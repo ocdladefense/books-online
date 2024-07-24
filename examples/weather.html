@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="dev_modules/node-modal/src/css/modal.css" />
+</head>
+<body>
+  <div id="app-container">
+      <div class="app">
+          <div class="zip-form">
+              <form id="zipForm" data-action="seven-day-forecast">
+                  <div class="flex-parent">
+                    <label for="user-input">Zip or City/State</label>
+                    <input class="form-control"
+                        type="text" id="user-input" name="user-input" 
+                        value="" required
+                    />
+                    <button type="submit" class="btn btn-success" data-action="seven-day-forecast">Get the forecast!</button>
+                    <button type="submit" class="ml-2" data-action="preview-forecast">Email Forecast</button>
+                </div>
+              </form>
+          </div>
+          <div id="emailFormContainer" class="text-center">
+
+          </div>
+          <!-- <div id="weatherList" class="weather-list flex-parent"> -->
+          <div id="weatherList">
+          </div>
+          <div id="currentDay" class="weather-list-items current-day">
+
+          </div>
+      </div>
+  </div>
+</body>
+</html>
+
+
+<script type="module" src="init.js"></script>

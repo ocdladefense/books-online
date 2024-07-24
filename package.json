@@ -1,0 +1,52 @@
+{
+  "name": "intern-starter",
+  "version": "0.1.0",
+  "description": "Starter package for interns.",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel node_modules/@ocdladefense/modal/src -d node_modules/@ocdladefense/modal/dist && ./node_modules/.bin/babel node_modules/@ocdladefense/ors/src -d node_modules/@ocdladefense/ors/dist",
+    "build2": "./node_modules/.bin/babel node_modules/@ocdladefense/modal/src/ -d node_modules/@ocdladefense/modal/dist",
+    "docs": "./node_modules/.bin/jsdoc js/BooksOnlineController.js -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocdladefense/intern-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocdladefense/intern-starter/issues"
+  },
+  "homepage": "https://github.com/ocdladefense/intern-starter#readme",
+  "dependencies": {
+    "@ocdladefense/books-online": "file:dev_modules/node-books-online",
+    "@ocdladefense/lib-http": "file:dev_modules/node-lib-http",
+    "@ocdladefense/lib-mock": "file:dev_modules/node-lib-mock",
+    "@ocdladefense/dom": "file:dev_modules/node-dom",
+    "@ocdladefense/html": "file:dev_modules/node-html",
+    "@ocdladefense/modal": "file:dev_modules/node-modal",
+    "@ocdladefense/ors": "file:dev_modules/node-ors",
+    "@ocdladefense/reading-context": "file:dev_modules/node-reading-context",
+    "@ocdladefense/search-client": "file:dev_modules/node-search-client",
+    "@ocdladefense/view": "^2.1.1",
+    "@ocdladefense/web": "file:dev_modules/node-web",
+    "@ocdladefense/webc-autocomplete": "file:dev_modules/webc-autocomplete",
+    "@ocdladefense/webc-events": "file:dev_modules/webc-events",
+    "@ocdladefense/webc-ors": "file:dev_modules/webc-ors",
+    "@ocdladefense/webc-oar": "file:dev_modules/webc-oar",
+    "babel-plugin-inline-dotenv": "^1.7.0",
+    "npm-watch": "^0.11.0"
+  },
+  "extra": {
+    "1": "https://github.com/entwicklerstube/babel-plugin-root-import"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-root-import": "^6.6.0",
+    "jsdoc": "^4.0.2"
+  }
+}
