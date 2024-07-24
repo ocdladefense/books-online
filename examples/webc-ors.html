@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="node_modules/@ocdladefense/modal/src/css/loading.css" />
+    <link rel="stylesheet" href="node_modules/@ocdladefense/modal/src/css/modal.css" />
+    <link rel="stylesheet" href="node_modules/@ocdladefense/modal/src/css/inline-modal.css" /> -->
+
+
+    <script src="https://kit.fontawesome.com/c2278a45b9.js" crossorigin="anonymous">
+    </script>
+    <style type="text/css">
+        body {
+            max-width:80%;
+            margin: 0 auto;
+        }
+        webc-ors {
+            max-width: 80%;
+        }
+    </style>
+</head>
+
+<body tab-index="-1">
+    <!-- Here is our custom web component. -->
+
+    
+    <h2>Example of ORS reference range</h2>
+    <webc-ors references="813.010(1)(a)-(b)"></webc-ors>
+
+    <h2>Example of ORS reference range</h2>
+    <webc-ors references="813.010(1)(a)-(b)"></webc-ors>
+
+
+    <h2>Example of ORS reference range</h2>
+    <webc-ors references="813.010(1)(a)-(b)"></webc-ors>
+
+
+    <h2>Example of ORS reference range</h2>
+    <webc-ors references="813.010(1)(a)-(b)"></webc-ors>
+
+    
+
+
+    <h2>Example of multiple ORS subsection references</h2>
+    <webc-ors references="813.010(1)(a),813.010(1)(d)"></webc-ors>
+
+    <h2>Problem Reference: Or Laws 1987, ch 619, § 2(2)</h2>
+    <webc-ors references="619.002(2)">“to punish each criminal offender appropriately and insure the security of the public in person and property[.]” Or Laws 1987, ch 619, § 2(2).</webc-ors>
+
+
+    <h2>Example of descendant subsections</h2>
+    <webc-ors references="813.010(6)(d)(B)"></webc-ors>
+
+    <h2>830.545(2)(a)-(e)</h2>
+    <webc-ors references="830.545(2)(a)-(e)"></webc-ors>
+
+  
+    <h2>Example of chapter with special text: ORS 830</h2>
+    <webc-ors references="830.510(2)"></webc-ors>
+    
+
+    <h2>Example of entire section</h2>
+    <webc-ors chapter="813" section="010"></webc-ors>
+
+
+   <!-- <webc-ors chapter="480" section="1"></webc-ors>-->
+
+   <!--
+    <p> 2021 LEGISLATIVE UPDATE:
+        Senate Bill 201 Provides that person commits DUII if person has BAC of 0.08 or more within two hours after
+        driving vehicle.</p>
+
+    <p> Provides that a person commits DUII if that person is found to have a .08 or higher percent blood alcohol
+        level within two hours of driving so long as the prosecution can prove the person did not drink between driving
+        and the breath or blood test.</p>
+
+    <p> Clarifies that fine for DUII is enhanced if person has a .15 percent or higher blood alcohol level within two
+        hours of driving.</p>
+
+    <p> Adds language that is already included in other repeat-DUII statutes to the third-time felony DUII law (ORS
+        813.011), along with ORS 163.118 (criminally negligent DUII homicide with three priors) and ORS 163.185 (DUII
+        assault with three priors) so that out-of-state convictions for DUII are counted as prior DUII convictions.</p>
+
+    <p> Amends ORS 163.118, 163.185, 813.010, 813.011 and 813.300.</p>
+    -->
+</body>
+
+<script type="module">
+
+
+    import { WebcOrs } from "../node_modules/@ocdladefense/webc-ors/src/WebcOrs.js";
+
+    window.onload = init;
+    window.WebcOrs = WebcOrs;
+
+    function init() {
+        customElements.define("webc-ors", WebcOrs);
+    }
+</script>
+
+
+
+
+</html>
