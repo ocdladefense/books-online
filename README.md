@@ -1,9 +1,6 @@
 # books-online
 A better reading experience for OCDLA's Books Online subscribers.
 
-
-
-
 ## Project notes
 _These notes were made July 23, 2024.  The development instance for this application can be found [here](https://pubs.ocdla.org/fsm/1)._
 * Document finished features or features that are incomplete and determine what code/libraries?
@@ -21,11 +18,11 @@ _These notes were made July 23, 2024.  The development instance for this applica
 
 
 ## Initial branching
-* <code>main</code> - Jose will push a main branch with the appropriate dev_modules/ submodules (protected).
-* <code>development</code> - Feature branches will be merged into development; audited before being merged into.
-* <code>layout</code> - HTML structure, existing markup/css as appropriate; TailwindCSS.
-* <code>outline</code> - Some existing code to traverse the document and retireve booksmarks for display in the document outline.
-* <code>github-pages</code> - Branch that facilitates the GitHub pages pipeline for our repo.
+* <code>main</code> - Primary branch containing all project code (protected).
+* <code>development</code> - Development branch containing all development modules; feature branches will be merged into this branch.
+* <code>layout</code> - Initial feature branch including HTML structure, existing markup/css as appropriate; TailwindCSS.
+* <code>outline</code> - Inital feature branch including code to traverse the document and retireve bookmarks for display in the document outline.
+* <code>github-pages</code> - Branch to facilitate the GitHub pages pipeline for our repo.
 
 ## Useful links
 * [The wikifix project](https://github.com/ocdladefense/wikifix)
