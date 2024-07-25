@@ -1,0 +1,35 @@
+.references {
+    padding: 15px;
+    border: 1px solid red;
+}
+
+.reference {
+    display: block;
+}
+
+a.cite {
+    display: inline-block;
+    border-bottom: 1px dashed;
+    padding-bottom: 0px;
+}
+
+a:link,
+a:visited {
+    color: rgb(0, 0, 238);
+}
+
+
+a:target {
+    animation: highlight 3s forwards;
+    background: yellow;
+}
+
+@keyframes highlight {
+    80% {
+        background: yellow;
+    }
+
+    100% {
+        background: transparent;
+    }
+}
