@@ -6,7 +6,10 @@
   "scripts": {
     "build": "./node_modules/.bin/babel node_modules/@ocdladefense/modal/src -d node_modules/@ocdladefense/modal/dist && ./node_modules/.bin/babel node_modules/@ocdladefense/ors/src -d node_modules/@ocdladefense/ors/dist",
     "build2": "./node_modules/.bin/babel node_modules/@ocdladefense/modal/src/ -d node_modules/@ocdladefense/modal/dist",
-    "docs": "./node_modules/.bin/jsdoc js/BooksOnlineController.js -d docs"
+    "docs": "./node_modules/.bin/jsdoc js/BooksOnlineController.js -d docs",
+    "webpack": "webpack",
+    "build3": "webpack --config webpack.config.js",
+    "watch": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -19,19 +22,19 @@
   },
   "homepage": "https://github.com/ocdladefense/intern-starter#readme",
   "dependencies": {
-    "babel-plugin-inline-dotenv": "^1.7.0",
-    "npm-watch": "^0.11.0",
-    "@ocdladefense/view": "^2.1.1",
-    "@ocdladefense/lib-polyfill": "file:dev_modules/lib-polyfill",
-    "@ocdladefense/web": "file:dev_modules/node-web",
-    "@ocdladefense/html": "file:dev_modules/node-html",
     "@ocdladefense/dom": "file:dev_modules/node-dom",
+    "@ocdladefense/html": "file:dev_modules/node-html",
     "@ocdladefense/lib-http": "file:dev_modules/lib-http",
     "@ocdladefense/lib-mock": "file:dev_modules/lib-mock",
+    "@ocdladefense/lib-polyfill": "file:dev_modules/lib-polyfill",
     "@ocdladefense/modal": "file:dev_modules/node-modal",
     "@ocdladefense/ors": "file:dev_modules/node-ors",
+    "@ocdladefense/view": "^2.1.1",
+    "@ocdladefense/web": "file:dev_modules/node-web",
     "@ocdladefense/webc-oar": "file:dev_modules/webc-oar",
-    "@ocdladefense/webc-ors": "file:dev_modules/webc-ors"
+    "@ocdladefense/webc-ors": "file:dev_modules/webc-ors",
+    "babel-plugin-inline-dotenv": "^1.7.0",
+    "npm-watch": "^0.11.0"
   },
   "extra": {
     "1": "https://github.com/entwicklerstube/babel-plugin-root-import"
@@ -43,6 +46,14 @@
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "babel-plugin-root-import": "^6.6.0",
-    "jsdoc": "^4.0.2"
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "jsdoc": "^4.0.2",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
