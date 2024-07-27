@@ -1,6 +1,24 @@
 # books-online
 A better reading experience for OCDLA's Books Online subscribers.
 
+
+## Installation
+* Clone <code>@ocdladefense/books-online</code>.
+* Switch to the <code>development</code> branch.
+* Initialize any Git submodules.  _Note: these commands should be run in the project root._
+  * Run <code>git submodule init</code>.
+  * Run <code>git submodule update</code>.
+* Update NPM packages by running <code>npm update</code>.
+* Use VSCode’s LiveServer in <code>src/index.html</code>.
+
+
+
+
+## Related projects
+* ORS Viewer
+  * https://tnguyen-win.github.io/ocdla_wiki_tailwindcss/
+
+
 ## Project notes
 _These notes were made July 23, 2024.  The development instance for this application can be found [here](https://pubs.ocdla.org/fsm/1)._
 * Document finished features or features that are incomplete and determine what code/libraries?
