@@ -35,7 +35,7 @@ module.exports = {
     target: 'web',
     devServer: {
         static: path.resolve(__dirname, './src'),
-        port: 80,
+        port: 8080,
         open: true,
         hot: true,
         compress: true,
