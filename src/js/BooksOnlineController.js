@@ -33,9 +33,9 @@ export default class BooksOnlineController {
 
         
 
-        const controller = new Controller();
-        domReady(() => document.addEventListener("click", controller));
-        domReady(() => controller.convert(".chapter"));
+        
+        domReady(() => document.addEventListener("click", this));
+        domReady(() => this.convert(".chapter"));
         domReady(init);
 
 
@@ -95,10 +95,10 @@ export default class BooksOnlineController {
         
         window.DomDocument = DomDocument;
 
-        domReady(init);
+        domReady(initOutline);
 
         // Use these headings to create an on-the-fly outline of the document.
-        function init() {
+        function initOutline() {
             let doc = new DomDocument();
             let nodes = doc.outline("h2"); // h1, h2, h3
             nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
@@ -111,8 +111,6 @@ export default class BooksOnlineController {
 
 
     // customElements.define("word-count", WordCount, { extends: "p" });
-    customElements.define("webc-ors", WebcOrs);
-    customElements.define("webc-oar", WebcOar);
 
     
     }
