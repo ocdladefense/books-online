@@ -9,14 +9,32 @@ A better reading experience for OCDLA's Books Online subscribers.
   * Run <code>git submodule init</code>.
   * Run <code>git submodule update</code>.
 * Update NPM packages by running <code>npm update</code>.
-* Use VSCode’s LiveServer in <code>src/index.html</code>.
+* Run <code>npm run watch</code>.
 
+
+
+## Working with Git submodules
+### Remove the submodule entry from .git/config
+```javascript
+git submodule deinit -f path/to/submodule
+```
+
+### Remove the submodule directory from the superproject's .git/modules directory
+```javascript
+rm -rf .git/modules/path/to/submodule
+```
+
+
+### Remove the entry in .gitmodules and remove the submodule directory located at path/to/submodule
+```javascript
+git rm -f path/to/submodule
+```
 
 
 
 ## Related projects
 * ORS Viewer
-  * https://tnguyen-win.github.io/ocdla_wiki_tailwindcss/
+  * https://ocdladefense.github.io/ors-viewer/
 
 
 ## Project notes
