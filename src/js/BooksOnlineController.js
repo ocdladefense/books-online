@@ -1,14 +1,18 @@
-import OregonLegislatureNetwork from "/node_modules/@ocdladefense/ors/src/Network.js";
-import { OrsParser } from "/node_modules/@ocdladefense/ors/src/OrsParser.js";
-import { Modal } from "/node_modules/@ocdladefense/modal/dist/modal.js";
-import { WebcOrs } from "/node_modules/@ocdladefense/webc-ors/src/WebcOrs.js";
-import { WebcOar } from "/node_modules/@ocdladefense/webc-oar/src/WebcOar.js";
-import "/node_modules/@ocdladefense/html/html.js";
-import domReady from "/node_modules/@ocdladefense/web/src/web.js";
-import init from "/js/init.js"; // TODO: This wasn't being referenced. Find out what it does.
-import { DomDocument } from "/node_modules/@ocdladefense/dom/src/DomDocument.js";
+import OregonLegislatureNetwork from "@ocdladefense/ors/src/Network.js";
+import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
+import { Modal } from "@ocdladefense/modal/dist/modal.js";
+import { WebcOrs } from "@ocdladefense/webc-ors/src/WebcOrs.js";
+import { WebcOar } from "@ocdladefense/webc-oar/src/WebcOar.js";
+import "@ocdladefense/html/html.js";
+import domReady from "@ocdladefense/web/src/web.js";
+import init from "./init.js"; // TODO: This wasn't being referenced. Find out what it does.
+import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 import { formatReferences, doRefs } from "./citations.js";
+import loadToc from './components/toc.js';
 
+// TODO: Format the disparate scripts and clean them up. Move the inline functions into methods as needed.
+// TODO: BooksOnlineController is named poorly now. We know it's a controller. BooksOnline.js is fine. Clean up references to it and rename it.
+// TODO: Follow the scripts and see where they lead. Familiarize myself with their structure and functions.
 
 
 /**
@@ -25,36 +29,27 @@ export default class BooksOnlineController {
         this.modal = new Modal();
         window.modal = this.modal;
         OregonLegislatureNetwork.setUrl("https://appdev.ocdla.org/books-online/index.php");
-    
 
         // customElements.define("word-count", WordCount, { extends: "p" });
         customElements.define("webc-ors", WebcOrs);
         customElements.define("webc-oar", WebcOar);
 
-        
-
-        
-        domReady(() => document.addEventListener("click", this));
-        domReady(() => this.convert(".chapter"));
-        domReady(init);
-
-
-// TODO: Format the disparate scripts and clean them up. Move the inline functions into methods as needed.
-// TODO: BooksOnlineController is named poorly now. We know it's a controller. BooksOnline.js is fine. Clean up references to it and rename it.
-// TODO: Follow the scripts and see where they lead. Familiarize myself with their structure and functions.
-
-    //<!-- Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.  -->
-
+        // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
         let refContainer = document.querySelector("#all-refs");
         let citations = document.querySelectorAll(".cite");
         let refs = document.querySelectorAll("[references], .cite");
 
+        // Multiple domReady calls consolidated into one. Unsure if this is needed outside of a script file.
         domReady(function () {
+            document.addEventListener("click", this)
+            BooksOnlineController.convert(".chapter")
             formatReferences(citations);
             doRefs(refs, refContainer);
+            init();
         });
 
 
+        // TODO: This is not working, and likely needs refactored and relocated. Unsure where now.
         window.addEventListener("hashchange", function (e) {
             e.preventDefault();
             e.stopPropagation();
@@ -70,49 +65,20 @@ export default class BooksOnlineController {
             }); //({top: (rect.y + offset),behavior:"smooth"});
         });
 
-
-
-    //<!-- Display table of contents (TOC) content and modal. This should display other chapters in the current publication. -->
+        // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
+        window.loadToc = loadToc();
         
-
-        window.loadToc = loadToc;
-        function loadToc() {
-            let config = {
-                style: "display:block; width:auto; vertical-align:top; overflow-x: hidden; overflow-y: auto; height:60vh; padding: 8px;"
-            };
-            let modal = new Modal(config);
-            modal.show();
-            fetch("/sites/pubs.ocdla.org/books/" + window.book + "/toc.tpl.php").then((resp) => {
-                return resp.text();
-            })
-                .then((html) => {
-                    modal.render(html);
-                });
-        }
-
-
-    //<!-- Setup the chapter ouline and display it inside of the div.outline-content element. Currently not displaying so we need to figure out what is going wrong. -->
-        
+        // Setup the chapter ouline and display it inside of the div.outline-content element. Currently not displaying so we need to figure out what is going wrong.
         window.DomDocument = DomDocument;
+        let doc = new DomDocument();
 
-        domReady(initOutline);
-
-        // Use these headings to create an on-the-fly outline of the document.
-        function initOutline() {
-            let doc = new DomDocument();
-            let nodes = doc.outline("h2"); // h1, h2, h3
-            nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
-        }
+        // Create the document outline and display it.
+        let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
+        nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
 
 
 
-        //<!-- Initialize custom components to display ORS/OAR citations. View the page source to identify several of these components and also make note of how these are used. -->
-    
-
-
-    // customElements.define("word-count", WordCount, { extends: "p" });
-
-    
+        // customElements.define("word-count", WordCount, { extends: "p" });
     }
 
     /**
@@ -191,7 +157,7 @@ export default class BooksOnlineController {
      * with inline links.
      * @param {CSSSelector} selector A valid CSS selector to pass to querySelector().
      */
-    convert(selector) {
+    static convert(selector) {
         var body = document.querySelector(selector);
 
         let nodes = body.querySelectorAll("p");
