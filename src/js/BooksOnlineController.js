@@ -47,6 +47,15 @@ export default class BooksOnlineController {
             init();
         });
 
+        domReady(initOutline);
+
+        // Use these headings to create an on-the-fly outline of the document.
+        function initOutline() {
+            let doc = new DomDocument();
+            let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
+            nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
+        }
+
         // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
         window.loadToc = loadToc();
         
@@ -55,8 +64,8 @@ export default class BooksOnlineController {
         let doc = new DomDocument();
 
         // Create the document outline and display it.
-        let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
-        nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
+        // let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
+        // nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
 
         // TODO: This is not working, and likely needs refactored and relocated. Unsure where now.
         // I believe it requires anchors to be set in the document.
