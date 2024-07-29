@@ -8,7 +8,7 @@ import domReady from "@ocdladefense/web/src/web.js";
 import init from "./init.js"; // TODO: This wasn't being referenced. Find out what it does.
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 import { formatReferences, doRefs } from "./citations.js";
-import loadToc from './components/toc.js';
+import loadToc from './components/Toc.js';
 
 // TODO: Format the disparate scripts and clean them up. Move the inline functions into methods as needed.
 // TODO: BooksOnlineController is named poorly now. We know it's a controller. BooksOnline.js is fine. Clean up references to it and rename it.
@@ -39,7 +39,6 @@ export default class BooksOnlineController {
         let citations = document.querySelectorAll(".cite");
         let refs = document.querySelectorAll("[references], .cite");
 
-        // Multiple domReady calls consolidated into one. Unsure if this is needed outside of a script file.
         domReady(function () {
             document.addEventListener("click", this)
             BooksOnlineController.convert(".chapter")
@@ -48,8 +47,19 @@ export default class BooksOnlineController {
             init();
         });
 
+        // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
+        window.loadToc = loadToc();
+        
+        // Setup the chapter ouline and display it inside of the div.outline-content element.
+        window.DomDocument = DomDocument;
+        let doc = new DomDocument();
+
+        // Create the document outline and display it.
+        let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
+        nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
 
         // TODO: This is not working, and likely needs refactored and relocated. Unsure where now.
+        // I believe it requires anchors to be set in the document.
         window.addEventListener("hashchange", function (e) {
             e.preventDefault();
             e.stopPropagation();
@@ -64,17 +74,6 @@ export default class BooksOnlineController {
                 inline: "nearest",
             }); //({top: (rect.y + offset),behavior:"smooth"});
         });
-
-        // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
-        window.loadToc = loadToc();
-        
-        // Setup the chapter ouline and display it inside of the div.outline-content element. Currently not displaying so we need to figure out what is going wrong.
-        window.DomDocument = DomDocument;
-        let doc = new DomDocument();
-
-        // Create the document outline and display it.
-        let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
-        nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
 
 
 
