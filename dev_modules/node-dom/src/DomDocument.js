@@ -60,18 +60,15 @@ class DomDocument {
 
 
     outline(selector) {
-        let elems = this.doc.querySelectorAll(selector);
-        let headings = [...elems].map((node) => node.textContent);
-        return headings.map((heading) => {
-            let l = heading.match(/Part/) == null ? 2 : 1;
-            let h = document.createTextNode(heading);
-            let n = document.createElement("div");
-            n.setAttribute("class", "outline-item");
-            if (1 == l) {
-                n.setAttribute("class", "outline-item outline-item-level-1");
-            }
-            n.appendChild(h);
-            return n;
+        let elems = [...this.doc.querySelectorAll(selector)];
+        return elems.map((elem) => {
+            let content = elem.textContent;
+            let heading = document.createTextNode(content);
+            let node = document.createElement("div");
+            node.setAttribute("class", "outline-item outline-item-level-" + elem.tagName[1]);
+
+            node.appendChild(heading);
+            return node;
         });
     }
 

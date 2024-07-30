@@ -30,6 +30,7 @@ export default class BooksOnlineController {
         // customElements.define("word-count", WordCount, { extends: "p" });
         customElements.define("webc-ors", WebcOrs);
         customElements.define("webc-oar", WebcOar);
+        
 
         
 
@@ -100,7 +101,7 @@ export default class BooksOnlineController {
         // Use these headings to create an on-the-fly outline of the document.
         function initOutline() {
             let doc = new DomDocument();
-            let nodes = doc.outline("h2"); // h1, h2, h3
+            let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
             nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
         }
 
@@ -114,6 +115,7 @@ export default class BooksOnlineController {
 
     
     }
+
 
     /**
      * Handle user-actions.  These include requests to open
