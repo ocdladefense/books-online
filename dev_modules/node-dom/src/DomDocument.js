@@ -61,15 +61,20 @@ class DomDocument {
 
     outline(selector) {
         let elems = [...this.doc.querySelectorAll(selector)];
-        return elems.map((elem) => {
+        let nodes = elems.map((elem) => {
             let content = elem.textContent;
             let heading = document.createTextNode(content);
-            let node = document.createElement("div");
+            let anchor = document.createElement("a");
+            anchor.setAttribute("href", "#" + elem.id);
+            let node = document.createElement("li");
             node.setAttribute("class", "outline-item outline-item-level-" + elem.tagName[1]);
 
             node.appendChild(heading);
-            return node;
+            anchor.appendChild(node);
+            return anchor;
         });
+
+        return nodes;
     }
 
 }
