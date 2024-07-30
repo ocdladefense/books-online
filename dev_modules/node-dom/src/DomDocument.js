@@ -93,7 +93,7 @@ class DomDocument {
 
         // Set up nested lists
         let currentList = root; // We want to operate out of a moving list. Start at the root, and change as we go deeper.
-       
+        
         for (let i = 0; i < nodes.length; i++) {
             let node = nodes[i];
             let prevNode = nodes[i - 1] || root;
@@ -115,11 +115,10 @@ class DomDocument {
 
                 // Example case: If we are at level 3, and we jump to level 1, we want to go up to level 1.
                 // The while loop finds the correct level, up to the root.
-                while (level < prevLevel || currentList !== root) {
+                while (level < prevLevel) {
                     currentList = currentList.parentElement || root;
                     prevLevel--;
                 }
-                currentList = currentList.parentElement || root;
             }
             currentList.appendChild(node);
         }
