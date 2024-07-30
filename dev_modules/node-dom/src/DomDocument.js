@@ -60,21 +60,72 @@ class DomDocument {
 
 
     outline(selector) {
-        let elems = [...this.doc.querySelectorAll(selector)];
-        let nodes = elems.map((elem) => {
+        // Take a comma separated string of html selectors
+        const elems = [...this.doc.querySelectorAll(selector)];
+        const root = document.createElement("ul");
+        root.setAttribute("class", "outline-content");
+
+        // Process all headings with anchor links and styling
+        const nodes = elems.map((elem) => {
             let content = elem.textContent;
             let heading = document.createTextNode(content);
+
+            // Create our anchor element that links to the id of the element
             let anchor = document.createElement("a");
             anchor.setAttribute("href", "#" + elem.id);
-            let node = document.createElement("li");
-            node.setAttribute("class", "outline-item outline-item-level-" + elem.tagName[1]);
+            anchor.setAttribute("class", "outline-anchor");
 
-            node.appendChild(heading);
-            anchor.appendChild(node);
-            return anchor;
+            // We want to put these into list items
+            let node = document.createElement("li");
+
+            // We are assuming the selectors are h1, h2, h3, etc. 
+            // We can use the heading level as the nested level.
+            let level = elem.tagName[1] || "1";
+
+            node.setAttribute("class", "outline-item outline-item-level-" + level);
+            node.setAttribute("data-level", level);
+
+
+            anchor.appendChild(heading);
+            node.appendChild(anchor);
+            return node;
         });
 
-        return nodes;
+        // Set up nested lists
+        let currentList = root; // We want to operate out of a moving list. Start at the root, and change as we go deeper.
+       
+        for (let i = 0; i < nodes.length; i++) {
+            let node = nodes[i];
+            let prevNode = nodes[i - 1] || root;
+
+            // Get the nested level of our current node
+            let level = parseInt(node.getAttribute("data-level"));
+            let prevLevel = parseInt(prevNode.getAttribute("data-level")) || 1;
+
+            // If the level is greater than the previous level, we want to start a new list
+            // This does not check if we go from level 1 to level 3. I'm not sure we want to check for that.
+            if (level > prevLevel) {
+                let prevList = currentList;
+                currentList = document.createElement("ul");
+                currentList.setAttribute("class", "outline-list");
+                prevList.appendChild(currentList);
+
+            // If the level is less than the previous level, we want to go up to the proper level
+            } else if (level < prevLevel) {
+
+                // Example case: If we are at level 3, and we jump to level 1, we want to go up to level 1.
+                // The while loop finds the correct level, up to the root.
+                while (level < prevLevel || currentList !== root) {
+                    currentList = currentList.parentElement || root;
+                    prevLevel--;
+                }
+                currentList = currentList.parentElement || root;
+            }
+            currentList.appendChild(node);
+        }
+
+        
+        return root;
     }
 
 }
