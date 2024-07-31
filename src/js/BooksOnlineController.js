@@ -9,6 +9,7 @@ import init from "./init.js"; // TODO: This wasn't being referenced. Find out wh
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 import { formatReferences, doRefs } from "./citations.js";
 import loadToc from './components/Toc.js';
+import Outline from './components/Outline.js';
 
 // TODO: Format the disparate scripts and clean them up. Move the inline functions into methods as needed.
 // TODO: BooksOnlineController is named poorly now. We know it's a controller. BooksOnline.js is fine. Clean up references to it and rename it.
@@ -45,18 +46,21 @@ export default class BooksOnlineController {
             formatReferences(citations);
             doRefs(refs, refContainer);
             init();
+            let outlines = Outline.parse("h1, h2, h3");
+            let nodeTree = Outline.toHtml(outlines);
+            document.querySelector(".outline").appendChild(nodeTree);
         });
 
-        domReady(initOutline);
+        // domReady(initOutline);
 
-        // Use these headings to create an on-the-fly outline of the document.
-        function initOutline() {
-            let doc = new DomDocument();
-            window.DomDocument = DomDocument;
-            let nodeTree = doc.outline("h1, h2, h3"); // h1, h2, h3
-            //nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
-            document.querySelector(".outline").appendChild(nodeTree);
-        }
+        // // Use these headings to create an on-the-fly outline of the document.
+        // function initOutline() {
+        //     let doc = new DomDocument();
+        //     window.DomDocument = DomDocument;
+        //     let nodeTree = doc.outline("h1, h2, h3"); // h1, h2, h3
+        //     //nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
+        //     document.querySelector(".outline").appendChild(nodeTree);
+        // }
 
         // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
         window.loadToc = loadToc();
