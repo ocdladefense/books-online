@@ -47,7 +47,8 @@ export default class BooksOnlineController {
             doRefs(refs, refContainer);
             init();
             let outlines = Outline.parse("h1, h2, h3");
-            let nodeTree = Outline.toHtml(outlines);
+            let nestedOutlines = Outline.nestChildren(outlines);
+            let nodeTree = Outline.toHtml(nestedOutlines);
             document.querySelector(".outline").appendChild(nodeTree);
         });
 
