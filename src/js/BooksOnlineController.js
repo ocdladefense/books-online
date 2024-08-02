@@ -45,11 +45,9 @@ export default class BooksOnlineController {
             BooksOnlineController.convert(".chapter")
             formatReferences(citations);
             doRefs(refs, refContainer);
-            init();
 
-            let outline = new Outline(document);
+            let outline = Outline.fromCurrentDocument();
             outline.outline("h1", "h2", "h3");
-
             document.querySelector(".outline").appendChild(outline.toNodeTree());
         });
 
