@@ -9,7 +9,7 @@ import init from "./init.js"; // TODO: This wasn't being referenced. Find out wh
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 import { formatReferences, doRefs } from "./citations.js";
 import loadToc from './components/Toc.js';
-import Outline from './components/Outline.js';
+import Outline from '@ocdla/outline';
 
 // TODO: Format the disparate scripts and clean them up. Move the inline functions into methods as needed.
 // TODO: BooksOnlineController is named poorly now. We know it's a controller. BooksOnline.js is fine. Clean up references to it and rename it.
@@ -45,11 +45,10 @@ export default class BooksOnlineController {
             BooksOnlineController.convert(".chapter")
             formatReferences(citations);
             doRefs(refs, refContainer);
-            init();
-            let outlines = Outline.parse("h1, h2, h3");
-            let nestedOutlines = Outline.nestChildren(outlines);
-            let nodeTree = Outline.toHtml(nestedOutlines);
-            document.querySelector(".outline").appendChild(nodeTree);
+
+            let outline = Outline.fromCurrentDocument();
+            outline.outline("h1", "h2", "h3");
+            document.querySelector(".outline").appendChild(outline.toNodeTree());
         });
 
         // domReady(initOutline);

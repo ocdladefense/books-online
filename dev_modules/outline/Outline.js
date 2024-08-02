@@ -1,49 +1,57 @@
+import OutlineItem from "./OutlineItem.js";
 export default class Outline {
+    // The outline class takes in document from which the outline will be built.
+    #doc;
+
+    // The flat array of items in the outline.
+    #items;
+
+    constructor(doc) {
+        this.#doc = doc;
+        this.#items = new Array();
+    }
+
     /**
-     * An outline item in the document that references a specific node in the document.
-     * 
-     * @param {string} [content=''] content Content of the node, the main body of text pulled from the page.
-     * @param {string} [href=''] Reference to the node that was parsed. Used to link to the node in the page.
-     * @param {int} [level=0] Level of indendation in the list. Level 1 is the top level.
+     * Returns the flat array of items in the outline in order of appearance.
+     * @returns {Array<OutlineItem>} Flat array of all outline items in order.
      */
-    constructor(content = '', href = '', level = 0) {
-        this.content = content;
-        this.href = href;
-        this.level = level;
-
-        // Outline items can have outlines as children.
-        this.children = [];
-
-        // The parent outline allows us to move up the tree. This is the outline that this is a child of.
-        this.parent = null;
+    getFlattened() {
+        return this.#items;
     }
 
     /**
-    * Adds a child to the current outline, and registers this outline as its parent.
-    * @param {Outline} child Child outline to be adopted
+    * Nests children based on their level into other outline items.
+    * @returns {Array<OutlineItems>} Nested array of top level outline items with order of appearance preserved.
     */
-    adopt(child) {
-        child.parent = this;
-        this.children.push(child);
+    getNested() {
+        return Outline.nestChildren(this.#items);
     }
 
     /**
-    * Parses the page and creates an array of outline objects. Use these objects to create an on-the-fly outline of the document.
-    * @param {string} selectorList Comma separated string of html selectors
-    * @param {DomDocument} [doc=document] doc DOM document, defaults to entire page
-    * @returns {Array<Outline>} Array of outline objects.
-    */
-    static parse(selectorList, doc = document) {
-        // Order of selectors should be used to determine the level of the list
-        const selectors = selectorList.replaceAll(" ", "").toLowerCase().split(",");
+     * Creates an outline from the current document.
+     * @returns {Outline}
+     */
+    static fromCurrentDocument() {
+        //TODO: Each outline item contains a text label, id, and level.
+        // Outline class takes in document from which the outline will be built.
+        return new Outline(document);
+    }
+
+    /**
+     * Searches the instanced document for the outline items based on the selectors passed in and maintains the hierarchy based on the order of arguments passed in.
+     * @param {...String} selectors List of selectors to search for in order of importance.
+     */
+    outline() {
+        let selectors = Array.from(arguments).map((arg) => arg.toLowerCase().trim());
 
         // Take a comma separated string of html selectors
-        const elems = [...doc.querySelectorAll(selectorList)];
+        const elems = [...this.#doc.querySelectorAll(selectors.join(","))];
 
         // Process all headings with anchor links and styling
-        return elems.map((elem) => {
-            return new Outline(elem.textContent, elem.id, selectors.indexOf(elem.tagName.toLowerCase()) + 1);
+        this.#items = elems.map((elem) => {
+            return new OutlineItem(elem.textContent, elem.id, selectors.indexOf(elem.tagName.toLowerCase()) + 1);
         });
+
     }
 
     /**
@@ -52,7 +60,7 @@ export default class Outline {
     * @returns {Array<Outline>} Array of top level outline objects. The array itself is the outline tree.
     */
     static nestChildren(outlines) {
-        const root = new Outline();
+        const root = new OutlineItem();
         let parent = root;
         let prevOutline = null;
 
@@ -104,16 +112,16 @@ export default class Outline {
             return;
         });
 
-
         return root.children;
     }
 
     /**
     * Creates a treeNode from the outlines as a set of nested unordered lists.
-    * @param {Array<Outline>} outlines Expects an array of Outline objects with children nested via nestChildren
     * @returns {DomElement} Single unordered list node as a treeNode.
     */
-    static toHtml(outlines) {
+    toNodeTree() {
+        let outlines = this.getNested(this.#items);
+
         // Create our root list node and add some styling
         const root = document.createElement("ul");
         root.setAttribute("class", "outline-content");
@@ -123,6 +131,7 @@ export default class Outline {
         // It also converts the children to list items and adds them to the parent list.
         let recNestLists = (outlines) => {
             const list = document.createElement("ul");
+            list.setAttribute("class", "outline-list");
 
             // Go through each child
             outlines.map((outline) => {
@@ -148,28 +157,24 @@ export default class Outline {
 
         return root;
     }
-    
+
     /**
-    * Converts an outline object to a list item, with an anchor.
-    * @returns {DomElement} Single list item based on the current object
-    */
-    toListItem() {
-        // Create our dom elements
-        let content = document.createTextNode(this.content);
-        let anchor = document.createElement("a");
+     * Gets the outlines as a nested array of outlines.
+     * @returns {Array<Outline>} Array of top level outline objects. The array itself is the outline tree.
+     */
+    toHtml() {
+        let doc = new Document();
+        let wordSection = doc.createElement("div");
+        wordSection.setAttribute("class", "WordSection1");
+        let nodeTree = this.toNodeTree();
 
-        // Set attributes for the anchor. This creates our link and does some styling
-        anchor.setAttribute("href", "#" + this.href);
-        anchor.setAttribute("class", "outline-anchor");
+        wordSection.appendChild(nodeTree);
+        doc.appendChild(wordSection);
+        
+        const serializer = new XMLSerializer();
+        const subset = doc.querySelector(".WordSection1");
+        return serializer.serializeToString(subset);
 
-        // Create the list item and add some styling
-        let node = document.createElement("li");
-        node.setAttribute("class", "outline-item outline-item-level-" + this.level);
-
-        // Build the list item
-        anchor.appendChild(content);
-        node.appendChild(anchor);
-
-        return node;
-    };
+    }
+    
 }
