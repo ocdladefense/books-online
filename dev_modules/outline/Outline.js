@@ -176,5 +176,31 @@ export default class Outline {
         return serializer.serializeToString(subset);
 
     }
+
+    addIntersectionObserver(fn, options) {
+        if (!options) 
+            options = {
+                root: this.#doc,
+                rootMargin: "0px",
+                threshold: 0.5
+            };
+        const intersectionObserver = new IntersectionObserver(fn, options);
+        this.#items.map((item) => {
+            if (!item.href) return;
+            let node = this.#doc.getElementById(item.href);
+            if (!node) return;
+            intersectionObserver.observe(node);
+        });
+    }
+
+    clearStyles() {
+        this.#items.map((item) => {
+            if (!item.href) return;
+            let node = this.#doc.getElementById(item.href);
+
+            if (!node) return;
+            node.style = "";
+        });
+    }
     
 }

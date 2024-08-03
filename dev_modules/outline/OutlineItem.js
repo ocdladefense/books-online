@@ -46,6 +46,7 @@ export default class OutlineItem {
         // Create the list item and add some styling
         let node = document.createElement("li");
         node.setAttribute("class", "outline-item outline-item-level-" + this.level);
+        node.setAttribute('id', this.href + '-outline-item');
 
         // Build the list item
         anchor.appendChild(content);

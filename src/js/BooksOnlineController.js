@@ -49,6 +49,21 @@ export default class BooksOnlineController {
             let outline = Outline.fromCurrentDocument();
             outline.outline("h1", "h2", "h3");
             document.querySelector(".outline").appendChild(outline.toNodeTree());
+
+            const scrollFunction = (observedEntries) => {
+                if (observedEntries.length == 0) return;
+                //outline.clearStyles();
+
+                // When an element is scrolled into view, highlight the corresponding outline item.
+                observedEntries.map((entry) => {
+                    let id = entry.target.id;
+                    let outlineEntry = document.getElementById(`${id}-outline-item`);
+                    outlineEntry.style = entry.isIntersecting ? "background-color: #f8f8f8;" : "";
+                });
+
+            }
+
+            outline.addIntersectionObserver(scrollFunction);
         });
 
         // domReady(initOutline);
@@ -71,22 +86,12 @@ export default class BooksOnlineController {
         // let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
         // nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
 
-        // TODO: This is not working, and likely needs refactored and relocated. Unsure where now.
-        // I believe it requires anchors to be set in the document.
+
         window.addEventListener("hashchange", function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            let newId = e.newURL.split("#")[1];
-            let newElem = document.getElementById(newId);
-            console.log(newId);
-
-            newElem.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-                inline: "nearest",
-            }); //({top: (rect.y + offset),behavior:"smooth"});
+            
         });
+
+        
 
 
 
