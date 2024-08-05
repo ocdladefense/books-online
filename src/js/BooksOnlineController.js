@@ -46,24 +46,31 @@ export default class BooksOnlineController {
             formatReferences(citations);
             doRefs(refs, refContainer);
 
-            let outline = Outline.fromCurrentDocument();
+            const outline = Outline.fromCurrentDocument();
             outline.outline("h1", "h2", "h3");
             document.querySelector(".outline").appendChild(outline.toNodeTree());
 
-            const scrollFunction = (observedEntries) => {
-                if (observedEntries.length == 0) return;
-                //outline.clearStyles();
+            const handleIntersection = (observedEntries) => {
+                // Filter out entries that are not intersecting
+                const intersectingEntries = observedEntries.filter((entry) => entry.isIntersecting);
 
-                // When an element is scrolled into view, highlight the corresponding outline item.
-                observedEntries.map((entry) => {
-                    let id = entry.target.id;
-                    let outlineEntry = document.getElementById(`${id}-outline-item`);
-                    outlineEntry.style = entry.isIntersecting ? "background-color: #f8f8f8;" : "";
-                });
+                // Make sure we have at least one entry remaining
+                if (intersectingEntries.length == 0) return;
 
-            }
+                // Iterate through our outline items and clear their styles.
+                outline.clearAllActive();
 
-            outline.addIntersectionObserver(scrollFunction);
+                // We only want the first entry. It's possible to scroll through multiple headings at once.
+                const entry = intersectingEntries[0];
+                const id = entry.target.id;
+                const outlineListItem = document.getElementById(`${id}-outline-item`);
+                outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
+                outlineListItem.classList.add("outline-item-active");
+                outlineListItem.firstChild.classList.add("outline-item-active");
+
+            };
+
+            outline.addIntersectionObserver(handleIntersection);
         });
 
         // domReady(initOutline);
@@ -88,7 +95,18 @@ export default class BooksOnlineController {
 
 
         window.addEventListener("hashchange", function (e) {
-            
+            e.preventDefault();
+            e.stopPropagation();
+
+            let newId = e.newURL.split("#")[1];
+            let newElem = document.getElementById(newId);
+            console.log(newId);
+
+            newElem.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "nearest",
+            }); //({top: (rect.y + offset),behavior:"smooth"});
         });
 
         

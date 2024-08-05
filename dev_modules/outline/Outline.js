@@ -49,6 +49,9 @@ export default class Outline {
 
         // Process all headings with anchor links and styling
         this.#items = elems.map((elem) => {
+            if (!elem.id)
+                elem.id = elem.textContent.replace(/[-’/`~!#*$@_%+=.,^&(){}[\]|;:”<>?\\]/g, "").replace(/\s+/g, '-').toLowerCase(); // If there isn't an ID, we need to make one.
+            
             return new OutlineItem(elem.textContent, elem.id, selectors.indexOf(elem.tagName.toLowerCase()) + 1);
         });
 
@@ -177,12 +180,21 @@ export default class Outline {
 
     }
 
+    /**
+     * Adds an Intersection Observer to the items in the current instance.
+     *
+     * @param {Function} fn - The callback function to be called when an intersection occurs.
+     * @param {Object} options - The options for the Intersection Observer. If not provided, default options are used.
+     * @param {HTMLElement} options.root - The element that is used as the viewport for checking visibility of the target. Defaults to the outline document.
+     * @param {string} options.rootMargin - The margin around the root. Defaults to "0px".
+     * @param {number} options.threshold - Indicates at what percentage of the target's visibility the observer's callback should be executed. Defaults to 1.0.
+     */
     addIntersectionObserver(fn, options) {
         if (!options) 
             options = {
                 root: this.#doc,
                 rootMargin: "0px",
-                threshold: 0.5
+                threshold: 1.0
             };
         const intersectionObserver = new IntersectionObserver(fn, options);
         this.#items.map((item) => {
@@ -193,13 +205,16 @@ export default class Outline {
         });
     }
 
-    clearStyles() {
+    /**
+    * Clears the styles of all outline items in the document.
+    */
+    clearAllActive() {
         this.#items.map((item) => {
+            // Make sure we have an ID
             if (!item.href) return;
-            let node = this.#doc.getElementById(item.href);
-
-            if (!node) return;
-            node.style = "";
+            let node = this.#doc.getElementById(item.href + '-outline-item');
+            node.classList.remove("outline-item-active");
+            node.firstChild.classList.remove("outline-item-active");
         });
     }
     
