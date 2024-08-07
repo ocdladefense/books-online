@@ -4,12 +4,10 @@ import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
 import { Modal } from "@ocdladefense/modal/dist/modal.js";
 import WebcOrs from "@ocdladefense/webc-ors/src/WebcOrs.js";
 import WebcOar from "@ocdladefense/webc-oar/src/WebcOar.js";
-import { formatReferences, doRefs } from "./citations.js";
+import { formatReferences, doRefs } from "../../dev_modules/citations/citations.js";
 import loadToc from "./components/Toc.js";
 import Outline from "@ocdla/outline";
 
-// TODO: This wasn't being referenced. Find out what it does.
-import init from "./init.js"; 
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 
 /**
