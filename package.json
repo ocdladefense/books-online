@@ -20,17 +20,18 @@
   },
   "homepage": "https://github.com/ocdladefense/intern-starter#readme",
   "dependencies": {
-    "@ocdladefense/dom": "file:dev_modules/@ocdla/node-dom",
-    "@ocdladefense/html": "file:dev_modules/@ocdla/node-html",
-    "@ocdla/lib-http": "file:dev_modules/@ocdla/lib-http",
-    "@ocdladefense/lib-polyfill": "file:dev_modules/@ocdla/lib-polyfill",
-    "@ocdladefense/modal": "file:dev_modules/@ocdla/node-modal",
-    "@ocdladefense/ors": "file:dev_modules/@ocdla/node-ors",
+    "@ocdladefense/dom": "file:./dev_modules/@ocdla/dom",
+    "@ocdladefense/html": "file:./dev_modules/@ocdla/html",
+    "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http",
+    "@ocdladefense/lib-polyfill": "file:./dev_modules/@ocdla/lib-polyfill",
+    "@ocdladefense/modal": "file:./dev_modules/@ocdla/modal",
+    "@ocdladefense/ors": "file:./dev_modules/@ocdla/ors",
     "@ocdla/view": "^2.1.1",
-    "@ocdladefense/web": "file:dev_modules/@ocdla/node-web",
-    "@ocdladefense/webc-oar": "file:dev_modules/@ocdla/webc-oar",
-    "@ocdladefense/webc-ors": "file:dev_modules/@ocdla/webc-ors",
-    "@ocdla/outline": "file:dev_modules/@ocdla/outline",
+    "@ocdladefense/web": "file:./dev_modules/@ocdla/web",
+    "@ocdladefense/webc-oar": "file:./dev_modules/@ocdla/webc-oar",
+    "@ocdladefense/webc-ors": "file:./dev_modules/@ocdla/webc-ors",
+    "@ocdla/outline": "file:./dev_modules/@ocdla/outline",
+    "@ocdla/global-components": "file:./dev_modules/@ocdla/global-components",
     "babel-plugin-inline-dotenv": "^1.7.0",
     "npm-watch": "^0.11.0"
   },
@@ -54,5 +55,14 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
     "@ocdla/view": "^2.1.1"
+  },
+  "overrides": {
+    "@ocdladefense/webc-ors": {
+      "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http",
+      "@ocdladefense/ors": "file:./dev_modules/@ocdla/ors"
+    },
+    "@ocdladefense/webc-oar": {
+      "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http"
+    }
   }
 }

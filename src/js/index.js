@@ -9,10 +9,14 @@ import '/themes/books-online/css/headings.css';
 import '/themes/books-online/css/toc.css';
 import '/themes/books-online/css/modal.css';
 import '/themes/books-online/css/tools.css';
-
 import '/themes/books-online/css/desktop.css'; //'(min-width:767px)' 
 
-let controller;
-window.onload = () => {
-    controller = new BooksOnlineController();
-}
+
+// import { OrsApiMock } from "./mock/OrsApiMock.js";
+// import { OarApiMock } from "./mock/OarApiMock.js";
+// HttpClient.register("appdev.ocdla.org", new OrsApiMock());
+// HttpClient.register("appdev.ocdla.org", new OarApiMock());
+
+
+
+let controller = new BooksOnlineController();

@@ -1,6 +1,6 @@
 
-import OregonLegislatureNetwork from "/node_modules/@ocdladefense/ors/src/Network.js";
-import {InlineModal} from "/node_modules/@ocdladefense/modal/dist/inline-modal.js";
+
+import {InlineModal} from "@ocdladefense/modal/dist/inline-modal.js";
 
 
 
