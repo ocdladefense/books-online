@@ -94,17 +94,66 @@ blockquote.statute {
 }
 
 
+.outline {
+    display: none;
+    vertical-align: top;
+    position: static;
+    font-family: var(--heading-font-family);
+    padding-top: 15px;
+    overflow-y: scroll;
+    position: sticky;
+    background: var(--paper-color);
+}
 
+.outline-anchor {
+    color: var(--text-darker);
+}
+
+.outline-anchor-active {
+    font-weight: 900;
+    color: #000;
+}
+
+
+.outline-list {
+    border-left: 1px solid;
+    border-left-color: goldenrod;
+    padding-left: 20px;
+    margin-left: 12px;
+    
+}
 
 .outline-item {
-    margin-top: 13px;
+    margin-top: 0px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 3px;
     font-size: 13px;
+
+    list-style-type: none;
+    
 }
 
 .outline-item-level-1 {
-    font-weight: bold;
-    color: rgba(0,0,0,0.6);
-    margin-top: 30px;
+    font-weight: 700;
+}
+
+.outline-item-level-2 {
+    font-weight: 500;
+}
+
+.outline-item-level-3 {
+    font-weight: normal;
+}
+
+ul > li.outline-item-active {
+    background: rgb(218, 165, 32);
+    background: linear-gradient(90deg, rgba(218, 165, 32, 1) 0%, rgba(218, 165, 32, 0.0) 100%);
+    border-radius: 2px;
+}
+.outline-item-active {
+    font-weight: 900;
+    color: #000;
 }
 
 h1.chapter-title i {
@@ -214,15 +263,7 @@ h1 {
     grid-row: 1;
 }
 
-.outline {
-    display: none;
-    vertical-align: top;
-    position: static;
-    font-family: var(--heading-font-family);
-    padding-top: 15px;
-    overflow-y: scroll;
-    position: sticky;
-}
+
 
 
 .document p {

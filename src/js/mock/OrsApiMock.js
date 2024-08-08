@@ -1,5 +1,5 @@
-import { HttpMock } from "../lib-http/HttpMock.js";
-import { Url } from "../lib-http/Url.js";
+import HttpMock from "@ocdla/lib-http/HttpMock";
+import Url  from "@ocdla/lib-http/Url";
 export { OrsApiMock };
 
 

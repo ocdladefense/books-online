@@ -2,6 +2,7 @@
  * Convert all citations to links to Google Scholar.
  */
 
+// TODO: Set up not as a submodule.
 
 const courts = {
   Or: "Oregon Supreme Court",

@@ -7,7 +7,8 @@
     "docs": "./node_modules/.bin/jsdoc js/BooksOnlineController.js -d docs",
     "webpack": "webpack",
     "build": "webpack --config webpack.config.js",
-    "watch": "webpack serve --open"
+    "watch": "webpack serve --open --env USEMOCK=true",
+    "watch-no-mock": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -20,18 +21,20 @@
   },
   "homepage": "https://github.com/ocdladefense/intern-starter#readme",
   "dependencies": {
-    "@ocdladefense/dom": "file:dev_modules/node-dom",
-    "@ocdladefense/html": "file:dev_modules/node-html",
-    "@ocdladefense/lib-http": "file:dev_modules/lib-http",
-    "@ocdladefense/lib-mock": "file:dev_modules/lib-mock",
-    "@ocdladefense/lib-polyfill": "file:dev_modules/lib-polyfill",
-    "@ocdladefense/modal": "file:dev_modules/node-modal",
-    "@ocdladefense/ors": "file:dev_modules/node-ors",
-    "@ocdladefense/view": "^2.1.1",
-    "@ocdladefense/web": "file:dev_modules/node-web",
-    "@ocdladefense/webc-oar": "file:dev_modules/webc-oar",
-    "@ocdladefense/webc-ors": "file:dev_modules/webc-ors",
+    "@ocdla/global-components": "file:./dev_modules/@ocdla/global-components",
+    "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http",
+    "@ocdla/outline": "file:./dev_modules/@ocdla/outline",
+    "@ocdla/view": "^2.1.1",
+    "@ocdladefense/dom": "file:./dev_modules/@ocdla/dom",
+    "@ocdladefense/html": "file:./dev_modules/@ocdla/html",
+    "@ocdladefense/modal": "file:./dev_modules/@ocdla/modal",
+    "@ocdladefense/ors": "file:./dev_modules/@ocdla/ors",
+    "@ocdladefense/web": "file:./dev_modules/@ocdla/web",
+    "@ocdladefense/webc-oar": "file:./dev_modules/@ocdla/webc-oar",
+    "@ocdladefense/webc-ors": "file:./dev_modules/@ocdla/webc-ors",
     "babel-plugin-inline-dotenv": "^1.7.0",
+    "citations": "file:./dev_modules/citations",
+    "lib-modal": "file:./dev_modules/lib-modal",
     "npm-watch": "^0.11.0"
   },
   "extra": {
@@ -42,10 +45,12 @@
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.14.5",
+    "@ocdla/view": "^2.1.1",
     "babel-loader": "^8.2.2",
     "babel-plugin-root-import": "^6.6.0",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
     "jsdoc": "^4.0.2",
     "postcss-loader": "^8.1.1",
@@ -53,5 +58,14 @@
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
+  },
+  "overrides": {
+    "@ocdladefense/webc-ors": {
+      "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http",
+      "@ocdladefense/ors": "file:./dev_modules/@ocdla/ors"
+    },
+    "@ocdladefense/webc-oar": {
+      "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http"
+    }
   }
 }
