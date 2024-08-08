@@ -1,13 +1,6 @@
-const dotenv = require('dotenv');
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-
-const env = dotenv.config().parsed;
-const envKeys = Object.keys(env).reduce((prev, next) => {
-    prev['process.env.' + next] = JSON.stringify(env[next]);
-    return prev;
-}, {});
 
 module.exports = {
   mode: "development",
@@ -80,10 +73,16 @@ module.exports = {
         test: /\.(png|jpg|gif)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
     ],
   },
   plugins: [
-    new webpack.DefinePlugin(envKeys),
+    new webpack.DefinePlugin({
+      "USEMOCK": JSON.stringify(process.env.USEMOCK || false),
+    }),
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/index.html"),
       chunks: ["app"],

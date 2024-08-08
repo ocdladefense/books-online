@@ -43,16 +43,29 @@ export default class Outline {
      */
     outline() {
         let selectors = Array.from(arguments).map((arg) => arg.toLowerCase().trim());
+        console.log(selectors);
 
         // Take a comma separated string of html selectors
         const elems = [...this.#doc.querySelectorAll(selectors.join(","))];
 
         // Process all headings with anchor links and styling
         this.#items = elems.map((elem) => {
+            const header = elem.children[0];
+            const label = header.textContent;
             if (!elem.id)
-                elem.id = elem.textContent.replace(/[-’/`~!#*$@_%+=.,^&(){}[\]|;:”<>?\\]/g, "").replace(/\s+/g, '-').toLowerCase(); // If there isn't an ID, we need to make one.
+                // If there isn't an ID, we need to make one.
+                elem.id = label.replace(/[-’/`~!#*$@_%+=.,^&(){}[\]|;:”<>?\\]/g, "").replace(/\s+/g, '-').toLowerCase(); 
             
-            return new OutlineItem(elem.textContent, elem.id, selectors.indexOf(elem.tagName.toLowerCase()) + 1);
+            // Find our indentation level
+            let level = -1;
+            for (let i = 0; i < selectors.length; i++) {
+                if (elem.matches(selectors[i])) {
+                    level = i + 1;
+                    break;
+                }
+            }
+
+            return new OutlineItem(label, elem.id, level);
         });
 
     }

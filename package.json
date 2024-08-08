@@ -7,7 +7,8 @@
     "docs": "./node_modules/.bin/jsdoc js/BooksOnlineController.js -d docs",
     "webpack": "webpack",
     "build": "webpack --config webpack.config.js",
-    "watch": "webpack serve --open"
+    "watch": "webpack serve --open --env USEMOCK=true",
+    "watch-no-mock": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -20,21 +21,21 @@
   },
   "homepage": "https://github.com/ocdladefense/intern-starter#readme",
   "dependencies": {
+    "@ocdla/global-components": "file:./dev_modules/@ocdla/global-components",
+    "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http",
+    "@ocdla/outline": "file:./dev_modules/@ocdla/outline",
+    "@ocdla/view": "^2.1.1",
     "@ocdladefense/dom": "file:./dev_modules/@ocdla/dom",
     "@ocdladefense/html": "file:./dev_modules/@ocdla/html",
-    "@ocdla/lib-http": "file:./dev_modules/@ocdla/lib-http",
     "@ocdladefense/modal": "file:./dev_modules/@ocdla/modal",
     "@ocdladefense/ors": "file:./dev_modules/@ocdla/ors",
-    "@ocdla/view": "^2.1.1",
     "@ocdladefense/web": "file:./dev_modules/@ocdla/web",
     "@ocdladefense/webc-oar": "file:./dev_modules/@ocdla/webc-oar",
     "@ocdladefense/webc-ors": "file:./dev_modules/@ocdla/webc-ors",
-    "@ocdla/outline": "file:./dev_modules/@ocdla/outline",
-    "@ocdla/global-components": "file:./dev_modules/@ocdla/global-components",
     "babel-plugin-inline-dotenv": "^1.7.0",
-    "npm-watch": "^0.11.0",
+    "citations": "file:./dev_modules/citations",
     "lib-modal": "file:./dev_modules/lib-modal",
-    "citations": "file:./dev_modules/citations"
+    "npm-watch": "^0.11.0"
   },
   "extra": {
     "1": "https://github.com/entwicklerstube/babel-plugin-root-import"
@@ -44,18 +45,19 @@
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.14.5",
+    "@ocdla/view": "^2.1.1",
     "babel-loader": "^8.2.2",
     "babel-plugin-root-import": "^6.6.0",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
     "jsdoc": "^4.0.2",
     "postcss-loader": "^8.1.1",
     "style-loader": "^4.0.0",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4",
-    "@ocdla/view": "^2.1.1"
+    "webpack-dev-server": "^5.0.4"
   },
   "overrides": {
     "@ocdladefense/webc-ors": {
