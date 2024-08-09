@@ -36,7 +36,10 @@ module.exports = {
   devtool: "source-map",
   module: {
     rules: [
-      { test: /\.xml$/, loader: 'xml-loader' },
+      {
+        test: /\.xml/,
+        type: 'asset/source'
+      },
       {
         test: /\.(js|jsx)$/,
         // exclude: /(node_modules|dev_modules)/,

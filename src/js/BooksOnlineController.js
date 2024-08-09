@@ -19,7 +19,22 @@ import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 export default class BooksOnlineController {
   modal = null;
 
+
+  async getIndex() {
+    let client = new HttpClient();
+
+    let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
+
+    let xml = await resp.text();
+
+    const parser = new DOMParser();
+
+    return parser.parseFromString(xml, "application/xml");
+  }
+
   constructor() {
+
+    this.getIndex().then((xml) => {console.log(xml); return xml;});
     // Full-screen modal.
     this.modal = new Modal();
     window.modal = this.modal;

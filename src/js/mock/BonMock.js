@@ -5,7 +5,7 @@ import fsm1 from './mock-data/fsm-1.html';
 export { BonMock };
 
 
-
+console.log(BonIndex);
 class BonMock extends HttpMock {
     errors = {
         'success': false,
