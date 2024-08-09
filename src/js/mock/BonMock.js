@@ -1,7 +1,7 @@
 import HttpMock from "@ocdla/lib-http/HttpMock";
 import Url  from "@ocdla/lib-http/Url";
 import BonIndex from './mock-data/books.xml';
-import Fsm1 from './mock-data/fsm-1.html';
+import fsm1 from './mock-data/fsm-1.html';
 export { BonMock };
 
 
@@ -19,10 +19,8 @@ class BonMock extends HttpMock {
 
         //let query = url.getQuery();
 
-        if (url.path.contains('index')) {
-            return new Response(BonIndex, { headers: { 'Content-Type': 'application/xml' } });
-        }
-        return new Response(Fsm1);
+
+        return url.path.includes('index') ? new Response(BonIndex, { headers: { 'Content-Type': 'application/xml' } }) : new Response(fsm1);
     }
 
     /* filterSections(chapter, section = null) {

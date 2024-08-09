@@ -27,7 +27,7 @@ export default class BooksOnlineController {
     // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors">
     // TODO: Set up env variables
     
-    let documentReady = this.fetchChapter("fsm", "1").then((html) => {
+    let documentReady = BooksOnlineController.fetchChapter("fsm", "1").then((html) => {
         const chapter = document.createElement('div');
         chapter.setAttribute('class', 'document');
         const doc = document.createElement('div');
@@ -39,7 +39,7 @@ export default class BooksOnlineController {
         document.querySelector('.document').replaceWith(chapter);
     });
       
-    let outlineReady = documentReady.then(() => {
+    documentReady.then(() => {
       const outline = Outline.fromCurrentDocument();
       outline.outline(".level1", ".level2", ".level3", ".level4", ".level5", ".level6");
       document.querySelector(".outline").appendChild(outline.toNodeTree());
@@ -96,7 +96,7 @@ export default class BooksOnlineController {
       //   allWebcOar[i].replaceWith(elem);
       // }
 
-    });
+    //});
 
 
     
@@ -268,7 +268,7 @@ export default class BooksOnlineController {
     // body.innerHTML = parsed;
   }
 
-  async fetchChapter(book, chapter) {
+  static async fetchChapter(book, chapter) {
     const url = `https://pubs.ocdla.org/${book}/${chapter}`;
     const req = new Request(url);
     const client = new HttpClient();

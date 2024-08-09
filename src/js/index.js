@@ -14,9 +14,9 @@ import '/themes/books-online/css/desktop.css'; //'(min-width:767px)'
 
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 
-import { OrsApiMock } from "./mock/OrsApiMock.js";
-import { OarApiMock } from "./mock/OarApiMock.js";
-import { BonMock } from "./mock/FsmMock.js";
+// import { OrsApiMock } from "./mock/OrsApiMock.js";
+// import { OarApiMock } from "./mock/OarApiMock.js";
+import { BonMock } from "./mock/BonMock.js";
 
 if (true) {
     //HttpClient.register("https://appdev.ocdla.org/", new OrsApiMock());
