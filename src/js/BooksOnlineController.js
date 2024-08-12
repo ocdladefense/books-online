@@ -62,6 +62,7 @@ export default class BooksOnlineController {
         const book = tocItem.dataset.book;
         const chapter = tocItem.dataset.chapter;
         BooksOnlineController.renderContent(book, chapter); 
+        document.querySelector('.top-of-page').scrollIntoView({ behavior: "smooth" });
       }) });
 
       // Add the table of contents to the page.
@@ -96,44 +97,7 @@ export default class BooksOnlineController {
 
     
 
-    // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
-    let refContainer = document.querySelector("#all-refs");
-    let citations = document.querySelectorAll(".cite");
-    let refs = document.querySelectorAll("[references], .cite");
-
-    domReady(function () {
-      document.addEventListener("click", this);
-      BooksOnlineController.convert(".chapter");
-      formatReferences(citations);
-      doRefs(refs, refContainer);
-
-      // const outline = Outline.fromCurrentDocument();
-      // outline.outline("h1", "h2", "h3");
-      // document.querySelector(".outline").appendChild(outline.toNodeTree());
-
-      // const handleIntersection = (observedEntries) => {
-      //   // Filter out entries that are not intersecting
-      //   const intersectingEntries = observedEntries.filter(
-      //     (entry) => entry.isIntersecting
-      //   );
-
-      //   // Make sure we have at least one entry remaining
-      //   if (intersectingEntries.length == 0) return;
-
-      //   // Iterate through our outline items and clear their styles.
-      //   outline.clearAllActive();
-
-      //   // We only want the first entry. It's possible to scroll through multiple headings at once.
-      //   const entry = intersectingEntries[0];
-      //   const id = entry.target.id;
-      //   const outlineListItem = document.getElementById(`${id}-outline-item`);
-      //   outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
-      //   outlineListItem.classList.add("outline-item-active");
-      //   outlineListItem.firstChild.classList.add("outline-item-active");
-      // };
-
-      // outline.addIntersectionObserver(handleIntersection);
-    });
+   
 
     // domReady(initOutline);
 
@@ -292,7 +256,7 @@ export default class BooksOnlineController {
       document.querySelector('.document').replaceWith(chapter);
     });
       
-    chapterReady.then(() => {
+    const outlineReady = chapterReady.then(() => {
       const outline = Outline.fromCurrentDocument();
       outline.outline(".level1", ".level2", ".level3", ".level4", ".level5", ".level6");
       document.querySelector(".outline").replaceChildren(outline.toNodeTree());
@@ -320,6 +284,20 @@ export default class BooksOnlineController {
 
       outline.addIntersectionObserver(handleIntersection);
       });
+
+    const refsReady = outlineReady.then(() => {
+       // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
+      let refContainer = document.querySelector("#all-refs");
+      let citations = document.querySelectorAll(".cite");
+      let refs = document.querySelectorAll("[references], .cite");
+
+      document.addEventListener("click", this);
+      BooksOnlineController.convert(".document");
+      formatReferences(citations);
+      doRefs(refs, refContainer);
+
+    });
+
 
     // let customElemReady = outlineReady.then(() => {
     //   // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors" class="webc-ors"></div>
