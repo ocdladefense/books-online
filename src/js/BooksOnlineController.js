@@ -36,7 +36,7 @@ export default class BooksOnlineController {
   constructor() {
 
     this.getIndex().then((xml) => {
-      const toc = TableOfContents.fromXml(xml);
+      const toc = TableOfContents.fromXml(xml, "https://pubs.ocdla.org");
       const nodeTree = toc.toNodeTree();
       const tocContent = document.querySelector('.toc-content');
       tocContent.replaceWith(nodeTree);

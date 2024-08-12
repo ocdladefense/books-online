@@ -1,10 +1,12 @@
 import Chapter from "./chapter";
 export default class TableOfContents {
+    #path;
     #chapters = new Array();
-    constructor(chapters) {
+    constructor(chapters, path = "") {
+        this.#path = path;
         this.#chapters = chapters;
     }       
-    static fromXml(xml) {
+    static fromXml(xml, path) {
         const items = [...xml.querySelectorAll("section, chapter")];
         const chapters = items.map((item) => {
             
@@ -13,7 +15,7 @@ export default class TableOfContents {
             const heading = titleCase + ' ' + item.id.split('-')[1];
             return new Chapter(item.id, item.attributes.name.textContent, heading)
     });
-        return new TableOfContents(chapters);
+        return new TableOfContents(chapters, path);
     }
 
     getChapters() {
@@ -36,7 +38,7 @@ export default class TableOfContents {
 
             // Make our table of contents link from our ID.
             // This is the entire item as well, since we want it all to be clickable
-            const href = '/' + chapter.getId().replace("-", "/");
+            const href = this.#path + '/' + chapter.getId().replace("-", "/");
             const a = document.createElement("a");
             a.setAttribute("href", href);
             a.setAttribute("title", ' - ' + chapter.getName());
