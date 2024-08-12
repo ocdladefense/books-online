@@ -36,18 +36,37 @@ export default class BooksOnlineController {
   constructor() {
 
     // Build the table of contents.
-    this.getIndex().then((xml) => {
+    const tocReady = this.getIndex().then((xml) => {
       const toc = TableOfContents.fromXml(xml, "https://pubs.ocdla.org");
       const nodeTree = toc.toNodeTree();
       [...nodeTree.children].map((node) => { node.addEventListener("click", (event) => { 
         event.preventDefault();
-        const book = node.dataset.book;
-        const chapter = node.dataset.chapter;
+
+        let tocItem = event.currentTarget;
+        let parent = tocItem.parentNode;
+
+        let siblings = parent.children;
+        [...siblings].map((sibling) => { sibling.classList.remove("toc-active") });
+
+        tocItem.classList.add("toc-active");
+
+        const book = tocItem.dataset.book;
+        const chapter = tocItem.dataset.chapter;
         BooksOnlineController.renderContent(book, chapter); 
       }) });
       const tocContent = document.querySelector('.toc-content');
       tocContent.replaceWith(nodeTree);
     });
+
+    tocReady.then(() => {
+      const tocContent = document.querySelector('.toc-content');
+      const tocItem = tocContent.children[0];
+      tocItem.setAttribute("class", "toc-active toc-item");
+
+      const book = tocItem.dataset.book;
+      const chapter = tocItem.dataset.chapter;
+      BooksOnlineController.renderContent(book, chapter);
+    })
 
     // Full-screen modal.
     this.modal = new Modal();
@@ -143,7 +162,7 @@ export default class BooksOnlineController {
 
 
 
-    BooksOnlineController.renderContent("fsm", "1");
+    
   }
 
   /**
