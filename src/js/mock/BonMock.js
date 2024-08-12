@@ -2,6 +2,8 @@ import HttpMock from "@ocdla/lib-http/HttpMock";
 import Url  from "@ocdla/lib-http/Url";
 import BonIndex from './mock-data/books.xml';
 import fsm1 from './mock-data/fsm/fsm-1.html';
+import fsm2 from './mock-data/fsm/fsm-2.html';
+import fsm3 from './mock-data/fsm/fsm-3.html';
 export { BonMock };
 
 
@@ -11,8 +13,8 @@ class BonMock extends HttpMock {
         '/fsm/foreword': fsm1,
         '/fsm/outline': fsm1,
         '/fsm/1': fsm1,
-        '/fsm/2': fsm1,
-        '/fsm/3': fsm1,
+        '/fsm/2': fsm2,
+        '/fsm/3': fsm3,
         '/fsm/4': fsm1,
         '/fsm/5': fsm1,
         '/fsm/6': fsm1,

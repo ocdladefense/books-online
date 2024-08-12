@@ -35,9 +35,16 @@ export default class BooksOnlineController {
 
   constructor() {
 
+    // Build the table of contents.
     this.getIndex().then((xml) => {
       const toc = TableOfContents.fromXml(xml, "https://pubs.ocdla.org");
       const nodeTree = toc.toNodeTree();
+      [...nodeTree.children].map((node) => { node.addEventListener("click", (event) => { 
+        event.preventDefault();
+        const book = node.dataset.book;
+        const chapter = node.dataset.chapter;
+        BooksOnlineController.renderContent(book, chapter); 
+      }) });
       const tocContent = document.querySelector('.toc-content');
       tocContent.replaceWith(nodeTree);
     });
@@ -46,79 +53,12 @@ export default class BooksOnlineController {
     this.modal = new Modal();
     window.modal = this.modal;
 
+    
+
     // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors">
     // TODO: Set up env variables
     
-    let documentReady = BooksOnlineController.fetchChapter("fsm", "1").then((html) => {
-        const chapter = document.createElement('div');
-        chapter.setAttribute('class', 'document');
-        const doc = document.createElement('div');
-        doc.innerHTML = html;
-        let sections = doc.querySelectorAll('header, section');
-        for (let i = 0; i < sections.length; i++) {
-          chapter.appendChild(sections[i]);
-        }
-        document.querySelector('.document').replaceWith(chapter);
-    });
-      
-    documentReady.then(() => {
-      const outline = Outline.fromCurrentDocument();
-      outline.outline(".level1", ".level2", ".level3", ".level4", ".level5", ".level6");
-      document.querySelector(".outline").appendChild(outline.toNodeTree());
-
-      const handleIntersection = (observedEntries) => {
-        // Filter out entries that are not intersecting
-        const intersectingEntries = observedEntries.filter(
-          (entry) => entry.isIntersecting
-        );
-
-        // Make sure we have at least one entry remaining
-        if (intersectingEntries.length == 0) return;
-
-        // Iterate through our outline items and clear their styles.
-        outline.clearAllActive();
-
-        // We only want the first entry. It's possible to scroll through multiple headings at once.
-        const entry = intersectingEntries[0];
-        const id = entry.target.id;
-        const outlineListItem = document.getElementById(`${id}-outline-item`);
-        outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
-        outlineListItem.classList.add("outline-item-active");
-        outlineListItem.firstChild.classList.add("outline-item-active");
-      };
-
-      outline.addIntersectionObserver(handleIntersection);
-    });
-  
-    // let customElemReady = outlineReady.then(() => {
-    //   // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors" class="webc-ors"></div>
-
-    //   // customElements.define("webc-ors", WebcOrs);
-    //   // customElements.define("webc-oar", WebcOar);
-
-    //   let allWebcOrs = document.querySelectorAll(".webc-ors");
-    //   let allWebcOar = document.querySelectorAll(".webc-oar");
-
-    //   for (let i = 0; i < allWebcOrs.length; i++) {
-    //     let elem = document.createElement("webc-ors");
-    //     elem.setAttribute("ref", allWebcOrs[i].getAttribute("ref"));
-    //     elem.setAttribute("custom-style", allWebcOrs[i].getAttribute("custom-style"));
-    //     elem.setAttribute("data-custom-style", allWebcOrs[i].getAttribute("data-custom-style"));
-    //     elem.setAttribute("class", allWebcOrs[i].getAttribute("class"));
-    //     allWebcOrs[i].replaceWith(elem);
-    //   }
-
-      // for (let i = 0; i < allWebcOar.length; i++) {
-      //   let elem = document.createElement("webc-oar");
-
-      //   elem.setAttribute("ref", allWebcOar[i].getAttribute("ref"));
-      //   elem.setAttribute("custom-style", allWebcOar[i].getAttribute("custom-style"));
-      //   elem.setAttribute("data-custom-style", allWebcOar[i].getAttribute("data-custom-style"));
-      //   elem.setAttribute("class", allWebcOar[i].getAttribute("class"));
-      //   allWebcOar[i].replaceWith(elem);
-      // }
-
-    //});
+    
 
 
     
@@ -200,6 +140,10 @@ export default class BooksOnlineController {
     });
 
     // customElements.define("word-count", WordCount, { extends: "p" });
+
+
+
+    BooksOnlineController.renderContent("fsm", "1");
   }
 
   /**
@@ -293,12 +237,88 @@ export default class BooksOnlineController {
   }
 
   static async fetchChapter(book, chapter) {
+
     const url = `https://pubs.ocdla.org/${book}/${chapter}`;
     const req = new Request(url);
     const client = new HttpClient();
     const resp = await client.send(req);
     return resp.text();
   }
+
+  static async renderContent(book, chapter) {
+
+    let chapterReady = BooksOnlineController.fetchChapter(book, chapter).then((html) => {
+      const chapter = document.createElement('div');
+      chapter.setAttribute('class', 'document');
+      const doc = document.createElement('div');
+      doc.innerHTML = html;
+      let sections = doc.querySelectorAll('header, section');
+      for (let i = 0; i < sections.length; i++) {
+        chapter.appendChild(sections[i]);
+      }
+      document.querySelector('.document').replaceWith(chapter);
+    });
+      
+    chapterReady.then(() => {
+      const outline = Outline.fromCurrentDocument();
+      outline.outline(".level1", ".level2", ".level3", ".level4", ".level5", ".level6");
+      document.querySelector(".outline").replaceChildren(outline.toNodeTree());
+
+      const handleIntersection = (observedEntries) => {
+        // Filter out entries that are not intersecting
+        const intersectingEntries = observedEntries.filter(
+          (entry) => entry.isIntersecting
+        );
+
+        // Make sure we have at least one entry remaining
+        if (intersectingEntries.length == 0) return;
+
+        // Iterate through our outline items and clear their styles.
+        outline.clearAllActive();
+
+        // We only want the first entry. It's possible to scroll through multiple headings at once.
+        const entry = intersectingEntries[0];
+        const id = entry.target.id;
+        const outlineListItem = document.getElementById(`${id}-outline-item`);
+        outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
+        outlineListItem.classList.add("outline-item-active");
+        outlineListItem.firstChild.classList.add("outline-item-active");
+      };
+
+      outline.addIntersectionObserver(handleIntersection);
+      });
+
+    // let customElemReady = outlineReady.then(() => {
+    //   // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors" class="webc-ors"></div>
+
+    //   // customElements.define("webc-ors", WebcOrs);
+    //   // customElements.define("webc-oar", WebcOar);
+
+    //   let allWebcOrs = document.querySelectorAll(".webc-ors");
+    //   let allWebcOar = document.querySelectorAll(".webc-oar");
+
+    //   for (let i = 0; i < allWebcOrs.length; i++) {
+    //     let elem = document.createElement("webc-ors");
+    //     elem.setAttribute("ref", allWebcOrs[i].getAttribute("ref"));
+    //     elem.setAttribute("custom-style", allWebcOrs[i].getAttribute("custom-style"));
+    //     elem.setAttribute("data-custom-style", allWebcOrs[i].getAttribute("data-custom-style"));
+    //     elem.setAttribute("class", allWebcOrs[i].getAttribute("class"));
+    //     allWebcOrs[i].replaceWith(elem);
+    //   }
+
+      // for (let i = 0; i < allWebcOar.length; i++) {
+      //   let elem = document.createElement("webc-oar");
+
+      //   elem.setAttribute("ref", allWebcOar[i].getAttribute("ref"));
+      //   elem.setAttribute("custom-style", allWebcOar[i].getAttribute("custom-style"));
+      //   elem.setAttribute("data-custom-style", allWebcOar[i].getAttribute("data-custom-style"));
+      //   elem.setAttribute("class", allWebcOar[i].getAttribute("class"));
+      //   allWebcOar[i].replaceWith(elem);
+      // }
+
+    //});
+
+    }
 
 
 }

@@ -24,4 +24,12 @@ export default class Chapter {
     isChapter() {
         return this.#heading.includes("Chapter");
     }
+
+    getBook() {
+        return this.#id.split("-")[0];
+    }
+
+    getChapter() {
+        return this.#id.split("-")[1];
+    }
 }
