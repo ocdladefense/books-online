@@ -37,32 +37,46 @@ export default class BooksOnlineController {
 
     // Build the table of contents.
     const tocReady = this.getIndex().then((xml) => {
-      const toc = TableOfContents.fromXml(xml, "https://pubs.ocdla.org");
+
+      // Create a table of contents from the XML loaded.
+      const toc = TableOfContents.fromXml(xml);
+
+      // Create the html for the table of contents.
       const nodeTree = toc.toNodeTree();
+
+      // Add event listeners to the table of contents.
       [...nodeTree.children].map((node) => { node.addEventListener("click", (event) => { 
         event.preventDefault();
 
         let tocItem = event.currentTarget;
         let parent = tocItem.parentNode;
 
+        // Remove the active class from all siblings.
         let siblings = parent.children;
         [...siblings].map((sibling) => { sibling.classList.remove("toc-active") });
 
+        // Add the active class to the current item.
         tocItem.classList.add("toc-active");
 
+        // Render the chapter.
         const book = tocItem.dataset.book;
         const chapter = tocItem.dataset.chapter;
         BooksOnlineController.renderContent(book, chapter); 
       }) });
+
+      // Add the table of contents to the page.
       const tocContent = document.querySelector('.toc-content');
       tocContent.replaceWith(nodeTree);
     });
 
+
     tocReady.then(() => {
+      // First page load, make the first item active.
       const tocContent = document.querySelector('.toc-content');
       const tocItem = tocContent.children[0];
       tocItem.setAttribute("class", "toc-active toc-item");
 
+      // Render the chapter.
       const book = tocItem.dataset.book;
       const chapter = tocItem.dataset.chapter;
       BooksOnlineController.renderContent(book, chapter);
