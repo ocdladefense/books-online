@@ -9,6 +9,7 @@ import loadToc from "./components/Toc.js";
 import Outline from "@ocdla/outline";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import Url from "@ocdla/lib-http/Url.js";
+import TableOfContents from "@ocdla/table-of-contents";
 
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 
@@ -34,7 +35,13 @@ export default class BooksOnlineController {
 
   constructor() {
 
-    this.getIndex().then((xml) => {console.log(xml); return xml;});
+    this.getIndex().then((xml) => {
+      const toc = TableOfContents.fromXml(xml);
+      const nodeTree = toc.toNodeTree();
+      const tocContent = document.querySelector('.toc-content');
+      tocContent.replaceWith(nodeTree);
+    });
+
     // Full-screen modal.
     this.modal = new Modal();
     window.modal = this.modal;
@@ -167,7 +174,9 @@ export default class BooksOnlineController {
     // }
 
     // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
-    window.loadToc = loadToc();
+    
+    
+    //window.loadToc = loadToc();
 
     // Setup the chapter ouline and display it inside of the div.outline-content element.
 

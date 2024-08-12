@@ -15,6 +15,19 @@ class BonMock extends HttpMock {
 
     getResponse(req) {
         let url = new Url(req.url);
+
+        // Remove the first / and replace the second with a - to get our ID.
+        // Example: /fsm/1 -> fsm-1
+        const id = url.getPath().split('/').slice(1).join('-');
+
+        // Get our chapter list from the XML
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(BonIndex, "application/xml");
+
+        const chapter = xml.querySelector(`chapter[id="${id}"]`);
+        console.log(chapter);
+
+
         //let data = [];
 
         //let query = url.getQuery();
