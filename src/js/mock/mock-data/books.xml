@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <books>
+    <!-- http://localhost:8080/?book=fsm&id=appendix-a -->
     <book name="Felony Sentencing Manual" shortName="fsm">
-        <sections>
-            <section id="fsm-foreword" name="Foreword"/>
-            <section id="fsm-outline" name="Sentencing Outline"/>
-        </sections>
+        <parts>
+            <part id="fsm-foreword" name="Foreword"/>
+            <part id="fsm-outline" name="Sentencing Outline"/>
+        </parts>
         <chapters>
-            <chapter id="fsm-1" name="Introduction"/>
-            <chapter id="fsm-2" name="Crime Seriousness Rankings"/>
-            <chapter id="fsm-3" name="Criminal History Scoring"/>
+            <chapter label="Chapter 1" id="fsm-1" name="Introduction"/>
+            <chapter label="Chapter 2" id="fsm-2" name="Crime Seriousness Rankings"/>
+            <chapter label="Chapter 3" id="fsm-3" name="Criminal History Scoring"/>
             <chapter id="fsm-4" name="Prison Sentences and Post-Prison Supervision"/>
             <chapter id="fsm-5" name="Probationary and Straight Jail Sentences"/>
             <chapter id="fsm-6" name="Plea Agreements"/>
@@ -17,5 +18,10 @@
             <chapter id="fsm-9" name="Appeals and Post-Sentencing/Resentencing Authority"/>
             <chapter id="fsm-10" name="Sentencing Guidelines"/>
         </chapters>
+        <appendices>
+            <appendix id="appendix-a" name="Appendix A"/>
+            <appendix id="appendix-b" name="Appendix B" />
+            <appendix id="appendix-c" name="Appendix C" />
+        </appendices>
     </book>
 </books>

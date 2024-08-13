@@ -44,82 +44,33 @@ export default class BooksOnlineController {
       // Create the html for the table of contents.
       const nodeTree = toc.toNodeTree();
 
-      // Add event listeners to the table of contents.
-      [...nodeTree.children].map((node) => { node.addEventListener("click", (event) => { 
-        event.preventDefault();
+      console.log(nodeTree);
 
-        let tocItem = event.currentTarget;
-        let parent = tocItem.parentNode;
 
-        // Remove the active class from all siblings.
-        let siblings = parent.children;
-        [...siblings].map((sibling) => { sibling.classList.remove("toc-active") });
-
-        // Add the active class to the current item.
-        tocItem.classList.add("toc-active");
-
-        // Render the chapter.
-        const book = tocItem.dataset.book;
-        const chapter = tocItem.dataset.chapter;
-        BooksOnlineController.renderContent(book, chapter); 
-        document.querySelector('.top-of-page').scrollIntoView({ behavior: "smooth" });
-      }) });
-
-      // Add the table of contents to the page.
-      const tocContent = document.querySelector('.toc-content');
-      tocContent.replaceWith(nodeTree);
+      document.querySelector(".toc-content").replaceWith(nodeTree);
     });
 
 
     tocReady.then(() => {
-      // First page load, make the first item active.
-      const tocContent = document.querySelector('.toc-content');
-      const tocItem = tocContent.children[0];
-      tocItem.setAttribute("class", "toc-active toc-item");
 
+      setSomethingAsActive("fsm-1");
       // Render the chapter.
       const book = tocItem.dataset.book;
       const chapter = tocItem.dataset.chapter;
       BooksOnlineController.renderContent(book, chapter);
-    })
+    });
+
+    function setSomethingAsActive(idSelector) {
+      idSelector = "#" + idSelector;
+      let tocItem = document.querySelector(idSelector);
+      tocItem.setAttribute("class", "toc-active toc-item");
+    }
 
     // Full-screen modal.
     this.modal = new Modal();
     window.modal = this.modal;
 
-    
-
-    // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors">
-    // TODO: Set up env variables
-    
-    
-
-
-    
-
-   
-
-    // domReady(initOutline);
-
-    // // Use these headings to create an on-the-fly outline of the document.
-    // function initOutline() {
-    //     let doc = new DomDocument();
-    //     window.DomDocument = DomDocument;
-    //     let nodeTree = doc.outline("h1, h2, h3"); // h1, h2, h3
-    //     //nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
-    //     document.querySelector(".outline").appendChild(nodeTree);
-    // }
-
-    // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
-    
-    
-    //window.loadToc = loadToc();
-
-    // Setup the chapter ouline and display it inside of the div.outline-content element.
-
-    // Create the document outline and display it.
-    // let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
-    // nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
+  
 
     window.addEventListener("hashchange", function (e) {
       e.preventDefault();
@@ -137,11 +88,47 @@ export default class BooksOnlineController {
     });
 
     // customElements.define("word-count", WordCount, { extends: "p" });
-
-
-
-    
   }
+
+
+
+
+
+changeChapter(e) {
+
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        let target = e.target;
+        let data = target.dataset;
+        let id = target.id;
+
+   
+        let currentTarget = e.currentTarget;
+
+        BooksOnlineController.removeClass(currentTarget, "toc-active");
+
+
+        // Add the active class to the current item.
+        target.classList.add("toc-active");
+
+        // Render the chapter.
+        const book = tocItem.dataset.book;
+        const chapter = tocItem.dataset.chapter;
+        BooksOnlineController.renderContent(book, chapter); 
+        document.querySelector('.top-of-page').scrollIntoView({ behavior: "smooth" });
+}
+
+
+// Remove the active class from all siblings.
+static removeClass(node, className) {
+  // Remove the active class from all siblings.
+ 
+  [...node.children].map((child) => {
+    child.classList.remove(className);
+  });
+}
 
   /**
    * Handle user-actions.  These include requests to open
@@ -285,49 +272,19 @@ export default class BooksOnlineController {
       outline.addIntersectionObserver(handleIntersection);
       });
 
-    const refsReady = outlineReady.then(() => {
-       // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
-      let refContainer = document.querySelector("#all-refs");
-      let citations = document.querySelectorAll(".cite");
-      let refs = document.querySelectorAll("[references], .cite");
+      const refsReady = outlineReady.then(() => {
+        // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
+        let refContainer = document.querySelector("#all-refs");
+        let citations = document.querySelectorAll(".cite");
+        let refs = document.querySelectorAll("[references], .cite");
 
-      document.addEventListener("click", this);
-      BooksOnlineController.convert(".document");
-      formatReferences(citations);
-      doRefs(refs, refContainer);
+        document.addEventListener("click", this);
+        BooksOnlineController.convert(".document");
+        formatReferences(citations);
+        doRefs(refs, refContainer);
 
-    });
+      });
 
-
-    // let customElemReady = outlineReady.then(() => {
-    //   // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors" class="webc-ors"></div>
-
-    //   // customElements.define("webc-ors", WebcOrs);
-    //   // customElements.define("webc-oar", WebcOar);
-
-    //   let allWebcOrs = document.querySelectorAll(".webc-ors");
-    //   let allWebcOar = document.querySelectorAll(".webc-oar");
-
-    //   for (let i = 0; i < allWebcOrs.length; i++) {
-    //     let elem = document.createElement("webc-ors");
-    //     elem.setAttribute("ref", allWebcOrs[i].getAttribute("ref"));
-    //     elem.setAttribute("custom-style", allWebcOrs[i].getAttribute("custom-style"));
-    //     elem.setAttribute("data-custom-style", allWebcOrs[i].getAttribute("data-custom-style"));
-    //     elem.setAttribute("class", allWebcOrs[i].getAttribute("class"));
-    //     allWebcOrs[i].replaceWith(elem);
-    //   }
-
-      // for (let i = 0; i < allWebcOar.length; i++) {
-      //   let elem = document.createElement("webc-oar");
-
-      //   elem.setAttribute("ref", allWebcOar[i].getAttribute("ref"));
-      //   elem.setAttribute("custom-style", allWebcOar[i].getAttribute("custom-style"));
-      //   elem.setAttribute("data-custom-style", allWebcOar[i].getAttribute("data-custom-style"));
-      //   elem.setAttribute("class", allWebcOar[i].getAttribute("class"));
-      //   allWebcOar[i].replaceWith(elem);
-      // }
-
-    //});
 
     }
 
