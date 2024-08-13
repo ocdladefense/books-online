@@ -4,7 +4,6 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
 
-
   return {
   mode: "development",
   entry: {
@@ -88,7 +87,7 @@ module.exports = (env) => {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "USEMOCK": JSON.stringify(process.env.USEMOCK || false),
+      "USEMOCK": JSON.stringify(env.USEMOCK || false),
     }),
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/index.html"),
