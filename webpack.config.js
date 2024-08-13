@@ -2,7 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+module.exports = (env) => {
+
+
+  return {
   mode: "development",
   entry: {
     app: path.resolve(__dirname, "./src/js/index.js"),
@@ -94,4 +97,5 @@ module.exports = {
       filename: "index.html",
     }),
   ],
+};
 };
