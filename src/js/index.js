@@ -18,7 +18,7 @@ import HttpClient from "@ocdla/lib-http/HttpClient.js";
 // import { OarApiMock } from "./mock/OarApiMock.js";
 import { BonMock } from "./mock/BonMock.js";
 
-if (true) {
+if (USEMOCK === 'true') {
     //HttpClient.register("https://appdev.ocdla.org/", new OrsApiMock());
     //HttpClient.register("https://appdev.ocdla.org/", new OarApiMock());
     HttpClient.register("https://pubs.ocdla.org/", new BonMock());
