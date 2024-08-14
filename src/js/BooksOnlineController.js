@@ -2,23 +2,28 @@
 /* eslint-disable no-unused-vars */
 import { vNode, View } from "@ocdla/view";
 
+// Unused imports
 import domReady from "@ocdladefense/web/src/web.js";
-import "@ocdladefense/html/html.js";
-import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
-import { Modal } from "@ocdladefense/modal/dist/modal.js";
 import WebcOrs from "@ocdladefense/webc-ors/src/WebcOrs.js";
 import WebcOar from "@ocdladefense/webc-oar/src/WebcOar.js";
 import {
   formatReferences,
   doRefs,
 } from "../../dev_modules/citations/citations.js";
-import loadToc from "./components/Toc.js";
-import Outline from "@ocdla/outline";
-import HttpClient from "@ocdla/lib-http/HttpClient.js";
-import Url from "@ocdla/lib-http/Url.js";
-import TableOfContents from "@ocdla/table-of-contents";
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 
+import "@ocdladefense/html/html.js";
+import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
+import { Modal } from "@ocdladefense/modal/dist/modal.js";
+
+import HttpClient from "@ocdla/lib-http/HttpClient.js";
+
+import Outline from "@ocdla/outline";
+import TableOfContents from "@ocdla/table-of-contents";
+
+// Global components
+import "../css/input.css";
+//import App from "./App";
 import Footer from "@ocdla/global-components/src/Footer.jsx";
 import Navbar from "@ocdla/global-components/src/Navbar.jsx";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
@@ -36,7 +41,7 @@ export default class BooksOnlineController {
     const root = View.createRoot(body);
     root.render(
       <>
-        <header class="sticky top-0">
+        <header class="sticky top-0 container mx-auto flex w-full flex-col bg-white lg:h-32">
           <Navbar />
           <Breadcrumbs items={[]} />
         </header>
