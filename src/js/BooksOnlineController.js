@@ -1,3 +1,7 @@
+/** @jsx vNode */ /** @jsxFrag "Fragment" */
+/* eslint-disable no-unused-vars */
+import { vNode, View } from "@ocdla/view";
+
 import domReady from "@ocdladefense/web/src/web.js";
 import "@ocdladefense/html/html.js";
 import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
@@ -24,6 +28,91 @@ export default class BooksOnlineController {
   modal = null;
 
   constructor() {
+    // TODO: Create base page with jsx
+    const body = document.querySelector("body");
+    const root = View.createRoot(body);
+    root.render(
+      <>
+        <div class="toolbar">
+          <div class="toolbar-section toolbar-left">
+            <img
+              class="logo"
+              src="https://appdev.ocdla.org/content/images/logo.png"
+            />
+          </div>
+
+          <div class="toolbar-section toolbar-right">
+            <webc-autocomplete
+              id="query"
+              style="display:inline-block; max-width: 60%;"
+            ></webc-autocomplete>
+
+            <div id="user-area">
+              <a
+                id="user-icon"
+                href="https://ocdla--ocdpartial.sandbox.my.site.com/AccountManager"
+                title="Hello "
+              >
+                <svg
+                  id="user-widget"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="50"
+                      style="fill: rgb(81 100 144);"
+                    ></circle>
+                    <text
+                      x="50%"
+                      y="50%"
+                      font-size="3.0em"
+                      fill="#ffffff"
+                      text-anchor="middle"
+                      stroke="#ffffff"
+                      stroke-width="0px"
+                      dy=".3em"
+                    >
+                      SA
+                    </text>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="toolbar-bottom">
+            <span class="nav-heading-item">Books Online</span>{" "}
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>{" "}
+            <span class="nav-heading-item">Felony Sentencing in Oregon</span>
+            <button>Feedback</button>
+          </div>
+        </div>
+
+        <div class="toc">
+          <div class="toc-content"></div>
+        </div>
+
+        <div class="workspace">
+          <div class="breadcrumb"></div>
+          <div class="top-of-page"></div>
+          <div class="document"></div>
+          <div class="outline"></div>
+        </div>
+
+        <footer></footer>
+
+        <div class="modal inline-modal" id="inline-ors">
+          <div class="modal-container">
+            <div class="modal-content">Loading...</div>
+          </div>
+        </div>
+      </>
+    );
+
     // Build the table of contents.
     const tocReady = this.getIndex().then((xml) => {
       // Create a table of contents from the XML loaded.
@@ -34,6 +123,8 @@ export default class BooksOnlineController {
       this.delegate("click", nodeTree, this.changeChapter);
 
       const tocContent = document.querySelector(".toc-content");
+
+      // TODO: Jsx this
       tocContent.replaceWith(nodeTree);
     });
 
@@ -206,6 +297,8 @@ export default class BooksOnlineController {
       for (let i = 0; i < sections.length; i++) {
         unit.appendChild(sections[i]);
       }
+
+      // TODO: Jsx this 2
       document.querySelector(".document").replaceWith(unit);
     });
 
@@ -219,6 +312,8 @@ export default class BooksOnlineController {
         ".level5",
         ".level6"
       );
+
+      // TODO: Jsx this 3
       document.querySelector(".outline").replaceChildren(outline.toNodeTree());
 
       const handleIntersection = (observedEntries) => {
