@@ -27,6 +27,8 @@ import "../css/input.css";
 import Footer from "@ocdla/global-components/src/Footer.jsx";
 import Navbar from "@ocdla/global-components/src/Navbar.jsx";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
+import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
+import Body from "@ocdla/global-components/src/Body.jsx";
 
 /**
  * Controller for the Books Online application.
@@ -41,32 +43,42 @@ export default class BooksOnlineController {
     const root = View.createRoot(body);
     root.render(
       <>
+        <div
+          // Preserve whitespace at end of top-0
+          // prettier-ignore
+          class='fixed right-0 z-10 flex w-max gap-2 bg-white p-4 lg:left-0 lg:p-2'
+        ></div>
         <header class="sticky top-0 container mx-auto flex w-full flex-col bg-white lg:h-32">
           <Navbar />
           <Breadcrumbs items={[]} />
         </header>
-        <div class="">
-          <div class="toc">
-            <div class="toc-content"></div>
-          </div>
-          <div class="workspace">
-            <div class="top-of-page"></div>
-            <div class="document"></div>
-            <div class="outline"></div>
-          </div>
-        </div>
-
-        <Footer
-          showFacebook="true"
-          showTwitter="true"
-          showGoogleMapsIFrame="true"
-        />
 
         <div class="modal inline-modal" id="inline-ors">
           <div class="modal-container">
             <div class="modal-content">Loading...</div>
           </div>
         </div>
+
+        {/* <Main cols='3' /> */}
+        <div class="container mx-auto border-x">
+          {/* <div class='flex flex-col lg:flex-row'> */}
+          <div class="lg:grid lg:grid-cols-6">
+            <div class="toc">
+              <div class="toc-content"></div>
+            </div>
+
+            <div class="workspace">
+              <div class="top-of-page"></div>
+              <div class="document"></div>
+              <div class="outline"></div>
+            </div>
+          </div>
+        </div>
+        <Footer
+          showFacebook={true}
+          showTwitter={true}
+          useGoogleMapsIFrame={true}
+        />
       </>
     );
 
