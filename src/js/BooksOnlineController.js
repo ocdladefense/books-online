@@ -17,8 +17,11 @@ import Outline from "@ocdla/outline";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import Url from "@ocdla/lib-http/Url.js";
 import TableOfContents from "@ocdla/table-of-contents";
-
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
+
+import Footer from "@ocdla/global-components/src/Footer.jsx";
+import Navbar from "@ocdla/global-components/src/Navbar.jsx";
+import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 
 /**
  * Controller for the Books Online application.
@@ -33,77 +36,26 @@ export default class BooksOnlineController {
     const root = View.createRoot(body);
     root.render(
       <>
-        <div class="toolbar">
-          <div class="toolbar-section toolbar-left">
-            <img
-              class="logo"
-              src="https://appdev.ocdla.org/content/images/logo.png"
-            />
+        <header class="sticky top-0">
+          <Navbar />
+          <Breadcrumbs items={[]} />
+        </header>
+        <div class="">
+          <div class="toc">
+            <div class="toc-content"></div>
           </div>
-
-          <div class="toolbar-section toolbar-right">
-            <webc-autocomplete
-              id="query"
-              style="display:inline-block; max-width: 60%;"
-            ></webc-autocomplete>
-
-            <div id="user-area">
-              <a
-                id="user-icon"
-                href="https://ocdla--ocdpartial.sandbox.my.site.com/AccountManager"
-                title="Hello "
-              >
-                <svg
-                  id="user-widget"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 100 100"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g>
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="50"
-                      style="fill: rgb(81 100 144);"
-                    ></circle>
-                    <text
-                      x="50%"
-                      y="50%"
-                      font-size="3.0em"
-                      fill="#ffffff"
-                      text-anchor="middle"
-                      stroke="#ffffff"
-                      stroke-width="0px"
-                      dy=".3em"
-                    >
-                      SA
-                    </text>
-                  </g>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="toolbar-bottom">
-            <span class="nav-heading-item">Books Online</span>{" "}
-            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>{" "}
-            <span class="nav-heading-item">Felony Sentencing in Oregon</span>
-            <button>Feedback</button>
+          <div class="workspace">
+            <div class="top-of-page"></div>
+            <div class="document"></div>
+            <div class="outline"></div>
           </div>
         </div>
 
-        <div class="toc">
-          <div class="toc-content"></div>
-        </div>
-
-        <div class="workspace">
-          <div class="breadcrumb"></div>
-          <div class="top-of-page"></div>
-          <div class="document"></div>
-          <div class="outline"></div>
-        </div>
-
-        <footer></footer>
+        <Footer
+          showFacebook="true"
+          showTwitter="true"
+          showGoogleMapsIFrame="true"
+        />
 
         <div class="modal inline-modal" id="inline-ors">
           <div class="modal-container">
