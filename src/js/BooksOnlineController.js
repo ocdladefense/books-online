@@ -4,7 +4,10 @@ import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
 import { Modal } from "@ocdladefense/modal/dist/modal.js";
 import WebcOrs from "@ocdladefense/webc-ors/src/WebcOrs.js";
 import WebcOar from "@ocdladefense/webc-oar/src/WebcOar.js";
-import { formatReferences, doRefs } from "../../dev_modules/citations/citations.js";
+import {
+  formatReferences,
+  doRefs,
+} from "../../dev_modules/citations/citations.js";
 import loadToc from "./components/Toc.js";
 import Outline from "@ocdla/outline";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
@@ -20,57 +23,31 @@ import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 export default class BooksOnlineController {
   modal = null;
 
-
-  async getIndex() {
-    let client = new HttpClient();
-
-    let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
-
-    let xml = await resp.text();
-
-    const parser = new DOMParser();
-
-    return parser.parseFromString(xml, "application/xml");
-  }
-
   constructor() {
-
     // Build the table of contents.
     const tocReady = this.getIndex().then((xml) => {
-
       // Create a table of contents from the XML loaded.
       const toc = TableOfContents.fromXml(xml);
 
       // Create the html for the table of contents.
       const nodeTree = toc.toNodeTree();
+      this.delegate("click", nodeTree, this.changeChapter);
 
-      console.log(nodeTree);
-
-
-      document.querySelector(".toc-content").replaceWith(nodeTree);
+      const tocContent = document.querySelector(".toc-content");
+      tocContent.replaceWith(nodeTree);
     });
-
 
     tocReady.then(() => {
-
-      setSomethingAsActive("fsm-1");
+      TableOfContents.setActive("fsm-1");
       // Render the chapter.
-      const book = tocItem.dataset.book;
-      const chapter = tocItem.dataset.chapter;
-      BooksOnlineController.renderContent(book, chapter);
+      // const book = tocItem.dataset.book;
+      // const chapter = tocItem.dataset.chapter;
+      this.renderContent("fsm", "1");
     });
-
-    function setSomethingAsActive(idSelector) {
-      idSelector = "#" + idSelector;
-      let tocItem = document.querySelector(idSelector);
-      tocItem.setAttribute("class", "toc-active toc-item");
-    }
 
     // Full-screen modal.
     this.modal = new Modal();
     window.modal = this.modal;
-
-  
 
     window.addEventListener("hashchange", function (e) {
       e.preventDefault();
@@ -88,47 +65,10 @@ export default class BooksOnlineController {
     });
 
     // customElements.define("word-count", WordCount, { extends: "p" });
+
+    this.renderContent = this.renderContent.bind(this);
+    this.changeChapter = this.changeChapter.bind(this);
   }
-
-
-
-
-
-changeChapter(e) {
-
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        let target = e.target;
-        let data = target.dataset;
-        let id = target.id;
-
-   
-        let currentTarget = e.currentTarget;
-
-        BooksOnlineController.removeClass(currentTarget, "toc-active");
-
-
-        // Add the active class to the current item.
-        target.classList.add("toc-active");
-
-        // Render the chapter.
-        const book = tocItem.dataset.book;
-        const chapter = tocItem.dataset.chapter;
-        BooksOnlineController.renderContent(book, chapter); 
-        document.querySelector('.top-of-page').scrollIntoView({ behavior: "smooth" });
-}
-
-
-// Remove the active class from all siblings.
-static removeClass(node, className) {
-  // Remove the active class from all siblings.
- 
-  [...node.children].map((child) => {
-    child.classList.remove(className);
-  });
-}
 
   /**
    * Handle user-actions.  These include requests to open
@@ -220,8 +160,19 @@ static removeClass(node, className) {
     // body.innerHTML = parsed;
   }
 
-  static async fetchChapter(book, chapter) {
+  async getIndex() {
+    let client = new HttpClient();
 
+    let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
+
+    let xml = await resp.text();
+
+    const parser = new DOMParser();
+
+    return parser.parseFromString(xml, "application/xml");
+  }
+
+  async fetchChapter(book, chapter) {
     const url = `https://pubs.ocdla.org/${book}/${chapter}`;
     const req = new Request(url);
     const client = new HttpClient();
@@ -229,23 +180,45 @@ static removeClass(node, className) {
     return resp.text();
   }
 
-  static async renderContent(book, chapter) {
+  async changeChapter(container) {
+    const id = container.id;
+    const book = id.split("-")[0];
+    const unit = id.split("-")[1];
 
-    let chapterReady = BooksOnlineController.fetchChapter(book, chapter).then((html) => {
-      const chapter = document.createElement('div');
-      chapter.setAttribute('class', 'document');
-      const doc = document.createElement('div');
+    TableOfContents.removeClass(container.parentNode, "toc-active");
+
+    // Add the active class to the current item.
+    TableOfContents.setActive(id);
+
+    this.renderContent(book, unit);
+    document
+      .querySelector(".top-of-page")
+      .scrollIntoView({ behavior: "smooth" });
+  }
+
+  async renderContent(book, unit) {
+    let chapterReady = this.fetchChapter(book, unit).then((html) => {
+      const unit = document.createElement("div");
+      unit.setAttribute("class", "document");
+      const doc = document.createElement("div");
       doc.innerHTML = html;
-      let sections = doc.querySelectorAll('header, section');
+      let sections = doc.querySelectorAll("header, section");
       for (let i = 0; i < sections.length; i++) {
-        chapter.appendChild(sections[i]);
+        unit.appendChild(sections[i]);
       }
-      document.querySelector('.document').replaceWith(chapter);
+      document.querySelector(".document").replaceWith(unit);
     });
-      
+
     const outlineReady = chapterReady.then(() => {
       const outline = Outline.fromCurrentDocument();
-      outline.outline(".level1", ".level2", ".level3", ".level4", ".level5", ".level6");
+      outline.outline(
+        ".level1",
+        ".level2",
+        ".level3",
+        ".level4",
+        ".level5",
+        ".level6"
+      );
       document.querySelector(".outline").replaceChildren(outline.toNodeTree());
 
       const handleIntersection = (observedEntries) => {
@@ -270,23 +243,35 @@ static removeClass(node, className) {
       };
 
       outline.addIntersectionObserver(handleIntersection);
-      });
+    });
 
-      const refsReady = outlineReady.then(() => {
-        // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
-        let refContainer = document.querySelector("#all-refs");
-        let citations = document.querySelectorAll(".cite");
-        let refs = document.querySelectorAll("[references], .cite");
+    // const refsReady = outlineReady.then(() => {
+    //   // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
+    //   let refContainer = document.querySelector("#all-refs");
+    //   let citations = document.querySelectorAll(".cite");
+    //   let refs = document.querySelectorAll("[references], .cite");
 
-        document.addEventListener("click", this);
-        BooksOnlineController.convert(".document");
-        formatReferences(citations);
-        doRefs(refs, refContainer);
+    //   document.addEventListener("click", this);
+    //   BooksOnlineController.convert(".document");
+    //   formatReferences(citations);
+    //   doRefs(refs, refContainer);
+    // });
+  }
 
-      });
+  getNodeChildrenEventHandler(e, elem, fn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const target = e.target;
+    const children = [...elem.children];
+    const container = children.filter((child) => child.contains(target))[0];
 
+    if (!container) return false;
+    fn(container);
+  }
 
-    }
-
-
+  delegate(type, elem, fn) {
+    return elem.addEventListener(type, (e) =>
+      this.getNodeChildrenEventHandler(e, elem, fn)
+    );
+  }
 }
