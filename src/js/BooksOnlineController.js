@@ -24,11 +24,15 @@ import TableOfContents from "@ocdla/table-of-contents";
 // Global components
 import "../css/input.css";
 //import App from "./App";
+
 import Footer from "@ocdla/global-components/src/Footer.jsx";
 import Navbar from "@ocdla/global-components/src/Navbar.jsx";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
+import Sidebar_Item from "@ocdla/global-components/src/Sidebar_Item.jsx";
 import Body from "@ocdla/global-components/src/Body.jsx";
+
+import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 
 /**
  * Controller for the Books Online application.
@@ -38,7 +42,7 @@ export default class BooksOnlineController {
   modal = null;
 
   constructor() {
-    // TODO: Create base page with jsx
+    // Create the base view using jsx.
     const body = document.querySelector("body");
     const root = View.createRoot(body);
     root.render(
@@ -63,15 +67,15 @@ export default class BooksOnlineController {
         <div class="container mx-auto border-x">
           {/* <div class='flex flex-col lg:flex-row'> */}
           <div class="lg:grid lg:grid-cols-6">
-            <div class="toc">
-              <div class="toc-content"></div>
-            </div>
-
-            <div class="workspace">
+            <div id="toc" class=""></div>
+            <div
+              id="document"
+              class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
+            >
               <div class="top-of-page"></div>
-              <div class="document"></div>
-              <div class="outline"></div>
+              <div id="body" class="flex flex-col gap-4"></div>
             </div>
+            <div id="outline" class=""></div>
           </div>
         </div>
         <Footer
@@ -87,14 +91,33 @@ export default class BooksOnlineController {
       // Create a table of contents from the XML loaded.
       const toc = TableOfContents.fromXml(xml);
 
-      // Create the html for the table of contents.
-      const nodeTree = toc.toNodeTree();
-      this.delegate("click", nodeTree, this.changeChapter);
+      // Create a root
+      const tocContent = View.createRoot(document.querySelector("#toc"));
 
-      const tocContent = document.querySelector(".toc-content");
+      // Get our entries in our toc
+      const tocEntries = toc.getEntries();
 
-      // TODO: Jsx this
-      tocContent.replaceWith(nodeTree);
+      // Render the toc into the toc div
+      tocContent.render(
+        <Sidebar id="toc-sidebar">
+          {tocEntries.map((entry) => {
+            return (
+              <Sidebar_Item
+                id={entry.getId()}
+                href={entry.getHref()}
+                label={entry.getName()}
+              />
+            );
+          })}
+        </Sidebar>
+      );
+
+      // Add an event listener to the toc
+      this.delegate(
+        "click",
+        document.querySelector("#toc-sidebar"),
+        this.changeChapter
+      );
     });
 
     tocReady.then(() => {
@@ -241,14 +264,14 @@ export default class BooksOnlineController {
   }
 
   async changeChapter(container) {
-    const id = container.id;
+    const id = container.children[0].id;
     const book = id.split("-")[0];
     const unit = id.split("-")[1];
 
-    TableOfContents.removeClass(container.parentNode, "toc-active");
+    //document.querySelector(".toc-active").classList.remove("toc-active");
 
     // Add the active class to the current item.
-    TableOfContents.setActive(id);
+    //TableOfContents.setActive(id);
 
     this.renderContent(book, unit);
     document
@@ -259,7 +282,7 @@ export default class BooksOnlineController {
   async renderContent(book, unit) {
     let chapterReady = this.fetchChapter(book, unit).then((html) => {
       const unit = document.createElement("div");
-      unit.setAttribute("class", "document");
+      unit.setAttribute("id", "body");
       const doc = document.createElement("div");
       doc.innerHTML = html;
       let sections = doc.querySelectorAll("header, section");
@@ -267,8 +290,8 @@ export default class BooksOnlineController {
         unit.appendChild(sections[i]);
       }
 
-      // TODO: Jsx this 2
-      document.querySelector(".document").replaceWith(unit);
+      // TODO: Jsx this
+      document.querySelector("#body").replaceWith(unit);
     });
 
     const outlineReady = chapterReady.then(() => {
@@ -282,8 +305,12 @@ export default class BooksOnlineController {
         ".level6"
       );
 
-      // TODO: Jsx this 3
-      document.querySelector(".outline").replaceChildren(outline.toNodeTree());
+      // Display the outline in the sidebar
+      const outlineRoot = View.createRoot(document.querySelector("#outline"));
+      outlineRoot.render(
+        <OutlineSidebar>{outline.getNested()}</OutlineSidebar>
+      );
+      //document.querySelector(".outline").replaceChildren(outline.toNodeTree());
 
       const handleIntersection = (observedEntries) => {
         // Filter out entries that are not intersecting
@@ -301,9 +328,9 @@ export default class BooksOnlineController {
         const entry = intersectingEntries[0];
         const id = entry.target.id;
         const outlineListItem = document.getElementById(`${id}-outline-item`);
-        outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
+        //outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
         outlineListItem.classList.add("outline-item-active");
-        outlineListItem.firstChild.classList.add("outline-item-active");
+        //outlineListItem.firstChild.classList.add("outline-item-active");
       };
 
       outline.addIntersectionObserver(handleIntersection);
