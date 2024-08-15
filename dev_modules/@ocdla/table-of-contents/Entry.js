@@ -21,6 +21,10 @@ export default class Entry {
     return this.#label;
   }
 
+  getHref() {
+    return "/" + this.getId().replace("-", "/");
+  }
+
   isChapter() {
     return this.#label.includes("Chapter");
   }
@@ -36,7 +40,7 @@ export default class Entry {
   toNode() {
     // Make our table of contents link from our ID.
     // This is the entire item as well, since we want it all to be clickable
-    const href = "/" + this.getId().replace("-", "/");
+    const href = this.getHref();
     const a = document.createElement("a");
     a.setAttribute("id", this.getId());
     a.setAttribute("href", href);
