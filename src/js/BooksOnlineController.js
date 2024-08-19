@@ -52,7 +52,7 @@ export default class BooksOnlineController {
           // prettier-ignore
           class='fixed right-0 z-10 flex w-max gap-2 bg-white p-4 lg:left-0 lg:p-2'
         ></div>
-        <header class="sticky top-0 container mx-auto flex w-full flex-col bg-white lg:h-32">
+        <header class="container mx-auto flex w-full flex-col bg-white lg:h-32 top-of-page">
           <Navbar />
           <Breadcrumbs items={[]} />
         </header>
@@ -72,7 +72,6 @@ export default class BooksOnlineController {
               id="document"
               class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
             >
-              <div class="top-of-page"></div>
               <div id="body" class="flex flex-col gap-4"></div>
             </div>
             <div id="outline" class=""></div>
@@ -344,14 +343,18 @@ export default class BooksOnlineController {
         if (intersectingEntries.length == 0) return;
 
         // Iterate through our outline items and clear their styles.
-        outline.clearAllActive();
+        outline.clearAllActive(
+          ".bg-black.text-white",
+          document.querySelector("#outline")
+        );
 
         // We only want the first entry. It's possible to scroll through multiple headings at once.
         const entry = intersectingEntries[0];
         const id = entry.target.id;
         const outlineListItem = document.getElementById(`${id}-outline-item`);
         //outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
-        outlineListItem.classList.add("outline-item-active");
+        outlineListItem.classList.add("bg-black");
+        outlineListItem.classList.add("text-white");
         //outlineListItem.firstChild.classList.add("outline-item-active");
       };
 
