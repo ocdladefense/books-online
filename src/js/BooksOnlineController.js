@@ -67,6 +67,14 @@ export default class BooksOnlineController {
 
         {/* <Main cols='3' /> */}
         <div class="container mx-auto border-x">
+          <button
+            onclick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            class="fixed bottom-0 right-0 z-10 rounded-lg p-4"
+          >
+            Top
+          </button>
           {/* <div class='flex flex-col lg:flex-row'> */}
           <div class="lg:grid lg:grid-cols-6">
             <div id="toc" class=""></div>
@@ -109,7 +117,9 @@ export default class BooksOnlineController {
                   href={entry.getHref()}
                   extraClasses="flex flex-col gap-2 border-b px-4 py-2"
                 >
-                  <span>{entry.isChapter() ? entry.getHeading() : null}</span>
+                  <span class="font-bold">
+                    {entry.isChapter() ? entry.getHeading() : null}
+                  </span>
                   <div>{entry.getName()}</div>
                 </Base_Element_Link>
               </li>
@@ -155,8 +165,7 @@ export default class BooksOnlineController {
 
       newElem.scrollIntoView({
         behavior: "smooth",
-        block: "center",
-        inline: "nearest",
+        block: "start",
       }); //({top: (rect.y + offset),behavior:"smooth"});
     });
 
