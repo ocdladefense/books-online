@@ -54,7 +54,9 @@ export default class BooksOnlineController {
         ></div>
         <header class="container mx-auto flex w-full flex-col bg-white lg:h-32 top-of-page">
           <Navbar />
-          <Breadcrumbs items={[]} />
+          <div id="breadcrumbs">
+            <Breadcrumbs items={[]} />
+          </div>
         </header>
 
         <div class="modal inline-modal" id="inline-ors">
@@ -135,6 +137,8 @@ export default class BooksOnlineController {
       // const book = tocItem.dataset.book;
       // const chapter = tocItem.dataset.chapter;
       this.renderContent("fsm", "1");
+
+      this.updateBreadcrumbs();
     });
 
     // Full-screen modal.
@@ -298,6 +302,27 @@ export default class BooksOnlineController {
     document
       .querySelector(".top-of-page")
       .scrollIntoView({ behavior: "smooth" });
+
+    this.updateBreadcrumbs(book, unit);
+  }
+
+  async updateBreadcrumbs(book, unit) {
+    const breadCrumbs = [
+      {
+        href: "#fsm",
+        text: "Felony Sentencing Manual",
+        type: "standard",
+      },
+      {
+        href: "#fsm-1",
+        text: "Chapter 1: Introduction",
+        type: "standard",
+      },
+    ];
+    const breadcrumbRoot = View.createRoot(
+      document.getElementById("breadcrumbs")
+    );
+    //breadcrumbRoot.render(<Breadcrumbs items={breadCrumbs} />);
   }
 
   async renderContent(book, unit) {
@@ -352,7 +377,13 @@ export default class BooksOnlineController {
         const entry = intersectingEntries[0];
         const id = entry.target.id;
         const outlineListItem = document.getElementById(`${id}-outline-item`);
-        //outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
+        // .scrollIntoView({ behavior: "auto", block: "center" });
+        // outlineListItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+        outlineListItem.scrollIntoView({
+          behavior: "instant",
+          block: "nearest",
+          inline: "center",
+        });
         outlineListItem.classList.add("bg-black");
         outlineListItem.classList.add("text-white");
         //outlineListItem.firstChild.classList.add("outline-item-active");
