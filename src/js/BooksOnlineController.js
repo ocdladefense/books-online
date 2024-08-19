@@ -23,7 +23,6 @@ import TableOfContents from "@ocdla/table-of-contents";
 
 // Global components
 import "../css/input.css";
-//import App from "./App";
 
 import Footer from "@ocdla/global-components/src/Footer.jsx";
 import Navbar from "@ocdla/global-components/src/Navbar.jsx";
@@ -33,6 +32,7 @@ import Sidebar_Item from "@ocdla/global-components/src/Sidebar_Item.jsx";
 import Body from "@ocdla/global-components/src/Body.jsx";
 
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
+import Base_Element_Link from "@ocdla/global-components/src/Base_Content.jsx";
 
 /**
  * Controller for the Books Online application.
@@ -102,11 +102,16 @@ export default class BooksOnlineController {
         <Sidebar id="toc-sidebar">
           {tocEntries.map((entry) => {
             return (
-              <Sidebar_Item
-                id={entry.getId()}
-                href={entry.getHref()}
-                label={entry.getName()}
-              />
+              <li>
+                <Base_Element_Link
+                  id={entry.getId()}
+                  href={entry.getHref()}
+                  extraClasses="flex flex-col gap-2 border-b px-4 py-2"
+                >
+                  <span>{entry.isChapter() ? entry.getHeading() : null}</span>
+                  <div>{entry.getName()}</div>
+                </Base_Element_Link>
+              </li>
             );
           })}
         </Sidebar>
@@ -121,7 +126,12 @@ export default class BooksOnlineController {
     });
 
     tocReady.then(() => {
-      TableOfContents.setActive("fsm-1");
+      const newSelectedChapter = document.getElementById("fsm-1");
+      if (newSelectedChapter) {
+        newSelectedChapter.classList.add("text-white");
+        newSelectedChapter.classList.add("border-black");
+        newSelectedChapter.classList.add("bg-black");
+      }
       // Render the chapter.
       // const book = tocItem.dataset.book;
       // const chapter = tocItem.dataset.chapter;
@@ -268,10 +278,22 @@ export default class BooksOnlineController {
     const book = id.split("-")[0];
     const unit = id.split("-")[1];
 
-    //document.querySelector(".toc-active").classList.remove("toc-active");
+    const oldSelectedChapter = document.querySelector(
+      ".text-white.border-black.bg-black"
+    );
+    if (oldSelectedChapter) {
+      oldSelectedChapter.classList.remove("text-white");
+      oldSelectedChapter.classList.remove("border-black");
+      oldSelectedChapter.classList.remove("bg-black");
+    }
 
     // Add the active class to the current item.
-    //TableOfContents.setActive(id);
+    const newSelectedChapter = document.getElementById(id);
+    if (newSelectedChapter) {
+      newSelectedChapter.classList.add("text-white");
+      newSelectedChapter.classList.add("border-black");
+      newSelectedChapter.classList.add("bg-black");
+    }
 
     this.renderContent(book, unit);
     document
