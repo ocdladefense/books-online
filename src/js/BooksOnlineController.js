@@ -82,7 +82,10 @@ export default class BooksOnlineController {
               id="document"
               class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
             >
-              <div id="body" class="flex flex-col gap-4"></div>
+              <div
+                id="body"
+                class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased"
+              ></div>
             </div>
             <div id="outline" class=""></div>
           </div>
@@ -318,19 +321,21 @@ export default class BooksOnlineController {
   async updateBreadcrumbs(id) {
     const index = await this.getIndex();
     const unit = index.querySelector(`#${id}`);
-    console.log(unit);
-
-    const book = unit.closest("book").getAttribute("name");
     const unitName = unit.getAttribute("name");
+    const unitHref = id.replaceAll("-", "/");
+
+    const bookNode = unit.closest("book");
+    const bookName = bookNode.getAttribute("name");
+    const bookHref = bookNode.getAttribute("shortName");
 
     const breadCrumbs = [
       {
-        href: "/",
-        text: book,
+        href: bookHref,
+        text: bookName,
         type: "standard",
       },
       {
-        href: "/",
+        href: unitHref,
         text: unitName,
         type: "standard",
       },
