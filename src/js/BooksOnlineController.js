@@ -148,7 +148,7 @@ export default class BooksOnlineController {
       // const chapter = tocItem.dataset.chapter;
       this.renderContent("fsm", "1");
 
-      this.updateBreadcrumbs();
+      this.updateBreadcrumbs("fsm-1");
     });
 
     // Full-screen modal.
@@ -290,6 +290,8 @@ export default class BooksOnlineController {
     const book = id.split("-")[0];
     const unit = id.split("-")[1];
 
+    this.updateBreadcrumbs(id);
+
     const oldSelectedChapter = document.querySelector(
       ".text-white.border-black.bg-black"
     );
@@ -311,27 +313,32 @@ export default class BooksOnlineController {
     document
       .querySelector(".top-of-page")
       .scrollIntoView({ behavior: "smooth" });
-
-    this.updateBreadcrumbs(book, unit);
   }
 
-  async updateBreadcrumbs(book, unit) {
+  async updateBreadcrumbs(id) {
+    const index = await this.getIndex();
+    const unit = index.querySelector(`#${id}`);
+    console.log(unit);
+
+    const book = unit.closest("book").getAttribute("name");
+    const unitName = unit.getAttribute("name");
+
     const breadCrumbs = [
       {
-        href: "#fsm",
-        text: "Felony Sentencing Manual",
+        href: "/",
+        text: book,
         type: "standard",
       },
       {
-        href: "#fsm-1",
-        text: "Chapter 1: Introduction",
+        href: "/",
+        text: unitName,
         type: "standard",
       },
     ];
     const breadcrumbRoot = View.createRoot(
       document.getElementById("breadcrumbs")
     );
-    //breadcrumbRoot.render(<Breadcrumbs items={breadCrumbs} />);
+    breadcrumbRoot.render(<Breadcrumbs items={breadCrumbs} separator=" / " />);
   }
 
   async renderContent(book, unit) {
