@@ -28,8 +28,6 @@ import Footer from "@ocdla/global-components/src/Footer.jsx";
 import Navbar from "@ocdla/global-components/src/Navbar.jsx";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
-import Sidebar_Item from "@ocdla/global-components/src/Sidebar_Item.jsx";
-import Body from "@ocdla/global-components/src/Body.jsx";
 
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Base_Element_Link from "@ocdla/global-components/src/Base_Content.jsx";
@@ -42,6 +40,8 @@ export default class BooksOnlineController {
   modal = null;
 
   constructor() {
+    window.addEventListener("hashchange", this);
+
     // Create the base view using jsx.
     const body = document.querySelector("body");
     const root = View.createRoot(body);
@@ -154,23 +154,9 @@ export default class BooksOnlineController {
       this.updateBreadcrumbs("fsm-1");
     });
 
-    // Full-screen modal.
-    this.modal = new Modal();
-    window.modal = this.modal;
-
-    window.addEventListener("hashchange", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      let newId = e.newURL.split("#")[1];
-      let newElem = document.getElementById(newId);
-      console.log(newId);
-
-      newElem.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      }); //({top: (rect.y + offset),behavior:"smooth"});
-    });
+    // // Full-screen modal.
+    // this.modal = new Modal();
+    // window.modal = this.modal;
 
     // customElements.define("word-count", WordCount, { extends: "p" });
 
@@ -187,10 +173,26 @@ export default class BooksOnlineController {
    */
   handleEvent(e) {
     let target = e.target;
-    let dataset = target.dataset;
+    let dataset = target.dataset || {};
     let action = dataset.action;
-    let c = target.dataset.chapter;
-    let s = target.dataset.section;
+    let c = dataset.chapter;
+    let s = dataset.section;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (e.type === "hashchange") {
+      let newId = e.newURL.split("#")[1];
+      let newElem = document.getElementById(newId);
+      console.log(newId);
+
+      newElem.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      }); //({top: (rect.y + offset),behavior:"smooth"});
+
+      return false;
+    }
 
     if ("modal-backdrop" == target.id) {
       this.modal.hide();
