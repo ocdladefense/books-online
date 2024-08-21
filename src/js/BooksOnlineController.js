@@ -84,7 +84,7 @@ export default class BooksOnlineController {
             >
               <div
                 id="body"
-                class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased"
+                class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased overflow-wrap break-words"
               ></div>
             </div>
             <div id="outline" class=""></div>
@@ -315,9 +315,7 @@ export default class BooksOnlineController {
     }
 
     this.renderContent(book, unit);
-    document
-      .querySelector(".top-of-page")
-      .scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   async updateBreadcrumbs(id) {
