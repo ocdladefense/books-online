@@ -71,13 +71,13 @@ export default class BooksOnlineController {
             onclick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            class="fixed bottom-0 right-0 z-10 rounded-lg p-4"
+            class="fixed bottom-0 right-0 z-10 rounded-lg p-4 bg-black text-white"
           >
             Top
           </button>
           {/* <div class='flex flex-col lg:flex-row'> */}
           <div class="lg:grid lg:grid-cols-6">
-            <div id="toc" class=""></div>
+            <div id="toc"></div>
             <div
               id="document"
               class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
@@ -87,7 +87,7 @@ export default class BooksOnlineController {
                 class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased overflow-wrap break-words"
               ></div>
             </div>
-            <div id="outline" class=""></div>
+            <div id="outline"></div>
           </div>
         </div>
         <Footer
