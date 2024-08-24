@@ -30,7 +30,7 @@ import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
 
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
-import Base_Element_Link from "@ocdla/global-components/src/Base_Content.jsx";
+import Sidebar_Item_Left from "@ocdla/global-components/src/Sidebar_Item_Left.jsx";
 
 /**
  * Controller for the Books Online application.
@@ -111,23 +111,25 @@ export default class BooksOnlineController {
 
       // Render the toc into the toc div
       tocContent.render(
-        <Sidebar id="toc-sidebar">
-          {tocEntries.map((entry) => {
-            return (
-              <li>
-                <Base_Element_Link
+        <Sidebar sticky={true}>
+          <ul id="toc-sidebar" class="list-none">
+            {tocEntries.map((entry) => {
+              return (
+                <Sidebar_Item_Left
+                  active={false}
                   id={entry.getId()}
                   href={entry.getHref()}
-                  extraClasses="flex flex-col gap-2 border-b px-4 py-2"
+                  heading={entry.isChapter() ? entry.getHeading() : null}
+                  label={entry.getName()}
                 >
                   <span class="font-bold">
                     {entry.isChapter() ? entry.getHeading() : null}
                   </span>
                   <div>{entry.getName()}</div>
-                </Base_Element_Link>
-              </li>
-            );
-          })}
+                </Sidebar_Item_Left>
+              );
+            })}
+          </ul>
         </Sidebar>
       );
 
@@ -297,21 +299,40 @@ export default class BooksOnlineController {
 
     this.updateBreadcrumbs(id);
 
-    const oldSelectedChapter = document.querySelector(
+    const toc = document.getElementById("toc");
+
+    const oldSelectedChapter = toc.querySelector(
       ".text-white.border-black.bg-black"
     );
     if (oldSelectedChapter) {
-      oldSelectedChapter.classList.remove("text-white");
-      oldSelectedChapter.classList.remove("border-black");
-      oldSelectedChapter.classList.remove("bg-black");
+      oldSelectedChapter.setAttribute(
+        "class",
+        "group hover:bg-neutral-100 flex flex-col gap-2 border-b px-4 py-2"
+      );
+
+      const h = oldSelectedChapter.querySelector("h1");
+      if (h)
+        h.setAttribute(
+          "class",
+          "text-blue-400 group-hover:text-blue-500 font-bold"
+        );
+
+      const p = oldSelectedChapter.querySelector("p");
+      if (p) p.setAttribute("class", "");
     }
 
     // Add the active class to the current item.
     const newSelectedChapter = document.getElementById(id);
     if (newSelectedChapter) {
-      newSelectedChapter.classList.add("text-white");
-      newSelectedChapter.classList.add("border-black");
-      newSelectedChapter.classList.add("bg-black");
+      newSelectedChapter.setAttribute(
+        "class",
+        "text-white border-black bg-black flex flex-col gap-2 border-b px-4 py-2"
+      );
+      const h = newSelectedChapter.querySelector("h1");
+      if (h) h.setAttribute("class", "font-bold");
+
+      const p = newSelectedChapter.querySelector("p");
+      if (p) p.setAttribute("class", "text-white");
     }
 
     this.renderContent(book, unit);
@@ -343,7 +364,7 @@ export default class BooksOnlineController {
     const breadcrumbRoot = View.createRoot(
       document.getElementById("breadcrumbs")
     );
-    breadcrumbRoot.render(<Breadcrumbs items={breadCrumbs} separator=" / " />);
+    breadcrumbRoot.render(<Breadcrumbs crumbs={breadCrumbs} />);
   }
 
   async renderContent(book, unit) {
