@@ -15,7 +15,6 @@ import fsm9 from "./mock-data/fsm/fsm-9.html";
 import fsm10 from "./mock-data/fsm/fsm-10.html";
 export { BonMock };
 
-console.log(BonIndex);
 class BonMock extends HttpMock {
   imports = {
     "/fsm/foreword": fsmforeword,

@@ -11,13 +11,11 @@ import {
   doRefs,
 } from "../../dev_modules/citations/citations.js";
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
+import { Modal } from "@ocdladefense/modal/dist/modal.js";
 
 import "@ocdladefense/html/html.js";
 import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
-import { Modal } from "@ocdladefense/modal/dist/modal.js";
-
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
-
 import Outline from "@ocdla/outline";
 import TableOfContents from "@ocdla/table-of-contents";
 
@@ -38,6 +36,7 @@ import Sidebar_Item_Left from "@ocdla/global-components/src/Sidebar_Item_Left.js
  */
 export default class BooksOnlineController {
   modal = null;
+  #index;
 
   constructor() {
     window.addEventListener("hashchange", this);
@@ -97,17 +96,20 @@ export default class BooksOnlineController {
         />
       </>
     );
+    const indexReady = this.getIndex().then((xml) => {
+      this.#index = xml;
+    });
 
     // Build the table of contents.
-    const tocReady = this.getIndex().then((xml) => {
+    const tocReady = indexReady.then(() => {
       // Create a table of contents from the XML loaded.
-      const toc = TableOfContents.fromXml(xml);
+      const index = TableOfContents.fromXml(this.#index);
 
       // Create a root
       const tocContent = View.createRoot(document.querySelector("#toc"));
 
       // Get our entries in our toc
-      const tocEntries = toc.getEntries();
+      const tocEntries = index.getEntries();
 
       // Render the toc into the toc div
       tocContent.render(
@@ -186,7 +188,6 @@ export default class BooksOnlineController {
     if (e.type === "hashchange") {
       let newId = e.newURL.split("#")[1];
       let newElem = document.getElementById(newId);
-      console.log(newId);
 
       newElem.scrollIntoView({
         behavior: "smooth",
@@ -272,6 +273,11 @@ export default class BooksOnlineController {
     // body.innerHTML = parsed;
   }
 
+  /**
+   * Retrieves the index from the specified URL and parses it into an XML document.
+   *
+   * @return {Document} The parsed XML document.
+   */
   async getIndex() {
     let client = new HttpClient();
 
@@ -284,6 +290,13 @@ export default class BooksOnlineController {
     return parser.parseFromString(xml, "application/xml");
   }
 
+  /**
+   * Fetches the specified chapter of a book from the OCDLA publications website.
+   *
+   * @param {string} book - The title of the book to fetch a chapter from.
+   * @param {string} chapter - The chapter number to fetch.
+   * @return {string} The text content of the chapter.
+   */
   async fetchChapter(book, chapter) {
     const url = `https://pubs.ocdla.org/${book}/${chapter}`;
     const req = new Request(url);
@@ -292,7 +305,16 @@ export default class BooksOnlineController {
     return resp.text();
   }
 
-  async changeChapter(container) {
+  /**
+   * Changes the currently selected chapter in the table of contents.
+   *
+   * Updates the breadcrumbs, removes the active class from the previously selected chapter,
+   * adds the active class to the newly selected chapter, and renders the content of the new chapter.
+   *
+   * @param {HTMLElement} container - The container element of the chapter to select.
+   * @return {void}
+   */
+  changeChapter(container) {
     const id = container.children[0].id;
     const book = id.split("-")[0];
     const unit = id.split("-")[1];
@@ -339,9 +361,14 @@ export default class BooksOnlineController {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  async updateBreadcrumbs(id) {
-    const index = await this.getIndex();
-    const unit = index.querySelector(`#${id}`);
+  /**
+   * Updates the breadcrumbs based on the given Chapter ID.
+   *
+   * @param {string} id - The ID of the chapter in the XML index.
+   * @return {void}
+   */
+  updateBreadcrumbs(id) {
+    const unit = this.#index.querySelector(`#${id}`);
     const unitName = unit.getAttribute("name");
     const unitHref = id.replaceAll("-", "/");
 
@@ -365,7 +392,15 @@ export default class BooksOnlineController {
     breadcrumbRoot.render(<Breadcrumbs crumbs={breadCrumbs} />);
   }
 
-  async renderContent(book, unit) {
+  /**
+   * Renders the content of a book chapter, including the chapter HTML and an outline of the chapter's sections.
+   *
+   * @param {string} book - The book shortname identifier.
+   * @param {string} unit - The unit (chapter / section / appendix) identifier.
+   * @return {void}
+   */
+  renderContent(book, unit) {
+    // Display the content of the chapter.
     let chapterReady = this.fetchChapter(book, unit).then((html) => {
       const unit = document.createElement("div");
       unit.setAttribute("id", "body");
@@ -380,8 +415,11 @@ export default class BooksOnlineController {
       document.querySelector("#body").replaceWith(unit);
     });
 
+    // Display the outline of the chapter once the content has been rendered.
     const outlineReady = chapterReady.then(() => {
       const outline = Outline.fromCurrentDocument();
+
+      // Books-Online content is in section tags with .level1, .level2, etc.
       outline.outline(
         ".level1",
         ".level2",
@@ -396,8 +434,8 @@ export default class BooksOnlineController {
       outlineRoot.render(
         <OutlineSidebar>{outline.getNested()}</OutlineSidebar>
       );
-      //document.querySelector(".outline").replaceChildren(outline.toNodeTree());
 
+      // Callback function used to detect where the user is on the page.
       const handleIntersection = (observedEntries) => {
         // Filter out entries that are not intersecting
         const intersectingEntries = observedEntries.filter(
@@ -417,20 +455,27 @@ export default class BooksOnlineController {
         const entry = intersectingEntries[0];
         const id = entry.target.id;
         const outlineListItem = document.getElementById(`${id}-outline-item`);
-        // .scrollIntoView({ behavior: "auto", block: "center" });
-        // outlineListItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+
+        // When we see a new item, we want to make sure the outline sidebar is scrolling to it.
         outlineListItem.scrollIntoView({
           behavior: "instant",
           block: "nearest",
           inline: "center",
         });
+
+        // Add the active class styling to the current item.
         outlineListItem.classList.add("bg-black");
         outlineListItem.classList.add("text-white");
-        //outlineListItem.firstChild.classList.add("outline-item-active");
       };
 
+      // Add the callback function to the intersection observer.
       outline.addIntersectionObserver(handleIntersection);
     });
+
+    // Future feature: Setting up WebC-ORS and WebC-OAR components here.
+    // const refsReady = outlineReady.then(() => {
+
+    //})
 
     // const refsReady = outlineReady.then(() => {
     //   // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
