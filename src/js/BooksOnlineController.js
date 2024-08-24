@@ -352,13 +352,11 @@ export default class BooksOnlineController {
     const breadCrumbs = [
       {
         href: bookHref,
-        text: bookName,
-        type: "standard",
+        label: bookName,
       },
       {
         href: unitHref,
-        text: unitName,
-        type: "standard",
+        label: unitName,
       },
     ];
     const breadcrumbRoot = View.createRoot(
