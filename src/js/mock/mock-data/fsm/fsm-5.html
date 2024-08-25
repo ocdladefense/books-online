@@ -1,0 +1,2862 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>OCDLA Felony Sentencing Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">OCDLA Felony Sentencing Manual</h1>
+                                    </header>
+            <p><strong><code>Felony Sentencing in Oregon: Guidelines, Statutes, Cases</code></strong><code>, 2019 edition </code></p>
+            <p>Includes January 2024 Update by Jennelle Meeks Barton</p>
+            <p>As explained in Chapters 2 and 3, a sentencing court’s
+            first step in imposing a guidelines sentence is to identify
+            the defendant’s criminal history score and the seriousness
+            ranking of his felony conviction. Having done that, the
+            court then locates the defendant’s grid block,
+            <em>i.e.</em>, the box on the sentencing guidelines grid
+            where the defendant’s crime seriousness ranking and criminal
+            history score intersect. <a
+            href="http://scholar.google.com/scholar_case?q=315+Or+484&amp;hl=en&amp;as_sdt=2,38&amp;case=17866389964872013717&amp;scilh=0">State
+            v. Davis</a>, 315 Or 484, 487, 847 P2d 834 (1993).</p>
+            <p>The guidelines grid has a total of 99 grid blocks. “Each
+            grid block contains what is called a ‘presumptive
+            sentence,’” 315 Or at 487, <em>i.e.</em>, “the sentence
+            provided in a grid block for an offender classified in that
+            grid block by the combined effect of the crime seriousness
+            ranking of the current crime of conviction and the
+            offender’s criminal history or a sentence designated as a
+            presumptive sentence by statute.” OAR 213-003-0001(16). A
+            presumptive guidelines sentence is either a term of
+            imprisonment, a term of probation, or a “straight” jail
+            term. Presumptive probation and presumptive straight jail
+            sentences share the same grid blocks.</p>
+            <p>A solid black line on the sentencing grid—the
+            “dispositional line,” OAR 213-003-0001(7)—separates the
+            imprisonment grid blocks from the probationary/straight jail
+            grid blocks. Forty-six of the 99 grid blocks specify
+            presumptive probation/straight jail sentences. <a
+            href="https://scholar.google.com/scholar_case?case=17866389964872013717&amp;q=315+Or+484,+847+P2d+834+(1993)&amp;hl=en&amp;as_sdt=4,38"><em>Davis</em></a>,
+            315 Or at 487 n 8.</p>
+            <p>In certain circumstances, three of the 53 presumptive
+            imprisonment grid blocks allow sentencing courts to impose
+            what are called optional probationary sentences. This
+            chapter first discusses optional probation. It then
+            discusses presumptive probation and straight jail sentences.
+            After that it discusses dispositional-departure probationary
+            sentences—<em>i.e.</em>, sentences that may be imposed, for
+            “substantial and compelling reasons,” when the defendant’s
+            presumptive sentence is imprisonment. The chapter then
+            discusses probationary sentences imposed in conditional
+            discharge situations.</p>
+            <p>The guidelines thus authorize four types of probationary
+            sentences: optional, presumptive, departure, and conditional
+            discharge. After discussing the four types of probationary
+            sentences, this chapter discusses the conditions of
+            probation a court may impose (including jail-term conditions
+            of probation). It concludes by discussing sanctions,
+            including revocation sanctions, a court may impose when a
+            defendant violates probation.</p>
+            <p>Regardless of the circumstances in which a court imposes
+            probation, it is important to recognize that unlike the
+            pre-guidelines era, when probation was a disposition imposed
+            in lieu of a sentence, so by definition was not a sentence,
+            <a
+            href="https://scholar.google.com/scholar_case?case=16518680987523178306&amp;q=97+Or+App+576&amp;hl=en&amp;as_sdt=6,38">State
+            v. Gaither</a>, 97 Or App 576, 776 P2d 595 (1989), under the
+            guidelines, probation is a sentence. <a
+            href="https://scholar.google.com/scholar_case?case=12505748528088146273&amp;q=321+Or+99&amp;hl=en&amp;as_sdt=6,38">Holcomb
+            v. Sunderland</a>, 321 Or 99, 104, 894 P2d 457 (1995).
+            Consequently, the court does not, as it did during the
+            pre-guidelines era, suspend imposition of sentence, or
+            impose sentence and then suspend execution, prior to
+            imposing a probationary term. Instead, in the guidelines era
+            the court imposes and executes a sentence of probation. <a
+            href="http://scholar.google.com/scholar_case?q=190+Or+App+245&amp;hl=en&amp;as_sdt=2,38&amp;case=11928593174076170052&amp;scilh=0">State
+            v. Tallman</a>, 190 Or App 245, 251, 78 P3d 141 (2003); <a
+            href="http://scholar.google.com/scholar_case?q=175+Or+App+278&amp;hl=en&amp;as_sdt=2,38&amp;case=6783641004245929333&amp;scilh=0">State
+            v. Ferguson</a>, 175 Or App 278, 279, 27 P3d 176 (2001).</p>
+            <section
+            id="oar_213_005_0006_optional_probationary_sentences."
+            class="level1">
+            <h1><strong>§ 5-1. OAR 213-005-0006 OPTIONAL PROBATIONARY
+            SENTENCES.</strong></h1>
+            <p>OAR 213-005-0006 sets out the guidelines’ optional
+            probation provisions:</p>
+            <p>(1) If an offense is classified in grid blocks 8-G, 8-H
+            or 8-I, the sentencing judge may impose an optional
+            probationary sentence upon making the specific findings on
+            the record:</p>
+            <p>(a) An appropriate treatment program is likely to be more
+            effective than the presumptive prison term in reducing the
+            risk of offender recidivism;</p>
+            <p>(b) The recommended treatment program is available and
+            the offender can be admitted to it within a reasonable
+            period of time; and</p>
+            <p>(c) The probationary sentence will serve community
+            interests by promoting offender reformation.</p>
+            <p>(2) The sentencing judge shall not impose an optional
+            probationary sentence if:</p>
+            <p>(a) A firearm was used in the commission of the offense;
+            or</p>
+            <p>(b) At the time of the offense, the offender was under
+            correctional supervision status for a felony conviction or a
+            juvenile adjudication as defined in OAR 213-003-0001(11);
+            or</p>
+            <p>(c) The offender’s conviction is for Manufacture of a
+            Controlled Substance involving substantial quantities of
+            methamphetamine, its salts, isomers or salts of its isomers,
+            as defined at ORS 475.996 (1)(a).</p>
+            <p>(3) A probationary sentence imposed for an offense
+            classified in grid blocks 8-G, 8-H and 8-I when not
+            authorized by this rule is a departure.</p>
+            <section id="application_of_provision." class="level2">
+            <h2><strong>§ 5-1.1. Application of Provision.</strong></h2>
+            <p>Grid blocks 8-G, 8-H, and 8-I carry presumptive terms of
+            imprisonment. For certain defendants in these grid blocks,
+            the court may impose an optional probationary sentence. The
+            court may do so if under OAR 213-005-0006(1), it finds that
+            (i) the probationary sentence would promote the defendant’s
+            reformation, (ii) the defendant may be admitted within a
+            reasonable amount of time into an “appropriate treatment
+            program,” and (iii) probation is more likely than a prison
+            term to reduce the defendant’s rate of recidivism and to
+            promote public safety; and if none of the ineligibility
+            provisions of OAR 213-005-0006(2) apply. Those ineligibility
+            provisions apply to a defendant who (i) used a firearm in
+            committing his crime, or (ii) was on “correctional
+            supervision” for a felony when he committed his crime, or
+            (iii) committed the crime of substantial-quantity
+            manufacture of methamphetamine (hereafter meth).
+            <em>Id</em>.</p>
+            <p>Although the guidelines do not define the phrase
+            “appropriate treatment program,” the Court of Appeals has
+            said it does not mean something “superficial” such as the
+            defendant’s “brain and society at large[.]” <a
+            href="http://scholar.google.com/scholar_case?q=112+Or+App+362&amp;hl=en&amp;as_sdt=2,38&amp;case=17278092182420147725&amp;scilh=0">State
+            v. Schuh</a>, 112 Or App 362, 366, 829 P2d 1040, <em>rev
+            den</em>, 314 Or 176 (1992). Moreover, Mitigating Factor I,
+            which is used to impose departure probation in cases where
+            OAR 213-005-0006(2) renders otherwise eligible defendants
+            legally ineligible for optional probation, also carries an
+            “appropriate treatment requirement.” <em>See</em> Chapter 7.
+            In a case involving Mitigating Factor I, the Court of
+            Appeals held that “‘an appropriate treatment program * * *
+            to which the offender can be admitted within a reasonable
+            period of time’ * * * carries a connotation of possibility,
+            or at the most, probability; it does not carry a connotation
+            of certainty.” <a
+            href="https://scholar.google.com/scholar_case?case=17479794829409897114&amp;q=State+v.+Waage,+160+Or+App+156,+981+P2d+333+(1999)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Waage</a>, 160 Or App 156, 165, 981 P2d 333 (1999). This
+            holding should be used in construing the meaning of the
+            “appropriate treatment requirement” in optional-probation
+            situations.</p>
+            <p>OAR 213-005-0011 and OAR 213-005-0013 authorize sanction
+            units and jail terms for optional probationers. Those
+            provisions are discussed later in this chapter.</p>
+            </section>
+            <section
+            id="appellate_review_of_optional_probation_sentences."
+            class="level2">
+            <h2><strong>§ 5-1.2. Appellate Review of Optional Probation
+            Sentences.</strong></h2>
+            <p>A sentencing court’s decision to impose or not to impose
+            optional probation is not reviewable on appeal. <em>But
+            see</em> <em>Schuh</em>, 112 Or App at 366 (appellate court
+            may review trial court’s incorrect application of
+            optional-probation rule). The ban on appellate review of
+            optional probationary is further discussed in Chapter 9.</p>
+            </section>
+            </section>
+            <section
+            id="oar_213_005_0007_presumptive_probation_and_straight_jail_sentences."
+            class="level1">
+            <h1><strong>§ 5-2. OAR 213-005-0007 PRESUMPTIVE PROBATION
+            AND STRAIGHT JAIL SENTENCES.</strong></h1>
+            <p>OAR 213-005-0007 sets out the guidelines’ presumptive
+            probation and straight jail provisions:</p>
+            <p>(1) Except as provided by OAR 213-009-0001, or otherwise
+            established by ORS 137.717 or 137.719, if the offense is
+            classified in a grid block below the dispositional line, the
+            presumptive sentence shall be:</p>
+            <p>(a) A term of probation which may include custody and
+            conditions of supervision or</p>
+            <p>(b) Straight jail subject to the limits in OAR
+            213-005-0013.</p>
+            <p>(2) Each grid block below the dispositional line of the
+            grid includes two components of a presumptive probationary
+            sentence. The top number in each grid block is the number of
+            sanction units that may be imposed as part of a presumptive
+            probationary sentence. The bottom number in each grid block
+            is the maximum number of sanction units that may be imposed
+            as a jail term.</p>
+            <section id="intent_of_provision." class="level2">
+            <h2><strong>§ 5-2.1. Intent of Provision.</strong></h2>
+            <p>Defendants whose grid blocks fall below the dispositional
+            line have presumptive sentences in one of two forms:
+            probation or straight jail. OAR 213-005-0007(1)(a) and (b).
+            This means the grid blocks below the dispositional line are
+            “presumptive-probation/straight jail term” grid blocks.</p>
+            <p>The 1993 Legislature approved amendments to
+            <em>former</em> ORS 253-05-007(1) (1989), which now is
+            codified as OAR 213-005-0007(1). The rule authorizes
+            imposing straight jail as presumptive sentences. By
+            definition, a straight jail term is not a prison sentence.
+            <em>See, e.g.</em>, ORS 137.124 (distinguishing between
+            sentences served in state Department of Corrections (DOC)
+            prisons, and county jails). That fact, coupled with the
+            rule’s use of the term “straight” jail, indicates that when
+            a court imposes a presumptive sentence of straight jail, it
+            does not also impose a post-prison supervision (PPS) term.
+            <em>See</em> Chap. 4 (discussing PPS terms).</p>
+            <p>To confirm that straight jail sentences do not include
+            PPS terms, the Criminal Justice Commission proposed an
+            amendment to the guidelines definitional rule, OAR
+            213-003-0001. The 2009 Legislature approved the amendment,
+            Or Laws 2009, ch 774, § 1(2), and it took effect on January
+            1, 2010. ORS 171.022. As amended, the rule states:
+            “‘Straight jail’ means a sentence of jail imposed instead of
+            a presumptive probationary sentence that is not followed by
+            a term of post-prison supervision defined in OAR
+            213-005-0002.” OAR 213-003-0001(20) (emphasis added). The
+            rule thus clarifies that when a court imposes a presumptive
+            sentence of “straight jail,” it does not also impose a term
+            of PPS.</p>
+            </section>
+            <section id="presumptive_probation_and_straight_jail_terms."
+            class="level2">
+            <h2><strong>§ 5-2.2. Presumptive Probation and Straight Jail
+            Terms.</strong></h2>
+            <p>In cases where courts impose presumptive sentences of
+            probation, they may impose jail terms as conditions of
+            probation. OAR 213-005-0007(1)(a). OAR 213-005-0013,
+            discussed in Section 5-8, sets the limitations on the
+            durations of jail term conditions of probation.</p>
+            <p>OAR 213-005-0007(1)(b) explains that OAR 213-005-0013
+            also sets the limitations on the durations of presumptive
+            straight jail sentences. Those limitations are specifically
+            found in OAR 213-005-0013(1), which, depending on the
+            defendant’s grid-block, sets presumptive straight jail
+            limitations at 30, 60, or 90 days. But under the departure
+            sentencing provisions discussed in Chapter 7, a court could
+            impose straight jail sentences of (i) less than 30, 60, or
+            90 days; or (ii) of up to double the 30-, 60-, or 90-day
+            limitations, so up to 60, 120, or 180 days.</p>
+            </section>
+            <section id="sanction_units." class="level2">
+            <h2><strong>§ 5-2.3. Sanction Units.</strong></h2>
+            <p>Under OAR 213-005-0007(2), each probation/straight jail
+            grid block authorizes a presumptive maximum number of
+            “sanction” units, which are used when the court chose the
+            presumptive probation option. Sanction units are discussed
+            later in this chapter.</p>
+            </section>
+            </section>
+            <section id="duration_of_probation." class="level1">
+            <h1><strong>§ 5-3. DURATION OF PROBATION.</strong></h1>
+            <p>OAR 213-005-0008 specifies the duration of probationary
+            sentences:</p>
+            <p>(1) The presumptive duration of probation shall be
+            determined by the crime seriousness category of the most
+            serious current crime of conviction:</p>
+            <p>(a) Eighteen months for Crime Categories 1-2;</p>
+            <p>(b) Two years for Crime Categories 3-5;</p>
+            <p>(c) Three years for Crime Categories 6-8; and</p>
+            <p>(d) Five years for Crime Categories 9-11.</p>
+            <p>(2) (a) Subject to OAR 213-003-0001(8) and paragraph (e)
+            of this section, the sentencing judge may without departure
+            impose a duration of bench probation other than the
+            presumptive durations in section (1) of this rule when
+            necessary to ensure the conditions and purposes of probation
+            are met, or extend the length of probation subject to OAR
+            213-005-0008(2)(e) upon finding a violation or violations of
+            the conditions of probation or when necessary to ensure that
+            the conditions of probation are completely satisfied;</p>
+            <p>(b) Subject to subsection (e) of this section, the
+            sentencing judge may by departure impose a greater term of
+            supervised probation when necessary to ensure that the
+            conditions and purposes of probation are met;</p>
+            <p>(c) When an offender is convicted of violating or
+            attempting to violate a crime of a sexual nature, as
+            described in ORS 163.365, 163.375, 163.395, 163.405,
+            136.408, 163.411, 163.425 or 163.427 and the court suspends
+            imposition or execution of the sentence or imposes a
+            probation sentence, the court shall sentence the offender to
+            probation for at least five years and no more than the
+            maximum statutory indeterminate sentence for that
+            offense.</p>
+            <p>(d) When an offender not subject to subsection (c) is
+            convicted of a crime of a sexual nature (including but not
+            limited to ORS 163.305 - 163.465, 163.525, 167.670, 163.673,
+            163.677, 163.680), or the sentencing judge finds a sex
+            offender treatment program is appropriate, the judge may
+            without departure impose a sentence of probation up to 5
+            years;</p>
+            <p>(e) A probationary term shall not exceed five years.</p>
+            <p>(3) The time during which the offender has absconded from
+            supervision and a bench warrant has been issued for the
+            offender‘s arrest shall not be counted in determining the
+            time served on a sentence of probation.</p>
+            <p>(4) Nothing in this rule shall preclude the sentencing
+            judge from imposing a period of bench probation as the
+            probationary sentence required or permitted by the
+            sentencing guidelines.</p>
+            <section id="standard_probationary_terms." class="level2">
+            <h2><strong>§ 5-3.1. Standard Probationary
+            Terms.</strong></h2>
+            <p>OAR 213-005-0008(1) explains that crime seriousness
+            levels set the duration of a defendant’s standard term of
+            probation. The terms are:</p>
+            <blockquote>
+            <p>• (a) 18 months for crimes in seriousness levels 1 and
+            2.</p>
+            <p>• (b) Two years for crimes in levels 3 to 5.</p>
+            <p>• (c) Three years for crimes in levels 6 to 8</p>
+            <p>• (d) Five years for crimes in levels 9 to 11.</p>
+            </blockquote>
+            <p>The above terms apply to optional, presumptive,
+            departure, and (presumably) conditional discharge
+            probationary terms.</p>
+            </section>
+            <section id="extended_probationary_terms." class="level2">
+            <h2><strong>§ 5-3.2. Extended Probationary
+            Terms.</strong></h2>
+            <p>OAR 213-005-0008(2)(a)-(d) authorize sentencing courts to
+            impose extended probationary terms. OAR 213-005-0008(2)(a)
+            authorizes extended terms in three different situations.
+            First, the court may impose an extended term at original
+            sentencing if it imposes it as bench probation, and if doing
+            so is “necessary to ensure that the conditions of probation
+            are completely satisfied.” <em>Id.</em> Second and third,
+            OAR 213-005-0008(2)(a) authorizes the court, <em>after</em>
+            original sentencing, to extend the term of probation upon
+            finding that the defendant is in violation of his probation,
+            or when necessary to ensure that the defendant satisfies the
+            conditions of probation (<em>e.g.</em>, the payment of
+            restitution). But before extending a probationary term, the
+            court must hold a hearing on the matter. It may not lengthen
+            a probationary term <em>ex parte</em>. <a
+            href="https://scholar.google.com/scholar_case?case=15356705148472890683&amp;q=State+v.+Warner,+118+Or+App+726,+848+P2d+146+(1993)&amp;hl=en&amp;as_sdt=4,38+146+(1993)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Warner</em></a>, 118 Or App 726, 727, 848 P2d 146
+            (1993).</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=9409896382196490363&amp;q=317+Or+App+319+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Lucas</a>, 317 Or App 319, 504 P3d 706 (2022) (because
+            the trial court failed to provide defendant an opportunity
+            for a contested case hearing, the court erred in extending
+            defendant’s probationary term from 24 to 48 months).</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=6346864408806572171&amp;q=State+v.+Westom,+320&amp;hl=en&amp;as_sdt=4,38">State
+            v. Westom</a>, 320 Or App 250, 512 P3d 850 (2022), the
+            defendant was convicted under separate judgments for
+            criminally negligent homicide and third-degree assault. On
+            the greater crime, the court delayed sentencing. But on the
+            lesser crime, it imposed a three-year sentence of probation,
+            which included a condition barring the defendant from having
+            contact from the victim’s mother. Later, the court held that
+            the defendant violated the condition, by knowingly remaining
+            in the mother’s “immediate presence.” 320 Or App at 254. The
+            court then imposed a three-year probationary term on the
+            greater crime, and extended the probationary term on the
+            smaller crime. On appeal the defendant claimed that being in
+            the mother’s “immediate presence” was an insufficient
+            contact. The Court of Appeals held that the trial court did
+            not err. Although the term “contact” is “undefined,”
+            “[k]nowledge, proximity, and the duration of the contact can
+            all bear on the issue. * * * The trial court reasonably
+            determined that defendant’s knowing decision to remain in
+            the victim’s mother’s immediate presence * * * fell within
+            the center of the prohibition.” <em>Id</em>. at 259.
+            </bon-update></p>
+            <p>OAR 213-005-0008(2)(b) authorizes extended probationary
+            terms by departure. <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=13336337739867524570&amp;q=State+v.+Maki,+115+Or+App+367,+838+P2d+636+(1992)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Maki</a>, 115 Or App 367, 369-70, 838 P2d 636 (1992)
+            (upholding sentencing court’s imposition of exceptionally
+            long probationary term); <a
+            href="http://scholar.google.com/scholar_case?q=114+Or+App+1&amp;hl=en&amp;as_sdt=2,38&amp;case=4801475415973858897&amp;scilh=0">State
+            v. Dotter</a>, 114 Or App 1, 4, 833 P2d 1369 (1992).</p>
+            <p>The aggravating factors used to impose a durational
+            departure term of probation are subject to Sixth Amendment
+            constitutional requirements of <a
+            href="http://scholar.google.com/scholar_case?q=530+US+466&amp;hl=en&amp;as_sdt=2,38&amp;case=4053038751252355308&amp;scilh=0">Apprendi
+            v. New Jersey</a>, 530 US 466, 120 S Ct 2348, 147 L Ed 2d
+            435 (2000), which are discussed in Chapter 1. <em>See</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=198+Or+App+568&amp;hl=en&amp;as_sdt=2,38&amp;case=18341777250259087838&amp;scilh=0">State
+            v. Howe</a>, 198 Or App 568, 109 P3d 391 (2005) (court erred
+            in basing 36-month durational departure term of probation on
+            its non-juried aggravating factor).</p>
+            <p>For convictions for completed and attempted first- and
+            second-degree rape, sodomy, sexual penetration, and sexual
+            abuse, a sentencing court must impose a probationary term of
+            up to five years, OAR 213-005-0008(2)(c), and, without
+            declaring a departure, may impose a probationary sentence of
+            as long as the crime’s ORS 161.605 statutory maximum. ORS
+            137.012. Finally, OAR 213-005-0008(2)(d) authorizes a
+            sentencing court, without a departure, to impose a
+            probationary term of up to five years if the defendant
+            stands convicted “a crime of a sexual nature” that is not
+            covered by OAR 213-005-0008(2)(c), or if the court finds
+            that “a sex offender treatment program is appropriate[.]”
+            OAR 213-005-0008(2)(d).</p>
+            <section id="maximum_length_of_extended_terms."
+            class="level3">
+            <h3><strong>§ 5-3.2.1. Maximum Length of Extended
+            Terms.</strong></h3>
+            <p>OAR 213-005-0008(2)(e) says that under no circumstances
+            may a court extend probation beyond a term of five years. As
+            previously discussed, the presumptive probationary terms for
+            crimes ranked at seriousness levels 9 to 11 is five years.
+            OAR 213-005-0008(1)(d). Thus, the extension provisions of
+            OAR 213-005-0008(2)(a)-(d) have no application to crimes
+            ranked at levels 9 to 11. Furthermore, the extension
+            provisions do not apply to sex offenders initially given
+            probationary terms of five years or longer under ORS
+            137.012.</p>
+            <p>The extension provision also addresses situations where,
+            to try to meet the purposes of probation, the court wishes
+            to extend the term. The court may “extend the length of
+            probation subject to OAR 213-005-0008(2)(e) upon finding a
+            violation or violations of the conditions of probation[.]”
+            OAR 213-005-0008(2)(a). Under OAR 213-005-0008(2)(e), the
+            court may not extend the term of probation to longer than
+            five years. This five-year limit irreconcilably conflicts
+            with the six-year limit set by ORS 137.010(4), which
+            states:</p>
+            <p>“[U]pon a later finding that a defendant sentenced to
+            probation for a felony has violated a condition of the
+            probation and in lieu of revocation, the court may order the
+            period of both the suspended sentence and the sentence of
+            probation extended until a date not more than six years from
+            the date of original imposition of sentence.”</p>
+            <p>For two reasons, this six-year limit has no application
+            in guidelines.</p>
+            <p>First, the legislature created the six-year limit in
+            1981. Or Laws 1981, ch 181, § 1(3). It created the five-year
+            limit in 1989, when it approved the sentencing guidelines.
+            Or Laws 1989, ch 790, § 87. OAR 213-005-0008(2)(e)’s
+            five-year limit thus is the later in time of the two
+            provisions, and it irreconcilably conflicts with the
+            six-year term. Under the “implied amendment” doctrine, the
+            five-year provision controls. <em>E.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=17244386562545586390&amp;q=vedder&amp;hl=en&amp;as_sdt=4,38">State
+            v. Vedder</a>, 206 Or App 424, 430-31, 136 P3d 1128 (2006),
+            <em>rev den</em>, 342 Or 417 (2007) (where two provisions
+            irreconcilably conflict, provision created later in time
+            controls).</p>
+            <p>Further, the six-year statute applies when the court
+            “suspended sentence.” This is consistent with the statute’s
+            opening clause, which states: “ If the court suspends the
+            imposition or execution of a part of a sentence for an
+            offense other than a felony committed on or after November
+            1, 1989[.]” ORS 137.010(4) (emphasis added). As previously
+            explained, the concept of suspending sentences does not
+            exist in guidelines sentencing. The is why the statute’s
+            opening clause references “an offense other than a felony
+            committed on or after November 1, 1989,” with that date
+            being the guidelines effective date. Thus, the text makes
+            clear that the six-year statute applies only in sentencing
+            crimes committed before the guidelines effective date,
+            rendering the statute inapplicable in guidelines cases.</p>
+            <p>In State v. Miller, 224 Or App 642, 199 P3d 329 (2008),
+            the court examined the scope of OAR 213-005-0008(3)—in
+            particular, by reconciling it with ORS 137.545(1), which
+            provides in pertinent part:</p>
+            <blockquote>
+            <p>“Subject to the limitations in ORS 137.010 and to rules
+            of the Oregon Criminal Justice Commission for felonies
+            committed on or after November 1, 1989:</p>
+            <p>“(a) The period of probation shall be as the court
+            determines and may, in the discretion of the court, be
+            continued or extended.”</p>
+            </blockquote>
+            <p>In <em>Miller</em>, the defendant had absconded from
+            probation. As a consequence, the trial court extended his
+            probationary term by one year. On the expiration date of his
+            extended term, the state brought a revocation action. A week
+            later the court issued a bench warrant.</p>
+            <p>The Court of Appeals observed, “If a circuit court
+            commences a revocation proceeding during a defendant’s
+            period of probation, through a show cause order or a bench
+            warrant, the court retains jurisdiction over the defendant
+            even after probation ends.” <a
+            href="https://scholar.google.com/scholar_case?q=224+Or+App+642&amp;hl=en&amp;as_sdt=2,38&amp;case=10199232361571913678&amp;scilh=0">Miller</a>,
+            224 Or App at 645 (emphasis added). In <em>Miller</em>, the
+            defendant argued that because the trial court did not issue
+            the warrant until one week after the extended probationary
+            term previously had expired, the court lacked jurisdiction
+            to revoke his probation. The state countered, and the trial
+            court agreed, that OAR 213-005-0008(3) operated to
+            automatically extend the defendant’s probationary term for
+            an amount of time equal to the time that he was on abscond,
+            which, the state claimed, was long enough for the trial
+            court to retain jurisdiction to revoke probation. <a
+            href="https://scholar.google.com/scholar_case?q=224+Or+App+642&amp;hl=en&amp;as_sdt=2,38&amp;case=10199232361571913678&amp;scilh=0"><em>Miller</em></a>,
+            224 Or App at 645.</p>
+            <p>The Court of Appeals reversed. The court explained that
+            ORS 137.545(1)(a) “suggests that a judicial order is
+            necessary to set or extend a term of probation. The period
+            of probation is ‘as the court determines.’ A period of
+            probation may be continued or extended only ‘in the
+            discretion of the court,’ <em>i.e.</em>, by a judicial
+            order.” <a
+            href="https://scholar.google.com/scholar_case?q=224+Or+App+642&amp;hl=en&amp;as_sdt=2,38&amp;case=10199232361571913678&amp;scilh=0"><em>Miller</em></a>,
+            224 Or App at 646. Although the court later noted that “we
+            do not decide if OAR 213-005-0008(3) operates to extend a
+            period of probation as a matter of law before a court
+            rules,” <a
+            href="https://scholar.google.com/scholar_case?q=224+Or+App+642&amp;hl=en&amp;as_sdt=2,38&amp;case=10199232361571913678&amp;scilh=0"><em>Miller</em></a>,
+            224 Or App at 648 n 3, the court’s analysis of ORS
+            137.545(1)(a) casts doubt on the state’s construction of OAR
+            213-005-0008(3). The court concluded:</p>
+            <blockquote>
+            <p>“We do not need to resolve whether OAR 213-005-0008(3)
+            operates independently of a judicial order on a term of
+            probation. Any independent effect would be superseded by a
+            judicial order reestablishing the term of probation. At
+            best, the rule could mean that the time of absconding must
+            be added to a period of probation until a court has issued
+            an appropriate sanction on the probation violation. But once
+            a court has acted on that violation, and adjudicated any
+            change to the probation term, the ‘period of probation shall
+            be as the court determines’ under ORS 137.545(1)(a) and not
+            otherwise. Any different effect of the rule—that it works to
+            reach behind a judicial sanction for a probation violation
+            and to modify that sanction by increasing the term of
+            probation—makes the rule inconsistent with the text of ORS
+            137.545(1)(a). The rule should not be interpreted to create
+            that disharmony. Limiting the effect of the rule once a
+            court sanctions a defendant avoids any contention of double
+            jeopardy that might arise when a single probation violation
+            of absconding from supervision is sanctioned twice—once by
+            the sanction imposed in the probation revocation proceeding
+            and later when the probationary period is recalculated and
+            extended.”</p>
+            </blockquote>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=224+Or+App+642&amp;hl=en&amp;as_sdt=2,38&amp;case=10199232361571913678&amp;scilh=0">Miller</a>,
+            224 Or App at 647 (court’s emphasis).</p>
+            <p>Moreover, the text of OAR 213-005-0008(3) casts further
+            doubt on the construction of the rule that the state
+            advanced in <em>Miller</em>. The rule says that a
+            defendant’s term of probation is tolled during the time he
+            is on abscond status “and a bench warrant has been issued
+            for [his] arrest[.]” OAR 213-005-0008(3) (emphasis added).
+            Thus, there is no tolling until such time that the court
+            issues a bench warrant.</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            In <a
+            href="https://scholar.google.com/scholar_case?case=2421168721403059033&amp;q=323+or+app+74&amp;hl=en&amp;as_sdt=6,38">State
+            v. LaCoe</a>, 323 Or App 74, 81, 522 P3d 18 (2022), the
+            trial court revoked the defendant’s probation based on a
+            supplemental allegation that was filed four months after
+            conclusion of the probation period. The four-month delay
+            would have supported the revocation, <strong>but only
+            if</strong> the defendant had absconded from probation. OAR
+            213-005-0008(3) (“[t]he time during which the offender has
+            absconded from supervision and a bench warrant has been
+            issued for the offender‘s arrest shall not be counted in
+            determining the time served on a sentence of probation”).
+            But “the state did not allege that defendant had absconded,
+            but rather alleged that defendant had failed to ‘[r]eport as
+            directed and abide by the direction of the supervision
+            officer’ when he missed a single meeting with a probation
+            officer.” <em>LaCoe</em>, 323 Or App at 81. The court
+            explained:</p>
+            <p>“The failure to report [to the probation office] can
+            be—but is not necessarily—absconding. <em>See</em> [<a
+            href="https://scholar.google.ca/scholar_case?case=5650750399048612527&amp;q=345+Or+28&amp;hl=en&amp;as_sdt=6,38">State
+            v. Robbins</a>, 345 Or 28, 37, 188 P3d 262 (2008)] (‘A
+            single missed appointment is not enough to conclude that
+            defendant was hiding or that [they] sought to evade the
+            court’s jurisdiction.’).”</p>
+            <p><em>Id</em>.</p>
+            <p>“Thus, the sentencing court lacked authority to revoke
+            probation based on the state’s supplemental allegation,
+            which was filed four months after the probation period
+            ended.” <em>Id</em>. </bon-update></p>
+            </section>
+            </section>
+            <section id="bench_probation." class="level2">
+            <h2><strong>§ 5-3.4. Bench Probation.</strong></h2>
+            <p>OAR 213-005-0008(4) authorizes sentencing courts to
+            impose bench probation in lieu of supervised terms of
+            probation. The provision makes clear that a court may impose
+            bench probation in all cases (and not only in cases where an
+            extended term of bench probation is necessary to ensure that
+            the conditions of probation are completely satisfied).</p>
+            </section>
+            </section>
+            <section
+            id="oar_213_005_0009_non_presumptive_probationary_sentences."
+            class="level1">
+            <h1><strong>§ 5-4. OAR 213-005-0009 NON-PRESUMPTIVE
+            PROBATIONARY SENTENCES.</strong></h1>
+            <p>OAR 213-005-0009 specifies the duration of optional and
+            departure terms of probation:</p>
+            <p>If the sentencing judge imposes a probationary sentence
+            as a dispositional departure or as an optional probationary
+            sentence, the duration of probation shall be as provided by
+            OAR 213-005-0008.</p>
+            <section id="analysis_of_provision." class="level2">
+            <h2><strong>§ 5-4.1. Analysis of Provision.</strong></h2>
+            <p>As previously discussed, if a defendant qualifies for
+            optional probation, the sentencing court has discretion to
+            impose such a term. Because OAR 213-005-0009 incorporates
+            the durational requirements of OAR 213-005-0008, the
+            standard duration of a term of optional probation is three
+            years.</p>
+            <p>For all other defendants falling into presumptive
+            imprisonment grid blocks, and who otherwise are eligible for
+            probation, the court may impose probation by dispositional
+            departure. OAR 213-003-0001(6) (“‘[d]ispositional departure’
+            means a sentence which imposes probation when the
+            presumptive sentence is prison”). The court may impose such
+            a sentence only if it concludes that that “substantial and
+            compelling reasons” justify imposing probation instead of
+            imprisonment. <em>See</em> Chapter 7 (discussing departure
+            sentences).</p>
+            <p>Because OAR 213-005-0009 incorporates the durational
+            requirements of OAR 213-005-0008, the standard duration of a
+            departure term of probation is two, three, or five years,
+            depending on the crime’s seriousness level. But if the
+            defendant’s crime falls under ORS 137.012, the probationary
+            term must be at least five years long, and may be as long as
+            the crime’s ORS 161.605 statutory maximum.</p>
+            </section>
+            </section>
+            <section
+            id="oar_213_005_0010_modification_of_length_of_probationary_terms."
+            class="level1">
+            <h1><strong>§ 5.5. OAR 213-005-0010 MODIFICATION OF LENGTH
+            OF PROBATIONARY TERMS.</strong></h1>
+            <p>OAR 213-005-0010 regulates the modification and
+            termination of probationary terms when such changes are to
+            the defendant’s benefit. It states:</p>
+            <p>(1) A sentencing judge may shorten or terminate a
+            probationary sentence or transfer supervision to bench
+            probation upon a finding that supervision is no longer
+            necessary to accomplish the purposes of the imposed
+            sentence.</p>
+            <p>(2) Modification of a probationary sentence which results
+            in shortening the term, termination, or transfer to bench
+            probation shall not require a hearing.</p>
+            <section id="analysis_of_provision._1" class="level2">
+            <h2><strong>§ 5-5.1. Analysis of Provision.</strong></h2>
+            <p>OAR 213-005-0010(1), as well as ORS 137.545(1)(b),
+            authorize sentencing courts to shorten or terminate a
+            probationary term, or to transform it to bench probation, if
+            it finds that a supervision is no longer needed. The court
+            may do so <em>ex parte</em>. OAR 213-005-0010(2).</p>
+            </section>
+            </section>
+            <section id="oar_213_005_0011_sanction_units."
+            class="level1">
+            <h1><strong>§ 5-6. OAR 213-005-0011 SANCTION
+            UNITS.</strong></h1>
+            <p>Guidelines probationary sentences typically have three
+            components: length of term, a custodial-type condition, and
+            non-custodial conditions. A guidelines concept called
+            “sanction units” are used to regulate the imposition of both
+            custodial-type and non-custodial conditions. OAR
+            213-005-0011(1) sets limits on the extent to which “sanction
+            units” regulate the imposition of custodial-type
+            conditions:</p>
+            <p>(1) When imposing a probationary sentence, the sentencing
+            judge may require that the offender serve a term of custody
+            supervision in a correctional facility or as part of a
+            custody program. The term of custody supervision shall be
+            imposed as a number of sanction units. Sanction units not
+            used to set an initial term of custody are automatically
+            reserved for use as sanctions for probation violations or to
+            insure the purposes of probation are being served.</p>
+            <p>(2) The number of sanction units that may be imposed as
+            part of a presumptive probationary sentence shall be
+            determined by the grid block classification of the
+            offense:</p>
+            <p>(a) Up to 90 sanction units for offenses classified in
+            Crime Categories 1 and 2 and grid blocks 3-G, 3-H and
+            3-I;</p>
+            <p>(b) Up to 120 sanction units for offenses classified in
+            grid blocks 3-A through 3-F, 4-C through 4-I, and 5-G
+            through 5-I; and</p>
+            <p>(c) Up to 180 sanction units for offenses classified in
+            grid blocks 5-F, 6-F through 6-I, and 7-F through 7-I.</p>
+            <p>(3) Notwithstanding section (2) of this rule, for
+            offenders sentenced under 2011 Or Laws ch 598, the maximum
+            number of sanction units that may be imposed as a
+            presumptive probation sentence shall be up to 180 sanction
+            units in grid blocks 4-C through 4-D.</p>
+            <p>(4) If the sentencing judge imposes a probationary
+            sentence as a dispositional departure or as an optional
+            probationary sentence, the sentencing judge may impose up to
+            180 sanction units as a part of the sentence. Imposition of
+            more than 180 sanction units is a departure.</p>
+            <p>(5) Notwithstanding the fact that the court has sentenced
+            a person to a term of incarceration, when an offender is
+            committed to the custody of the supervisory authority of a
+            county under ORS 137.124(2) or (4):</p>
+            <p>(a) The supervisory authority shall incarcerate offenders
+            sentenced under 2011 Or Laws ch 598 for at least the
+            mandatory minimum term of 90 days without reduction for any
+            reason.</p>
+            <p>(b) Except for the mandatory minimum term of 90 days as
+            provided in (5)(a) above, the supervisory authority may
+            execute any sentence by imposing sanctions other than
+            incarceration if deemed appropriate by the supervisory
+            authority.</p>
+            <p>(6) Notwithstanding the limits on sanction units
+            established in sections 2 and 3 of this rule, an additional
+            number of non-jail sanction units may be used to sanction
+            violations of conditions of a probation sentence. There
+            shall be no departure on these additional non-jail sanction
+            units, nor may they be used as jail sanction units pursuant
+            to the findings allowed in OAR 213-005-0013(3). These
+            additional non-jail sanction units are:</p>
+            <p>(a) Up to 30 additional non-jail sanction units for
+            offenses classified in Crime Seriousness Categories 1 and 2
+            and grid blocks 3-G, 3-H and 3-I;</p>
+            <p>(b) Up to 60 additional non-jail sanction units for
+            offenses classified in grid blocks 3-A through 3-F, 4-C
+            through 4-I, and 5-G through 5-I; and</p>
+            <p>(c) Up to 90 additional non-jail sanction units for
+            offenses classified in grid blocks 5-F, 6-F through 6-I, 7-F
+            through 7-I, and offenses in which a sentence of probation
+            was imposed as a departure or pursuant to OAR 213-005-0006
+            (Optional Probation).</p>
+            <p>(7) Notwithstanding the limits on sanction units
+            established in sections 2, 3 and 4 of this rule, an
+            additional number of sanction units may be used to sanction
+            violations of conditions of a probation sentence. There
+            shall be no departure on these additional sanction units,
+            nor may they be used as jail sanction units pursuant to the
+            findings allowed in OAR 213-005-0013(3). These additional
+            sanction units are:</p>
+            <p>(a) Up to 60 additional jail or non-jail sanction units
+            for offenses classified in Crime Seriousness Categories 1
+            and 2 and grid blocks 3-G, 3-H and 3-I, of which no more
+            than 30 may be jail sanction units;</p>
+            <p>(b) Up to 105 additional jail or non-jail sanction units
+            for offenses classified in grid blocks 3-A through 3-F, 4-C
+            through 4-I, and 5-G through 5-I, of which no more than 45
+            may be jail sanction units; and</p>
+            <p>(c) Up to 150 additional jail or non-jail sanction units
+            for offenses classified in grid blocks 5-F, 6-F through 6-I,
+            7-F through 7-I, and offenses in which a sentence of
+            probation was imposed as a departure or pursuant to OAR
+            213-005-0006 (Optional Probation), of which no more than 60
+            may be jail sanction units.</p>
+            <p>(8) For crimes committed on or after January 1, 2002,
+            section 6 shall not apply and section 7 shall operate in its
+            place.</p>
+            <section id="definition_of_sanction_unit." class="level2">
+            <h2><strong>§ 5-6.1. Definition of “Sanction
+            Unit.”</strong></h2>
+            <p>The guidelines do not define the phrase “sanction unit.”
+            But as will be seen, it may be defined as a discrete element
+            of a condition of probation a defendant satisfies by
+            spending time in jail, in a residential custodial treatment
+            center, on release programs such as work release, under
+            house arrest, or performing community service.</p>
+            </section>
+            <section id="general_requirements_of_provision."
+            class="level2">
+            <h2><strong>§ 5-6.2. General Requirements of
+            Provision.</strong></h2>
+            <p>Except in the context of the intermediate-sanction
+            system, <em>see</em> Section 5-16, only the sentencing court
+            may specify how sanction units are to be used; consequently,
+            the court may not order that sanction units “be utilized at
+            the discretion of [the defendant’s] probation officer.” <a
+            href="http://scholar.google.com/scholar_case?q=118+Or+App+536&amp;hl=en&amp;as_sdt=2,38&amp;case=12323693848931948059&amp;scilh=0">State
+            v. Shefler</a>, 118 Or App 536, 537, 847 P2d 417 (1993)
+            <em>(per curiam</em>). Sanction units that are not used
+            initially are automatically reserved for use as sanctions
+            for probation violations, or to ensure that the purposes of
+            probation are being served. OAR 213-005-0011(1). <em>See
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=111+Or+App+294&amp;hl=en&amp;as_sdt=2,38&amp;case=8397870417991730500&amp;scilh=0">State
+            v. Anderson</a>, 111 Or App 294, 298, 826 P2d 66 (1992)
+            (un-imposed sanction units are automatically reserved for
+            future use).</p>
+            </section>
+            <section id="maximum_number_of_sanction_units."
+            class="level2">
+            <h2><strong>§ 5-6.3. Maximum Number of Sanction
+            Units.</strong></h2>
+            <p>OAR 213-005-0011(2) sets out the presumptive maximum
+            number of sanction units the court may impose for each
+            probationary grid block. Depending on the defendant’s
+            grid-block, these numbers are 90, 120, or 180, as shown as
+            the upper number in each presumption probation/straight jail
+            grid-block. For example, presumption probation/straight jail
+            grid-blocks ranked at seriousness level 4 specify a sanction
+            unit maximum of 120. But when a court imposes a sentence of
+            probation on a defendant convicted of level 4 felony driving
+            under the influence of intoxicants (DUII), and whose
+            criminal-history score is C or D, the defendant’s sanction
+            units total is 180. OAR 213-005-0011(3). For defendants whom
+            the court sentences to an optional or a
+            dispositional-departure term of probation, the sanction
+            units total also is 180. OAR 213-005-0011(4).</p>
+            </section>
+            <section id="converting_incarceration_sanctions."
+            class="level2">
+            <h2><strong>§ 5-6.4. Converting Incarceration
+            Sanctions.</strong></h2>
+            <p>OAR 213-005-0011(5) references ORS 137.124. Under that
+            statute, if a court imposes an incarceration term of one
+            year or less, and the term is not consecutive to an
+            incarceration term of greater than one year, the defendant
+            serves the sentence locally, in the county jail. But the
+            local supervisory authority may convert the incarceration
+            term into a non-incarceration term. OAR 213-005-0011(5).</p>
+            </section>
+            <section
+            id="increasing_sanction_units_for_probation_violations."
+            class="level2">
+            <h2><strong>§ 5-6.5. Increasing Sanction Units for Probation
+            Violations.</strong></h2>
+            <p>OAR 213-005-0011(6) authorizes sentencing courts to
+            increase, by 30, 60, or 90, the number of sanction units a
+            defendant must serve. However, the subsection only
+            authorizes these increases as sanctions for probation
+            violations. To impose additional sanction units, the court
+            must hold a hearing. <a
+            href="https://scholar.google.com/scholar_case?case=15356705148472890683&amp;q=State+v.+Warner,+118+Or+App+726,+848+P2d+146+(1993)&amp;hl=en&amp;as_sdt=4,38">Warner</a>,
+            118 Or App at 727.</p>
+            <p>Moreover, the 2001 Legislature’s House Bill 3461 directed
+            the Criminal Justice Commission to “amend its rules to
+            increase the jail and nonjail custody [<em>sic</em>] units
+            that can be imposed as custodial sanctions for probation
+            violations under ORS 137.595. The commission shall base the
+            amendments on the existing rule structure and may not
+            increase existing sanction limits by more than 60 days.”</p>
+            <p>The commission responded by adopting OAR 213-005-0011(7).
+            The amendments apply to crimes committed on or after January
+            1, 2002. OAR 213-005-0011(8). Depending on the defendant’s
+            grid block, OAR 213-005-0011(7) allows sanction-unit
+            maximums of 150, 225, and 330 to deal with probation
+            violations. Moreover, the number of sanction units that may
+            be satisfied by jail time are 30, 45, and 60, again
+            depending on the defendant’s grid block.</p>
+            </section>
+            </section>
+            <section id="oar_213_005_0012_custodial_supervision."
+            class="level1">
+            <h1><strong>§ 5-7. OAR 213-005-0012 CUSTODIAL
+            SUPERVISION.</strong></h1>
+            <p>OAR 213-005-0012 specifies the custody-type programs that
+            may be used to satisfy the sanction-units component of a
+            probationary sentence:</p>
+            <p>(1) The sanction units imposed as part of a probationary
+            sentence shall be used to set a term of custodial
+            supervision in a correctional facility or as part of a
+            custody program. Credit for sanction units shall only be
+            granted for time actually served. Good time credits, work
+            time credits, or early release shall not count towards
+            satisfaction of sanction units.</p>
+            <p>(2) When sanction units are imposed as part of a
+            probationary sentence, the offender shall receive credit for
+            having served those sanction units as follows:</p>
+            <p>(a) JAIL: Each day of jail incarceration equals one (1)
+            sanction unit.</p>
+            <p>(b) RESIDENTIAL CUSTODIAL TREATMENT FACILITY: Each day of
+            actual confinement in a 24-hour residential custodial
+            treatment facility equals one (1) sanction unit when the
+            program is satisfactorily completed including up to one year
+            of any required aftercare. Aftercare may continue for more
+            than one year, but custody unit credit shall be granted
+            following satisfactory completion of one year.</p>
+            <p>(c) RELEASE PROGRAMS: Each day of partial confinement in
+            a release program, in which the offender is confined in a
+            custodial facility when not on release, equals one (1)
+            sanction unit for each day of partial incarceration.</p>
+            <p>(d) HOUSE ARREST: Each day of satisfactory compliance
+            with the requirements of house arrest equals one (1)
+            sanction unit if the offender satisfactorily completes the
+            house arrest.</p>
+            <p>(e) COMMUNITY SERVICE: Sixteen hours of community service
+            under the direct supervision of a supervisor designated by
+            the supervisory authority equals one sanction unit.</p>
+            <p>(3)(a) When the sentencing judge orders jail time as part
+            of a probationary sentence, the judge shall sentence the
+            offender directly to the custody of the supervisory
+            authority with jurisdiction over the county jail.</p>
+            <p>(b) When the sentencing judge recommends a custodial
+            facility or program other than jail, the judge shall
+            sentence the offender directly to the custody of the
+            supervisory authority with jurisdiction over that facility
+            or program. To impose such a sentence, the judge must
+            determine that space is available in that facility or
+            program and that the offender meets the eligibility criteria
+            established for that facility or program by the supervisory
+            authority.</p>
+            <p>(4) The supervisory authority shall keep a record of all
+            sanction units served by the offender during the course of
+            the probationary term. When sanction units are served only
+            upon the satisfactory completion of a custodial program, the
+            supervisory authority, when appropriate, shall certify that
+            the offender has satisfactorily completed a custodial
+            program and the number of sanction units served by the
+            offender as part of the program.</p>
+            <p>(5) Where the sentencing judge finds that a custodial
+            rehabilitation program designed to deal with drug or alcohol
+            abuse or sexual behavior is essential to minimize the
+            offender’s likelihood of engaging in future criminal
+            conduct, the requirement that the offender enter and
+            satisfactorily complete such a program shall not be limited
+            by the sanction units set forth in OAR 213-005-0011 or the
+            provisions of this rule.</p>
+            <section id="general_requirements_of_provision._1"
+            class="level2">
+            <h2><strong>§ 5-7.1 General Requirements of
+            Provision.</strong></h2>
+            <p>OAR 213-005-0012(1) allows satisfying sanction units by
+            actual participation in custody programs. A defendant may
+            not earn good-time reductions in the sanction unit component
+            of his probationary sentence.</p>
+            <p>Sentencing courts may use sanction units by committing
+            probationers to jail, residential custodial treatment, or
+            such release programs as work release, house arrest, and
+            community service. OAR 213-005-0012(2)(a)-(e). For each of
+            these facilities except community service, each day of
+            participation satisfies one sanction unit. OAR
+            213-005-0012(2)(a)-(d). Each 16 hours of participation in
+            supervised community service satisfies one sanction unit.
+            OAR 213-005-0012(2)(e).</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            However, the criminal code provides certain limitations on
+            the imposition of community service to meet sanction unit
+            requirements. The code provision states:</p>
+            <blockquote>
+            <p>“(1) A judge may sentence an offender to community
+            service either as an alternative to incarceration or fine or
+            probation, or as a condition of probation. Prior to such
+            order of community service the offender must
+            <strong>consent</strong> to donate labor for the welfare of
+            the public. The court or its delegate may select community
+            service tasks that are within the offender’s capabilities
+            and are to be performed within a reasonable length of time
+            during hours the offender is not working or attending
+            school.</p>
+            <p>“(2) Failure to perform a community service sentence may
+            be grounds for revocation of probation or contempt of
+            court.”</p>
+            </blockquote>
+            <p>ORS 137.128 (emphasis added).</p>
+            <p><strong>WARNING</strong>: Depending on how judges offer
+            defendants the community service alternative, this statute
+            can be problematic. For example, suppose a judge tells the
+            defendant, “Unless you agree to some community service time,
+            I’m going to sentence you to some jail time. So, do you
+            consent to some community service?” In that scenario, the
+            defendant could be considered to have <strong>submitted, but
+            not to have consented</strong> to community service, so may
+            be <strong>compelled</strong> to accept community service by
+            threat of jail. In that scenario, the defendant submitting
+            to community service will serve legal slavery under
+            authority of the Thirteenth Amendment.</p>
+            <p>Previously, the defendant could serve legal slavery not
+            only under authority of the Thirteenth Amendment, but also
+            under authority of Article I, section 34, of the Oregon
+            Constitution. That was because in 1859 (so six years before
+            ratification of the Thirteenth Amendment), the voters
+            authorized legal slavery of <strong>inmates</strong> who
+            were “duly convicted” of crimes. But in November 2022, the
+            voters approved (by a comfortable margin) Ballot Measure
+            112, which amended Article I, section 34 by removing the
+            section’s text, and which authorized legal slavery of
+            inmates who were “duly convicted” of crimes. With that text
+            removed, section 34 no longer permits
+            <strong>inmates</strong> legal slavery.<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a></p>
+            <p>But defendants who are probationers are not inmates, and,
+            rather surprisingly, Measure 112 allows imposing legal
+            slavery in the form of community service on probationers and
+            parolees. Measure 112 so confirms that, by adding the
+            pertinent text: “Upon conviction of a crime, an Oregon court
+            or a probation or parole agency may order the convicted
+            person to engage in * * * community service * * * as part of
+            sentencing for the crime[.]” Art I, § 34(2).<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            <p>This leaves two open questions:</p>
+            <blockquote>
+            <p>Does section 34(2) supersede ORS 137.128(1), so as to
+            allow courts to impose community service without obtaining
+            the probationers’ consent?</p>
+            <p>Or does section 34(2) allow courts to impose community
+            service only if probationers consent to community service?<a
+            href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a></p>
+            </blockquote>
+            <p></bon-update></p>
+            <p>OAR 213-005-0012(3)(a) applies when the sentencing court
+            orders jail in satisfaction of sanction units. It requires
+            the court to place the defendant in the custody of the
+            jail’s supervisory authority (usually, the county
+            sheriff).</p>
+            <p>OAR 213-005-0012(3)(b) applies when the court orders time
+            in any type of custodial facility other than jail. Before a
+            court may order a defendant into one of these facilities, it
+            must find that the facility has space available and that the
+            defendant qualifies for participation in the program. When
+            these two conditions are met, the court “sentence[s] the
+            offender directly to the custody of the supervisory
+            authority with jurisdiction over that facility or program.”
+            <em>Id.</em></p>
+            <p>OAR 213-005-0012(4) requires the custodial facility’s
+            supervisory authority to keep records of a defendant’s
+            service of sanction units. In some circumstances, the rule
+            also requires the supervisory authority to certify that a
+            defendant has “satisfactorily” completed the custodial
+            program.</p>
+            </section>
+            <section id="behavior_modification_programs."
+            class="level2">
+            <h2><strong>§ 5-7.2. Behavior Modification
+            Programs.</strong></h2>
+            <p>OAR 213-005-0012(5) applies to defendants whose sanction
+            units are to be satisfied by commitment to facilities
+            “deal[ing] with drug or alcohol abuse or sexual behavior[.]”
+            In cases where the court finds that program participation is
+            essential to reducing recidivism, the limits on the number
+            of sanction units discussed above do not apply. Also
+            inapplicable are the provisions specifying how many hours a
+            defendant must spend in a facility to satisfy a single
+            sanction unit.</p>
+            </section>
+            </section>
+            <section id="jail_as_condition_of_probation."
+            class="level1">
+            <h1><strong>§ 5-8. JAIL AS CONDITION OF
+            PROBATION.</strong></h1>
+            <p>OAR 213-005-0013 specifies the maximum number of days in
+            jail that may be used to satisfy the sanction unit component
+            of a probationary sentence:</p>
+            <p>(1) Subject to the provisions of sections (2), (3) and
+            (4) of this rule, the maximum number of sanction units that
+            may be used to impose a jail term as part of a probationary
+            sentence shall be as follows:</p>
+            <p>(a) Up to 30 sanction units for offenses classified in
+            Crime Categories 1 and 2 and grid blocks 3-G, 3-H and
+            3-I;</p>
+            <p>(b) Up to 60 sanction units for offenses classified in
+            grid blocks 3-A through 3-F, 4-C through 4-I, and 5-G
+            through 5-I; and</p>
+            <p>(c) Up to 90 sanction units for offenses classified in
+            grid blocks 5-F, 6-F through 6-I, and 7-F through 7-I, and
+            if a probation sentence is imposed as a departure from a
+            presumptive prison term or as an optional probation
+            sentence.</p>
+            <p>(2) Within the limitations established by this rule on
+            the use of jail as part of a probation sentence, the
+            sentencing judge may impose:</p>
+            <p>(a) A jail term of no more than one-third of the jail
+            sanction units described in section 1 of this rule as part
+            of a probation sentence to be served immediately upon
+            sentencing;</p>
+            <p>(b) One or more jail terms as a sanction for probation
+            violations over the term of probation; or</p>
+            <p>(c) Subsections (a) and (b) of this section so long as
+            the total length of jail incarceration does not exceed the
+            limits established by this rule on the use of jail as part
+            of a probationary sentence except as provided in OAR
+            213-005-0011(6).</p>
+            <p>(3) The limitations established by this rule on the use
+            of jail as part of a probationary sentence may be exceeded
+            if the sentencing judge, after consulting with the
+            appropriate supervisory authority, finds on the record that
+            local jail space provided by the county is available for a
+            longer term. Upon making such a finding, the sentencing
+            judge may, without departure, use:</p>
+            <p>(a) Up to the maximum number of jail sanction units
+            described in section 1 of this rule at the time of initial
+            sentencing; and</p>
+            <p>(b) Up to the maximum number of sanction units described
+            in OAR 213-005-0011(2) and (3) to impose jail for violations
+            of conditions of the probation sentence.</p>
+            <p>(4) The maximum number of sanction units that may be used
+            to impose a jail term as part of a probationary sentence
+            under 2011 Or Laws ch 598 shall be 90, which must be imposed
+            without reduction for any reason. The provisions of
+            subsection (2)(a) shall not apply to sentences imposed under
+            this subsection.</p>
+            <section id="general_requirements_of_provision._2"
+            class="level2">
+            <h2><strong>§ 5-8.1. General Requirements of
+            Provision.</strong></h2>
+            <p>OAR 213-005-0013(1) specifies the maximum number of jail
+            days, of 30, 60, or 90, that a sentencing court ordinarily
+            may impose in satisfaction of sanction units. But ORS
+            813.011(3) mandates a minimum incarceration term of 90 days
+            in felony DUII cases. To accommodate this mandate, OAR
+            213-005-0013(4) mandates imposition of 90 sanction units in
+            such cases, which units then are satisfied by imposition of
+            the mandatory incarceration term.</p>
+            <p>Under OAR 213-005-0013(2)(a), a court ordinarily may not
+            impose a jail term equal to the grid block’s lower number.
+            Instead, under the so-called “one-third rule,” the court may
+            impose a jail term of equal to one-third of the grid block’s
+            lower number.<a href="#fn4" class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a> The remaining two-thirds
+            are reserved for probation-violation sanctions. OAR
+            213-005-0013(2)(b). The sum of a defendant’s initial jail
+            term and his jail-term sanctions for probation violations
+            usually may not exceed his grid block’s lower number. OAR
+            213-005-0013(2)(c).</p>
+            </section>
+            <section id="exceptionally_long_jail_terms." class="level2">
+            <h2><strong>§ 5-8.2. Exceptionally Long Jail
+            Terms.</strong></h2>
+            <p>In four situations, sentencing courts may impose jail
+            terms longer than authorized by OAR 213-005-0013(2). First,
+            a court may impose a longer term if it finds on the record
+            that the county has available jail space. The court then may
+            avoid the one-third rule and impose a jail term of up to the
+            lower number in the defendant’s grid block. OAR
+            213-005-0013(3)(a).</p>
+            <p>Second, a court may impose a longer term in the event of
+            probation violations. OAR 213-005-0013(3)(b). That rule, as
+            well as OAR 213-005-0013(2)(c), establish that for such
+            violations, the court may not impose a sanction-unit total
+            that exceeds the grid block’s upper number.</p>
+            <p>Third, by departure the court may impose a jail term of
+            up to the maximum number of sanction units. OAR
+            213-008-0006(2). Section 5-8.2, as well as Chapter 7,
+            discuss departing as to the duration of jail terms.</p>
+            <p>Finally, under OAR 213-005-0011(6), for probation
+            violations, a court may add jail sanction units of up to 30,
+            45, or 60 days, depending on the defendant’s grid block.</p>
+            </section>
+            </section>
+            <section
+            id="oar_213_005_0014_level_of_community_supervision."
+            class="level1">
+            <h1><strong>§ 5-9. OAR 213-005-0014 LEVEL OF COMMUNITY
+            SUPERVISION.</strong></h1>
+            <p>OAR 213-005-0014 establishes the methodology the DOC uses
+            in determining how intensively its officers, or its
+            designee’s officers, will supervise a defendant who is on
+            probation:</p>
+            <p>(1) The Department or its designees shall use a risk
+            assessment classification system to classify offenders for
+            supervision purposes.</p>
+            <p>(2) The level of supervision shall be established by the
+            Department or its designees based on the offender-risk
+            classification. The level of supervision may be increased or
+            decreased by the supervisory authority in response to the
+            offender’s conduct under supervision and as is necessary to
+            manage the offender in the community.</p>
+            <section id="analysis_of_provision._2" class="level2">
+            <h2><strong>§ 5-9.1. Analysis of Provision.</strong></h2>
+            <p>According to commentary, the provisions of OAR
+            213-005-0014</p>
+            <blockquote>
+            <p>“depend on the use of a statewide risk classification
+            instrument to ensure that the same standards are used to
+            classify offenders in all jurisdictions. Systematic
+            classification also seeks to ensure the best use of limited
+            supervisory resources whereby more resources are used to
+            supervise offenders judged to pose the greatest risk of
+            probation violation, including the risk of new criminal
+            conduct.”</p>
+            </blockquote>
+            <p><em>Sentencing Guidelines Implementation Manual</em> 167
+            (1989) (hereafter <em>Implementation Manual</em>).</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            Counsel should be wary of OAR 213-005-0014(1), which
+            instructs, “The Department or its designees shall use a
+            <strong>risk assessment classification</strong> system to
+            classify offenders for [probationary] supervision purposes.”
+            (Emphasis added.) This wariness stems from the lack of
+            reliability of risk assessment testing, which requires
+            development and use of a “toolbox” to challenge risk
+            assessment testing. As Philipsborn explains:</p>
+            <blockquote>
+            <p>“A lawyer’s need for a toolbox arises in part because
+            different theories, categories, and classes of such
+            assessments exist; there are scientific and technical
+            questions about the reliability of risk assessment practices
+            in criminal justice risk assessment; the individual doing
+            the assessment may not have an adequate background,
+            training, or knowledge of the reliability of the assessment
+            procedure being used. Another important reason for preparing
+            a toolbox is Professor Christopher Slobogin’s observation in
+            his book on ‘dangerousness’ adjudications about ‘[t]he
+            courts’ nonchalance toward prediction testimony.’”</p>
+            </blockquote>
+            <p>John Philipsborn, <em>A Basic Risk Assessment Toolbox:
+            Aiming for Adequate Lawyering During the Spread of Risk
+            Assessments</em>, The Champion, Jan/Feb 2020, at 36 (quoting
+            Christopher Slobogin, <em>Proving the Unprovable: The Role
+            of Law, Science, &amp; Speculation in Adjudicating
+            Culpability &amp; Dangerousness</em> 108 (2007)).
+            </bon-update></p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            Finally, a defendant</p>
+            <blockquote>
+            <p>“convicted of a felony or a designated drug-related
+            misdemeanor and sentenced to probation * * * is eligible for
+            a reduction in the period of probation * * * for complying
+            with terms of probation * * * , including demonstrating a
+            commitment to the payment of restitution to the extent the
+            person is able to pay, and participation in recidivism
+            reduction programs.”</p>
+            </blockquote>
+            <p>ORS 137.633(1).</p>
+            <p>“The maximum reduction * * * may not exceed 50 percent of
+            the period of probation * * * imposed.” ORS 137.633(2).
+            Additionally, the “reduction * * * may not be used to
+            shorten the period of probation * * * to less than six
+            months.” ORS 137.633(3). However, a defendant who falls into
+            any of the several categories listed in ORS 137.633(4) “is
+            not eligible for a reduction in the term of
+            supervision[.]”</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=635219761361110208&amp;q=State+v.+Covell,+322&amp;hl=en&amp;as_sdt=4,38">State
+            v. Covell</a>, 322 Or App 243, 519 P3d 173 (2022) clarifies
+            application of ORS 137.633. “[T]he sentencing court
+            contravened ORS 137.633 when it ordered that defendant would
+            ‘[n]ot be eligible for earned discharge.’” 322 Or App at
+            244. The Court of Appeals rejected the sentencing court’s
+            order. It explained that the defendant</p>
+            <p><strong>“‘is eligible</strong> for a reduction in the
+            period of probation or local control post-prison supervision
+            for complying with terms of probation or post-prison
+            supervision, including the payment of restitution and
+            participation in recidivism reduction programs.’ ORS
+            137.633(1) (emphasis added).</p>
+            <p>“ORS 137.633(1) does not allow room for a sentencing
+            court to preemptively deny eligibility for earned discharge
+            or otherwise change the terms of eligibility for earned
+            discharge.”</p>
+            <p><em>Id.</em> at 246-47. The court then concluded that
+            “the sentencing court contravened the terms of the statute
+            when it ordered as part of its sentencing judgment that
+            defendant would not be eligible for earned discharge.
+            <em>Id.</em> at 248. </bon-update></p>
+            </section>
+            </section>
+            <section
+            id="oar_213_005_0015_non_custody_conditions_of_probation."
+            class="level1">
+            <h1><strong>§ 5-10. OAR 213-005-0015 NON-CUSTODY CONDITIONS
+            OF PROBATION.</strong></h1>
+            <p>OAR 213-005-0015 authorizes the imposition of special
+            conditions of probation:</p>
+            <p>The sentencing judge may impose any additional
+            non-custodial special conditions of probation as provided by
+            law.</p>
+            <section id="general_requirements_of_provision._3"
+            class="level2">
+            <h2><strong>§ 5-10.1. General Requirements of
+            Provision.</strong></h2>
+            <p>OAR 213-005-0015 “confirms the continued authority of
+            sentencing judges to impose any non-custodial supervisory
+            conditions permitted by law. <em>See</em>, ORS 137.540.”
+            <em>Implementation Manual</em> at 105-06. During the
+            probationary period, “[t]he court may at any time modify the
+            conditions of probation.” ORS 137.540(9)(a). But the court
+            may not delegate to the probation officer the authority to
+            impose conditions of probation. <a
+            href="http://scholar.google.com/scholar_case?q=89+Or+App+47&amp;hl=en&amp;as_sdt=2,38&amp;case=8049106953336314864&amp;sc">State
+            v. Flynn</a>, 89 Or App 47, 747 P2d 376 (1987) (after
+            ordering that defendant, as condition of probation, pay
+            certain fees, the court erred in delegating to probation
+            officer the authority to determine defendant’s ability to
+            pay; statute requires court to make that determination).
+            Indeed, the court may violate the state constitution’s
+            separation of powers if it delegates its
+            condition-imposition authority to the probation officer.
+            <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=15850832251683790500&amp;q=United+States+v.+Esparza,+552+F3d+1088,+1091+(9th+Cir+2009)&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Esparza</a>, 552 F3d 1088, 1091 (9th Cir 2009)
+            (such delegation violates federal constitution’s separation
+            of powers); <a
+            href="https://scholar.google.com/scholar_case?case=11412538874137172006&amp;q=United+States+v.+Stevens,+424+F3d+876,+881+(9th+Cir+2005)&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Stephens</a>, 424 F3d 876, 881 (9th Cir 2005)
+            (same).</p>
+            <p>A part of Section 24 of HB 3194, codified as ORS
+            137.540(2)(b)(B), states that a probationer may be ordered
+            to “[c]omply with any special conditions of probation that
+            are imposed by the supervising officer in accordance with
+            subsection (9) of this section.” <em>Id</em>. This provision
+            applies only to “crimes committed on or after August 1,
+            2013.” Or Laws 2013, ch 649, § 25. The pertinent part of ORS
+            137.540(9), which HB 3194 also created, states:</p>
+            <p><bon-update year="2023" month="June" deprecated="false"></p>
+            <blockquote>
+            <p>“(b) When the court orders a defendant placed under the
+            supervision of the Department of Corrections or a community
+            corrections agency, the supervising officer may file with
+            the court a proposed modification to the special conditions
+            of probation. The supervising officer shall provide a copy
+            of the proposed modification to the district attorney and
+            the probationer, and shall notify the probationer of the
+            right to file an objection and have a hearing as described
+            in subparagraph (A) of this paragraph. The notice
+            requirement may be satisfied by providing the probationer
+            with a copy of a form developed in accordance with rules
+            adopted under ORS 137.595 (2)(b) that describes the right to
+            a hearing. If the district attorney or probationer:</p>
+            <p>“(A) Files an objection to the proposed modification less
+            than five judicial days after the proposed modification was
+            filed, the court shall schedule a hearing no later than 10
+            judicial days after the proposed modification was filed,
+            unless the court finds good cause to schedule a hearing at a
+            later time.</p>
+            <p>“(B) Does not file an objection to the proposed
+            modification less than five judicial days after the proposed
+            modification was filed, the proposed modification becomes
+            effective five judicial days after the proposed modification
+            was filed.”</p>
+            </blockquote>
+            <p>The legislature passed Senate Bill 651 (2021) (enrolled
+            as Oregon Laws 2021, chapter 404), which amended ORS
+            137.540(9) These amendments require the supervising officer
+            to notify the defendant of the officer’s proposed
+            modification to the defendant’s special conditions of
+            probation, and the defendant has the right to file an
+            objection the proposed modification. </bon-update></p>
+            <p>It has long been established that a court may not modify
+            the terms of probation without first giving notice and an
+            opportunity for the defendant to be heard. <em>See,
+            e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?case=15356705148472890683&amp;q=118+Or+App+726&amp;hl=en&amp;as_s">Warner</a>,
+            118 Or App at 727. As seen, the provisions of ORS
+            137.540(9)(b)(A) created a roughly parallel notification
+            requirement, for the benefit of prosecutors.</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            Moreover, the court may not modify the conditions of
+            probation after the defendant completed the term of
+            probation. For example, in <a
+            href="https://scholar.google.com/scholar_case?case=17292532938960686034&amp;q=State+v.+Larson,+314+Or+App+576&amp;hl=en&amp;as_sdt=4,38">State
+            v. Larson</a>, 314 Or App 576, 497 P3d 1276 (2021), the
+            court held a “resentencing” hearing and imposed fines, but
+            by then the defendant had completed service of his sentence,
+            including the probation. The court, therefore, lacked
+            authority to modify the terms of his sentence.
+            </bon-update></p>
+            <p>ORS 137.540(1) sets out an extensive list of general
+            non-custodial conditions of probation. These general
+            conditions are included in all probationary sentences
+            “unless specifically deleted by the court.” <em>Id</em>.
+            Consequently, the general conditions essentially are
+            presumptive conditions.</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            But in certain cases, general conditions are limited in
+            their scope. For example, in <a
+            href="https://scholar.google.com/scholar_case?case=1483019805959675161&amp;q=308+Or+App+694&amp;hl=en&amp;as_sdt=6,38">State
+            v. Heaston</a>, 308 Or App 694, 482 P3d 167 (2021), the
+            trial court imposed the general condition that a probationer
+            shall not “use or possess controlled substances except
+            pursuant to a medical prescription.” ORS 137.540(1)(b).
+            While on probation, the defendant admitted that he had used
+            marijuana. Later, in a probation-violation hearing, he
+            “argue[d] that a ‘defendant does not violate the general
+            condition of probation forbidding him to use or possess
+            controlled substances by using marijuana,’” because
+            “‘marijuana is no longer considered a controlled substance
+            in the State of Oregon.’” 308 Or App at 696. The trial court
+            rejected the defendant’s argument and imposed violation
+            sanctions. But the Court of Appeals reversed. It held that
+            “considering text, context, and legislative history, we
+            conclude the phrase ‘controlled substances’ in ORS
+            137.540(1)(b) does not include marijuana. Accordingly, we
+            conclude that the trial court erred. We reverse and remand.”
+            <em>Id</em>. at 705. <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=8700246024757110355&amp;q=State+v.+Carlson,+317+Or+App+337&amp;hl=en&amp;as_sdt=4,38">State
+            v. Carlson</a>, 317 Or App 337, 341, 504 P3d 1284 (2022) (in
+            violation of ORS 137.542(2), “the trial court erred in
+            imposing special conditions of probation that completely
+            prohibit defendant from using or possessing marijuana and
+            from entering any marijuana dispensary, without giving
+            defendant an opportunity to establish whether he holds a
+            marijuana registry identification card”). </bon-update></p>
+            <p>Recent Court of Appeals decisions suggest that general
+            conditions are subject to strict constructions. For example,
+            in <a
+            href="https://scholar.google.com/scholar_case?case=2624276222914700064&amp;q=296+Or+App+184&amp;hl=en&amp;as_sdt=6,38">State
+            v. Kelemen</a>, 296 Or App 184, 437 P3d 1225 (2019), the
+            court relied on general condition (m)—“[r]eport as required
+            and abide by the direction of the supervising officer,” ORS
+            137.540(1)(m)—to revoke probation. The factual basis for the
+            allegation was that the defendant had repeatedly failed to
+            comply with his probation officer’s orders to complete his
+            work-crew assignment. Previously, in <a
+            href="https://scholar.google.com/scholar_case?case=209319964072607981&amp;q=State+v.+Hardges,+294+Or+App+445,+432+P3d+268+(2018)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hardges</a>, 294 Or App 445, 446, 432 P3d 268 (2018), the
+            court construed general condition (m) as applicable “only
+            when the direction at issue directly relates to the
+            reporting requirement imposed by that condition.” Relying on
+            <em>Hardges</em>, the <a
+            href="https://scholar.google.com/scholar_case?case=2624276222914700064&amp;q=296+Or+App+184&amp;hl=en&amp;as_sdt=6,38"><em>Kelemen</em></a>
+            court held that the defendant’s refusal to complete his
+            work-crew assignment did not constitute a violation of
+            general condition (m). 296 Or App at 189.</p>
+            <p>The sentencing court may “impose any special conditions
+            of probation that are reasonably related to the crime of
+            conviction or the needs of the defendant for the protection
+            of the public or reformation of the offender[.]” ORS
+            137.540(2). <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=3992217141935637636&amp;q=Gallo,+275+Or+App+868&amp;hl=en&amp;as_sdt=4,38">State
+            v. Gallo</a>, 275 Or App 868, 365 P3d 1154 (2015) (where
+            defendant used the internet to facilitate his commission of
+            sexual abuse, trial court did not err in imposing a special
+            condition of probation barring defendant from using email,
+            social networking, and the internet generally without
+            obtaining pre-approval from his probation officer);</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            <a
+            href="https://scholar.google.com/scholar_case?case=10874516840185577520&amp;q=325+Or+App+574&amp;hl=en&amp;as_sdt=4,38">State
+            v. Priester</a>, 325 Or App 574, 589, 530 P3d 118 (2023)
+            (“[t]he probation condition that defendant ‘[d]isclose
+            nature of conviction to any domestic partner’ is
+            unconstitutionally vague under the Fourteenth Amendment”);
+            <a
+            href="https://scholar.google.com/scholar_case?case=15756973644753732986&amp;q=State+v.+Butler,+313+Or+App+786&amp;hl=en&amp;as_sdt=4,38">State
+            v. Butler</a>, 313 Or App 786, 494 P3d 1031 (2021) (Court of
+            Appeals affirmed trial court’s finding of probation
+            violation where defendant violated a condition of probation
+            prohibiting him from contacting victim, by posting about
+            victim on his Facebook page, which posts victim could see);
+            <a
+            href="https://scholar.google.com/scholar_case?case=1588178374484229663&amp;q=312+Or+App+618&amp;hl=en&amp;as_sdt=6,38">State
+            v. Farris</a>, 312 Or App 618, 622, 365 P3d 1154 (2021)
+            (where defendant was convicted of second-degree sexual
+            abuse, Court of Appeals rejected vagueness and overbroad
+            claim that special condition of defendant must seek
+            permission before participating in any “intimate or sexual
+            relationship or encounter (such as dating, romantic, or
+            otherwise sexual”); <a
+            href="https://scholar.google.com/scholar_case?case=4137493007760265770&amp;q=309+Or+App+589&amp;hl=en&amp;as_sdt=6,38">State
+            v. Preusse</a>, 309 Or App 589, 482 P3d 189 (2021) (<em>per
+            curiam</em>) (special condition requiring probation
+            officer’s permission to engage in intimate relationships was
+            unlawful); <a
+            href="https://scholar.google.com/scholar_case?case=7260783633877035079&amp;q=309+Or+App+762&amp;hl=en&amp;as_sdt=6,38">State
+            v. Welt</a>, 309 Or App 762, 483 P3d 56 (2021) (<em>per
+            curiam</em>) (trial court erred in imposing special
+            conditions related to drugs and alcohol, when defendant’s
+            crime did not involve drugs or alcohol); <a
+            href="https://scholar.google.com/scholar_case?case=1666988631182764944&amp;q=302+Or+App+140&amp;hl=en&amp;as_sdt=6,38">State
+            v. Worthey</a>, 302 Or App 140, 143-44, 460 P3d 545 (2020)
+            (trial court erred in imposing special condition of
+            probation prohibiting defendant from possessing marijuana or
+            cannabis products, because the defendant’s use of marijuana
+            did not reasonably relate to his crime of conviction, his
+            needs, or the protection of the public); </bon-update></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=9094679048827076051&amp;q=State+v.+Gaskill,+250+Or+App+100&amp;hl=en&amp;as_sdt=4,38">State
+            v. Gaskill</a>, 250 Or App 100, 279 P3d 275 (2012) (where
+            defendant was convicted of the third-degree sexual abuse of
+            an adult woman, and nothing in his record indicated he ever
+            had engaged in unlawful activity with minors, trial court
+            erred in imposing special condition prohibiting defendant
+            from having contact with minors or frequenting places where
+            minors congregate); <a
+            href="https://scholar.google.com/scholar_case?case=11568069210283072661&amp;q=State+v.+Hitesman,+113+Or+App+356&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hitesman</a>, 113 Or App 356, 362-63, 833 P2d 306,
+            <em>rev den</em>, 314 Or 574 (1992) (where defendant was
+            convicted of cultivating marijuana, special condition
+            banning him from living in rural areas and possessing
+            buildings of certain sizes, was overly broad and not
+            authorized). A court may not impose conditions that conflict
+            with any of the general and special conditions enumerated in
+            ORS 137.540(1)-(2). <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=12611581223543380306&amp;q=State+v.+Smith,+117+Or+App+473,+844+P2d+276+(1992)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Smith</a>, 117 Or App 473, 475-76, 844 P2d 276 (1992)
+            (where <em>former</em> special condition (k) authorized
+            chemical tests at request of defendant’s probation officer,
+            condition allowing such tests at request of a police officer
+            was invalid). <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=534+US+112&amp;hl=en&amp;as_sdt=2,38&amp;case=1560488013338831968&amp;sci">United
+            States v. Knights</a>, 534 US 112, 122 S Ct 587, 151 L Ed 2d
+            497 (2001) (Fourth Amendment allows police, with reasonable
+            suspicion, to search home of probationer whose probation is
+            conditioned on warrantless searches);</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            <a
+            href="https://scholar.google.com/scholar_case?case=8151315943739431807&amp;q=State+v.+Vanhorn,+310+Or+App+224&amp;hl=en&amp;as_sdt=4,38">State
+            v. Vanhorn</a>, 310 Or App 224, 483 P3d 1257 (2021) (<em>per
+            curiam</em>) (special condition requiring submission to
+            searches unlawful, because it overrode general condition
+            authorizing searches only upon reasonable grounds); <a
+            href="https://scholar.google.com/scholar_case?case=16089247589059942790">State
+            v. Nelson</a>, 310 Or App 219, 483 P3d 1261 (2021) (<em>per
+            curiam</em>) (same). </bon-update></p>
+            <p>The court “must make a fact[ual] record [explaining how]
+            the condition is appropriate.” <a
+            href="http://scholar.google.com/scholar_case?q=113+Or+App+263&amp;hl=en&amp;as_sdt=2,38&amp;case=3310980997178772764&amp;scilh=0">State
+            v. Quackenbush</a>, 113 Or App 263, 265, 832 P2d 1236
+            (1992).</p>
+            <p>PRACTICE TIP: With some frequency, courts impose
+            unauthorized conditions which go unchallenged at sentencing
+            or on appeal. If the state later seeks to revoke probation
+            based on an alleged violation of such an unauthorized
+            condition, the defendant may not assert the condition’s
+            illegality as a defense. <a
+            href="https://scholar.google.com/scholar_case?case=8980728988040168505&amp;q=State+v.+Hindman,+125+Or+App+434,+866+P2d+481+(1993)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hindman</a>, 125 Or App 434, 437, 866 P2d 481 (1993); <a
+            href="https://scholar.google.com/scholar_case?case=15118814835439401051&amp;q=121+Or+App+594&amp;hl=en&amp;as_sdt=6,38">State
+            v. Beavers</a>, 121 Or App 594, 596, 856 P2d 332 (1993). For
+            this reason, at sentencing defense counsel must be careful
+            object to unauthorized conditions, and, if necessary, appeal
+            their imposition.</p>
+            <p>A trial court may impose a “sex-offender package” as a
+            condition of probation in sentencing a crime listed as a
+            sexual offense. <a
+            href="https://scholar.google.com/scholar_case?case=11586362123048335105&amp;q=156"><em>State
+            v. Mack</em></a>, 156 Or App 423, 428-29, 967 P2d 516
+            (1998). If the court is not sentencing a crime listed as a
+            sexual offense, it may impose a sex-offender package only if
+            the facts show that the defendant “acted with a sexual
+            purpose[.]” 156 Or App at 429. <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=210+Or+App+1&amp;hl=en&amp;as_sdt=2,38&amp;case=12834712007754332842&amp;scilh=0">State
+            v. McCollister</a>, 210 Or App 1, 5-6, 150 P3d 7 (2006)
+            (holding consistent with <em>Mack</em>).</p>
+            <p>Notwithstanding that probation is a sentence,
+            <em>e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=321+Or+99&amp;hl=en&amp;as_sdt=2,38&amp;case=12505748528088146273&amp;scilh=0">Holcomb</a>,
+            321 Or at 104, in <em>McCollister</em> the Court of Appeals
+            held that where the defendant is convicted of a non-sexual
+            offense—in <em>McCollister,</em> harassment after sexual
+            abuse charges were dropped—the trial court may impose a
+            sex-offender package as a special condition of probation
+            without making specific findings that the defendant acted
+            with a sexual purpose. All that is required is for the
+            record to show that the package is reasonably related to the
+            defendant’s offense, his needs for the protection of the
+            public, or his reformation.</p>
+            <p>Because no specific findings are required to impose a
+            sex-offender package, the <em>McCollister</em> court further
+            held that the Sixth Amendment jury trial requirements
+            discussed in Chapter 1 does not require a jury finding of a
+            reasonable relationship. Whether <em>McCollister</em> will
+            defeat the claim that the Sixth Amendment requires jury
+            findings of reasonable relationships for the imposition of
+            other types of special conditions of probation remains to be
+            seen.</p>
+            <p>Moreover, sex-offender packages usually or always require
+            the defendant to undergo treatment. Sex-offender treatment
+            programs often require defendants to “come clean” about all
+            of their prior sexual transgressions—and to perhaps even
+            undergo polygraphs to prove that they have come clean. A
+            failure to come clean may be treated as a violation of the
+            sex-offender-package condition of probation and result in
+            violation sanctions. But in <a
+            href="https://scholar.google.com/scholar_case?case=11974151542831798607&amp;q=395+F3d+1128&amp;hl=en&amp;as_sdt=6,38">United
+            States v. Antelope</a>, 395 F3d 1128 (9th Cir 2005), the
+            court held that revocation of a defendant’s probation
+            because he refused to come clean as part of his sex-offender
+            treatment violated his Fifth Amendment right against
+            self-incrimination. Later, in <a
+            href="http://scholar.google.com/scholar_case?case=4989070518157463871&amp;q=730+">United
+            States v. Bahr</a>, 730 F3d 963 (9th Cir 2013), the court
+            relied on <em>Antelope</em> to hold that because statements
+            made during a sex-evaluation treatment (a consequence of a
+            state conviction for a sexual offense) were given under
+            compulsion—the threat that if the defendant did not fully
+            disclose his past sexual history, he would fail the program
+            and his probation (or supervised release) would be
+            revoked—it is “unconstitutional” to use those statements to
+            determine the defendant’s “sentence in a later, unrelated
+            criminal proceeding[.]” <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=526+US+314&amp;hl=en&amp;as_sdt=2,38&amp;case=12775750995573865720&amp;scilh=0">Mitchell
+            v. United States</a>, 526 US 314, 325, 119 S Ct 1307, 143 L
+            Ed 2d 424 (1999) (unless defendant has knowingly and
+            voluntarily waived his right against self-incrimination,
+            <em>e.g.</em>, as part of a guilty or no-contest plea, right
+            continues until the completion of sentencing); <a
+            href="https://scholar.google.com/scholar_case?case=817504197673326694&amp;q=State+v.+Barone,+329+Or+210,+986+P2d+5+(1999)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Barone</a>, 329 Or 210, 231, 986 P2d 5 (1999) (right
+            against self-incrimination continues until after defendant
+            has “been convicted and [his appeal or] his time for appeal
+            [has] run”).</p>
+            </section>
+            <section id="risk_and_needs_assessment." class="level2">
+            <h2><strong>§ 5-10.2. Risk and Needs
+            Assessment.</strong></h2>
+            <p>Section 24 of HB 3194 created a new general condition of
+            probation, which states: “Submit to a risk and needs
+            assessment as directed by the supervising officer[.]” ORS
+            137.540(1)(q). The authority to impose this type of
+            condition applies only in sentencings for “crimes committed
+            on or after August 1, 2013.” Or Laws 2013, ch 649, § 25.</p>
+            </section>
+            </section>
+            <section
+            id="oar_213_005_0016._departure_probationary_sentences."
+            class="level1">
+            <h1><strong>§ 5-11. OAR 213-005-0016. DEPARTURE PROBATIONARY
+            SENTENCES.</strong></h1>
+            <p>OAR 213-005-0016 authorizes a sentencing court to depart
+            on the number of sanction units imposed:</p>
+            <p><em>A probationary sentence which exceeds the applicable
+            limitation on the use of custodial supervision as part of a
+            probationary sentence is a departure.</em></p>
+            <section id="analysis_of_provision._3" class="level2">
+            <h2><strong>§ 5-11.1. Analysis of Provision.</strong></h2>
+            <p>OAR 213-005-0016 authorizes a sentencing court, by
+            “departure,” to impose a sanction unit total “exceed[ing]
+            the total limits on [sanction] units, the limits on use of
+            jail as part of the total [sanction] unit limitation, or
+            both.” <em>Implementation Manual</em> at 139. The maximum
+            number of sanction units the court may impose is double the
+            presumptive number of units. OAR 213-008-0006(1). Chapter 7
+            discusses the imposition of departure sentences. Imposing
+            them requires the finding of “aggravating factors,” which
+            findings are subject to the Sixth Amendment jury trial
+            requirements discussed in Section 1. Those constitutional
+            requirements should apply to the imposition of departure
+            sanction unit totals.</p>
+            <p>As discussed in Section 5-8.2, the court may, by
+            departure, impose a jail term of up to the maximum number of
+            sanction units. OAR 213-008-0006(2). But here again, the
+            constitutional requirements discussed in Chapter 1 should
+            apply to the imposition of departure jail terms.</p>
+            </section>
+            </section>
+            <section id="conditional_discharge_probationary_sentences."
+            class="level1">
+            <h1><strong>§ 5-12. CONDITIONAL DISCHARGE PROBATIONARY
+            SENTENCES.</strong></h1>
+            <p>If a defendant is convicted of a drug offense, and has no
+            prior drug convictions or conditional discharges, a
+            sentencing court may order the conditional discharge of his
+            conviction, rather than impose a judgment of conviction and
+            sentence. ORS 475.245. The discharge is conditioned on the
+            defendant successfully completing a term of probation
+            imposed by the sentencing court. If the defendant violates
+            probation, the court may impose a judgment of conviction and
+            sentence.</p>
+            <p>ORS 475.245 does not specify the duration and conditions
+            of a conditional discharge probationary sentence. Presumably
+            they are the same as the court would impose as a presumptive
+            probationary sentence. If so, a conditional discharge
+            probationary sentence would be identical to a presumptive
+            probationary sentence, with the exception that upon
+            successful completion of the conditional discharge
+            probationary term, the defendant’s record of conviction will
+            be cleared.</p>
+            <p>Moreover, a discharged conviction “is not a conviction *
+            * * for purposes of disqualifications or disabilities
+            imposed by law upon conviction of a crime.” <em>Id</em>.
+            Thus, it may not be used for criminal history scoring
+            purposes, discussed in Chapter 3.</p>
+            <p>Defense counsel also should be aware that except for DUII
+            and domestic-violence charges, under ORS 137.533,
+            conditional discharges generally are available for
+            misdemeanor charges.</p>
+            <section id="appeal_of_conditional_discharge_orders."
+            class="level2">
+            <h2><strong>§ 5-12.1. Appeal of Conditional Discharge
+            Orders.</strong></h2>
+            <p>Occasionally, a defendant who receives a
+            conditional-discharge probationary sentence will have an
+            issue he wishes to appeal, <em>e.g.</em>, the denial of a
+            motion to suppress evidence. But as discussed in Chapter 9,
+            a defendant may not appeal unless and until a final judgment
+            is entered. An order imposing conditional discharge is not a
+            final judgment, so the defendant may not appeal. <a
+            href="https://scholar.google.com/scholar_case?case=13040175345672438339&amp;q=State+v.+Spencer,+130+Or+App+158,+881+P2d+154+(1994)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Spencer</em></a>, 130 Or App 158, 881 P2d 154 (1994).</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            Moreover, if the defendant fails to complete the probation
+            agreement and then is convicted of crimes charged, ORS
+            475.245(2), the defendant may appeal only on the grounds
+            “that the sentence exceeds the maximum allowed by law or
+            constitutes cruel and unusual punishment.” ORS
+            475.245(1)(c)(E). </bon-update></p>
+            </section>
+            </section>
+            <section id="oar_213_005_0017_record_of_sanction_units."
+            class="level1">
+            <h1><strong>§ 5-13. OAR 213-005-0017 RECORD OF SANCTION
+            UNITS.</strong></h1>
+            <p>OAR 213-005-0017 specifies the requirements for keeping
+            records of a defendant’s service of sanction units:</p>
+            <p>The supervisory authority or the supervisory authority’s
+            designee shall keep a record of all sanction units served by
+            the offender while under the jurisdiction of the supervisory
+            authority. The record shall be maintained in a form that
+            will enable the sentencing judge to determine whether the
+            sanction units imposed as part of a probationary sentence
+            have been served.</p>
+            <section id="analysis_of_provision._4" class="level2">
+            <h2><strong>§ 5-13.1. Analysis of Provision.</strong></h2>
+            <p>Commentary explains, “This rule describes the supervisory
+            authority’s general record keeping responsibilities to
+            record custody units. The specific form of record keeping is
+            left to the supervisory authority, but the form must enable
+            the sentencing judge to determine whether an offender has
+            served the custody units imposed as part of probation.”
+            <em>Implementation Manual</em> at 107-08.</p>
+            </section>
+            </section>
+            <section id="oar_213_010_0001_revocation_of_probation."
+            class="level1">
+            <h1><strong>§ 5-14. OAR 213-010-0001 REVOCATION OF
+            PROBATION.</strong></h1>
+            <p>OAR 213-010-0001 establishes the sentencing court’s
+            authority to revoke guidelines sentences of probation:</p>
+            <p>The decision to revoke probation is discretionary and may
+            be exercised upon a finding that the offender has violated
+            one or more of the conditions of probation, or that the
+            offender has participated in new criminal activity.</p>
+            <section id="purpose_of_provision." class="level2">
+            <h2><strong>§ 5-14.1. Purpose of Provision.</strong></h2>
+            <p>According to commentary, “This rule confirms that
+            sentencing guidelines do not change the sentencing judge’s
+            discretion to revoke probation.” <em>Implementation
+            Manual</em> at 169. But it is important to bear in mind that
+            revocation is not the only available sanction. Other, lesser
+            sanctions include imposing intermediate sanctions imposed by
+            the supervisory authority, <em>see</em> Section 5-16;
+            extending the probationary term; and imposing additional
+            conditions of probation, including additional jail time.
+            Furthermore, even if the defendant committed his violative
+            act during the probationary period, a bench warrant or
+            show-cause order must issue during the probationary period.
+            Otherwise, the probation expires and the court loses
+            jurisdiction to impose sanctions. <a
+            href="http://scholar.google.com/scholar_case?q=224+Or+App+642&amp;hl=en&amp;as_sdt=2,38&amp;case=10199232361571913678&amp;scilh=0">Miller</a>,
+            224 Or App at 642; <a
+            href="http://scholar.google.com/scholar_case?q=24+Or+App+423&amp;hl=en&amp;as_sdt=2,38&amp;case=13069415443293249174&amp;scilh=0">State
+            v. O’Neal</a>, 24 Or App 423, 427, 545 P2d 910 (1976).</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            In <a
+            href="https://scholar.google.com/scholar_case?case=12730229820055228519&amp;q=313+Or+App+578&amp;hl=en&amp;as_sdt=4,38">State
+            v. Martin</a>, 313 Or App 578, 496 P3d 1077 (2021),
+            <em>aff’d</em>, <a
+            href="https://scholar.google.com/scholar_case?case=17807279692782056129&amp;q=370+Or+653+&amp;hl=en&amp;as_sdt=4,38">370
+            Or 653</a>, 522 P3d 841 (2022), a divided Court of Appeals
+            opinion addressed the trial court’s admission of the
+            victim’s out-of-court statements made during a 9-1-1 call,
+            without good cause for why the victim was not called as a
+            witness during the hearing. The majority affirmed on the
+            ground that the victim’s statements were excited utterances,
+            so were within a firmly rooted exception to the hearsay
+            rule. As such, the admission did not violate the defendant’s
+            due process rights. The Supreme Court affirmed, “but on
+            different grounds than the Court of Appeals.” 370 Or at
+            655.</p>
+            <p>The Supreme Court explained that, under <a
+            href="https://scholar.google.com/scholar_case?case=6651080982371538818&amp;q=Morrissey+v.+Brewer&amp;hl=en&amp;as_sdt=4,38&amp;as_vis=1">Morrissey
+            v. Brewer</a>, 408 US 471, 92 S Ct 2593, 33 L Ed 2d 484
+            (1972), a defendant in a probation revocation hearing has a
+            due process right to confront adverse witnesses unless the
+            state establishes good cause for not allowing confrontation.
+            The court rejected the state’s argument that good cause is
+            always established if the evidence at issue falls within a
+            “firmly rooted” exception to the rule prohibiting hearsay.
+            The Court reasoned that, in light of the discretionary
+            nature of the ultimate decision to revoke probation, and
+            because the United States Supreme Court has held that the
+            hallmarks of procedural due process are flexibility and
+            fundamental fairness, it is appropriate to balance a
+            defendant’s interest in revocation against the factors
+            bearing on the state’s showing of good cause, regardless of
+            the reliability of the evidence. 370 Or 669-70. Applying
+            those factors here, including the presumptive veracity of
+            the evidence and the difficulty in producing the witness,
+            the court held that the trial court had correctly ruled that
+            the state established good cause for overcoming defendant’s
+            interest in confrontation. <em>Id</em>. at 671-72.</p>
+            <p>Finally, just as a court may not revoke probation if the
+            revocation action were initiated after the term of probation
+            expired, the court may not consider additional
+            probation-violation allegations the prosecution added after
+            the term of probation expired. For example, in <a
+            href="https://scholar.google.com/scholar_case?case=3426552574424427004&amp;q=State+v.+Bergland,+311+Or+App+424&amp;hl=en&amp;as_sdt=4,38">State
+            v. Bergland</a>, 311 Or App 424, 491 P3d 820 (2021), a
+            revocation action was initiated during the probationary
+            period, but the revocation hearing was not held until after
+            the probationary period had expired. Once the hearing
+            finally began, the prosecution alleged an additional six
+            violations. The trial court considered those additional
+            allegations and revoked the defendant’s probation. The Court
+            of Appeals reversed. It stated:</p>
+            <blockquote>
+            <p>“[T]he authority of a sentencing court to adjudicate
+            probation violations charged after the end of the
+            probationary period must be explicitly conferred by statute.
+            There is no statute conferring that authority. And the
+            statutes that govern the retained authority of a court to
+            sanction probation violations confine that authority to
+            violations that are charged ‘[a]t any time during the
+            probation period.’ No such violation was sanctioned
+            here.”</p>
+            </blockquote>
+            <p>311 Or App at 433. </bon-update></p>
+            </section>
+            <section
+            id="challenges_to_evidence_in_probation_violation_proceedings."
+            class="level2">
+            <h2><strong>§ 5-14.2. Challenges to Evidence in
+            Probation-Violation Proceedings.</strong></h2>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            A trial court may not “exercise its discretionary authority
+            to revoke probation absent the finding of a new crime or
+            other violation of the conditions of probation.” <a
+            href="https://scholar.google.com/scholar_case?case=9288501646575699689&amp;q=296+Or.App.+184&amp;hl=en&amp;as_sdt=4,38">State
+            v. Kelemen</a>, 296 Or App 184, 192, 437 P3d 1225 (2019).
+            Similarly, a trial court may not revoke probation based on
+            the defendant’s failure to comply with a probation officer’s
+            directive. This is because, regardless of the fact that the
+            court imposed a condition of probation requiring the
+            defendant to abide by the directives of the probation
+            officer, it is impermissible to revoke probation for
+            violating a condition imposed <strong>by a probation
+            officer</strong>. <em>E.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=4238230427820390693&amp;q=279+Or+App+274&amp;hl=en&amp;as_sdt=4,38">State
+            v. Rivera-Waddle</a>, 279 Or App 274, 278-79, 379 P3d 820
+            (2016).</p>
+            <p>Moreover, a trial court may not revoke probation for
+            failing to comply with a condition of probation when
+            compliance was impossible. In <a
+            href="https://scholar.google.com/scholar_case?case=7787667590550241877&amp;q=302+Or+App+730,&amp;hl=en&amp;as_sdt=4,38">State
+            v. Adams</a>, 302 Or App 730, 462 P3d 761 (2020), the trial
+            court revoked the defendant’s probation on the ground he
+            violated the special condition of probation that he failed
+            to complete family court. But family court was not available
+            to the defendant, because he had been “transfer[red] out of
+            [it] when * * * [his] children” were returned “to [his]
+            wife’s care and they moved out of state.” 302 Or App at 739.
+            In light of those facts, the court concluded: “The condition
+            cannot plausibly be construed to require defendant to
+            participate in a family court program that is not offered to
+            him for reasons beyond his control. Therefore, the trial
+            court erred in revoking defendant’s probation on that
+            basis.” <em>Id</em>. <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=17292532938960686034&amp;q=State+v.+Larson,+314+Or+App+576&amp;hl=en&amp;as_sdt=4,38">State
+            v. Larson</a> (where defendant had completed his term of
+            probation, the trial court erred in modifying the terms of
+            the sentence). </bon-update></p>
+            <p>Defense counsel should be aware of potential limitations
+            on the type of evidence a trial court may consider in a
+            probation-revocation hearing. For example, in <a
+            href="https://scholar.google.com/scholar_case?case=9339070540443160181&amp;q=State+v.+Hammond,+218+Or+App+574&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hammond</a>, 218 Or App 574, 582, 180 P3d 137 (2008)
+            (<em>en banc</em>), the Court of Appeals held that
+            “polygraph examination evidence is not—as a matter of
+            law—inadmissible in probation revocation proceedings.” But
+            the court noted that it did</p>
+            <p>“not mean to suggest that the admissibility of evidence
+            in such proceedings is entirely without limit. <em>Cf</em>.
+            <a
+            href="http://scholar.google.com/scholar_case?q=411+US+778&amp;hl=en&amp;as_sdt=2,38&amp;case=15952797368929450963&amp;scilh=0">Gagnon
+            v. Scarpelli</a>, 411 US 778, 93 S Ct 1756, 36 L Ed 2d 656
+            (1973) (discussing the due process implications of probation
+            revocation proceedings). Additionally, we acknowledge that
+            there may be other reasons for the exclusion of polygraph
+            evidence in proceedings to revoke probation.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=218+Or+App+574&amp;hl=en&amp;as_sdt=2,38&amp;case=9339070540443160181&amp;scilh=0">Hammond</a>,
+            218 Or App at 582 n 3.</p>
+            <p>Moreover, hearsay proffered at a probation-violation
+            hearing, against the defendant, is objectionable on federal
+            Confrontation Clause grounds. Oregon courts use a four-part
+            balancing test adapted from <a
+            href="https://scholar.google.com/scholar_case?case=11097631964325379982&amp;q=United+States+v.+Martin,+984+F2d+308&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Martin</a>, 984 F2d 308 (9th Cir 1993) to
+            determine whether to admit hearsay. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=260+P.3d+607&amp;hl=en&amp;as_sdt=2,38&amp;case=9119818749571598794&amp;scilh=0">State
+            v. Monk</a>, 244 Or App 152, 260 P3d 607 (2011) (explaining
+            the test, first adopted in <a
+            href="https://scholar.google.com/scholar_case?case=14374620811724939218&amp;q=State+v.+Johnson,+221+Or+App+394&amp;hl=en&amp;as_sdt=4,38">State
+            v. Johnson</a>, 221 Or App 394, 190 P3d 455 (2008)). The
+            four factors are: (i) the importance of the challenged
+            evidence to the court’s finding or central issue at stake,
+            (ii) the defendant’s opportunity to refute the evidence,
+            (iii) the difficulty and expense of obtaining witnesses for
+            live testimony, and (iv) the “traditional indicia of
+            reliability borne by the evidence.” <a
+            href="https://scholar.google.com/scholar_case?case=14374620811724939218&amp;q=State+v.+Johnson,+221+Or+App+394&amp;hl=en&amp;as_sdt=4,38">Johnson</a>,
+            221 Or App at 401.</p>
+            <p>In <em>Johnson</em>, the Court of Appeals affirmed the
+            admission of the hearsay, because it was in the form of a
+            sworn affidavit, the evidence was mostly unchallenged, and
+            the issue was fairly objective—<em>e.g</em>., did the
+            probationer report as directed or change his address. But in
+            cases decided since <em>Johnson</em>, the court has accepted
+            confrontation clause challenges to hearsay. For example, in
+            <a
+            href="https://scholar.google.com/scholar_case?case=16401587091852945078&amp;q=State+v.+Wibbens,+238+Or+App+737&amp;hl=en&amp;as_sdt=4,38">State
+            v. Wibbens</a>, 238 Or App 737, 243 P3d 790 (2010), the
+            defendant’s probation officer testified that a police
+            officer had told him the defendant smelled of alcohol. The
+            state offered no explanation for why the officer was not
+            present to testify—despite that the officer was a Douglas
+            County sheriff’s deputy and the proceeding was held in
+            Douglas County—and the probation officer did not corroborate
+            any of the statements. The Court of Appeals held that the
+            hearsay statements should not have been admitted and
+            reversed.</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            <a
+            href="https://scholar.google.com/scholar_case?case=812943979151679278&amp;q=State+v.+Brown,+313+Or+App+283&amp;hl=en&amp;as_sdt=4,38">State
+            v. Brown</a>, 313 Or App 283, 286, 496 P3d 701 (2021) (owing
+            to the importance of defendant’s interest in confrontation
+            and the absence of good cause for denying it, the admission
+            of the hearsay evidence violated defendant’s due process
+            right to confront an adverse witness, and the trial court
+            erred in admitting that evidence in a probation-revocation
+            hearing); </bon-update></p>
+            <p><em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=240+Or.App.+330&amp;hl=en&amp;as_sdt=2,38&amp;case=18354364227706791055&amp;scilh=0">State
+            v. Terry</a>, 240 Or App 330, 252 P3d 332 (2011) (admission
+            of hearsay violated confrontation clause); <a
+            href="https://scholar.google.com/scholar_case?case=9119818749571598794&amp;q=Monk,+244+Or+App&amp;hl=en&amp;as_sdt=4,38"><em>Monk</em></a>,
+            244 Or App at 159 (same).</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            On the other hand, <a
+            href="https://scholar.google.com/scholar_case?case=1704893566712490671&amp;q=State+v.+Jackson,+319&amp;hl=en&amp;as_sdt=4,38">State
+            v. Jackson</a>, 319 Or App 789, 511 P3d 82 (2022) carried a
+            different type of consideration. “While on probation,”
+            the</p>
+            <blockquote>
+            <p>“defendant entered a no contest plea to a new harassment
+            charge and was convicted of that offense. The state moved to
+            revoke defendant’s probation on the basis that he violated
+            the probation condition to “[o]bey all laws.” ORS
+            137.540(1)(j). At the show cause hearing, the state’s only
+            evidence was the judgment of conviction for harassment.
+            Defendant moved to dismiss, arguing that evidence of the
+            conviction was legally insufficient, because it arose from a
+            no contest plea, whereby he did not admit guilt.”</p>
+            </blockquote>
+            <p>319 Or App at 790.</p>
+            <p>The Court of Appeals rejected the defendant’s argument.
+            The court explained:</p>
+            <blockquote>
+            <p>“Although defendant did not affirmatively admit guilt in
+            the criminal proceeding, he did not contest the charges
+            against him and acknowledged that a factual basis supported
+            those charges. The trial court did not err by considering
+            the judgment of conviction as probative as to whether
+            defendant failed to obey all laws. Defendant does not
+            contend that any of the procedural safeguards required for
+            the acceptance of a no contest plea were absent in his case,
+            nor does he assert that he was unaware of the consequences
+            that entering that plea could have on his probation. As a
+            result, the trial court was entitled to rely on the judgment
+            of conviction as evidence that defendant committed a crime
+            and to weigh that evidence against the credibility of
+            defendant’s testimony at the probation hearing. Further,
+            given the record in this case, we conclude that the judgment
+            of conviction was legally sufficient evidence for the trial
+            court to find by a preponderance of the evidence that
+            defendant failed to obey all laws in violation of ORS
+            137.540(1)(j).”</p>
+            </blockquote>
+            <p><em>Id.</em> at 792.</p>
+            <p>Also worth considering is State v.+Straub, 322 Or App
+            393, 520 P3d 915 (2022). There, the defendant argued</p>
+            <blockquote>
+            <p>“that a trial court is required, in the context of a
+            probation revocation hearing, to engage in a colloquy with
+            defendant about the opportunity to contest the allegations
+            and the rights he would be giving up by admitting the
+            allegations. According to defendant, a failure to engage in
+            such a colloquy is reversible error.”</p>
+            </blockquote>
+            <p>322 Or App at 394.</p>
+            <p>The Court of Appeals noted that the “[d]efendant’s
+            argument that due process requires a formal colloquy has
+            been rejected by the Ninth Circuit, which has held that a
+            colloquy to ensure a knowing and intelligent waiver in the
+            context of a probation revocation hearing is not
+            required[.]” <em>Id.</em> at 395 (relying on <a
+            href="https://scholar.google.com/scholar_case?case=6049674579220614639&amp;q=549+F2d+1293&amp;hl=en&amp;as_sdt=6,38">United
+            States v. Segal</a>, 549 F2d 1293, 1298 (9th Cir), <em>cert
+            den</em>, 431 US 919 (1977)). The Court of Appeals rejected
+            the defendant’s argument, stating that “[a]lthough we are
+            not bound by the Ninth Circuit on this issue, here we find
+            its reasoning persuasive and reach the same conclusion.”
+            <em>Id</em>. </bon-update></p>
+            </section>
+            <section id="grid_block_for_revocation_proceedings."
+            class="level2">
+            <h2><strong>§ 5-14.3. Grid Block for Revocation
+            Proceedings.</strong></h2>
+            <p>Upon revocation of probation, the court uses the
+            defendant’s guidelines grid block as the basis for imposing
+            a revocation sanction (unless ORS 137.593(2)(d) applies,
+            <em>see</em> Section 5-15.2). As a matter of statutory law,
+            the court must use the same grid block it used in the
+            defendant’s original sentencing even if, in the interim, it
+            is determined that the grid block was erroneously low. The
+            court may not correct the prior error by using the higher
+            and correct grid block. <a
+            href="http://scholar.google.com/scholar_case?q=217+Or+App+606&amp;hl=en&amp;as_sdt=2,38&amp;case=13860096054115552129&amp;scilh=0">State
+            v. Bolf</a>, 217 Or App 606, 176 P3d 1287 (2008) (trial
+            court erred in recalculating defendant’s criminal-history
+            score at probation-revocation proceeding; under OAR
+            213-010-0002, once a probationary sentence is executed,
+            revocation sanctions must flow from grid block used at
+            original sentencing); <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=164+Or+App+192&amp;hl=en&amp;as_sdt=2,38&amp;case=13177673425351990377&amp;scilh=0">State
+            v. Hoffmeister</a>, 164 Or App 192, 990 P2d 910 (1999)
+            (where court used erroneously low grid-block of 7-I when it
+            imposed probation at original sentencing, it erred in using
+            correct 7-C grid-block to impose probation violation
+            sanction; overruling <a
+            href="https://scholar.google.com/scholar_case?case=11583503853531165947&amp;q=State+v.+Guyton,+126+Or+App+143&amp;hl=en&amp;as_sdt=4,38">State
+            v. Guyton</a>, 126 Or App 143, 868 P2d 1335, <em>rev
+            den</em>, 319 Or 36 (1994)).</p>
+            <p>On the other hand, suppose that in the interim it is
+            determined that the court used an erroneously high
+            grid-block at original sentencing. The defendant could argue
+            that his due process rights supersede the statutory law
+            applied in <em>Hoffmeister</em>, and require that his
+            correct, lower grid-block be used to impose a revocation
+            sanction. As the Ninth Circuit has explained, “[T]he failure
+            of a state to abide by its own statutory commands may
+            implicate a liberty interest protected by the Fourteenth
+            Amendment against arbitrary deprivation by a state.” <a
+            href="http://scholar.google.com/scholar_case?q=997+F2d+1295&amp;hl=en&amp;as_sdt=2,38&amp;case=10648670770297412282&amp;">Fetterly
+            v. Paskett</a>, 997 F2d 1295, 1300 (9th Cir 1993) (citing
+            inter alia <a
+            href="http://scholar.google.ca/scholar_case?q=447+US+343&amp;hl=en&amp;as_sdt=2,38&amp;case=1072181381858223047&amp;scilh=0">Hicks
+            v. Oklahoma</a>, 447 US 343, 100 S Ct 2227, 65 L Ed 2d 175
+            (1980)). <em>See also</em> <a
+            href="http://scholar.google.ca/scholar_case?q=,+881+F2d+785&amp;hl=en&amp;as_sdt=2,38&amp;case=16062921930906365046&amp;scilh=0">United
+            States v. Columbus</a>, 881 F2d 785, 787 (9th Cir 1989)
+            (“[v]iolations of a defendant’s due process rights occur
+            when a court relies on materially false or unreliable
+            information in sentencing”). <em>See generally</em> Arthur
+            W. Campbell, <em>Law of Sentencing,</em> ch 8 (3d ed 2004)
+            (analyzing various due process rights at sentencing).</p>
+            <p>Unfortunately, in <a
+            href="https://scholar.google.com/scholar_case?case=12907604839334667462&amp;q=State+v.+Anderson,+243+Or+App+222&amp;hl=en&amp;as_sdt=6,38">State
+            v. Anderson</a>, 243 Or App 222, 189 P3d 28 (2011), the
+            court rejected these types of challenges. There, the
+            defendant accepted a plea agreement in which he was
+            convicted of third-degree rape and, using a 6-D grid block,
+            was sentenced to a dispositional-departure sentence of
+            probation. A prior assault conviction was the basis of his
+            criminal-history score of “D.” While on probation, the Court
+            of Appeals reversed the prior assault conviction. <a
+            href="http://scholar.google.ca/scholar_case?q=,+221+Or+App+193&amp;hl=en&amp;as_sdt=2,38&amp;case=11916896598949221416&amp;scilh=0">State
+            v. Anderson</a>, 221 Or App 193, 189 P3d 28 (2008).
+            Subsequent to that, the defendant violated a term of his
+            probation and the trial court revoked his probation. He
+            moved for modification of his criminal-history score from
+            “D” to “G,” by excluding his now reversed assault conviction
+            from his criminal-history assessment. The trial court denied
+            his motion, and the Court of Appeals affirmed. Critically,
+            the court stated: “Defendant was fully aware that the appeal
+            of his assault charge was pending in this court at the time
+            he entered the plea agreement.” 243 Or App at 229.</p>
+            <p>Defense counsel should not accept <em>Anderson</em>’s
+            validity. The Court of Appeals decision is not final on
+            federal due process claims, so counsel should assert them as
+            means of distinguishing <em>Anderson</em>.</p>
+            <p>PRACTICE TIP: A key feature of the <em>Anderson</em>
+            opinion is that when the defendant was sentenced, he was
+            aware that he then was challenging the prior conviction that
+            was used to enhance his criminal-history score. This
+            suggests that the defendant should have sought to negotiate
+            a condition subsequent, stating that in the event he won his
+            appeal, he could seek modification of his plea by excluding
+            the assault conviction from his criminal-history assessment.
+            Had he been successful in that effort, he would not have
+            faced a probation-revocation sanction based on what proved
+            to be an erroneously high criminal-history score. In
+            situations like that in <em>Anderson</em>, defense counsel
+            should negotiate for conditions subsequent.</p>
+            <p><bon-update year="2023" month="June" deprecated="false"></p>
+            </section>
+            <section id="specialty_court_proceedings." class="level2">
+            <h2><strong>§ 5-14.4. Specialty Court
+            Proceedings.</strong></h2>
+            <p>On behalf of the Oregon District Attorneys Association,
+            the Senate Interim Committee on Judiciary requested the
+            pre-session filing of <a
+            href="https://olis.oregonlegislature.gov/liz/2021R1/Downloads/MeasureDocument/SB0218/Enrolled">Senate
+            Bill 218 (2021)</a> to establish procedures for
+            <strong>specialty courts</strong>. The legislature passed
+            the bill enrolled as Oregon Laws 2021, chapter 330. The bill
+            took effect on January 1, 2022. ORS 171.022.</p>
+            <p>“‘[S]pecialty court’ has the meaning given that term in
+            ORS 137.680.” ORS 137.532(6). “‘[S]pecialty courts’ means
+            drug court programs as defined in ORS 3.450, veterans
+            courts, mental health courts or any other similar court or
+            docketing system.” ORS 137.680(1).</p>
+            <p>SB 218 incorporated provisions from the conditional
+            discharge statute, which applies to certain controlled
+            substances offenses. ORS 475.245. But SB 218’s incorporated
+            provisions apply a bit more broadly. It states:</p>
+            <blockquote>
+            <p>“Whenever a person is charged with a <strong>misdemeanor
+            or a Class C felony, other than driving while under the
+            influence of intoxicants</strong><em>,</em> and has been
+            formally accepted into a specialty court, the court, with
+            the consent of the district attorney and the person, may
+            defer further proceedings and place the person on probation.
+            The terms of the probation shall be defined by a probation
+            agreement.”</p>
+            </blockquote>
+            <p>ORS 137.532(1)(a) (emphasis added).</p>
+            <p>As in conditional discharge proceedings, “[a] probation
+            agreement carries the understanding that if the defendant
+            fulfills the terms of the agreement, the criminal charges
+            filed against the defendant will be dismissed with
+            prejudice.” ORS 137.532(1(b). “Upon fulfillment of the terms
+            and conditions of the probation agreement, the court shall
+            discharge the person and dismiss the proceedings against the
+            person.” ORS 137.532(3). But if</p>
+            <blockquote>
+            <p>“[u]pon violation of a term or condition of the probation
+            agreement, the court may resume the criminal proceedings and
+            may find the defendant guilty of the offenses in the
+            accusatory instrument in accordance with the waiver of
+            rights in the probation agreement. The defendant may not
+            contest the sufficiency of the evidence establishing the
+            defendant’s guilt of the offenses in the accusatory
+            instrument.”</p>
+            </blockquote>
+            <p>ORS 137.532(2).</p>
+            <p>“Nothing in [the bill] is intended to restrict a person’s
+            participation in a specialty court,” ORS 137.532(5), and
+            <strong>a</strong> probation “agreement may not contain a
+            requirement that the defendant enter a plea of guilty or no
+            contest on any charge in the accusatory instrument.” ORS
+            137.532(1)(e)<em>.</em> But as a practical matter, the
+            probation agreements imitate guilty or no contest pleas,
+            because the defendant must acquiesce to waiving various
+            “rights * * * with respect to each criminal charge[.]” ORS
+            137.532(1)(c). The defendant must waive:</p>
+            <blockquote>
+            <p>• “The right to a speedy trial and trial by jury,” ORS
+            137.532<em>(</em>1)(c)(A);</p>
+            <p>• “The right to present evidence on the defendant’s
+            behalf,” ORS 137.532(1)(c)(B);</p>
+            <p>• “The right to confront and cross-examine witnesses
+            against the defendant,” ORS 137.532(1)(c)(C);</p>
+            <p>• “The right to contest evidence presented against the
+            defendant, including the right to object to hearsay
+            evidence,” ORS 137.532(1)(c)(D); and</p>
+            <p>• “The right to appeal from a judgment of conviction
+            resulting from an adjudication of guilt entered under
+            [section 1(2).]” ORS 137.532(1)(c)(E).</p>
+            </blockquote>
+            <p>In addition, the bill prohibits the defendant from
+            “contest[ing] the sufficiency of the evidence establishing
+            the defendant’s guilt of the offenses in the accusatory
+            instrument.” ORS 137.532(2).</p>
+            <p>As seen, if the court resumes criminal proceedings
+            consequent to a probation violation, the defendant will be
+            tried to the bench and may suffer delay. Even if the
+            prosecution evidence is insufficient to support a
+            conviction, the defendant will be barred
+            <strong>both</strong> from moving for judgment of acquittal,
+            <strong>and</strong> from appealing the conviction on
+            grounds of insufficient evidence.<a href="#fn5"
+            class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a> Moreover, the defendant
+            will be barred from (i) offering relevant defense evidence,
+            (ii) confronting and cross-examining unreliable and
+            untrustworthy prosecution witnesses, (iii) challenging
+            hearsay and irrelevant evidence offered by the prosecution.
+            So just as the defendant will be barred from appealing the
+            conviction on grounds of insufficient evidence, the
+            defendant will be barred from appealing convictions on the
+            three additional grounds just mentioned.</p>
+            <p><strong>PRACTICE TIP:</strong> The bill’s prohibitions on
+            challenging specialty court adjudications at trial and on
+            appeal deny defendants the judicial due process principle of
+            fundamental fairness. Because the prohibitions transform
+            probation agreements into imitations of guilty or no contest
+            pleas, defense counsel should negotiate provisions
+            dismissing or reducing charges, or sentencing terms, or
+            both.</p>
+            <p>Finally, before SB 218, well established case law denied
+            jurisdiction over probation violations if no bench warrant
+            or show-cause order was issued <strong>before</strong>
+            expiration of the probationary period, <a
+            href="https://scholar.google.com/scholar_case?q=24+Or+App+423&amp;hl=en&amp;as_sdt=2,38&amp;case=13069415443293249174&amp;scilh=0">State
+            v. O’Neal</a><em>,</em> 24 Or App 423, 545 P2d 910 (1976),<a
+            href="#fn6" class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a> but with one exception.
+            The conditional discharge system provided the sole
+            exception, which allows courts to issue show cause orders
+            <strong>after</strong> expiration of the probationary
+            period. ORS 475.245(4).</p>
+            <p>SB 218 created the second exception to the established
+            case law, by incorporating ORS 475.245(4). The bill’s
+            provision states:</p>
+            <blockquote>
+            <p>“In the event that the period of probation under this
+            section expires, but the terms and conditions of the
+            probation agreement have not been fulfilled and no probation
+            violation proceeding was initiated prior to the expiration
+            of the period of probation, the court may not discharge the
+            person and dismiss the proceedings against the person. The
+            court shall instead issue an order requiring the person to
+            appear and to show cause why the court should not enter an
+            adjudication of guilt as described in [section 1(2)] due to
+            the failure of the person to fulfill the terms and
+            conditions of the probation agreement prior to expiration of
+            the period of probation. At the hearing on the order to show
+            cause, after considering any evidence or argument from the
+            district attorney and the person, the court
+            may<em>:</em></p>
+            <p>“(a) Order a new period of probation to allow the person
+            to fulfill the terms and conditions of the probation
+            agreement; or</p>
+            <p>“(b) Enter an adjudication of guilt as described in
+            [section 1(2)].”</p>
+            </blockquote>
+            <p>ORS 137.532(4)<strong><em>.</em></strong></p>
+            <p>As seen, the defendant may present “evidence and
+            argument” to contest claims of failing to complete the
+            probation agreement, <em>id.</em>, which should include
+            relevant defense evidence. But if the defendant is found in
+            violation and is facing an adjudication of guilt, the
+            defendant will be deprived of challenging the adjudication
+            of guilt. ORS 137.532(1)(c) and (2).</p>
+            <p><strong>PRACTICE TIP:</strong> The specialty court is
+            free to consider even a minor failure to complete the
+            agreement as a legitimate ground to order the defendant to
+            show cause <strong>after</strong> the probationary period
+            has expired. Moreover, there is no statute of limitations on
+            a show cause order. But if there were a significant lapse of
+            time between expiration of the probationary period and
+            issuance of the show cause order, defense counsel could
+            assert a <em>laches</em> defense (and could assert the
+            statute of repose, ORS 12.140, if the lapse of time were 10
+            years or longer). </bon-update></p>
+            </section>
+            </section>
+            <section id="oar_213_010_0002_revocation_sanctions."
+            class="level1">
+            <h1><strong>§ 5-15. OAR 213-010-0002 REVOCATION
+            SANCTIONS.</strong></h1>
+            <p>When a court revokes probation, it does not impose
+            sentence; instead, it imposes a revocation sanction. <a
+            href="https://scholar.google.ca/scholar_case?case=10935020324388949831&amp;q=State+v.+Patterson,+269+Or+App+226&amp;hl=en&amp;as_sdt=6,38">State
+            v. Patterson</a>, 269 Or App 226, 234-37, 344 P3d 497
+            (2015). <em>But see</em> <a
+            href="https://scholar.google.ca/scholar_case?case=17599742142828415170&amp;q=357+or+619&amp;hl=en&amp;as_sdt=6,38">State
+            v. Lane</a>, 357 Or 619, 355 P3d 914 (2015) (holding that
+            under Article I, section 44(1)(b), of the Oregon
+            Constitution, probation-revocation sanctions are “sentences”
+            for purposes of imposing consecutive sentences for crimes
+            having separate victims). OAR 213-010-0002 prescribes
+            imprisonment sanctions for defendants whose probations have
+            been revoked:</p>
+            <p>(1) For those offenders whose presumptive sentence was
+            probation, the sentence upon revocation shall be to the
+            supervisory authority for a term up to a maximum of six
+            months.</p>
+            <p>(2) For those offenders whose probationary sentence was
+            either a departure from a presumptive prison sentence or a
+            sentence imposed pursuant to OAR 213-005-0006, the sentence
+            upon revocation shall be a prison term up to the maximum
+            presumptive prison term which could have been imposed
+            initially, if the presumptive prison term exceeds 12 months.
+            For those presumptive prison terms 12 months or less, the
+            sentence upon revocation shall be to the supervisory
+            authority, up to the maximum presumptive prison term.</p>
+            <p>(3) Notwithstanding (2) of this rule, if a probation
+            sentence is revoked under ORS 137.712(5), the court shall
+            impose the presumptive prison term.</p>
+            <p>(4) When imposing a revocation sanction, the sentencing
+            judge shall also set a term of post-prison supervision in
+            accordance with OAR 213-005-0002.</p>
+            <p>(5) No revocation sanction may exceed the limitations
+            established by this rule.</p>
+            <section
+            id="sanctions_for_revocations_of_presumptive_sentences_of_probation."
+            class="level2">
+            <h2><strong>§ 5-15.1. Sanctions for Revocations of
+            Presumptive Sentences of Probation.</strong></h2>
+            <p>OAR 213-010-0002(1) prescribes a maximum sanction of six
+            months’ imprisonment for defendants whose presumptive
+            sentence was probation. <a
+            href="http://scholar.google.ca/scholar_case?q=,+134+Or+App+668&amp;hl=en&amp;as_sdt=2,38&amp;case=9563539177039699663&amp;scilh=0">State
+            v. Jerue</a>, 134 Or App 668, 669, 896 P2d 613 (1995) (upon
+            revocation of presumptive term of probation, court cannot
+            impose departure term of greater than six months’
+            incarceration). The term must be served in the local county
+            jail unless it is made consecutive to an incarceration
+            sentence of greater than 12 months. In that case, the
+            six-month sanction must be served in a state facility. ORS
+            137.124(2)(b).</p>
+            </section>
+            <section
+            id="sanctions_for_revocations_of_optional_and_departure_sentences_of_probation."
+            class="level2">
+            <h2><strong>§ 5-15.2. Sanctions for Revocations of Optional
+            and Departure Sentences of Probation.</strong></h2>
+            <p>A defendant sentenced to either optional or departure
+            probation has a presumptive imprisonment grid block. If the
+            defendant’s probation is revoked, his maximum revocation
+            sanction is not the six-month term of imprisonment specified
+            in OAR 213-010-0002(1). According to OAR 213-010-0002(2) his
+            maximum revocation sanction instead is “a prison term up to
+            the maximum presumptive prison term which could have been
+            imposed when the offender was initially sentenced.”
+            <em>Implementation Manual</em> at 170. Commentary
+            explains:</p>
+            <blockquote>
+            <p>“This section reflects a policy judgment by the
+            Guidelines Board that an offender granted probation in lieu
+            of presumptive imprisonment should remain subject to the
+            imprisonment that the court could have imposed as a
+            presumptive sentence under these guidelines. This sanction
+            policy should encourage probationary sentences in
+            appropriate cases because the sentencing judge retains the
+            authority to impose the more substantial prison term. The
+            policy should also encourage compliance with the conditions
+            of probation because the offender will be aware of the more
+            severe revocation penalty.”</p>
+            </blockquote>
+            <p><em>Id</em>.</p>
+            <p>Under OAR 213-010-0002(2), when a sentencing court
+            revokes an optional or departure term of probation, the
+            maximum revocation sanction is the defendant’s presumptive
+            maximum. The court may not impose an aggravated durational
+            departure sentence. State v. Taylor, 295 Or App 32, 37, 433
+            P3d 486 2018) (where defendant’s presumptive maximum
+            sentence was 18 months but court imposed probation, court
+            later erred by imposing 36-month aggravated-departure
+            sentences as a probation-revocation sanction). Were a court
+            to impose such a departure, it would impose a sentence
+            greater than “the maximum presumptive prison term which
+            could have been imposed initially.” OAR 213-010-0002(2)
+            (emphasis added). The court thereby would impermissibly
+            “exceed the limitations established by this rule.” OAR
+            213-010-0002(5).</p>
+            <p>If a defendant’s presumptive sentence is one prescribed
+            by statute, rather than his grid-block, the statutorily
+            prescribed presumptive sentence sets his maximum revocation
+            sanction, but only if his judgment of conviction and
+            sentence specifies the statutorily prescribed presumptive
+            sentence as his presumptive sentence.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1353642984604440428&amp;q=280+Or+App+439&amp;hl=en&amp;as_sdt=6,38">State
+            v. Orcutt</a>, 280 Or App 439, 444, 380 P3d 1105 (2016). If
+            the judgment fails to specify the statutorily prescribed
+            presumptive sentence as his presumptive sentence, then his
+            grid-block’s presumptive maximum sets his maximum revocation
+            sanction. <a
+            href="https://scholar.google.com/scholar_case?case=1353642984604440428&amp;q=280+Or+App+439&amp;hl=en&amp;as_sdt=6,38"><em>Orcutt</em></a>,
+            280 Or App at 442 n 3;</p>
+            <p><bon-update year="2023" month="June" deprecated="false">
+            <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=16245229933932127779&amp;q=301+Or+App+762&amp;hl=en&amp;as_sdt=6,38">State
+            v. Keyes</a><em>,</em> 301 Or App 762, 766-68, 459 P3d 935
+            (2020) (nothing in the 2017 amendments to ORS 137.717
+            reflects an explicit or implicit legislative intent to give
+            the phrase “sentences imposed,” as used in the 2017
+            amendments, a different meaning than how <em>State v.
+            Orcutt</em> construed that phrase, as used in the 2013
+            amendments). </bon-update></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=17541556634791166736&amp;q=State+v.+Denson,+280+Or+App+225&amp;hl=en&amp;as_sdt=6,38">State
+            v. Denson</a>, 280 Or App 225, 233-35, 380 P3d 1170 (2016).
+            Moreover, if between the times of imposition of the
+            probationary sentence and its revocation the legislature
+            reduces the length of the presumptive sentence, the longer
+            presumptive sentence in force at the time probation was
+            imposed still controls. <a
+            href="https://scholar.google.com/scholar_case?case=1353642984604440428&amp;q=280+Or+App+439&amp;hl=en&amp;as_sdt=6,38"><em>Orcutt</em></a>,
+            280 Or App at 444.</p>
+            <p>But there is one situation where the court may impose a
+            revocation sanction that exceeds the defendant’s presumptive
+            maximum. That situation arises when, as part of plea
+            negotiations, the defendant stipulates to such a sanction.
+            The stipulation will bar the defendant from securing
+            appellate review of the sanction. <a
+            href="https://scholar.google.com/scholar_case?case=3492768935485326276&amp;q=282+Or+App+104&amp;hl=en&amp;as_sdt=4,38&amp;as_vis=1">State
+            v. Silsby</a>, 282 Or App 104, 113, 386 P3d 172 (2016), rev
+            den, 360 Or 752 (2017); <a
+            href="https://scholar.google.com/scholar_case?q=Blackledge+v.+Morrow&amp;hl=en&amp;as_sdt=4,38&amp;as_vis=1&amp;case=6663019182556129775&amp;scilh=0">Blackledge
+            v. Morrow</a>, 174 Or App 566, 570-71, 26 P3d 851, rev den,
+            332 Or 558 (2001).<a href="#fn7" class="footnote-ref"
+            id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+            </section>
+            <section id="consecutive_probation_revocation_sanctions."
+            class="level2">
+            <h2><strong>§ 5-15.3. Consecutive Probation-Revocation
+            Sanctions.</strong></h2>
+            <p>OAR 213-012-0040 limits sentencing court authority to
+            impose consecutive sanctions in cases involving revocations
+            of multiple terms of probation. Chapter 8 addresses that
+            provision’s limitations.</p>
+            </section>
+            <section
+            id="post_prison_supervision_terms_attendant_to_probation_revocation_sanctions."
+            class="level2">
+            <h2><strong>§ 5-15.4. Post-Prison Supervision Terms
+            Attendant to Probation Revocation Sanctions.</strong></h2>
+            <p>According to guidelines’ commentary, OAR 213-010-0002(4)
+            “provides that imprisonment which occurs as a sanction for
+            probation revocation must include a term of [PPS] set
+            according to the most serious crime of conviction as
+            provided by OAR 213-005-0002.” <em>Implementation
+            Manual</em> at 170. Chapter 4 discusses durations of PPS
+            terms.</p>
+            </section>
+            </section>
+            <section id="intermediate_probation_violation_sanctions."
+            class="level1">
+            <h1><strong>§ 5-16. INTERMEDIATE PROBATION VIOLATION
+            SANCTIONS.</strong></h1>
+            <p>As a cost-saving measure, the 1993 Legislature
+            significantly changed the system for imprisoning revoked
+            probationers. The legislature did so by adopting an
+            intermediate sanction system designed, which moved most
+            probation-violation proceedings out of the judicial branch
+            and into the executive branch. ORS 137.592 to 137.599.</p>
+            <p>The intermediate sanction system supplements, rather than
+            replaces, the revocation sanctions that OAR 213-010-0002
+            authorizes. The stated purpose of the system is to
+            “respond[] to [probation] violations with swift, certain and
+            fair punishments,” ORS 137.592(1), and to ensure that upon
+            violation, probationers are incarcerated on “a reasonably
+            systematic basis that will insure that available prison
+            space is used to house those offenders who constitute a
+            serious threat to the public, taking into consideration the
+            availability of both prison space and local resources.” ORS
+            137.592(2).</p>
+            <p>As a matter of both constitutional and statutory law,
+            probationers are entitled to judicial probation-revocation
+            hearings, represented by counsel (appointed at public
+            expense, if necessary). <em>See, e.g.</em>, <a
+            href="http://scholar.google.ca/scholar_case?q=392+p2d+769&amp;hl=en&amp;as_sdt=2,38&amp;case=17598138732712789452&amp;scilh=0">Barker
+            v. Ireland</a>, 238 Or 1, 392 P2d 769 (1964). Under the
+            intermediate-sanction system, a defendant charged with a
+            probation violation may follow the traditional approach and
+            demand a judicial hearing, represented by counsel.
+            Alternatively, he may waive his rights to a hearing and
+            counsel, and submit to intermediate sanctions as determined
+            by the DOC or the local community corrections agency. ORS
+            137.595(2)(b); ORS 137.597. The maximum incarceration term
+            he may receive under the intermediate sanction system is 60
+            days in jail. ORS 137.595(3).</p>
+            <p>Should intermediate sanctions be imposed, the defendant’s
+            probation continues, because the DOC or county agency lacks
+            authority to revoke his probation. ORS 137.593(1). Only the
+            sentencing court has that authority. ORS 137.593(2)(a).</p>
+            <p>The DOC or county agency must notify the court and
+            district attorney of probation violations. ORS
+            137.595(2)(f). Before imposing intermediate sanctions, or
+            within four judicial days afterwards but before the
+            defendant has completed his intermediate sanctions, the
+            court or the district attorney may bring the probationer
+            before the court for a judicial hearing. ORS 137.593(2)(c)
+            and (3); ORS 137.599. The court then may vacate the
+            imposition of intermediate sanctions and revoke probation.
+            Or it may vacate the imposition of intermediate sanctions
+            and impose other sanctions or modify the conditions of
+            probation as authorized by law. ORS 137.593(2)(c); ORS
+            137.599.</p>
+            <p>If the defendant completes serving his intermediate
+            sanctions before the court acts on his case, the court loses
+            authority to “revoke probation or impose other or additional
+            sanctions[.]” ORS 137.599. This should be the case, even if
+            the fourth judicial day after the court’s receipt of notice
+            has not expired. But even if the defendant has completed
+            service of his intermediate sanctions, the court may impose
+            a sanction or revoke probation if it bases its decision on
+            the violation of a condition different from that which
+            served as the basis for the intermediate sanction. This is
+            true even if the two violations stemmed from the same
+            incident. <em>See</em> <a
+            href="https://scholar.google.ca/scholar_case?case=18348177721109453327&amp;q=State+v.+Melton,+189+Or+App+411&amp;hl=en&amp;as_sdt=6,38">State
+            v. Melton</a>, 189 Or App 411, 414-15, 76 P3d 156 (2003)
+            (where defendant violated three conditions of probation, and
+            where probation officer based intermediate sanctions on two
+            of the condition violations, defendant’s completion of
+            intermediate sanctions did not bar court from revoking
+            probation based on third condition violation). <em>Cf</em>.
+            <a
+            href="https://scholar.google.ca/scholar_case?case=1267216211004735764&amp;q=State+v.+Richards,+361+Or+840&amp;hl=en&amp;as_sdt=6,38">State
+            v. Richards</a>, 361 Or 840, 401 P3d 767 (2017) (the fact
+            that defendant previously had incurred a structured,
+            post-prison supervision sanction for certain violative
+            conduct did not deprive trial court of authority to revoke
+            his probation for the same violative conduct).</p>
+            </section>
+            <section id="credit_for_time_served." class="level1">
+            <h1><strong>§ 5-17. CREDIT FOR TIME SERVED.</strong></h1>
+            <p>In straight-jail sentence cases, defendants are
+            constitutionally entitled to credit for presentence
+            incarceration time (“time-served credit”) against their jail
+            terms. <em>E.g.</em>, <a
+            href="http://scholar.google.ca/scholar_case?q=395+US+711&amp;hl=en&amp;as_sdt=2,38&amp;case=3746284767088352998&amp;scilh=0">North
+            Carolina v. Pearce</a>, 395 US 711, 718-19, 89 S Ct 2072, 23
+            L Ed 2d 656 (1969); <a
+            href="http://scholar.google.ca/scholar_case?q=307+Or+102&amp;hl=en&amp;as_sdt=2,38&amp;case=9068381679986128001&amp;scilh=0">Nissel
+            v. Pearce</a>, 307 Or 102, 106-07, 764 P2d 224 (1988); <a
+            href="https://scholar.google.ca/scholar_case?case=70239620368734118&amp;q=State+v.+Jones,+117+Or+App+174&amp;hl=en&amp;as_sdt=6,38">State
+            v. Jones</a>, 117 Or App 174, 175, 842 P2d 466 (1992); ORS
+            137.320.</p>
+            <p>In probation cases, time-served credit issues arise in
+            four situations:</p>
+            <p>1. Crediting presentence incarceration time against a
+            jail term imposed as a condition of probation.</p>
+            <p>2. Crediting incarceration time awaiting a
+            probation-violation hearing against a non-revocation jail
+            term probation-violation sanction.</p>
+            <p>3. Crediting incarceration time awaiting a
+            probation-violation hearing against a probation-violation
+            revocation sanction.</p>
+            <p>4. Crediting time served in jail as a condition of
+            probation against a probation-violation revocation
+            sanction.</p>
+            <p>In the first situation, it is important to recognize that
+            in contrast to pre-guidelines law, a probationary term under
+            the sentencing guidelines is a sentence. <em>See, e.g.,</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=321+Or+99&amp;hl=en&amp;as_sdt=2,38&amp;case=12505748528088146273&amp;scilh=0">Holcomb</a>,
+            321 Or at 104. As discussed above, such a sentence may
+            include a jail term in satisfaction of the sanction-unit
+            component of the probationary sentence. Thus, the jail-term
+            component of a probationary sentence itself should be
+            considered a sentence. ORS 137.320(4).</p>
+            <p>Under <em>Nissel</em>, <em>Jones</em>, and ORS 137.320, a
+            defendant’s time served before sentencing must be credited
+            against his incarceration term. Because probation is a
+            sentence under the guidelines, and its jail-term component
+            itself should be considered a sentence. In <em>Holcomb</em>,
+            the court relied on the statutory scheme that existed before
+            July 18, 1995 to hold that a defendant’s time served prior
+            to sentencing must be credited against the jail-term
+            component of a probationary sentence imposed under the
+            guidelines.</p>
+            <p>The 1995 Legislature sought to overrule <em>Holcomb</em>,
+            by creating ORS 137.372(3). It purports to grant sentencing
+            courts discretion to deny the type of time-served credit as
+            was at issue in <em>Holcomb</em>, for felonies committed on
+            or after July 18, 1995. Defense counsel should argue that to
+            the extent that ORS 137.372(3) authorizes judicial
+            discretion to deny this time-served credit, the statute
+            violates double jeopardy, Pearce, 395 US at 718-19, and
+            equal protection. <a
+            href="https://scholar.google.com/scholar_case?case=9068381679986128001&amp;q=Nissel,+307+Or+102&amp;hl=en&amp;as_sdt=6,38">Nissel</a>,
+            307 Or at 106-07.</p>
+            <p>The second time-served credit situation arises when the
+            defendant is arrested for a probation violation, serves time
+            in jail awaiting his probation-violation hearing, and the
+            trial court imposes time in jail as a violation sanction but
+            otherwise continues probation. In that situation, the court
+            has discretion to deny pre-revocation incarceration credit
+            (so long as the denial does not result in the defendant
+            serving more jail time than his grid-block’s sanction units
+            total allows).</p>
+            <p>The third time-served credit situation arises when the
+            defendant is arrested for a probation violation, serves time
+            in jail awaiting his probation-violation hearing, and the
+            trial court revokes his probation and imposes incarceration
+            as a revocation sanction. Because probation is a sanction,
+            under the guidelines, the revocation sanction should be
+            considered a sentence, too. Therefore, double jeopardy and
+            equal protection principles should require that the
+            defendant be given credit for time served awaiting his
+            revocation hearing.</p>
+            <p>The last situation arises when the court imposed a
+            guidelines sentence of probation, the defendant served time
+            in jail as a condition of probation, and sometime during the
+            defendant’s service of the jail term, or after the defendant
+            completed the jail-term, the court revoked probation and
+            imposed an incarceration sanction. The court may deny credit
+            for time the defendant served as a condition of probation.
+            ORS 137.372(1) (2016 ed.) (a defendant “shall receive credit
+            for time served in jail * * * as part of the probationary
+            sentence unless the sentencing judge orders otherwise”).
+            <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=7618741185426396589&amp;q=Haas+v.+Hathaway,+144+Or+App+478&amp;hl=en&amp;as_sdt=6,38">Haas
+            v. Hathaway</a>, 144 Or App 478, 928 P2d 331 (1996) (court’s
+            denial of credit for time defendant spent in sex-offender
+            treatment program as a condition of probation, and from
+            which he was expelled, was valid exercise of discretion);
+            OAR 291-100-0090 (regulating time-served credit as a
+            condition of probation).</p>
+            <p>But 2015 legislation modified the time-served credit
+            principles in situations 3 and 4, but only for revocations
+            of departure and presumptive probations made on or after of
+            August 1, 2015. For decisions made on or after that date,
+            persons revoked from departure probation must receive
+            “credit for the time served in jail after arrest and before
+            commencement of the probationary sentence and for the time
+            served in jail as part of the probationary sentence”
+            (although the court may limit the amount of credit to 90
+            days). ORS 137.372(1)(a) (emphasis added). Persons revoked
+            from presumptive probation must receive “credit for the time
+            served in jail after arrest and before commencement of the
+            probationary sentence and for the time served in jail as
+            part of the probationary sentence, unless the sentencing
+            judge orders otherwise.” ORS 137.372(1)(b) (emphasis
+            added).</p>
+            <p>Unfortunately, the 2015 legislation contained an
+            oversight. It did not modify the time-served credit
+            principles for persons revoked from optional probation.</p>
+            <p>Fortunately, 2018 legislation corrected the oversight.
+            Section 13 of Senate Bill 1543 (enrolled as Oregon Laws
+            2018, chapter 120) amended ORS 137.372(1)(b), to treat
+            revocations of optional probation the same as revocations of
+            presumptive probation. But the amendment is not retroactive
+            to the 2015 legislation’s effective date. Instead, it
+            applies prospectively, “to sentences imposed on or after the
+            [the bill’s] effective date[.]” Or Laws 2018, ch 120, §
+            19(2). Owing to its emergency clause, Or Laws 2018, ch 120,
+            § 20, the bill took effect when the governor signed it into
+            law, on March 15, 2018.</p>
+            <p>Finally, the 2015 legislation allows “credit for the time
+            served in jail after arrest and before commencement of” a
+            diversion or a specialty court “program and for the time
+            served in jail as a sanction for violating the terms of the
+            program, unless the sentencing judge orders otherwise.” ORS
+            137.372(2).</p>
+            <references />
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1">The Thirteenth Amendment, which was ratified
+            six years after Oregon voters approved section 34,
+            authorizes legal slavery of inmates who were “duly
+            convicted” of crimes. But the newly amended version of
+            section 34 prohibits legal slavery of inmates who were “duly
+            convicted,” so section 34 supersedes the Thirteenth
+            Amendment. <em>Cf.</em> <a
+            href="https://scholar.google.com/scholar_case?case=16865013857854825510&amp;q=328+Or+355&amp;hl=en&amp;as_sdt=4,38">State
+            v. Baker</a><em>,</em> 328 Or 355, 360, 976 P2d 1132 (1999)
+            (regarding jury waivers in favor of bench trials, Article I,
+            section 11, of the Oregon Constitution supersedes the Sixth
+            Amendment).<a href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2">It stands to reason that the Board of Parole
+            and Post-Prison Supervision may impose community service on
+            parolees, the board also may impose community service on
+            defendants serving post-prison supervision.<a href="#fnref2"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn3">Without question, section 34(2) will allow the
+            board, without obtaining consent, to impose community
+            service on parolees and defendants on post-prison
+            supervision.<a href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4">The text of OAR 213-005-0013(2)(a) establishes
+            that the one-third rule applies to jail terms imposed as
+            conditions of probation. Therefore, the rule does not apply
+            to presumptive straight jail sentences.<a href="#fnref4"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn5">The defendant may appeal <strong>only the
+            sentence</strong> on the grounds that it “exceeds the
+            maximum allowed by law or constitutes cruel and unusual
+            punishment.” ORS 137.532(1)(c)(E). This provision mirrors
+            <em>former</em> ORS 138.050, <em>repealed</em> by Or Laws
+            2017, ch 529, § 26, which applied to guilty and no contest
+            pleas. The provision transforms probation agreements into
+            imitations of guilty and no contest pleas.<a href="#fnref5"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn6">Former Metropolitan Public Defender executive
+            director James D. Hennings litigated this case two
+            generations ago.<a href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7">It may, however, be possible for the defendant
+            to challenge the stipulated sanction in post-conviction or
+            federal <em>habeas corpus</em> proceedings.<a href="#fnref7"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

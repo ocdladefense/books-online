@@ -9,7 +9,7 @@
     --secondary-light-violet: rgb(173 180 200 / 18%);
     --primary-text-color: rgb(32, 33, 36, 0.8);
     --border-outline-color: rgba(111, 111, 111, 0.8);
-    --button-background-color: #1a73e8;
+    /* --button-background-color: #1a73e8; */
     --heading-font-family: Lato, Google Sans, Noto Sans, Noto Sans JP, Noto Sans KR, Noto Naskh Arabic, Noto Sans Thai, Noto Sans Hebrew, Noto Sans Bengali, sans-serif;
     --statute-font: monospace;
     --footer-background-color: rgb(47 54 76);
@@ -25,7 +25,7 @@ body {
     padding: 0px;
     margin: 0px;
     position: relative;
-    background-color: var(--desktop-shading);
+    /* background-color: var(--desktop-shading); */
 }
 
 a {
@@ -66,7 +66,7 @@ a {
     vertical-align: middle;
 }
 
-p {
+section>p {
     margin-top: 15px;
     margin-bottom: 4px;
 }  
@@ -94,7 +94,7 @@ blockquote.statute {
 }
 
 
-.outline {
+/* .outline {
     display: none;
     vertical-align: top;
     position: static;
@@ -154,7 +154,7 @@ ul > li.outline-item-active {
 .outline-item-active {
     font-weight: 900;
     color: #000;
-}
+} */
 
 h1.chapter-title i {
     color: #c4a12e;
@@ -163,7 +163,7 @@ h1.chapter-title i {
     vertical-align: top;
 }
 
-h1.part {
+section>h1, #body>h1, h1.title {
     font: 400 26px/35px var(--heading-font-family);
     margin-top: 2.0em;
 }
@@ -189,7 +189,7 @@ h1.part {
 }
 
 
-.breadcrumb {
+/* .breadcrumb {
     display: none;
 }
 .breadcrumb ul {
@@ -203,7 +203,7 @@ h1.part {
 }
 .breadcrumb li:before {
     content: " > ";
-}  
+}   */
 
 
 .synopsis {
@@ -216,16 +216,18 @@ h1.part {
 
 
 
-
+/* 
 h1 {
     font: 400 32px/40px var(--heading-font-family);
     letter-spacing: 0px;
-}
+} */
 
 .nav-item {
     border-top: 1px solid var(--nav-item-border-grey);
     padding-top: 4px;
-    margin-top:14px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 0px;
 }
 
 .logo {
@@ -266,8 +268,11 @@ h1 {
 
 
 
-.document p {
+/* .document p {
     line-height: 27px;
+} */
+#body>section>p {
+    overflow-wrap: break-word;
 }
 
 .chapter {

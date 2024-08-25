@@ -1,16 +1,34 @@
+/** @jsx vNode */ /** @jsxFrag "Fragment" */
+/* eslint-disable no-unused-vars */
+import { vNode, View } from "@ocdla/view";
+
+// Unused imports
 import domReady from "@ocdladefense/web/src/web.js";
-import "@ocdladefense/html/html.js";
-import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
-import { Modal } from "@ocdladefense/modal/dist/modal.js";
 import WebcOrs from "@ocdladefense/webc-ors/src/WebcOrs.js";
 import WebcOar from "@ocdladefense/webc-oar/src/WebcOar.js";
-import { formatReferences, doRefs } from "../../dev_modules/citations/citations.js";
-import loadToc from "./components/Toc.js";
-import Outline from "@ocdla/outline";
-import HttpClient from "@ocdla/lib-http/HttpClient.js";
-import Url from "@ocdla/lib-http/Url.js";
-
+import {
+  formatReferences,
+  doRefs,
+} from "../../dev_modules/citations/citations.js";
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
+import { Modal } from "@ocdladefense/modal/dist/modal.js";
+
+import "@ocdladefense/html/html.js";
+import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
+import HttpClient from "@ocdla/lib-http/HttpClient.js";
+import Outline from "@ocdla/outline";
+import TableOfContents from "@ocdla/table-of-contents";
+
+// Global components
+import "../css/input.css";
+
+import Footer from "@ocdla/global-components/src/Footer.jsx";
+import Navbar from "@ocdla/global-components/src/Navbar.jsx";
+import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
+import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
+
+import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
+import Sidebar_Item_Left from "@ocdla/global-components/src/Sidebar_Item_Left.jsx";
 
 /**
  * Controller for the Books Online application.
@@ -18,179 +36,136 @@ import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
  */
 export default class BooksOnlineController {
   modal = null;
-
-
-  async getIndex() {
-    let client = new HttpClient();
-
-    let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
-
-    let xml = await resp.text();
-
-    const parser = new DOMParser();
-
-    return parser.parseFromString(xml, "application/xml");
-  }
+  #index;
 
   constructor() {
+    window.addEventListener("hashchange", this);
 
-    this.getIndex().then((xml) => {console.log(xml); return xml;});
-    // Full-screen modal.
-    this.modal = new Modal();
-    window.modal = this.modal;
+    // Create the base view using jsx.
+    const body = document.querySelector("body");
+    const root = View.createRoot(body);
+    root.render(
+      <>
+        <div
+          // Preserve whitespace at end of top-0
+          // prettier-ignore
+          class='fixed right-0 z-10 flex w-max gap-2 bg-white p-4 lg:left-0 lg:p-2'
+        ></div>
+        <header class="container mx-auto flex w-full flex-col bg-white lg:h-32 top-of-page">
+          <Navbar />
+          <div id="breadcrumbs">
+            <Breadcrumbs items={[]} />
+          </div>
+        </header>
 
-    // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors">
-    // TODO: Set up env variables
-    
-    let documentReady = BooksOnlineController.fetchChapter("fsm", "1").then((html) => {
-        const chapter = document.createElement('div');
-        chapter.setAttribute('class', 'document');
-        const doc = document.createElement('div');
-        doc.innerHTML = html;
-        let sections = doc.querySelectorAll('header, section');
-        for (let i = 0; i < sections.length; i++) {
-          chapter.appendChild(sections[i]);
-        }
-        document.querySelector('.document').replaceWith(chapter);
-    });
-      
-    documentReady.then(() => {
-      const outline = Outline.fromCurrentDocument();
-      outline.outline(".level1", ".level2", ".level3", ".level4", ".level5", ".level6");
-      document.querySelector(".outline").appendChild(outline.toNodeTree());
+        <div class="modal inline-modal" id="inline-ors">
+          <div class="modal-container">
+            <div class="modal-content">Loading...</div>
+          </div>
+        </div>
 
-      const handleIntersection = (observedEntries) => {
-        // Filter out entries that are not intersecting
-        const intersectingEntries = observedEntries.filter(
-          (entry) => entry.isIntersecting
-        );
-
-        // Make sure we have at least one entry remaining
-        if (intersectingEntries.length == 0) return;
-
-        // Iterate through our outline items and clear their styles.
-        outline.clearAllActive();
-
-        // We only want the first entry. It's possible to scroll through multiple headings at once.
-        const entry = intersectingEntries[0];
-        const id = entry.target.id;
-        const outlineListItem = document.getElementById(`${id}-outline-item`);
-        outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
-        outlineListItem.classList.add("outline-item-active");
-        outlineListItem.firstChild.classList.add("outline-item-active");
-      };
-
-      outline.addIntersectionObserver(handleIntersection);
-    });
-  
-    // let customElemReady = outlineReady.then(() => {
-    //   // <div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors" class="webc-ors"></div>
-
-    //   // customElements.define("webc-ors", WebcOrs);
-    //   // customElements.define("webc-oar", WebcOar);
-
-    //   let allWebcOrs = document.querySelectorAll(".webc-ors");
-    //   let allWebcOar = document.querySelectorAll(".webc-oar");
-
-    //   for (let i = 0; i < allWebcOrs.length; i++) {
-    //     let elem = document.createElement("webc-ors");
-    //     elem.setAttribute("ref", allWebcOrs[i].getAttribute("ref"));
-    //     elem.setAttribute("custom-style", allWebcOrs[i].getAttribute("custom-style"));
-    //     elem.setAttribute("data-custom-style", allWebcOrs[i].getAttribute("data-custom-style"));
-    //     elem.setAttribute("class", allWebcOrs[i].getAttribute("class"));
-    //     allWebcOrs[i].replaceWith(elem);
-    //   }
-
-      // for (let i = 0; i < allWebcOar.length; i++) {
-      //   let elem = document.createElement("webc-oar");
-
-      //   elem.setAttribute("ref", allWebcOar[i].getAttribute("ref"));
-      //   elem.setAttribute("custom-style", allWebcOar[i].getAttribute("custom-style"));
-      //   elem.setAttribute("data-custom-style", allWebcOar[i].getAttribute("data-custom-style"));
-      //   elem.setAttribute("class", allWebcOar[i].getAttribute("class"));
-      //   allWebcOar[i].replaceWith(elem);
-      // }
-
-    //});
-
-
-    
-
-    // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
-    let refContainer = document.querySelector("#all-refs");
-    let citations = document.querySelectorAll(".cite");
-    let refs = document.querySelectorAll("[references], .cite");
-
-    domReady(function () {
-      document.addEventListener("click", this);
-      BooksOnlineController.convert(".chapter");
-      formatReferences(citations);
-      doRefs(refs, refContainer);
-
-      // const outline = Outline.fromCurrentDocument();
-      // outline.outline("h1", "h2", "h3");
-      // document.querySelector(".outline").appendChild(outline.toNodeTree());
-
-      // const handleIntersection = (observedEntries) => {
-      //   // Filter out entries that are not intersecting
-      //   const intersectingEntries = observedEntries.filter(
-      //     (entry) => entry.isIntersecting
-      //   );
-
-      //   // Make sure we have at least one entry remaining
-      //   if (intersectingEntries.length == 0) return;
-
-      //   // Iterate through our outline items and clear their styles.
-      //   outline.clearAllActive();
-
-      //   // We only want the first entry. It's possible to scroll through multiple headings at once.
-      //   const entry = intersectingEntries[0];
-      //   const id = entry.target.id;
-      //   const outlineListItem = document.getElementById(`${id}-outline-item`);
-      //   outlineListItem.scrollIntoView({ behavior: "auto", block: "center" });
-      //   outlineListItem.classList.add("outline-item-active");
-      //   outlineListItem.firstChild.classList.add("outline-item-active");
-      // };
-
-      // outline.addIntersectionObserver(handleIntersection);
+        {/* <Main cols='3' /> */}
+        <div class="container mx-auto border-x">
+          <button
+            onclick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            class="fixed bottom-0 right-0 z-10 rounded-lg p-4 bg-black text-white"
+          >
+            Top
+          </button>
+          {/* <div class='flex flex-col lg:flex-row'> */}
+          <div class="lg:grid lg:grid-cols-6">
+            <div id="toc"></div>
+            <div
+              id="document"
+              class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
+            >
+              <div
+                id="body"
+                class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased overflow-wrap break-words"
+              ></div>
+            </div>
+            <div id="outline"></div>
+          </div>
+        </div>
+        <Footer
+          showFacebook={true}
+          showTwitter={true}
+          useGoogleMapsIFrame={true}
+        />
+      </>
+    );
+    const indexReady = this.getIndex().then((xml) => {
+      this.#index = xml;
     });
 
-    // domReady(initOutline);
+    // Build the table of contents.
+    const tocReady = indexReady.then(() => {
+      // Create a table of contents from the XML loaded.
+      const index = TableOfContents.fromXml(this.#index);
 
-    // // Use these headings to create an on-the-fly outline of the document.
-    // function initOutline() {
-    //     let doc = new DomDocument();
-    //     window.DomDocument = DomDocument;
-    //     let nodeTree = doc.outline("h1, h2, h3"); // h1, h2, h3
-    //     //nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
-    //     document.querySelector(".outline").appendChild(nodeTree);
-    // }
+      // Create a root
+      const tocContent = View.createRoot(document.querySelector("#toc"));
 
-    // Display table of contents (TOC) content and modal. This should display other chapters in the current publication.
-    window.loadToc = loadToc();
+      // Get our entries in our toc
+      const tocEntries = index.getEntries();
 
-    // Setup the chapter ouline and display it inside of the div.outline-content element.
+      // Render the toc into the toc div
+      tocContent.render(
+        <Sidebar sticky={true}>
+          <ul id="toc-sidebar" class="list-none">
+            {tocEntries.map((entry) => {
+              return (
+                <Sidebar_Item_Left
+                  active={false}
+                  id={entry.getId()}
+                  href={entry.getHref()}
+                  heading={entry.isChapter() ? entry.getHeading() : null}
+                  label={entry.getName()}
+                >
+                  <span class="font-bold">
+                    {entry.isChapter() ? entry.getHeading() : null}
+                  </span>
+                  <div>{entry.getName()}</div>
+                </Sidebar_Item_Left>
+              );
+            })}
+          </ul>
+        </Sidebar>
+      );
 
-    // Create the document outline and display it.
-    // let nodes = doc.outline("h1, h2, h3"); // h1, h2, h3
-    // nodes.forEach((node) => document.querySelector(".outline-content").appendChild(node));
-
-    window.addEventListener("hashchange", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      let newId = e.newURL.split("#")[1];
-      let newElem = document.getElementById(newId);
-      console.log(newId);
-
-      newElem.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest",
-      }); //({top: (rect.y + offset),behavior:"smooth"});
+      // Add an event listener to the toc
+      this.delegate(
+        "click",
+        document.querySelector("#toc-sidebar"),
+        this.changeChapter
+      );
     });
+
+    tocReady.then(() => {
+      const newSelectedChapter = document.getElementById("fsm-1");
+      if (newSelectedChapter) {
+        newSelectedChapter.classList.add("text-white");
+        newSelectedChapter.classList.add("border-black");
+        newSelectedChapter.classList.add("bg-black");
+      }
+      // Render the chapter.
+      // const book = tocItem.dataset.book;
+      // const chapter = tocItem.dataset.chapter;
+      this.renderContent("fsm", "1");
+
+      this.updateBreadcrumbs("fsm-1");
+    });
+
+    // // Full-screen modal.
+    // this.modal = new Modal();
+    // window.modal = this.modal;
 
     // customElements.define("word-count", WordCount, { extends: "p" });
+
+    this.renderContent = this.renderContent.bind(this);
+    this.changeChapter = this.changeChapter.bind(this);
   }
 
   /**
@@ -202,10 +177,25 @@ export default class BooksOnlineController {
    */
   handleEvent(e) {
     let target = e.target;
-    let dataset = target.dataset;
+    let dataset = target.dataset || {};
     let action = dataset.action;
-    let c = target.dataset.chapter;
-    let s = target.dataset.section;
+    let c = dataset.chapter;
+    let s = dataset.section;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (e.type === "hashchange") {
+      let newId = e.newURL.split("#")[1];
+      let newElem = document.getElementById(newId);
+
+      newElem.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      }); //({top: (rect.y + offset),behavior:"smooth"});
+
+      return false;
+    }
 
     if ("modal-backdrop" == target.id) {
       this.modal.hide();
@@ -283,7 +273,31 @@ export default class BooksOnlineController {
     // body.innerHTML = parsed;
   }
 
-  static async fetchChapter(book, chapter) {
+  /**
+   * Retrieves the index from the specified URL and parses it into an XML document.
+   *
+   * @return {Document} The parsed XML document.
+   */
+  async getIndex() {
+    let client = new HttpClient();
+
+    let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
+
+    let xml = await resp.text();
+
+    const parser = new DOMParser();
+
+    return parser.parseFromString(xml, "application/xml");
+  }
+
+  /**
+   * Fetches the specified chapter of a book from the OCDLA publications website.
+   *
+   * @param {string} book - The title of the book to fetch a chapter from.
+   * @param {string} chapter - The chapter number to fetch.
+   * @return {string} The text content of the chapter.
+   */
+  async fetchChapter(book, chapter) {
     const url = `https://pubs.ocdla.org/${book}/${chapter}`;
     const req = new Request(url);
     const client = new HttpClient();
@@ -291,5 +305,205 @@ export default class BooksOnlineController {
     return resp.text();
   }
 
+  /**
+   * Changes the currently selected chapter in the table of contents.
+   *
+   * Updates the breadcrumbs, removes the active class from the previously selected chapter,
+   * adds the active class to the newly selected chapter, and renders the content of the new chapter.
+   *
+   * @param {HTMLElement} container - The container element of the chapter to select.
+   * @return {void}
+   */
+  changeChapter(container) {
+    const id = container.children[0].id;
+    const book = id.split("-")[0];
+    const unit = id.split("-")[1];
 
+    this.updateBreadcrumbs(id);
+
+    const toc = document.getElementById("toc");
+
+    const oldSelectedChapter = toc.querySelector(
+      ".text-white.border-black.bg-black"
+    );
+    if (oldSelectedChapter) {
+      oldSelectedChapter.setAttribute(
+        "class",
+        "group hover:bg-neutral-100 flex flex-col gap-2 border-b px-4 py-2"
+      );
+
+      const h = oldSelectedChapter.querySelector("h1");
+      if (h)
+        h.setAttribute(
+          "class",
+          "text-blue-400 group-hover:text-blue-500 font-bold"
+        );
+
+      const p = oldSelectedChapter.querySelector("p");
+      if (p) p.setAttribute("class", "");
+    }
+
+    // Add the active class to the current item.
+    const newSelectedChapter = document.getElementById(id);
+    if (newSelectedChapter) {
+      newSelectedChapter.setAttribute(
+        "class",
+        "text-white border-black bg-black flex flex-col gap-2 border-b px-4 py-2"
+      );
+      const h = newSelectedChapter.querySelector("h1");
+      if (h) h.setAttribute("class", "font-bold");
+
+      const p = newSelectedChapter.querySelector("p");
+      if (p) p.setAttribute("class", "text-white");
+    }
+
+    this.renderContent(book, unit);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /**
+   * Updates the breadcrumbs based on the given Chapter ID.
+   *
+   * @param {string} id - The ID of the chapter in the XML index.
+   * @return {void}
+   */
+  updateBreadcrumbs(id) {
+    const unit = this.#index.querySelector(`#${id}`);
+    const unitName = unit.getAttribute("name");
+    const unitHref = id.replaceAll("-", "/");
+
+    const bookNode = unit.closest("book");
+    const bookName = bookNode.getAttribute("name");
+    const bookHref = bookNode.getAttribute("shortName");
+
+    const breadCrumbs = [
+      {
+        href: bookHref,
+        label: bookName,
+      },
+      {
+        href: unitHref,
+        label: unitName,
+      },
+    ];
+    const breadcrumbRoot = View.createRoot(
+      document.getElementById("breadcrumbs")
+    );
+    breadcrumbRoot.render(<Breadcrumbs crumbs={breadCrumbs} />);
+  }
+
+  /**
+   * Renders the content of a book chapter, including the chapter HTML and an outline of the chapter's sections.
+   *
+   * @param {string} book - The book shortname identifier.
+   * @param {string} unit - The unit (chapter / section / appendix) identifier.
+   * @return {void}
+   */
+  renderContent(book, unit) {
+    // Display the content of the chapter.
+    let chapterReady = this.fetchChapter(book, unit).then((html) => {
+      const unit = document.createElement("div");
+      unit.setAttribute("id", "body");
+      const doc = document.createElement("div");
+      doc.innerHTML = html;
+      let sections = doc.querySelectorAll("header, section");
+      for (let i = 0; i < sections.length; i++) {
+        unit.appendChild(sections[i]);
+      }
+
+      // TODO: Jsx this
+      document.querySelector("#body").replaceWith(unit);
+    });
+
+    // Display the outline of the chapter once the content has been rendered.
+    const outlineReady = chapterReady.then(() => {
+      const outline = Outline.fromCurrentDocument();
+
+      // Books-Online content is in section tags with .level1, .level2, etc.
+      outline.outline(
+        ".level1",
+        ".level2",
+        ".level3",
+        ".level4",
+        ".level5",
+        ".level6"
+      );
+
+      // Display the outline in the sidebar
+      const outlineRoot = View.createRoot(document.querySelector("#outline"));
+      outlineRoot.render(
+        <OutlineSidebar>{outline.getNested()}</OutlineSidebar>
+      );
+
+      // Callback function used to detect where the user is on the page.
+      const handleIntersection = (observedEntries) => {
+        // Filter out entries that are not intersecting
+        const intersectingEntries = observedEntries.filter(
+          (entry) => entry.isIntersecting
+        );
+
+        // Make sure we have at least one entry remaining
+        if (intersectingEntries.length == 0) return;
+
+        // Iterate through our outline items and clear their styles.
+        outline.clearAllActive(
+          ".bg-black.text-white",
+          document.querySelector("#outline")
+        );
+
+        // We only want the first entry. It's possible to scroll through multiple headings at once.
+        const entry = intersectingEntries[0];
+        const id = entry.target.id;
+        const outlineListItem = document.getElementById(`${id}-outline-item`);
+
+        // When we see a new item, we want to make sure the outline sidebar is scrolling to it.
+        outlineListItem.scrollIntoView({
+          behavior: "instant",
+          block: "nearest",
+          inline: "center",
+        });
+
+        // Add the active class styling to the current item.
+        outlineListItem.classList.add("bg-black");
+        outlineListItem.classList.add("text-white");
+      };
+
+      // Add the callback function to the intersection observer.
+      outline.addIntersectionObserver(handleIntersection);
+    });
+
+    // Future feature: Setting up WebC-ORS and WebC-OAR components here.
+    // const refsReady = outlineReady.then(() => {
+
+    //})
+
+    // const refsReady = outlineReady.then(() => {
+    //   // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
+    //   let refContainer = document.querySelector("#all-refs");
+    //   let citations = document.querySelectorAll(".cite");
+    //   let refs = document.querySelectorAll("[references], .cite");
+
+    //   document.addEventListener("click", this);
+    //   BooksOnlineController.convert(".document");
+    //   formatReferences(citations);
+    //   doRefs(refs, refContainer);
+    // });
+  }
+
+  getNodeChildrenEventHandler(e, elem, fn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const target = e.target;
+    const children = [...elem.children];
+    const container = children.filter((child) => child.contains(target))[0];
+
+    if (!container) return false;
+    fn(container);
+  }
+
+  delegate(type, elem, fn) {
+    return elem.addEventListener(type, (e) =>
+      this.getNodeChildrenEventHandler(e, elem, fn)
+    );
+  }
 }
