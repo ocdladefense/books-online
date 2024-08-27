@@ -28,7 +28,7 @@ import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
 
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
-import Sidebar_Item_Left from "@ocdla/global-components/src/Sidebar_Item_Left.jsx";
+import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 
 /**
  * Controller for the Books Online application.
@@ -136,11 +136,11 @@ export default class BooksOnlineController {
       );
 
       // Add an event listener to the toc
-      this.delegate(
-        "click",
-        document.querySelector("#toc-sidebar"),
-        this.changeChapter
-      );
+      // this.delegate(
+      //   "click",
+      //   document.querySelector("#toc-sidebar"),
+      //   this.changeChapter
+      // );
     });
 
     tocReady.then(() => {
