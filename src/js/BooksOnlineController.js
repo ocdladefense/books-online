@@ -105,7 +105,7 @@ export default class BooksOnlineController {
       // Create a table of contents from the XML loaded.
       const index = TableOfContents.fromXml(
         this.#index,
-        "path",
+        "part",
         "chapter",
         "appendix"
       );
@@ -117,7 +117,8 @@ export default class BooksOnlineController {
       const tocEntries = index.getEntries();
 
       // Render the toc into the toc div
-      tocContent.render(
+      // We need to return here so that we actually wait for the toc to be rendered
+      return tocContent.render(
         <Sidebar sticky={true}>
           <ul id="toc-sidebar" class="list-none">
             {tocEntries.map((entry) => {
@@ -139,16 +140,16 @@ export default class BooksOnlineController {
           </ul>
         </Sidebar>
       );
-
-      // Add an event listener to the toc
-      // this.delegate(
-      //   "click",
-      //   document.querySelector("#toc-sidebar"),
-      //   this.changeChapter
-      // );
     });
 
     tocReady.then(() => {
+      // Add event listener for the toc
+      this.delegate(
+        "click",
+        document.querySelector("#toc-sidebar"),
+        this.changeChapter
+      );
+
       const newSelectedChapter = document.getElementById("fsm-1");
       if (newSelectedChapter) {
         newSelectedChapter.classList.add("text-white");
@@ -210,7 +211,7 @@ export default class BooksOnlineController {
       return false;
     }
 
-    e.preventDefault();
+    // e.preventDefault();
     // e.stopPropagation();
 
     if ("view-section" == action) {

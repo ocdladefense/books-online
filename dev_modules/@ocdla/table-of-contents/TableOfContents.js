@@ -8,7 +8,14 @@ export default class TableOfContents {
   }
 
   static fromXml(doc) {
-    const items = [...doc.querySelectorAll("part, chapter, appendix")];
+    let selectors = Array.from(arguments).map((arg) =>
+      typeof arg === "string" ? arg.toLowerCase().trim() : arg
+    );
+    selectors.shift();
+
+    // Take a comma separated string of html selectors
+    const items = [...doc.querySelectorAll(selectors.join(","))];
+
     const entries = items.map((item) => {
       return new Entry(
         item.getAttribute("name"),
