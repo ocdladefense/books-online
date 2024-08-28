@@ -103,7 +103,12 @@ export default class BooksOnlineController {
     // Build the table of contents.
     const tocReady = indexReady.then(() => {
       // Create a table of contents from the XML loaded.
-      const index = TableOfContents.fromXml(this.#index);
+      const index = TableOfContents.fromXml(
+        this.#index,
+        "path",
+        "chapter",
+        "appendix"
+      );
 
       // Create a root
       const tocContent = View.createRoot(document.querySelector("#toc"));
