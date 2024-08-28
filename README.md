@@ -39,14 +39,15 @@ git rm -f path/to/submodule
 ## TODO
 _This list was made August 28, 2024 by Katelyn Sullivan_
 * The next major item to tackle is going to be routing.
- * The `Table-Of-Contents` component and the `Router` component are going to be key here
+  * The `Table-Of-Contents` component and the `Router` component are going to be key here
 * Next is likely going to be reintegration of the `webc-oar` and `webc-ors` components into the body of the chapters after they render.
 * An easy feature once routing is in would be to get section linking implemented.
- * What I mean is given the link 'bon.com/fsm/1#section3' the page should load, the URL should be read and parsed, and then scrolled to that section.
+  * What I mean is given the link 'bon.com/fsm/1#section3' the page should load, the URL should be read and parsed, and then scrolled to that section.
 * Mobile navigation was a feature asked about in our presentation. It will look very good if when you present next that you can show off a mobile view of the table of contents and outline.
 * Being able to go back to a book, and even a specific section that you were previously looking at was asked about in our presentation. Local storage might be a key tool here.
- * I had the idea of a possible 'Working shortlist' feature where a user could add a section to a clipboad saved in local storage, access it via some slide out sidebar or other list, and it would act as direct section link
- * You could take this a step further with tools in that feature like clearing it, or making multiple shortlists you can switch between, or even saving things other than sections like `oar` or `ors` entries and entire books.
+  * I had the idea of a possible 'Working shortlist' feature where a user could add a section to a clipboad saved in local storage, access it via some slide out sidebar or other list, and it would act as direct section link
+  * You could take this a step further with tools in that feature like clearing it, or making multiple shortlists you can switch between, or even saving things other than sections like `oar` or `ors` entries and entire books.
+* Adding a service worker in to view the properies offline.
 
 
 ## Project notes
