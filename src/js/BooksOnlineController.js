@@ -4,8 +4,6 @@ import { vNode, View } from "@ocdla/view";
 
 // Unused imports
 import domReady from "@ocdladefense/web/src/web.js";
-import WebcOrs from "@ocdladefense/webc-ors/src/WebcOrs.js";
-import WebcOar from "@ocdladefense/webc-oar/src/WebcOar.js";
 import {
   formatReferences,
   doRefs,
@@ -14,7 +12,6 @@ import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
 import { Modal } from "@ocdladefense/modal/dist/modal.js";
 
 import "@ocdladefense/html/html.js";
-import { OrsParser } from "@ocdladefense/ors/src/OrsParser.js";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import Outline from "@ocdla/outline";
 import TableOfContents from "@ocdla/table-of-contents";
@@ -254,24 +251,7 @@ export default class BooksOnlineController {
     return false;
   }
 
-  /**
-   * Replace references to Oregon Revised Statutes (ORS)
-   * with inline links.
-   * @param {CSSSelector} selector A valid CSS selector to pass to querySelector().
-   */
-  static convert(selector) {
-    var body = document.querySelector(selector);
 
-    let nodes = body.querySelectorAll("p");
-    for (var p of nodes.values()) {
-      let text = OrsParser.replaceAll(p.innerHTML);
-      p.innerHTML = text;
-    }
-    // var text = body.innerHTML;
-    // var parsed = OrsParser.replaceAll(text);
-
-    // body.innerHTML = parsed;
-  }
 
   /**
    * Retrieves the index from the specified URL and parses it into an XML document.
