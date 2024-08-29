@@ -1,8 +1,9 @@
 // const dotenv = require('dotenv');
 const path = require("path");
 const webpack = require("webpack");
-const htmlWebpackPlugin = require("html-webpack-plugin");
-const copyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackInjector = require("html-webpack-injector");
+const CopyPlugin = require("copy-webpack-plugin");
 
 // const env = dotenv.config().parsed;
 // const envKeys = Object.keys(env).reduce((prev, next) => {
@@ -13,8 +14,10 @@ const copyPlugin = require("copy-webpack-plugin");
 module.exports = (env) => {
   return {
     mode: "development",
+    target: "web",
     entry: {
       app: path.resolve(__dirname, "src/js/index.js"),
+      init_head: path.resolve(__dirname, "src/js/custom-elements.js"),
     },
     snapshot: {
       managedPaths: [],
@@ -33,10 +36,9 @@ module.exports = (env) => {
       assetModuleFilename: "images/[name][ext]",
       clean: true,
     },
-    target: "web",
     devServer: {
       static: path.resolve(__dirname, "src"),
-      port: 80,
+      port: 8080,
       open: false,
       hot: true,
       compress: true,
@@ -54,15 +56,13 @@ module.exports = (env) => {
           use: {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/preset-env", "@babel/preset-react"]
+              presets: ["@babel/preset-env", "@babel/preset-react"],
             },
           },
         },
         {
           test: /\.css$/i,
-          exclude: [
-            /dev_modules\/(?!@ocdla\/global-components)/
-          ],
+          exclude: [/dev_modules\/(?!@ocdla\/global-components)/],
           use: ["style-loader", "css-loader", "postcss-loader"],
         },
         {
@@ -112,13 +112,16 @@ module.exports = (env) => {
       //     path: './.env'
       // }),
       // new webpack.DefinePlugin(envKeys),
-      new htmlWebpackPlugin({
+      new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "src/index.html"),
-        chunks: ["app"],
+        chunks: ["app", "init_head"],
         inject: "body",
         filename: "index.html",
+        xhtml: true,
+        scriptLoading: "blocking"
       }),
-      new copyPlugin({
+      new HtmlWebpackInjector(),
+      new CopyPlugin({
         patterns: [
           // {
           //     from: path.resolve(__dirname, 'src/images'),
