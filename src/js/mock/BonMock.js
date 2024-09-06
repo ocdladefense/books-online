@@ -13,7 +13,7 @@ import fsm7 from "./data/fsm/fsm-7.html";
 import fsm8 from "./data/fsm/fsm-8.html";
 import fsm9 from "./data/fsm/fsm-9.html";
 import fsm10 from "./data/fsm/fsm-10.html";
-import ss1 from "./data/ss/ss-1.html";
+import ss1b from "./data/ss/ss-1b.html";
 export { BonMock };
 
 class BonMock extends HttpMock {
@@ -30,7 +30,7 @@ class BonMock extends HttpMock {
     "/fsm/8": fsm8,
     "/fsm/9": fsm9,
     "/fsm/10": fsm10,
-    "/ss/1": ss1,
+    "/ss/1b": ss1b,
   };
   errors = {
     success: false,
