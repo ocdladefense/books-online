@@ -9,7 +9,7 @@ import {
   doRefs,
 } from "../../dev_modules/citations/citations.js";
 import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
-import { Modal } from "@ocdladefense/modal/dist/modal.js";
+// import { Modal } from "@ocdladefense/ modal/dist/modal.js";
 
 import "@ocdladefense/html/html.js";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
@@ -55,11 +55,6 @@ export default class BooksOnlineController {
           </div>
         </header>
 
-        <div class="modal inline-modal" id="inline-ors">
-          <div class="modal-container">
-            <div class="modal-content">Loading...</div>
-          </div>
-        </div>
 
         {/* <Main cols='3' /> */}
         <div class="container mx-auto border-x">

@@ -1,8 +1,8 @@
 import BooksOnlineController from "./BooksOnlineController.js";
 
-import "/node_modules/@ocdladefense/modal/src/css/loading.css";
-import "/node_modules/@ocdladefense/modal/src/css/modal.css";
-import "/node_modules/@ocdladefense/modal/src/css/inline-modal.css";
+// import "/node_modules/@ocdladefense/modal/src/css/loading.css";
+// import "/node_modules/@ocdladefense/modal/src/css/modal.css";
+// import "/node_modules/@ocdladefense/modal/src/css/inline-modal.css";
 import "/themes/books-online/css/main.css";
 import "/themes/books-online/css/citations.css";
 import "/themes/books-online/css/headings.css";
