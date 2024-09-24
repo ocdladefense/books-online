@@ -3,27 +3,15 @@
 import { vNode, View } from "@ocdla/view";
 
 // Unused imports
-import domReady from "@ocdladefense/web/src/web.js";
-import {
-  formatReferences,
-  doRefs,
-} from "../../dev_modules/citations/citations.js";
-import { DomDocument } from "@ocdladefense/dom/src/DomDocument.js";
-// import { Modal } from "@ocdladefense/ modal/dist/modal.js";
-
+// import {formatReferences,doRefs} from "../../dev_modules/citations/citations.js";
 import "@ocdladefense/html/html.js";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import Outline from "@ocdla/outline";
 import TableOfContents from "@ocdla/table-of-contents";
-
-// Global components
-import "../css/input.css";
-
 import Footer from "@ocdla/global-components/src/Footer.jsx";
 import Navbar from "@ocdla/global-components/src/Navbar.jsx";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
-
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 
