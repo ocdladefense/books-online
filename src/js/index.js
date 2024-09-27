@@ -10,6 +10,7 @@ import "/themes/books-online/css/tools.css";
 import "/themes/books-online/css/desktop.css";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import WebcOrs from "@ocdladefense/webc-ors/src/WebcOrs.js";
+import WebcOar from "@ocdladefense/webc-oar/src/WebcOar.js";
 import {parseChapterAndSection, parseSubsections, parseReferences, toSelectors} from "@ocdladefense/ors/src/ReferenceParser.js";
 
 import { BonMock } from "./mock/BonMock.js";
