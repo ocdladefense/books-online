@@ -25,13 +25,26 @@ window.parseReferences = parseReferences;
 window.toSelectors = toSelectors;
 window.WebcOrs = WebcOrs;
 
+
+
 function loadOrs(ref) {
-  let chapter = WebcOrs.loadChapter(182);
-  chapter.then((chapter) => {
-    console.log(chapter);
-    chapter.download();
+  
+  // Translate the reference into selectors.
+  let selectors = toSelectors(ref);
+  console.log("For "+ref+" selectors are: ", selectors);
+  // 182.515 Definitions for ORS 182.515 and 182.525.
+
+  let load = WebcOrs.loadChapter(182);
+  load.then((chapter) => {
+    // console.log(chapter);
+    // chapter.download();
+    // Note: had to truncate the 182 off.
+    let range = chapter.getRange([515,2], [515,4]);
+    console.log(range.cloneContents());
   });
 }
 
-// loadOrs(182);
+
+
+// loadOrs("182.515(5),(2)-(3)");
 let controller = new BooksOnlineController();
