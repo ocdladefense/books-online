@@ -10,11 +10,8 @@ import Body from "@ocdla/global-components/src/Body";
 import Footer from "@ocdla/global-components/src/Footer";
 /* eslint-enable */
 import Books_Online_Breadcrumbs_Items from "../data/json/books-online/breadcrumbs/items.json";
-// import Ors_Viewer_Breadcrumbs_Items from '../data/json/ors-viewer/breadcrumbs/items.json';
 import Books_Online_Sidebar_Left_Items from "../data/json/books-online/sidebar_left/items.json";
-// import Ors_Viewer_Sidebar_Left_Items from '../data/json/ors-viewer/sidebar_left/items.json';
 import Books_Online_Sidebar_Right_Items from "../data/json/books-online/sidebar_right/items.json";
-// import Ors_Viewer_Sidebar_Right_Items from '../data/json/ors-viewer/sidebar_right/items.json';
 
 export default function App({
   view,
@@ -37,32 +34,11 @@ export default function App({
 
   return (
     <>
-      {/* <div class='absolute right-0 flex w-max translate-x-[28.75%] translate-y-[100%] -rotate-90 gap-2 bg-white p-4 lg:left-0 lg:translate-x-[-25%] lg:translate-y-[200%] lg:p-2'> */}
       <div
         // Preserve whitespace at end of top-0
         // prettier-ignore
         class={`${headerPinned === 'pinned' ? 'fixed ' : 'absolute '}right-0 z-10 flex w-max gap-2 bg-white p-4 lg:left-0 lg:p-2`}
       >
-        {/* <input
-                    id='testToggle'
-                    type='checkbox'
-                    checked={currentAppType}
-                    onchange={() => {
-                        currentAppType = !currentAppType;
-
-                        view.update(
-                            <App
-                                view={view}
-                                currentAppType={currentAppType}
-                            />
-                        );
-                    }}
-                />
-                <label
-                    class='select-none whitespace-pre font-bold'
-                    for='testToggle'>
-                    {appTypeString}
-                </label> */}
         <button
           class="select-none font-bold"
           onclick={() => {
@@ -70,8 +46,6 @@ export default function App({
 
             view.render(
               <App
-                view={view}
-                currentAppType={currentAppType}
                 headerPinned={headerPinned}
                 currentVolume={currentVolume}
                 currentTitle={currentTitle}
