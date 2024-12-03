@@ -6,9 +6,9 @@ A better reading experience for OCDLA's Books Online subscribers.
 
 - Clone <code>@ocdladefense/books-online</code>.
 - Switch to the <code>development</code> branch.
+- If already cloned, be sure to run <code>git pull</code>.
 - Initialize any Git submodules. _Note: these commands should be run in the project root._
-  - Run <code>git submodule init</code>.
-  - Run <code>git submodule update</code>.
+  - Run <code>git submodule update --init --recursive</code>.
 - Update NPM packages by running <code>npm update</code>.
 - Run <code>npm run watch</code>.
 
@@ -108,4 +108,69 @@ We may be able to reduce the programming complexity of any given feature by intr
 
 “(b) Suspension of imposition or execution of any part of a sentence, extension of a period of probation, imposition of a new or modified condition of probation or of sentence suspension, and imposition or execution of a sentence upon revocation of probation or sentence suspension.”
 == end ==
+```
+
+
+# Pandoc general notes
+* [Pandoc documentation](https://pandoc.org/MANUAL.html) can be found at: https://pandoc.org/MANUAL.html.
+* By default Pandoc converts from Pandoc markdown to HTML.
+* You can use Pandoc from the command line: <code>echo "# I am a heading" | pandoc</code>.
+* Description of the [<code>styles</code> extension](https://pandoc.org/chunkedhtml-demo/14.2-input.html).
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+# Pandoc conversion examples
+
+### Convert a MediaWiki document to an HTML document.
+Given a sample MediaWiki document:
+```html
+= Felony Sentencing in Oregon: Guidelines, Statutes, Cases =
+2019 edition. Includes January 2024 update by Jennelle Meeks Barton.
+
+== Chapter 1 - Introduction ==
+'''Jesse Wm. Barton'''
+
+In 1977, the Oregon Legislature adopted the state’s indeterminate (parole matrix) sentencing system. Effective November 1, 1989, the legislature replaced that system with the Oregon Sentencing Guidelines, a determinate sentencing system. The differences between indeterminate and determinate sentencing systems are discussed later in this chapter. Under either system:
+
+<div ref="ORS 138.005(5)(a)-(b)" custom-style="ors" data-custom-style="ors">
+“(5) ‘Sentence’ means all legal consequences established or imposed by the trial court after conviction of an offense, including but not limited to:
+
+“(a) Forfeiture, imprisonment, cancellation of license, removal from office, monetary obligation, probation, conditions of probation, discharge, restitution and community service; and
+
+“(b) Suspension of imposition or execution of any part of a sentence, extension of a period of probation, imposition of a new or modified condition of probation or of sentence suspension, and imposition or execution of a sentence upon revocation of probation or sentence suspension.”
+</div>
+```
+
+We can convert this document to HTML5 using this command:
+```bash
+# Add the --section-divs flag to get sections wrapped in divs.
+pandoc --standalone --metadata title="OCDLA Felony Sentencing Manual" -f mediawiki -t html5 input/fsm-1.wiki -o output/fsm-1.html --template templates/html5.html
+```
+
+### Convert wikitest to ICML
+```bash
+pandoc --standalone --metadata title="OCDLA Felony Sentencing Manual" -f mediawiki -t icml input/fsm-1.wiki -o output/fsm-1.icml --table-of-contents
+```
+
+### Convert HTML to DOCX
+```bash
+pandoc -f html -t docx output/fsm-1.html -o output/fsm-1.docx --reference-doc style/bonstyles.docx
+```
+
+### Convert DOCX to HTML
+```bash
+pandoc --standalone --metadata title="OCDLA Felony Sentencing Manual" -f docx+styles -t html5 output/fsm-1.docx -o fsm-1-FINAL.html --reference-doc style/bonstyles.docx
+```
+
+
+### Convert back to HTML from Word
+```bash
+pandoc --standalone --metadata title="OCDLA Felony Sentencing Manual" -f docx+styles -t html5 output/fsm-1.docx -o fsm-1-FINAL.html --reference-doc style/bonstyles.docx --section-divs --table-of-contents
+```
+
+### Other flags
+```bash
+pandoc --standalone --metadata title="OCDLA Felony Sentencing Manual" -f mediawiki -t html5 input/fsm-1.wiki -o output/fsm-1.html --bibliography=test.bib
 ```
