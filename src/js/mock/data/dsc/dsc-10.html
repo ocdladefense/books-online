@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </header>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 10. “Vouching”: Comments on Witness
+            Credibility</strong></p>
+            <p><strong>By Susan Elizabeth Reese</strong></p>
+            <h1 id="i._what_is_vouching"><strong>I. What Is
+            Vouching?</strong></h1>
+            <p>A strong legal principle dating back to the beginning of
+            our legal system places the determination of a witness’s
+            credibility solely within the province of the jury. In
+            <em>Marbury v. Madison,</em> the United States Supreme Court
+            set that boundary which was recently reaffirmed by the Ninth
+            Circuit:</p>
+            <p>Just as “[i]t is emphatically the province and duty of
+            the judicial department to say what the law is,” <a
+            href="https://scholar.google.com/scholar_case?case=9834052745083343188&amp;q=Marbury+v.+Madison,+5+U.S.+&amp;hl=en&amp;as_sdt=3,38">Marbury
+            v. Madison</a>, 5 US (1 Cranch) 137, 177, 2 L Ed 60 (1803),
+            it is emphatically the “province and duty [of the jury] to
+            determine...the weight and the credibility of the testimony
+            of the witnesses....” <a
+            href="https://scholar.google.com/scholar_case?case=5878636096685310531&amp;q=Allis+v.+United+States,+155+U.S.+117&amp;hl=en&amp;as_sdt=3,38">Allis
+            v. United States</a>, 155 US 117, 121, 15 S Ct 36, 39 L Ed
+            91 (1894); <a
+            href="https://scholar.google.com/scholar_case?case=8043959783326500322&amp;q=Bonds,+784+F3d+582,+&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Bonds</a>, 784 F3d 582, 603 (9th Cir 2015) (“[W]e
+            must respect the exclusive province of the jury to determine
+            the credibility of witnesses....”) (citation omitted).
+            Accordingly, “testimony regarding a witness’s credibility is
+            prohibited unless it is admissible as character
+            evidence.” <a
+            href="https://scholar.google.com/scholar_case?case=14846253076587361895&amp;q=Sanchez-Lima,+161+F3d+545&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Sanchez-Lima</a>, 161 F3d 545, 548 (9th Cir
+            1998).</p>
+            <blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=259775958749511593&amp;q=Preston,+No.+15-10521&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Preston</a>, 873 F3d at 837 (9th Cir 2017).</p>
+            </blockquote>
+            <p>In Oregon, Justice Richard Baldwin authored the Oregon
+            Supreme Court’s most recent analysis of the problem of
+            vouching for a witness’s credibility in <a
+            href="https://scholar.google.com/scholar_case?case=15212196728993713978&amp;q=State+v.+Chandler+360+Or+323&amp;hl=en&amp;as_sdt=4,38">State
+            v. Chandler</a>, 360 Or 323, 380 P3d 323 (2016). The court
+            stated that vouching is the “rule prohibiting one witness
+            from commenting on the credibility of another witness.” He
+            noted that the rule applies both to comments that bolster
+            and to those that may undermine a witness’s credibility.
+            <em>See Chandler</em>, at 329 and fn 3.</p>
+            <p>The rule is a judicially created rule of evidence, which
+            is not included in the Oregon Evidence Code. The court
+            expressly adopted the rule in <a
+            href="https://scholar.google.com/scholar_case?case=6931044034072923715&amp;q=State+v.+Middleton,+294+Or+427&amp;hl=en&amp;as_sdt=4,38">State
+            v. Middleton</a>, 294 Or 427, 437-438, 657 P2d 1215
+            (1983):</p>
+            <p>We expressly hold that in Oregon a witness, expert or
+            otherwise, may not give an opinion on whether he believes a
+            witness is telling the truth. We reject testimony from a
+            witness about the credibility of another witness, although
+            we recognize some jurisdictions accept it.</p>
+            <p>We hold that if a witness is accepted as an expert by the
+            trial court, it is not error to allow testimony describing
+            the reaction of the typical child victim of familial sexual
+            abuse and whether a testifying victim impeached by her prior
+            inconsistent statement reacted in the typical manner when
+            she made that inconsistent statement.</p>
+            <p><em>Middleton</em> involved a 14-year-old girl who
+            reported that her father raped her, later claimed that she
+            had lied about the allegation, and then at trial testified
+            that the rape had occurred as she originally alleged. The
+            trial court admitted testimony from two social workers who
+            had interviewed the girl. They were allowed to discuss the
+            behavior “typical” of children who report rape by a family
+            member and whether the complainant’s actions were
+            “consistent with typical” behavior in such circumstances.
+            The testimony also included statements that the recantation
+            was “a very common kind of thing to happen.” 294 Or at
+            433-434.</p>
+            <h1
+            id="ii._milbradt_we_really_mean_itno_vouching"><strong>II.
+            <em>Milbradt</em>: “We really mean it…no
+            vouching!”</strong></h1>
+            <p>The prohibition against vouching developed largely in
+            response to the use of expert psychiatric testimony to
+            attack a witness’s character. Courts have been concerned
+            that such testimony would undermine the role of the jury in
+            assessing credibility and the ultimate facts of the
+            case.</p>
+            <p>Using an expert’s testimony to challenge a witness’s
+            character “would create a class of cases in which opinion
+            evidence would, in fact, determine the credibility of
+            witnesses. Unless the function of a jury is to find the
+            truth, its role is devoid of substance.” <a
+            href="https://scholar.google.com/scholar_case?case=8183241307034812339&amp;q=State+v.+Walgraeve,+243+Or+328&amp;hl=en&amp;as_sdt=4,38">State
+            v. Walgraeve</a><em>,</em> 243 Or 328, 333, 413 P2d 609
+            (1966). Thus, the rule prohibiting vouching testimony serves
+            the policy goals of ensuring that the jury remains the only
+            arbiter of credibility and that such a role is not usurped
+            by another witness’s opinion testimony which could empower
+            the jury to give ‘special credence’ to such testimony.
+            <em>Chandler</em>, at 331, other citations omitted.</p>
+            <p>This concern regarding expert testimony led the Oregon
+            Supreme Court nearly three decades ago to articulate more
+            clearly its simple but emphatic rule against vouching:</p>
+            <p>We have said before, and we will say it again, but this
+            time with emphasis—we really mean it—<em>no psychotherapist
+            may render an opinion on whether a witness is credible in
+            any trial conducted in this state.</em> The assessment of
+            credibility is for the trier of fact and not for
+            psychotherapists. In the case at bar there was a direct
+            disregard of the specific prohibitive statement set forth in
+            <em>Middleton,</em> 294 Or at 438, 657 P2d 1215: “We
+            expressly hold that in Oregon a witness, expert or
+            otherwise, may not give an opinion on whether he believes a
+            witness is telling the truth.” An opinion that a person is
+            not deceptive, could not lie without being tripped up, and
+            would not betray a friend (to wit: the defendant) is
+            tantamount to the same thing.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14235864362426214514&amp;q=State+v.+Milbradt+305+Or+621&amp;hl=en&amp;as_sdt=4,38">State
+            v. Milbradt</a><em>,</em> 305 Or 621, 624,756 P 2d 620, 630
+            (1988) (emphasis in original).</p>
+            <p><em>Milbradt</em> has been the guiding star in assessing
+            whether an expert’s opinion consists of improper vouching
+            and thus invades the province of the jury. The case involved
+            two mentally retarded women who complained that the
+            defendant, a school bus driver, had sexually assaulted them.
+            Trial testimony included that of a psychologist and a
+            psychiatrist who discussed the alleged victims’ competence
+            and their credibility. The psychologist, Dr. Farrenkopf,
+            declared that he saw “no indications of deception” in his
+            assessment of the two victims. In ordering a new trial, the
+            court found that even the court’s limiting instruction was
+            insufficient to cure the impact this expert’s testimony had
+            on the jury:</p>
+            <p>The proffered evidence directly reflected upon the
+            credibility of the testimony of the state’s key witnesses, a
+            matter to be assessed by the jury…the inadmissible testimony
+            was received and the jury heard it. The trial judge did not
+            tell the jury to disregard the expert’s opinion. Its
+            admission and the trial judge’s failure to instruct the jury
+            to disregard the testimony concerning…credibility…were
+            reversible errors.</p>
+            <p>305 Or at 626.</p>
+            <h1 id="iii._experts_and_scientific_evidence"><strong>III.
+            Experts and Scientific Evidence</strong></h1>
+            <p>Justice Robert Jones’ opinion in <em>Milbradt</em>
+            included a lengthy appendix of decisions across the nation
+            which “addressed the twin issues of the admissibility of
+            evidence and the extent to which an expert can testify
+            concerning the credibility of other witnesses.” <em>See</em>
+            <em>Milbradt,</em> fn 5.</p>
+            <p>Since that opinion, concerns about vouching have
+            dovetailed with those about admissibility of expert
+            testimony in numerous cases. The descriptions below reflect
+            a partial list. This area is ever-changing, and the careful
+            practitioner is advised to remain current by regular
+            involvement in OCDLA’s Pond listserve and the <a
+            href="https://libraryofdefense.ocdla.org/Welcome_to_The_Library">Library
+            of Defense</a><em>.</em></p>
+            <h2
+            id="a._state_v._keller_315_or_273_844_p_2d_195_1993"><strong>A.
+            <a
+            href="https://scholar.google.com/scholar_case?case=3892459732545137537&amp;q=Keller,+315+Or+273&amp;hl=en&amp;as_sdt=4,38">State
+            v. Keller</a><em>,</em> 315 Or 273, 844 P 2d 195
+            (1993)</strong></h2>
+            <p>A doctor testified that during her evaluation of an
+            alleged child victim of sex abuse she found no evidence that
+            the child had been led or coached or had fantasized the
+            incident. This was an impermissible comment on the child’s
+            credibility, because the statements were, in effect,
+            testimony that the child was credible. <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=17832841699072143545&amp;q=State+v.+Pergande,+270+Or+280&amp;hl=en&amp;as_sdt=4,38">State
+            v. Pergande</a><em>,</em> 270 Or 280, 348 P3d 245 (2015): a
+            social worker’s testimony that she saw no evidence that the
+            complainants were coached was “plain error.” In <a
+            href="https://scholar.google.com/scholar_case?case=3644087849850237568&amp;q=State+v.+Ross,+271+Or+App+1&amp;hl=en&amp;as_sdt=4,38">State
+            v. Ross</a><em>,</em> 271 Or App 1 (2015), the court stated
+            that “In many cases where credibility is critical to the
+            outcome, even a single ‘vouching’ statement by a
+            witness…with years of experience and training in the field
+            of child abuse prevention, can be given considerable weight
+            by the jury.” In fact, the trial judge may have an
+            obligation to intercede and exclude testimony <em>sua
+            sponte</em>. <a
+            href="https://scholar.google.com/scholar_case?case=6294494588075494563&amp;q=B.A.+v.+Webb,+253+Or+App+1&amp;hl=en&amp;as_sdt=4,38">B.A.
+            v. Webb</a><em>,</em> 253 Or App 1 (2012) (where trial judge
+            did not <em>sua sponte</em> exclude testimony of
+            mental-health counselor and a psychosexual evaluator who
+            “emphatically and repeatedly offered their…opinions that
+            [the] plaintiff was truthful in her accounts of the alleged
+            abuse).</p>
+            <h2
+            id="b._state_v._remme_173_or_app_546_23_p3d_374_2001"><strong>B.
+            <a
+            href="https://scholar.google.com/scholar_case?case=3469343350242975971&amp;q=State+v.+Remme+173+Or+App+546&amp;hl=en&amp;as_sdt=4,38">State
+            v. Remme</a><em>,</em> 173 Or App 546, 23 P3d 374
+            (2001)</strong></h2>
+            <p>Testimony from Kroeger, a social worker, and Stiles, an
+            SCF (DHS) caseworker was permitted in a case charging
+            criminal mistreatment. Each discussed reasons the children
+            might have given inconsistent reports, that recanting is
+            common, and that the process of “disclosing” abuse often
+            involves variances in detail. The court found that “neither
+            expert rendered an explicit or direct opinion” on
+            credibility or comment on the witness’s demeanor and ruled
+            that, “The jury’s function is not impinged upon when expert
+            testimony does no more than provide jurors with useful,
+            non-conclusive information from which <em>inferences</em> as
+            to credibility <em>may</em> be drawn.” 173 Or App 563.
+            (Emphasis in original)<a href="#fn1" class="footnote-ref"
+            id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+            <p>Whether a witness’s testimony is admissible as
+            “scientific” is a question distinct from but interrelated to
+            the question of whether the testimony is impermissible
+            vouching. <em>Milbradt</em> implied that the testimony
+            concerning “typical” reactions of sex abuse victims was
+            scientific and suggested that, for it to be admissible, a
+            foundation as set out in <a
+            href="https://scholar.google.com/scholar_case?case=16347591282643565388&amp;q=State+v.+Brown,+297+Or+404&amp;hl=en&amp;as_sdt=4,38">State
+            v. Brown</a>, 297 Or 404, 687 P2d 751 (1984) would be
+            required. 305 Or at 630-631.</p>
+            <h2
+            id="c._state_v._trager_158_or_app_399_974_p2d_750_1999"><strong>C.
+            <a
+            href="https://scholar.google.com/scholar_case?case=2188276643168108830&amp;q=State+v.+Trager,+158+Or+App+399&amp;hl=en&amp;as_sdt=4,38">State
+            v. Trager</a><em>,</em> 158 Or App 399, 974 P2d 750
+            (1999)</strong></h2>
+            <p>A pediatrician from CARES testified that a child had been
+            sexually abused. The Court of Appeals found, curiously, that
+            her testimony was not “scientific” but, rather, drawn from
+            her personal observations in light of her experience.</p>
+            <h2
+            id="d._state_v._logan_105_or_app_556_806_p2d_137_1991"><strong>D.
+            <a
+            href="https://scholar.google.com/scholar_case?case=11449573115599662066&amp;q=State+v.+Logan,+105+Or+App+556&amp;hl=en&amp;as_sdt=4,38">State
+            v. Logan</a>, 105 Or App 556, 806 P2d 137
+            (1991)</strong></h2>
+            <p>A doctor and an interviewer at CARES evaluated a child
+            complainant. The doctor testified about the child’s
+            statements to her and her conclusion that the child whom she
+            examined [and who was “unavailable” at trial because she was
+            unable to remember events]<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> had been sexually
+            abused. The interviewer, Butler, videotaped her interview,
+            and the tape was admitted; there, the child identified the
+            defendant as the abuser. The evidence was allowed as a
+            “medical diagnosis” under the hearsay exception <a
+            href="https://www.oregonlaws.org/ors/40.460_OEC_803(4)"
+            title="wikilink">https://www.oregonlaws.org/ors/40.460 OEC
+            803(4)</a> permitting such testimony. The court was
+            <em>not</em> asked to address whether the testimony was
+            “scientific.”</p>
+            <p>Judge Edmonds’ thoughtful dissent pointed out the dangers
+            inherent in allowing this diagnosis, providing a hint that
+            it might be impermissible “vouching:”</p>
+            <p>The record in this case is absolutely clear that the
+            child was taken to Bays, not for medical treatment, but only
+            for the purpose of obtaining a diagnosis that she was a
+            sexually abused child and obtaining evidence that defendant
+            was the one who had abused her. Although Bays may have told
+            her that she was being examined for medical purposes,
+            purportedly to qualify her statements under OEC 803(4), I am
+            concerned about the implications that flow from the use of
+            the hearsay exception in this manner. I expect that we now
+            will see many hearsay statements admitted in evidence under
+            OEC 803(4), just because the physician, at the instance of
+            inventive counsel, said the magic words to the declarant as
+            a predicate for the examination. OEC 803(4) was never
+            intended to be a vehicle by which to manufacture evidence.
+            See Louisell and Mueller, <em>Federal Evidence</em> 596, §
+            444 (1980).”</p>
+            <p>105 Or App 564.</p>
+            <h2
+            id="e._state_v._wilson_121_or_app_460_855_p2d_657_1993"><strong>E.
+            <a
+            href="https://scholar.google.com/scholar_case?case=13487761228653241755&amp;q=State+v.+Wilson,+121+Or+App+460&amp;hl=en&amp;as_sdt=4,38">State
+            v. Wilson</a>, 121 Or App 460, 855 P2d 657
+            (1993)</strong></h2>
+            <p>A CARES pediatrician testified to her diagnosis that the
+            child witness had been sexually abused, although there was
+            no physical evidence. The court allowed the testimony,
+            despite a defense claim that it was impermissible vouching,
+            because the doctor had included in her conclusions a
+            complete examination and also because she did not express a
+            “specific opinion” about the child’s believablity or lack of
+            coaching. <em>But see</em> <a
+            href="https://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=Southard&amp;hl=en&amp;as_sdt=4,38">State
+            v. Southard</a><em>,</em> 347 Or 127, 218 P3d 104 (2009) and
+            <a
+            href="https://scholar.google.com/scholar_case?case=15447269637507288119&amp;q=State+v.+Lupoli,+348+Or+346&amp;hl=en&amp;as_sdt=4,38">State
+            v. Lupoli</a>, 348 Or 346, 243 P3d 117 (2010).</p>
+            <h2
+            id="f._state_v._sanchez_cruz_177_or_app_332_33_p3d_1037_2001"><strong>F.
+            <a
+            href="https://scholar.google.com/scholar_case?case=5257311413500943452&amp;q=State+v.+Sanchez-Cruz,+177+Or+App+332&amp;hl=en&amp;as_sdt=4,38">State
+            v. Sanchez-Cruz</a>, 177 Or App 332, 33 P3d 1037
+            (2001)</strong></h2>
+            <p>A conviction of rape and sex abuse was affirmed. A CARES
+            physician, Bays, testified that a diagnosis of child sexual
+            abuse is not novel and is a generally accepted medical
+            diagnosis. The court held that the diagnosis of sexual abuse
+            was scientific evidence, that it was sufficiently probative
+            under <a href="https://www.oregonlaws.org/ors/40.150">OEC
+            401</a> and <a
+            href="https://www.oregonlaws.org/ors/40.410">702</a>, and
+            that the diagnosis was not substantially outweighed by any
+            of the reasons against admission in <a
+            href="https://www.oregonlaws.org/ors/40.160">OEC
+            403</a>.</p>
+            <h2
+            id="g._state_v._harrison_267_or_app_571_340_p3d_777_2014"><strong>G.
+            <a
+            href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=4%2C38&amp;q=State+v.+Harrison%2C+267+Or+App+571&amp;btnG=">State
+            v. Harrison</a>, 267 Or App 571, 340 P3d 777
+            (2014)</strong></h2>
+            <p>A counselor at Liberty House testified as follows:</p>
+            <p>A: I believe the statistic at Liberty House is 96 to 98
+            percent of the time when a child makes a disclosure about
+            abuse, there’s truth to it. The exact numbers, from my
+            experience, are unclear. Excuse me. What is clear is that
+            children rarely lie about these things. And over—I believe
+            it’s over 95 percent of the time when child—when a child
+            discloses information about being sexually abused, it’s
+            true.</p>
+            <p>Q: Over 95 percent.</p>
+            <p>Counsel failed to object to the testimony, and the
+            defendant argued on appeal that this was plain error and
+            should be reversed, <em>sua sponte.</em> The Court of
+            Appeals distinguished this testimony from “true vouching,”
+            that is, “one witness’ testimony that he or she believes
+            that another witness is or is not credible, which a party
+            offers to bolster or undermine the veracity of that other
+            witness.” The court said that this stopped short of saying
+            the complainant was <em>like</em> the 96 to 98 percent of
+            Liberty House complainants whose reports were truthful.
+            <em>Cf.</em> <a
+            href="https://scholar.google.com/scholar_case?case=3469343350242975971&amp;q=Remme&amp;hl=en&amp;as_sdt=4,38">State
+            v. Remme</a><em>,</em> 173 Or App 546, 558, 23 P3d 374
+            (2001) (it is impermissible for a witness to “ ‘connect the
+            dots’ explicitly by [giving] testimony relating [a general]
+            phenomenon’s specific application to a particular witness’
+            testimony”).</p>
+            <p>The <em>Harrison</em> court ruled,</p>
+            <p>It is not apparent that <em>Mills</em> even indirectly
+            connected the statistic that he cited to A’s report of abuse
+            or its purported veracity. Instead, the testimony by Mills
+            more closely resembles the kind of “general
+            information…indicat [ing] that [a general class of
+            witnesses] is or is not” credible that we approved in <a
+            href="https://scholar.google.com/scholar_case?case=222451156267437734&amp;q=State+v.+Preuitt,+255+Or+App+215&amp;hl=en&amp;as_sdt=4,38">State
+            v. Preuitt</a><em>,</em> 255 Or App 215, 221, 296 P3d 648,
+            <em>rev. den.,</em> 353 Or 868, 306 P3d 640 (2013).</p>
+            <p>In short, “Because the evidence in question here was not
+            clearly vouching for [A’s] credibility…but was more akin to
+            permissible testimony,” <a
+            href="https://scholar.google.com/scholar_case?case=15046075108666529994&amp;q=State+v.+Wilson,+266+Or+App+481&amp;hl=en&amp;as_sdt=4,38">State
+            v. Wilson</a><em>,</em> 266 Or App 481, 495, 337 P3d 990
+            (2014), “we agree with the state that there is a reasonable
+            dispute as to whether Mills impermissibly vouched for A.”
+            Thus, the trial court did not plainly err by not <em>sua
+            sponte</em> striking the disputed testimony at issue
+            here.</p>
+            <h2
+            id="h._state_v._marrington_335_or_555_73_p3d_911_2003"><strong>H.
+            <a
+            href="https://scholar.google.com/scholar_case?case=10154162156262782119&amp;q=State+v.+Marrington,+335+Or+555&amp;hl=en&amp;as_sdt=4,38">State
+            v. Marrington</a>, 335 Or 555, 73 P3d 911
+            (2003)</strong></h2>
+            <p>Psychologist’s claim that “delayed reporting” is a
+            prominent feature in a child’s claim of abuse is a
+            scientific assertion that requires a proper foundation under
+            <em>State v. Brown</em>. Because this issue was a central
+            fact in the case and the expert’s testimony had an increased
+            potential to influence the jury, a reversal was proper.</p>
+            <h2
+            id="i._state_v._henley_281_or_app_825_386_p3d_126_2016"><strong>I.
+            <a
+            href="https://scholar.google.com/scholar_case?case=11113095160507298852&amp;q=State+v.+Henley,+281+Or+App+825&amp;hl=en&amp;as_sdt=4,38">State
+            v. Henley</a>, 281 Or App 825, 386 P3d 126
+            (2016)</strong></h2>
+            <p>Palfreyman, an interviewer at CARES, described
+            defendant’s acts of massaging the child and other behavior
+            she labelled “grooming.” The court affirmed, ruling this
+            testimony permissible, because Palfreyman was not an expert
+            and her testimony did not seek “to draw its convincing force
+            from principles of science, but rather” from her training
+            and experience in forensic interviews of child victims of
+            sexual abuse. Significantly, however, the court noted that
+            objections to relevance <a
+            href="https://www.oregonlaws.org/ors/40.150_OEC_401"
+            title="wikilink">https://www.oregonlaws.org/ors/40.150 OEC
+            401</a> and prejudicial impact <a
+            href="https://www.oregonlaws.org/ors/40.160_OEC_403"
+            title="wikilink">https://www.oregonlaws.org/ors/40.160 OEC
+            403</a> were <em>not properly preserved</em>. 281 Or App
+            834.</p>
+            <h2
+            id="j._state_v._southard_347_or_127_218_p3d_104_2009"><strong>J.
+            <a
+            href="https://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=Southard&amp;hl=en&amp;as_sdt=4,38">State
+            v. Southard</a>, 347 Or 127, 218 P3d 104
+            (2009)</strong></h2>
+            <p>Here, the court finally barred the testimony of a CARES
+            doctor who, in the absence of physical evidence, made a
+            diagnosis that the child had been sexually abused. The court
+            found that such testimony <em>was</em> scientific, but found
+            that the probative value of the evidence was outweighed by
+            the danger of unfair prejudice under OEC 403. The court
+            cautioned, however, that “expert testimony with which a lay
+            person ordinarily would not be familiar may be admissible.”
+            347 Or 143.</p>
+            <h2
+            id="k._state_v._lupoli_348_or_346_234_p3d_117_2010"><strong>K.
+            <a
+            href="https://scholar.google.com/scholar_case?case=15447269637507288119&amp;q=State+v.+Lupoli,+348+Or+346&amp;hl=en&amp;as_sdt=4,38">State
+            v. Lupoli</a>, 348 Or 346, 234 P3d 117 (2010)</strong></h2>
+            <p>The Oregon Supreme Court found that testimony by a nurse,
+            a CARES social worker, a physician and a therapist who
+            diagnosed the complainants as having been sexually abused
+            constituted impermissible vouching. The court again
+            cautioned that some aspects of the testimony might be
+            admissible, but only if it was not based on an assessment of
+            the complainant’s believability.</p>
+            <h2
+            id="l._state_v._black_289_or_app_256_407_p3d_992_2017"><strong>L.
+            <a
+            href="https://scholar.google.com/scholar_case?case=11295081907039148615&amp;q=State+v.+Black,+289+Or+App+256&amp;hl=en&amp;as_sdt=4,38">State
+            v. Black</a>, 289 Or App 256, 407 P3d 992
+            (2017)</strong></h2>
+            <p>Relying on the Oregon Supreme Court decisions in
+            <em>Keller, Middleton, Milbradt</em> and <em>Beauvais</em>,
+            the <em>Black</em> court affirmed the trial court’s
+            exclusion of the defense expert’s proposed testimony that
+            the particular interviews conducted of the child victims
+            contained leading, suggestive, and emotionally coercive
+            questions because allowing such testimony would amount to
+            improper comment on the credibility of child victim.
+            <em>Black</em>, 289 Or App at 260.</p>
+            <p>The <em>Black</em> court explained that even though the
+            testimony did not go to the “ultimate question” of the child
+            victim’s credibility, it went to the “penultimate”
+            question—i.e., the expression of an opinion as to whether
+            the specific complainant’s account comports with more
+            general phenomena or dynamics bearing on credibility and
+            therefore was an improper comment on the credibility of the
+            witness. <em>Id.</em> at 263. The court concluded that the
+            “proposed expert testimony was a “commonly understood way [
+            ] of signaling [the expert’s] belief [regarding whether] a
+            witness is telling the truth” and was not relevant for an
+            independent reason. <em>Id</em>. at 264.</p>
+            <p>On May 24, 2018, the Oregon Supreme Court granted review.
+            Allowed a petition for review in <em>State of Oregon v.
+            Johnathan Richard Black</em>, 289 Or App 256, 407 P3d 992
+            (2017) (A158879) (S065729) (from the Washington County
+            Circuit Court):</p>
+            <p>Defendant Johnathan Richard Black has been granted review
+            of a Court of Appeals decision that affirmed a trial court
+            ruling excluding expert witness testimony proferred by him
+            with respect to whether certain established protocols for
+            interviews of children who have reported sexual abuse –
+            touching on issues of credibility – were violated in the
+            interviews of the children in this case.</p>
+            <p>On review, the issue is:</p>
+            <p>Does expert testimony from a child psychologist
+            concerning whether forensic child interviews were conducted
+            according to appropriate standards and protocols constitute
+            impermissible vouching?</p>
+            <h1
+            id="iv._significant_cases_reversed_under_the_holdings_of_southard_and_lupoli"><strong>IV.
+            Significant Cases Reversed Under the Holdings of
+            <em>Southard</em> and <em>Lupoli:</em></strong></h1>
+            <h2
+            id="a._state_v._lovern_234_or_app_502_228_p3d_688_2010"><strong>A.
+            <a
+            href="https://scholar.google.com/scholar_case?case=15920877896761407148&amp;q=State+v.+Lovern,+234+Or+App+502&amp;hl=en&amp;as_sdt=4,38">State
+            v. Lovern</a>, 234 Or App 502, 228 P3d 688
+            (2010)</strong></h2>
+            <p>ABC House doctor’s diagnosis of sexual abuse, in a case
+            tried before <em>Southard</em> was decided, nevertheless
+            constituted “error on the face of the record” and required
+            reversal.</p>
+            <h2
+            id="b._state_v._merrimon_234_or_app_515_228_p_3d_666_2010"><strong>B.
+            <a
+            href="https://scholar.google.com/scholar_case?case=6243429708509417975&amp;q=State+v.+Merrimon,+234+Or+App+515&amp;hl=en&amp;as_sdt=4,38">State
+            v. Merrimon</a>, 234 Or App 515, 228 P 3d 666
+            (2010)</strong></h2>
+            <p>“Plain error” for pediatric nurse practitioner to
+            testify, in the absence of physical evidence, that she could
+            make a diagnosis of “highly concerning” for abuse.</p>
+            <h2
+            id="c._state_v._bainbridge_238_or_app_56_241_p_3d_1186_2010"><strong>C.
+            <a
+            href="https://scholar.google.com/scholar_case?case=4513878514158556690&amp;q=State+v.+Bainbridge+238+Or+App+56&amp;hl=en&amp;as_sdt=4,38">State
+            v. Bainbridge</a>, 238 Or App 56, 241 P 3d 1186
+            (2010)</strong></h2>
+            <p>Reversible error for pediatric nurse practitioner to
+            testify to diagnosis of sexual abuse in the absence of
+            physical evidence.</p>
+            <h2
+            id="d._state_v._davilia_239_or_app_468_244_p3d_855_2010"><strong>D.
+            <a
+            href="https://scholar.google.com/scholar_case?case=17270861260451628222&amp;q=State+v.+Davilia,+239+Or+App+468&amp;hl=en&amp;as_sdt=4,38">State
+            v. Davilia</a>, 239 Or App 468, 244 P3d 855
+            (2010)</strong></h2>
+            <p>Guilty finding after bench trial was reversed after CARES
+            nurse practitioner testified to a diagnosis of “highly
+            concerning for sexual abuse.” Appellate court declares this
+            impermissible vouching in a close case which rested on
+            credibility.</p>
+            <h2
+            id="e._state_v._cordova_contreras_239_or_app_279_245_p3d_147_2010"><strong>E.
+            <a
+            href="https://scholar.google.com/scholar_case?case=3800674009555417436&amp;q=State+v.+Cordova-Contreras,+239+Or+App+279&amp;hl=en&amp;as_sdt=4,38">State
+            v. Cordova-Contreras</a>, 239 Or App 279, 245 P3d 147
+            (2010)</strong></h2>
+            <p>Juliette House doctor’s testimony that he diagnosed
+            sexual abuse based on examination of child and observation
+            of her interview was an improper comment on complainant’s
+            credibility in the absence of any physical findings.</p>
+            <h2
+            id="f._state_v._kelly_244_or_app_105_260_p3d_551_2010"><strong>F.
+            <a
+            href="https://scholar.google.com/scholar_case?case=9273944402785086529&amp;q=State+v.+Kelly,+244+Or+App+105&amp;hl=en&amp;as_sdt=4,38">State
+            v. Kelly</a>, 244 Or App 105, 260 P3d 551
+            (2010)</strong></h2>
+            <p>Testimony from physician at The Lighthouse that he
+            diagnosed sexual abuse in the absence of physical evidence
+            was an improper comment on the complainant’s credibility.
+            Court does not reach question of whether physician’s
+            testimony was unduly prejudicial under OEC 403. Appellate
+            court also upheld the trial court’s refusal to allow a
+            “taint” hearing and refusal to prohibit child’s testimony as
+            “unreliable.”</p>
+            <h2
+            id="g._state_v._beauvais_261_or_app_837_322_p3d_1116_2014_357_or_524_354_p3d_680_2015"><strong>G.
+            <a
+            href="https://scholar.google.com/scholar_case?case=720182858931800050&amp;q=261+Or+App+837&amp;hl=en&amp;as_sdt=ffffffffffffe04">State
+            v. Beauvais</a><em>,</em> 261 Or App 837, 322 P3d 1116
+            (2014); 357 Or 524, 354 P3d 680 (2015)</strong></h2>
+            <p>Following the holdings in <em>Southard</em> and
+            <em>Lupoli</em>, prosecutors continued to seek ways to admit
+            expert testimony to buttress that of a complainant,
+            particularly in a close case. <em>State v. Beauvais</em>
+            gave both the Oregon Court of Appeals and, eventually, the
+            Oregon Supreme Court an opportunity to articulate what type
+            of diagnostic testimony was permissible when there are
+            <em>some</em> physical findings.</p>
+            <p>In <em>Beauvais</em>, the defendant was charged in a
+            single count of sexual abuse and two counts of attempted
+            sexual abuse arising from contact with two complainants. The
+            state dismissed charges involving one of the children midway
+            through the trial. Testimony in the case included that of a
+            physician at the KIDS Center, Kyriakos, who reviewed an
+            early report from a sexual assault nurse describing some
+            “acute injury” in the genital area. Kyriakos examined the
+            child six weeks later and found no physical symptoms.
+            Nevertheless, she offered her diagnosis that the child had
+            been sexually abused.</p>
+            <p>The Court of Appeals affirmed, noting that the
+            admissibility of this diagnosis continues to be subject to a
+            balancing test under OEC 403, even when there are physical
+            findings. The court found that the significance of the
+            physical findings was complex, and they corroborated the
+            observations Kyriakos had made and thus supported her
+            diagnosis.</p>
+            <p>The Oregon Supreme Court then addressed the issue that
+            <em>Southard</em> foreshadowed but did not resolve: whether
+            and under what circumstances a diagnosis of child sexual
+            abuse is admissible under OEC 403 when physical evidence of
+            abuse is present.</p>
+            <p>The court held that when proper foundational requirements
+            are satisfied, the probative force of the diagnosis is based
+            more likely on the strength of the causal connection between
+            the physical findings and the diagnosis than the expert’s
+            reliance on the child’s statements. The court ruled,</p>
+            <p>We therefore hold that, when a jury otherwise reasonably
+            could perceive a medical diagnosis of child sexual abuse to
+            be based on a credibility determination, the diagnosis
+            nevertheless tells the jury something that it is not equally
+            capable of determining on its own if (1) physical evidence
+            meaningfully corroborates the alleged type of abuse; (2) the
+            expert significantly relies on that physical evidence in
+            making the diagnosis of sexual abuse; and (3) the causal
+            relationship between the physical evidence and the diagnosis
+            is sufficiently complex such that a lay trier of fact cannot
+            assess the connection as well as an expert.</p>
+            <p>357 Or 539, 354 P3d 690.</p>
+            <p>Here, the trial court could have concluded that the
+            diagnosis told the trier of fact something that it could not
+            determine as well on its own.</p>
+            <p>Further, because the diagnosis was based in meaningful
+            part on corroborative physical findings, the trial court
+            could have concluded that the danger of unfair prejudice
+            described in <em>Southard</em>—that the jury improperly
+            would defer to the expert’s assessment of the complaining
+            witness’s credibility—was correspondingly reduced. On
+            balance, therefore, we conclude that the trial court did not
+            abuse its discretion in determining that the probative value
+            of [the] diagnosis of sexual abuse was not substantially
+            outweighed by the danger of unfair prejudice.</p>
+            <p>357 Or 540, 354 P3d 691.</p>
+            <p>The court set out a three-part test to establish
+            “sufficient physical evidence of abuse so that a medical
+            diagnosis of sexual abuse ordinarily is admissible under OEC
+            403” if these factors are present:</p>
+            <p>(1) physical evidence meaningfully corroborates the
+            alleged type of abuse;</p>
+            <p>(2) the expert significantly relies on that physical
+            evidence in making the diagnosis of sexual abuse; and</p>
+            <p>(3) the causal relationship between the physical evidence
+            and the diagnosis is sufficiently complex such that a lay
+            trier of fact cannot assess the connection as well as an
+            expert.</p>
+            <p>When those factors are present, the diagnosis tells the
+            jury something that it could not determine as well on its
+            own; thus, the probative value of the diagnosis ordinarily
+            will not be substantially outweighed by the danger of unfair
+            prejudice. In this case, because those factors were present,
+            the trial court did not err in admitting the diagnosis.</p>
+            <p>357 Or 549.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>In challenging this type of evidence, defense counsel
+            should look carefully at the proffered evidence to challenge
+            the three factors:</p>
+            <p>1. What is “meaningful corroboration”?</p>
+            <p>2. What is “significant reliance” and is it independent
+            of the complainant’s statements<br />
+            or dependent on them?</p>
+            <p>3. Is there a “complex causal relationship” between the
+            physical evidence and the diagnosis that is not simply a
+            recitation of the complainant’s behavior or allegations?</p>
+            <h2 id="h._united_states_v._preston_873_f3d_829_2017">H. <a
+            href="https://scholar.google.com/scholar_case?case=259775958749511593&amp;q=Preston,+No.+15-10521&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Preston</a><em>,</em> 873 F3d 829, (2017)</h2>
+            <p>The Ninth Circuit has ruled that testimony by a therapist
+            concerning her treatment of an alleged sexual abuse victim
+            was improper vouching during the following exchange:</p>
+            <p>“[I]s it your opinion that Tim Rosenberg was truthful to
+            you about the sexual abuse?”</p>
+            <p>She replied, “[i]t is, yes.”</p>
+            <p>873 F3d at 837.</p>
+            <p>In addition, the <em>Preston</em> court noted that
+            testimony of a treatment provider whom the court has not
+            found to be an expert should be considered that of a lay
+            witness. Thus, the admissibility of her statements should be
+            decided on that basis, and the following exchange should
+            have been stricken:</p>
+            <p>Q: “To the best of your knowledge, have you treated males
+            for sexual abuse only to find the abuse to be false?”
+            Bussart replied, “I have not experienced that even when I
+            have done—treated men and women or girls or boys, yes, that
+            the allegation has normally been true.”)</p>
+            <p>873 F3d at 838.</p>
+            <p>The district court also was held to have abused its
+            discretion by allowing a juror question as follows:</p>
+            <p>“Based off of your sessions with Tim and his emotions,
+            did his emotions demonstrate similarity to those of a person
+            that had been a victim of sexual abuse?”</p>
+            <p>Bussart replied, “Yes. Very much so.”</p>
+            <p>873 F3d at 839.</p>
+            <h1 id="v._non_scientific_evidence"><strong>V.
+            Non-Scientific Evidence</strong></h1>
+            <p>Lay witnesses, frequently law enforcement officers, talk
+            about credibility when questioning other witnesses. In
+            determining whether testimony about these techniques
+            constitutes impermissible vouching, courts have examined two
+            criteria: first, is there a basis for the witness’s
+            observation in specialized “training and experience,” and
+            second, is the comment made in court or out of court.</p>
+            <p>If the witness is describing demeanor, behavior and
+            statements based on “training and experience,” the courts
+            generally have allowed the testimony. Likewise, if the
+            comments are made out of court rather than in court and
+            related to a specific witness’s testimony, the statements
+            are often allowed.</p>
+            <h2 id="a._law_enforcement_vouching"><strong>A. Law
+            Enforcement Vouching</strong></h2>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=5246288985279010869&amp;q=State+v.+Leahy&amp;hl=en&amp;as_sdt=4,38">State
+            v. Leahy</a>, 190 Or App 147, 78 P3d 132 (2003)</p>
+            <p>Reversible error in sodomy trial for state trooper
+            specialized in child abuse investigation to testify, “I
+            believe that it most definitely happened exactly the way the
+            victim described it<br />
+            to me.”</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8838324916788203567&amp;q=State+v.+Charboneau,+323+Or+38&amp;hl=en&amp;as_sdt=4,38">State
+            v. Charboneau</a>, 323 Or 38, 913 P2d 308 (1996)</p>
+            <p>Reversible error to allow a prosecutor to introduce
+            portions of a plea agreement which included the state’s
+            “beliefs” about the role of the witness, because they were
+            analogous to a comment on the credibility of the
+            witness.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=3832330006139384432&amp;q=State+v.+Viranond,+346+Or+451&amp;hl=en&amp;as_sdt=4,38">State
+            v. Viranond</a>, 346 Or 451, 212 P 3d 1252 (2009)</p>
+            <blockquote>
+            <p>Police officer in a home invasion robbery case could
+            testify that two witnesses’ trial testimony was “consistent”
+            with their prior statements to officers. Justice Gillette
+            denied a claim that this was an improper comment on the
+            witnesses’ credibility. He noted that the testimony was
+            allowed as prior consistent statements of the witnesses
+            after the defense cross-examination had challenged the
+            statements. He declared that the officer was simply
+            testifying that the witnesses told the same story,
+            regardless of whether it was true or false, on the occasion
+            of the interviews.</p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=3000965907878182322&amp;q=State+v.+Salas-Juarez,+264+Or+App+57&amp;hl=en&amp;as_sdt=4,38">State
+            v. Salas-Juarez</a>, 264 Or App 57, 329 P3d 805 (2014)</p>
+            <p>Lead detective in a murder/attempted murder prosecution
+            could testify that he did not find a witness evasive and
+            that his out-of-court statement “appeared to be truthful to
+            me.” The appellate court noted:</p>
+            <p>Young’s comment that he found Russell’s statement
+            “truthful” and not “evasive” is a straightforward instance
+            of vouching. That the comment related to his decision-making
+            process for the investigation is of no consequence;
+            investigators routinely make credibility determinations out
+            of court, but that does not create an exception to the
+            prohibition against relaying those credibility
+            determinations in their in-court testimony.</p>
+            <p>329 P3d at 810.</p>
+            <p>The court held, however, that the objection <em>had not
+            been preserved</em> at the trial level; in addition, the
+            court found a strategic reason for trial counsel’s failure
+            to object at the time of the testimony and affirmed the
+            conviction.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14438724525999815765&amp;q=State+v.+Marquez-Vela,+266+Or+App+738&amp;hl=en&amp;as_sdt=4,38">State
+            v. Marquez-Vela</a>, 266 Or App 738, 338 P3d 813 (2014)</p>
+            <p>In a murder prosecution police detective Ober interviewed
+            the defendant, claiming he was “nonchalant” during the
+            interview and also testified as follows:</p>
+            <p>[Ober:] <em>I think he was dishonest. I think he was
+            untruthful. I think he was lying about the whole situation
+            and he was selectively leaving out details that he thought
+            was harmful to him.”</em> (emphasis in original).</p>
+            <p>The state acknowledged that this testimony was
+            inadmissible but argued that defense<br />
+            counsel had “opened the door” to the remarks by
+            cross-examining Ober about the defen-<br />
+            dant being “nonchalant.” The Court of Appeals rejected this
+            suggestion and reversed.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=11440022106596234491&amp;q=State+v.+Thomas,+Or+App+195&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014">State
+            v. Thomas</a>, 270 Or App 195 (2015)</p>
+            <blockquote>
+            <p>In DUII prosecution, Officer Douglas testified that he
+            did not see a particular action attributed to the defendant,
+            but he heard remarks about it from Officer Burke which
+            informed his actions because, “I trust Officer Burke.” The
+            court held this was not an improper comment on Burke’s
+            credibility, but even if it was the error was harmless.</p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=4274221626065474893&amp;q=State+v.+Althof,+273+Or+App+342&amp;hl=en&amp;as_sdt=4,38">State
+            v. Althof</a>, 273 Or App 342, 359 P3d 399(2015)</p>
+            <blockquote>
+            <p>Police officer’s testimony about delay in reporting child
+            abuse was sufficient to qualify him as an expert under OEC
+            702, but his testimony was <em>not</em> scientific
+            evidence:</p>
+            </blockquote>
+            <p>A witness is not assumed to be disqualified merely
+            because the person lacks a particular educational or
+            professional degree. To be an expert, a person simply must
+            have the “knowledge, skill, experience, training or
+            education” to provide testimony “in the form of an opinion
+            or otherwise” regarding the “particular topic” on which the
+            person claims expertise. <a
+            href="https://www.oregonlaws.org/ors/40.410">OEC 702</a>; <a
+            href="https://scholar.google.com/scholar_case?case=1002151546933871559&amp;q=Rogers,+330+Or&amp;hl=en&amp;as_sdt=4,38">Rogers</a>,
+            330 Or at 315. “ ‘The capacity [to testify] in every case is
+            a relative one, <em>i</em>.<em>e</em>., relative to the
+            topic about which the person is asked to make his
+            statement.’ ” (Additional citations omitted.)</p>
+            <blockquote>
+            <p>The court found that the investigating detective’s
+            training and experience enabled him to testify as an expert
+            about different reasons why victims of sexual abuse or
+            domestic abuse might not report such abuse immediately. The
+            court noted that his testimony was narrow: he did not
+            describe the delay as if it were a scientific or
+            psychological phenomenon, as in <a
+            href="https://scholar.google.com/scholar_case?case=10154162156262782119&amp;q=marrington&amp;hl=en&amp;as_sdt=4,38">Marrington</a>,
+            <em>supra</em>. Instead, he simply gave concrete reasons why
+            victims of physical or sexual abuse might not report abuse
+            to authorities immediately.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>Counsel should look carefully at the “training and
+            experience” offered to allow these officers to be “experts,”
+            pointing out the requirements of basic and continuing
+            training and officer experiences which are routine, not
+            specific to the type of case involved. The substance of the
+            testimony may also be subject to challenge as in
+            <em>Dunning,</em> below.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=6480847180386057775&amp;q=State+v.+Dunning,+245+Or+App+582&amp;hl=en&amp;as_sdt=4,38">State
+            v. Dunning</a>, 245 Or App 582, 263 P3d 372 (2011)</p>
+            <p>In a trial for attempted murder and assault, Officer
+            Kozowski testified that a pivotal witness’s testimony had
+            changed because the memories of trauma victims improve over
+            time. The appellate court refused to accept him as an
+            expert, pointing out,</p>
+            <p>His expertise derived from reading some material by one
+            author and one institute and from familiarity with one or
+            two public documents. That is not the stuff of expertise; if
+            it were, any literate person with access to a library or an
+            Internet connection could become an expert in anything over
+            one long weekend. Our standards are higher. Allowing
+            Kozowski to testify as an expert on the subject of memory
+            after traumatic events was error.</p>
+            <p>The court noted that the pivotal witness’ account of
+            events had changed from one which mentioned defendant only
+            in passing to one which strongly implicated her. Because
+            Kozowski’s testimony gave an “expert’s” imprimatur to the
+            counterintuitive proposition that a person’s memory improves
+            over time, the conviction was reversed. 245 Or App 592.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=17678505893804981307&amp;q=State+v.+Higgins&amp;hl=en&amp;as_sdt=4,38">State
+            v. Higgins</a>, 258 Or App 117, 308 P3d 352 (2013)</p>
+            <p>Complainant’s mother testified at trial that she waited a
+            period of time before asking her daughter to repeat her
+            claims that the defendant raped her so that she “could be
+            sure that [the complainant] wasn’t lying.” This was a direct
+            comment that the girl was truthful and that mother believed
+            the accusations. As her mother, she was aware of the girl’s
+            behaviors, characteristics, and past experiences. “That fact
+            significantly increases the risk that the jury’s credibility
+            determination was affected by [the mother’s] comments.” The
+            issue of force depended on the girl’s credibility, and the
+            ends of justice required that the convictions be
+            reversed.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15046075108666529994&amp;q=State+v.+Wilson,+266+Or+App+481&amp;hl=en&amp;as_sdt=4,38">State
+            v. Wilson</a>, 266 Or App 481, 337 P3d 990 (2014)</p>
+            <p>The court allowed testimony from an EMT worker that the
+            complainant’s distressed demeanor when telling her father
+            about her attack “wasn’t fake” and that “I did not think she
+            was faking it.” Defense counsel did not object. The
+            appellate court ruled the testimony not plain error. The
+            evidence in question was not clearly vouching for the young
+            woman’s credibility but was more like permissible testimony
+            about her demeanor. In addition, the court found plausible
+            reasons that the evidence could support the defense of the
+            case, so the trial court did not plainly err in failing to
+            strike the testimony <em>sua sponte.</em></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=18410230580283769875&amp;q=State+v.+Ferguson,+247+Or+App+747&amp;hl=en&amp;as_sdt=4,38">State
+            v. Ferguson</a>, 247 Or App 747, 271 P3d 150 (2012)</p>
+            <p>The prosecutor asked an alleged rape victim’s father
+            about his call to police:</p>
+            <p>“<em>So, if you…had thought she had just made a mistake,
+            got drunk, but had sex with somebody knowingly, would you
+            have let the police be called?</em></p>
+            <p>“A—oh, no, sir.” [emphasis in opinion].</p>
+            <blockquote>
+            <p>In reversing the conviction, the Court of Appeals held
+            that this testimony vouched for the woman’s credibility on
+            the issues of whether sex occurred, whether she was drunk
+            and whether it was a mistake. The suggestion to the jury
+            that they should believe complainant because her father,
+            with whom she was “very close,” believed her was improper
+            vouching.</p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=4744943883784089687&amp;q=State+v.+Inman,+275+Or+App+920&amp;hl=en&amp;as_sdt=4,38">State
+            v. Inman</a>, 275 Or App 920, 366 P3d 721 (2015)</p>
+            <p>Police detective testified that he spoke with a
+            complainant a week before trial to be sure she had not lied;
+            this was not “plain error.” Without an objection from trial
+            counsel, the “vouching” argument was not preserved.</p>
+            <p><strong>Practice Tip – Object! Object!</strong></p>
+            <p>Object to any testimony that hints at support for the
+            credibility of another witness’s statements.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15212196728993713978&amp;q=State+v.+Chandler,+360+Or+323+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Chandler</a>, 360 Or 323, 380 P3d 982 (2016)</p>
+            <blockquote>
+            <p>Officer Gates’ pretrial videotaped interview of the
+            defendant was admitted at trial. In it, Gates expressed her
+            opinion that the victims were truthful and the defendant was
+            lying:</p>
+            </blockquote>
+            <p>The girl had no history of…lying, making accusations…that
+            have turned out to be lies….I can see you act a certain way
+            when you say something that’s truthful and… a different way
+            when you are saying something…I already know is a lie.</p>
+            <blockquote>
+            <p>The court distinguished <a
+            href="https://scholar.google.com/scholar_case?case=8838324916788203567&amp;q=State+v.+Charboneau,+323+Or+38&amp;hl=en&amp;as_sdt=4,38">Charboneau</a><em>,
+            supra</em>, from <a
+            href="https://scholar.google.com/scholar_case?case=13626535282465657859&amp;q=State+v.+Odoms,+313+Or+App+76&amp;hl=en&amp;as_sdt=4,38">State
+            v. Odoms</a><em>,</em> 313 Or App 76, which allowed an
+            officer’s testimony recounting his statements while
+            questioning the defendant and which indicated his belief
+            that the victim was truthful. The court ruled that the
+            distinction between in-court and out-of-court statements was
+            not decisive. The court disavowed the reasoning in
+            <em>Odoms</em> and expressly ruled that the bounds of the
+            vouching rule are not defined by the setting in which the
+            comments are uttered, but rather whether the statement is
+            offered for the “truth of the credibility opinion” that it
+            expresses.</p>
+            <p>The court carefully ruled that a vouching statement is
+            “not categorically inadmissible” if it is offered for a
+            relevant, non-opinion purpose; but the evidence must still
+            be relevant under <a
+            href="https://www.oregonlaws.org/ors/40.150">OEC 401</a>,
+            may not be unduly prejudicial under <a
+            href="https://www.oregonlaws.org/ors/40.160">OEC 403</a>,
+            and in appropriate circumstances may be subject to a
+            limiting instruction under OEC 105. 360 Or 335. On the
+            record before it, the court noted that trial counsel had not
+            objected to the “non-vouching” purpose [context] for which
+            Gates’ statements were offered.</p>
+            <p>Justice Baldwin, however, noted that “We do not disagree
+            that such statements are troubling. Indeed, Gates’s claim of
+            expertise in determining truthfulness posed the risk…that
+            jurors might place undue weight on the ‘aura of reliability’
+            created by such a claim.” But the proper procedure for
+            challenging such statements was to raise an objection under
+            OEC 403 which triggers the trial court’s duty to weigh the
+            statements. Here, trial counsel not only developed <em>no
+            argument</em> under OEC 403, <em>but also</em>
+            <em>failed</em> to cite <em>Southard</em>, “the primary case
+            on which his appellate argument relied.”</p>
+            </blockquote>
+            <p>Since <a
+            href="https://scholar.google.com/scholar_case?case=15212196728993713978&amp;q=State+v.+Chandler,+360+Or+323+&amp;hl=en&amp;as_sdt=4,38">Chandler</a><em>,</em>
+            several cases have relied on the portion of the opinion that
+            allowed the statement into evidence by finding it was not
+            vouching. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=16252159605959663794&amp;q=State+v.+Garcia-Rocio,+287+Or+App+745&amp;hl=en&amp;as_sdt=4,38">State
+            v. Garcia-Rocio</a><em>,</em> 287 Or App 745, 749-750, 403
+            P3d 470 (2017); <a
+            href="https://scholar.google.com/scholar_case?case=6609692942513330375&amp;q=State+v.+Codon,+282+Or+App+165&amp;hl=en&amp;as_sdt=4,38">State
+            v. Codon</a><em>,</em> 282 Or App 165, 386 P3d 45 (2016); <a
+            href="https://scholar.google.com/scholar_case?case=4045374407325173036&amp;q=State+v.+Davis,+291+Or+App+146&amp;hl=en&amp;as_sdt=4,38">State
+            v. Davis</a><em>,</em> 291 Or App 146, ___ P3d ____ (April
+            2018). In both <em>Codon</em> and <em>Garcia-Rocio,</em> the
+            Court of Appeals let stand a trial court ruling allowing the
+            recording and interrogation of the defendant in its entirety
+            where the interrogating detective constantly confronted the
+            defendant with statements that the defendant was lying and
+            the victim was telling the truth. The court’s reasoning set
+            forth in <em>Garcia-Rocio</em> is that the detective’s
+            statements made during the interview were not vouching
+            because they were offered “to show [defendant’s] reaction to
+            being confronted with a particular statement,” and the jury
+            was instructed that the detective’s statements were “not to
+            be considered for their truth” or as “comments upon the
+            credibility of any person or witness.” Because the
+            detective’s statements were not admitted for the truth of
+            the credibility opinions they contained, they were not
+            categorically inadmissible. <a
+            href="https://scholar.google.com/scholar_case?case=16252159605959663794&amp;q=State+v.+Garcia-Rocio,+287+Or+App+745&amp;hl=en&amp;as_sdt=4,38">State
+            v. Garcia-Rocio</a>, 287 Or App 745, 750, 403 P3d 470, 472
+            (2017), <em>review denied,</em> 362 Or 389, 411 P3d 385
+            (2018).</p>
+            <p>In <em>Davis</em>, the trial court allowed a text
+            exchange between the alleged victim and the accused. The
+            <em>Davis</em> court hammered home the new <em>Chandler</em>
+            rule that the categorical prohibition only applies when the
+            statements are offered “for the truth of the credibility
+            opinion that it expresses” and went further to emphasize
+            that statements by a witness (law enforcement, victim, etc.)
+            regarding his opinion as to whether an accused is being
+            truthful with them are admissible as nonhearsay context for
+            defendant’s admissible statements. <a
+            href="https://scholar.google.com/scholar_case?case=4045374407325173036&amp;q=State+v.+Davis,+291+Or+App+146&amp;hl=en&amp;as_sdt=4,38">State
+            v. Davis</a>, 291 Or App 146, 159 (2018).</p>
+            <p>Unlike in <em>Chandler, Condon</em> and
+            <em>Garcia-Rocio</em>, <em>Davis</em> preserved his 403
+            argument, but the <em>Davis</em> court summarily rejected
+            the position that the alleged victim/witness pronouncements
+            regarding the veracity of the accused, even in light of
+            <em>Mayfield</em>, were more probative than prejudicial
+            because of the importance of putting the accused’s
+            statements “into context.”</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=259775958749511593&amp;q=Preston,+No.+15-10521&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Preston</a>, 873 F3d 829 (2017)</p>
+            <p>The Court found the following exchange to be improper
+            vouching:</p>
+            <p>Q: [...]Did you ask the defendant, Did you put your penis
+            in [Rosenberg’s] mouth at your house?</p>
+            <p>A: Yes.</p>
+            <p>Q: And what was the defendant’s response to [the]
+            question[ ]?</p>
+            <p>A: No.</p>
+            <p>Q: Did you indicate to the defendant that you did not
+            believe him?</p>
+            <p>A. Yes.</p>
+            <p>Q: What was the defendant’s response when you told him
+            you didn’t believe him?</p>
+            <p>A: Preston never denied receiving blow jobs from
+            [Rosenberg] ... [he] stated that he<br />
+            could not remember receiving blow jobs from [Rosenberg]
+            because that is when he was a meth addict.”</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=259775958749511593&amp;q=Preston,+No.+15-10521&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Preston</a>, <em>supra</em>.</p>
+            <p>B. Non-Law Enforcement Lay Opinion Vouching
+            Prohibited</p>
+            <p><em>United States v. Preston</em></p>
+            <p>The Court held the following was impermissible vouching
+            by father of alleged victim:</p>
+            <p>Q: “What was your response when you learned about the
+            allegations of sexual abuse by the defendant?”</p>
+            <p>A: “[T]here wasn’t any questioning my brother about what
+            he was saying. There was just understanding. I can
+            understand. I can see. Things make sense to me.”</p>
+            <p><em>Id.</em> at *6 (9th Cir Oct. 17, 2017).</p>
+            <h1 id="vi._indirect_vouching"><strong>VI. Indirect
+            Vouching</strong></h1>
+            <p>Prosecutors often refer to the complaining witness,
+            particularly a child, as a “victim.” This term is both a
+            legal conclusion and a signal to the jury that the
+            complainant has been wronged and that the defendant is the
+            person responsible. Defense counsel should ask the court to
+            prevent the prosecutor from using this term. Also see
+            Chapter 12, “Demurrers and Motions” by Matthew McHenry.</p>
+            <p><a href="https://www.oregonlaws.org/ors/131.007">ORS
+            131.007</a> defines a “victim” as follows:</p>
+            <p>As used in <a
+            href="https://www.oregonlaws.org/ors/40.385">ORS 40.385</a>,
+            <a
+            href="https://www.oregonlaws.org/ors/135.230">135.230</a>,
+            <a
+            href="https://www.oregonlaws.org/ors/135.406">135.406</a>,
+            <a
+            href="https://www.oregonlaws.org/ors/135.970">135.970</a>,
+            <a
+            href="https://www.oregonlaws.org/ors/147.417">147.417</a>,
+            <a href="https://www.oregonlaws.org/ors/147.419">147.419</a>
+            and <a
+            href="https://www.oregonlaws.org/ors/147.421">147.421</a>
+            and in ORS chapters 136, 137 and 144, except as otherwise
+            specifically provided or unless the context requires
+            otherwise, “victim” means the person or persons who have
+            suffered financial, social, psychological or physical
+            <em>harm as a result of a crime</em> and includes, in the
+            case of a homicide or abuse of corpse in any degree, a
+            member of the immediate family of the decedent and, in the
+            case of a minor victim, the legal guardian of the minor. In
+            no event shall the criminal defendant be considered a
+            victim.<br />
+            (Emphasis added).</p>
+            <p>In a sex case, the issue will be whether a crime or
+            crimes occurred at all. Until that decision is made, there
+            is no objective basis to accord the complainant the label
+            “victim” in front of the jury.</p>
+            <p>The statutes providing complaining witnesses the status
+            of “victim” and providing “victim’s rights” have limited,
+            specific attributes. Those individuals designated as
+            “victims” under the statutes are given that designation so
+            that they may exercise certain statutory rights: (1)
+            consultation with the district attorney about plea
+            negotiations, ORS 135.406, (2) the right not to have his or
+            her name and address provided to the accused, ORS 135.970,
+            (3) the right to be notified of his or her constitutional
+            rights, ORS 147.417, (4) the right to obtain a transcript or
+            tape of a criminal proceeding, ORS 147.419, and (5) the
+            right to information about an accused that a public body is
+            required to provide, ORS 147.421.</p>
+            <p>The foregoing rules do not, and cannot, diminish an
+            accused’s constitutional rights. <a
+            href="https://www.oregonlaws.org/ors/147.540">ORS
+            147.540</a>(2)(c). The statutes do not change the
+            evidentiary rules concerning procedures for a trial or shift
+            the burden of proof to a defendant to disprove his guilt.
+            Those rights bestowed upon designated “victims” do not give
+            the complainant the privilege of being labeled a “victim” in
+            front of the jury. The definition of “victim” in <a
+            href="https://www.oregonlaws.org/ors/131.007">ORS
+            131.007</a> makes use of that label inappropriate until
+            <em>after</em> a verdict or finding of guilt (i.e.,
+            determination of injury “as the result of a crime”). To
+            determine the verdict is precisely the reason for a jury
+            trial.</p>
+            <p>The constitutional provisions concerning designated
+            victims are similar.</p>
+            <p><a
+            href="https://ballotpedia.org/Article_I,_Oregon_Constitution">Article
+            1</a>, sections 42 and 43, set out “the rights of victims in
+            criminal prosecutions and juvenile court delinquency
+            proceedings.” The specific rights enumerated include: (1)
+            the right to be present at any critical stage, Article 1,
+            section 42 (1) (a); (2) the right to obtain information
+            about conviction, etc., Article 1, section 42 (1) (b), (3)
+            the right to refuse an interview to the defense, Article 1,
+            section 42 (1) (c), (4) the right to prompt restitution,
+            Article 1, section 42 (1) (d), (5) the right to a copy of
+            the transcript, Article 1, section 42 (1) (e), (6) the right
+            to be consulted regarding plea negotiations involving any
+            violent felony, Article 1, section 42 (1) (f), and (7) the
+            right to be informed of the rights as soon as practicable,
+            Article 1, section 42 (1) (g). There is no right to be
+            called “the victim” in front of the jury.</p>
+            <p>The Oregon Constitution does leave the designation of who
+            is a “victim” in certain contexts to the discretion of the
+            district attorney. See, e.g., Article 1, sections 42 and 43
+            (3) (c); <em>see also</em> ORS 147.500 (statute leaves
+            designation of victim to discretion of district attorney or
+            court).</p>
+            <p>Even though the prosecution has discretion to determine
+            the complainant’s status as a “victim,” that status is still
+            limited by the requirement that the person has suffered
+            “harm as a result of a crime.” The limitation is the same as
+            in the statute. There must be a final determination that a
+            “crime” occurred, and this determination must be made by an
+            objective source (e.g., not the complainant, not the
+            prosecuting attorney) before the label can be used without
+            limitation. The Oregon constitutional sections are
+            consistent with the foregoing analysis because those
+            sections recognize that a criminal defendant’s rights are
+            unchanged. Article 1, sections 42 and 43 (2) specify,
+            “Nothing in this section reduces a criminal defendant’s
+            rights under the Constitution of the United States.”</p>
+            <p>Under both state and federal law, a defendant is entitled
+            to the presumption of innocence and has no burden of proof.
+            He is also entitled to require the state to prove each and
+            every element of each charge beyond a reasonable doubt. Use
+            of the term “victim” for the complainant before the jury
+            would unfairly and improperly dilute the state’s burden of
+            proof. It would say to the jury that the prosecution has
+            already shown—by filing an indictment—that a crime has been
+            committed and this defendant committed it. Clearly that is
+            not the law.</p>
+            <p>By referring to a complainant as a “victim” before that
+            fact has been determined by a jury, the state and its other
+            witnesses would be, in effect, personally vouching for the
+            credibility of the complainant and the justness of the
+            state’s case in front of the jury. A prosecutor may not
+            offer his or her personal opinions on an issue as a factor
+            for the jury to consider in its deliberations without
+            violating federal due process rights. Fifth and Fourteenth
+            Amendments to the United States Constitution; Article 1,
+            sections 11 and 12, of the Oregon Constitution; <a
+            href="https://scholar.google.com/scholar_case?case=9550433126269674519&amp;q=Brady+v.+Maryland&amp;hl=en&amp;as_sdt=3,38">Brady
+            v. Maryland</a>, 373 US 83, 83 S Ct 1194, 110 L Ed2d 215
+            (1963).</p>
+            <p>The Oregon Supreme Court has held that a trial lawyer may
+            not assert the lawyer’s personal opinion about an issue at
+            trial. <a
+            href="https://scholar.google.com/scholar_case?case=8838324916788203567&amp;q=State+v.+Charboneau,+323+Or+38&amp;hl=en&amp;as_sdt=4,38">State
+            v. Charboneau</a>, 323 Or 38, 47-48, 913 P2d 308 (1996). See
+            also DR 7-106(C)(4), which prohibits a lawyer from asserting
+            “the lawyer’s personal opinion as to the justness of a
+            cause.” While the trial court has broad discretion to
+            control argument, it cannot permit argument that is unfair
+            to a defendant. <a
+            href="https://scholar.google.com/scholar_case?case=3340291332660031747&amp;q=State+v.+Bolt,+108+Or+746&amp;hl=en&amp;as_sdt=4,38">State
+            v. Bolt, 108 Or 746</a>, 817 P2d 1322 (1991); <em>State v.
+            Blodgett</em>, 50 Or 329, 343, 92 P 820 (1907).</p>
+            <p>Courts have been inconsistent in their responses to a
+            motion in limine seeking to preclude the use of the label
+            “victim” at trial. One judge in Benton County ruled that he
+            would preclude “excessive” use of the term. A judge in
+            Umatilla County ruled that, like the label “defendant,” the
+            term simply designated a participant in the trial. But
+            presiding Judge Thomas Branford in Lincoln County has held
+            for more than 30 years that use of the term “victim” as a
+            label for the complainant is fundamentally unfair to the
+            accused in a criminal trial.</p>
+            <h1 id="vii._prosecutors"><strong>VII.
+            Prosecutors</strong></h1>
+            <h2
+            id="a._united_states_v._garcia_522_f3d_597_5th_cir_2008"><strong>A.
+            <em>United States v. Garcia,</em> 522 F3d 597
+            (5<sup>th</sup> Cir 2008)</strong></h2>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=15509330512832587558&amp;q=Garcia,+522+F3d+597+&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Garcia</a><em>,</em> 522 F3d 597 (5<sup>th</sup>
+            Cir 2008), the government concedes error, personal
+            assurances are improper.</p>
+            <p>In <em>Garcia</em>, the Court first quoted the ABA
+            standard:</p>
+            <p>The prosecutor should not express his or her personal
+            belief or opinion as to the truth or falsity of any
+            testimony or evidence or the guilt of the defendant or
+            “cloak a witness in its protective mantle.”</p>
+            <p>The Court then set out the rule as follows:</p>
+            <p>As the government concedes, it is impermissible per se
+            for a prosecutor to offer personal assurances to the jury
+            that government witnesses are telling the truth, or to tell
+            the jury that law enforcement witnesses should be believed
+            simply because they were doing their job.</p>
+            <p>522 F3d at 602.</p>
+            <p>The court also found it improper and impermissible for a
+            prosecutor to ask a rhetorical question about whether
+            federal agents would risk their careers to commit perjury
+            and whether they had gotten up that morning determined to
+            engage in a conspiracy wrongfully to convict Mr. Garcia. 522
+            F3d 600.</p>
+            <p><em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=12017305798012303543&amp;q=United+States+v.+McCann,+613+F3d+486&amp;hl=en&amp;as_sdt=3,38">United
+            States v. McCann</a><em>,</em> 613 F3d 486, 495
+            (5<sup>th</sup> Cir. 2010) (“The test for improper vouching
+            for the credibility of a witness is whether the prosecutor’s
+            expression might reasonably lead the jury to believe that
+            there is other evidence, unknown or unavailable to the jury,
+            on which the prosecutor was convinced of the accused’s
+            guilt”), <em>other citations omitted</em>.</p>
+            <h2 id="b._united_states_v._preston"><strong>B. <a
+            href="https://scholar.google.com/scholar_case?case=259775958749511593&amp;q=Preston,+No.+15-10521&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Preston</a></strong></h2>
+            <p>The Court held the following comments by the prosecutor
+            were all improper vouching for the witness:</p>
+            <p>1. In opening, the government stated, “The truth always
+            comes out no matter how many years have passed.... And the
+            truth in this case is that the defendant,
+            Christopher Preston, put his penis in ten-year-old Timothy
+            Rosenberg’s mouth[.]”</p>
+            <p>2. In summation, the government reiterated, “The truth
+            will always come out.... And in this case the truth has come
+            out.” The government further noted, “In the end...ladies and
+            gentlemen, the truth came out of the mouth of Tim
+            Rosenberg.</p>
+            <p>3. In rebuttal, referring to Rosenberg’s testimony, the
+            government stated, “And that is the truth in this case. That
+            is the evidence in this case.” Later in rebuttal the
+            government added, “[Rosenberg] has come here to court...to
+            testify to you as to the truth of what happened...the
+            uncontroverted truth as to what happened.” The government
+            also stated, “The crux of this case, the core of the truth
+            of what Timothy Rosenberg testified to in detail on the
+            stand under oath is that the defendant sexually molested him
+            as a child....” Finally, the government declared,
+            “[Rosenberg] probably wishes that the drinking and the
+            drugs...could erase this memory of what happened. But it
+            can’t. And it didn’t. Because it is the truth of what
+            happened.”</p>
+            <p>873 F3d at 844.</p>
+            <h1 id="viii._post_conviction_relief"><strong>VIII.
+            Post-Conviction Relief</strong></h1>
+            <p>Trial counsel’s failure to object to vouching testimony
+            may be constitutionally ineffective assistance, which
+            justifies post-conviction relief.</p>
+            <h2
+            id="a._simpson_v._coursey_224_or_app_145_197_p3d_68_2008"><strong>A.
+            <a
+            href="https://scholar.google.com/scholar_case?case=16725495486307555850&amp;q=Simpson+v.+Coursey,+224+Or+App+145&amp;hl=en&amp;as_sdt=4,38">Simpson
+            v. Coursey</a>, 224 Or App 145, 197 P3d 68
+            (2008)</strong></h2>
+            <blockquote>
+            <p>Trial counsel was constitutionally defective for failing
+            to move for a mistrial, to strike, or for a curative
+            instruction after a uniformed police officer testified that
+            he found the complainant “very honest, very
+            straightforward.” Although counsel had objected to the
+            testimony and the objection was sustained, this was
+            insufficient without asking for additional remedies from the
+            court.</p>
+            </blockquote>
+            <p>In granting post conviction relief, the appellate court
+            observed that the possible effect of this vouching on the
+            verdict was magnified because the trial seemed extremely
+            close for the jury. It returned a verdict of not guilty on
+            three of the four charged counts, and the single guilty
+            verdict rested on a vote of 10-2. The charges involved just
+            one victim and depended on her credibility. “Thus, the
+            possibility that [the] testimony vouching for the
+            credibility of the victim affected the verdict is very
+            real.” 224 Or App 155.</p>
+            <h2
+            id="b._berg_v._nooth_258_or_app_286_309_p3d_164_2013"><strong>B.
+            <a
+            href="https://scholar.google.com/scholar_case?case=15885576128605815668&amp;q=Berg+v.+Nooth,+258+Or+App+286&amp;hl=en&amp;as_sdt=4,38">Berg
+            v. Nooth</a>, 258 Or App 286, 309 P3d 164
+            (2013)</strong></h2>
+            <p>A DHS caseworker testified on cross-examination, “I did
+            believe the children in this case.” The prosecutor objected,
+            and the court asked defense counsel if he wanted a curative
+            instruction. The attorney did not answer. In addition, the
+            prosecutor in his closing arguments referred to the
+            expertise of the state’s witnesses, claiming that they would
+            not have been fooled if the children were lying, that the
+            girls had disincentives to lie, and that the defendant
+            should “not be allowed to get away” with the crimes.</p>
+            <p>The Court of Appeals had “little difficulty concluding
+            that trial counsel failed to exercise reasonable
+            professional skill and judgment” in the case in light of the
+            Oregon Supreme Court’s “emphatic condemnation” of vouching
+            testimony. The court also reaffirmed the court’s instruction
+            that if counsel tried to elicit such testimony, “the trial
+            judge, <em>sua sponte,</em> should summarily cut off the
+            inquiry before a jury is contaminated by it.” 258 Or App
+            298.</p>
+            <h2
+            id="c._alne_v._nooth_288_or_app_307_309_406_p3d_109_112_2017"><strong>C.
+            <a
+            href="https://scholar.google.com/scholar_case?case=13310009243388020684&amp;q=Alne+v.+Nooth,+288+Or+App+307&amp;hl=en&amp;as_sdt=4,38">Alne
+            v. Nooth</a>, 288 Or App 307, 309, 406 P3d 109, 112
+            (2017)</strong></h2>
+            <p>As in the <em>Berg</em> case, <em>supra</em>, the
+            <em>Alne</em> court found deficient the failure of trial
+            counsel to object to the following testimony:</p>
+            <p>[STATE]: In your training and experience in dealing with
+            children, is that something that a child who has not been
+            abused would ordinarily come up with or burst out with?</p>
+            <p>[FINDLAY]: Not generally. I think, again, I look at the
+            statements that she made about that and the way in which she
+            described it. We do try to discern to the best of our
+            ability is a child describing something that was an
+            experience, or by the way that they’re describing the event,
+            does it appear as if that’s an experienced event, or is that
+            something that they could have seen or something like
+            that.</p>
+            <p>“From my training and experience, I thought again that
+            she provided information that was from a child’s point of
+            view, and it just seemed like a genuine statement.</p>
+            <p>The court affirmed post-conviction relief, emphasizing
+            that no reasonable attorney would have failed to object to
+            such a statement and, where there is no physical evidence,
+            the failure of the trial counsel to object is ineffective
+            assistance of counsel.</p>
+            <h2
+            id="d._heroff_v._coursey_280_or_app_177_380_p3d_1032_2016"><strong>D.
+            <a
+            href="https://scholar.google.com/scholar_case?case=8713646832517990420&amp;q=Heroff+v.+Coursey,+280+Or+App+177+&amp;hl=en&amp;as_sdt=4,38">Heroff
+            v. Coursey</a>, 280 Or App 177, 380 P3d 1032
+            (2016)</strong></h2>
+            <p>In <em>Heroff v. Coursey,</em> the prosecutor made the
+            following arguments:</p>
+            <ul>
+            <li><blockquote>
+            <p>“Well, to a young, undeveloped child, apparently, it
+            really didn’t feel like anything. Was that an accurate
+            description? Probably. I think so.”</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>“Your first experience as a little child being sodomized
+            by an adult, your body is going to be kind of shaky, and
+            that’s what she described, and that’s how it was, and that’s
+            credible, and that’s honest, and that’s the truth.”</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>“She came forward, and she told the truth. She told the
+            truth here this week. She was nervous. She didn’t want to be
+            up there, but she came up here. She told the truth, and she
+            got it out, and she told her story.”</p>
+            </blockquote></li>
+            </ul>
+            <p>380 P3d at 1042.</p>
+            <p>The court held that it is permissible for a prosecutor to
+            argue that the jury should infer a witness is credible based
+            on the evidence in the record so long as the prosecutor does
+            not vouch for the witness by interjecting his or her
+            personal opinion of the witness’s credibility.</p>
+            <h1 id="ix._conclusion"><strong>IX. Conclusion</strong></h1>
+            <p>Defense counsel should challenge testimony by any
+            witness—whether doctor, police office or ordinary
+            citizen—which addresses statements made by another
+            witness—whether in court or out of court—on several grounds
+            as Justice Baldwin clearly set out in Chandler.</p>
+            <p>• First, make a vouching objection. The prosecutor should
+            demonstrate specifically and in detail, on the record, any
+            “non-vouching” purpose for which she is offering the
+            statement.</p>
+            <p>• Second, object that the statement is not relevant under
+            OEC 401.</p>
+            <p>• Finally, ask the trial court to engage in the balancing
+            test under OEC 403, weighing whether the probative value of
+            the evidence is outweighed by its prejudice.</p>
+            <p>Ultimately, if the court allows the statement, trial
+            counsel should insist that the court provide a limiting
+            instruction, specifically telling the jury that the
+            statement is not to be considered for its truth and the jury
+            alone determines the credibility of all the witnesses.
+            Without such a record, any supportive reviewing court has no
+            legal basis for offering relief to a client who is defeated
+            in the trial arena.</p>
+            <h2 id="appendix"><strong>Appendix</strong></h2>
+            <p><strong>Checklist</strong></p>
+            <p>• File a motion to compel discovery of expert opinions to
+            determine if they constitute improper vouching.</p>
+            <p>• File a motion in limine admonishing DDA to not vouch
+            (and cite examples from the cases) and argue 403 balancing
+            (use <em>Mayfield</em> template).</p>
+            <p>• Object, object, object (failure to object can be cause
+            for determination of IAC) and ask for 403 balancing
+            (<em>Chandler</em>). Object that the statement is not
+            relevant under oec 401. The prosecutor should demonstrate
+            specifically and in detail, on the record, any
+            “non-vouching” purpose for which she is offering the
+            statement.</p>
+            <p>• Require the trial court to engage in the balancing test
+            under OEC 403, weighing whether the probative value of the
+            evidence is outweighed by its prejudice.</p>
+            <p>• Move for mistrial immediately upon the vouching taking
+            place.</p>
+            <p>• In the alternative, move to strike.</p>
+            <p>• Request curative instruction or tell court that no
+            curative instruction would be satisfactory to cure the
+            error..</p>
+            <p>• Seek jury instruction in line with curative
+            instruction.</p>
+            <p>• <em>Pound the table.</em></p>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup> </sup> Curiously, Judge Haselton finds
+            <em>Milbradt</em> inconsistent with <em>Middleton</em>,
+            noting that the recantation in <em>Middleton</em> was,
+            essentially, a question of credibility. But he resolves the
+            dilemma as follows: “The line, albeit fine, is principled.
+            Both [cases] preclude an expert from explicitly stating that
+            he or she believes that the witness/complainant is truthful.
+            That is, they agree that the ‘ultimate’ question cannot be
+            answered. Where they differ is in their treatment of the
+            ‘penultimate’ question – i.e., the expression of an opinion
+            as to whether the specific complainant’s account comports
+            with more general phenomena or dynamics bearing on
+            credibility. <em>Middleton</em> allows the expert to
+            ‘connect that dot.’ <em>Milbradt</em> and <em>Keller</em> do
+            not.” 173 Or App 562.<a href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup> </sup> This evidence would be
+            impermissible under <a
+            href="https://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=Crawford+v+Washington,+541+US+36&amp;hl=en&amp;as_sdt=3,38">Crawford
+            v. Washington</a>, 541 US 36, 124 S Ct 1354, 158 L Ed 2d 177
+            (2004).<a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

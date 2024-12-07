@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <p>2020 edition</p>
+            <h1 id="jury_instructions"><strong>Jury
+            Instructions</strong></h1>
+            <p><strong><em>By L. Todd Wilson</em></strong></p>
+            <h1 id="i._rules_for_jury_instructions"><strong>I. Rules for
+            Jury Instructions</strong></h1>
+            <p>Note: All the rules of civil procedure may be found
+            online here: <a
+            href="http://www.oregonlegislature.gov/bills_laws/Pages/orcp.aspx">Oregon
+            Rules of Civil Procedure</a>.</p>
+            <h2 id="a._ors_136.330"><strong>A. ORS 136.330</strong></h2>
+            <p><a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors136.html">ORS
+            136.330</a> lists the applicable rules of civil procedure in
+            criminal cases for jury instructions, ORCP 59 A through F,
+            and ORCP 59 G (1)(3)(4)(5) and (H). Following are certain
+            rules of note.</p>
+            <p><strong>1. ORCP 59 (B). Jury instructions can be reduced
+            to writing or recorded and given to the jury for
+            deliberations.</strong></p>
+            <p>a. Must be requested at the commencement of the
+            trial.</p>
+            <p>b. If you are requesting taped instructions be provided
+            to the jury for deliberations, it is a good idea to bring
+            your own recording device or check with the clerk before
+            instruction to find the best way to make the recording.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Looper,+77+Or+App+660,+713+P2d+1099+%281986&amp;hl=en&amp;as_sdt=4,38&amp;case=8832359813299407155&amp;scilh=0"><em>State
+            v. Looper</em>, 77 Or App 660, 713 P2d 1099 (1986)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Hansen+v.+Bennett,+162+Or+App+380,+986+P2d+633+%281999&amp;hl=en&amp;as_sdt=4,38&amp;case=7403514353976851929&amp;scilh=0"><em>Hansen
+            v. Bennett,</em> 162 Or App 380, 986 P2d 633 (1999)</a>
+            (failure of trial court to comply with ORCP 59(B) requires a
+            new trial, but trial court’s failure to comply must be on
+            the record in order for reviewing court to determine
+            compliance).</p>
+            <p>c. UTCR 6.070 provides that:</p>
+            <p>(1) A party requesting written or recorded jury
+            instructions as provided by ORCP 59 (B) shall have the
+            responsibility for recording or reducing the court’s
+            instructions to writing in a timely manner; and</p>
+            <p>(2) No identifying information relating to the parties or
+            any other extraneous material, including authorities, must
+            appear on the typed or copied instructions.</p>
+            <p><strong>2. ORCP 59 (C) Deliberation.</strong></p>
+            <p>a. The jury may take four items with them into
+            deliberations:</p>
+            <p>i. an impartial written statement summarizing the issues
+            to be decided by the jury</p>
+            <p>ii. their notes</p>
+            <blockquote>
+            <p>iii. exhibits received (jury cannot take any exhibit not
+            received into evidence into the jury room); and</p>
+            </blockquote>
+            <p>iv. copies of documents that may be substituted for any
+            public records or private documents that ought not, in the
+            opinion of the court, be taken from the person in
+            possession.</p>
+            <p>b. The jury must remain together and separate from all
+            others, absent a valid order of the court; if allowed to
+            separate, must be instructed by the court on the reason for
+            separation.</p>
+            <p><strong>3. ORCP 59 (D) Questions by jurors.</strong></p>
+            <p>a. Judge may require the jury to be brought back into
+            court and reinstructed.</p>
+            <p>b. Counsel must be present or notified prior to
+            reinstruction.</p>
+            <p>c. If jurors have questions, the question is presented to
+            the court through the bailiff. Typically, the judge will
+            confer with counsel and then have the bailiff return with a
+            written answer. Sometimes, the nature of the question merely
+            requires that the jury be reinstructed.</p>
+            <p><strong>4. ORCP 59 (G). Polling the jury; the hunt for
+            inconsistencies and misconduct.</strong></p>
+            <p>a. There is a strong preference for finality of jury
+            verdicts. <a
+            href="http://scholar.google.com/scholar_case?q=DC+Thompson+and+Co.+v.+Hauge,+72+Or+App+116+%281985&amp;hl=en&amp;as_sdt=4,38&amp;case=3709625113219575086&amp;scilh=0"><em>DC
+            Thompson and Co. v. Hauge</em>, 72 Or App 116 (1985)</a>
+            (jurors’ post-verdict affidavits stating that they did not
+            understand jury verdict forms are not sufficient misconduct
+            to cause reversal); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gardner,+230+Or+569,+371+P2d+558+%281962%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3326377643661434708&amp;scilh=0"><em>State
+            v. Gardner</em>, 230 Or 569, 371 P2d 558 (1962)</a>; [<a
+            href="http://scholar.google.com/scholar_case?q=Leland+Properties+V">http://scholar.google.com/scholar_case?q=Leland+Properties+V</a>.,+152+Or+App+557,+954+P2d+851+%281998&amp;hl=en&amp;as_sdt=4,38&amp;case=7283320957668130064&amp;scilh=0
+            <em>Leland Properties V. Burton Eng’g and Survey</em>, 152
+            Or App 557<em>,</em> 954 P2d 851 (1998)] (long discussion on
+            long history of refusing to consider jurors’ post-verdict
+            affidavits to impeach a verdict).</p>
+            <p>b. May be requested by either side.</p>
+            <p>c. Always poll each individual juror. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+DeVault,+78+Or+App+307,+715+P2d+1353+%281986&amp;hl=en&amp;as_sdt=4,38&amp;case=74516631930565635&amp;scilh=0"><em>State
+            v. DeVault</em>, 78 Or App 307, 715 P2d 1353 (1986)</a>.
+            Even if a juror votes for conviction in the jury room, that
+            juror may change his/her vote when polled and defeat the
+            verdict. Defendant is entitled to have deliberations
+            continue until enough jurors are willing to assure
+            individual responsibility for verdict to permit verdict to
+            stand<em>. State v. DeVault</em>, 78 Or App at 309.</p>
+            <p>d. If jurors answering in the affirmative are less than
+            the number required to reach a verdict, the jury shall be
+            sent out for further deliberation. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Imlah,+204+Or+43,+281+P2d+973+%281955&amp;hl=en&amp;as_sdt=4,38&amp;case=2713383756532525854&amp;scilh=0"><em>State
+            v. Imlah</em>, 204 Or 43, 281 P2d 973 (1955)</a>. However,
+            once the jurors’ verdict has been received by the court,
+            absent some egregious juror misconduct, the verdict will
+            stand, even if the jurors come back to the court later
+            claiming error. <em>DC Thompson and Co. v. Hauge</em>, 72 Or
+            App 116 (1985).</p>
+            <p><code>Practice Tip</code></p>
+            <p>Retired Oregon Supreme Court Justice Van Hoomissen has
+            dissented on the issue, suggesting that where all jurors
+            unanimously agree on a verdict but fail to accurately record
+            or communicate that verdict, the trial court should have
+            broad discretion to set the verdict aside. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Barmon,+67+Or+App+369&amp;hl=en&amp;as_sdt=4,38&amp;case=4289870057574970727&amp;scilh=0"><em>State
+            v. Barmon</em>, 67 Or App 369, 384, 679 P2d 888 (1984)</a>
+            (Van Hoomissen, J. dissenting).</p>
+            <p><strong>5. ORCP 59 (H) Exceptions.</strong></p>
+            <p>a. No instruction shall be subject to review by the Court
+            of Appeals unless an exception is noted by the judge.</p>
+            <p>b. The exception must be made and recorded
+            <em>immediately</em> after the court instructs the jury.</p>
+            <p>c. Exceptions are not necessary to an adverse ruling such
+            as refusal to give an instruction or refusal to give a
+            statement of issues.</p>
+            <h2 id="b._instructions_requested_in_writing"><strong>B.
+            Instructions Requested in Writing</strong></h2>
+            <p>1. Check supplementary local court rules (SLRs) and UTCR
+            6.070.</p>
+            <p>2. Instructions must be provided by the party requesting
+            and cannot contain information that identifies the party or
+            points and authorities. It is the responsibility of the
+            requesting party to make the record clear for appeal; the
+            party cannot simply rely on the “usual” practice of the
+            trial court. <em>Leland Properties V. Burton Eng’g and
+            Survey</em>, 152 Or App 557<em>,</em> 954 P2d 851
+            (1998).</p>
+            <p>3. All Oregon Uniform Criminal Jury Instructions are
+            available to members of the bar via the <em>BarBooks</em>
+            section of the <a
+            href="https://hello.osbar.org/Account/Index?ReturnUrl=%2fdashboard">Oregon
+            State Bar website</a>.</p>
+            <h2 id="c._uniform_jury_instructions"><strong>C. Uniform
+            Jury Instructions</strong></h2>
+            <p>UCrJI 2700–2712a set forth all of the current
+            instructions regarding DUII. Although the courts generally
+            do not agree to modify the uniform instructions, the accused
+            can challenge or request modification of the
+            instructions.</p>
+            <h2 id="d._limiting_instructions"><strong>D. Limiting
+            Instructions</strong></h2>
+            <p>1. The court shall, upon request, give a limiting
+            instruction. The commentary states that the effectiveness of
+            the limiting instruction must be taken into consideration in
+            deciding whether to exclude evidence for unfair prejudice
+            under OEC 403.</p>
+            <p>2. Request the instruction immediately after the evidence
+            comes in, unless you think it would draw undue attention to
+            the prejudicial testimony.</p>
+            <p>3. Request it at the end of the case together with the
+            other instructions.</p>
+            <p>4. Case Law</p>
+            <p>Examples of cases where DUII is alleged along with other
+            crimes where limiting instructions are appropriate.</p>
+            <blockquote>
+            <p>Evidence of a defendant’s past participation in a DUII
+            diversion program has been determined relevant in an Assault
+            III prosecution. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cavaner,+206+Or+App+131,+135+P3d+402+%282006&amp;hl=en&amp;as_sdt=4,38&amp;case=3902045815432982501&amp;scilh=0"><em>State
+            v. Cavaner</em>, 206 Or App 131, 135 P3d 402 (2006)</a>.</p>
+            </blockquote>
+            <p>Evidence of a defendant’s prior conviction for DUII has
+            been allowed in a prosecution for an allegation involving
+            extreme indifference to the value of human life. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hopkins,+173+Or+App+1,+21+P3d+134+%282001%29.+&amp;hl=en&amp;as_sdt=4,38&amp;case=5746128007473037351&amp;scilh=0"><em>State
+            v. Hopkins</em>, 173 Or App 1, 21 P3d 134 (2001).</a>
+            <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wyant+217+Or+App+199,+175+P3d+988+%282007&amp;hl=en&amp;as_sdt=4,38&amp;case=4382190493526502432&amp;scilh=0"><em>State
+            v. Wyant</em> 217 Or App 199, 175 P3d 988 (2007)</a>
+            (evidence of prior DUII conviction admissible in Assault III
+            prosecution).</p>
+            <h1 id="ii._specific_instructions"><strong>II. Specific
+            Instructions</strong></h1>
+            <h2 id="a._insanity_defense"><strong>A. Insanity
+            Defense</strong></h2>
+            <p>Under <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Olmstead,+310+Or+455,+800+P2d+277+%281990&amp;hl=en&amp;as_sdt=4,38&amp;case=17942915936615114115&amp;scilh=0"><em>State
+            v. Olmstead</em>, 310 Or 455, 800 P2d 277 (1990)</a>, the
+            affirmative defense of guilty but insane, <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors161.html">ORS
+            161.295</a>, is applicable in DUIIs. See “DWI and the
+            Insanity Defense: A Reasoned Approach,” 20 Vt. L. Rev. 161,
+            175 (1995).</p>
+            <h2 id="b._theory_of_the_case_instruction"><strong>B. Theory
+            of the Case Instruction</strong></h2>
+            <p>Under <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McBride,+287+Or+315&amp;hl=en&amp;as_sdt=4,38&amp;case=2418153602390643395&amp;scilh=0"><em>State
+            v. McBride</em>, 287 Or 315, 599 P2d 449 (1979)</a>,
+            defendant is entitled to have his theory of the case
+            presented to the jury through instruction if there is
+            evidence to support it. But it is not error for a trial
+            court to refuse to give a requested instruction that is
+            incorrect in some respect in the terms in which it is
+            proposed. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Francis,+284+Or+621,+588+P2d+611+%281978&amp;hl=en&amp;as_sdt=4,38&amp;case=2214582288184074439&amp;scilh=0"><em>State
+            v. Francis,</em> 284 Or 621, 626, 588 P2d 611
+            (1978)</a>.</p>
+            <p>See Sample Jury Instruction No. l on page 16–9.</p>
+            <h2
+            id="c._unanimity_no_boots_instruction_ucrji_2708"><strong>C.
+            Unanimity — No <em>Boots</em> Instruction — UCrJI
+            2708</strong></h2>
+            <p>The jury has to be unanimous only as to whether the
+            accused was under the influence as the element of DUII, the
+            jury need not agree on the how the accused is impaired, just
+            whether he or she is impaired. There is not a separate crime
+            for each theory of impairment. The accused can be convicted
+            if the fact finder believes either: 1) being under the
+            influence of intoxicating liquors, 2) having a BAC of .08 or
+            greater, 3) being under the influence of controlled
+            substances, or 4) being under the influence of controlled
+            substances and intoxicating liquors. Therefore, three jurors
+            can find the accused had a BAC of .08 or greater and three
+            could find that the accused was simply under the influence
+            of intoxicants, but it is still one crime. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+King,+316+Or+437+%281993&amp;hl=en&amp;as_sdt=4,38&amp;case=14820577670034710917&amp;scilh=0"><em>State
+            v. King</em>, 316 Or 437 (1993)</a>. Accordingly, there is
+            no instruction allowed requiring unanimity of theories under
+            <em>State v. Boots, cert den</em>, 510 U.S. 1013, 114 S Ct
+            606, 126 L Ed 2d 571 (1993).</p>
+            <h2 id="d._attempt_instruction"><strong>D. Attempt
+            Instruction</strong></h2>
+            <p>An accused is entitled to request a lesser included
+            attempted DUII instruction if such an instruction is
+            supported by the evidence. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Baty,+243+Or+App+77,+259+P3d+98+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14941801838560933850&amp;scilh=0"><em>State
+            v. Baty,</em> 243 Or App 77, 259 P3d 98 (2011)</a><em>.</em>
+            If the facts support it, you may request it. <em>Baty</em>
+            involved a question as to whether a driver in a parking lot,
+            who was attempting to place her vehicle in reverse, actually
+            placed her vehicle in motion or not.</p>
+            <p><em>But see <a
+            href="https://scholar.google.com/scholar_case?case=15950107479767344935&amp;q=+State+v.+Snyder,+288+Or+App+58+(2017&amp;hl=en&amp;as_sdt=4,38"><span class="underline">State
+            v. Snyder</span></a></em>, 288 Or App 58 (2017) (Shorr, J.),
+            where attempted DUII instruction was requested based on a
+            defense that the driver’s blood alcohol content was rising
+            after the stop based on the driver having consumed “5 or 6
+            beers in a four hour period.” The trial court refused to
+            give an attempted DUII instruction and the Court of Appeals
+            affirmed noting that intoxication is a status that does not
+            require conduct, intent, or a mental state rendering a
+            theory of criminal attempt liability inapplicable.</p>
+            <p>Note: The <em>Snyder</em> decision does not restrict
+            defense counsel’s ability to present evidence and argument
+            that the .08 legal limit was not met at the <em>time of
+            actual operation of a vehicle</em>.</p>
+            <p>The legislature did not consider the crime of attempted
+            DUII, so there is no license suspension or mandatory alcohol
+            evaluation and treatment.</p>
+            <p>See Sample Jury Instruction No. 2 on page 16–9.</p>
+            <h2
+            id="e._operating_a_vessel_while_under_the_influence_buii"><strong>E.
+            Operating a Vessel While Under the Influence
+            (BUII)</strong></h2>
+            <p>With the dawn of the Intoxilyzer 1400 and increased
+            traffic on the state’s waterways, it is now a crime to
+            operate a vessel under the influence. BUII jury instructions
+            are found at 2900, 2901 and 2902. 2902 has a cross reference
+            in the Comment section back to 2700–2712 (General DUII
+            instructions).</p>
+            <p>Oregon law applies a very broad definition of the term
+            “boat” for purposes of application to the BUII statute, <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors830.html">ORS
+            830.005</a> – “every description of watercraft, including a
+            seaplane on the water and not in flight, used or capable of
+            being used as a means of transportation on the water, but
+            does not include boathouses, floating homes, air mattresses,
+            beach and water toys or single inner tubes.” According to <a
+            href="https://scholar.google.com/scholar_case?case=6595029803146133528&amp;q=state+v.+lambert&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lambert,</em> 227 Or App 614, 206 P3d 1065 (2009)</a>, a
+            person floating in a one- or two-person raft on a navigable
+            river, whether actually propelling the raft or not, is
+            exercising actual physical control of the raft to a degree
+            that brings him or her within the BUII statute, 830.325.
+            <em>Id</em> at 621.</p>
+            <p><strong><code>Practice Tip</code></strong></p>
+            <p>There are no definitions for “propel or be in actual
+            physical control” in the statute nor is there a definition
+            of these terms in the jury instructions. However, “operate”
+            is defined in ORS 830.005(8) and also in UCrJI 2900(2). The
+            language “or otherwise uses” may be subject to a vagueness
+            challenge. However, the <em>Lambert</em> court indicated
+            that evidence of a person occupying a raft, who was
+            allegedly attempting to go upstream but was found on the
+            shore, did not persuade them to reverse a BUII conviction
+            but also declined to define “operate” or “actual physical
+            control” for purposes of BUII.</p>
+            <p>Make the government choose which theory because the
+            verdict must be unanimous as to each element of the offense.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+King,+316+Or+437+%281993&amp;hl=en&amp;as_sdt=4,38&amp;case=14820577670034710917&amp;scilh=0"><em>State
+            v. King</em>, 316 Or 437 (1993)</a>.</p>
+            <h2
+            id="f._no_instruction_on_being_under_the_influence_of_controlled_substances_unless_pled"><strong>F.
+            No Instruction on Being Under the Influence of Controlled
+            Substances Unless Pled</strong></h2>
+            <p>Under <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McFeron,+166+Or+App+110,+&amp;hl=en&amp;as_sdt=4,38&amp;case=2989582927949731705&amp;scilh=0"><em>State
+            v. McFeron</em>, 166 Or App 110, 999 P2d 470 (2000</a>), no
+            evidence regarding an accused’s use of controlled substances
+            is admissible <em>and</em> no instruction is allowed
+            regarding being under the influence of anything except
+            intoxicating liquors unless the state alleges being under
+            the influence of controlled substances in the complaint.</p>
+            <h2 id="g._felony_duii"><strong>G. Felony DUII</strong></h2>
+            <p>The felony DUII instructions are now UCrJI No. 2704
+            (intoxicating liquor) and 2706 (combination of intoxicating
+            liquor/inhalants and/or controlled substances). However, see
+            Chapter 1 on strategy for felony DUII cases. If you are not
+            successful challenging the validity of prior convictions,
+            then you will probably want to stipulate to their validity
+            so the jury does not hear about them. In that case, you
+            would not use 2704 or 2706, which has <em>convicted of DUII
+            previously</em> as an element, and instead use 2703 or other
+            appropriate misdemeanor DUII instruction.</p>
+            <h2
+            id="h._when_the_court_erroneously_allows_a_breath_test_result"><strong>H.
+            When the Court Erroneously Allows a Breath Test
+            Result</strong></h2>
+            <p>When the court erroneously allows in a breath test
+            result, the defense is that the individual was not under the
+            influence and the government relies on UCrJI 2703, then it
+            is not harmless error. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Coen,+203+Or+App+92,+125+P+3d+761+%282005&amp;hl=en&amp;as_sdt=4,38&amp;case=10145338261044166416&amp;scilh=0"><em>State
+            v. Coen</em>, 203 Or App 92, 125 P 3d 761 (2005)</a>.</p>
+            <h2
+            id="i._evidence_instruction_less_than_satisfactory"><strong>I.
+            Evidence Instruction Less Than Satisfactory</strong></h2>
+            <p>For a discussion on the use of less satisfactory evidence
+            instruction in DUII cases <em>see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Schneider,+201+Or+App+546,+120+P3d+16+%282005&amp;hl=en&amp;as_sdt=4,38&amp;case=12415967825139062594&amp;scilh=0"><em>State
+            v. Schneider, 2</em>01 Or App 546, 120 P3d 16
+            (2005)</a>.</p>
+            <h2
+            id="j._general_driving_duties_instruction_allowed"><strong>J.
+            General Driving Duties Instruction Allowed</strong></h2>
+            <blockquote>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Clark,+256+Or+App+428,+300+P3d+281+%282013&amp;hl=en&amp;as_sdt=4,38&amp;case=1950464693923361003&amp;scilh=0"><em>State
+            v. Clark</em>, 256 Or App 428, 300 P3d 281 (2013)</a>. In a
+            prosecution for DUII and other traffic crimes alleging
+            recklessness, the trial court instructed the jury with the
+            following statement:</p>
+            </blockquote>
+            <p>The driver of a motor vehicle is required by law to drive
+            upon a highway or premises open to the public at a speed no
+            greater than is reasonable and prudent, having due regard
+            for the traffic, surface and width of the road, hazards at
+            intersections and any other conditions existing. A driver
+            has a continuing duty to keep a reasonable lookout and
+            maintain the automobile under reasonable control, and that
+            is such as would be exercised by a reasonable person.</p>
+            <p>This instruction, in the author’s opinion, can possibly
+            be used in a DUII case where the accused’s driving is good
+            and impairment is alleged on other grounds other than
+            driving.</p>
+            <h2 id="k._voluntary_act_ucrji_1065"><strong>K. Voluntary
+            Act (UCrJI 1065)</strong></h2>
+            <p>The state must prove the accused in a DUII case acted
+            consciously. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Newman,+353+Or+632,+302+P3d+435+%282013&amp;hl=en&amp;as_sdt=4,38&amp;case=14313039189933721661&amp;scilh=0"><em>State
+            v. Newman</em>, 353 Or 632, 302 P3d 435 (2013)</a>. This is
+            especially relevant in any case where your client has taken
+            a sleep medication or is otherwise arguing that their
+            driving was not done consciously due to other
+            medications.</p>
+            <h2
+            id="l._contrasts_between_confessions_and_admissions"><strong>L.
+            Contrasts Between Confessions and Admissions</strong></h2>
+            <p>A driver was not entitled to the “Confession Instruction”
+            (UCrJI 1050) where a driver’s statement, “Oh, yeah, I drove
+            around but not like that,” was considered to be an admission
+            of driving but not a confession to the crime of DUII. <a
+            href="https://scholar.google.com/scholar_case?case=15770659684542355056&amp;q=State+v.+Barbero,+297+Or+App+372+(2019)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Barbero</em>, 297 Or App 372 (2019)</a> (James,
+            P.J.).</p>
+            <h2 id="m._alternative_theories_of_duii"><strong>M.
+            Alternative Theories of DUII</strong></h2>
+            <p>The court rejects defendant’s argument that the trial
+            court erred in instructing the jury that it could find
+            defendant guilty of DUII if it found that she had driven
+            under the influence of intoxicants, the influence of
+            controlled substances, or a combination of the two, when the
+            state alleged that defendant committed DUII by driving under
+            the influence of intoxicants and a controlled substance.
+            Defendant contended that <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.010(1)(a),(b), and (c)</a>, set forth different ways of
+            committing DUII and each were essential elements of the
+            offense. The court concludes that they are not elements, but
+            are alternative factual theories of proving the element of
+            intoxication. The court further concludes that ORS
+            813.010(2), which requires the state to allege controlled
+            substances if proceeding under that theory, does not change
+            that rule. <a
+            href="https://scholar.google.com/scholar_case?case=6250437631104157888&amp;q=State+v.+Leachman,+285+Or+App+756+(2017&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Leachman</em>, 285 Or App 756 (2017)</a> (Armstrong,
+            P.J.).</p>
+            <h1 id="iii._exceptions"><strong>III.
+            Exceptions</strong></h1>
+            <h2 id="a._no_presumptions"><strong>A. No
+            Presumptions</strong></h2>
+            <p>Watch for any instruction that allows the jury to presume
+            that defendant’s blood alcohol level at the time he took the
+            test was the same or greater than when he was driving. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Conway,+75+Or+App+430,+707+P2d+618+%281985&amp;hl=en&amp;as_sdt=4,38&amp;case=6000700424018204566&amp;scilh=0"><em>State
+            v. Conway</em>, 75 Or App 430,707 P2d 618 (1985)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kohlasch,+11+Or+App+459,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14107830331962906068&amp;scilh=0"><em>State
+            v. Kohlasch</em>, 11 Or App 459, 502 P2d 1158 (1972)</a>,
+            gets the state past judgment of acquittal on the issue of
+            whether the defendant’s BAC is over the legal limit at the
+            time he is driving because of a disputable presumption (or
+            inference), but in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rainey,+298+Or+459,+639+P2d+635+%281985+&amp;hl=en&amp;as_sdt=4,38&amp;case=4459043142057953350&amp;scilh=0"><em>State
+            v. Rainey</em>, 298 Or 459, 639 P2d 635 (1985)</a>, the
+            court states “it is up to the advocate not the judge to
+            comment on inferences.” In <em>Conway</em>, the court states
+            that it is doubtful that the holding and rationale of
+            <em>Kohlasch</em> survives <em>Rainey</em>.</p>
+            <h2
+            id="b._duii_by_itself_is_not_reckless_endangering"><strong>B.
+            DUII By Itself Is Not Reckless Endangering</strong></h2>
+            <p><em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Maciel-Cortes,+231+Or+App+302,+&amp;hl=en&amp;as_sdt=4,38&amp;case=13556932350157231474&amp;scilh=0"><em>State
+            v. Maciel-Cortes</em>, 231 Or App 302, 218 P3d 900
+            (2009)</a> (The trial court, in a prosecution for Recklessly
+            Endangering Another, instructed the jury that “[d]riving
+            under the influence of intoxicants is, itself, evidence that
+            a person created a substantial risk of physical injury to
+            passengers.” The conviction was reversed on appeal as the
+            instruction was determined to be an improper comment on the
+            evidence).</p>
+            <h2
+            id="c._miles_instruction_persons_physical_condition_ucrji_2708_may_not_be_dead_but_wounded_severely"><strong>C.
+            <em>Miles</em> Instruction – Person’s Physical Condition
+            (UCrJI 2708): May Not Be Dead but Wounded
+            Severely</strong></h2>
+            <p>Make sure if the state requests a <em>Miles</em>
+            instruction that there was <em>actual evidence</em>, not an
+            inference, in the case that indicates that particular
+            defendant was more susceptible to the effects of alcohol
+            when driving, otherwise the instruction is not appropriate.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Massey,+240+Or+App++689,+278+P3d+130+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=8073628097031315235&amp;scilh=0"><em>State
+            v. Massey</em>, 240 Or App 689, 278 P3d 130 (2012)</a>. In
+            <em>Massey</em>, the evidence at trial showed a 71-year-old
+            man with back and leg problems who experienced dizziness
+            from a low blood pressure medication, who testified he’d
+            been cutting brush all day and felt progressively worse as
+            the day went on, yet the evidence was not sufficient to
+            allow a <em>Miles</em> instruction, even in the context of a
+            bench trial, which <em>Massey</em> was.</p>
+            <p>Also, remember, an allegation that a defendant was
+            operating under the influence of controlled substances must
+            be pled and proven, or no instruction. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McFeron,+166+Or+App+110+%282000&amp;hl=en&amp;as_sdt=4,38&amp;case=2989582927949731705&amp;scilh=0"><em>State
+            v. McFeron</em>, 166 Or App 110 (2000)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stiles,+165+Or+App+584+%282000&amp;hl=en&amp;as_sdt=4,38&amp;case=554844026125363969&amp;scilh=0"><em>State
+            v. Stiles</em>, 165 Or App 584 (2000)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jayne,+173+Or+App+533,+24+P3d+920+%282001&amp;hl=en&amp;as_sdt=4,38&amp;case=4435538589292844286&amp;scilh=0"><em>State
+            v. Jayne</em>, 173 Or App 533, 24 P3d 920 (2001)</a>. Make
+            sure to take an exception if you believe the evidence is
+            insufficient.</p>
+            <p><em>But see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Moody,+201+Or+App+58,+116+P3d+935+%282005&amp;hl=en&amp;as_sdt=4,38&amp;case=3899947647518782011&amp;scilh=0"><em>State
+            v. Moody</em>, 201 Or App 58, 116 P3d 935 (2005)</a>.</p>
+            <p>1. Defendant’s testimony that he was tired or taking
+            medication does not support the instruction. In
+            <em>Miles</em>, defendant testified that his “condition” was
+            a result of his medication.</p>
+            <p>2. There must be some evidence suggesting the medication
+            increased the effect of the alcohol, if controlled
+            substances are pled, or fatigue if controlled substances not
+            pled. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Huck,+100+Or+App+193,+785+P2d+785+%281990&amp;hl=en&amp;as_sdt=4,38&amp;case=4878687592140672661&amp;scilh=0"><em>State
+            v. Huck</em>, 100 Or App 193, 785 P2d 785 (1990)</a>
+            (<em>Miles</em> instruction was improper). <em>But cf.,</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Anderson,+117+Or+App+495,+844+P2d+923+%281992&amp;hl=en&amp;as_sdt=4,38&amp;case=1825642519240269895&amp;scilh=0"><em>State
+            v. Anderson</em>, 117 Or App 495, 844 P2d 923 (1992)</a>
+            (<em>Miles</em> instruction was proper).</p>
+            <p>3. The instruction may not be appropriate where defendant
+            is alleged to be under the influence of a controlled
+            substance and not alcohol, as the Uniform Jury Instructions
+            appear to cover those circumstances.</p>
+            <p>4. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rich,+2013&amp;hl=en&amp;as_sdt=4,38&amp;case=7686093713143155379&amp;scilh=0"><em>State
+            v. Rich,</em> 259 Or App 655, 314 P3d 979 (2013)</a>
+            (although the defendant told the arresting officer that he
+            had taken “pain medication” because of a bad knee, that
+            evidence, without more, was insufficient to allow a
+            <em>Miles</em> instruction. <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Curtis,+182+Or+App+166,+47+P3d+929+%282002&amp;hl=en&amp;as_sdt=4,38&amp;case=11904679920116742633&amp;scilh=0"><em>State
+            v. Curtis</em>, 182 Or App 166, 47 P3d 929 (2002)</a>
+            (although there was evidence the defendant was exhausted,
+            there was no evidence the exhaustion made him more
+            susceptible to the effects of alcohol; giving the
+            <em>Miles</em> instruction was improper); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Roller,+181+Or+App+542,+47+P3d+52+%282002&amp;hl=en&amp;as_sdt=4,38&amp;case=1091161434430624751&amp;scilh=0"><em>State
+            v. Roller</em>, 181 Or App 542, 47 P3d 52 (2002)</a>
+            (although there was evidence the defendant had the flu,
+            there was no evidence that this made him more susceptible to
+            the effects of alcohol; giving the <em>Miles</em>
+            instruction was an error).</p>
+            <p>Use the <em>Miles</em> counter attack instruction, sample
+            No. 3, on page 16–10.</p>
+            <h2
+            id="d._refusal_instruction_ucrji_2712_impacted_by_state_v._banks"><strong>D.
+            Refusal Instruction UCrJI 2712 Impacted by <em>State v.
+            Banks</em></strong></h2>
+            <p>State’s failure to demonstrate that officer’s request for
+            driver to take a breath test could reasonably be understood
+            as a request only to provide physical cooperation, and not
+            as a request for constitutionally-significant consent to
+            search, rendered a breath test refusal inadmissible against
+            the driver. <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=State+v.+Banks+364+OR+332,+343+(2019&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Banks</em>, 364 Or 332, 434 P3d 361 (2019)</a> ( Walters,
+            P.J.). Naturally, this ruling will impact the viability of
+            UCrJI 2712 and 2712a in the even of urinalysis. In the event
+            you are faced with a refusal case, be sure to review the
+            <em>Banks</em> opinion to determine whether the refusal is
+            admissible into evidence.</p>
+            <p>The <em>Banks</em> case involved a one-vehicle accident
+            where the driver was determined to be under the influence of
+            alcohol by the investigating officer. The driver would not
+            open his mouth at the request of the officer. The officer
+            then initiated the implied consent process and read the back
+            of the Implied Consent Combined Report concluding with a
+            request for the driver to take a breath test. The driver
+            refused and the arresting officer lodged a refusal. The
+            state at trial offered the refusal evidence at trial, over
+            defense objection. The <em>Banks</em> court ruled that the
+            request of the officer to open the driver’s mouth and
+            reading of the implied consent rights did not overcome the
+            driver’s rights to refuse a warrantless search. The Court
+            ruled a refusal to submit to a breath test after reading of
+            the implied consent rules, without additional evidence that
+            would satisfy the state’s burden of proof to prove refusal
+            to take a breath test as evidence of consciousness of guilt,
+            is inadmissible.</p>
+            <h2
+            id="e._general_instructions_that_require_exceptions"><strong>E.
+            General Instructions that Require Exceptions</strong></h2>
+            <p>1. It is not the function of the court in instructing the
+            jury to tell them what the state should not prove (e.g., bad
+            driving).</p>
+            <p>2. Instructions referring to guilt or innocence:</p>
+            <p>The jury does not find anyone “innocent,” only that there
+            is reasonable doubt as to guilt or not.</p>
+            <p>3. Flight.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stilling,+285+Or+293,+590+P2d+1223+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=8071240885683896151&amp;scilh=0"><em>State
+            v. Stilling</em>, 285 Or 293, 590 P2d 1223 (1979)</a>, and
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Greene,+30+Or+App+1019,+568+P2d+716+%281977&amp;hl=en&amp;as_sdt=4,38&amp;case=15380669949017961884&amp;scilh=0"><em>State
+            v. Greene</em>, 30 Or App 1019, 568 P2d 716 (1977)</a>, both
+            say instructions on the significance of flight should not be
+            given. The subject of flight, or lack thereof, can be argued
+            by counsel in closing, but a jury instruction on flight is
+            inappropriate.</p>
+            <p><em>Bill Uhle (ed., 2004)</em>: The trend in the
+            legislature and judiciary is to close as many of the
+            defendant’s defenses to the charge of DUII as possible. A
+            fertile but often forgotten or overlooked area in selling a
+            case to a jury or creating reversible error is in creative
+            use of jury instructions. Requesting and receiving a jury
+            instruction on your theory of defense lets the jury know
+            that your theory of defense is legitimate and recognized by
+            the court. The more you can incorporate the language of jury
+            instructions to support your closing argument, the more
+            legitimate and acceptable a not guilty verdict becomes in
+            the eyes of the jury.</p>
+            <h1
+            id="iv._defendants_requested_jury_instructions"><strong>IV.
+            Defendant’s Requested Jury Instructions</strong></h1>
+            <ol>
+            <li><blockquote>
+            <p><strong>Special Jury Instruction No. 1</strong></p>
+            </blockquote></li>
+            </ol>
+            <p>Presence or Absence of Operator or Machine
+            Malfunction</p>
+            <p>You may consider the presence or absence of operator
+            error or machine malfunctions in determining the accuracy of
+            the breath test evidence.</p>
+            <p>It is up to you what weight you will give to the breath
+            test evidence. You are not required to accept such evidence.
+            You should give the breath test evidence such weight as you
+            feel is appropriate in reaching your verdict.</p>
+            <p>_______________</p>
+            <p>Comment: A Defendant is entitled to have his/her theory
+            of the case presented to the jury through instructions if
+            there is evidence to support it. The trial court has no
+            discretion to refuse an instruction supported by evidence.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McBride,+287+Or+315,+599+P2d+449+%281979%29&amp;hl=en&amp;as_sdt=4,38&amp;case=2418153602390643395&amp;scilh=0"><em>State
+            v. McBride</em>, 287 Or 315, 319, 599 P2d 449
+            (1979)</a>.</p>
+            <ol start="2">
+            <li><blockquote>
+            <p><strong>Special Jury Instruction No. 2</strong></p>
+            </blockquote></li>
+            </ol>
+            <p>Jury May Consider Attempted Driving Under the Influence
+            of Intoxicants</p>
+            <p>Although the complaint charges the offense of Driving
+            Under the Influence of Intoxicants, it is within your power
+            to consider whether the Defendant may be guilty of a lesser
+            included offense.</p>
+            <p>If, from the evidence in this case, you are not satisfied
+            that the state has proved to you beyond a reasonable doubt
+            that the defendant is guilty of any offense, you must return
+            a verdict of not guilty. If, however, you are not satisfied
+            that the state has proven the offense of Driving Under the
+            Influence of Intoxicant beyond a reasonable doubt, you may
+            consider whether or not the state has proven to you beyond a
+            reasonable doubt that the Defendant is guilty of the lesser
+            included offense of Attempted Driving Under the Influence of
+            Intoxicants.</p>
+            <p>Oregon law provides: A person commits the crime of
+            Attempted Driving Under the Influence of Intoxicants if the
+            person intentionally engages in conduct which constitutes a
+            substantial step toward the commission of the offense of
+            Driving Under the Influence of Intoxicants.</p>
+            <p>In order to establish the crime of Attempted Driving
+            Under the Influence of Intoxicants, it is necessary for the
+            state to prove beyond a reasonable doubt each of the
+            elements of the crime as follows:</p>
+            <p>First, that crime was committed in __________ County,
+            Oregon.</p>
+            <p>Second, that the crime was committed on or about the day
+            of ____ of ________, 20___, the date alleged in the
+            complaint.</p>
+            <p>Third, that the person charged drove a vehicle on
+            premises open to the public.</p>
+            <p>Fourth, that while driving the vehicle [select
+            appropriate language from above].</p>
+            <p>Fifth, that the person intentionally engaged in conduct
+            which constituted a substantial</p>
+            <p>step toward the commission of the offense of Driving
+            Under the Influence of Intoxicants.</p>
+            <p>________________</p>
+            <ol start="3">
+            <li><blockquote>
+            <p><strong>Special Jury Instruction No. 3</strong></p>
+            </blockquote></li>
+            </ol>
+            <p><em>Miles</em> Counter Attack</p>
+            <p>If you find from the evidence that the Defendant was in
+            such a physical condition that he/she was less susceptible
+            to the influence of intoxicating liquor than he/she
+            otherwise would have been, and because of his/her (physical
+            condition) was not under the influence of intoxicants,
+            regardless of the amount of intoxicating liquor he/she had
+            consumed, he/she is nevertheless not guilty of driving under
+            the influence.</p>
+            <h1 id="v._instruction_checklist"><strong>V. Instruction
+            Checklist</strong></h1>
+            <p>Generally, in most cases defense counsel will want to
+            request the following instructions in a DUII trial:</p>
+            <p>1. 1001 Introduction</p>
+            <p>2. 1004 Precautionary Instructions</p>
+            <p>3. 1005 Functions of the Court and Jury</p>
+            <p>4. 1006 Evaluating Witness Testimony</p>
+            <p>5. 1009 Innocence of Defendant – Proof Beyond Reasonable
+            Doubt</p>
+            <p>6. 1023 Defendant’s Prior Conviction</p>
+            <p>7. 1024 Defendant’s Statements</p>
+            <p>8. 1025 Direct or Circumstantial Evidence</p>
+            <p>9. 1030 Less Satisfactory Evidence</p>
+            <p>10. 1032 Criminal Charge</p>
+            <p>11. 1033 Nonexpert Opinion Evidence</p>
+            <p>12. 1034 Expert Opinion Evidence</p>
+            <p>13. 2701 Definition – Under the Influence – Intoxicating
+            Liquor</p>
+            <p>14. 2703 Driving While Under the Influence of Intoxicants
+            – Intoxicating Liquor (or Controlled Substance, or both as
+            appropriate)</p>
+            <p>15. 2707 Controlled Substance as a Matter or Law</p>
+            <p>16. 2709 Opinion Evidence of Being Under the Influence of
+            Intoxicants</p>
+            <p>17. 2710 Use of Chemical Analysis to Show Blood
+            Alcohol</p>
+            <p>18. 2711 Breath Test Evidence</p>
+            <p>19. 2712 Breath Test Refusal (when applicable).</p>
+    </body>
+</html>

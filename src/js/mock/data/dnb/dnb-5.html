@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2020 edition</p>
+            <h1 id="discovery_disclosure_notice"><strong>Discovery,
+            Disclosure &amp; Notice</strong></h1>
+            <p><strong><em>By Rich Oberdorfer</em></strong></p>
+            <p>Discovery rules are not “technicalities.” They are rules
+            of fairness. “Society wins not only when the guilty are
+            convicted but when criminal trials are fair; our system of
+            the administration of justice suffers when any accused is
+            treated unfairly.” <a
+            href="http://scholar.google.com/scholar_case?q=brady+v.+maryland&amp;hl=en&amp;as_sdt=6,38&amp;case=9550433126269674519&amp;scilh=0"><em>Brady
+            v. Maryland</em>, 373 U.S. 83, 87 (1963)</a>.</p>
+            <p>“[T]he prosecutor’s role transcends that of an adversary:
+            he is the representative not of an ordinary party to a
+            controversy, but of a sovereignty…whose interest…in a
+            criminal prosecution is not that it shall win a case, but
+            that justice shall be done.” <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Bagley,+473+US+667&amp;hl=en&amp;as_sdt=6,38&amp;case=3513040471717484808&amp;scilh=0"><em>United
+            States v. Bagley</em>, 473 US 667, 675 n 6 (1985)</a>
+            (internal quotations omitted). Always ask whether the
+            prosecution is living up to its obligation “to assist the
+            defense in making its case” – whether it has “transcended”
+            its role as “adversary.”</p>
+            <p>Defense counsel is not asked to transcend her role as an
+            adversary. She’s an adversary. Her obligations are a matter
+            of statute and ethics.</p>
+            <h1
+            id="i._the_two_main_bases_for_pretrial_discovery"><strong>I.
+            The Two Main Bases for Pretrial Discovery</strong></h1>
+            <p><strong>1. Oregon’s statutory discovery, <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.805-135.873;</a> and</strong></p>
+            <p><strong>2. <em>Brady</em>. 373 US at 87 (“the suppression
+            by the prosecution of evidence favorable to an
+            accused…violates due process where the evidence is material
+            either to guilt or to punishment, irrespective of the good
+            faith or bad faith of the prosecution.”).</strong></p>
+            <p>In the 2013 legislature, OCDLA was instrumental in
+            amending Oregon’s discovery statute to include most Brady
+            material. <em>See</em> <a
+            href="https://olis.leg.state.or.us/liz/2013R1/Measures/Text/SB492/Enrolled">SB
+            492 (2013) (“Brady Bill”)</a>. Before that time, Brady and
+            Oregon statutory discovery were not synonymous. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Koennecke,+274+Or+169,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5636794740304898694&amp;scilh=0"><em>State
+            v. Koennecke,</em> 274 Or 169, 176, 545 P2d 127
+            (1976)</a>.</p>
+            <h2 id="a._ask_for_discovery_on_both_grounds"><strong>A. Ask
+            for Discovery on Both Grounds</strong></h2>
+            <p>Because the discovery rules stem from different sources,
+            demands for discovery should be made under both so that all
+            possible methods of receiving discovery will be covered.</p>
+            <p>You may ask, “Why would I need to make a formal, written
+            demand for discovery? Aren’t these rules self-effecting?”
+            The answer is: sure. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Strickler+v.+Greene,+527+U.S.+263,+281-82+&amp;hl=en&amp;as_sdt=3,38&amp;case=424722551103861982&amp;scilh=0"><em>Strickler
+            v. Greene,</em> 527 U.S. 263, 281-82</a> (“defense request”
+            not an element of a <em>Brady</em>); <em>Bagley</em>, 473
+            U.S. at 668, <em>supra</em> (rejecting different standard of
+            review based on whether defendant made specific
+            <em>Brady</em> request).</p>
+            <p>But it’s wise to make a formal, written request for
+            purposes of preservation; to demonstrate that defendant
+            values particular information (e.g., in DUIIs, photo or
+            video evidence); to make it more likely a judge will be
+            offended by the state’s later discovery violation; and
+            finally, because some judges erroneously believe a formal,
+            written request is required. <em>See, e.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sheppard,+32+Or+App+345,+&amp;hl=en&amp;as_sdt=4,38&amp;case=4049225737526199842&amp;scilh=0"><em>State
+            v. Sheppard</em>, 32 Or App 345, 347, 573 P2d 1276
+            (1978)</a> (“While we do not intend to discourage informal
+            communication between the district attorney’s office and the
+            attorneys in pursuing discovery, more is required to make
+            formal demand under the statute than is demonstrated here”),
+            <em>rev den</em> 282 Or 537 (1978). And finally, a written
+            demand underscores the non-delegable nature of the district
+            attorney discovery obligation.</p>
+            <p>Under ORS 132.260 there likely is a recorded grand jury
+            proceeding (unless the county is exempted due to population
+            less than 150,000 or between 300,001 and 699,999. You need
+            to request this as part of your discovery request to ensure
+            you get a copy.</p>
+            <h2
+            id="b._prosecutors_cannot_condition_plea_on_waiving_discovery"><strong>B.
+            Prosecutors Cannot Condition Plea on Waiving
+            Discovery</strong></h2>
+            <p>The “Brady Bill” also amended <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.405</a> to bar prosecutors from conditioning a plea
+            agreement on defendant waiving discovery. SB 492 (2013)
+            amended subsection ORS 135.405(5) to read, “The district
+            attorney may not condition a plea offer on a requirement
+            that the defendant waive the disclosure obligation of ORS
+            135.815 (1)(g).” “Missing discovery” is common in DUII
+            cases, primarily due to the slowness of the Oregon State
+            Crime Lab and missing video evidence. A defendant should not
+            be denied a favorable plea agreement, or entry into
+            diversion, because they are waiting on discovery.</p>
+            <p>If a party can get desired evidence outside of the
+            discovery process, it should. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Spada,+286+Or+305,+594+P2d+815+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=742835309681492290&amp;scilh=0"><em>State
+            v. Spada</em>, 286 Or 305, 594 P2d 815 (1979)</a>, held that
+            evidence should not be suppressed if available to the
+            defendant through either a subpoena <em>duces tecum</em> or
+            through Oregon’s Public Records Inspection Act. In short,
+            you may want to seek the documents outside of regular
+            discovery.</p>
+            <h2 id="c._document_production_outside_discovery"><strong>C.
+            Document Production Outside Discovery</strong></h2>
+            <p>If your client was stopped for speeding based on radar or
+            LIDAR evidence, you may seek pertinent training manuals
+            either from the prosecutor in discovery, from the device
+            manufacturer, or from the police agency. (Note: For the
+            release of public records, visit the Oregon State Police
+            site here: <a
+            href="http://www.oregon.gov/OSP/PRR/pages/prr_policy.aspx">http://www.oregon.gov/OSP/PRR/pages/prr_policy.aspx</a></p>
+            <p>Also see Appendix B, Defendant’s Request for Discovery,
+            Preservation &amp; Inspection of Evidence.”) These documents
+            may be used to impeach in the same way we use the NHTSA
+            manual. <a
+            href="http://scholar.google.com/scholar_case?q=See+State+v.+Morgan,+251+Or+App+99+%282012%29&amp;hl=en&amp;as_sdt=4,38&amp;case=10812684624079740313&amp;scilh=0"><em>See
+            State v. Morgan</em>, 251 Or App 99 (2012)</a> (reversible
+            error to forbid cross exam on NHTSA manual); <a
+            href="http://scholar.google.com/scholar_case?q=James+v.+The+State,+260+Ga+App+536,+580+SE2d+334+%282003&amp;hl=en&amp;as_sdt=4,11,38&amp;case=5874089692201228981&amp;scilh=0"><em>James
+            v. The State</em>, 260 Ga App 536, 580 SE2d 334 (2003)</a>
+            (same); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hubbard,+297+Or+789+%281984&amp;hl=en&amp;as_sdt=4,38&amp;case=10478035907161230734&amp;scilh=0"><em>State
+            v. Hubbard</em>, 297 Or 789 (1984)</a> (reversible error to
+            forbid cross-exam on department manuals; relevant both to
+            officer’s knowledge and bias). Successful impeachment on the
+            radar or LIDAR evidence may lead to suppression of the stop.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+O%E2%80%99Key,+321+Or+285+%281995%29&amp;hl=en&amp;as_sdt=4,38&amp;case=4487336251714325364&amp;scilh=0"><em>State
+            v. O’Key</em>, 321 Or 285 (1995)</a> (scientific evidence
+            only admissible when strictly administered in accordance
+            with standardized procedures).</p>
+            <p>Pursuing these documents through regular discovery
+            channels in the prosecutor’s office is not always wise. Even
+            when you receive the requested documents without a fight
+            (<em>but cf. Spada, supra)</em>, you may end up educating
+            your opponent more than yourself.</p>
+            <h1
+            id="ii._the_oregon_pretrial_discovery_statute"><strong>II.
+            The Oregon Pretrial Discovery Statute</strong></h1>
+            <p>ORS 135.815, as effective January 1, 2014, provides for
+            discovery to a represented defendant as follows:</p>
+            <p>(1) Except as otherwise provided in ORS 135.855 and
+            135.873, the district attorney shall disclose to a
+            represented defendant the following material and information
+            within the possession or control of the district
+            attorney:</p>
+            <blockquote>
+            <p>(a) The names and addresses of persons whom the district
+            attorney intends to call as witnesses at any stage of the
+            trial, together with their relevant written or recorded
+            statements or memoranda of any oral statements of such
+            persons.</p>
+            <p>(b) Any written or recorded statements or memoranda of
+            any oral statements made by the defendant, or made by a
+            codefendant if the trial is to be a joint one.</p>
+            <p>(c) Any reports or statements of experts, made in
+            connection with the particular case, including results of
+            physical or mental examinations and of scientific tests,
+            experiments or comparisons which the district attorney
+            intends to offer in evidence at the trial.</p>
+            <p>(d) Any books, papers, documents, photographs or tangible
+            objects:</p>
+            <p>(A) Which the district attorney intends to offer in
+            evidence at the trial; or</p>
+            <p>(B) Which were obtained from or belong to the
+            defendant.</p>
+            <p>(e) If actually known to the district attorney, any
+            record of prior criminal convictions of persons whom the
+            district attorney intends to call as witnesses at the trial;
+            and the district attorney shall make a good faith effort to
+            determine if such convictions have occurred.</p>
+            <p>(f) All prior convictions of the defendant known to the
+            state that would affect the determination of the defendant’s
+            criminal history for sentencing under rules of the Oregon
+            Criminal Justice Commission.</p>
+            <p>(g) Any material or information that tends to:</p>
+            <p>(A) Exculpate the defendant;</p>
+            <p>(B) Negate or mitigate the defendant’s guilt or
+            punishment; or</p>
+            <p>(C) Impeach a person the district attorney intends to
+            call as a witness at the trial.</p>
+            <p>(2)(a) The disclosure required by subsection (1)(g) of
+            this section shall occur without delay after arraignment and
+            prior to the entry of any guilty plea pursuant to an
+            agreement with the state. If the existence of the material
+            or information is not known at that time, the disclosure
+            shall be made upon discovery without regard to whether the
+            represented defendant has entered or agreed to enter a
+            guilty plea.</p>
+            <p>(b) Nothing in subsection (1)(g) of this section:</p>
+            <p>(A) Expands any obligation under a statutory provision or
+            the Oregon or United States Constitution to disclose, or
+            right to disclosure of, personnel or internal affairs files
+            of law enforcement officers.</p>
+            <p>(B) Imposes any obligation on the district attorney to
+            provide material or information beyond the obligation
+            imposed by the Oregon and United States Constitutions.</p>
+            <p>(3) Except as otherwise provided in ORS 135.855 and
+            135.873, in prosecutions for violation of ORS 813.010 in
+            which an instrument was used to test a person’s breath,
+            blood or urine to determine the alcoholic content of the
+            person’s blood the district attorney shall disclose to a
+            represented defendant at least the following material and
+            information within the possession or control of the district
+            attorney:</p>
+            <p>(a) Any report prepared by a police officer relating to
+            field tests, interviews, observations and other information
+            relating to the charged offense;</p>
+            <p>(b) Any report relating to the test results;</p>
+            <p>(c) A copy of the form provided to the defendant under
+            ORS 813.100 (3)(b); and</p>
+            <p>(d) Any checklist prepared by the operator of the
+            instrument for the test.</p>
+            </blockquote>
+            <h2 id="a._what_must_be_disclosed"><strong>A. What Must Be
+            Disclosed</strong></h2>
+            <p><strong>1. Generally</strong></p>
+            <p>For purposes of the discovery statutes, the police are
+            considered part of the prosecution. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+26+Or+App+651,&amp;hl=en&amp;as_sdt=4,38&amp;case=17279001998203840615&amp;scilh=0"><em>State
+            v. Johnson</em>, 26 Or App 651, 554 P2d 624 (1976)</a>;
+            <em>cf.</em> <a
+            href="http://scholar.google.com/scholar_case?q=Kyles+v.+Whitley,+514+US+419,+437+%281995%29&amp;hl=en&amp;as_sdt=3,38&amp;case=11340909204337910931&amp;scilh=0"><em>Kyles
+            v. Whitley</em>, 514 US 419, 437 (1995)</a> (for
+            <em>Brady</em> purposes, “the individual prosecutor has a
+            duty to learn of any favorable [i.e., exculpatory] evidence
+            known to the others acting on the government’s behalf in the
+            case, including the police”). In <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Wilson+v.+Thomas,+74+Or+App+137,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5427175333551212921&amp;scilh=0"><em>State
+            ex rel</em> <em>Wilson v. Thomas</em>, 74 Or App 137, 700
+            P2d 1045, <em>rev den</em> 300 Or 64, 707 P2d 582
+            (1985)</a>, a person arrested by an officer on a
+            prostitution charge filed a complaint against the officer.
+            The officer made a statement to an investigator for the
+            internal affairs division about the facts of the case. This
+            officer was a witness for the prosecution in the
+            prostitution case. The Court of Appeals held that the
+            statement by the officer to the investigator was
+            discoverable under ORS 135.815(1) because it was within the
+            prosecutor’s “control” since the internal affairs division
+            is a division of the police and the police are an arm of the
+            prosecution. The court held that it was not material that
+            the division’s records are “civil” or that the officer was
+            told that the statement was confidential.</p>
+            <p>Police officers with a history of dishonesty or “not
+            credible” findings are sometimes referred to as “Brady
+            cops.” Prosecutors should be providing defendants in any
+            case involving such an officer with information related to
+            those findings. Beware the prosecutor who tells you that he
+            “doesn’t know” why an officer is unavailable for trial, or
+            that he “doesn’t know” why the officer is on leave from the
+            department.</p>
+            <p>Statements and witnesses’ memoranda in the possession of
+            the police are subject to discovery under the statute, even
+            though they are not given to the prosecutor. <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Wilson+v.+Thomas,+74+Or+App+137,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10488446557267510536&amp;scilh=0"><em>State
+            v. Warren</em>, 304 Or 428, 433, 746 P2d 711 (1987)</a> (“In
+            a prosecution, the prosecutor is responsible for evidence in
+            the possession of the police.… And, of course, information
+            that the prosecutor may obtain directly is within the
+            prosecutor’s ‘control’ as well, even if it was not in the
+            prosecutor’s physical possession”). <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Divito,+152+Or+App+672&amp;hl=en&amp;as_sdt=4,38&amp;case=6375006253859324858&amp;scilh=0"><em>State
+            v. Divito</em>, 152 Or App 672, 675 n. 1, 955 P2d 327 (1998)
+            (<em>Divito I</em>)</a> (“Statements and memoranda of
+            witnesses in the possession of the police are subject to ORS
+            135.815, even though they are not given to the prosecutor”),
+            <a
+            href="http://scholar.google.com/scholar_case?q=330+Or+319,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11802569026488935080&amp;scilh=0"><em>aff’d
+            on other grounds</em>, 330 Or 319, 5 P3d 1103 (2000)
+            (<em>Divito II</em>),</a> <a
+            href="http://scholar.google.com/scholar_case?q=180+Or+App+156,+42+P3d+918&amp;hl=en&amp;as_sdt=4,38&amp;case=8832129688923270547&amp;scilh=0"><em>appeal
+            after remand</em>, 180 Or App 156, 42 P3d 918 (<em>Divito
+            III</em>),</a> <em>rev den</em> 334 Or 288, 49 P3d 797
+            (2002). See Section II G for a more exhaustive look at the
+            <em>Divito</em> trilogy.</p>
+            <p>If a judge orders a district attorney to produce a file
+            for <em>in</em> <em>camera</em> inspection and the district
+            attorney refuses to produce the file, the district attorney
+            can use appeal or mandamus to challenge the judge’s order.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Crenshaw,+307+Or+160,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11397753430334065772&amp;scilh=0"><em>State
+            v. Crenshaw</em>, 307 Or 160, 168, 764 P2d 1372 (1988)</a>.
+            However, if the district attorney gives the file to the
+            judge for an <em>in</em> <em>camera</em> inspection then
+            refuses to comply with the judge’s order to produce
+            information in the file, mandamus is not an appropriate
+            method of challenging a contempt order for refusal to
+            comply. <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+City+of+Portland+v.+Keys,+96+Or+App+669,+773+P2d+1347+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=11517525891612077968&amp;scilh=0"><em>State
+            ex rel City of Portland v. Keys</em>, 96 Or App 669, 773 P2d
+            1347 (1989)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Heisler,+106+Or+App+7,+806+P2d+1154+%281991%29&amp;hl=en&amp;as_sdt=4,38&amp;case=18145444160052543269&amp;scilh=0"><em>State
+            v. Heisler</em>, 106 Or App 7, 806 P2d 1154 (1991)</a>.</p>
+            <p>Department of Human Services caseworkers may be part of
+            the “prosecution” in certain cases. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johns,+44+Or+App+421,+&amp;hl=en&amp;as_sdt=4,38&amp;case=18209506668931126458&amp;scilh=0"><em>State
+            v. Johns</em>, 44 Or App 421, 606 P2d 640, <em>rev den</em>
+            289 Or 1 (1980)</a>. If statements of witnesses for the
+            state are contained in a DHS file, they are in the
+            “possession or control” of the district attorney for
+            purposes of ORS 135.815 and the defendant is entitled to
+            disclosure of those statements. To preserve the
+            confidentiality of materials in the file if disclosure is
+            not warranted, the proper method of obtaining files is to go
+            through an <em>in</em> <em>camera</em> review by the trial
+            court of the file. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Graville,+304+Or+424,+746+P2d+715+%281988%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7003465676665865704&amp;scilh=0"><em>State
+            v. Graville</em>, 304 Or 424, 746 P2d 715 (1988),</a> and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Warren,+304+Or+428,+746+P2d+711+%281988%29&amp;hl=en&amp;as_sdt=4,38&amp;case=10488446557267510536&amp;scilh=0"><em>State
+            v. Warren</em>, 304 Or 428, 746 P2d 711 (1988)</a>. The
+            judge’s duty to examine the files cannot be delegated to the
+            district attorney who is prosecuting the case. <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Dugan+v.+Tiktin,+313+Or+607,+837+P2d+959+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=8339434875904849421&amp;scilh=0"><em>State
+            ex rel Dugan v. Tiktin</em>, 313 Or 607, 837 P2d 959
+            (1992)</a>. The Due Process Clause of the Fourteenth
+            Amendment requires the state to turn over exculpatory
+            evidence in confidential government files to the defense
+            after an <em>in camera</em> inspection. <em>Id.</em>;
+            <em>State v. Warren</em>, <em>supra</em>; <em>State v.
+            Graville</em>, <em>supra</em>; and <a
+            href="http://scholar.google.com/scholar_case?q=Pennsylvania+v.+Ritchie,+480+US+39+%281987%29&amp;hl=en&amp;as_sdt=3,38&amp;case=12511445525279708707&amp;scilh=0"><em>Pennsylvania
+            v. Ritchie</em>, 480 US 39 (1987)</a>. However, the court
+            cannot order DHS to make children in the custody of DHS
+            available for pretrial interviews by the defendant where the
+            prosecutor has done nothing to impede the defendant’s
+            attempt to interview the children. <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+O%E2%80%99Leary+v.+Lowe,+307+Or+395,+769+P2d+188+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=8406179078449713403&amp;scilh=0"><em>State
+            ex rel O’Leary v. Lowe,</em> 307 Or 395, 769 P2d 188
+            (1989)</a>.</p>
+            <p>The rules regarding DHS should apply to material in the
+            possession of other state agencies, in light of the
+            prosecutor’s affirmative duty to seek out exculpatory
+            information. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=kyles&amp;hl=en&amp;as_sdt=3,38&amp;case=11340909204337910931&amp;scilh=0"><em>Kyles
+            v. Whitley</em>, 514 US 419, 437 (1995)</a>.</p>
+            <blockquote>
+            <p>In DUII cases, <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors818.html">ORS
+            813.324(1)</a> imposes additional disclosure requirements on
+            the parties relating to tapes and transcripts of DMV
+            hearings. Specifically, counsel must “provide a copy of the
+            tape or transcript to the attorney for the other party at
+            least seven days prior to the first date set for trial,” or
+            the testimony may be excluded absent a showing of good
+            cause.</p>
+            <p>You are not required to produce the tape or transcript
+            for free. ORS 813.324(2) specifically provides, “The cost of
+            a copy of a tape or transcript furnished under subsection
+            (1) of this section shall be borne by the party who receives
+            the copy.”</p>
+            </blockquote>
+            <p><code>Practice Tip</code></p>
+            <p>Arguably, defense counsel can satisfy his duty under ORS
+            813.324(1) via a Notice like the one in Appendix E which
+            informs the prosecutor that a tape or transcript is
+            available subject to payment of reasonable costs associated
+            with production. Prosecutors commonly ignore these notices
+            and fail to pony up the money. If you get to the day of
+            trial and the prosecutor has not paid for the tape or
+            transcript yet raises a stink on your use of the transcript
+            (usually as you are embarrassing the officer with his prior
+            inconsistent statement), you can argue that you have “made
+            available” the tape and transcript since the date of your
+            Notice. There is no discovery violation where one party
+            makes documents or evidence available and his opponent does
+            not bother to inspect or copy them. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Addicks,+34+Or+App+557,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14551581935966991763&amp;scilh=0">State
+            v. Addicks, 34 Or App 557, 579 P2d 289 (1978)</a>. If the
+            prosecutor argues that Addicks interpreted the general
+            discovery statute and not ORS 813.324, the response would be
+            that the prosecutor’s failure to respond to the Notice
+            provided “good cause” as contemplated by the statute in
+            subsection (1). In any event, most prosecutors’ offices
+            certainly do not provide discovery absent payment for
+            copying costs, and what’s good for the goose is good for the
+            gander. Note: you are not guaranteed to win the argument, so
+            you may want to play it safe—give the prosecutor the tape or
+            transcript at least seven days before trial, and thereby
+            avoid the issue altogether. Note addendum: since the author
+            wrote the previous note a decade earlier, he has indeed had
+            one judge (erroneously, but that’s cold comfort) bar
+            cross-exam from a DMV transcript in exactly this situation.
+            For that reason, the author now routinely emails to the DA a
+            PDF of the transcript if he intends to cross-examine from it
+            – that is, if the officer’s testimony is more favorable than
+            surprisingly damaging. By “surprisingly damaging,” I mean
+            “bad facts not mentioned in the police report.</p>
+            <p><strong>2. Witness Names, Addresses and
+            Testimony</strong></p>
+            <p>The parties must supply the names and addresses of
+            witnesses who will be testifying. If a party does not know
+            information he is required to disclose, for instance a
+            witness address, but knows how to obtain this information,
+            the party must obtain it and provide it to the other side.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Clarke,+106+Or+App+204,&amp;hl=en&amp;as_sdt=4,38&amp;case=16912482055783515416&amp;scilh=0"><em>State
+            v. Clarke</em>, 106 Or App 204, 206–207, 808 P2d 92
+            (1991)</a>.</p>
+            <p>Experts don’t have to talk to the adversary – but the
+            lawyer calling them must disclose what the experts have said
+            to them in broad strokes. ORS 135.815(1)(c) (requiring
+            disclosure of “reports or statements of experts, made in
+            connection with the particular case, including results of
+            physical or mental examinations and of scientific tests,
+            experiments or comparisons”). In DUII cases, this
+            particularly applies if the state’s expert has engaged in
+            “retrograde extrapolation” calculations. You need to know
+            the results of the expert’s calculations – what is the range
+            of BAC the expert will testify to – and the calculations
+            themselves to check for error, and to tailor your
+            defense.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Schmid,+80+Or+App+545,+723+P2d+334+%281986%29&amp;hl=en&amp;as_sdt=4,38&amp;case=8463924432315071393&amp;scilh=0"><em>State
+            v. Schmid</em>, 80 Or App 545, 723 P2d 334 (1986)</a>, it
+            was error to exclude the testimony of a defense psychologist
+            simply because the psychologist would not tell the
+            prosecutor what his testimony would be. Defense counsel had
+            notified the prosecutor that the psychologist would testify,
+            gave the prosecutor the psychologist’s notes, and made the
+            psychologist available for an interview by the prosecutor,
+            who never attempted to interview the psychologist until the
+            day of trial, did not consult another psychologist on the
+            issues the defense witness would discuss and did not ask for
+            a continuance. The Court of Appeals seriously questioned
+            whether any discovery violation had even occurred.</p>
+            <h2 id="b._defendants_duty_to_disclose"><strong>B.
+            Defendant’s Duty to Disclose</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.835</a> provides that a defendant must disclose certain
+            information to the district attorney. It is important that a
+            defendant turn over the required materials. Failure to do so
+            can have serious consequences, such as having the court
+            preclude the testimony of a defense witness. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wolfe,+273+Or+518,+542+P2d+482+%281975%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12831410617540703221&amp;scilh=0"><em>State
+            v. Wolfe</em>, 273 Or 518, 542 P2d 482 (1975)</a>. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Young,+94+Or+App+683,+767+P2d+90+%281989&amp;hl=en&amp;as_sdt=4,38&amp;case=7245829628872315828&amp;scilh=0"><em>State
+            v. Young</em>, 94 Or App 683, 767 P2d 90 (1989)</a>, the
+            Court of Appeals upheld the suppression of a tape recording
+            in a sodomy case where the defense attorney failed to
+            disclose to the prosecutor the existence of the tape and a
+            transcript of the tape, even though defense counsel intended
+            to use the evidence only to impeach the victim. On the tape,
+            the victim told the defendant’s son that the defendant had
+            not committed the offense and that a CSD (now DHS) worker
+            had promised the victim immunity from prosecution on
+            juvenile charges if the victim would testify against the
+            defendant. As an addendum to the previous “Practice Tip,”
+            this is yet another admonition: if you intend to impeach a
+            witness with a DMV or other transcript, it really is
+            probably best to provide it to the DA ahead of time –
+            ideally more than seven days before trial. ORS
+            813.324(1).</p>
+            <p><strong>1. Sanctions</strong></p>
+            <p>In <em>State v. Wolfe</em>, <em>supra</em>, Justice
+            Dennecke, in a concurring opinion, suggested that a judge
+            who keeps a defense witness from testifying may be violating
+            Article I, section 11, of the Oregon Constitution and
+            Amendment VI of the United States Constitution, which
+            provide that an accused has the right to have compulsory
+            process for obtaining witnesses. That right includes the
+            right to examine the witnesses obtained. <a
+            href="http://scholar.google.com/scholar_case?q=Washington+v.+Texas,+388+US+14+%281967%29&amp;hl=en&amp;as_sdt=3,38&amp;case=5676629902054312770&amp;scilh=0"><em>Washington
+            v. Texas</em>, 388 US 14 (1967)</a>. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mai,+294+Or+269,+656+P2d+315+%281982%29&amp;hl=en&amp;as_sdt=4,38&amp;case=10806636245678756085&amp;scilh=0"><em>State
+            v. Mai</em>, 294 Or 269, 656 P2d 315 (1982)</a>, a defendant
+            was charged and convicted of driving under the influence of
+            intoxicants and evading a police officer. The defendant’s
+            attorney refused to comply with the reciprocal discovery
+            statutes, claiming that the defendant had an absolute right
+            to call witnesses. He cited the sections of the United
+            States and Oregon constitutions just referred to. The trial
+            court imposed a sanction under ORS 135.865 and refused to
+            let the defendant’s witnesses testify.</p>
+            <p>On appeal, the Oregon Supreme Court held that the right
+            to compulsory process protects the right to subpoena
+            witnesses and the right to have a witness testify. However,
+            Oregon’s reciprocal discovery rules were passed to ensure
+            that both sides have access to all the facts prior to trial
+            so that a jury can best determine where the truth lies. The
+            court held that preclusion is a legitimate sanction for the
+            failure to make discovery, on the theory that the sanction
+            does not deny the right to compulsory process but merely
+            poses a reasonable condition to the exercise of that right.
+            Moreover, the court also held that an intrusion on a
+            defendant’s right to call witnesses should be no more than
+            is necessary to achieve the purpose of the discovery
+            statutes. The court further held that the preclusion
+            sanction should be imposed only where no lesser sanction
+            would accomplish the aim of the discovery statute and then
+            only if the state would be prejudiced if the witness is
+            permitted to testify, even though the statute has not been
+            complied with.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johanesen,+110+Or+App+348,+822+P2d+154+%281991%29&amp;hl=en&amp;as_sdt=4,38&amp;case=1835172276815993007&amp;scilh=0"><em>State
+            v. Johanesen</em>, 110 Or App 348, 822 P2d 154 (1991)</a>,
+            the court held: “Before a court can exclude defense evidence
+            because of a discovery violation, there are at least two
+            prerequisites: First, it must find actual prejudice to the
+            state; and, second, it must determine that no other sanction
+            short of exclusion would remedy the prejudice to the state.”
+            As noted above, no specific finding is required to support a
+            sanction which is less than exclusion.</p>
+            <p>In the cases of <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Girard+%28I%29,+106+Or+App+463,+808+P2d+1017+%281991&amp;hl=en&amp;as_sdt=4,38&amp;case=7054604496805510916&amp;scilh=0"><em>State
+            v. Girard (I)</em>, 106 Or App 463, 808 P2d 1017 (1991)</a>,
+            and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Girard,+113+Or+App+238&amp;hl=en&amp;as_sdt=4,38&amp;case=1386842690962981581&amp;scilh=0"><em>State
+            v. Girard (II)</em>, 113 Or App 238, 832 P2d 463 (1992)</a>,
+            the trial court excluded the testimony of Bart Reid because
+            disclosure of Reid’s testimony was not made to the state
+            until four days before trial. In the first appeal, the
+            defendant’s case was remanded for a finding of whether a
+            sanction short of exclusion was available. On remand, the
+            trial court said exclusion was appropriate because “the
+            judge felt to do otherwise would encourage poor practice by
+            the defense bar and the court would lose control over its
+            docket.” 113 Or App at 240. The conviction was again
+            reversed because there was no evidence that the state would
+            have been prejudiced by a continuance. 113 Or App at 241.
+            <em>See</em> <em>also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lindquist,+141+Or+App+84,+917+P2d+510+%281996&amp;hl=en&amp;as_sdt=4,38&amp;case=7032097871369245791&amp;scilh=0"><em>State
+            v. Lindquist</em>, 141 Or App 84, 917 P2d 510 (1996)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fain,+132+Or+App+488,+888+P2d+1052+%281995%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14400356052205569376&amp;scilh=0"><em>State
+            v. Fain</em>, 132 Or App 488, 888 P2d 1052 (1995)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Clarke,+106+Or+App+204,&amp;hl=en&amp;as_sdt=4,38&amp;case=16912482055783515416&amp;scilh=0"><em>State
+            v. Clarke</em>, 106 Or App 204, 207, 808 P2d 92
+            (1991)</a>.</p>
+            <p><strong>2. Timeliness of Disclosure</strong></p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ben,+310+Or+309,+798+P2d+650+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12035240523252647488&amp;scilh=0"><em>State
+            v. Ben</em>, 310 Or 309, 798 P2d 650 (1990)</a>, defense
+            counsel waited until the morning of trial to disclose the
+            existence of two witnesses to the state. When the prosecutor
+            tried to talk to the witnesses during a noon recess, they
+            said that defense counsel has advised them not to speak with
+            the prosecutor about the case unless defense counsel was
+            present. After the state rested, the trial court granted a
+            prosecution motion to exclude the testimony of the two
+            witnesses. The defense suggested that a recess would be an
+            appropriate sanction. The Oregon Supreme Court held that
+            Oregon’s reciprocal criminal discovery statutes impose an
+            equal burden on the state and the defendant to disclose to
+            each other the names of witnesses, and failure to perform
+            this duty “as soon as practicable” after the filing of an
+            indictment exposes the offending party to the possibility
+            that a sanction will be imposed. The court held that ORS
+            135.835 imposes a responsibility for disclosure on the
+            defendant and his attorney, interpreting the term
+            “defendant” as including a defendant and his attorney. A
+            clear discovery violation occurred because the defendant
+            knew about both witnesses prior to trial and an additional
+            discovery violation occurred when the defense attorney
+            instructed the witnesses not to speak to the prosecutor
+            unless he was present. The court also found that the
+            witnesses could have been properly precluded from testifying
+            as a sanction if prejudice to the state had been found;
+            however, prejudice could have been avoided by allowing the
+            state time to talk to the witnesses by ordering a recess.
+            The court rejected the argument that preclusion is not
+            appropriate where its effect would be to punish a defendant
+            for actions that are solely the responsibility of his or her
+            attorney. The case was reversed because the effect of the
+            preclusion was to deny the defendant a fair trial by keeping
+            from the jury testimony of a witness who, if believed, would
+            have exonerated the defendant on all charges.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Don’t give witnesses advice, period. If you want a
+            witness to know whether they have to respond to that mailed
+            subpoena that directs them to the DA’s office 30 minutes
+            before trial (ahem), ask a fellow lawyer not associated with
+            your office to give them that advice <em>pro bono</em>.</p>
+            <p><strong>3. Protective Order</strong></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.873</a> permits a party to get an order from the court
+            protecting from disclosure information normally
+            discoverable. This statutory section is derived in part from
+            Rule 16(e) of the Federal Rules of Criminal Procedure and
+            requires a demonstrated need, such as threats against the
+            lives of family members, before a protective order can be
+            issued. A simple conclusive statement of fear or
+            apprehension in an affidavit, unsupported by a showing of
+            specific circumstances or occurrences that support the
+            conclusion, is insufficient to justify the issuance of a
+            protective order. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pettit,+66+Or+App+575,+675+P2d+183,+&amp;hl=en&amp;as_sdt=4,38&amp;case=17159206794733924267&amp;scilh=0"><em>State
+            v. Pettit</em>, 66 Or App 575, 675 P2d 183, <em>rev den</em>
+            297 Or 227, 683 P2d 91 (1984)</a>.</p>
+            <h2
+            id="c._discovery_laws_must_be_complied_with_as_soon_as_practicable"><strong>C.
+            Discovery Laws Must be Complied With as Soon as
+            Practicable</strong></h2>
+            <p>The obligation to disclose materials and information in a
+            party’s possession and control shall be performed as soon as
+            practicable following the filing of an indictment or
+            information in the circuit court or the filing of a
+            complaint charging a misdemeanor or violation of a city
+            ordinance, ORS 135.845(1), or the filing of a traffic
+            citation for an infraction. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Harshman,+61+Or+App+711,+658+P2d+1173+%281983%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9899113040140236524&amp;scilh=0"><em>State
+            v. Harshman</em>, 61 Or App 711, 658 P2d 1173 (1983)</a>,
+            the Oregon Court of Appeals held that if evidence is
+            discovered after the filing of an accusatory instrument but
+            before or during trial, there must be prompt notification to
+            the other party. When on the morning of trial the state gave
+            notice of its intent to offer evidence of “other bad acts”
+            as evidence of motive and delivered to defense counsel
+            written material relating to the prior act, the Court of
+            Appeals held that the trial court had abused its discretion
+            when it failed to impose some sanction against the state.
+            The court held that prejudice need not be shown to require
+            imposition of a sanction, such as exclusion or a
+            continuance, because “the effective administration of
+            justice requires that discoverable evidence be provided much
+            sooner than ‘moments’ before trial.”</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Burdge,+295+Or+1,+664+P2d+1076+%281983%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15045771437968205507&amp;scilh=0"><em>State
+            v. Burdge</em>, 295 Or 1, 664 P2d 1076 (1983)</a>, the
+            parties stipulated that witnesses would be excluded.
+            Defendant’s wife watched the case in the courtroom. During
+            trial, evidence developed by the state made it important to
+            call the wife as an impeachment witness, but the trial court
+            refused to let the wife testify because of the exclusion
+            order. The Oregon Supreme Court held that where a defendant
+            does not learn a particular person or evidence may be needed
+            for impeachment until the trial is in progress, a failure to
+            disclose the witness’s name or the evidence prior to trial
+            will not bar the witness from testifying or the evidence
+            from being admitted. However, a defendant must promptly
+            notify the state as soon as she or he learns of the
+            additional witness or evidence, and the court may allow
+            reasonable time for the prosecution to interview the witness
+            or review the evidence. The court also held that violation
+            of an exclusion order is not, of itself, sufficient to
+            disqualify a defense witness in a criminal case. Exclusion
+            is not proper where the violation of the order was not
+            intentional and not procured by connivance of counsel or
+            some improper motive.</p>
+            <p><em>See</em> <em>also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dillard,+100+Or+App+645,+787+P2d+1307+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=18098199034068819444&amp;scilh=0"><em>State
+            v. Dillard</em>, 100 Or App 645, 787 P2d 1307 (1990)</a> (no
+            discovery violation when defendant did not learn of a photo
+            he wished to introduce until morning of trial), and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gill,+96+Or+App+358,+&amp;hl=en&amp;as_sdt=4,38&amp;case=7795176832154956167&amp;scilh=0"><em>State
+            v. Gill</em>, 96 Or App 358, 772 P2d 957 (1989)</a> (trial
+            court erred in refusing to permit a witness to testify who
+            was not disclosed during discovery without first
+            ascertaining whether the prejudice claimed by the state
+            could be cured by an interview with the witness, a brief
+            recess in trial or postponement because trial court was
+            obligated to explore other alternatives to the remedy of
+            exclusion before it could preclude a witness from
+            testifying).</p>
+            <h2 id="d._no_duty_to_deliver_materials"><strong>D. No Duty
+            to Deliver Materials</strong></h2>
+            <p>The duty to disclose does not encompass a duty to deliver
+            the materials and information in a party’s possession and
+            control to an adversary. It merely means that an opportunity
+            must be afforded the adverse party to inspect or copy the
+            material. ORS 135.805(2). Simply writing an informal letter
+            to the district attorney demanding discovery and doing
+            nothing more will not support the allegation that the
+            district attorney has violated the pretrial discovery
+            statutes if the letter writer receives no discovery.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Addicks,+34+Or+App+557,&amp;hl=en&amp;as_sdt=4,38&amp;case=14551581935966991763&amp;scilh=0"><em>State
+            v. Addicks</em>, 34 Or App 557, 579 P2d 289 (1978)</a> (no
+            discovery violation where state makes documents available
+            but defendant does not inspect or copy).</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Andes,+104+Or+App+719,+803+P2d+273+%281990&amp;hl=en&amp;as_sdt=4,38&amp;case=12957519559929393437&amp;scilh=0"><em>State
+            v. Andes</em>, 104 Or App 719, 803 P2d 273 (1990), <em>rev
+            den</em> 311 Or 482, 813 P2d 1064 (1991)</a>, a defendant
+            moved for discovery of all instances relating to the
+            Intoxilyzer Model 4011A when an individual took multiple
+            tests and the results varied, when there was a discrepancy
+            in results between blood and breath tests for a single
+            individual, or when other circumstances led an officer to
+            question the result of an Intoxilyzer test. The Court of
+            Appeals held that a defendant’s right to discovery does not
+            include unlimited requests for information about cases of
+            other individuals or other Intoxilyzer machines, and that
+            the state had no responsibility under the discovery statutes
+            to compile results for a defendant.</p>
+            <p>When the parties do not agree on the method of discovery
+            to be used, a trial judge should exercise supervisory
+            authority to ensure that the discovery proceeds properly,
+            that the parties’ rights are not adversely affected, and
+            that the trial is not unreasonably delayed. When the state
+            intends to offer a videotape in evidence at trial, the trial
+            court may order that a usable copy of the videotape be
+            provided to the defendant at the defendant’s expense, even
+            though the state has previously allowed inspection of the
+            videotape. If the state fails to comply with the order, the
+            trial court may exclude admission of the videotape. The
+            authority for the court’s power in this case derives from
+            ORS 135.805(2), which defines “disclose” to mean giving the
+            adverse party the right to inspect or copy the material. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kull,+298+Or+38,+688+P2d+1327+%281984%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17279723899606581520&amp;scilh=0"><em>State
+            v. Kull</em>, 298 Or 38, 688 P2d 1327 (1984)</a>.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Videos are often highly exculpatory in DUII cases. They
+            are also often full of inadmissible prior bad acts evidence
+            (“This is my third DUII!”), hearsay (“They told me not to
+            drive!”), and vouching (police officers discussing amongst
+            themselves – or to themselves – how drunk defendant is).
+            Rather than object at trial, irritating the jury during the
+            video presentation, redact the video to exclude the
+            inadmissible parts. Make a detailed list (on a pleading
+            wouldn’t hurt) of what you redacted and why. I’ve had judges
+            agree with me in theory that the state’s video has
+            inadmissible elements, but indicate it’s coming in because I
+            didn’t make a copy with the inadmissible parts excised.</p>
+            <h2
+            id="e._no_right_to_compel_a_witness_to_submit_to_interview_prosecutorial_interference"><strong>E.
+            No Right to Compel a Witness to Submit to Interview;
+            Prosecutorial Interference</strong></h2>
+            <p>Once defense counsel has the names and addresses of the
+            state’s witnesses, counsel should try to interview them.
+            However, a defendant has no absolute right to compel an
+            adverse witness to submit to an interview. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Trow,+56+Or+App+478,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1056323279055677225&amp;scilh=0"><em>State
+            v. Trow</em>, 56 Or App 478, 484, 642 P2d 1178</a>
+            (“[Witness]’s decision not to talk to the defense was his
+            own. The prosecution did not advise or suggest that he
+            should not talk to the defense. Defendant was afforded both
+            discovery of [witness]’s statement to police and full
+            cross-examination at trial. He had no absolute right to
+            compel [witness] to speak with defense counsel”), <em>rev
+            den</em> 293 Or 394, 650 P2d 927 (1982). On the other hand,
+            although the prosecutor need not make the state’s witnesses
+            available for a defense interview, need not encourage the
+            witnesses to consent to being interviewed, and may advise
+            them of their right to refuse the pretrial interview by the
+            defense, it is improper for the state to interfere with
+            defense efforts to interview prospective witnesses by
+            instructing them not to talk to the defense attorney or by
+            telling them that “It would be better if they didn’t say
+            anything.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+York,+291+Or+535,+632+P2d+1261+%281981%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6155911183524569540&amp;scilh=0"><em>State
+            v. York</em>, 291 Or 535, 632 P2d 1261 (1981)</a>. A policy
+            that is favorable to access to witnesses and evidence and
+            hostile to improper adversarial interference with such
+            access is implicit in the Oregon pretrial discovery
+            statutes, as well as the disciplinary rules of the Oregon
+            Code of Professional Responsibility. <em>Id</em>.
+            <em>See</em> <em>also</em> <em>State v. Ben</em>,
+            <em>supra</em>.</p>
+            <h2 id="f._effects_of_victims_rights_legislation"><strong>F.
+            Effects of Victims’ Rights Legislation</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.970</a> provides guidelines for discovery involving
+            “victims” as defined by ORS 131.007 (“the person or persons
+            who have suffered financial, social, psychological or
+            physical harm as a result of a crime”). When interviewing
+            someone who may be classified as a “victim” (e.g<em>.</em>,
+            the car owner in a hit-and-run), questioning should be
+            prefaced with the notices described in ORS 135.970(2).
+            Experienced investigators understand this issue, but you may
+            need to educate legal assistants or others who may end up
+            speaking with victims (e.g., in discussing civil
+            compromise).</p>
+            <h2
+            id="g._no_duty_to_reduce_statement_to_writing"><strong>G. No
+            Duty to Reduce Statement to Writing</strong></h2>
+            <p>The <em>Divito</em> trilogy, mentioned in II A, answered
+            many questions on the interplay between the prosecutor’s
+            office and the police department for purposes of statutory
+            discovery (but, importantly, did not address <em>Brady</em>
+            issues). <em>Divito II</em> made clear that it is no
+            statutory discovery violation for police to omit important,
+            pertinent, inculpatory information in the reports they
+            provide to the prosecutor’s office. <em>Cf.</em> <a
+            href="http://scholar.google.com/scholar_case?q=kyles&amp;hl=en&amp;as_sdt=3,38&amp;case=11340909204337910931&amp;scilh=0"><em>Kyles
+            v. Whitley</em>, 514 US 419, 437 (1995)</a> (for
+            <em>Brady</em> purposes “the individual prosecutor has a
+            duty to learn of any favorable [i.e., exculpatory] evidence
+            known to the others acting on the government’s behalf in the
+            case, including the police”).</p>
+            <p><em>Divito</em> involved a prosecutor who, the night
+            before trial, became curious regarding the lack of 911
+            information in the police reports. She called 911 and the
+            supervisor gave her the name of a witness, Dean, with whom
+            she then spoke, and discovered he was prepared to testify
+            obliquely (via a third party’s excited utterance) to the
+            defendant driving that evening. This did some damage to the
+            defense of no driving. The prosecutor left a late-night
+            voice mail at the defense attorney’s office. At a pretrial
+            hearing the next day, Dean testified that the investigating
+            officer had made notes of their conversation. The trial
+            court judge found “a discovery violation, not the DA’s
+            office, but certainly through the police, who neglected to
+            write a pretty critical piece of information up” in his
+            police report and excluded the excited utterance.</p>
+            <p><em><a
+            href="http://scholar.google.com/scholar_case?q=divito&amp;hl=en&amp;as_sdt=4,38&amp;case=6375006253859324858&amp;scilh=0">Divito
+            I</a></em> was the result of a fractured <em>en banc</em>
+            Court of Appeals, essentially holding that Dean’s statements
+            were not “relevant statements” under the statute <em>until
+            the prosecutor decided to call him as a witness</em>. At
+            that point, the prosecutor properly telephoned defense
+            counsel. <em>State v. Divito</em>, 152 Or App 672, 955 P2d
+            327 (1998) (1998) (<em>Divito I</em>), <em>aff’d on other
+            grounds</em>, 330 Or 319, 5 P3d 1103 (2000) (<em>Divito
+            II</em>), <em>appeal after remand</em>, 180 Or App 156, 42
+            P3d 918 (2002) (<em>Divito III</em>), <em>rev den</em> 334
+            Or 288, 49 P3d 797 (2002).</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=divito&amp;hl=en&amp;as_sdt=4,38&amp;case=11802569026488935080&amp;scilh=0"><em>Divito
+            II</em></a>, the Oregon Supreme Court affirmed on other
+            grounds. The court found no discovery violation because,
+            while <em>Warren, supra</em>, required prosecutors to
+            disclose reports which already exist, it does not require
+            prosecutors to “expand the scope of existing documents, such
+            as police reports, to incorporate additional information of
+            which only the police are aware.” <em>Divito II,</em> 330 Or
+            at 328. Justice Durham, concurring in the result, wrote
+            separately that although ORS 135.815(1) did not require
+            police to include certain information in reports, it did
+            obligate “the state to disclose [the officer’s] notes that
+            he wrote during or after his conversation with Dean.” 330 Or
+            at 329. “Under ORS 135.815(1), the significant fact is not
+            that the prosecutor had no personal knowledge of Dean until
+            the eve of trial, but that in response to defendant’s
+            request for discovery, the prosecutor failed to disclose a
+            police officer’s notes that were under the prosecutor’s
+            control and that pertained to defendant’s guilt or
+            innocence.” <em>Id</em>. at 330.</p>
+            <p>In <em><a
+            href="http://scholar.google.com/scholar_case?q=divito&amp;hl=en&amp;as_sdt=4,38&amp;case=8832129688923270547&amp;scilh=0">Divito
+            III</a></em> (worth reading just for an exposition of the
+            state’s inability to make a proper offer of proof), the
+            Court of Appeals cited Justice Durham’s concurrence for the
+            proposition that the [OR] Supreme Court never reached the
+            issue of whether the state committed a discovery violation
+            by failing to disclose the officer’s notes of his
+            conversation with Dean. Ignoring Justice Durham’s quite
+            clear opinion on the matter, a three-judge panel of the
+            Court of Appeals held, again, that the notes were not
+            “relevant statements” until they became actually known to
+            the prosecutor and she intended to call Dean as a witness
+            (the night before trial). Thus, there was no discovery
+            violation at all. 180 Or App at 167. The state Supreme Court
+            denied review, 334 Or 288. The Court of Appeals has since
+            held that police officer notes generally must be disclosed,
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+210+Or+App+733+%282007&amp;hl=en&amp;as_sdt=4,38&amp;case=1916986115619945031&amp;scilh=0"><em>State
+            v. Johnson</em>, 210 Or App 733 (2007</a>), but as a
+            practical matter notes are often destroyed once incorporated
+            into a formal police report.</p>
+            <p><code>Practice Tip</code></p>
+            <p>At your DMV Hearing, notice if the officer flips open a
+            notepad in response to questioning. If so, consider a formal
+            discovery request to the prosecutor’s office noting exactly
+            that fact.</p>
+            <p>Earlier cases hold that neither the defense nor the
+            prosecution is required to reduce witnesses’ oral statements
+            to writing. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKendall,+36+Or+App+187,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11544243081392498322&amp;scilh=0"><em>State
+            v. McKendall</em>, 36 Or App 187, 196, 584 P2d 316
+            (1978)</a> (“The statute does not provide that the state, or
+            the defendant for that matter, under ORS 135.835(1), reduce
+            oral statements of witnesses to writing so that they may be
+            discovered. We decline to read such a broad requirement into
+            the statute”), <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lopez,+147+Or+App+314,+936+P2d+386+%281997&amp;hl=en&amp;as_sdt=4,38&amp;case=12736811192249298395&amp;scilh=0"><em>overruled
+            on other grounds</em>, <em>State v. Lopez</em>, 147 Or App
+            314, 936 P2d 386 (1997)</a>; <em>but cf. Kyles v.
+            Whitley</em>, <em>supra</em>. However, Oregon courts have
+            not yet ruled on the question of whether a trial court has
+            the power, under the discovery statutes, to order the
+            reduction of oral statements to writing if it determines
+            that the oral statement was not reduced to writing in order
+            to avoid discovery. <em>Id</em>.; <em>see</em> <em>also</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Curtis,+20+Or+App+35,+530+P2d+520+%281975&amp;hl=en&amp;as_sdt=4,38&amp;case=7308540815237883796&amp;scilh=0"><em>State
+            v. Curtis</em>, 20 Or App 35, 530 P2d 520 (1975)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=People+v.+Manley,+19+Ill+App+3d+365,+311+NE2d+593+%281973%29&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000000000400004&amp;case=5262175041696640280&amp;scilh=0"><em>People
+            v. Manley</em>, 19 Ill App 3d 365, 311 NE2d 593
+            (1973)</a>.</p>
+            <h2 id="h._what_is_a_statement"><strong>H. What Is a
+            “Statement”?</strong></h2>
+            <p>Once a writing exists, ORS 135.815 and 135.835 require it
+            be disclosed if it contains the statement of a witness whom
+            the disclosing party intends to call. <em>Young</em>,
+            <em>supra</em>, also encourages disclosure of statements you
+            may use to impeach – even if you have no intent to call a
+            particular witness. This is the situation where, for
+            example, your investigator reduces an interview with a
+            state’s witness to writing and you intend to use those
+            statements for impeachment.</p>
+            <p>There’s also a danger that if the state opts not to call
+            the witness and then you wish to do so, you have then
+            arguably committed a discovery violation by not disclosing
+            the notes “as soon as practicable.” One could argue that,
+            under <em>Divito I</em> and <em>III</em>, the notes were not
+            discoverable until you subjectively intended to call the
+            witness as your own, but it’s not a judge-friendly
+            argument.</p>
+            <p>A writing may take many forms—it may be a fragmentary
+            note, a rough draft, stenographer’s notes, or a final
+            report. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bray,+31+Or+App+47,+569+P2d+688+%281977&amp;hl=en&amp;as_sdt=4,38&amp;case=9101557819349208352&amp;scilh=0"><em>State
+            v. Bray</em>, 31 Or App 47, 569 P2d 688 (1977)</a>, the
+            Oregon Court of Appeals stated: “[W]e construe the statute
+            to require production of any ‘statement’ which is intended
+            by its maker as an account of an event or declaration fact.”
+            The court then held that the notes penciled by an officer on
+            the back of his citation after a traffic arrest were not
+            “statements” within the meaning of the Oregon pretrial
+            discovery statutes. <em>See</em> <em>also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Peters,+39+Or+App+109,+591+P2d+761+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=5697855529379970975&amp;scilh=0"><em>State
+            v. Peters</em>, 39 Or App 109, 591 P2d 761 (1979)</a>.
+            However, in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johns,+44+Or+App+421,+606+P2d+640+%281980&amp;hl=en&amp;as_sdt=4,38&amp;case=18209506668931126458&amp;scilh=0"><em>State
+            v. Johns</em>, 44 Or App 421, 606 P2d 640 (1980)</a>, the
+            Oregon Court of Appeals held that the notes of a Services to
+            Children and Families caseworker were discoverable. The
+            Oregon Court of Appeals also held that stenographer’s notes
+            and rough drafts that are the basis for a final police
+            report, which is a verbatim account of the shorthand notes
+            or rough draft, are not “statements” subject to discovery
+            under the statutes. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jackson,+31+Or+App+645,+571+P2d+523+%281977&amp;hl=en&amp;as_sdt=4,38&amp;case=7704966901919777972&amp;scilh=0"><em>State
+            v. Jackson</em>, 31 Or App 645, 571 P2d 523 (1977)</a>.</p>
+            <p><em>But</em> <em>see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fritz,+72+Or+App+409,+695+P2d+972+%281985%29&amp;hl=en&amp;as_sdt=4,38&amp;case=2127403170268372652&amp;scilh=0"><em>State
+            v. Fritz</em>, 72 Or App 409, 695 P2d 972 (1985)</a>, in
+            which the Oregon Court of Appeals held that notes which a
+            Department of Fish and Wildlife officer took of defendant’s
+            statements during an investigation were discoverable, even
+            though a report that was given to the defense was prepared
+            from notes for the district attorney, because the court felt
+            that the notes were “memoranda of...oral statements made by
+            the defendant,” to which ORS 135.815(2) is applicable. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Morrison,+33+Or+App+9,+575+P2d+988+%281978%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14375368279073559041&amp;scilh=0"><em>State
+            v. Morrison</em>, 33 Or App 9, 575 P2d 988 (1978)</a>, a
+            police agent made a writing which was a complete summary of
+            a drug transaction. When asked to write a report of the drug
+            transaction, the police agent prepared a letter using the
+            original writing. The Court of Appeals held that the
+            original writing which was destroyed was not a “statement”
+            but was more akin to notes or rough drafts. The basis for
+            this decision appears to be that the agent had not shown the
+            original writing to anyone but instead redrafted it.
+            <em>See</em>, <em>however</em>, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+26+Or+App+651,&amp;hl=en&amp;as_sdt=4,38&amp;case=17279001998203840615&amp;scilh=0"><em>State
+            v. Johnson</em>, 26 Or App 651, 554 P2d 724 (1976)</a>.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Taylor,+133+Or+App+503,+892+P2d+697&amp;hl=en&amp;as_sdt=4,38&amp;case=12786969173841216021&amp;scilh=0"><em>State
+            v. Taylor</em>, 133 Or App 503, 892 P2d 697, <em>adhered to
+            as modified</em>, 134 Or App 501 (1995)</a>, the court held
+            that police officer’s notes of statements by witnesses were
+            not discoverable, and noted that defendant made no offer of
+            proof as to what the notes contained, did not ask to have
+            the notes sealed and included in the record which would have
+            permitted appellate review, and made no showing of prejudice
+            by the state’s failure to disclose the notes.</p>
+            <p><code>Practice Tip</code></p>
+            <p>To the extent possible, the defendant should make offers
+            of proof, showings of prejudice, and ask to have the
+            disputed materials sealed and included in the record.</p>
+            <p>The file of an attorney is not “work product” that is
+            exempt from discovery if the file contains notes from the
+            attorney’s interview with a witness. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gallup,+108+Or+App+508,+816+P2d+669+%281991%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12940006992778896376&amp;scilh=0"><em>State
+            v. Gallup</em>, 108 Or App 508, 816 P2d 669 (1991)</a>.</p>
+            <p>The Oregon Supreme Court has not yet ruled on the
+            question of what constitutes a statement under the Oregon
+            pretrial discovery statutes. The reader should note that the
+            Oregon Court of Appeals cases which restrict the definition
+            of “statement” base their decisions on an interpretation of
+            the ABA Standards Relating to Discovery and Procedure Before
+            Trial, Section 2.1 (approved draft 1970). A careful reading
+            of the ABA Standards reveals that the Court of Appeals has
+            misstated the position of the majority of the commentators
+            who would require broad pretrial discovery, and which may
+            have to include “interview notes...however
+            fragmentary...even if they are merely jottings to aid the
+            investigator in later compiling his formal report.” ABA
+            Standards, pp. 61–64.</p>
+            <p>Witness statements not discoverable under the pretrial
+            discovery statute may be discoverable under other sections
+            of the Oregon Revised Statutes. See Section IV, “Other
+            Discovery Tools.”</p>
+            <h2 id="i._sanctions"><strong>I. Sanctions</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.865</a> sets out the sanctions that are available if a
+            party in a criminal case fails to comply with the pretrial
+            discovery statutes.</p>
+            <blockquote>
+            <p>Upon being apprised of any breach of the duty imposed by
+            the provisions of ORS 135.805 to 135.873, the court may
+            order the violating party to permit inspection of the
+            material, or grant a continuance, or refuse to permit the
+            witness to testify, or refuse to receive in evidence the
+            material not disclosed, or enter such other order as it
+            considers appropriate.</p>
+            </blockquote>
+            <p>When a claim of violation of the criminal discovery
+            statutes is made during a trial, the trial court must make a
+            record, or permit the parties to make a record, of whether
+            or not, in fact, the discovery statutes were complied with,
+            the explanation of noncompliance, and the impact of
+            noncompliance. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Addicks,+34+Or+App+557,&amp;hl=en&amp;as_sdt=4,38&amp;case=14551581935966991763&amp;scilh=0"><em>State
+            v. Addicks</em>, 28 Or App 663, 560 P2d 1095 (1977)</a>.
+            Failure to comply with the <em>Addicks</em> procedure will
+            result in reversal unless the failure is harmless error, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Burns,+30+Or+App+1157,+569+P2d+671+%281977&amp;hl=en&amp;as_sdt=4,38&amp;case=5991961505061852442&amp;scilh=0"><em>State
+            v. Burns</em>, 30 Or App 1157, 569 P2d 671 (1977)</a>, or
+            one of the attorneys prevents the court from determining
+            whether the violation is prejudicial, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hand,+19+Or+App+514,+528+P2d+126+%281975%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16154072591868087898&amp;scilh=0"><em>State
+            v. Hand</em>, 19 Or App 514, 528 P2d 126 (1975)</a>.
+            Although prejudice is a factor to be considered by a court
+            in deciding what sanction is to be imposed on a party who
+            fails to comply with the discovery statutes, it is not
+            necessary for a party to show that it was prejudiced before
+            invoking the sanctions set out in ORS 135.865. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dyson,+292+Or+26,+636+P2d+961+%281981%29&amp;hl=en&amp;as_sdt=4,38&amp;case=2518333418987884362&amp;scilh=0"><em>State
+            v. Dyson</em>, 292 Or 26, 636 P2d 961 (1981)</a>. One
+            exception to this rule arises when the state seeks to
+            exclude defense witnesses or evidence. Prejudice to the
+            state’s case must be shown before the sanction of exclusion
+            can be used, particularly if exclusion would violate a
+            defendant’s Article I, section 11, right to compulsory
+            process. See discussion of <em>State v. Mai</em>,
+            <em>supra</em>, in Section II B. If the state is ordered to
+            provide discovery to the defense, it has no right to appeal
+            from the court’s order. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Koennecke,+274+Or+169,+545+P2d+127+%281976&amp;hl=en&amp;as_sdt=4,38&amp;case=5636794740304898694&amp;scilh=0"><em>State
+            v. Koennecke</em>, 274 Or 169, 545 P2d 127 (1976)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Langlois,+287+Or+503,+600+P2d+872+%281979%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14922697279641597089&amp;scilh=0"><em>State
+            v. Langlois</em>, 287 Or 503, 600 P2d 872 (1979)</a>
+            (memorandum opinion); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Harshman,+61+Or+App+711,+658+P2d+1173+%281983%29.&amp;hl=en&amp;as_sdt=4,38&amp;case=9899113040140236524&amp;scilh=0"><em>State
+            v. Harshman</em>, 61 Or App 711, 658 P2d 1173
+            (1983)</a>.</p>
+            <h1 id="iii._constitutional_issues"><strong>III.
+            Constitutional Issues</strong></h1>
+            <p>The 14th Amendment to the U.S. Constitution is the basis
+            for <a
+            href="http://scholar.google.com/scholar_case?q=brady&amp;hl=en&amp;as_sdt=3,38&amp;case=9550433126269674519&amp;scilh=0"><em>Brady
+            v. Maryland</em>, 373 US 83, 87 (1963)</a>:</p>
+            <blockquote>
+            <p>[T]he suppression by the prosecutor of evidence favorable
+            to an accused, upon request, violates due process where the
+            evidence is material either to guilt or to punishment
+            irrespective of the good faith or bad faith of the
+            prosecution.</p>
+            </blockquote>
+            <p>This includes evidence which may be used by the defense
+            for impeachment purposes. <a
+            href="http://scholar.google.com/scholar_case?q=Giglio+v.+United+States,+405+US+150+%281972%29&amp;hl=en&amp;as_sdt=3,38&amp;case=12450678889272734206&amp;scilh=0"><em>Giglio
+            v. United</em> <em>States</em>, 405 US 150 (1972)</a>. When
+            a defendant is making a motion under <em>Brady</em> for
+            disclosure, dismissal or other remedies, charging that the
+            government has withheld from the defense evidence favorable
+            on the issue of guilt or punishment, it does not matter
+            whether the material sought was negligently, accidentally or
+            maliciously withheld. <a
+            href="http://scholar.google.com/scholar_case?q=Hanson+v.+Cupp,+5+Or+App+312&amp;hl=en&amp;as_sdt=4,38&amp;case=8314282295696741000&amp;scilh=0"><em>Hanson
+            v. Cupp</em>, 5 Or App 312, 320, 484 P2d 846 (1971)</a>. It
+            may or may not matter whether the evidence favorable to the
+            defendant and in the hands of the state was or was not
+            requested by the defendant. <em>Id</em>.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Agurs,+427+US+97+%281976&amp;hl=en&amp;as_sdt=3,38&amp;case=2986048599161358285&amp;scilh=0"><em>United
+            States v. Agurs</em>, 427 US 97 (1976)</a>, the Supreme
+            Court fashioned a three‑tiered standard under which the
+            degree of materiality required to overturn a conviction for
+            <em>Brady</em> violations varies with the specificity of the
+            defendant’s request for disclosure. If the prosecutor knew,
+            or should have known, that the government’s case contained
+            perjured testimony, a conviction should be reversed for
+            nondisclosure if there was “any reasonable likelihood that
+            the false testimony could have affected the jury’s
+            judgment.” <em>Id</em>. at 103–104. If the defendant makes a
+            specific request for <em>Brady</em> material and the
+            government fails to disclose it, reversal is required
+            whenever there is reason to believe that the nondisclosure
+            “might have affected the outcome of the trial.” <em>Id</em>.
+            at 104. Finally, if a defendant has made only a general
+            <em>Brady</em> request, or no discovery request at all, a
+            court may reverse only if the nondisclosed evidence would
+            create “a reasonable doubt that did not otherwise exist.”
+            <em>Id</em>. at 112.</p>
+            <p>Subsequently, a plurality of the U.S. Supreme Court held
+            that in situations where a <em>Brady</em> violation occurs
+            whether there has been no request for discovery, a general
+            request for discovery, or a specific request for the
+            material, a reversal is warranted only if there is a
+            reasonable probability that the result of the trial would
+            have been different if the nondisclosed evidence had been
+            disclosed to the defense prior to trial. A “reasonable
+            probability” is a probability sufficient to undermine the
+            confidence in the outcome. For example, if the government
+            uses perjured testimony, the conviction must be set aside if
+            there is any reasonable likelihood that the false testimony
+            could have affected the judgment of the jury. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Agurs,+427+US+97+%281976&amp;hl=en&amp;as_sdt=3,38&amp;case=3513040471717484808&amp;scilh=0"><em>United</em>
+            <em>States v. Bagley</em>, 473 US 687 (1985)</a>. “[T]he
+            individual prosecutor has a duty to learn of any favorable
+            [i.e., exculpatory] evidence known to the others acting on
+            the government’s behalf in the case, including the police.”
+            <a
+            href="http://scholar.google.com/scholar_case?q=kyles&amp;hl=en&amp;as_sdt=3,38&amp;case=11340909204337910931&amp;scilh=0"><em>Kyles
+            v. Whitley</em>, 514 US 419, 437 (1995)</a>. This is true
+            notwithstanding the reality that “no one doubts that police
+            investigators sometimes fail to inform a prosecutor of all
+            they know. But neither is there any serious doubt that
+            ‘procedures and regulations can be established to carry [the
+            prosecutor’s] burden and to insure communication of all
+            relevant information on each case to every lawyer who deals
+            with it.’ ” <em>Kyles</em>, 514 US at 438 (citing
+            <em>Giglio</em>, <em>supra</em>). The Court concluded that
+            “any argument for excusing a prosecutor from disclosing what
+            he does not happen to know about boils down to a plea to
+            substitute the police for the prosecutor, and even for the
+            courts themselves, as the final arbiters of the government’s
+            obligation to ensure fair trials.” <em>Kyles</em>, 514 US at
+            438.</p>
+            <h2 id="a._the_duty_to_preserve_evidence"><strong>A. The
+            Duty to Preserve Evidence</strong></h2>
+            <p>The duty to disclose evidence in the hands of the
+            government that is favorable to the defendant includes a
+            duty to preserve evidence prior to trial. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Michener,+25+Or+App+523,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11502082986107406680&amp;scilh=0"><em>State
+            v. Michener</em>, 25 Or App 523, 532, 550 P2d 449
+            (1976)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=v.+Hockings,+23+Or+App+274,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12167956553715626452&amp;scilh=0"><em>State
+            v. Hockings</em>, 23 Or App 274, 285, 542 P2d 133
+            (1976)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lance,+48+Or+App+141,+616+P2d+546+%281980&amp;hl=en&amp;as_sdt=4,38&amp;case=18023732698411361750&amp;scilh=0"><em>State
+            v. Lance</em>, 48 Or App 141, 616 P2d 546 (1980)</a>;
+            <em>but</em> <em>see</em> <a
+            href="http://scholar.google.com/scholar_case?q=Arizona+v.+Youngblood,+488+US+51%281988&amp;hl=en&amp;as_sdt=3,38&amp;case=14445531523312297888&amp;scilh=0"><em>Arizona
+            v. Youngblood</em>, 488 US 51(1988)</a>, discussed
+            <em>post</em>. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wright,+87+Wash+2nd+783,+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108100000000000004&amp;case=3713726433309118141&amp;scilh=0"><em>State
+            v. Wright</em>, 87 Wash 2nd 783, 557 P2d 1 (1976)</a>, and
+            <a
+            href="http://scholar.google.com/scholar_case?q=People+v.+Gomez,+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000000000004004&amp;case=15752699747886205402&amp;scilh=0"><em>People
+            v. Gomez</em>, 596 P2d 1192 (CO Sct, 1979)</a>, the
+            Washington and Colorado supreme courts recognized the
+            necessity of setting guidelines for investigative agencies
+            to follow when they have obtained evidence they wish to
+            destroy because of a belief that it has no value or which
+            may be destroyed during scientific testing. Failure to
+            preserve evidence in <em>Wright</em> and <em>Gomez</em>
+            resulted in defense victories in a murder case and a drug
+            case. The Oregon courts, however, have not yet seen the need
+            to impose similar guidelines. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kersting,+50+Or+App+461,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6849073758010211791&amp;scilh=0"><em>State
+            v. Kersting</em>, 50 Or App 461, 475 n. 4, 623 P2d 1095
+            (1980)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=292+Or+350,+638+P2d+1145+%281982&amp;hl=en&amp;as_sdt=4,38&amp;case=7569861865451705383&amp;scilh=0"><em>aff’d</em>
+            292 Or 350, 638 P2d 1145 (1982)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hendershott,+131+Or+App+531,+887+P2d+351+%281994&amp;hl=en&amp;as_sdt=4,38&amp;case=6094068297050914696&amp;scilh=0"><em>State
+            v. Hendershott</em>, 131 Or App 531, 887 P2d 351 (1994),
+            <em>rev den</em> 320 Or 587, 890 P2d 993 (1995)</a>.</p>
+            <h2
+            id="b._how_does_a_defendant_show_suppressed_evidence_is_favorable"><strong>B.
+            How Does a Defendant Show Suppressed Evidence Is
+            Favorable?</strong></h2>
+            <p>In order to show a violation of the constitutional rights
+            set forth in <em>Brady</em>, a defendant must demonstrate,
+            to the extent possible under the circumstances, that the
+            evidence suppressed or destroyed is both favorable and
+            material to an element of her or his defense or to
+            punishment. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Zinsli,+156+Or+App+245,+966+P2d+1200+%281998%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9241531761441254542&amp;scilh=0"><em>State
+            v. Zinsli</em>, 156 Or App 245, 966 P2d 1200 (1998)</a>
+            (video of FSTs); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Koennecke,+274+Or+169,&amp;hl=en&amp;as_sdt=4,38&amp;case=5636794740304898694&amp;scilh=0"><em>State
+            v. Koennecke</em>, 274 Or 169, 545 P2d 127 (1976)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mower,+50+Or+App+63,+622+P2d+745+%281981%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7142928869976675132&amp;scilh=0"><em>State
+            v. Mower</em>, 50 Or App 63, 622 P2d 745 (1981)</a>. The
+            scope of the required showing of favorableness is gauged
+            against what would be possible to show under the
+            circumstances. <em>State v. Mower</em>, <em>id</em>.;
+            <em>State v. Kersting</em>, <em>supra</em>, at 474. Simply
+            alleging that the state has withheld evidence favorable to a
+            defendant is not enough to invoke sanctions for violations
+            of the due process clause. A defendant must make some
+            showing that the evidence sought will be favorable to the
+            defense. <em>State v. Hockings</em>, <em>supra</em>.</p>
+            <p>Where evidence sought to be disclosed has been
+            functionally destroyed but was subjected to scientific
+            testing by the state prior to its destruction, a defendant
+            must show that a retest of the material would have been
+            possible and must challenge the state’s results, either by
+            attacking the manner in which the test was conducted or by
+            other evidence. On the other hand, if the state has not
+            tested an item of evidence before its loss or destruction,
+            and no other facts indicate the test result might have
+            proved unfavorable to the defendant, little more may be
+            required than a showing that the test could have been
+            performed and results obtained which, in the context of the
+            defendant’s version of the facts, would prove exculpatory.
+            <em>State v. Kersting</em>, <em>supra</em>. However, the
+            U.S. Supreme Court recently held in <em>Arizona v.
+            Youngblood</em>, <em>supra</em>, that the failure to
+            preserve evidence, absent a showing of bad faith on the part
+            of the government where the exculpatory value of the
+            evidence was highly speculative at best, did not constitute
+            a due process violation.</p>
+            <h2 id="c._alcohol_breath_tests"><strong>C. Alcohol Breath
+            Tests</strong></h2>
+            <p>Breath tests are used by the police to determine the
+            alcohol content of a person’s blood. The primary breath
+            testing device currently in use in Oregon is the Intoxilyzer
+            8000. Documents relating to the testing, certification,
+            design, and accuracy of the machines are discoverable,
+            although there is probably no requirement for the police to
+            retain any breath sample which may have been obtained from a
+            defendant, under the federal Due Process Clause. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Simpson,+40+Or+App+83,+594+P2d+425+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=13609151577638875124&amp;scilh=0"><em>State
+            v. Simpson</em>, 40 Or App 83, 594 P2d 425 (1979)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=California+v.+Trombetta,+467+US+479+%281984&amp;hl=en&amp;as_sdt=3,38&amp;case=13283072995230934974&amp;scilh=0"><em>California
+            v. Trombetta</em>, 467 US 479 (1984)</a>. If a blood sample
+            is taken, the sample is discoverable, under ORS
+            135.815(4)(b). The government may also be required to
+            preserve the sample, and failure to do so may constitute a
+            <em>Brady</em> violation, upon the appropriate evidentiary
+            showing. In <em>State v. Michener</em>, <em>supra</em>, the
+            court held that the chemical-filled ampules used to trap a
+            subject’s breath for testing by a different type of breath
+            testing device are discoverable under <em>Brady</em> and a
+            duty to preserve them exists, if the defendant can make a
+            showing that a retest of the ampule would produce evidence
+            favorable to him or her, i.e., a reading that would show or
+            suggest that the defendant was not under the influence. This
+            showing can be made by producing witnesses who can testify
+            that the defendant was sober, by showing a videotape made by
+            the police which would indicate that the defendant was not
+            under the influence, by a technical challenge to the
+            accuracy of the machine, or by other evidence. <em>But</em>
+            <em>see</em> <em>Youngblood</em>, <em>supra</em>.
+            <em>See</em> <em>also</em> <em>State v. Kersting</em>,
+            <em>supra</em>; <em>State v. Mower</em>, <em>supra</em>; <a
+            href="http://scholar.google.com/scholar_case?q=ketchersid,+586+P2d+119&amp;hl=en&amp;as_sdt=4,38&amp;case=1238332995306154195&amp;scilh=0"><em>State
+            v. Ketchersid</em>, 36 Or App 97, 586 P2d 119 (1978)</a>,
+            <em>affirmed</em> <em>on</em> <em>remand</em> <a
+            href="http://scholar.google.com/scholar_case?q=52+Or+App+931,+630+P2d+1312+&amp;hl=en&amp;as_sdt=4,38&amp;case=12049554037205535083&amp;scilh=0">52
+            Or App 931, 630 P2d 1312 (1981)</a>.</p>
+            <h2 id="section"></h2>
+            <h2 id="d._audio_and_videotapes"><strong>D. Audio and
+            Videotapes</strong></h2>
+            <p>If the police make a video or audiotape of your client,
+            it is discoverable under ORS 135.815(1). <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Peters,+39+Or+App+109,+591+P2d+761+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=5697855529379970975&amp;scilh=0"><em>State
+            v. Peters</em>, 39 Or App 109, 591 P2d 761 (1979)</a>. If
+            the tape is destroyed and a showing can be made that it
+            would have been favorable to the defendant, there has been a
+            <em>Brady</em> violation. <em>State v. Zinsli</em>,
+            <em>supra</em> (videotape evidence [of FSTs] is unique
+            because it would provide defendant with an objective video
+            replay of the events from which a jury <em>could draw its
+            own conclusions</em>); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+42+Or+App+543,+600+P2d+949+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=18212221581551255279&amp;scilh=0"><em>State
+            v. Smith</em>, 42 Or App 543, 600 P2d 949 (1979)</a>.
+            Unfortunately, the <em>Zinsli</em> court held that dismissal
+            was too extreme a sanction for destruction of the tape;
+            rather, the state should simply be barred from introducing
+            evidence of the FSTs. 156 Or App at 255; <em>cf. Smith</em>,
+            42 Or App at 546 (dismissing DUII prosecution as
+            <em>Brady</em> sanction for destruction of similar
+            tape).</p>
+            <h1 id="iv._other_discovery_tools"><strong>IV. Other
+            Discovery Tools</strong></h1>
+            <p><a href="http://www.oregonlaws.org/ors/40.375">ORS 40.375
+            (Oregon Evidence Code, Rule 612)</a> gives a party the right
+            to see a writing used to refresh the memory of a witness. So
+            notes, which might not be discoverable “statements” under
+            the pretrial discovery statutes, will be discoverable if the
+            witness refreshed his or her memory with them.</p>
+            <p>If a client claims that he or she was abused physically
+            or verbally by the arresting police officer, it will be
+            useful to find out if the officer has acted previously in a
+            similar fashion. A defendant should seek discovery of the
+            officer’s personnel file to see if complaints have been
+            filed against the officer. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fleischman,+10+Or+App+22,+495+P2d+277+%281972&amp;hl=en&amp;as_sdt=4,38&amp;case=7639098504830579271&amp;scilh=0"><em>State
+            v. Fleischman</em>, 10 Or App 22, 495 P2d 277 (1972)</a>. A
+            defendant must make a showing that evidence in the file will
+            assist him and cannot rely on pure conjecture. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sagner,+18+Or+App+464,+525+P2d+1073+%281974&amp;hl=en&amp;as_sdt=4,38&amp;case=16248498017867998218&amp;scilh=0"><em>State
+            v. Sagner</em>, 18 Or App 464, 525 P2d 1073 (1974)</a>;
+            <em>see</em> <em>also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Christopher,+55+Or+App+544,&amp;hl=en&amp;as_sdt=4,38&amp;case=17745152629413595833&amp;scilh=0"><em>State
+            v. Christopher</em>, 55 Or App 544, 555, 639 P2d 642
+            (1982)</a>. If a complaint was filed regarding police
+            conduct arising out of your particular case, the police
+            department internal investigation of the incident may be
+            discoverable as well. ORS 135.815(1); <em>State</em>
+            <em>ex</em> <em>rel</em> <em>Wilson v. Thomas</em>,
+            <em>supra</em>; <a
+            href="http://scholar.google.com/scholar_case?q=City+of+Portland+v.+Rice,+308+Or+118,+775+P2d+1371+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14092555005882042986&amp;scilh=0"><em>City</em>
+            <em>of</em> <em>Portland v. Rice</em>, 308 Or 118, 775 P2d
+            1371 (1989)</a> (police internal affairs investigation file
+            subject to public disclosure because investigation did not
+            result in discipline).</p>
+            <p>Oregon’s public records law, <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors192.html">ORS
+            chapter 192</a>, can be used to get accident reports,
+            overtime pay records of officers, mug shots, Intoxilyzer
+            maintenance and repair records, medical records at jails (if
+            your client signs a release), and countless other items.
+            Police dispatch tapes and 911 tapes are also discoverable.
+            ORS 135.815(1). Use of the Public Records Inspection Act,
+            ORS 192.410–192.500, as a discovery tool was specifically
+            discussed in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Spada,+286+Or+305,+594+P2d+815+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=742835309681492290&amp;scilh=0"><em>State
+            v. Spada</em>, 286 Or 305, 309–310, 594 P2d 815 (1979</a>).
+            The court in <em>Spada</em> held that evidence should not be
+            suppressed if available to the defendant through either a
+            subpoena <em>duces tecum</em> or through Oregon’s Public
+            Records Inspection Act. In light of <em>Spada</em>, it is
+            essential for the DUII practitioner to become familiar with
+            procedures for acquiring documents and evidence outside of
+            the normal discovery process. It is important to both
+            understand Oregon’s Public Records Inspection Act and to
+            develop relationships with law enforcement records
+            personnel. For instance, in Multnomah County one can acquire
+            booking photos and jail records with a letter like that in
+            Appendix C; and booking videotapes are available with a
+            letter like that in Appendix D.</p>
+            <p>The state cannot invoke a claim of privilege concerning
+            evidence relevant to guilt or innocence or punishment when
+            it chooses to prosecute a person for a crime, even when
+            otherwise such evidence might be privileged against
+            disclosure. <em>See</em> <em>State v. Fleischman</em>,
+            <em>supra,</em> at 32, and cases cited therein; <em>State v.
+            Warren</em>, <em>supra</em> [DHS files]; <em>City</em>
+            <em>of</em> <em>Portland v. Rice</em>, <em>supra</em>. In <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Kerns+v.+Read,+11+Or+App+48,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10536404909196620093&amp;scilh=0"><em>State</em>
+            <em>ex</em> <em>rel</em> <em>Kerns v. Read</em>, 11 Or App
+            48, 53–54, 501 P2d 82 (1972)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=266+Or+382,+513+P2d+1160+%281973&amp;hl=en&amp;as_sdt=4,38&amp;case=3411793752099552856&amp;scilh=0"><em>rev
+            dismissed as improvidently granted</em>, 266 Or 382, 513 P2d
+            1160 (1973)</a>, the Oregon Court of Appeals held that:</p>
+            <blockquote>
+            <p>When, in a criminal trial, the state persists in a claim
+            of privilege that has been overruled by the judge the state
+            should be given an election: disclose the information or
+            dismiss the indictment…</p>
+            </blockquote>
+            <p>Contempt is ordinarily not the sanction to be imposed.
+            <em>But</em> <em>see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Beach+v.+Norblad,+308+Or+429,+781+P2d+349+%281989&amp;hl=en&amp;as_sdt=4,38&amp;case=11548309962273513054&amp;scilh=0"><em>State</em>
+            <em>ex</em> <em>rel</em> <em>Beach v. Norblad,</em> 308 Or
+            429, 781 P2d 349 (1989)</a>.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hartfield,+290+Or+583,+624+P2d+588+%281981&amp;hl=en&amp;as_sdt=4,38&amp;case=11196518619898803650&amp;scilh=0"><em>State
+            v. Hartfield</em>, 290 Or 583, 624 P2d 588 (1981)</a>, held
+            that after a witness has testified on direct examination by
+            the state, the defendant is entitled to hear an existing
+            tape recording of that witness’s testimony given in the
+            grand jury proceeding which led to the indictment upon which
+            the trial is held. This does not, however, extend to clerk
+            or grand juror notes. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cox,+87+Or+App+443,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11053455100572760823&amp;scilh=0"><em>State
+            v. Cox</em>, 87 Or App 443, 742 P2d 694 (1987)</a>. This may
+            be helpful in felony DUII prosecutions, or misdemeanor DUII
+            prosecutions that were taken to the grand jury (e.g.,
+            manslaughter cases).</p>
+            <h1 id="v._additional_practice_tips"><strong>V. Additional
+            Practice Tips</strong></h1>
+            <p>It is not necessary to file a discovery motion in order
+            to obtain discovery. <em>Brady</em> and the Oregon statutes
+            require the state to disclose all discoverable material,
+            regardless of the demand for it. However, as discussed above
+            it is advisable to file a written demand for discovery, as
+            well as a written motion to compel discovery, if you do not
+            receive everything you have requested. If a demand for
+            discovery or a motion requesting specific material is on
+            file, the district attorney cannot claim that the material
+            was never requested or that he or she did not know defense
+            counsel wanted the material.</p>
+            <p>Pursuant to <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">ORS
+            136.580</a>, the defendant may subpoena books, papers or
+            documents relevant to his trial prior to the trial. Thus,
+            the subpoena may require that the documents be returned to
+            the court before the trial begins and allow for the
+            inspection and copying of what is requested. In the DUII
+            realm, a subpoena of the arresting officer’s police reports
+            from the three prior and three subsequent DUII arrests may
+            reveal helpful information—such as each defendant
+            mysteriously misses the letter “H” in the alphabet or they
+            each stumble on step nine on the walk-and-turn.</p>
+            <p>A practitioner should always consult local court rules
+            regarding discovery because they are different in different
+            counties. It is also a good idea to consult with other
+            practitioners in the county to find out how those local
+            rules are actually practiced. For example, in Multnomah
+            County it is virtually impossible to obtain any sanction for
+            a discovery violation unless a motion to compel has
+            previously been filed. Do not rely on the assertions of the
+            district attorney’s office that “we do not have it” or “it
+            is not discoverable.” If there is any question in your mind,
+            file your motion and ask for a hearing. If there is doubt
+            about the existence or discoverability of information in
+            various files, an <em>in</em> <em>camera</em> inspection of
+            the material is the preferred method of resolving the
+            question, the decision to be made by the trial court. The
+            file can then be copied and sealed for appellate review of
+            the trial court ruling. <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Dooley+v.+Connall,+257+Or+94,+475+P2d+582+%281970&amp;hl=en&amp;as_sdt=4,38&amp;case=479233370660618979&amp;scilh=0"><em>State</em>
+            <em>ex</em> <em>rel</em> <em>Dooley v. Connall</em>, 257 Or
+            94, 475 P2d 582 (1970)</a>; <em>State v. Warren</em>,
+            <em>supra</em>; <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Beach+v.+Norblad,+308+Or+429,+781+P2d+349+%281989&amp;hl=en&amp;as_sdt=4,38&amp;case=11548309962273513054&amp;scilh=0"><em>State</em>
+            <em>ex</em> <em>rel</em> <em>Beach v. Norblad</em>, 308 Or
+            429, 781 P2d 349 (1989)</a><em>.</em></p>
+    </body>
+</html>

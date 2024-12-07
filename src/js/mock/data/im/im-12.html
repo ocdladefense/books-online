@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p>2010 edition</p>
+            <p><strong>Investigating Informants</strong></p>
+            <p><strong><em>Don Grant</em></strong></p>
+            <h1 id="overview"><strong>Overview</strong></h1>
+            <p>Investigating an informant can be very productive if
+            carried out in a timely and organized way. The pressure of
+            time will almost always be the limiting factor in how far
+            you can go toward discrediting the informant, so it is
+            critical to begin the background investigation of the
+            informant as soon as you start the case. Many of the
+            procedures I recommend will require several rounds of
+            subpoenas <em>duces tecum,</em>with some delay between
+            rounds as the records suppliers comply. Start early and keep
+            at it, regardless of what else may be going on in the case
+            (including negotiations).</p>
+            <p>There are several meaningful categories of informants
+            encountered in criminal cases. One of the more common is the
+            “CRI” or “Confidential Reliable Informant” who provides the
+            inside information necessary to obtain a search warrant. One
+            variant of this type of informant is referred to by the
+            affiant in a warrant affidavit as a “CI” or “Confidential
+            Informant,” which may indicate that the affiant could not
+            bring herself to refer to this scum-dog as “reliable.” The
+            CI or CRI is often on the payroll of one or more police
+            agencies, and those agencies may not be willing to give up
+            the true identity of a working CRI just to make your case
+            stick. Occasionally you will encounter the “concerned
+            citizen” who claims to be assisting the police purely as a
+            public service, or the truly concerned family member or
+            friend who is convinced that by giving</p>
+            <p>information to the police she is forcing the client to
+            get the “help” he needs. While these well-motivated
+            informants might seem to be unassailable, when their true
+            motivation for providing information is unmasked, their
+            credibility can still be severely undermined.</p>
+            <p>The type of informant used in your case and the stage of
+            the proceedings where you intend to attack the informant’s
+            credibility may determine which methods are most suitable
+            for you. In some cases the informant is used to obtain a
+            search warrant and then is never seen or heard from again.
+            The focus of this investigation is to show how the affiant,
+            who attested to the affidavit in support of the warrant,
+            knew or should have known the information that suggests the
+            informant was not reliable and should have disclosed that
+            information to the magistrate. In other cases the government
+            will have to call the informant at trial when, for example,
+            the informant is a percipient witness to crimes in the
+            indictment, or to rebut a claim of entrapment.</p>
+            <p>Attacking the credibility of an informant is not
+            materially different from attacking the credibility of any
+            witness, except that informants tend to have more “dirt” in
+            their backgrounds. The successful attack will be one that
+            gets as much of this dirt as possible in an admissible form
+            and where the dirt is sufficiently cross- referenced to make
+            each part of the impeachment support all of the other
+            parts.</p>
+            <h1 id="finding_the_rat"><strong>Finding the
+            Rat</strong></h1>
+            <p>In some cases the informant’s identity is not explicitly
+            disclosed in discovery materials and the client may not know
+            who the informant was. Do not accept at face value the
+            client’s assertion that he does not know who the informant
+            is; go after the information that <em>should</em>have warned
+            him and ask the background questions. Some productive areas
+            to inquire about are the following: Were any of his friends,
+            suppliers, associates or acquaintances busted at roughly the
+            same time he was? Were searches conducted of premises
+            controlled by any of these people within a few weeks of
+            client’s bust? If so, talk to the representatives of the
+            people searched or busted. Get search warrants and
+            affidavits from those busts; they may unwittingly reveal the
+            identity of the rat. Were any of client’s friends,
+            relatives, suppliers, associates or acquaintances busted
+            shortly before client was? There could either be a common
+            rat or an earlier “bustee” could <em>be</em>the rat. As soon
+            as any search warrant affidavits associated with the
+            client’s bust come to light (either through discovery or
+            through investigation — that is, going to the appropriate
+            courthouse and copying the warrant), go over these documents
+            with the client in detail. There is often a high level of
+            denial at the outset of a case, when the client truly does
+            not want to believe that “good ol’ Joe” sold him out. Even
+            reading in the affidavit that the informant visited on a
+            particular day and purchased a specified quantity of product
+            from the client may not convince the client that his ex is
+            the informant, but focusing him on those details may help
+            break through the denial. Do not assume that the client is
+            lying about knowing who the informant is; as an investigator
+            your ability to sift information to find the important part
+            is not an attribute most of your clients will share. Help
+            them figure it out.</p>
+            <h1 id="the_two_pronged_attack"><strong>The Two-pronged
+            Attack</strong></h1>
+            <h2 id="attacking_the_story"><strong><em>1. Attacking the
+            Story</em></strong></h2>
+            <p>The task ahead of you is not simply to show that the
+            informant is an unreliable person, you will also have to
+            prove he is lying about your client. To effectively
+            discredit an informant you need to attack the “story” in
+            addition to attacking the storyteller. A certain amount of
+            organization and preparation is necessary to effectively
+            attack the informant’s testimony. To begin with, you have to
+            ascertain what that testimony will be. You can start by
+            trying to discover as many versions of the story as possible
+            given to cops, DAs, the grand jury or whoever else. You may
+            find references to what the informant has said in comments
+            made at the informant’s sentencing on recent charges, or at
+            a resentencing where the informant is given a reduction in
+            sentence. There may be references in institutional records
+            to the informant having provided information against certain
+            individuals or groups.</p>
+            <p>Once you have a sense of the informant’s story, analyze
+            it for inconsistencies. Does the informant’s chronology make
+            sense? I have seen informant statements where drug deals
+            were described in which the provider gave up the dope and
+            the buyer owed the provider for the drugs, but I have never
+            talked to a drug dealer who did business this way. I always
+            wonder what happened to the buy money when I hear that the
+            dope and the money did not change hands near simultaneously.
+            While looking for internal contradictions, also look for
+            facts that could be objectively verified. Weather, work
+            schedules, release date from custody, meetings with lawyers,
+            club meetings, weddings, funerals or public events can be
+            checked to see whether they support the informant’s account.
+            Similarly, other witnesses, especially other government
+            witnesses, should be questioned and their statements
+            analyzed to see whether they support the informant’s
+            account.</p>
+            <h2 id="attacking_the_rat"><strong><em>2. Attacking the
+            Rat</em></strong></h2>
+            <p>To attack the rat, you need to find the cheese. What is
+            the informant’s motivation? Let’s start with the worst case
+            scenario: the informant is a concerned citizen who is
+            determined to stop the dope dealing in his neighborhood and
+            is helping the cops as a public service. If you can show
+            that the informant had a personal motive to get the client
+            out of the way, the “public service” rationale will be
+            exposed as the smoke screen that it is.</p>
+            <p>What motivates someone to become an informant? The most
+            common answers are these: money, fear of prosecution or
+            incarceration, and personal advantage. Many informants are
+            professional rats who make a good living by betraying the
+            trust of their friends and associates. If this kind of
+            informant is exposed or has his credibility severely damaged
+            in court, he simply gets passed on by his police handlers to
+            an area where he is not yet known. Police handling the
+            informant gain the advantage that they can remain ignorant
+            of misconduct by the informant in the past, or about money
+            or drugs or property given to the informant by police in
+            other agencies. Agents will go to some length to conceal how
+            much their rat has been paid and the basis on which they are
+            paid. Some informants get paid only after the case is made,
+            so they can not be cross- examined about how much they are
+            getting for setting this client up; the agency will argue
+            that amounts paid for other cases are irrelevant to this
+            one. Informants can be paid by the number of deals they set
+            up, the quantity of drugs seized, the value of property
+            seized for forfeiture or the length of a defendant’s
+            sentence, or they may simply get a certain amount each month
+            they work for that particular agency. A paid informant may
+            receive most or all of his compensation “in kind” in free
+            rent, furniture, food or vehicles. One informant we
+            researched, who was also a fence, got to keep some of the
+            property taken in the burglaries he arranged for the
+            defendant to commit.</p>
+            <p>Consideration in a pending case or cases can be a
+            powerful motivation to become an informant. The payoff can
+            be as obvious as a case suddenly dismissed or as subtle as a
+            favorable recommendation for a downward adjustment. When
+            looking for case consideration as motivation, it is critical
+            not to miss consideration given someone close to the
+            informant. This caution is particularly appropriate when
+            looking for motivation for the “concerned citizen” type of
+            informant. That citizen will look much less credible if you
+            can show that his activities resulted in a dismissal of his
+            child’s case. If the informant or his family are not
+            citizens of the U.S., immigration considerations may provide
+            a powerful motivation.</p>
+            <p>There are many kinds of personal advantage that might
+            motivate an informant. Revenge for past disputes is not
+            uncommon (especially revenge for the defendant having
+            informed against the witness or against a friend or family
+            member). Sexual motivations are sometimes involved. Gang
+            rivalries, even within a single gang, can provide a motive
+            to get rid of some competition. Certain personalities simply
+            enjoy “getting over” on other people and would set people up
+            for fun but get special pleasure (and other advantages) from
+            doing this for law enforcement.</p>
+            <p>Discovering (and proving) the motivation for the
+            informant to dump on your client is an important part of
+            discrediting that informant.</p>
+            <h1 id="personal_history_in_public_records"><strong>Personal
+            History in Public Records</strong></h1>
+            <p>There may be cases in which the client can tell you where
+            to look to get the goods on your informant, but if so they
+            are rare indeed. It is more common that your client can tell
+            you nothing relevant about the informant, so you have to
+            find your way to the documents and people who can tell you.
+            In effect you need to reconstruct the informant’s life
+            history. By life history I mean his criminal history,
+            medical history, employment history, marital history, and
+            perhaps his military record, educational background and
+            financial history. As a legal investigator you should be
+            thoroughly familiar with preparing a complete history of an
+            individual, but this can seem more difficult when preparing
+            a history of a person where you have to discover all the
+            relevant facts.</p>
+            <p>The first things to ascertain are the informant’s
+            “identifiers,” that is full name, date of birth, and Social
+            Security Number. (See also Chapter 10, “Locating
+            Witnesses.”) You may be able to start on this list through
+            the Dept. of Motor Vehicles if you have enough unique
+            information to identify the informant conclusively. If not,
+            you may have to start with his last known residence. He
+            either owned it or rented it. If he is the owner, there
+            should be documents recorded that will identify his lender
+            or mortgage holder. The seller’s realtor may have records
+            showing his Social Security Number, his employer and his
+            bank. If there are photocopies of checks in the file, they
+            may reveal a spouse’s name. If the informant was a renter,
+            you may be able to get a look at the rental application.
+            These applications will typically have information about
+            prior residences, personal or financial references,
+            employment and family. You will want a copy of this and any
+            other application you discover the informant has filled out
+            because such applications are a fertile source for lies he
+            has told outside of setting your client up. You will want to
+            compile as many lies as possible to prepare for
+            cross-examination of the informant. So, once you have seen
+            the rental application you will want to backtrack each
+            assertion made on it and see whether you can verify it or
+            not. Once you get an idea of where the informant has worked
+            in the past you will want to start gathering employment
+            applications also and do the same kind of back-tracking on
+            these documents. You may find that an undocumented alien
+            suddenly says he is a citizen, produces an SSN that does not
+            belong to him and assures his prospective employer he has
+            never been arrested or charged with a felony before.</p>
+            <p>As soon as you develop a date of birth, try to locate the
+            informant’s driver’s license and the records of vehicles he
+            owns or has owned. Motor vehicle records can help you start
+            to piece together where the informant has lived in the past
+            since each vehicle’s history may reveal a different set of
+            addresses. The vehicle records will also list any
+            lien-holders, which may lead you to credit applications
+            where the informant found it useful to lie about his
+            livelihood and his criminal past. His driving record will
+            reveal where he has been stopped for moving violations and
+            may also have some historical information about where he has
+            lived.</p>
+            <p>As you figure out where the informant has lived over the
+            years, check court records for those areas. Court records
+            are one of the most fertile public records sources for
+            developing a life history. Remember, at this point in the
+            investigation, you are not only interested in offenses that
+            can legally be used in court to impeach the informant, you
+            are trying to develop more information about who he is,
+            where he has lived and who he has associated with. Each
+            parking ticket is a record of a place the informant once
+            visited and a vehicle he at least once drove. A small claims
+            case shows someone he once did business with or had a
+            problem with. As you continue to organize and work these
+            records you will want to get in touch with as many people
+            who have known the informant as possible and to locate those
+            witnesses who will candidly tell you what kind of person he
+            was then.</p>
+            <p>Among the most significant court records are domestic
+            relations cases. Here you will find the restraining orders
+            detailing his misdeeds and lies, and the support enforcement
+            proceedings that are running parallel to the large cash
+            payments the cops are giving the informant. It is wonderful
+            to disclose to jurors that while the informant was knocking
+            down serious money for turning in your client, he was also
+            ducking his obligations to pay for the support of his
+            children. The items mentioned are the tip of the iceberg of
+            what you may find by researching domestic relations
+            files.</p>
+            <p>To the extent that you find court records of criminal
+            cases, you will want to obtain the police reports describing
+            the arrests. These reports will contain references to
+            associates and codefendants and will certainly detail lies
+            told to law enforcement. The court file of his criminal
+            cases may include sentencing letters or motions for
+            reduction of sentence, which may give you impeachment
+            options. Pay particular attention to any sealed documents
+            you find in these files. For obvious reasons, information
+            submitted to a court about cooperation with authorities is
+            often filed under seal. You may want to have a motion
+            presented to that court to unseal these documents or to
+            provide them for an <em>in camera</em>review by the judge in
+            your case. You will also want to get Department of
+            Corrections records to look for pre-sentence reports,
+            psychological evaluations, parole and probation conditions,
+            and parole violation reports.</p>
+            <p>The first focus is usually on easily obtained public
+            records like court and motor vehicles records because
+            locating these will not alert the informant to your interest
+            in him. To prevent the informant from warning people not to
+            cooperate with you, you will want to gather as much
+            information about the informant’s life before you start
+            knocking on the doors that will alert him to your interest.
+            As you move from the public records to follow up with the
+            people referenced in them, you will want to start with those
+            who are least likely to alert him and move inward to those
+            who may still be in close contact.</p>
+            <p>Aside from formal public records searches, you should
+            also make inquiries within the criminal defense bar (for
+            example on the OCDLA or OALI listserves). Your informant may
+            have been active in previous cases. If he was, try to find
+            out whether he testified in any of those cases, and if he
+            did get a transcript of that testimony. At the least such a
+            transcript will give you an idea of how he is going to
+            respond to questions about his motivation, method of
+            payment, whether he pays taxes on the blood money he earns,
+            etc. Occasionally, since you have more time to follow up on
+            the answers he gave in the earlier proceeding than the
+            previous trial team did, you may be able to prove he
+            perjured himself when he claimed that he could not pay
+            income taxes because his handlers had not fixed him up with
+            a Social Security Number, or that he had no idea how
+            methamphetamine is manufactured and sold. Even better you
+            may be able to establish that his handlers (and <em>ex
+            hypotheo</em>the prosecutor) knew he perjured himself. Why
+            didn’t they mention this in the search warrant affidavit in
+            your case?</p>
+            <p>While researching court documents, do not forget to look
+            for records of bankruptcies typically filed and indexed
+            separately from other cases.</p>
+            <p>If the informant has ever run a business, there may be
+            records on him at the Department of Revenue or the
+            Corporations Commission. These may in turn reveal who his
+            business associates were and provide more insight into his
+            financial history.</p>
+            <p>As you compile and organize the public record history of
+            your informant, you will want to keep running lists of
+            people and organizations to follow up with and also of lies
+            you discover on the face of the documents. For each address
+            you can associate with the informant you will want to
+            interview neighbors; for each employer you may want to
+            interview supervisors and co-workers, and you will certainly
+            want to obtain copies of applications for employment.</p>
+            <p>As you develop leads to follow, keep in mind that you
+            will want to analyze each step to decide whether you have
+            enough information to bring your investigation of the
+            informant into the light, then strategically decide which
+            leads to follow in what order.</p>
+            <p>There may be cases in which you will want the informant
+            to know he is the object of intense scrutiny. While
+            certainly no ethical investigator would intentionally harass
+            the subject of the investigation, in a case where you want
+            to interview the informant and he is not coming forward,
+            conducting interviews with his ex-wife or adult children may
+            precipitate a call or visit from the informant. Just as
+            certain interviews are likely to trigger a response from the
+            informant, attempting to obtain certain kinds of documents
+            such as mental health records or drug and alcohol treatment
+            records or DHS files will almost certainly provoke a motion
+            to quash. There is no reason to be afraid of such a motion,
+            but you and the attorney will want to plan your strategy so
+            that the motion to quash does not come up before you have
+            obtained all the records you are likely to get without a
+            fight. A judge may react badly to a set of subpoenas that
+            appear to be a “fishing expedition,” while the same judge
+            may not be at all concerned about turning over records when
+            you clearly have a basis for believing those records contain
+            relevant information. In other words, you want to interview
+            the adult child the informant abused before you have to
+            defend your subpoena for the records showing that abuse (and
+            the lies he told denying it).</p>
+            <p>If you know where the informant is staying, you may want
+            to consider running a “trash cover” on that
+            residence—intercept the garbage after it is put out but
+            before it gets picked up. This can be a risky investigation
+            move but it could yield a huge benefit if you discover the
+            informant’s prescription bottles for psychotropic
+            medications or his notes from the meeting with the agents to
+            discuss his testimony at the motion to suppress. You will
+            almost certainly gather more information about his financial
+            dealings and what he has been buying and where.</p>
+            <h1
+            id="subpoenas_duces_tecumand_discovery_motions"><strong>Subpoenas
+            <em>Duces Tecum</em>and Discovery Motions</strong></h1>
+            <p>The most important point to keep in mind is that this
+            level of research takes time to do properly. After
+            exhausting the freely available public records of your
+            informant, it is time to prepare and serve the first round
+            of subpoenas for documents that are not subject to the
+            Public Records Act or the Freedom of Information Act. The
+            first round of subpoenas should usually be served and
+            returned by a subpoena return date. The subpoena return date
+            might be an arraignment or a pretrial conference hearing, or
+            it might be a date you set up with the court specifically
+            for the return of subpoenas.</p>
+            <p>You will not want a motion to suppress before you get the
+            documents you want to impeach the informant in that motion.
+            To be used effectively, any documents you receive will
+            require review and follow-up interviews. It is best to
+            prepare for several rounds of subpoena returns before the
+            hearing or trial where you intend to impeach the informant.
+            Each round gives you a separate opportunity to educate the
+            judge about the many ways this informant has shown himself
+            to be a liar and a cheat in the past, and perhaps to tweak
+            the prosecutor for not digging up and disclosing the very
+            information you are having to locate on your own.</p>
+            <p>In both state and federal criminal cases, subpoenas can
+            be used to require a person or organization to produce
+            documents or tangible objects. There are two distinctly
+            different uses of such subpoenas <em>duces tecum:</em>to
+            obtain the records in conjunction with testimony at an
+            otherwise regularly scheduled hearing or trial, and to
+            obtain documents in advance of the trial or hearing. There
+            is a debate among lawyers about whether the rules require a
+            specific motion to obtain the court’s permission to issue
+            the second type of subpoena. I think of the distinction as
+            focusing first on why the person or organization was
+            subpoenaed for that date: If it was to obtain testimony
+            relevant to the scheduled hearing and the documents or
+            objects are relevant to that testimony, I would consider the
+            <em>duces tecum</em>portion of the subpoena to be an adjunct
+            to the testimony and this should not require a motion and
+            order. If, on the other hand, the hearing date is simply a
+            convenient time for you to receive the documents and there
+            is no plan to introduce them that day in that proceeding, I
+            would consider a more specific motion and order
+            appropriate.</p>
+            <p>The governing law in this area for federal court derives
+            from Federal Rule of Criminal Procedure (FRCrP)</p>
+            <p>17. This rule provides authority for the court, upon
+            motion of a party, to direct that documents or other items
+            be produced in advance of trial or hearing. The state law on
+            criminal subpoenas is in ORS 136.567 (issuance of
+            subpoenas), and ORS 136.580 (books, papers or documents).
+            Note that ORS 136.580(2) requires a motion before the court
+            can direct that such items be produced at the court prior to
+            the time when they are to be offered, and provides that the
+            court can order that both parties be permitted to inspect or
+            copy such documents. I am aware of substantial debate among
+            practicing defense attorneys about whether or when such
+            motions can be made <em>ex parte</em>or under seal. Be aware
+            that the debate exists and make sure the attorneys you are
+            working for do the necessary research to back their position
+            before the motions to quash are filed. (Also see Chapter 13
+            for more on subpoenas.)</p>
+            <p>Every document you receive should be examined carefully,
+            both as a record of lies or contradictions and as a source
+            for new people to interview or documents to seek. You will
+            want to interview anyone you can find who has ever had a
+            dispute with the informant or has been charged with
+            responsibility for supervising him. Previous crime victims,
+            ex-spouses, ex-lovers, and former employers can be very
+            difficult witnesses for the prosecutor to cross. Does she
+            want to bring out in front of the jury that while the
+            informant’s wife and kids were on welfare in Texas he was
+            screwing around with his ex-girlfriend here in Oregon and
+            eventually stole her car and left with her sister? At times,
+            the witness’s relationship with the informant may be
+            more</p>
+            <p>significant as impeachment than the bad things they have
+            to say about his reputation for truthfulness. Parole and
+            probation officers can be great sources for lies the
+            informant told in the past. How does the prosecutor explain
+            why her witness even had a parole officer, much less lied to
+            her repeatedly? You may be surprised to find how freely the
+            informant’s old POs are willing to share dirt on their
+            former supervisee—somehow they do not seem to feel that
+            parolees are entitled to much privacy about their past
+            indiscretions…. A true bonanza is finding the PO who was
+            supervising the informant during the period when he was
+            working your client. It is almost always a condition of
+            probation or post-prison supervision that the defendant tell
+            his PO about any contact he has with law enforcement. Do you
+            really think the informant told his PO he was going out and
+            buying drugs to work off his latest beef? And do you think
+            the informant’s handlers on the task force told the PO how
+            they were using the person the PO was supposed to be
+            supervising? How do you suppose the PO feels when she learns
+            that the task force agents have been treating her like a
+            mushroom (keeping her in the dark and feeding her
+            manure)?</p>
+            <h1
+            id="spreading_the_stench_beyond_the_rat"><strong>Spreading
+            the Stench Beyond the Rat</strong></h1>
+            <p>In some cases neutralizing the testimony of the informant
+            will not be enough to win the case. If you have the right
+            facts, you may be able to infect the handling agents with
+            the lies and cheating of the informant. You should always
+            get the agency’s or task force’s rules for dealing with
+            informants. When you can show that the handler ignored some
+            of those rules to avoid a problem with the informant, you
+            may be able to taint the handler with the informant’s bad
+            behavior. Among the common agency rules are that all funds
+            or other consideration promised or given to the informant
+            must be documented, that any supervising probation or
+            post-prison supervision officers be kept informed of the
+            informant’s activities, and that the informant be</p>
+            <p>told not to break any laws and to pay all applicable
+            taxes.</p>
+            <p>Why bother looking for stuff the Rules of Evidence won’t
+            let you use?</p>
+            <p>At times, the attorney you are working with will be less
+            excited about a particular piece of impeachment than you
+            are. They may react immediately that the lie you caught the
+            witness in is collateral to his testimony, or is “only” a
+            prior bad act and therefore not admissible directly.
+            Sometimes this reaction comes from a less creative view of
+            the Rules of Evidence. Information that is not directly
+            admissible against the informant may become admissible if he
+            denies it, or if another witness testifies to the
+            informant’s character for truthfulness, or as an example of
+            the reasons your witness has the opinion that the informant
+            is not a truthful person. Occasionally you may have an
+            extensive list of admissible lies the informant has been
+            caught in and a few that are probably outside the Rules’
+            scope. If you get the informant admitting to admissible lies
+            during cross-examination, the inadmissible ones may get past
+            the opponent, or put him in the position where he has to sit
+            silently while his witness admits he has perjured himself,
+            lied to the IRS and his bank, only to rise indignantly to
+            object when you ask about the lies the witness told his
+            kids. This scenario is one of the many reasons why you need
+            to gather as many lies and cheats by the informant as
+            possible, without regard to their individual
+            admissibility.</p>
+            <p>Not all cases end up in trial. It may be that the
+            information you have might not be admissible in trial, but
+            that doesn’t mean it won’t affect your opponent’s decisions
+            about settling the case. In short, gather the dirt early and
+            get it all. If you do not end up using some of it in court,
+            so be it.</p>
+            <p>What kind of dirt should I look for?</p>
+            <p>The answer: “Anything you can find!” This is probably not
+            specific enough in this context, but the fact is you should
+            get whatever you can find that would make <em>you</em>less
+            likely to believe the person; leave the legal theory to the
+            attorney who will have to get it admitted. That said, a few
+            ideas that have worked for others would include the
+            following:</p>
+            <p>1.Other bad acts, Oregon Evidence Code (OEC) 404(3) and
+            Federal Rules of Evidence (FRE)</p>
+            <p>404(b). This approach will work best if the evidence is
+            related to one of the factors listed in the rule, such as
+            motive, intent, plan, etc.</p>
+            <p>2.Opinion or reputation, OEC 608 and 405 and FRE 608 and
+            405. If the witness can be asked for the basis of their
+            opinion, you may be able to get into specific acts. Both
+            rules appear to limit inquiry about specific acts to
+            cross-examination, especially for lay witnesses. Expert
+            witnesses may be permitted to go further in testifying to
+            the basis of their opinion. If the evidence is offered under
+            part (b) of either Federal Rule, testimony of specific acts
+            of bad conduct is admissible if the acts bear on the
+            witness’ character for truthfulness. OEC 608 prohibits
+            inquiry into specific instances of conduct for the purposes
+            of attacking or supporting the credibility of a witness.</p>
+            <p>3.Drug use or dealing. If not admissible as a prior bad
+            act under 608, it may be admissible to attack the witness’
+            competence to perceive or accurately recall what
+            occurred.</p>
+            <p>4.Mental condition also may be admitted to attack ability
+            to accurately perceive and recall.</p>
+            <p>5.Bias. If the evidence you have reveals a reason why the
+            informant may be motivated to lie about your client,
+            otherwise inadmissible evidence may be admitted for this
+            purpose.</p>
+            <p>6.Motive. If you can show the witness will avoid
+            prosecution, or a longer sentence, get revenge, or resolve a
+            marital problem by having your client put away, you should
+            be able to bring these facts out at least through cross of
+            the witness. If the witness denies the motive, extrinsic
+            evidence may be admitted. This may be where you can use the
+            pending charges you turned up, or where information gleaned
+            from prison records might prove useful.</p>
+            <p>7.Inconsistent statements. Depending on how the questions
+            are framed, evidence that would be inadmissible under FRE
+            608 and OEC 613 may be admissible as a prior inconsistent
+            statement, for example, where a witness is testifying he was
+            motivated to be an informant because he is opposed to drug
+            use and you have evidence he used to deal.</p>
+            <p>8.There are more, just keep digging!</p>
+            <h1 id="organizing_the_material"><strong>Organizing the
+            Material</strong></h1>
+            <p>How you keep your materials organized is much less
+            important than understanding that you have to keep them
+            organized. I will generally base my system on the plan for
+            presenting the material.</p>
+            <p>If we are planning to use our impeachment of the
+            informant to attack the affiant and seek a
+            <em>Franks</em>hearing, I would probably keep the material
+            about the informant in a three-ring binder with a separate
+            section each for the lies, crimes, and misdeeds we can prove
+            the affiant knew about. On the other hand, if we are
+            planning an entrapment defense at trial, I might have a
+            separate binder for each witness or document source we might
+            want to present independently, and a separate binder for the
+            cross of the informant. I like to use binders both because
+            they make the documents easy to review and share within the
+            team and because they can be effective courtroom theater. In
+            one case involving seven informants we made sets of binders
+            for each of the seven. The court had one, the witness was
+            given one as he took the stand, the AUSA had one, and each
+            juror had a copy so everyone could follow along. As our
+            attorney started the cross, the witness would initially deny
+            that he had a long history of lying and our lawyer would
+            direct him to identify exhibit #1 in the binder. After two
+            or three of these documents were discussed, when our
+            attorney would ask if the witness had ever lied about X, the
+            witness would try to get out of the trap by saying, “I don’t
+            recall lying about that, but if you have it here in your
+            book, it is probably true that I did.” Our attorney could
+            then use the document to refresh the witness’s recollection
+            about a lie he had apparently forgotten. By the third
+            witness, the jurors were obviously eyeing the size of the
+            notebook to get an idea either of how long the examination
+            would take or how big a liar this witness was.</p>
+            <p>Cross-referencing the material is also an important part
+            of keeping it organized. Impeachment is much more effective
+            if the points of impeachment reinforce each other, so it is
+            critical to corroborate the facts you are proving and to
+            provide a narrative thread to show that making things up
+            about other people is a tactic this person has used
+            repeatedly and successfully. The previous “victims” of an
+            informant’s lies may well know each other and be somewhat
+            aware of what the informant has done to the other people in
+            their social set.</p>
+            <p>Cross-referencing the materials also makes it easier to
+            examine the informant thematically. You might, for example,
+            start with his testimony in a prior case that he
+            <em>would</em>have paid taxes on the $150 grand he knocked
+            down as an informant the previous year if only the agents
+            had gotten him a Social Security Number as they promised,
+            then move to the rental application from two years prior
+            where he listed a Social Security Number, then to the loan
+            application he filled out a year before that testimony where
+            he used the same Social Security Number and listed his
+            occupation as “security consultant” and his income for the
+            year as sixty thousand, and then on through the other half
+            dozen times he was happy to use that same Social Security
+            Number in other contexts.</p>
+            <p>Another organization issue arises from the need to keep
+            track of subpoenas, FOIA requests and Public Records</p>
+            <p>Act requests. You may be allotted a limited number of
+            subpoenas <em>duces tecum,</em>as in federal court, in which
+            case it is important to know how many you have served and
+            how many you have left. As responses come in it is vital to
+            know which subpoenas were simply ignored because you will
+            want to follow up those subpoenas with a motion to compel.
+            FOIA and the Oregon Public Records Act have clear deadlines,
+            and once those deadlines pass without a response you will
+            want to initiate the next escalation in each of those
+            fights.</p>
+            <h1 id="conclusion"><strong>Conclusion</strong></h1>
+            <p>I never met or did a background check on George
+            Washington or Abraham Lincoln, but I feel quite safe in
+            advising you that no matter how squeaky clean the informant
+            may appear from the description in the search warrant
+            affidavit, if you do a thorough, concentrated, organized
+            life history of the informant as outlined in this chapter
+            you will find a few instances where he lied to someone about
+            something to get some benefit or avoid some consequence. A
+            few mythological figures aside, informants are human and if
+            you look hard enough you should be able to prove it.</p>
+            <p>Good hunting.</p>
+            <p><strong>i <em>Acknowledgments</em></strong></p>
+            <p>The material this chapter was drawn from has been written
+            about and discussed by a number of people in and around the
+            Federal Public Defender’s office, and I have borrowed
+            shamelessly from the ideas and organizational concepts of my
+            colleagues, including Steve Wax, Parke Eldred, Paul Papak,
+            Karen Bates, Toni Pisani, Allen Hallmark, Craig Weinerman
+            and numerous others. The errors and omissions, of course,
+            are solely my own.</p>
+            <p>'''</p>
+            <center>
+            <p>Index of Information Sources</p>
+            </center>
+            <p>'''</p>
+            <center>
+            <p>(Originally compiled by Paul Papak and Craig
+            Weinerman.)</p>
+            </center>
+            <p><strong>Criminal History</strong></p>
+            <p>1.Pre-sentence investigation reports</p>
+            <p>2.Police reports from every case:
+            felony/misdemeanor/juvenile</p>
+            <p>3.Grand jury transcripts from every case</p>
+            <p>4.Guilty plea transcripts from every case</p>
+            <p>5.Sentencing transcripts from every case</p>
+            <p>6.Applications for reconsideration</p>
+            <p>7.Letters from snitch to court</p>
+            <p>8.Diagnostic reports from all institutions</p>
+            <p>9.Disciplinary reports from all institutions</p>
+            <p>10.Letters of recommendation</p>
+            <p><strong>Medical History</strong></p>
+            <p>1.Psychological evaluations for schools</p>
+            <p>2.Psychological evaluations for the military</p>
+            <p>3.Psychological evaluations for correctional
+            institutions</p>
+            <p>4.Welfare records showing medical services performed at
+            state expense</p>
+            <p>5.Any medical records relating to current case</p>
+            <p>6.Private psychiatric/psychological examination or
+            therapy—need release or subpoena</p>
+            <p>7.Reports done when the snitch was involved in civil
+            litigation</p>
+            <p>8.Reports done when the snitch was a child under
+            protection of a social services agency</p>
+            <p>9.Previous pleas of insanity, incapacity, or impaired
+            mental state</p>
+            <p>10.Drug or alcohol treatment programs</p>
+            <p><strong>Source Material on Con Jobs</strong></p>
+            <p>1.Criminal records and hearings</p>
+            <p>2.Probation or parole agreements</p>
+            <p>3.Civil suits</p>
+            <p>4.Divorce suits</p>
+            <p>5.Employment records and resources</p>
+            <p>6.Bank loan applications and payment records</p>
+            <p>7.Interviews of people who know the snitch well</p>
+            <p>8.Letters to the court from the snitch</p>
+            <p>9.Prior inconsistent statements</p>
+            <p>10.Any application for anything, ever</p>
+            <p><strong>Employment History</strong></p>
+            <p>1.Resumés</p>
+            <p>2.Employment applications and records</p>
+            <p>3.Incorporation/Partnership/DBA registrations</p>
+            <p>4.Letters to customers</p>
+            <p>5.Pre-sentence investigation reports</p>
+            <p>6.Law enforcement investigatory files on the witness’
+            business</p>
+            <p>7.Better Business Bureau files</p>
+            <p>8.Civil suits concerning business</p>
+            <p>9.Business equipment lease agreements</p>
+            <p>10.Divorce documents</p>
+            <p><strong>Marital History</strong></p>
+            <p>1.Divorce actions—pleadings</p>
+            <p>2.Financial affidavit</p>
+            <p>3.Divorce custody hearings</p>
+            <p>4.Divorce hearings on division of property</p>
+            <p>5.Tax information</p>
+            <p>6.Pre-sentence investigation reports</p>
+            <p>7.Jail visiting sheets</p>
+            <p>8.Auto registration records</p>
+            <p>9.Property records</p>
+            <p>10.Credit reports</p>
+            <p><strong>Education History</strong></p>
+            <p>1.Release of records by snitch</p>
+            <p>2.Pre-sentence investigation reports</p>
+            <p>3.Job applications</p>
+            <p>4.Transcripts from all schools attended</p>
+            <p>5.Subpoena <em>duces tecum</em></p>
+            <p>6.Applications for trade licenses</p>
+            <p>7.Credit applications</p>
+            <p>8.K-HS—check archives of Board of Education</p>
+            <p>9.Check who has requested transcripts</p>
+            <p>10.Driving records–look for high school driver’s
+            education</p>
+            <p><strong>Military History</strong></p>
+            <p>1.Letter to branch of service</p>
+            <p>2.Release from snitch</p>
+            <p>3.Pre-sentence investigation reports</p>
+            <p>4.Job applications</p>
+            <p>5.Letter to local draft board</p>
+            <p>6.Medical records</p>
+            <p>7.Probation/bond applications</p>
+            <p>8.Local/national military fraternal organizations</p>
+            <p>9.Veteran benefit applications at colleges/trade
+            schools</p>
+            <p>10.Family interviews</p>
+            <p><strong>Financial History</strong></p>
+            <p>1.Loan applications, loan history, and collection
+            activity</p>
+            <p>2.Get case numbers for court cases</p>
+            <p>3.Names of co-signers</p>
+            <p>4.Collateral pledged on loans</p>
+            <p>5.Uses of borrowed funds</p>
+            <p>6.If snitch embezzled funds, the bonding company will
+            have a full investigatory file on the matter, almost always
+            containing background on the snitch.</p>
+    </body>
+</html>

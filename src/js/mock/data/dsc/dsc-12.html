@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </header>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 12. Demurrers and Motions</strong></p>
+            <p><strong>By Matthew McHenry</strong></p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>Motion practice is a crucial component of any vigorous
+            defense. While several of the concepts and arguments herein
+            apply across a broad array of cases, defense practitioners
+            have found them particularly useful in litigating pretrial
+            motions in sex crime cases. That these motions are not
+            always (or even often) granted should not deter defense
+            counsel from filing and litigating them.</p>
+            <p>Information gathered through investigation and a thorough
+            review of discovery, in consultation with appropriate
+            experts, can be used to file motions which frame and press
+            the defense theory, block unfavorable evidence, and admit
+            favorable evidence.</p>
+            <p>The defense bar should push trial judges to think
+            critically about the importance of the defense function,
+            their role as gatekeeper, and their responsibility to ensure
+            the jury is not impermissibly or unfairly prejudiced. Be
+            creative—favorable appellate law is grounded in innovative
+            arguments made at the trial level.</p>
+            <h1 id="ii._discovery_motions"><strong>II. Discovery
+            Motions</strong></h1>
+            <p>Do not rely on the state meeting its discovery
+            obligations to provide you with all relevant discovery.
+            Police reports and child abuse center assessments may not
+            reveal critical information about the complaining witness,
+            such as a history of lying, mental health issues, or a
+            pattern of sexual behavior relevant to your defense. Be
+            proactive in filing motions for discovery and subpoenaing
+            evidence under Oregon’s statutory scheme as well as your
+            client’s rights under <a
+            href="https://scholar.google.com/scholar_case?case=9550433126269674519&amp;q=brady+v+maryland&amp;hl=en&amp;as_sdt=3,38"><em>Brady
+            v. Maryland</em></a>, 373 US 83 (1963). Defense counsel
+            should, for example, seek copies of text messages and other
+            forensic data downloaded from the complaining witness’s
+            digital devices that may contain information relevant to the
+            witness’s background or the allegations. All discovery
+            motions made under <em>Brady</em> should be factual and
+            specific, and can be supported through proffered testimony
+            of investigators, family members, etc.</p>
+            <p>Defense counsel should seek <em>in camera</em> review of
+            a complaining witness’s counseling records, if any. Records
+            of counseling sessions pertinent to the alleged conduct can
+            be particularly valuable. Such records contain information
+            and details about the allegations not provided elsewhere.
+            They may reveal inconsistencies, or show how a complaining
+            witness’s account has developed over<br />
+            time, perhaps due to suggestive interviewing techniques or
+            other outside influence. Such records may contain
+            information about mental health issues, developmental
+            disabilities, or other traits<br />
+            that could affect a person’s ability to accurately perceive,
+            recall, and report events. Counseling records, when viewed
+            by an expert, can provide a better understanding of the
+            complaining wit-ness, both as a person and as a witness.</p>
+            <blockquote>
+            <p>Counseling records are generally protected by privilege
+            under the Oregon Evidence Code (Rule 504). The privilege can
+            be overridden, however, by your client’s constitutional
+            right to produce evidence and present a defense, and at the
+            very least an <em>in camera</em> review by a judge for
+            information relevant to the defense will be obtainable in
+            many cases. <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=2803473276092247324&amp;q=lammi&amp;hl=en&amp;as_sdt=4,38"><em>State v. Lammi</em></a>,
+            278 Or App 690, 375 P3d 547 (<em>Lammi I</em>), <em>adh’d to
+            as clarified</em>, 281 Or App 96, 380 P3d 1257 (2016) (<a
+            href="https://scholar.google.com/scholar_case?case=17970950792474530660&amp;q=281+Or+App+96,+&amp;hl=en&amp;as_sdt=4,38"><em>Lammi
+            II </em></a>), <em>rev. den.</em>, 360 Or 697, 388 P3d 710
+            (2017) (defendant entitled to <em>in camera</em> review of
+            complaining witness’s otherwise privileged counseling
+            records upon demonstration of reasonable basis to believe
+            records contain exculpatory evidence); <em>see <a
+            href="https://scholar.google.com/scholar_case?case=14187385942476506430&amp;q=State+v.+Covington,+291+Or+App+514&amp;hl=en&amp;as_sdt=4,38">State
+            v. Covington</a>,</em> 291 Or App 514, ___ P3d ___ (2018).
+            In crafting motions for and proffering evidence in support
+            of a request for <em>in camera</em> review, focus on why the
+            records you seek are material and helpful to the defense.
+            Under <em>Lammi</em> and <em>Covington</em>, you have a
+            two-step threshold: “the defendant must first ‘demonstrate
+            that the items of which he sought review would have been
+            material and favorable to his defense.’ ” <a
+            href="https://scholar.google.com/scholar_case?case=16160591226774405961&amp;q=State+v.+Cockrell,+284+Or+App+674&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cockrell</em></a>, 284 Or App 674, 689, 395 P3d
+            612, <em>rev. den.</em>, 361 Or 886, 403 P3d 772
+            (2017) (alterations omitted). Once the defendant establishes
+            that the evidence he seeks in the record meets that
+            standard, he must show it is reasonable to believe the
+            documents records sought contain that evidence.
+            <em>Covington</em>, 291 Or App at 517.</p>
+            </blockquote>
+            <p>Practice Tip: Concepts to Obtain Sensitive/Confidential
+            Records</p>
+            <p>When arguing to obtain such records, important
+            considerations include whether the records contain:</p>
+            <ul>
+            <li><blockquote>
+            <p>information that the complaining witness has a mental
+            illness that can affect perception, memory, or accurate
+            recounting</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>information regarding other assaults or sexual activity
+            alleged by the complaining witness, which could support a
+            motion to introduce prior false accusations (see below) or,
+            alternatively, could be the source of the complaining
+            witness’s knowledge of sexual behavior</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>the identity of other possible perpetrators who may be
+            responsible for the abuse</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>information about suggestive interviewing techniques,
+            inconsistent statements, or witness coaching.</p>
+            </blockquote></li>
+            </ul>
+            <p>Obtaining an <em>in camera</em> inspection from the court
+            is only the first step. Equally important is educating the
+            judge (who in all likelihood has never been a criminal
+            defense attorney) about the materials you seek and why they
+            are critical to your defense—be prepared to articulate your
+            theory of relevance and admissibility for the materials. If
+            you are concerned about prematurely disclosing defense
+            strategy to the other side, seek an <em>ex parte</em>
+            hearing on your need for the records. For additional
+            procedural guidance on obtaining <em>in camera</em> review
+            of such records, review <a
+            href="https://scholar.google.com/scholar_case?case=2994318378946002036&amp;q=State+v.+Reed,+173+Or+App+185&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Reed</em></a>, 173 Or App 185, 197-201 (2001). Under
+            <em>Reed</em>, a defendant is entitled to <em>in camera</em>
+            review of records if the defendant demonstrates that such a
+            review “might yield” evidence subject to disclosure.
+            <em>Id.</em> at 197. To satisfy the “might yield” standard,
+            the defendant must provide the court with evidence that
+            would support a reasonable belief that something in the
+            records might be subject to disclosure (such as exculpatory
+            evidence). <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=17970950792474530660&amp;q=State+v.+Lammi,+278+Or+App+690,+695&amp;hl=en&amp;as_sdt=4,38">Lammi</a></em>,
+            278 Or App at 694 (noting that <em>Reed</em> “explains what
+            standard a defendant . . . must satisfy to obtain an <em>in
+            camera</em> review of the counseling records); <em>See
+            Covington, supra</em> setting forth the two step test from
+            <em>Lammi</em>.</p>
+            <p>School records are an important investigative lead as
+            well, as they can lead to evidence of motive, reactions to
+            peer pressure, disciplinary actions related to dishonesty,
+            and potential witnesses. They can also expose whether there
+            had been recent behavioral changes (or the absence of any
+            behavioral changes, which could also be helpful to the
+            defense).</p>
+            <h1 id="iii._severance"><strong>III. Severance</strong></h1>
+            <p>Severing counts can provide multiple benefits. Severing
+            counts means severing trials, which leads to more
+            opportunities for problems to arise in the state’s case(s).
+            In addition, damaging evidence relevant only to severed
+            counts can be excluded from a trial on the non-severed
+            counts. Severed counts also allow a defendant to present
+            inconsistent defenses in separate trials without alienating
+            the jury. Of course, even if the motion is unsuccessful, the
+            defense has created an issue for appeal.</p>
+            <h2 id="a._law_of_severance"><strong>A. Law of
+            Severance</strong></h2>
+            <p>The process for severing counts is governed by ORS
+            132.560:</p>
+            <p>Joinder of counts and charges; consolidation of charging
+            instruments.</p>
+            <p>(1) A charging instrument must charge but one offense,
+            and in one form only, except that:</p>
+            <p>(a) Where the offense may be committed by the use of
+            different means, the charging instrument may allege the
+            means in the alternative.</p>
+            <p>(b) Two or more offenses may be charged in the same
+            charging instrument in a separate count for each offense if
+            the offenses charged are alleged to have been committed by
+            the same person or persons and are:</p>
+            <p>(A) Of the same or similar character;</p>
+            <p>(B) Based on the same act or transaction; or</p>
+            <blockquote>
+            <p>(C) Based on two or more acts or transactions connected
+            together or constituting parts of a common scheme or
+            plan.</p>
+            </blockquote>
+            <p>(2) If two or more charging instruments are found in
+            circumstances described in subsection (1)(b) of this
+            section, the court may order them to be consolidated.</p>
+            <p>(3) If it appears, upon motion, that the state or
+            defendant is substantially prejudiced by a joinder of
+            offenses under subsection (1) or (2) of this section, the
+            court may order an election or separate trials of counts or
+            provide whatever other relief justice requires.</p>
+            <p>Note that a defendant wishing to sever counts only needs
+            to show “substantial prejudice” if the counts are already
+            joined properly under subsections (1) or (2). If the counts
+            are improperly joined to begin with, as has historically
+            been true in many charging instruments, “substantial
+            prejudice” is not required. <a
+            href="https://scholar.google.com/scholar_case?case=5046522544336606544&amp;q=State+v.+Crummett,+274+Or+App+618,+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Crummett</em></a>, 274 Or App 618, 620 (2015) (“<em>Once
+            charges are properly joined</em> in a single charging
+            instrument, either party may move to sever the charges if
+            the joinder will ‘substantially prejudice[]’ the party”)
+            (citing ORS 132.560(3)) (emphasis added).</p>
+            <p>To avoid the high bar of the “substantial prejudice”
+            standard, defendants should argue for severance on the
+            grounds that joinder of the charges is impermissible under
+            the statutory criteria. While a traditional motion to sever
+            may be filed, severance can also be accomplished through a
+            demurrer based on <a
+            href="https://scholar.google.com/scholar_case?case=13385997525429503324&amp;q=State+v.+Poston,+277+Or+App+137+(2016)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Poston</em></a>, 277 Or App 137 (2016), <em>adhered to on
+            recons.</em> 285 Or App 750 (2017); <em>see also <a
+            href="https://scholar.google.com/scholar_case?case=15320085152885258065&amp;q=State+v.+Page,+290+Or+App+&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2018">State
+            v. Page</a></em>, 290 Or App 562, WL 1083431 (2018). A
+            demurrer may be a better vehicle than a traditional motion
+            to sever because it is aimed at “the face” of the charging
+            instrument, thus the state is not permitted to introduce
+            extrinsic evidence in an attempt to save the deficiencies.
+            ORS 135.630. The court cannot examine anything outside the
+            four corners of the indictment. <a
+            href="https://scholar.google.com/scholar_case?case=11668008536910734058&amp;q=State+v.+Cervantes,+232+Or+App+567,++(2009)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cervantes</em></a>, 232 Or App 567, 573 (2009) (citing
+            cases).</p>
+            <p>A defendant may demur to an indictment if it does not
+            “substantially conform to the requirements of ORS 132.510 to
+            ORS 132.560 . . .” ORS 135.630(2) (emphasis added). ORS
+            132.560 is the joinder statute discussed above. Thus, if the
+            charges are impermissibly joined under ORS 132.560, the
+            demurrer should be allowed and the indictment dismissed—the
+            equivalent of a successful motion to sever counts, and if
+            the state chooses to reissue the charges, it must do so
+            under separate charging instruments.</p>
+            <p>When joining charges, the state must allege <em>in the
+            indictment</em> the basis for the joinder. <em>Poston</em>,
+            277 Or App at 144–45 (error to deny demurrer where state
+            failed to “allege in the charging instrument the basis for
+            the joinder of the crimes that are charged in it, whether by
+            alleging the basis for joinder in the language of the
+            joinder statute or by alleging facts sufficient to establish
+            compliance with the joinder statute”). Under the joinder
+            statute if any of the charges are not of the “same” or
+            “similar” character to others, those charges are improperly
+            joined. Likewise, the charges are improperly joined if the
+            indictment fails to allege either that the crimes occurred
+            as part of the same criminal episode, or that the charges
+            are part of the same scheme or plan. ORS 132.560(1)(b).</p>
+            <p>1. Crimes of the Same or Similar Character</p>
+            <p>Because the Oregon legislature and appellate courts have
+            offered little guidance in determining whether crimes are of
+            the “same or similar character,” defense counsel can and
+            should be creative in arguing they are not. “Similar
+            character” means “[n]early corresponding; resembling in many
+            respects; somewhat alike; having a general likeness.” <a
+            href="https://scholar.google.com/scholar_case?case=8550915177515973369&amp;q=State+v.+Meyer,+109+Or+App+598,++(1991)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Meyer</em></a>, 109 Or App 598, 602 (1991). In arguing
+            crimes are not of similar character, focus on the
+            differences in the elements, including the required mental
+            state for each charge. Other areas ripe for argument against
+            joinder are differences in possible or likely sentences, or
+            differences in the nature of the victims (age, or images vs.
+            contact offenses, for example). Urge trial judges not to
+            accept vague arguments by the state. “Similar” must mean
+            something—it is a restrictive term. Not all crimes can be
+            joined—they must be of similar character. A prosecution
+            argument, for example, that “all sex crimes” are of similar
+            character divests the phrase “similar character” of any
+            meaning. <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=12016112786431522430&amp;q=State+v.+Johnson,+199+Or+App+305+(2005)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Johnson</em></a>, 199 Or App 305 (2005) (rejecting
+            state’s argument that joinder of marijuana and
+            methamphetamine charges was proper because both involved
+            “drug trade” as too generalized). Unless the charges allege
+            the same crime and the same victim, arguments can be made
+            that the charges are not of the “same” or “similar”
+            character.</p>
+            <p>2. Two or More Acts or Transactions Connected Together or
+            Constituting Parts of a Common Scheme or Plan</p>
+            <p>The legislature and the courts have similarly provided
+            vague guidance on the meanings of “same act or transaction”
+            and “two or more acts or transactions connected together
+            constituting a common scheme or plan.” <a
+            href="https://scholar.google.com/scholar_case?case=14733960523135553940&amp;q=250+Or+App+316+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Witherspoon</em></a> restated and summarized the existing
+            case law on the subject. 250 Or App 316 (2012). A key
+            component of the analysis is “whether a complete account of
+            one crime necessarily includes details of the other, or,
+            framed another way, whether the crimes are ‘cross-related.’”
+            <em>Id.</em> at 322 (quoting <a
+            href="https://scholar.google.com/scholar_case?case=5689157977191855854&amp;q=State+v.+Potter,+236+Or+App+74,+(2010&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Potter</em></a>, 236 Or App 74, 82-83 (2010)). Crimes are
+            <em>not</em> cross-related where one of the crimes may be
+            proven without evidence of the other. <em>Id.</em></p>
+            <p>The Oregon Supreme Court has held that “same criminal
+            episode” from ORS 131.505(4) has the same meaning as “same
+            transaction” in ORS 132.560(1)(b). <a
+            href="https://scholar.google.com/scholar_case?case=12518298256310522930&amp;q=State+v.+Boyd,+271+Or+558,+(1975)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Boyd</em></a>, 271 Or 558, 565-66 (1975) (en banc). ORS
+            131.505(4) defines “criminal episode” as “continuous and
+            uninterrupted conduct that establishes at least one offense
+            and is so joined in time, place and circumstances that such
+            conduct is directed to the accomplishment of a single
+            criminal objective.” Defense counsel should review Justice
+            Walters’s concurrence in <a
+            href="https://scholar.google.com/scholar_case?case=1608364165056524560&amp;q=State+v.+Campbell,+354+Or+375+(2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Campbell</em></a>, 354 Or 375 (2013). Writing in support
+            of the court’s decision to dismiss a petition for review,
+            and after reviewing the Commentary to the criminal code
+            regarding “single criminal objective,” Justice Walter
+            wrote:</p>
+            <p>What I take from those examples is that, to be directed
+            to the accomplishment of a single criminal objective, the
+            two offenses need not be similar, need not have the same
+            elements, need not be proved by the same evidence, and need
+            not share the same statutory intent. Rather, they may be as
+            dissimilar as robbery and murder or as robbery and rape. It
+            also appears that a “single criminal objective” is not a
+            narrow concept: Two or more offenses may be directed toward
+            more than one criminal objective and still be part of the
+            same criminal episode, as long as they reasonably can be
+            seen to be directed toward a single overarching criminal
+            objective. Those examples from the Commentary are helpful in
+            assessing how closely distinct criminal events must be
+            connected in time and place before they can be said to share
+            a criminal objective.</p>
+            <p><em>Id.</em> at 379.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12016112786431522430&amp;q=State+v.+Johnson,+199+Or+App+305+(2005)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Johnson</em></a>, 199 Or App 305 (2005), is also useful.
+            <em>Johnson</em> confirmed that to be part of the same act
+            or transaction, or common scheme or plan, the crimes must be
+            both logically related <em>and</em> there must be large
+            amounts of “overlapping proof.” <em>Id.</em> at 317-18. Too
+            often, trial courts focus on the “logically related” prong
+            while overlooking the “large amount of overlapping proof”
+            requirement.</p>
+            <p>The <em>Johnson</em> defendant was involved in marijuana
+            manufacturing, which led to his affiliation with
+            methamphetamine manufacturers, which led to a
+            methamphetamine-related robbery. <em>Id.</em> at 316. The
+            trial court allowed the joinder of the methamphetamine
+            manufacturing, robbery, and murder charges with a marijuana
+            manufacturing charge because both involved manufacture of
+            “controlled substances.” <em>Id.</em> at 315. The Court of
+            Appeals rejected the state’s argument that joinder was
+            proper because the charges were both related to the “drug
+            trade.” <em>Id.</em> at 316. That generalized argument “is
+            best appreciated at high altitudes” and “would stretch the
+            meaning of the phrases ‘connected together’ or ‘common
+            scheme or plan’ to a level of generality that equates the
+            expansive standard for relevance in OEC 401 . . . with the
+            connectedness between offenses required in ORS
+            132.560(1)(b)(C), rendering almost useless the tests in
+            subparagraphs (1)(b)(A) and (1)(b)(B).” <em>Id</em>. Rather,
+            the overlapping evidence for the two charges was “very
+            slight,” and “aside from the attenuated relationship between
+            defendant’s drug manufacturing and the state’s theory
+            concerning his motive to rob . . . there were no
+            interlocking facts that would suggest a logical relationship
+            between the two offenses.” <em>Id.</em> at 317-18. <em>See
+            also <a
+            href="https://scholar.google.com/scholar_case?case=18170317824223245490&amp;q=State+v.+Dewhitt,+276+Or+App+373,+(2016)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Dewhitt</a></em>, 276 Or App 373, 380-87 (2016)
+            (discussing joinder statute and analysis under
+            <em>Johnson</em>). As with the “same” or “similar” character
+            standard, be thoughtful—if your client faces different
+            charges with different victims, press your arguments that
+            the charges do not stem from the same criminal episode.</p>
+            <h1
+            id="iv._grand_jury_recordings_and_motions_to_produce_grand_jury_notes_and_records"><strong>IV.
+            Grand Jury Recordings and Motions to Produce Grand Jury
+            Notes and Records</strong></h1>
+            <p>Governor Kate Brown signed Senate Bill 505 into law in
+            September of 2017, which directs certain counties
+            (Multnomah, Deschutes, Jackson) to record grand jury
+            testimony and proceedings. Under the new law, if the grand
+            jury returns a true bill, the district attorney must provide
+            the defense with audio or written transcripts of the
+            proceedings 10 days after the defendant is arraigned. The
+            district attorney may move for a protective order to redact,
+            restrict, or deny access based on various factors such as
+            witness security and secrecy of informants.</p>
+            <p>It remains to be seen how often prosecutors will move for
+            protective orders or how courts will respond to such
+            motions. In addition, the grand jury recording requirement
+            will not apply statewide until 2019. As such, defense
+            counsel should be prepared to respond to prosecutorial
+            motions to restrict and move for production of grand jury
+            notes and records (insofar as they exist) under the current
+            scheme. If the motion is denied, the defense attorney should
+            move to have the grand jury notes sealed and made part of
+            the record for appellate purposes. Filing the motion can
+            have other beneficial results as well. In one sex abuse case
+            with multiple alleged victims, though the motion was denied,
+            the state responded to it with a letter admitting that at
+            grand jury, one of the complaining witnesses recanted the
+            statements detectives attributed to her during the
+            investigation. Though the state was obligated to produce
+            this information under <em>Brady</em> in any event, it was
+            not until the motion for grand jury notes was filed that the
+            state acted on its obligation.</p>
+            <p>While ORS 135.855 exempts from discovery “[t]ranscripts,
+            recordings, or memoranda of testimony of witnesses before
+            the grand jury,” due process dictates that in certain
+            situations, records of a grand jury witness’s testimony
+            should be disclosed to the defense. ORS 132.220 expressly
+            provides that a court may require disclosure of “[t]he
+            testimony of a witness examined before the grand jury, for
+            the purpose of ascertaining whether it is consistent with
+            that given by the witness before the court,” and also “[t]he
+            testimony given before such grand jury by any person, upon a
+            charge against such person for perjury or false swearing or
+            upon trial therefore.”</p>
+            <p><em>Brady</em> and the United States Constitution present
+            the strongest arguments to obtain grand jury records.
+            Disclosure of grand jury testimony may be constitutionally
+            compelled. <a
+            href="https://scholar.google.com/scholar_case?case=16160591226774405961&amp;q=State+v.+Cockrell,+284+Or+App+674+(2017)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cockrell</em></a>, 284 Or App 674 (2017). The state must
+            disclose grand jury testimony that is favorable to the
+            defendant. <a
+            href="https://scholar.google.com/scholar_case?case=9550433126269674519&amp;q=brady+v+maryland&amp;hl=en&amp;as_sdt=3,38"><em>Brady
+            v. Maryland</em></a>, 373 US 83 (1963). ORS 153.055(2)
+            defines “material” as that which can affect the course or
+            outcome of any proceeding or transaction. A false statement
+            need not bear on an ultimate fact in dispute to be material.
+            <a
+            href="https://scholar.google.com/scholar_case?case=6719257288250001619&amp;q=State+v.+Ray,+36+Or+App+375,++(1978)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ray</em></a>, 36 Or App 375, 378-79 (1978). <em>See also
+            Brady</em>, 375 US at 87 (“suppression by the prosecution of
+            evidence favorable to an accused upon request violates due
+            process where the evidence is material either to guilt or to
+            punishment, irrespective of the good faith or bad faith of
+            the prosecution”); <a
+            href="https://scholar.google.com/scholar_case?case=1328923367946889640&amp;q=State+v.+McDonnell,+313+Or+478,+500+(1992)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McDonnell</em></a>, 313 Or 478, 500 (1992) (en banc)
+            (state has affirmative due process obligation to produce
+            exculpatory evidence to defense).</p>
+            <p>The most common ground for production of grand jury
+            records is inconsistent statements by grand jury witnesses.
+            If, for example, defense counsel learns a witness testified
+            before grand jury in a manner inconsistent with statements
+            made to law enforcement, the defendant is entitled to the
+            grand jury records. Likewise, if the complaining witness’s
+            statements to law enforcement are inconsistent with
+            statements made during a child abuse assessment interview
+            (such as CARES), it necessarily follows that any testimony
+            given to the grand jury is inconsistent with at least some
+            of their prior statements, thus entitling the defendant to
+            the materials.</p>
+            <p>A credible motion for grand jury records should at least
+            result in a judge conducting an <em>in camera</em> review of
+            any grand jury notes and records, looking for exculpatory
+            information, including impeachment material. As with a
+            request for <em>in camera</em> review of counseling records,
+            the defense must produce “evidence sufficient to support a
+            reasonable belief that in camera review might yield”
+            relevant evidence. <a
+            href="https://scholar.google.com/scholar_case?case=16452009604046495212&amp;q=State+v.+Bray,+281+Or+App+584,+616+(2016)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bray</em></a>, 281 Or App 584, 616 (2016). Defense
+            counsel should be prepared to proffer testimonial and
+            documentary evidence where available to support counsel’s
+            belief that grand jury notes “might yield” exculpatory
+            evidence.</p>
+            <h1
+            id="v._carbon_copy_counts_and_forcing_the_state_to_elect_differentiating_theories"><strong>V.
+            Carbon Copy Counts and Forcing the State to Elect
+            Differentiating Theories</strong></h1>
+            <p>In many sex crime cases, particularly those involving
+            minors as complaining witnesses, the state charges our
+            clients with multiple identical counts—same alleged act,
+            same time period—against the same victim. At times the state
+            differentiates counts by designating them as a “separate act
+            or transaction” from the other counts, but even in that
+            situation they are still otherwise exact copies of each
+            other. For example, an indictment may contain multiple
+            charges stating:</p>
+            <p>That as a separate act and transaction from [each of the
+            other counts]: The defendant, on or between September 1,
+            2013 and October 1, 2015, in Washington County, Oregon, did
+            unlawfully and knowingly subject [the victim], a child under
+            14 years of age, to sexual contact by touching the victim’s
+            genitalia, a sexual and intimate part of the child.</p>
+            <p>Federal case law supports arguments that carbon-copy
+            indictments violate due process by failing to provide
+            sufficient notice of the alleged offense and also
+            implicating double-jeopardy concerns. The grand jury’s role
+            is compromised when it is unclear whether conduct a grand
+            jury found to support a charge is the same conduct a petit
+            jury considers when deciding on convictions. Until recently,
+            upon defense motion a court would either require the state
+            to “elect” a theory on each count at the close of its case
+            in chief (assigning specific differentiating conduct or
+            circumstances to each carbon-copy count), or would deliver a
+            “concurrence” instruction to the jury (instructing the jury
+            that in order to convict on any count, the jurors must all
+            agree on the same act or transaction underlying the count).
+            <em>See <a
+            href="https://scholar.google.com/scholar_case?case=5361268885973885825&amp;q=State+v.+Houston,+147+Or+App+285,+(1997)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Houston</a></em>, 147 Or App 285, 292 (1997).</p>
+            <p>The election process clearly provided an unfair advantage
+            for prosecutors—it allowed the state to tailor the charges
+            to conform to the evidence as it came in at trial. This
+            could lead to the presentation of evidence that might
+            otherwise be inadmissible as irrelevant or improper
+            character evidence. It also creates enormous difficulties in
+            formulating and presenting a defense theory if the
+            prosecutor’s theory is not fully developed until the close
+            of the state’s case.</p>
+            <p>In 2015, however, the Oregon Court of Appeals provided a
+            way to attack these indictments and force the state to
+            provide differentiating details for each count
+            <em>before</em> the trial begins. <a
+            href="https://scholar.google.com/scholar_case?case=1715038003024966943&amp;q=State+v.+Antoine,+269+Or+App+66+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Antoine</em></a>, 269 Or App 66 (2015). <em>Antoine</em>
+            recognizes that carbon copy counts do not provide sufficient
+            notice of the charges under the federal and state
+            constitutions. <em>Id.</em> at 75-76. The operative facts in
+            <em>Antoine</em> are familiar. The defendant was charged
+            with four counts of sodomy and four counts of first-degree
+            sexual abuse. Each count alleged the crimes occurred during
+            the same two-year period using the wording of the relevant
+            statute. Each count was indistinguishable from the other
+            counts of the same crime. The defendant demurred to the
+            charging instrument, challenging the lack of specificity in
+            the charges. <em>Id.</em> at 68-70. Specifically, the
+            defendant argued the indictment lacked the notice necessary
+            to defend himself, created a risk of double jeopardy, and
+            failed to ensure he was being tried only for those acts for
+            which the grand jury indicted. <em>Id.</em> at 68.</p>
+            <p>In response to the demurrer, the state agreed to elect
+            what specific acts constituted each count <em>after</em> the
+            close of the state’s case in chief. The defendant did not
+            object to the prosecutor’s proposal, and the trial court
+            overruled the demurrer. At the close of the state’s case in
+            chief, the prosecutor ascribed specific acts to each of the
+            carbon-copy counts, and the judge tailored the jury
+            instructions accordingly. The defendant was convicted.</p>
+            <p>On appeal, <em>Antoine</em> held that carbon-copy
+            indictments were impermissible. Such indictments fail to
+            provide defendants “with sufficient notice, and the problem
+            with inadequate notice, which arose before trial, was not
+            cured during trial.” <em>Id.</em> at 76. By waiting until
+            the close of its case in chief before electing the specific
+            criminal acts it was prosecuting, “the state’s charging
+            method effectively allowed the state to adduce evidence of
+            multiple criminal acts in each count of the indictment,
+            without defendant knowing which of the acts would be
+            specified and argued to the jury for convictions. Such a
+            charging process failed to provide defendant with proper
+            notice of the charges before trial.” <em>Id.</em> at 77.</p>
+            <p>The court also raised concerns that the mid-trial
+            election process undermines efforts by Oregon courts to
+            prevent “other acts” evidence from being introduced in
+            contravention of OEC 404(3), which instructs that certain
+            evidence is “not admissible to prove the character of a
+            person in order to show the person acted in conformity
+            therewith.” <em>Antoine</em> noted that if carbon-copy
+            counts are allowed, a trial court “is powerless to sustain
+            objections to ‘other acts’ evidence under 404(3) because the
+            court does not know what charges are being prosecuted.”
+            <em>Id.</em> at 78.</p>
+            <p><strong>Practice Tip: The Defendant Must Object to the
+            State’s Offer to Elect After Its Case In Chief</strong></p>
+            <p>Despite the lack of notice, <em>Antoine</em> upheld the
+            defendant’s convictions. This was because though the
+            defendant filed a demurrer, he did not specifically object
+            to the prosecutor’s offer to elect at the close of the
+            state’s case in chief. <em>Antoine</em> noted the burden is
+            on the defense to attempt to obtain notice of the charges.
+            The defense “could have moved to discover the state’s
+            election of the specific criminal acts . . . in time for
+            defendant to tailor his defense to those specific
+            incidents.” <em>Id.</em> at 79. The state “put defendant on
+            notice at the hearing on the demurrer that it would make its
+            election <em>after</em> it presented its case in chief.
+            Defendant did not object to the timing of the election.”
+            <em>Id.</em> at 71 (emphasis in original).</p>
+            <p>The upshot of <em>Antoine</em> is clear. <em>First</em>,
+            carbon-copy indictments fail to provide the defense<br />
+            with adequate notice necessary to defend against the charges
+            and are subject to demurrer. <em>Second</em>, a prosecutor’s
+            election of facts to assign each charge <em>after</em> its
+            case in chief is impermissible. <em>Third</em>, however, is
+            that the defendant must take affirmative steps to obtain
+            adequate notice if possible.</p>
+            <p><em>The defendant should move for election of counts
+            early—way before trial—and must object to any attempt by the
+            state to elect its theories after trial has begun.</em></p>
+            <p><strong>Practice Tip: Use <em>Antoine</em> to Obtain
+            Grand Jury Records</strong></p>
+            <p><em>Antoine</em> also provides support for obtaining
+            grand jury records. Recall that under <em>Antoine</em>, the
+            burden is on the defendant to attempt to procure adequate
+            and timely notice of charges even when the indictment does
+            not. Upon the state’s <strong><em>pretrial</em></strong>
+            election of its theories, the defense should move, or move
+            again, for grand jury notes, arguing that in light of the
+            election, the testimony presented to grand jury must be
+            inconsistent with the election and/or prior statements of
+            the complaining witness and thus constitutes impeachment
+            evidence, or that the election was inconsistent with the
+            charges the grand jury intended.</p>
+            <p><strong>Practice Tip: Use <em>Antoine</em> to Obtain
+            Judgments of Acquittal</strong></p>
+            <p>Forcing the state to elect prior to trial should also
+            lead to more judgments of acquittal. In sex cases, the
+            testimony of the complaining witnesses—especially young
+            complaining witnesses—is nearly always at some odds with the
+            police reports. Prior to <em>Antoine</em>, judgments of
+            acquittal were particularly difficult to obtain in these
+            cases, because the state was free to shift the theory of any
+            individual count to conform to the testimony.
+            Post-<em>Antoine</em>, however, pretrial election by the
+            state precludes the state from doing so. Now, those
+            variances between police reports, charges, and trial
+            testimony should lead to more judgments of acquittal on
+            specific counts as the state is required to provide more
+            detail.</p>
+            <h1
+            id="vi._motion_to_introduce_evidence_of_the_complaining_witnesss_prior_sexual_behavior"><strong>VI.
+            Motion to Introduce Evidence of the Complaining Witness’s
+            Prior Sexual Behavior</strong></h1>
+            <blockquote>
+            <p>Oregon Evidence Rule 412 prohibits evidence on a
+            complaining witness’s past sexual behavior, <em>except in
+            certain situations</em>. Where available and appropriate,
+            defense counsel should focus on those exceptions and move to
+            admit evidence of a complaining witness’s past sexual
+            conduct under OEC 412(b). These motions do more than allow
+            the introduction of critical defense evidence at the trial.
+            A properly litigated motion under Rule 412 can put enormous
+            pressure on the state and the complaining witness. Often,
+            when it becomes apparent that a complaining witness’s sexual
+            history will be covered extensively at trial through
+            cross-examination of the complaining witness as well as
+            extrinsic evidence, pretrial negotiations turn favorably for
+            the defense.</p>
+            </blockquote>
+            <p><strong>Practice Tip: File at Least 15 Days Before Trial,
+            and Include a Written Offer of Proof</strong></p>
+            <p>In moving to introduce such evidence under Rule 412, be
+            aware of the rule’s filing deadline of 15 days before the
+            trial date (“not later than 15 days before the date on which
+            the trial in which the evidence offered is scheduled to
+            begin”), and the requirement that such a motion be
+            accompanied by a written offer of proof. OEC 412(4).</p>
+            <blockquote>
+            <p>OEC 412(2)(b) provides that, in a prosecution for certain
+            sex offenses, “evidence of a victim’s past sexual behavior
+            other than reputation or opinion evidence” is admissible if
+            the evidence “[r]elates to the motive or bias of the alleged
+            victim, is necessary to rebut or explain scientific or
+            medical evidence offered by the state, or is otherwise
+            constitutionally required to be admitted.”</p>
+            <p>While the need to rebut or explain scientific or medical
+            evidence offered by the state is clearly case-specific, the
+            other two options—evidence that “relates to the motive or
+            bias of the alleged victim” or evidence that is “otherwise
+            constitutionally required”—should be at play in most, if not
+            all, cases where the defense can obtain information about
+            past sexual behavior. For example, a teenager’s sexual
+            relationship with another person could explain why the
+            allegations against your client are false or mistaken. Other
+            possible theories of admissibility include:</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>prior sexual experiences or viewing of sexual activity in
+            person or through pornography that would explain a
+            complaining witness’s knowledge of sexual practices and
+            behaviors</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>prior consensual sexual conduct for which a complaining
+            witness was punished or embarrassed, to explain the motive
+            for false accusations of non-consensual assault</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>prior sexual abuse at the hands of another individual</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>Practice Tip</strong></p>
+            <p>Be expansive with your required written offer of proof in
+            support of your motion under OEC 412. This is an opportunity
+            to frame your case and press your theory of defense on the
+            court, which can lead to favorable rulings on other
+            evidentiary issues. Use investigation reports and witness
+            statements to support and articulate why the evidence of
+            prior sexual behavior must be admitted.</p>
+            <h1 id="vii._motion_to_pre_admit_exhibits"><strong>VII.
+            Motion to Pre-Admit Exhibits</strong></h1>
+            <blockquote>
+            <p>In many cases it makes sense to move the court to
+            pre-admit your exhibits (and the state’s exhibits as
+            <em>quid pro quo</em>). Preadmission of exhibits allows the
+            defense to reference and display these exhibits during
+            opening statements, and also saves time and interruptions to
+            the flow of a direct or cross-examination by avoiding the
+            need to establish foundation or move to have the exhibits
+            admitted then.</p>
+            <p>However, the defense must be vigilant about potential
+            challenges to preadmission of state exhibits. The relevance
+            and admissibility of exhibits can be established through
+            proffer, but be sure that each exhibit in the state’s
+            requested list for preadmission is addressed individually.
+            In one post-conviction case, for example, defense counsel’s
+            competency was challenged due to his failure to examine the
+            state’s packet of exhibits for which it sought preadmission.
+            One exhibit (a pamphlet aimed at children discussing the
+            danger of child predators) was pre-admitted without
+            objection, but the state never established relevance or
+            otherwise referred to the pamphlet at trial. Nevertheless,
+            this pamphlet went into the jury room and, with no frame of
+            reference for the jury, likely infected the deliberations
+            unfairly.</p>
+            </blockquote>
+            <h1
+            id="viii._motion_to_prohibit_use_of_the_term_victim"><strong>VIII.
+            Motion to Prohibit Use of the Term “Victim”</strong></h1>
+            <blockquote>
+            <p>Defense attorneys should be conscious of any conduct by
+            the state or the court that impermissibly skews the jury’s
+            view of the case or the defendant. For example, prosecutors
+            and judges often refer to the complaining witness as a
+            “victim” throughout trial proceedings before a jury. The
+            defense should argue that referring to the complaining
+            witness as a “victim” violates due process and should move
+            the court to prohibit the state from doing so.</p>
+            <p>The term “victim” refers to a person who has been injured
+            as the result of criminal act. References to the accuser as
+            a “victim” necessarily conveys the speaker’s opinion that a
+            crime in fact occurred, and evinces a bias against the
+            defendant in violation of his presumption of innocence.
+            <em>See</em>, <em>e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=4773942819675969248&amp;q=Jackson+v.+State,+600+A2d+21,+24+(Del.+1991&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>Jackson
+            v. State</em></a>, 600 A2d 21, 24 (Del. 1991) (“the word
+            ‘victim’ should not be used in a case where the commission
+            of a crime is in dispute”).</p>
+            <p>Referring to an accuser as a “victim” also violates the
+            proscription against a prosecutor expressing personal
+            beliefs about the credibility of a witness. This is
+            particularly dangerous in classic “swearing contest” cases
+            where the credibility of a complaining witness is crucial to
+            the jury’s deliberations. A prosecutor calling a complaining
+            witness a “victim” equates to an assertion that the
+            complaining witness is truthful, and is thus an
+            impermissible comment<br />
+            on credibility.</p>
+            </blockquote>
+            <p>Defense counsel should file similar motions to prohibit
+            the government from referring to the complaining witness’s
+            statements as “disclosures.” A “disclosure” refers to a
+            revelation of fact. As such, labeling a statement as a
+            “disclosure” conveys that the statement is not an assertion
+            of opinion, but rather an assertion of fact. Labeling a
+            statement as a “disclosure” insinuates that the statement
+            has <em>already</em> been established as fact.</p>
+            <p>Other motions can be made on the same general principles
+            of impermissibly infecting the jury’s deliberations. If, for
+            example, a prosecutor has a habit of placing a copy of the
+            defendant’s mug shot on the outside of her trial notebook, a
+            motion should be made. Certain posters, art, and décor in a
+            courtroom, courthouse, or curtilage of a courthouse could be
+            subject to a motion—an informational poster regarding
+            reporting child abuse, for example. The juror assembly room
+            in Multnomah County used to play reruns of <em>Law and
+            Order</em> on the televisions until a defense attorney
+            pointed out the negative view that the show presents of
+            defendants and defense attorneys. Impermissible intrusions
+            into a jury’s deliberations can be everywhere—be creative in
+            your motions.</p>
+            <h1 id="ix._motion_for_juror_questionnaires"><strong>IX.
+            Motion for Juror Questionnaires</strong></h1>
+            <p>Trials can be won or lost during jury selection. More
+            than any other type of charge, allegations of sex crimes
+            invite significant biases and prejudices, and can likewise
+            evoke deeply personal and visceral reactions in the members
+            of the jury pool. Because a fair and unbiased jury is
+            critical in all cases, every effort should be made to obtain
+            as much information as possible about the prospective
+            jurors. Jury questionnaires and sequestration for
+            questioning if necessary are two ways to obtain that
+            information. Though not a right of the defendant, persuasive
+            case law supports<br />
+            the procedures.</p>
+            <p>It is well settled that voir dire plays “a critical
+            function in assuring the criminal defendant that his Sixth
+            Amendment right to an impartial jury will be honored.” <a
+            href="https://scholar.google.com/scholar_case?case=13120098518847889246&amp;q=Rosales-Lopez+v.+United+States,+451+U.S.+182,+188+(1981)&amp;hl=en&amp;as_sdt=ffffffffffffe03"><em>Rosales-Lopez
+            v. United States</em></a>, 451 U.S. 182, 188 (1981). Indeed,
+            “part of the guaranty of the defendant’s right to an
+            impartial jury is an adequate voir dire to identify
+            unqualified jurors.” <a
+            href="https://scholar.google.com/scholar_case?case=11006108854293170103&amp;q=Morgan+v.+Illinois,+504+U.S.+719,+729+(1992)&amp;hl=en&amp;as_sdt=ffffffffffffe03"><em>Morgan
+            v. Illinois</em></a>, 504 U.S. 719, 729 (1992). Without a
+            searching voir dire, the trial judge cannot fulfill the
+            “responsibility to remove prospective jurors who will not be
+            able impartially to follow the court’s instructions and
+            evaluate the evidence.” <em>Rosales-Lopez</em>, 451 U.S. at
+            188. <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=7924483267198765644&amp;q=Dyer+v.+Calderon,+151+F3d+970,+(9th+Cir.+1998)&amp;hl=en&amp;as_sdt=ffffffffffffe03">Dyer
+            v. Calderon</a></em>, 151 F3d 970, 973 (9th Cir. 1998) (en
+            banc) (“one important mechanism for ensuring impartiality is
+            voir dire, which enables the parties to probe potential
+            jurors for prejudice”). Questions of the venire must probe
+            the jurors’ beliefs and attitudes about the law because “the
+            bias or prejudice of even a single juror would violate [the
+            defendant’s] right to a fair trial.” <em>Dyer</em>, 151 F3d
+            at 973. “The presence of a biased juror cannot be harmless
+            [and] such error requires a new trial without a showing of
+            actual prejudice.” <em>Id</em>. at n.2.</p>
+            <p>As stated by the Oregon courts, “The purpose of <em>voir
+            dire</em> is to ascertain the existence of grounds for a
+            challenge for cause and to enable litigants to obtain enough
+            information to make an intelligent decision whether to
+            exercise a peremptory challenge.” <a
+            href="https://scholar.google.com/scholar_case?case=3186253560461884422&amp;q=123+Or+App+546+(1993)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em></a>, 123 Or App 546, 550-551 (1993). In sex
+            cases, in particular, “the trial court must be zealous to
+            protect the rights of the accused<em>.</em>” <a
+            href="https://scholar.google.com/scholar_case?case=11918655103190896273&amp;q=Dennis+v.+United+States,+339+U.S.+162,+(1950)&amp;hl=en&amp;as_sdt=3,38"><em>Dennis
+            v. United States</em></a>, 339 U.S. 162, 168 (1950).</p>
+            <p>Although the scope of voir dire examination by the
+            attorneys is in the trial court’s discretionary power to
+            efficiently and expeditiously conduct the trial, the court
+            cannot “prohibit counsel from seeking information about
+            prospective jurors which is obviously relevant.” <a
+            href="https://scholar.google.com/scholar_case?case=10062399597194376366&amp;q=State+v.+Barnett,+251+Or+234,+(1968)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Barnett</em></a>, 251 Or 234, 237-38 (1968); <em>See
+            also</em> <em>Williams,</em> 123 Or App at 551 (1993) (in
+            drug case court abused its discretion in limiting defense
+            counsel’s voir dire to 44 minutes). This is true in part
+            because “jurors are reluctant to admit actual bias, and the
+            reality of their biased attitudes must be revealed by
+            circumstantial evidence.” <a
+            href="https://scholar.google.com/scholar_case?case=9676518738239618281&amp;q=United+States+v.+Gonzalez,+214+F3d+1109,+(9th+Cir.+2000)&amp;hl=en&amp;as_sdt=3,38"><em>United
+            States v. Gonzalez</em></a>, 214 F3d 1109, 1111 (9th Cir.
+            2000).</p>
+            <p>Questionnaires are particularly appropriate when volatile
+            and sensitive issues will arise at trial. <em>See,
+            e.g</em>., <a
+            href="https://scholar.google.com/scholar_case?case=14985883065657239812&amp;q=State+v.+Compton,+333+Or+274,+(2002)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Compton</em></a>, 333 Or 274, 284 (2002) (questionnaire
+            used in case of murder and sex abuse). Further, where
+            circumstances raise questions as to a juror’s impartiality,
+            “little stock need be placed in jurors’ claims” that they
+            will not be prejudiced.” <a
+            href="https://scholar.google.com/scholar_case?case=11274497574528912071&amp;q=Dyas+v.+Poole,+309+F3d+586&amp;hl=en&amp;as_sdt=3,38"><em>Dyas
+            v. Poole</em></a>, 309 F3d 586, 589 (9th Cir. 2002) (quoting
+            <a
+            href="https://scholar.google.com/scholar_case?case=15677514837182205401&amp;q=Holbrook+v.+Flynn,+475+U.S.+560,+570+(1986&amp;hl=en&amp;as_sdt=3,38"><em>Holbrook
+            v. Flynn</em></a>, 475 U.S. 560, 570 (1986)). <em>See also
+            <a
+            href="https://scholar.google.com/scholar_case?case=9458706997573683891&amp;q=United+States+v.+Egbuniwe,+969+F.2d+757,+762+(9th+Cir.+1992)&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Egbuniwe</a></em>, 969 F.2d 757, 762 (9th Cir.
+            1992) (“juror’s assertion that he or she can reach a fair
+            and impartial verdict is not dispositive”).</p>
+            <blockquote>
+            <p>Argue to the trial court that in sex crime cases, a jury
+            questionnaire followed by <em>in camera</em> questioning on
+            certain topics is a fair, efficient, and effective way to
+            help identify the extent of the potential jurors’ prejudices
+            and biases. This method avoids contaminating other members
+            of the panel, and will aid the exercise of challenges,
+            whether peremptory or for cause.</p>
+            </blockquote>
+            <p>Practice Tip: <em>In camera</em> Questioning of
+            Jurors</p>
+            <p>After the jury questionnaires are answered, counsel
+            should ask the court for the opportunity to question,
+            individually and <em>in camera</em>, any jurors who provide
+            an answer that suggests prior knowledge of the case, an
+            emotional reaction they cannot put aside, or negative
+            experiences with conduct similar to the charged conduct.
+            This will encourage truthful and complete disclosure by the
+            juror and also avoids contamination of the other prospective
+            jurors.</p>
+            <h1 id="x._motion_to_exclude_lay_opinion"><strong>X. Motion
+            to Exclude Lay Opinion</strong></h1>
+            <blockquote>
+            <p>Experts are not the only trial witnesses who attempt to
+            offer opinions as evidence. Defense counsel must be diligent
+            in objecting to, and moving to exclude impermissible opinion
+            evidence from non-expert witnesses. Various sections of the
+            Oregon Evidence Code and select appellate case law provide
+            tools to exclude damaging lay opinion evidence. Motions to
+            exclude lay opinion testimony can be made <em>in limine</em>
+            and in writing, and the following concepts are applicable to
+            a broad variety of testimonial evidence.</p>
+            <p>Under OEC 701, a lay witness’s opinion must “be
+            rationally based on the perception of the witness,”
+            <em>and</em> “helpful to a clear understanding of testimony
+            of the witness or the determination of a fact in issue.” ORS
+            40.405 (emphasis added).</p>
+            </blockquote>
+            <h2
+            id="a._opinion_not_rationally_based_on_perception_of_witness"><strong>A.
+            Opinion Not Rationally Based on Perception of
+            Witness</strong></h2>
+            <p>OEC 701 allows for lay opinion testimony only when it is
+            grounded in personal knowledge and is rationally based upon
+            the perceptions of the witness, and disallows opinions based
+            upon conjecture or speculation. Defense attorneys should
+            move to exclude any comments from lay witnesses that
+            approach a comment on the credibility of a witness or
+            address the intention of a party. <a
+            href="https://scholar.google.com/scholar_case?case=7113031323240231675&amp;q=State+v.+McQuisten,+97+Or+App+517+(1989)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McQuisten</em></a>, 97 Or App 517 (1989); <a
+            href="https://scholar.google.com/scholar_case?case=5909372801688142310&amp;q=Ensley+v.+Fitzwater,+59+Or+App+411+(1982)&amp;hl=en&amp;as_sdt=4,38"><em>Ensley
+            v. Fitzwater</em></a>, 59 Or App 411 (1982).</p>
+            <p>Admissible lay opinion testimony is based on something
+            visual or otherwise tangibly detectable by the average
+            person. <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=5976490014431120544&amp;q=315+Or+124+(1992)+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wright</em></a>, 315 Or 124, 132 (1992) (testimony an
+            individual was under the influence of alcohol); <a
+            href="https://scholar.google.com/scholar_case?case=17111394645862953526&amp;q=296+Or+377&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lerch</em></a>, 296 Or 377 (1984) (smell of decaying
+            flesh); <em>Crosby v. Portland Ry. Co</em>., 53 Or 496
+            (1909) (physical condition of a person). This can extend to
+            intent, motives, and emotions, but only where those emotions
+            are manifested and observable by the witness. <em>State v.
+            Broadhurst</em>, 184 Or 178, 249 (1948) (“[i]t is generally
+            held that a witness may testify as to emotions manifested by
+            another and observed by him”). This is why officers and
+            others may testify about another’s “demeanor.” However, all
+            such opinions require observation of specific expressions or
+            behaviors of an individual that allow a person of common
+            sense to deduce a conclusion about the condition of another.
+            An officer cannot testify to a defendant’s demeanor if the
+            foundation for that testimony is the officer’s intuition,
+            hunch, or something else that cannot be tangibly
+            observed.</p>
+            <p>In addition, opinion testimony regarding “demeanor” may
+            violate the rule against a comment on the credibility of a
+            witness. Any testimony suggesting an opinion about a
+            witness’s or defendant’s credibility must be excluded.
+            <em>See</em>, <em>e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=9309836956971935405&amp;q=State+v.+White,+119+Or+App+424,+(1993&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. White</em></a>, 119 Or App 424, 428 (1993) (officer’s
+            testimony that victim’s demeanor is “forthright” is
+            impermissible comment on credibility). Testimony that a
+            witness is “earnest” or “straightforward” is similarly
+            objectionable, as would be testimony that a witness was
+            “evasive” or “hard to pin down.” Defense practitioners can
+            move <em>in limine</em> for cautionary instructions to
+            witnesses to avoid any such dangerous area.</p>
+            <h2
+            id="b._same_considerations_to_exclude_expert_witness_testimony"><strong>B.
+            Same Considerations to Exclude Expert Witness
+            Testimony</strong></h2>
+            <p>The above concepts are not limited to lay opinion
+            testimony but apply equally to expert opinion testimony.
+            While a full analysis on admissibility of expert testimony
+            under the <em>Brown/O’Key</em> factors is outside the scope
+            of this chapter, defense practitioners should consider
+            attacking expert testimony using the same concepts as lay
+            opinion testimony. While expert testimony is covered by a
+            different rule than lay opinion testimony, to be admissible
+            it still must assist the trier of fact “to understand the
+            evidence or to determine a fact in issue,” and its probative
+            value must not be substantially outweighed by the danger of
+            unfair prejudice. OEC 403, 702. So, for example, an expert
+            cannot testify to a diagnosis of sexual abuse in the absence
+            of physical findings, because such testimony’s probative
+            value is low and the danger of unfair prejudice quite high.
+            <a
+            href="https://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=State+v.+Southard,+347+Or+127+(2009)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Southard</em></a>, 347 Or 127 (2009) (citing with
+            approval jurisdictions which disallow such testimony because
+            it does not assist the trier of fact). The expert must also
+            be qualified “by knowledge, skill, experience, training, or
+            education.” OEC 702. Expert opinion testimony is also
+            limited by relevance and foundational requirements, and by
+            the prohibition on comments regarding witness credibility.
+            <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=10154162156262782119&amp;q=State+v.+Marrington,+335+Or+555+(2003)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Marrington</em></a>, 335 Or 555 (2003) (reversing
+            conviction where insufficient foundation for expert
+            testimony that delay in reporting of sex abuse by a child is
+            a prominent feature in child disclosures); <a
+            href="https://scholar.google.com/scholar_case?case=15447269637507288119&amp;q=State+v.+Lupoli,+348+Or+346+(2010)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lupoli</em></a>, 348 Or 346 (2010) (in absence of
+            physical evidence, nurse’s testimony about her diagnosis of
+            sexual abuse based on child’s statements was impermissible
+            comment on credibility).</p>
+            <h1
+            id="xi._motion_to_admit_extrinsic_evidence_of_prior_false_accusations"><strong>XI.
+            Motion to Admit Extrinsic Evidence of Prior False
+            Accusations</strong></h1>
+            <p>In many cases there is evidence that a complaining
+            witness has made prior false accusations of sexual
+            misconduct. Such evidence is not covered by OEC 412 as prior
+            <em>false</em> accusations do not constitute prior sexual
+            conduct. Every effort should be made to fully develop those
+            accusations—specific instances of conduct of a complaining
+            witness—before the jury.</p>
+            <p>OEC 608 ostensibly prohibits extrinsic evidence
+            <em>and</em> cross-examination on specific instances of
+            conduct, even if probative of truthfulness. However, as
+            detailed below, in sex crime cases defense attorneys can
+            cross-examine a complaining witness regarding specific
+            instances of prior false accusations, notwithstanding the
+            prohibitions of OEC 608. Further, defense attorneys should
+            also move the court to allow presentation of extrinsic
+            evidence of prior false accusations where such evidence
+            exists and is otherwise admissible, using the following
+            arguments. Admitting extrinsic evidence of prior false
+            accusations would obviously be critical if, on
+            cross-examination, the complaining witness denied any prior
+            false accusations, as without extrinsic evidence, the
+            defense attorney must simply accept the answer of the
+            witness.</p>
+            <p>Trial courts have historically disallowed such extrinsic
+            evidence, nearly always because of a misunderstanding of the
+            reasoning underlying the case of <a
+            href="https://scholar.google.com/scholar_case?case=4091161015946476649&amp;q=State+v.+Driver,+192+Or+App+395+(2004)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Driver</em></a>, 192 Or App 395 (2004). However, no
+            controlling cases or evidentiary rules forbid the
+            introduction of extrinsic evidence of prior false
+            accusations, and in fact persuasive authority from other
+            jurisdictions support it.</p>
+            <h1
+            id="a._evidence_of_prior_false_accusations_by_the_complaining_witness_is_admissible_under_oec_608_and_the_confrontation_clauses_of_the_oregon_and_united_states_constitutions"><strong>A.
+            Evidence of Prior False Accusations by the Complaining
+            Witness Is Admissible Under OEC 608 and the Confrontation
+            Clauses of the Oregon and United States
+            Constitutions</strong></h1>
+            <p>=</p>
+            <p>Rule 608 normally prohibits cross-examining a witness on
+            specific instances of conduct when attacking a witness’s
+            credibility. However, the Oregon Court of Appeals has held
+            that in sex crime trials a defendant’s right to confront
+            witnesses under Article I, section 11, of the Oregon
+            Constitution carves out an exception to Rule 608’s
+            prohibition on delving into specific acts on
+            cross-examination. <a
+            href="https://scholar.google.com/scholar_case?case=1440952504434046625&amp;q=State+v.+LeClair,+83+Or+App+121+(1986)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. LeClair</em></a>, 83 Or App 121 (1986). More
+            specifically, where there is evidence of prior false
+            accusations by the complaining witness, the Confrontation
+            Clause “tips the scales” in favor of permitting
+            cross-examination on the prior false accusations.
+            <em>Id.</em> at 129.</p>
+            <p>The right to cross-examination on the subject of prior
+            false accusations is of particular significance in cases
+            where the critical issue is the credibility of the
+            complaining witness:</p>
+            <p>Evidence of prior false accusations by a complainant is
+            certainly probative on the issue of credibility. Courts have
+            uniformly stated that, when a complainant has recanted prior
+            accusations or they are otherwise demonstrably false, the
+            trial court must allow the defendant to cross-examine the
+            complaining witness regarding them.</p>
+            <p><em>Id.</em> (citing cases).</p>
+            <p><em>LeClair</em> identified three situations in which,
+            “regardless of the prohibitions of OEC 608,” the defendant’s
+            confrontation rights “require[] that the court permit a
+            defendant to cross-examine the complaining witness in front
+            of the jury concerning other accusations she has made.”
+            <em>Id.</em> at 130. These situations are if: “1) she has
+            recanted them; 2) the defendant demonstrates to the court
+            that those accusations were false; or 3) there is
+            <em>some</em> evidence that the victim has made prior
+            accusations that were false.” <em>Id.</em> (emphasis
+            added).</p>
+            <p>Defense counsel should further argue that to allow the
+            full exercise of the right to confrontation under the Oregon
+            and United States constitutions, as well as the right to due
+            process under the Fourteenth Amendment to the United States
+            Constitution, presentation of extrinsic evidence on prior
+            falsities should be allowed as well. Though <em>State v.
+            Driver</em>, 192 Or App 395 (2004), held that the exception
+            to OEC 608 announced in <em>LeClair</em> is limited to
+            <em>cross-examination</em> of the complaining witness, other
+            jurisdictions have suggested and permitted extrinsic
+            evidence on the issue. <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=10881744166851417695&amp;q=Davis+v.+Alaska,+415+US+308,+316%C2%AC%E2%80%9317+(1974)&amp;hl=en&amp;as_sdt=3,38"><em>Davis
+            v. Alaska</em></a>, 415 US 308, 316–17 (1974)
+            (distinguishing between general and particular attacks on
+            credibility, and noting that examination of a witness
+            “directed toward revealing possible biases, prejudices, or
+            ulterior motives of the witness as they may relate directly
+            to issues . . . in the case” is a particular attack on
+            credibility and thus entitled to a special protection under
+            the Confrontation Clause); <a
+            href="https://scholar.google.com/scholar_case?case=8061210733119814825&amp;q=State+v.+Guenther,+854+A2d+308+(NJ+2004)+&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Guenther</em></a>, 854 A2d 308 (NJ 2004) (holding, in sex
+            abuse case, that where complaining witness denies prior
+            false accusations, “the interests of justice require that we
+            relax the strictures against specific conduct evidence,” and
+            further that if certain standards are met, defendant may
+            introduce extrinsic evidence on the matter); <a
+            href="https://scholar.google.com/scholar_case?case=10651028382274504565&amp;q=State+v.+Barber,+766+P2d+1288,+(Kan+App+1989)+&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Barber</em></a>, 766 P2d 1288, 1290 (Kan App 1989)
+            (finding that the defendant’s confrontation rights trumped
+            the evidentiary rule barring specific conduct evidence and
+            holding that “in a sex crime case, the victim/complaining
+            witness may be cross-examined about prior false accusations,
+            and if she denies making those accusations, defendant may
+            put on evidence of those accusations”).</p>
+            <p>In addition to New Jersey and Kansas, courts in Alaska,
+            Arizona, Arkansas, Georgia, Idaho, Indiana, Louisiana, New
+            Hampshire, Nevada, and Virginia have all held that, in sex
+            crime cases extrinsic evidence of prior false accusations
+            must be permitted to avoid violating the confrontation
+            clauses of the United States and various state
+            constitutions. <em>See, e.g.</em>, <em><a
+            href="https://scholar.google.com/scholar_case?case=8287808677370043672&amp;q=Morgan+v.+State,+54+P3d+332,+336+(Alaska+Ct+App+2002)&amp;hl=en&amp;as_sdt=ffffffffffffe04">Morgan
+            v. State</a>,</em> 54 P3d 332, 336 (Alaska Ct App 2002); <a
+            href="https://scholar.google.com/scholar_case?case=13680067195899360263&amp;q=State+v.+Hutchinson,+688+P2d+209,++(Ariz+Ct+App+1984)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Hutchinson</em></a>, 688 P2d 209, 212–13 (Ariz Ct App
+            1984); <a
+            href="https://scholar.google.com/scholar_case?case=3660766549977324844&amp;q=West+v.+State,+719+SW2d+684,+(Ark+1986)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>West
+            v. State</em></a>, 719 SW2d 684, 686–87 (Ark 1986); <a
+            href="https://scholar.google.com/scholar_case?case=13852456470930771704&amp;q=West+v.+State,+719+SW2d+684,+686%E2%80%9387+(Ark+1986)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>Smith
+            v. State</em></a>, 377 SE2d 158, 160 (Ga 1989); <a
+            href="https://scholar.google.com/scholar_case?case=6319744412001833977&amp;q=State+v.+Schwartzmiller,+685+P2d+830,+833+(Idaho+1984)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Schwartzmiller</em></a>, 685 P2d 830, 833 (Idaho 1984);
+            <a
+            href="https://scholar.google.com/scholar_case?case=11616770504131737963&amp;q=Little+v.+State,+413+NE2d+639,+(Ind+Ct+App+1980)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>Little
+            v. State</em></a>, 413 NE2d 639, 643–44 (Ind Ct App 1980);
+            <a
+            href="https://scholar.google.com/scholar_case?case=10215494413944357292&amp;q=State+v.+Smith,+743+So2d+199,+202+(La+1999)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Smith</em></a>, 743 So2d 199, 202 (La 1999); <em>State v.
+            Gordon</em>, 770 A2d 702, 704–05 (NH 2001); <a
+            href="https://scholar.google.com/scholar_case?case=2392216584090589531&amp;q=Miller+v.+State,+779+P2d+87,+89%E2%80%9390+(Nev+1989)&amp;hl=en&amp;as_sdt=ffffffffffffe04https://scholar.google.com/scholar_case?case=2392216584090589531&amp;q=Miller+v.+State,+779+P2d+87,+89%E2%80%9390+(Nev+1989)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>Miller
+            v. State</em></a>, 779 P2d 87, 89–90 (Nev 1989); <a
+            href="https://scholar.google.com/scholar_case?case=12869865728655342048&amp;q=Clinebell+v.+Commonwealth,+368+SE2d+263,+266+(Va+1988)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>Clinebell
+            v. Commonwealth</em></a>, 368 SE2d 263, 266 (Va 1988).</p>
+            <p>Moreover, OEC 613 allows for extrinsic evidence of a
+            prior inconsistent statement by a witness, as long as the
+            witness “is afforded an opportunity to explain or deny the
+            same.” OEC 613(2). In short, if the complaining witness
+            denies the prior false accusations on cross-examination, OEC
+            613 should permit extrinsic evidence on the matter.</p>
+            <h2
+            id="b._extrinsic_evidence_of_prior_false_accusations_by_the_complaining_witness_is_admissible_under_oec_4043"><strong>B.
+            Extrinsic Evidence of Prior False Accusations by the
+            Complaining Witness Is Admissible Under OEC
+            404(3)</strong></h2>
+            <p>In response to the above, the state will almost surely
+            argue that <em><a
+            href="https://scholar.google.com/scholar_case?case=1440952504434046625&amp;q=leclair&amp;hl=en&amp;as_sdt=4,38">LeClair</a></em>
+            and <a
+            href="https://scholar.google.com/scholar_case?case=4091161015946476649&amp;q=driver&amp;hl=en&amp;as_sdt=4,38"><em>Driver</em></a>
+            prohibit introduction of extrinsic evidence of prior false
+            accusations. However, those cases were not so broad. Rather,
+            <em>LeClair</em>’s holding, affirmed in <em>Driver</em>,
+            only addressed the constitutional, confrontation-based
+            exception to OEC 608. <em>Driver</em>, 192 Or App at 398;
+            <em>LeClair,</em> 83 Or App at 127. Recall
+            <em>LeClair</em>’s holding that in sex cases, a defendant’s
+            constitutional right to confrontation overrides OEC 608,
+            allowing a defendant to cross-examine a complaining witness
+            about prior false accusations. The <em>LeClair</em> holding,
+            however, “does not address extrinsic evidence.”
+            <em>Driver</em>, 192 Or App at 401. <em>Driver</em> did
+            address extrinsic evidence, but narrowly held that extrinsic
+            evidence was not admissible <em>under the specific exception
+            to OEC 608</em> announced in <em>LeClair</em>. <em>Id.</em>
+            at 401-02 and n.6. <em>Driver</em> did <em>not</em> say
+            extrinsic evidence of prior false accusations was
+            <em>never</em> admissible—only that it was not admissible
+            under the <em>LeClair</em> OEC 608 exception. More
+            specifically, <em>Driver</em> does not address the argument
+            that extrinsic evidence of prior false accusations is
+            admissible under OEC 404(3) and 405 as prior acts of the
+            complaining witness.</p>
+            <p>Character evidence is permitted under OEC 404. More
+            specifically, extrinsic evidence of specific acts relating
+            to a witness’s character is permitted under OEC 404(3), the
+            subsection covering “Other crimes, wrongs or acts.” Though
+            normally the state takes advantage of this rule to introduce
+            prior bad acts of a defendant, a defendant likewise enjoys
+            the benefits of this rule. <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=6962841382110865291&amp;q=State+v.+Cox,+337+Or+477+(2004)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cox</em></a>, 337 Or 477 (2004) (en banc) (evidence of
+            criminal acts of victim toward persons other than the
+            defendant allowed under OEC 403(3)). <em>See also Laird C.
+            Kirkpatrick, Oregon Evidence</em> § 404.06[10] (6th ed 2013
+            and 2015 supp). In fact, when the defendant offers evidence
+            under this rule, “the standard for admission is relaxed.”
+            <em>Id.</em> (quoting <a
+            href="https://scholar.google.com/scholar_case?case=6280707891601171775&amp;q=United+States+v.+Cohen,+888+F2d+770,+(11th+Cir.+1989)&amp;hl=en&amp;as_sdt=3,38"><em>United
+            States v. Cohen</em></a>, 888 F2d 770, 776 (11th Cir. 1989).
+            Further, evidence admitted under OEC 404(3) may be presented
+            in the form of specific instances of conduct. OEC 405.</p>
+            <p>Evidence offered under OEC 404(3) is not limited to
+            evidence related only to “proof of motive, opportunity,
+            intent, preparation, plan, knowledge, identity, or absence
+            of mistake or accident,” the situations explicitly listed in
+            the rule. Rather, OEC 404(3) is an inclusionary rule, and
+            the list of purposes set forth in 404(3) “is not meant to be
+            exclusive.” <a
+            href="https://scholar.google.com/scholar_case?case=488257333952677274&amp;q=State+v.+Johns,+301+Or+535,++(1986&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Johns</em></a>, 301 Or 535, 542 (1986) (en banc) (quoting
+            the legislative commentary to Rule 404). Oregon has “adopted
+            the inclusionary approach,” and as such Oregon judges may
+            “resort to any theory of logical relevance when ruling on
+            ‘prior crime’ evidence that does not run afoul of the
+            ‘propensity to commit crimes or other acts’ prohibition.”
+            <em>Id.</em> at 548.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=17177059973544972386&amp;q=State+v.+Hurlburt,+333+P2d+82+(Cal+App+1958)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>People
+            v. Hurlburt</em></a>, 333 P2d 82 (Cal App 1958), the
+            California Court of Appeals examined the issue. That court
+            noted that in sex abuse cases, where the crucial issue is
+            the credibility of the complaining witness and the
+            defendant, evidence of prior falsities is not offered merely
+            for the purpose of impeaching or discrediting the general
+            character or reputation of the witness. Rather, it</p>
+            <p>is offered to disprove the very charge before the court.
+            It is relevant as to the state of mind of the prosecutrix.
+            Because of its high degree of relevancy and its high
+            probative value, such evidence should be admitted.</p>
+            <p><em>Id.</em> at 87.</p>
+            <p>Most other jurisdictions that have examined the issue
+            have followed <em>Hurlburt</em>. For example, the Supreme
+            Court of Montana noted that, though excluded by Rule 608(b)
+            for credibility purposes, such evidence</p>
+            <p>may be admissible if probative of the witness’ state of
+            mind, motive, or biases with respect to making the more
+            current accusations. The principle expressed in
+            <em>Hurlburt</em>—that evidence of prior false charges may
+            often be probative of the complaining witness’ specific
+            reputation for untruthfulness—is approved by most
+            jurisdictions.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=13151892967779253329&amp;q=State+v.+Anderson,+686+P2d+193,++(Mont.+1984)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Anderson</em></a>, 686 P2d 193, 199 (Mont. 1984) (citing
+            cases). <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=11008333516800421291&amp;q=Peeples+v.+State,+681+So2d+236,+237%E2%80%9339+(Ala+1995)+&amp;hl=en&amp;as_sdt=ffffffffffffe04">Peeples
+            v. State</a></em>, 681 So2d 236, 237–39 (Ala 1995) (finding
+            evidence relevant to the issue of whether the complaining
+            witness was merely continuing her habit of making threats
+            and false accusations to manipulate persons around her, and
+            holding “[t]his does not amount to an attempt to impeach the
+            victim’s character based on her prior bad acts and is,
+            therefore, admissible”).</p>
+            <p>OEC 404(3) prohibits evidence of prior bad acts “only
+            when the evidence is offered <em>solely</em> to prove (1)
+            the character of a person, <em>and</em> (2) that the person
+            acted in conformity therewith. Both elements are required.”
+            <a
+            href="https://scholar.google.com/scholar_case?case=488257333952677274&amp;q=johns+&amp;hl=en&amp;as_sdt=4,38"><em>Johns</em></a>,
+            301 Or at 548. <em>But see <a
+            href="https://scholar.google.com/scholar_case?case=9903617515752744475&amp;q=State+v.+Williams,+357+Or+1+(2015)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Williams</a></em>, 357 Or 1 (2015), <em>en banc</em>
+            (prior bad acts of <em>defendant</em> admissible if
+            relevant, even if offered for propensity purposes). [Note:
+            See Chapter 9, “They Introduce What?: Other Act Evidence.”]
+            While <em>Williams</em> held propensity evidence admissible
+            against a defendant, there was no reciprocal rule announced
+            with respect to complaining witnesses. Thus, the defendant
+            must present a non-character purpose for introducing
+            extrinsic evidence of prior false accusations under OEC
+            404(3). Again, rely on <em>Johns</em>: evidence under 404(3)
+            is not limited only to evidence related to “proof of motive,
+            opportunity, intent, preparation, plan, knowledge, identity,
+            or absence of mistake or accident,” the situations
+            explicitly listed in the rule. Rather, Rule 404(3) is
+            inclusionary, and the list of purposes set forth in 404(3)
+            “is not meant to be exclusive.” <em>State v. Johns</em>, 301
+            Or 535, 542 (1986) (en banc) (quoting the legislative
+            commentary to Rule 404). Be creative in your theories.</p>
+            <p>Of course, the distinction between whether evidence is
+            offered to show conformity with a character trait or for
+            some other permissible purpose under 404(3) is often
+            blurred, and the decision must be made on a case-by-case
+            basis. The fine line between conformance and some other
+            permissible purpose is apparent in many cases.
+            <em>Johns</em> is again instructive. There, the defendant
+            was on trial for the murder of his spouse. The court held
+            that evidence that the defendant had attempted to kill a
+            different spouse six years earlier was admissible under Rule
+            404(3). According to the court, the evidence was offered not
+            as proof that the defendant had acted in conformity with his
+            conduct on the prior occasion, but rather that the evidence
+            proved intent and absence of mistake or accident.
+            <em>Johns</em>, 301 Or at 559. <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=6603793611212903656&amp;q=State+v.+Rogers,+313+Or+356+(1992&amp;hl=en&amp;as_sdt=4,38">State
+            v. Rogers</a></em>, 313 Or 356 (1992) (evidence of other
+            acts of inflicting pain on other prostitutes admissible to
+            prove defendant had the same objective to intentionally
+            cause intense pain to his murder victims); <a
+            href="https://scholar.google.com/scholar_case?case=12583039273850040837&amp;q=State+v.+Davis,+156+Or+App+117+(1998)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Davis</em></a>, 156 Or App 117 (1998) (prior recent acts
+            of violence by defendant toward homicide victim relevant on
+            issue of motive). A discretionary call by the trial judge,
+            the decision should be informed by ideas of fairness and a
+            defendant’s due process right to present a defense. Indeed,
+            “courts have been quite liberal, and properly so, in
+            allowing the admission of evidence of prior acts of the
+            <em>defendant</em> toward the <em>prosecutrix</em>. Equally
+            relevant, and for the same reasons, is evidence that the
+            prosecutrix has in the past lied about the type of acts
+            charged to the defendant.” <a
+            href="https://scholar.google.com/scholar_case?case=17177059973544972386&amp;q=State+v.+Hurlburt,+333+P2d+82+(Cal+App+1958)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>Hurlburt</em></a>,
+            333 P2d at 87. This passage from <em>Hurlburt</em> is
+            particularly germane in light of the <em>Williams</em>
+            decision.</p>
+            <p>Argue that extrinsic evidence must be admitted based on
+            the above principles, and point out that <em>Driver</em> and
+            <em>LeClair</em> only address a limited exception to Rule
+            608, not Rule 404. “[W]hen the mechanistic application of a
+            state’s rules of evidence or procedure would undermine the
+            truth-finding function by excluding relevant evidence
+            necessary to a defendant’s ability to defend against the
+            charged offenses, the Confrontation and Compulsory Process
+            Clauses must prevail.” <a
+            href="https://scholar.google.com/scholar_case?case=10153814637174829694&amp;q=State+v.+Garron,+827+A2d+243,++(NJ+2003)&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Garron</em></a>, 827 A2d 243, 256 (NJ 2003) (citing <a
+            href="https://scholar.google.com/scholar_case?case=10804189023260429532&amp;q=Chambers+v.+Mississippi,+410+US+284,+302+(1973))&amp;hl=en&amp;as_sdt=ffffffffffffe03"><em>Chambers
+            v. Mississippi</em></a>, 410 US 284, 302 (1973)).</p>
+            <h1
+            id="xii._motion_to_exclude_hearsay_of_complainant"><strong>XII.
+            Motion to Exclude Hearsay of Complainant</strong></h1>
+            <p>While as a general rule hearsay is not admissible, OEC
+            803(18a)(b) provides for a limited, yet devastating
+            exception which allows hearsay statements “concerning” an
+            act of sexual abuse made by a child under 18, if certain
+            requirements are met. One of those requirements is that the
+            state must “make known to the [defendant] the [state’s]
+            intention to offer the statement and the particulars of the
+            statement no later than 15 days before trial.” OEC
+            803(18a)(b). This clause may provide the defendant with a
+            way to keep the statements out of evidence.</p>
+            <h2
+            id="a._timing_and_particulars_requirements_from_oec_80318ab"><strong>A.
+            Timing and Particulars Requirements from OEC
+            803(18a)(b)</strong></h2>
+            <p>Obviously, if the notice does not come at least 15 days
+            before trial, the evidence must be excluded under OEC
+            803(18a)(b). <a
+            href="https://scholar.google.com/scholar_case?case=16897898071103295958&amp;q=State+v.+Bradley,+253+Or+App+277,+283+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bradley</em></a>, 253 Or App 277, 283 (2012) (“The sole
+            sanction for violations [of OEC 803(18a)(b)], as provided by
+            the rule, is exclusion of the offered statements”). It is
+            also insufficient for the state to simply provide notice to
+            the defense of its intent to offer statements without the
+            substance, or “particulars,” of the statement. It is
+            similarly insufficient to merely identify where the
+            statements can be found in discovery. Rather, the
+            “particulars” requirement of OEC 803(18a)(b) must be
+            scrupulously honored, providing the substance of the
+            statements and not merely a general overview. In <a
+            href="https://scholar.google.com/scholar_case?case=2634521372818142164&amp;q=240+Or+App+541&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Chase</em></a>, for example, the state noticfied the
+            defendant that it would introduce 18a(b) statements, and
+            that the statements were found in “foregoing and subsequent
+            reports” that “contain particulars of statements made by
+            [the victim].” 240 Or App 541, 544 (2011). <em>Chase</em>
+            noted the “particulars” requirement refers to “an individual
+            fact, point, circumstance, or detail . . . [a] specific item
+            of information.” <em>Id.</em> at 546. The state’s notice
+            must, “at a minimum . . . identify the substance of the
+            statement sought to be introduced.” <em>Id.</em> at 546-47.
+            <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=16526184649836631967&amp;q=State+v.+Edblom,+257+Or+App+22+(2013)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Edblom</a></em>, 257 Or App 22 (2013) (reversing
+            convictions where state’s notice failed to provide substance
+            of statements it intended to introduce); <a
+            href="https://scholar.google.com/scholar_case?case=16897898071103295958&amp;q=State+v.+Bradley,+253+Or+App+277,+283+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bradley</em></a>, 253 Or App 277 (2012) (reversing
+            convictions where state failed to properly identify the
+            particulars of a complaining witness’s statement in its
+            pretrial notice, because the notice did not identify the
+            “substance” of the hearsay statements); <a
+            href="https://scholar.google.com/scholar_case?case=1880437136798698964&amp;q=State+v.+Wood,+253+Or+App+97+(2012)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wood</em></a>, 253 Or App 97 (2012) (reversing
+            convictions and citing <em>Chase</em> where state’s notice
+            provided to whom the statements were made, but failed to
+            provide the substance of the statements).</p>
+            <p>Further, that the “particulars” of the statements have
+            already been provided to the defendant in discovery does not
+            excuse the state’s failure to include the “particulars” of
+            the statement in its notice. <em>E.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=16526184649836631967&amp;q=State+v.+Edblom,+257+Or+App+22+(2013)&amp;hl=en&amp;as_sdt=4,38"><em>Edblom</em></a>,
+            257 Or App at 30 (“[D]iscovery does not constitute notice
+            for the purposes of OEC 803(18a)(b).”); <a
+            href="https://scholar.google.com/scholar_case?case=10869958370183668481&amp;q=State+v.+McKinzie,+186+Or+App+384,+(2003)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McKinzie</em></a>, 186 Or App 384, 393 (2003) (“[T]he
+            fact that defendant received discovery of the out-of-court
+            statements of the victim does not satisfy the rule’s
+            requirements”). Case law is clear—the <em>only</em> remedy
+            for the state’s violation of 803(18a)(b)’s notice
+            requirement is exclusion of the statements. <a
+            href="https://scholar.google.com/scholar_case?case=16897898071103295958&amp;q=State+v.+Bradley,+253+Or+App+277,+283+(2012&amp;hl=en&amp;as_sdt=4,38"><em>Bradley</em></a>,
+            253 Or App at 283.</p>
+            <h2 id="b._exclusion_based_on_oec_403"><strong>B. Exclusion
+            Based on OEC 403</strong></h2>
+            <p>[Note: Also see Chapter 9, “They Want to Introduce What?:
+            Other Act Evidence.”]</p>
+            <p>OEC 403 provides that evidence may be excluded “if its
+            probative value is outweighed by the danger of unfair
+            prejudice, confusion of the issues, or misleading the jury,
+            or by considerations of undue delay or needless presentation
+            of cumulative evidence.”</p>
+            <p>If the complaining witness is testifying, argue that the
+            probative value of any prior statements concerning the
+            allegations is negligible:</p>
+            <p>When the witness has merely testified on direct
+            examination, without any impeachment, proof of consistent
+            statements is unnecessary and valueless. The witness is not
+            helped by it; for, even if it is an improbable or
+            untrustworthy story, it is not made more probable or more
+            trustworthy by any number of repetitions of it.</p>
+            <p>4 Wigmore, Evidence § 7124 at 255 (Chadbourn rev.
+            1972).</p>
+            <p>Argue further that if the state were to offer such
+            hearsay, it would simply consist of bolstering the testimony
+            of the complainant. This is impermissible under <a
+            href="https://scholar.google.com/scholar_case?case=14235864362426214514&amp;q=State+v.+Milbradt,+305+Or+621,++(1988)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Milbradt</em></a>, 305 Or 621, 629–30 (1988), and its
+            progeny, which prevents comment by any witness upon the
+            credibility of another and, by implication, use of simple
+            repetition of one witness’s statements to buttress the
+            credibility of the complainants. The danger of unfair
+            prejudice is particularly concerning in cases which will be
+            a “typical ‘credibility contest’ . . . [where] the young
+            wom[a]n only belatedly complained of sexual abuse by
+            defendant[,] these complaints were uncorroborated by any
+            witnesses or physical evidence[, and] defendant vehemently
+            denie[s] any involvement.” <em>Id.</em> at 628. <em>See also
+            <a
+            href="https://scholar.google.com/scholar_case?case=4749319348797165105&amp;q=United+States+v.+McCulley,+178+F3d+872&amp;hl=en&amp;as_sdt=3,38">United
+            States v. McCulley</a></em>, 178 F3d 872, 876 (7th Cir.
+            1999) (“It is, of course, improper to admit a previous
+            statement for the mere purpose of bolstering a statement
+            made at trial”); <a
+            href="https://scholar.google.com/scholar_case?case=937917960627093465&amp;q=Montana+v.+Harris,+808+P2d+453,++(Mont.+1991)&amp;hl=en&amp;as_sdt=6,38"><em>Montana
+            v. Harris</em></a>, 808 P2d 453, 458 (Mont. 1991) (holding
+            hearsay statements of complaining witness to another
+            regarding sex abuse inadmissible because, since hearsay
+            declarant was available to testify, the hearsay statements
+            “were not the most probative evidence on the matter [and
+            such] testimony on the issue was merely cumulative, serving
+            only to bolster [complaining witness’s] testimony”). As one
+            court has noted, the introduction of prior statements
+            consistent with the complaining witness’s testimony only
+            serves as “corroboration by repetition,” and should not be
+            admissible because “this tactic preys on the human failing
+            of placing belief in that which is most often repeated.” <a
+            href="https://scholar.google.com/scholar_case?case=4232366118480512374&amp;q=People+v.+Sanders,+375+NE2d+921&amp;hl=en&amp;as_sdt=6,38"><em>People
+            v. Sanders</em></a>, 375 NE2d 921, 924 (Ill. App. 1978).
+            Argue that admission of these repeated, emotionally charged
+            statements will add nothing substantive to the state’s case,
+            but would, however, render the trial unfair due to the
+            improper bolstering of a critical witness’s statements.</p>
+            <h2 id="c._exclusion_under_oec_8014"><strong>C. Exclusion
+            Under OEC 801(4)</strong></h2>
+            <p>Even if kept out of its case in chief, the state may
+            attempt to introduce such hearsay statements under OEC
+            801(4), which allows that a prior statement by a witness is
+            not hearsay if the statement is “[c]onsistent with the
+            testimony of the witness and is offered to rebut an
+            inconsistent statement or an express or implied charge
+            against the witness of recent fabrication or improper
+            influence or motive.”</p>
+            <p>Before the state can offer evidence under the rule,
+            however, the state must establish three things: 1) that the
+            statement in question is consistent with the testimony of
+            the complaining witness at trial, 2) that the defense
+            expressly or impliedly charged that the complaining witness
+            fabricated her story or had an improper motive or influence,
+            and 3) that the fabrication was “recent.” Defense attorneys
+            can argue <em>in limine</em> that the court must hold a
+            hearing, outside the presence of the jury, on whether each
+            statement meets the requirements of OEC 801(4) before it can
+            be introduced. Case law further fleshes out these
+            requirements.</p>
+            <p>Whether there has been a charge of “recent fabrication”
+            is a question for the court to determine. <a
+            href="https://scholar.google.com/scholar_case?case=11506760758344215146&amp;q=Powers+v.+Cheeley,+307+Or+585,++(1989&amp;hl=en&amp;as_sdt=4,38"><em>Powers
+            v. Cheeley</em></a>, 307 Or 585, 593 n.5 (1989). Merely
+            impeaching the testimony of a witness with contradictory
+            evidence does not create an implied charge of recent
+            fabrication or improper motive or influence. <em>Id.</em>
+            (“The historical meaning of ‘implied charge’ and its present
+            meaning do not include cases of simple contradiction
+            concerning the facts of the case among or between
+            witnesses”). Indeed, as nearly every trial inevitably
+            involves contradictory evidence, to hold otherwise would
+            “repeal the rule of OEC 801(4)(a) [and] would reward the
+            garrulous but not the reticent.” <em>Id.</em> at 594. In
+            addition, the state cannot attempt to create an implied
+            charge of fabrication through cross-examination of a defense
+            witness—by asking the witness to say that anything contrary
+            to that witness’s version of the events would be a
+            fabrication. <em>Id.</em> at 593 and n.5.</p>
+            <p>Moreover, prior statements must have been made
+            <em>before</em> the time when the alleged motive to
+            fabricate arose. <em>Id.</em> at 591 (“[T]he prior
+            consistent statement which may be admitted is one made
+            before the alleged motive to fabricate arose”); <a
+            href="https://scholar.google.com/scholar_case?case=6931044034072923715&amp;q=State+v.+Middleton,+294+Or+427,++(1982)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Middleton</em></a>, 294 Or 427, 431 (1982) (where
+            defendant contended complaining witness invented rape story
+            so she could move out to live with her boyfriend, “the
+            desire to move away from her home was a motive that could
+            have been present before her initial report, so it would not
+            support the admission of prior consistent statements”).</p>
+            <p>Thus, if the state seeks to introduce the prior
+            statements of the complaining witness under OEC
+            801(4)(a)(B), the defendant should request a hearing,
+            outside the presence of the jury, to determine 1) whether
+            there has been an explicit or implied charge of recent
+            fabrication under the law, and if so 2) whether the
+            statement or statements in question are consistent with the
+            complaining witness’s trial testimony, and 3) whether the
+            statements were made before the motive to fabricate
+            arose.</p>
+            <h1 id="xiii._motion_to_redact_recordings"><strong>XIII.
+            Motion to Redact Recordings</strong></h1>
+            <p>The state often moves to introduce the recorded statement
+            of the defendant in evidence. While a defendant’s statements
+            are generally admissible, invariably those recordings
+            contain inadmissible, and sometimes quite damning, evidence
+            as well. Recorded police interrogations, in particular,
+            present this risk. For example, an interrogator may, as part
+            of her interrogation, suggest or outright state that she
+            does not believe what the defendant is saying. This improper
+            comment should not come before the jury (see below). Another
+            example is when officers read a search warrant to a
+            defendant prior to an interrogation—the search warrant will
+            contain language that a judicial officer has found probable
+            cause that the crime was committed by the defendant. It
+            would violate due process for a jury to hear this. The
+            defense attorney should review any recorded statements in
+            detail and move to redact any irrelevant or otherwise
+            inadmissible portions. A motion <em>in limine</em> to redact
+            the statement alerts the court to these issues prior to
+            trial and thus avoids taking time out for the redaction
+            process during the trial.</p>
+            <p><strong>Practice Tip: Argue Due Process, Not
+            Vouching</strong></p>
+            <p>Importantly, defense counsel should <em>not</em> argue
+            for redaction based on the longstanding prohibition against
+            vouching testimony, i.e., that one witness cannot comment on
+            the credibility of another. <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=6931044034072923715&amp;q=State+v.+Middleton,+294+Or+427,++(1982)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Middleton</em></a>, 294 Or 427, 438 (1983) (“We reject
+            testimony from a witness about the credibility of another
+            witness”). Instead, argue that the interview must be
+            redacted and the statements excluded as both irrelevant and
+            because their probative value is far outweighed by the
+            danger of unfair prejudice under OEC 403. <a
+            href="https://scholar.google.com/scholar_case?case=7113031323240231675&amp;q=State+v.+McQuisten,+97+Or+App+517,++(1989&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McQuisten</em></a>, 97 Or App 517, 520 (1989) is helpful.
+            There, the Court of Appeals reversed a conviction where the
+            trial court allowed the prosecution to play portions of a
+            defendant interview in which officers expressed their belief
+            in the <em>complaining witness’s</em> allegations:</p>
+            <blockquote>
+            <p>The principal issue at trial . . . turns on whether the
+            jury believed defendant or the complaining witness. From the
+            context of the officer’s comment to defendant, the jury
+            could reasonably have drawn the inference that the officer
+            believed the story of the complaining witness, bolstering
+            her credibility in its estimation. . . . [T]he prejudicial
+            effect of the officer’s opinion as to the credibility of the
+            complaining witness outweighs the any probative value of
+            defendant’s response [when confronted with the officer’s
+            opinion].</p>
+            </blockquote>
+            <p><em>Id.</em> at 520 (reversing under OEC 403). <em>See
+            also <a
+            href="https://scholar.google.com/scholar_case?case=10401873358254409751&amp;q=Earls+v.+McCaughtry,+379+F3d+489,+&amp;hl=en&amp;as_sdt=3,38">Earls
+            v. McCaughtry</a></em>, 379 F3d 489, 493 (7th Cir 2004)
+            (ineffective assistance for failing to redact vouching
+            comments of interviewer, because duty to assess witness
+            credibility is “left solely to the jury,” and witness
+            comments on credibility are “harmful at trial because it
+            impermissibly interferes with the jury’s role”).</p>
+            <h1
+            id="xiv._motion_to_introduce_evidence_of_defendants_sexual_propriety_with_minors"><strong>XIV.
+            Motion to Introduce Evidence of Defendant’s Sexual Propriety
+            with Minors</strong></h1>
+            <blockquote>
+            <p>In some cases, it may benefit a defendant to introduce
+            character evidence related to the defendant’s sexual
+            propriety. Further, such character evidence can, if desired,
+            be limited to evidence of defendant’s sexual propriety
+            <em>specifically</em> around minors. The decision whether to
+            introduce such evidence should not be made lightly—character
+            witnesses have the potential to backfire under
+            cross-examination. Putting on character evidence of this
+            sort could also draw the jury’s attention to issues or
+            create inferences that would not otherwise have been
+            considered. Once the decision is made, the following
+            arguments support the introduction of this character
+            evidence.</p>
+            <p>A defendant’s character for sexual propriety around
+            minors is pertinent character evidence and admissible under
+            OEC 404(2)(a). <em>See <a
+            href="https://scholar.google.com/scholar_case?case=424881432093166491&amp;q=State+v.+Enakiev,+175+Or+App+589+(2001&amp;hl=en&amp;as_sdt=4,38">State
+            v. Enakiev</a></em>, 175 Or App 589 (2001). <em>Enakiev</em>
+            reversed a trial court’s exclusion of evidence of a
+            defendant’s character for sexual propriety, applying a
+            four-part test for admissibility in cases where character is
+            not an essential element of the charge or defense:</p>
+            </blockquote>
+            <p>[C]haracter evidence proffered by the defense under OEC
+            404(2)(a) is admissible only if: (1) the evidence concerns a
+            “trait of character”; (2) that trait is “pertinent” to the
+            crime charged; (3) the evidence is offered in the proper
+            form under OEC 405, and (4) the evidence was not of
+            “specific instances of conduct.”</p>
+            <p><em>Id.</em> at 594.</p>
+            <p><em>Enakiev</em> held squarely that character for sexual
+            propriety is the type of “pertinent” character trait
+            contemplated by OEC 404(2)(a). <em>Id.</em> at 595 (“sexual
+            propriety is materially indistinguishable from other
+            examples of character traits . . . and is properly deemed a
+            character trait”). <em>Enakiev</em> relied on <em>State v.
+            Marshall</em>, defining “character” as “a person’s
+            disposition or propensity toward certain behavior.” [<a
+            href="https://scholar.google.com/scholar_case?case=1921580370191220656&amp;q=Marshall,+312+Or+367">https://scholar.google.com/scholar_case?case=1921580370191220656&amp;q=Marshall,+312+Or+367</a>,(1991)&amp;hl=en&amp;as_sdt=4,38
+            <em>Marshall</em>], 312 Or 367, 371-72 (1991). Sexual
+            propriety around minors clearly speaks to a “disposition or
+            propensity toward certain behavior.”</p>
+            <p><em>Marshall</em> held that a character trait could be a
+            particular subset of a more broadly defined category. The
+            <em>Marshall</em> defendant wished to admit character
+            evidence not only on the victim’s general reputation for
+            truthfulness, but also whether she had a reputation for
+            telling “any particular kind of lie.” <em>Id.</em> at 369,
+            372. The court approved this narrowed character trait as
+            “within the scope of OEC 404(2)(b).” <em>Id.</em> at
+            372.</p>
+            <p>Further, evidence of a character trait is admissible if
+            the trait is “pertinent,” i.e., “relevant to the offense
+            charged.” <a
+            href="https://scholar.google.com/scholar_case?case=424881432093166491&amp;q=State+v.+Enakiev,+175+Or+App+589+(2001&amp;hl=en&amp;as_sdt=4,38"><em>Enakiev</em></a>,
+            175 Or App 595-96. Thus character evidence is “pertinent” if
+            it has “‘any tendency’ to make the existence of a fact of
+            consequence ‘more or less probable than it would be without
+            the evidence.’” <em>Id.</em> at 596 (citing OEC 401,
+            defining relevance).</p>
+            <p>It follows that where the indictment includes charges
+            containing elements that allege the victim was “a child” or
+            a person “under the age of fourteen years,” for example, the
+            defendant’s character for sexuality propriety around minors
+            is “pertinent”—it has the tendency to make the existence of
+            a fact of consequence (age of the complaining witness) more
+            or less probable than it would be without the evidence.
+            <em>Enakiev</em>, 175 Or App at 596; OEC 401. <em>See also
+            <a
+            href="https://scholar.google.com/scholar_case?case=529761737526295079&amp;q=Arizona+v.+Rhodes,+200+P3d+973,++(Ariz+App+2008)&amp;hl=en&amp;as_sdt=ffffffffffffe04">Arizona
+            v. Rhodes</a></em>, 200 P3d 973, 976 (Ariz App 2008)
+            (“Defendant’s sexual normalcy, or appropriateness in
+            interacting with children, is a character trait, and one
+            that pertains to charges of sexual conduct with a child”)
+            (citing <em>Enakiev</em>).</p>
+            <p>Under <em>Marshall</em> and <em>Enakiev</em>, a
+            defendant’s sexual propriety around minors is a permissible
+            “trait of character” under OEC 404(2). <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=17532816419464987055&amp;q=State+v.+Rothwell,+294+P3d+1137,++(Idaho+App+2013)&amp;hl=en&amp;as_sdt=ffffffffffffe04">State
+            v. Rothwell</a></em>, 294 P3d 1137, 1143 (Idaho App 2013)
+            (citing <em>Enakiev</em> and cases from several other
+            jurisdictions allowing character evidence on sexual
+            propriety around minors).</p>
+    </body>
+</html>

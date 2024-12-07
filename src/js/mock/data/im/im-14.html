@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p>2010 edition</p>
+            <p><strong>Investigating Dependency and Termination Cases in
+            Juvenile Court</strong></p>
+            <p><strong><em>Barbara Builder</em></strong></p>
+            <p>Juvenile court dependency cases exist when the conditions
+            or circumstances of a child or children are such as to
+            endanger their own welfare or the welfare of others.
+            Children come to the attention of the Department of Human
+            Services (DHS) when someone—either a police officer,
+            mandatory reporter, friend, neighbor, or concerned citizen
+            calls the child abuse hotline [numbers available on the DHS
+            website at<a
+            href="http://www.oregon.gov/DHS/children/abuse/cps/cw_branches.shtml"><span>http://www.oregon.gov/DHS/children/abuse/cps/cw_branches.shtml</span></a>]
+            and reports abuse or neglect. A Child Protective Services
+            worker screens the report and determines if the allegation
+            falls into one of four categories:</p>
+            <p>1) information only, 2) referral to other services, 3)
+            not a situation that is abuse or neglect, and 4) possible
+            abuse or neglect. If the caseworker determines that the
+            child in question is in immediate danger, the report is
+            promptly sent to the appropriate DHS office to conduct an
+            immediate assessment of the family. Many reports received
+            through the hotline are screened out and no case is opened.
+            The reports that warrant a safety assessment are sent to a
+            protective services worker who meets with the child, the
+            family, and others who are familiar with the child.</p>
+            <p>The caseworker’s focus at this point is to determine if
+            the child has been abused or neglected and if that child can
+            remain safely in the home. Because DHS is child centered and
+            family focused, the primary responsibility is to ensure the
+            child’s safety and well-being. DHS will file a Dependency
+            Petition in juvenile court if they believe that the family
+            cannot ameliorate the circumstances that led to the referral
+            without the intervention of DHS and the court. Once a
+            petition is filed, all parties are appointed attorneys (in
+            most counties). As reported by DHS, less than ten percent of
+            total child abuse reports resulted in a child being removed
+            from home and placed in relative or substitute foster
+            care.</p>
+            <h1 id="petition"><strong>Petition</strong></h1>
+            <p>DHS files a petition in juvenile court based in part on
+            police reports, witness information, medical/mental health
+            records, and child and family interviews. At times the
+            agency has very little detailed information to support its
+            allegations. Close review of records and witness statements
+            is important to ensure that your client is accurately
+            portrayed. This is especially true if DHS filed a petition
+            based on previous involvement with a parent. When the
+            petition is filed, DHS must attempt to locate all legal
+            parents. DHS must at least attempt to notify a man that he
+            has been identified as a potential biological father and
+            give him the opportunity to address paternity.</p>
+            <h1 id="jurisdiction"><strong>Jurisdiction</strong></h1>
+            <p>Unlike criminal cases, dependency cases are heard in
+            civil court. Jurisdiction is defined as whether the court
+            will have the power to make decisions about the family and
+            the child’s placement. The petition filed by DHS outlines
+            the agency’s concerns and how they adversely affect the
+            child. The standard to find jurisdiction of the child as to
+            one or both of the parents is a “preponderance of the
+            evidence,” which means 51 percent or better chance that the
+            child has been abused or neglected, or is at imminent risk
+            of being abused or neglected If there are two parents listed
+            on the petition, only one allegation of each parent has to
+            be proven in order to establish jurisdiction.</p>
+            <p>Investigation is crucial to either support or refute the
+            basis of the allegations, depending on who your client is
+            and how they want the situation resolved. If an attorney
+            represents a young child, that attorney will represent what
+            is in the child’s “best interest” since the child cannot
+            take part in the case due to their age. Attorneys who
+            represent older children (around seven years old) will
+            represent their client’s “expressed wishes.” The court makes
+            findings and orders the parents to complete services based
+            on the allegations proven to be true. DHS may not compel a
+            parent to complete a service if the service is not related
+            to the proven allegations on the petition.</p>
+            <h1 id="parties"><strong>Parties</strong></h1>
+            <p>There are many parties involved in dependency cases. The
+            District Attorney represents the state’s interests, which at
+            times may conflict with DHS. If DHS believes they need
+            representation, a lawyer from the Attorney General’s office
+            appears at hearings. The biological mother and legal father
+            are also appointed attorneys. The legal standing of a father
+            or fathers can be confusing and may need clarification from
+            your attorney. The children are appointed an attorney or
+            attorneys, depending on their ages and wishes. Often the
+            agency will have one plan for a younger child and another
+            plan for an older child.</p>
+            <h1 id="players"><strong>Players</strong></h1>
+            <p>The players include all parties listed above as well as
+            foster parents, teachers, medical providers, drug and
+            alcohol providers, mental health providers, parole officers,
+            disability workers, daycare providers, family, friends, and
+            neighbors. DHS often requests written reports from providers
+            involved in the case and provides them to the court. It is
+            DHS’ responsibility to tailor and coordinate services that
+            best meet the family’s specific needs.</p>
+            <h1 id="setting_up_your_file"><strong>Setting Up Your
+            File</strong></h1>
+            <p>Your file should include discovery provided by DHS and
+            the DA’s office at the initial shelter hearing. That
+            discovery will often include the Dependency Petition, police
+            reports, the hotline referral, and medical records of the
+            children. If a child has suffered significant neglect or
+            physical or sexual abuse, the child is often examined by
+            specialized doctors. In Multnomah County the program is
+            called CARES, and the doctors work closely with police and
+            DHS to determine the severity of the abuse and the identity
+            of the perpetrator. DHS should request reports from any
+            provider involved with the family prior to the hotline
+            referral. Due to HIPPA privacy laws, without a subpoena you
+            will most likely only be able to gather reports on your
+            client.</p>
+            <h1 id="dealing_with_the_dhs"><strong>Dealing with the
+            DHS</strong></h1>
+            <p>While many caseworkers and supervisors mean well, they
+            are frequently overworked and under trained. There is a high
+            turnover rate, and your client may have several caseworkers
+            before the case is resolved. It is important to know that
+            DHS generally takes the mother’s allegations of abuse by the
+            father as the truth. It is vital to order all police reports
+            to determine if the mother’s statements are accurate. It is
+            also a good idea to talk with neighbors, family members,
+            employers or anyone who may have intimate knowledge of the
+            family. Cell phone records can be obtained through
+            subpoenas, as can prison visiting records and phone calls.
+            Never forget to review MySpace, Facebook and other online
+            social networking sites for information about your client
+            and/or witnesses involved in the case.</p>
+            <p>DHS frequently requests psychological evaluations of the
+            parents to determine the best course of treatment or to
+            determine if the treatment the parents have been involved
+            with have been beneficial. The attorney may request that the
+            investigator speak with people who can provide background
+            information about the client. This can assist the attorney
+            in preparing a letter that can be given to the expert as a
+            way to augment DHS’ information. Your client is not always
+            portrayed in the most positive light by DHS.</p>
+            <p>When subpoenaing an existing DHS file you will need a
+            Qualified Protective Order (QPO) signed by a judge. Request
+            a copy of the complete file, including all child abuse
+            hotline referrals, visitation log notes, written case notes,
+            and FACIS case notes (these notes are kept on the
+            computer—all caseworkers are supposed to keep copious notes
+            on each case in the computer; these notes are often not
+            included as part of the DHS file). You will also need a QPO
+            to subpoena any medical or mental health records.</p>
+            <h1 id="interviewing_children"><strong>Interviewing
+            Children</strong></h1>
+            <p>Talk with your attorney about the parties in the case. If
+            any witness is represented by counsel, you will need to
+            obtain permission from that attorney before interviewing the
+            witness. If your attorney does not represent the child,
+            chances are you will not interview her. If your attorney
+            does represent the child, spend time getting to know her
+            before asking questions directly related to the allegations
+            against the parents. Many of the kids in foster care want to
+            return to their parent(s), regardless of the situation. Many
+            of the children you will meet have been through a great deal
+            of abuse and/or neglect—never underestimate their
+            feelings.</p>
+            <h2
+            id="a_general_guide_to_interviewing_children"><strong><em>A
+            General Guide to Interviewing Children</em></strong></h2>
+            <p>Consider the age and gender of the witness and the nature
+            of the information you are trying to illicit. If the witness
+            is under 16, I always consult with the parents as a
+            precautionary measure.</p>
+            <p>Find out as much as possible before interviewing the
+            witness. Many children involved with DHS can present with a
+            myriad of issues, and certain approaches are more effective
+            than others. If the child/witness has a specific diagnosis,
+            spend time learning about that diagnosis and how it
+            manifests itself in children.</p>
+            <p>Schedule interviews at the witness’s convenience. Schools
+            will not release a child to an investigator without the
+            parents’ permission. Allow yourself plenty of time for the
+            interview. Establishing any commonalities will always
+            help.</p>
+            <p>Keep the questions simple and straightforward. Give a
+            child witness the option of answering the question with, “I
+            don’t know.” Use significant dates such as holidays or
+            summer break to help with timeframes. Use words kids can
+            understand when explaining your role in your client’s case.
+            You may not get all the information you need in the first
+            meeting.</p>
+            <p>Always review the child’s statement for accuracy before
+            you end the interview. (Also see Chapter 15 for sections on
+            interviewing children, teenagers, and victims.)</p>
+            <h1 id="life_of_a_dhs_case"><strong>Life of a DHS
+            Case</strong></h1>
+            <p>If children are removed from a parent’s custody, that
+            parent basically has twelve months to engage in services and
+            ameliorate the circumstances that brought the family to the
+            attention of DHS. Parents will be referred to such services
+            as alcohol and drug treatment, domestic violence, anger
+            management, mental health therapy, family counseling,
+            psychological evaluations, parenting classes, and skills
+            training. The child may be referred for a mental health
+            evaluation and treatment. The court or a CRB (Citizens
+            Review Board) will review the case every six months to
+            determine DHS’ compliance with court orders and the parents’
+            compliance with treatment expectations. Many of these cases
+            come down to the mother or father’s capacity to parent.
+            Sometimes parents resolve many of their own issues and are
+            still unable to parent given their child’s significant
+            mental health/behavioral issues.</p>
+            <p>If neither biological parent appears fit to resume
+            physical custody of their child at the end of twelve months,
+            DHS will staff the case with the District Attorney or
+            Attorney General’s office to determine if a Termination of
+            Parental Rights Petition should be filed.</p>
+            <h1 id="termination"><strong>Termination</strong></h1>
+            <p>DHS pursues termination of the parents’ rights if it does
+            not appear that the child can return safely to the parent
+            within a reasonable amount of time—as in the next three or
+            four months. Another factor that must be considered in
+            termination cases is the adoptability of the child. Older
+            children and children with high special needs can be more
+            difficult to place adoptively. Sometimes DHS recruits for an
+            adoptive home before the termination of parental rights
+            petition is filed.</p>
+            <p>After the Termination of Parental Rights Petition is
+            filed the court schedules trial dates which are often months
+            out. The parent can continue to engage in services and work
+            to regain custody. An investigator should review the
+            client’s treatment reports and speak with treatment
+            providers in preparation for a termination trial. It will be
+            your job to help the attorney disprove the allegations by
+            showing that the parent has made sufficient and significant
+            progress in treatment to safely parent the child(ren). Your
+            job may also be to prove that DHS did not provide
+            appropriate services to the family. Termination trials can
+            take days or weeks and are very difficult and emotional for
+            all parties.</p>
+            <h1 id="conclusion"><strong>Conclusion</strong></h1>
+            <p>Working in the juvenile field can be emotionally
+            draining. You will meet many children and adults who have
+            endured severe trauma. Many families who come to the
+            attention of DHS are heavily involved with drugs and
+            criminality. There can be generations of families involved
+            with DHS. It will be important to educate yourself about
+            topics such as alcohol and drug use, domestic violence,
+            gangs, mental heath issues and trauma. For books that I have
+            found helpful, please see the appendix.</p>
+            <p>='''</p>
+            <center>
+            <p>Appendix</p>
+            </center>
+            <p>'''=</p>
+            <center>
+            <p>Books recommended by the author</p>
+            </center>
+            <p>•<em>The Boy Who Was Raised as a Dog: And Other Stories
+            from a Child Psychiatrist’s Notebook</em></p>
+            <p>Bruce Perry, M.D., Ph.D.</p>
+            <p>•<em>Code of the Street: Decency, Violence and the Moral
+            Life of the Inner City</em></p>
+            <p>Elijah Anderson</p>
+            <p>•<em>Always Running: La Vida Loca Gang Days in
+            L.A.</em></p>
+            <p>Luis J. Rodriguez</p>
+            <p>•<em>A Child Called “It”</em></p>
+            <p>Dave Pelzer</p>
+            <p>•<em>Hope’s Boy</em></p>
+            <p>Andrew Bridge</p>
+            <p>•<em>Broken</em></p>
+            <p>William Cope Moyers</p>
+            <p>•<em>Beautiful Boy: A Father’s Journey Through His Son’s
+            Addiction</em></p>
+            <p>David Sheff</p>
+    </body>
+</html>

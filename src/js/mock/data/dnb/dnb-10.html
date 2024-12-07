@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2020 edition, with 2024 Update</p>
+            <h1 id="dres_and_cannabis"><strong>DREs and
+            Cannabis</strong></h1>
+            <p><strong><em>By Max Mizejewski and Justin
+            Morehouse</em></strong></p>
+            <p><em>“If the doors of perception were cleansed<br />
+            every thing would appear to man as it is, infinite.” William
+            Blake</em></p>
+            <h3 id="update"><strong>2024 update</strong></h3>
+            <p>See the new DRE Matrix attached to this chapter.</p>
+            <p>Note: Cannabis duration of effects has been changed to
+            three-four hours if smoked and up to eight hours if
+            eaten.</p>
+            <p>Look for additional 2024 updates further down in the
+            chapter.</p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>If your client is arrested for DUII and provides a breath
+            alcohol sample that is less than 0.08%, there is a good
+            chance the police will not apologize and release them from
+            custody but will instead bring in a “drug recognition
+            expert” or DRE. A DRE is a police officer that has attended
+            a specialized training program purported to enable them to
+            tell whether a person is impaired by drugs and, if so, which
+            ones. The police report will likely say something like:
+            defendant’s blood alcohol level was not consistent with the
+            level of impairment so I brought in a DRE. A second officer
+            is typically brought in even if the arresting officer is a
+            certified DRE to create the illusion of impartiality. An
+            important point about the DRE process to be aware of is that
+            the DRE most likely knows the answer before beginning the
+            test. By this point the arresting officer will have grilled
+            your client relentlessly about the last time they smoked
+            cannabis or used other drugs and will have a pretty good
+            idea of what they are looking for. Sometimes your client
+            will be in possession of drugs which gives the DRE a strong
+            indication of what substance will be in your client’s urine
+            to confirm the DRE’s opinion.</p>
+            <p>Do not be intimidated by a DRE DUII. This is a practice
+            area ripe with opportunities to mount a strong defense
+            against voodoo science and provide alternative explanation
+            for observations made by the DRE. The DRE DUII jury trial
+            provides a wonderful opportunity to educate the jury about
+            the DRE program and why it cannot prove beyond a reasonable
+            doubt what, if any, drugs your client was on at the time of
+            driving. Think of yourself as a professor educating the jury
+            on what the DRE program is, what observations the DRE made,
+            and why those observations don’t go very far in determining
+            with certainty whether there was impairment at the time of
+            driving. You may want to use expert witnesses to help
+            educate the jury, or you may choose to rely on the state’s
+            own witnesses to support your theory of defense.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Whenever possible, use the state’s own witnesses to
+            support your theory of defense. This will have a much
+            greater impact on the jury since they may believe defense
+            expert witnesses are hired guns who will say whatever we
+            want them to. There can be little chance of bias if the
+            state’s witnesses are providing testimony <em>we</em> can
+            use in closing to support our theory of defense. A common
+            theory of defense in a DRE DUII case is, “My client was not
+            under the influence of a controlled substance at the time of
+            driving.” Bring out every piece of evidence in the state’s
+            case-in-chief that supports this theory, and every piece of
+            evidence that contradicts the state’s theory.</p>
+            <p>This chapter will begin by providing a brief history of
+            the DRE program, then review some statistics of DRE cases in
+            Oregon, then review the seven drug categories. We will
+            briefly review polydrug use and how a determination is made
+            when a defendant is accused of being on multiple drugs. We
+            will then review the DRE 12-step protocol and case law that
+            supports the DRE program as scientific evidence. We will
+            then explore the DRE matrix, focusing on the four drug
+            categories that are identified 98% of the time (cannabis,
+            CNS depressants, CNS stimulants, and narcotics). This
+            section includes a deep dive into the cannabis category,
+            which made up 40% of the Oregon DRE calls in 2018. We will
+            resurface with some general defense strategies and practice
+            tips to help you prepare for your DRE DUII trial. At the end
+            of the chapter, you will find a glossary of useful terms
+            that will help you analyze your DRE case, a list of sample
+            cross-examination questions to ask the arresting officer,
+            DRE, and lab technician. Finally, we have provided an
+            independent peer-reviewed study that calls into question the
+            accuracy and validity of the DRE program. This chapter gives
+            citations to and relies heavily on the <a
+            href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/documents/dre_7-day_participant_manual-tag.pdf"><span class="underline">2018
+            Drug Recognition Expert Course Participant
+            Manual</span></a>, which can be found online and in the DUII
+            Notebook Resource Guide. The narly 1000-page Drug
+            Recognition Expert Course Participant’s Manual is divided
+            into 30 sessions and the session and page number are given
+            when referred to in this chapter.</p>
+            <p>DRE DUII enforcement is an area of law that casts a
+            particularly wide net. Innocent people are often captured
+            who may have used controlled substances at some point in the
+            past but were not impaired at the time of driving. We hope
+            you find this chapter to be a valuable resource to defend
+            those accused of this crime and being prosecuted by the use
+            of this arbitrary, pseudo-scientific process.</p>
+            <h1 id="ii._history_of_the_dre_program"><strong>II. History
+            of the DRE Program</strong></h1>
+            <p>According to the <a
+            href="http://www.lapdonline.org/special_operations_support_division/content_basic_view/1038">Los
+            Angeles Police Department</a> (LAPD) website<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a>, in the 1970s the
+            following scenario was regularly played out on the streets
+            of American communities. While on routine patrol, an officer
+            makes a stop and completes a mental checklist: bloodshot
+            eyes, check; slurred words, check; forgetting about the
+            driver’s license, check; car smells like a brewery, check.
+            “I think this guy might be deuce,” the officer thinks.
+            “Deuce” is a slang term, primarily used in California, for a
+            person who drives under the influence of alcohol. “Deuce” is
+            derived from 502, a former California penal code for DUII.
+            The LAPD article goes on to lament how the officer loses the
+            deuce because the person blows 0% BAC and they do not have
+            the evidence to convict for driving while under the
+            influence of drugs. LAPD was frustrated at being unable to
+            prosecute these cases and therefore developed the first DRE
+            program. Mixing together a potent cocktail of law
+            enforcement, medicine, psychiatry, physiology, and
+            toxicology, they developed a drug classification and
+            identification program to secure more DUII convictions.</p>
+            <p>According to the <a
+            href="https://www.theiacp.org/projects/the-international-drug-evaluation-classification-program">International
+            Association of Chiefs of Police</a> (IACP) website, two LAPD
+            sergeants collaborated with various medical doctors,
+            research psychologists, and other medical professionals to
+            develop a simple, standardized procedure for recognizing
+            drug influence and impairment. Their efforts culminated in
+            the development of a multistep protocol and the first drug
+            recognition expert (DRE) program. The LAPD formally
+            recognized the Drug Recognition Expert program in 1979.<a
+            href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            <p>The National Highway Transportation Safety Administration
+            (NHTSA) took an interest in the LAPD program and
+            collaborated with the LAPD to create the current Drug
+            Evaluation and Classification Program (DECP) in 1984. In
+            1987, the Highway Safety Committee of the IACP partnered
+            with NHTSA to roll out the DECP nationwide. In the 1980s,
+            NHTSA sponsored three studies to validate the DECP and allow
+            them to be used in court. These studies were reviewed by a
+            neutral third party in 2013 and found to be flawed, biased,
+            and unscientific. <em>See</em> Kane study in Appendix C.<a
+            href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> Oregon eventually
+            adopted the DRE program in 1997, and as of 2018 Oregon had
+            212 certified DREs and 38 DRE instructors (<a
+            href="https://www.theiacp.org/sites/default/files/2019-01/Final%202018%20Annual%20Report%20Single%20Pages.pdf">IACP
+            2018 annual report</a>)<a href="#fn4" class="footnote-ref"
+            id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+            <p>An ordinary officer can become a DRE after about two
+            weeks of classes and a few field practice sessions. This is
+            not the most sophisticated expert in the courtroom. The
+            certification process includes a 16-hour “Pre-School,” a
+            56-hour DRE school (using the <a
+            href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/documents/dre_7-day_participant_manual-tag.pdf">2018
+            DRE Course Participants’ Manual</a>), and then the officer
+            must conduct at least 12 drug influence evaluations while
+            under the supervision of a DRE instructor. The DRE student
+            must pass a final written exam and show an accuracy of at
+            least 75% based on toxicological confirmation (Session 30,
+            pg 10). The DRE must then be re-certified every two years by
+            showing they have completed at least four acceptable drug
+            evaluations, completed at least eight hours of approved
+            recertification training, and presenting an updated CV and
+            rolling log (Session 30, pg 17). To maintain certification
+            the DRE must maintain a rolling log that demonstrates a
+            minimum 80% accuracy rating when compared with the
+            toxicology results.<a href="#fn5" class="footnote-ref"
+            id="fnref5" role="doc-noteref"><sup>5</sup></a> To be
+            considered an accurate opinion, toxicological confirmation
+            proceeds as follows: for one drug category, the category
+            called must come back positive; for two drug categories, at
+            least one category called must come back positive; for three
+            categories called, at least two categories called must come
+            back positive, and so on.<a href="#fn6" class="footnote-ref"
+            id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+            <p>You may have had some deuces involving drugs come in that
+            you want to beat at trial and may be wondering, how can the
+            state prove whether my client was impaired? Being under the
+            influence of a drug is a subjective experience, a
+            modification of the user’s ordinary experience of
+            consciousness that is only experienced by the individual on
+            drugs. The DRE program has developed “signs and symptoms”
+            that are commonly observed when a person is high on a
+            particular drug. However, since Oregon generally tests urine
+            rather than blood, there will be little hard evidence of
+            impairment at the time of driving. Urine is the waste bin of
+            the body and does not tell the jury anything about
+            impairment at the time of driving. In cases where there was
+            a blood draw, was there a check for quantity of controlled
+            substance? Were there other substances in the blood or urine
+            that could also cause the police observations? More on this
+            can be found in Chapter 11, Breath, Blood, &amp; Urine.</p>
+            <p><code>Practice Tip</code></p>
+            <p>When discrediting state witnesses with the profoundly
+            unscientific nature of this program, be kind. A big part of
+            winning DUII cases at trial is helping the jury like you and
+            your client and helping them not like the police. So many
+            California juries refused to convict possessors of cannabis
+            since the 1960s that they effectively nullified the cannabis
+            part of the controlled substances laws. As J. Tony Serra
+            describes, nullification is the process of transcending the
+            facts of the case, in order to make at least one member of
+            the jury empathize with the plight of your client.<a
+            href="#fn7" class="footnote-ref" id="fnref7"
+            role="doc-noteref"><sup>7</sup></a></p>
+            <h1 id="iii._the_seven_drug_categories"><strong>III. The
+            Seven Drug Categories</strong></h1>
+            <p>The DRE program consolidates all controlled substances
+            into six broad categories plus cannabis. The controlled
+            substances listed below are not an exhaustive list but
+            include the substances most commonly seen in Oregon.</p>
+            <p>'''1. CNS Depressants: includes alcohol, barbiturates,
+            and benzodiazepines (Xanax, Klonopin, Valium, and
+            Ativan)</p>
+            <p><strong>2. CNS Stimulants: includes methamphetamine,
+            cocaine, and Adderall</strong></p>
+            <p><strong>3. Hallucinogens: includes LSD, MDMA, psilocybin,
+            mescaline, DMT and Ayahuasca</strong></p>
+            <p><strong>4. Dissociative Anesthetics: includes ketamine
+            and PCP</strong></p>
+            <p><strong>5. Narcotic Analgesics: includes heroin and
+            synthetic opioids (Kratom falls into this category but as of
+            this publication it was not a controlled
+            substance)</strong></p>
+            <p><strong>6. Inhalants: includes nitrous oxide and
+            difluoroethane (found in canned air such as
+            Dust-Off)</strong></p>
+            <p><strong>7. Cannabis: includes natural THC products and
+            synthetic THC (Marinol)</strong></p>
+            <p>Some drug categories are called by DREs much more often
+            than others. There were 1,502 DRE evaluations conducted in
+            Oregon in 2018. Cannabis was the most common call (750),
+            then stimulants (496), then depressants (348), then
+            narcotics (287). Hallucinogens (11), dissociative
+            anesthetics (10), and inhalants (7) were rarely called.<a
+            href="#fn8" class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a> This varies slightly
+            from the national statistics shown in the table below.
+            Oregon has a higher percentage of cannabis cases and lower
+            percentage of narcotic cases as shown in the table. This
+            table gives a good idea of what police are looking for
+            nationally and in Oregon.</p>
+            <h2 id="february_2022_update"><strong>February 2022
+            Update</strong></h2>
+            <p>2021 Legislative Update</p>
+            <p>House Bill 3140 Adds psilocybin to DUII and BUII statutes
+            that reference controlled substances.</p>
+            <blockquote>
+            <p>• Makes changes to statutes related to operating vehicle
+            or boat while under influence of intoxicants that reference
+            controlled substances to clarify applicability to
+            psilocybin.</p>
+            <p>• Creates new provisions; amends ORS 801.272, 807.060,
+            809.235, 809.260, 809.730, 813.010, 813.040, 813.131,
+            813.140, 813.150, 813.215, 813.220, 813.430, 813.602,
+            821.250, 830.325, 830.365, 830.505, 830.515, 830.520,
+            830.525 and 830.815.</p>
+            </blockquote>
+            <p><strong>[End 2022 Update]</strong></p>
+            <h1 id="iv._polysubstance_use"><strong>IV. Polysubstance
+            Use</strong></h1>
+            <p>Most drug users mix different substances depending on
+            what is available and to get the desired effect. Sometimes
+            drugs can have a synergistic effect when used together. In
+            the 1985 Los Angeles field study, 72% of the suspects had
+            two or more drugs on board (Session 24, pg 6). Some of the
+            most common combinations of drugs are alcohol and cannabis,
+            heroin and cocaine, and coffee and cigarettes. The
+            Participant Guide says that use of alcohol and cannabis
+            together can strengthen the effect and lead to a condition
+            called “greening out.” (Session 24, pg 5). I have not heard
+            that term in the Pacific Northwest but have heard this
+            commonly referred to as being cross-faded. Polysubstance use
+            presents a problem for the DRE because the signs and
+            symptoms they may expect from one drug may be offset or
+            amplified by another drug. The DRE program has taken account
+            of this problem and implemented a method for accounting for
+            polysubstance use in their determination by asserting that
+            drug combinations result in four possible effects: null
+            effect, overlapping effect, additive effect, or antagonistic
+            effect.</p>
+            <h2 id="a._null_effect"><strong>A. Null Effect</strong></h2>
+            <p>If neither drug affects a particular indicator of
+            impairment, their combination will also not affect that
+            indicator. For example, if the person is suspected to be
+            using cocaine and heroin and we are interested in what
+            effect that would have on HGN the answer would be: HGN not
+            present for cocaine + HGN not present for heroin = HGN not
+            present. The DRE would not expect to see HGN with this
+            combination (Session 24, pg 11).</p>
+            <h2 id="b._overlapping_effect"><strong>B. Overlapping
+            Effect</strong></h2>
+            <p>If one drug affects an indicator and the other drug does
+            not, the DRE considers this to be an overlapping effect. For
+            example, if the person is suspected to be using alcohol and
+            cannabis and we are interested in HGN, the answer would be:
+            HGN present for alcohol + HGN not present for cannabis = HGN
+            present (Session 24, pg 15).</p>
+            <h2 id="c._additive_effect"><strong>C. Additive
+            Effect</strong></h2>
+            <p>If two drugs independently affect some indicator in the
+            same way, the DRE will expect to see a reinforced action.
+            For example, if the person is suspected of using cocaine
+            with LSD and we are interested in pupil dilation, the answer
+            would be: pupil size dilated for cocaine + pupil size
+            dilated for LSD = dilated pupils, potentially extremely
+            dilated pupils (Session 24, pg 19).</p>
+            <h2 id="d._antagonistic_effect"><strong>D. Antagonistic
+            Effect</strong></h2>
+            <p>When one drug would cause one action, and the other drug
+            would cause an opposite action, the DRE manual states that
+            the results would be unpredictable (Session 24, pg 23). The
+            Participant’s Manual further states that whichever drug is
+            more psychoactive at the time determines what will be
+            observed. This is based on the potency of the drug, the
+            quantity ingested, the time of ingestion and the duration of
+            effects. The manual also purports that there is not an
+            antagonistic effect for HGN, VGN, LOC, and Reaction to
+            Light, most likely because these are either present or not,
+            rather than up or down (Session 24, pg 24). For example, if
+            the person is suspected of using MDMA and Xanax and we are
+            interested in muscle tone, the answer would be: flaccid
+            muscle tone due to Xanax + rigid muscle tone due to MDMA =
+            rigid, normal or flaccid muscle tone. This is a situation
+            where the DRE can basically state any answer is correct.</p>
+            <h2 id="e._making_a_determination"><strong>E. Making a
+            Determination</strong></h2>
+            <p>The best way to determine the predicted effect is to
+            methodically input the data into a table as shown in the
+            2018 Participant’s Manual. The table below shows an example
+            of mapping out what the DRE would expect to see when a
+            person is suspected of using cannabis and Xanax
+            together.</p>
+            <h1 id="v._the_12_step_dre_protocol"><strong>V. The 12-Step
+            DRE Protocol</strong></h1>
+            <p>The DRE program requires a 12-step protocol that must be
+            precisely followed for evaluation results to be used as
+            scientific evidence at trial. If the 12-step protocol is not
+            properly followed, the results cannot be testified to as
+            scientific evidence but may come in as nonscientific expert
+            opinion testimony. For example, if the police do not get a
+            urine sample, which is part of the twelfth step, the
+            officer’s observations may come in but the officer cannot
+            make the claim that the opinion carries the weight of expert
+            testimony.<a href="#fn9" class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a> The entire evaluation
+            process is standardized and must be administered the same
+            way to all subjects and the same way by all officers
+            (Session 3, pg 6). At trial, you may want to point out that
+            during Step 2, the officer interviews the arresting officer
+            and will know whether any drugs were found or admissions
+            made regarding drug use. This is how the DRE finds out the
+            answer they are looking for prior to starting the test.</p>
+            <p>The evaluation is standardized in that it is administered
+            the same way every time (Session 4, pg 4). If standardized
+            protocol is not followed, move to exclude the DRE
+            evaluation. Reasons for standardization listed in the
+            Participants Manual include ensuring that no mistakes are
+            made, promoting professionalism among DREs, and securing
+            acceptance in court. In cases where protocol was not met,
+            you may want to have the officer recite to the jury why
+            standardization is important (Session 4, pg 5).</p>
+            <p>If the DRE does not obtain a urinalysis (UA) or blood
+            test to support the evaluation as the twelfth step of the
+            process, the test lacks standardization and scientific
+            credibility. The 2018 Participant Guide says that if the
+            subject refuses to submit to a chemical test they are
+            “denying us of scientific evidence of drug influence… In
+            that case, conviction or acquittal may hinge on the
+            officer’s observations and expertise as a DRE” (Session 3,
+            pg 7). Use this comment to point out to the DRE that the
+            only scientific evidence obtained in the DRE process is the
+            chemical test of BAC.</p>
+            <h2 id="a._dre_case_law"><strong>A. DRE Case
+            Law</strong></h2>
+            <p>When making challenges to the DRE protocol, it is good to
+            be familiar with the following three cases: <em>State v.
+            Sampson, State v. Aman,</em> and <em>State v.
+            Rambo</em>.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=7487768677061913031&amp;q=State+v.+Sampson,+167+Or+App+489+(2000)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Sampson</em>, 167 Or App 489 (2000)</a>, was the first
+            case to rule that DRE evidence comes in as scientific
+            evidence only when the DRE evaluation is completed to
+            protocol. “The state must make a foundational showing ‘that
+            the officer who administered the test was properly
+            qualified, the test was administered properly, and the test
+            results were recorded accurately.’” <em>Id.</em> at 322. If
+            any step is left incomplete, the DRE evidence is not
+            considered scientifically valid.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=18357110716886964593&amp;q=State+v.+Aman,+194+Or+App+463+(2004)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Aman,</em> 194 Or App 463 (2004)</a>, is authority for
+            the proposition that an incomplete DRE evaluation does not
+            come in as scientific evidence. In <em>Aman</em>, the DRE
+            failed to obtain a urine sample in the twelfth step.
+            “Without the corroborating evidence of the urinalysis called
+            for in the twelfth step, ‘the DRE protocol cannot be
+            considered complete.’” <em>Id.</em> at 510. Absent the
+            complete protocol, the Court of Appeals found that DRE
+            evidence failed the foundational test for scientific
+            evidence approved in <a
+            href="https://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State+v.+O%27Key,+321+Or+285+(1995)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. O’Key</em>, 321 Or 285 (1995)</a>, and <a
+            href="https://scholar.google.com/scholar_case?case=16347591282643565388&amp;q=State+v.+Brown,+297+Or+404+(1984)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown,</em> 297 Or 404 (1984)</a>.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=13342633884786707858&amp;q=State+v.+Rambo,+250+Or+App+186+(2012)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rambo</em>, 250 Or App 186 (2012)</a>, the Oregon Court
+            of Appeals further refined what evidence can be proffered by
+            the state when there is an incomplete DRE evaluation. In
+            <em>Rambo</em>, a certified DRE conducted an evaluation but
+            did not obtain a valid urine sample as the twelfth step of
+            the protocol. The defense moved to suppress the results of
+            the evaluation based on the officer’s failure to follow the
+            12-step protocol. The court ruled that the officer’s
+            testimony was allowed to come in as nonscientific expert
+            opinion evidence. <em>Id.</em></p>
+            <p>In distinguishing <em>Aman</em> from <em>Rambo</em>, the
+            court stated that based on the officer’s “training and
+            experience, police officers can—and frequently do—testify as
+            to their opinions of whether an individual was under the
+            influence of alcohol or a controlled substance.”
+            <em>Id.</em> “The fact that they may rely in part on
+            independently admissible scientific evidence, such as blood
+            alcohol content and HGN test results, to reinforce their
+            opinions, does not render those opinions inadmissible as
+            unqualified scientific evidence. Although the line we draw
+            may be fine, it is not artificial. Specialized expert
+            opinion evidence based on a witness’s training and
+            experience draws its force from that training and
+            experience, but not necessarily from the mantle of science.”
+            <em>Id.</em></p>
+            <p>Practice Tip</p>
+            <p>When the state relies on <em>Rambo</em> to argue that the
+            incomplete DRE evidence is admissible as nonscientific
+            evidence of drug impairment, you may argue that a jury will
+            view the evidence as scientific regardless of how it is
+            admitted. Then, argue that it is inadmissible under OEC 403
+            because the jury will allot it greater weight as “science”
+            when the state has failed to establish its scientific
+            validity.</p>
+            <h2 id="b._12_step_dre_protocol_detailed_view"><strong>B.
+            12-Step DRE Protocol Detailed View</strong></h2>
+            <p>Become familiar with the 12-step protocol checklist used
+            by DREs on the previous page. A summary of the 12 steps
+            follows.</p>
+            <p><strong>1. A blood alcohol content (BAC) analysis is
+            done. If the subject’s BAC exceeds 0.08 percent, the DRE
+            protocol ends.</strong></p>
+            <p><strong>2. The DRE officer interviews the arresting
+            officer to elicit information about the subject’s behavioral
+            and physical symptoms.</strong></p>
+            <p><strong>3. The DRE officer conducts a preliminary
+            physical examination: he or she checks the subject’s eyes
+            for synchronization and pupil size, checks the pulse for the
+            first time, and asks general health questions. This step
+            determines whether the subject is impaired by a medical
+            condition.</strong></p>
+            <p><strong>4. The DRE officer conducts four standard eye
+            examinations developed to detect intoxication: Horizontal
+            Gaze Nystagmus (HGN), Vertical Gaze Nystagmus (VGN), and
+            Lack of Convergence (LOC).</strong></p>
+            <p>• HGN—present with CNS depressants, inhalants, and
+            dissociative anesthetics.</p>
+            <p>• VGN—present with CNS depressants, inhalants, and
+            dissociative anesthetics (indicates a high dose for that
+            individual).</p>
+            <p>• LOC—present with CNS depressants, inhalants,
+            dissociative anesthetics, and cannabis (20–30% of general
+            public cannot converge).</p>
+            <p><strong>5. The DRE officer conducts four field sobriety
+            tests (FSTs): the Romberg-balance test, the walk-and-turn
+            test, the one-leg-stand test, and the finger-to-nose
+            test.</strong></p>
+            <p><strong>6. The DRE officer checks the subject’s pulse a
+            second time, blood pressure, and body
+            temperature.</strong></p>
+            <p>• Pulse rate—normal range 60–90 BPM.</p>
+            <p>• Blood Pressure—normal range systolic 120–140 mmHg,
+            diastolic 70–90 mmHg.</p>
+            <p>• Body temperature—normal range 98.6 +/- 1 degree.</p>
+            <p><strong>7. The DRE officer measures the subject’s pupil
+            size under three light conditions (near total darkness, room
+            light, and direct light), and inspects the nose and mouth
+            for signs of drug ingestion.</strong></p>
+            <p>• Near total darkness—normal range 5.0–8.5 mm.</p>
+            <p>• Room light—normal range 2.5–5.0 mm.</p>
+            <p>• Direct light—normal range 2.0–4.5 mm.</p>
+            <p><strong>8. The DRE officer checks the subject’s muscle
+            tone for extreme flaccidity or rigidity.</strong></p>
+            <p><strong>9. The DRE officer inspects for injection sites
+            and checks the pulse for a third time.</strong></p>
+            <p><strong>10. The DRE officer conducts a focused
+            interrogation and observation of the subject’s
+            behavior.</strong></p>
+            <p><strong>11. Considering the results of all the foregoing
+            procedures, the DRE officer develops a formal opinion
+            identifying the drug the subject took.</strong></p>
+            <p><strong>12. The DRE officer obtains a urine sample for
+            toxicological testing. The test is used to corroborate the
+            DRE officer’s opinion and to provide a learning tool for the
+            officer.</strong></p>
+            <h2 id="c._dre_opinion"><strong>C. DRE Opinion</strong></h2>
+            <p>During Step 11 of the protocol, the DRE is asked to form
+            an opinion as to whether the subject is under the influence
+            at the time of the evaluation and, if so, what categories of
+            drugs are influencing the subject.</p>
+            <p>If the subject is not under the influence of any drugs at
+            the time of the evaluation, the DRE is to enter an opinion
+            indicating “not under the influence.” If the DRE believes a
+            medical condition is present that mimic’s alcohol or drug
+            influence, the DRE should indicate a medical rule-out in
+            Step 11. Medical conditions that mimic alcohol or drug
+            influence are: head trauma, stroke, diabetes,
+            conjunctivitis, shock, and multiple sclerosis, among
+            others.</p>
+            <p><code>Practice Tip: Officer Training Records</code></p>
+            <p>Always order the training records of the police officers
+            involved. They can be ordered by sending an email with the
+            officer’s name and DPSST number to <a
+            href="mailto:dpsst.records@state.or.us">dpsst.records@state.or.us</a>.
+            To request specific training programs, first view the
+            officer’s DPSST training history on the <a
+            href="https://www.oregon.gov/dpsst/SC/Pages/IRIS.aspx">Information
+            Records Inquiry System</a> (IRIS).<a href="#fn10"
+            class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a></p>
+            <p>The entire evaluation will be summarized on the Drug
+            Influence Evaluation (DIE) cover sheet. The DIE is a
+            wonderful resource to carefully review and prepare for
+            trial, because everything is summarized in a condensed
+            format. Carefully study this “cheat sheet” and go through
+            all of the data points that support your theory of defense
+            at trial. A sample blank DIE is included on the following
+            page.</p>
+            <h1 id="vi._the_matrix"><strong>VI. The Matrix</strong></h1>
+            <p>A copy of the May 2018 DECP DRE matrix is provided on the
+            previous page. These are updated regularly so make sure you
+            are using the current version. The state may have an
+            enlarged version on markable foamboard, you may want to
+            bring your own. “Major Indicators” of drug category
+            impairment are listed along the top nine rows. Below the
+            major indicators are the general indicators. General
+            indicators are the officer’s off-hand observations, but not
+            involuntary symptoms of intoxication, like the major
+            indicators (from the 2018 Participant’s Manual). These
+            general indicators are not “scientific” or clinical clues
+            that police look for. Rather, they constitute a laundry list
+            to substantiate probable cause.</p>
+            <p>There are seven rows—one for each of the seven drug
+            categories. We will review the four drug categories that
+            make up 98% of the DRE calls: cannabis, depressants,
+            stimulants, and narcotics. The process at trial is to
+            methodically go through each of the “major indicators” and
+            each of the “general indicators” and show the jury how 1)
+            many of the results of these indicators support your theory
+            of defense, and 2) even if these indicators do support the
+            state’s theory of defense, the whole process is an
+            untrustworthy way to determine whether someone is under the
+            influence of a controlled substance. Mention that the 2018
+            Participant Manual states that the only “scientific”
+            evidence of impairment is chemical analysis of the blood or
+            urine (Session 3, pg 7) and hammer on the idea that if we
+            had a blood analysis we would have a much better idea of
+            what substance was in the system at the time of driving. The
+            OSP lab technician can educate the jury on what blood shows
+            versus urine and that the state did not expend the resources
+            to test the blood even though they have the ability. See
+            Appendix B for lab-technician cross-examination.</p>
+            <h1 id="vii._cannabis"><strong>VII. Cannabis</strong></h1>
+            <p>Of all drug categories, cannabis is a great one for
+            trial. Of the nine indicators, five of them are normal plus
+            pupil size can be normal. It’s a game of gotcha that your
+            client can not win, and your job is to make the jury see
+            that. I like to talk about normal muscle tone being an
+            indicator of cannabis impairment. You want to make the
+            police lose credibility with the jury.</p>
+            <p>In jury selection be frank and open with questioning and
+            do all you can to have a jury composed of experienced drug
+            users. If a person has never used cannabis they may believe
+            it when the police tell them it impairs a person for 24
+            hours.</p>
+            <p>Is it cannabis or marijuana? You may want to use the term
+            “cannabis” rather than “marijuana” when referring to the
+            drug. There is some interesting history around why the word
+            marijuana has been used in popular culture, as described in
+            the following excerpt from an April 13, 2016, column
+            published in Seattle’s weekly newspaper, <a
+            href="https://www.thestranger.com/news/2016/04/13/23948555/the-word-marijuana-versus-the-word-cannabis"><em>The
+            Stranger</em></a>:</p>
+            <p>In 1930, Harry Anslinger, the head of the brand-new
+            Federal Bureau of Narcotics, was unsatisfied with regulating
+            only cocaine and opium. When he went in front of a
+            congressional panel in 1937 to push his pot prohibition
+            bill, he said, “We seem to have adopted the Mexican
+            terminology, and we call it marihuana.” While he sounds all
+            innocent there, like he just picked up the word from who
+            knows where, many surmise that he was actively using the
+            term to focus the discussion on recreational use. His
+            terminology distanced the plant as much as possible from its
+            common medical and industrial uses, where it was more often
+            referred to as cannabis or hemp. Using “marijuana,” most
+            commonly associated with recreational use among poor Mexican
+            immigrants, was a sneaky bit of branding for the bill he
+            wanted passed. Dr. William C. Woodward, legislative counsel
+            of the American Medical Association, showed up to the same
+            1937 hearing to protest Anslinger’s feigned semantic
+            innocence, accusing him of switching the name to fool groups
+            that would have otherwise been opposed to the bill. “I use
+            the word ‘cannabis’ in preference to the word ‘marihuana,’
+            because cannabis is the correct term for describing the
+            plant and its products,” Woodward said. “It was the use of
+            the term ‘marihuana’ rather than the use of the term
+            ‘cannabis’ or the use of the term ‘Indian hemp’ that was
+            responsible, as you realized, probably, a day or two ago,
+            for the failure of the dealers in Indian hempseed to connect
+            up this bill with their business until rather late in the
+            day.” As an example of the racial dimension of Anslinger’s
+            animus toward cannabis, here’s one of his quotes on the
+            subject: “There are 100,000 total marijuana smokers in the
+            US, and most are Negroes, Hispanics, Filipinos, and
+            entertainers. Their satanic music, jazz, and swing, result
+            from marijuana use,” he said. “This marijuana causes white
+            women to seek sexual relations with Negroes, entertainers,
+            and any others.<a href="#fn11" class="footnote-ref"
+            id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+            <h2 id="a._cannabis_defined"><strong>A. Cannabis
+            Defined</strong></h2>
+            <p>Post-legalization, the Oregon legislature chose cannabis
+            as the legal designation in DUIIs. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.010</a>. However, the legislature did not define
+            cannabis, they only defined cannabinoid as follows: “For the
+            purposes of the Adult and Medical Use of cannabis Act,
+            ‘Cannabinoid’ means any of the chemical compounds that are
+            the active constituents of marijuana.” <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors475B.html">ORS
+            475B.015(1)</a>. The legislature further defined marijuana
+            as “the plant cannabis family Cannabaceae, any part of the
+            plant cannabis family Cannabaceae and marijuana seeds.” ORS
+            475B.015(17). When drafting rules for recreational cannabis,
+            the Oregon Liquor Control Commission defined
+            “Delta-9-Tetrahydrocannabinol” (Δ<sup>9</sup>-THC; ) as the
+            principal psychoactive constituent (the principal
+            cannabinoid) of cannabis. <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=267071">OAR
+            845-025-7000 (19)</a>. (<a
+            href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=3873">Link
+            to the full Division 25 Recreational Marijuana
+            Rules</a>.)</p>
+            <p>Cannabis was also specifically removed from the
+            definition of “Controlled Substance” under Oregon law in
+            2015. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors475.html">ORS
+            475.005(6)</a>. The Oregon legislature vested the State
+            Board of Pharmacy with the authority to make changes to or
+            make additions to the definition of a controlled substance.
+            ORS 475.035(1). When the Board decides, the Oregon
+            definition of “controlled substance” will vary from the
+            federal definitions by order of rule. ORS 475.035(2). The
+            State Board of Pharmacy memorializes its rules under the <a
+            href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=3987">Oregon
+            Administrative Rules Chapter 855, Division 80</a>. Cannabis
+            was also removed from the Pharmacy Board’s list of
+            controlled substances.</p>
+            <p>Practice Tip: Metabolites Are Not Controlled
+            Substances</p>
+            <p>For the purposes of cross-examination on the
+            toxicology/urinalysis report it is important to note that
+            9-Carboxy-THC and 11-Hydroxy-THC are not classified and do
+            not appear in all of Division 80. OAR 855-80. These are
+            metabolites that do not have the psychoactive character of
+            Delta-9-THC.</p>
+            <h2 id="b._the_cannabis_duii_stop"><strong>B. The Cannabis
+            DUII Stop</strong></h2>
+            <p>In this section we take a deeper dive into the possible
+            challenges to the DRE DUII using cannabis as an example.
+            Cannabis was chosen because it is the intoxicant most often
+            called in DRE evaluations in Oregon. The principles applied
+            in the context of a cannabis DUII carryover to other drug
+            categories.</p>
+            <p>At the roadside stop, the arresting officer will often
+            rely on odors, paraphernalia in plain sight, and client
+            admissions of historic cannabis use to develop probable
+            cause to request field sobriety tests.</p>
+            <p>Cannabis odors fall into two categories, unburned or
+            “green” and burned cannabis. The case law surrounding
+            probable cause based on both categories is currently
+            fluctuating to adapt to post-legalization realities. For
+            either category, it will be worth testing the limits of the
+            <em>Arreola-Botello</em> ruling to question whether or not
+            the odor of cannabis provides an “independent constitutional
+            justification” to continue the stop. <a
+            href="https://scholar.google.com/scholar_case?case=8074178314255181044&amp;q=State+v.+Arreola-Botello&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Arreola-Botello</em>, 365 Or 695 (2019)</a>.</p>
+            <p><strong>1. Green or Unburned Cannabis</strong></p>
+            <p>One should argue that the odor of “green” or unburned
+            cannabis is insufficient to reach probable cause to request
+            field sobriety tests (FSTs) because cannabis is no longer
+            contraband under Oregon law. <em>Smalley</em> asserts that
+            the federal prohibition upholds cannabis’s status as
+            contraband to form the basis for probable cause. <a
+            href="https://scholar.google.com/scholar_case?case=6582415683801406775&amp;q=smalley&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Smalley</em>, 233 Or App 263</a> (2010). However, in our
+            post-legalization reality, this would be practically akin to
+            requesting a driver to perform FSTs because they were seen
+            placing a six-pack in their trunk at the grocery store.</p>
+            <p>The courts are recognizing that cannabis is not
+            contraband and cannot be treated as such. The Oregon Court
+            of Appeals has held that the general odor of marijuana in a
+            vehicle does not give rise to objectively reasonable
+            suspicion that a passenger possessed marijuana in <a
+            href="https://scholar.google.com/scholar_case?case=2631946045758538044&amp;q=State+v.+Martinez,+275+Or+App+645,+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Martinez</em>, 275 Or App 645, 650 (2015)</a>. In the
+            Northern District of California, “a strong odor of marijuana
+            emanating from the open car window” did not give rise to a
+            “fair probability that contraband or evidence of a crime”
+            would be found in the vehicle. <a
+            href="https://scholar.google.com/scholar_case?case=4910839364624404935&amp;q=United+States+v.+Maffei+(N.D.+Cal.+2019)&amp;hl=en&amp;as_sdt=3,38"><em>United
+            States v. Maffei</em> (N.D. Cal. 2019)</a>.</p>
+            <p>Following passage of the 2019 Farm Bill legalizing
+            industrial hemp, there has been a proliferation of hemp
+            farms nationwide. In response, the Oregon State Police Crime
+            Lab issued an advisory letter on July 19, 2019, that the
+            Forensic Services Division would no longer examine plant
+            material identified as “marijuana” because it is
+            indistinguishable from industrial hemp. By the same letter,
+            industrial hemp is defined as a cannabis plant with a
+            delta-9-THC content of no more than 0.3% by weight.</p>
+            <p><strong>2. Burned Cannabis</strong></p>
+            <p>It is worth arguing that the residual odor of burned
+            cannabis is insufficient to reach probable cause. In an
+            older yet uncontroverted case, the Oregon Court of Appeals
+            disagreed with the proposition that an officer witnessing
+            the frequent lighting of a pipe gave rise to reasonable
+            suspicion of smoking marijuana in a vehicle, even though the
+            officer smelled burned marijuana when approaching it. <a
+            href="https://scholar.google.com/scholar_case?case=8311131414721098742&amp;q=State+v.+Chambers,+69+Or+App+681+(1984)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Chambers</em>, 69 Or App 681 (1984)</a>.</p>
+            <p>Further, the same argument above for unburned cannabis
+            should be made for burned cannabis in that if unburned
+            industrial hemp is indistinguishable from cannabis
+            containing psychoactive amounts of THC according to Oregon
+            State Police forensic scientists, it stands to reason that
+            field officers are not receiving any training to distinguish
+            the burned odors of the two, which is likely impossible.</p>
+            <h2 id="c._cannabis_fsts"><strong>C. Cannabis
+            FSTs</strong></h2>
+            <p>The field sobriety tests (FSTs) are validated only as an
+            estimator of blood alcohol content (BAC), not impairment
+            from cannabis or other controlled substances. Even so, the
+            consumption of cannabis has been shown to lead to impaired
+            driving. The National Highway Transportation Safety
+            Administration, however, has not performed studies to
+            specifically validate the Standardized Field Sobriety Tests
+            (SFSTs) for cannabis impairment, only BAC level.<a
+            href="#fn12" class="footnote-ref" id="fnref12"
+            role="doc-noteref"><sup>12</sup></a></p>
+            <p>Independent studies have shown that performance on the
+            SFSTs provides only a moderate predictor of driving
+            impairment following the consumption of THC, ranging from
+            65.8% and 76.3% detection rates.<a href="#fn13"
+            class="footnote-ref" id="fnref13"
+            role="doc-noteref"><sup>13</sup></a> However, the SFSTs
+            produce a false positive rate of up to 26%.<a href="#fn14"
+            class="footnote-ref" id="fnref14"
+            role="doc-noteref"><sup>14</sup></a></p>
+            <p>The 2018 Field Sobriety Test Manual provides very little
+            guidance for the patrol officer to identify cannabis
+            impairment.</p>
+            <p><em>General Indicators of Cannabis Influence:</em></p>
+            <p>• Bloodshot eyes</p>
+            <p>• Body tremors</p>
+            <p>• Odor of marijuana</p>
+            <p>• Disoriented</p>
+            <p>• Relaxed inhibitions</p>
+            <p>• Difficulty in dividing attention</p>
+            <p><em>Eye Indicators of Cannabis Influence:</em></p>
+            <p>• Neither HGN nor VGN will be present</p>
+            <p>• Pupil size generally will be dilated, but also may not
+            be affected</p>
+            <p>Note: Since the legalization of marijuana, the Oregon
+            State Police have not updated their administrative rules to
+            consider cannabis as something other than a controlled
+            substance. The Oregon State Police define their field
+            sobriety tests as “physical and/or mental tests that enable
+            a police officer or trier of fact to screen for or detect
+            evidence of physical condition that indicates probable
+            impairment from intoxicating liquor, a controlled substance
+            or a combination of intoxicating liquor and controlled
+            substance. Tests meeting the requirements of <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors801.html">ORS
+            801.272</a> are defined as field sobriety tests and are
+            listed and described in <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=33706">OAR
+            257-025-0012 and 257-025-0020</a>.”</p>
+            <p><code>Practice Tip: Cannabis Use</code></p>
+            <p>Credibility of witness testimony is great to bring up in
+            closing argument, as in: the testimony of this officer is
+            not credible, he would have you believe that smoking weed
+            causes your tongue to turn green and that the high lasts up
+            to 24 hours. You may want to ask the officer if he has used
+            cannabis. Now that it is legal I expect police will start
+            admitting this, as easily as they will admit that they have
+            drunk beer, or had some amount of beer and driven a car.</p>
+            <h2 id="d._cannabis_dre"><strong>D. Cannabis
+            DRE</strong></h2>
+            <p>The DRE is trained to look for expected results of the
+            evaluation that are broken into two categories considered to
+            be “Observable Evidence of Impairment” from cannabis. The
+            “Major Indicators” in the DRE Matrix are a combination of
+            the “Clinical Indicators” and “Symptoms” of cannabis use.
+            The “General Indicators” are general observations of the
+            subjects appearance and behavior.</p>
+            <p><strong>1. Major Indicators</strong></p>
+            <p>First attack the “Major Indicators” or “Clinical
+            Indicators.” The first thing to notice about this category
+            is that of the nine major indicators, five of them are
+            normal. This is great to point out to the jury. The DRE
+            manual includes a “Cannabis Symptomatology Chart” that
+            summarizes this in the list of physical features regarded as
+            indicating cannabis impairment.</p>
+            <p><code>Practice Tip: Involuntary Conditions</code></p>
+            <p>On cross and closing, emphasize the nature of the
+            clinical indicators as involuntary physical conditions that
+            the client could not control or fake.</p>
+            <p>The major or clinical indicators are grouped into three
+            categories: the dexterity tests, eye activity, and vital
+            signs.</p>
+            <p>Dexterity Tests are the familiar tests from the FSTs.
+            Performance is expected to be impaired on the walk-and-turn
+            test, modified-Romberg-balance test, one-leg-stand test, and
+            finger-to-nose test.</p>
+            <p>The modified-Romberg test and the finger-to-nose test are
+            not part of the “standard” battery of FSTs. In the modified
+            Romberg, officers are trained that +/- 5 seconds in
+            estimating the passage of 30 seconds is outside the range,
+            and the officer will generally emphasize swaying by the
+            subject. In the finger-to-nose test, it is helpful to refer
+            to the DIE sheet to see where the officer is marking the
+            missed touch. For example, if the officer testifies that the
+            third touch was low and their mark on the DIE is close to
+            the tip of the nose, that detail can be used to impugn
+            credibility on cross-examination.</p>
+            <p>Eye Activity Tests are HGN/VGN, Lack of Convergence, and
+            observations relating to pupil size. HGN and VGN will not
+            detect cannabis impairment, though remember the VGN is
+            generally not admissible outside the DRE. <em>State v.
+            Bevan</em>, 235 Or App 533 (2010).</p>
+            <p>Lack of Convergence (LOC) is often considered the
+            hallmark of cannabis consumption. LOC is simply checking for
+            whether a person can cross their eyes. An inability to cross
+            eyes occurs naturally for some people. If your client was
+            unable to cross their eyes and the DRE is using that as a
+            sign of impairment point out Session 5, pg 15, of the 2018
+            Participant Manual which says “this test may not be as
+            reliable as the other eye tests because some people may have
+            an inability to cross their eyes normally.” This presents
+            yet another “gotcha” moment for the DRE where another “major
+            indicator” of cannabis impairment is a naturally occurring
+            condition. If this is the case with your client, consider
+            bringing in a medical doctor to testify. When LOC is not
+            present, emphasize its status as a “clinical indicator” in
+            DRE training and compare to the involuntary movement of the
+            eyes in HGN and VGN as a clue the client could not control
+            or fake.</p>
+            <p>Pupil Size measurements are detailed in the 12-Step
+            Protocol section above. In the cannabis DUII, Pupil reaction
+            to light will be normal. Pupil activity is not a reliable
+            clue for the DRE. The DRE matrix indicates that pupil size
+            is “Dilated (6)” and when you refer to (6) it says “(6)
+            pupil size possibly normal.” This is the quintessential
+            example of the gotcha game. You can’t win. If your pupils
+            are dilated, it is a “major indicator” of cannabis
+            impairment. If your pupils are normal it is also a “major
+            indicator” of cannabis impairment.</p>
+            <p>Rebound Dilation is related to pupil size. DREs report
+            rebound dilation is present in subject impaired by cannabis.
+            “Rebound dilation” is a period of apillary constriction
+            followed by a period of apillary dilation where the pupil
+            steadily increases in size and does not return to its
+            original constricted size. However, see pupil size above,
+            DREs also expect cannabis to not reliably affect pupils,
+            which makes pupil activity a perfect example of the gotcha
+            game of the cannabis DRE.</p>
+            <p>Vital Signs are medical measurements the DRE performs on
+            the subject’s body. These are fairly straightforward, and
+            one of the three are normal. Following cannabis consumption,
+            pulse is generally elevated, blood pressure is generally
+            elevated, and muscle tone is normal. Always consider other
+            reasons that may elevate your client’s pulse rate or blood
+            pressure when under arrest and being “examined” by a
+            DRE.</p>
+            <p><code>Practice Tip: Using Medical Doctors</code></p>
+            <p>Bring in a medical doctor to testify. The client’s
+            primary care physician may be most useful. The doctor may be
+            able to testify to your client’s specific conditions that
+            affect pulse and blood pressure, as well as general
+            physiological reactions to stress. If your client is
+            testifying, ask if they were nervous and how long they had
+            been under arrest when these tests were performed. Then
+            emphasize that when they were scared and in jail their
+            numbers were up.</p>
+            <p>With no HGN present, no VGN present, reaction to light
+            normal, body temperature normal, muscle tone normal and
+            pupil size possibly normal, we are left with only three of
+            the nine major indicators being utilized to determine
+            cannabis impairment: heart rate, blood pressure, and lack of
+            convergence. This is where the matrix really starts to break
+            down.</p>
+            <p><strong>2. General Indicators</strong></p>
+            <p>After reviewing the major indicators, you will want to
+            spend time on the general indicators. These indicators are a
+            lengthy list of general observations. The DRE will likelly
+            testify that, given the totality of the circumstances and in
+            their training and experience, these observations lead them
+            to believe your client was impaired by cannabis.</p>
+            <ul>
+            <li><blockquote>
+            <p>Odor of marijuana</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Possible paranoia</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Relaxed inhibitions</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Lack of concentration</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Impaired memory</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Alterations in thought formation</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Drowsiness</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Sedation</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Mood changes</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Panic reactions</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Paranoia</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Dry mouth and throat</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Fatigue</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Paranoia</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Acute anxiety</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Possible psychosis</p>
+            </blockquote></li>
+            </ul>
+            <p>New to the 2018 DRE manual are the general indicators of
+            acute anxiety attacks and possible psychosis. These
+            additions recall the prohibitionist scare tactics used in
+            the time of the 1936 propaganda film <a
+            href="https://www.youtube.com/watch?v=aYHDzrdXHEA"><em>Reefer
+            Madness</em></a><a href="#fn15" class="footnote-ref"
+            id="fnref15" role="doc-noteref"><sup>15</sup></a>. The use
+            of these over-the-top characterizations can be used to
+            delegitimize the DRE in the eyes of the jury, when our
+            current reality of legalization does not cast cannabis as a
+            “dangerous” narcotic.</p>
+            <p>My favorite non-credible indicator of marijuana
+            impairment is the green tongue. There is absolutely no
+            science to prove this. See the referred <a
+            href="https://www.ydr.com/story/news/watchdog/2019/11/06/green-tongue-marijuana-dui-cases-york-daily-record-investigation/3911787002/">article</a>
+            out of <em>USA Today’s</em> “York Daily Record” which
+            provides some history on this concept.<a href="#fn16"
+            class="footnote-ref" id="fnref16"
+            role="doc-noteref"><sup>16</sup></a> Apparently, the photo
+            below was included in a handbook called “Identifying the
+            Marihuana User,” published in 1986 for the California
+            Highway Patrol. Even though there was no science to back
+            this up, the IACP and DECP program ran with it and it is
+            still included on the DRE matrix to this day.</p>
+            <figure>
+            <img src="media/image1.jpeg" title="media/image1.jpeg"
+            width="653" height="439" />
+            <figcaption>media/image1.jpeg</figcaption>
+            </figure>
+            <p><code>Practice Tip: Using the State’s Witness</code></p>
+            <p>The key is using the state’s witnesses to prove your
+            defense, if you can get this from their forensic scientist.
+            But your own expert witnesses are also great. Doctors can
+            talk about it, and if you can use the client’s primary care
+            physician, they might have more credibility with the jury
+            than a “hired gun” expert witness.</p>
+            <h2 id="e._addressing_roadside_admissions"><strong>E.
+            Addressing Roadside Admissions</strong></h2>
+            <p>If your client made an admission to use prior to driving,
+            you will want to develop a timeline that establishes when
+            the use occurred and when the driving occurred. Then,
+            determine the onset and duration of effects to decide
+            whether you will be able to show the jury that your client
+            was no longer under the influence of the substance.</p>
+            <p>For example, if your client makes an admission that they
+            “smoked a bowl this morning around 7 a.m.” and the stop
+            occurred at 4 p.m., do this analysis: cannabis ingestion
+            within a few minutes; peak effect 10–30 minutes after use;
+            duration 2–3 hours user continues to feel and exhibit
+            effects, 3–5 hours user feels “normal” (Session 21, pg 17).
+            Then do the math: stop occurred at 4 p.m., which was nine
+            hours after cannabis ingestion, which means the client was
+            no longer impaired at the time of the stop. But be aware of
+            the 1990 Stanford University airline pilot study that
+            concluded that seven of nine pilots showed some degree of
+            impairment in specific behaviors at 24 hours after smoking
+            cannabis, while only one of those pilots reported any
+            awareness of the effects.</p>
+            <p>This is why you want a jury of people that have used
+            cannabis. If the officer testifies that the effects of
+            cannabis last up to 24 hours, the jury can use their own
+            experience and common sense to counter the credibility of
+            the testimony. If there are jurors on the panel that have
+            never used cannabis, they may believe noticeable effects
+            last up to 24 hours. Also, be aware that the duration of
+            edibles can be much longer than when it is smoked.</p>
+            <h2 id="f._analytical_report"><strong>F. Analytical
+            Report</strong></h2>
+            <p>As soon as an analytical report is received from the
+            crime lab, send a discovery request directly to the Oregon
+            State Police (OSP) Crime Lab by fax and to the district
+            attorney by your usual methods. At a minimum request the
+            following: case notes, conversation logs, and
+            chain-of-custody report.</p>
+            <p>A police officer may obtain a chemical test of the breath
+            or blood to determine the amount of alcohol in any person’s
+            blood, or a test of the person’s blood or urine, or both, to
+            determine the presence of cannabis. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.140</a> (Oregon Revised Statutes (2019 Edition)).</p>
+            <p>In blood or urine reports, you will see findings of
+            9-Carboxy-THC and 11-Hydroxy-THC, but these are not the
+            principal psychoactive components of cannabis. 9-Carboxy-THC
+            has not been found to have any psychoactive effect.
+            11-Hydroxy-THC has been found to associate with lingering
+            euphoria and is eliminated from the blood within six hours.
+            The presence of either metabolite in urine is not an
+            indicator of present-sense impairment at the time the sample
+            was collected. Make the OSP lab tech confirm this on
+            cross-examination.</p>
+            <p>The Oregon Court of Appeals recognizes that the urine
+            test performed during cannabis DREs has very little
+            evidentiary value: “At most, if the ‘positive’ result is
+            assumed to be correct despite the lack of a confirmatory
+            quantification test, the evidence could demonstrate that
+            defendant had used drugs some time before the accident.” <a
+            href="https://scholar.google.com/scholar_case?case=4435538589292844286&amp;q=State+v.+Jayne,+173+Or+App+533+(2001)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Jayne</em>, 173 Or App 533 (2001)</a>. In <em>Jayne</em>,
+            the Court of Appeals found a “lack of direct correlation
+            between the urinalysis test results and impairment at the
+            time of the accident.” <em>Id.</em> The court was consistent
+            in holding that you “cannot judge or cannot tell impairment
+            from a drug test[,] … [only] that the drug was used at some
+            point in time.” <a
+            href="https://scholar.google.com/scholar_case?case=3899947647518782011&amp;q=State+v.+Moody,+201+Or+App+58+(2005)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moody</em>, 201 Or App 58 (2005)</a>.</p>
+            <p>In light of these decisions, one should attack the
+            Analytical Report at every stage of the case. Urine tests
+            for cannabis impairment should not be admissible as
+            scientific evidence.</p>
+            <p>The first line of attack is to move to suppress the
+            Analytical Report under <em>State v. O’Key</em>. The
+            Analytical Report fails the first prong requiring scientific
+            evidence to be “pertinent to the issue to which it is
+            directed.” <a
+            href="https://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State+v.+O%E2%80%99Key,+321+Or+285,+(1995&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. O’Key</em>, 321 Or 285, 303 (1995)</a>. In a cannabis
+            DUII case, it must be pertinent to whether or not a driver
+            was “adversely affected … to a noticeable and perceptible
+            degree” at the time of driving. <em>Uniform Criminal Jury
+            Instruction</em> No. 2702.</p>
+            <p>The question for the court will be can the legislature
+            dispense with applicable foundational requirements for
+            scientific evidence in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors475.html">ORS
+            813.131</a>? The Court of Appeals previously concluded that
+            “the legislature, in enacting ORS 813.131, did not intend to
+            dispense with the otherwise applicable foundational
+            requirements for scientific evidence for a urinalysis
+            performed pursuant to the implied consent law.” <a
+            href="https://scholar.google.com/scholar_case?case=13844038272512601480&amp;q=State+v.+Tripathi,+226+Or+App+552,++(2009)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Tripathi</em>, 226 Or App 552, 562 (2009)</a>.</p>
+            <p>If the legislature did intend to dispense with the
+            “otherwise applicable foundational requirements for
+            scientific evidence,” then ORS 813.131 violates due process.
+            The Oregon Supreme Court recognized that scientific evidence
+            is linked to defendants’ rights to due process in
+            <em>O’Key.</em> In <em>O’Key,</em> the court held that trial
+            courts must exclude “‘bad science’ in order to control the
+            flow of confusing, misleading, erroneous, prejudicial, or
+            useless information to the trier of fact.” <em>Id.</em> at
+            306. The Analytical Report showing someone used cannabis at
+            some time in the past is just the kind of useless
+            information the <em>O’Key</em> court characterized as “bad
+            science.”</p>
+            <p>By abrogating the burden on the state to prove that
+            scientific evidence must be pertinent to the issue, ORS
+            813.131 violates due process. Rather, such legislative
+            action “alters the rules of evidence in a one-sided way that
+            makes conviction of the defendant more likely.” <a
+            href="https://scholar.google.com/scholar_case?case=7827442127342506176&amp;q=State+v.+Fugate,+332+Or+195,+(2001)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Fugate</em>, 332 Or 195, 213 (2001)</a>. Thus, creating a
+            new rule that operates only in favor of the prosecution
+            violates due process by removing the judicial tests for
+            scientific evidence under <em>O’Key</em> without
+            substituting nearly the same protection. Therefore, you
+            should ask the trial court to find that ORS 813.131 violates
+            due process because removing the protections provided by the
+            <em>O’Key</em> tests will allow the confusing, misleading,
+            erroneous, prejudicial, and useless Analytical Report to be
+            admitted into evidence.</p>
+            <p><code>Practice Tip: Subpoena Lab Technicians</code></p>
+            <p>Do not let the state avoid the issue by relying on the
+            statute. Subpoena lab technicians to suppression hearings to
+            testify that 9-Carboxy-THC and 11-Hydroxy-THC are not
+            indicators of present impairment.</p>
+            <p>In a 4-to-3 opinion, the Court of Appeals declined to
+            address the issue of introducing 9-Carboxy-THC as evidence
+            of intoxication because the issue was not properly
+            presented. However, the lengthy dissenting opinion would
+            have found that the evidence of 9-Carboxy-THC was “not
+            pertinent to the issue to which it is directed – whether the
+            measurement of the total cannabinoids in plaintiff’s urine
+            indicated that he was impaired at the time of his injury.”
+            <a
+            href="https://scholar.google.com/scholar_case?case=9333943561012894842&amp;q=Mitchell+v.+Mt.+Hood+Meadows+Oregon,+195+Or+App+431,++(2004)&amp;hl=en&amp;as_sdt=4,38"><em>Mitchell
+            v. Mt. Hood Meadows Oregon</em>, 195 Or App 431, 468
+            (2004)</a> (Wollheim, J., dissenting).</p>
+            <p>It is useful to question the lab technician on the
+            Selective Ion Modeling methodology used to test for cannabis
+            metabolites; make it look as unreliable at indicating
+            present intoxication as it really is.</p>
+            <h3 id="update_1"><strong>2024 Update</strong></h3>
+            <p><strong>Please add new section:</strong></p>
+            <h3 id="g._resources"><strong>G. Resources</strong></h3>
+            <p><strong>*</strong> The 2018 DRE manual session 21 refers
+            to <strong>Journal of Forensic Science 2016 by Perez and
+            DeClues. </strong>Ms. Perez is now a member of the OSP
+            Forensic Division. This article states that 33% of the MJ
+            cases reported HGN.</p>
+            <p><em>“a two-year study of THC concentrations and drivers:
+            examining driving and field sobriety test
+            performance”</em></p>
+            <p><strong><em>*<strong> </strong></em>Drug recognition
+            expert validation study, Arizona, 1994 by Eugene Adler and
+            Marceline Burns </strong>reports that 66% of the individuals
+            exhibited HGN.</p>
+            <p><strong>* Psychopharmacology 2005 </strong><em>“an
+            evaluation of the sensitivity of the standardized field
+            sobriety test to detect impairment due to marijuana
+            intoxication” </em>by Papafotiou<em> </em>reported nystagmus
+            between 55 and 105 minutes after smoking.</p>
+            <p><strong>* Pharmacological biochemistry and behavior
+            1998</strong></p>
+            <p><em>“acute and residual effects of marijuana in
+            humans” </em>by Fant</p>
+            <p>HGN produced up to 5.5 hours after smoking</p>
+            <p><strong>* OSP forensic scientist Jeff
+            Eitner</strong> testified that MJ produces HGN</p>
+            <p><em>State v Hernandez-German</em> 19CR74575 Lane Co</p>
+            <p><strong>[END UPDATE]</strong></p>
+            <h1 id="viii._the_other_major_drug_categories"><strong>VIII.
+            The Other Major Drug Categories</strong></h1>
+            <h2 id="a._cns_depressants"><strong>A. CNS
+            Depressants</strong></h2>
+            <p>If your client is being charged with a prescription drug
+            DUII, consider arguing that they were taking their
+            medication as prescribed and it just leveled out their
+            mental state to get them to normal. For example, the Xanax
+            just reduced the anxiety or the Adderal just controlled the
+            ADHD. Consider bringing in their primary care physician to
+            testify.</p>
+            <h2 id="b._cns_stimulants"><strong>B. CNS
+            Stimulants</strong></h2>
+            <p>A methamphetamine and cocaine defense could be that these
+            drugs make you more alert and they have been tested and used
+            by fighter pilots for that purpose. The 2018 Participant’s
+            Manual states that amphetamine use grew rapidly when
+            amphetamines were distributed to soldiers during World War
+            II (Session 10, pg 9). The United States Air Force
+            previously gave pilots amphetamines to keep them alert on
+            long flights, and the drugs have had other short-term
+            military applications (Session 10, pg 43). '</p>
+            <h3 id="update_2"><strong>2024 Update</strong></h3>
+            <p><strong>Methamphetamine</strong></p>
+            <p>Methamphetamine can produce HGN that is reported in
+            NHTSA’s Human Performance Fact Sheet 2004 and 2014. Author
+            is Dr. Barry Logan. A panel of 18 PhD’s, physicians, and
+            police officers also created this document. Noteworthy
+            participants were:</p>
+            <p>Captain Chuck Hayes (previous Oregon DRE Coordinator,
+            currently on the DRE board)</p>
+            <p>Marilyn Huestis, Ph.D. (highly recognized in
+            driving/toxicology research)</p>
+            <p>Marcelline Burns, Ph.D. (original researcher in the DRE
+            program)</p>
+            <p>Kurt Dubowski, Ph.D. (highly recognized in
+            driving/toxicology research)</p>
+            <p><em>* </em><strong>Drug recognition expert validation
+            study, Arizona, 1994 by Eugene Adler and Marceline
+            Burns </strong>reports that 66% of the individuals exhibited
+            HGN.</p>
+            <p>Information suggests that the DRE’s have prior knowledge
+            of the drugs/medications consumed prior to the DRE starting
+            the evaluation. Shinar reported in <em>Accident Analysis
+            Prevention</em> (37 (2005 843-851)) that a group of DRE’s
+            performed the typical evaluation with dosed individuals.
+            However, the group was divided into two separate groups.
+            Group 1 went through the evaluation under normal conditions.
+            Group 2 went through the evaluation but the DRE’s
+            were <em>not</em> advised what drug/meds were consumed,
+            resulting in 57% false results, sensitivity of detecting
+            amphetamines at 10% and marijuana at 49%.</p>
+            </blockquote>
+            <p><strong>[End Update]</strong></p>
+            <h2 id="c._narcotic_analgesics"><strong>C. Narcotic
+            Analgesics</strong></h2>
+            <p>Remember, Kratom is not a controlled substance as of
+            March 6, 2020.</p>
+            <h1
+            id="xi._trial_preparation_and_typical_defense_arguments"><strong>XI.
+            Trial Preparation and Typical Defense
+            Arguments</strong></h1>
+            <h2 id="a._trial_preparation"><strong>A. Trial
+            Preparation</strong></h2>
+            <p>Use expert witnesses for consult or testimony and
+            familiarize yourself with their <em>curriculum vitae</em>
+            (CV), the police report, the drug influence evaluation
+            report and the DRE report.</p>
+            <p>Preparation is key. Thoroughly review the reports and any
+            video from the scene or DRE evaluation. Review all of the
+            laboratory documents that accompany the
+            Analytical/Toxicology Report.</p>
+            <p><strong>1. DRE Rolling Logs</strong></p>
+            <p>This is a critical piece of discovery and a valuable way
+            to impeach the DRE. Every DRE is required to maintain a
+            document that records all of their DRE arrests, which drugs
+            the DRE determined the defendant to be impaired by, and
+            which drug (if any) showed up in the urine or blood. Be sure
+            to make a specific discovery request and get it before trial
+            so you have time to review it. Check that it has been
+            updated with recent lab results and, if not, consider filing
+            a motion to compel. Then look through it for instances when
+            the DRE called a certain controlled substance that is not
+            supported by the urinalysis, particularly when it is the
+            controlled substance your case involves. You will want to
+            highlight those specific cases on cross-examination to show
+            the jury that the DRE is incorrect a certain amount of the
+            time. You may want to redact defendant names and provide
+            this to the jury as an exhibit.</p>
+            <p><strong>2. Toxicology</strong></p>
+            <p>Always request laboratory case notes, conversation logs,
+            and chain-of-custody reports. With the help of an expert,
+            these documents can help you spot mishandling of specimens,
+            errors in test results, or multiple tests with contradictory
+            results. See Chapter 11, “Breath, Blood and Urine.”</p>
+            <h2 id="b._typical_defense_arguments"><strong>B. Typical
+            Defense Arguments</strong></h2>
+            <p>The manual lists the defense arguments below to train the
+            DRE how to respond to cross-examination (Session 28, pg 15).
+            Use this list to develop your own arguments and be prepared
+            to cross an officer that’s had this training.</p>
+            <p><strong>1. Missing Symptoms &amp; Normals</strong></p>
+            <p>You will want to carefully review the DIE and evaluation
+            and make note of all symptoms that deviate from what would
+            be expected by the drug category called. Elicit statements
+            on cross-examination that build your theory of defense by
+            showing the contradiction. For example, if the muscle tone
+            is normal in controlled substance depressant cases, ask the
+            questions: “CNS depressants cause a flaccid muscle tone? Mr.
+            Bigg’s muscle tone was normal?”</p>
+            <p><strong>2. Alternative Explanations</strong></p>
+            <p>a. Medical conditions may mimic drug impairment (Session
+            6, pg 47). Bring in a medical doctor to testify that, for
+            example, your client’s high blood pressure at the time of
+            driving may have been due to ongoing hypertension they are
+            being treated for, not use of a controlled substance. Other
+            medical conditions or historic injuries may also impact
+            balance and dexterity in the evaluation.</p>
+            <p>b. Natural conditions may also affect vital signs:
+            exercise, excitement, fear, anxiety, and depression (Session
+            6, pg 48).</p>
+            <p>c. Use of caffeine or nicotine may affect clinical
+            indicators.</p>
+            <p><strong>3. Defendant’s Normals</strong></p>
+            <p>Normal is described on Session 6, pg 5 of the manual. The
+            manual tells you that normal is a range, and what is normal
+            for one person may not be normal for another. Clarify that
+            to the jury.</p>
+            <p><strong>4. Doctor Cop / Just a Cop</strong></p>
+            <p>a. A DRE is not a doctor. You may want to call a doctor
+            as an expert witness and really distinguish the level of
+            expertise of a medical doctor versus the DRE (“doctor cop”).
+            Carefully review the DRE’s CV before trial and compare and
+            contrast it with your doctor’s CV. A DRE is an officer
+            trained by other officers on medical issues used to
+            determine impairment. As stated in the physiology chapter of
+            the Participant’s Manual, a DRE does not diagnose anyone,
+            they render an opinion that is a judgment based on special
+            knowledge and experience (Session 6, pg 7). The manual
+            distinguishes opinion from diagnosis, which is a legal and
+            medical conclusion reached by someone with medical
+            experience and expertise. A 56-hour police training that
+            includes coverage of human physiology using the acronym
+            MURDERS, INC, to aid memorization of body systems (muscular,
+            urinary, respiratory, system, endocrine, reproductive,
+            skeletal, integumentary, nervous, and circulatory) is a long
+            way from medical training, especially considering this is
+            being used with a veil of expertise to tell a jury why a
+            defendant should be convicted. Some medical topics briefly
+            covered in Session 6 include homeostasis, neurotransmitters,
+            voluntary and autonomic nervous systems, metabolites, and
+            use of sphygmomanometers. This is truly a case of giving
+            someone just enough information to be dangerous.</p>
+            <p>b. Push back by bringing your own learned treatises that
+            contradict the DRE’s testimony. There is a nice list at
+            Session 13, pg 17. One of my favorites is <em>A Primer of
+            Drug Action</em> by Robert M. Julien.</p>
+            <p>c. The officer is conducting a medical evaluation even
+            though they have not had any medical training. Suggest that
+            this type of medical evaluation would be best performed by a
+            medical professional. The original LAPD DRE program was a
+            collaboration with medical professionals; now, officers are
+            being trained to do all the medical work on their own.</p>
+            <p><strong>5. The Unknown</strong></p>
+            <p>An officer can recite what they have memorized out of the
+            Participant’s Manual but will most likely be unable to
+            explain how or why the information they were taught is
+            accurate. For example, you can ask: “You have no idea how a
+            stimulant causes the pupils to dilate?” or “You cannot
+            explain in medical terms the physiological process that
+            causes a person’s blood pressure to decrease after using a
+            depressant?”</p>
+            <p><strong>6. Guessing Game</strong></p>
+            <p>The DRE process is so subjective it defies our sense of
+            moral honesty. A DRE makes a semi-educated guess about what
+            substances a person has used and then conveys this to the
+            jury with an air of certainty. Let the jury know this DRE
+            actually has no idea what drugs your client consumed or
+            when.</p>
+            <p><strong>7. Tolerance Argument</strong></p>
+            <p>In Session 6 on page 43, the 2018 Participant’s Manual
+            states that a habitual user must externally supply some of
+            the drug just to feel like a typical, non-drug-using person
+            would. Argue that your client just took a maintenance dose
+            to feel normal and that they were not “under the influence.”
+            And in Session 17, page 17, the manual states that a
+            narcotic user who has developed tolerance and is using his
+            or her “normal” dose of the drug may exhibit little or no
+            evidence of intellectual or physical impairment. If there is
+            no evidence of impairment, is there impairment?</p>
+            <h1 id="xii._conclusion"><strong>XII.
+            Conclusion</strong></h1>
+            <p>We hope that the information contained in this chapter
+            will help you assess and dismantle the state’s case in a DRE
+            DUII. Don’t be intimidated by the scientific nature of the
+            DRE and toxicology report. There are plenty of avenues to
+            attack each piece of the state’s evidence. With persistence
+            and careful attention to details, you can show the jury that
+            a DRE’s opinion does not mean much.</p>
+            <p><strong>Appendix A</strong></p>
+            <p>'''</p>
+            <blockquote>
+            <p>Glossary of DRE Terminology</p>
+            </blockquote>
+            <p>''' These are terms you will want to be familiar with and
+            understand to effectively defend a DRE DUII case. These are
+            the police definitions and all are taken from Session 1 of
+            the 2018 DRE Participant’s Manual.</p>
+            <p><strong>Addiction</strong> – Habitual, psychological, and
+            physiological dependence on a substance beyond one’s
+            voluntary control.</p>
+            <p><strong>Additive Effec</strong>t – One mechanism of
+            polydrug interaction. For a particular indicator of
+            impairment, two drugs produce an additive effect if they
+            both affect the indicator in the same way. For example,
+            cocaine elevates pulse rate and PCP also elevates pulse
+            rate. The combination of Cocaine and PCP produces an
+            additive effect on pulse rate.</p>
+            <p><strong>Alkaloid</strong> – A chemical that is found in,
+            and can be physically extracted from, some substance. For
+            example, Morphine is a natural alkaloid of Opium. It does
+            not require a chemical reaction to produce Morphine from
+            Opium.</p>
+            <p><strong>Analgesic</strong> – A drug that relieves or
+            allays pain.</p>
+            <p><strong>Analog (of a drug)</strong> – A chemical that is
+            very similar to the drug, both in terms of molecular
+            structure and in terms of psychoactive effects. For example,
+            the drug Ketamine is an analog of PCP.</p>
+            <p><strong>Antagonistic Effect</strong> – One mechanism of
+            polydrug interaction. For a particular indicator of
+            impairment, two drugs produce an antagonistic effect if they
+            affect the indicator in opposite ways. For example, Heroin
+            constricts pupils while Cocaine dilates pupils. The
+            combination of Heroin and Cocaine produces an antagonistic
+            effect on pupil size. Depending on how much of each drug was
+            taken, and on when they were taken, the suspect’s pupils
+            could be constricted, or dilated, or within the DRE Average
+            range of pupil size.</p>
+            <p><strong>Bad Trip</strong> – A hallucination where the
+            user becomes panic‐stricken by what he/she is seeing or
+            hearing, and may become uncontrollably excited, or even try
+            to flee from the terror.</p>
+            <p><strong>Blood Alcohol Concentration (BAC)</strong> – The
+            percentage of alcohol in a person’s blood.</p>
+            <p><strong>Breath Alcohol Concentration (BrAC)</strong> –
+            The percentage of alcohol in a person’s blood as measured by
+            a breath testing device.</p>
+            <p>Blood Pressure – The force exerted by blood on the walls
+            of the arteries. Blood pressure changes continuously, as the
+            heart cycles between contraction and expansion.</p>
+            <p><strong>Bruxism</strong> – Grinding the teeth. This
+            behavior is often seen in persons who are under the
+            influence of Cocaine or other CNS Stimulants.</p>
+            <p><strong>Cannabis</strong> – This is the drug category
+            that includes Marijuana. Marijuana comes primarily from the
+            leaves of certain species of cannabis plants that grow
+            readily all over the temperate zones of the earth. Hashish
+            is another drug in this category, and consists of the
+            compressed leaves from female cannabis plants. The active
+            ingredient in both Marijuana and Hashish is a chemical
+            called delta‐9 tetrahydrocannabinol, usually abbreviated
+            THC.</p>
+            <p><strong>Carboxy</strong>-<strong>THC</strong> – A
+            metabolite of THC (tetrahydrocannabinol).</p>
+            <p><strong>Central Nervous System (CNS)</strong> – A system
+            within the body consisting of the brain, the brain stem, and
+            the<br />
+            spinal cord.</p>
+            <p><strong>CNS Depressants</strong> – One of the seven drug
+            categories. CNS Depressants include alcohol, barbiturates,
+            anti‐anxiety tranquilizers, and numerous other drugs.</p>
+            <p><strong>CNS Stimulants</strong> – One of the seven drug
+            categories. CNS Stimulants include Cocaine, the
+            Amphetamines, Ritalin, Desoxyn, and numerous other
+            drugs.</p>
+            <p><strong>Conjunctivitis</strong> – An inflammation of the
+            mucous membrane that lines the inner surface of the eyelids
+            caused by infection, allergy, or outside factors. May be
+            bacterial or viral. Persons suffering from conjunctivitis
+            may show symptoms in one eye only. This condition is
+            commonly referred to as “pink eye”, a condition that could
+            be mistaken for the bloodshot eyes produced by alcohol or
+            cannabis.</p>
+            <p><strong>Curriculum Vitae (CV)</strong> – A written
+            summary of a person’s education, training, experience,
+            noteworthy achievements and other relevant information about
+            a particular topic.</p>
+            <p><strong>Dissociative Anesthetics</strong> – One of the
+            seven drug categories. Includes drugs that inhibits pain by
+            cutting off or disassociating the brain’s perception of
+            pain. PCP and its analogs are considered Dissociative
+            Anesthetics.</p>
+            <p><strong>Downside Effect</strong> – An effect that may
+            occur when the body reacts to the presence of a drug by
+            producing hormones or neurotransmitters to counteract the
+            effects of the drug consumed.</p>
+            <p><strong>Dysphoria</strong> – A disorder of mood. Feelings
+            of depression and anguish.</p>
+            <p><strong>Expert Witness</strong> – A person skilled in
+            some art, trade, science or profession, having knowledge of
+            matters not within the knowledge of persons of average
+            education, learning and experience, who may assist a jury in
+            arriving at a verdict by expressing an opinion on a state of
+            facts shown by the evidence and based upon his or her
+            special knowledge. (NOTE: Only the court can determine
+            whether a witness is qualified to testify as an expert.)</p>
+            <p><strong>General Indicator</strong> – Behavior or
+            observations of the subject that are observed and not
+            specifically tested for. (Observational and Behavioral
+            Indicators)</p>
+            <p><strong>Hallucination</strong> – A sensory experience of
+            something that does not exist outside the mind, e.g.,
+            seeing, hearing, smelling, or feeling something that isn’t
+            really there. Also, having a distorted sensory perception,
+            so that things appear differently than they are.</p>
+            <p><strong>Hallucinogens</strong> – One of the seven drug
+            categories. Hallucinogens include LSD, MDMA, Peyote,
+            Psilocybin, and numerous other drugs.</p>
+            <p><strong>Horizontal Gaze Nystagmus (HGN)</strong> –
+            Involuntary jerking of the eyes occurring as the eyes gaze
+            to the side.</p>
+            <p><strong>Hydroxy-THC</strong> –  A metabolite of THC
+            (tetrahydrocannabinol).</p>
+            <p><strong>Hypertension</strong> – Abnormally high blood
+            pressure. Do not confuse this with hypotension.</p>
+            <p><strong>Impairment</strong> – One of the several items
+            used to describe the degradation of mental and/or physical
+            abilities necessary for safely operating a vehicle.</p>
+            <p><strong>Inhalants</strong> – One of the seven drug
+            categories. The inhalants include volatile solvents (such as
+            glue and gasoline), aerosols (such as hair spray and
+            insecticides) and anesthetic gases (such as nitrous
+            oxide).</p>
+            <p><strong>Insufflation</strong> – One method of ingesting
+            certain drugs. Insufflation requires that the drug be in
+            powdered form.<br />
+            The user rapidly draws the drug up into the nostril, usually
+            via a paper or glass tube. Insufflation is also known as
+            snorting.</p>
+            <p><strong>Lack Of Convergence (LOC)</strong> – The
+            inability of a person’s eyes to converge, or “cross” as the
+            person attempts to focus on a stimulus as it is pushed
+            slowly toward the bridge of his or her nose.</p>
+            <p><strong>Major Indicators</strong> – Physiological signs
+            that are specifically assessed and are, for the most part,
+            involuntary reflecting the status of the central nervous
+            system (CNS) homeostasis (Physiological Indicators).</p>
+            <p><strong>Marijuana</strong> – Common term for the cannabis
+            Sativa plant. Usually refers to the dried leaves of the
+            plant. This is the most common form of the cannabis
+            category.</p>
+            <p><strong>Marinol</strong> – A drug containing a synthetic
+            form of THC (tetrahydrocannabinol). Marinol belongs to the
+            cannabis category of drugs, but Marinol is not produced from
+            any species of cannabis plant.</p>
+            <p><strong>Medical Impairment</strong> – An opinion made by
+            a DRE based on the evaluation that the state of a suspected
+            impaired driver is more likely related to a medical
+            impairment that has affected the subject’s ability to
+            operate a vehicle safely.</p>
+            <p><strong>Metabolite</strong> – A chemical product, formed
+            by the reaction of a drug with oxygen and/or other
+            substances in the body.</p>
+            <p><strong>Narcotic Analgesics</strong> – One of the seven
+            drug categories. Narcotic analgesics include opium, the
+            natural alkaloids of opium (such as morphine, codeine and
+            thebaine), the derivatives of opium (such as Heroin,
+            Dilaudid, Oxycodone and Percodan), and the synthetic
+            narcotics.</p>
+            <p><strong>Neuron</strong> – A nerve cell. The basic
+            functional unit of a nerve. It contains a nucleus within a
+            cell body with one or more axons and dendrites.</p>
+            <p><strong>Neurotransmitter</strong> – Chemicals that pass
+            from the axon of one nerve cell to the dendrite of the next
+            cell, and that carry messages across the gap between the two
+            nerve cells.</p>
+            <p><strong>Null Effect</strong> – One mechanism of polydrug
+            interaction. For a particular indicator of impairment, two
+            drugs produce a null effect if neither of them affects that
+            indicator. For example, PCP does not affect pupil size, and
+            alcohol does not affect pupil size. The combination of PCP
+            and alcohol produces a null effect on pupil size.</p>
+            <p><strong>Nystagmus</strong> – An involuntary jerking of
+            the eyes.</p>
+            <p><strong>Overlapping Effect</strong> – One mechanism of
+            polydrug interaction. For a particular indicator of
+            impairment, two drugs produce an overlapping effect if one
+            of them affects the indicator but the other doesn’t. For
+            example, cocaine dilates pupils while alcohol doesn’t affect
+            pupil size. The combination of cocaine and alcohol produces
+            an overlapping effect on pupil size: the combination will
+            cause the pupils to dilate.</p>
+            <p><strong>Parasympathetic Nerve</strong> – An autonomic
+            nerve that commands the body to relax and to carry out
+            tranquil activities. The brain uses parasympathetic nerves
+            to send “at ease” commands to the muscles, tissues, and
+            organs.</p>
+            <p><strong>Physician’s Desk Reference (PDR)</strong> – A
+            basic reference source for drug recognition experts. The PDR
+            provides detailed information on the physical appearance and
+            psychoactive effects of licitly‐manufactured drugs.</p>
+            <p><strong>Piloerection</strong> – Literally, “hair standing
+            up”, or goose bumps. This condition of the skin is often
+            observed in persons who are under the influence of LSD.</p>
+            <p><strong>Polydrug</strong> – Use Ingesting two or more
+            different drugs.</p>
+            <p><strong>Psychedelic</strong> – A mental state
+            characterized by a profound sense of intensified or altered
+            sensory perception sometimes accompanied by
+            hallucinations.</p>
+            <p><strong>Psychophysical Tests</strong> – Methods of
+            investigating the mental (psycho‐) and physical
+            characteristics of a person suspected of alcohol or drug
+            impairment. Most psychophysical tests employ the concept of
+            divided attention to assess a suspect’s impairment.</p>
+            <p><strong>Rebound Dilation</strong> – A period of pupillary
+            constriction followed by a period of pupillary dilation
+            where the pupil steadily increases in size and does not
+            return to its original constricted size.</p>
+            <p><strong>Resting Nystagmus</strong> – Jerking of the eyes
+            as they look straight ahead.</p>
+            <p><strong>Sinsemilla</strong> – The unpollinated female
+            cannabis plant, with a relatively high concentration of
+            THC.</p>
+            <p><strong>Standardized</strong> – Conforming to a model in
+            comparative applications.</p>
+            <p><strong>Standardized Field Sobriety Testing
+            (SFST)</strong> – There are three SFSTs, namely Horizontal
+            Gaze Nystagmus (HGN), Walk and Turn (WAT), and One Leg Stand
+            (OLS). Based on a series of controlled laboratory studies,
+            scientifically validated clues of impairment have been
+            identified for each of these three tests. They are the only
+            Standardized Field Sobriety Tests for which validated clues
+            have been identified.</p>
+            <p><strong>Synapse (or Synaptic Gap)</strong> – The gap or
+            space between two neurons (nerve cells).</p>
+            <p><strong>Synesthesia</strong> – A sensory perception
+            disorder, in which an input via one sense is perceived by
+            the brain as an input via another sense. An example of this
+            would be a person “hearing” a phone ring and “seeing” the
+            sound as a flash of light. Synesthesia sometimes occurs with
+            persons under the influence of hallucinogens.</p>
+            <p><strong>Tachycardia</strong> – Abnormally rapid heart
+            rate.</p>
+            <p><strong>Tetrahydrocannabinol (THC)</strong> –The
+            principal psychoactive ingredient in drugs belonging to the
+            cannabis category.</p>
+            <p><strong>Tolerance</strong> – An adjustment of the drug
+            user’s body and brain to the repeated presence of a drug. As
+            tolerance develops, the user will experience diminishing
+            psychoactive effects from the same dose of the drug. As a
+            result, the user typically will steadily increase the dose
+            he or she takes, in an effort to achieve the same
+            psychoactive effect.</p>
+            <p><strong>Vertical Gaze Nystagmus (VGN)</strong> – An
+            involuntary jerking of the eyes (up‐and‐down) which occurs
+            as the eyes are held at maximum elevation. The jerking
+            should be distinct and sustained.</p>
+            <p><strong><br />
+            </strong></p>
+            <p><strong>Appendix B</strong></p>
+            <p><strong>Sample Cross-Examination and Voir Dire
+            Questions</strong></p>
+            <p><strong>Sample Cross-Examination of Arresting
+            Officer</strong>:</p>
+            <ul>
+            <li>Mr. Client was able to follow your direction to provide
+            driver’s license, registration and proof of insurance?</li>
+            <li>Mr. Client did not fumble for or have trouble retrieving
+            his driver’s license? His proof of insurance? His
+            registration?</li>
+            <li>Mr. Client did not stumble or have any trouble getting
+            out of his truck?</li>
+            <li>You did not smell any cannabis?</li>
+            <li>You are trained to look for the odor of cannabis?</li>
+            <li>If you would have smelled cannabis you would have noted
+            it in your report?</li>
+            <li>You searched Mr. Client’s vehicle?</li>
+            <li>You did not find any cannabis in Mr. Client’s
+            vehicle?</li>
+            <li>You did not find a cannabis pipe in Mr. Client’s
+            vehicle?</li>
+            <li>You thought this was an alcohol DUI arrest?</li>
+            <li>You had no reason to think Mr. Client had used cannabis
+            this day?</li>
+            </ul>
+            <p><strong>SFSTs</strong>:</p>
+            <ul>
+            <li>HGN – walk through in the courtroom</li>
+            <li>Walk and Turn – walk through</li>
+            <li>One Leg Stand – walk through</li>
+            <li>Arrested for DUII alcohol?</li>
+            <li>You drove Mr. Client to jail for a breath test?</li>
+            <li>It was only after Mr. Client blew 0.04% that you even
+            considered to think of this as a combined effects cannabis
+            alcohol DUI?</li>
+            </ul>
+            <p><strong>DRE Officer</strong>:</p>
+            <p><strong>Background</strong>:</p>
+            <ul>
+            <li>You are a police officer?</li>
+            <li>You have been trained to be a drug recognition
+            expert?</li>
+            <li>Detect intoxication from drugs other than alcohol?</li>
+            <li>Cannabis?</li>
+            <li>Controlled substances?</li>
+            <li>To be a DRE requires you maintain a rolling log?</li>
+            <li>A rolling log tracks how many times you were correct on
+            a call?</li>
+            <li>You must retain a __% accuracy to maintain your DRE
+            certification?</li>
+            <li>Your __% accuracy is __%?</li>
+            <li>That means that over 100 calls you were not correct __
+            times?</li>
+            <li>There have been times you had an opinion someone was
+            impaired by cannabis and provided a UA that was clean?</li>
+            <li>The DRE analysis does not tell with certainty that a
+            person is impaired?</li>
+            <li>You did a DRE analysis on Mr. Client Jan 3, 2020?</li>
+            <li>First step was to interview Patrol Trooper?</li>
+            <li>Patrol Trooper was working a DUII grant position? The
+            purpose of the DUII grant position is to make DUII arrests?
+            Patrol Trooper told you she observed a truck fail to
+            maintain its lane on nearly every corner?</li>
+            <li>Mr. Client had a BAC of 0.04%?</li>
+            <li>You do not conduct a DRE if a person is 0.08% or
+            greater?</li>
+            <li>You conduct the DRE evaluation in a controlled
+            environment?</li>
+            <li>Like the police station?</li>
+            <li>Not outdoors? Not roadside like FST?</li>
+            </ul>
+            <p><strong>Cannabis-specific questions (review the DRE
+            Matrix and adapt according to drug category called by DRE in
+            your case):</strong></p>
+            <ul>
+            <li>Evaluation of subjects under the influence of cannabis a
+            specific session in the DRE training?</li>
+            <li>Expect certain results from the evaluation?</li>
+            <li>These are clinical indicators?</li>
+            <li>Performance on Modified Romberg will be impaired?</li>
+            <li>Performance on finger-to-nose impaired?</li>
+            <li>Performance on one-leg-stand impaired?</li>
+            <li>Performance on walk-and-turn impaired?</li>
+            <li>Lack of convergence will generally be present?</li>
+            <li>Lack of convergence is listed on the cannabis
+            symptomatology chart as an involuntary symptom of cannabis
+            intoxication?</li>
+            <li>How can you tell when a person is under the influence of
+            MJ?</li>
+            <li>How long does one stay under the influence of MJ after
+            smoking it?</li>
+            <li>What is the onset and duration of cannabis effects?
+            (From manual: peak 10–30 minutes; effects continue for 2-3
+            hours; the user typically feels “normal” within 3–6 hours of
+            smoking MJ.)</li>
+            <li>The DRE manual states that effects of MJ peak within
+            10–30 minutes, and the effects generally continue for 2–3
+            hours, correct? (If denies, introduce Dr. Julien’s
+            book.)</li>
+            </ul>
+            <p><strong>OREGON DRUG INFLUENCE EVALUATION
+            (ODIE)</strong></p>
+            <ul>
+            <li>Important document, correct?</li>
+            <li>If you noticed things relevant to the case, you would
+            have made note in this document, correct?</li>
+            <li>There are nine major indicators to determine if
+            impaired?</li>
+            <li>Nine symptoms of cannabis intoxication?</li>
+            <li>Symptom is involuntary – cannot be controlled by the
+            subject?</li>
+            <li>Physical reaction to the substance?</li>
+            <li>Six of eight of these are “normal”?</li>
+            <li>According to the DRE manual, if a person has a normal
+            muscle tone it is consistent with them being impaired by
+            marijuana?</li>
+            <li>Cannabis impairs a person’s perception of time?</li>
+            <li>Mr. Client estimated passage of 30 seconds in 33
+            seconds?</li>
+            <li>His speech was slow and quiet (DRE 0023)?</li>
+            <li>Smelled an odor of alcohol on his breath?</li>
+            <li>Did not document an odor of marijuana on his
+            breath?</li>
+            <li>Did not document an odor of marijuana on his
+            clothing?</li>
+            <li>Mr. Client’s pulse remained steady at 106 bpm
+            throughout?</li>
+            <li>Pulse was in the normal range?</li>
+            <li>Mr. Client had high blood pressure (190/110)?</li>
+            <li>Pupils were equal size?</li>
+            <li>Pupils had normal reaction to light?</li>
+            <li>Pupil size in room light were normal?</li>
+            <li>Pupil size in near total darkness was normal?</li>
+            <li>Pupil size in direct light was normal?</li>
+            <li>The DRE guide tells you that marijuana causes pupils to
+            be dilated?</li>
+            <li>DRE guide also says pupils may be normal?</li>
+            <li>DRE guide also says that a normal temperature is
+            consistent with marijuana use?</li>
+            <li>Mr. Client had a low temperature at 97.4?</li>
+            <li>Mr. Client had a near normal muscle tone?</li>
+            <li>Why not a normal muscle tone?</li>
+            <li>Is a normal muscle tone consistent with marijuana
+            use?</li>
+            <li>Is a near normal?</li>
+            <li>Six of those symptoms could be the same if some is stone
+            sober, or after smoking cannabis?</li>
+            <li>Same as sober?</li>
+            <li>HGN?</li>
+            <li>VGN?</li>
+            <li>Pupil Size?</li>
+            <li>Reaction to Light?</li>
+            <li>Body temperature?</li>
+            <li>Muscle tone?</li>
+            <li>These physical tests and observations are all critical
+            to completing the 12 step protocol?</li>
+            <li>You observed a green coating on Mr. Client’s
+            tongue?</li>
+            <li>If you see someone with a green coating on their tongue
+            is that a pretty good indicator of marijuana use?</li>
+            <li>Describe the green coating on Client’s tongue.</li>
+            <li>Did you test the green coating?</li>
+            <li>Did you take a swab for later testing?</li>
+            <li>Mr. Client was polite and calm early in the
+            interview?</li>
+            <li>Mr. Client told you THC would show up in his urine?</li>
+            <li>He told you he smokes before he goes to bed each
+            night?</li>
+            <li>Told you he smoked a couple of hits from a pipe at 7pm
+            the night before?</li>
+            <li>You told Mr. Client that the presence of marijuana in
+            his urine did not automatically mean that he was impaired by
+            cannabis?</li>
+            <li>Mr. Client became frustrated and agitated after a
+            while?</li>
+            <li>Said you were searching for stuff?</li>
+            <li>Said you were wrong about him being impaired by
+            marijuana?</li>
+            </ul>
+            <p><strong>Sample Cross-Examination of Lab
+            Technician:</strong></p>
+            <ul>
+            <li>You signed the analytical report on this case?</li>
+            <li>Your analytical report states the sample received
+            confirms 9-Carboxy-THC?</li>
+            <li>Scientifically, does that tell you if someone was under
+            the influence when the sample was collected?</li>
+            <li>You make notes of the tests you run on the sample?</li>
+            <li>Sample collected from Mr. Client on
+            <span class="underline">[date]</span>?</li>
+            <li>Sample submitted to lab on
+            <span class="underline">[date]</span>?</li>
+            <li>Tested the sample with Assay Emit on
+            <span class="underline">[date]</span>?</li>
+            <li>How is the sample stored at the lab?</li>
+            <li>How is the sample stored before it is sent to the
+            lab?</li>
+            <li>Wrote the analytical report on
+            <span class="underline">[date]</span>?</li>
+            <li>Creatinine level outside/inside of normal range for
+            testing?</li>
+            <li>Quant ran on GCMS on
+            <span class="underline">[date]</span>?</li>
+            <li>Did you test for other controlled substances, aside from
+            MJ?</li>
+            <li>Result?</li>
+            <li>Did you test for any non-controlled substances, such as
+            caffeine or nicotine?</li>
+            <li>Result?</li>
+            <li>What is Delta-9-THC? (Psychoactive ingredient of
+            MJ.)</li>
+            <li>Delta-9-THC is what is commonly known as THC, the
+            psychoactive ingredient of MJ?</li>
+            <li>You did not test for Delta-9-THC in this case?</li>
+            <li>When a person smokes MJ, how long do the effects
+            generally last?</li>
+            <li>Does the MJ test that you performed determine how much
+            Delta-9-THC is in a person’s system?</li>
+            <li>The test shows the presence of 9-Carboxy-THC – what is
+            that?</li>
+            <li>How does the test detect 9-Carboxy-THC?</li>
+            <li>GCMS detects ions on a spectrum?</li>
+            <li>You deduce from the presence of certain i ons that the
+            sample could contain 9-carboxy?</li>
+            <li>Ion 371? Ion 473? Ion 488?</li>
+            <li>These ions occur in other compounds?</li>
+            <li>Ask lab tech to explain how some molecules are directly
+            detected by the GCMS, such as nicotine, cotinine metablolite
+            of nicotine, hydroxycontinine metabolite of nicotine,
+            tobacco, and caffeine.</li>
+            <li>Not necessary to perform simulated ion modeling?</li>
+            <li>Because abundance?</li>
+            <li>Type of molecule?</li>
+            <li>What is the relation of Delta-9-THC to 9-Carboxy-THC?
+            (It is a metabolite.)</li>
+            <li>How long does 9-Carboxy-THC stay in a person’s system
+            after using MJ?</li>
+            <li>Is there any correlation between the presence of
+            9-Carboxy-THC and MJ impairment?</li>
+            <li>So, by detecting 9-Carboxy-THC in the urine, you are not
+            implying that it was causing adverse effects at the time Mr.
+            Client was driving?</li>
+            <li>But to be clear, 9-Carboxy/11-Hydroxy in urine sample do
+            not indicate the person was under the influence of cannabis
+            at the time of the sample?</li>
+            <li>Why do you test for a THC metabolite rather than THC
+            itself?</li>
+            <li>Is it possible to test for THC itself in urine?</li>
+            <li>Is it possible to test for the active amount of
+            Delta-9-THC in a person’s blood?</li>
+            <li>Would a blood test for Delta-9-THC have a correlation
+            with impairment at the time of driving?</li>
+            <li>You did not test blood in this case?</li>
+            </ul>
+            <p><strong>Sample Voir Dire</strong></p>
+            <p>It’s a good idea to introduce the jury panel to the
+            concept that being under the influence of cannabis does not
+            mean that a person has simply consumed cannabis.</p>
+            <p>Accomplish this in voir dire by questioning about
+            cannabis use and comparing to alcohol:</p>
+            <ul>
+            <li>Did you know that it is legal in Oregon to drink and
+            then drive?</li>
+            <li>Do you think there is a low level of consumption of
+            alcohol where it has not affected your mental or physical
+            faculties to a noticeable and perceptible degree?</li>
+            <li>Or do you think that consumption of <em>any</em> alcohol
+            would affect you?</li>
+            <li>Do you realize that the same sort of analysis would
+            apply to cannabis?</li>
+            <li>What do you think of that?</li>
+            <li>Do you think that there would be a low level of
+            consumption of, say, marijuana, where it has not affected
+            your mental or physical capacities to a noticeable or
+            perceptible degree?</li>
+            <li>Or do you think that consumption of <em>any</em>
+            marijuana would automatically make you intoxicated?</li>
+            <li>How about more powerful drugs, e.g., methamphetamine or
+            heroin?</li>
+            <li>Would the timing of taking the drug be important for you
+            to know?</li>
+            <li>So, did the person smoke marijuana 10 minutes ago or 10
+            days ago?</li>
+            <li>E.g., marijuana is fat soluble rather than water
+            soluble, it could show up in a UA for a couple of weeks
+            after smoking it, long after any intoxicating affects are
+            gone. Would it be important for you to know the
+            <em>level</em> of any drugs that are in a person’s
+            system?</li>
+            <li>Did he take one puff off the marijuana pipe or did he
+            smoke three bowls by himself?</li>
+            <li>Did he take one Vicodin or did he take four?</li>
+            <li>So, if evidence is that Mr. Client took a drug or smoked
+            some marijuana, can you look beyond that to determine
+            whether his mental or physical faculties were affected to a
+            noticeable degree?</li>
+            <li>What do you think of medical cannabis laws?</li>
+            <li>cannabis is legal now in Oregon, does anyone think that
+            is a bad idea and the feds should start cracking down on
+            recreational use of marijuana?</li>
+            <li>Think it should have been legalized?</li>
+            <li>What is the difference between medical use of marijuana
+            and recreational use?</li>
+            <li>How many people have ever used marijuana?</li>
+            <li>Who currently uses marijuana?</li>
+            <li>How long did you notice the effects lasting?</li>
+            <li>Has anyone ever driven after smoking marijuana?</li>
+            <li>How long after smoking marijuana is it safe to
+            drive?</li>
+            <li>How do police know if someone has smoked marijuana?</li>
+            <li>Is there a breath test like alcohol?</li>
+            <li>Would a blood test show if someone is high on
+            marijuana?</li>
+            <li>Do some states set a threshold of how many nanograms of
+            THC can be in a person’s blood while driving?</li>
+            </ul>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li
+            id="fn1">lapdonline.org/special_operations_support_division/content_basic_view/1038.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li
+            id="fn2">theiacp.org/projects/the-international-drug-evaluation-classification-program.<a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3">Kane: “The methodological quality of three
+            foundational law enforcement drug influence evaluation
+            validation studies,” <em>Journal of Negative Results in
+            BioMedicine</em> 2013, 12:16.<a href="#fnref3"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li
+            id="fn4">theiacp.org/sites/default/files/2019-01/Final%202018%20Annual%20Report%20Single%20pgs.pdf.<a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn5">Policies and Procedures, Oregon Drug Evaluation
+            &amp; Classification Program (2016) pg. 39.<a href="#fnref5"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><em>Id</em>.<a href="#fnref6"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn7"><em>Lust for Justice</em>: <em>The Radical Life
+            &amp; Law of J. Tony Serra,</em> by Paulette Frankl (2010)
+            pg. 125.<a href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8"><a
+            href="https://www.theiacp.org/sites/default/files/2019-09/2018%20DECP%20Annual%20Report.pdf">2018
+            IACP report</a>.<a href="#fnref8" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn9"><em>State v. Sampson</em>, 167 Or App 489
+            (2000); <em>State v. Aman,</em> 194 Or App 463 (2004);
+            <em>State v. Rambo</em>, 250 Or App 186 (2012)<a
+            href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn10">oregon.gov/dpsst/SC/pgs/IRIS.aspx.<a
+            href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li
+            id="fn11">thestranger.com/news/2016/04/13/23948555/the-word-marijuana-versus-the-word-cannabis.<a
+            href="#fnref11" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn12">Stuster, Jack &amp; Burns, Marcellline,
+            “Validation of Standardized Field Sobriety Test Batter at
+            BACs Below 0.10 Percent,” Anacapa Sciences Inc., Final
+            Report to NHTSA (Aug. 1998).<a href="#fnref12"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn13">Papfotiou, K., Carter, J.D., Stough, C., “The
+            relationship between performance on the standardized field
+            sobriety tests, driving performance and the level of
+            Δ9-tetrahydrocannabionl (THC) in blood,” <em>Forensic
+            Science International</em>, 155 (2005) 172-178.<a
+            href="#fnref13" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn14">Yoshizuka, Keith et al. “Standardized Field
+            Sobriety Test: False Positive Test Rate among Sober
+            Subjects,” <em>Journal of Forensic Toxicology &amp;
+            Pharmacology,</em> 2014, 3:2.<a href="#fnref14"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn15">youtube.com/watch?v=aYHDzrdXHEA.<a
+            href="#fnref15" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li
+            id="fn16">ydr.com/story/news/watchdog/2019/11/06/green-tongue-marijuana-dui-cases-york-daily-record-investigation/3911787002.<a
+            href="#fnref16" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

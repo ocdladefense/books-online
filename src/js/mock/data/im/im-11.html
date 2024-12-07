@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2010 edition</p>
+            <h1 id="interviewing_witnesses"><strong>Interviewing
+            Witnesses</strong></h1>
+            <p><strong><em>Jerry Elshire</em></strong></p>
+            <h1 id="introduction"><strong>Introduction</strong></h1>
+            <p>Preparing for an interview requires preparing for things
+            you know as well as things you don’t know. Investigators
+            must recognize and deal with significant issues when they
+            unexpectedly arise during an interview. The circumstances
+            are analogous to a script that is not yet complete. You have
+            a theme and know many of the characters, but the dialog is
+            mostly unknown. Thorough preparation will usually lead to a
+            successful ending.</p>
+            <p>I got my first interview adrenaline rush over thirty
+            years ago. My style has thankfully improved, but the rush
+            remains. While waiting for someone to answer my knock, I
+            mentally twist and turn the possible reactions to my
+            invasion. Investigators face a constant challenge to get the
+            subject of the interview to open up.</p>
+            <h1 id="preparation"><strong>Preparation</strong></h1>
+            <h2
+            id="review_and_organize_all_discovery_letters_requests_including_client_statements"><strong><em>Review
+            and Organize All Discovery, Letters, Requests (Including
+            Client Statements)</em></strong></h2>
+            <p>One cannot say enough about reviewing police reports.
+            They are the guts of your client’s case and an investigator
+            must become very familiar with them. Organize the materials
+            and prepare an outline that divides the reports into
+            sections—date, officer, witness and summary of their
+            statement(s). You will need to quickly find information
+            during interviews. Some information contained in police
+            reports will support the defense theory, some will not.
+            Police officers seldom take their reports to the witness for
+            review. Investigators should let the attorney decide when a
+            witness should review the officer’s report of their
+            statement. This can be an opportunity for the witness to
+            deny statements and offer more complete explanations.</p>
+            <p>In addition to police reports, investigators must be
+            aware of and access other discovery materials. Items such as
+            9-1-1 recordings, medical records, newspaper articles and
+            client statements are only a few examples of information
+            that may or may not be available.</p>
+            <h2
+            id="familiarize_yourself_with_the_law"><strong><em>Familiarize
+            Yourself with the Law</em></strong></h2>
+            <p>There is no need to attain a lawyer’s level of knowledge
+            in the law. Some understanding of the law, however, helps an
+            investigator participate in development of the case theory,
+            deal with the unexpected, as well as develop an
+            understanding of what attorneys must deal with.
+            Investigators are encouraged to read <em>Oregon</em></p>
+            <p><em>Evidence</em>, <em>Fifth Edition</em>by Laird
+            Kirkpatrick (2007, LexisNexis). This book offers a helpful
+            analysis of legal issues concerning evidence, including
+            privileges, witnesses, opinions, expert testimony,
+            relevance, character evidence, the hearsay rule (and its
+            exceptions), presumptions, and the contents of recordings
+            and photographs. OCDLA and the Oregon State Bar also have
+            many other publications that can help the investigator
+            understand specific areas of the law.</p>
+            <p>My familiarity with the law paid great dividends in
+            <em>State of Oregon v. Judah Larson,</em>159 Or App 34
+            (1999). In that case the lawyer believed there was a legal
+            issue concerning the search and seizure of marijuana plants
+            at the client’s residence. The attorney provided me with
+            case law that dealt with privacy protections in the area
+            surrounding private dwellings. When I found a witness at the
+            apartment complex who had placed a sign in the backyard that
+            read, “We like you, but not in our backyard. PLEASE KEEP
+            OUT!” I understood the potential legal significance of the
+            sign. I photographed the sign and interviewed the witness
+            based on my reading of the case law. The witness’s testimony
+            at the suppression hearing provided the legal grounds for
+            the court to suppress the search and seizure of the
+            marijuana plants.</p>
+            <p>Talk to your attorney about legal restrictions on the
+            government advising witnesses not to speak with the defense.
+            Be prepared with a series of questions and responses for the
+            witness who claims the police or prosecutor told them not to
+            talk to anyone. Your notes of the witness’s responses should
+            be detailed because the witness will likely try to change
+            their tune at a later time. It is a fine line between “The
+            prosecutor told me not to talk to you,” versus “The
+            prosecutor told me I don’t have to talk to you.”</p>
+            <h2 id="background_information"><strong><em>Background
+            Information</em></strong></h2>
+            <p>Complete a thorough background check on all the
+            witnesses. An outline for investigating the background of
+            witnesses and informants is given in Appendix A. You can be
+            sure the prosecution will conduct a background investigation
+            of all defense witnesses.</p>
+            <p>Don’t forget to background the officers involved in the
+            case. A sample letter of request to DPSST for training
+            records is given in Appendix B. Check federal and state
+            court records for the history of any civil or divorce cases
+            against the officer. Try to obtain information about the
+            officer’s activities leading up to the contact with the
+            client or witness. Many agencies can provide a computer
+            printout detailing the officer’s activities. You can also
+            request a copy of the officer’s notebook. See Appendix C for
+            a sample of Portland Police Bureau records requests.</p>
+            <p>Large police agencies, such as the Portland Police
+            Bureau, often maintain their own databases for names of
+            people, locations and vehicles involved in their criminal
+            investigations. A sample request and the result of a name
+            search are provided in Appendix D.</p>
+            <p>As a part of preparing for the interview, the
+            investigator should research the types of investigative
+            resources available to government agents. Government
+            wiretaps are common. To obtain a wiretap, the government
+            must allege that all avenues of investigation have failed
+            and that only a wiretap will provide the needed information.
+            In order to attack the wiretap, defense investigators are
+            often asked to interview the agent who applied for it. One
+            source of particular interest in wiretap cases is the El
+            Paso Intelligence Center (EPIC). EPIC was established by the
+            Drug Enforcement Administration (DEA) in 1974 to gather
+            drug-dealing intelligence from different local, state,
+            federal and international agencies into one place. The
+            center attempts to monitor the movement of drugs across
+            international borders and tracks illegal aliens, fugitives,
+            firearms, aircraft, goats, motor vehicles and currency.
+            Agencies also provide the center with informant information
+            about suspected drug dealers and their organizations. EPIC
+            has a lot of information that agents should know about, but
+            often say they don’t, before applying for a wiretap.</p>
+            <h2
+            id="review_the_evidence_and_go_to_the_scene"><strong><em>Review
+            the Evidence and Go to the Scene</em></strong></h2>
+            <p>Attorneys can usually get permission from the prosecution
+            for the investigator to view, copy and photograph evidence
+            in police custody. Hopefully the attorney will accompany you
+            as these items are very helpful in case preparation.
+            Exercise caution, however, in discussing the case in the
+            presence of the police personnel.</p>
+            <p>Go to the scene and take photographs, prepare drawings
+            and take notes about landmarks. Define the scene as clearly
+            as possible. Note the time and date of the alleged event.
+            Seasonal changes can alter important details of the scene.
+            (For more on photographing scenes and evidence, see Chapter
+            8.)</p>
+            <h2 id="who_what_and_where"><strong><em>Who, What, and
+            Where?</em></strong></h2>
+            <p>Before interviewing witnesses you should have a meeting
+            with the attorney to discuss a game plan and possible case
+            theories. When you are ready to start interviewing
+            witnesses, ask yourself the following questions:</p>
+            <p>1.Who should I interview first and who should I interview
+            last? Do I want to work from general to specific or vice
+            versa?</p>
+            <p>2.Who am I about to talk to? Is the witness a
+            professional (police, fire, etc.)? Is the witness the
+            client? Is the witness friendly or hostile?</p>
+            <p>3.Why am I talking to the witness? Am I fact-finding? Do
+            I expect the witness to support my position?</p>
+            <center>
+            <p>Am I assessing the opposition?</p>
+            </center>
+            <p>4.How do I want to set up the dynamics of the interview?
+            Should I make an appointment (probably with a professional
+            witness, client or key witness) or do I just show up (the
+            hostile witness)? Can I do an effective interview over the
+            phone? Should the interview take place in an office, at a
+            home, or a neutral site? Should anyone else be present
+            during the interview?</p>
+            <h1 id="conducting_the_interview"><strong>Conducting the
+            Interview</strong></h1>
+            <p>Investigators depend on the willingness of the witness to
+            talk about the case. We have no power to compel anyone to
+            talk. The most crucial point in obtaining an interview comes
+            immediately after the witness opens the door or answers the
+            telephone.</p>
+            <h2 id="initial_contact"><strong><em>Initial
+            Contact</em></strong></h2>
+            <p>Advise the person who you are, why you are calling, and
+            who you work for. In criminal cases alleged victims must
+            also be advised that they do not have to talk to the
+            defendant’s attorney or agents and that they may have the
+            district attorney present during an interview (ORS
+            135.970(2)). Never give or leave the impression that you are
+            an attorney. It is possible to let a witness know what your
+            role is without answering questions about the case (“Oh, we
+            are just gathering facts right now”). Some telephone
+            conversations between two parties can be recorded with the
+            consent of only one of the parties (ORS 165.540). Never
+            record a telephone interview with a witness unless you have
+            discussed the specific legal issues involved with the
+            attorney. Likewise, you should seek legal advice before
+            intercepting (recording) oral communications. It is a
+            misdemeanor crime to intercept oral communications to which
+            you are not a party (ORS 165.543).</p>
+            <h2 id="develop_a_lure"><strong><em>Develop a
+            Lure</em></strong></h2>
+            <p>Always develop an initial question that serves as a lure
+            for the witness to bite on. With police officers, you might
+            point out a part of their report that obviously leaves out
+            an important fact or detail. Blanket requests for interviews
+            seldom work with police officers.</p>
+            <p>Careful review of the discovery and case background will
+            often help prepare a lure. I worked on a sex abuse case, for
+            example, that involved a very convincing twelve-year-old
+            girl. After reviewing the reports, I prepared a lure that
+            indirectly presented a problem and asked for help in solving
+            it. I put together the following introduction:</p>
+            <p>Hello, I’m Jerry Elshire, I work as an investigator with
+            John Doe, Attorney. We represent Mr. X, who is accused of
+            sexual impropriety with Jane Roe. She formerly lived next
+            door to you. I apologize for bothering you. If you think I
+            should go on my way, I will. If there is something that you
+            feel you should talk to me about I would greatly appreciate
+            it.</p>
+            <p>Several witnesses invited me into their homes and told me
+            they expected something like this to happen. They then
+            provided me with damaging character evidence about the
+            alleged victim. Their testimony provided the basis for a
+            not-guilty verdict.</p>
+            <h2 id="witness_reactions"><strong><em>Witness
+            Reactions</em></strong></h2>
+            <p>Be prepared for some typical witness reactions to your
+            request to speak with them. “I don’t think I should talk to
+            the defense.” “How can you represent someone like that?” A
+            good answer will not offend the witness. Maybe you can agree
+            with the witness and tell them that you feel bad about the
+            case also. Help people understand that sometimes you
+            represent people who are not guilty. Let them know you are
+            an experienced and reputable professional. Perhaps you can
+            refer to a recent case concerning an innocent or falsely
+            accused person in the media in order to keep the door open
+            and start a conversation.</p>
+            <h2 id="outlines"><strong><em>Outlines</em></strong></h2>
+            <p>An outline assures that you cover all necessary points.
+            Incorporate what you have learned from prior interviews.
+            Organization can help you maintain important control over
+            the interview. Don’t be over- committed to the outline,
+            however. Always remember to listen to the answers and follow
+            up on opportunities as they present themselves.</p>
+            <h2 id="respect_the_witness"><strong><em>Respect the
+            Witness</em></strong></h2>
+            <p>Set the person at ease. Use a humane approach and show
+            respect for the witness. Try to engage in preliminary
+            conversation about family life or common interests. Look for
+            photographs, trophies, cars, or anything that will encourage
+            conversation and respect. The witness may even forget why
+            you showed up at their door. This interaction lets the
+            investigator see how the witness reacts to questions and
+            clearly facilitates communication. Bringing out a tape
+            recorder or immediately making copious notes can quickly
+            turn off a witness.</p>
+            <h2 id="let_the_witness_talk"><strong><em>Let the Witness
+            Talk</em></strong></h2>
+            <p>Always make the witness think they know more about the
+            case than you. Let the person talk. Let the person tell
+            their entire story. Do not interrupt. Encourage and allow
+            the person to explain, describe and review the situation in
+            their own words, phrases and expressions. Using your
+            outline, come back to issues to confirm or clarify key
+            points. Distract and re-ask questions for consistency. (“I’m
+            sorry, give me a second to catch up here. Okay, now what was
+            that you said?”) For additional information about
+            interrogation and cognitive interviewing techniques, see the
+            <em>Criminal Investigator’s Handbook</em>(Matthew Bender,
+            2005).</p>
+            <h2 id="control_the_pace"><strong><em>Control the
+            Pace</em></strong></h2>
+            <p>Control the pace of the questions. You normally want to
+            use a steady pace in order to keep the interview focused and
+            under your control. Master the art of the tactful or
+            pregnant silence. This can be used when you are at the
+            crucial point of the interview. Leave time for the witness
+            to decompress after the interview. It may have been a
+            stressful event and your respectful style will pay
+            dividends.</p>
+            <h2 id="your_impressions"><strong><em>Your
+            Impressions</em></strong></h2>
+            <p>Remember to note your subjective impressions of the
+            witness. The attorney needs to know how the witness
+            presents. Was the witness nervous, angry, fearful, or quiet?
+            Or, was the witness composed, cooperative, concerned, open,
+            or spontaneous? This information needs to go in the separate
+            and clearly marked work- product portion of your notes or
+            reports.</p>
+            <h1 id="conclusion"><strong>Conclusion</strong></h1>
+            <p>Interviews must produce relevant evidence admissible in
+            court. The “I sense” or “I consider” statements may not be
+            admissible or useful in court. Clear, positive statements
+            such as “I saw” or “I clearly heard” are much more
+            convincing. The investigator has the responsibility to
+            provide substantial and useful facts to an attorney by
+            thoroughly preparing for interviews, using appropriate
+            approaches to witnesses, and professionally controlling the
+            interview.</p>
+            <p>'''</p>
+            <center>
+            <p>Appendix A</p>
+            </center>
+            <p>'''</p>
+            <p>'''</p>
+            <center>
+            <p>Outline for Investigating the Background of Witnesses and
+            Informants</p>
+            </center>
+            <p>'''</p>
+            <p><strong>Facts About Informants</strong></p>
+            <p>1.Informants caught will offer the police the information
+            the police let the informant know they want.</p>
+            <p>2.Informants have trouble with telling the truth, some
+            lie part of the time while others lie all of the time.</p>
+            <p>They lie to avoid responsibility, save themselves, avoid
+            prosecutions, to divert attention to others and under
+            oath.</p>
+            <p>3.Everyone has a closet they want no one to enter.</p>
+            <p>4.Once the informant identifies with his captors they
+            become ever so confident.</p>
+            <p>5.All informants leave a deceptive trail.</p>
+            <p>Investigators can find information and witnesses who will
+            testify to the informants lack of credibility. This will
+            give the attorney a plan to attack the informant. The
+            following is an outline of some of the information that
+            should be checked</p>
+            <p>1.Court House Search, State and Federal (many online
+            computer services can provide the following data):</p>
+            <p>A.Criminal Case Searches (OJIN has made it easier to
+            locate a case, but a rummage through files will produce
+            witnesses and background information.)</p>
+            <p>•Pending and past cases</p>
+            <p>•Probation violations</p>
+            <p>•Prior addresses</p>
+            <p>•Work history (the recog. sheets are worth their weight
+            in gold)</p>
+            <p>•Criminal background and convictions</p>
+            <p>B.Civil Cases</p>
+            <p>•Dissolution</p>
+            <p>•Personal injury</p>
+            <p>•Financial information</p>
+            <p>•Restraining orders</p>
+            <p>•Depositions</p>
+            <p>•Child support records</p>
+            <p>•Employment</p>
+            <p>•Former Addresses</p>
+            <p>2.Criminal Background Checks</p>
+            <center>
+            <p>A.Portland Police Data Systems</p>
+            </center>
+            <p>Name Check</p>
+            <p>•Provides a complete record of prior addresses,
+            description, scars, marks and tattoos, addresses,
+            alias/monikers, associated names, associates cases.</p>
+            <p>•Police Reports</p>
+            <p>•Officer File/Notebook Entries</p>
+            <center>
+            <p>B.Oregon State Police – Identification Division</p>
+            </center>
+            <p>•A complete Oregon conviction record</p>
+            <p>C.Multnomah County Sheriff’s Office</p>
+            <p>•All custody information on an individual (many times
+            there is no record of arrest, the cops just want to
+            chat.)</p>
+            <p>3.Property Records</p>
+            <p>•Property bought and sold.</p>
+            <p>•Other parties who have dealt with the informant.</p>
+            <p>•Loan applications.</p>
+            <p>•Mortgage companies and attorneys who were involved in
+            property purchases.</p>
+            <p>4.Credit Card Records (obtained through “credit header”
+            checks</p>
+            <p>•Applications for credit cards (you will be surprised by
+            how much income the informant states on the
+            applications.)</p>
+            <p>5.Telephone Toll Records (residential and cell
+            telephones)</p>
+            <p>•Again, get the application and toll information. It can
+            lead to many things.</p>
+            <p>6.Marriage License Records (County Recorders Office)</p>
+            <p>•Provides information on mother and father of the groom
+            and the bride, place of birth, etc.</p>
+            <p>7.Newspapers</p>
+            <p>•Run a name check to see if the informant is named in an
+            article.</p>
+            <p>8.Hospitals, mental and physical care</p>
+            <p>•Obtain all records regarding hospital admissions.</p>
+            <p>9.Department of Motor Vehicles</p>
+            <p>•Obtain a driving abstract and all vehicles and
+            histories.</p>
+            <p>10.Department of Corrections</p>
+            <p>•Obtain probation and parole records. (don’t overlook UA
+            tests)</p>
+            <p>•Obtain all correctional facility records.</p>
+            <p>11.The Feds</p>
+            <p>•They run credit checks on informants, try to obtain
+            them.</p>
+            <p>•The AUSA or agent will take notes to show their boss,
+            obtain the notes.</p>
+            <p>•Try to get the informants version of the case from the
+            PSI.</p>
+            <p>•Obtain the Witness Security program records or
+            benefits.</p>
+            <p>•Obtain DEA 103 payment receipt and DEA 368 informant
+            payment records, ATF F-3220.2 and</p>
+            <p>3220.3, the same information.</p>
+            <p>•Obtain manuals of the agencies through the Freedom of
+            Information Act, DEA Informant</p>
+            <p>Chapter 66.</p>
+            <p>•US Marshal’s Intake Form, USM-129, lists aliases,
+            addresses and associates.</p>
+            <p>•Prisoner Record or Order to Deliver, BP377(58), will
+            include transfers for mental evaluations.</p>
+            <p>•Waiver of rights form, FBI FD-35, gave a statement but
+            would not sign the form, still dealing.</p>
+            <p>•US Marshal’s Personal History, USM-312 or Secret Service
+            Personal History.</p>
+            <p>•SSF 1599, in case the informant runs they have a
+            personal background to locate.</p>
+            <p>•FBI Receipt of Property Seized or Returned, FD 597.</p>
+            <p>12.The State</p>
+            <p>•Subpoena payment records from the police agency.</p>
+            <p>•Subpoena records from the DA when the informant has
+            testified in other cases.</p>
+            <p>•Make sure the informant is not a witness to the
+            transaction or can provide evidence that helps your client.
+            (The informant said drug dealer has long bushy hair and your
+            client has sported a flat top for years.)</p>
+            <p>•Obtain all procedural orders for the police agency
+            regarding the use of an informant. (The Metropolitan Public
+            Defenders Office in Portland receives all new orders and
+            they will let you look at them).</p>
+            <p>•Obtain all surveillance records.</p>
+            <p>Now You Have The Data</p>
+            <p>After the investigator diligently puts together the above
+            listed data, it is time to develop the informant attack.
+            Witnesses developed from the data must be interviewed to
+            develop the attack. In particular, you want to discuss the
+            following subjects:</p>
+            <p>•Try to interview the informant</p>
+            <p>•Any other criminal activity the informant has or is
+            involved in</p>
+            <p>•Credibility witnesses that can describe acts of
+            dishonesty</p>
+            <p>•Violence and brutality</p>
+            <p>•Drug use</p>
+            <p>•Any statements about the case or the client</p>
+            <p>•Any information about how the informant deals with the
+            cops</p>
+            <p>•Ex-spouse stories</p>
+            <p>•Any videos or photographs of the informant using drugs,
+            displaying weapons or money.</p>
+            <p>•Incentive to seek revenge on the client.</p>
+            <p>The Cops</p>
+            <p>1.Background (Look into their background like they are
+            the informant.</p>
+            <p>•Obtain Department of Public Safety Standards and
+            Training transcripts.</p>
+            <p>•Obtain training materials that relate to the case.</p>
+            <p>•Contact other defense investigators and attorneys to
+            learn about the cop(s) reputation and other cases.</p>
+            <p>•Obtain transcripts, court tapes and videos of the
+            cop(s).</p>
+            <p>•Obtain any disciplinary files.</p>
+            <p>•Check Federal and State civil records for divorce,
+            lawsuits, comp claims, personal injury suits.</p>
+            <p>•Obtain transcripts and audio/video tapes.</p>
+            <p>•Run a newspaper check.</p>
+            <p>•Check real property records (look for forfeited
+            properties).</p>
+            <p>•Try to locate witnesses who can testify about the cop(s)
+            M.O. and reputation for truthfulness. (Locate some not
+            guilty cases or plaintiffs).</p>
+            <p>2.The Search Warrant</p>
+            <p>•Does the affiant state the use of the informant to issue
+            prior search warrants. (Look for a time period, “within the
+            last year.”)</p>
+            <p>•Locate the prior search warrants issued by the officer.
+            (Check to see if the number of issued warrants and the CRI
+            relate.)</p>
+            <p>•Check search warrant logs for prior addresses searched.
+            (Multnomah County maintains a log book of all search
+            warrants, however it is indexed by address and search
+            warrant number, not the police officer.)</p>
+            <p>3.Dogs</p>
+            <p>•Obtain the entire training record.</p>
+            <p>4.Scene</p>
+            <p>•Photograph the scene. (Make sure the cops can see what
+            they claim.)</p>
+            <p>•Prepare drawings.</p>
+            <p>•Canvass neighbors.</p>
+            <p>5.Wiretaps</p>
+            <p>•Did the agents complete normal investigative procedures
+            prior to the tap?</p>
+            <p>•Did they: contact the US Customs Service Department’s El
+            Paso Intelligence Center (EPIC). EPIC tracks the entry of
+            person from outside the country through US Customs, this
+            information is turned over to the Financial Crimes
+            Enforcement Network which will provide the information to
+            law enforcement along with banking records. EPIC also
+            receives and stores debriefing information on informants and
+            suspected drug dealers. Agent reports are also stored in the
+            data base.</p>
+            <p>•Law enforcement also has access to Airline Reporting
+            Corporation (ARC) in Washington, D.C., which is the collator
+            for all the tickets of all the major airline carriers in the
+            US. The International Air Transport Association (IATA) in
+            Montreal handles and stores foreign travel tickets for
+            international airlines.</p>
+            <p>•Following the subject, obtaining toll records from
+            hotels and searching the trash for notes and receipts.</p>
+            <p>•Telephone logs and follow up on the numbers.</p>
+            <p>•Examine credit card receipts and applications.</p>
+            <p>•Did they do all the investigation the defense did to
+            investigate the informant?</p>
+            <p>6.Drug Buys</p>
+            <p>•Chart the drug buys to subject, date, case #, officers,
+            purchases, amount, cost, weight, description, informant,
+            vehicle, client, passenger or driver, location,
+            statements.</p>
+            <p>•Photograph the scene.</p>
+            <p>The Client</p>
+            <p>Background</p>
+            <p>•Research the client’s background like that of the
+            informant. (Clients don’t always recall where they were on a
+            specific date, but a credit card slip or some other alibi
+            evidence might.)</p>
+            <p>•Develop witnesses on credibility, employment.</p>
+            <p>•Any piece of evidence to show the informant or cops are
+            not being truthful.</p>
+            <p>•Weigh the drugs.</p>
+            <p>The Investigator’s Testimony</p>
+            <p>Motions, Trials and Sentencing</p>
+            <p>•Have the investigator tell the judge and or jury about
+            themselves, their years in the business, education and
+            training seminars.</p>
+            <p>'''</p>
+            <center>
+            <p>Appendix B</p>
+            </center>
+            <p>'''</p>
+            <p>'''</p>
+            <center>
+            <p>Sample Letter Requesting DPSST Training Records with
+            Sample First Page of Training Record</p>
+            </center>
+            <p>'''</p>
+            <p>Requests are emailed to Rebecca A. Hannon in the
+            Standards and Certification Section. Her telephone number is
+            503-378-2328, Fax is 503-378-4600 and email is <a
+            href="mailto:dpsst.records@state.or.us">dpsst.records@state.or.us</a></p>
+            <p>Dear Rebecca,</p>
+            <p>Following is a list of officers I need training records
+            for: Klamath County Sheriff’s Office</p>
+            <p>Ferns, Sean 32957</p>
+            <p>Dougherty, John D. 09839</p>
+            <p>Klamath Falls Police Department</p>
+            <p>Dentinger, Robert 26838</p>
+            <p>Oregon State Police – Klamath Falls Substation</p>
+            <p>Gourley, Stephanie</p>
+            <p>Please forward an invoice for the cost of the records to:
+            RL Coats Investigations, Inc.; PO Box 2117; Bend, OR
+            97709.</p>
+            <p>Thank you very much for your assistance with this
+            request. Your help is very appreciated. Very Truly
+            Yours,</p>
+            <p>Rhonda L. Coats</p>
+            <p>Mitigation Investigator</p>
+            <p>541-604-4518</p>
+            <p>DPSST# 33451</p>
+            <p><a href="Image:" title="wikilink">Image:</a></p>
+            <p><a href="Image:" title="wikilink">Image:</a></p>
+            <p>Level Status Date Status Cert # Certified Expiration
+            Probation</p>
+            <center>
+            <p>-------- -</p>
+            </center>
+            <p>Police Officer</p>
+            <p>Advanced 9-29-2008 Granted 9-29-2008</p>
+            <p>CPRFirst Aid</p>
+            <p>Maintenance: Police Maintenance</p>
+            <p>9-26-2007 Completed 9-26-2009</p>
+            <p>9-26-2007 Completed 9-26-2009Basic 1-0i-2007 Required
+            12-31-2009</p>
+            <p>CPRPolice Officer</p>
+            <p>4-29-2005 Completed 4-29-2007Intermediate 4-08-2002
+            Granted 4-08-2002</p>
+            <p>Police Officer</p>
+            <p>Basic 6-20-2000 Granted 6-20-2000</p>
+            <p>Corrections Officer</p>
+            <p>Basic 9-01-i999 Lapsed 11-03-1997</p>
+            <p>Date Action/Class Status Rank/Assgn Level Agency</p>
+            <center>
+            <p>--------</p>
+            </center>
+            <p>6-01-1999 Reclassif. ActiveDpty ShrfKlamath County
+            Sheriff's Office</p>
+            <p>Functions:POL Service: 9 Years 303 Days</p>
+            <p>9-03-1996 Hired ActiveDpty ShrfKlamath County Sheriff's
+            Office</p>
+            <p>Functions:COR Service: 2 Years 270 Days</p>
+            <table>
+            <tbody>
+            <tr>
+            <td style="border:none;padding:0in;"><p>Course</p></td>
+            <td style="border:none;padding:0in;"><p>Title</p>
+            <hr /></td>
+            <td style="border:none;padding:0in;"><p>Date</p>
+            <p>- -----</p></td>
+            <td style="border:none;padding:0in;"><p>Hours</p></td>
+            <td style="border:none;padding:0in;"><p>Score</p></td>
+            <td style="border:none;padding:0in;"><p>Status</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>09-0794</p></td>
+            <td style="border:none;padding:0in;"><p>Child Abuse
+            Investigation</p></td>
+            <td style="border:none;padding:0in;"><p>2-04-2009</p></td>
+            <td style="border:none;padding:0in;"><p>1.50</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>09-0257</p></td>
+            <td style="border:none;padding:0in;"><p>SWAT
+            Training</p></td>
+            <td style="border:none;padding:0in;"><p>1-30-2009</p></td>
+            <td style="border:none;padding:0in;"><p>2.00</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>09-0716</p></td>
+            <td style="border:none;padding:0in;"><p>LEOS
+            Recertification</p></td>
+            <td style="border:none;padding:0in;"><p>1-15-2009</p></td>
+            <td style="border:none;padding:0in;"><p>1.00</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"></td>
+            <td style="border:none;padding:0in;"></td>
+            <td style="border:none;padding:0in;"><p>2009
+            Pass/Comp</p></td>
+            <td style="border:none;padding:0in;"><p>4.50</p></td>
+            <td style="border:none;padding:0in;"></td>
+            <td style="border:none;padding:0in;"></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0100</p></td>
+            <td style="border:none;padding:0in;"><p>Active
+            Shooter</p></td>
+            <td style="border:none;padding:0in;"><p>i2-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>2.00</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0274</p></td>
+            <td style="border:none;padding:0in;"><p>Taser -
+            Other</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>1.25</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0276</p></td>
+            <td style="border:none;padding:0in;"><p>Use of Force -
+            Other</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>i .25</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0662</p></td>
+            <td style="border:none;padding:0in;"><p>Outlaw Motorcycle
+            Gang Investigation</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>0.50</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0663</p></td>
+            <td style="border:none;padding:0in;"><p>Gang Training -
+            Other</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>0.50</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0851</p></td>
+            <td style="border:none;padding:0in;"><p>Explosive Device
+            Training</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>1.00</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0893</p></td>
+            <td style="border:none;padding:0in;"><p>Terrorism
+            Trends</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>2.00</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-0904</p></td>
+            <td style="border:none;padding:0in;"><p>DPSST Revocation
+            <em>I</em>Ethics Bulletin Review</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>0.50</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-1038</p></td>
+            <td style="border:none;padding:0in;"><p>Interview &amp;
+            Interrogation</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>0.75</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            <tr>
+            <td style="border:none;padding:0in;"><p>08-i068</p></td>
+            <td style="border:none;padding:0in;"><p>Drugs -
+            Other</p></td>
+            <td style="border:none;padding:0in;"><p>12-31-2008</p></td>
+            <td style="border:none;padding:0in;"><p>1.50</p></td>
+            <td style="border:none;padding:0in;"><p>0.0</p></td>
+            <td style="border:none;padding:0in;"><p>Passed</p></td>
+            </tr>
+            </tbody>
+            </table>
+            <center>
+            <p><strong>Appendix C</strong></p>
+            </center>
+            <center>
+            <p><strong>Requesting a Police Report</strong></p>
+            </center>
+            <p>All requests for police reports must be in writing.</p>
+            <p>Copies of Portland Police Reports are available by mail
+            only.</p>
+            <p>Fees:</p>
+            <p>$10.00 for the first 5 pages, $2.00 each additional
+            page</p>
+            <p>The Portland Police Bureau will charge for search time
+            even if we fail to locate any records responsive to the
+            request or even if the records located are subsequently
+            determined to be exempt from disclosure (minimum of</p>
+            <p>$10.00).</p>
+            <p>View the Fee Schedule, next page. Step 1:</p>
+            <p>Print and complete this form: Police Report Request Form,
+            following Fee Schedule, or at</p>
+            <p><a
+            href="http://www.portlandonline.com/police/index.cfm?c=30557&amp;a=45528"><span>http://www.portlandonline.com/police/index.cfm?c=30557&amp;a=45528</span></a></p>
+            <p>To obtain a report and to avoid additional search fees or
+            delays, please provide as much information as possible about
+            the incident and the person(s) involved. Supply, if known:
+            the date of the incident; the full name and date(s) of birth
+            of person(s) involved; the location of the incident; the
+            type of incident; and license plate and/or vehicle
+            identification number (VIN) of vehicle(s) involved.</p>
+            <p>• Date of the incident: Date and time the incident
+            occurred or when the report was filed.</p>
+            <p>• Full name and date of birth:. First, middle, and last
+            name of the person(s) involved. Include date of birth</p>
+            <p>if available. A home address will be helpful in narrowing
+            a search.</p>
+            <center>
+            <p>• Location of incident: Provide the exact address of the
+            incident. If there isn't an exact address, then provide</p>
+            </center>
+            <p>cross streets. Be sure to include the direction, i.e., NW
+            St. Helens Road and the St. Johns Bridge orE</p>
+            <p>Burnside St. Highways and freeways are also searchable,
+            i.e., northbound on Interstate 5 near the Jantzen</p>
+            <p>Beach exit. If the incident occurred at an apartment
+            complex, include the name of the complex.</p>
+            <p>• Type of incident: Provide information on the type of
+            incident that occurred. Examples of commonly requested
+            reports include: automobile accident, assault, theft of an
+            item, or family disturbance.</p>
+            <center>
+            <p>• License plate and/or vehicle identification number
+            (VIN): Provide as much information as possible about</p>
+            </center>
+            <p>the vehicle(s) involved. The description, red Chevy
+            two-door, is not searchable, but OR plate ABC 123;</p>
+            <p>VIN JHM456123230; red Dodge Ram pick-up is very specific
+            and will narrow the search.</p>
+            <p>Step 2:</p>
+            <p>Mail the form a business-size (large enough for five
+            standard sheets of paper), self-addressed, stamped envelope,
+            and a check or money order in the amount of $10.00 to:</p>
+            <p>Correspondence Desk</p>
+            <p>Portland Police Bureau Records Division</p>
+            <p>1111 SW 2nd Avenue, Room 1126</p>
+            <p>Portland, Oregon 97204</p>
+            <p>Make check payable to: Treasurer, City ofPordand</p>
+            <center>
+            <p>11-13</p>
+            </center>
+            <center>
+            <p>Bureau of Police</p>
+            </center>
+            <center>
+            <p>Dan Saltzman, Police Commissioner</p>
+            </center>
+            <center>
+            <p>Rosanne M. Sizer, Chief of Police</p>
+            </center>
+            <center>
+            <p>1111 S.W. 2nd Avenue e Portland, OR 97204 • Phone:
+            503·823·0000 • fax: 503·823·0342</p>
+            </center>
+            <center>
+            <p>Integrity • Compassion • Accountability • Respect •
+            Excellence " Service</p>
+            </center>
+            <center>
+            <p>Portland Police Bureau Records Division</p>
+            </center>
+            <center>
+            <p>Police Request Form</p>
+            </center>
+            <center>
+            <p>(Please Print)</p>
+            </center>
+            <center>
+            <p>Requesting:Police Report PPDS Printout Officer Notes</p>
+            </center>
+            <center>
+            <p>Type of Crime:</p>
+            </center>
+            <p>(Examples: Burglary from Residence, Larceny from Auto,
+            Traffic Accident)</p>
+            <center>
+            <p>Location:</p>
+            </center>
+            <p>(Address of incident, street or cross streets where
+            incident or accident occurred)</p>
+            <p>Date Reported: (Date of incident or contact with
+            police)</p>
+            <center>
+            <p>Person/Reported By:</p>
+            </center>
+            <p>(Name of person(s) who had contact with police or name of
+            PPDS printout requested)</p>
+            <p>Date of Birth: (Date of birth of person who had contact
+            with the police)</p>
+            <center>
+            <p>Case Number (If known):</p>
+            </center>
+            <center>
+            <p>Other:</p>
+            </center>
+            <p>(Include vehicle description, license plate number, or
+            VIN number if known)</p>
+            <p>Reason for request: Mail to: Address:</p>
+            <p>Payment must be included, check or money order for each
+            request of $10.00 per report, $5.00 printout, or</p>
+            <p>$8.50 officer notes. Make payable to: <em>Treasurer, City
+            of Portland.</em></p>
+            <p>Mail this form, payment, and a business size,
+            self-addressed stamped envelope to: Correspondence Desk</p>
+            <center>
+            <p>Portland Police Bureau</p>
+            </center>
+            <center>
+            <p>1111 SW 2"d Avenue, Room 1126</p>
+            </center>
+            <center>
+            <p>Portland, OR 97204</p>
+            </center>
+            <center>
+            <p>Requests sent by e-mail or facsimile machine wili not be
+            accepted.</p>
+            </center>
+            <p>Check No. Money Order No. Receipt No. _ By PRS
+            --------------------- DPSST ------</p>
+            <center>
+            <p>Community Policing: Making the Differenc:tl! Together</p>
+            </center>
+            <center>
+            <p>An Equal Opportunity Employer</p>
+            </center>
+            <center>
+            <p>City Information Line: 503-823-4000, TTY (for hearing and
+            speech impaired): 503·823·6868 Website: <a
+            href="http://www.portlandpolice.com/">www.portlandpolice.com</a></p>
+            </center>
+            <center>
+            <p><strong>Bureau of Police</strong></p>
+            </center>
+            <center>
+            <p>Dan Saltzman,Police Commissioner</p>
+            </center>
+            <center>
+            <p>Rosanne M. Sizer, Chief of Police</p>
+            </center>
+            <center>
+            <p>1111 s.w. 2nd Avenue • Portland,OR 97204 • Phone:
+            503·823·0000 • Fax: 503·823·0342</p>
+            </center>
+            <p><a href="Image:" title="wikilink">Image:</a></p>
+            <center>
+            <p>Integrity • Compassion • Accountability • Respect •
+            Excellence • Service</p>
+            </center>
+            <p><a href="Image:" title="wikilink">Image:</a></p>
+            <center>
+            <p><strong>RECORDS DIVISION FEE SCHEDULE</strong></p>
+            </center>
+            <p><strong>Police
+            Report..............................................................................................$10.00
+            per report</strong></p>
+            <p>A copy of the first five pages of the report will be
+            provided. An additional charge of $2.00 for each additional
+            page will apply if the report exceeds five pages.
+            <strong><em>The Portland Police Bureau will charge for
+            search time even if</em>we <em>fail to locate any records
+            responsive to the request or even if the records located are
+            subsequently determined to be exempt from disclosure
+            (minimum of $10.00).</em></strong></p>
+            <p><strong>PPDS Name Record
+            Print</strong>..............................................................<strong>.$5.00
+            per individual record</strong></p>
+            <p>This record only lists contact between an individual and
+            the Portland Police Bureau for which a police report was
+            created. This record lists case number, date and locations
+            of occurrence, involvement, and offenses.</p>
+            <p>•!• An individual may request their own printout in
+            person at the Records Division. The individual must have
+            valid picture identification.</p>
+            <p>•!• If an individual lives more than 25 miles from
+            Portland, or is physically unable to present themselves to
+            the Records Division, they may make their request in
+            writing. A copy of their valid</p>
+            <p>picture identification must be included with the
+            request.The printout will be mailed to the</p>
+            <p>requestor.</p>
+            <p>•!• Third party requests for Portland Police Data System
+            Name Records must be submitted in the form of a Public
+            Records Request. Requests must include name and date of
+            birth. Requests must be submitted to the Custodian of
+            Record, 1111 SW 2nd Avenue, Room 1126, Portland, Oregon</p>
+            <p>97204.</p>
+            <p>•!• Records are certified a true copy upon request.</p>
+            <p>•!• Certification of Immigration and Customs Enforcement
+            VISA letters upon request. (FOC)</p>
+            <p><strong>Address Record
+            Print.................................................................................
+            $5.00 per address</strong>This record lists case numbers and
+            incident types for each incident associated with a specific
+            address for which a police report was created.</p>
+            <p><strong>Officer Notebook
+            Entry................................................$8.50
+            per each officer's notebook entry</strong></p>
+            <center>
+            <p>For more information, call the Records Division at
+            503-823-0043 or visit our website. <a
+            href="http://www.portlandpolice.org/">www.portlandpolice.org</a></p>
+            </center>
+            <p><a href="Image:" title="wikilink">Image:</a></p>
+            <center>
+            <p><strong>Community Policing:Making the Difference
+            Together</strong></p>
+            </center>
+            <center>
+            <p><strong>An Equal Opportunity Employer</strong></p>
+            </center>
+            <p>City Information Line: 503·823·4000, TIY (for hearing and
+            speech impaired): 503·823·6868 Website: <a
+            href="http://www.portlandpolice.com/">www.portlandpolice.com</a></p>
+            <center>
+            <p>11-15</p>
+            </center>
+            <p>'''</p>
+            <center>
+            <p>AppendixD</p>
+            </center>
+            <p>'''</p>
+            <p>'''</p>
+            <center>
+            <p>Sample Request and Result of Name Search</p>
+            </center>
+            <p>'''</p>
+            <p>RE:</p>
+            <p>Please provide a complete PPDS name record on the above
+            captioned names. When completed, please call Jerry Elshire
+            at 697-0792 and the necessazy arrangements will be made for
+            pick up. Ifyou have·any questions regarding the subject,
+            please call Jerry W. El.sbire.RINTED:</p>
+            <p>?PDS COMPLETE NAME RECORDPF'DS
+            <code>NUMBER:305762</code></p>
+            <p><code>SID</code>F'PC: HFP:</p>
+            <p>PPB <code>MUG</code>NSR: •.</p>
+            <p><code>MCL NBR:</code>SPCL INDICATORS: <a href="Image:"
+            title="wikilink">Image:</a></p>
+            <center>
+            <p>SCARS-MARKS-TATOOS</p>
+            </center>
+            <center>
+            <p>1AT L WRS-69 TAT L HND-CROSSTAT L SHLD-ROSE</p>
+            </center>
+            <center>
+            <p><code>TAT L SHLD-BLACK PANTHE TAT R SHLD-LIVE AND LET TAT R SHLD-DIE</code></p>
+            </center>
+            <p>1Ai i.. ARM-KIM</p>
+            <div align="right">
+            <p><code>SOCIAL SECURITY</code></p>
+            </div>
+            <p>ALIAS/MONIKERS</p>
+            <p>ASSOC DATE</p>
+            <p>05-01-93</p>
+            <p>SEX RACE DOS</p>
+            <p>DATE UPDA'ln</p>
+            <div align="right">
+            <p>NAME:·</p>
+            </div>
+            <p><code>MICHAEL</code></p>
+            <p>11 w</p>
+            <p><code>07-16-7:5</code><br />
+            <code>06-22-79</code><code>MICHAEL L JR MIKE</code></p>
+            <center>
+            <p>MICHAEL</p>
+            </center>
+            <p><code>, MICHAEL LYNN JR</code></p>
+            <center>
+            <p><code>, MICHAEL L</code></p>
+            </center>
+            <center>
+            <p>, MICHAEL</p>
+            </center>
+            <center>
+            <p>MICHAEL</p>
+            </center>
+            <div align="right">
+            <p>ASSOCIATED VEHICLES</p>
+            </div>
+            <p>1'1<code>WO:Z-16-'TS MW07-16-7:5</code></p>
+            <p>1'1<code>W07.:.16-T..S</code></p>
+            <p><code>MW07-16-73</code></p>
+            <p><code>M W. 07-16-75</code></p>
+            <p><code>MW09-02-7:5</code></p>
+            <p><code>M wo -28-'TS</code></p>
+            <p><code>M W07-16-73</code></p>
+            <p><code>M W07-16-'TS</code></p>
+            <p><code>M W07-16-73</code></p>
+            <p><code>11-3'0-BO</code><br />
+            <code>02-10-87</code><br />
+            <code>02-10-97</code><br />
+            <code>02-25-87</code><br />
+            <code>0::1-03-87</code><br />
+            <code>09-14-99</code><br />
+            <code>09-:Zl-89</code><br />
+            <code>07-24-92</code><br />
+            <code>09-1!1-92</code><br />
+            <code>09-19-92</code><code>LICENSE NUM!:!ER</code><code>MJSS:s'S</code></p>
+            <p>VEiitCL.E NUMBER</p>
+            <p>v::( ="</p>
+            <p><code>1H57U6Z41C.C.7•)</code></p>
+            <p>':&gt;4</p>
+            <center>
+            <p>11-16</p>
+            </center>
+    </body>
+</html>

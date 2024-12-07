@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2020 edition with 2024 Update.</p>
+            <p>Chapter 4 Implied Consent Hearings</p>
+            <p>Hugh Duvall</p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>Implied consent suspensions are imposed administratively,
+            using a process which affords drivers far fewer protections
+            against unjust results than the related criminal proceeding.
+            Additionally, because these suspensions either impose a
+            partial or complete period of denial of any hardship
+            privileges, they often have significantly greater impact on
+            one’s client than an actual conviction for Driving Under the
+            Influence. (Much appreciation is due to Ben Eder for his
+            assistance in a previous version of this chapter.)</p>
+            <p>Included in the Resource Guide is a copy of the Office of
+            Administrative Hearings Guide to Oregon Implied Consent
+            Hearings. This is the publication used by administrative law
+            judges to determine how to rule on implied consent hearings.
+            This document is full of valuable case law to prepare for
+            and conduct an implied consent hearing. The guide is also
+            available at the top of the page.</p>
+            <p>There are many reasons to request a DMV hearing, such as
+            the fact that you might win. There is no penalty if you lose
+            and you get an opportunity to cross-examine the police
+            officer close in time to the arrest and develop a transcript
+            for future use.</p>
+            <p>Note: In <a
+            href="https://scholar.google.com/scholar_case?case=1158997500300415488&amp;q=State+v.+McRae,+271+Or+App+558+(2015&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McRae</em>, 271 Or App 558 (2015)</a>, the defendant
+            sought to admit the opinion of the ALJ, from the Implied
+            Consent Hearing, to impeach an officer at a pretrial
+            suppression motion. The trial judge ruled the opinion was
+            inadmissible. The Court of Appeals disagreed, but affirmed
+            based upon harmless error. In the ruling, the court held, “A
+            hearing on a motion to suppress evidence in a criminal case
+            is a hearing involving a preliminary question concerning
+            evidence within the meaning of OEC 101(4)(a) and OEC 104(1)
+            and is not governed by the rules of evidence. <a
+            href="https://scholar.google.com/scholar_case?case=5976490014431120544&amp;q=State+v.+Wright,+315+Or.+124,+129,+843+P.2d+436+(1992)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wright</em>, 315 Or. 124, 129, 843 P.2d 436 (1992)</a>.
+            In excluding the DMV order, the trial court described the
+            ‘opinion’ of the ALJ as not relevant to the ‘fact finding
+            and decision-making’ task of the trial court at the
+            suppression hearing. To the extent the trial court meant
+            that the ALJ’s ‘opinion’ regarding credibility and probable
+            cause had no bearing on how the trial court decided those
+            issues, defendant does not disagree. But defendant sought to
+            admit the order because it describes prior statements that
+            Ginnow made regarding pertinent facts. Although the trial
+            court would have been free to give that evidence little or
+            even no weight in assessing Ginnow’s credibility, the court
+            should have admitted and considered the offered evidence at
+            the suppression hearing and then determined what weight to
+            afford it.” <em>McRae</em> at 560-61.</p>
+            <p>The best hearings are done with short questions using eye
+            contact and pacing to create a good transcript that can be
+            used at the criminal trial.</p>
+            <p>Warning: “If the prosecuting attorney or the attorney for
+            the defendant in a prosecution for driving while under the
+            influence of intoxicants obtains a tape or a transcript of a
+            hearing held for the defendant under <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.410</a> (suspension upon receipt of police report on
+            implied consent test), the attorney must provide a copy of
+            the tape or transcript to the attorney for the other party
+            at least seven days prior to the <em>first</em> date set for
+            trial. If the attorney fails to supply the material in the
+            time required, testimony from the hearing may not be
+            admitted in evidence in the trial for any purpose, unless
+            the attorney shows good cause for the failure to make the
+            material available.” <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.324(1)</a> (Emphasis added).</p>
+            <p><strong>Fig. 1. ODOT chart setting forth the implied
+            consent suspension scheme.</strong></p>
+            <p><a href="Media:ODOT_chart.docx" title="wikilink">ODOT
+            chart</a></p>
+            <p>Perhaps the greatest benefit a DUII defense attorney can
+            provide his or her client is to maximize the client’s chance
+            of avoiding this suspension.</p>
+            <h1
+            id="ii._relevant_statutes_and_oregon_administrative_rules"><strong>II.
+            Relevant Statutes and Oregon Administrative
+            Rules</strong></h1>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">Chapter
+            813 of Oregon Revised Statutes</a> – Driving Under the
+            Influence of Intoxicants</p>
+            <p><a
+            href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=3372">Division
+            90 of Oregon Administrative Rules</a> – Implied Consent
+            Hearing Procedures</p>
+            <p>A fundamental familiarity and understanding of the
+            following statutes and administrative rules is essential to
+            adequately challenging an implied consent suspension:</p>
+            <ul>
+            <li><blockquote>
+            <p>ORS 813.410, statute specifically explaining challenging
+            an implied consent suspension, and ORS 813.132, urine test
+            refusal statute.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>ORS 183.310–470, statutes explaining contested
+            hearings.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>OAR 735-090-0000 to 735-090-0130.</p>
+            </blockquote></li>
+            </ul>
+            <p>A familiarity with how the courts enforce the rules an
+            agency promulgates upon itself is helpful, and even
+            critical. A good place to start is reading <a
+            href="https://scholar.google.com/scholar_case?case=18124190477232777531&amp;q=Marshall%E2%80%99s+Towing+v.+Department+of+State+Police,+339+Or+54+(2005)&amp;hl=en&amp;as_sdt=4,38"><em>Marshall’s
+            Towing v. Department of State Police</em>, 339 Or 54
+            (2005)</a>.</p>
+            <h2 id="remote_hearings"><strong>Remote
+            Hearings</strong></h2>
+            <p>The hearing will be, “by telephone or other two-way
+            electronic communication device.” However, petitioner or
+            officer may request hearing be in person. ORS
+            813.410(4-5).</p>
+            <h1 id="iii._requesting_the_hearing"><strong>III. Requesting
+            the Hearing</strong></h1>
+            <h2 id="a._timely_requests"><strong>A. Timely
+            Requests</strong></h2>
+            <p>ORS 813.410(4) and OAR 735-090-0020 set forth how to
+            request a hearing.</p>
+            <p>There is a ten-day deadline from the date of the arrest,
+            <em>not counting the date of the arrest</em>, to deliver a
+            hearing request to DMV. See ORS 813.410(4) and OAR
+            735-090-0020(4). ORCP 10A applies. OAR 735-090-0020(4). If
+            the tenth day falls on a Saturday, Sunday or legal holiday,
+            the deadline for DMV to receive the hearing request is the
+            next business day. <em>Id</em>.</p>
+            <p>DMV must actually <em>receive</em> the hearing request
+            within the above deadline; the mailbox rule does not apply.
+            <em>Id</em>.</p>
+            <p>Instructions to request a hearing are set forth on the
+            Implied Consent Combined Report.</p>
+            <p>The hearing will be, “by telephone or other two-way
+            communication device.” <em>See</em> ORS 813.410(5)(b)
+            (Except as noted in ORS 813.410(6)).</p>
+            <h2 id="b._late_hearing_requests"><strong>B. Late Hearing
+            Requests</strong></h2>
+            <p>Reasons a petitioner may request a hearing after the
+            ten-day deadline are set forth in ORS 813.440. The last
+            basis listed in this statute is for, “Other just cause as
+            defined by the department by administrative rule.”</p>
+            <p>“Just cause” is defined in OAR 735-090-0000(5).</p>
+            <p>Note: If the petitioner was in custody without access to
+            his/her implied consent documents, or in the hospital, a
+            late hearing will likely be granted if the request is
+            received by the department within ten days <em>plus the
+            number of days when the petitioner was not in position to
+            submit the request.</em></p>
+            <p><code>Practice Tip</code></p>
+            <p><code>Instruct whomever answers your phone to always ask anyone inquiring about representation on a DUII case what was the day of the arrest, and to warn everyone that a ten-day deadline to request a suspension hearing likely applies to their case. Make sure your assistant knows that the day of the arrest does not count toward the ten days, and that if the tenth day falls on a Saturday, Sunday or legal holiday, the next business day is the deadline.</code></p>
+            <h1 id="iv._subpoenas"><strong>IV. Subpoenas</strong></h1>
+            <p>The petitioner may request a subpoena from the Office of
+            Administrative Hearings (OAH). <em>See</em> ORS
+            813.410(5)(f). DMV and OAH will only enforce subpoenas
+            served on the witness at least 72 hours prior to the
+            hearing. <em>See</em> OAR 735-090-0051.</p>
+            <p>An attorney of record for a party may also issue a
+            subpoena upon the attorney’s signature. <em>See</em> <a
+            href="tps://www.oregonlegislature.gov/bills_laws/ors/ors183.html"
+            title="wikilink">ORS 183.440(1)</a>.</p>
+            <p>Witness fees and mileage are as follows:</p>
+            <p>“Witnesses appearing pursuant to subpoena, other than the
+            parties or officers or employees of the agency, shall
+            receive fees and mileage as prescribed by law for witnesses
+            in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors044.html">ORS
+            44.415 (2)</a>.” <em>See</em> <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors044.html">ORS
+            183.440(1).</a></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors044.html">ORS
+            44.415(2)</a>, says that witness fees are $5.00/day, and
+            witnesses get eight cents a mile; however, “Total mileage
+            reimbursement shall not exceed the necessary cost of
+            transportation on reasonably available common carriers.”
+            (So, bus fare is “fair” game.)</p>
+            <p><strong>Note</strong>: It appears that <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">ORS
+            136.595(2)</a> allows one to subpoena a law enforcement
+            officer by “desk service” with at least ten days’
+            notice.</p>
+            <p><code>Practice Tip</code></p>
+            <p><code>There are two camps within the defense attorney community. One approach is to always subpoena </code><em><code>duces tecum</code></em><code> the reporting officer to bring all records to the hearing. The other is to subpoena the officer only when information from the client or early production of a police report indicate it may be useful. The dilemma is caused by the fact the greatest percentage, by far, of implied consent suspension “wins” are a result of an officer default. Will your subpoena </code><em><code>duces tecum</code></em><code> result in being one more reminder to the officer to show up for the hearing on time?</code></p>
+            <p>Telephone hearings may create challenges regarding how to
+            view and use subpoenaed material at the hearing. This may be
+            a reason to request an in-person hearing under ORS
+            813.410(6).</p>
+            <h1 id="v._postponements"><strong>V.
+            Postponements</strong></h1>
+            <p>A petitioner may request a postponement of the hearing
+            due to the “inability of the person’s attorney to appear due
+            to the attorney’s illness, vacation or scheduling conflict
+            arising from other court or administrative hearing
+            appearances.” <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.440(1)(f)</a>. [<strong>Note</strong>: When you see John
+            Henry Hingson, you owe him a drink. He singlehandedly got us
+            this provision.]</p>
+            <p>While a postponement by the department stays a
+            suspension, a postponement by the petitioner does not.</p>
+            <p>A reset request may be made on behalf of a police officer
+            under <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.440(1)(d)</a> and <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=186689">OAR
+            735-090-0120(4)</a>. Under OAR 735-090-0120, “if a
+            subpoenaed police officer is unable to appear at a hearing
+            under ORS 813.410 due to an officer’s illness, vacation or
+            official duty conflicts, a hearing will be re-scheduled as
+            soon as practicable.” OAR 735-090-0120(4) states, “an
+            official duty conflict exists if the subpoenaed police
+            officer is unable to attend the hearing due to any of the
+            following conditions: (a) Community caretaking pursuant to
+            <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors133.html">ORS
+            133.033</a>; (b) Court appearance on behalf of the police
+            officer’s agency; (c) Participating in employer approved
+            training; or (d) Duty-related physical incapacity.”</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=15207654500095964440&amp;q=Johnson+v.+DMV,+261+Or+App+(2014&amp;hl=en&amp;as_sdt=4,38"><em>Johnson
+            v. DMV</em>, 261 Or App 641 (2014)</a>, the Court of Appeals
+            held an officer who had jury duty did not have an “official
+            duty conflict” under the law. Because jury duty was not an
+            obligation of the officer’s position as a police officer, it
+            does not justify extending a DMV hearing.</p>
+            <p><code>Practice Tip</code></p>
+            <p><code>Warn your client prior to requesting a postponement that his/her license suspension will go into effect on the currently scheduled date. However, you can also tell your client that you will likely have discovery by the new hearing date that will allow you to be more effective during the hearing.</code></p>
+            <p><code>Also, “A hearing must be rescheduled no later than 45 days after the date of the original hearing and may not be rescheduled more than once for reasons described in this paragraph.” </code><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html"><code>ORS 813.440(1)(f).</code></a></p>
+            <h1 id="vi._hearing_checklist_and_endnotes"><strong>VI.
+            Hearing Checklist and Endnotes</strong></h1>
+            <p>One-page checklist pdf is available <a
+            href="Media:Implied_Consent_Hearing_Checklist.pdf"
+            title="wikilink">here</a>.</p>
+            <h2 id="a._opening_statement"><strong>A. Opening
+            Statement</strong></h2>
+            <ul>
+            <li><blockquote>
+            <p>“We will be challenging the legality of the stop and the
+            legality of the arrest in this case pursuant to <a
+            href="http://scholar.google.com/scholar_case?q=bish&amp;hl=en&amp;as_sdt=4,38&amp;case=4824659435117689182&amp;scilh=0"><em>Bish
+            v. MVD</em>, 97 Or App 648 (1989)</a>,<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> and <a
+            href="http://scholar.google.com/scholar_case?q=Pooler+&amp;hl=en&amp;as_sdt=4,38&amp;case=13067479942163237635&amp;scilh=0"><em>Pooler
+            v. MVD</em>, 306 Or 47 (1988).</a>”<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            </blockquote></li>
+            </ul>
+            <p>It’s also a good idea to tell the administrative law
+            judge (ALJ) that you are challenging everything listed in
+            813.410 and that you are also challenging the fact that your
+            client was not given a reasonable opportunity to contact
+            counsel or others.</p>
+            <ul>
+            <li>If hearing has been postponed upon other than
+            Petitioner’s request]: “We are challenging the reset of this
+            hearing.”<ref>“Except as provided in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.440</a> or upon remand under ORS 813.450, the department
+            shall hold the hearing and issue a final order within 30
+            days of the date of the arrest or, if the person fails a
+            blood test, within 60 days from the date the department
+            received the report of the failure.” ORS 813.410(5)(e). A
+            blood test for DMV purposes may only be given after an
+            accident. ORS 813.100.</li>
+            </ul>
+            <p>ORS 813.440(1) states in part: “Notwithstanding ORS
+            813.410, the Department of Transportation may provide a
+            hearing to determine the validity of a suspension under ORS
+            813.410 only if the time requirements under ORS 813.410
+            could not be met because of any of the following: * * * (c)
+            An error of the department. (d) The inability of a
+            subpoenaed police officer to appear due to the officer’s
+            illness, vacation or official duty conflicts. The department
+            shall set forth by rule the conditions that constitute
+            “official duty conflicts.” A hearing may not be rescheduled
+            more than once for reasons described in this paragraph. * *
+            * (g) Other just cause as defined by the department by
+            administrative rule.” OAR 735-090-0120 states: “(1) If a
+            subpoenaed police officer is unable to appear at a hearing
+            under ORS 813.410 due to an officer’s illness, vacation or
+            official duty conflicts, a hearing will be re-scheduled as
+            soon as practicable. (2) DMV will rescind the suspension of
+            the petitioner’s driving privileges pending the outcome of
+            the hearing conducted pursuant to ORS 813.440(1)(d). (3) The
+            DMV or OAH may receive notification of an officer’s illness,
+            vacation or official duty conflict before or after a
+            scheduled hearing. Post hearing notification must be
+            received by the DMV or OAH no later than 10 days after the
+            hearing. Verification must be to the satisfaction of the
+            DMV. (4) An official duty conflict exists if the subpoenaed
+            police officer is unable to attend the hearing due to any of
+            the following conditions: (a) Community caretaking pursuant
+            to <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors133.html">ORS
+            133.033</a>; (b) Court; (c) Hazardous or impeding travel
+            conditions; (d) Participating in employer approved training;
+            (e) Physical incapacity; or (f) Service in the U.S. Armed
+            Forces, military reserves, National Guard or the organized
+            militia. (5) Nothing in this rule prevents the taking of
+            evidence at the time of the originally scheduled hearing and
+            continuing the hearing for the testimony of the unavailable
+            police witness(es). <a
+            href="http://scholar.google.com/scholar_case?q=Higgins&amp;hl=en&amp;as_sdt=4,38&amp;case=9176563199878923478&amp;scilh=0"><em>Higgins
+            v. MVD</em>, 139 Or App 314 (1996)</a> (Petitioner may
+            challenge reset of hearing beyond 30th day of arrest). Under
+            <em>Higgins</em>, an officer’s letter to MVD stating that he
+            was “assigned to training” was not “substantial evidence in
+            the record” that the officer had an official duty conflict
+            under the old text of the rule which stated that an official
+            duty conflict include the officer absence due to “priority
+            official training.” <a
+            href="http://scholar.google.com/scholar_case?q=Blaisdell+v.+MVD&amp;hl=en&amp;as_sdt=4,38&amp;case=2333984728248768199&amp;scilh=0"><em>Blaisdell
+            v. MVD</em>, 145 Or App 468 (1996)</a> (Officer’s inability
+            to attend initial hearing due to car trouble was not an
+            “official duty conflict” under the old text of the
+            rule).</p>
+            </ref>
+            <ul>
+            <li>If more than one officer/state witness present: “We move
+            to exclude witnesses.”<ref>OAR 137-003-0595(2): “The
+            administrative law judge may exclude witnesses from the
+            hearing, except for a party, a party’s authorized
+            representative, expert witnesses, the agency representative,
+            one agency officer or employee and any persons authorized by
+            statute to attend.” ORS 813.412. “Notwithstanding <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors009.html">ORS
+            9.160</a> (Bar membership required to practice law) and
+            9.320 (Necessity for employment of attorney), in any hearing
+            under ORS 813.410 (Suspension upon receipt of police report
+            on implied consent test) in which a city attorney or
+            district attorney does not appear, a police officer actively
+            involved in the investigation of the offense may present
+            evidence, examine and cross-examine witnesses and make
+            arguments ….”</li>
+            </ul>
+            <p>OAR 137-003-0595(1): “Unless otherwise required by law,
+            contested case hearings are open to the public unless the
+            agency by rule or in writing determines that the hearing
+            will be closed to non-participants in the hearing.”</p>
+            </ref>
+            <h2 id="b._states_case_in_chief"><strong>B. State’s
+            Case-in-Chief</strong></h2>
+            <ul>
+            <li>Validity of officer’s <em>initial</em> contact with the
+            client.<ref>If justification for stop is based on hearsay,
+            consider asking ALJ to consider the nonexclusive, five
+            factors from <em>Cole/Dinsmore</em> prior to determining
+            that such hearsay supports “substantial evidence in the
+            record” to find such stop was legal. If there are two layers
+            hearsay, your argument to exclude is stronger. Although it
+            is highly unlikely you will prevent an officer’s report from
+            being offered as evidence, you may argue under
+            <em>Cole/Dinsmore</em>:</li>
+            </ul>
+            <p>1. There are alternatives to relying on hearsay (weighs
+            against DMV). 2. The importance of facts sought (without
+            valid stop/arrest, petitioner prevails). 3. The state of the
+            supporting or opposing evidence. Check on presence of
+            missing officer’s report. If no report, then this weighs in
+            favor of petitioner (neutral if report present). 4. The
+            potential efficacy of cross-examination. Question officer re
+            2nd factor (i.e., has he reviewed written report of missing
+            officer; does he have the missing officer’s report with him;
+            does he recall exactly what the missing officer told him?).
+            Ask the officer step-by-step questions which the missing
+            officer would know and which would confirm either an
+            infraction or reasonable suspicion. 5. The significance of
+            consequences. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Cole/Dinsmore+v.+DMV,&amp;hl=en&amp;as_sdt=6,38&amp;case=16424439997629776128&amp;scilh=0"><em>Cole/Dinsmore
+            v. DMV</em>, 336 Or 565 (2004)</a>. Note: OAR 735-090-0130:
+            “In accordance with the definition of “Error of the
+            Department” specified in OAR 735-090-0000(2), in a hearing
+            that determines the validity of a suspension of driving
+            privileges under ORS 813.410, if hearsay evidence is used to
+            establish the required elements under ORS 813.410(8) and a
+            petitioning party presents substantial evidence that
+            contradicts the hearsay evidence, DMV will rescind the
+            suspension and OAH will continue the hearing pursuant to ORS
+            813.440(1)(c) and subpoena the hearsay witness to the
+            continued hearing.”</p>
+            </ref>
+            <ul>
+            <li>Validity of officer’s <em>continued</em> contact with
+            the client.<ref>Did officer have reasonable suspicion of a
+            crime justifying a continuation of the stop? <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Rodgers/Kirkeby,&amp;hl=en&amp;as_sdt=6,38&amp;case=14615796947142643999&amp;scilh=0"><em>Rodgers/Kirkeby</em>,
+            347 Or 610 (2010)</a>: “Here, both defendants have shown the
+            required nexus. In both cases the officers had completed the
+            traffic violation investigation and should have either
+            issued a citation or informed each defendant that they could
+            leave. As already explained, the officers in each case did
+            neither and instead unlawfully detained each defendant. It
+            was during the period of unlawful detention that the
+            officers requested that each defendant consent to a
+            search.... [W]e conclude that each defendant’s consent, even
+            if voluntary, was the product of police conduct that
+            violated Article I, section 9. Because the consent to search
+            in each case was a product of the unlawful seizure, the
+            evidence obtained during the search, in both cases, must be
+            suppressed.”</li>
+            </ul>
+            <p>The police officer must have probable cause of a traffic
+            infraction or reasonable suspicion of a crime to effectuate
+            a stop of your client. If the officer believes that a
+            traffic violation occurred but they are mistaken about the
+            law then it is not a lawful stop. <a
+            href="https://scholar.google.com/scholar_case?case=2092395731333655702&amp;q=State+v.+Tiffin,+202+Or+App+199&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Tiffin</em>, 202 Or App 199 (2005)</a>. Also look to see
+            if the reason for the stop dissipated such as an expired tag
+            was not actually expired. Was the stop based on an anonymous
+            phone tip? <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Black,+80+Or+App&amp;hl=en&amp;as_sdt=6,38&amp;case=4213306174530831816&amp;scilh=0"><em>State
+            v. Black</em>, 80 Or App 12 (1986)</a>. The officer must be
+            in a uniform displaying a badge under ORS 810.400 to enforce
+            the traffic code. If the officer came into your client’s
+            home then Article I, section 9, of the Oregon Constitution
+            may protect your client. The police are not allowed to enter
+            a home because a door is open and they think a drunk driver
+            is inside their home. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Apodaca,&amp;hl=en&amp;as_sdt=6,38&amp;case=13003437992374994133&amp;scilh=0"><em>State
+            v. Apodaca</em>, 85 Or App 128 (1987)</a>. Did the police
+            walk into the garage to speak to your client? <em>See</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Somfleth,+&amp;hl=en&amp;as_sdt=6,38&amp;case=5174463567628460059&amp;scilh=0"><em>State
+            v. Somfleth</em>, 168 Or App 414 (2000)</a>, declaring the
+            garage curtilage. The burden is on the state to show that
+            they could not have gotten a warrant to enter a home. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Roberts,+75+Or+App+292+%281985&amp;hl=en&amp;as_sdt=4,38&amp;case=1200209121720903743&amp;scilh=0"><em>State
+            v. Roberts</em>, 75 Or App 292 (1985)</a>. Did the officer
+            violate Article I, section 9, when he stuck his head in the
+            car to smell an odor of alcohol? This is a search under <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hendricks,+&amp;hl=en&amp;as_sdt=4,38&amp;case=3340026638345663776&amp;scilh=0"><em>State
+            v. Hendricks</em>, 151 Or App 271 (1997)</a>. Officer may
+            not ask questions unrelated to the basis for the traffic
+            stop, without independent reasonable suspicion for such
+            questions. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=14787812868823424503&amp;q=State+v.+Arreola-Botello&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Arreola-Botello</em>, 365 Or 695 (2019)</a>.</p>
+            </ref>
+            <ul>
+            <li>Validity of officer’s request for client to perform
+            FSTs:</li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Client consented?<a href="#fn3" class="footnote-ref"
+            id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Officer had probable cause (and exigent circumstances)?<a
+            href="#fn4" class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a></p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li>Validity of officer’s arrest:</li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Client drove.<a href="#fn5" class="footnote-ref"
+            id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>A motor vehicle.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>While under the influence of intoxicants.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>On a public highway or premises open to the public.<a
+            href="#fn6" class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Within the appropriate venue.</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li>Client was arrested for DUII under state statute or
+            municipal ordinance.<a href="#fn7" class="footnote-ref"
+            id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
+            <li>Officer honored client’s request to communicate with
+            counsel or others.<ref><em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Brown+v.+DMV,&amp;hl=en&amp;as_sdt=4,38&amp;case=18302634174482414122&amp;scilh=0"><em>Brown
+            v. DMV</em>, 219 Or App 607 (2008)</a>: “[I]f an arrested
+            driver asks to speak with someone (including but not limited
+            to counsel), the driver “must be afforded reasonable
+            opportunity to do so unless or until it would interfere with
+            effective administration of the [breath] test,” including by
+            interrupting the observation period. <a
+            href="http://scholar.google.com/scholar_case?q=652+P2d+794&amp;hl=en&amp;as_sdt=4,38&amp;case=16712411138368981048&amp;scilh=0"><em>Moore</em>,
+            293 Or at 715, 723, 652 P2d 794 (1982)</a>. Always ask if
+            the officer was worried that your client would be under the
+            legal limit if they allowed more time to speak to an
+            attorney.</li>
+            </ul>
+            <p>The request for the need or desire for legal
+            representation is an invocation of the right to counsel and
+            should be argued that it triggers an obligation to have an
+            opportunity to speak with an attorney about taking a test.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Trenary,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6158459232545546982&amp;scilh=0"><em>State
+            v. Trenary</em>, 114 Or App 608, 614 (1992)</a>, for any
+            glancing reference for the desire of legal representation,
+            and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ohm&amp;hl=en&amp;as_sdt=4,38&amp;case=10010211099656350220&amp;scilh=0"><em>State
+            v. Ohm</em>, 224 Or App 390 (2008)</a>, about equivocal
+            statements about calling an attorney. Did the client ask for
+            legal advice from the officer? The police are not authorized
+            to give legal advice. <a
+            href="http://scholar.google.com/scholar_case?q=Oregon+State+Bar+v.+Taub&amp;hl=en&amp;as_sdt=4,38&amp;case=16656969379128040672&amp;scilh=0"><em>Oregon
+            State Bar v. Taub</em>, 190 Or App 280 (2003)</a>.
+            Therefore, asking for legal advice from the officer may
+            trigger the obligation for the police to give an opportunity
+            to communicate with a lawyer. “If the police failed to
+            afford the driver a reasonable opportunity to communicate,
+            the driver’s refusal to take the test would have resulted
+            from a legally unauthorized procedure, and an administrative
+            penalty imposed based on that procedure would be invalid.
+            <em>See Moore v. MVD</em>. “[I]n a license suspension
+            proceeding, the driver bears the burden of establishing that
+            his or her opportunity to communicate with counsel or others
+            was unreasonably restricted. <a
+            href="http://scholar.google.com/scholar_case?q=Walls+v.+DMV,+154+Or+App+101&amp;hl=en&amp;as_sdt=4,38&amp;case=17851060147764523262&amp;scilh=0"><em>Walls
+            v. DMV</em>, 154 Or App 101, 107, 960 P2d 888 (1998)</a>.”
+            <em>Brown</em> at 613-14. <em>Also see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Freytag,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1237473171505635833&amp;scilh=0"><em>State
+            v. Freytag</em>, 230 Or App 694, 698 (2009)</a>: “Opinions
+            from the Supreme Court and this court appear to presume that
+            the Fourteenth Amendment right to communicate includes the
+            right to communicate, not only with an attorney, but with
+            others as well. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Newton,+291+Or+788&amp;hl=en&amp;as_sdt=4,38&amp;case=3246877478657920036&amp;scilh=0"><em>State
+            v. Newton</em>, 291 Or 788, 807, 636 P2d 393 (1981)</a>,
+            <em>overruled by</em> <a
+            href="http://scholar.google.com/scholar_case?q=Spencer,+305+Or+59&amp;hl=en&amp;as_sdt=4,38&amp;case=5589510454377077101&amp;scilh=0"><em>Spencer</em>,
+            305 Or 59, 750 P2d 147 (1988)</a>, a plurality of the
+            Supreme Court held that the Fourteenth Amendment protects an
+            arrested driver’s liberty interest in communication not only
+            with counsel, but also with the outside world. The opinion
+            referred to the ‘[f]reedom of an arrested person to
+            communicate’ and ‘liberty to communicate as he chose.’
+            <em>Newton</em>, 291 Or at 807, 636 P2d 393. The plurality
+            opinion on that issue was restated in <em>Moore v. Motor
+            Vehicles Division</em>, 293 Or 715, 719, 652 P2d 794 (1982),
+            in which the court described Newton as ‘holding that an
+            arrested person is entitled to communicate with counsel or
+            others.’ <em>Newton</em>, however, was overruled in
+            <em>Spencer</em>, albeit on grounds not implicating the
+            Fourteenth Amendment. And in <em>Brown</em>, 219 Or App at
+            612-13, 185 P3d 459, we wrote, ‘[I]f an arrested driver asks
+            to speak with someone (including but not limited to
+            counsel),’ the driver must be afforded the opportunity to do
+            so.” “In a civil proceeding for revocation of a driver’s
+            license, the revocation is invalid if the breath test is not
+            properly administered, regardless of causation.
+            <em>Moore</em>, 293 Or at 723-24, 652 P2d 794; <a
+            href="http://scholar.google.com/scholar_case?q=Hays+v.+DMV,&amp;hl=en&amp;as_sdt=4,38&amp;case=2427521346542122615&amp;scilh=0"><em>Hays
+            v. DMV</em>, 230 Or App 559, 562, 216 P3d 902 (2009)</a>.”
+            <em>Freytag</em> at 699.</p>
+            </ref>
+            <ul>
+            <li>Officer informed client of “rights and
+            consequences.”<ref><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lyons,+118+Or+App+660+&amp;hl=en&amp;as_sdt=4,38&amp;case=18249553456832846933&amp;scilh=0">State
+            v. Lyons, 118 Or App 660 (1993)</a>: “[A]n officer must
+            always inform a driver of the ‘rights and consequences’
+            before administering a breath test. [citations omitted]. The
+            officer has that obligation, even if the driver has
+            voluntarily consented to take the test without initially
+            refusing. See State v. Trenary, supra; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Weishar,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12466290108125508687&amp;scilh=0">State
+            v. Weishar, 78 Or App 468, 478, 717 P2d 231</a>, rev den,
+            301 Or 338, 722 P2d 737 (1986). Defendant had the right to
+            be properly informed before taking the test, and he was
+            not.” At 663.</li>
+            </ul>
+            <p>The officer is not allowed to mislead your client to
+            taking or refusing a test. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Freymuller,+&amp;hl=en&amp;as_sdt=4,38&amp;case=2164768443917944466&amp;scilh=0"><em>State
+            v. Freymuller</em>, 26 Or App 411 (1980)</a>. ORS 813.410(8)
+            states in part: “A suspension under this section is valid if
+            all of the following requirements have been met:… (e) The
+            person had been informed under ORS 813.100 of rights and
+            consequences as described under ORS 813.130.” ORS 813.100(1)
+            states in part: “Before the test is administered the person
+            requested to take the test shall be informed of consequences
+            and rights as described under ORS 813.130.”</p>
+            </ref>
+            <ul>
+            <li>At the time of the sample request, police still had
+            reasonable grounds to believe client had driven under the
+            influence.<a href="#fn8" class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a></li>
+            </ul>
+            <h2 id="c._if_bac_failure_alleged"><strong>C. If BAC Failure
+            Alleged<a href="#fn9" class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a></strong></h2>
+            <ul>
+            <li>Officer used “checklist.”<a href="#fn10"
+            class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a></li>
+            <li>Officer certified to operate the Intoxilyzer.<ref>ORS
+            813.410(8) states in part: “A suspension under this section
+            is valid if all of the following requirements have been
+            met:… (g) If the person arrested submitted to a test under
+            ORS 813.100, the person administering the test was qualified
+            to administer the test under ORS 813.160.”</li>
+            </ul>
+            <p>ORS 813.160(1)(b)(E) states in relevant part: “Permits
+            may be issued to police officers only upon satisfactory
+            completion of the prescribed training course and written
+            examination. A permit must state the methods and equipment
+            that the police officer is qualified to use. Permits are
+            subject to termination or revocation at the discretion of
+            the Department of State Police.” OAR 257-030-0150: “(1) No
+            individual shall operate approved breath testing equipment
+            to determine the alcoholic content of the blood of a person
+            in accordance with the provisions of ORS 813.160 unless that
+            individual has been issued and maintains a valid permit to
+            operate such equipment by the Oregon State Police. (2) To
+            qualify for training and to obtain a permit for the
+            operation of approved breath testing equipment, an
+            individual must be a police officer as defined in ORS
+            801.395 or a trained technician of the Oregon State Police.
+            The term police officer includes reserve police
+            officer.”</p>
+            </ref>
+            <ul>
+            <li>Machine was certified within 90 days prior to the
+            test.<ref>OAR 257-030-0170: “Pursuant to <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.160(b)(C)</a>, a trained technician of the Oregon State
+            Police shall conduct an accuracy test of approved breath
+            testing equipment and certify the accuracy of the equipment
+            if accuracy test performance is within a range of 0.010 high
+            to 0.020 low of the expected value. The testing can be
+            performed by either an on site test, or by remote testing
+            via telephone, modem, or Internet connection utilizing a
+            computer. The computerized testing will utilize a security
+            system to ensure the integrity of the scientific testing of
+            the breath test equipment.”</li>
+            </ul>
+            <p>ORS 813.410(8) states in part: “A suspension under this
+            section is valid if all of the following requirements have
+            been met:… (h) If the person arrested submitted to a test
+            under ORS 813.100, the methods, procedures and equipment
+            used in the test complied with requirements under ORS
+            813.160. ORS 813.160(1)(b) states in relevant part: “It is
+            an analysis of a person’s breath and is performed by an
+            individual possessing a valid permit to perform chemical
+            analyses issued by the Department of State Police and <em>is
+            performed according to methods approved by the Department of
+            State Police.”</em> (Emphasis added.)</p>
+            </ref>
+            <ul>
+            <li>Officer complied with all required testing
+            procedures.</li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Operator conducts proper pre-test observation of
+            client.<a href="#fn11" class="footnote-ref" id="fnref11"
+            role="doc-noteref"><sup>11</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Operator confirmed that instrument displayed, and
+            operator followed, “prompts.”<a href="#fn12"
+            class="footnote-ref" id="fnref12"
+            role="doc-noteref"><sup>12</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Operator has used bar code scanner and/or keyboard to
+            “sufficiently” identify operator, establish operator
+            possesses valid permit and PIN combination, and “link”
+            client to the test.<a href="#fn13" class="footnote-ref"
+            id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Operator has instructed client how to give a proper
+            breath sample and told the client to blow after the “prompt”
+            is displayed.<a href="#fn14" class="footnote-ref"
+            id="fnref14" role="doc-noteref"><sup>14</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Operator complied with continued observation of client.<a
+            href="#fn15" class="footnote-ref" id="fnref15"
+            role="doc-noteref"><sup>15</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Operator again told client to blow after “prompt”
+            displayed.<a href="#fn16" class="footnote-ref" id="fnref16"
+            role="doc-noteref"><sup>16</sup></a></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Instrument performed test with “control sample.”<a
+            href="#fn17" class="footnote-ref" id="fnref17"
+            role="doc-noteref"><sup>17</sup></a></p>
+            </blockquote></li>
+            </ul>
+            <h2 id="d._if_refusal_alleged"><strong>D. If Refusal
+            Alleged</strong></h2>
+            <ul>
+            <li>Client actually refused and was physically able.<ref><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.410(8)</a> states in relevant part: “A suspension under
+            this section is valid if all of the following requirements
+            have been met:… (c) The person refused a test under <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.100</a>[.]”</li>
+            </ul>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12169712643393395098&amp;q=See+Davis+v.+DMV,+209+Or+App+39+(2006)&amp;hl=en&amp;as_sdt=6,38"><em>Davis
+            v. DMV</em>, 209 Or App 39 (2006)</a>: “On appeal, DMV
+            argues that the trial court erred in ordering reinstatement
+            of petitioner’s driving privileges. According to DMV, the
+            ALJ correctly concluded that petitioner had refused to take
+            the breath test. DMV argues that the ALJ did not err in
+            concluding that petitioner had refused the breath test
+            because, under the applicable case law, anything
+            substantially short of “unqualified, unequivocal consent”
+            amounts to refusal. Petitioner responds that her insistence
+            that Hoesly reread the rights and consequences notice should
+            not be taken as a refusal without proof that rereading the
+            notice would have substantially delayed the test process. We
+            agree with DMV.” Note: Can silence be a “refusal”? In
+            response to silence, must operator tell client to “blow into
+            the mouthpiece”? <em>See</em> OAR 257-030-0130(5)(b), which
+            states in relevant part: “If during either of the breath
+            sample collection periods, the subject refuses, <em>through
+            some willful act,</em> to follow the instructions to provide
+            an adequate breath sample, the operator may depress the
+            “Start Test” button or the “R” key on the instrument
+            keyboard to terminate the breath testing sequence.”
+            (Emphasis added.) And subsection (6)(b) states in relevant
+            part: “Nothing in this subsection precludes an operator from
+            terminating the breath testing sequence as “Refused” if the
+            subject refuses, <em>through a willful act,</em> to follow
+            the instructions of the operator.” (Emphasis added.) <a
+            href="http://scholar.google.com/scholar_case?q=Cobine+v.+MVD,+102+Or+App+17+%281990&amp;hl=en&amp;as_sdt=4,38&amp;case=15323158640408557835&amp;scilh=0"><em>Cobine
+            v. MVD</em>, 102 Or App 17 (1990)</a>, states that physical
+            incapacity is a defense. If your client was unable to blow
+            due to lung capacity, passing out or getting sick, then you
+            may have a physical incapacity defense. Also note <a
+            href="http://scholar.google.com/scholar_case?q=Shakerin+v.+MVD&amp;hl=en&amp;as_sdt=4,38&amp;case=10209004205858626003&amp;scilh=0"><em>Shakerin
+            v. MVD</em>, 101 Or App 357, 359-60 (1990)</a>: “MVD
+            concedes that a painful need to urinate might make a refusal
+            involuntary if the officer indicates that the arrested
+            person must refuse in order to use the bathroom
+            immediately.” Note further that if a language barrier or
+            hearing impairment prevents the client from understanding
+            the “rights and consequences” of which the officer has
+            “informed” him, this may violate due process and could be
+            argued that it is not a willful act. Although in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nguyen&amp;hl=en&amp;as_sdt=4,38&amp;case=16344481055245279742&amp;scilh=0"><em>State
+            v. Nguyen</em>, 107 Or App 716 (1991)</a>, <em>rev den</em>
+            312 Or 528 (1991), the Court of Appeals found that while an
+            officer must read the rights and consequences to a
+            non-English speaking driver, the driver need not understand
+            the information. And in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Weishar,&amp;hl=en&amp;as_sdt=4,38&amp;case=12466290108125508687&amp;scilh=0"><em>State
+            v. Weishar</em>, 78 Or App 468 (1986)</a>, where a hearing
+            impaired driver also submitted and failed a breath test, the
+            issue is similar. But note that in both <em>Nguyen</em> and
+            <em>Weishar</em>, the drivers subjected themselves to the
+            test, and thus did not suffer the longer suspension lengths
+            of a refusal. A due process violation may be more pronounced
+            if the driver’s status prejudices the result of the
+            procedure.</p>
+            </ref>
+            <h2 id="e._if_enhanced_suspension_alleged"><strong>E. If
+            Enhanced Suspension Alleged</strong></h2>
+            <ul>
+            <li>Basis for enhancement placed in record.<a href="#fn18"
+            class="footnote-ref" id="fnref18"
+            role="doc-noteref"><sup>18</sup></a></li>
+            </ul>
+            <h2 id="f._required_documents"><strong>F. Required
+            Documents</strong></h2>
+            <ul>
+            <li>ODOT received, from a police officer, a report in
+            “substantial” compliance with ORS 813.420 by the tenth day
+            following the arrest.<ref><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.410(1)</a>.</li>
+            </ul>
+            <p>ORS 813.120: Police report to department. (1) A report
+            required by ORS 813.100 shall disclose substantially all of
+            the following information: (a) Whether the person, at the
+            time the person was requested to submit to a test, was under
+            arrest for driving a motor vehicle while under the influence
+            of intoxicants in violation of ORS 813.010 or of a municipal
+            ordinance. (b) Whether the police officer had reasonable
+            grounds to believe, at the time the request was made, that
+            the person arrested had been driving under the influence of
+            intoxicants in violation of ORS 813.010 or of a municipal
+            ordinance. (c) Whether the person refused to submit to a
+            test or if the person submitted to a breath or blood test
+            whether the level of alcohol in the person’s blood, as shown
+            by the test, was sufficient to constitute being under the
+            influence of intoxicating liquor under ORS 813.300. (d)
+            Whether the person was driving a commercial motor vehicle
+            and refused to submit to a test or if the person submitted
+            to a breath or blood test whether the level of alcohol in
+            the person’s blood, as shown by the test, was 0.04 percent
+            or more by weight. (e) Whether the person was informed of
+            consequences and rights as described under ORS 813.130. (f)
+            Whether the person was given written notice of intent to
+            suspend required by ORS 813.100 (3)(b). (g) If the arrested
+            person took a test, a statement that the person conducting
+            the test was appropriately qualified. (h) If the arrested
+            person took a test, a statement that any methods, procedures
+            and equipment used in the test comply with any requirements
+            under ORS 813.160. (2) A report required by ORS 813.100 may
+            be made in one or more forms specified by the Department of
+            Transportation. The original and a copy of the Implied
+            Consent Combined Report must be received by DMV within 10
+            days of the arrest. See OAR 735-090-0040(1)(a). Note: A
+            defective ICCR may cause DMV to lose jurisdiction to impose
+            a suspension. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Coulter+v.+DMV,&amp;hl=en&amp;as_sdt=4,38&amp;case=3168384439642284594&amp;scilh=0"><em>Coulter
+            v. DMV</em>, 168 Or App 442 (2000)</a>. Always look at the
+            ICCR to see if the correct box was checked reflecting your
+            client’s action.</p>
+            </ref>
+            <ul>
+            <li>“Breath Test Report,” <em>if BAC failure alleged</em>.<a
+            href="#fn19" class="footnote-ref" id="fnref19"
+            role="doc-noteref"><sup>19</sup></a></li>
+            <li>“Certificate of Accuracy for Alcohol Breath Testing
+            Equipment,” <em>if BAC failure alleged</em>.<ref><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.160(1)</a>
+            A chemical analysis is valid under ORS 813.300 if:</li>
+            </ul>
+            <p>“(b) ...It is an analysis of a person’s breath and... the
+            Department of State Police shall do all of the following:
+            (C) Test and certify the accuracy of equipment to be used by
+            police officers for chemical analyses of a person’s breath
+            before regular use of the equipment and periodically
+            thereafter at intervals of not more than 90 days. Tests and
+            certification required by this subparagraph must be
+            conducted by trained technicians. Certification under this
+            subparagraph does not require a signed document.”</p>
+            </ref>
+            <h2 id="g._hearing_location"><strong>G. Hearing
+            Location</strong></h2>
+            <ul>
+            <li>The hearing is within the county where the “alleged
+            offense” (not arrest) occurred, or within 100 miles of where
+            the “alleged offense” (not arrest) occurred.<ref>OAR
+            735-090-0101: “Except as provided in section (2) of this
+            rule, an in-person hearing will be held either in the county
+            where the alleged offense occurred or at any place within
+            100 air miles of the place where the offense is alleged to
+            have occurred. There is no location restriction when a
+            hearing is conducted by telephone or other two-way
+            electronic communication device.</li>
+            </ul>
+            <p>“(2) If there is a mutual agreement between the
+            petitioning party and DMV, a hearing or telephone hearing
+            may be held at a location outside of either the county where
+            the alleged offense occurred or 100 air miles of the place
+            where the offense is alleged to have occurred.”</p>
+            </ref>
+            <h2 id="h._service_of_proposed_suspension"><strong>H.
+            Service of Proposed Suspension</strong></h2>
+            <ul>
+            <li>Officer provided client with a copy of the suspension
+            notice.<ref>ORS 813.410(8) states in part: “A suspension
+            under this section is valid if all of the following
+            requirements have been met:… (f) The person was given
+            written notice required under ORS 813.100.</li>
+            </ul>
+            <p>ORS 813.100(2) states in part: “[T]he police officer
+            shall do all of the following:… (b) Provide the person with
+            a written notice of intent to suspend, on forms prepared and
+            provided by the Department of Transportation. The written
+            notice shall inform the person of consequences and rights as
+            described under ORS 813.130.</p>
+            </ref>
+            <p>[If Blood Test<a href="#fn20" class="footnote-ref"
+            id="fnref20" role="doc-noteref"><sup>20</sup></a>]</p>
+            <p>[If Urine Test Refusal<a href="#fn21"
+            class="footnote-ref" id="fnref21"
+            role="doc-noteref"><sup>21</sup></a>]</p>
+            <p>[If Commercial Vehicle<a href="#fn22"
+            class="footnote-ref" id="fnref22"
+            role="doc-noteref"><sup>22</sup></a>]</p>
+            <h2 id="i._petitioners_case"><strong>I. Petitioner’s
+            Case</strong></h2>
+            <p>The petitioner does not have a burden to prove a valid
+            stop or any other burden of proof. The petitioner can submit
+            evidence such as an affidavit from a witness, calling a
+            witness to testify, photos or other documents to support a
+            defense.</p>
+            <h2 id="j._closing_argument"><strong>J. Closing
+            Argument</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.410</a> states in relevant part that under Oregon’s
+            Implied Consent law: “[T]he department shall suspend the
+            driving privileges of the person...unless...the department
+            determines that the suspension would not be valid as
+            described in this section.”</p>
+            <p><code>Practice Tip</code></p>
+            <p><code>If you need more time to formulate the closing argument then ask for time to submit a written memorandum.</code></p>
+            <h2 id="k._appealing_the_final_order"><strong>K. Appealing
+            the Final Order</strong></h2>
+            <p>The petitioner may appeal a final order to circuit court.
+            <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.410(10)</a>. Instructions for appealing a final order
+            are found in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.410(10))</a>, and UTCR Chapter 10.</p>
+            <p>The suspension is not stayed during the appeal.</p>
+            <p><strong>Warning #1</strong>: If the petitioner lives in
+            Oregon, file the appeal in the circuit court where
+            petitioner lives. <em>Id</em>. This is, of course, not
+            necessarily the jurisdiction where the arrest occurred. Only
+            if the petitioner lives out of state is the petition to be
+            filed in the jurisdiction where the arrest occurred.</p>
+            <p><strong>Warning #2</strong>: Be sure to include a copy of
+            the final order with service of the petition for review:
+            “The petition as filed and served <em>must be accompanied by
+            a copy of the final order</em> of the DMV from which the
+            appeal is taken.” (Emphasis added.)</p>
+            <h1
+            id="vii._banks_and_implied_consent_suspension_hearings"><strong>VII.
+            <em>Banks</em> and Implied Consent Suspension
+            Hearings</strong></h1>
+            <p>On February 7, 2019, the Oregon Supreme Court handed down
+            the decision <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=state+v+banks&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Banks</em>, 364 Or 332 (2019)</a>. The defendant in
+            <em>Banks</em> refused to consent to a blood test, and the
+            state introduced evidence of that refusal over defense
+            objection. The Oregon Supreme Court reversed, initially
+            recognizing that a person arrested for DUII has a right
+            under ORS 813.100(2) to decide whether to submit or refuse a
+            breath test. <em>Banks</em>, 364 Or at 339. <em>See
+            also</em> <a
+            href="https://scholar.google.com/scholar_case?case=14726824813236399336&amp;q=state+v+swan&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Swan</em>, 363 Or 121, 145 (2018)</a> (same).</p>
+            <p>The <em>Banks</em> court then addressed the state’s
+            primary contention that the defendant’s refusal to submit
+            was merely a refusal to perform a physical act, not an
+            invocation of a constitutional right to insist on a warrant.
+            <em>Id</em>. at 340. The court acknowledged that a driver’s
+            refusal to consent may be either an invocation or a refusal
+            to cooperate without constitutional significance.
+            <em>Id</em>. at 342. But the majority noted that, as
+            proponent of the evidence, the state bears the burden of
+            establishing admissibility:</p>
+            <p>The state must demonstrate that the officer’s question
+            could reasonably be understood only as a request to provide
+            physical cooperation and not as a request for
+            constitutionally-significant consent to search. If the state
+            fails to establish that fact, then a driver’s refusal cannot
+            be admitted in evidence against the driver.</p>
+            <p><em>Id</em>. at 343. The court found that the officer’s
+            question – “Will you take a breath test?” – was ambiguous:
+            the officer could have been asking for physical submission
+            to the test or could have been asking for consent to search,
+            thereby establishing a warrant exception. “Consequently, the
+            state did not establish that defendant’s refusal to take the
+            test was admissible as evidence of guilt.” <em>Id</em>. The
+            court concluded by rejecting the state’s suggested exception
+            to the general rule of exclusion when the officer has a
+            constitutional basis to search other than consent.
+            <em>Id</em>. at 349 (admission of such evidence would “place
+            an impermissible burden” on assertion of the right to refuse
+            consent).</p>
+            <p>In the administrative context of an implied consent
+            hearing, an open question remains whether this decision
+            impacts the validity of a suspension imposed after this
+            language (or alternative language currently being employed
+            by law enforcement) is read to the petitioner. The focus
+            should be on whether the procedure used to suspend the
+            petitioner is a “legally unauthorized procedure.”
+            <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=2427521346542122615&amp;q=hays+v+dmv&amp;hl=en&amp;as_sdt=4,38"><em>Hays
+            v DMV</em>, 230 Or App 559 (2009)</a>.</p>
+            <h1 id="viii._conclusion"><strong>VIII.
+            Conclusion</strong></h1>
+            <p>To quote the great Bob Thuemmel regarding how to best
+            approach an implied consent hearing, “Stay loose.” If
+            possible, try not to be overly focused onto a checklist,
+            rather be open to answers and modify questioning from
+            there.</p>
+            <p>Have fun.</p>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1">[T]he hearings officer must consider the
+            propriety of an arrest only if the driver raises the issue
+            during the evidentiary part of the hearing.” <em>Bish</em>
+            at 652. This is why you do an opening statement.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2">Upon petitioner’s request, the hearings officer
+            was required under former <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors482.html">ORS
+            482.541</a> to determine whether petitioner validly was
+            under arrest for DUII when asked to take the chemical breath
+            test.” <em>Pooler</em> at 51. This allows you to
+            cross-examine on how the officer formed his opinion to
+            arrest your client.<a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><p>“The proper test for voluntariness is
+            whether, under the totality of the circumstances, the
+            consent was given by an act of free will or was the result
+            of coercion, express or implied. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dimeo,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5164810646147724375&amp;scilh=0">State
+            v. Dimeo, 304 Or 469, 474, 747 P2d 353 (1987)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wolfe,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5007503532529020809&amp;scilh=0">State
+            v. Wolfe, 295 Or 567, 572, 669 P2d 320 (1983)</a>. The state
+            bears the burden of proving voluntariness by a preponderance
+            of the evidence. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Paulson,+&amp;hl=en&amp;as_sdt=4,38&amp;case=9933662029375153496&amp;scilh=0">State
+            v. Paulson, 313 Or. 346, 351-52, 833 P2d 1278
+            (1992)</a>.</p>
+            <p>“The relevant factors to be considered in determining the
+            voluntariness of consent include (1) whether physical force
+            was used or threatened; (2) whether weapons were displayed;
+            (3) whether the consent was obtained in public; (4) whether
+            the person who gives consent was the subject of an
+            investigation; (5) the number of officers present; (6)
+            whether the atmosphere surrounding the consent was
+            antagonistic or oppressive; and (7) whether drug or alcohol
+            use has impaired the defendant’s ability to make a knowing,
+            voluntary, and intelligent choice. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Larson,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12034953772196442937&amp;scilh=0"><em>State
+            v. Larson</em>, 141 Or App 186, 198, 917 P2d 519, <em>rev
+            den</em>, 324 Or 229, 925 P2d 908 (1996)</a>.”<a
+            href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn4"><p>Both subjective and objective probable cause
+            are required. See <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stroup&amp;hl=en&amp;as_sdt=4,38&amp;case=8803079542427733321&amp;scilh=0">State
+            v. Stroup, 147 Or App 118 (1997)</a>: “Whether [the
+            officer’s] belief that he had probable cause to require
+            defendant to undergo the field sobriety tests was
+            objectively reasonable depends on the totality of the
+            circumstances. Defendant was not stopped for erratic
+            driving, nor did she exhibit any of the typical
+            characteristics of a person who is under the influence, such
+            as slurred speech or impaired balance. By themselves, a
+            slight odor of alcohol, bloodshot eyes and an admission of
+            drinking alcoholic beverages do not establish probable cause
+            that defendant was mentally or physically impaired by her
+            consumption of alcoholic beverages as required by ORS
+            813.010(1)(b). In fact, there is a complete paucity of
+            evidence about impairment when the initial HGN test result
+            is disregarded. We conclude that the trial court correctly
+            ruled that [the officer] lacked objective probable cause
+            under ORS 813.010(1)(b) to subject defendant to field
+            sobriety tests.” At 441-42.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=739452567755381323&amp;q=DMV+171+OR+591&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=1999&amp;as_yhi=2000"><em>Ezzell
+            v. DMV</em>, 171 Or App 591 (2000)</a> invalidates the
+            suspension if the officer bases his probable cause from
+            improperly administered field sobriety tests. It is always a
+            good idea to cross-examine the officer on how the field
+            sobriety tests were conducted to see if the tests were
+            administered correctly.<a href="#fnref4"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn5"><a
+            href="http://scholar.google.com/scholar_case?q=Hilton+v.+MVD&amp;hl=en&amp;as_sdt=4,38&amp;case=8508191463897376848&amp;scilh=0">Hilton
+            v. MVD, 308 Or 150, 157 (1989)</a>: “We hold that MVD must
+            consider a defense that the licensee was not driving, if
+            such a defense is proffered, before it may suspend the
+            licensee’s license. [Citation omitted]. Because MVD refused
+            to consider Hilton’s defense, the suspension was invalid.”
+            Driving is premised on making the vehicle move. Sitting in a
+            parked car with the engine running is not driving. See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+Billsborrow,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15253499888490603167&amp;scilh=0">State
+            v. Billsborrow, 230 Or App 413 (2009)</a>.<a href="#fnref5"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn6">See <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sterling&amp;hl=en&amp;as_sdt=4,38&amp;case=9788496937939821256&amp;scilh=0">State
+            v. Sterling, 196 Or App 626 (2004)</a> (private driveway was
+            “open to the public”): “In sum, the cases construing the
+            term ‘premises open to the public’ teach that the phrase
+            should be defined so as to achieve its primary purpose,
+            which is to protect members of the public from serious
+            driving offenses; that signs discouraging the public from
+            entering do not necessarily close premises to the public;
+            that the absence of a physical barrier, although not itself
+            sufficient to prove openness to the public, is strong
+            evidence to that effect; and that the key evidentiary fact
+            the state has to prove is that members of the public,
+            including ‘those with a legitimate business purpose, such as
+            garbage collectors, meter readers and paper carriers, are
+            allowed on the premises.’”<a href="#fnref6"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn7">ORS 813.410(8)(a): “The person, at the time the
+            person was requested to submit to a test under ORS 813.100,
+            was under arrest for driving while under the influence of
+            intoxicants in violation of ORS 813.010 or a municipal
+            ordinance.”<a href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8">ORS 813.410(8) states in part: “A suspension
+            under this section is valid if all of the following
+            requirements have been met:… (b) The police had reasonable
+            grounds to believe, at the time the request was made, that
+            the person arrested had been driving under the influence of
+            intoxicants in violation of ORS 813.010 or of a municipal
+            ordinance.”<a href="#fnref8" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn9"><p>ORS 813.410(8) states in part: “A suspension
+            under this section is valid if all of the following
+            requirements have been met:… (c) The person refused a test
+            under ORS 813.100, or took a breath or blood test and the
+            test disclosed that the level of alcohol in the person’s
+            blood at the time of the test was:</p>
+            <p>(A) 0.08 percent or more by weight if the person was not
+            driving a commercial motor vehicle;</p>
+            <p>(B) 0.04 percent or more by weight if the person was
+            driving a commercial motor vehicle; or3</p>
+            <p>(C) Any amount if the person was under 21 years of
+            age.”<a href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn10">OAR 257-030-0130(1) “Test Identification: A
+            checklist containing an outline of the approved procedures
+            shall be used and completed by all operators of this
+            instrument. Failure to record information specified in this
+            section does not invalidate the test result obtained if the
+            testing procedures were otherwise followed.” But this is a
+            good guide to look at the observation times. Always listen
+            to see if the officer continued to observe your client for
+            15 minutes prior to the breath test.<a href="#fnref10"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn11"><p>OAR 257-030-0130(2): (a) The operator is
+            certain that the subject has not taken anything by mouth
+            (drinking, smoking, eating, taking medication, etc.),
+            vomited, or regurgitated liquid from the stomach into mouth,
+            for at least fifteen minutes before taking the test; (b)
+            There is no requirement that the operator be the person who
+            makes observation of the subject. The person performing the
+            Pre-Test Requirement (observation period) need not possess a
+            permit for the testing of alcoholic content of blood; (c)
+            The Pre-Test Requirement (observation period) does not
+            require that the subject rinse the mouth or remove dentures
+            prior to providing a breath sample; (d) The use of a
+            mouthpiece by the subject during the testing sequence does
+            not constitute a violation of the Pre-Test Requirement.</p>
+            <p><em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Barletta&amp;hl=en&amp;as_sdt=4,38&amp;case=3217164979276041847&amp;scilh=0"><em>State
+            v. Barletta</em>, 188 Or App 113 (2003)</a> (cited as
+            authority by <a
+            href="https://scholar.google.com/scholar_case?case=11416278659026501823&amp;q=State+v.+True,+324+Or+App+621+(2023&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. True</em>, 324 Or App 621 (2023</a>) and <em>State v.
+            Stewart</em>, 227 Or App 632 (2009): “The focus of the rule
+            is on the officer’s conduct—whether the officer has complied
+            with the precautions that the rule establishes. <em>See</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Balderson,+&amp;hl=en&amp;as_sdt=4,38&amp;case=9644202525855568838&amp;scilh=0"><em>State
+            v. Balderson</em>, 138 Or App 531, 534, 910 P2d 1138
+            (1996)</a>, <em>rev dis’d</em>, 327 Or 555 (1998)
+            (discussing predecessor rule). The test for determining
+            whether the officer has complied with the rule is both
+            subjective and objective. “‘First, the rule requires that
+            the operator of the test form a subjective belief to the
+            degree of ‘certainty’ that the test subject has not engaged
+            in any of the acts described by the rule. Second, that
+            belief must be reasonable under the circumstances.’ “<a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tynon,&amp;hl=en&amp;as_sdt=4,38&amp;case=4923884785303985456&amp;scilh=0"><em>State
+            v. Tynon</em>, 152 Or App 693, 696, 955 P2d 250 (1998)</a>,
+            <em>rev den</em>, 328 Or 365 (1999).” At 114.</p>
+            <p>In <em>Tynon</em>, the Court of Appeals stated: “Our
+            standard of review regarding a trial court’s ruling on
+            whether the state complies with the pre-test requirements
+            for an Intoxilyzer test focuses on a question of fact and a
+            question of law that afford meaning to the rule.
+            <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=9644202525855568838&amp;q=State+v.+Balderson,+138+Or+App+531&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Balderson</em>, 138 Or App 531, 534, 910 P2d 1138</a>,
+            <em>rev allowed</em>, 324 Or 305, 925 P2d 908 (1996)
+            (interpreting the ‘operator must make certain’ language of
+            former OAR 257-30-020(1)(b) which also required a 15-minute
+            pre-test observation period). 2 First, the rule requires
+            that the operator of the test form a subjective belief to
+            the degree of ‘certainty’ that the test subject has not
+            engaged in any of the acts described by the rule. Second,
+            that belief must be reasonable under the circumstances.”
+            <em>Id</em>. at 536, 910 P2d 1138.</p>
+            <p>“Also, the rule expressly contemplates that the operator
+            may rely on the observation of someone else in reaching the
+            required subjective belief. OAR 257-030-0070(2)(b); <em>see
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McVay,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6747225638441520161&amp;scilh=0"><em>State
+            v. McVay</em>, 83 Or App 312, 315, 731 P2d 466 (1987)</a>
+            (interpreting former OAR 257-030-020(1)(b), that required
+            that ‘[t]he test operator must make certain’); <em>see
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Herring,+&amp;hl=en&amp;as_sdt=4,38&amp;case=17298726906027453164&amp;scilh=0"><em>State
+            v. Herring</em>, 112 Or App 83, 85-86, 827 P2d 932
+            (1992)</a> (holding that the former rule had been complied
+            with when the test operator asked the observer whether the
+            defendant ‘had done anything?’). However, the text of the
+            rule does not require express communications between the
+            observer and the test operator about what occurred during
+            the absence of the operator, and it is not difficult to
+            think of situations where silence is as effective a
+            communication as oral statements, particularly in situations
+            where procedures and roles are commonly understood by those
+            involved in the administration of the test. 3 Thus, whether
+            ‘certainty’ is reasonable under the circumstances must be
+            tested by all the circumstances of which the operator was
+            aware at the time that the operator formed the belief that
+            the requirements of the rule had been met.” At 696-97.<a
+            href="#fnref11" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn12"><p>OAR 257-030-0130(3) “Test Procedure:
+            <em>The operator shall administer the test</em> (consisting
+            of two valid breath samples, provided within a single
+            testing sequence and culminating in a printed report with a
+            completed test result) <em>as follows</em>:</p>
+            <p>“(a) Ensure that the instrument display indicates “Ready
+            to Start”;</p>
+            <p>“(b) Push “Start Test” button to initiate the test
+            sequence;</p>
+            <p>“(c) Once the operator initiates the testing sequence by
+            pressing the “Start Test” button, the testing sequence shall
+            be conducted without interruption until:</p>
+            <p>“(A) The instrument completes the test sequence and the
+            operator obtains a completed test report; or</p>
+            <p>“(B) The operator depresses the “Start Test” button or
+            the “R” key on the keyboard to indicate that the subject
+            refused the test; or</p>
+            <p>“(C) The operator or the instrument aborts the testing
+            sequence.” (Emphasis added.)</p>
+            <p>Also see section (4)(b) which states in relevant part:
+            “The operator should enter information into the instrument
+            through the bar code scanner and/or keyboard for the
+            purposes of linking a breath test document to the test
+            subject.”</p>
+            <p>But also see section (7) of the above rule: “Failure to
+            record information specified in section (1) and subsection
+            (4)(b) of this rule does not invalidate the test result
+            obtained if the testing procedures were otherwise
+            followed.”<a href="#fnref12" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn13"><p>OAR 257-030-0130(3) “Test Procedure:
+            <em>The operator shall administer the test</em> (consisting
+            of two valid breath samples, provided within a single
+            testing sequence and culminating in a printed report with a
+            completed test result) <em>as follows</em>:</p>
+            <p>“(d) Using the instrument’s bar code scanner and/or
+            keyboard, the operator shall enter sufficient information
+            to:</p>
+            <p>“(A) identify the operator conducting the test; and</p>
+            <p>“(B) establish that the operator possesses a valid
+            operator permit and PIN combination. The operator should
+            also enter sufficient information to link the test report to
+            the test subject. The instrument will start the testing
+            sequence when the operator’s permit has been validated and
+            the data entry process is complete[.]” (Emphasis added.)</p>
+            <p>OAR 257-030-0130(4)(a) states in relevant part: “The
+            operator shall enter into the instrument a permit and
+            Personal Identification Number (PIN) information through the
+            bar code scanner and/or keyboard for the purpose of: (1)
+            identifying the operator conducting the test, and (2)
+            establishing that the operator possesses a valid operator
+            permit and PIN combination. Only operators who possess both
+            a valid permit and PIN will be authorized to conduct a test
+            sequence.”<a href="#fnref13" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn14"><p>OAR 257-030-0130(3) “Test Procedure:
+            <em>The operator shall administer the test</em> (consisting
+            of two valid breath samples, provided within a single
+            testing sequence and culminating in a printed report with a
+            completed test result) <em>as follows</em>:</p>
+            <p>“(e) After instructing the subject on how to give a
+            proper breath sample, have the subject provide a breath
+            sample through the mouthpiece when “Please blow into
+            mouthpiece to activate tone” appears on the display[.]”<a
+            href="#fnref14" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn15"><p>OAR 257-030-0130(3) “Test Procedure: The
+            operator shall administer the test (consisting of two valid
+            breath samples, provided within a single testing sequence
+            and culminating in a printed report with a completed test
+            result) as follows:</p>
+            <p>“(f) Continued Observation Period: The operator shall
+            continue to observe the subject and remain certain that the
+            subject does not take anything by mouth (drink, smoke, eat,
+            take medication(s), etc.), vomit, or regurgitate liquid from
+            the stomach into mouth until the second breath sample
+            request period is completed. The use of a mouthpiece by the
+            subject during the testing sequence does not constitute a
+            violation of the observation period.”</p>
+            <p><strong>Practice Tip</strong>: It is important to
+            cross-examine the officer as to what she or he did during
+            the observation period. Did the client leave the room
+            because you can’t objectively do an observation period if
+            the officer can’t observe your client? <em>State v.
+            Barletta</em>, 188 Or App 113 (2003). Did the officer really
+            observe your client if they were going between rooms,
+            talking on the phone, filling out paperwork or completing
+            other tasks?<a href="#fnref15" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn16"><p>OAR 257-030-0130(3) “Test Procedure:
+            <em>The operator shall administer the test</em> (consisting
+            of two valid breath samples, provided within a single
+            testing sequence and culminating in a printed report with a
+            completed test result) <em>as follows</em>:</p>
+            <p>“(g) When “Please blow into mouthpiece to activate tone”
+            again appears on the display, have the subject provide a
+            second breath sample[.]”<a href="#fnref16"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn17"><p>OAR 257-030-0130(3)(h): “Once the
+            instrument accepts the second breath sample, it will
+            automatically perform an analysis of a gaseous sample
+            containing a known alcohol vapor concentration (“control
+            sample”) to test the accuracy and proper working order of
+            the instrument. The operator does not need to take any
+            action with the instrument at this time other than to
+            monitor the progression of the instrument through the
+            remainder of the test sequence. If all parameters are met,
+            the instrument will proceed to the next step[.]”</p>
+            <p>OAR 257-030-0130(4)(k) reads in relevant part: “The
+            instrument will perform an analysis of a gaseous sample
+            containing a known alcohol vapor concentration, the result
+            of which must be within a range of 0.010 high to 0.020 low
+            of the expected value, to test the accuracy and proper
+            working order of the instrument.”<a href="#fnref17"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn18">Evidence must be presented which is “of a type
+            commonly relied upon by reasonably prudent persons in the
+            conduct of their serious affairs” (see OAR 137-003-0610(1)),
+            that one of the circumstances in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.430</a> existed at the time of the test failure or
+            refusal.<a href="#fnref18" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn19">OAR 257-030-0130(3)(i): When the instrument
+            has successfully completed the test sequence, the operator
+            will be afforded an opportunity to enter into and review
+            comments added to the test report. <em>The test report will
+            then be printed with the test result.</em>” (Emphasis
+            added.)<a href="#fnref19" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn20">If your client failed a blood test after an
+            accident then the DMV will hold a hearing similar to a
+            breath test failure. If your client is asked for a blood
+            test after a traffic stop but no accident, there is no
+            authority for DMV to suspend under ORS 813.100.<a
+            href="#fnref20" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn21">The officer must have taken at least eight
+            hours of training on drugs that impair driving to request
+            urine and given after a breath test is given. ORS
+            813.131(3).<a href="#fnref21" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn22">A commercial motor vehicle is defined by the
+            Oregon Vehicle Code as a vehicle that will be operating at a
+            gross vehicle weight rating or combination weight over
+            26,000 pounds. The definition also includes vehicles
+            designed to transport 16 or more persons and vehicles
+            designed to transport hazardous materials regardless of
+            weight. This definition excludes fire trucks, emergency
+            vehicles, motor homes and recreational vehicles operated
+            solely for personal use. ORS 813.410(8) states in part: “A
+            suspension under this section is valid if all of the
+            following requirements have been met:… (d) If the report
+            under ORS 813.120 indicates that the person was driving a
+            commercial motor vehicle, the vehicle was in fact a
+            commercial motor vehicle as defined in ORS 801.208.<a
+            href="#fnref22" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

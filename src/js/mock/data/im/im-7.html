@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>'''Computer Forensics – Legal Consulting in a Digital
+            Age—</p>
+            <p><strong>What Defense Lawyers &amp; Investigators Need to
+            Know</strong></p>
+            <p><strong>Marcus Lawson</strong></p>
+            <p>2010 edition</p>
+            <h1 id="a_digital_age_with_digital_crimes">A Digital Age
+            with Digital Crimes</h1>
+            <p>We clearly live in a digital age. From awakening to our
+            digitally programmed alarm clocks, driving our computer
+            controlled and GPS equipped car, being recorded at the Mini
+            Mart while buying coffee, typing on a laptop, talking and
+            texting through our cell phones to watching cable
+            television, we are constantly surrounded and using digital
+            technology. It should come as no surprise then that in the
+            practice of criminal law, digital evidence is relied on more
+            and more.</p>
+            <p>It is a common perception that digital evidence—and, in
+            particular, computer forensics—is associated only with
+            crimes related to child pornography or the solicitation of
+            minors through the Internet à la such shows as MSNBC’s “To
+            Catch a Predator.” While the majority of cases involving
+            computer evidence deal with one or both of these issues (and
+            will be the subject of the majority of this article), the
+            fact that we interact with digital technology in almost
+            every aspect of daily life tells us that the criminal
+            offenses people become involved with will too.</p>
+            <p>Consider a couple of scenarios. The first involves a
+            client charged with homicide when his wife is found
+            strangled in the passenger seat of their car at a
+            neighborhood park. The police feel that the husband does not
+            “act appropriately” when informed of his wife’s death, and a
+            witness at the park identifies a man seen from a distance
+            that matches the husband’s description, including the
+            wearing of a “dark coat with white stripes on the sleeves.”
+            A coat of that description is found in the man’s closet, and
+            the witness believes the husband “looks like” the man they
+            saw leaving the park on foot. It is also subsequently
+            learned that a hefty life insurance policy has been taken
+            out on the victim and coworkers of the deceased woman tell
+            police she had reported she was “unhappy at home.” The
+            husband’s fingerprints are in and on the car (as he drives
+            it too), and the driver’s seat is pushed back as if
+            accommodating a larger (masculine) driver. The husband has
+            no defensive wounds, but the coroner believes the
+            perpetrator was wearing gloves. Gloves belonging to the
+            husband are found in the closet with the coat, and a hair,
+            ultimately determined to belong to the victim, is attached
+            to one of the gloves. The evidence isn’t overwhelming, but
+            the district attorney feels it is sufficient to go
+            forward.</p>
+            <p>In the second scenario, your client has been charged with
+            a convenience store armed robbery. Although the robber had
+            worn a coat with a hood, his face had been visible and the
+            victim, the attendant on duty at the time, identifies your
+            client as the perpetrator, saying he knows him as an
+            occasional customer from the neighborhood. Unfortunately,
+            when the store manager attempts to collect the digitally
+            recorded security camera footage, it is corrupted and
+            unreadable. The attendant is adamant that your client was
+            the robber and even picks him out of a line-up. The
+            prosecutor decides to go forward.</p>
+            <p>We will revisit these incidents later after learning some
+            of the in and outs of the field.</p>
+            <h1 id="what_is_computer_forensics">What Is “Computer
+            Forensics”?</h1>
+            <p>The first misnomer with this often-asked question is the
+            word “computer.” The word brings up images of desktops and
+            laptops but, as we have just discussed, digital evidence can
+            be found in many places outside a computer. Yes, most of the
+            time the computer hard drives are indeed the source of the
+            information and ultimately the answers in a given case, but
+            cell phones, Blackberry’s, iPhones, GPS devices, thumb
+            drives, cameras and security systems can contain evidence
+            that might be important in a given case. Thus, when we talk
+            about “computer forensics” what we really mean is any device
+            that has the ability to record information in an electronic
+            (digital) format.</p>
+            <p>When done correctly, computer (or rather “digital”)
+            forensics is more appropriately described as a computer
+            investigation. When a given piece of media is determined to
+            possibly be relevant in a case, it needs to be investigated
+            and analyzed in the context of the litigation, and the
+            attorney needs to be informed of everything potentially
+            relevant about it. Individual pieces of data are usually
+            meaningless unless the context of the data is also analyzed
+            and explained.</p>
+            <p>The “forensics” side of computer forensics, then, is the
+            investigative analysis of the data that has been recovered
+            from the piece of media in question. As we will see later in
+            the chapter, there are very sophisticated tools for the
+            recovery of data from devices, and mastering the knowledge
+            of how to use those tools takes many, many hours of
+            experience and training. If computer forensics has a golden
+            rule, it is that once something is written to a digital
+            device, it will remain there indefinitely until overwritten
+            by new data. Finding that data among trillions of pieces
+            (bits) of other data can be a challenge but, nevertheless,
+            until it is overwritten, that data will remain and is almost
+            always recoverable.</p>
+            <p>In essence, computer forensics is the investigative and
+            intuitive use of sophisticated forensic software tools to
+            recover all relevant data (active or deleted) and present it
+            in the proper context so that the attorney can make informed
+            decisions about what did or didn’t happen in a case.</p>
+            <h1 id="can_i_do_it_myself">Can I Do It Myself?</h1>
+            <p>“My client is very computer savvy and wants to go through
+            everything himself.” If the data in question is not child
+            pornography contraband, the defendant can indeed at times
+            offer insight into what he or others were doing on the
+            machine at a given time; however, what more often happens is
+            an attempt to look at the data from a skewed perspective and
+            an attempt to create red herrings that will not hold up as
+            valid defense strategies. With the examiner’s time almost
+            always limited by budget, the chasing down and disproving of
+            possible defense scenarios created by the defendant means
+            that short of unusual circumstances, this practice is not
+            encouraged. Defense strategies in computer cases truly need
+            to be based on the reality of what is or isn’t on the
+            media.</p>
+            <p>In addition, the primary reasons a review of digital
+            evidence must involve a forensic examiner using approved
+            forensic software is 1) forensic software is required to
+            recover and view deleted data—there is no other way to do
+            so, and 2) the review of any active (nondeleted) files
+            without forensic software changes the date attributes of the
+            file forever. Even booting a computer changes hundreds of
+            file dates and times.</p>
+            <h1 id="methods_and_tools_of_an_examination">Methods and
+            Tools of an Examination</h1>
+            <p>The forensics examiner should be more than a data
+            recovery technician and should use an investigative approach
+            to find and interpret all the relevant evidence in your
+            case. That does not mean, however, that the examiner does
+            not need to be thoroughly trained and a master of the many
+            forensic software tools at his or her disposal. EnCase sold
+            by Guidance Software and FTK (Forensic Tool Kit) by Access
+            Data are as close to an industry “standard” that is
+            available and are widely used by law enforcement—however, no
+            tool does “everything” and, especially, no tool does
+            everything well. A competent forensic examiner will have a
+            library of various software tools at his or her disposal.
+            Certain steps to be followed in the investigation of
+            computer media are described below.</p>
+            <p><em>File Signature Analysis</em></p>
+            <p>The two forensic softwares mentioned above verify file
+            extensions with the data the file actually contains and will
+            alert the examiner to files with extensions that do not
+            match content. If, for instance, a letter that would have
+            the file extension “.doc” has been saved by the user as
+            “letter.jpg,” it might appear at first glance to be a
+            picture. The signature analysis tool will alert the examiner
+            that the extension “.jpg” did not match the actual data
+            content of the file, a written document.</p>
+            <p><em>Keyword Searching</em></p>
+            <p>The forensic software also allows keyword searching
+            through both allocated (live) files and unallocated
+            (deleted) file space and will reveal every instance where
+            the keyword is found. For instance, if a nickname such as
+            those used for chatting and email are known or uncovered
+            during the exam, that nickname can be run as a keyword
+            search revealing previously deleted emails and chats.
+            Likewise, certain keyword combinations related to the use of
+            web search engines such as Google will find previously
+            deleted searches of that engine offering clues as to what
+            the user searched for and potentially the results of that
+            search.</p>
+            <p>Keyword searching is generally the most efficient method
+            of combing through vast amounts of textual data on a given
+            hard drive. With average-sized laptop hard drives now
+            reaching over one hundred gigabytes, it is important that
+            the examination process be both efficient and thorough; the
+            strategic choice of keywords enables this.</p>
+            <p><em>Hash Sets</em></p>
+            <p>When a forensic copy is made of a piece of media, like a
+            hard drive, it is “hashed” at the time of acquisition,
+            creating a digital “fingerprint” specific to that drive.
+            This hash can be compared with all subsequent copies made,
+            assuring that each copy is an exact duplicate of the
+            original. Similarly, individual files can also be hashed,
+            creating unique fingerprints for them. Once a hash value for
+            a given file is known, that hash value can be searched for
+            throughout other computers and pieces of media identifying
+            the duplicate file. This can be useful in determining
+            whether personal files have been taken from one user’s
+            machine and placed onto another user’s machine without their
+            knowledge.</p>
+            <p>Interestingly, the ability to fingerprint files with hash
+            sets is the major reason the defense bar has seen an influx
+            of child pornography cases. Confirmed images of child
+            pornography from various government databases are scanned
+            and a hash value obtained. An officer working on a computer
+            and utilizing a file sharing application such as Limewire
+            searches across the network through the “shared” folders of
+            other users for these hash sets. When a hash value is noted
+            in a user’s shared folder, it can be downloaded to the law
+            enforcement computer, verified, and set out as an
+            investigative lead. What the defense bar should remember in
+            these cases is that file names often do not match file
+            content; mass downloaders of pornography can easily and
+            accidentally download a contraband image which, by default,
+            will remain in the “shared folder” until discovered and
+            deleted. Key to these cases are the keywords used as search
+            terms as well as things like link files indicating a picture
+            has been opened or a movie viewed—things which only a
+            forensic examination will reveal.</p>
+            <p><em>Gallery Viewing</em></p>
+            <p>Typical Windows-based computers will have tens of
+            thousands of images of all types on them. Avid pornography
+            collectors will often have totals exceeding one hundred
+            thousand images; atypically but still seen on occasion are
+            cases with over one million images. Reviewing images on a
+            machine would be a logistical nightmare except for the
+            ability of the forensic software to sort every image, both
+            allocated (live) and unallocated (deleted) and place them in
+            a thumbnail gallery view. This gallery can then be sorted by
+            file creation date, creating a timeline of images that can
+            be scrolled relatively rapidly.</p>
+            <p><em>Deleted Data and Unallocated File Space</em></p>
+            <p>When data is “deleted” it is not actually erased. What
+            happens is that pointers that allow the operating system to
+            recognize and retrieve it are changed, but the data remains
+            in the same location indefinitely or until overwritten by
+            new files. The forensic software is used to view and recover
+            these files, even if they have been partially overwritten.
+            This area of the media that is available for the saving of
+            new files (and yet retaining previously deleted files) is
+            referred to as <em>unallocated file space</em>. Because the
+            operating system keeps track of metadata associated with
+            files no longer “sees” the file, data retrieved from
+            unallocated file space will not have corresponding metadata
+            regarding creation or last accessed dates. All that is
+            available is the raw data itself. Many times, data that is
+            most relevant to a case will have been previously deleted
+            and found in unallocated file space. The important thing to
+            remember about data recovered from unallocated file space is
+            that it will no longer have time/date stamps (metadata)
+            associated with it revealing date of creation, last access
+            and the like. Depending on the data recovered, however, on
+            occasion a date can be attributed to a particular item. A
+            recovered letter, for instance, may have a date with the
+            signature line. A deleted web page may have an embedded date
+            that was part of the page itself when it was viewed by the
+            user. Many commercial pornography portals offer gateways to
+            various sexual paraphilias on the Internet by offering
+            visitors links organized by sexual subject matter. These
+            portal sites make money by funneling web users to
+            pornography sites and compete with each other by attempting
+            to offer the most current and up-to-date links to web
+            surfers who use them. Many of these portal sites will have
+            an embedded date and time reflecting when the portal was
+            last updated. Even if that cached web page is subsequently
+            deleted, with other browser cache, it may be recovered with
+            forensic software revealing the embedded date and time that
+            the user was there.</p>
+            <p>Items recoverable from unallocated file space can include
+            virtually anything ever written to the drive that has not
+            been overwritten by new data. Deleted Internet histories,
+            letters, emails, chats, financial records and pictures are
+            all recoverable from unallocated file space.</p>
+            <p><em>Browser History</em></p>
+            <p>Internet web browsers can keep files that index the
+            user’s browser session in detail. The pages of web sites
+            searched and visited as well as images and videos from them
+            are captured and stored in cache files. In Windows these
+            cache files are called Temporary Internet Files (TIFs).
+            Windows also keeps a running textual log of browser use that
+            does not include content called Index.dat files. Browser
+            history can be sorted by time and date with forensic
+            software creating a moment by moment timeline of activity.
+            These timelines can be very effective when attempting to
+            place a specific user at the keyboard at a certain time.</p>
+            <h1 id="child_pornography_allegations">Child Pornography
+            Allegations</h1>
+            <p>Few issues are likely to stir as much controversy or are
+            as difficult to defend as allegations of child pornography
+            possession and/or distribution. Mere allegations alone can
+            be enough to cause tremendous damage to professional and
+            personal reputations and cause irrevocable damage to family
+            relationships. At the same time, the Internet has made the
+            viewing of pornography of virtually every conceivable
+            paraphilia, including child pornography, a mouse click
+            away.</p>
+            <p>When allegations of this nature are made, they obviously
+            need to be treated extremely seriously. The state of Oregon
+            as well as the federal government provide severe criminal
+            penalties for possession of child pornography and it is a
+            crime that is rigorously investigated and enforced. (See 18
+            USC 2252 et al in the Appendix.)</p>
+            <p>Any member of a defense team that has handled one of
+            these cases knows that one of the biggest issues faced is
+            getting access to the media. Prior to the passage of the
+            Adam Walsh Act (see below), media in child pornography cases
+            was routinely granted to defense computer forensics experts
+            via court order. Such is not the case anymore.</p>
+            <p>The Adam Walsh Child Protection Act (18 USC 3509) signed
+            into law by President George W. Bush in July 2006 made vast
+            and sweeping changes to federal child protection laws.
+            Section (m) of that act states:</p>
+            <p>(1) In any criminal proceeding, any property or material
+            that constitutes child pornography shall remain in the care,
+            custody, and control of either the Government or the
+            court.</p>
+            <p>(2) (A) Notwithstanding Rule 16 of the Federal Rules of
+            Criminal Procedure, a court shall deny, in any criminal
+            proceeding, any request by the defendant to copy,
+            photograph, duplicate, or otherwise reproduce any property
+            or material that constitutes child pornography, so long as
+            the Government makes the property reasonably available to
+            the defendant.</p>
+            <p>(B) For purposes of subparagraph (A), property or
+            material shall be deemed to be reasonably available to the
+            defendant if the Government provides ample opportunity for
+            inspection, viewing, and examination at a Government
+            facility.</p>
+            <p>Many (but not all) state prosecutors are following this
+            rule and refusing to allow forensics experts to have custody
+            of media that is alleged to contain child pornography. (As
+            an aside, it should be noted that it is the mere allegation
+            that an image is child pornography which triggers the Act,
+            an issue that is often the very point of the case when
+            decisions about whether an item is child pornography is
+            based on law enforcement opinion.) California, Washington,
+            Idaho, Colorado and several others are notable exceptions
+            and courts in these states will direct copies to be made and
+            turned over to experts for analysis in criminal cases, with
+            judges generally finding that the Adam Walsh rules apply to
+            federal cases, not state.</p>
+            <p>The current status in Oregon (in the experience of the
+            author) is that with surrounding states choosing
+            <em>not</em> to follow Adam Walsh, arguing for court-ordered
+            release of media would likely be successful. The experience
+            of the author has been that media in most state and FBI
+            cases brought within Oregon can be examined at the Regional
+            Computer Forensics Laboratory in Portland with comparatively
+            minor issues. However, problems definitely arise no matter
+            how accommodating the law enforcement entity, with trial
+            preparation. It is simply not possible to adequately prepare
+            in the final days leading up to trial without having
+            ongoing, as needed access to the media—access which law
+            enforcement entities and prosecutors do have, and obviously
+            use to their advantage.</p>
+            <h2 id="what_exactly_is_child_pornography">What Exactly Is
+            Child Pornography?</h2>
+            <p>For an image or movie to be legally classifiable and
+            prosecuted as child pornography, it needs two major
+            qualifications:</p>
+            <p>• An image of a child under 18 years of age</p>
+            <p>• The image needs to be pornographic.</p>
+            <p>If either of these two fundamental elements is missing,
+            the image is not legally child pornography.</p>
+            <p><strong><em>“Child”</em></strong></p>
+            <p>For the purposes of child pornography laws, a “child” is
+            defined as anyone under the age of 18. This is not typically
+            in question if the people featured in the images are
+            prepubescent but is very much in question if the people in
+            the images are alleged to be teens. There are literally
+            thousands of “teen” pornography web sites on the Internet,
+            many with extremely young-looking models that are in fact 18
+            years of age and in many cases much older than that. United
+            States law requires that all producers of child pornography
+            keep records of identification on file as to the names and
+            ages of actors and models portrayed (18 USC 2257) and all
+            United States–based (and many foreign-based) pornographic
+            web pages have this disclaimer. Indeed, true child
+            pornography web sites tend to take the opposite approach and
+            make sure the visitor to the page fully knows that they have
+            found real child pornography material by clearly announcing
+            so and certainly no 2257 disclaimer will be found.</p>
+            <p>This is an important consideration because many people
+            who have not been exposed to Internet pornography, and
+            certainly the vast majority of people who have not been
+            exposed to child pornography, will make the assumption that
+            an image of a “young-looking” model or actor seen on a
+            computer is child pornography when it is not. A forensic
+            analysis that includes a review of web site activity may
+            indeed reveal whether images in question came from a site
+            with an 18 USC 2257 disclaimer, thus giving rise to a
+            presumption the images are legal. Add to this that, as a
+            pornography genre, web pages offering images of extremely
+            young looking yet legal age models are a very large Internet
+            market, and it is obvious why an investigation should occur
+            as to the origination point of pubescent images.</p>
+            <p><strong><em>“Pornographic”</em></strong></p>
+            <p>Child pornography laws also require the image to be
+            “pornographic” in nature. Pornographic, as applied to actual
+            sexual interaction, is not hard to discern; however, the
+            question becomes murky when no obvious sexual acts are
+            portrayed. In these circumstances child pornography laws
+            require there to be a “lascivious exhibition” of the
+            genitals. The federal courts have tended to rely on the case
+            of <em>United States v. Dost,</em> 636 F Supp 828, 833 (S.D.
+            Cal. 1986), and the following six factors in determining if
+            an image is a lascivious exhibition:</p>
+            <ol>
+            <li>whether the focal point of the visual depiction is on
+            the child’s genitalia or pubic area</li>
+            <li>whether the setting of the visual depiction is sexually
+            suggestive, i.e., in a place or pose generally associated
+            with sexual activity</li>
+            <li>whether the child is depicted in an unnatural pose, or
+            in inappropriate attire, considering the age of the
+            child</li>
+            <li>whether the child is fully or partially clothed or
+            nude</li>
+            <li>whether the visual depiction suggests sexual coyness or
+            a willingness to engage in sexual activity</li>
+            <li>whether the visual depiction is intended or designed to
+            elicit a sexual response in the viewer.</li>
+            </ol>
+            <p>While the <em>Dost</em> court and decisions like it have
+            attempted to objectify the process of “lasciviousness” with
+            standards, the reality is still that one person’s view of a
+            lascivious picture can be interpreted by someone else as
+            not. This issue can be exceedingly difficult with sentencing
+            guidelines which increase with the volume of material
+            possessed. While there may indeed be images of child
+            pornography in the defendant’s possession, if an increase in
+            the number will enhance sentencing, the government may
+            include more “borderline” images, in either age or
+            lasciviousness. Defending against this strategy by
+            attempting an educated, objective discussion of each image
+            can be extremely difficult for obvious reasons.</p>
+            <p>The National Center for Missing and Exploited Children
+            (NCMEC) is the keeper of a database of “known” images of
+            child pornography. The NCMEC database consists of images
+            that have been previously identified by law enforcement as
+            known victims. Typically, images in child pornography cases
+            are forwarded to the NCMEC to see if they match others in
+            the database. When they do, NCMEC sends back a report of
+            verification but verifies merely that the image matches one
+            in the database. NCMEC will supply with that verification a
+            law enforcement contact for the image, and it is actually
+            this contact who would testify as to the authenticity of the
+            image. Generally speaking, images in the NCMEC database are
+            what they purport to be, however, one caveat: there may be
+            images verified in the database as known victims that are
+            not pornographic. In other words, images that were part of a
+            known series but that particular image is not lascivious,
+            such as the child was clothed for instance.</p>
+            <p>One final point as it relates to the definition of child
+            pornography: Experience has shown that on occasion
+            defendants themselves have believed they held and confessed
+            to items as being “child pornography” where a subsequent
+            investigation revealed they may not have been. In other
+            words, not every confession to “looking at child
+            pornography” means per se that the defendant did so. An
+            examination and investigation into what was viewed is
+            necessary to confirm if the images were truly of 1) a person
+            under 18 years of age, and 2) also pornographic.</p>
+            <h2 id="we_have_child_pornographywhats_next">We Have Child
+            Pornography—What’s Next?</h2>
+            <p>If there is reason to believe that contraband exists on
+            the media based on an evaluation of the two considerations
+            discussed above, the next step is to determine how the
+            material came to be on the media and who is responsible for
+            its presence. The determination of how the images came to be
+            on the media (i.e. file sharing, web surfing, transferred
+            from other media, etc.) will greatly help in determining who
+            was at the keyboard and their intent while there.</p>
+            <p>In a web surfing case, for instance (as anyone who uses
+            the Internet with a web browser and search engine knows),
+            the Internet is full of pop-ups and re-directions,
+            particularly in the realm of pornography web pages. Every
+            image on every page that opens is cached to the computer’s
+            cache folders and, although they may indeed be present on
+            the computer, they may or may not be there as a result of a
+            purposeful intent to look for them. The key is typically
+            what was searched for and what was done as a result of those
+            searches.</p>
+            <p>Child pornography statutes require a “possession” or some
+            sort of dominion and control of the image on the part of the
+            defendant. When images are cached to the computer, they are
+            “saved” because of the actions of the operating system, not
+            necessarily the defendant. In order to show a purposeful
+            (knowledgeable) “possession” of an image in the computer’s
+            cache folders, typically the government will attempt to show
+            an image was sought out by the use of specific search terms
+            and then dominion and control were exercised by the
+            defendant when clicking on a thumbnail to create an
+            enlargement, for instance. Such cases require a careful
+            moment-by-moment analysis of the browser’s actions on the
+            part of the defense examiner.</p>
+            <p>File-sharing cases—such as those seen with Limewire
+            applications—are common in many defense offices. At first
+            blush a defendant with several images of child pornography
+            in a Limewire “shared” folder indicates not only possession
+            but potential distribution as well. With law enforcement
+            hash set searching through file-sharing networks as
+            discussed above, these cases appear with regularity. When
+            the client informs the defense attorney he was unaware he
+            possessed the images, is it possible to determine if that
+            was the case? The answer can sometimes be found in the terms
+            searched through the network and the pattern of downloads.
+            Frequent users of these networks quickly learn that files
+            available for download may or may not match their file
+            titles. A movie file with a title of “Batman Returns” may in
+            fact be anything—from what the title purports to a
+            <em>Hustler</em> magazine XXX latest release. Prolific
+            pornography collectors know this and the highlighting and
+            mass downloading of pornographic files regardless of title
+            is a common occurrence. The user may or may not review these
+            files for some time, thereby not knowing a contraband file
+            is on their computer.</p>
+            <h2 id="potential_defense_strategies">Potential Defense
+            Strategies</h2>
+            <p>Obviously, the question of defense strategies should
+            always begin with ascertaining whether the material in
+            question is 1) pornographic and 2) depicts a minor as
+            discussed above. Assuming these elements are satisfied, the
+            investigation moves to how the images came to be on the
+            media and, if possible, who put them there.</p>
+            <p>Great care needs to be taken in a decision to follow a
+            particular defense strategy and it is vital that it be
+            supported by the data. The random blaming of “viruses” or
+            “Trojans” that turn a user’s computer into an Internet
+            zombie receptor of child pornography will probably not be
+            successful unless the computer is found to be (or have been)
+            infected with such issues. This is not to say such programs
+            don’t exist, just that a defense based on this theory will
+            need to be supported by objective evidence from the
+            computer.</p>
+            <p>Likewise, more than one vindictive spouse has attempted
+            to win a child custody battle or move on to a new
+            relationship with the assets of the previous one by
+            arranging for child pornography to be on the opposing
+            spouse’s machine. There have been instances where this has
+            been done by the spouse alone as well as cases where
+            confederates were recruited to help. A careful and thorough
+            investigation by the forensic examiner will likely uncover
+            evidence to support such a claim if it is true. The decision
+            to affect such a defense strategy will need to be supported
+            by data or likely will not be successful.</p>
+            <h2 id="assembly_and_presentation_of_findings">Assembly and
+            Presentation of Findings</h2>
+            <p>Completing the investigative analysis, the examiner needs
+            to be able to pull the investigation together and present
+            his or her findings in an articulate, understandable way.
+            This is typically done with a narrative report. In addition
+            to a conveyance of findings, the report should also explain
+            in laymen’s terms where the data of interest was found and,
+            in a simplified manner, any thing technically relevant about
+            the data. For instance, if web browsing is of importance to
+            the case and the examiner found deleted web pages that are
+            relevant, the report should identify those pages, the
+            information on them, as well as a brief explanation of how
+            web pages in general are cached by the operating system and
+            recovered by the forensic software. These explanations need
+            to be focused on relevant findings only and not a diatribe
+            on the expert’s computer knowledge. In other words, the
+            report’s technical writings should be limited only to
+            explain where the data was found, how it was found and why
+            it appears to be relevant.</p>
+            <p>The report should also include textual screen captures
+            taken during the forensic process. Screen capture software
+            allows the examiner to take a “snapshot” of what is being
+            observed on the forensic machine’s computer screen and
+            creates a visual demonstrative aid to the report. These
+            screen captures can also be used in the courtroom, allowing
+            a visual aid that the examiner can use in describing how and
+            where data was found. As the narrative of the report flows,
+            reference should be made to individual screen captures to
+            assist the reader’s understanding.</p>
+            <h2 id="the_examiner">The Examiner</h2>
+            <p>Considering the myriad issues in these types of cases,
+            choosing the forensic examiner is obviously quite important.
+            The expert should have considerable experience in the
+            investigation of child pornography, can make valid calls on
+            the presence of true child pornography, and can determine
+            how the material came to be on the machine in question.</p>
+            <p>Experts who are willing to put forth defense theories
+            based on technical “what if” speculation are rarely
+            successful and do a disservice to the field. The technical
+            aspects and jargon associated with computer technology in
+            general leaves abundant room for an unscrupulous expert to
+            confuse a jury and proffer opinions not based in a realistic
+            evaluation of the data. Such experts rarely last long as
+            they are quickly impeached by trained, experienced
+            government experts and savvy prosecutors. Experience in the
+            field itself with multiple positive references should be the
+            guide in choosing the expert. While EnCase and FTK software
+            both offer certifications, these are for demonstrated,
+            competent use of the software, not experience in how to
+            effectively and competently investigate a case.</p>
+            <p>Questions to ask a potential forensic expert include:</p>
+            <p>• evidence handling and storage procedures</p>
+            <p>• how they document their evidence handling</p>
+            <p>• acquisition procedures and documentation</p>
+            <p>• forensic software used</p>
+            <p>• previous experience with the fact scenario in
+            question</p>
+            <p>• previous court experience</p>
+            <p>• verifiable references that have used the expert with
+            previous positive results.</p>
+            <p>As with any expert hired by the defense, the computer
+            forensics expert needs a polished and professional demeanor
+            in court for the presentation of findings. It is exceedingly
+            important that he be able to explain the complexities of the
+            forensics process in a simple manner without “computerese.”
+            Judges and jurors may have no concept of the interworking of
+            computers and how data is stored and retrieved and few will
+            have any knowledge at all about how forensic software
+            recovers deleted data. The expert needs to be able to
+            explain the process as well as investigative findings in a
+            manner that requires no technical expertise on the part of
+            the listener. If you are not able to follow the expert’s
+            explanation of the process, neither will the jury.</p>
+            <p>Another critical component of the expert’s role is
+            assistance in cross-examination of opposing experts. In
+            cases where the examiner uncovers deleterious information
+            and it would be unwise to put him or her on the witness
+            stand, they should still be present for all direct testimony
+            discussing any aspect of the digital evidence in the case
+            (whether by layperson or expert) and, from that, deliver
+            well-thought, relevant questions for cross-examination. The
+            presence of a qualified expert in the courtroom often
+            dramatically helps in keeping the opposition’s expert
+            “honest.” Your expert should be watching and help you with
+            cross-examination questions “on the fly” that keep testimony
+            in check.</p>
+            <h1 id="returning_to_our_scenarios">Returning to Our
+            Scenarios</h1>
+            <p><strong><em>Scenario One</em></strong></p>
+            <p>Despite convincing circumstantial evidence to the
+            contrary, our suspect husband is actually innocent. Although
+            the family’s home desktop computer is not seized or examined
+            by the police, the defense attorney has the computer
+            examined for anything that might bear on the case. Among
+            other searches, the examiner uses a forensic software to
+            parse and decode chat logs created by the use of Yahoo
+            Instant Messenger. In decoding the recovered chats, she
+            encounters a user name and associated chats that appear to
+            have been between the deceased wife and a heretofore unknown
+            male individual of suspicious nature. The decoded chat logs
+            clearly show a torrid affair had been going on between the
+            two for several months. As the examiner reads through the
+            chats she learns that in recent weeks the deceased had
+            attempted to end the affair, to the dismay of the lover. The
+            lover’s chats reveal veiled threats of blackmail and/or
+            violence if the affair is ended. The examiner further sees
+            that the last chat with the lover is just one week before
+            her murder. The examiner wonders, did the husband uncover
+            the affair and kill his wife in a fit of jealousy, or did
+            the lover finally make good on his veiled threats?</p>
+            <p>She continues her examination and does a timeline
+            analysis of the computer the day the murder took place. She
+            sees activity during the afternoon she associates with the
+            wife including the purchase of a pair of women’s shoes
+            online. There is little activity on the computer in the
+            evening hours of the night of the murder, however, she does
+            note that there is a web site visit to an online stock
+            trading company at 7:40 pm, close to the time the police
+            believe the murder occurred. The husband is questioned by
+            the attorney if he has an online trading account; he reveals
+            he does and that he often places orders for stock trades
+            through it and believes he may even have done so the night
+            of the murder but does not recall exactly when. The attorney
+            prepares a subpoena for records from the stock trading
+            company requesting server logs for the husband’s account.
+            The information returned shows indeed that the account was
+            accessed at 7:40 pm on the evening of the murder and an
+            order for the purchase of ten shares of stock was
+            placed.</p>
+            <p>The husband’s cell phone tower records had already been
+            retrieved by the police and they showed that his cell phone
+            had not been used the evening in question and ping logs as
+            to its location were not kept by the cell phone provider.
+            The wife’s cell phone had been found powered off with no
+            calls having been made or received the night in question
+            either. The attorney takes the timeline and stock
+            information to the district attorney, who agrees to have the
+            investigators subpoena Yahoo for the IP information
+            associated with the recovered chats. That IP information is
+            provided, leading the police to the lover’s residence. He is
+            questioned by police and ultimately confesses to the murder.
+            In his statement he tells police that he had provided the
+            wife a second cell phone which her husband was unaware of
+            and it was on that phone that calls and text messages
+            regarding clandestine meetings were planned and executed. On
+            the evening of the murder he had taken this phone with him
+            when he left.</p>
+            <p><strong><em>Scenario Two</em></strong></p>
+            <p>In our second scenario, it is the client’s good fortune
+            that he is an online pornography surfer. The examiner first
+            attempts to recover the corrupted security camera footage
+            from the mini mart robbery but is unsuccessful. The files
+            are simply unreadable and have been recording unreadable
+            footage for some time, unbeknownst to the store manager.
+            Next, the defendant’s computer is examined. It is
+            immediately apparent that the computer has been online and
+            someone has been at the keyboard surfing (adult) pornography
+            web sites. Because the defendant has roommates, the question
+            then becomes Who was at the keyboard? The examiner creates a
+            timeline of events by first verifying the internal clock
+            settings on the computer are correct. He then examines the
+            Windows event logs for abnormalities that would indicate if
+            the clock had been manipulated. He finds none. He next
+            begins an entry-by-entry timeline examination of the web
+            traffic. He notes the visit to a commercial pornography
+            “portal” site that has a server-based embedded date and
+            time. This embedded date and time from the cached web page
+            verifies that the computer clock is correct. The examiner
+            continues the timeline and notes a visit to an adult
+            “matching” site and a log-in to a user account. He sees
+            scrolling through and access of various online profiles,
+            something that can only be done with a paid user account.
+            Finally, he notes that intermittently throughout the evening
+            of pornography surfing there is access to the Internet-based
+            email program Hotmail. Although the examiner is unable to
+            recover any cached web pages showing the content of these
+            emails, he is able to recover several that show the user
+            name of the Hotmail account holder. The client indicates to
+            the attorney that this is indeed his Hotmail account and
+            embarrassingly admits to the adult matchmaking service
+            membership. The examiner locates the Custodian of Records
+            information for the attorney and subpoenas are served. The
+            results of the subpoenas verify the client’s creation (and
+            repeated access) of the accounts as well as an IP number
+            accessing these services on the night in question that
+            resolves back to the client’s residence. A timeline of use
+            is created that shows the client at the keyboard up to,
+            during and after the robbery.</p>
+            <h1 id="conclusion">Conclusion</h1>
+            <p>While child pornography crimes continue to account for
+            the majority of digitally based investigations for the
+            criminal defense investigator, as we noted at the beginning
+            of the article, digital evidence is all around us and
+            interwoven in our daily lives. From a homicide case with
+            cell phone triangulation tracking, to child pornography, to
+            a vehicular homicide case with evidence from an onboard GPS,
+            where we go, who we talk to and, at times, even our
+            motivations for doing so are being recorded.</p>
+            <p>The field of computer forensics is really a field of
+            investigation limited only by the imagination of the
+            investigator. Computer forensics is not just child
+            pornography. For the criminal defense investigator, it is
+            quite possibly going to touch one or more aspects of their
+            case, perhaps in ways not initially considered. It is
+            important for the investigator to think about this new and
+            expanding field outside the box and consider innovative ways
+            to arrive at the truth.</p>
+    </body>
+</html>

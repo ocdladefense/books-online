@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong>2020 edition, with 2024 Update by Shannon
+            Mortimer</strong></p>
+            <h1 id="the_offense"><strong>The Offense:</strong><br />
+            </h1>
+            <h2
+            id="misdemeanor_felony_and_boatsbikesother_vehicles"><strong>Misdemeanor,
+            Felony and Boats/Bikes/Other Vehicles</strong></h2>
+            <p><strong><em>Shannon Mortimer, Jason Short, Mark Gorski,
+            Bruce Tarbox &amp; Robert Crow</em></strong></p>
+            <h1 id="part_1_misdemeanor_duii"><strong>Part 1 Misdemeanor
+            DUII</strong></h1>
+            <p><strong><em>By Shannon Mortimer</em></strong></p>
+            <h2 id="i._the_crime"><strong>I. The Crime</strong></h2>
+            <h2
+            id="a._definition_of_driving_under_the_influence_of_intoxicants_ors_813.010"><strong>A.
+            Definition of Driving Under the Influence of Intoxicants:
+            ORS 813.010</strong></h2>
+            <h3 id="update"><strong>2024 Update</strong></h3>
+            <p>Please be advised that there have been significant
+            changes once again to Oregon statutes related to DUII in
+            2023.</p>
+            <p>2023 Oregon Laws Ch. 498, Sec. 2 now defines Intoxicant
+            as; 1) Intoxicating liquor; 2) A controlled substance; 3) An
+            inhalant; 4) Cannabis; 5) Psilocybin; or 6) Any drug, as
+            defined in ORS 475.005, that, when used either alone or in
+            combination with intoxicating liquor, an inhalant,
+            psilocybin, cannabis or a controlled substance, adversely
+            affects a person’s mental or physical faculties to a
+            noticeable or perceptible degree.</p>
+            <p>Commensurate with that change in definition, ORS 813.010
+            now has subsection (1)(b) which modifies the combination of
+            intoxicating liquor, cannabis, psilocybin, a controlled
+            substance or an inhalant language from the old version into
+            “Is under the influence of an intoxicant or a combination of
+            intoxicants.”</p>
+            <p>Ed. note: See the summary of HB 2316 in the
+            attachments.</p>
+            <h3 id="february_2022_update"><strong>February 2022
+            Update</strong></h3>
+            <p>2021 Amendment to ORS 813.010</p>
+            <p>Please be advised that there have been some significant
+            changes to Oregon’s DUII statute.</p>
+            <p>ORS 813.010(1)(d) has been added to include anyone who
+            provides a blood alcohol content 0.08 or higher within two
+            hours after driving. This is similar the Washington State
+            DUII statute.</p>
+            <p>Also be advised that 813.010(6)(d)(B) has been added to
+            provide for a $2000 fine for someone who provides a BAC 0.15
+            within two hours of driving.</p>
+            <p>ORS 813.010 has been amended to read:</p>
+            <p>(1) A person commits the offense of driving while under
+            the influence of intoxicants if the person drives a vehicle
+            while the person:</p>
+            <p>(a) Has 0.08 percent or more by weight of alcohol in the
+            blood of the person as shown by chemical analysis of the
+            breath or blood of the person made under ORS 813.100,
+            813.140 or 813.150;</p>
+            <p>(b) Is under the influence of intoxicating liquor,
+            cannabis, a controlled substance or an inhalant;</p>
+            <p>(c) Is under the influence of any combination of
+            intoxicating liquor, cannabis, a controlled substance and an
+            inhalant; or</p>
+            <p>(d) Within two hours after driving a vehicle, and without
+            consuming alcohol in the intervening time period, has 0.08
+            percent or more by weight of alcohol in the blood of the
+            person, as shown by chemical analysis of the breath or blood
+            of the person made under ORS 813.100, 813.140 or
+            813.150.</p>
+            <ul>
+            <li><ul>
+            <li>***</li>
+            </ul></li>
+            </ul>
+            <p>(6) (d)(B) For a person who, within two hours after
+            driving a vehicle, and without consuming alcohol in the
+            intervening time period, has 0.15 percent or more by weight
+            of alcohol in the blood of the person as shown by chemical
+            analysis of the breath or blood of the person made under ORS
+            813.100, 813.140 or 813.150, a minimum of $2000.</p>
+            <p>Oregon Laws 2021 Ch. 480, Sec. 1</p>
+            <p>2021 Legislative Update:</p>
+            <p>Senate Bill 201 Provides that person commits DUII if
+            person has BAC of 0.08 or more within two hours after
+            driving vehicle.</p>
+            <p>• Provides that a person commits DUII if that person is
+            found to have a .08 or higher percent blood alcohol level
+            within two hours of driving so long as the prosecution can
+            prove the person did not drink between driving and the
+            breath or blood test.</p>
+            <p>• Clarifies that fine for DUII is enhanced if person has
+            a .15 percent or higher blood alcohol level within two hours
+            of driving.</p>
+            <p>• Adds language that is already included in other
+            repeat-DUII statutes to the third-time felony DUII law (ORS
+            813.011), along with ORS 163.118 (criminally negligent DUII
+            homicide with three priors) and ORS 163.185 (DUII assault
+            with three priors) so that out-of-state convictions for DUII
+            are counted as prior DUII convictions.</p>
+            <p>• Amends ORS 163.118, 163.185, 813.010, 813.011 and
+            813.300.</p>
+            <p><strong>[End 2022 Update]</strong></p>
+            <h2 id="b._strict_liability_offense"><strong>B. Strict
+            Liability Offense</strong></h2>
+            <p>Driving under the influence of intoxicants is a strict
+            liability crime. A culpable mental state is not required. A
+            voluntary act is required. In 2013, the Oregon Supreme Court
+            stated that evidence of sleep-driving should be allowed in
+            as relevant to the issue of whether defendant’s act of
+            driving was voluntary. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Newman,+246+Or+App+334+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16940999385262235992&amp;scilh=0"><em>State
+            v. Newman,</em> 353 Or 652 (2013)</a>. This opened the door
+            to an Ambien defense in Oregon.</p>
+            <h2 id="c._plea_agreement_prohibited"><strong>C. Plea
+            Agreement Prohibited</strong></h2>
+            <p>Prosecutors are statutorily prohibited from allowing a
+            defendant to plead guilty or no contest to any other offense
+            in exchange for a dismissal of the DUII (ORS 813.170). Thus
+            there is no such thing as a “wet reckless” in Oregon as
+            there is in Washington. This statute does not prohibit a
+            prosecutor from dismissing a DUII in the interest of justice
+            or if there is insufficient evidence.</p>
+            <h2
+            id="d._elements_of_driving_under_the_influence_of_intoxicants"><strong>D.
+            Elements of Driving Under the Influence of
+            Intoxicants</strong></h2>
+            <p>The state must prove that the defendant was:</p>
+            <p>1) driving a vehicle</p>
+            <p>2) upon premises open to the public</p>
+            <p>3) the driving occurred within the jurisdiction of the
+            court</p>
+            <p>4) a blood alcohol content of .08% or greater as shown by
+            chemical analysis, and/or was</p>
+            <p>5) under the influence of intoxicating liquor, and/or a
+            controlled substance, and/or an inhalant.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Ask, why was your client stopped in the first place? Was
+            there a lawful basis for the encounter with police? A
+            traffic stop is lawful only if the officer has probable
+            cause to believe an infraction has occurred or has
+            reasonable suspicion of a crime. <em>State v. Matthews</em>,
+            320 Or 398 (1994). An officer’s subjective belief that an
+            infraction has occurred is objectively reasonable if, and
+            only if, the facts as the officer perceives them actually
+            satisfy the elements of a traffic infraction. <em>State v.
+            Gordon</em>, 273 Or App 495 (2015). If the DUII stems from
+            an illegal stop file a suppression motion (see Chapter
+            7).</p>
+            <p><strong>1. Driving a Vehicle</strong></p>
+            <p>a. Although the term “drives” is not defined under
+            813.010, the word is “construed as requiring that the
+            vehicle be in motion in order for the offense to be
+            committed.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Minow,+246+Or+App+179,++%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=9708850174613394981&amp;scilh=0"><em>State
+            v. Minow</em>, 246 Or App 179, 184-185 (2011)</a>. The terms
+            “drives” (ORS 813.010) and “operates” (ORS 813.100) are
+            synonymous. The term “operation” is defined in ORS 801.370
+            as “any operation, towing, pushing, movement or otherwise
+            propelling.” Nothing indicates that this definition not be
+            applied in the context of DUII. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cruz,+121+Or+App+241,+%281993&amp;hl=en&amp;as_sdt=4,38&amp;case=14465753892105674362&amp;scilh=0"><em>State
+            v. Cruz</em>, 121 Or App 241, 244 (1993)</a>. See also
+            <em>State v. Martinelli</em>, 6 Or App 182 (1971), and
+            <em>Moe v. MVD</em>, 133 Or App 75(1995). The slightest
+            amount of movement is sufficient. Rolling forward one inch
+            in a parking space is driving. Multiple impaired people
+            pushing a car stuck in the snow are all subject to DUII.</p>
+            <p>b. Driving can be inferred from the circumstances. While
+            having the engine running does not constitute “driving”
+            under the statute, a jury could reasonably infer that the
+            defendant drove to that location. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bilsborrow,+230+Or+App+413,++%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=15253499888490603167&amp;scilh=0"><em>State
+            v. Bilsborrow</em>, 230 Or App 413, 418-19 (2009)</a>,
+            conviction upheld where defendant was found asleep in a
+            parked car with the engine running, the car in gear, his
+            foot on the brake, and intoxicated.</p>
+            <p>c. Can a person attempt to drive under the influence of
+            intoxicants? Yes! <a
+            href="https://scholar.google.com/scholar_case?case=14941801838560933850&amp;q=State+v.+Baty,+243+Or+77+(2011)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Baty</em>, 243 Or 77 (2011)</a>, interpreting vehicle
+            code as not precluding application of a lesser-included
+            offense such as ORS 161.405–Attempt. As an inchoate offense
+            found in the criminal code, Attempted DUII does not come
+            with a conviction-based license suspension under ORS
+            813.400.</p>
+            <p>d. But attempted intoxication won’t really help your
+            client. <a
+            href="https://scholar.google.com/scholar_case?case=7979567647308189200&amp;q=State+v.+Snyder,+288+Or+App+58+(2017)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Snyder</em>, 288 Or App 58 (2017)</a>.</p>
+            <p><code>Practice Tip</code></p>
+            <p>It is not uncommon to come across this type of fact
+            pattern: the police arrive on scene to a driver slumped over
+            the steering wheel. The officers tap on the window to wake
+            the driver up. Usually a police cruiser or two will be in
+            position to box the car in. Police then reach inside and
+            pull the driver out of the car. Once the driver’s foot is
+            pulled off the brake, the car lurches forward. Was there a
+            voluntary act to propel the car? Did the driver merely
+            attempt to drive?</p>
+            <p><strong>2. Upon Premises Open to the Public</strong></p>
+            <p>a. “Except as provided in subsection (5) of this section,
+            the offense described in this section, driving while under
+            the influence of intoxicants, is a Class A misdemeanor and
+            is applicable upon any premises open to the public.” ORS
+            813.010(4).</p>
+            <p>b. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors801.html">ORS
+            801.400</a> defines “premises open to the public” to include
+            “any premises open to the general public for the use of
+            motor vehicles, whether the premises are publicly or
+            privately owned and whether or not a fee is charged for the
+            use of the premises.” The term “premises open to the public”
+            should be defined so as to achieve its primary purposes,
+            which is to protect members of the public from serious
+            driving offenses. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sterling,+196+Or+App+626,&amp;hl=en&amp;as_sdt=4,38&amp;case=9788496937939821256&amp;scilh=0"><em>State
+            v. Sterling</em>, 196 Or App 626, 630-31 (2004)</a>.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Where is your client alleged to have been driving? The
+            grocery store parking lot and pay-to-park lots are certainly
+            included as premises open to the public for use of a motor
+            vehicle. So too is a driveway that can be accessed from a
+            public street. But did your client get stopped by police
+            while spinning cookies in the athletic field of the local
+            high school? Your client may have other problems, but the
+            athletic field is most likely not a premises open to the
+            public for the use of a motor vehicle. Other common premises
+            that may not be open to the public include private
+            driveways, ranches, and fenced-off private parking lots.</p>
+            <p><strong>3. Driving Occurred Within the Jurisdiction of
+            the Court</strong></p>
+            <p>a. The state has the burden of establishing that the
+            defendant drove a vehicle within the jurisdiction of the
+            court in its case in chief. “In all criminal prosecutions,
+            the accused shall have the right to public trial by an
+            impartial jury in the county in which the offense shall have
+            been committed…” Article I, section 11, Oregon
+            Constitution.</p>
+            <p>b. <em>But see</em> <a
+            href="https://scholar.google.com/scholar_case?case=9178622040936679577&amp;q=State+v.+Mills,+354+Or+350+(2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mills</em>, 354 Or 350, 351 (2013)</a>. Venue is
+            <em>not</em> a material allegation of the offense that the
+            state is required to prove beyond a reasonable doubt.
+            Rather, Article I, section 11, confers a right to have a
+            trial in a particular location. To exercise such a right, a
+            defendant must assert the right to proper venue before
+            trial. <em>Id</em>.</p>
+            <p><strong>4. Blood Alcohol Content of .08 Percent as Shown
+            by Chemical Analysis</strong></p>
+            <p>Breaking News: As of the publication of the 2020 edition
+            of the <em>DUII Notebook</em>, <a
+            href="https://olis.oregonlegislature.gov/liz/2020R1/Downloads/MeasureDocument/SB1503/A-Engrossed"><span class="underline">SB
+            1503</span></a> was under legislative review. This bill
+            would amend ORS 813.010 to define the crime of DUII to
+            include when a person has a BAC of 0.08% or greater within
+            two hours after driving a vehicle. This bill would limit the
+            use of a rising BAC defense and undermine the authority of
+            <em><a
+            href="https://scholar.google.com/scholar_case?case=2072410113210491575&amp;q=State+v.+Hedgepeth,+290+Or+App+399+(2018)&amp;hl=en&amp;as_sdt=4,38"><span class="underline">State
+            v. Hedgpeth</span></a></em> since in that case defendant
+            blew 0.09% within two hours of driving. The amendment also
+            creates a 21-day notice requirement if the defense wants to
+            proffer a subsequent drinking defense.<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a></p>
+            <p>a. The state may show a defendant committed the offense
+            of driving under the influence of intoxicants by proving the
+            defendant drove with a blood alcohol content of .08% or
+            higher as shown by chemical analysis. ORS 813.010(1)(a).
+            This is known as the “per se” level of impairment and
+            prohibits use of the “hold your liquor” defense. Your client
+            may still be found guilty of DUII even if they are not
+            “under the influence.” The state may also prove the
+            defendant violated the statute by driving under the
+            influence of intoxicants. ORS 813.010(1)(b)-(c).</p>
+            <p>b. The relevant point in time for a defendant’s blood
+            alcohol content is the time of driving, not the time of the
+            breath or blood test. Retrograde extrapolation may be used
+            to show a defendant’s blood alcohol content at the time they
+            were driving. The Oregon Supreme Court explicitly found that
+            an expert may project backwards from blood alcohol content
+            at the time of a breath or blood test to the likely blood
+            alcohol content at the time of the driving. An expert may
+            testify about the rate of dissipation through retrograde
+            extrapolation. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Eumana-Moranchel,+352+Or+1+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=15333483509637516862&amp;scilh=0"><em>State
+            v. Eumana-Moranchel</em>, 352 Or 1 (2012)</a>. Roughly
+            speaking, alcohol is absorbed for the first hour and then
+            dissipates at a rate of approximately 0.015% per hour
+            thereafter.</p>
+            <p>c. When using retrograde extrapolation to prove blood
+            alcohol content, the state must make a foundational showing
+            of the scientific validity of an expert’s methods pursuant
+            to <em><a
+            href="http://scholar.google.com/scholar_case?q=Brown/O%E2%80%99Key&amp;hl=en&amp;as_sdt=4,38&amp;case=16347591282643565388&amp;scilh=0"><span class="underline">Brown</span></a>/<a
+            href="http://scholar.google.com/scholar_case?q=Brown/O%E2%80%99Key&amp;hl=en&amp;as_sdt=4,38&amp;case=4487336251714325364&amp;scilh=0"><span class="underline">O’Key</span></a></em>.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Whitmore,+257+Or+App++2013&amp;hl=en&amp;as_sdt=4,38&amp;case=9703024366980448755&amp;scilh=0"><em>State
+            v. Whitmore</em>, 257 Or App 664 (2013)</a>. The use of an
+            expert in a DUII trial is governed by OEC 702. <em>State v.
+            Trujillo</em>, 271 Or App 785 (2015). Does the state’s
+            witness qualify as an expert? Will their scientific,
+            technical or other specialized knowledge assist the trier of
+            fact to understand evidence? Think of this as a two-step
+            process: First, the state must qualify their witness as an
+            expert. This will almost always be someone from the Oregon
+            State Police crime lab who has been trained on how to
+            testify as to their qualification Second, through the expert
+            the state must show the scientific BAC evidence meets the
+            <em>O’Key</em> standard.</p>
+            <p><code>Practice Tip</code></p>
+            <p>This can present an opportunity for the defense if the
+            prosecutor and their witness are not prepared to walk
+            through the <em>O’Key</em> steps in the face of a defense
+            objection.</p>
+            <p>d. Be on alert for the many ways the state may try and
+            introduce evidence regarding a person’s BAC at the time of
+            driving. Making a motion in limine pretrial to cut off this
+            line of testimony ahead of time is generally a good idea.
+            This helps limit the possibility that the officer as witness
+            may ring this bell in front of the jury.</p>
+            <p>i. Generally, a police officer cannot testify that a
+            person’s actions correlate to a certain BAC. <a
+            href="https://scholar.google.com/scholar_case?case=7019001372857797085&amp;q=State+v.+Ross,+147+Or+App+634+(1997&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ross</em>, 147 Or App 634 (1997)</a>.</p>
+            <p>ii. An officer cannot speculate in their testimony as to
+            what a person’s BAC was at the time of driving. <a
+            href="https://scholar.google.com/scholar_case?case=1053439246489985855&amp;q=State+v.+Johnson,+219+Or+App+200+(2008)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Johnson</em>, 219 Or App 200 (2008)</a>.</p>
+            <p>iii. The state also cannot rely solely on an inference
+            that because a person’s BAC was above .08 at the time of the
+            breath test the person must have also been above .08 at an
+            earlier point when the driving occurred. <a
+            href="https://scholar.google.com/scholar_case?case=2072410113210491575&amp;q=State+v.+Hedgepeth,+290+Or+App+399+(2018)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hedgepeth</em>, 290 Or App 399 (2018)</a>, precise range
+            of absorption/dissipation rates are not common knowledge
+            among the general public (<em>this is a good case for
+            defense regarding permissible inferences</em>). <em>See
+            also</em> <a
+            href="https://scholar.google.com/scholar_case?case=9670483715121044988&amp;q=State+v.+Guckert,+260+Or+App+50+(2013)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Guckert</em>, 260 Or App 50 (2013)</a>, permissibility of
+            inference is for court to decide, and <a
+            href="https://scholar.google.com/scholar_case?case=12829720496310691332&amp;q=State+v.+Bivins,+191+Or+App+460+(2004)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bivins</em>, 191 Or App 460 (2004)</a>, there is a
+            difference between inferences drawn from circumstantial
+            evidence and mere speculation.</p>
+            <p>iv. An officer may not testify that a person’s BAC was
+            over the legal limit if four or more clues on the HGN are
+            observed. <a
+            href="file:///Users/jennifer/Documents/Publications/DUII%20Trial%20Notebook/2020%20edition%20/2020%20chapters%20/1%20the%20offense/State%20v.%20Fisken,%20138%20Or%20App%20396%20(2008)"><em>State
+            v. Fisken</em>, 138 Or App 396 (1996)</a>.</p>
+            <p>e. A person has a right to a reasonable opportunity to
+            speak to an attorney, upon request, prior to taking a breath
+            test. <a
+            href="https://scholar.google.com/scholar_case?case=5589510454377077101&amp;q=State+v.+Spencer,+305+Or+59+(1988&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Spencer,</em> 305 Or 59 (1988)</a>, <a
+            href="https://scholar.google.com/scholar_case?case=10693510004867984133&amp;q=State+v.+Matviyenko,+212+Or+App+125+(2007)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Matviyenko</em>, 212 Or App 125 (2007)</a>.</p>
+            <p>f. Exigent Circumstances: Why is everyone in such a
+            hurry?</p>
+            <p>i. The Oregon Supreme Court has recognized that the
+            evanescent nature of alcohol in the blood gives rise to
+            exigent circumstances. The court has shifted to an emphasis
+            on the exigency caused by the dissipation of alcohol rather
+            than whether or not a warrant could have been obtained in a
+            timely fashion. <a
+            href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=4%2C38&amp;q=State+v.+Machuca%2C+347+Or+644+%282010&amp;btnG="><em>State
+            v. Machuca</em>, 347 Or 644 (2010)</a>.</p>
+            <p>ii. <em>But see</em> <a
+            href="https://scholar.google.com/scholar_case?case=15875321954166885109&amp;q=Missouri+v.+McNeeley,+569+US+141+(2013)&amp;hl=en&amp;as_sdt=3,38"><em>Missouri
+            v. McNeeley</em>, 569 US 141 (2013)</a>, US Supreme Court
+            declines to declare alcohol dissipation creates a per se
+            exigency and still requires a showing by the state that a
+            warrant could not have been obtained without sacrificing the
+            evidence on a case-by-case basis for purposes of the Fourth
+            Amendment.</p>
+            <p>iii. A warrantless entry into a home to arrest a
+            suspected drunk driver may be allowed if the entry into the
+            home itself is justified by exigent circumstances, not just
+            the dissipation of alcohol in the blood. <a
+            href="https://scholar.google.com/scholar_case?case=17869784983288213703&amp;q=State+v.+Ritz,+361+Or+781+(2017)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ritz</em>, 361 Or 781 (2017)</a>.</p>
+            <p>g. Big Updates in BAC Suppression</p>
+            <p>i. A request for a BAC sample is a search and seizure for
+            purposes of Article I, section 9. <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=State+v.+Banks,+364+Or+332+(2019)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Banks</em>, 364 Or 332 (2019)</a>. A refusal to provide a
+            breath sample requested under ORS 813.100 (Implied Consent)
+            may be considered an invocation of one’s constitutional
+            right to refuse a warrantless search. The state must
+            demonstrate that the request for the BAC sample could
+            reasonably be understood <em>only</em> as a request for
+            physical cooperation and <em>not</em> a request for
+            constitutionally significant consent to search. <em>Id</em>
+            at 343.</p>
+            <p>ii. Results of a BAC sample should have been suppressed
+            based on officer’s disregard for a person’s repeated request
+            to speak to an attorney under Article I, section 12. <a
+            href="https://scholar.google.com/scholar_case?case=14726824813236399336&amp;q=State+v.+Swan,+363+Or+121+(2018&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Swan</em>, 363 Or 121 (2018)</a>.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Did your client refuse the breath test? Did the officer
+            exhibit any type of bias against your client? Often a person
+            may have legitimate reasons for not wanting to cooperate
+            with the police. Explore those reasons with your client.
+            Officer bias is never collateral. <em>State v. Tyon</em>,
+            226 Or App 428 (2009).</p>
+            <p>Did your client request an independent breath or blood
+            test <em>after</em> taking the breath test requested by
+            police? If so, did the police afford your client a
+            reasonable opportunity to take such a test as set forth in
+            ORS 813.150? Though not particularly helpful, <em>see
+            generally State v. Davis</em>, 254 Or App 387 (2012), and
+            <em>State v. Darlin</em>, 122 Or App 172 (1993). I did
+            litigate and win this issue in Multnomah County in front of
+            the Honorable Henry Kantor several years back. <em>State v.
+            Hicks</em>, Mult Cir Co No 130647216. It is not often the
+            right set of facts comes along, but make what you can of
+            them.</p>
+            <p>Did the state bring the Intoxilyzer certificates to
+            trial? Both the Intoxilyzer 8000 and 5000 are required to be
+            certified for accuracy every 90 days. ORS 813.160(1)(b)(C),
+            OAR 257-30-0100. The Intoxilyzer certificates are not
+            testimonial evidence. <em>State v.</em> <em>Bergin</em>, 231
+            Or App 36 (2009). Is the officer qualified to operate the
+            Intoxilyzer machine? OAR 257-30-0080. See also ORS
+            813.322(2), if officer testifies that they are qualified to
+            run the machine, the burden shifts to defense to present
+            evidence that the officer is not so qualified.</p>
+            <p>h. Reduction to .05 Percent</p>
+            <p>In 2019 Utah became the first state to reduce the legal
+            driving limit to 0.05%. In January of 2019 Senator Peter
+            Courtney introduced Senate Bill 7 to do the same in Oregon,
+            but the bill died under pressure from the liquor and
+            restaurant industries. The Oregon legislature will likely
+            continue to consider this idea, which has the support of
+            Governor Kate Brown. Australia, most of Europe, and Japan
+            have enacted 0.05% as the legal limit.</p>
+            <p><strong>5. Under the Influence of
+            Intoxicants</strong></p>
+            <p>a. The prosecution may show a defendant violated the DUII
+            statute by proving they were under the influence of an
+            intoxicating liquor, a controlled substance, an inhalant, or
+            any combination of intoxicating liquor, inhalant and a
+            controlled substance. ORS 813.010(1)(b)-(c). The state must
+            allege any such theory in the charging instrument. ORS
+            813.010(2).</p>
+            <p>b. A person is considered under the influence of
+            intoxicants if their physical and mental faculties are
+            adversely affected to a noticeable or perceptible degree,
+            regardless of their blood alcohol content. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stroup,+147+Or+App+118,+%281997&amp;hl=en&amp;as_sdt=4,38&amp;case=8803079542427733321&amp;scilh=0"><em>State
+            v. Stroup</em>, 147 Or App 118, 122 (1997)</a>, “Under ORS
+            813.010(1)(b), a person is under the influence of
+            intoxicating liquor or a controlled substance when the
+            person’s physical or mental facilities are adversely
+            affected to a noticeable or perceptible degree.”</p>
+            <p>c. The state may try and prove a defendant was under the
+            influence of intoxicants by offering evidence of poor
+            driving, officer observations upon contact with the
+            defendant, performance on field sobriety tests, admissions
+            made by the defendant, audio and/or video recordings, DRE
+            interviews, breath or blood test results, and/or
+            urinalysis.</p>
+            <p>d. Drugs, DREs, and UAs. Under ORS 813.010(2), scheduled
+            controlled substances must be in the charging instrument in
+            order to be used as evidence of intoxication.</p>
+            <p>i. Drugs must be pled to be relevant in a controlled
+            substance DUII case. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jayne,+173+Or+App+533+%282001&amp;hl=en&amp;as_sdt=4,38&amp;case=4435538589292844286&amp;scilh=0"><em>State
+            v. Jayne</em>, 173 Or App 533 (2001)</a>.</p>
+            <p>ii. But see <a
+            href="https://scholar.google.com/scholar_case?case=1684797814580032050&amp;q=State+v+Miles,+8+Or+App+189+(1972&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v Miles</em>, 8 Or App 189 (1972)</a>, source of the dreaded
+            <em>Miles</em> instruction—is there anything about
+            defendant’s physical condition (or use of controlled
+            substances) that would make a person more susceptible to the
+            effects of alcohol?</p>
+            <p>iii. The state must put on evidence of what effect a
+            controlled substance may have in combination with alcohol in
+            order to get the <em>Miles</em> instruction. <a
+            href="https://scholar.google.com/scholar_case?case=4878687592140672661&amp;q=State+v.+Huck,+100+Or+App+193+(1990&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Huck</em>, 100 Or App 193 (1990)</a>, the court rejects
+            state’s argument that a jury in their common sense and
+            experience can infer that ingesting Vicodin in combination
+            with alcohol may increase the effects of the alcohol on a
+            person.</p>
+            <p>iv. Generally the court has found that a warrantless
+            seizure of urine test acquired under Implied Consent will be
+            upheld if probable cause and exigent circumstances exist.
+            <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=6796900537028747780&amp;q=State+v.+Fuller,+252+Or+App+245+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Fuller,</em> 252 Or App 245 (2012)</a>, citing <a
+            href="https://scholar.google.com/scholar_case?case=15258986129945626236&amp;q=State+v.+McMullen,+250+Or+App+208+(2012)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McMullen</em>, 250 Or App 208 (2012)</a>, state expert
+            testified that chemical breakdown of controlled substance in
+            urine can change in a short period of time.</p>
+            <p>v. <em>But also see</em> <em>State v. Banks</em>, 364 Or
+            332 (2019), and <em>Swan</em>, 363 Or 121 (2018), discussed
+            <em>supra</em>. Under <em>Banks</em> there may be several
+            areas to attack a urine sample or refusal to give a urine
+            sample purportedly obtained via Implied Consent.</p>
+            <p>vi. It is error to admit the results of a urine test that
+            was requested after a person invoked their right to counsel
+            under Article I, section 12. <a
+            href="https://scholar.google.com/scholar_case?case=9442473167121356505&amp;q=State+v.+Koch,+267+Or+App+322+(2014&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Koch</em>, 267 Or App 322 (2014)</a>, citing <a
+            href="https://scholar.google.com/scholar_case?case=7372925076664245243&amp;q=State+v.+Jarnagin,+351+Or+703+(2012)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Jarnagin,</em> 351 Or 703 (2012)</a>.</p>
+            <p>vii. In a prosecution for DUII–controlled substance, the
+            state must prove that a person was not only impaired, but
+            that impairment was due to a controlled substance. <a
+            href="https://scholar.google.com/scholar_case?case=3899947647518782011&amp;q=State+v.+Moody,+201+Or+App+58+(2005)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moody</em>, 201 Or App 58 (2005)</a>.</p>
+            <p>viii. In a case where the state alleged a combination
+            alcohol/controlled substance theory, the evidence was
+            sufficient that defendant drove while impaired. Defendant
+            admitted to using both alcohol and a controlled substance;
+            in light of a BAC test above .08, defendant’s statements
+            that he also had smoked some marijuana did not need to be
+            corroborated by expert testimony. <a
+            href="https://scholar.google.com/scholar_case?case=8396259092704115216&amp;q=State+v.+Beck,+254+Or+App+60+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beck</em>, 254 Or App 60 (2012)</a>, citing <a
+            href="https://scholar.google.com/scholar_case?case=15755580314856187097&amp;q=State+v.+Harmon,+239+Or+App+587+(2010)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Harmon</em>, 239 Or App 587 (2010)</a>.</p>
+            <p>ix. The 12-step Drug Recognition Expert (DRE) protocol
+            has been approved by Oregon courts. <a
+            href="https://scholar.google.com/scholar_case?case=7487768677061913031&amp;q=State+v.+Sampson&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Sampson</em>, 167 Or App 489 (2000)</a>. But the state
+            must demonstrate that the officer is qualified as a DRE,
+            administered the DRE protocol properly, and recorded the
+            results accurately.</p>
+            <p>x. Even if the DRE Protocol is not completed, an officer
+            may still be permitted to offer nonscientific expert
+            testimony based on their training and experience. <a
+            href="https://scholar.google.com/scholar_case?case=13342633884786707858&amp;q=State+v.+Rambo,+250+Or+App+186+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rambo</em>, 250 Or App 186 (2012)</a>. <em>See also</em>
+            <a
+            href="https://scholar.google.com/scholar_case?case=4883208655569287464&amp;q=State+v.+Herandez,+227+Or+App+319+(2009)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Herandez</em>, 227 Or App 319 (2009)</a>, some components
+            of the DRE may be admissible as nonscientific evidence of
+            impairment but the state must specify which components are
+            being offered as nonscientific evidence.</p>
+            <p>xi. Under the influence of a controlled substance refers
+            to a person’s use of a controlled substance and did that use
+            materially contribute to culpable impairment? <a
+            href="https://scholar.google.com/scholar_case?case=554844026125363969&amp;q=State+v.+Stiles,+165+Or+App+584+(2000)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Stiles</em>, 165 Or App 584 (2000)</a>.</p>
+            <p>e. Field Sobriety Tests. Field sobriety tests are a
+            search and must be supported by a warrant or a valid
+            exception to the warrant requirement. <a
+            href="https://scholar.google.com/scholar_case?case=8563449355723280526&amp;q=State+v.+Nagel,+320+Or+24+(1994)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nagel</em>, 320 Or 24 (1994)</a>. <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=3712446278887154480&amp;q=State+v.+Miller,+265+Or+App+442+(2014)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Miller</em>, 265 Or App 442 (2014)</a>.</p>
+            <p>i. Refusal to perform FSTs can be compelled testimonial
+            evidence in violation of Article I, section 12. <a
+            href="https://scholar.google.com/scholar_case?case=13533074752773959333&amp;q=State+v.+Fish,+321+Or+48+(1995)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Fish</em>, 321 Or 48 (1995)</a>.</p>
+            <p>ii. Thus comes the <em>Rohrs</em> Admonishment. <a
+            href="https://scholar.google.com/scholar_case?case=5165467123903813710&amp;q=State+v.+Rohrs&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rohrs,</em> 157 Or App 494 (1998)</a>. If a person
+            refuses FSTs, in order for the refusal to be admissible the
+            officer must inform the person that the FSTs are purely
+            physical tests and do not require a person to reveal their
+            thoughts and/or beliefs. An FST refusal is not admissible at
+            trial absent the <em>Rohrs</em> Admonishment.</p>
+            <p>QUERY: What might the <em>Rohrs</em> Admonishment look
+            like in light of <em>Banks</em> and <em>Swan</em>?</p>
+            <p>iii. Not all FSTs are testimonial. <a
+            href="https://scholar.google.com/scholar_case?case=8758570984212263671&amp;q=State+v.+Nielsen,+147+Or+App+294+(1997).&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nielsen</em>, 147 Or App 294 (1997).</a></p>
+            <p>iv. If a person refuses FSTs, is given the <em>Rohrs</em>
+            Admonishment, then consents to perform verbal FSTs like
+            recite the alphabet, they will generally be out of luck. <a
+            href="https://scholar.google.com/scholar_case?case=15497277816729091927&amp;q=State+v.+Adame,+261+Or+App+11+(2014)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Adame</em>, 261 Or App 11 (2014)</a>.</p>
+            <p>v. The officer cannot testify that the FSTs are
+            scientifically valid absent an <em>O’Key</em> showing. <a
+            href="https://scholar.google.com/scholar_case?case=7210345234509381092&amp;q=State+v.+Eatinger,+298+Or+App+630+(2019)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Eatinger</em>, 298 Or App 630 (2019)</a>. An officer’s
+            testimony as to what constitutes passing or failing FSTs
+            draws its convincing force from a scientific proposition
+            that a certain number of standardized clues from the FSTs
+            may constitute a failure, thus such testimony may require an
+            <em>O’Key</em> foundation. <a
+            href="https://scholar.google.com/scholar_case?case=16260876675816212834&amp;q=State+v.+Beltran+Chavez,+286+Or+App+590+(2017&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beltran-Chavez</em>, 286 Or App 590 (2017)</a>.</p>
+            <p>vi. An officer is not allowed to offer expert testimony
+            under OEC 702 that a person with traumatic brain injury
+            would not exhibit signs of HGN as a result of the brain
+            injury. <a
+            href="https://scholar.google.com/scholar_case?case=10457716314766482448&amp;q=State+v.+Brown,+294+Or+App+61+(2018)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown</em>, 294 Or App 61 (2018)</a>.</p>
+            <h2 id="update_1"><strong>2024 Update</strong></h2>
+            <p>Please add new section:</p>
+            <h2
+            id="e._affirmative_defense_to_drug_related_duii"><strong>E.
+            Affirmative Defense to Drug-related DUII</strong></h2>
+            <blockquote>
+            <p>There is now an affirmative defense to drug-related
+            DUII:</p>
+            <p><strong>813.015 Affirmative defense; qualifications;
+            written notice.</strong> (1) As used in this section, “drug”
+            has the meaning given that term in ORS 475.005.</p>
+            <p>      (2) In a prosecution under ORS 813.010 for driving
+            while under the influence of intoxicants other than a
+            prosecution involving intoxicating liquor, a controlled
+            substance, an inhalant, cannabis or psylocibin, it is an
+            affirmative defense that:</p>
+            <p>      (a)(A) The defendant obtained a drug pursuant to a
+            prescription issued by a licensed health care professional
+            authorized to prescribe drugs and that the defendant
+            consumed the drug in the prescribed or recommended dosage
+            and followed all directions and warnings relating to the
+            consumption of the drug, including directions, if any, from
+            the manufacturer of the drug, the pharmacist who provided
+            the drug to the defendant and the licensed health care
+            professional who prescribed or recommended the drug to the
+            defendant; or</p>
+            <p>      (B) The defendant obtained a drug that is available
+            without a prescription and that the defendant consumed the
+            drug in the recommended dosage and followed all directions
+            and warnings relating to the consumption of the drug;
+            and</p>
+            <p>      (b) The defendant experienced a reaction to the
+            drug that the defendant could not reasonably have
+            anticipated and that caused the defendant’s mental or
+            physical faculties to be adversely affected to a noticeable
+            and perceptible degree while driving a vehicle.</p>
+            <p>      (3) A defendant may not introduce evidence of the
+            affirmative defense described in subsection (2) of this
+            section unless the defendant gives notice in writing of
+            intent to do so. The notice must be filed with the court and
+            served on the prosecuting attorney at least 45 days before
+            the first trial date set for the case unless the parties
+            agree otherwise or the court authorizes a later date for
+            good cause shown, but under no circumstances less than 21
+            days before trial. The notice must specify the drug the
+            defendant consumed and contact information for any medical
+            provider who advised the defendant regarding that drug.</p>
+            <p>      (4) The affirmative defense described in subsection
+            (2) of this section may be asserted only with respect to a
+            drug that is specified in the notice given under subsection
+            (3) of this section, and may not be asserted when
+            intoxicating liquor, a controlled substance, an inhalant,
+            cannabis or psylocibin, or any combination of intoxicating
+            liquor, a controlled substance, an inhalant, cannabis or
+            psylocibin, is pleaded in the accusatory instrument. [2023
+            c.498 §5]</p>
+            <p>Please note 813.015(3) prescribes the timeline for the
+            written notice requirement: at least 45 days before the
+            first trial date set, except for good cause shown, and under
+            NO circumstances less than 21 days before trial!</p>
+            </blockquote>
+            <p><strong>[End 2024 Update]</strong></p>
+            <h2 id="ii._reckless_driving_companion_charges"><strong>II.
+            Reckless Driving Companion Charges</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=berliner&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2009&amp;case=11355060758993538880&amp;scilh=0"><em>State
+            v. Berliner</em>, 232 Or App 539 (2009)</a>. Admission of
+            specifics from defendant’s prior treatment allowed to prove
+            that defendant was aware that driving under the influence is
+            dangerous behavior for the purpose of any companion charge
+            that includes a reckless state of mind.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=coen&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2009&amp;case=5842704115383717024&amp;scilh=0"><em>State
+            v. Coen</em>, 231 Or App 280 (2009)</a>. Defendant’s prior
+            DUII comes in to prove recklessness (if defendant is charged
+            with a crime that has a reckless <em>mens rea</em>) without
+            a balancing test under <a
+            href="http://www.oregonlaws.org/ors/40.160"><span class="underline">OEC
+            403(4)</span></a>.</p>
+            <h1 id="part_2_felony_duii"><strong>Part 2 Felony
+            DUII</strong></h1>
+            <p>Jason Short</p>
+            <h2 id="i._introduction"><strong>I.
+            Introduction</strong></h2>
+            <p>Obviously the stakes are much higher when your client is
+            facing a felony DUII charge. In these cases, your client has
+            much more at risk, including the potential for prison time,
+            a lifetime driver’s license revocation, and being labeled a
+            “Felon.” Before representing someone facing this criminal
+            charge, familiarize yourself with the Oregon Criminal
+            Justice Commission’s Sentencing Guidelines Rules and consult
+            experienced practitioners who have tried these cases before.
+            The facts, aside from the prior convictions, will be like
+            every other misdemeanor DUII case you have defended before.
+            Do not let the label of “felony DUII” deter you from the
+            case. There are many ways to effectively defend and attack
+            felony DUII cases. Some of the methods are listed below.</p>
+            <h2 id="ii._the_crimes"><strong>II. The Crimes</strong></h2>
+            <h2
+            id="a._ors_813.010_5a_three_prior_convictions"><strong>A. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.010</a> (5)(a) (Three Prior Convictions)</strong></h2>
+            <p>Felony DUII was created in 1999 by HB 2002, which added
+            subsection (5) to ORS 813.010. It has been amended several
+            times since then.</p>
+            <p>The current version of ORS 813.010(5) says:</p>
+            <p>(a) Driving while under the influence of intoxicants is a
+            Class C felony if the current offense was committed in a
+            motor vehicle and the person has, at least three times in
+            the 10 years prior to the date of the current offense, been
+            convicted of, or been found to be within the jurisdiction of
+            the juvenile court for an act that if committed by an adult
+            would be, any of the following offenses in any
+            combination:</p>
+            <p>(A) Driving while under the influence of intoxicants in
+            violation of:</p>
+            <p>(i) This section; or</p>
+            <p>(ii) The statutory counterpart to this section in another
+            jurisdiction.</p>
+            <p>(B) A driving under the influence of intoxicants offense
+            in another jurisdiction that involved the impaired driving
+            or operation of a vehicle, an aircraft or a boat due to the
+            use of intoxicating liquor, cannabis, a controlled
+            substance, an inhalant or any combination thereof.</p>
+            <p>(C) A driving offense in another jurisdiction that
+            involved operating a vehicle, an aircraft or a boat while
+            having a blood alcohol content above that jurisdiction’s
+            permissible blood alcohol content.</p>
+            <p>(b) For the purposes of paragraph (a) of this subsection,
+            a conviction or adjudication for a driving offense in
+            another jurisdiction based solely on a person under 21 years
+            of age having a blood alcohol content that is lower than the
+            permissible blood alcohol content in that jurisdiction for a
+            person 21 years of age or older does not constitute a prior
+            conviction or adjudication.</p>
+            <p>Note: Under <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors419C.html"><span class="underline">ORS
+            419C.370</span></a>, it is possible for persons ages 15, 16
+            and 17 who commit misdemeanor traffic offenses (e.g., DUII,
+            Reckless Driving), to be remanded to adult/circuit court for
+            prosecution and the juvenile court system is bypassed
+            entirely.</p>
+            <h2 id="b._ors_813.011_two_prior_convictions"><strong>B. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.011</a> (Two Prior Convictions)</strong></h2>
+            <p>ORS 813.011 provides another, similar basis for DUII
+            under ORS 813.010 to be elevated to a Class C felony. ORS
+            813.011 says:</p>
+            <p>(1) Driving under the influence of intoxicants under ORS
+            813.010 (Driving under the influence of intoxicants) shall
+            be a Class C felony if the defendant has been convicted of
+            driving under the influence of intoxicants in violation of
+            ORS 813.010 (Driving under the influence of intoxicants), or
+            its statutory counterpart in another jurisdiction, at least
+            two times in the 10 years prior to the date of the current
+            offense.</p>
+            <h3 id="february_2022_update_1"><strong>February 2022
+            Update</strong></h3>
+            <p>Be advised that ORS 813.011 has been amended to include
+            out of state boating and/or flying under the influence
+            offenses as predicate convictions for Oregon’s felony DUII
+            statute.</p>
+            <p>Felony driving under the influence of intoxicants <a
+            href="https://oregon.public.law/statutes/ors_813.011">ORS
+            813.011</a> is amended to read:</p>
+            <p>813.011. (1) Driving under the influence of intoxicants
+            under ORS 813.010 shall be a Class C felony if at least two
+            times in the 10 years prior to the date of the current
+            offense the defendant has been convicted of any of the
+            following offenses in any combination:</p>
+            <p>(a) Driving Under the Influence of Intoxicants in
+            violation of ORS 813.010, or its statutory counterpart in
+            another jurisdiction.</p>
+            <p>(b) A driving under the influence of intoxicants offense
+            in another jurisdiction that involved the impaired driving
+            or operation of a vehicle, an aircraft or a boat due to the
+            use of intoxicating liquor, cannabis, a controlled
+            substance, an inhalant or any combination thereof.</p>
+            <p>(c) An offense in another jurisdiction that involved
+            driving or operating a vehicle, an aircraft or a boat while
+            having a blood alcohol content above that jurisdiction’s
+            permissible blood alcohol content.</p>
+            <p>(2) Once a person has been sentenced for a Class C felony
+            under this section, the 10-year time limitation is
+            eliminated and any subsequent episode of driving under the
+            influence of intoxicants shall be a Class C felony
+            regardless of the amount of time which intervenes.</p>
+            <p>(3) Upon conviction for a Class C felony under this
+            section, the person shall be sentenced to a mandatory
+            minimum term of incarceration of 90 days, without reduction
+            for any reason.</p>
+            <p>Oregon Laws 2021 Ch. 480, Sec. 2</p>
+            <p><strong>[End 2022 Update]</strong></p>
+            <h2
+            id="c._differences_between_ors_813.010_5_and_813.011"><strong>C.
+            Differences between ORS 813.010 (5) and
+            813.011</strong></h2>
+            <p>ORS 813.010 (5) requires three prior convictions, not
+            including DUII-lite for defendants under 21, and only
+            applies to offenses in a motor vehicle.</p>
+            <p>ORS 813.011 requires two prior convictions within ten
+            years of the current offense, or a prior conviction under
+            this section, and it carries a 90-day minimum jail sentence.
+            Whether DUII-lite can be a prior conviction is
+            unresolved.</p>
+            <p>Under either statute, prior convictions can include
+            Boating Under the Influence, Pedaling Under the Influence,
+            or other variations, from Oregon or another
+            jurisdiction.</p>
+            <h2 id="iii._pretrial"><strong>III. Pretrial</strong></h2>
+            <h2 id="a._challenging_prior_convictions"><strong>A.
+            Challenging Prior Convictions</strong></h2>
+            <p>One of the most important things counsel can do for a
+            felony DUII defendant is to exclude, suppress, or otherwise
+            nullify the prior conviction so those priors are no longer
+            an element of the felony DUII. For purposes of the current
+            DUII charge being a felony, the prior convictions are
+            measured from the date of <em>conviction</em> of the priors
+            to the date of <em>incident</em> on the current charge.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">ORS
+            136.434</a> and ORS 813.328 are the two guidelines. Counsel
+            should familiarize themselves with these statutes and the
+            subsequent case law before moving forward. If the prior
+            conviction is for an out-of-state charge then compare the
+            elements to Oregon’s DUII. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=6911857466307072683&amp;q=State+v.+Guzman,+366+Or+18+(2019&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Guzman,</em> 366 Or 18 (2019)</a><em>.</em></p>
+            <p>Note: ORS 813.328 (1) A defendant who challenges the
+            validity of prior convictions alleged by the state as an
+            element of felony driving while under the influence of
+            intoxicants must give notice of the intent to challenge the
+            validity of the prior convictions at least seven days prior
+            to the first date set for trial on the felony charge. (See
+            Appendix A First Date = First Trial Setting.)</p>
+            <p><strong>1. Validity of a Prior Conviction</strong></p>
+            <p>To be used as an element of the crime of DUII, each prior
+            conviction must meet the Oregon standard for a valid
+            conviction. Although uncounseled pleas are becoming far less
+            frequent, they still occur. Under <a
+            href="http://scholar.google.com/scholar_case?q=McKenzie,+195+Or+App+318+(2004&amp;hl=en&amp;as_sdt=4,38&amp;case=13669159485185433252&amp;scilh=0"><em>State
+            v. McKenzie,</em> 195 Or App 318 (2004<em>)</em></a>, the
+            Court of Appeals found that Oregon law requires that “an
+            uncounseled guilty plea be preceded by a knowing waiver of
+            counsel that is based on an awareness by the defendant of
+            the risks of self-representation.” In Oregon, under <a
+            href="http://scholar.google.com/scholar_case?q=Meyrick,+313+Or+125+%25281992%2529,+&amp;hl=en&amp;as_sdt=4,38&amp;case=3868546510032013217&amp;scilh=0"><em>State
+            v. Meyrick,</em> 313 Or 125 (1992)</a><em>,</em> and later
+            <a
+            href="http://scholar.google.com/scholar_case?q=Reed,+247+Or+App+155+%25282011&amp;hl=en&amp;as_sdt=4,38&amp;case=13096057346249394218&amp;scilh=0"><em>State
+            v. Reed,</em> 247 Or App 155 (2011)</a>, the courts have
+            established that a presumption of a validity exists as to a
+            judgment which was unappealed, or has become final after
+            appeal. Therefore, the defendant has the burden of proving
+            by a preponderance of the evidence that the conviction is
+            invalid, then the burden shifts to the state to prove beyond
+            a reasonable doubt the validity of the prior conviction. <a
+            href="http://scholar.google.com/scholar_case?q=Luttrell,+80+Or+App+771+%25281986%2529&amp;hl=en&amp;as_sdt=4,38&amp;case=6937093988656694584&amp;scilh=0"><em>State
+            v. Luttrell,</em> 80 Or App 771 (1986)</a>; <em>see
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=Probst,+339+Or+612+%25282005%2529&amp;hl=en&amp;as_sdt=4,38&amp;case=4748958881503709322&amp;scilh=0"><em>State
+            v. Probst,</em> 339 Or 612 (2005)</a>. [Appendix B]</p>
+            <p>A conviction is “invalid” if it is unlawful: obtained in
+            violation of the right to counsel, jury, or the like.
+            <em>See, e.g.,</em> <a
+            href="https://scholar.google.com/scholar_case?case=3025909618011781123&amp;q=State+v.+Jacob,+208+Or+App+62+(2006&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Jacob</em>, 208 Or App 62, 67 (2006</a>), aff’d, 344 Or
+            181 (2008); <a
+            href="https://scholar.google.com/scholar_case?case=4748958881503709322&amp;q=State+v.+Probst,+339+Or+612,++(2005)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Probst,</em> 339 Or 612, 618 (2005)</a> (using “valid” to
+            mean “lawful”). Accordingly, the seven days’–notice
+            provision probably does not apply to an argument that a
+            conviction is not for a statutory counterpart of DUII or is
+            not the defendant.</p>
+            <p><strong>2. Other Jurisdictions</strong></p>
+            <p>Any out-of-state prior conviction must meet the same
+            requirements of a “statutory counterpart” to Oregon’s DUII
+            to be counted as a prior conviction. <a
+            href="http://scholar.google.com/scholar_case?q=Ortiz,+202+Or+App+695+%25282005%2529&amp;hl=en&amp;as_sdt=4,38&amp;case=15492066100522438572&amp;scilh=0"><em>State
+            v. Ortiz,</em> 202 Or App 695 (2005)</a>. At the end of
+            2019, the Oregon Supreme Court provided clarification on
+            what constitutes a statutory counterpart in <a
+            href="https://scholar.google.com/scholar_case?case=6911857466307072683&amp;q=State+v.+Guzman,+366+Or+18+(2019)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Guzman</em>, 366 Or 18 (2019)</a>. Guzman restricts the
+            prior court rulings on what counts as a counterpart and uses
+            a “close element matching” process to make the
+            determination. Examine the out of state prior conviction to
+            see how the elements match the Oregon legal standard. The
+            standard in Colorado of driving while impaired to the
+            slightest degree was sufficiently dissimilar to Oregon’s
+            noticeable/perceptible degree standard and therefore did not
+            count as a prior conviction. Likewise, a Kansas statute that
+            said driving or attempting to drive while impaired was not
+            the statutory counterpart to Oregon because attempted DUII
+            is not the same as DUII in Oregon.</p>
+            <p>A conviction for a non-DUII offense, such as a “wet
+            reckless,” would not be a statutory counterpart.
+            <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=10004292231806155052&amp;q=Martini+v.+DMV,+278+Or+App+172+(2016&amp;hl=en&amp;as_sdt=4,38"><em>Martini
+            v. DMV</em>, 278 Or App 172 (2016)</a>.</p>
+            <p>Further, a non-conviction, such as a diversion under
+            local law, might not be a conviction for purposes of an
+            Oregon DUII. <em>Compare</em> <a
+            href="https://scholar.google.com/scholar_case?case=12159686732737176646&amp;q=Molette+v.+Nooth+291+Or+App+426+(2018&amp;hl=en&amp;as_sdt=4,38"><em>Molette
+            v. Nooth,</em> 291 Or App 426 (2018)</a> (Texas
+            unadjudicated judgment is not conviction of sex offense) and
+            <a
+            href="https://cdm17027.contentdm.oclc.org/digital/collection/p17027coll5/id/7585/rec/1"><em>State
+            v. Donathan,</em> 281 Or App 718 (2016)</a> (California
+            no-contest plea leading to probation is conviction of
+            DUII).</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=8307850658537201671&amp;q=State+v.+Davis,%C2%A0313+Or+246+(1992)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Davis, </em>313 Or 246 (1992)</a>, the Oregon Supreme
+            Court ordered the exclusion of evidence that had been
+            obtained by authorities in another state in a manner that
+            would have violated the Oregon Constitution had it occurred
+            in Oregon. By contrast, in <a
+            href="https://scholar.google.com/scholar_case?case=13521064174020206902&amp;q=State+v.+Graves,%C2%A0150+Or+App+437+(1997)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Graves, </em>150 Or App 437 (1997)</a>, <em>rev
+            den</em>, 326 Or 507 (1998), the court admitted a
+            court-martial conviction, explaining that “the validity of
+            an out-of-state conviction…should be tested under the
+            constitutional requirements of that jurisdiction or of the
+            federal constitution.” In <a
+            href="https://scholar.google.com/scholar_case?case=13669159485185433252&amp;q=State+v.+McKenzie,+195+Or+App+318+(2004)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McKenzie,</em> 195 Or App 318 (2004)</a>, the Court of
+            Appeals noted the tension between <em>Davis</em> and
+            <em>Graves</em> but did not resolve it, holding that the
+            out-of-state evidence in that case was not admissible under
+            either standard.</p>
+            <p>Cases like <em>Molette</em> and <em>McKenzie</em> show
+            how important it is for defense counsel to understand the
+            out-of-state record and to choose how to attack it.
+            <em>Molette,</em> a post-conviction case, found counsel to
+            have been ineffective in failing to attack an out-of-state
+            conviction.</p>
+            <p>If one or more of defendant’s out-of-state convictions is
+            not, or is arguably not, a statutory counterpart, that
+            should probably be raised as a motion in limine prior to
+            trial. If that motion is unsuccessful, it appears to be a
+            jury question. See Appendix C for a list of statutory
+            counterparts that have been litigated.</p>
+            <p><a
+            href="https://olis.oregonlegislature.gov/liz/2020R1/Downloads/MeasureDocument/SB1503/A-Engrossed"><span class="underline">Senate
+            Bill 1503</span></a>, which is still under legislative
+            review at the time the 2020 edition is being prepared, would
+            add a definition of “statutory counterpart” to the Oregon
+            Vehicle Code. The text of the proposed bill is this:
+            “Statutory counterpart” means a statute from another
+            jurisdiction that has the same use, role or characteristics
+            as an identified Oregon statute notwithstanding differences
+            in substantive scope between the statutes. Another
+            jurisdiction’s statute need not be the same or nearly the
+            same as an identified Oregon statute to be considered a
+            statutory counterpart.</p>
+            <p><strong>3. Non-criminal Offenses</strong></p>
+            <p>No Oregon court has discussed whether an out-of-state
+            violation can be used to increase the penalty for an Oregon
+            DUII. The lack of any reported opinion suggests that it
+            doesn’t come up much.</p>
+            <h2 id="b._negotiating_a_misdemeanor"><strong>B. Negotiating
+            a Misdemeanor</strong></h2>
+            <p>Pursuant to ORS 813.170, the defendant may not plead
+            guilty to another offense when they are charged with DUII.
+            What this statute does <em>not</em> say is that a defendant
+            may not plea to a misdemeanor DUII when they have been
+            charged with a felony DUII. Some of the factors that
+            prosecutors will look for include age of the prior
+            convictions, relative criminal history, success in
+            treatment, high risk driver’s courses, etc. Although it can
+            be very difficult, use all these positive factors to help
+            negotiate the misdemeanor DUII.</p>
+            <h2 id="iv._trial"><strong>IV. Trial</strong></h2>
+            <p>The elements of a felony DUII trial are identical to the
+            elements in a misdemeanor DUII trial, except that, lacking a
+            stipulation, the state has to prove the prior convictions.
+            If counsel is unable to exclude, suppress, or otherwise
+            nullify the prior conviction, be prepared to either
+            stipulate or face their existence head-on with the jury.</p>
+            <h2 id="a._to_stipulate_or_not_to_stipulate"><strong>A. To
+            Stipulate or Not to Stipulate</strong></h2>
+            <p>If the defendant does not stipulate to the existence of
+            prior convictions pursuant to ORS 813.326 (3), the
+            prosecutor will be required to prove them beyond a
+            reasonable doubt. The most common way is via certified
+            copies of the judgment presented to the jury pursuant to <a
+            href="http://www.oregonlaws.org/ors/40.510">OEC 902</a>.
+            These judgments will be admitted and allowed for the jury to
+            consider. With prior convictions admitted and under
+            consideration by the jury, the defense of your case just
+            became far more difficult.</p>
+            <p>But if the state doesn’t have certified judgments of
+            conviction, or if the convictions aren’t under the
+            defendant’s exact name, consider whether not to stipulate.
+            <em>C.f.,</em> <a
+            href="https://scholar.google.com/scholar_case?case=11190788950872390434&amp;q=State+v.+Garrett,+281+Or+281+(1978)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Garrett,</em> 281 Or 281 (1978)</a> (under former
+            statute, evidence regarding Gene Garrett was not sufficient
+            to convict Eugene Garrett). The state’s failure to prove the
+            requisite prior convictions can be challenged by MJOA. <a
+            href="https://cdm17027.contentdm.oclc.org/digital/collection/p17027coll5/id/7585/rec/1"><em>State
+            v. Donathan,</em> 281 Or App 718 (2016)</a>.</p>
+            <h2 id="b._jury_unanimity"><strong>B. Jury
+            Unanimity</strong></h2>
+            <p>As of this writing, <em>Ramos v. Louisiana</em>, docket
+            no. 18-5924, is pending in the US Supreme Court. The issue
+            in <em>Ramos</em> is “Whether the 14th Amendment fully
+            incorporates the Sixth Amendment guarantee of a unanimous
+            verdict.”</p>
+            <p>Until <em>Ramos</em> is decided, counsel should consider
+            filing a motion for unanimous jury and objecting to a
+            nonunanimous verdict in every felony case. Also be sure to
+            poll the jury after a verdict is reached to document on the
+            record whether the verdict was unanimous or not.</p>
+            <h1 id="part_3_boats_bikes_and_other_vehicles"><strong>Part
+            3 Boats, Bikes and Other Vehicles</strong></h1>
+            <h2 id="boating_by_mark_gorski"><strong>Boating, <em>By Mark
+            Gorski</em></strong></h2>
+            <h2 id="i._general_information"><strong>I. General
+            Information</strong></h2>
+            <p>Boating Under the Influence of Intoxicants is addressed
+            in <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors830.html"><span class="underline">ORS
+            830.325</span></a>. Under that statute, no person may
+            “operate, propel or be in actual physical control of any
+            boat on any waters” of Oregon while “under the influence of
+            an intoxicating liquor of controlled substance.” ORS
+            830.325(1). Additionally, “no owner of a boat or person in
+            charge or in control of a boat shall authorize or knowingly
+            permit the boat to be propelled or operated on any waters of
+            this state by any person who is under the influence of an
+            intoxicating liquor or a controlled substance.” <em>Id.</em>
+            (2).</p>
+            <p>A “boat” is defined as “every description of watercraft,
+            including a seaplane on the water and not in flight, used or
+            capable of being used as a means of transportation on the
+            water, but does not include boathouses, floating homes, air
+            mattresses, beach and water toys or single inner tubes.” ORS
+            830.005(2). <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lambert,+227+Or+App+614+%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=6595029803146133528&amp;scilh=0"><span class="underline"><em>State
+            v. Lambert</em>, 227 Or App 614 (2009)</span></a>. An
+            inflatable raft is a boat even if it has no oarlocks or
+            ropes. Floating on it may be operating it.</p>
+            <p>Effective January 1, 2020, <a
+            href="https://olis.oregonlegislature.gov/liz/2019R1/Downloads/MeasureDocument/HB2079/Enrolled">HB
+            2079</a> amends ORS 830.315 to rename the crime of Reckless
+            Operation of a Boat to Reckless Boating and updates the
+            mental state of “recklessness” to be consistent with the
+            vehicle code. HB 2079 also amends other provisions of
+            Chapter 830 by requiring a one-year suspension of a person’s
+            boating safety education card on conviction of Reckless
+            Boating or BUII, and a three-year suspension if the person
+            is arrested for BUII and willfully refuses a breath, urine
+            or non-testimonial field sobriety test. The bill also makes
+            a person ineligible to apply for title, registration or
+            numbering during a suspension period. More information on HB
+            2079 is provided below.</p>
+            <p>Practice Tip</p>
+            <p>An inflatable mattress is not a boat. A water toy is not
+            a boat. Try to get your inflatable defined as either a
+            mattress or a toy.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bilsborrow,+230+Or+App+413,++%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=15253499888490603167&amp;scilh=0"><span class="underline"><em>State
+            v. Bilsborrow</em>, 230 Or App 413 (2009)</span></a>.
+            Evidence of defendant’s refusal to take a urine test is not
+            relevant under Implied Consent because defendant was on a
+            raft, not a boat. It was not error to give the refusal
+            instruction because defendant’s refusal is generally
+            relevant to the issue of whether or not he was under the
+            influence.</p>
+            <p>Under ORS 830.510(2), “not less than .08 percent of
+            weight of alcohol in a person’s blood constitutes being
+            under the influence of intoxicating liquor.” If it is shown
+            by chemical analysis of breath or blood that the weight of
+            alcohol was less than .08 percent, then it is “indirect
+            evidence that may be used with other evidence, if any, to
+            determine whether or not the person was under the influence
+            of intoxicants.” ORS 830.510(1).</p>
+            <h2 id="ii._stops_and_seizure"><strong>II. Stops and
+            Seizure</strong></h2>
+            <p>Under ORS 830.035(1) sheriffs and other peace officers
+            are empowered to enforce the statutes and regulations of the
+            State Marine Board and “may stop any boat and direct it to a
+            suitable pier or anchorage for boarding.” This statute does
+            not create a maritime exception to search and seizure laws.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lecarros,+187+Or+App+105,+66+P3d+543+%282003&amp;hl=en&amp;as_sdt=4,38&amp;case=10513162524429442981&amp;scilh=0"><span class="underline"><em>State
+            v. Lecarros</em>, 187 Or App 105, 66 P3d 543
+            (2003)</span></a> (rejecting the argument that the history
+            of U.S. and Oregon constitutions creates a maritime
+            exception to search and seizer protections) <em>review
+            denied</em>. In that case, deputy sheriffs arrested Lecarros
+            for a BUII following a safety check of his boat. The court
+            found that ORS 830.035(1) provided sufficient legal
+            authority for the seizure, but the absence of rules to limit
+            the discretion of seizures by deputies made the seizure
+            unconstitutional: “So long as ORS 830.035(1) is not
+            supplemented by rules governing its enforcement so as to
+            eliminate officer discretion, it cannot lawfully authorize
+            warrantless, suspicionless seizures.” <em>Id.</em></p>
+            <p>ORS 830.990 has been amended as of 2009 to include
+            authority for the Department of Fish and Wildlife to set up
+            check stations to look for illegal invasive species on board
+            boats.</p>
+            <p>Reasonable suspicion for a stop is based upon a
+            totality-of-the-circumstances test. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Busacker,+154+Or+App+528&amp;hl=en&amp;as_sdt=4,38&amp;case=10703451191878638124&amp;scilh=0"><span class="underline"><em>State
+            v. Busacker</em>, 154 Or App 528, 962 P2d 723
+            (1998)</span></a>, <em>review denied</em>; citing <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors131.html"><span class="underline">ORS
+            131.605(4)</span></a>. In that case, Busacker was arrested
+            for BUII after officers had previously observed drinking on
+            his boat, though not by him, and after the officers received
+            reports of intoxication from Naval Officers. The court found
+            that the previous observations and the “tip” from the Navy
+            personnel were sufficient for reasonable suspicion.
+            <em>Id.</em></p>
+            <h2 id="iii._field_sobriety_tests"><strong>III. Field
+            Sobriety Tests</strong></h2>
+            <p>Field sobriety tests as a component of BUII cases are
+            often overlooked by both the police and defense attorneys.
+            The National Association of State Boating Law Administrators
+            (NASBLA), in a successful grant application to the U.S.
+            Coast Guard, noted the following:</p>
+            <p>A battery of SFSTs was validated for traffic enforcement
+            over two decades ago and since has become accepted
+            nationwide as a means of demonstrating probable cause to
+            arrest suspected impaired drivers. However, no such
+            definitive validation has ever been conducted for SFSTs used
+            on suspected impaired boat operators. In fact, the
+            Horizontal Gaze Nystagmus (HGN) field sobriety test is the
+            only truly validated SFST that can be administered to BUI
+            suspects by marine law enforcement officer while afloat.</p>
+            <p>Despite the lack of validation, many marine enforcement
+            agencies routinely teach their officers to use these same
+            highway-based SFSTs to screen boat operators, a purpose for
+            which they were not validated. Over the course of the last
+            20 years literally thousands of BUI cases have been
+            prosecuted using SFSTs designed and validated for use on
+            highways, but borrowed as proxies for use on our waterways.
+            Unfortunately, the primary battery of SFSTs approved by the
+            National Highway Traffic Safety Administration (NHSTA) for
+            use in highway traffic enforcement is based on the
+            assessment of human motor skills linked to one’s sense of
+            balance.</p>
+            <p>The grant application is full of excellent information
+            that illustrates the weaknesses in BUII prosecutions,
+            especially with regard to the administration of field
+            sobriety tests. NASBLA’s application recounts the history of
+            studies conducted concerning field sobriety tests in a
+            marine environment, concluding with a description of the
+            research to date:</p>
+            <p>In 1993, Dr. Marceline Burns (“A Study of Field Sobriety
+            Tests in the Marine Environment”), of the Southern
+            California Research Institute, conducted a preliminary study
+            in an attempt to evaluate a number of accepted field
+            sobriety tests and their use in a marine environment. The
+            results of this study indicated the Rhomberg-type tests of
+            subtraction and backward counting variations were not
+            alcohol-sensitive enough for use as FSTs. Three tests showed
+            significant promise as on-boat FST and were identified as
+            the finger to nose, 30-second time estimation and the skip
+            alphabet. As a note, horizontal gaze nystagmus (HGN) was
+            also evaluated in the marine environment, but because it is
+            neural and not vestibular in origin (vestibular impairment
+            may include dizziness, imbalance, vertigo, nausea, and fuzzy
+            vision), there were no perceived issues in its use as an
+            on-boat FST. Recently, HGN was validated for both sitting
+            and prone positions, thus increasing its validity as an
+            on-boat predictor of alcohol use in the marine
+            environment.</p>
+            <p>In 2011, after a three-year study funded by the Coast
+            Guard, NASBLA – along with the SCRI – validated four seated
+            field sobriety tests for use afloat. Four seated tests have
+            been approved for detection of impairment (defined as BAC
+            greater than or equal to .08%: <em>horizontal gaze
+            nystagmus; finger to nose; palm pat, and hand
+            coordination.</em></p>
+            <p>“<em>Horizontal Gaze Nystagmus</em> – The HGN test
+            requires three separate checks, administered independently
+            to each eye. Four or more clues indicate impairment due to
+            BAC greater than or equal to .08%.</p>
+            <p><em>Finger to Nose</em> – The FTN test requires the
+            subject to bring the tip of the index finger to touch the
+            tip of the nose. It is performed with eyes closed and head
+            tilted slightly back. Nine or more clues indicate impairment
+            due to BAC greater than or equal to .08%.</p>
+            <p><em>The Palm Pat</em> – The PP test requires the subjects
+            to place one hand extended, palm up, out in front of them.
+            The other hand is placed on top of the first with the palm
+            facing down. The top hand rotates 180 degrees and pats the
+            bottom hand, alternating between the back of the hand and
+            the palm of the hand. The bottom hand remains stationary.
+            The subjects count out loud in relation with each pat. Two
+            or more clues indicate impairment due to BAC greater than or
+            equal to .08%.</p>
+            <p><em>The Hand Count</em> – The HC test requires the
+            subjects to perform a series of tasks with their hands. It
+            is very loosely adapted from the Walk-And-Turn test
+            performed on land. Three or more clues indicate impairment
+            due to BAC greater than or equal to .08%.”</p>
+            <p>Fiorentino, Dary D., <a
+            href="http://www.operationdrywater.org/documents/AAP-Validation-of-sobriety-tests-for-the-marine-environment-030511.pdf"><span class="underline">“Validation
+            of Sobriety Tests for the Marine Environment,”</span></a>
+            <em>Accident Analysis and Prevention</em> November 2010.
+            (See Appendix).</p>
+            <h2 id="iv._breathalyzer_tests"><strong>IV. Breathalyzer
+            Tests</strong></h2>
+            <p>A person operating a boat on any waters of Oregon “shall
+            be deemed to have given consent to submit to chemical tests”
+            of their breath for “purposes of determining the alcoholic
+            content” of their blood, provided they are arrested “in
+            violation ORS 830.325 or of a municipal ordinance.” ORS
+            830.505(1).</p>
+            <p>As of January 1, 2020, <a
+            href="https://olis.oregonlegislature.gov/liz/2019R1/Downloads/MeasureDocument/HB2079/Enrolled">HB
+            2079</a> establishes an implied consent process for BUII and
+            attempts to address <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=State+v.+Banks,+364+Or+332+(2019&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Banks</em>, 364 Or 332 (2019)</a>, by requiring the
+            officer to first ask for consent to take a chemical test,
+            and upon refusal must ask for only “physical cooperation”
+            and inform the individual of the consequences of a refusal.
+            Refusal is deemed willful if a person is informed about
+            rights and consequences concerning the test under ORS
+            830.505 and 830.545 and refuses to physically submit to the
+            test. The legislation allows for a defense if the person
+            provides documentation from a medical doctor stating they
+            were physically unable to provide a sample at the time of
+            the incident. The bill also adds a prohibition on boating
+            under the influence of an inhalant.</p>
+            <p>Officers may request a test if they have “reasonable
+            grounds to believe that the person arrested was operating a
+            boat while under the influence of intoxicants while in
+            violation of ORS 830.325 or of a municipal ordinance.”
+            <em>Id</em>.</p>
+            <p>The person being asked to take the test “shall be
+            informed of rights and consequences as described in ORS
+            830.545.” <em>Id.</em> Under ORS 830.545 “the information
+            about rights and consequences shall be:</p>
+            <p>(a) Operating a boat under the influence of intoxicants
+            is a crime in Oregon and the person is subject to criminal
+            penalties if the test shows that the person is under the
+            influence of intoxicants. If the person refuses the test or
+            fails, evidence of the refusal or failure may also be
+            offered against the person.</p>
+            <p>(b) The person fails the test if the test shows the
+            person is under the influence of intoxicants under Oregon
+            law.</p>
+            <p>(c) If the person is convicted of operating a boat while
+            under the influence of intoxicants, the person may not
+            operate a boat for a period of time following the
+            conviction.</p>
+            <p>(d) If the person is convicted of operating a boat while
+            under the influence of intoxicants, the person is not
+            eligible to apply for any certificate of title, registration
+            or numbering and all certificates of title, registration and
+            numbering necessary to lawfully operate a boat on Oregon
+            waters shall be canceled for at least a year. The
+            ineligibility to apply for certificates or the cancellation
+            of the certificates shall be substantially longer if the
+            person refuses the test.</p>
+            <p>(e) After taking the test, the person shall have a
+            reasonable opportunity, upon request, for an additional
+            chemical test for blood alcohol content to be performed at
+            the person’s own expense by a qualified individual of the
+            person’s choosing.</p>
+            <p>ORS 830.545(2)(a)-(e).</p>
+            <p>A test will not be administered if the person under
+            arrest refuses the request for a test after she or he “has
+            been informed of rights and consequences as described in ORS
+            830.545.” ORS 830.505(2).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bilsborrow,+230+Or+App+413,++%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=15253499888490603167&amp;scilh=0"><span class="underline"><em>State
+            v. Bilsborrow</em>, 230 Or App 413 (2009)</span></a>.
+            Evidence of defendant’s refusal to take a urine test is not
+            relevant under Implied Consent because defendant was on a
+            raft, not a boat. It was not error to give the refusal
+            instruction because defendant’s refusal is generally
+            relevant to the issue of whether or not he was under the
+            influence. <em>See also <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bilbro,+229+Or+App+231+%282009%29&amp;hl=en&amp;as_sdt=4,38&amp;case=2889924252105370507&amp;scilh=0"><span class="underline">State
+            v. Bilbro, </span></a></em><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bilbro,+229+Or+App+231+%282009%29&amp;hl=en&amp;as_sdt=4,38&amp;case=2889924252105370507&amp;scilh=0"><span class="underline">229
+            Or App 231 (2009)</span></a>.</p>
+            <p>A person’s refusal to “submit to chemical tests of
+            breath, blood or urine as required by ORS 830.505 and
+            830.520” is admissible “in any criminal or civil action or
+            proceeding arising out of acts alleged to have been
+            committed while the person was operating a boat while under
+            the influence of intoxicating liquor or controlled
+            substances.” ORS 830.515.</p>
+            <h2 id="v._blood_and_urine_tests"><strong>V. Blood and Urine
+            Tests</strong></h2>
+            <p>The requirements for breathalyzer tests under 830.505 are
+            not intended to preclude other chemical tests. ORS 830.520.
+            With a person’s expressed consent, a peace officer may
+            obtain that person’s blood to test for alcohol, or the
+            officer may obtain the person’s blood or urine to test for a
+            controlled substance. <em>Id.</em> (1). An officer can
+            obtain those bodily fluids without the person’s consent if:
+            “(a) The peace officer has probable cause to believe that
+            the person was operating a boat while under the influence of
+            an intoxicating liquor or controlled substance and that
+            evidence of the offense will be found in the person’s blood
+            or urine; and (b) The person is unconscious or otherwise in
+            a condition rendering the person incapable of expressly
+            consenting to the test or tests requested.” <em>Id.</em>
+            (2)(a)-(b).</p>
+            <p>A “person shall be permitted upon request, at the
+            person’s own expense, reasonable opportunity” to have “any
+            licensed physician, licensed professional nurse or qualified
+            technician, chemist or other qualified person of the
+            person’s own choosing administer” a breath or blood test for
+            the purpose of determining the alcoholic content of the
+            person’s blood. Under those same requirements, a person may
+            obtain a test of their blood and/or urine for the purposes
+            of determining the presence of a controlled substance in the
+            person. ORS 830.525. The “failure or inability to obtain
+            such a test or tests… shall not preclude the admission of
+            evidence relating to a test or test taken upon the request
+            of a peace officer.” <em>Id.</em></p>
+            <h2 id="vi._administering_chemical_tests"><strong>VI.
+            Administering Chemical Tests</strong></h2>
+            <h2 id="a._definition"><strong>A. Definition</strong></h2>
+            <p>“‘Chemical Test/Chemical Analysis’ means a quantitative
+            analysis for alcohol by means of direct or indirect
+            measurement of physiochemical technique performed on a
+            sample of breath.” <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=31282"><span class="underline">OAR
+            250-010-0410</span></a>.</p>
+            <h2 id="b._breathalyzer_tests"><strong>B. Breathalyzer
+            Tests</strong></h2>
+            <p>Analysis of breath is valid under ORS 830.505, 830.520,
+            and 830.525 if it is performed by a person possessing a
+            valid permit from the Department of State Police, under ORS
+            813.160, or by the State Marine Board. ORS 830.535(1)(b).
+            The analysis must also “be performed according to the
+            methods approved by the Department of State Police under ORS
+            813.160” or by the approved methods of the State Marine
+            Board. <em>Id.</em> The State Marine Board shall prepare
+            manuals and conduct courses for peace officers throughout
+            Oregon. ORS 830.535(1)(b)(B).</p>
+            <p>For arrests under ORS 830.325, the approved machines for
+            breathalyzer tests are Intoxilyzer 8000, Intoxilyzer 5000,
+            Intoxilyzer 1400, and Drager Alcotest EPAS (Evidential
+            Portable Alcohol System) 7410 Plus. OAR 250-010-0430(3). The
+            Department of State Police and the State Marine Board can
+            approve the use of other instruments and equipment for
+            testing breath for alcohol content of the blood. OAR
+            250-010-0470.</p>
+            <p>The accuracy of breath testing equipment “shall be
+            performed by qualified personnel of “the Oregon State Police
+            Forensic Division, a state agency with appropriate
+            laboratory facilities and personnel trained in testing the
+            equipment, or an independent laboratory facility with
+            personal trained in testing such equipment. State Marine
+            Code 250-010-0460(1)(a)-(c). The testing facility “shall
+            certify the accuracy of the instrument if the accuracy test
+            performance is within a range of .01 high to .02 low from
+            the expected value of a reference sample provided by the
+            laboratory.” <em>Id.</em> (2). The testing my be done
+            on-site or by “remote telephone modem.” <em>Id.</em> (3).
+            The State Marine Board shall test and certify the accuracy
+            of the breath testing equipment used by peace officers
+            before regular use of the equipment and “at intervals of not
+            more than 90 days.” ORS 830.535(1)(b)(C).</p>
+            <p>Individuals performing a chemical analysis of breath
+            under ORS 830.505, 830.520, and 830.525 “shall sign a
+            written report of the findings of the test.” <em>Id.</em>
+            (3). If the test is done at the request of a peace officer,
+            the test must include the identification of the officer.
+            <em>Id.</em> (3). Upon the request of the person tested,
+            copies of test done in connection to ORS 830.505, 830.520,
+            and 830.525 shall be furnished to the tested person or their
+            attorney. <em>Id.</em> (4).</p>
+            <h2 id="c._blood_tests"><strong>C. Blood Tests</strong></h2>
+            <p>An analysis of a person’s blood content for alcohol is
+            valid under ORS 830.505, 830.520, and 830.525 if it is: a
+            “laboratory certified or accredited under 42 C.F.R. 493 and
+            approved for toxicology testing,” a “laboratory licensed
+            under ORS 438.110 and approved toxicology testing,” or a
+            “forensic laboratory established by the Department of State
+            Police under ORS 181.080 that is accredited by a national
+            forensic accrediting organization.” ORS
+            830.535(1)(a)(A)-(C). Chemical analysis of blood shall be
+            done in accordance to methods found “in OAR Chapter 33,
+            Division 13 of the Health Division, Department of Human
+            Resources.” OAR 250-010-0430(1).</p>
+            <p>“Only a duly licensed physician or a person acting under
+            the direction or control of a duly licensed physician” may
+            withdraw blood or pierce human tissue in conducting a
+            chemical test of the blood. <em>Id.</em> (2). If the test is
+            done at the request of a peace officer, the test must
+            include the identification of the officer. <em>Id.</em> (3).
+            Upon the request of the person tested, copies of tests done
+            in connection to ORS 830.505, 830.520, and 830.525 shall be
+            furnished to the tested person or their attorney.
+            <em>Id.</em> (4).</p>
+            <h2 id="vii._penalties"><strong>VII. Penalties</strong></h2>
+            <p>A violation of ORS 830.325 is a Class A misdemeanor. ORS
+            830.990(6). Additionally, following a conviction the courts
+            shall:</p>
+            <p>(a) Order the person not to operate a boat for a period
+            of one year;</p>
+            <p>(b) Order the person to complete a boating safety course
+            approved by the State Marine Board; and</p>
+            <p>(c) Include in the record of conviction a finding whether
+            the person willfully refused the request of a peace officer
+            to submit to chemical testing of the breath or a field
+            sobriety test pursuant to ORS 830.505 and 830.550. For
+            purposes of this subsection, a person shall be found to have
+            willfully refused the request if the person was informed
+            about rights and consequences concerning the test under ORS
+            830.505 and 830.545 and refused to submit to the test.</p>
+            <p>ORS 830.994(1)(a)-(c).</p>
+            <h2 id="viii._officer_reports"><strong>VIII. Officer
+            Reports</strong></h2>
+            <p>Within ten days of a BUII arrest, the arresting officer
+            must submit an Operating Under the Influence Report and
+            Consent Report to the State Marine Board. State Marine Code
+            250-010-0420. ORS 830.505 requires “within the time required
+            by the State Marine Board” that an officer report “whether
+            the person refused to submit to a test” and if “the person
+            was informed of rights and consequences as described under
+            ORS 830.545.” ORS 830.505(3)(a)-(b).</p>
+            <h2 id="ix._miscellaneous"><strong>IX.
+            Miscellaneous</strong></h2>
+            <p>Diversion. Most counties do <em>not</em> allow diversion
+            in a BUII, taking the position that since it is not
+            specifically authorized by statute, it should not be
+            allowed. As of this writing, Jackson and Douglas counties
+            are the only counties that do allow diversions for BUII’s.
+            Check with the DA’s office or the court clerk or trial court
+            administrators office to be sure of current policy.</p>
+            <h2 id="x._other_resources"><strong>X. Other
+            Resources</strong></h2>
+            <p>Oregon State Marine Board</p>
+            <p>• <a
+            href="https://www.oregon.gov/OSMB/pages/index.aspx">https://www.oregon.gov/OSMB/pages/index.aspx</a></p>
+            <p>National Association of State Boating Law
+            Administrators</p>
+            <p>• <a
+            href="http://nasbla.org/i4a/pages/index.cfm?pageid=3433">http://nasbla.org/i4a/pages/index.cfm?pageid=3433</a></p>
+            <h2
+            id="bikes_by_shannon_m._mortimer_bruce_tarbox"><strong>Bikes,
+            <em>By Shannon M. Mortimer &amp; Bruce
+            Tarbox</em></strong></h2>
+            <p>So your client rolls in to your office and lets you know
+            they got a DUII on a bicycle.</p>
+            <p>How can this happen, they ask. It was just a bike. Well,
+            here is your primer on bicycles and DUIIs.</p>
+            <h2
+            id="i._general_information_can_somebody_be_charged_with_duii_on_a_bicycle_yes."><strong>I.
+            General Information – Can somebody be charged with DUII on a
+            bicycle? Yes.</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors814.html"><span class="underline">814.400</span></a>
+            Application of vehicle laws to bicycles</p>
+            <p>(1) Every person riding a bicycle upon a public way is
+            subject to the provisions applicable to and has the same
+            rights and duties as the driver of any other vehicle
+            concerning operating on highways, vehicle equipment and
+            abandoned vehicles, except:</p>
+            <p>(a) Those provisions which by their very nature can have
+            no application.</p>
+            <p>(b) When otherwise specifically provided under the
+            vehicle code.</p>
+            <p>(2) Subject to the provisions of subsection (1) of this
+            section:</p>
+            <p>(a) A bicycle is a vehicle for purposes of the vehicle
+            code; and</p>
+            <p>(b) When the term ““vehicle”” is used the term shall be
+            deemed to be applicable to bicycles.</p>
+            <p>(3) The provisions of the vehicle code relating to the
+            operation of bicycles do not relieve a bicyclist or motorist
+            from the duty to exercise due care. [1983 c.338 §§697; 1985
+            c.16 §§335]</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Woodruff,+81+Or+App+484+%281986&amp;hl=en&amp;as_sdt=4,38&amp;case=17367420274271599144&amp;scilh=0"><span class="underline"><em>State
+            v. Woodruff</em>, 81 Or App 484 (1986)</span></a>.</p>
+            <p>Referring to former <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors487.html"><span class="underline">ORS
+            487.005(5)</span></a> definition of “driver” as “any person
+            in physical control of a vehicle” and using the former
+            chapter 487 definition of vehicle that includes bicycles,
+            <em>Woodruff</em> holds that the DUII statute (now <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html"><span class="underline">813.010</span></a>)
+            “applies to bicyclists.” <em>Id</em> at 487.</p>
+            <p>This application of the DUII statute to bikes implicates
+            the standards that the state must meet in order to prove a
+            DUII case; either a BAC of .08% or greater at the time of
+            operation of the bicycle or that the bicyclist is under the
+            influence of 1) intoxicating liquor, 2) a controlled
+            substance, or 3) a combination of alcohol and a controlled
+            substance such that the person’s physical or mental
+            faculties are adversely affected by the intoxicants to a
+            noticeable and perceptible degree.</p>
+            <p>Effective January 1, 2020, <a
+            href="https://olis.oregonlegislature.gov/liz/2019R1/Downloads/MeasureDocument/SB998/Enrolled">SB
+            998</a> amends ORS Chapter 814 to permit a bicyclist
+            approaching an intersection controlled by a stop sign or
+            flashing red light to proceed through the intersection or
+            make a turn without stopping if the bicyclist slows to a
+            safe speed. SB 998 creates new Class D traffic violations of
+            improper entry into an intersection controlled by a flashing
+            red light or a stop sign. A violation occurs if a bicyclist
+            fails to yield to traffic within the intersection, disobeys
+            a flagger or officer, fails to exercise care to avoid an
+            accident or fails to yield right of way to a pedestrian.</p>
+            <h3 id="update_2"><strong>2024 Update</strong></h3>
+            <p><strong>Part 4 Bikes</strong></p>
+            <p><strong>I. General Information</strong></p>
+            <blockquote>
+            <p>813.010(6)(a)-(e) has now been modified in terms of
+            minimum fines, creates minimum fine of $500 for first time
+            Bicycle DUII.</p>
+            <p>Both 813.020(3) and 813.235 now read that the court “may
+            not require defendant to attend a victim impact panel” if
+            the current offense was on a bicycle that was not an
+            electric assisted bicycle.</p>
+            <p>813.400(3) provides that the mandatory license suspension
+            per ORS 809.428 or revocation per ORS 809.235 does not apply
+            for Bicycle DUIIs, unless it is an electric-assisted
+            bicycle.</p>
+            </blockquote>
+            <p><strong>[End Update]</strong></p>
+            <h2 id="ii._implied_consent_and_bicycles"><strong>II.
+            Implied Consent and Bicycles</strong></h2>
+            <h2
+            id="a._813.100__implied_consent_to_breath_or_blood_test"><strong>A.
+            813.100- Implied Consent to Breath or Blood
+            Test</strong></h2>
+            <p>(1) Any person who operates a motor vehicle upon premises
+            open to the public...shall be deemed to have given consent,
+            subject to the implied consent law, to a chemical test of
+            the person’s breath....</p>
+            <p>By the very terms of the statute, implied consent does
+            <em>not</em> apply to bicycles. If you receive a police
+            report where the officer walks through the IC paperwork with
+            your client then gets them to take the breath test, the
+            client is entitled to suppression of the BAC results.
+            <em>State v. Woodruff</em>, <em>supra</em>, makes this an
+            express holding. <em>Id</em> at 487.</p>
+            <p>Similarly, a person under arrest for a DUII-Bicycle can
+            refuse the breath test and there will not be a one year (or
+            longer) license suspension under ORS 813.420(1).</p>
+            <p>Even if you receive no IC paperwork in the police report,
+            it is worth asking your client whether there were any
+            threats or promises, express or veiled, made by the officer
+            regarding adverse consequences of refusing a breath or blood
+            test. Since IC does not apply to bicycles, there is no
+            license sanction for refusing the breath/blood test.</p>
+            <h2 id="b._warrant_for_blood_draw"><strong>B. Warrant for
+            Blood Draw</strong></h2>
+            <p>Regardless of the Implied Consent statute, an officer may
+            still seek out a warrant for a blood draw. Many of the same
+            issues that we encounter with motor vehicle DUIIs will
+            arise:</p>
+            <blockquote>
+            <p>• What did the officer swear to in their Affidavit in
+            Support of Warrant?</p>
+            <p>• Who drew the blood? 813.160(2) only allows a licensed
+            physician or person working under the direction or control
+            of a licensed physician to pierce human tissue.</p>
+            <p>• Was an iodine or betadine swap used, as opposed to an
+            alcohol swab?</p>
+            <p>• Does the lab performing the test comport with
+            813.160?</p>
+            </blockquote>
+            <h2 id="iii._bikes_and_other_statutes"><strong>III. Bikes
+            and Other Statutes</strong></h2>
+            <p><em>State v. Woodruff</em> lays the groundwork for the
+            argument that if a statute refers to “vehicle,” it will
+            apply to bicycles. See Reckless Driving <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors811.html"><span class="underline">811.140</span></a>,
+            “a person commits the offense of Reckless Driving if the
+            person recklessly drives a <em>vehicle</em>...”(emphasis
+            added). But if a statute refers to “motor vehicles,” the
+            bicycles will not fall under the statute. See Implied
+            Consent.</p>
+            <p>However, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Potter,+185+Or+App+81+%282002&amp;hl=en&amp;as_sdt=4,38&amp;case=11027246497969834870&amp;scilh=0"><span class="underline"><em>State
+            v. Potter</em>, 185 Or App 81 (2002)</span></a>, raises a
+            red flag as to the “vehicle” vs. “motor vehicle” distinction
+            as used in the Vehicle Code. In <em>Potter</em> a bicyclist
+            was convicted under 811.130 for impeding traffic. This
+            particular statute states that “a person commits the offense
+            of impeding traffic if the person drives a motor vehicle or
+            a combination of motor vehicles in a manner that impedes or
+            blocks the normal and reasonable movement of traffic.”</p>
+            <p>The Court of Appeals affirmed the trial court’s denial of
+            the bicyclist’s Motion for Judgment of Acquittal on the
+            grounds that 811.130 did apply to bicycles, express
+            reference to motor vehicles in the statute notwithstanding.
+            In reaching this conclusion the court relied on <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors811.html"><span class="underline">801.026(6)</span></a>
+            and 814.400.</p>
+            <p>801.026 lays out a list of exemptions and exceptions to
+            the vehicle code. Subsection (6) addresses bicycles:</p>
+            <p>“6) Devices that are powered exclusively by human power
+            are not subject to those provisions of the vehicle code that
+            relate to vehicles. Notwithstanding this subsection,
+            bicycles are generally subject to the vehicle code as
+            provided under ORS 814.400.” <em>See <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+184+Or+App+118+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16003909448037687770&amp;scilh=0"><span class="underline">State
+            v. Smith</span></a></em><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+184+Or+App+118+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16003909448037687770&amp;scilh=0"><span class="underline">,
+            184 Or App 118 (2002)</span></a> (a skateboard is not a
+            vehicle within the meaning of ORS 811.140 (Reckless
+            Driving)).</p>
+            <p>After engaging in a <a
+            href="http://scholar.google.com/scholar_case?q=PGE+v.+BOLI+&amp;hl=en&amp;as_sdt=4,38&amp;case=5450306107264830888&amp;scilh=0"><em><span class="underline">PGE
+            v. BOLI</span></em></a> analysis, the court concludes that,
+            since 801.026(6) exempts non-motorized vehicles from the
+            Vehicle Code except for bicycles as provided in 814.400, the
+            exception spelled out in 814.400(2)(that 814.400 does not
+            apply when otherwise provided under the Vehicle Code) would
+            be rendered meaningless were the court to find that 811.130
+            did not apply to bikes without the legislature specifically
+            exempting bicycles from the coverage of 811.130.</p>
+            <p>In other words, according to <em>Potter</em>,
+            non-motorized vehicles are exempted from the vehicle code
+            under 801.026(6) except for bicycles. In general, bikes fall
+            under the vehicle code by way of 814.400(1), unless
+            according to 814.400(1)(b) “otherwise specifically provided
+            under the vehicle code.” <em>Potter</em> seems to hold that
+            bicycles always fall under all provisions of the vehicle
+            code unless a particular statute specifically says it does
+            not apply to bicycles.</p>
+            <p>There is great conflict between <em>Potter</em> and
+            <em>Woodruff</em>. Under the <em>Potter</em> reasoning,
+            implied consent should apply to bicycles because it does not
+            specifically exempt bicycles. Extending <em>Potter</em> to
+            implied consent would lead to an absurd result because no
+            operator’s license is necessary to ride a bicycle in Oregon,
+            thus the implicit consent to take a breath test one gives to
+            the state when they receive a driver’s license simply
+            doesn’t exist when it comes to bicycles.</p>
+            <p>Should this issue come up, another angle of attack is
+            814.400(1)(a), which provides that the vehicle code applies
+            to bicycles except for “those provisions which by their very
+            nature can have no application.” This subsection was not
+            argued in <em>Potter</em>. Arguably, a provision in the code
+            that refers specifically to motor vehicles cannot by its
+            very nature apply to bicycles. Presumably, the legislature
+            knows what it is doing when it uses the more specific
+            language of “motor vehicle” versus simply “vehicle” in any
+            given provision in the vehicle code.</p>
+            <p>Please note that the conviction-based driver’s license
+            suspension enumerated at ORS 813.400 does apply to a bicycle
+            DUII. This also includes a permanent license revocation for
+            a person convicted of felony DUII on a bicycle. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Abbey,+239+Or+App+306,+245+p3d+152+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5701807464496455423&amp;scilh=0"><span class="underline"><em>State
+            v. Abbey</em>, 239 Or App 306, 245 P3d 152
+            (2010)</span></a>, Sup Ct <em>review denied</em>.</p>
+            <h2 id="iv._other_defenses"><strong>IV. Other
+            Defenses</strong></h2>
+            <h2 id="a._sidewalk_vs._street"><strong>A. Sidewalk vs.
+            Street</strong></h2>
+            <p>Was your client riding their bike on the sidewalk as
+            opposed to in the street? The vehicle code only applies to
+            those areas that are “premises open to the public.” Under
+            801.400, “premises open to the public” includes any premises
+            open to the general public for the use of motor vehicles,
+            whether the premises are publicly or privately owned and
+            whether or not a fee is charged for the use of the premises.
+            [1983 c.338 §§72]</p>
+            <p>A sidewalk, or a dedicated bike path, is not open for the
+            use of motor vehicles; the vehicle code does not apply in
+            that situation.</p>
+            <h2 id="b._balance"><strong>B. Balance</strong></h2>
+            <p>How was your client doing on their bike before they got
+            pulled over? Riding a bicycle requires not only a fair
+            amount of physical coordination, but balance as well. It
+            really is a test of divided attention and balance. Were they
+            riding along just fine prior to being stopped for not having
+            a light on their bike?</p>
+            <h2 id="v._other_resources"><strong>V. Other
+            Resources</strong></h2>
+            <p><a
+            href="http://bikeportland.org"><span class="underline">Bike
+            Portland</span></a></p>
+            <p>(<a
+            href="http://bikeportland.org">bikeportland.org</a>)</p>
+            <p><a
+            href="http://www.portlandoregon.gov/transportation/article/301187"><span class="underline">Portland
+            Bureau of Transportation Bikes and the Law
+            Section</span></a></p>
+            <p>(<a
+            href="http://www.portlandoregon.gov/transportation/article/301187">portlandoregon.gov/transportation/article/301187</a>)</p>
+            <p>State of Oregon <a
+            href="http://www.oregonbicyclelaws.com"><span class="underline">Bicycle
+            Laws</span></a> and <a
+            href="http://www.oregon.gov/ODOT/hwy/bikeped/Pages/laws_regs.aspx"><span class="underline">Regulations</span></a></p>
+            <p>(<a
+            href="http://www.oregonbicyclelaws.com">oregonbicyclelaws.com</a>
+            and <a
+            href="http://www.oregon.gov/ODOT/hwy/bikeped/Pages/laws_regs.aspx">oregon.gov/ODOT/hwy/bikeped/Pages/laws_regs.aspx</a>)</p>
+            <p><a
+            href="https://www.thestreettrust.org/"><span class="underline">The
+            Street Trust </span></a></p>
+            <p>(<a
+            href="https://www.thestreettrust.org/">thestreettrust.or</a>g
+            – redirecting the Bicycle Transportation Alliance)</p>
+            <p><a
+            href="http://www.bikeleague.org/content/bike-law-university-riding-under-influence"><span class="underline">The
+            League of American Bicyclists</span></a></p>
+            <p>(<a
+            href="http://www.bikeleague.org/content/bike-law-university-riding-under-influence">bikeleague.org/content/bike-law-university-riding-under-influence</a>)</p>
+            <h2 id="other_vehicles_by_robert_crow"><strong>Other
+            Vehicles, <em>By Robert Crow</em></strong></h2>
+            <p>A Person in a Motorized Wheelchair in a Crosswalk Is a
+            Pedestrian and Not a Driver</p>
+            <p>The court concludes that defendant—who was intoxicated
+            while operating his motorized wheelchair in a crosswalk—was
+            entitled to a judgment of acquittal for DUII. The court
+            agrees with defendant that at the time he was operating his
+            wheelchair in a crosswalk he was a pedestrian, not a driver
+            subject to the vehicle code. The court acknowledges that the
+            state’s argument, that defendant’s motorized wheelchair is a
+            vehicle, is not without some merit. The vehicle expressly
+            treats motorized vehicles as bicycles when they are operated
+            in a bicycle lane or path. Accordingly, a person in a
+            motorized wheelchair may be subject to DUII when operating
+            in a bike lane. However, the vehicle code treats persons in
+            wheelchairs as pedestrians for most other purposes and a
+            person cannot be simultaneously a pedestrian and a driver.
+            Therefore, when a person in a motorized wheelchair is
+            traveling as a pedestrian in a crosswalk, he is not subject
+            to DUII.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14708096969913627671&amp;q=State+v.+Greene,+283+Or+App+120+(2016)+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Greene</em>, 283 Or App 120 (2016)</a> (Armstrong,
+            P.J.).</p>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><a
+            href="https://olis.oregonlegislature.gov/liz/2020R1/Downloads/MeasureDocument/SB1503/A-Engrossed">https://olis.oregonlegislature.gov/liz/2020R1/Downloads/MeasureDocument/SB1503/A-Engrossed</a><a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2020 edition</p>
+            <h1 id="pretrial_motions"><strong>Pretrial
+            Motions</strong></h1>
+            <p><strong><em>By Rankin Johnson, John Robb, Rob Crow and
+            Ben Eder</em></strong></p>
+            <p>2024 Update by Simon Whang</p>
+            <h3 id="update"><strong>2024 Update</strong></h3>
+            <p>Consider a motion to suppress related to evidence arising
+            from an unlawful traffic stop:</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors811.html">ORS
+            811.370</a> – Failure to drive within lane</p>
+            <p>• <a
+            href="https://scholar.google.com/scholar_case?case=15594240240402673592&amp;q=State+v.+Little,+326+Or+App+788+(2023)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Little</em>, 326 Or App 788 (2023)</a></p>
+            <p>• A “momentary and minor deviation over a lane line is
+            not a violation of ORS 811.370.”</p>
+            <p>Contrast to:</p>
+            <p>• <a
+            href="https://scholar.google.com/scholar_case?case=7516515653878676904&amp;q=State+v.+Phillips,+325+Or+App+598+(2023)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Phillips</em>, 325 Or App 598 (2023)</a></p>
+            <p>• A police officer’s observations of a vehicle weaving
+            within its own lane provides a sufficient basis to believe
+            that the person is DUII and justifies reasonable suspicion
+            for a stop.</p>
+            <p>Consider motion to suppress related to evidence of
+            refusals of FSTs:</p>
+            <p>• <a
+            href="https://scholar.google.com/scholar_case?case=4589665089549931542&amp;q=State+v.+Hamilton,+330+Or+App+258+(2024)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hamilton</em>, 330 Or App 258 (2024)</a></p>
+            <p>• Refusals to perform FST [like refusals to perform
+            breath tests, see <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=State+v.+Banks+364+Or+332&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Banks,</em> 364 Or 332</a>, <a
+            href="https://scholar.google.com/scholar_case?case=16234937043343645265&amp;q=State+v.+Brandes+317+Or+App+672&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brandes</em>, 317 Or App 672</a>] may be admitted only if
+            state proves police request to perform tests are only a
+            request to submit to physical act/cooperation, versus
+            defendant providing consent, essentially applying Banks
+            breath test analysis to FSTs.</p>
+            <p><strong>[End Update]</strong></p>
+            <h1 id="i._general_considerations"><strong>I. General
+            Considerations</strong></h1>
+            <p>A motion is a request that the court do something. Trial
+            courts have inherent power to grant any relief required to
+            provide a fair trial. <a
+            href="http://scholar.google.com/scholar_case?q=State+ex+rel+Ricco+v.+Biggs,+&amp;hl=en&amp;as_sdt=6,38&amp;case=7756905683253151041&amp;scilh=0"><em>State
+            ex rel Ricco v. Biggs,</em> 198 Or 413, 428-429, 255 P2d
+            1055 (1953)</a>. Motions serve myriad purposes: to obtain a
+            bargaining, trial, or sentencing advantage by winning the
+            motion, to secure a favorable plea-bargain with the threat
+            of winning the motion or making the prosecutor work, to
+            preserve issues for subsequent review, or to favorably
+            dispose the court toward your client or you. Good motion
+            practice is essential to good lawyering.</p>
+            <h2
+            id="a._statutes_court_rules_and_standard_practices"><strong>A.
+            Statutes, Court Rules, and Standard Practices</strong></h2>
+            <p>You should be familiar with the Uniform Trial Court Rules
+            and Supplemental Local Rules. Many courts have local
+            practices that are not really consistent with the UTCRs and
+            SLRs, and it will be easier to follow the local practice
+            than to insist that the judge follow the SLR.</p>
+            <p>Some motion practice is also driven by statute. <em>See,
+            e.g.,</em> <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors014.html">ORS
+            14.210</a> <em>et seq.</em> (regarding motions for change of
+            judge, setting both substantive and procedural
+            requirements).</p>
+            <p>If you want to file a motion in violation of the
+            applicable rules then do so, cite to the rule and explain
+            why it doesn’t apply or will deprive your client of a fair
+            trial, and make a record. If the basis for a motion to
+            suppress only became apparent when the prosecutor provided
+            the fourth batch of discovery, file a motion to suppress,
+            explain why it is late, offer evidence if any is required
+            (such as an affidavit about when you got the discovery and
+            why it matters) and ask the court to consider the late
+            motion. The trial court has discretion to permit the late
+            filing.</p>
+            <p>If you are filing a motion to challenge the validity of
+            the prior convictions then you must send notice of intent to
+            challenge at least seven days before the first trial
+            setting. ORS 813.328. Compare the elements of any out of
+            state prior conviction under <em><a
+            href="http://scholar.google.com/scholar_case?q=ortiz&amp;hl=en&amp;as_sdt=4,38&amp;case=15492066100522438572&amp;scilh=0">State
+            v. Guzman</a><span class="underline">,
+            </span></em><span class="underline">366 Or 18
+            (2019)<em>.</em></span></p>
+            <h2 id="b._style_and_format"><strong>B. Style and
+            Format</strong></h2>
+            <p>A written motion is not a mere formal requirement so you
+            can get a hearing and make a record. Rather, a written
+            motion is an attempt to persuade the judge to do something.
+            It should be clear about what you want the judge to do, why
+            the law permits or requires the judge to do what you want,
+            and why justice and fairness are on your side. Keep it as
+            short as you can.</p>
+            <p>Read UTCR Ch. 2 on standards for pleadings; judges know
+            those rules and will notice if you don’t follow them. If the
+            motion is longer than ten pages or so, consider including
+            tables of contents and authorities. Most word processors
+            will do some or all of that automatically.</p>
+            <h2 id="c._content"><strong>C. Content</strong></h2>
+            <p>You can’t file a good motion if you don’t know the
+            applicable law and who has the burdens of production and
+            persuasion. Making a minimal showing because you don’t have
+            the burden of proof may be sufficient in the case of,
+            e.g.<em>,</em> a motion to suppress a warrantless search.
+            <em>See, e.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Taylor,+43+Or+App+589,+&amp;hl=en&amp;as_sdt=6,38&amp;case=16672165062177875603&amp;scilh=0"><em>State
+            v. Taylor,</em> 43 Or App 589, 603 P2d 1218 (1979)</a>; UTCR
+            4.060 (regarding the requirements for suppression motions).
+            But a minimal showing is probably not the most persuasive
+            way to make your argument, and hiding the ball from opposing
+            counsel is not a tactic that often succeeds. It’s better to
+            take your opportunity to frame the argument and make a
+            persuasive written showing.</p>
+            <h1 id="ii._initial_motions"><strong>II. Initial
+            Motions</strong></h1>
+            <h2 id="a._release"><strong>A. Release</strong></h2>
+            <p>Provisions for release are contained in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.230-135.290</a> and apply to all major traffic offenses.
+            ORS 135.295. These are the same release provisions for a
+            person charged with any other crime. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">ORS
+            136.290</a> requires that a defendant who has been held for
+            more than 60 days prior to trial shall be released from
+            custody unless the defendant has consented to a continuance
+            or the judge finds good cause to deny release.</p>
+            <p>Release is different in every county. Know the local
+            practice.</p>
+            <h2 id="b._bail"><strong>B. Bail</strong></h2>
+            <p>Some bail amounts are set by statute, and those amounts
+            tend to affect bail, but a judge always has the authority to
+            reduce bail for a specific defendant (except those charged
+            with murder or treason). <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sutherland,+329+Or+359&amp;hl=en&amp;as_sdt=6,38&amp;case=1798349884163452981&amp;scilh=0"><em>State
+            v. Sutherland</em>, 329 Or 359, 362, 987 P2d 501, 502
+            (1999)</a>. Like release, bail varies widely from county to
+            county, and in some counties very specific bail amounts are
+            coded information to guide later release decisions.</p>
+            <p>A judge may accept a driver’s license or AAA or other
+            automobile membership club card in lieu of bail. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors810.html">ORS
+            810.300</a> <em>et seq.</em> It is arguable that bail is
+            only a guarantee of future trial attendance, and therefore
+            bail cannot be used to coerce the defendant or be seized
+            following the defendant’s failure to comply with non-flight
+            release conditions. S<em>ee</em> <a
+            href="http://scholar.google.com/scholar_case?q=Priest+v.+Pearce,+314+Or+411&amp;hl=en&amp;as_sdt=6,38&amp;case=10387749321892911760&amp;scilh=0"><em>Priest
+            v. Pearce,</em> 314 Or 411, 413-14, 840 P2d 65, 66
+            (1992)</a>, on the right to bail. But, in practice, a
+            defendant paying bail into court should expect that the bail
+            will be connected to release agreements and will be seized
+            to pay mandatory fines, restitution, even an unrelated child
+            support. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Baker,+165+Or+App+565,&amp;hl=en&amp;as_sdt=6,38&amp;case=7944588971676982174&amp;scilh=0"><em>State
+            v. Baker,</em> 165 Or App 565, 568, 998 P2d 700 (2000)</a>
+            (applying rule.) In <em>Baker</em>, the defendant had signed
+            a release agreement permitting the seizure. It is doubtful
+            whether a judge would order release on bail with no release
+            agreement, but arguably the release-agreement requirement is
+            inconsistent with the constitutional right to bail.</p>
+            <h2 id="c._jurisdictional_issues"><strong>C. Jurisdictional
+            Issues</strong></h2>
+            <p>State, municipal and justice courts have concurrent
+            jurisdiction over misdemeanor traffic offenses such as DUII
+            (<a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors051.html">ORS
+            51.050(1), 51.070; 221.339(1)</a>), although neither
+            municipal courts <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors221.html">(ORS
+            221.339(3)</a>) nor justice courts (ORS 51.050(3)) have
+            jurisdiction to hear any felony. Some justice and municipal
+            courts are not courts of record, and in those courts the
+            defendant possesses a right to remove his or her case to
+            circuit court and must be notified of the option to remove.
+            The motion to remove must be made within ten days of
+            entering a plea in order to be valid. ORS 51.050(2); <a
+            href="http://scholar.google.com/scholar_case?q=Henderson+v.+Smith,+282+Or+109,&amp;hl=en&amp;as_sdt=6,38&amp;case=11537658923944232979&amp;scilh=0"><em>Henderson
+            v. Smith</em>, 282 Or 109, 577 P2d 504 (1978)</a>.</p>
+            <p>An appeal from not-of-record justice and municipal courts
+            is an appeal de novo to circuit court. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors157.html">ORS
+            157.010-157.020</a>; 221.359. In other words, the defendant
+            gets a second try at an acquittal or other favorable
+            result.</p>
+            <p>If the justice or municipal court is a court of record,
+            then an appeal proceeds as provided in chapter 138, as for
+            an appeal in any criminal matter.</p>
+            <h1
+            id="iii._motions_against_charging_instruments_demurrers_and_motions_in_arrest"><strong>III.
+            Motions Against Charging Instruments: Demurrers and Motions
+            in Arrest</strong></h1>
+            <p>A demurrer is a facial attack on the adequacy of the
+            charging instrument. A motion in arrest of judgment is a
+            post-trial demurrer, with fewer grounds available and a
+            stricter standard. ORS 135.630 (regarding demurrers); ORS
+            136.500 (regarding motions in arrest of judgment). Demurrers
+            and motions in arrest are based solely on the charging
+            instrument. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Davis,+1+Or+App+285,+&amp;hl=en&amp;as_sdt=6,38&amp;case=17345870291972201707&amp;scilh=0"><em>State
+            v. Davis</em>, 1 Or App 285, 290, 462 P2d 448, 451
+            (1969)</a>. But see <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Shadley/Spencer/Rowe,+16+Or+App+113,+&amp;hl=en&amp;as_sdt=6,38&amp;case=6598167694774828075&amp;scilh=0"><em>State
+            v. Shadley/Spencer/Rowe</em>, 16 Or App 113, 517 P2d 324
+            (1973)</a> (discovery can clarify vague terms in the
+            charging instrument). If you think that the discovery
+            creates a demurrable issue, attach the discovery to your
+            demurrer and explain how you think the discovery modifies
+            the charging instrument.</p>
+            <h2 id="a._formal_or_technical_issues"><strong>A. Formal or
+            Technical Issues</strong></h2>
+            <p>The formal requirements for a complaint appear in <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors133.html">ORS
+            133.015</a>; for a citation, in ORS 133.069; and for an
+            indictment, in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors132.html">ORS
+            132.510-132.580</a>; 135.711-135.740. Technical errors can
+            lead to dismissal, so it’s worth knowing the requirements
+            and demurring if they are not met. If the DUII charging
+            instrument does not explicitly state controlled substances
+            and it is a DUII for controlled substances or combination,
+            you don’t want to raise this pretrial.</p>
+            <h2 id="b._substantive_issues"><strong>B. Substantive
+            Issues</strong></h2>
+            <p>In addition to the formal requirements, a charging
+            instrument may be subject to demurrer if it does not allege
+            all the elements, or if it alleges multiple unrelated
+            offenses.</p>
+            <p>It is hard to win an argument that an accusatory
+            instrument is indefinite. <em>See, e.g</em><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Molver&amp;hl=en&amp;as_sdt=6,38&amp;case=7911953270729511010&amp;scilh=0"><em>.,
+            State v. Molver,</em> 233 Or App 239, 247, 225 P3d 136
+            (2010)</a> (listing authorities). Nonetheless, the defendant
+            is entitled to sufficient information to make a defense.
+            Article I, section 11, of the Oregon Constitution provides
+            that “in all criminal prosecutions, the accused shall have
+            the right to demand the nature and cause of the accusation
+            against him.” The Due Process Clause contains a similar
+            guarantee. <em>State v. Smith,</em> 182 Or 497, 500-01, 188
+            P2d 998 (1948); <a
+            href="http://scholar.google.com/scholar_case?q=Russell+v.+United+States,+369+US+749,+82+S+Ct+1038,+8+L+Ed+2d+240+%281962&amp;hl=en&amp;as_sdt=3,38&amp;case=14634095171418512820&amp;scilh=0"><em>Russell
+            v. United States</em>, 369 US 749, 82 S Ct 1038, 8 L Ed 2d
+            240 (1962)</a>.</p>
+            <p>Whether multiple offenses can be joined in a single
+            accusatory instrument is a complex, fact-dependent question.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=campbell,+354+Or+375,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1608364165056524560&amp;scilh=0"><em>State
+            v. Campbell</em>, <em>review dismissed as improvidently
+            granted,</em> 354 Or 375, 377, 312 P3d 511 (2013)</a>
+            (Justice Walters, concurring) (discussing issue, citing
+            authorities). When a DUII investigation leads to the
+            discovery of other, logically-unrelated offenses, and all
+            the offenses are combined in a single accusatory instrument,
+            consider a demurrer for misjoinder. <em>See also</em>
+            Joinder and Severance, below.</p>
+            <p>Venue is now a matter to attack through pretrial motion,
+            rather than demurrer or MJOA. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mills,+354+Or+350,&amp;hl=en&amp;as_sdt=4,38&amp;case=9178622040936679577&amp;scilh=0"><em>State
+            v. Mills</em>, 354 Or 350, 312 P3d 515 (2013)</a>.</p>
+            <h2 id="c._effect_of_demurrer"><strong>C. Effect of
+            Demurrer</strong></h2>
+            <p>The granting of a demurrer results in the dismissal of
+            the case and is a bar to recharging the defendant without
+            leave of the court. If the court grants leave to refile, it
+            must be done within 30 days of the order. Ordinarily, leave
+            to refile is granted if it appears that the defect is easily
+            correctable. ORS 135.670-135.690. <em>But see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Eberhardt,+225+Or+App.+275,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1025506187161833161&amp;scilh=0"><em>State
+            v. Eberhardt</em>, 225 Or App. 275, 280-81, 201 P3d 915, 918
+            (2009)</a> (failure to grant demurrer was harmless).</p>
+            <h1 id="iv._motions_to_dismiss"><strong>IV. Motions to
+            Dismiss</strong></h1>
+            <h2 id="a._former_jeopardy"><strong>A. Former
+            Jeopardy</strong></h2>
+            <p>Former jeopardy bars prosecution for offenses based upon
+            the same criminal episode reasonably known to the prosecutor
+            and properly tried in the same court. ORS 131.505–131.535.
+            Oregon Constitution, Article I, section 12.</p>
+            <p>Jeopardy will attach and will act as a bar to a second
+            prosecution where multiple traffic crimes arise out of the
+            same “criminal episode,” each can be tried in the same
+            court, the charges are adjudicated in separate proceedings
+            and the defendant is acquitted or convicted of the first
+            criminal charge. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hagey,+38+Or+App+487&amp;hl=en&amp;as_sdt=4,38&amp;case=11489742189949096340&amp;scilh=0"><em>State
+            v. Hagey</em>, 38 Or App 487, 590 P2d 753 (1979)</a>. The
+            term “criminal episode” may have a different meaning under
+            the Oregon Constitution from that under ORS 131.515(2).
+            Thus, for constitutional purposes, DWS and DUII are
+            committed during a single episode, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Farley,+301+Or+668,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14434909695617453&amp;scilh=0"><em>State
+            v. Farley</em>, 301 Or 668, 375 P2d 359 (1986)</a>, since
+            they arise from one single act of driving, while DUII and
+            False Name to a Police Officer are not. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ellison,+301+Or+676,+&amp;hl=en&amp;as_sdt=4,38&amp;case=13984210622321756586&amp;scilh=0"><em>State
+            v. Ellison</em>, 301 Or 676, 725 P2d 363 (1986)</a>.
+            Normally, a defendant’s objection to consolidating the
+            offenses will waive double jeopardy rights, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Shields,+280+Or+471,+&amp;hl=en&amp;as_sdt=4,38&amp;case=377017754670457571&amp;scilh=0"><em>State
+            v. Shields</em>, 280 Or 471, 571 P2d 892 (1977)</a>, and
+            dismissal for purposes of consolidation does not trigger
+            double jeopardy rights. ORS 135.753(3).</p>
+            <p>The former jeopardy statutes provide greater protection
+            than the Oregon Constitution. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Custer+v.+Baldwin,+163+Or+App+60,&amp;hl=en&amp;as_sdt=4,38&amp;case=1706613469020428734&amp;scilh=0"><em>Custer
+            v. Baldwin</em>, 163 Or App 60, 66, 986 P2d 1203 (1999), rev
+            den, 329 Or 589</a>:</p>
+            <p>Subsection (2) [ORS 131.515] … provides greater
+            protection for criminal defendants because it bars
+            consecutive prosecutions not only for the same offense but
+            also for all known charges arising out of the same criminal
+            episode.</p>
+            <p>Jeopardy attaches either when a jury is impaneled and
+            sworn or when the first witness in a court trial is sworn.
+            Jeopardy also attaches, for constitutional purposes, upon
+            the entry of a guilty plea to one offense when two or more
+            offenses arise from a single episode. ORS 131.505(5);
+            <em>State v. Farley, supra</em>. Thus, to the extent that
+            ORS 131.525(2) authorizes the withdrawal of a guilty plea to
+            prevent jeopardy from attaching, that statute is
+            unconstitutional. <em>State v. Farley</em>, 301 Or 668.</p>
+            <p>Fifth Amendment analysis is less favorable, and probably
+            only applies in the case of true greater- and
+            lesser-included offenses. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Rutledge+v.+United+States,+517+US+292,+116+S+Ct+1241,+134+LEd2d+419+%281996&amp;hl=en&amp;as_sdt=3,38&amp;case=7530261126625738427&amp;scilh=0"><em>Rutledge
+            v. United States</em>, 517 US 292, 116 S Ct 1241, 134 LEd2d
+            419 (1996)</a>.</p>
+            <p>Jeopardy only attaches in criminal prosecutions. Thus, a
+            trial of a companion violation will not bar trial of the
+            DUII. ORS 153.108(1) provides that “if a person commits both
+            a crime and a violation as part of the same criminal
+            episode, the prosecution for one offense shall not bar the
+            subsequent prosecution for the other.” <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Roeder,+209+Or+App+199&amp;hl=en&amp;as_sdt=4,38&amp;case=3961946974799364180&amp;scilh=0"><em>State
+            v. Roeder</em>, 209 Or App 199, 147 P3d 363 (2006)</a>
+            (applying the four-part <em>Selness/Miller</em> test to
+            violation of refusing a breath test, and holding that
+            offense is not “criminal in nature for purposes of Article
+            I, section 12” of the Oregon Constitution). <em>See
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McGilchrist,+294+Or+473,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10874083249581000180&amp;scilh=0"><em>State
+            v. McGilchrist</em>, 294 Or 473, 657 P2d 681 (1983)</a>
+            (subsequent vehicular assault charge barred by prior DUII
+            prosecution). <em>But see</em> Collateral Estoppel
+            discussion below.</p>
+            <p>Similarly, the administrative suspension of a defendant’s
+            driver’s license for refusal to take a breath test does not
+            bar subsequent criminal prosecution for driving under the
+            influence. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Burgess,+145+Or+App+334,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8321560975355315471&amp;scilh=0"><em>State
+            v. Burgess</em>, 145 Or App 334, 930 P2d 869, <em>rev
+            den</em>, 325 Or 80 (1996)</a>. Nor does the civil
+            forfeiture of the vehicle in a collateral proceeding. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Ursery,+518+US+267,+116+S+Ct+2135,+135+L+Ed+2d+549+%281996%27&amp;hl=en&amp;as_sdt=3,38&amp;case=1260008517002895184&amp;scilh=0"><em>United
+            States v. Ursery</em>, 518 US 267, 116 S Ct 2135, 135 L Ed
+            2d 549 (1996</a>); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Vettrus&amp;hl=en&amp;as_sdt=4,38&amp;case=7815107280789728221&amp;scilh=0"><em>State
+            v. Vettrus</em>, 142 Or App 359, 922 P2d 673 (1996)</a>.</p>
+            <p>If a prosecutor causes a mistrial by conduct that the
+            prosecutor knows was improper and prejudicial, and either
+            intends or is indifferent to a mistrial, retrial is barred
+            under Article I, section 12, Oregon Constitution. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kennedy,+295+Or+260&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0"><em>State
+            v. Kennedy</em>, 295 Or 260, 276, 666 P2d 1316 (1983)</a>.
+            See Mistrial Section for more on this.</p>
+            <h2 id="b._collateral_estoppel"><strong>B. Collateral
+            Estoppel</strong></h2>
+            <p>Collateral estoppel (<a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors043.html">ORS
+            43.160</a>) is available for use by a criminal defendant in
+            Oregon<em>.</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+George,+253+Or+458,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15517642629481270381&amp;scilh=0"><em>State
+            v. George</em>, 253 Or 458, 455 P2d 609 (1969)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Ashe+v.+Swenson,+397+US+436,+445,+90+S+Ct+1189,+1195,+25+L+Ed+2d+469+%281970&amp;hl=en&amp;as_sdt=3,38&amp;case=15455227313476065874&amp;scilh=0"><em>Ashe
+            v. Swenson</em>, 397 US 436, 445, 90 S Ct 1189, 1195, 25 L
+            Ed 2d 469 (1970)</a>. The prior proceeding may be a
+            probation violation hearing. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Donovan,+305+Or+332,+&amp;hl=en&amp;as_sdt=4,38&amp;case=2834244063761761156&amp;scilh=0"><em>State
+            v. Donovan</em>, 305 Or 332, 751 P2d 1109 (1988)</a>. So, if
+            the defendant is accused of violating probation by
+            committing a new criminal offense, and wins the
+            probation-violation hearing, move to dismiss the criminal
+            prosecution on former-jeopardy grounds.</p>
+            <h1 id="v._motions_to_suppress"><strong>V. Motions to
+            Suppress</strong></h1>
+            <p>The subject of illegally seized evidence is broad,
+            complex, and constantly changing. It would not be possible
+            to have an exhaustive discussion in the context of this
+            manual, see the OCDLA <em><a
+            href="https://libraryofdefense.ocdla.org/Public:Search_and_Seizure_2019_Update_TOC">Search
+            and Seizure in Oregon</a></em> manual and <a
+            href="file:///Users/ocdla-crystal/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/4C9CE5EB-BC9F-45E7-AF2B-F1F7456EA9C4/libraryofdefense.org">libraryofdefense.org</a>
+            for that. This chapter will contain, however, a brief
+            discussion of the law regarding statements and a few
+            specific issues regarding DUII defense.</p>
+            <h2
+            id="a._statements_and_other_compelled_evidence"><strong>A.
+            Statements and Other Compelled Evidence</strong></h2>
+            <p><strong>1. Advice of Rights</strong></p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=Miranda+v.+Arizona,+384+US+436,+&amp;hl=en&amp;as_sdt=3,38&amp;case=6386252699535531764&amp;scilh=0"><em>Miranda
+            v. Arizona</em>, 384 US 436, 86 S Ct 1602, 16 LEd 2d 694
+            (1966)</a>, the U.S. Supreme Court held that prior to
+            “custodial interrogation” the defendant must be advised that
+            he or she has the right to remain silent, that anything he
+            or she says can or will be used against him or her in a
+            court of law, and that he or she has the right to an
+            attorney, and that if he or she cannot afford an attorney,
+            an attorney will be appointed for him or her. Absent a
+            subsequent knowing, intelligent and voluntary waiver of
+            those rights by the defendant, the statements are not
+            admissible. U.S. Constitution, Amendments 5 and 14.</p>
+            <p>Article I, section 12, of the Oregon Constitution appears
+            to require <em>Miranda</em>-type warnings prior to the
+            interrogation of a defendant who is “in custody” or who is
+            being interrogated in a “setting which judges would or
+            officers should know is compelling.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Magee,+304+Or+261,+&amp;hl=en&amp;as_sdt=4,38&amp;case=902460391222689911&amp;scilh=0"><em>State
+            v. Magee</em>, 304 Or 261, 256, 744 P2d 250 (1987)</a>;
+            <em>cited with approval</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+310+Or+1,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0"><em>State
+            v. Smith</em>, 310 Or 1, 791 P2d 836 (1990)</a>. (This
+            appears to be a total repudiation of the plurality opinion
+            in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+301+Or+681,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12741068374409291314&amp;scilh=0"><em>State
+            v. Smith</em>, 301 Or 681, 725 P2d 894 (1986)</a>, which
+            held to the contrary.)</p>
+            <p>a. Custodial Status of Defendant</p>
+            <p>Whether the advice of rights is required depends
+            initially on the defendant’s custodial status. Under the
+            recently emerging state constitutional analysis,
+            <em>Miranda</em>-type warnings are certainly required if the
+            defendant is in “full custody.”</p>
+            <p>“The concept obviously includes extended official
+            detention in a cell or another enclosure, with or without
+            booking or deprivation of personal belongings. But an
+            enclosure is not essential; one would hardly dispute that a
+            person handcuffed on the street or in his own home is in
+            ‘full custody.’” <em>State v. Magee, supra</em> at 265.</p>
+            <p>The “compelling” circumstances referred to in
+            <em>Magee</em> are somewhat more elusive and have not been
+            specifically identified by the courts. The lead opinion in
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Brown,+100+Or+App+204&amp;hl=en&amp;as_sdt=4,38&amp;case=3879142205741433764&amp;scilh=0"><em>State
+            v. Brown</em>, 100 Or App 204, 212, 785 P2d 790 (1990)</a>,
+            held that the facts in that case supported the conclusion
+            that the “questioning was not so prolonged, pressured, or
+            police-dominated as to become tantamount to an arrest,” and
+            therefore warnings were not required. Four of the judges,
+            however, would have held that a more elastic standard should
+            be applied: “[T]he truly relevant test is whether there are
+            sufficient, compelling circumstances...to support a
+            conclusion that warnings must have been given in order for
+            the subsequent admissions to be untainted.” <em>Id</em>,
+            215. The Oregon Supreme Court in <em>State v. Smith,
+            supra</em>, seems to have adopted the latter approach, at
+            least for the time being. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carlson,+311+Or+201&amp;hl=en&amp;as_sdt=4,38&amp;case=8877466298312506640&amp;scilh=0"><em>State
+            v. Carlson</em>, 311 Or 201, 808 P2d 1002 (1991)</a>.</p>
+            <p>Under the federal constitution analysis, the standard was
+            articulated in <a
+            href="http://scholar.google.com/scholar_case?q=Berkemer+v.+McCarty,+468+US+420,+441%E2%80%9342+%281984%29&amp;hl=en&amp;as_sdt=3,38&amp;case=1340354395100305765&amp;scilh=0"><em>Berkemer
+            v. McCarty</em>, 468 US 420, 441–42 (1984)</a>. Warnings are
+            required if “a reasonable person in defendant’s situation
+            would have understood himself to be in custody or under
+            restraints comparable to those associated with a formal
+            arrest.” <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Oregon+v.+Elstad,+470+US+298&amp;hl=en&amp;as_sdt=3,38&amp;case=3137504906210191208&amp;scilh=0"><em>Oregon
+            v. Elstad</em>, 470 US 298 (1985)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sadler,+85+Or+App+134,+&amp;hl=en&amp;as_sdt=4,38&amp;case=491079904925824258&amp;scilh=0"><em>State
+            v. Sadler</em>, 85 Or App 134, 735 P2d 1267</a><em>,
+            modified on reconsideration</em>, <a
+            href="file:///Users/ocdla-crystal/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/4C9CE5EB-BC9F-45E7-AF2B-F1F7456EA9C4/86%20Or%20App%20152">86
+            Or App 152, 738 P2d 601 (1987)</a>.</p>
+            <p>Under either analysis, a “routine traffic stop” is
+            neither sufficiently custodial nor compelling as to require
+            <em>Miranda</em> or <em>Miranda</em>-like warnings prior to
+            interrogation; that is, until the subject is placed into
+            custody. But see Justice Linde’s dissent in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Roberti,+298+Or+412,&amp;hl=en&amp;as_sdt=4,38&amp;case=9958854663016406381&amp;scilh=0"><em>State
+            v. Roberti</em>, 298 Or 412, 415 (1984)</a>.</p>
+            <p>b. Investigation or Interrogation</p>
+            <p>Assuming the defendant’s level of restraint is sufficient
+            to warrant them, <em>Miranda</em>-type warnings are required
+            prior to the interrogation of the defendant, but not prior
+            to mere “investigatory” inquiries.</p>
+            <p>Interrogation means express questioning or its functional
+            equivalent. The analysis appears to be similar under the
+            state and federal constitutions. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bradbury,+80+Or+App+613,+&amp;hl=en&amp;as_sdt=4,38&amp;case=9483578569445061741&amp;scilh=0"><em>State
+            v. Bradbury</em>, 80 Or App 613, 723 P2d 1051 (1986)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dorey,+100+Or+App+457&amp;hl=en&amp;as_sdt=4,38&amp;case=12247250275425840718&amp;scilh=0"><em>State
+            v. Dorey</em>, 100 Or App 457, 786 P2d 1288 (1990)</a>.</p>
+            <p>“That is to say, the term ‘interrogation’ refers not only
+            to express questioning, but also to any words or actions on
+            the part of the police (other than those normally attendant
+            to arrest and custody) that the police should know are
+            reasonably likely to elicit an incriminating response from
+            the subject. The latter portion of this definition focuses
+            primarily on the perception of the suspect, rather than the
+            intent of the police. This focus reflects that the
+            <em>Miranda</em> safeguards were designed to vest a suspect
+            in custody with an added measure against coercive police
+            practices without regard to objective proof of the
+            underlying intent of the police. A practice that the police
+            should know is reasonably likely to evoke an incriminating
+            response from a suspect thus amounts to interrogation. But,
+            since the police surely cannot be held accountable for the
+            unforeseeable results of their words or actions, the
+            definition of the word interrogation can extend only to
+            words or actions on the part of the police officers that
+            they <em>should have known</em> were reasonably likely to
+            elicit an incriminating response.” <a
+            href="http://scholar.google.com/scholar_case?q=Rhode+Island+v.+Innis,+446+US+291,+301%E2%80%9302+%281980&amp;hl=en&amp;as_sdt=3,38&amp;case=3211815991125819431&amp;scilh=0"><em>Rhode
+            Island v. Innis</em>, 446 US 291, 301–02 (1980</a>);
+            <em>cited with approval, State v. Bradbury, supra,</em> at
+            616; <em>State v. Dorey, supra,</em> at 462.</p>
+            <p>On the other hand, statements made in response to mere
+            “investigatory questions” are not the product of “custodial
+            interrogation” and are thus admissible. <em>See, e.g.,</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cohn,+43+Or+App+913&amp;hl=en&amp;as_sdt=4,38&amp;case=8556124415523496342&amp;scilh=0"><em>State
+            v. Cohn</em>, 43 Or App 913, 607 P2d 729 (1979)</a> (asking
+            for name and license); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Medenbach,+48+Or+App+133,+616+P2d+543+%281980&amp;hl=en&amp;as_sdt=4,38&amp;case=6977712235348019415&amp;scilh=0"><em>State
+            v. Medenbach</em>, 48 Or App 133, 616 P2d 543 (1980)</a>
+            (statements made in response to questions about defendant’s
+            alcohol consumption in a response to a request to do field
+            sobriety tests); <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ledbetter,+95+Or+App+187,&amp;hl=en&amp;as_sdt=4,38&amp;case=13158962201547067341&amp;scilh=0"><em>State
+            v. Ledbetter</em>, 95 Or App 187, 768 P2d 431
+            (1989)</a>.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=14726824813236399336&amp;q=state+v.+swan&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Swan</em>, 363 Or 121 (2018)</a>, the court suppressed
+            the breath test result because after the arrested driver
+            asked to speak with a lawyer, the police officer asked
+            interview questions and then asked for consent to a breath
+            test. This violation of counsel led to suppression of the
+            breath test.</p>
+            <p><strong>2. Waiver</strong></p>
+            <p>Once <em>Miranda</em> rights have been asserted, there is
+            a “heavy burden” placed on the state to prove that a
+            subsequent waiver is made in a knowing, voluntary and
+            intelligent manner. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Singleton,+288+Or+89,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8451259316110199308&amp;scilh=0"><em>State
+            v. Singleton</em>, 288 Or 89, 602 P2d 1059 (1979)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mendacino,+288+Or+231,&amp;hl=en&amp;as_sdt=4,38&amp;case=1271330991466070160&amp;scilh=0"><em>State
+            v. Mendacino</em>, 288 Or 231, 608 P2d 1247 (1979)</a>.
+            Similarly, for an initial waiver of <em>Miranda</em> rights
+            to be valid, it must also be made knowingly, voluntarily and
+            intelligently. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McGrew,+38+Or+App+493,+590+P2d+755+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=17141378072191319084&amp;scilh=0"><em>State
+            v. McGrew</em>, 38 Or App 493, 590 P2d 755 (1979)</a>. Where
+            the police choose not to use available tape recording
+            devices, this weighs against the state when it seeks to
+            prove waiver. <a
+            href="http://scholar.google.com/scholar_case?q=+State+v.+Quinn,+290+Or+383,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11264397036353792082&amp;scilh=0"><em>See
+            State v. Quinn</em>, 290 Or 383, 389 fn 2, 623 P2d 630
+            (1981)</a>.</p>
+            <p>Waiver most often becomes an issue when a defendant
+            asserts his or her right to counsel or states that he or she
+            does not wish to answer questions. This should be a complete
+            bar to the introduction of subsequent statements. Law
+            enforcement personnel often institute “interrogation” by
+            allegedly innocuous conversation. <em>Rhode Island v. Innis,
+            supra</em> (1980), prohibits this form of “waiver” if the
+            officer knew he or she was likely to elicit an incriminatory
+            response. Such “interrogations” can be physical or verbal in
+            nature, and the susceptibilities of the subject, such as
+            intoxication, are considered in determining if
+            “interrogation” occurred. <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Crawford,+73+Or+App+53&amp;hl=en&amp;as_sdt=4,38&amp;case=6488072661600309081&amp;scilh=0"><em>State
+            v. Crawford</em>, 73 Or App 53, 698 P2d 40 (1985)</a>.</p>
+            <p>The recent case law requires an in-depth look at
+            <em>Miranda</em> violations and also violation of the right
+            to counsel. In <a
+            href="https://scholar.google.com/scholar_case?case=12782971683612831157&amp;q=State+v.+Taylor,+296+Or+App+278+(2019&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Taylor</em>, 296 Or App 278 (2019)</a>, the court
+            suppressed the breath test after the arrested driver did not
+            clearly waive her <em>Miranda</em> rights. The court weighs
+            the following factors: (1) the nature of the violation, (2)
+            amount of time between the violation and any later
+            statements, (3) whether the defendant remained in custody
+            before making any later statements, (4) subsequent events
+            that may have dissipated the taint of the earlier violation,
+            and (5) the use that state has made of the
+            statements/evidence.</p>
+            <p><strong>3. Voluntariness of
+            Statements/Confessions</strong></p>
+            <p>The common law rule is that inculpatory statements by a
+            defendant are presumed to be involuntary, the burden being
+            on the state to prove voluntariness. <em>See State v.
+            Wintzingerode</em>, 9 Or 153, 161–62 (1881); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Foster,+288+Or+649&amp;hl=en&amp;as_sdt=4,38&amp;case=11674869533586605612&amp;scilh=0"><em>State
+            v. Foster</em>, 288 Or 649, 607 P2d 173 (1980)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ely,+237+Or+329,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6095351294501105340&amp;scilh=0"><em>State
+            v. Ely</em>, 237 Or 329, 390 P2d 348 (1964)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Brewton,+238+Or+590,+&amp;hl=en&amp;as_sdt=4,38&amp;case=3875327692139321449&amp;scilh=0"><em>State
+            v. Brewton</em>, 238 Or 590, 395 P2d 374 (1964)</a>.
+            <em>Cf.</em>, Oregon Constitution, Article I, section
+            12.</p>
+            <p>Ordinarily, the advice of <em>Miranda</em> rights, their
+            acknowledgment by the defendant, and waiver thereof will
+            satisfy the state’s burden. However, even if the appropriate
+            warnings are given, the statement may still be shown to be
+            involuntary if it was induced by fear produced by official
+            threats or promises (<a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Foster,+303+Or+518,+&amp;hl=en&amp;as_sdt=4,38&amp;case=7564717978419096022&amp;scilh=0"><em>State
+            v. Foster</em>, 303 Or 518, 525, 739 P2d at 1032
+            (1987)</a>), or overreaching (<a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Foster,+288+Or+649+%28&amp;hl=en&amp;as_sdt=4,38&amp;case=11674869533586605612&amp;scilh=0"><em>State
+            v. Foster</em>, 288 Or 649 (1980)</a>), or otherwise is
+            involuntary.</p>
+            <p>In cases in which the officer has asserted that the
+            defendant was “dead drunk,” the client’s statements might be
+            suppressed on the grounds that they were involuntary. <a
+            href="http://scholar.google.com/scholar_case?q=Johnson+v.+Zerbst,+304+US+458+%281938&amp;hl=en&amp;as_sdt=3,38&amp;case=11009897881566368743&amp;scilh=0"><em>Johnson
+            v. Zerbst</em>, 304 US 458 (1938)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Gladden+v.+Unsworth,+396+F2d+373&amp;hl=en&amp;as_sdt=3,38&amp;case=13049801064727660255&amp;scilh=0"><em>Gladden
+            v. Unsworth</em>, 396 F2d 373 (9th Cir, 1968)</a> (“gross
+            intoxication”); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Culley,+25+Or+App+387,+&amp;hl=en&amp;as_sdt=4,38&amp;case=16862925469291108838&amp;scilh=0"><em>State
+            v. Culley</em>, 25 Or App 387, 549 P2d 1130 (1976)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+4+Or+App+130,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8504291869579029657&amp;scilh=0"><em>State
+            v. Smith</em>, 4 Or App 130, 134, 476 P2d 802, 25 ALR 4th
+            419 (1970)</a>. (If, in the course of the suppression
+            hearing, the clever officer temporizes, with instances of
+            defendant’s sobriety, in the spirit of “well, he wasn’t
+            <em>that</em> drunk,” such statements should be used at
+            trial to rebut the contention that the client was “drunk” at
+            all.)</p>
+            <p>For a complete discussion of the history of the
+            voluntariness of confessions in Oregon, see <em>State v.
+            Smith</em>, 301 Or 681, <em>supra</em> (no longer good law
+            but still accurate as history). <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lloyd,+22+Or+App,+254+%281975&amp;hl=en&amp;as_sdt=4,38&amp;case=15039504609582535412&amp;scilh=0"><em>State
+            v. Lloyd</em>, 22 Or App, 254 (1975)</a>, lays out specific
+            facts resulting in a defendant’s inability to waive his
+            <em>Miranda</em> rights due to intoxication. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lowry,+245+Or+565+%281967&amp;hl=en&amp;as_sdt=4,38&amp;case=3814922769945178157&amp;scilh=0"><em>State
+            v. Lowry</em>, 245 Or 565 (1967)</a> holds that a defendant
+            with a .30 BAC is incapable of validly waiving his
+            <em>Miranda</em> rights.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+adame&amp;hl=en&amp;as_sdt=4,38&amp;case=15497277816729091927&amp;scilh=0"><em>State
+            v. Adame</em>, 261 Or App 11 (2014)</a>, the court held
+            verbal field sobriety tests are admissible so long as the
+            defendant was not under the impression, based upon the
+            officer’s words, that a refusal could be used in court. This
+            is in contrast to physical FSTs, which are not testimonial
+            and can be compelled by an admonishment regarding the
+            admissibility of a refusal.</p>
+            <p><strong>4. Right to Counsel</strong></p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=Edwards+v.+Arizona,+451+US+477,&amp;hl=en&amp;as_sdt=3,38&amp;case=18226661136880099694&amp;scilh=0"><em>Edwards
+            v. Arizona</em>, 451 US 477, 101 S Ct 1880 (1981)</a>, the
+            Supreme Court decided that once an accused asserts his or
+            her right to counsel during custodial interrogation, all
+            questioning must cease until counsel is provided, unless the
+            accused reinitiates the contact with the police.
+            <em>Edwards</em> was followed by <a
+            href="http://scholar.google.com/scholar_case?q=Oregon+v.+Bradshaw,+462+US+1039,+&amp;hl=en&amp;as_sdt=3,38&amp;case=5136515899495392588&amp;scilh=0"><em>Oregon
+            v. Bradshaw</em>, 462 US 1039, 103 S Ct 2830 (1983)</a>.
+            Clearly, an accused has greater rights when she asserts a
+            right to counsel then when she tells the police she doesn’t
+            want to talk with them, because in asserting a right to
+            counsel the accused has expressed a desire “to deal with the
+            police only through counsel.” <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Barmon,+&amp;hl=en&amp;as_sdt=4,38&amp;case=4289870057574970727&amp;scilh=0"><em>State
+            v. Barmon</em>, 67 Or App 369, 679 P2d 888</a>, <em>rev
+            den,</em> 297 Or 227 (1984); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Crawford,+73+Or+App+53,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6488072661600309081&amp;scilh=0"><em>State
+            v. Crawford</em>, 73 Or App 53, 698 P2d 40 (1985)</a>.</p>
+            <p>The state constitutional right to counsel has been
+            extended to the breath test situation. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Spencer,+305+Or+59,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5589510454377077101&amp;scilh=0"><em>State
+            v. Spencer</em>, 305 Or 59, 750 P2d 147 (1988)</a>, the
+            court held that a suspect that requests so must be given a
+            reasonable opportunity to consult with an attorney prior to
+            taking a breath test. If denied that opportunity, the breath
+            test result is suppressed. While not specifically deciding
+            what a “reasonable opportunity” might be, the court noted
+            that 15 minutes on the telephone “will doubtless suffice in
+            most cases.” <em>Id</em>, at 75, n. 5.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+martinez&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=13534423344575868359&amp;scilh=0"><em>State
+            v. Martinez</em>, 263 Or App 658 (2014)</a>, the court held
+            that A DUII suspect who wishes to invoke his 5<sup>th</sup>
+            Amendment right to counsel must be clear that he is not
+            merely accepting his more limited right to call an attorney
+            prior to the administration of a breath test under Art I,
+            Sec 11 of the Oregon Constitution. The defendant’s
+            statements are viewed in lieu of the totality of the
+            circumstances.</p>
+            <p>The defendant must be accorded privacy in which to make
+            the phone call, which was impossible when the police were
+            taping the attorney-client phone call even if the officers
+            promised not to listen to it. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Riddle,+149+Or+App+141,&amp;hl=en&amp;as_sdt=4,38&amp;case=2458067174562358038&amp;scilh=0"><em>State
+            v. Riddle</em>, 149 Or App 141, 941 P2d 1079 (1997)</a>. The
+            defendant need not specifically request that the officer
+            allow privacy during the consultation with the attorney. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Durbin,+335+Or+183&amp;hl=en&amp;as_sdt=4,38&amp;case=12109966704612003490&amp;scilh=0"><em>State
+            v. Durbin</em>, 335 Or 183, 63 P3d 576 (2003)</a>.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+lile&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=16539642135496822711&amp;scilh=0"><em>State
+            v. Lile</em>, 267 Or App 712 (2014)</a>, the court held that
+            an officer must be out of earshot when the defendant makes a
+            call to his attorney. The right to a reasonable opportunity
+            to consult with counsel before deciding whether to submit to
+            a breath test includes the right to a private consultation.
+            In this case, the defendant was able only to contact his
+            attorney’s receptionist. The court held, “that difference
+            does not lead to a different result. An attorney may not
+            always be available to speak directly with a client. As a
+            result, a receptionist can, and often does, serve as a
+            conduit of confidential communications between a client and
+            the attorney.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carlson,+225+Or+App+9+%282008&amp;hl=en&amp;as_sdt=4,38&amp;case=2600043686199012590&amp;scilh=0"><em>State
+            v. Carlson</em>, 225 Or App 9 (2008)</a>. Defendant refused
+            FSTs and asked to talk to a lawyer before taking a breath
+            test. Officer wouldn’t let defendant use his own cell phone.
+            Officer tried to dial inmate phone for defendant and was not
+            sure if he knew how to properly use the phone. He never got
+            a completed call. The state must prove that the officer used
+            the phone properly and that the phone worked in order to use
+            the breath test or the refusal against the defendant. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hunt,+225+Or+App+51+%282008&amp;hl=en&amp;as_sdt=4,38&amp;case=7720306645535393856&amp;scilh=0"><em>State
+            v. Hunt</em>, 225 Or App 51 (2008)</a>. Defendant asked to
+            consult an attorney. Officer pointed to a phone in another
+            room. Defendant said he wanted a lawyer, not a phone. Held:
+            refusal comes in. There was enough evidence to show that the
+            defendant would have had the opportunity to privately talk
+            to the lawyer on the phone. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stone,+229+Or+App+708+&amp;hl=en&amp;as_sdt=4,38&amp;case=12628000044264198415&amp;scilh=0"><em>State
+            v. Stone</em>, 229 Or App 708 (2009)</a>, <em>affirms
+            Matviyenko</em>. No chance to call a lawyer after asking for
+            one means bac suppressed. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Freytag,+230+Or+App+694+%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=1237473171505635833&amp;scilh=0"><em>State
+            v. Freytag</em>, 230 Or App 694 (2009)</a>. Defendant wanted
+            to call a nonlawyer and was refused the opportunity. Held:
+            Defendant did not prove a “minimal factual nexus” between
+            the denial of his “alleged right” to call a non-lawyer and
+            his decision to take the breath test.</p>
+            <p>The defendant is not entitled to have counsel present at
+            the administration of the breath test. <a
+            href="http://scholar.google.com/scholar_case?q=City+of+Roseberg+v.+Dykstra,+121+Or+App+317,+854+P2d+985+%281993&amp;hl=en&amp;as_sdt=4,38&amp;case=14699803364583450484&amp;scilh=0"><em>City
+            of Roseberg v. Dykstra</em>, 121 Or App 317, 854 P2d 985
+            (1993)</a>.</p>
+            <p>Note: Since field sobriety tests are now part of the
+            implied consent law, it might be that the same rule applies
+            prior to the administration of field sobriety tests.</p>
+            <p>If a defendant initially asks for an attorney but does
+            not follow through with his request, he has not necessarily
+            waived his right to counsel. The Court of Appeals has held a
+            defendant is not obliged to make a futile request for a
+            private consultation with an attorney when, under the
+            circumstances, it was clear that he would not be granted a
+            private consultation with an attorney. The test for
+            determining whether or not a request for an attorney is
+            futile is whether the defendant subjectively believes that
+            he will not be permitted a private consultation with an
+            attorney before deciding to submit to an Intoxilyzer test,
+            and that belief must be objectively reasonable under the
+            totality of the circumstances. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Greenwood,+175+Or+App+69,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11445009493874958764&amp;scilh=0"><em>State
+            v. Greenwood</em>, 175 Or App 69, 27 P3d 151 (2001)</a>.</p>
+            <p>A citizen not trained in the law does not have to recite
+            specific magic words to invoke a right such as the right to
+            communicate. <a
+            href="https://scholar.google.com/scholar_case?case=6158459232545546982&amp;q=State+v.+Trenary,+114+Or+App+608&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Trenary</em>, 114 Or App 608, 614 (1992)</a>. Petitioner
+            stated the desire for advice before submitting to a breath
+            test under Oregon law which is all that is required to
+            trigger the right to communicate. “[A]n adequate invocation
+            of the right to counsel is any plain reference, however
+            glancing, to a need or desire for representation.” <em>State
+            v. Trenary, supra</em>.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14726824813236399336&amp;q=State+v+Swan&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>See
+            Swan</em>, 363 Or 121
+            (2018)</a><em><span class="underline">,</span></em> for
+            violation of right to counsel by continued questioning after
+            the invocation of counsel.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Matviyenko,+212+Or+App+125,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10693510004867984133&amp;scilh=0"><em>State
+            v. Matviyenko</em>, 212 Or App 125, 157 P3d 268 (2007)</a>,
+            the court reviewed the relevant case law regarding the right
+            to a reasonable opportunity to consult privately with
+            counsel and arguably expanded its application to the benefit
+            of defendants.</p>
+            <p>In <em>Matviyenko</em>, the defendant requested an
+            attorney immediately upon arrest and was told that he could
+            call an attorney at the station. Once at the station, the
+            officer took him to the Intoxilyzer room, which had a
+            telephone and phone books, and sat down across the table
+            from the defendant. The defendant asked to call his wife and
+            was told that he could “make any phone calls at that time.”
+            The defendant called his wife and then provided a breath
+            sample. The officer never left the room and testified at the
+            suppression hearing that the defendant would never have been
+            allowed privacy in the Intoxilyzer room due to the sensitive
+            nature of the equipment.</p>
+            <p>In rejecting the state’s argument that the “practical
+            reality” of the situation required the officer to remain in
+            the room, the court noted that the officer created the
+            situation by taking the defendant—who had requested an
+            attorney—to a room the officer knew would afford no privacy.
+            <em>Id.</em> at 129–130. The court went on to reject the
+            state’s arguments that the defendant waived his right to
+            counsel by calling his wife and not calling an attorney,
+            holding that taking the breath test did not “unambiguously
+            demonstrate that he had changed his mind about wanting to
+            call an attorney.” <em>Id.</em> at 130.</p>
+            <p>The case law following <em>Matviyenko</em> makes it clear
+            that when an attorney is requested, inherent in that request
+            is the ability to communicate privately with an attorney. If
+            the request for counsel is equivocal, the law requires the
+            police officer to offer a phone call or clarify the reason
+            for the request. <a
+            href="https://scholar.google.com/scholar_case?case=10010211099656350220&amp;q=State+v.+Ohm,+224+Or+App+390&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Ohm</em>, 224 Or App 390, 395-6 (2008)</a>. In
+            <em>Ohm</em>, the court addressed an equivocal request for
+            advice and determined that asking for advice is construed as
+            asking for legal advice in the context of a breath test. The
+            court held,</p>
+            <p>[i]f a suspect makes an equivocal invocation of the right
+            to counsel under Article I, section 12, police are required
+            to ask follow-up questions to determine what the suspect
+            meant before proceeding with interrogation. <a
+            href="https://scholar.google.com/scholar_case?case=8838324916788203567&amp;q=State+v.+Charboneau,+323+Or.+38,+913+P.2d+308+(1996)&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Charboneau</em>, 323 Or. 38, 54, 913 P.2d 308 (1996)</a>.
+            Similarly, we conclude that if a driver arrested for DUII
+            makes an equivocal invocation of the right to counsel under
+            Article I, section 11, police must ask follow-up questions
+            to determine whether they must inform the driver that, once
+            he or she contacts an attorney, privacy will be afforded. In
+            determining whether a defendant’s statement is an equivocal
+            invocation, we view the statement in light of the totality
+            of the circumstances at and preceding the time that it was
+            made, “to ascertain whether a reasonable officer in the
+            circumstances would have understood that defendant was
+            invoking [her] rights.” <em>State v. Holcomb</em>, 213 Or.
+            App. 168, 176, 159 P.3d 1271, rev. den., 343 Or. 224, 168
+            P.3d 1155 (2007).</p>
+            <p>We conclude that, under the circumstances here, a
+            reasonable police officer would regard defendant’s statement
+            that she wanted advice from “someone” as an equivocal
+            invocation of her right to counsel [Emphasis Added]. <em>See
+            Ohm, supra</em>.</p>
+            <p>It is the officer’s responsibility to inform the suspect
+            of the ability to communicate privately, as a valid waiver
+            cannot occur if suspect is not informed he will not have the
+            ability to privately communicate. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sawyer,+221+Or+App+350+%282008&amp;hl=en&amp;as_sdt=4,38&amp;case=4059591004615733960&amp;scilh=0"><em>State
+            v. Sawyer</em>, 221 Or App 350 (2008)</a>. The suspect must
+            also actually be afforded the ability to communicate
+            privately. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carslon,+225+Or+App+9+%282008%29&amp;hl=en&amp;as_sdt=4,38&amp;case=2600043686199012590&amp;scilh=0"><em>State
+            v. Carslon</em>, 225 Or App 9 (2008)</a> (officer tried to
+            dial the phone for suspect but was not sure how to use the
+            phone and never got a completed call). As long as the
+            officer effectively communicates to the suspect that privacy
+            will be afforded, however, the Court of Appeals has
+            generally found a subsequent waiver of the right to call an
+            attorney valid. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hunt,+225+Or+App+51+%282008%29+&amp;hl=en&amp;as_sdt=4,38&amp;case=7720306645535393856&amp;scilh=0"><em>State
+            v. Hunt</em>, 225 Or App 51 (2008)</a> (refusal comes in
+            after a suspect asked to consult an attorney and the officer
+            pointed to a phone in another room).</p>
+            <p><strong>5. Refusals</strong></p>
+            <p>A refusal to take a breath test was deemed an exercise of
+            an Article I, section 9 right under <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=state+v+banks+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004&amp;as_ylo=2016"><em>State
+            v. Banks</em></a> and therefore inadmissible as evidence in
+            the criminal case. 364 Or 332, 337 (2019). This likely also
+            applies to field sobriety tests. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=14889897046144151966&amp;q=State+v.+Stills,+299+Or+App+194+(2019)+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004&amp;as_ylo=2016"><em>State
+            v. Stills</em>, 299 Or App 194 (2019)</a> where the state
+            concedes the FST’s refusal should not have been admitted.
+            This makes sense because a person cannot invoke their right
+            to be free from search (Article I, section 9) without
+            waiving the Article I, section 12 right of showing
+            “consciousness of guilt.” Field sobriety tests are searches
+            under Oregon law (similar to a breath or blood test).</p>
+            <p>The Oregon Supreme Court, in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fish,+321+Or+48,&amp;hl=en&amp;as_sdt=4,38&amp;case=13533074752773959333&amp;scilh=0"><em>State
+            v. Fish</em>, 321 Or 48, 893 P2d 1023 (1995)</a>, held,
+            <em>inter alia,</em> that the request made of a stopped
+            motorist to take a field sobriety test requires a
+            testimonial response, and the circumstances of such
+            request—being made in an inherently coercive setting, upon
+            threat of using any test results or the refusal to take such
+            test against the motorist in court—are sufficiently
+            “compelling” that the transaction must be analyzed under the
+            self-incrimination clauses of Article I, section 12, and
+            Amendments V and XIV, as discussed above. The court held
+            that the evidence of defendant’s refusal was “compelled
+            ‘testimonial’ evidence” regarding his state of mind, and was
+            therefore inadmissible. That holding has been narrowed by
+            subsequent decisions.</p>
+            <p>The Oregon Court of Appeals has held that “testimony” is
+            “communication by words or conduct of an individual’s
+            thoughts, beliefs or ‘state of mind.’ Thus, purely verbal
+            answers to purely verbal questions (‘on an intoxication
+            scale of 1 to 10, I think I rank a 2’) are testimony, as are
+            answers by conduct to the same question (holding up two
+            fingers to self-rank intoxication on a 1 to 10 scale).”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nielsen,+147+Or+App+294,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8758570984212263671&amp;scilh=0"><em>State
+            v. Nielsen</em>, 147 Or App 294, 306, 936 P2d 374
+            (1997)</a>. The court went on to hold that a test producing
+            physical evidence of intoxication, without requiring an
+            individual to reveal his or her thoughts, beliefs or state
+            of mind, is generally not testimonial.</p>
+            <p>However, in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rohrs,+157+Or+App+494,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5165467123903813710&amp;scilh=0"><em>State
+            v. Rohrs</em>, 157 Or App 494, 499, 970 P2d 262 (1998)</a>,
+            non-verbal FST’s were admissible after an admonishment, but
+            this old case should be re-read in accordance with
+            <em>Banks</em>.</p>
+            <p><strong>6. Burden of Proof</strong></p>
+            <p>Where statements are challenged as involuntary, the state
+            has the burden of proving the statements were voluntary,
+            were not made in a custodial setting absent <em>Miranda</em>
+            advice, and, if made in a custodial setting, were made in
+            compliance with <em>Miranda</em>. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wheeler,+43+Or+App+875,&amp;hl=en&amp;as_sdt=4,38&amp;case=2418410376301422447&amp;scilh=0"><em>State
+            v. Wheeler</em>, 43 Or App 875, 880, 604 P2d 449 (1979)</a>.
+            It is not just <em>confessions</em> the state must prove
+            were voluntary; <em>admissions</em> must be proved voluntary
+            as well. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rollo,+221+Or+428,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5356376243587953802&amp;scilh=0"><em>State
+            v. Rollo</em>, 221 Or 428, 432, 531 P2d 422 (1960)</a>.</p>
+            <p>The Oregon Supreme Court distinguishes between admissions
+            and confessions because a defendant cannot be convicted
+            solely on a confession, ORS 136.425, but could on an
+            admission. For a definition of confession and historical
+            discussion of this issue, read <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Manzella,+306+Or+303,&amp;hl=en&amp;as_sdt=4,38&amp;case=3578560651698077678&amp;scilh=0"><em>State
+            v. Manzella</em>, 306 Or 303, 759 P2d 1078 (1988)</a>.</p>
+            <h2 id="b._audio_and_video_recordings"><strong>B. Audio and
+            Video Recordings</strong></h2>
+            <p>The admission of recordings made of field sobriety tests
+            are nontestimonial in character and have been held to be
+            admissible. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Medenbach,+48+Or+App+133,&amp;hl=en&amp;as_sdt=4,38&amp;case=6977712235348019415&amp;scilh=0"><em>State
+            v. Medenbach</em>, 48 Or App 133, 616 P2d 543 (1980)</a>.
+            The driver must be told he or she is being recorded,
+            however. If a police officer records a conversation or test
+            without the defendant’s knowledge, that recording is
+            inadmissible under <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors165.html">ORS
+            165.540(1)(c)</a> and <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors041.html">ORS
+            41.910(1)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cooney,+36+Or+App+217,&amp;hl=en&amp;as_sdt=4,38&amp;case=8890151202043294968&amp;scilh=0"><em>State
+            v. Cooney</em>, 36 Or App 217, 584 P2d 329 (1978)</a>. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">ORS
+            136.432</a>, which limits the authority of the court to
+            exclude relevant evidence for statutory violations, does not
+            apply to ORS 41.910(1) or <em>Cooney</em>, as ORS 136.432
+            does not repeal statutory rules that <em>expressly</em>
+            provide for evidentiary exclusion. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Thompson-Seed,+162+Or+App+483,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12845732836464902626&amp;scilh=0"><em>State
+            v. Thompson-Seed</em>, 162 Or App 483, 986 P2d 732
+            (1999)</a>.</p>
+            <p>A defendant sufficiently intoxicated might successfully
+            argue that his intoxication precluded knowing he was
+            recorded. While the statute only requires one to be
+            “specifically informed,” one could argue that the purpose is
+            to permit a choice not to speak, thus requiring
+            knowledge.</p>
+            <p>Additionally, an officer may advise the defendant that
+            her statements are not being recorded and not turn off the
+            recorder. The defendant may be placed in the rear of the
+            police vehicle and, even in the absence of the officer, make
+            incriminating statements while unaware the recorder is
+            operating. Such statements may be suppressible.</p>
+            <p>It has been suggested that suppression or exclusion of a
+            recording may be ordered where the officer records other
+            persons in conjunction with recording the defendant or
+            records radio communications simultaneously. This would
+            appear to violate ORS 165.540(c).</p>
+            <p>Keep in mind that even though the entire recording may
+            not be excludable or suppressible parts of it may be, such
+            as statements of third persons, conclusions or opinions. If
+            there is a destroyed or lost tape/recording/video, then the
+            defense may be able to suppress parts that would have been
+            captured on the recording if the defense can show it would
+            have been favorable. <a
+            href="https://scholar.google.com/scholar_case?case=9241531761441254542&amp;q=State+v.+Zinzli,+156+Or+App+245+(1998)&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Zinzli</em>, 156 Or App 245 (1998)</a>.</p>
+            <h2 id="c._other_compelled_evidence"><strong>C. Other
+            Compelled Evidence</strong></h2>
+            <p>Even though authority exists to allow recordings, the
+            results of field sobriety tests, blood tests, breath tests,
+            lineups and show-ups into evidence—on the basis that they
+            are not “testimonial”—such evidence may in fact not be
+            admissible because it was obtained in violation of the
+            defendant’s right not to be compelled to furnish evidence
+            against himself under Article I, section 12, of the Oregon
+            Constitution.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Soriano,+68+Or+App+642,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6384140653068058316&amp;scilh=0"><em>State
+            v. Soriano</em>, 68 Or App 642, fn. 4, 684 P2d 1220, <em>op.
+            adopted</em>, 298 Or 392, 693 P2d 26 (1984)</a>, Judge (now
+            Justice) Gillette stated the following:</p>
+            <p>In most constitutions, the statement of the right is that
+            a person may not “be compelled in any criminal case to be a
+            witness against himself,” United States Constitution,
+            Amendment V, or “be compelled in any criminal prosecution to
+            testify against himself.” Oregon Constitution, Article I,
+            section 12. Some constitutions provide that a person shall
+            not “be compelled to accuse or furnish evidence against
+            himself,” New Hampshire Constitution, Bill of Rights, Art
+            15th, and some courts hold that the additional language
+            provides a broader right than would otherwise exist.
+            <em>Emery’s Case</em>, 107 Mass 172 (1871); <em>State v.
+            Nowell</em>, 58 NH 314 (1878). The common law privilege
+            included both the right not to be required to testify
+            against oneself in a criminal trial (indeed, at common law,
+            the defendant was generally not a competent witness) and the
+            right not to give self-incriminating testimony in other
+            judicial proceedings. Early decisions held that the
+            constitutional right included both parts of the common law
+            privilege, however the privilege might be phrased. <em>See
+            State v. Quarles</em>, 13 Ark 307, 312 (1853); <em>Wilkins
+            v. Malone</em>, 14 Ind 153 (1860); <em>Cullen v.
+            Commonwealth</em>, 65 Va (24 Gratt) 624 (1873). Some courts
+            holding otherwise did so in order to give a witness broader
+            rights than courts in other states provided. <em>Emery’s
+            Case, supra; State v. Nowell, supra</em>. Other early cases
+            that took a more restrictive view were later limited.
+            Compare <em>People ex rel Hackley v. Kelly</em>, 24 NY 74
+            (1861) (dictum limiting the right to criminal prosecutions)
+            with <em>People v. Sharp</em>, 107 NY 427, 14 NE 319 (1887)
+            (assuming that the right applied to a witness before a
+            legislative committee). In 1892, the United States Supreme
+            Court declared that all the constitutional provisions were
+            entitled to the same broad construction, and state courts
+            generally followed its lead thereafter. <em>Counselman v.
+            Hitchcock</em>, 142 US 547, 584–85, 12 S Ct 195, 35 LEd 1110
+            (1892); <em>See People ex rel Lewisohn v. O”Brien</em>, 176
+            NY 253, 68 NE 353 (1903) (adopting the reasoning in
+            <em>Counselman</em> and overruling <em>People ex rel Hackley
+            v. Kelly, supra</em>); <em>but see Attorney General v.
+            Colleton</em> 387 Mass 790, 444 NE2d 915 (1982) (continuing
+            to give the Massachusetts constitutional language a broader
+            meaning than the Fifth Amendment in order to avoid such
+            recent restrictive United States Supreme Court decisions as
+            <em>Kastigar v. United States</em>, 406 US 441, 92 S Ct
+            1653, 32 LEd2d 212 (1972)). <em>We see no reason to construe
+            the Oregon Constitution to give protection from testifying
+            but not from furnishing evidence.”</em> (Emphasis
+            added.)</p>
+            <p>[Case links available in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Soriano,+68+Or+App+642,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6384140653068058316&amp;scilh=0"><em>Soriano</em></a>.]</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=7513893257822109070&amp;q=State+v.+Sanchez,+273+Or+App+778+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Sanchez</em>, 273 Or App 778 (2015)</a>, the court held
+            that consent to search may not cure a violation of a
+            defendant’s Article I, section 9, rights. Under the Article
+            I, section 9, exclusionary rule, “[w]henever the state has
+            obtained evidence following the violation of a defendant’s
+            Article I, section 9, rights it is presumed that the
+            evidence was tainted by the violation and must be
+            suppressed.” <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+miller&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=5015830502709394522&amp;scilh=0"><em>State
+            v. Miller</em>, 267 Or App 382, 398, 340 P3d 740 (2014)</a>.
+            To avoid suppression, the state bears the burden of proving
+            that the evidence at issue “did not derive from the
+            preceding illegality.” <em>Id</em>. (quoting <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+hall&amp;hl=en&amp;as_sdt=4,38&amp;case=3400934262176087409&amp;scilh=0"><em>Hall</em>, 339
+            Or at 25</a>)… Whether a defendant’s consent to a search or
+            consent to speak with officer breaks the connection between
+            a prior illegality and subsequently discovered evidence
+            depends on “the totality of the circumstances, including the
+            temporal proximity between that misconduct and the consent,
+            and the existence of any intervening or mitigating
+            circumstances. We also consider the nature, purpose, and
+            flagrancy of the misconduct.” <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+unger&amp;hl=en&amp;as_sdt=4,38&amp;case=14357303116046869438&amp;scilh=0"><em>State
+            v. Unger</em>, 356 Or 59, 88, 333 P3d 1009 (2014)</a>. In
+            <em>Sanchez</em>, the court held the officer exploited the
+            Article I, section 9, violation; thus, even with the
+            defendant’s consent, all evidence seized after the unlawful
+            entry of the curtilage should have been suppressed.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+ritz&amp;hl=en&amp;as_sdt=4,38&amp;case=10140493101714960130&amp;scilh=0"><em>State
+            v. Ritz</em>, 270 Or App 88 (2015)</a>, the court held that
+            in order for the police to enter a home absent a warrant,
+            they must establish the evidence would have been completely
+            lost, not just diminished. The court established a standard
+            that, “after first showing how long it would take to obtain
+            a search warrant, the state may prove exigency by further
+            showing that police had an objectively reasonable belief
+            that the circumstances were such that, had they waited for
+            that warrant, the suspect’s blood would have lost all
+            evidentiary value. In this case, the state established, the
+            defendant took almost four hours trying to escape from the
+            police. The officer testified further that it would take up
+            to 90 minutes to obtain a warrant. Based upon normal
+            dissipation rates, had the defendant been a .08 at the time
+            of driving, the evidence may have been completely lost by
+            the time a warrant was obtained and his blood was drawn.
+            However, in <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+rice&amp;hl=en&amp;as_sdt=4,38&amp;case=2231873464273049631&amp;scilh=0"><em>State
+            v. Rice</em>, 270 Or App 50 (2015)</a>, the court held the
+            state did not make a showing at trial that critical evidence
+            would have been lost, other than it being a case involving
+            driving and likely intoxication.</p>
+            <h2
+            id="d._warrantless_searches_of_breathbloodurine"><strong>D.
+            Warrantless Searches of Breath/Blood/Urine</strong></h2>
+            <p>Warrantless blood draws are likely inadmissible under the
+            Fourth Amendment. You might want to cite <a
+            href="https://scholar.google.com/scholar_case?case=13321473862812444568&amp;q=Birchfield+v.+North+Dakota,+579+U.S.+___+136+S.Ct.+2160+(2016&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003"><em>Birchfield
+            v. North Dakota</em>, 136 S.Ct. 2160 (2016)</a><em>,</em>
+            rather than using Oregon’s laws or constitution.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.131</a> provides in part:</p>
+            <p>(1) Any person who operates a motor vehicle upon premises
+            open to the public or the highways of this state shall be
+            deemed to have given consent, subject to the Motorist
+            Implied Consent Law, to a chemical test of the person’s
+            urine for the purpose of determining the presence of a
+            controlled substance or an inhalant in the person’s body if
+            the person is arrested for driving while under the influence
+            of intoxicants in violation of ORS 813.010 or of a municipal
+            ordinance and either:</p>
+            <p>(a) The person takes the breath test described in ORS
+            813.100 and the test discloses a blood alcohol content of
+            less than .08 percent; or</p>
+            <p>(b) The person is involved in an accident resulting in
+            injury or property damage. A urine test may be requested
+            under this paragraph regardless of whether a breath test has
+            been requested and regardless of the results of a breath
+            test, if one is taken.</p>
+            <p>Although the police may request urine tests in the
+            situations outlined above, the admissibility of this type of
+            evidence is still in question. It is possible that a person
+            giving a urine sample that is positive for controlled
+            substances is not being <em>affected</em> by the controlled
+            substance in the urine at the time the sample is given.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jayne,+173+Or+App+533&amp;hl=en&amp;as_sdt=4,38&amp;case=4435538589292844286&amp;scilh=0"><em>State
+            v. Jayne</em>, 173 Or App 533, 540, 24 P3d 920 (2001)</a>.
+            The Court of Appeals in <em>Jayne</em> found that urinalysis
+            evidence was not relevant in that case for the charges of
+            first and second degree manslaughter or failing to perform
+            the duties of a driver to an injured person. In so finding
+            the court stated:</p>
+            <p>Clearly, whether defendant was impaired due to alcohol or
+            drug consumption <em>at the time of the accident</em> was
+            material to the state’s case. However, the trial court
+            correctly accorded the urinalysis evidence little probative
+            value as to that question, because of the conceded lack of
+            direct correlation between the urinalysis test results and
+            impairment at the time of the accident. At most, the
+            evidence could properly be used to demonstrate that
+            defendant had consumed drugs at some point before the
+            accident. It also could be viewed as providing some slight
+            corroboration of the officer’s observation of symptoms,
+            <em>e.g.,</em> red eyes and greenish tongue, that the
+            officer associated with drug use. However, given the
+            significant weight that a jury is likely to accord this type
+            of evidence, the potential for prejudice here is high.
+            Specifically, the jury might infer, from the very fact that
+            it is being told that defendant tested “positive” for
+            marijuana and methamphetamine after the accident, that there
+            necessarily must be some correlation between the drugs in
+            her urine and her physical or mental condition at the time
+            of the accident. Alternatively, the jury might assume that
+            because defendant had consumed drugs in the past, she was a
+            reckless person and was likely to have been acting in a
+            reckless manner at the time of the accident. Evidence that
+            may cause “unfair prejudice,” for purposes of OEC 403, is
+            evidence that has “an undue tendency to suggest a decision
+            on an improper basis,” and “describes a situation in which
+            the preferences of the trier of fact are affected by reasons
+            essentially unrelated to the persuasive power of the
+            evidence to establish the fact of consequence.”
+            <em>O’Key</em>, 321 Or at 321. In this case, the trial court
+            correctly concluded that the probative value of this
+            evidence was low and the danger of unfair prejudice was
+            high. The trial court did not err in excluding the
+            urinalysis evidence.</p>
+            <p>The same argument applies in cases where the state seeks
+            to use a urine test to prove that the defendant was under
+            the influence at the time of driving. Since the state will
+            not be able to produce a witness to testify that the results
+            of the urinalysis have any relationship to the impairment of
+            the defendant at the time the sample is given, the results
+            are not very relevant and are terribly prejudicial. The
+            Court of Appeals has not spoken directly to this issue yet,
+            but it has met with some success at the trial court level. A
+            sample motion and memorandum is attached as an appendix to
+            the chapter.</p>
+            <p>Furthermore, the lack of foundation for a breath test may
+            lead to the exclusion of urine test results. As noted above,
+            Oregon statute provides that the police may request that a
+            defendant give a urine sample after the defendant has given
+            a breath sample of .08 or less. ORS 813.131(1)(a). What if
+            the police have no basis for requesting a breath test? An
+            implied consent law cannot obviate the unconstitutional
+            seizure of a breath sample. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Newton,+291+Or+788,&amp;hl=en&amp;as_sdt=4,38&amp;case=3246877478657920036&amp;scilh=0"><em>State
+            v. Newton</em>, 291 Or 788, 636 P2d 393 (1981)</a>.
+            Ordinarily, the results of a breath test will be allowed in
+            spite of the fact it is compelled by the threat of a license
+            suspension because it is supported by probable cause and
+            exigent circumstances.</p>
+            <p>There will be times when the police arrest a defendant
+            for driving under the influence of a controlled substance
+            without having any evidence that the defendant has consumed
+            alcohol. If the police don’t have any reason to believe that
+            the defendant has consumed intoxicating liquor, they have no
+            probable cause to seize a breath sample from the defendant.
+            If the breath test is not constitutionally obtained,
+            derivative evidence from the breath test, such as a urine
+            sample, must also be suppressed.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tripathi,+226+Or+App+552+%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=13844038272512601480&amp;scilh=0"><em>State
+            v. Tripathi</em>, 226 Or App 552 (2009)</a>, the court
+            excluded the results of a urine test as not scientific. The
+            state argued that the results came from an accredited
+            laboratory and therefore were by definition reliable and
+            scientific. The court held that without a confirmatory (not
+            necessarily quantitative) test, the results were not
+            scientific. The legislature amended ORS 813.131 to add
+            (4)(a): At the trial in any civil or criminal action, suit
+            or proceeding arising out of the acts committed by a person
+            driving a motor vehicle while under the influence of
+            intoxicants, a valid chemical analysis of a person’s urine
+            is admissible as evidence and may be used with other
+            evidence, if any, to determine whether the person was
+            driving under the influence of intoxicants. (b) A chemical
+            analysis of a person’s urine is valid under this subsection
+            if analysis is performed in an accredited or licensed
+            toxicology laboratory.</p>
+            <p><code>Practice Tip</code></p>
+            <p><em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=15349793107974146661&amp;q=Melendez-Diaz+v.+Massachusetts,+557+US___(2009&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003"><em>Melendez-Diaz
+            v. Massachusetts</em>, 557 US 305 (2009)</a>, holding that
+            forensic laboratory reports are subject to the Confrontation
+            Clause.</p>
+            <p>To admit the results of a warrantless search of a
+            defendant’s breath, blood, or urine into evidence,
+            prosecutors have relied on two exceptions to the warrant
+            requirement: consent and exigency. The Oregon Court of
+            Appeals addressed both of those exceptions in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Machuca,+231+Or+App+232&amp;hl=en&amp;as_sdt=4,38&amp;case=8706648175630264681&amp;scilh=0"><em>State
+            v. Machuca</em>, 231 Or App 232 (2009)</a> (<em>Machuca
+            I</em>). In <em>Machuca I</em>, the court reversed a DUII
+            conviction after deciding that the reading of the implied
+            consent warnings based on ORS 813.100 rendered the
+            defendant’s subsequent consent involuntary and that the
+            state had not shown sufficient exigency to justify the
+            warrantless search of the defendant’s blood. After taking
+            review, however, the Oregon Supreme Court reversed the Court
+            of Appeals in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Machuca,+231+Or+App+232&amp;hl=en&amp;as_sdt=4,38&amp;case=11659925106359372288&amp;scilh=0"><em>State
+            v. Machuca</em>, 347 Or 644 (2010)</a> (<em>Machuca
+            II</em>), holding that under Article I, section 9, of the
+            Oregon Constitution, the “evanescent nature” of blood
+            alcohol evidence created an exigency in all but “the rare
+            case” in which a warrant could have been obtained
+            “<em>significantly</em> faster” than the evidence was
+            actually obtained. The <em>Machuca II</em> court, however,
+            only based their holding on the exigency analysis and
+            seemingly left the <em>Machuca I</em> analysis on consent
+            alone.</p>
+            <p>A post <em>Machua II</em> Court of Appeals confirmed that
+            the implied consent warnings rendered any subsequent consent
+            involuntary in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Machuca,+231+Or+App+232&amp;hl=en&amp;as_sdt=4,38&amp;case=16155972704936399295&amp;scilh=0"><em>State
+            v. Moore</em>, 247 Or App 39 (2011)</a>, confirming that the
+            threats inherent in the implied consent warnings rendered
+            any subsequent consent granted and citing <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Newton,+291+Or+788,+&amp;hl=en&amp;as_sdt=4,38&amp;case=3246877478657920036&amp;scilh=0"><em>State
+            v. Newton</em>, 291 Or 788, 636 P2d 393 (1981)</a>. Later,
+            however, it extended a similar broad exigency analysis from
+            alcohol to controlled substances in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McMullen,+250+Or+App+208+%282012+&amp;hl=en&amp;as_sdt=4,38&amp;case=15258986129945626236&amp;scilh=0"><em>State
+            v. McMullen</em>, 250 Or App 208 (2012)</a>. In
+            <em>McMullen</em> the court applied the <em>Machuca II</em>
+            exigency analysis to controlled substances and held that
+            since the state was able to establish the “evanescent
+            nature” of some controlled substances in urine, an exigency
+            existed in all but the “rare case” alluded to in <em>Machuca
+            II</em>. This was expanded soon after by <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fuller,+252+Or+App+245+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=6796900537028747780&amp;scilh=0"><em>State
+            v. Fuller</em>, 252 Or App 245 (2012)</a>, in which the
+            Court of Appeals held that all the state needed to do to
+            establish exigency for a search for controlled substances
+            was to adduce some evidence that <em>some</em> controlled
+            substances are of “evanescent nature,” but did not need to
+            establish specific probable cause regarding which controlled
+            substance may be found in the defendant’s urine.</p>
+            <p>Then in 2013 the United States Supreme Court issued its
+            opinion in <a
+            href="https://scholar.google.com/scholar_case?case=15875321954166885109&amp;q=Missouri+v.+McNeely,+569+U.S.+___+(2013)&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003"><em>Missouri
+            v. McNeely</em>, 133 S Ct 1552 (2013)</a>, and held that a
+            per se exigency was not created by the mere fact that blood
+            alcohol content diminishes over time. The facts of
+            <em>McNeely</em> involved a forcible warrantless blood draw;
+            the holding was narrow and in response to the prosecution
+            argument for a blanket per se exigency rule when evidence of
+            blood alcohol content is sought by police. The Court
+            essentially left alone the previous test for exigency, which
+            was a totality of the circumstances test examining the
+            specific facts of each individual case. It left alone the
+            holding in <a
+            href="http://scholar.google.com/scholar_case?q=Schmerber+v.+California,+384+U.S.+757+%281966&amp;hl=en&amp;as_sdt=3,38&amp;case=9806833505253407923&amp;scilh=0"><em>Schmerber
+            v. California</em>, 384 U.S. 757 (1966)</a>, in which the
+            Court upheld a warrantless search for blood alcohol content
+            using an exigency analysis. The holding in both
+            <em>McNeely</em> and <em>Schmerber</em> seemingly meant
+            that, under a Fourth Amendment analysis, the prosecution had
+            to do more than merely point out that blood alcohol evidence
+            was being searched for to establish an exigency. It was
+            unclear, however, how this holding affected DUII practice in
+            Oregon, if at all.</p>
+            <p><strong>1. Consent</strong></p>
+            <p>The Oregon Supreme Court issued its opinion in <em>State
+            v. Moore</em>, 354 Or 493 (2013), in December of 2013,
+            reversing the Court of Appeals <em>Machuca I</em> analysis
+            regarding the coercive nature of reading the implied consent
+            warnings and potentially clearing the air regarding how
+            <em>McNeely</em> affects the exigency analysis in Oregon. In
+            doing so, the court relied on <em>State v. Hirsch</em>, 267
+            Or 613 (1974), in which the court held that if an officer
+            threatens a defendant “only to do what the law permits them
+            to do,” the coercion the threat may produce does not render
+            the consent constitutionally invalid. Since all the officer
+            in <em>Moore</em> did was to accurately read the defendant
+            the legal consequences of refusing to provide blood and
+            urine samples, the court reasoned, <em>Hirsch</em>
+            controlled and the reading of the implied consent warnings
+            did not unconstitutionally coerce the subsequent consent
+            given for the search. The issue of exigency and
+            <em>McNeely</em> was also addressed in a footnote, in which
+            the court indicated it did not consider the holding in
+            <em>McNeely</em> inconsistent from its own holding in
+            <em>Machuca II</em>. So for now, it seems that trial courts
+            are going to consider the issues regarding voluntary consent
+            and the implied consent warnings closed and exigency
+            regarding chemical searches for intoxicants closed.</p>
+            <p>However, the Oregon Supreme Court did leave itself an
+            escape valve through which it could potentially revisit this
+            issue. As pointed out the by court, the defendant’s argument
+            and briefing in <em>Moore</em> did not rely on the nature of
+            the coercion of the threat of punitive civil penalties for
+            refusing a breath test, but rather that a portion of the
+            warnings given was unconstitutional—namely, the threat that
+            the refusal could be offered against him in court
+            proceedings. Since part of the threat was <em>not</em>
+            legal, the defendant in <em>Moore</em> argued, such a
+            warning rendered the consent unconstitutionally coerced. The
+            court firmly closed the door on that argument but, in a
+            footnote, acknowledged that the idea in <em>Hirsch</em>
+            regarding threats of legally permissible consequences could
+            be problematic. It concluded, however, that since neither
+            party fully briefed the issue, it would be inappropriate to
+            reconsider it. Justice Kistler wrote a concurring opinion in
+            which he pointed out that the precedential value of
+            <em>Hirsch</em> is, in his mind, open for debate. The facts
+            of <em>Hirsch</em> involved a threat by officers to obtain a
+            search warrant if the defendant did not consent to a search,
+            and the reasoning <em>Hirsch</em> uses came from a
+            dissenting opinion in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Douglas,+260+Or+60+%281971%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12048327304466811225&amp;scilh=0"><em>State
+            v. Douglas</em>, 260 Or 60 (1971)</a>.</p>
+            <p>But <em><span class="underline">Moore</span></em> did not
+            address the issue of the nature of the coercion of the
+            threat of punitive civil penalties for refusing a breath
+            test. The court has since addressed this argument.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+wieboldt&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=11994863648319851061&amp;scilh=0"><em>State
+            v. Wieboldt</em>, 260 Or App 583 (2014)</a>, the court
+            directly dealt with the argument that advice about civil
+            penalties was coercive. In <em>Wieboldt</em>, the court
+            held, citing <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+moore&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=4341082146818453896&amp;scilh=0"><em>State
+            v. Moore</em>, 354 Or 493 (2013)</a>, the defendant
+            voluntarily consented to the seizure and search of his urine
+            even though he consented after he had received the statutory
+            implied consent warnings required by <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.100(1), ORS 813.130, ORS 813.131, and ORS 813.132</a>
+            about the economic harm and loss of privileges that would
+            result if he refused.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+geren&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=3643435391608851774&amp;scilh=0"><em>State
+            v. Geren</em>, 263 Or App 716 (2014)</a>, the court held
+            that consent to a breath or urine test is not involuntary
+            merely because it follows an officer’s reading of
+            information about defendant’s rights and consequences of
+            refusal. Accurate advice about legal consequences does not
+            render consent unlawful. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+moore&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=17993137066116172468&amp;scilh=0"><em>State
+            v. Moore II</em>, 354 Or 835
+            (2014)</a><span class="underline">.</span></p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+lopez-lopez&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=10236135404665148632&amp;scilh=0"><em>State
+            v. Lopez-Lopez</em>, 271 Or App 817 (2015)</a>, the court
+            held that agreeing to a warrantless breath test after being
+            read the implied consent warnings indicates the
+            voluntariness of consent unless there are some signs of
+            police exploitation or threats. The court held, “[a]lthough
+            defendant was under a DUII investigation and her consent to
+            the breath test was obtained at the police department, there
+            is no evidence that physical force was used or threatened,
+            that weapons were displayed, or that the atmosphere
+            surrounding defendant’s consent was antagonistic or
+            oppressive.”</p>
+            <p><strong>2. Exigency</strong></p>
+            <p>Warrantless entry into the home for the loss of evidence
+            might be a violation of Article I, section 9. <a
+            href="https://scholar.google.com/scholar_case?case=5071138509818977707&amp;q=state+v+ritz&amp;hl=en&amp;as_sdt=4,38"><em>See
+            State v. Ritz</em>, 291 Or App 660 (2018)</a>.</p>
+            <p>Warrantless blood draws should be analyzed under Fourth
+            Amendment. See <em>Birchfield</em> discussion above.</p>
+            <p>As pointed out earlier, beyond consent, the next issue
+            regarding a warrantless search of breath, blood, or urine is
+            exigency. Exigency is a factual question that depends on
+            procedures in obtaining a warrant and whether the delay
+            caused by obtaining the warrant would lead to a loss of
+            evidence. <a
+            href="https://scholar.google.com/scholar_case?case=3068703633660775677&amp;q=In+State+v.+Raymond,+274+Or+App+409+(2015)&amp;hl=en&amp;as_sdt=4,38">In
+            <em>State v. Raymond</em>, 274 Or App 409 (2015)</a>, the
+            court held that under the Oregon Constitution, the exigency
+            exception to the warrant requirement will justify the
+            warrantless collection of defendant’s urine in DUII
+            investigation if (1) there is probable cause to believe that
+            a controlled substance other than alcohol would be present
+            in defendant’s urine, (2) at least one relevant controlled
+            substance dissipates rapidly in urine after it is consumed,
+            and (3) a warrant cannot be obtained significantly faster
+            than the actual process otherwise used. Here, after
+            completing 11 of the 12 steps of the DRE protocol the
+            officer concluded that defendant was under the influence of
+            a central nervous system stimulant. At trial, the state
+            offered evidence that cocaine, a central nervous system
+            stimulant, has a short detection time and may be eliminated
+            from the urine within several hours of consumption. Finally,
+            the officer collected the urine sample within two and a half
+            hours of the arrest and was conducting the DRE evaluation at
+            the police station during most of that time. It was
+            estimated that it would have taken about two hours to obtain
+            a warrant. Thus, even if the officer could have initiated
+            the warrant process immediately upon arrival at the station,
+            the potential half-hour difference was not significantly
+            faster than the two and half hour process that actually
+            occurred. Accordingly, the state established a
+            constitutionally sufficient exigency for purposes of Article
+            I, section 9, of the Oregon Constitution. </p>
+            <p>Also, in <a
+            href="https://scholar.google.com/scholar_case?case=12896463380060093145&amp;q=State+v.+Perryman,+275+Or+App+631+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Perryman</em>, 275 Or App 631 (2015)</a>, the court held
+            that where the time it would take to obtain a search warrant
+            to draw blood would lead to a significant loss of evidence,
+            the exigent circumstances exception applies. Here, defendant
+            was lawfully seized for probable cause of driving under the
+            influence. Defendant was taken to a hospital where he was
+            subjected to a blood test. The officer testified that the
+            normal process to obtain a warrant at two a.m. would have
+            taken approximately two and a half hours, and during the
+            whole process the officer was without much “down time” where
+            the officer could have obtained the warrant. Accordingly,
+            the warrantless blood draw was justified. </p>
+            <h1 id="vi._motions_in_limine"><strong>VI. Motions in
+            Limine</strong></h1>
+            <p>A motion in limine is an early evidentiary motion.
+            Although prosecutors will gripe if you file them two days
+            before trial, you are within your rights to file them after
+            trial has started, when the prosecutor offers expert
+            evidence and you raise an objection based on the evidence
+            code. Doing so will annoy the judge, so you should decide if
+            you want to file early and tip your hand, or file late and
+            make it harder for the prosecutor to react.</p>
+            <p>Be careful about filing a motion in limine before
+            jeopardy has attached, because until jeopardy attaches, the
+            state can appeal an adverse ruling. ORS 138.060. <em>See
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jones,+199+Or+App+424&amp;hl=en&amp;as_sdt=4,38&amp;case=10960175206407888960&amp;scilh=0"><em>State
+            v. Jones,</em> 199 Or App 424, 426, 112 P3d 356, 357
+            (2005)</a> (listing authorities, applying rule). In the
+            right case, the right time to file the motion would be after
+            the jury is sworn and before opening argument. For example,
+            if in a controlled-substance DUII the state has erroneously
+            alleged the use of alcohol and not a controlled substance,
+            you should move in limine to exclude evidence of drug use
+            after jeopardy has attached. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stiles,+165+Or+App+584&amp;hl=en&amp;as_sdt=4,38&amp;case=554844026125363969&amp;scilh=0"><em>State
+            v. Stiles,</em> 165 Or App 584, 998 P2d 703 (2000)</a>
+            (controlled-substance theory must be alleged specifically in
+            charging instrument).</p>
+            <h1 id="vii._speedy_trial"><strong>VII. Speedy
+            Trial</strong></h1>
+            <p>Effective April 1, 2014, ORS 135.747, the statutory
+            speedy trial provision, has been repealed. Constitutional
+            speedy trial rights remain. Constitutionally, speedy-trial
+            analysis involves a flexible balancing approach if the delay
+            is long enough to trigger an inquiry, but, generally, a
+            court should look at the length of the delay, reason for the
+            delay, and prejudice to the defense if the length of the
+            delay is longer than average. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+342+Or+596,+&amp;hl=en&amp;as_sdt=4,38&amp;case=4906495402277529928&amp;scilh=0"><em>State
+            v. Johnson</em>, 342 Or 596, 606-07, 157 P3d 198, 207
+            (2007)</a>.</p>
+            <p>Because the factors are interrelated, there is no clear
+            point at which the delay is too long. <em>Compare,
+            e.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ivory,+278+Or+499,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5831535993437087386&amp;scilh=0"><em>State
+            v. Ivory</em>, 278 Or 499, 564 P2d 1039 (1977)</a> (10-month
+            delay led to dismissal) <em>with</em> <a
+            href="http://scholar.google.com/scholar_case?q=Haynes+v.+Burks,+290+Or+75+&amp;hl=en&amp;as_sdt=4,38&amp;case=14480763208460525135&amp;scilh=0"><em>Haynes
+            v. Burks</em>, 290 Or 75, 619 P2d 632 (1980)</a> (30-month
+            delay did not lead to dismissal).</p>
+            <p>Although a long delay may lead to dismissal without a
+            showing of prejudice, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hale,+80+Or+App+279,&amp;hl=en&amp;as_sdt=4,38&amp;case=4780781608901686224&amp;scilh=0"><em>State
+            v. Hale</em>, 80 Or App 279, 729 P2d 887 (1986)</a>
+            (three-year delay led to dismissal), usually the defendant
+            must show “a reasonable possibility of prejudice.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Harberts,+331+Or+72,&amp;hl=en&amp;as_sdt=4,38&amp;case=10787468046572289395&amp;scilh=0"><em>State
+            v. Harberts</em>, 331 Or 72, 94, 11 P3d 641 (2000)</a>.</p>
+            <p>The Sixth Amendment to the U.S. Constitution provides
+            similar protection. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Barker+v.+Wingo,+407+US+514,+92+S+Ct+2182,+33+L+Ed+2d+101+%281972&amp;hl=en&amp;as_sdt=3,38&amp;case=11206207816951312495&amp;scilh=0"><em>Barker
+            v. Wingo</em>, 407 US 514, 92 S Ct 2182, 33 L Ed 2d 101
+            (1972)</a>. Federal analysis adds a fourth factor: the
+            timeliness of the assertion of the right to a speedy trial
+            filed by the defendant. State law rejects that factor,
+            because the Article I, section 10, guarantee is “not a
+            ‘right’ of the accused but a mandatory directive not within
+            the disposal of the parties.” <em>Haynes v. Burks,</em> 290
+            Or at 80–81. VIII. Miscellaneous Motions</p>
+            <h2
+            id="a._dismissal_when_state_not_ready_to_proceed"><strong>A.
+            Dismissal When State Not Ready to Proceed</strong></h2>
+            <p>ORS 136.120 provides for the dismissal of cases when the
+            defendant is ready for trial but the district attorney is
+            not and does not justify a further postponement. However, if
+            it is not dismissed with prejudice, a DUII charge may be
+            reinstituted subject to the statute of limitations. ORS
+            136.130, 135.753.</p>
+            <h2 id="b._motions_to_quash"><strong>B. Motions to
+            Quash</strong></h2>
+            <p>A summons—a necessary part of the citation—must be
+            personally served on the defendant or it is subject to a
+            motion to quash. ORS 133.055–133.065. Failure to serve the
+            summons on the defendant leads to dismissal. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Picard,+37+Or+App+483,&amp;hl=en&amp;as_sdt=4,38&amp;case=1081730925071376303&amp;scilh=0"><em>State
+            v. Picard</em>, 37 Or App 483, 587 P2d 514 (1978)</a> (The
+            defendant was not personally served with the new complaint
+            following the allowance of his demurrer on the first
+            complaint. Savvy defense counsel argued the motion in the
+            absence of the client, preserving the service question.)</p>
+            <h2 id="c._severance_of_charges"><strong>C. Severance of
+            Charges</strong></h2>
+            <p>Under ORS 132.560, the law favors joinder of charges even
+            from different incidents so long as they are related or
+            similar. Therefore you may be faced with a trial setting
+            charging two or more DUIIs from different dates (ORS
+            132.560(1)(b)(A)). To obtain severance, you will need to
+            show prejudice by the joinder; for example, the defendant
+            will testify in one case but not the other, or in the case
+            of multiple charges from the same incident, that evidence is
+            admissible as to one charge but not the other, i.e., breath
+            or blood alcohol tests taken in violation of implied consent
+            law admissible on assault charge but not DUII. <em>See</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Heintz,+286+Or+239,&amp;hl=en&amp;as_sdt=4,38&amp;case=10230606586917302607&amp;scilh=0"><em>State
+            v. Heintz</em>, 286 Or 239, 594 P2d 385(1979)</a>
+            (implied-consent statutes do not apply in manslaughter
+            prosecution). <em>Heintz</em> may no longer be good law in
+            light of ORS 136.432. <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=Chartrand+v.+Coos+Bay+Tavern,+298+Or+689+&amp;hl=en&amp;as_sdt=4,38&amp;case=6018398593335294476&amp;scilh=0"><em>Chartrand
+            v. Coos Bay Tavern</em>, 298 Or 689 (1985)</a> (potential
+            for confusing instruction: .08 percent BAC has nothing to do
+            with level of intoxication). See discussion relating to
+            Demurrers, above.</p>
+            <h2 id="d._aliases"><strong>D. Aliases</strong></h2>
+            <p>ORS 135.065(2) permits, upon motion, the striking of
+            aliases. A defendant may be charged in another name than he
+            gave to the officer at the arrest.</p>
+            <h2 id="e._motions_to_disqualify_judge"><strong>E. Motions
+            to Disqualify Judge</strong></h2>
+            <p>Both parties can remove up to two judges as a matter of
+            right, a process colloquially called “affidaviting” a judge.
+            See <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors014.html">ORS
+            14.250–14.270</a>. The motion must be made at the time of
+            assignment of the case to the judge in judicial districts of
+            100,000 people or more, or in smaller jurisdictions “within
+            five days after such cause … is at issue upon a question of
+            fact or within 10 days after the assignment … of another
+            judge to preside over such cause, matter or proceeding.”</p>
+            <p>The motion must also be made before the judge in question
+            has made any rulings in the case (except for rulings on
+            motions to extend time). Only two such motions are allowed.
+            Check local rules for timing and procedures for your
+            jurisdiction. Some counties ask that counsel identify judges
+            to remove before judges are assigned; that process is not
+            required by the statute, and it makes it more likely that an
+            objectionable judge will be assigned. The defense bar should
+            resist this procedure, and counsel should weigh whether to
+            object in a particular case.</p>
+            <p>No particular basis needs to be alleged in the affidavit
+            of prejudice except that the lawyer or the defendant has a
+            good faith belief that a fair and impartial trial cannot be
+            had before that judge. The judge may challenge the good
+            faith of the affiant.</p>
+            <p>Of course, a judge may also be disqualified for
+            statutorily enumerated cause. ORS 14.210. Beyond the
+            statutory provisions, a judge who is actually biased against
+            a defendant or counsel must be disqualified as a matter of
+            due process, regardless of any failure to comply with
+            statutory procedures. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Meyer,+31+Or+App+775,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12624172359356043060&amp;scilh=0"><em>State
+            v. Meyer</em>, 31 Or App 775, at 781, 571 P2d 550
+            (1977)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Taylor+v.+Hayes,+418+US+488,&amp;hl=en&amp;as_sdt=3,38&amp;case=1782820884316696411&amp;scilh=0"><em>Taylor
+            v. Hayes</em>, 418 US 488, 94 S Ct 2697, 41 LEd2d 897
+            (1974)</a>. If you have such an issue, make a motion and
+            offer evidence of facts tending to show bias.</p>
+            <h1 id="ix._day_of_trial_motions"><strong>IX. Day of Trial
+            Motions</strong></h1>
+            <h2
+            id="a._exclusion_or_sequestration_of_witnesses"><strong>A.
+            Exclusion or Sequestration of Witnesses</strong></h2>
+            <p>It is usually a good idea to move to exclude all
+            witnesses, whether at trial or a motions hearing. <a
+            href="http://www.oregonlaws.org/ors/40.385">OEC 615</a>. For
+            similar reasons, do not let your client talk to the officer,
+            and attempt to keep your client from walking in the
+            officer’s presence. The prosecution frequently asks the
+            officer if the defendant talks and walks the same today as
+            she did at the time of the arrest.</p>
+            <h2 id="b._motions_for_judgment_of_acquittal"><strong>B.
+            Motions for Judgment of Acquittal</strong></h2>
+            <p>The motion for judgment of acquittal tests whether the
+            prosecution’s evidence is legally sufficient to prove the
+            elements of the offense. A true judgment of acquittal,
+            whether granted at trial or on appeal or subsequent review,
+            is final and prevents a retrial. ORS 136.445; Oregon
+            Constitution, Article I, section 2; U.S. Constitution,
+            Amendments V and XIV; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Harris,+288+Or+703,&amp;hl=en&amp;as_sdt=4,38&amp;case=18104996629393878233&amp;scilh=0"><em>State
+            v. Harris,</em> 288 Or 703, 609 P2d 798 (1980)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Wright+v.+West,+505+US+277,&amp;hl=en&amp;as_sdt=3,38&amp;case=11705113260695675872&amp;scilh=0"><em>Wright
+            v. West</em>, 505 US 277, 112 S Ct 2482, 120 L Ed 2d 225
+            (1992)</a>.</p>
+            <p>A true motion for judgment of acquittal relates solely to
+            the sufficiency of the state’s proof, i.e., whether the
+            evidence is sufficient to prove the elements of the offense.
+            <em>See, e.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lovins,+177+Or+App+534,&amp;hl=en&amp;as_sdt=4,38&amp;case=4717676486840327607&amp;scilh=0"><em>State
+            v. Lovins</em>, 177 Or App 534, 537, 33 P3d 1060 (2001)</a>
+            (so stating). It is not a basis to attack the indictment or
+            the statute. <em>E.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hankins,+342+Or+258,&amp;hl=en&amp;as_sdt=4,38&amp;case=16444776925019672864&amp;scilh=0"><em>State
+            v. Hankins</em>, 342 Or 258, 151 P3d 149 (2007)</a>. It may,
+            however, focus on a legal question rather than a factual
+            one. <em>E.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kurtz,+233+Or+App+573,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10543972518163045231&amp;scilh=0"><em>State
+            v. Kurtz</em>, 233 Or App 573, 228 P3d 583 (2010)</a>
+            (judgment of acquittal should have been granted because a
+            tribal officer is not a police officer for purposes of
+            attempt to elude statute).</p>
+            <p>If the state’s evidence is sufficient to prove the
+            defendant’s guilt of a different offense than the charged
+            offense, there is a variance between the pleading and the
+            proof. If the variance is “material,” the defendant is
+            entitled to acquittal. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Duvall,+187+Or+App+316&amp;hl=en&amp;as_sdt=4,38&amp;case=14617356779189319018&amp;scilh=0"><em>State
+            v. Duvall</em>, 187 Or App 316, 67 P3d 424 (2003)</a>
+            (discussing rule, citing cases). If the variance is not
+            material, i.e., if the defendant is not prejudiced, there is
+            no remedy for the variance. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Woodward,+187+Or+App+233,&amp;hl=en&amp;as_sdt=4,38&amp;case=2405426905271498499&amp;scilh=0"><em>State
+            v. Woodward,</em> 187 Or App 233, 66 P3d 556 (2003)</a>. If
+            the defendant is convicted notwithstanding a material
+            variance, the remedy is a new trial. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Alben,+139+Or+App+236,&amp;hl=en&amp;as_sdt=4,38&amp;case=2572731446902269833&amp;scilh=0"><em>State
+            v. Alben</em>, 139 Or App 236, 911 P2d 1239 (1996)</a>.</p>
+            <p>A ruling on a defense motion for acquittal by reason of a
+            variance may not bar a retrial. ORS 131.535; 136.490; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Freeman,+127+Or+App+640,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15515020858899097701&amp;scilh=0"><em>State
+            v. Freeman</em>, 127 Or App 640, 873 P2d 1107 (1994)</a>
+            (trial court dismissed with prejudice accusatory instrument
+            alleging wrong date; Court of Appeals held dismissal was
+            error). But, if the vague terms of the indictment threatens
+            the defendant with a double-jeopardy violation because there
+            are multiple acts as to which jeopardy might attach,
+            defendant should argue that a retrial is barred.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Roper,+34+Or+App+273,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1914091927799971406&amp;scilh=0"><em>State
+            v. Roper</em>, 34 Or App 273, 277, 578 P2d 479 (1978)</a>,
+            <em>reversed on other grounds</em>, <a
+            href="http://scholar.google.com/scholar_case?q=286+Or+621+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=12855253330119406694&amp;scilh=0">286
+            Or 621 (1979)</a> (noting that a variance might be
+            prejudicial if it exposed the defendant to a possible
+            double-jeopardy violation). If the accusatory instrument
+            alleges one theory, but the proof is another theory so
+            closely related that the two would have to be joined for
+            trial, retrial may be barred by statutory double jeopardy
+            under ORS 131.535.</p>
+            <p>A trial court has discretion to grant the state’s motion
+            to reopen the case. ORCP 58B; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Agee,+223+Or+App+729&amp;hl=en&amp;as_sdt=4,38&amp;case=13277037048279210809&amp;scilh=0"><em>State
+            v. Agee</em>, 223 Or App 729, 196 P3d 1060 (2008)</a>. The
+            court’s discretion might be more limited, and is more likely
+            to be exercised in your favor, if the defense has offered
+            evidence before the motion is made. So, in the right case,
+            it would be worth not making the motion at the close of the
+            states case, putting on evidence (preferably completely
+            unrelated to the gap in the state’s case) and then making
+            the motion. <em>Id</em>. (discussing factors to guide the
+            exercise of discretion). <em>Agee</em> cites <a
+            href="http://scholar.google.com/scholar_case?q=Creasey+v.+Hogan,+292+Or+154,&amp;hl=en&amp;as_sdt=4,38&amp;case=9803439886607974100&amp;scilh=0"><em>Creasey
+            v. Hogan</em>, 292 Or 154, 169, 637 P2d 114 (1981)</a> for
+            the proposition that the court should not reopen evidence
+            once the jury starts deliberating, but a trial court might
+            find the motion untimely once the jury is out. <em>See</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Brust,+158+Or+App+455&amp;hl=en&amp;as_sdt=4,38&amp;case=13311948472602009288&amp;scilh=0"><em>State
+            v. Brust</em>, 158 Or App 455, 974 P2d 734 (1999)</a>
+            (suggesting that the trial court has discretion to rule on
+            an MJOA at that time, and reviewing on appeal after the
+            trial court rules on the merits.) The court cannot grant an
+            MJOA post-verdict. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Metcalfe,+328+Or+309,&amp;hl=en&amp;as_sdt=4,38&amp;case=6827331566670650216&amp;scilh=0"><em>State
+            v. Metcalfe</em>, 328 Or 309, 974 P2d 1189 (1999)</a>.</p>
+            <p>Evidence produced during the defense case will be
+            considered by the trial court on a renewed motion at the end
+            of the case, and may cure any error in the mid-trial ruling.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nix,+7+Or+App+383,&amp;hl=en&amp;as_sdt=4,38&amp;case=7798038547240681978&amp;scilh=0"><em>State
+            v. Nix</em>, 7 Or App 383, 491 P2d 635 (1971)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stothoff,+99+Or+App+197&amp;hl=en&amp;as_sdt=4,38&amp;case=8278750875777650437&amp;scilh=0"><em>State
+            v. Stothoff</em>, 99 Or App 197, 781 P2d 412 (1989)</a>.
+            Defense counsel should object to this procedure on due
+            process and equal protection grounds; the defendant should
+            not be in a worse position than an otherwise identical
+            defendant for whom the trial court rules correctly and
+            grants the motion made at the close of the state’s case.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=+349+Or+371&amp;hl=en&amp;as_sdt=4,38&amp;case=5033888829277784561&amp;scilh=0"><em>State
+            v. Moore/State v. Coen</em>, 349 Or 371, 245 P3d 101
+            (2010)</a> (where defendant takes the stand to refute
+            improperly-admitted evidence, that testimony may not be
+            offered by the state on retrial).</p>
+            <h2 id="c._continuance"><strong>C. Continuance</strong></h2>
+            <p>If you need more time, ask for it. A written motion is
+            required in some counties and in front of some judges, and
+            it is virtually always more persuasive than an oral request
+            at a scheduling or pretrial hearing. Offer evidence of
+            related facts, such as when you got the last batch of
+            discovery or why your expert needs to conduct more tests. A
+            request for a continuance is within the court’s discretion,
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wolfer,+241+Or+15,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8037921610928699892&amp;scilh=0"><em>State
+            v. Wolfer,</em> 241 Or 15, 17, 403 P2d 715 (1965)</a>. It is
+            possible to win reversal for denial of a continuance, and if
+            you ask and make a good showing, you’re more likely to get
+            the time you need. Consider whether the state is the one who
+            really needs a continuance; if, for example, the state
+            failed to provide discovery timely, then you want a
+            dismissal for failure to provide discovery, but you don’t
+            object if the state seeks a continuance.</p>
+            <h1 id="x._recent_case_law"><strong>X. Recent Case
+            Law</strong></h1>
+            <p><strong>Motion to suppress—probable cause of traffic
+            violation—failure to drive within a lane.</strong></p>
+            <p>Failure to drive within a lane statute requires drivers
+            to stay within a single lane unless the driver has some
+            valid reason that makes it impracticable to do so. An
+            officer observed defendant’s Hummer drift back and forth
+            within its lane, briefly cross a lane-dividing line, and
+            cross over the fog line for 20 to 30 feet. The officer
+            stopped defendant for failing to drive within a single lane,
+            ORS 811.370(1)(a), observed evidence that defendant was
+            intoxicated, and arrested defendant for DUII. Defendant
+            moved to suppress, arguing that the officer lacked probable
+            cause to stop him because ORS 811.370 does not prohibit
+            brief and minor instances of driving outside a lane. Court
+            holds that ORS 811.370 requires drivers to stay within a
+            single lane unless the driver has some valid reason that
+            makes it impracticable to do so. Here, because there was no
+            apparent reason for defendant not to keep his vehicle within
+            the lane, the officer had probable cause to stop him for
+            violating ORS 811.370(1)(a).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=18172585627484622400&amp;q=State+v.+Rosling&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rosling</em>,</a> <a
+            href="https://scholar.google.com/scholar_case?case=18172585627484622400&amp;q=State+v.+Rosling&amp;hl=en&amp;as_sdt=4,38">288
+            Or App 357 (2017)</a> (Aoyagi, J.).</p>
+            <p><strong>Search &amp; Seizure—reasonable
+            suspicion—suspicion of duii diversion violation not a lawful
+            basis to stop.</strong></p>
+            <p><strong>Officer’s reasonable suspicion that defendant had
+            violated her DUII diversion agreement is not a lawful basis
+            for a stop.</strong></p>
+            <p>Defendant entered diversion following a charge for
+            driving under the influence of intoxicants (DUII). Law
+            enforcement at a victim’s impact panel observed signs that
+            defendant was under the influence of drugs, asked defendant
+            to leave the auditorium, directed her to sit in a chair and
+            blocked her exit, and confronted her about using illegal
+            drugs. Defendant admitted to taking drugs and gave an
+            officer consent to search her purse. The search revealed a
+            firearm and drugs.</p>
+            <p>The court concludes that because the provisions of
+            Oregon’s statutory DUII diversion program do not authorize
+            officers to arrest a person for failing to comply with the
+            conditions of DUII diversion, they do not implicitly
+            authorize officers to stop a person based on reasonable
+            suspicion that the person has violated those conditions.</p>
+            <p><strong>Miranda warnings were not required during traffic
+            stop and duii investigation.</strong></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=2642428424205840130&amp;q=State+v.+Nelson,+285+Or+App+345+(2017&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Nelson</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=2642428424205840130&amp;q=State+v.+Nelson,+285+Or+App+345+(2017&amp;hl=en&amp;as_sdt=4,38">285
+            Or App 345 (2017)</a> (Ortega, P.J.)</p>
+            <p>The court concludes that defendant was not in compelling
+            circumstances during a DUII investigation that took place on
+            defendant’s driveway and he was not entitled to suppression
+            of his statements. Defendant was stopped for a traffic
+            violation on his own driveway. The officer then developed
+            suspicion that defendant was driving while intoxicated.
+            Defendant made several incriminating statements to the
+            officer. The court rejects defendant’s argument that the
+            stop went beyond a routine investigatory stop into
+            compelling circumstances. In particular, the court notes
+            that defendant was in his own driveway. And, although the
+            officer told defendant he was not free to leave and did not
+            allow him to walk into his house, the restrictions on his
+            movements were not so significant to create compelling
+            circumstances. Further, the duration of the encounter – 32
+            minutes – was also not so lengthy to create compelling
+            circumstances. Finally, the officer’s statement to defendant
+            that he believed defendant was too impaired to be driving
+            did not convey to defendant that the officer had probable
+            cause to arrest defendant.</p>
+            <p><strong>Defendant could not invoke right to counsel in
+            non-compelling circumstances.</strong></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1516889235966675925&amp;q=+State+v.+Anderson,+285+Or+App+355+(2017)&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Anderson</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=1516889235966675925&amp;q=+State+v.+Anderson,+285+Or+App+355+(2017)&amp;hl=en&amp;as_sdt=4,38">285
+            Or App 355 (2017)</a> (Ortega, P.J.)</p>
+            <p>The court rejects defendant’s argument that she invoked
+            her right to counsel by handing an officer a preprinted care
+            asserting her rights at the beginning of a traffic stop.
+            Additionally, after consenting to performing FSTs, defendant
+            twice asked to talk to her attorney, and the officer said
+            she could talk to her attorney in the event she was
+            arrested. The court rejects without discussion defendant’s
+            argument that the circumstances were compelling. The court
+            then explains that in non-compelling circumstances, officers
+            were permitted to question defendant even after she invoked
+            her rights and her statements were not involuntary.</p>
+            <p><strong>Miranda warnings – warnings were not rendered
+            inadequate by officer’s subsequent statements and defendant
+            knowingly and voluntarily waived rights.</strong></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15173124923198268619&amp;q=State+v.+Fink,+285+Or+App+302+(2017)+&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Fink</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=15173124923198268619&amp;q=State+v.+Fink,+285+Or+App+302+(2017)+&amp;hl=en&amp;as_sdt=4,38">285
+            Or App 302 (2017)</a> (Garrett, J.)</p>
+            <p>The court concludes that defendant knowingly and
+            voluntarily waived her Miranda rights. Defendant was
+            arrested for DUII and given Miranda warnings. Defendant told
+            the officer to stop talking to her, but the officer asked
+            her questions related to her hair and eye color and where
+            she lived. Defendant asked for an attorney and the officer
+            said, “Well these aren’t the questions that you can really
+            avoid by using, you would like an attorney.” Defendant
+            continued to engage in off-topic conversation with the
+            officer, eventually saying that she drove drunk. On appeal,
+            defendant conceded that she initiated a discussion of the
+            crime and that the officer’s statement was reasonably
+            referring to “booking questions” that are excepted from
+            Miranda. However, under the totality, she argued that the
+            officer’s comment undermined the Miranda warnings and there
+            was no valid waiver. The court rejects that argument.
+            Defendant’s initial warnings were adequate and it was clear
+            from the record that she understood her rights. Nothing
+            occurred between the warnings and her re-engagement in
+            conversation that would have required the officer to give
+            new warnings.</p>
+            <p><strong>Search and seizure – defendant did not have a
+            privacy interest in a bac test conducted for medical
+            treatment.</strong></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=9173055418515461591&amp;q=State+v.+Miller,+284+Or+App+818&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Miller</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=9173055418515461591&amp;q=State+v.+Miller,+284+Or+App+818&amp;hl=en&amp;as_sdt=4,38">284
+            Or App 818 (2017)</a> (Duncan, P.J.)</p>
+            <p>ORS 676.260(1) requires hospital staff to notify law
+            enforcement investigating a car accident if the purported
+            driver has a BAC that exceeds the legal amount. Defendant
+            was in the hospital being treated following a car accident.
+            Hospital staff tested his blood as part of his medical
+            treatment and revealed a .333 percent BAC. Staff then
+            notified the officer who was present investigating the
+            accident.</p>
+            <p>Defendant argued that the hospital’s disclosure of his
+            BAC test result was a search under both Article I, section
+            9, and the Fourth Amendment. The court first rejects
+            defendant’s argument that he had a privacy interest under
+            Article I, section 9, because it had previously rejected
+            that argument in State v. Gonzalez, 120 Or App 249 (1993)
+            and defendant did not meet the burden of showing that
+            Gonzalez was wrongly decided. Under the Fourth Amendment,
+            defendant relied on Ferguson v. City of Charleston, 532 US
+            67 (2001), in which the United States Supreme Court struck
+            down as unconstitutional searches of pregnant patient’s
+            urine pursuant to a joint policy between the hospital and
+            law enforcement. Here, the court distinguishes that case
+            because the purpose of the search in Ferguson was to gather
+            incriminating evidence for later prosecution. The Supreme
+            Court did not similarly overrule policies that impose a duty
+            to make disclosures to law enforcement when evidence is
+            discovered in the course of routine treatment, as it was in
+            this case.</p>
+            <p><strong>Search and seizure – extension of stop justified
+            by reasonable suspicion of DUII.</strong></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8885360410497219654&amp;q=State+v.+Craig,+284+Or+App+786+(2017)&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Craig</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=9173055418515461591&amp;q=State+v.+Miller,+284+Or+App+818&amp;hl=en&amp;as_sdt=4,38">284
+            Or App 786 (2017)</a> (Flynn, J., pro tem)</p>
+            <p>The court concludes that police were justified in
+            extending a traffic stop of defendant because they had
+            reasonable suspicion of DUII. Police stopped defendant for
+            driving unsafely because one of her tires was flat and she
+            was driving well under the speed limit. Police also
+            suspected that defendant’s vehicle had left the scene of an
+            earlier accident. Police detained defendant so another
+            officer, who was investigating the accident, could look at
+            the car. That officer determined that the car was not
+            involved in the accident. However, the officers had noted
+            the odor of alcohol coming from defendant’s car, and that
+            her eyes were glassy. Although the original purpose of the
+            stop dissipated when the officer concluded that her car was
+            not involved in the accident, the other facts – the odor of
+            alcohol, defendant’s glassy eyes, and her unsafe driving –
+            gave rise to reasonable suspicion of DUII. It is worth
+            examining if an expanded search or questioning after the
+            unavoidable lull of a traffic stop occurs.</p>
+            <p><strong>DUII – right to counsel during a breath
+            test.</strong></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=13359026709816671568&amp;q=State+v.+Green,+279+Or.+App.+716+(2016)&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Green</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=13359026709816671568&amp;q=State+v.+Green,+279+Or.+App.+716+(2016)&amp;hl=en&amp;as_sdt=4,38">279
+            Or. App. 716 (2016)</a></p>
+            <p>In a DUII case, officers denied defendant the right to
+            counsel before he consented to a breath test by remaining in
+            the room while defendant spoke to the receptionist for an
+            attorney. The receptionist, although not an attorney, was
+            the means through which defendant could confidentially
+            communicate with, and obtain legal advice from, an attorney.
+            The officers’ presence is presumed to have a chilling effect
+            on the defendant’s exercise of his right to counsel and the
+            state did not overcome that presumption in this case.
+            Therefore, the breath test that followed the conversation
+            must be suppressed.</p>
+            <p><strong>DUII blood draws require a warrant or
+            exigency.</strong></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=13321473862812444568&amp;q=Birchfield+v.+North+Dakota+136+S.Ct.2160&amp;hl=en&amp;as_sdt=3,38"><em><span class="underline">Birchfield
+            v. North Dakota</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=13321473862812444568&amp;q=Birchfield+v.+North+Dakota+136+S.Ct.2160&amp;hl=en&amp;as_sdt=3,38">136
+            S.Ct. 2016</a></p>
+            <p>Under the Fourth Amendment, obtaining a blood draw in a
+            DUII investigation requires a search warrant or an exception
+            to the warrant requirement beyond the search incident to
+            arrest exception to the warrant requirement. Although states
+            may punish motorists for a refusal to submit to a breath
+            test based on implied consent laws, states may not
+            criminally punish motorists for reviewing to submit to a
+            blood test.</p>
+            <p>ORS 813.131(2013) – Certification required to request a
+            urine test.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=2072410113210491575&amp;q=State+v.+Hedgepeth+290+Or+App+399+&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Hedgepeth</span></em> 290 Or App 399</a> (February 22,
+            2018) (Shorr, J.) (En banc) (Powers, J., dissenting)</p>
+            <p>An officer was properly certified to request a urine test
+            after suspecting that the defendant was driving under the
+            influence even though ORS 813.131 (2013), the governing
+            statute at the time, required that the officer be certified
+            by the Board of Public Safety Standards and Training and the
+            officer was only certified by the Department of Public
+            Safety Standards and Training. This was because the
+            legislature had impliedly amended the statute in 1997 to
+            require that officers requesting such tests be only
+            certified by the DPSST. <a
+            href="https://scholar.google.com/scholar_case?case=13135414173306678655&amp;q=Hanson+v.+DMV,+278+Or.+App.+599+(2016)&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">Hanson
+            v. DMV</span></em></a>, <a
+            href="https://scholar.google.com/scholar_case?case=13135414173306678655&amp;q=Hanson+v.+DMV,+278+Or.+App.+599+(2016)&amp;hl=en&amp;as_sdt=4,38">278
+            Or. App. 599 (2016)</a></p>
+            <h1 id="xi._final_thoughts"><strong>XI. Final
+            Thoughts</strong></h1>
+            <p>Don’t just file a motion because you have a spiffy form
+            and you want to see what happens. File it for a reason. Good
+            reasons include: winning the motion and thereby increase
+            your chance of winning at trial, getting a good plea offer,
+            setting up an issue for appeal, or making the judge tell you
+            <em>No</em> so many times that he or she feels a little
+            guilty and wants to say <em>Yes</em> to something. A motion
+            to suppress may give you what amounts to an opportunity to
+            depose the arresting officer.</p>
+            <p>If you are doing your job, judges will say <em>No</em> to
+            you over and over and over. Get over it, and ask again. You
+            are not helping your client if you really need another two
+            weeks to get a report back from an expert and you don’t ask
+            because the judge is cranky and never grants continuances.
+            Be polite and persistent and make your record.</p>
+            <p><strong>Acknowledgements</strong></p>
+            <p>With special thanks to previous authors of this chapter,
+            Dave Celuch and Spencer Hahn.</p>
+            <h1 id="xii._sample_pretrial_motions"><strong>XII. Sample
+            Pretrial Motions</strong></h1>
+            <p>As can be seen by a review of this chapter, the issues
+            that can be covered in pretrial motions are varied and are
+            only limited by the imagination of the trial lawyer. Which
+            pretrial motions you choose to file will depend on the facts
+            of your case. To help you get started thinking creatively
+            about motion practice and provide some case law that may be
+            of assistance we have provided ten sample pretrial motions
+            in the appendices. The form and style of pretrial motions
+            vary as can be seen in these samples provided by eight
+            different attorneys. [Look for the appendices in the box at
+            the upper right corner of this page.]</p>
+            <p><strong>A. Defendant’s Trial Memo re Invocation of Rights
+            and FSTs</strong> – This trial memo, which includes citation
+            to <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=state+v+banks&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Banks</em></a>, addresses why a jury should not hear
+            testimony regarding invocation of constitutional rights or
+            about refusal to take a breath test. This memo also
+            addresses admissibility of VGN, HGN and FSTs.</p>
+            <p><strong>B. Motion to Suppress Defendant’s Refusal to
+            Consent to Breath Test</strong> – This motion to suppress
+            invokes <em>State v. Banks</em> to argue that evidence of
+            defendant’s refusal to provide a breath test is an
+            impermissible burden on the exercise of defendant’s
+            constitutional right to refuse to consent to a warrantless
+            search.</p>
+            <p><strong>C. Motion to Suppress Stop, Breath Test Result,
+            Statements &amp; Refusal</strong> – This motion to suppress
+            relies on <em>State v. Banks</em> and other cases to support
+            the position that evidence of a stop, refusal to perform
+            FSTs, statements and breath test results should all be
+            suppressed.</p>
+            <p><strong>D. Motion to Suppress all Fruit of
+            Unconstitutional Traffic Stop</strong> – This motion to
+            suppress discusses suppression issues around traffic stops
+            based on probable cause of a violation, reasonable suspicion
+            of DUII, whether brushing a lane line is a traffic
+            violation, extension of a traffic stop and whether there is
+            sufficient probable cause to require performance of
+            FSTs.</p>
+            <p><strong>E. Motion in Limine to Exclude Description of
+            Performance of FSTs</strong> – This motion is limine relies
+            on <a
+            href="https://scholar.google.com/scholar_case?case=16260876675816212834&amp;q=state+v+bELTRAN+CHAVEZ&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beltran-Chavez</em></a> and <a
+            href="https://scholar.google.com/scholar_case?case=2072410113210491575&amp;q=State+v.+Hedgepeth,+290+Or+App+399+(2018)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hedgpeth</em></a> for the proposition that description of
+            the performance of field sobriety tests in a cannabis DUII
+            should be excluded.</p>
+            <p><strong>F. Motion in Limine to Exclude Observations of
+            Officers that Are Identified as Associated with Cannabis
+            Consumption</strong> – This motion in limine moves to
+            exclude observations of officers that are identified as
+            associated with the use of cannabis.</p>
+            <p><strong>G. Motion in Limine to Exclude Evidence of Prior
+            DUII Cases and PCS Conviction</strong> – This motion in
+            limine is a safeguard against mention of prior DUII cases or
+            a felony conviction more than 15 years old.</p>
+            <p><strong>H. Motion to Compel Up-do-date Lab Results of DRE
+            Officer’s Rolling Log</strong> – This is a motion to compel
+            up to date lab results of a DRE officer’s rolling log.</p>
+            <p><strong>I. Motion to Suppress Results of Urinalysis,
+            Analytical Report and Description of DRE Report or Training
+            as Scientific</strong> – This motion to suppress requests
+            the court to exclude the results of a urine analysis and any
+            evidence describing the DRE report or training as scientific
+            evidence.</p>
+            <p><strong>J. Motion to Suppress Results of Urinalysis Under
+            <em>Jayne</em></strong> – This motion to suppress relies on
+            <em>State v. Jayne</em> and <em>State v. O’Key</em> to argue
+            that urinalysis results should be excluded.</p>
+            <p><strong>K. Motion in Limine Regarding Field Sobriety Test
+            Evidence</strong> – This motion relies on <a
+            href="https://scholar.google.com/scholar_case?case=8341539148624883472&amp;q=State+v.+Eskie+277+Or+App+93+(2016)&amp;hl=en&amp;as_sdt=4,38"><span class="underline"><em>State
+            v. Eskie,</em> 277 Or App 93 (2016)</span></a>, as a basis
+            to exclude evidence of both testimonial and non-testimonial
+            field sobriety tests when there is a refusal by
+            non-cooperation. John Henry Hingson III believes Eskie is a
+            highly valuable and underutilized case which implicates <a
+            href="https://scholar.google.com/scholar_case?case=4564612388614417024&amp;q=State+v.+Rohrs,+333+Or+397+(2002)&amp;hl=en&amp;as_sdt=4,38"><span class="underline"><em>State
+            v. Rohrs</em>, 333 Or 397 (2002)</span></a>, and <a
+            href="https://scholar.google.com/scholar_case?case=13533074752773959333&amp;q=State+v.+Fish,+321+Or+48+(1995)&amp;hl=en&amp;as_sdt=4,38"><span class="underline"><em>State
+            v. Fish</em>, 321 Or 48 (1995)</span></a>. Will we see an
+            “Eskie Admonishment” in the future?</p>
+    </body>
+</html>

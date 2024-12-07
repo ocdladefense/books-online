@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong>2020 edition, with 2024 Update</strong></p>
+            <h1 id="the_file"><strong>The File</strong></h1>
+            <p><strong><em>By Randall W. Snow</em></strong></p>
+            <h1 id="part_1_case_overview"><strong>Part 1 Case
+            Overview</strong></h1>
+            <p>This chapter is designed to provide lawyers’ assistants
+            with the information necessary to handle procedural matters
+            pertaining to DUII cases. Assistants and lawyers can benefit
+            by defining those duties which assistants can handle,
+            thereby lessening the need for constant communication and
+            dictation, freeing time up for the attorney. This also
+            creates a more responsible and interesting position for the
+            assistant.</p>
+            <h1 id="i._intake"><strong>I. Intake</strong></h1>
+            <p>The assistant generally has the initial contact with the
+            new client by taking the incoming telephone call. Most
+            callers are open about their need for legal assistance. Some
+            callers are more hesitant to discuss the matter with anyone
+            but the attorney. With the attorney’s permission, assistants
+            can perform the “pre-interview” interview. Indicate to the
+            caller that perhaps you can obtain some initial information
+            that will help the attorney understand what his/her case is
+            about when the attorney returns the call. Also, if the
+            attorney handles the case, you will have the information
+            needed to set up your file. You will need to obtain the
+            following information (also see Appendix A, DUII Telephone
+            Intake, and the client-related forms in Part 2, Checklists
+            and Forms, begining on pg 3–17):</p>
+            <ul>
+            <li><blockquote>
+            <p>Name, address and phone numbers (work, home, cell, and
+            email).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Exact date citation was issued.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>County in which citation was issued.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Date of first appearance and court (i.e., municipal,
+            county, federal, tribunal).</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Whether a breath test was taken or refused.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Whether a blood test or urinalysis was taken or
+            refused.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Test result, if known.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Whether caller was involved in an accident.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If so, was anyone injured? Get names of all involved for
+            a conflict check.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Whether or not the caller is a resident of Oregon.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Whether the caller has prior DUII convictions, prior
+            diversion entries, prior breath test refusals or failures,
+            prior alcohol treatment program participation, etc.</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Military or non-military.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Whether currently on probation or parole.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Whether there was a passenger in the caller’s
+            vehicle.</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Whether caller has a Commercial Driver License.</p>
+            </blockquote></li>
+            </ul>
+            <p>The caller will be asking a lot of questions. It is
+            important to remember that an assistant cannot give legal
+            advice.</p>
+            <p>After obtaining the necessary information, inform the
+            caller of the following:</p>
+            <p>1. When you determine implied consent status, ask the
+            caller if a DMV hearing has been requested. The caller has
+            10 days (not counting the day of arrest) to make a request
+            for a hearing. This request must be received at the DMV
+            Hearings Branch in Salem by 5 p.m. on the 10th day following
+            arrest. If the 10th day falls on a holiday or weekend, the
+            deadline is the next business day. This hearing is to
+            contest the proposed suspension by DMV for either failure or
+            refusal of a test.</p>
+            <p>2. If no request for a hearing has been filed, schedule
+            an appointment to see the prospective client within the
+            10-day period for requesting a hearing. If the caller cannot
+            get in within the 10-day period, obtain information to make
+            the hearing request for the caller and make an appointment
+            as soon as possible. This request does not obligate the
+            caller or the attorney, it only protects the caller’s right
+            to a hearing.</p>
+            <p>a. If the caller doesn’t hire the attorney, she can still
+            attend the hearing.</p>
+            <p>b. Even if the caller is currently suspended for another
+            reason, a hearing request may protect her from further
+            suspension and is an excellent discovery tool.</p>
+            <p>c. The caller should be told that in the event no hearing
+            is requested, suspension will automatically take effect 30
+            days from the date of arrest. Ask caller to bring all papers
+            that the officer gave her when the caller comes to initial
+            appointment.</p>
+            <h1 id="ii._dmv_hearing_request"><strong>II. DMV Hearing
+            Request</strong></h1>
+            <p>[Note: For a detailed analysis of the implied consent
+            hearing process, see Chapter 4.]</p>
+            <h2 id="a._determine_the_deadline"><strong>A. Determine the
+            Deadline</strong></h2>
+            <p>The request must be received by the Hearings Branch in
+            Salem by 5 p.m. on the 10th day following arrest (including
+            weekends and holidays), and if the 10th day falls on a
+            holiday or weekend the deadline is the next business
+            day.</p>
+            <h2 id="b._the_request"><strong>B. The Request</strong></h2>
+            <p>The hearing request can be made <a
+            href="https://www.oregon.gov/ODOT/DMV/Pages/Email_forms/implied_consent_hearing.aspx"><span class="underline">online</span></a>,
+            by fax, by mail or can be hand delivered. For a sample
+            hearing request, go to Part 2, Checklists and Forms, pg.
+            3–53. A sample reequest is on pg. 3–54.<br />
+            The request should include:</p>
+            <p>1. Full name of client.</p>
+            <p>2. Client’s mailing address. (Be sure to check with
+            client on this, because current address may be different
+            than that shown on implied consent form. DMV will mail
+            notice of hearing to the address you give them.)</p>
+            <p>3. Driver’s license number and state of issuance.</p>
+            <p>4. Date of birth.</p>
+            <p>5. Date and county of arrest.</p>
+            <p>6. Attorney contact information and availability: dates,
+            portions of days (morning, afternoon, 10–2, etc.).</p>
+            <p>7. Request an in-person hearing. Otherwise, the automatic
+            default will be a telephonic hearing. An in-person hearing
+            will provide a better opportunity to properly question the
+            officer and will increase the likelihood that they do not
+            show up within 15 minutes of the scheduled hearing time.</p>
+            <p>8. If an interpreter is needed specify what language.</p>
+            <p>9. The DMV Hearings Case Management Unit also requests a
+            brief statement of the issues you intend to raise at the
+            hearing. A general statement such as the following should be
+            provided: “We will be challenging the legality of the stop
+            and the legality of the arrest in this case pursuant to
+            <em>Bish v. MVD</em>, 97 or App 648 (1989), and <em>Pooler
+            v. MVD</em>, 306 Or 47 (1988).”</p>
+            <p>If client requested his own hearing prior to hiring you,
+            they may not have requested an in-person hearing and will
+            not have known your schedule. If the client did not request
+            an in-person hearing it will still be scheduled as an
+            in-person hearing if the officer checked that request on the
+            ICCR. If the hearing has not been scheduled, when you fax
+            the Offices of Administrative Hearings with your
+            representation letter, you should indicate you want an
+            in-person hearing. You can also send your availability to
+            the OAH after a client has made a request. If the hearing
+            has already been scheduled for a telephonic hearing, the OAH
+            will not change this.</p>
+            <p>The initial request for a hearing is sent to the DMV.
+            Once they have determined the request is within the 10-day
+            time limit, the case is transferred to the Offices of
+            Administrative Hearings. Pay attention to the county of
+            arrest—a hearing in another area will require travel time.
+            The OAH will try to accommodate the attorney’s schedule.</p>
+            <p>Under certain circumstances, you may file a motion with
+            the Offices of Administrative Hearings to allow a late
+            hearing.</p>
+            <p>Establishing rapport with the person who does the
+            scheduling in your area is advised.</p>
+            <h2
+            id="c._hearings_branch_office_of_administrative_hearings_contact_information"><strong>C.
+            Hearings Branch &amp; Office of Administrative Hearings
+            Contact Information</strong></h2>
+            <p>Hearings Branch</p>
+            <p>Motor Vehicles Division</p>
+            <p>1905 Lana Avenue NE</p>
+            <p>Salem, Oregon 97314</p>
+            <p>Tel: (503) 945-5545</p>
+            <p>Fax: (503) 945-5521</p>
+            <p>After the case has been transferred to the Offices of
+            Administrative Hearings, the contact<br />
+            information is:</p>
+            <p>Offices of Administrative Hearings</p>
+            <p>4600 25<sup>th</sup> Avenue, Suite 140</p>
+            <p>Salem, Oregon 97301</p>
+            <p>Tel: (503) 947-1515</p>
+            <p>Fax: (503) 947-1923</p>
+            <p>The hearing request can be made online at the link below.
+            An online request is a good way to go because you will
+            immediately receive a confirmation email that you will want
+            to place in the file to prove the request was timely if
+            there is any question. If you fax the request instead be
+            sure to keep the fax receipt showing that it went
+            through.</p>
+            <p>Make an online request <a
+            href="https://www.oregon.gov/ODOT/DMV/Pages/Email_forms/implied_consent_hearing.aspx">here</a>.<a
+            href="#fn1" class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a></p>
+            <p>For the most up-to-date information, go to the Implied
+            Consent Hearing page <a
+            href="https://www.oregon.gov/ODOT/DMV/pages/driverid/ichearing.aspx">here</a>.<a
+            href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            <h2 id="d._rescheduling"><strong>D.
+            Rescheduling</strong></h2>
+            <p>If the need arises to reschedule the hearing date, please
+            note that if the petitioner files the request, the client’s
+            license will be suspended within the time period indicated
+            on the implied consent form. If the officer is unavailable
+            and the hearing is rescheduled, the client’s license
+            suspension is withdrawn until the outcome of the hearing.
+            Reasons for allowing the department to reschedule the
+            hearing are covered in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.440</a> and includes the inability of the attorney to
+            appear due to the attorney’s illness, vacation or scheduling
+            conflict arising from other court or administrative hearing
+            appearances.</p>
+            <h2 id="e._servicemembers"><strong>E.
+            Servicemembers</strong></h2>
+            <p>If the client is in the military, different rules will
+            apply. Pursuant to <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            183.413</a>, a member of the Armed Forces (Army, Navy, Air
+            Force, Marines, Coast Guard and National Guard) may be
+            subject to the protection of the Servicemembers’ Civil
+            Relief Act (SCRA). The SCRA provides certain protections to
+            servicemembers and their dependents, if specific conditions
+            are met. If your client qualifies, he or she may be entitled
+            to have the license suspension matter stayed. You will need
+            to get a copy of the client’s service orders as it pertains
+            to the specific condition.</p>
+            <h1 id="iii._case_management"><strong>III. Case
+            Management</strong></h1>
+            <h2 id="a._the_file"><strong>A. The File</strong></h2>
+            <p>When setting up a file for a new client, it is important
+            the file be of an adequate size to contain the volume of
+            material these cases can generate. Multipart folders or
+            notebooks allow room for organizing information.</p>
+            <p>Along with the client’s address and phone number it is
+            helpful to include the address and phone numbers of the
+            court clerk and city and district attorneys.</p>
+            <p>Note: When your office takes on a case in a county where
+            the attorney does not normally practice, contact the clerk
+            of that court. Ask the clerk about their procedures, special
+            appearances or filing requirements. Read the Supplemental
+            Trial Court Rules that apply to that judicial district. It
+            is very important to ask how the diversion deadline is
+            calculated. Never assume it will always be 30 days after the
+            initial appearance date. Asking in advance can save you a
+            lot of time and headaches. Don’t be afraid to ask questions
+            or let people know that you are unfamiliar with some
+            procedures. They are almost always willing to help if you
+            express your desire to do things right.</p>
+            <h2 id="b._checklists"><strong>B. Checklists</strong></h2>
+            <p>One cannot say too much for these!</p>
+            <p>Checklists allow much to be done without a great deal of
+            attorney time. In a busy office, having checklists marked
+            indicating what to do means that case preparation goes on in
+            the absence of the attorney. With a checklist used by the
+            attorney, the assistant can prepare and transmit the fee
+            agreement, request discovery, request a DMV hearing, send
+            initial correspondence to witnesses, advise court of
+            representation, prepare standard motions, etc. A checklist
+            also allows the attorney to know at a glance that things
+            have been done. A checklist could include the following (see
+            Part 2, Checklists and Forms, and Appendix B):</p>
+            <ul>
+            <li><blockquote>
+            <p>DMV hearing request</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Driving record</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Discovery request and payment to city/district
+            attorney</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Letter of representation to court</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Not-guilty letter to court (in lieu of first appearance,
+            if acceptable)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Jail records (including mug shot and medical screening
+            form)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Audio/videotape recording of arrest/field sobriety
+            tests</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Communications/911 tape</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Medical records</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Court documents regarding prior convictions</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Fee agreement</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>DMV recordings ordered (DMV retains them for only six
+            months after the hearing)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Routine motions</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Discovery to state</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Expert witnesses needed and obtained</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Notification to district attorney of DMV recording</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Witnesses interviewed, subpoenaed and notified of trial
+            date.</p>
+            </blockquote></li>
+            </ul>
+            <p>Again, to obtain samples of many of these forms, see Part
+            2.</p>
+            <h2 id="c._give_copies_to_your_client"><strong>C. Give
+            Copies to Your Client</strong></h2>
+            <p>By sending copies of everything to the client, whether
+            motions or correspondence, you keep your client advised of
+            what is going on. Sending the police reports to the client
+            with a request that he or she contact the attorney after
+            reviewing them gives the client an opportunity to go over
+            the materials thoroughly. When sending police reports and
+            discovery to the client, you <em>must</em> redact all
+            personal identifiers of victims and witnesses pursuant to
+            ORS 135.815(4)(A). Personal identifiers are defined as a
+            person’s address, telephone number, social security number,
+            date of birth, and numbers of accounts at financial
+            institutions or on credit cards. ORS 135.815(5)(A).</p>
+            <h2 id="d._transcripts_and_recordings"><strong>D.
+            Transcripts and Recordings</strong></h2>
+            <p>It is a good practice to request a copy of the CD of the
+            DMV hearing. Since the Hearings Branch keeps the recordings
+            for only six months, doing this automatically ensures that
+            you will have the recording.</p>
+            <p>When retained to represent the client on the DUII, the
+            testimony portions of the recordings can then be transcribed
+            for use at trial or for motion hearings.</p>
+            <p>These recordings can be obtained by writing the Hearings
+            Branch, Attention: Record Services, with a check. You may
+            also want to set up an account for CDs, and then you can fax
+            in your request. If you have an account with DMV, you can
+            fax your request to (503) 588-0155 or (503) 588-0165.</p>
+            <p>Note: <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.324</a> requires that the party who intends to use a DMV
+            hearing recording or transcript provide a copy to the
+            attorney for the other party at least seven days prior to
+            the first date set for trial. The sole remedy for failure to
+            comply with this statute is <em>exclusion</em>, absent a
+            showing of “good cause.”</p>
+            <h1 id="iv._docket_control"><strong>IV. Docket
+            Control</strong></h1>
+            <p>Having the docket handled by the assistant can save the
+            attorney a great deal of time. The assistant usually takes
+            calls from the court and others to set matters and can
+            eliminate conflicts by catching them before appearances are
+            set. The assistant generally opens the mail and can enter
+            trial, motion and other dates on dockets as she or he
+            handles the mail, notifying clients and witnesses and
+            issuing necessary subpoenas. The assistant can determine
+            conflicts and bring them to the attention of the attorney
+            who will advise how to handle them (reset one case or
+            another). It is also important to let the court know when
+            your client needs an interpreter in advance of the hearing
+            or trial. Do not assume that they will know this.</p>
+            <h1 id="v._discovery"><strong>V. Discovery</strong></h1>
+            <p>When you send your letter or online notification to DMV
+            requesting an implied consent hearing, be sure to request
+            discovery. The discovery you receive from DMV will not be
+            complete. You will receive only documents pertaining to the
+            implied consent suspension (implied consent form,
+            Intoxilyzer checklist, evidence card, permit, etc.). You
+            will not, however, receive the officer’s written report,
+            DUII interview form, recordings, etc. In rare instances you
+            may receive a police report. In order to ensure you have all
+            discovery in your hands prior to the DMV hearing, you should
+            request it from the city or district attorney’s office, if
+            available prior to the client being arraigned.</p>
+            <p>Periodically you will have a DMV hearing set and the
+            court case has not been “filed” by the city/district
+            attorney’s office. In this case, the city/district
+            attorney’s office may not release the discovery because “a
+            case has not been filed.” If you cannot get discovery from
+            the prosecutor, call the arresting agency’s records
+            custodian. Explain that you can not obtain the discovery
+            from the prosecuting attorney’s office because the case has
+            not yet been filed and that you have a DMV hearing set soon.
+            The records custodian may agree to give them to you or
+            you’ll be referred back to the city/district attorney’s
+            office. If you cannot get them from the records custodian,
+            you will need to issue a subpoena <em>duces tecum</em> (see
+            Appendix C) to the records custodian to bring them to the
+            DMV hearing. Usually the custodian will promptly provide
+            them to you so he or she will not have to appear at the
+            hearing. Be sure to attach a check to the subpoena for a
+            witness fee of $5 and mileage ($.08 per mile). <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors044.html">ORS
+            44.415(2)</a></p>
+            <h2 id="a._oregon_state_police"><strong>A. Oregon State
+            Police</strong></h2>
+            <p>For the most up-to-date information, go to <a
+            href="http://www.oregon.gov/osp">http://www.oregon.gov/osp</a>.</p>
+            <p>1. Intoxilyzer certification/maintenance records. These
+            records can now be obtained online. The Breathalyzer Report
+            will contain the machine number which you will need for the
+            records search. Check with the attorney to see what time
+            span he or she wants on these reports (i.e., six months in
+            advance of arrest).</p>
+            <p>2. The <em><a
+            href="https://www.oregon.gov/osp/Docs/8000_oper_guide_090806.pdf">Intoxilyzer
+            8000 Operator’s Guide</a></em> is available online and in
+            the Resource Guide, as is the <a
+            href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/documents/sfst_full_participant_manual_2018.pdf"><em>DWI
+            Detection and Standardized Field Sobriety Tests
+            Manual</em></a> (February 2018).</p>
+            <p>3. If your client was arrested by an Oregon State Police
+            officer you may want to request a copy of the communications
+            (radio talk between officer and dispatch,
+            officer-to-officer, 911 calls). You can request this from
+            the <a
+            href="https://www.oregon.gov/osp/programs/Pages/Public-Records-Requests.aspx">Oregon
+            State Police Central Records</a>, 255 Capitol St. N.E., 4th
+            Floor, Salem, Oregon 97310, (503) 375-3555. <em>You must
+            send a check along with your request</em>. (See Appendix D
+            for the request form and instructions.)</p>
+            <p>4. You may want to obtain a background/training record on
+            the officer. If the officer is an Oregon State Police
+            Trooper you’ll need to send a letter to: Department of
+            Public Safety Standards and Training (DPSST), 4190 Aumsville
+            Highway, Salem, Oregon 97317. You may fax requests to DPSST
+            at (503) 378-4600.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Set up a separate filing system of old DUII police
+            reports indexed by the names of the officers<br />
+            involved.</p>
+            <h2
+            id="b._police_agencies_communications_recordings"><strong>B.
+            Police Agencies (Communications Recordings)</strong></h2>
+            <p>In order to receive a copy of the communications
+            recordings you will need to call the arresting agency and
+            ask for the name of the agency that records radio
+            communications/telephone calls. The recordings may be
+            especially important if a 911 call was made to the dispatch
+            center by a witness. Send a letter to the communications
+            agency including the date, time, and location of the
+            incident, subject’s name, vehicle description, etc.</p>
+            <h2 id="c._driving_records"><strong>C. Driving
+            Records</strong></h2>
+            <p>1. <a
+            href="https://www.oregon.gov/odot/Forms/DMV/7266fill.PDF"><span class="underline">You
+            can request a driving record online here</span></a>. If you
+            have an account with DMV, you may call (503) 945-5310 or
+            (503) 945-5300 for DAVE (automated system). Get updated fees
+            for DMV records <a
+            href="http://www.oregon.gov/ODOT/DMV/Pages/records/available.aspx">here</a>.<a
+            href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> If you’ll be sending a
+            letter, send it to Motor Vehicle Division, 1905 Lana Avenue,
+            NE, Salem, Oregon 97314. Provide full name, date of birth,
+            driver’s license number and a check for $4.50 to obtain a
+            certified court print, which provides the most
+            information.</p>
+            <p>2. <a href="http://www.dol.wa.gov/">State of
+            Washington</a><a href="#fn4" class="footnote-ref"
+            id="fnref4" role="doc-noteref"><sup>4</sup></a> five-year
+            complete driving record: Cost is $13.00. Send request (a
+            letter on the law firm’s letterhead, indicating that you
+            represent the driver and including the driver’s full name,
+            date of birth, and mailing address) to: Driver Records,
+            Department of Licensing, Post Office Box 3907, Seattle, WA
+            98124-3907.</p>
+            <p>3. The <a href="https://www.dmv.ca.gov/portal/dmv">State
+            of California</a>.<a href="#fn5" class="footnote-ref"
+            id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+            <h1 id="vi._arraignment_booking_and_mugshots"><strong>VI.
+            Arraignment, Booking and Mugshots</strong></h1>
+            <p>Many municipal courts will accept a “not guilty” letter
+            that allows the attorney to basically make the initial
+            appearance by letter and set the case in the normal course.
+            If you are dealing with a court you are not familiar with,
+            you should always make it a practice to call and confirm
+            their procedures. For example, in Eugene Municipal Court the
+            first appearance can be made by letter but the client will
+            need to watch a brief video about their legal rights within
+            two weeks of the arraignment date. Even if you are familiar
+            with the court, you may want to periodically check to ensure
+            that the “rules” have not changed. It seems that “rules” are
+            changed quite frequently without notice.</p>
+            <p>If the case is a felony then the client must appear at
+            arraignment. For a misdemeanor the attorney can appear
+            without the client, pursuant to <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors134.html">ORS
+            134.030</a>. In this situation you will want the client to
+            sign a “waiver of appearance” and file it with the court
+            (see a sample letter in Part 2, pg. 3–47). Be aware that <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.017</a> requires a client to be booked after the
+            arraignment if they were not booked during the arrest. In
+            this situation the attorney may appear for the client with a
+            waiver of appearance but will need to instruct them to go in
+            and be fingerprinted. Some courts will also require the
+            client to sign and return a release agreement to the court
+            after the arraignment.</p>
+            <p>One of the greatest collateral consequences of DUII is
+            having a mugshot appear on the internet. Be sure to advise
+            the client whether he or she must attend the arraignment and
+            warn them that when they are booked they will be
+            fingerprinted, but they may also be photographed, in which
+            case their mugshot will appear on a Google image search of
+            their name. The organizations that post mugshots to the
+            internet, such as Lane County Mugshots, will typically have
+            a process on the website for removing a mugshot, such as if
+            the case is dismissed or for a fee. <a
+            href="https://oregoncrimenews.com/mugshot-removal/">Oregon
+            Crime News</a> is one such site.<a href="#fn6"
+            class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a></p>
+            <h1 id="vii._diversion"><strong>VII. Diversion</strong></h1>
+            <p><em>Call the court to determine deadline and
+            procedures.</em> Many courts have different rules when it
+            comes to diversion deadlines. Some courts, pursuant to
+            statute, calculate the deadline as 30 days from the “actual”
+            initial appearance date. If a court allows submission of a
+            “not guilty” letter, it may calculate the 30-day deadline
+            from the date of receipt of the letter. If not calculated
+            correctly the client may be too late to file. Also, some
+            courts may automatically set a diversion deadline date
+            beyond the 30-day period. For these reasons it is absolutely
+            necessary to call the court.</p>
+            <p>If you are certain that your client will be entering
+            diversion, <a
+            href="https://www.courts.oregon.gov/forms/Pages/duii-diversion.aspx"><span class="underline">order
+            a diversion packet from the court</span></a>. Most courts
+            have a diversion packet that contains a petition and an
+            informational sheet on the diversion program including the
+            costs the client will have to pay. This information is
+            useful for the client so she will know what to expect. Many
+            of the forms are provided in Chapter 6, “Diversion.”</p>
+            <p>For purposes of determining diversion eligibility and for
+            other reasons, it is sometimes necessary to obtain
+            information on prior DUII cases. After obtaining a copy of
+            the driver’s license record or the client’s criminal history
+            from the city/district attorney’s office, you should request
+            a copy of the entire case file from the trial court where
+            client previously entered diversion.</p>
+            <p>Once client has entered diversion, calendar 40 days in
+            advance of when the diversion period ends. If client has
+            been unable to complete all of the requirements of the
+            diversion, they are eligible for a one-time six-month
+            extension to complete the diversion. The documents must be
+            filed within the 30 days prior to the one-year deadline.</p>
+            <p><code>Practice Tip</code></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.255</a> allows an extension of diversion to be granted
+            by the court just one time. For this reason, if the client
+            is still in treatment, it is prudent to request the maximum
+            allowable 180-day extension in case there are any unforeseen
+            problems such as having to start the 90 days demonstrated
+            sobriety anew due to a dilute urine sample.</p>
+            <p>Once the court has appointed an evaluator for the client,
+            the evaluator will need the following information before the
+            client has the evaluation:</p>
+            <p>• Police reports.</p>
+            <p>• Driving record.</p>
+            <p>• BAC breathalyzer report.</p>
+            <p>The client will also be required to attend a Victim
+            Impact Panel (VIP) once he enters diversion. It’s important
+            that he attends on the date the court enters on the
+            diversion paperwork. If your client misses the date, you may
+            have to request a new referral from the court. You can find
+            VIP locations, dates, and information at Mothers Against
+            Drunk Driving’s site <a
+            href="https://maddvip.org/">here</a>.<a href="#fn7"
+            class="footnote-ref" id="fnref7"
+            role="doc-noteref"><sup>7</sup></a> This website also
+            contains links to other VIP classes in other states if your
+            client lives out of state.</p>
+            <h2 id="february_2022_update"><strong>February 2022
+            UPDATE</strong></h2>
+            <p>Page 3-9, at the end of the section add the following
+            Practice Tip:</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15481596277005763939&amp;q=State+v.+Zook,+307+Or+App+49&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Zook</em>, 307 Or App 49 (2020)</a>, now allows a court
+            some discretion about whether to terminate someone from
+            diversion. The operative language is whether the person has
+            made a “good faith effort” to complete the requirements and
+            terms of the diversion agreement. Prior to <em>Zook</em>,
+            most courts interpreted the diversion statutes to be
+            inflexible, which left no discretion to the judge to
+            continue a person on diversion if there was a violation.</p>
+            <p>Use <em>Zook</em> to convince your judge to extend that
+            ruling in your case, showing how your client has made a good
+            faith effort.</p>
+            <p>[End 2022 Update]</p>
+            <h1 id="viii._diversion_show_cause_hearings"><strong>VIII.
+            Diversion Show Cause Hearings</strong></h1>
+            <p>These notices are generated by the court when conditions
+            of diversion are allegedly not met. Upon receipt, contact
+            the court diversion clerk and determine the reason for
+            non-compliance. In many cases a client has simply failed to
+            pay the balance of the court fee or the court has not
+            received confirmation of class attendance. Notify the client
+            of the non-compliance notice and advise them that the
+            problem needs to be corrected. If the “non-compliance” is
+            not correctable, then the client may be terminated from
+            diversion and sentenced on the DUII.</p>
+            <p>The show cause process is generally two steps. The client
+            will be arraigned on the show cause and can enter a denial
+            and have the matter set for a hearing. Discovery should be
+            requested and reviewed. Some courts (usually municipal) will
+            allow a stipulated recommendation to the court in which the
+            client serves a sanction and the diversion remains in place.
+            Circuit courts will generally revoke on any showing that the
+            client violated any terms of the agreement. One of the
+            biggest traps is blowing into an ignition interlock device
+            (IID) with alcohol on the breath. In that situation, request
+            and review all of the IID blow data from the IID provider
+            and demand that the prosecution lay a proper foundation for
+            introducing that evidence. Sometimes the IID analysis lab
+            will be out of area and not available for the hearing.</p>
+            <h1 id="ix._hardship_license_requests"><strong>IX. Hardship
+            License Requests</strong></h1>
+            <p>This probationary permit may be required as a result of a
+            license suspension in an implied consent matter or as a
+            result of a court-ordered suspension for DUII. In the latter
+            case, requirements for a hardship permit can vary widely,
+            depending on the client’s prior record, date of arrest, etc.
+            Call DMV at (503) 945-5400 (general number), or the
+            suspensions unit at (503) 945-5037 or (503) 945-5033 with
+            the client’s ODL number and obtain specific information for
+            that individual from the licensing department regarding
+            eligibility. This information is provided at no cost. The
+            Hardship Permit application is given at Appendix E and can
+            be found <a
+            href="https://www.oregon.gov/ODOT/DMV/pages/driverid/hardship.aspx">online</a>.<a
+            href="#fn8" class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a></p>
+            <p>Historically a hardship permit was only available for
+            driving for work, looking for work and going to treatment
+            classes. In January of 2020 DMV greatly expanded the use of
+            the hardship to also allow for “necessary services”
+            including: grocery shopping one day a week, driving yourself
+            or children to school, driving to medical appointments two
+            days a week and caring for elderly family members.</p>
+            <p>The process for getting a hardship permit is as follows:
+            The client sends the completed application and a check for
+            $125 to DMV in Salem. After about 10 days the client will
+            receive a letter from DMV, which they take to their local
+            DMV office to get the hardship license. The client will have
+            to bring proof of SR-22 insurance and proof of the
+            installation of an IID. SR-22 insurance can increase the
+            client’s premiums for a significant time after the need for
+            the insurance is over, so they may want to check with a
+            short-term SR-22 insurance provider rather than going with
+            their current insurance carrier.</p>
+            <p>In implied consent suspensions, there is a mandatory
+            waiting period before the hardship license will be issued.
+            During the waiting period the client should make
+            arrangements for the SR-22 insurance and make sure the
+            insurance carrier advises DMV that it is effective at least
+            a week before she is eligible for the hardship permit.
+            Provide the client with the <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6044fill.pdf">Hardship
+            Permit form</a>, and have them fill it out completely. DMV
+            is very particular about routes to/from employment. The
+            client must list every street on which she drives and the
+            direction in which she travels. If the client travels
+            extensively, provide information for going to and from the
+            office and, on a separate sheet of paper, list the counties
+            where work-related travel is required. Don’t forget to
+            include a county the client must go through in order to
+            reach a business location in another county. If information
+            on alcohol and diversion programs or AA meetings is not
+            available at the time the request is submitted, it can be
+            supplied to the DMV at a later date. Again, be sure to list
+            very specific travel routes and times. A check must be
+            provided.</p>
+            <h1 id="x._ignition_interlock_device"><strong>X. Ignition
+            Interlock Device</strong></h1>
+            <p>One of the things clients dislike most about getting a
+            DUII is the requirement for an IID. It is embarrassing and a
+            hassle. For information about the dangers of using an IID
+            see “<a
+            href="https://www.nytimes.com/2019/12/23/business/drunk-driving-interlock-crash.html?action=click&amp;module=Top%20Stories&amp;pgtype=Homepage">The
+            Unforeseen Dangers of a Device That Curbs Drunken
+            Driving</a>,” from the December 23, 2019, edition of the
+            <em>New York Times</em>.</p>
+            <p>ORS 813.602 governs when an IID is required. An IID is
+            required during the term of any hardship permit. For a
+            first-time DUII conviction, an IID will be required for one
+            full year after the ending date of the suspension. For a
+            second or subsequent DUII conviction, an IID will be
+            required for two full years after the end of any suspension
+            or revocation period.</p>
+            <p>For diversion, an IID is required on 0.08% or greater
+            alcohol cases and cases where there is any amount of alcohol
+            and a controlled substance. If the client enters diversion
+            on an alcohol-only DUII with a breath test of less than 0.08
+            (hopefully the attorney has pushed for a dismissal in the
+            case and carefully considered going to trial), or on a
+            controlled substance case without any alcohol, then
+            installation of an IID is at the discretion of the court.
+            Always request a waiver of the IID in that situation. ORS
+            813.645 allows people to remove the IID after six months as
+            long as there are all clean blows and the person is in
+            compliance with treatment. Most people will want to do that.
+            There is a sample form provided in the DUII Diversion Forms
+            in Chapter 6, Appendix A.</p>
+            <p>Be aware that ORS 813.635(2) provides a separate
+            requirement for 90 days of no negative IID reports to be
+            sent to DMV so a person can not wait out the one year
+            diversion period and then drive without using an IID.
+            Regardless of how long it has been after diversion, a person
+            will be required to use the IID for a minimum of 90 days.
+            Strategically, the client may want to wait until after the
+            end of diversion to get the IID so there is no risk to
+            losing diversion. Or, a person may want to just get the IID
+            for the last 90 days of the diversion. Or, a person may
+            consider installing the IID during a term of suspension and
+            starting the car without driving it at least once a month to
+            fulfill the IID requirement. This area of law is changing
+            all the time so make sure you understand current IID
+            requirements so you can advise your client properly.</p>
+            <p>For instance, effective January 1, 2020, HB 3005 amends
+            ORS 813.599 to change what constitutes a “test violation” of
+            an ignition interlock device. For a person on DUII
+            diversion, an attempt to start a vehicle with a blood
+            alcohol content of 0.02 percent rather than 0.00% is now a
+            violation unless the person performs a subsequent test
+            within ten minutes that registers a BAC of less than 0.02%
+            (previously 0.00%). This bill also increases the allowable
+            rolling retest BAC for a person on DUII diversion from 0.00%
+            to 0.02%. For a person required to use an IID but not in the
+            DUII diversion program, the bill reduces the allowable BAC
+            to start a vehicle from 0.04% to 0.02%.</p>
+            <p>Note that the DMV has created an <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6874.pdf">exemption
+            for individuals operating employer owned vehicles</a>. (See
+            Appendix F). There is also a <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6941.pdf">medical
+            exemption</a>. (See Appendix G).</p>
+            <p>Providers for the ignition interlock devices can be found
+            at the state police IID website <a
+            href="https://www.oregon.gov/osp/programs/Pages/Ignition-Interlock-Device-Program.aspx">here</a>.<a
+            href="#fn9" class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a></p>
+            <p>Your local court may also have their preferred list. Some
+            are better than others so you may want to ask around or
+            check out the chatter on OCDLA’s listserve, The Pond, or the
+            special listserve for DUII issues. Read about the OCDLA
+            listserves <a
+            href="https://www.ocdla.org/data-emaillists.shtml">here</a>.<a
+            href="#fn10" class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a></p>
+            <h2 id="update"><strong>2024 Update</strong></h2>
+            <p>Per 2023 Oregon Laws Ch. 135, Sec. 1, ORS 813.645 no
+            longer requires a hearing when a Diversion Participant
+            petitions for removal of the ignition interlock device when
+            they are eligible. <strong><em>However</em></strong>,</p>
+            <p>“If the defendant is required to participate in a
+            treatment program as a condition of diversion, a letter
+            signed by a treatment counselor from the treatment program
+            in which the defendant is enrolled stating that the
+            defendant has entered into and is in compliance with the
+            treatment program.” (813.645(3)(c).</p>
+            <p>This is in addition to the no negative report from the
+            IID provider already required.</p>
+            <p><strong>[End Update]</strong></p>
+            <h1 id="xi._client_control"><strong>XI. Client
+            Control</strong></h1>
+            <p>One of the complaints heard most often from clients is
+            the inability to reach the attorney or find out information
+            on things they want to know. The assistant can often
+            eliminate this complaint by being a source between the
+            client and the unavailable attorney. It is important to not
+            give legal advice in the process.</p>
+            <p>The assistant can keep the client advised of what is
+            happening by diligently sending copies of every document
+            sent or received.</p>
+            <p>The assistant can monitor appointments by getting the
+            client and witnesses scheduled for pretrial preparation,
+            making sure the client is aware of and will be present for
+            all mandatory appearances. Calling the client the day before
+            a hearing as a reminder is always helpful and
+            appreciated.</p>
+            <p>When the client is unable to reach the attorney, the
+            assistant can determine what the client needs to know, speak
+            with the attorney and return the call. Often, the assistant
+            will know the information and can answer the question.
+            During times when the attorney is unavailable, this can save
+            tempers and time. All this is easier if the attorney
+            introduces the client to the assistant during the initial
+            interview and tells the client that he can talk with the
+            assistant and that often the assistant will be easier to
+            reach than the attorney. How the attorney presents this to
+            the client will determine the client’s acceptance.</p>
+            <h1 id="xii._dealing_with_difficult_clients"><strong>XII.
+            Dealing with Difficult Clients</strong></h1>
+            <p>Stay calm. Your client made a mistake and a bad judgment
+            call that will affect his life, family status, and often
+            employment status. More than likely, he has never been
+            through this process and will need a little extra attention.
+            The client is not concerned about your caseload or the
+            attorney’s trial schedule. The only thing the client is
+            worried about is his case. Do not try to minimize this
+            worry. It is real and you need to treat it that way. Your
+            client may come across as irritated and sometimes obnoxious.
+            Do not take it personally. Remain calm and professional at
+            all times. If the client gets out of hand, simply let her
+            know that you will pass information to the attorney and have
+            that attorney call them back. That will sometimes suffice in
+            getting them off the phone for a “time out” or cool down
+            period. If client becomes verbally abusive, simply tell her
+            you would be happy to help and to call back when she is
+            ready to discuss the matter more civilly. If all attempts of
+            calming the client down fail, you may hang up on them. More
+            often than not, this will get their attention and they will
+            call back to apologize and be more apt to work with you. It
+            is important to not demean the client at this point. This is
+            an opportunity to build a working relationship once again
+            with your client. Respect goes both ways. See Chapter 2 for
+            a thorough discussion of interacting with clients in a
+            healthy and positive way.</p>
+            <h1
+            id="xiii._courtesy_and_the_power_of_relationships"><strong>XIII.
+            Courtesy and the Power of Relationships</strong></h1>
+            <p>You can make your job a lot easier by establishing good
+            working relationships with all staff in the courts where
+            your employer has cases. Learning their rules and procedures
+            and following them will make things run smoothly. Having
+            someone in the courthouse, DMV or whatever agencies you deal
+            with who will go that extra distance to assist you with
+            problems, help you locate information or work around a
+            problem will be priceless. Don’t forget the people who do
+            you favors. A thank you every time is a must! We all like to
+            know we’re appreciated.</p>
+            <p><em>Bill Uhle, (ed. 2004):</em> I can’t emphasize enough
+            how valuable an intelligent, knowledgeable and well-trained
+            assistant can be in taking these cases, from setting up the
+            initial appointment until the attorney and client leave the
+            office for the courthouse on the morning of trial. Delegate
+            as much of the non-courtroom work (subpoenas, organizing
+            witness interviews, docketing, resets, dealing with DMV,
+            forms, and the myriad of other things covered in this
+            chapter) to your assistant. These activities take up a lot
+            of time and energy. If they can be delegated to a competent
+            assistant, you will have far more time to concentrate on
+            preparing your motions, your theory of defense and your
+            witnesses for trial.</p>
+            <p>Note: Bill Uhle retired in the years since editing the
+            204 edition, but he had the same assistant for more than 30
+            years. He said she knew more about “her end” of their
+            business than anyone he knew. He said that if you plan on
+            doing these cases in volume over a number of years, a
+            competent assistant is essential and will delay the
+            inevitable defense attorney burnout.</p>
+            <h1 id="part_2_checklists_and_forms"><strong>Part 2
+            Checklists and Forms</strong></h1>
+            <p>[NOTE: For the Books Online format, please refer to the
+            "Checklists, Forms and Appendices" box in the upper right
+            corner of ths chapter.]</p>
+            <h1 id="i._getting_organized"><strong>I. Getting
+            Organized</strong></h1>
+            <h2
+            id="places_to_start_looking_duii_related_ors_provisions"><strong>Places
+            To Start Looking: DUII Related ORS Provisions</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">Chapter
+            813 — Driving Under the Influence of Intoxicants</a></p>
+            <p>1. Application to Bicyclists <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors814.html">ORS
+            814.400</a></p>
+            <p>2. Careless Driving <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors811.html">ORS
+            811.135</a></p>
+            <p>3. Chemical Tests; Methods and Requirements ORS
+            813.140–160</p>
+            <p>4. Conviction of Crime/Mandatory Revocation or
+            Suspension</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">ORS
+            809.240</a></p>
+            <p>ORS 809.410–430</p>
+            <p>ORS 813.400</p>
+            <p>5. Diversion Agreements ORS 813.200-270</p>
+            <p>6. Driving under the Influence of Intoxicants ORS
+            813.010</p>
+            <p>7. DUII Evidence ORS 813.300–328</p>
+            <p>8. Habitual Offenders ORS 809.600–640</p>
+            <p>9. Hardship Permits ORS 813.520</p>
+            <p>10. Ignition Interlock Devices ORS 813.599–680</p>
+            <p>11. Implied Consent ORS 813.095–136</p>
+            <p>12. Implied Consent Suspensions ORS 813.410–470</p>
+            <p>13. Occupational License Limitations <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors807.html">ORS
+            807.240</a></p>
+            <p>813.520</p>
+            <p>14. Plea Agreements Limited ORS 813.170</p>
+            <p>15. Reckless Driving ORS 811.140</p>
+            <p>16. Suspension and Restriction That is Court Ordered ORS
+            809.210–260</p>
+            <p>17. Suspension of Commercial Driver License Upon
+            Conviction ORS 813.400</p>
+            <p>18. Suspension and Revocation Grounds ORS 809.310</p>
+            <p>19. Suspension or Revocation for Out of State Conviction
+            /<br />
+            Non-resident Driver ORS 809.400–490</p>
+            <p>20. Vehicle Impoundment / Forfeiture ORS 809.698–745</p>
+            <h2 id="client_related_forms"><strong>Client Related
+            Forms</strong></h2>
+            <p>Look for these forms and resources in the "Checklists,
+            Forms and Appendices" box in the upper right corner of this
+            chapter:</p>
+            <p>• <strong>DUII Case Outline Checklist</strong></p>
+            <p>• <strong>DUII Investigative Checklist</strong></p>
+            <p>• <strong>Flat Fee Agreement</strong></p>
+            <p>• <strong>New Client Information Sheet</strong></p>
+            <p>• <strong>Addendum to Client Information
+            Sheet</strong></p>
+            <p>• <strong>DUII Client Interview Form</strong></p>
+            <p>• <strong>DUII Client Questionnaire</strong></p>
+            <p>• <strong>DUII Witness Questionnaire</strong></p>
+            <p>• <strong>DUII Expert Witness Information</strong></p>
+            <p>• <strong>Pointers for Witnesses</strong></p>
+            <p>• <strong>Authorization for Release of
+            Information</strong></p>
+            <p>• <strong>Medical Release</strong></p>
+            <p>• <strong>Schedule of Syndromes</strong></p>
+            <h1
+            id="ii._sample_court_filings_letters_and_dmv_forms"><strong>II.
+            Sample Court Filings, Letters and <a
+            href="https://www.oregon.gov/ODOT/DMV/Pages/form/index.aspx">DMV
+            Forms</a></strong></h1>
+            <p>Look for these forms and resources in the "Checklists,
+            Forms and Appendices" box in the upper right corner of this
+            chapter:</p>
+            <p>• <strong>Assignment of Bail/Security</strong></p>
+            <p>• <strong>Affidavit in Support of Bail
+            Release</strong></p>
+            <p>• <strong>Order Allowing Bail Release</strong></p>
+            <p>• <strong>Arraignment Letter for Infractions</strong></p>
+            <p>• <strong>Arraignment Waiver &amp;
+            Acknowledgment</strong></p>
+            <p>• <strong>Client Discovery Review Instruction
+            Letter</strong></p>
+            <p>• <strong>Plea of Guilty by Affidavit</strong></p>
+            <p>• <strong>Notice of Defense of Choice of
+            Evil</strong></p>
+            <p>• <strong>DMV Hearing Request and DMV Record Fee
+            List</strong></p>
+            <blockquote>
+            <p><a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6691.pdf">DMV
+            Record Fee List</a></p>
+            <p>• <strong>How to Request DMV Records</strong></p>
+            <p><a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/7161.pdf">How to
+            Request DMV Records Form 7161</a></p>
+            </blockquote>
+            <p>• <strong>Request for Intoxilyzer/Operator’s
+            Certifications</strong></p>
+            <p>• <strong>Request for Implied Consent
+            Hearing/Subpoena</strong></p>
+            <blockquote>
+            <p><a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6684.pdf">Notice
+            of Rights and Procedures in Implied Consent Hearings</a></p>
+            </blockquote>
+            <p>• <strong>Request for Hardship/Probationary
+            Permit</strong></p>
+            <blockquote>
+            <p><a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6044fill.pdf">Hardship/Probationary
+            Application</a></p>
+            </blockquote>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><a
+            href="https://www.oregon.gov/ODOT/DMV/Pages/Email_forms/implied_consent_hearing.aspx">https://www.oregon.gov/ODOT/DMV/Pages/Email_forms/implied_consent_hearing.aspx</a>.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><a
+            href="https://www.oregon.gov/ODOT/DMV/pages/driverid/ichearing.aspx">https://www.oregon.gov/ODOT/DMV/pages/driverid/ichearing.aspx</a>.<a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><a
+            href="http://www.oregon.gov/ODOT/DMV/Pages/records/available.aspx">http://www.oregon.gov/ODOT/DMV/Pages/records/available.aspx</a>.<a
+            href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><a
+            href="http://www.dol.wa.gov">http://www.dol.wa.gov</a>.<a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn5"><a
+            href="http://www.dmv.ca.gov/dmv.htm">http://www.dmv.ca.gov/dmv.htm</a>.<a
+            href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><a
+            href="https://oregoncrimenews.com/mugshot-removal">https://oregoncrimenews.com/mugshot-removal</a>.<a
+            href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7"><a
+            href="https://maddvip.org">https://maddvip.org</a>.<a
+            href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8"><a
+            href="https://www.oregon.gov/ODOT/DMV/pages/driverid/hardship.aspx">https://www.oregon.gov/ODOT/DMV/pages/driverid/hardship.aspx</a>.<a
+            href="#fnref8" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn9"><a
+            href="https://www.oregon.gov/osp/programs/Pages/Ignition-Interlock-Device-Program.aspx">https://www.oregon.gov/osp/programs/Pages/Ignition-Interlock-Device-Program.aspx</a>.<a
+            href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn10"><a
+            href="https://www.ocdla.org/data-emaillists.shtml">https://www.ocdla.org/data-emaillists.shtml</a>.<a
+            href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

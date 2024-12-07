@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p><strong>So you want to Be in Business!</strong></p>
+            <p><strong><em>Rhonda Coats</em></strong></p>
+            <p>2010 edition</p>
+            <p>This chapter will examine running a small business from
+            an investigator’s point of view. I have been a full- time,
+            self-employed investigator since 1988. I hope my experience
+            can save you some time, money and mistakes. The failure rate
+            of small businesses in Oregon is high. Therefore, there are
+            many serious considerations you must address before you hang
+            out the shingle.</p>
+            <h1 id="are_you_ready"><strong>Are you ready?</strong></h1>
+            <p>Do you have the necessary experience to be an
+            investigator full-time, in private practice? Do you have six
+            months of easily available savings (money not tied up in
+            CDs, money market funds or life insurance) that you can use
+            to pay your rent or mortgage and feed your kids? In
+            addition, you need cash to run your business during the same
+            six-month period. Do you know how much money it takes on a
+            monthly basis to run an investigation business? You will
+            also have up-front costs. Know your cash-flow needs. Do not
+            consider starting your business without this six-month
+            fallback.</p>
+            <p>Where will you find clients and how will you keep them?
+            If you are depending on advertising in the yellow pages for
+            the majority of your business—forget it. You will go under.
+            If you are going to depend on a website for the majority of
+            your business—forget that. These are expensive tools and
+            <em>may</em>enhance your business, but you cannot depend
+            solely on them. If you work for only one or two attorneys,
+            keep your day job. If you are working for only one insurance
+            company, make sure you have a contract to do all of their
+            investigation and quickly go after more clients.</p>
+            <p>The point I am trying to make here is this: if you do not
+            have a strong client base, finding work as a beginner is
+            going to be nearly impossible. Consider working part-time
+            and building a client base before you start a full-time
+            business.</p>
+            <p>You may be a great investigator working for a public or
+            private agency, have the client base and look forward to
+            giving notice. Before you do, think about running a small
+            business. If you have never had any experience starting,
+            managing or running a business, think twice. There is a lot
+            more to having a successful</p>
+            <p>investigation business than being a great investigator. I
+            have known many good investigators who have left</p>
+            <p>their jobs, only to have to ask for them back. They had
+            to return not because they were not capable and experienced
+            investigators, but because they did not know how to run a
+            business.</p>
+            <p>Plan, plan, and plan some more. Here is just a small
+            sampling of the kinds of questions you need to be</p>
+            <p>asking yourself: What kind of computer do I need?
+            Software? Camera? Tape recorder? Do I need a secretary? Do I
+            have the up-front money to get several thousand pages of
+            discovery copied, hire a translator or fly to southern
+            California to conduct interviews? Do I really have enough
+            business insurance? What about health insurance for my
+            family and me? Could a client sue me and take my house? Do I
+            need to be licensed in Washington? Do I have my DPSST
+            license?</p>
+            <h1
+            id="considerations_in_running_a_successful_business"><strong>Considerations
+            in Running a Successful Business</strong></h1>
+            <p>Below is a general checklist of things you must consider
+            and research before you take that big step.</p>
+            <p>√Have a business plan! I cannot stress this enough. Just
+            reviewing a business plan template will get you thinking in
+            the right direction. There are a number of state and federal
+            programs available (listed below) that can assist you. (A
+            quick overview of a business plan is included in the
+            appendix.)</p>
+            <p>√ Consult a CPA, certified bookkeeper or a business
+            lawyer to select your business structure. If you are running
+            your business as a sole proprietorship or with another
+            person or with several others, you must weigh the pros and
+            cons of the legal structure of your business. Do you know
+            the difference</p>
+            <p>between a limited liability company (LLC), a partnership
+            or a limited liability partnership (LLP)? Do not take the
+            advice of anyone but an expert. The tax laws are too
+            complicated and your neighbor or another investigator is not
+            taking the risk—you are! Talk to a tax consultant or
+            attorney and get advice on how to structure your business
+            and legally maintain your business.</p>
+            <p>√ You, your CPA or lawyer must file your business name
+            and legal structure with the state of Oregon.</p>
+            <p>You can get the forms from Corporation Division, Business
+            Registry Section, Public Service Building, Suite 151, 255
+            Capitol Street NE, Salem, OR 97310-1327, (503) 986-2200. You
+            can also register your business name and legal structure
+            through the website at <a
+            href="http://filinginoregon.com/"><span>http://filinginoregon.com</span>.</a></p>
+            <p>√ It is fun to name your business. But investigator
+            licensing rules require you to register an assumed business
+            name with the State of Oregon Business Registry. Make sure
+            no one else is using the same name. A phone call to the
+            Corporation Division will tell you—(503) 986-2200, choose
+            option 5.</p>
+            <p>√ Be sure to check with the state of Oregon Corporation
+            Division regarding the current laws on obtaining a business
+            license. See Laws and Rules on their website.</p>
+            <p>√ Also check with local city and county offices to make
+            sure the location of your business is properly zoned. If you
+            are going to operate your business from home there may be
+            city, county and homeowner association restrictions. I have
+            always maintained a home office and it works for me. I do
+            not have clients visit my office. The one time I had an
+            outside office it was not efficient to run in terms of time
+            or money. Keep in mind that the fewer expenses, the greater
+            your chances of financial success.</p>
+            <p>√ Know something about copyright law. Written materials,
+            computer programs, works of art, business names and logos,
+            as well as many other intellectual creations come under the
+            copyright laws. So, you might spend some money getting your
+            logo on your business card only to have it pulled because
+            someone else owns it. Contact the Register of Copyrights at
+            the Library of Congress in Washington, D.C, <a
+            href="http://www.copyright.org/">www.copyright.org.</a></p>
+            <center>
+            <p>√If you are considering using a trademark or service
+            mark, you must register with the State of Oregon.</p>
+            </center>
+            <p>Forms for filing an “Application for New Trade and
+            Service Mark Registration” can be obtained from the
+            Corporation Division of the State of Oregon.</p>
+            <p>√ How about equipment? I am going to assume you know your
+            way around a computer. You cannot operate a successful
+            business without strong computer skills. Do you have the
+            most up-to-date equipment? You have to stay competitive in
+            private business and that means having the latest software,
+            a good digital camera, as well as a regular camera, a cell
+            phone and pager. You have to be available to new clients, as
+            well as old. Are you familiar with public information
+            sources online? Do you know how to find Macon, Georgia, or
+            conduct criminal background checks online? Believe me, an
+            attorney is not going to pay you to drive to the courthouse
+            to do a criminal background check.</p>
+            <p>√ Do you know accounting software? Many CPAs and
+            accountants use QuickBooks and that is what I would
+            recommend. If you do not know QuickBooks or QuickBooks Pro
+            buy it, learn it or take a class on how to use it—before you
+            give notice. Allocate a specific time each day to do your
+            business housekeeping. That means entering your billable
+            activities into QuickBooks, TimeSlips or another program. Do
+            it faithfully. You will not remember what you did last
+            Monday on the Smith case. You may log the interview in your
+            case notes, but what about that cell phone call to Mr. Smith
+            on the way to the Jones case team meeting?</p>
+            <p>√ This brings me to tax information. Make sure your
+            accountant has fully explained to you what is deductible,
+            how to document expenses, keep records and for how long, and
+            to make proper filings. As your business grows you may add
+            employees or subcontract work to others. Educate yourself on
+            the difference between a subcontractor and an employee. Talk
+            to your accountant <em>before</em>you hire either to
+            determine your obligations. Make certain you understand
+            Oregon Unemployment Insurance Tax, Workers’ Compensation
+            Insurance and the vast array of employment responsibilities.
+            Talk to your accountant on filing personal property reports.
+            Examples of taxable personal property include equipments,
+            tools of the trade, leased equipment and libraries (such as
+            sample books and law books). You must report all property
+            you own. There are also federal taxes that will apply to
+            your business. I cannot urge you enough to contact and
+            maintain a solid relationship with your accountant. Small,
+            home-based businesses are red flags to the IRS. Make sure
+            you stay on top of all of your taxes—federal, state, county
+            and city (hotel-motel, Tri-Met, and Lane Transit District to
+            name just a few). I recommend setting aside a portion of
+            your fee when it is received in order to pay state and
+            federal quarterly taxes.</p>
+            <p>√ Talk to your accountant or business lawyer about the
+            state’s occupational safety and health standards, set and
+            enforced by OR-OSHA, and other employment obligations. It is
+            a lot more complicated than just hiring some help.</p>
+            <p>√ With the exception of certain sole proprietors, all
+            businesses are required to obtain a federal tax
+            identification number. To obtain a federal tax I.D. number,
+            complete an SS-4 Form, available at your local IRS office
+            and most banks. You can also call the IRS at 1-800-829-1040
+            or apply at the IRS website at <a
+            href="http://www.irs.gov/businesses"><span>http://www.irs.gov/businesses</span></a>and
+            click on Small Businesses and Self-Employed Tax Center.</p>
+            <p>√ How do I get clients? This is a commonly asked
+            question. The best business is based on referrals.</p>
+            <p>Network—join professional associations such as the Oregon
+            Association of Licensed Investigators, the Oregon Criminal
+            Defense Lawyers Association as well as national
+            associations. I would encourage you to volunteer, get
+            involved and join committees. If you enjoy writing,
+            volunteer to write articles for association newsletters,
+            assist at seminars or conferences. Get to know people in
+            your business. Let them know your specialty. Market
+            yourself! Never walk out the door without your business
+            cards.</p>
+            <p>√ The best marketing tool you have is the quality of your
+            work and your reputation. Do a good job! If you are just
+            beginning your business, work twice as hard as you think you
+            should. Be prepared to work 12 to 14 hours a day. This is
+            not an exaggeration. Your work will speak volumes both
+            negatively and positively.</p>
+            <p>√ Find experienced and successful investigators you
+            admire. Ask them to lunch, discuss your goals and get their
+            advice. I have never met a successful investigator who would
+            turn you down. Ask them to what they attribute their
+            success. Ask them what they might have done differently. If
+            appropriate, let them know that you are hard working and
+            available.</p>
+            <p>√ This leads me to working with other investigators.
+            There is more than enough work for good investigators. When
+            asked to assist as a subcontractor by another investigator,
+            <em>never</em>talk to the client or attorney without
+            permission of the lead investigator or the investigator who
+            hired you. When working on a team, do your job! Do not tell
+            another investigator how to do theirs. Suggest ideas, share
+            your experiences, but assume your colleagues are
+            professionals and treat them as such. Keep everyone on the
+            team up-to-date with your findings.</p>
+            <p>√ The most successful businesses have the best customer
+            service. The investigation business is no different.
+            Practice good customer service. Don’t assume you know your
+            clients’ needs. Every attorney I work for is different. Meet
+            the attorney’s or client’s specific needs. Is it a fast and
+            speedy investigation report or a verbal report first? Be
+            very clear about what the attorney expects from you and
+            respond accordingly.</p>
+            <p>√ When billing, do not nickel-and-dime your clients.
+            There is a cost to doing business. Do not bill for a stamp
+            or fifty cents in parking. Bill promptly. Do not let hours
+            accumulate. Report regularly. Good accounting software will
+            do this for you.</p>
+            <p>√ To keep and maintain your clients, do not ever pretend
+            you know what you are doing when you do not. In 24 years as
+            an investigator I have never had a lawyer get upset with me
+            for asking questions. It was my investigative skills he
+            needed, not my knowledge of the law. By asking, it helped me
+            understand the elements of the law and I got a better
+            interview. But if you cannot get in the door, you are
+            useless. Just be sure you know exactly what you are doing
+            and <em>why</em>. The better you understand a case, the
+            defense and what the attorney expects, the better job you
+            will perform for your client. Know your limits. Most lawyers
+            enjoy educating. Take it upon yourself to do research and
+            acquire knowledge.</p>
+            <p>√ Learn how to manage your time. As you start your
+            business, you will take every case that comes through the
+            door and, at some point, like all of us, you will spread
+            yourself too thin. As your business grows, managing your
+            time will become more of an issue. Starting and updating
+            your calendar on a daily basis will be essential, whether
+            your calendar is on your computer, cell phone, Palm, or even
+            a hand-written scheduling product such as Franklin
+            Planner.</p>
+            <p>√ Study, study, and study some more. Attend seminars,
+            classes and conferences. Consult other investigators. For
+            every suggestion I have made here, there is a book, article
+            or class available to you that can expand your knowledge. Do
+            not just attend “investigator”-related classes. Take
+            business classes as well. There are many small business
+            assistance programs available. Take advantage of them! I
+            have. Here are just a few:</p>
+            <p>•U.S. Small Business Administration<a
+            href="http://www.sba.gov/">—www.sba.gov.</a></p>
+            <p>•SCORE (Service Corps of Retired Executives/Counselors to
+            America’s Small Business)—</p>
+            <p><a href="http://www.score.org/">www.score.org.</a></p>
+            <p>•The Oregon Small Business Development Center Network.
+            There is an SBDC at every community college in Oregon.</p>
+            <p>•Oregon Economic Development Department,
+            1-866-467-3466—<a
+            href="http://www.oregon4biz.com/">www.oregon4biz.com.</a></p>
+            <p>•Oregon Business Network—<a
+            href="http://www.oregonbusinessnetwork.com/">www.oregonbusinessnetwork.com.</a></p>
+            <p>•Oregon Association of Minority Entrepreneurs (OAME)—<a
+            href="http://www.oame.org/">www.oame.org.</a></p>
+            <p>•Office of Minority, Women &amp; Emerging Small Business
+            (OMWESB), also located at—</p>
+            <p><em>oregon4biz.com</em>.</p>
+            <p>•Native American Business Network (ONABEN)—<a
+            href="http://www.onaben.org/">www.onaben.org.</a></p>
+            <p>•Oregon Innovation Center—<a
+            href="http://www.innovationcenter.org/">www.innovationcenter.org.</a></p>
+            <p>•Small Business Health Insurance Program—<a
+            href="http://www.sbhi.net/">www.sbhi.net.</a></p>
+            <h1 id="conclusion"><strong>Conclusion</strong></h1>
+            <p>In closing, the most important piece of advice I can give
+            you is to conduct your investigations with complete
+            integrity. If you also maintain sound business principles
+            and practices, you will be successful!</p>
+            <center>
+            <p>Appendix</p>
+            </center>
+            <center>
+            <p>Business Plan Overview and Sales &amp; Marketing for the
+            Investigator</p>
+            </center>
+            <center>
+            <p>By Gary Rice, Vancouver, WA</p>
+            </center>
+            <p>A business plan is useful in a start-up as well as
+            expanding a current business. A business plan should contain
+            the following elements:</p>
+            <p>•Title Page</p>
+            <p>•Table of Contents</p>
+            <p>•Executive Summary</p>
+            <p>•A Vision or Mission Statement</p>
+            <p>•Company Overview</p>
+            <p>•Product Strategy</p>
+            <p>•Market Analysis</p>
+            <p>•Marketing Plan</p>
+            <p>•Financial Plan</p>
+            <p>Each of the above categories contain subtopics which are
+            very important to the success of your business plan.</p>
+            <p>Elements of Your Business Plan</p>
+            <p><strong><em>Title Page</em></strong></p>
+            <p>The title page of your business plan provides the name,
+            address, and telephone number of the company and lists the
+            name of the CEO.</p>
+            <p><strong><em>Table of Contents</em></strong></p>
+            <p>The Table of Contents includes a sequential listing of
+            the sections of your business plan.</p>
+            <p><strong><em>Executive Summary</em></strong></p>
+            <p>This section is the most important portion of your
+            business plan. The Executive Summary should briefly discuss
+            and provide a “Readers Digest” version of each of the topics
+            listed in your completed plan. Because of this particular
+            element’s importance it should be the last document written
+            for your business plan. More often than not this is the only
+            portion of the plan that gets read by potential investors or
+            lending institutions.</p>
+            <p><strong><em>Vision / Mission Statement</em></strong></p>
+            <p>This category is a snapshot of the current stage or
+            success of your business. It should also present to the
+            reader a picture of where your business is going and what it
+            will look like when it arrives. Your goals and objectives
+            should be described at great length.</p>
+            <p><strong><em>Company Overview</em></strong></p>
+            <p>This section provides the basic information regarding
+            your company. It will present and explain in detail your
+            company structure, management, staffing and any alliances
+            that you may have.</p>
+            <p><strong><em>Product / Service Strategy</em></strong></p>
+            <p>This section reviews and highlights your current products
+            or services and what makes them unique and competitive. This
+            section should also contain any research and development in
+            fields or products that your company has targeted for growth
+            and how these products or services will be produced and
+            delivered to your clients.</p>
+            <p><strong><em>Market Analysis</em></strong></p>
+            <p>This section defines your current market, your target
+            customers, your competitors’ products or services and any
+            risks your company may face.</p>
+            <p><strong><em>Marketing Plan</em></strong></p>
+            <p>This section contains your sales strategy, advertising,
+            product or service distribution, promotions and any public
+            relations details.</p>
+            <p><strong><em>Financial Plan</em></strong></p>
+            <p>This section reflects and demonstrates your company’s
+            capital requirements and your current and forecasted
+            profits.</p>
+            <p>Sales &amp; Marketing</p>
+            <p>All too often when an individual or a group begins a new
+            business, they usually try to provide too many services. My
+            suggestion is to have one field that you feel very
+            comfortable in as it pertains to your knowledge and
+            aptitude. Have a secondary or even a third field in which
+            you could market, sell and complete the assignments given to
+            you.</p>
+            <p>Here are some examples of Investigative Services that you
+            could market.</p>
+            <p><strong><em>Security Consulting
+            Services</em></strong></p>
+            <p>•Physical Security Audits</p>
+            <p>•Security Audits</p>
+            <p>•Loss Prevention Analysis</p>
+            <p>•Security Operations Analysis</p>
+            <p>•Electronic Security Analysis</p>
+            <p>•Vulnerability Assessment</p>
+            <p>•Threat Analysis</p>
+            <p>•Risk Assessment</p>
+            <p>•Contingency Planning</p>
+            <p>•Disaster Preparedness</p>
+            <p>•Disaster Recovery Review</p>
+            <p>•Other Services</p>
+            <p><strong><em>Litigation Intelligence</em></strong></p>
+            <p>•Witness Interviews</p>
+            <p>•Witness Locates</p>
+            <p>•Victim/Complainant Research</p>
+            <p>•Asset Searches</p>
+            <p>•Evidence Gathering</p>
+            <p>•Photography</p>
+            <p>•Video Surveillance</p>
+            <p>•Surveillance</p>
+            <center>
+            <p><strong><em>Environmental and Special
+            Investigations</em></strong></p>
+            </center>
+            <p>•Third Party Cost Allocation</p>
+            <p>•Compliance Verification</p>
+            <p>•Insurance Coverage Issues</p>
+            <p>•Identification of Potentially Responsible
+            Individuals</p>
+            <p>•Environmental Due Diligence</p>
+            <p><strong><em>Asset Searching &amp;
+            Analysis</em></strong></p>
+            <p>•Bankruptcies and Insolvencies</p>
+            <p>•Loan Defaults</p>
+            <p>•Pre-Litigation Asset Assessment</p>
+            <p>•Internal Investigations</p>
+            <p>•Post-Judgment Searches</p>
+            <center>
+            <p><strong><em>Company Independent
+            Investigations</em></strong></p>
+            </center>
+            <p>•Internal Investigations</p>
+            <p>•Public Reports</p>
+            <p>•Reports to Regulators</p>
+            <p>•Reports to Boards of Directors</p>
+            <p>•Monitoring or an Overseer Responsibility</p>
+            <p>•Allocation of damages</p>
+            <p>•Pre-Employment Background Investigations</p>
+    </body>
+</html>

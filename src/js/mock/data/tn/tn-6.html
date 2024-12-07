@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2013 edition</p>
+            <p><strong><em>Ryan Scott</em></strong></p>
+            <h1
+            id="i._definition_and_timing_requirements_of_demurrers_and_similar_motions"><strong>I.
+            Definition and Timing Requirements of Demurrers and Similar
+            Motions</strong></h1>
+            <h2
+            id="a._motion_to_dismiss_on_grounds_of_former_jeopardy"><strong>A.
+            Motion to Dismiss on Grounds of Former
+            Jeopardy</strong></h2>
+            <p>This motion applies when a former prosecution bars the
+            current prosecution. <a
+            href="http://www.leg.state.or.us/ors/">ORS 135.470</a>.</p>
+            <p>Must be made at arraignment, within 10 days of
+            arraignment, or later, upon a finding of good cause. ORS
+            135.520. Implicit in the language of the statute, a judge
+            who did not find good cause for a filing more than 10 days
+            after arraignment could refuse to consider the motion on its
+            merits.</p>
+            <h2 id="b._motion_to_set_aside_the_indictment"><strong>B.
+            Motion to Set Aside the Indictment</strong></h2>
+            <p>This motion applies when the charging instrument fails to
+            comply with <a
+            href="http://www.leg.state.or.us/ors/132.html">ORS
+            132.360</a>, 132.400 to 132.430 and 132.580, or when there
+            is a failure to include the names of the grand jury
+            witnesses at the foot of the indictment. <a
+            href="http://www.leg.state.or.us/ors/">ORS 135.510</a>.</p>
+            <p>The timing issues are the same as with a motion to
+            dismiss on grounds of former jeopardy. ORS 135.520.</p>
+            <p>A successful motion to set aside is not an automatic bar
+            to refiling the indictment, unless the basis for the motion
+            was former jeopardy. ORS 135.560.</p>
+            <h2 id="c._demurrer"><strong>C. Demurrer</strong></h2>
+            <p>A demurrer is a challenge to either the entire complaint,
+            or an individual charge within the complaint. It is
+            applicable only when the charging instrument is flawed on
+            its face. ORS 135.630. ''See also <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pinnell,+319+Or+438+%281994%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5728726604176517311&amp;scilh=0">State
+            v. Pinnell</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pinnell,+319+Or+438+%281994%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5728726604176517311&amp;scilh=0">,
+            319 Or 438 (1994)</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>If you need extraneous evidence to show why the
+            indictment is flawed, such as a police report or witness
+            testimony, it is almost a certainty that a demurrer is not a
+            proper vehicle for your challenge to the indictment. The one
+            possible exception is a demurrer based on a complaint that
+            is indefinite and uncertain. The state may use the discovery
+            to show that it cures any ambiguity in the complaint, or the
+            defendant may use the discovery to show that it does not. At
+            present, no case has explicitly held whose burden it is to
+            show that discovery does or does not cure the problem.
+            Defense counsel should assume the burden is on them, and if
+            not actually offer the discovery into evidence, at least
+            make an offer of proof (e.g., an affidavit regarding what
+            the discovery does and does not show).</p>
+            <p>A demurrer “shall be entered either at the time of the
+            arraignment or at such other time as may be allowed to the
+            defendant for that purpose.” ORS 135.610. “The words ‘such
+            other time’ in
+            [../../../../Publications/Trial%20Notebook/2013%20edition%20-%20TNB/'13%20revised%20chapters%20/chapters%20ready%20for%202013/ch%2006%20demurrers/htt%0D%0Ap://www.lexis.com/research/buttonTFLink%3F_m=0344f5c9403e8995f51319dad0a189ab&amp;_xfercite=%3Ccite%20cc%3D%22USA%22%3E%3C%21%5BCDATA%5B315%20Ore.%20103%5D%5D%3E%3C%2Fcite%3E&amp;_butType=4&amp;_butStat=0&amp;_butNum=69&amp;_butInline=1&amp;_butinfo=ORCODE%20135.610&amp;_fmtstr=FULL&amp;
+            ORS 135.610] establish a discretion in the trial court to
+            permit the filing of a demurrer at times other than
+            arraignment. This court will not disturb the trial court’s
+            exercise of that discretion except in a case of clear
+            abuse.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tucker,+252+Or+597,+451+P2d+471+%281969%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12428090503553835773&amp;scilh=0">State
+            v. Tucker</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tucker,+252+Or+597,+451+P2d+471+%281969%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12428090503553835773&amp;scilh=0">,
+            252 Or 597, 451 P2d 471 (1969).</a></p>
+            <p>The Oregon Supreme Court stated in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wimber,+315+Or+103+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14206351166239180581&amp;scilh=0">State
+            v. Wimber</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wimber,+315+Or+103+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14206351166239180581&amp;scilh=0">,
+            315 Or 103 (1992)</a>, that “[we] do not wish to be
+            understood as approving of the practice of raising demurrers
+            at trial. As this court stated in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Montez,+309+Or+564,+789+P2d+1352+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=1008787569744245968&amp;scilh=0">State
+            v. Montez</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Montez,+309+Or+564,+789+P2d+1352+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=1008787569744245968&amp;scilh=0">,
+            309 Or 564, 597, 789 P2d 1352 (1990)</a>:’ The proper time
+            for defendant’s objection to the indictment was before
+            trial. A pretrial demurrer would have given both the court
+            and the state a timely opportunity to review the indictment
+            and to make any necessary corrections before trial.’”
+            <em>Wimber</em> at 112. The <em>Wimber</em> court also noted
+            that the defendant – at arraignment – had “reserved” his
+            right to move against the charging instrument at any time,
+            and that no objection was made by the state or the
+            arraignment judge. This would seem to be good practice,
+            although it did not have a bearing on the <em>Wimber</em>
+            holding.</p>
+            <p>That said, two bases for demurring – when the facts
+            stated do not constitute an offense or when the court lacks
+            jurisdiction – may be taken as a motion in arrest of
+            judgment. <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.640</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>When determining when to file a demurrer (or a motion in
+            arrest of judgment), it helps to know the local rules
+            (written and unwritten) of the county in which it would be
+            filed. Some counties – and some judges – will not consider a
+            demurrer filed after jeopardy has attached if the demurrer
+            is based strictly on statutory grounds. Unless it’s a
+            demurrer that can be refiled as a motion in arrest of
+            judgment, a judge’s refusal to consider a demurrer that was
+            filed more than 10 days after arraignment may effectively
+            defeat the demurrer, leaving no grounds for appeal.</p>
+            <p>A defense attorney should ask a number of questions
+            before deciding when to file the demurrer:</p>
+            <p>1. Will the prosecutor be able to fix the problem?</p>
+            <p>2. If the prosecutor believes he or she will have to
+            reindict, will the demurrer nevertheless strengthen my hand
+            in negotiations?</p>
+            <p>3. Will it get my client out of custody, even if he or
+            she will be reindicted later?</p>
+            <p>4. Will the judge refuse to consider a late demurrer,
+            thereby depriving my client of any benefit of filing it?</p>
+            <p>5. If there is a 90-day speedy trial issue, will the
+            state be able to reindict and get the case to trial in time
+            to satisfy the 90-day demand?</p>
+            <p>6. Will a judge refuse to grant my demurrer on the
+            merits, thereby giving my client an issue on appeal he or
+            she might otherwise not have had?</p>
+            <p>There is often no right answer on when to file the
+            demurrer: it depends on your client, the grounds for
+            demurring, the facts of the case, the prosecutor, the
+            county, and the judge. As the best defense attorneys have
+            long said about the evidence code, “I may not object to the
+            introduction of evidence that I could have objected to, but
+            it’s my choice; I always know when I can object, and the
+            grounds for doing so, even when I choose not to.” The same
+            is true for demurrers and the decision regarding when to
+            file. Do what you think is best, but know the reasons
+            why.</p>
+            <h1 id="ii._requirements"><strong>II.
+            Requirements</strong></h1>
+            <p>A demurrer must be in writing and signed by the attorney
+            or the defendant, and it must be specific. <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.610</a>. An oral demurrer is not worth the paper it is
+            written on.</p>
+            <h1 id="iii._hearings_on_the_demurrer"><strong>III. Hearings
+            on the Demurrer</strong></h1>
+            <p>The issues raised by a demurrer are supposed to be heard
+            either “immediately or at such time as the court may
+            direct.” ORS 135.650.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>If you wait until the morning of trial to argue the
+            demurrer, the prosecutor may be able to reindict that same
+            day (even before your client gets out of custody), since all
+            of the state’s witnesses will be there for the trial.
+            Consider setting the hearing on the demurrer well before
+            trial to avoid immediate re-indictment, and if doing so is
+            contrary to the local court rules, direct the court’s
+            attention to ORS 135.650.</p>
+            <h1 id="iv._grounds_for_demurring"><strong>IV. Grounds for
+            Demurring</strong></h1>
+            <p>A demurrer can be filed when:</p>
+            <p>1. The charging instrument fails to comply with any of a
+            number of procedural statutes listed in ORS 135.630(2).</p>
+            <p>If the accusatory instrument is an indictment, that it
+            does not substantially conform to the requirements of <a
+            href="http://www.leg.state.or.us/ors/132.html">ORS 132.510
+            to 132.560</a>, 135.713, 135.715, 135.717 to 135.737,
+            135.740 and 135.743.</p>
+            <p>Some of the requirements of ORS 132.540, which, if not
+            complied with, can result in a successful motion to set
+            aside:</p>
+            <p>An allegation that the crime was committed within the
+            jurisdiction of the court, either because it occurred within
+            the county or is otherwise triable within. ORS
+            132.540(1)(b).</p>
+            <p>An allegation that the crime occurred prior to the
+            finding of the indictment and within the time allowed by the
+            statute of limitations. ORS 132.540(1)(c).</p>
+            <p>The indictment shall not contain allegations that the
+            defendant has previously been convicted of the violation of
+            any statute which may subject the defendant to enhanced
+            penalties, except where the conviction constitutes a
+            material element of the crime charged. ORS 132.540(2).</p>
+            <p>However, see <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Upton,+339+Or+673+%282005%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9590772109734549803&amp;scilh=0">State
+            v. Upton</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Upton,+339+Or+673+%282005%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9590772109734549803&amp;scilh=0">,
+            339 Or 673 (2005)</a>, which holds that sentencing
+            enhancement facts are now material elements under ORS
+            132.540(2). Though intended to enhance the sentence, the
+            allegation of “persistent involvement in prior offenses”
+            would not be a basis for a motion to set aside since the
+            “material element” exception now applies.</p>
+            <p>2. When the grand jury had no legal authority to inquire
+            into the crime, because the crime was not triable in the
+            county in which the grand jury was empaneled. <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.630(1)</a>.</p>
+            <p>3. When the accusatory instrument charges more than one
+            offense not separately stated. ORS 135.630(3).</p>
+            <p>An argument was once made that alleging DCS – Commercial
+            Drug Offense (CDO) and DCS – Substantial Quantity (SQ) in
+            the same count violated this provision. The Oregon Court of
+            Appeals ruled otherwise in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Merrill,+135+Or+App+408+%281995%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3331345019746386718&amp;scilh=0">State
+            v. Merrill</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Merrill,+135+Or+App+408+%281995%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3331345019746386718&amp;scilh=0">,
+            135 Or App 408 (1995)</a>. The reason the <em>Merrill</em>
+            court gave is that CDO and SQ factors are not elements, but
+            alternative grounds for enhancing the sentence.<em></em></p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>There are times when losing a demurrer is in your
+            client’s best interest. Some demurrers, if successful, will
+            simply result in the state reindicting. But losing the
+            demurrer, then winning on appeal, will often mean it’s too
+            late under the statute of limitations to reindict.</p>
+            <p>Also, if the legal argument is sound but the judge
+            decides a demurrer is not the proper vehicle, the judge may
+            indicate a willingness to reconsider the argument at trial
+            or at sentencing. In that situation, you may have improved
+            your bargaining position, even though you have lost the
+            demurrer.</p>
+            <p>Another time losing the demurrer can benefit your client
+            is when you lose the demurrer for improper joinder. See
+            Appendix C. If you lose because the judge finds the two
+            felonies joined in the indictment are from the same criminal
+            episode (e.g., failure to register and felon in possession),
+            your client now gets the benefit from being from the same
+            criminal episode, including the <em>Buchholz/Miller</em>,
+            shift-to-I, 200% and 400% rules.</p>
+            <p>4. When the facts stated do not constitute an offense.
+            ORS 135.630(4).</p>
+            <p>a. This is one of the grounds that can also be filed as a
+            motion in arrest of judgment or even a motion for judgment
+            of acquittal (''see <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hankins,+342+Or+258,+151+P3d+149+%282007%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16444776925019672864&amp;scilh=0">State
+            v. Hankins,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hankins,+342+Or+258,+151+P3d+149+%282007%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16444776925019672864&amp;scilh=0">342
+            Or 258, 151 P3d 149 (2007)</a>, in which the Oregon Court of
+            Appeals held that a motion for judgment of acquittal based
+            on a failure to state an offense is in effect a premature
+            motion in arrest of judgment. However, in affirming, the
+            Oregon Supreme Court strongly suggested that a trial court
+            should wait until after verdict, in case an acquittal moots
+            the issue.) Also, in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Touchstone+188+Or+App+45+%282003%29&amp;hl=en&amp;as_sdt=4,38&amp;case=8953998361304478281&amp;scilh=0">State
+            v. Touchstone,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Touchstone+188+Or+App+45+%282003%29&amp;hl=en&amp;as_sdt=4,38&amp;case=8953998361304478281&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Touchstone+188+Or+App+45+%282003%29&amp;hl=en&amp;as_sdt=4,38&amp;case=8953998361304478281&amp;scilh=0">188
+            Or App 45 (2003)</a>, in an analysis which would apply just
+            as much to demurrers, a charge of harassment was improperly
+            alleged and remanded to the trial court for entry of a
+            conviction for attempted harassment. In that case, the
+            defendant wisely filed a motion in arrest of judgment rather
+            than a demurrer because the prosecutor would have fixed the
+            complaint if alerted to the issue by way of a demurrer.</p>
+            <p>Case law indicates that jeopardy does not attach, even
+            after trial, when a motion in arrest of judgment is granted
+            on the basis that the facts do not constitute an offense. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wolfs,+312+Or+646+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9250834865384752954&amp;scilh=0">State
+            v. Wolfs</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wolfs,+312+Or+646+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9250834865384752954&amp;scilh=0">,
+            312 Or 646 (1992)</a>. In other words, the defendant could
+            go through a trial, be convicted, be sentenced, successfully
+            file a motion in arrest of judgment and the state could
+            still reindict. At present, however, all appellate cases
+            dealing with this issue have dealt with single count
+            indictments, and the same analysis may not hold true when
+            there are counts from the same criminal episode which were
+            adjudicated at trial and survived the motion in arrest of
+            judgment.</p>
+            <p>Jeopardy would still attach to those additional counts,
+            which should result in a different result than the one in
+            <em>Wolfs</em>.</p>
+            <p>b. Although there is no explicit statutory language
+            allowing the defendant to demur to indictments with
+            constitutional defects, the appellate courts have ruled that
+            when a statute is constitutionally “invalid,” a charging
+            instrument based on that statute does not “constitute an
+            offense.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0">See</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0">State
+            v. McKenzie</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0">,
+            307 Or 554 (1989)</a> (a vague statute is subject to a
+            motion in arrest of judgment because – if vague – the
+            statute is “invalid” and therefore fails to state an
+            offense).</p>
+            <p>At first blush, it might make sense to apply the same
+            analysis to – for example – a pretrial demurrer to a statute
+            that would inevitably result in a constitutionally
+            disproportionate sentence, given that a disproportionate
+            statute is “invalid.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Shumway,+291+Or+153+%281981%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12498319768823710840&amp;scilh=0">State
+            v. Shumway</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Shumway,+291+Or+153+%281981%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12498319768823710840&amp;scilh=0">,
+            291 Or 153 (1981)</a>. But case law is ambiguous on this
+            point:</p>
+            <p>Defendant also contended before the trial court and
+            argues again on appeal that the classification of delivery
+            of marijuana for no consideration as a Class A felony in
+            this case, while the delivery of marijuana for consideration
+            is classified a Class B felony, violates the proportionality
+            clause in Article I, section 16, of the <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution</a>. However, that argument is not a proper
+            consideration at this time under ORS 135.630 because its
+            effect is to challenge the length of sentence that the trial
+            court would be authorized to impose only if defendant is
+            convicted. ''Cf. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fanus,+336+Or+63,+79+P3d+847+%282003%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7022868415443907239&amp;scilh=0">State
+            v. Fanus</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fanus,+336+Or+63,+79+P3d+847+%282003%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7022868415443907239&amp;scilh=0">,
+            336 Or 63, 79 P3d 847 (2003)</a> (holding that a facial
+            challenge to the constitutionality of Oregon’s sentencing
+            statute for aggravated murder was the proper subject of a
+            pretrial demurrer).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Brown,+232+Or.+App.+472&amp;hl=en&amp;as_sdt=4,38&amp;case=5020863484036350111&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Brown,+232+Or.+App.+472&amp;hl=en&amp;as_sdt=4,38&amp;case=5020863484036350111&amp;scilh=0">,
+            232 Or App 472, 480 (2009)</a>.</p>
+            <p>Regardless, a demurrer is not the proper vehicle when the
+            constitutional defect does not appear on the face of the
+            indictment. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pinnell,+319+Or+438+%281994%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5728726604176517311&amp;scilh=0">State
+            v. Pinnell</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pinnell,+319+Or+438+%281994%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5728726604176517311&amp;scilh=0">,
+            319 Or 438 (1994).</a></p>
+            <p>If there is no statutory remedy anywhere for a
+            constitutional defect, the constitution itself may serve as
+            the authority for a hearing on the issue. <em>Se,e for
+            example,</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sutherland,+329+Or+359+%281999%29&amp;hl=en&amp;as_sdt=4,38&amp;case=1798349884163452981&amp;scilh=0">State
+            v. Sutherland</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sutherland,+329+Or+359+%281999%29&amp;hl=en&amp;as_sdt=4,38&amp;case=1798349884163452981&amp;scilh=0">,
+            329 Or 359 (1999)</a>, where the Oregon Supreme Court found
+            that in the absence of statutory authority allowing the
+            defendant to challenge the “bail minimum” statute, the
+            Oregon Constitution’s bail provisions could serve as
+            authority for a hearing on a violation of that provision.
+            See Appendix B for an example.</p>
+            <p>5. When the facts in the charging instrument constitute a
+            legal justification or other legal bar to the alleged crime.
+            <a href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.630(5)</a>.</p>
+            <p>Up until September 29, 1991, the crime of sexual
+            penetration with a foreign object – former <a
+            href="http://www.leg.state.or.us/ors/163.html">ORS
+            163.411</a> – specifically excluded from its scope
+            penetration by any part of the actor’s
+            body<strong>.</strong>The 1991 legislature amended ORS
+            163.411 to include digital penetration within the conduct
+            prohibited by the statute.<strong></strong>The amendment
+            took effect on September 29, 1991. As a result of that
+            change, it is not unusual to see indictments that describe
+            the foreign object as, “to wit: the defendant’s finger.”
+            However, because the statute of limitations on sex crimes
+            has been lengthened (in some cases more than 20 years), the
+            state may now indict the crime of sexual penetration, using
+            the “to wit: the defendant’s finger” language, when the
+            crime occurred long enough ago (before September 29, 1991)
+            that “the finger” was actually a defense to the crime.</p>
+            <p>6. That the accusatory instrument is not definite and
+            certain. <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.630(6)</a>.</p>
+            <p>This provision codifies the requirement under Article I,
+            section 11, of the <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution</a>, which provides: “In all criminal
+            prosecutions, the accused shall have the right…to demand the
+            nature and cause of the accusation against him.…” This
+            section has been interpreted to require specificity in
+            accusatory instruments. <em>State v. Smith</em>, 182 Or 497,
+            188 P2d 998 (1948); <a
+            href="http://scholar.google.com/scholar_case?q=Smith,+182+Or+497&amp;hl=en&amp;as_sdt=4,38&amp;case=3680270296935259072&amp;scilh=0">State
+            v. Sanders</a><a
+            href="http://scholar.google.com/scholar_case?q=Smith,+182+Or+497&amp;hl=en&amp;as_sdt=4,38&amp;case=3680270296935259072&amp;scilh=0">,
+            280 Or 685, 572 P2d 1307 (1977)</a>.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cooper,+78+Or+App+237+%281986%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9677626946947753211&amp;scilh=0">State
+            v. Cooper</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cooper,+78+Or+App+237+%281986%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9677626946947753211&amp;scilh=0">,
+            78 Or App 237 (1986)</a>, the court decided that a complaint
+            charging a person with promoting gambling was insufficient
+            when it merely mirrored the language of the statute and
+            contained no identifying facts or acts. This may be
+            particularly useful when the indictment includes sentence
+            enhancement allegations, such as “harm substantially greater
+            than typical,” without giving any specific facts either to
+            the harm or what is typical.</p>
+            <center>
+            <p><strong>What is the purpose of a
+            complaint/indictment?</strong></p>
+            </center>
+            <p>What is the purpose of a complaint/indictment? Is it
+            merely to give notice to the defendant? Or is it to ensure
+            that the defendant is only tried for crimes found by the
+            grand jury? The following quotes are taken from <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Anderson,+233+Or+App+475+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17511225254144088044&amp;scilh=0">State
+            v. Anderson</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Anderson,+233+Or+App+475+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17511225254144088044&amp;scilh=0">,
+            233 Or App 475 (2010)</a>:</p>
+            <p>“Defendant acknowledges both the general principle that
+            an indictment in the language of a statute generally is
+            adequate and the holdings in <em>Reynolds</em>,
+            <em>Hulsey</em>, and <em>Burns</em>. Regardless, he argues,
+            each of those cases stands only for the proposition that the
+            indictment was sufficient to fulfill the ‘notice’ objective
+            of indictments. Defendant emphasizes that one of the
+            functions of an indictment is to ‘ensure that the defendant
+            is tried only for an offense that is based on facts found by
+            the grand jury.’ <a
+            href="http://scholar.google.com/scholar_case?q=Burnett,+185+Or+App&amp;hl=en&amp;as_sdt=4,38&amp;case=50973598385727209&amp;scilh=0">Burnett</a><a
+            href="http://scholar.google.com/scholar_case?q=Burnett,+185+Or+App&amp;hl=en&amp;as_sdt=4,38&amp;case=50973598385727209&amp;scilh=0">,
+            185 Or App at 415</a>. He argues, ‘The fact that the
+            indictment identified the [felon in possession] statute in
+            the caption and alleged ‘unlawfully and knowingly’ may
+            establish that the indictment was sufficient to give
+            defendant notice, but it does not establish that the grand
+            jury considered, much less found, that defendant knew, or
+            was reckless or criminally negligent in failing to know,
+            that he was a felon.’ Defendant relies on <em>Burnett</em>
+            to support his argument.”</p>
+            <p>* * * *</p>
+            <p>“Most directly relevant to defendant’s argument in this
+            case, we concluded, while agreeing that the indictment
+            satisfied most of the functions of an indictment, that it
+            did not satisfy the requirement that a defendant be tried
+            only for an offense that is based on facts found by the
+            grand jury indicting him. ‘[W]ithout the inclusion in the
+            indictment of the elements of this offense set forth in <a
+            href="http://www.leg.state.or.us/ors/811.html">ORS
+            811.540(1)(b)</a>, we stated, ‘we cannot say with certainty
+            that the grand jury based the indictment on facts that
+            satisfy this element of the crime.’ <a
+            href="http://scholar.google.com/scholar_case?q=Burnett,+185+Or+App&amp;hl=en&amp;as_sdt=4,38&amp;case=50973598385727209&amp;scilh=0">Id</a><a
+            href="http://scholar.google.com/scholar_case?q=Burnett,+185+Or+App&amp;hl=en&amp;as_sdt=4,38&amp;case=50973598385727209&amp;scilh=0">.
+            at 416</a>. Defendant asserts in this case that, under <a
+            href="http://scholar.google.com/scholar_case?q=Burnett,+185+Or+App&amp;hl=en&amp;as_sdt=4,38&amp;case=50973598385727209&amp;scilh=0">Burnett</a>,
+            the state’s failure to allege a culpable mental state
+            regarding his status as a felon means that the indictment
+            was deficient because it did not ensure that the grand jury
+            ‘considered, much less found, all the elements of the
+            offense.’ “Defendant is attempting to place more weight on
+            the holding in <em>Burnett</em> than it can bear, for
+            several reasons. We read <em>Burnett</em>as stating a narrow
+            exception to the established rule that the primary function
+            of an indictment is to provide notice to a defendant as to
+            what crime he is being prosecuted for. <em>Burnett</em> held
+            only that, when an indictment completely lacks language
+            regarding an essential element of a crime, that indictment
+            is insufficient. But when, as in <em>Reynolds</em> and
+            <em>Burns</em>, the element is alleged--in this case, that
+            defendant was a felon--but reference to other language in
+            the indictment is needed only to ‘round out’ the allegation,
+            it is governed by the more general rule that an indictment
+            is sufficient if it is framed ‘in such manner as to enable a
+            person of common understanding to know what is intended[.]’
+            <a href="http://www.leg.state.or.us/ors/132.html">ORS
+            132.550(7)</a>.”</p>
+            <h1 id="v._effect_of_allowance_of_demurrer"><strong>V.
+            Effect of Allowance of Demurrer</strong></h1>
+            <p>1. Like a motion in arrest of judgment, a demurrer puts
+            the defendant in the same position he or she would be in
+            prior to the filing of the charging instrument.</p>
+            <p>2. If a demurrer has been granted, one might think that
+            <a href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.670(2)</a> bars the case from being re-filed or
+            re-submitted if the state has not done so within 30 days of
+            when the court submitted the order granting the demurrer.
+            However, ‘if re-filing does not occur within 30 days after
+            the order allowing a demurrer…further prosecution is not
+            barred.’ ” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Harrison,+125+Or+App+472+%281993%29&amp;hl=en&amp;as_sdt=4,38&amp;case=18198663049689513006&amp;scilh=0">State
+            v. Harrison</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Harrison,+125+Or+App+472+%281993%29&amp;hl=en&amp;as_sdt=4,38&amp;case=18198663049689513006&amp;scilh=0">,
+            125 Or App 472 (1993)</a>, ''citing <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Moline,+104+Or+App+173+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9571714542683765208&amp;scilh=0">State
+            v. Moline</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Moline,+104+Or+App+173+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9571714542683765208&amp;scilh=0">,
+            104 Or App 173 (1990)</a>.</p>
+            <p>3. An indictment against which a defendant has
+            successfully demurred shall not be refiled unless the trial
+            court believes the indictment can be fixed. ORS
+            135.670(1).</p>
+            <h1 id="vi._denial_of_a_demurrer"><strong>VI. Denial of a
+            Demurrer</strong></h1>
+            <p>In a very disappointing holding, the Oregon Court of held
+            that, even assuming the demurrer for failure to state a
+            crime was wrongly denied, it would be harmless error since
+            the jury was properly instructed on the elements of the
+            crime. <a
+            href="http://scholar.google.com/scholar_case?q=Eberhardt,+225+Or+App+275&amp;hl=en&amp;as_sdt=4,38&amp;case=1025506187161833161&amp;scilh=0">State
+            v. Eberhardt</a><a
+            href="http://scholar.google.com/scholar_case?q=Eberhardt,+225+Or+App+275&amp;hl=en&amp;as_sdt=4,38&amp;case=1025506187161833161&amp;scilh=0">,
+            225 Or App 275, 201 P3d 915 (2009)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=Eberhar+347+Or+608,+226+P3d+43+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=4658755462037245432&amp;scilh=0">review
+            denied</a><a
+            href="http://scholar.google.com/scholar_case?q=Eberhar+347+Or+608,+226+P3d+43+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=4658755462037245432&amp;scilh=0">,
+            347 Or 608, 226 P3d 43 (2010)</a>.</p>
+            <p>For further forms for demurrers, please refer to the
+            OCDLA<em>Criminal Law Formbook</em>, Chapter 2.</p>
+    </body>
+</html>

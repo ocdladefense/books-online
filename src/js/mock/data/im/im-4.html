@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p><strong>The Criminal Defense Attorney–Investigative
+            Team</strong></p>
+            <p><strong><em>Tactics for Success</em></strong></p>
+            <p><strong><em>Robert Harris</em></strong></p>
+            <p>2010 edition</p>
+            <h3 id="introduction">Introduction</h3>
+            <p>Successful and effective Attorney-Investigator teams
+            share common characteristics.</p>
+            <ul>
+            <li>Prompt mutual communication of all facts or actions that
+            effect the case.</li>
+            <li>An understanding of the responsibilities of each
+            person.</li>
+            <li>The ability to openly and honestly communicate and share
+            ideas and theories about the case, the witnesses and the
+            evidence.</li>
+            </ul>
+            <p>Different types of cases call for different levels of
+            interaction between parties and different depths of
+            investigation. And, different attorneys will have preferred
+            methods of communication and their own ideas about things
+            like written reports.</p>
+            <p>In a murder case, the relationship between parties, the
+            expectations and the depth of the investigation will be
+            vastly different than in a misdemeanor case. Because of
+            these variances, the relationship between attorney and
+            investigator isn’t a static one. It can be as unique as the
+            facts of each case and the personalities involved. You must
+            remain flexible and openly communicate so expectations are
+            met and the client is provided quality representation.</p>
+            <h3
+            id="initiating_the_attorney_investigator_relationship">Initiating
+            the Attorney-Investigator Relationship</h3>
+            <p>Once an attorney has retained an investigator, the first
+            thing the investigator should expect is to set up a
+            face-to-face meeting with the attorney. In the best case,
+            the attorney will have provided the investigator with all
+            available police reports, or other relevant evidence, prior
+            to the meeting. The attorney may also have provided a case
+            summary as well as the “theory of the case.” That
+            information may have been provided in the phone call or
+            email that the attorney used in initiating the investigation
+            work. If the attorney didn’t provide the investigator with
+            information prior to the first meeting, the investigator
+            should request it.</p>
+            <p>Prior to the meeting, the investigator should be familiar
+            with the police reports, have a list of any questions he or
+            she may have, and be prepared to have a substantive
+            conversation with the lawyer about the case and possible
+            avenues for investigation. In addition, the investigator can
+            perform a conflict check at this time to determine if
+            representation of the defendant would create any conflict of
+            interest.</p>
+            <p>The investigator should have a good sense of their
+            workload before accepting a case. It is important to
+            consider such things as the custody status of the accused or
+            time constraints that may be imposed by the attorney or a
+            court. Where a defendant is in custody, the timelines will
+            be shorter and scheduling will not be as flexible.</p>
+            <p>If the case is court-appointed by either federal or state
+            court, the attorney should provide an authorization from
+            Public Defense Services Commission to the investigator prior
+            to any investigative work being performed. Beginning work on
+            a case without authorization from PDSC may result in
+            non-payment for that work.</p>
+            <p><em>First Meeting of Attorney and Investigator</em></p>
+            <p>Depending on the type of case, the first meeting can be
+            as brief as 15 minutes or as long as several hours. At this
+            meeting it’s important for the attorney and investigator to
+            understand and agree on the role the investigator will take,
+            what the attorney will provide, and the respective
+            responsibilities of each.</p>
+            <p>Police reports should be reviewed and discussed together
+            by the team. Here are some of the issues that could be
+            addressed at this first meeting:</p>
+            <ul>
+            <li>Witness location and interviews</li>
+            <li>Site investigation</li>
+            <li>Photos and videos</li>
+            <li>Preparing written reports</li>
+            <li>Preparation of exhibits for presentation to court</li>
+            <li>Assistance with trial and witness preparation (check
+            availabilities)</li>
+            <li>Trial dates, hearing dates, availability for testimony
+            (f these dates are available at this meeting, the
+            investigator should ask the attorney if they need to be
+            reserved)</li>
+            </ul>
+            <p>If you haven’t performed a conflict check you should do
+            so at the first meeting. You need to carefully review all
+            reports, list the possible witnesses, discuss possible
+            witnesses that aren’t listed in the report, and make sure
+            that your representation doesn’t cause a professional
+            conflict of interest.</p>
+            <p>The attorney should also be prepared to provide copies of
+            releases of information (signed by the client) to the
+            investigator.</p>
+            <p>At times an attorney may also prepare a written
+            investigation request for the investigator. This is a
+            document the investigator and attorney agree on which sets
+            forth, in memorandum form, what the attorney is requesting
+            the investigator do on a case. The content of this written
+            request is best left to the styles and discretion of the
+            attorney and investigator. Disputes over pretrial discovery
+            sometimes arise, and written communications between the
+            attorney and investigator could be subject to inquiry by the
+            prosecutor and judge. In practice, written requests should
+            be fairly general. “Sensitive matters” should be
+            communicated verbally or in a way that is clearly protected
+            by the attorney-client privilege or as work product. (See
+            the Appendix for a sample letter requesting investigative
+            services.)</p>
+            <p><em>Understanding the Role of the Attorney</em></p>
+            <p>While the attorney and investigator need to act as a
+            team, ultimately it’s the attorney that is responsible for
+            effectively and zealously representing the client and for
+            the quality of the representation. Attorneys take this very
+            personally, but good attorneys will encourage the
+            investigator to offer opinions on issues such as the quality
+            of a witness or whether a particular theory is reasonable.
+            At the attorney-investigator meetings, it is perfectly
+            appropriate and helpful for the investigator to offer
+            opinions on these issues. But be aware that each attorney
+            may have a different conception of how you and he or she
+            should work together. Don’t take for granted that each
+            attorney will want the investigator to undertake the same
+            tasks and responsibilities.</p>
+            <p>You will also work with attorneys of different experience
+            and ability. This will affect your role and your
+            responsibilities. With a younger, less experienced attorney,
+            it is perfectly proper to offer suggestions that you may not
+            offer to a more seasoned trial attorney. In fact, younger
+            attorneys should welcome any insights you can provide.</p>
+            <p><em>Foundation of a Good Relationship</em></p>
+            <p>Trust and confidence are the keystones to an effective
+            attorney-investigator team. Some key characteristics of an
+            effective team are the following:</p>
+            <ul>
+            <li>Respect for each other’s role in the case, regardless of
+            experience.</li>
+            <li>Willingness to offer and respect constructive ideas on
+            gathering evidence or new theories of the case.</li>
+            <li>Ability to get hold of each other on short notice.</li>
+            <li>Taking accurate direction and following through on that
+            direction.</li>
+            <li>Reasonable and understandable billing procedures.</li>
+            <li>Willingness to point out possible errors or “dead ends”
+            in a constructive and positive manner.</li>
+            </ul>
+            <p>The following are some of the issues that arise that will
+            harm trust and confidence:</p>
+            <ul>
+            <li>Failure to respond to the attorney’s requests in a
+            timely manner.</li>
+            <li>Failure to provide reports and other investigatory
+            materials (photos, videos) on a timely basis, or failing to
+            provide them in a usable format.</li>
+            <li>Inability of the attorney to contact the investigator
+            when necessary.</li>
+            <li>Unwillingness to take direction, or an “attitude” that
+            is condescending or dismissive of the attorney’s role.</li>
+            <li>Any surprises in billing.</li>
+            </ul>
+            <p>Meeting with the attorney is a priority, and is one of
+            the most productive things a team can do. Plus,
+            brainstorming is fun. Attorneys and investigators bring
+            different mindsets to the case. Teamwork frequently results
+            in creative solutions.</p>
+            <p><em>Who Is the Client?</em></p>
+            <p>In a criminal defense case the accused has historically
+            been referred to as “the client.” Legislation requiring the
+            licensing of investigators, however, has created new and
+            unresolved questions about who, legally, is the client. ORS
+            703.401(2) seems to say that the attorney who hires the
+            investigator is the client. The Department of Public Safety
+            Standards and Training, however, may decide at some future
+            time that the attorney’s client is also the investigator’s
+            client.</p>
+            <p>The client question could become important because of the
+            statutory requirement that the investigator or operative
+            “shall inform each client that the client has a right to
+            receive a written contract. The contract shall clearly state
+            the task to be performed and the rate of payment.” ORS
+            703.455(1). Related statutes also address the client’s right
+            to receive written or oral reports. The report issue is
+            dealt with later in this chapter. These provisions probably
+            have little effect on an investigator and attorney who have
+            a good working relationship. When working with a new or
+            unfamiliar attorney, it is recommended that the investigator
+            deliver a simple letter of understanding to the attorney. It
+            is highly recommended that when hired by someone other than
+            an attorney, an investigator should provide a contract for
+            the client and investigator both to sign. The contract
+            should outline specifically what is expected of the
+            investigator, the amount the investigator charges per hour,
+            plus what the investigator may charge as additional
+            expenses, such as mileage, meals, etc.</p>
+            <p>While acting for the attorney on the client’s behalf, the
+            attorney-client privilege that protects communications
+            between the attorney and the client will likewise protect
+            communications between the client and the investigator, as
+            long as the same precautions are taken by the investigator
+            to maintain that confidential relationship, meaning that any
+            communication between the investigator and the criminal
+            defendant must be intended as confidential and no one else,
+            other than the attorney, can have access to the
+            communications. You should be careful to coordinate with the
+            attorney prior to any communication with the client to
+            ensure the privilege is preserved.</p>
+            <h3 id="theories_of_prosecution_and_defense">Theories of
+            Prosecution and Defense</h3>
+            <p>Lawyers often talk about their “theory of the case,”
+            meaning how the evidence can be explained in such a way that
+            doesn’t incriminate the defendant. For instance, if stolen
+            property was found in the defendant’s car, did anyone else
+            have access to the car?</p>
+            <p>Discuss with the attorney the possible legal theories of
+            the case. What is the prosecutor’s theory as to how the
+            evidence is explained, and what is the defense theory?</p>
+            <p>The investigator should be aware of both theories. During
+            an investigation, you will discover new facts. And if you
+            are aware of both the defense and prosecution theories, what
+            may seem like an immaterial fact at first may tend to prove,
+            or disprove, a particular theory.</p>
+            <p>A well-prepared defense team understands the state’s
+            theory of the case and may come to know the government’s
+            case, and its weaknesses, better than the prosecutor.</p>
+            <p>The original defense theory may become unworkable because
+            of defense investigation. The theory may also shift or
+            completely change based on new information provided by the
+            government. Don’t worry, theories and investigation often
+            become fluid before “gelling” again. Good communication is
+            vital and the investigator should be part of any ongoing
+            discussion.</p>
+            <p><em>Understand the Law Behind the Charges</em></p>
+            <p>The investigator must also be aware of and understand the
+            law behind the charges. Is the defendant charged with
+            <em>criminal recklessness</em> as opposed to
+            <em>intentional</em> or <em>knowing</em> conduct? Has the
+            defendant been charged with an <em>attempted</em> crime as
+            opposed to a completed crime? Or, is the defense theory of
+            the case that it was merely an attempted crime ? (which
+            would carry less severe consequences than a conviction for
+            the completed crime). Understanding these issues may effect
+            how the investigator views and gathers evidence and
+            statements.</p>
+            <h3 id="mitigation">Mitigation</h3>
+            <p>Sometimes there may not be a theory of defense, or, as
+            stated above, the theory may become untenable. If it appears
+            that the defendant will likely be found guilty of some or
+            all of the charges, then sentencing mitigation is called
+            for. Mitigation requires the investigator to gather
+            information regarding circumstances that puts the defendant
+            in the best possible light, while acknowledging his or her
+            guilt. The investigator should be prepared and able to
+            recognize helpful statements by witnesses during the first
+            interview. Even if a witness gives evidence that
+            incriminates the client, there may be information that could
+            assist the client at the time of sentencing, for instance,
+            was the defendant contrite or attempted to avoid unnecessary
+            harm or injury.</p>
+            <p>Be prepared, at all times to get mitigating information.
+            You may not get a second chance to interview these
+            witnesses. (For more on mitigation, see Chapter 18.)</p>
+            <h3 id="litigation_teams">Litigation Teams</h3>
+            <p>Ideally, a litigation team should be comprised of
+            attorneys, paralegals, investigators and legal secretaries.
+            In reality, the team is usually smaller, depending on the
+            case and jurisdiction. Don’t be afraid to recommend
+            additional team members if you see the need for their
+            expertise. The most successful litigation teams are
+            characterized by high levels of communication and
+            flexibility among members. Regularly scheduled meetings are
+            important where all can discuss the status of tasks and
+            brainstorm new ideas and avenues of defense.</p>
+            <p>Becoming part of a litigation team is a big commitment.
+            Carefully consider and discuss the situation with other
+            potential members before joining.</p>
+            <h3 id="defendant_interaction">Defendant Interaction</h3>
+            <p>The defendant will have specific facts about witnesses or
+            a victim that may be beneficial in the investigation. If
+            possible, avoid relying only on the attorney’s version of
+            the defendant’s statement. Attorney and investigators have
+            different skills. Investigators are skilled interrogators
+            and listeners outside the courtroom and use different
+            filters than attorneys. If the defendant’s version of events
+            differs from the attorney, make sure you inform the attorney
+            immediately of that divergence and discuss the reasons for
+            that difference.</p>
+            <p>The investigator and attorney may each have a different
+            rapport with the defendant. At some point this rapport may
+            assist the defendant in making important decisions.</p>
+            <p>Returning to the subject of attorney-client privilege,
+            investigators are legally considered representatives of the
+            attorney and are, therefore, bound by that privilege. Oregon
+            Evidence Code (OEC) 503(2) sets out the attorney-client
+            privilege. It provides, in part:</p>
+            <ol start="2">
+            <li>A client has a privilege to refuse to disclose and to
+            prevent any other person from disclosing confidential
+            communications made for the purpose of facilitating the
+            rendition of professional legal services to the client:</li>
+            </ol>
+            <ol>
+            <li>Between the client or the client’s representative and
+            the client’s lawyer or a representative of the lawyer;</li>
+            <li>Between the client’s lawyer and the lawyer’s
+            representative[.]</li>
+            </ol>
+            <p>OEC 503(1)(b) defines “confidential communication” for
+            purposes of subsection (2) as “a communication not intended
+            to be disclosed to third persons other than those to whom
+            disclosure is in furtherance of the rendition of
+            professional legal services to the client or those
+            reasonably necessary for the transmission of the
+            communication.”</p>
+            <p>OEC 503(1)(e) defines “representative of the lawyer” as
+            “one employed to assist the lawyer in the rendition of
+            professional legal services.”</p>
+            <p>Investigators must be constantly vigilant in not
+            disclosing confidential communications.</p>
+            <p><span id="__RefHeading___Toc133378173" class="anchor"></span></p>
+            <h3 id="organize_and_prioritize">Organize and
+            Prioritize</h3>
+            <p><em>Major Tasks</em></p>
+            <p>As early as possible identify large, time-consuming tasks
+            such as record retrieval and multiple witness interviews.
+            Begin these tasks as early as you’ve identified them.</p>
+            <p><em>Gathering Documents</em></p>
+            <p>Make sure you have signed releases from the client or the
+            attorney, and clarify with the attorney to determine if you
+            need documents to be certified copies. When large numbers of
+            documents are involved, agree with the attorney on a
+            consistent system of organization. A Bates stamp provides a
+            simple and inexpensive method of numbering documents.</p>
+            <p><em>Witnesses</em></p>
+            <p>When attempting to locate witnesses or doing background
+            investigation, be sure the attorney has provided you with as
+            much information as possible about the witness, including
+            their contact information, their relevance to the case, or
+            whether they are a defense or state’s witness. Have the
+            attorney provide you with a subpoena before you interview a
+            witness who might be difficult to locate again. The attorney
+            can have several subpoenas prepared for you so that you can
+            obtain one on short notice. (For more on witnesses, see
+            Chapter 10, “Locating Witnesses,” and Chapter 11,
+            “Interviewing Witnesses.”)</p>
+            <p><em>Deadlines</em></p>
+            <p>Many courts require attorneys and their clients to accept
+            or reject plea bargains well in advance of a trial date. So
+            it can be important to have mitigating evidence prepared
+            prior to plea negotiations between the defense attorney and
+            the state. Motions (to suppress evidence, to limit
+            introduction of evidence by the other side, to compel
+            discovery) may also be scheduled in advance of trial and
+            require specific investigator tasks.</p>
+            <p><em>Communicate Effectively</em></p>
+            <p>Keep the attorney advised of any investigator vacations
+            or scheduling problems. Attorneys should likewise advise
+            investigators when a hearing or trial is postponed and
+            consult with them about future scheduling.</p>
+            <h3 id="investigation_results_to_the_attorney">Investigation
+            Results to the Attorney</h3>
+            <p>Once the investigator has located and interviewed
+            someone, or done other investigatory tasks, the attorney and
+            investigator must decide what to do with that
+            information.</p>
+            <p><em>Should a report be generated?</em></p>
+            <p>Whether or not to write a report, and what to put in the
+            report, are probably the most discussed issues between
+            attorneys and investigators. These decisions are best
+            handled on a case-by-case basis. There are, however, some
+            general rules to be aware of.</p>
+            <p><em>Statutory Requirement.</em> ORS 703.455 requires all
+            investigators to inform a client that the client is entitled
+            to receive either an oral or a written report. A written
+            report must be furnished within seven days after the
+            investigator has received a written request from the client.
+            Investigators are also required to maintain separate and
+            distinct case files for each client with, among other
+            things, copies of all correspondence and written
+            reports.</p>
+            <p>Attorneys are responsible for complying with laws
+            concerning pretrial discovery. ORS 135.835 <em>et seq</em>.
+            Oregon law requires the defense attorney to disclose to the
+            prosecutor before trial:</p>
+            <blockquote>
+            <p>[t]he names and addresses of persons, including the
+            defendant, whom the defense intends to call as witnesses at
+            the trial, together with relevant written or recorded
+            statements or memoranda of any oral statements of such
+            persons other than the defendant.</p>
+            </blockquote>
+            <p>In theory, pretrial discovery laws exist to prevent one
+            party from being surprised or ambushed at trial. In reality,
+            aggressive advocates often push the rules to or beyond the
+            limits. Investigators must rely upon the attorney for the
+            many legal interpretations of discovery law. There are a few
+            things that investigators and operatives should know that
+            could prevent problems for themselves and their clients.</p>
+            <p><em>Written witness statements.</em> A written document
+            reporting the statement of someone a party intends to call
+            as a witness represents the classic example of a document
+            that must be disclosed. An attorney, however, may ask the
+            investigator <em>not</em> to prepare a formal report, though
+            notes may be discoverable even if they never leave the
+            investigator’s file. This depends on the nature of the notes
+            and whether the attorney knows of their existence. Notes
+            intended as or amounting to a full report are probably
+            discoverable. Generally, an investigator’s “fragmentary
+            notes” (notes not intended to be a full account of the event
+            reported) are probably not discoverable. Notes that are
+            merely a step in the preparation of a final report are
+            probably not discoverable, assuming the report was
+            disclosed. The law in this area is very dependent on the
+            particular facts of the case and judicial interpretation. It
+            is best, therefore, to initially assume that investigator
+            notes are discoverable. In any event, you should always
+            consult with the attorney employing you in order to have a
+            clear and consistent policy regarding investigation reports
+            and notes.</p>
+            <p><em>Work Product.</em> This is a very important concept.
+            Work product should be communicated to the attorney as a
+            clearly labeled separate document. Pretrial discovery
+            statutes do protect some information from disclosure. “Work
+            product” generally refers to reports or memoranda that
+            contain opinions, theories or conclusions of the attorney or
+            their agent. ORS 135.855(1). A report concerning an
+            investigator’s interview of a witness is not work product
+            just because it contains something an attorney wishes to
+            hide from the other side. Portions of a report that contain
+            the investigator’s opinion or belief of what kind of witness
+            a person would make should be set out in a separate report,
+            or at the very least a clearly labeled separate section of
+            your report. That way the attorney can redact the work
+            product if the report needed to be provided to opposing
+            counsel.</p>
+            <p>[Editors’ Note: It is important to recognize that notes
+            and information labeled “work product” loses confidential
+            status as the case moves from the initial defense stage to
+            an appeal and to PCR and habeas. By the time a case hits PCR
+            and habeas stages, work initially identified as confidential
+            work product may not be held as such by subsequent defense
+            teams.]</p>
+            <h3 id="testimony">Testimony</h3>
+            <p>Being called as a witness can be an unnerving experience.
+            The effective investigator needs plenty of notice so he or
+            she can review their work and consult with the trial
+            attorney. Every attorney has their own style of preparing
+            and presenting witnesses. Testimony is rarely scripted,
+            which is why it is important to meet with the attorney and
+            understand the purpose of your testimony.</p>
+            <p>Be prepared to explain your job and your qualifications.
+            It is important to appear professional and unbiased. Most
+            jurors are interested in what you do.</p>
+            <p>Typical examples of defense investigator testimony
+            concern impeachment of witnesses for prior inconsistent
+            statements and laying the foundation for physical
+            exhibits.</p>
+            <p>Don’t be surprised or offended when the prosecutor
+            decides to cross-examine you. Likewise, don’t take the
+            attack or questions personally. Listen and understand the
+            question, and if you don’t, ask that the question be
+            repeated. Once you understand the question your answer
+            should be consistent, even repetitive, with your testimony
+            on direct. The answer should be as short and concise as
+            “Yes,” “No,” and “I don’t know.” Never guess or use words
+            such as “maybe” or “probably.” Volunteering information will
+            lead to problems.</p>
+            <p>When you do testify, take the question from the attorney,
+            but answer it to the jury. They’re the ones you’re talking
+            to.</p>
+            <p>Should the investigator take their report or notes to
+            court when they are called to testify? Before doing so, the
+            investigator must confirm with the attorney that the report
+            has been disclosed during the pretrial discovery process. If
+            no report has been written and the investigator shows up
+            with notes, it is likely that a judge will order the
+            investigator to disclose those notes to the other side.
+            Similarly, Oregon Rules of Evidence 612 provide that if a
+            witness (such as an investigator) uses a writing (like
+            notes) to refresh memory for the purpose of testifying, then
+            an adverse party is entitled to inspect that writing.</p>
+            <h3 id="conclusion">Conclusion</h3>
+            <p>The most consistent theme in the effective
+            attorney-investigator relationship is communication. From
+            accepting employment to brainstorming, locating witnesses,
+            preparing reports and testifying, the well-informed team
+            that has consistently communicated the relevant
+            investigatory documents, discussed the theory of the case,
+            accepted and carried out the responsibilities of the
+            respective parties, will succeed.</p>
+            <h3 id="appendix">Appendix</h3>
+            <p><strong>Sample Engagement Letter For Legal Investigative
+            Services</strong></p>
+            <p>RE: State of Oregon V. Jane Doe</p>
+            <p>Dear Judy Super-Snoop</p>
+            <p>The purpose of this communication is to engage service of
+            an investigator to provide legal investigative services.
+            This document , its contents, and all communications between
+            investigator and attorney are privileged communication
+            protected by Attorney/Client confidential and shall not be
+            disclosed to any other person without the written consent of
+            our client or by order of the court.</p>
+            <p>This will confirm our conversation this morning and the
+            retention of your services for the above referenced matter,
+            the terms of service and the requested investigation:</p>
+            <p><strong><span class="underline">Terms of
+            Employment:</span></strong> [INSERT TERMS OF PAYMENT. IF
+            INDIGENT AND COURT APPOINTED STATE WHAT APPROVAL HAS BEEN
+            OBTAINED FROM OPDS].</p>
+            <p><strong><span class="underline">Client /
+            DOB:</span></strong> Jane Doe; DOB 01/01/80</p>
+            <p><strong><span class="underline">Possible
+            Witnesses/Conflicts:</span></strong> “Autumn” Unknown Last,
+            Employee of JC Penney</p>
+            <p>Heather Locklear, Employee of JC Penney</p>
+            <p>T.J. Hooker, Manager at JC Penney</p>
+            <p><strong><span class="underline">Incident Date / Case
+            No.:</span></strong> 01/01/10; Washington County Case No.
+            D123456M</p>
+            <p><strong><span class="underline">Background
+            Facts:</span></strong> This is a straight forward Theft II
+            case, shoplift from JC Penney at Washington Square. Our
+            client is from Canada, speaks Farsi and is a devout Muslim.
+            She wears a head scarf (printed; not all black) but wears
+            common western style clothing, not robes. Loss prevention
+            was particularly rude to her and accused her of being part
+            of an “Arabic” ring of thieves that were then selling items
+            on the black market.</p>
+            <p><strong><span class="underline">Facts according to
+            client:</span></strong> My client’s position is that she
+            simply forgot to pay, began leaving the store (there are two
+            sets of glass doors at the exit; the first set that is from
+            the store to a carpeted area, then a second set from the
+            carpeted area to the outside). She recalls opening the
+            second set for doors to the outside, but doesn’t recall if
+            she got all the way out and/or if the door closed behind
+            her. She says at that point, she remembers she didn’t pay
+            for the jackets she put in a JC Penney bag she found in the
+            elevator, and turns to go back in, but at the point, Loss
+            Prevention officer grabs her and detains her and things go
+            from there.</p>
+            <p><strong><span class="underline">Investigation
+            Request:</span></strong></p>
+            <blockquote>
+            <p><strong>1. Locate and interview “Autumn”- employee of JC
+            Penney:</strong> My client is a frequent shopper at the
+            location, so we would like you to try to make contact with a
+            cashier by the name of Autumn. She is a Persian woman that
+            has assisted our client on many occasions – and they spoke
+            Arabic to one another. I want you to locate and interview
+            her regarding any transactions she recalls between herself
+            and my client and whether our client is a frequent shopper
+            at the store. If you are able to locate her, I may want to
+            subpoena her, but I will wait to hear the results of your
+            interview if you are able to locate her.</p>
+            <p><strong>2. Subpoena Heather Locklear – employee of JC
+            Penney:</strong> She was present as a witness during my
+            client’s interview.</p>
+            <p><strong>3. View tapes of incident at JC Penney:</strong>
+            The incident was recorded by loss prevention. I have a
+            signed authorization to view the tape that is attached along
+            with a signed letter from me granting you permission to view
+            on my behalf. Please review and report your impressions.</p>
+            <p><strong>4. Determine whether third party present during
+            interview was LP Manager TJ Hooker:</strong> My client
+            claims there was another man that came in about half way
+            through her interview and observed and indicat4ed he also
+            thought she was involved in some black market ring. The only
+            other person mentioned in the police report/LP report is the
+            LP manager. If he was the one present, I will want you to
+            subpoena him as well.</p>
+            </blockquote>
+            <p>Please call me with a verbal report before you prepare
+            any written statements. Let me know if you have any
+            questions. I look forward to working with you.</p>
+            <p>Thanks,</p>
+            <p>Robert J. Harris</p>
+    </body>
+</html>

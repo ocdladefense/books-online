@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p>2010 edition</p>
+            <p><strong>Locating Witnesses</strong></p>
+            <p><strong><em>Janaan Stoll</em></strong></p>
+            <h1 id="introduction"><strong>Introduction</strong></h1>
+            <p>Investigators spend a considerable amount of their time
+            looking for potential witnesses. These quests can be
+            rewarding or frustrating, quick or long-lasting. Some
+            searches become mazelike as we repeatedly hit dead ends. I
+            personally enjoy the creative energy inspired by a search,
+            which I liken to a professional game of “Hide and Go
+            Seek.”</p>
+            <p>While the majority of our witnesses are not trying to
+            evade us, we have all had situations where it seems as if
+            the witness may be deliberately hiding from us. Their
+            efforts to out-fox us are later confirmed, at the time of a
+            face-to-face meeting, by their incredulous query of “How did
+            you find me?” The following are some methods for locating
+            people that I have used with success.</p>
+            <h1
+            id="gathering_personal_data_on_your_witness"><strong>Gathering
+            Personal Data on Your Witness</strong></h1>
+            <p>Before you begin your search, try to acquire as much
+            reliable personal data as possible about the witness. This
+            information should include their full name, nickname(s),
+            a.k.a.(s), date of birth (or approximate age), last known
+            address and telephone number, physical description,
+            outstanding features, marital status, names of family
+            members, ex-spouses, significant others, friends, present or
+            former employers, usual type of employment, primary
+            language, country or state of origin, educational
+            background, professional associations, criminal history,
+            gang affiliation, social service agency connections, health
+            history, vices, hobbies, favorite locales, vehicle(s), type
+            of housing, military history, financial situation, other
+            states of residence, and more.</p>
+            <h1 id="telephone_directories"><strong>Telephone
+            Directories</strong>''</h1>
+            <p>Traditionally, the telephone directory, and especially
+            the White Pages, was <em>the</em>go-to book. It can still be
+            a useful tool in obtaining landline phone numbers and
+            addresses. But these days most people use cellular phones.
+            Mobile phone numbers are not included in telephone
+            directories and this is where the Internet comes in handy.
+            For a fee, a number of web sites can provide mobile phone
+            numbers, addresses and other contact information.</p>
+            <p>See Chapter 6, “Computers and Computer Evidence,” for an
+            in-depth discussion on the use of the Internet for help in
+            locating individuals.</p>
+            <p>For recently acquired numbers, you will need to contact
+            Directory Assistance. Be sure to check neighboring area
+            codes, even in adjoining states. If your call to Directory
+            Assistance informs you that your witness has an unpublished
+            number, you may be able to subpoena subscriber information
+            from their local or long-distance telephone company.</p>
+            <p>Local libraries have copies of telephone directories and
+            reverse directories available through their resource center.
+            If you have a phone number but no address, call the local
+            library and they will search the reverse directory for you
+            at no cost.</p>
+            <p>Frequently you will have little more to go on than a name
+            and approximate age. Unless your source is certain of the
+            spelling of your witness’s name, never assume a traditional
+            spelling. Creativity is the key.</p>
+            <h1 id="computer_databases"><strong>Computer
+            Databases</strong></h1>
+            <p>Computer databases can be of great assistance in locating
+            witnesses. Anywho.com is a free directory service that
+            receives information from Intelius, Inc., and is gathered
+            through public records. There you can often find home
+            addresses and phone numbers as well as links to a witness’s
+            social networking site(s). Westlaw and Lexis are two
+            fee-based search sites which have “People Finder” databases.
+            These databases search public record filings, including
+            professional affiliations, throughout the country. If your
+            witness is a licensed professional and a property or
+            business owner, there is a high likelihood that you will
+            find their home and/or business address listed in the
+            database. People Finder databases also provide historical
+            data for the addresses such as names of other residents or
+            owners.</p>
+            <p>Lexis can provide a variety of useful information
+            including personal and professional licenses held, potential
+            relatives, and potential neighbors. You may also find
+            neighbors’ telephone numbers, the approximate value of the
+            home, length of residence, and sometimes the person’s
+            telephone number, date of birth, and social security number.
+            Editors’ Note: We again refer you to Chapter 6 for further
+            information.</p>
+            <h1 id="family_members"><strong>Family Members</strong></h1>
+            <p>Your witness may not have a listed number, but a family
+            member sharing the same surname may be listed. I have
+            located many witnesses by this somewhat haphazard method of
+            calling subscribers. Knowing the city of origin of your
+            witness is often helpful since there still may be family
+            members residing there. When you make these calls it helps
+            to be apologetic, since often the person you call is of no
+            relation to the person you are seeking.</p>
+            <p>Once a family member is located, explain your situation
+            and see if they are willing to pass on your name and
+            telephone number. Let them know you will accept a collect
+            call from the witness. If you do not hear from the witness
+            within a week or so, re-contact the family member. Sometimes
+            by your second call they have communicated with their
+            relative and have permission to pass on contact information
+            to you.</p>
+            <h1 id="department_of_motor_vehicles"><strong>Department of
+            Motor Vehicles</strong></h1>
+            <p>Another quick source of information is the Department of
+            Motor Vehicles. As a professional investigator, you can
+            establish a DMV account through which you can access their
+            registration information. If your witness has contacted the
+            DMV for a driver’s license, identification card, or to
+            register a vehicle, you can obtain their full name, date of
+            birth, height, weight, last address, name changes, status of
+            license, vehicle information including co-owners and lien
+            holders, and driving record. Co-owners of vehicles and lien
+            holders are potential avenues to finding your witness.</p>
+            <h1 id="cole_directory"><strong>Cole Directory</strong></h1>
+            <p>If DMV has provided you with a potential address, you may
+            want to check a Cole Directory to discover a telephone
+            number or the names of other residents at that address. If
+            you are not a Cole subscriber or believe your witness is at
+            an address in a different state, contact the public library
+            reference desk in the appropriate town. Most libraries have
+            Cole or city directories available. In the event that there
+            is only a nonpublished number for the address, or no phone
+            number listed, ask the librarian to provide you with
+            telephone numbers for nearby neighbors or the apartment
+            manager. Sometimes an apartment name is listed, but there is
+            no indication which telephone number is for the manager.
+            Call Directory Assistance to obtain the manager’s number and
+            ask for the number for that specific apartment complex or
+            trailer court. If you have access to old Cole Directories,
+            they can be useful for historical information since people
+            frequently pass on apartments or rental homes to friends or
+            roommates. Your witness may have had a relationship with a
+            prior tenant who is more easily located and may know the
+            whereabouts.</p>
+            <h1 id="neighbors"><strong>Neighbors</strong></h1>
+            <p>A call to a neighbor may help you determine whether or
+            not a witness is still living in the neighborhood. In the
+            event that your witness has moved, the neighbor may be able
+            to give you leads to other neighbors who have kept in touch
+            with the witness. If time is of the essence, a kindhearted
+            neighbor, especially in a distant town, may be willing to
+            drop off a note for you at the home of the witness. A call
+            to a neighbor can often bear fruitful information, even if
+            the witness is no longer living in the area, such as contact
+            information for the current resident of your witness’s prior
+            abode. The current occupant may be forwarding mail to the
+            witness or is related to the witness in some way. If a
+            landlord exists, the current occupant will have their name
+            and telephone number. A landlord may be willing to provide
+            you with important contact information from the witness’s
+            rental application, such as a parent’s name and telephone
+            number. Even if the witness has left the area, a neighbor
+            may know where they moved, where they had been working, if
+            they were living with others, or if they had had police
+            contacts.</p>
+            <h1 id="u.s._postal_service"><strong>U.S. Postal
+            Service</strong></h1>
+            <p>If you believe you have an address for your witness but
+            have had no luck in communicating with them, the U.S. Postal
+            Service may be of assistance to you. A discussion with their
+            letter carrier may help you determine whether or not the
+            witness is still receiving mail there. In rural areas, UPS
+            drivers are quite knowledgeable of people’s locations and
+            give excellent directions. If the witness has actually
+            moved, the post office may be able to provide you with a
+            forwarding address (if the witness has filled out a card and
+            you have the proper authority to request it). A letter sent
+            to them at their original address will be forwarded unless
+            too much time has elapsed (in which case your letter will be
+            returned to you with a label indicating the witness’s new
+            address).</p>
+            <h1 id="others_keeping_tabs_on_your_witness"><strong>Others
+            Keeping Tabs on Your Witness</strong></h1>
+            <p>A helpful way to focus your investigation is to determine
+            who else might want to keep tabs on your witness, e.g.,
+            probation or parole officers, current or ex-spouses
+            (especially if they share custody of children), parents,
+            military superiors, medical professionals (especially if the
+            person has a chronic illness), employers, creditors, drug
+            and alcohol treatment programs, plasma centers, facilities
+            for street youth, college alumni offices, secretaries, recog
+            officers, group home workers, professional licensing
+            agencies, school truancy officers, attorneys, caseworkers,
+            board chairpersons, editors and anyone who might benefit
+            from their association with the witness.</p>
+            <h1 id="elections_offices"><strong>Elections
+            Offices</strong></h1>
+            <p>You can also check the elections office for the county
+            where you believe your witness is residing. If your witness
+            is a registered voter, the county elections office will be
+            able to provide you with their full name and current
+            address.</p>
+            <h1 id="licensing_agencies"><strong>Licensing
+            Agencies</strong></h1>
+            <p>If your witness is a professional whose employment
+            requires licensing, check with whichever agency has
+            licensing authority over them to obtain their business
+            address. Often, medical professionals working for a specific
+            hospital will not be listed in the telephone directory. In
+            the case of a retired professional the licensing agency may
+            give you a home address or a last known business address.
+            The retired professional may have sold their practice, but
+            the current owner may be willing to pass on a letter or
+            message to the witness. If the professional has allowed
+            their license to lapse, you may want to contact others
+            working in their former firm or business to see if anyone
+            has maintained contact with them. It may be that your
+            witness is still working in the same profession but in
+            another state and a former coworker would be able to tell
+            you which state or even provide you with their new number.
+            Many trades require union membership. You may be able to
+            send a message to your witness via their union officer.
+            Perhaps your witness is in the military reserves. If so,
+            their commanding officer may be able to locate them for
+            you.</p>
+            <h1 id="business_ownerplace_of_work"><strong>Business
+            Owner/Place of Work</strong></h1>
+            <p>Your witness may be a business owner and can be found via
+            their business address. You can check with the Secretary of
+            State’s Corporation Division for their business filings.
+            Board members also may serve as leads to your witness. Some
+            less than reputable businesses prefer to operate without
+            listed telephone numbers. One such business I discovered was
+            in the same location as an earlier business that had a
+            telephone number listed in Cole’s. The owner had changed the
+            name of the business while retaining the original telephone
+            number but made it an unlisted number. Often other
+            businesses in the area will have each other’s telephone
+            numbers for security purposes. If you know the location of a
+            business and suspect that your witness is the owner, you may
+            want to contact neighboring business owners or employees of
+            other businesses to confirm your suspicions. In some cases
+            they may even assist you by pointing out the individual. The
+            Tax Assessor’s Office will also have the name and address
+            for the owner of the property in question.</p>
+            <p>If you know your witness’s place of work you can
+            typically leave a message for them to contact you when they
+            go on a break. If you have a physical description or
+            photograph of your witness and an idea of when their shift
+            ends, you may want to meet them at the end of a shift. (When
+            I contact law enforcement officers or emergency room
+            physicians, I let them know that they can call me whenever
+            there is a lull in their shift, no matter the hour.) If you
+            discover that your witness is no longer employed by a
+            certain business, attempt to locate coworkers who are still
+            in touch with the witness. Possibly the witness was fired
+            and, due to their behavior, their disgruntled employer or
+            supervisor is willing to reveal information from the
+            ex-employee’s job application. If the employee works in a
+            specific field or trade, contact similar businesses where
+            they may have found work. If the individual worked in a
+            large company with various shifts of workers, try calling
+            back during other shifts in order to find a person who was
+            friendly with your witness.</p>
+            <h1 id="court_records"><strong>Court Records</strong></h1>
+            <p>Your witness may be rumored to be in financial distress
+            or have a reputation for making rash purchases or for
+            gambling. If that is the case, you may want to check
+            bankruptcy records or civil suits. Bankruptcy</p>
+            <p>records will provide you with a Social Security Number
+            for your witness, the name of their attorney, perhaps the
+            name of their spouse, a list of their creditors (with
+            contact information) and the items purchased. With their
+            Social Security Number you can return to Westlaw’s People
+            Finder database and check credit bureau information.
+            Typically several years’ worth of addresses will appear,
+            with the most recent address at the top of the list. If that
+            address is no longer good, you might contact their
+            bankruptcy attorney to see if the attorney is willing to
+            pass on a message to their former client. The same holds for
+            a civil attorney who may have represented them in a civil
+            action.</p>
+            <p>Since you are now reviewing court records, check to see
+            if your witness has been through a divorce. If so, the
+            divorce records will provide you with the name and Social
+            Security Numbers of the witness, their ex-spouse and any
+            children they may have had together. Your witness may have
+            been sued for child support and an address will be listed in
+            the filings. You may want to locate their ex-spouse or any
+            grown children for assistance in locating the witness. Their
+            divorce attorney might also be a possible message passer, if
+            the divorce was fairly recent or there have been subsequent
+            hearings.</p>
+            <p>If your witness has been involved with the Oregon court
+            system, you will have many sources of information available
+            to you. Begin by doing an OJIN search on your witness.
+            Public OJIN terminals are available at courthouses. You can
+            also purchase access to OJIN through the state. An OJIN
+            search will provide you with their full name, address,
+            criminal offenses, civil case information, names of
+            representing attorneys, judges handling their cases,
+            sentences, case numbers, etc. If they have a case pending,
+            contact them through their counsel of record. If the witness
+            is in the process of serving a state sentence, contact the
+            Oregon Department of Corrections in Salem for the location
+            of their institution. For witnesses on supervision, state
+            and federal probation and parole officers tend to be
+            excellent sources of accurate contact information. If the
+            witness is no longer on supervision, you may want to check
+            their most recent court file to glean invaluable information
+            off the recog sheet, such as names and telephone numbers of
+            employers, close friends and family members. If you know
+            which police agency arrested them most recently, you may be
+            able to purchase their latest booking photo. Jail records
+            will also have address and telephone information on the
+            witness which will be helpful if they have been released. If
+            your witness has lived in other states, check with
+            corrections departments, state police records offices and
+            court records departments in those states as well.</p>
+            <p>If your witness has been prosecuted federally, you will
+            want to check the federal docket available on the public
+            computer in the clerk’s office at the federal courthouse.
+            Again, if there is a case pending, you will need to contact
+            the attorney of record to request access to the witness. If
+            the witness has been sentenced and is being supervised, you
+            can obtain contact information from their federal probation
+            officer. If they are serving a sentence, you will need to
+            have their full name and date of birth in order to call the
+            U.S. Marshals’ inmate locator service, located in Washington
+            D.C., for the name and location of the federal institution
+            in which they are serving their time.</p>
+            <h1
+            id="social_service_agencies_and_treatment_centers"><strong>Social
+            Service Agencies and Treatment Centers</strong></h1>
+            <p>Even if your witness is transient or homeless, you may be
+            able to communicate with them via social service agencies.
+            If you suspect that your witness occasionally stays at
+            homeless shelters, you can request that messages be left for
+            them on bulletin boards at the shelters. Agencies that offer
+            counseling, food stamps or medical treatment for the
+            homeless may be willing to accept a letter for your witness
+            to be placed in their file until the witness returns to the
+            agency. (You may want to enclose some change in the letter
+            to facilitate the telephone call from a pay phone.) Security
+            guards and police officers working in or patrolling the area
+            where you suspect your witness might be found may be
+            familiar with your witness and their habits and can give you
+            suggestions on where to find the witness.</p>
+            <p>Perhaps your witness is an alcoholic and you know where
+            they typically drink. The bartender is most likely familiar
+            with your witness and might be willing to hand the phone
+            over to them if you call when the witness is present. The
+            cashier at a store where the witness purchases their alcohol
+            might also be willing to pass on a message left for the
+            witness. If the witness seems to have disappeared for some
+            time, it is possible that they have entered treatment or
+            have been taken to a detoxification center. Family members
+            or friends of the witness may know the name of the treatment
+            center. Counselors in programs are bound by confidentiality
+            laws that protect their clients’ identities, but a letter
+            sent to your witness at the address of the program will
+            probably be delivered once they have completed their initial
+            “black-out” period. Your witness may be attending Alcoholics
+            Anonymous meetings in the area where you suspect they are
+            living and it would be possible for you to leave them a
+            message on a bulletin board at the meeting place.</p>
+            <p>If you believe that your witness is an illegal drug user,
+            you might try leaving your messages for them at Narcotics
+            Anonymous sites near where you think the witness is
+            residing. You might also try leaving messages for them at
+            plasma centers, methadone clinics, drug programs (both
+            inpatient and outpatient) and at a social services office
+            where they might be receiving food stamps.</p>
+            <p>Your witness may have a mental health problem that
+            necessitates counseling and medication. The witness may have
+            spent time in a psychiatric hospital. You may want to try to
+            leave a message for the witness at various mental health
+            agencies. They will not acknowledge your witness’s
+            participation in their program, but a letter to the witness
+            in care of the program might get delivered to them. Your
+            witness may have qualified for Social Security Disability
+            payments and is receiving regular checks. You might be able
+            to send them a letter via the Social Security office in
+            their town by directing it to your witness’s caseworker.</p>
+            <p>Perhaps your witness has come here from another country.
+            The witness may be connected to social service agencies,
+            churches, stores or restaurants that cater to people from
+            that culture or who speak your witness’s native language.
+            You may want to search these locations in the company of an
+            interpreter. Have the interpreter translate any messages
+            into the witness’s language. You will want to determine in
+            advance if your interview will require the assistance of an
+            interpreter. If the witness does not speak any English, you
+            may want to tell them in your note to schedule an in-person
+            interview with you by calling the interpreter first.</p>
+            <p>If your witness is quite elderly and no longer living in
+            their home, you may want to check with aging and
+            disabilities services or other agencies such as Meals on
+            Wheels. It is possible that they have gone into an assisted
+            living situation. You may want to call nursing homes in the
+            town where the person was living and simply ask for them. It
+            is possible that they have gone to live with family members
+            elsewhere. You may want to check with former neighbors (in
+            particular, elderly neighbors) who may have known your
+            witness for years and can tell you where they have gone and
+            names of family members. It is also possible to access
+            genealogical records on the Internet or through the Mormon
+            Church if you are searching for family members.</p>
+            <h1 id="hobbies_and_activities"><strong>Hobbies and
+            Activities</strong></h1>
+            <p>Think of how your witness chooses to spend their free
+            time. If the witness is a member of a church, you may be
+            able to reach them by contacting the church secretary or by
+            locating a church directory. If they enjoy hunting or
+            fishing, they may have applied for a hunting license or a
+            gun permit. If the witness is a board member for an
+            organization, you may be able to find them at a meeting. If
+            you know which college or university the witness attended,
+            you may contact their alumni office. While an alumni officer
+            will rarely provide you with an address or telephone number
+            (unless you also are an alum of the school), the alumni
+            officer will typically agree to forward a letter from you to
+            the last known address they have. Your witness may belong to
+            a club, volunteer with an agency, or work out at a fitness
+            center. You may be able to leave a message for your witness
+            with the person responsible for the membership list or
+            directory for the organization. They may even be willing to
+            consult their directory and make a call for you. Maybe your
+            witness is a member of a motorcycle club and can be found at
+            a clubhouse that serves the membership or at a specific
+            tavern.</p>
+            <h1 id="juvenile_witnesses"><strong>Juvenile
+            Witnesses</strong></h1>
+            <p>If your witness is a juvenile living with a parent or
+            guardian, I would recommend obtaining prior permission to
+            conduct an interview with them from the responsible adult.
+            If you know the student attends a certain school but do not
+            know their address, you may request that a school secretary
+            assist you in making contact with the parent. Most parents
+            appreciate being notified and many wish to be present for
+            the interview. They are also helpful in corralling their
+            child whose schedule they may know.</p>
+            <p>For an emancipated or homeless juvenile, you may be able
+            to reach them through their juvenile court counselor or
+            juvenile probation officer. Try leaving messages for them
+            with the staff of agencies providing care to youth, such as
+            low-cost medical clinics, youth shelters, residential
+            treatment centers, or with security guards for parks or
+            squares where homeless youth congregate. If you know the
+            youth is a skater, look for them at skating parks or check
+            with other skaters. If the witness is a suspected gang
+            member or associate, you may want to check with gang
+            outreach workers or with programs designed to assist youths
+            in extricating themselves from gang activity.</p>
+            <p>Sometimes knowing the name of a witness’s child will help
+            lead you to the witness. The family may be involved with
+            DHS, a fact you can confirm by calling the agency to
+            determine the name of the caseworker assigned. In a
+            dependency case, typically the child(ren) and the parent(s)
+            have their own attorneys. The juvenile court records
+            department will be able to give you the name of the attorney
+            assigned to your witness’s case, and through that attorney
+            you may be able to connect with your witness.</p>
+            <h1 id="unable_to_locate_witness"><strong>Unable to Locate
+            Witness</strong></h1>
+            <p>Suppose you have been attempting to locate your witness
+            for months and have continually hit dead ends. I suggest
+            taking a break from your search, even if it requires that
+            your attorney and client agree to request a set-over.
+            Sometimes if the witness thinks you are no longer looking
+            for them they will suddenly emerge. The witness may have
+            been out of the country, traveling with a circus, following
+            the harvest season to another state, or simply lying low
+            because they have a warrant pending. In time the witness may
+            get arrested, return to the area, or happen to contact one
+            of the individuals with whom you left a message. You may
+            want to re- contact some of your sources. They may have
+            misplaced your name and telephone number.</p>
+            <p>It can be fun trying to out-smart a witness who seems to
+            be trying to dodge you. If you are fairly sure they are
+            living at a location check back in the evening or early
+            morning; try to catch them as they enter or exit the house.
+            See if any vehicles registered to your witness show up at
+            the house. Run the license plates for other vehicles parked
+            at the house for potential friends of the witness. Be
+            observant. Sometimes there will be a vehicle parked in front
+            of the house with a “for sale” sign in the window, which
+            will provide you with a telephone number!</p>
+            <p>It is also possible, especially if the person is a
+            potential government witness (such as a snitch), that they
+            have had government assistance in changing their identity
+            and relocating. You may want to ask your attorney to make a
+            motion to force the government to produce the witness.
+            Needless to say, it is much more fun to find them yourself.
+            This is often possible because they tend to continue with
+            illegal activities even while working as an informant.</p>
+            <p>Finally, if you feel you have exhausted all avenues, you
+            may want to check death records for your witness. Westlaw’s
+            People Finder database has a section for deceased
+            individuals. You might also search newspaper obituary
+            records through Westlaw or call the Vital Statistics Office
+            of the state where you think they were last residing.</p>
+            <h1 id="conclusion"><strong>Conclusion</strong></h1>
+            <p>Do not give up hope. Talk with other investigators about
+            your efforts. They may have new ideas or suggestions for
+            you. When you finally locate your witness you will have
+            gained their respect. They will undoubtedly know just how
+            persistent you have been in your quest. Hopefully, they will
+            reward you with a thorough interview and their testimony
+            will be of benefit to your client. Of course, there is
+            always the chance that what they know about the case came to
+            them second-hand from their friend “Charlie,” last name and
+            whereabouts unknown…. Good luck!</p>
+    </body>
+</html>

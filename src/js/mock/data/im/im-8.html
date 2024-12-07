@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p><strong>Forensic Photography</strong></p>
+            <p><strong><em>Clyde C. Gideon</em></strong></p>
+            <p>2010 edition</p>
+            <h1 id="introduction"><strong>Introduction</strong></h1>
+            <p>This chapter is intended to cover the basic concepts of
+            forensic photography that may be required during the course
+            of a criminal defense investigation. These concepts are
+            designed to produce a photograph or video that a criminal
+            defense attorney should expect to have available for
+            pretrial preparation, any subsequent negotiation, and/or for
+            presentation at trial.</p>
+            <p>Each heading in this chapter could easily be expanded
+            into a chapter on its own. Some details will have to be
+            omitted. Every effort will be made, however, to cover the
+            situations that are usually found in a typical criminal
+            defense investigation and a few situations that occur less
+            frequently. There will also be care given to include
+            “pitfalls” to watch out for and some helpful hints and
+            tricks. Seasoned and novice investigators alike should find
+            the information useful.</p>
+            <p>Since the “architecture” for this chapter will be very
+            broad and all-encompassing some of the sections will seem
+            like overkill. In the section on equipment I have included a
+            description of the equipment that I use. Photography is a
+            hobby of mine as well as a necessary part of my
+            investigative work. Consequently, I have much more equipment
+            than is necessary for basic forensic photography. The reason
+            that I describe it all is to assist you in determining what
+            format of equipment you want to work in. I use Polaroid
+            (more to be said about the demise of this format later),
+            digital “point-and-shoot,” cell phone camera, 35mm SLR, Hi-8
+            video, and digital video–digital still combination. Though
+            not included in this chapter, I also use large format
+            cameras. This multiformat equipment is not absolutely
+            necessary, but I will try to explain some of the benefits
+            and drawbacks of each one.</p>
+            <p>I will also explain basic concepts of photography in
+            terms that are synonymous with “film” cameras. If you are
+            using a digital camera, many, if not all, of these concepts
+            may be utilized on the digital camera by referring to the
+            camera menu or the instruction manual.</p>
+            <h1
+            id="purposeaccuracy"><strong>Purpose—Accuracy</strong></h1>
+            <p>Photography is multifaceted. It is often used as an art
+            form. If you have ever read, practiced or taken classes on
+            how to take photographs with good color, composition,
+            creativity, balance, framing and contrast – you can forget
+            all of those rules. In forensic photography you will break
+            some of those rules all of the time and all of those rules
+            some of the time.</p>
+            <p>Generally your task will be to take a photograph which
+            represents an object or a scene precisely as it actually
+            exists at the moment the photograph was taken. The challenge
+            is <em>accuracy –</em>without embellishment. Creativity is
+            not a virtue unless it assists in accurately depicting the
+            scene or object. In other words, you might be creative in
+            climbing onto the roof of a house and hanging over the edge
+            to photograph the distance between a bush and the house. But
+            creatively tying ropes around the bush to get in behind it
+            and photographing the distance is not permitted.</p>
+            <p>There is a phenomenon which seems, at first, to be
+            contradictory to accurate photographic representation
+            –<em>storytelling</em>. We will be discussing the art of
+            storytelling throughout this chapter. Indeed, an attorney
+            may use your photographs or video to tell a story about the
+            scene as it existed months or years before you took the
+            pictures. There is no contradiction here. Your charge is
+            still accuracy without embellishment. You must not use
+            tricks or gimmicks to adulterate or alter a photograph to
+            help the attorney tell a story. Attorneys are very good
+            storytellers. Let them practice their craft. Storytelling
+            for the forensic photographer is a state of mind that
+            ensures a complete and logical series of photographs that
+            will with little narrative, let the viewer see and
+            understand a scene or an event as if they were there.</p>
+            <h1 id="when_to_photograph"><strong>When To
+            Photograph</strong></h1>
+            <p>One of the advantages of photographs and video is that
+            they can assist in the investigation and for that they need
+            to be available long before trial. Remember, the attorney
+            may want to use the photographs for pretrial preparation and
+            any subsequent negotiation.</p>
+            <p>Know the case before you go out to take photographs.
+            Although there may be several photographic tasks throughout
+            the case investigation, the primary tasks require specific
+            knowledge. The most basic information will come from the
+            initial discovery, and you need to have a full and complete
+            understanding of what the state has done and thinks was the
+            crime and the players within the crime. The scene where the
+            crime allegedly took place will be identified and various
+            witnesses or pieces of evidence will begin to tell a story.
+            If there are obvious gaps in the discovery, such as missing
+            witness interviews or missing evidence receipts, these must
+            be obtained before proceeding. Also, the photos taken by the
+            police, coroner, crime lab, etc. are considered to be part
+            of the discovery that you have perused.</p>
+            <p>Before, during and after reading the discovery you should
+            have several discussions with the attorney. These
+            discussions should lead to deciding on a theory of defense
+            and the direction your investigation will head. Your client
+            conferences will also shed light on the path for your
+            investigation. The knowledge obtained from the discovery and
+            the conversations with the attorney and client will form the
+            minimum basic information before proceeding.</p>
+            <p>Of course, guidelines need to be adjusted as necessary.
+            If on the day you first get the case and prior to reading
+            the discovery you learn that the crime scene is going to be
+            demolished, run right out and photograph the scene even if
+            you are ill-prepared and may miss something.</p>
+            <h1 id="equipment"><strong>Equipment</strong></h1>
+            <p><em>Polaroid</em></p>
+            <p>The benefits of this camera were obvious. I used an SLR
+            680 SE, which allowed viewing and flash readings through the
+            lens like a 35mm SLR. It enabled me to see precisely what
+            the print would look like. This was a good camera for taking
+            a quick photo that needed to instantly be in hard copy form
+            or for backing up another camera on a critical shot.</p>
+            <p>Picture quality was poor compared to other formats, but
+            the instant viewing of a shot in hard copy was something
+            that only Polaroid could offer. Unfortunately, Polaroid no
+            longer makes their product.</p>
+            <p><em>35mm</em></p>
+            <p>This has been the mainstay of forensic photography for
+            many decades. Digital cameras are catching up, but if I
+            could only have one camera, this is the one. The picture
+            quality is very good, so detail and enlargements for court
+            exhibits are no problem. I use a Minolta system, a brand
+            choice I made over 25 years ago and have stayed with because
+            of accessories and the interchangeability of lenses. There
+            are times when changing the aperture, speed and lenses of
+            the camera are critical and a 35mm SLR offers this total
+            versatility. The film still needs to be developed and you
+            have no proof that you got a good picture, but the camera’s
+            ability to “bracket” shots and “paint with light” are close
+            to guarantees of a good picture. More about these last two
+            concepts later in this chapter.</p>
+            <p><em>Digital “Point-and-shoot”</em></p>
+            <p>The benefit of these inexpensive cameras is their ease of
+            operation. They also have a self-timer and fit on a tripod.
+            This can be handy if you need to take a shot that is
+            obscured by a tree limb or if you are alone and need to hold
+            a tape measure up to your subject that is more than a few
+            feet away. These cameras do not have interchangeable lenses
+            or detachable flash units, but you should always have one in
+            your glove box that you can grab, point and shoot in a few
+            seconds while still driving your car or if you don’t have
+            the camera you really need at hand.</p>
+            <p>I include cell phone cameras in this category. The
+            quality of pictures for some of these cameras is amazing. My
+            Blackberry cell phone camera takes a picture that is
+            superior to my 5.2-megapixel digital camera, which used to
+            be my point-and-shoot choice. Although they are difficult to
+            stabilize, the instant email of the photo makes these
+            cameras the one tool that has done the most with recent
+            technology.</p>
+            <p><em>Video Camera</em></p>
+            <p>These cameras come in digital, VHS, Hi-8 and various 8mm
+            and 8mm cassette formats. TV news cameras are the highest
+            quality digital video, but they use a digital format that
+            costs around $50,000. For the rest of us there is the
+            consumer-professional market that ranges from a few hundred
+            dollars to $15,000.</p>
+            <p>I use a Canon L2, which is a Hi-8 camera that uses all
+            the lenses available from the Canon Auto focus 35mm cameras.
+            There are dozens of types of Canon AF lenses available so
+            the versatility is unlimited. This camera is more than what
+            is needed for forensic video. It does have several important
+            features, however, including an S-Video terminal which
+            allows playback or download to a VCR. This provides the
+            least generation loss. Most video cameras download using RCA
+            plugs—the red, yellow and white wires that hook your TV and
+            VCR together. This allows multiple sound systems such as
+            remote microphones and lapel mikes to be used
+            simultaneously. It has all of the manual and automatic lens
+            speed and aperture settings of a good 35mm system.</p>
+            <p>Digital still and digital video combination cameras are
+            common and within a few years will rival 35mm camera systems
+            and Hi-8 video cameras in both price and quality. The
+            discussion on the use and attributes of digital versus other
+            camera systems could take many pages to explain in detail,
+            so let me shorten it all by explaining what my camera does
+            and why I bought it.</p>
+            <p>My Canon Optura is a combination video and still camera.
+            It will take 600 to 700 photos on one ten-dollar cassette or
+            one hour of video or a combination of photos and videos.
+            While taking still photos you can flip a switch and
+            automatically you are videotaping, without changing the
+            camera position or your own position to look for the proper
+            setting. Each time a still photo is taken, the camera
+            records 30 frames per second for six seconds of that one
+            shot. During that six seconds, the camera will record the
+            sound occurring at the scene. This enables the operator to
+            record a number or description of the photo for later use.
+            It also records the conversation going on around the camera,
+            which can be very interesting, however, disable this feature
+            in the event of consent issues.</p>
+            <p>It has a “progressive scan” which is like a motor-drive
+            feature. It enables 30 frames per second of full-quality
+            action to be recorded. These are not half-frame shots like a
+            video camera; they are 30 full-quality still photos. Most
+            fast 35mm cameras have motor drives that peak at about five
+            to eight frames per second.</p>
+            <p>The camera downloads using RCA plugs, S-video cables or
+            “firewire.” It downloads to TV, VCR or computer. Once in a
+            computer the photos or videos can be emailed, put on web
+            pages or written to a CD or DVD. I recently took over six
+            hundred photos at an evidence view and never stopped to
+            change film. I gave each of the other five members of the
+            defense team a copy of the photos on CD. The cost for the
+            CD, label, case, padded mailing envelope and postage was
+            less than five dollars each. Considerably less than five
+            copies of six hundred 35mm photos.</p>
+            <p>There are drawbacks to digital systems. My camera has one
+            silicon chip in the lens. This limits quality. Some cameras
+            have three chip systems and the quality of the video is very
+            near that of studio television.</p>
+            <p>There are also costs associated with the computer
+            software and other related accessories, but there is a place
+            for digital photography in forensic investigation and it is
+            growing fast. Some have been concerned that there would be
+            challenges in court due to the ease with which digital
+            photos can be enhanced and manipulated. I feel little will
+            be made of this issue, at least as it pertains to criminal
+            court. Most of the use of sophisticated digital photo and
+            video systems that I have observed has been by police
+            departments. This leaves little room for argument by the
+            prosecution when the defense presents digital exhibits. Any
+            major and long-lasting court battles that I foresee would
+            likely be on the civil court side.</p>
+            <p>You should never be without a camera and therefore at
+            least one point-and-shoot camera is mandatory. I also
+            recommend a good-quality 35mm film camera. Auto focus is
+            handy, but not mandatory. A variety of lenses is advisable
+            but a high-quality 50mm lens is a good starting point. After
+            that a 28mm wide-angle lens and a zoom to 120mm is good. For
+            very close work I use close-up filters on a 50mm lens, but a
+            macro lens is the common way to photograph very close
+            detail.</p>
+            <p>After the 35mm, the field is open. If you need video,
+            digital is great. Above all, don’t make a purchase in haste.
+            Quality equipment costs money and quality equipment is worth
+            buying. If waiting a few months will give you more money for
+            a good system, then wait.</p>
+            <p><em>Film, Lighting and Accessories</em></p>
+            <p>Film is simple. Pick a major brand that is readily
+            available and stick with it, though it should be noted that
+            film is becoming harder to find. Pick a couple of different
+            ASA ratings and stick with them. I would suggest 100 ASA for
+            normal shots with good light and outdoors, and 400 ASA for
+            low light situations. Carry a few 12-exposure rolls of each.
+            Load your camera with 12-exposure film when you think you
+            are taking only one or two pictures. Then take all 12
+            exposures on your subject. More is better and film is cheap.
+            Carry many rolls of 36-exposure film. Load this when you are
+            taking several photos. Shoot all of the film in the camera
+            on your subject before you put the camera away.</p>
+            <p>Another tip: Don’t shoot pictures for two cases on one
+            roll of film. Use all the film in your camera on the case at
+            hand, unload the film, and mark the roll with the case name
+            or number using a felt tip pen. The negatives have
+            sequential numbers underneath them and you need to account
+            for all the negatives of a roll if asked. And, if you are in
+            this business long enough, you will be asked.</p>
+            <p>Speaking of numbers, here is another tip. Don’t
+            <em>permanently</em> place any sequential number on the back
+            of a print you give to the attorney. Use some easily
+            removable label, even post-it notes. If the attorney should
+            ask you on the witness stand about a photograph, opposing
+            counsel might turn it over and notice the number “16” and
+            then ask you about the other 35 pictures on the roll, hoping
+            one of them would show the subject more to his liking.</p>
+            <p>Lighting is pretty straightforward. Your camera needs to
+            be able to see with the light that you provide for any
+            situation you are trying to photograph. The
+            factory-recommended strobe or movie light for your camera is
+            a minimum. A battery-powered emergency flood is a necessary
+            backup. I also have two sets of dual 500-watt halogen work
+            lights on telescoping stands, and three single 500-watt
+            lights that sit on the ground. These are mandatory for arson
+            photographs of a burned-out building. A black-charred room
+            will eat the flash from a strobe light as if it never fired.
+            Remember, though, most burned-out buildings have no
+            electricity, so you need very long, heavy-duty extension
+            cords or bring your own electrical generator. More about
+            these problems later.</p>
+            <p>Other necessary accessories include a tripod, a cable for
+            remote shutter firing, a cable for moving the strobe light
+            away from the camera without detaching the synchronizing
+            capability, batteries and any chargers necessary for the
+            batteries.</p>
+            <p>All of the lenses of all of the cameras should have UV
+            haze filters on them at all times to protect the end of the
+            lens. The filter is not removed when the camera is in use.
+            It removes ultraviolet rays from the ambient lighting and
+            improves picture quality. A polarizing filter can be used
+            instead of a UV filter. More about that later.</p>
+            <p>One concept that is extremely important is containment:
+            Containing all the items necessary to take a photo or video.
+            Each and every camera system you use should be contained in
+            a camera bag. That bag should be complete in every detail
+            for the operation of that camera system. This is no problem
+            if you use only one camera system. But as soon as you expand
+            to two or more systems, you will find that lights, film,
+            batteries, battery chargers, remote light and shutter cords
+            are interchangeable from one system to another. The tendency
+            to not purchase one of these items for your new camera
+            because you have one that will work from your older camera
+            is a mistake if both cameras are going to be in service. Out
+            in the field you may not be able to carry each of your
+            cameras to the location of the shoot, or you may not have
+            brought each camera. Film and accessories that are required
+            will do little good if they are in a camera bag you did not
+            bring to the scene, so stock each camera system
+            completely.</p>
+            <p><em>Other Stuff</em></p>
+            <p><em>Other stuff</em> is a category of accessories and
+            supplies that will be necessary with any camera system and
+            should be taken to most shooting locations. I carry
+            measuring and marking devices in a multipocket fishing vest:
+            a roll of string, wire, a knife, pliers, bright fluorescent
+            yarn, a bubble level that hooks onto string and various
+            hooks, snaps, tacks, push-pins and swivels. Also, a 12-foot
+            measuring tape, a 50-foot measuring tape, and a very handy
+            6.5-foot metal tape that is one-inch wide with very large
+            numerals that can be seen easily when photographed from a
+            distance. This last tape can be pulled out completely from
+            its container and stood up next to an object to illustrate
+            size. It is formed in such a way that it will not bend over,
+            so it does not have to be held in position. These items are
+            useful because they compensate for the fact that you are
+            working alone.</p>
+            <p>I also have an accessory bag that I bring primarily for
+            video shoots. It contains heavy duty extension cords and
+            electrical connectors, a hammer and nails, gaffer’s tape,
+            duct tape and various lamps and lighting necessities. By the
+            way, once you have used gaffer’s tape you will never want to
+            be without it. It will hold a heavy object like a halogen
+            lamp on a painted wall. But unlike duct tape, it won’t pull
+            the paint off the wall when you remove it. It is also
+            invaluable in taping extension cords to a floor or carpet,
+            which is a mandatory safety procedure.</p>
+            <p>Photographing a Crime or Accident Scene</p>
+            <p>Before going out to do any photographic assignment, some
+            thought has to be given to the purpose of the shoot. Your
+            photographs or video, remember, are for use by an attorney
+            in pretrial preparation. Most likely, the attorney has not
+            yet been to the scene. The attorney may be presenting your
+            work to a prosecutor or a jury, who may not be familiar with
+            the city where the incident occurred. Here is where
+            storytelling comes into play.</p>
+            <ul>
+            <li>Begin with generalities and work slowly toward
+            specifics.</li>
+            <li>Try to tie each picture into something from the previous
+            shot to lead your audience along a narrative.</li>
+            <li>Document in notes or on tape what each photo depicts and
+            the location of the camera.</li>
+            </ul>
+            <p><em>Sequence</em></p>
+            <p>Your sequence of shooting—whether video or stills—must
+            start with familiarizing your intended audience with the
+            area. Landmarks are the best way to familiarize an audience
+            with a location. A good way to start this process is a shot
+            of two intersecting street signs, then a shot of the
+            accident location with the same street sign in the picture,
+            or the front of the house where the crime occurred with the
+            same street sign in the picture. For more familiarity, take
+            a shot both up and down the street (all four directions at
+            an intersection) and one across the street from the house.
+            Photograph all sides of the house (including the back of the
+            house and the back yard) and the houses on either side of
+            it. Shoot all four street intersections with the camera at
+            the diagonal intersection.</p>
+            <p>At this stage it is very important to know the locations
+            of every witness and potential witness. Take a photo as near
+            as possible to their location at the time of the incident.
+            And remember, if you subsequently do a neighborhood canvass
+            looking for additional witnesses, have your camera along to
+            augment their statement. Here is where the point-and-shoot
+            camera in the glove box will really pay off.</p>
+            <p>At an accident scene, photograph specifics such as skid
+            marks, tire marks on curbs, pot holes and grade changes.
+            Remember, if visibility approaching an intersection is a
+            possible factor, you must photograph the path taken by all
+            participants. These photos should be at approximate eye
+            level for each driver or pedestrian. Normally a camera held
+            by a standing photographer will properly show the eye level
+            of a standing adult or a driver in a car. But if one driver
+            was in a large truck, you may need to rent a similar truck
+            or mount the camera on a jib to get the elevation correct.
+            Be sure to show the driver’s ability to see all stop or
+            warning signs.</p>
+            <p>If a stop sign is near foliage that appears to have been
+            trimmed back since the accident, photograph the cut foliage
+            in detail, including close-ups of the cuts. Then take a
+            series of shots with measuring devices in the pictures that
+            show the diameter of the cut limbs and the distances from
+            the foliage cuts to the near and far sides of the stop sign.
+            An expert arborist or biologist may be brought in to court
+            to testify as to the length of the limbs before they were
+            trimmed. These photographs will also be a reminder to you to
+            follow-up regarding the date of the landscaping changes.</p>
+            <p>If the crime scene is in a house and assuming you have
+            permission to enter, photograph the front door and walk
+            inside. Take at least one shot standing in the doorway
+            showing the first glimpse upon entering. Turning around,
+            take another of the view of the street from the front door.
+            It goes without saying that if the discovery has revealed an
+            alleged break-in, this area should be photographed in detail
+            before entering the house. Don’t try to remember to return
+            to an area and photograph it later if you know it is
+            important. You will find new reasons you were not aware of
+            from discovery to retake some shots later.</p>
+            <p>Take photographs of all the rooms of the house even if
+            they were not the actual crime scene. This includes closets,
+            bathrooms, hallways, the basement and attic. Show where the
+            access is to crawl spaces under or above the living area
+            and, if possible, gain access and take at least one
+            photograph to show that they were examined and did not
+            appear to show anything of evidentiary value.</p>
+            <p>Also, if your access to the scene permits, do not fail to
+            open and photograph the inside of all cupboards and drawers.
+            Do not forget to photograph under the kitchen and bathroom
+            sinks. After the initial shot of these areas, remove any
+            garbage bags or containers and take one shot of the contents
+            as they appear undisturbed.</p>
+            <p>Finally, you can begin to photograph the detail of any
+            blood spatter, dried blood or bullet holes. Photograph any
+            areas where the scene was altered by crime lab personnel,
+            such as holes left by carpet or sheet rock removal, etc. If
+            an area seems to have been cleaned up by someone prior to
+            the arrival of the police and therefore incident to the
+            crime, attempt to locate any cleaning supplies and
+            photograph them well enough for product identification.
+            Traces of these products may appear in subsequent laboratory
+            tests.</p>
+            <p>During this part of the procedure, you will probably be
+            using measuring devices to show relative scale in some
+            photographs. Perhaps you are “stringing” blood spatter to
+            show directionality or photographing dowels in bullet holes
+            for the same reason. A good rule to follow is don’t take any
+            photograph that includes an object that you have added,
+            without first taking the same shot without the additional
+            device. This has not been a big issue in recent years, but
+            there was a time when major courtroom arguments ensued
+            regarding admissibility of photographs that contained
+            objects that were foreign to the scene. Protect yourself and
+            be able to show one of each. Prosecutors are reluctant to
+            argue this issue since their own crime labs and
+            pathologists’ photos have measuring devices included. Civil
+            attorneys may still want to bring the issue up.</p>
+            <p>Another caveat: Unless you are only accompanied by
+            associates or experts who are also couched within privilege,
+            do not talk about what you are doing or things that you
+            notice at the scene. An onlooker or homeowner is just as
+            dangerous as a policeman for transmitting information to the
+            district attorney and therefore to the jury. If there are
+            such people present, communicate with your colleagues in
+            writing or not at all.</p>
+            <p><em>Photographing Vehicles</em></p>
+            <p>Photographing vehicles in a civil case can be a very
+            detailed and time consuming matter. It may involve proving
+            liability on the design, manufacture or maintenance of the
+            vehicle or shifting causation to another driver or an entity
+            responsible for design and maintenance of the roadway or
+            adjacent landscaping.</p>
+            <p>All of these issues can be present in a criminal case as
+            well, if the driver is being accused of criminal conduct in
+            the use of the vehicle.</p>
+            <p>First and foremost in the photography of a vehicle is the
+            proper identification of the vehicle. If the license plates
+            are attached and they are the ones that identify the vehicle
+            for the purpose of the case, then the first series known as
+            “basic eight” will suffice.</p>
+            <p>Basic eight is a series of eight photos taken of the
+            front, rear, both sides and four corners. If the camera
+            position is similar to the numerals on a clock face, a photo
+            is taken at the 12, 3, 6 and 9 o’clock positions and the
+            1:30, 4:30, 7:30 and 10:30 positions. If the plates are
+            missing, then the Vehicle Identification Number should be
+            photographed. On older cars the V.I.N. number was located on
+            the driver’s door jamb or the firewall but late model cars
+            have the number on a strip attached at the top of the dash
+            board where it meets the windshield in front of the steering
+            wheel. This was designed to give a policeman an easy way to
+            identify a vehicle even though locked and without plates, to
+            determine if it was stolen.</p>
+            <p>Photographing anything through glass can occasionally
+            create problems because of the glare of the sun. The
+            quickest remedy for this is the polarizing filter which was
+            noted earlier as an alternative filter to be used for
+            protecting the end of a lens. A polarizing filter is a
+            two-piece accessory that can be rotated with the attached
+            lever to remove the effect of the sun’s glare. This trick is
+            standard operating procedure for investigators who do
+            surveillance and need to identify people in cars or standing
+            at plate glass windows.</p>
+            <p>In addition to the number on the vehicle for
+            identification, the investigator must consider the
+            information given by witnesses for identification. Witnesses
+            most frequently include color as a means of vehicle
+            identification. Just taking photographs of the vehicle does
+            not necessarily give a true representation of color. The
+            amount and type of light that is present will determine what
+            color a witness perceives. The same color in sunlight will
+            appear much different under halogen light, for instance. So,
+            your photograph of a car in the sun may not be the same
+            perception that a witness experienced of that same car in a
+            parking garage or under a streetlight.</p>
+            <p>To keep it simple, the way to get the most accurate film
+            photograph of a car’s color is to shoot the car in the same
+            light conditions as the witness saw the car, and to use film
+            which is made for those conditions. In other words, use
+            daylight film outdoors and indoor film under artificial
+            lighting. A close-up picture should be taken of a “color
+            card” next to the car door or fender to show how the car
+            appears in relation to true colors. These cards can be
+            purchased at a photo equipment store. The color card could
+            then be presented in court as an exhibit to show accurate
+            representation of color in the photograph.</p>
+            <p>Another way is to videotape the car in the same ambient
+            light that the witness experienced after setting the video
+            camera “white balance” to that light. Video cameras can be
+            adjusted to accept any “temperature” of light so that two
+            types of light will reflect the same color. If your camera
+            has a manual white balance you turn auto white balance off,
+            zoom in on a pure white object such as a white piece of
+            paper and push the white balance button. Until the camera is
+            turned off and restarted, the white balance is set for those
+            conditions. You would need to download the video to produce
+            a color print, but some photo shops can do that for you.</p>
+            <p><em>Photographing Evidence</em></p>
+            <p>Evidence photography appears elementary and
+            straightforward but it is not. Too many investigators take
+            this procedure lightly and reveal information that they
+            should not and overlook information that was readily
+            available and may be extremely important. Discovery probably
+            contains photographs of evidence; you are not there to
+            reinvent the wheel, thereby wasting your client’s or the
+            state’s money. Your purpose is to gather information you did
+            not previously have. Your scope of permission to be in the
+            vicinity of the evidence is to <em>view, inspect and
+            photograph</em>the evidence. The photography, though very
+            important, is probably the least important of those three
+            tasks. Remember, you are an investigator and photography is
+            merely one of your tools.</p>
+            <p>The evidence will normally be made available in a police
+            department property room. A property room technician will be
+            present to ensure that the chain of custody is not broken
+            and that the evidence is not tampered with or altered. Keep
+            in mind that the property room technician works for the
+            government, not the defense. You should assume that every
+            word you speak will be relayed back to the police detective
+            and/or the district attorney. Remember the following at all
+            times:</p>
+            <ul>
+            <li>Do not discuss the evidence with the technician.</li>
+            <li>Do not discuss anything about the case with an associate
+            or the attorney who may have accompanied you while in the
+            presence of the technician.</li>
+            <li>Do not discuss how the evidence fits into the crime
+            scene or the case. Pass a note to an associate if you must.
+            Better yet, just make a note about it to discuss later.
+            Before you enter the property room, remind your associates
+            about the limits of open conversation.</li>
+            </ul>
+            <p>When the technician opens the bag or other container to
+            remove the evidence item, look to see if the seal has been
+            broken and resealed. This is an indication that someone has
+            viewed or tested the evidence after it was originally
+            gathered. If the seal was broken, there should be a chain of
+            custody within or on the evidence container that lists who
+            took it and when, what they did with it and when it was
+            returned. Ask for a photocopy of that custody document.
+            Watch carefully for an evidence container that has a fresh,
+            unbroken seal but inside is another evidence container with
+            a broken seal. Sometimes the bag that contained the evidence
+            originally is so badly torn when opened that a new bag is
+            used to reenter the evidence into property control.</p>
+            <p>You should take at least one photo of each piece of
+            evidence. In that way, no single piece of evidence appears
+            to have more significance than any other.</p>
+            <p>Make a note regarding each photograph on a piece of paper
+            and check the item off the evidence receipt. One of your
+            tasks is to see if all pieces of evidence that you have been
+            told about are in property room custody. If an item is not
+            in custody at the property room you need to track it down.
+            Ask if it is at the crime lab. Take notes about what you are
+            told.</p>
+            <p>Another of your tasks is to see if evidence exists that
+            you have not been told about. If you do not have all
+            property receipts with you and accessible, you will not
+            realize when a “new” item is presented that had not
+            previously been revealed.</p>
+            <p>Look at the evidence closely. An old, dirty shirt with
+            holes in it might actually be a bloody shirt with swatches
+            cut out by the crime lab for testing. If holes appear in a
+            garment, ask if it has been processed by the crime lab. If
+            you see an evidence item with circles drawn around small
+            specks with a felt tip pen, this is an indication that the
+            crime lab has “lifted” these specks by removing a portion of
+            them with a moistened swab.</p>
+            <p>Some tips to assist in getting good quality out of your
+            evidence photos:</p>
+            <ul>
+            <li>Black or dark-colored items, especially fabric, will
+            absorb light. Take more than one shot of each item and open
+            the lens up or slow the shutter down on repeat shots.</li>
+            <li>Watch for glare from a tabletop or whatever surface you
+            are using to lay the evidence on. Use a piece of butcher
+            paper, if available, for a background.</li>
+            <li>Do not try to photograph evidence while it is inside a
+            plastic evidence bag. It will usually flash-back and will
+            diffuse detail in the photograph.</li>
+            </ul>
+            <p><em>Unusual Circumstances</em></p>
+            <p>There are some circumstances that require creativity to
+            photograph. I have found that the best way to handle these
+            problems is to realize in advance that they will exist and
+            to go out and experiment before the actual situation
+            arises.</p>
+            <p><em>Outdoor Night Photographs</em></p>
+            <p>The best example of this is to photograph an automobile
+            at night that is located in a remote location away from any
+            electricity. Naturally, if you have a power generator that
+            you can take to the scene, part of your problem is solved.
+            Remember that you still need to practice getting the right
+            exposure under these circumstances, because your camera is
+            not connected to your light source.</p>
+            <p>Assume you are caught without your generator and racks of
+            halogen lights and need to get some pictures of this car in
+            a remote area. And you are alone. You will need a tripod to
+            set your camera on. When you are trying to place the tripod
+            as close to the car as possible and realize that the camera
+            view finder is not revealing how your subject is framed, you
+            will see the importance in practicing this exercise in
+            advance. Take your strobe light off the camera and point it
+            at the car while looking through the view finder. Hit the
+            “test” button on the strobe to make it flash and for a split
+            second it will light up the area enough to see if the car is
+            framed properly. For this example, lets say you are shooting
+            the side of the car.</p>
+            <p>Open the camera lens to its largest setting. Set your
+            camera shutter to “b,” the setting that opens the shutter
+            when the camera trigger is hit and leaves it open until the
+            trigger is hit again. Trigger the camera so the film is
+            being exposed and immediately take your strobe and walk
+            toward one end of the car. Point the strobe away from the
+            camera at one end of the car and pop the test button so the
+            light floods that end of the side of the car. Now walk to
+            the middle of the car at about the same distance from the
+            car and hit the test button again. Now do the same at the
+            other end of the car. You should have flooded light over the
+            entire side of the car from three different angles. Return
+            to your camera and trigger it so the lens closes. Now you
+            need to repeat this procedure firing the strobe four, maybe
+            five times during each photograph. I have had some instances
+            where the best pictures came out where the strobe was fired
+            twice at each of five locations. That is why you need to
+            practice these situations in advance. To be sure that you
+            get a good photo, you should make at least a dozen photos,
+            all with different strobe positions and number of strobe
+            firings.</p>
+            <p>Another way to handle night situations such as
+            photographing a large building where the strobe will not
+            send its light to the upper reaches of the structure is to
+            “paint with light.” This is done in the same manner, only
+            instead of a strobe being fired, a flashlight or flood light
+            is shone back and forth over the subject as if the light
+            were a paint brush. The variable in this technique is the
+            number of passes back and forth over the building and the
+            speed that the light is moved in each pass. Again practice,
+            practice, practice and take lots of exposures, all
+            different.</p>
+            <p><em>Bruising On People</em></p>
+            <p>“Alternative light source” is a technique used to bring
+            out faint or deep bruising that does not appear in regular
+            photographs. The examples that I have seen show that it is
+            an imperfect art that in most cases does not produce better
+            results. Ultraviolet and other light sources are used to
+            illuminate an area of skin, sometimes at very oblique
+            angles. I believe there may be good uses for this technique,
+            but not on bruising, at least with any consistency. The best
+            technique for photographing bruises I have found is regular
+            color film. Black and white film will show bruising in good
+            detail, but without coloration there can be no precise age
+            determination of the injury. I have experimented with
+            infra-red film and had some good results. My suggestion is
+            to shoot bruising from varying angles and with subtle
+            changes in exposure.</p>
+            <p><em>Black Tire Marks On Black Streets</em></p>
+            <p>This can present a very difficult problem, especially if
+            the streets are wet. The best trick is to reshoot the area
+            many times at differing angles. The light source will
+            predominantly be natural light and since you cannot alter
+            the source, you must alter the camera relationship to the
+            source. This can be enhanced with flash or flood lighting as
+            a supplement, but be aware of glare when using two or more
+            light sources. This is another instance where infrared may
+            produce the best results.</p>
+            <p>Speaking of infrared, you do not need infra-red light,
+            just the film. The light is only needed for taking night
+            photos where the light source is intended to be hidden. I
+            have played around with infra-red film since I was a kid
+            with my first “Brownie Box Camera.” A sunny day photograph
+            of a park with fresh green grass will appear as if there is
+            an inch of snow covering the ground. Infra-red film with
+            available light is an interesting exercise that should be
+            tested under conditions where lighting—the type of light,
+            not the quantity—is an issue.</p>
+            <h1 id="conclusion"><strong>Conclusion</strong></h1>
+            <p>Photography is a valuable and necessary tool in
+            investigation. Get good equipment that you are comfortable
+            with and learn to use it well. Carry more film than you
+            think you will need and take more rather than fewer
+            photographs.</p>
+            <p>Remember, however, that you are an investigator using
+            photography as just one of your tools. Although you may have
+            been assigned to go to a certain place and take pictures,
+            what has really happened is that you have been given an
+            excuse to be in a place where you can further your
+            investigation, some of it with a camera and some without.
+            Remind yourself before you go out on any seemingly simple,
+            routine task: my goal is to learn things about this
+            situation that I do not know and could not find another
+            way.</p>
+    </body>
+</html>

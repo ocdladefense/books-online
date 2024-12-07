@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong><em>Christopher O’Connor, Alexandra St.
+            Pierre</em></strong></p>
+            <h1 id="i._the_motion_on_the_threshold_of_trial"><strong>I.
+            The Motion (on the Threshold of Trial)</strong></h1>
+            <h2 id="a._definition_of_a_motion_in_limine"><strong>A.
+            Definition of a Motion in Limine</strong></h2>
+            <p>A motion in limine is a pretrial motion that seeks to
+            limit or control the admissibility of certain evidence.
+            There is no specific rule in the Oregon Evidence Code
+            allowing or disallowing such motions. The Latin term <em>in
+            limine</em> does not signify any special form of pleading,
+            but simply means “preliminary” or “on the threshold.”</p>
+            <p>Any request for an evidentiary ruling that is made in
+            advance of trial which seeks an order to exclude or regulate
+            the production of potentially inflammatory evidence before
+            the jury, and which seeks relief on the ground that
+            suggestive or uncontrolled revelation of that evidence to
+            the jury may unfairly prejudice the determination of the
+            case, may be regarded as a motion in limine. 20 <em>Am Jur
+            Trials</em>441, 445 (1973).</p>
+            <p>Oregon courts began taking an open view to such pretrial
+            determinations of evidentiary matters in such cases as <a
+            href="http://scholar.google.com/scholar_case?case=17199979887202295060&amp;q=296+Or+174&amp;hl=en&amp;as_sdt=4,38">State
+            v. Foster</a>:</p>
+            <p>The pretrial motion to limit evidence, commonly called a
+            “motion in limine,” provides a legal procedure to flush out
+            problems to be encountered during the trial, before a jury
+            is contaminated with the evidence. An objection to evidence,
+            with a motion to tell the jury to disregard it, is a poor
+            alternative. The old cliché, “you can’t unring a bell,”
+            still applies.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?case=17199979887202295060&amp;q=296+Or+174&amp;hl=en&amp;as_sdt=4,38">State
+            v. Foster</a><a
+            href="http://scholar.google.com/scholar_case?case=17199979887202295060&amp;q=296+Or+174&amp;hl=en&amp;as_sdt=4,38">,
+            296 Or 174, 182, 674 P2d 587 (1983)</a>.</p>
+            <p>Motions in limine can be used to move to exclude
+            reference to particular evidence or facts in all phases of
+            the trial, including voir dire and closing argument.</p>
+            <h2 id="b._authority_for_a_motion_in_limine"><strong>B.
+            Authority for a Motion in Limine</strong></h2>
+            <p>Motions in limine are permitted at the trial court’s
+            discretion under the omnibus hearing statute, <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.037</a>. <a
+            href="http://scholar.google.com/scholar_case?case=16735414157873308492&amp;q=290+Or+573&amp;hl=en&amp;as_sdt=4,38">State
+            v. Madison,</a><a
+            href="http://scholar.google.com/scholar_case?case=16735414157873308492&amp;q=290+Or+573&amp;hl=en&amp;as_sdt=4,38">290
+            Or 573, 575–76, 624 P2d 599 (1981)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=16067038906599203084&amp;q=100+Or+App+442&amp;hl=en&amp;as_sdt=4,38">State
+            v. Troen,</a><a
+            href="http://scholar.google.com/scholar_case?case=16067038906599203084&amp;q=100+Or+App+442&amp;hl=en&amp;as_sdt=4,38">100
+            Or App 442, 444, 786 P2d 751 (1990)</a>.</p>
+            <p>The relevant parts of ORS 135.037 read as follows:</p>
+            <p>(1) At any time after the filing of the accusatory
+            instrument in circuit court and before the commencement of
+            trial thereon, the court upon motion of any party shall, and
+            upon its own motion may, order an omnibus hearing. (3) The
+            court, at the time of the omnibus hearing, may also consider
+            any matters which will facilitate trial by avoiding
+            unnecessary proof or by simplifying the issues to be tried,
+            or that are otherwise appropriate under the circumstances to
+            facilitate disposition of the proceeding.</p>
+            <p>Depending on the rules of the particular jurisdiction
+            this hearing may happen in the days and weeks prior to trial
+            or may occur immediately before the jury selection.</p>
+            <p>Note that a court is not required to rule on all possible
+            evidentiary issues at the time of the motion in limine. <a
+            href="http://scholar.google.com/scholar_case?case=15939500039324319491&amp;q=41+Or+App+141&amp;hl=en&amp;as_sdt=4,38">State
+            v. Cheshier</a><a
+            href="http://scholar.google.com/scholar_case?case=15939500039324319491&amp;q=41+Or+App+141&amp;hl=en&amp;as_sdt=4,38">,
+            41 Or App 141, 145–146, 597 P2d 839 (1979)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=15939500039324319491&amp;q=41+Or+App+141&amp;hl=en&amp;as_sdt=4,38">State
+            v. Staley</a><a
+            href="http://scholar.google.com/scholar_case?case=15939500039324319491&amp;q=41+Or+App+141&amp;hl=en&amp;as_sdt=4,38">,
+            142 Or App 583, 588, 923 P2d 650 (1996)</a>.</p>
+            <h2 id="c._the_form_of_a_motion_in_limine"><strong>C. The
+            Form of a Motion in Limine</strong></h2>
+            <p>In an ideal world with unlimited time to prepare for each
+            part of a case, the motions in limine would be written in
+            order to provide notice to the opposing party and to the
+            court. In practice, however, there may be reasons to not
+            inform the prosecutor ahead of time of the defense intent to
+            challenge certain evidence. Some issues may be better raised
+            immediately before trial.</p>
+            <p>Non-written oral motions may simply serve as a reminder
+            or an opportunity to clarify the court’s and prosecutor’s
+            understanding of the rules of evidence. For instance,
+            defense counsel might orally move the court to limit
+            reference to certain topics. “Your honor, the defense would
+            move in limine to exclude reference to the defendant’s prior
+            convictions by the police officer. I anticipate that may be
+            a problem because of several paragraphs in the police report
+            discussing how the booking photos from a previous burglary
+            case were of great use in allowing the civilian witness to
+            make a possible ID. I want to be clear that testimony
+            regarding the previous charges should not be mentioned in
+            front of the jury.” This gives the court an opportunity to
+            consider the issue of how the photos would be introduced
+            without references to prior bad acts.</p>
+            <h1 id="ii._types_of_motions_in_limine"><strong>II. Types of
+            Motions in Limine</strong></h1>
+            <p>There are two main types of motions in limine. The first
+            main type of motion in limine is a motion seeking to
+            prohibit certain evidence from being presented to the jury.
+            The second type seeks a permissive order by informing the
+            court of a particular issue and seeking permission to elicit
+            certain evidence.</p>
+            <h2 id="a._prohibitive_order"><strong>A. Prohibitive
+            Order</strong></h2>
+            <p>A motion in limine seeking a prohibitive order regarding
+            evidence is one in which the movant asks the court to
+            prevent the opposing party from eliciting certain evidence.
+            It is a request to forbid the other party from raising a
+            certain issue with witnesses or forbidding the opposing
+            party from moving to admit certain evidence. For example,
+            the defense attorney may ask to prevent the prosecutor’s use
+            of excessively gory photos of an injury as too prejudicial.
+            Perhaps there are other similar photos that are less graphic
+            and are appropriate. The defense attorney should seek
+            pretrial to prohibit the use of the more graphic photos as
+            exhibits.</p>
+            <p>A pretrial motion seeking such a prohibitive order should
+            be done to keep such evidence away from potential jurors.
+            Certain issues may lend themselves to pretrial decisions
+            while in other cases the court might reserve a ruling until
+            later in trial to see how the evidence develops.</p>
+            <h2 id="b._permissive_order"><strong>B. Permissive
+            Order</strong></h2>
+            <p>As an alternative to asking to prohibit evidence, other
+            motions in limine may seek the court’s permission to elicit
+            particular testimony or admit certain physical evidence. An
+            attorney may want to avoid committing error or causing a
+            mistrial or may want to essentially warn the court that the
+            opposing party may object to certain evidence and the
+            question is best dealt with pretrial.</p>
+            <p>An example involving testimony evidence might be the
+            question of a hearsay exception under <a
+            href="http://www.leg.state.or.us/ors/040.html">OEC
+            404(3)</a> showing a prior bad act to prove motive,
+            opportunity, intent, preparation or absence of mistake. For
+            instance, the prosecutor may wish to inform the court that
+            he intends to offer evidence to show that the defendant had
+            been convicted of three previous shoplifting charges at a
+            particular store to show absence of mistake. By getting the
+            court’s permission pretrial, the prosecutor allows the
+            defense attorney to make the appropriate objection and
+            record and limit the range of the questioning on the
+            previous act instead of objecting at the time of testimony
+            in front of the jury. In such a situation the state would
+            seek a permissive order while the defense would seek a
+            prohibitive order.</p>
+            <p>An example involving physical or demonstrative evidence
+            might be when there is evidence that is logically relevant
+            but for which there may be an apparent question of
+            prejudice. For example, a defense attorney may wish to
+            subpoena a K-9 dog handler to bring the animal to court to
+            demonstrate the size of the animal and the handling
+            techniques in a case in which the defendant is accused of
+            resisting arrest. There may be a logical relevance, but the
+            defense attorney may wish to clarify the court’s wishes
+            pretrial regarding such atypical evidence.</p>
+            <p>There are numerous, less unusual examples in which a
+            defense attorney may seek pretrial permission or guidance on
+            the admission of such evidence as recordings, videos, photos
+            or other potentially prejudicial evidence.</p>
+            <h1 id="iii._the_hearing"><strong>III. The
+            Hearing</strong></h1>
+            <p>The hearing on the motion in limine may involve detailed
+            evidentiary proceedings or simple verbal offers of proof by
+            counsel. The court normally has no authority to order a
+            witness to testify on the substance of the case until the
+            witness is called during the normal course of the trial. <a
+            href="http://scholar.google.com/scholar_case?case=17340337157524949501&amp;q=99+Or+App+12&amp;hl=en&amp;as_sdt=2,38">State
+            v. Nefsted,</a><a
+            href="http://scholar.google.com/scholar_case?case=17340337157524949501&amp;q=99+Or+App+12&amp;hl=en&amp;as_sdt=2,38">99
+            Or App 12, 17, 781 P2d 358 (1989)</a>. It is not necessary
+            to reveal the defense case prior to trial. Instead, at this
+            hearing the movant must only show:</p>
+            <p>1. Anticipation that the adversary will offer evidence
+            that is the subject of the motion in limine.</p>
+            <p>2. That determination of inadmissibility must be capable
+            of being made prior to the time that the evidence is offered
+            before the jury.</p>
+            <p>3. Grounds and authority for excluding evidence.</p>
+            <h1 id="iv._the_ruling"><strong>IV. The Ruling</strong></h1>
+            <p>The court may, after a hearing on the motion in limine,
+            come to two types of decisions: an absolute ruling that will
+            be the final determination of the admissibility of such
+            evidence in the trial or a preliminary or contingent motion.
+            <strong>Counsel should ask the court to clarify the nature
+            of the court’s ruling.</strong></p>
+            <h2 id="a._absolute_rulings"><strong>A. Absolute
+            Rulings</strong></h2>
+            <p>An absolute ruling would be one that decides an issue for
+            the rest of the trial. For instance, after considering the
+            proposed evidence, the court might make a determination that
+            some photos are far too prejudicial to be admitted and that
+            only certain other photos showing substantially the same
+            thing should be admitted instead. This order will control
+            throughout the trial and will not be subject to change based
+            on the course of other testimony or evidence.</p>
+            <h2 id="b._a_preliminary_ruling"><strong>B. A Preliminary
+            Ruling</strong></h2>
+            <p>A preliminary ruling might suggest the court’s
+            inclination on a certain issue and informs counsel that the
+            issue should be raised outside the presence of the jury at a
+            later point in the trial in order to allow the court to make
+            a final determination. This allows the court to reserve its
+            ruling until there is a more complete body of evidence
+            before it to allow for a more considered decision and a more
+            thoughtful weighing of the probative versus prejudicial
+            value of the evidence. This may be advantageous or
+            disadvantageous depending on how the trial progresses.</p>
+            <p>Counsel should be sure to ask to address the issue at a
+            later time outside the presence of the jury in order to
+            preserve any objections.</p>
+            <h1 id="v._advantages_of_motions_in_limine"><strong>V.
+            Advantages of Motions in Limine</strong></h1>
+            <p>There are many advantages to dealing with evidentiary
+            matters pretrial. There are numerous reasons a motion in
+            limine may be appropriate, and the advantages or
+            disadvantages will depend on each individual case. Consider
+            the following general reasons to use a motion in limine.</p>
+            <h2 id="a._limit_prejudicial_evidence"><strong>A. Limit
+            Prejudicial Evidence</strong></h2>
+            <p>Dealing with these evidentiary matters pretrial will help
+            insulate the jury from prejudicial evidence. Once the bell
+            is rung, it cannot be unrung. By addressing a matter
+            pretrial, the defense avoids the risk that a witness would
+            blurt out something before counsel is able to object.</p>
+            <h2
+            id="b._eliminate_the_need_for_impractical_or_useless_admonitions"><strong>B.
+            Eliminate the Need for Impractical or Useless
+            Admonitions</strong></h2>
+            <p>Motions in limine replace ineffective, unrealistic and
+            psychologically invalid admonitions to the jury. Despite the
+            judge’s instructions to a jury to disregard testimony they
+            just heard, the jury will of course already have heard the
+            information and the admonition will only pique their
+            interest. Sometimes you can’t unring the bell no matter how
+            hard the judge tries.</p>
+            <h2 id="c._avoid_objections_in_front_of_the_jury"><strong>C.
+            Avoid Objections in Front of the Jury</strong></h2>
+            <p>By dealing with objections through a motion in limine,
+            the objecting attorney does not suffer from appearing to
+            hide the truth. If the matter has been dealt with pretrial,
+            the jury is not left wondering what the answer to the
+            question might be should the judge sustain an objection.
+            Counsel does not have to choose between permitting prejudice
+            to be planted by opposing counsel or stimulating the
+            prejudice by objection.</p>
+            <h2 id="d._uncover_the_opponents_case"><strong>D. Uncover
+            the Opponent’s Case</strong></h2>
+            <p>Pretrial attack at sensitive evidentiary areas may force
+            the prosecutor to disclose what evidence she may offer as
+            well as the legal theory behind that evidence.</p>
+            <h2
+            id="e._lock_witnesses_into_statementsfishing_expedition"><strong>E.
+            Lock Witnesses into Statements/Fishing
+            Expedition</strong></h2>
+            <p>By having the witnesses testify beforehand, not only can
+            the defense discover more specifically what the witnesses
+            will testify to, but the witnesses then become bound by
+            their statements.</p>
+            <h2 id="f._gain_a_better_bargaining_position"><strong>F.
+            Gain a Better Bargaining Position</strong></h2>
+            <p>A prohibitive motion that disarms the opponent or a
+            permissive one that strengthens the defense case can
+            suddenly make things negotiable.</p>
+            <h2
+            id="g._give_the_court_more_time_to_consider_legal_issues"><strong>G.
+            Give the Court More Time to Consider Legal
+            Issues</strong></h2>
+            <p>A judge may have more time to consider evidentiary issues
+            if a complex or lengthy issue is raised pretrial rather than
+            in the middle of a trial. A court is much more likely to
+            consider the evidentiary issues fully and consult the proper
+            legal sources to come to a thoughtful decision if counsel
+            raises the matter before a jury is sitting in a jury room
+            and the witnesses are lined up ready to testify.</p>
+            <h2
+            id="h._streamline_the_presentation_of_the_case"><strong>H.
+            Streamline the Presentation of the Case</strong></h2>
+            <p>By dealing with evidentiary matters pretrial, the defense
+            attorney will prevent the need for numerous objections and
+            arguments over admissibility and allow the judge and jury to
+            focus on the main issues. This may increase the strength of
+            the defense case and will allow counsel to keep the jury’s
+            focus on the primary issues. (However, depending on the
+            case, the defendant may <em>want</em> the confusion and
+            delays created by frequent objections).</p>
+            <h2
+            id="i._eliminate_the_risk_that_counsel_will_miss_the_issue_when_it_arises_in_trial"><strong>I.
+            Eliminate the Risk that Counsel Will Miss the Issue When it
+            Arises in Trial</strong></h2>
+            <p>By addressing the issues in an organized manner pretrial,
+            the defense attorney will avoid the risk of falling asleep
+            at the switch and missing an objection or allowing a witness
+            to blurt something out before an objection can be
+            raised.</p>
+            <h2 id="j._preserve_issues_for_appeal"><strong>J. Preserve
+            Issues for Appeal</strong></h2>
+            <p>Filing a motion in limine allows the issue to be
+            preserved for appeal later down the line. However, depending
+            on the nature of the judge’s ruling on the motion, it may
+            also be necessary to re-raise the objection at trial. Even
+            if the ruling is absolute, it does not hurt to overpreserve
+            an issue. Counsel can simply say, “Judge, I would like to
+            re-object based on the reasons I argued in my pretrial
+            motion.”</p>
+            <p>In addition, if the defense lost on the motion in limine
+            and then the evidence comes in at trial in a somewhat
+            different way, it is essential to object by re-raising the
+            issue and making a slightly different argument that
+            corresponds to the change in evidence.</p>
+            <h1 id="vi._disadvantages_of_motions_in_limine"><strong>VI.
+            Disadvantages of Motions in Limine</strong></h1>
+            <p>There are also a number of reasons not to make a motion
+            in limine and rely instead on objections to evidence in the
+            course of a trial. A motion in limine may:</p>
+            <h2 id="a._waste_time_on_nonissues"><strong>A. Waste Time on
+            Nonissues</strong></h2>
+            <p>A motion in limine may force attention at pretrial stage
+            to evidentiary issues that may otherwise not even come up at
+            trial because the evidence might not be offered.</p>
+            <h2 id="b._be_denied_or_be_untimely"><strong>B. Be Denied or
+            Be Untimely</strong></h2>
+            <p>A motion in limine does not allow the court to fully
+            evaluate the evidence in the total trial context. By
+            considering the evidence out of context, the court may
+            engage in piecemeal and fragmented analysis.</p>
+            <h2 id="c._deprive_the_defendant_of_a_defense"><strong>C.
+            Deprive the Defendant of a Defense</strong></h2>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?case=16067038906599203084&amp;q=100+Or+App+442+&amp;hl=en&amp;as_sdt=2,38">State
+            v. Troen</a><a
+            href="http://scholar.google.com/scholar_case?case=16067038906599203084&amp;q=100+Or+App+442+&amp;hl=en&amp;as_sdt=2,38">,
+            100 Or App 442 (1990)</a>, an animal rights activist was
+            forbidden from raising evidence that would support a
+            choice-of-evils defense after the state moved in limine to
+            exclude photos of lab experiments that the defendant
+            intended to offer as evidence of a choice of evils. The
+            result of the pretrial arguments on this issue led to the
+            denial of the defendant’s choice-of-evil defense.</p>
+            <h2 id="d._allow_an_appeal_by_the_state"><strong>D. Allow an
+            Appeal By the State</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/138.html">ORS
+            138.060(3)</a> permits the state to appeal from a pretrial
+            order suppressing evidence. This statute extends to any
+            pretrial order rejecting evidence that the state intends to
+            offer. “When a defendant raises an objection to evidence in
+            advance of trial, he takes the risk that the state may have
+            an opportunity to obtain review of an adverse decision it
+            would otherwise be deprived of if the objection were made
+            during the course of the proceeding.” <a
+            href="http://scholar.google.com/scholar_case?case=16085012781129889838&amp;q=20+Or+App+439&amp;hl=en&amp;as_sdt=2,38">State
+            v. Hoare</a><a
+            href="http://scholar.google.com/scholar_case?case=16085012781129889838&amp;q=20+Or+App+439&amp;hl=en&amp;as_sdt=2,38">,
+            20 Or App 439, 444–45, 532 P2d 240 (1975)</a>. ''See, e.g.,
+            <a
+            href="http://scholar.google.com/scholar_case?case=875079331803270933&amp;q=342+Or+647&amp;hl=en&amp;as_sdt=2,38">State
+            v. Hess</a><a
+            href="http://scholar.google.com/scholar_case?case=875079331803270933&amp;q=342+Or+647&amp;hl=en&amp;as_sdt=2,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=875079331803270933&amp;q=342+Or+647&amp;hl=en&amp;as_sdt=2,38">342
+            Or 647,</a><a
+            href="http://scholar.google.com/scholar_case?case=875079331803270933&amp;q=342+Or+647&amp;hl=en&amp;as_sdt=2,38">654,
+            1</a><a
+            href="http://scholar.google.com/scholar_case?case=875079331803270933&amp;q=342+Or+647&amp;hl=en&amp;as_sdt=2,38">59
+            P3d 309</a><a
+            href="http://scholar.google.com/scholar_case?case=875079331803270933&amp;q=342+Or+647&amp;hl=en&amp;as_sdt=2,38">(2007)</a>;
+            <a
+            href="http://scholar.google.com/scholar_case?case=7113876950529889849&amp;q=326+Or+607&amp;hl=en&amp;as_sdt=2,38">State
+            ex rel. Carlile v. Frost</a><a
+            href="http://scholar.google.com/scholar_case?case=7113876950529889849&amp;q=326+Or+607&amp;hl=en&amp;as_sdt=2,38">,
+            326 Or 607, 616, 956 P2d 202 (1998)</a>.</p>
+            <h2
+            id="e._suggest_proof_to_opposing_counsel_that_she_had_not_yet_considered"><strong>E.
+            Suggest Proof to Opposing Counsel that She Had Not Yet
+            Considered</strong></h2>
+            <p>Defense counsel wants to avoid raising an issue if it is
+            not clear that the prosecutor is aware of the issue or proof
+            in question. Failure to prevail after calling such proof to
+            the attention of opposing counsel strengthens her case.</p>
+            <h2
+            id="f._allow_the_prosecutor_time_to_fix_flaws_or_gaps_in_his_case"><strong>F.
+            Allow the Prosecutor Time to Fix Flaws or Gaps in His
+            Case</strong></h2>
+            <p>A major reason not to make a motion in limine is because
+            the defense attorney may give the prosecutor a chance to fix
+            the problems in the state’s evidence. A defense attorney may
+            want to wait for jeopardy to attach to raise an objection.
+            For example, depending on the experience or sophistication
+            of the prosecutor, defense counsel may want to save an
+            objection until well into a trial. If a prosecutor fails to
+            properly lay a foundation for some piece of evidence or
+            discovers that they are not able to get a particular
+            statement or fact into evidence, the defense will have
+            gained by not giving them the chance to set the case over or
+            get a continuance to gather the appropriate witness or learn
+            the proper method of submitting the evidence. In the
+            appropriate case the defense may want to surprise them with
+            an objection when their problem is too late for them to
+            fix.</p>
+            <h1
+            id="vii._matters_which_must_be_raised_by_motions_in_limine"><strong>VII.
+            Matters Which Must Be Raised by Motions in
+            Limine</strong></h1>
+            <h2 id="a._oec_412_rape_shield_law"><strong>A. <a
+            href="http://www.leg.state.or.us/ors/040.html">OEC 412</a>
+            (Rape Shield Law)</strong></h2>
+            <p>If a defendant charged with any degree of rape, sodomy,
+            sexual abuse, or any attempt of those crimes wishes to offer
+            proof of the victim’s past sexual behavior for the purpose
+            of establishing bias, refuting scientific or medical
+            evidence, or for some other relevant purpose, he must file a
+            motion requesting admission of such evidence, together with
+            a written offer of proof, at least 15 days before trial. OEC
+            412(4)(a).</p>
+            <p>The rule does not allow admission of opinion or
+            reputation evidence regarding the sexual behavior of the
+            victim. OEC 412(1)(a).</p>
+            <p>When the evidence is newly discovered or the issue making
+            the evidence relevant is newly raised, the 15-day
+            requirement may be excused. In addition, the notice and
+            hearing requirements cannot be interpreted to conflict with
+            the right of confrontation in Article I, section 11, of the
+            Oregon Constitution. <a
+            href="http://scholar.google.com/scholar_case?case=10831811103033758256&amp;q=65+Or+App+304&amp;hl=en&amp;as_sdt=2,38">State
+            v. Rieter,</a><a
+            href="http://scholar.google.com/scholar_case?case=10831811103033758256&amp;q=65+Or+App+304&amp;hl=en&amp;as_sdt=2,38">65
+            Or App 304, 307, 672 P2d 56 (1983)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=12465877808564509255&amp;q=201+F3d+1166+&amp;hl=en&amp;as_sdt=2,38">Lajoie
+            v. Thom</a><a
+            href="http://scholar.google.com/scholar_case?case=12465877808564509255&amp;q=201+F3d+1166+&amp;hl=en&amp;as_sdt=2,38">p</a><a
+            href="http://scholar.google.com/scholar_case?case=12465877808564509255&amp;q=201+F3d+1166+&amp;hl=en&amp;as_sdt=2,38">son,</a><a
+            href="http://scholar.google.com/scholar_case?case=12465877808564509255&amp;q=201+F3d+1166+&amp;hl=en&amp;as_sdt=2,38">201
+            F3d 1166 (9th Cir. 2000)</a>.</p>
+            <p>The state may appeal before trial an order allowing
+            admission of the evidence. OEC 412(4)(c); <a
+            href="http://scholar.google.com/scholar_case?case=12932664391888407437&amp;q=97+Or+App+401&amp;hl=en&amp;as_sdt=2,38">State
+            v. Wright,</a><a
+            href="http://scholar.google.com/scholar_case?case=12932664391888407437&amp;q=97+Or+App+401&amp;hl=en&amp;as_sdt=2,38">97
+            Or App 401, 405, 776 P2d 1294,</a><a
+            href="http://scholar.google.com/scholar_case?case=12932664391888407437&amp;q=97+Or+App+401&amp;hl=en&amp;as_sdt=2,38">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?case=12932664391888407437&amp;q=97+Or+App+401&amp;hl=en&amp;as_sdt=2,38">308
+            Or 593 (1989)</a>.</p>
+            <h2
+            id="b._oec_803_18ab_child_hearsaysexual_and_domestic_violence_complaints"><strong>B.
+            <a href="http://www.leg.state.or.us/ors/040.html">OEC 803
+            18(a)(b)</a> (Child Hearsay—Sexual and Domestic Violence
+            Complaints)</strong></h2>
+            <p>This rule creates a hearsay exception for statements of
+            children under the age of 12 who are victims of sex abuse
+            and domestic violence. The exception applies in civil,
+            criminal, and juvenile court proceedings. The statements
+            cannot be admitted unless it is made known to the opposing
+            party at least 15 days before trial the moving party’s
+            intention to offer the statements and the particulars of the
+            statement. OEC 803 18(a)(b).</p>
+            <p>The Court of Appeals has “previously recognized that, if
+            evidence satisfies the criteria for admissibility under OEC
+            803(18a)(b), it does not violate a defendant’s confrontation
+            rights under <em>Article I, section 11</em>.” <a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">State
+            v. Shelton</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">,
+            218 Or App 652, 657, 180 P3d 155 (2008)</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38"></a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">(referencing</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">State
+            v. Reed,</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">173
+            Or App 185, 192, 21 P3d 137</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">332
+            Or 559, 34 P3d 1177 (2001)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=4548550094913989536&amp;q=111+Or+App+453&amp;hl=en&amp;as_sdt=2,38">State</a><a
+            href="http://scholar.google.com/scholar_case?case=4548550094913989536&amp;q=111+Or+App+453&amp;hl=en&amp;as_sdt=2,38">v.
+            Renly,</a><a
+            href="http://scholar.google.com/scholar_case?case=4548550094913989536&amp;q=111+Or+App+453&amp;hl=en&amp;as_sdt=2,38">111
+            Or App 453, 461, 827 P2d 1345 (1992)</a>.</p>
+            <p><strong>Note:</strong> Keep in mind that the
+            constitutionality under the Sixth Amendment of this type of
+            hearsay, as well as all cases involving hearsay exceptions,
+            should be thoroughly researched since <a
+            href="http://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=541+US+36&amp;hl=en&amp;as_sdt=2,38">Crawford
+            v. Washington</a><a
+            href="http://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=541+US+36&amp;hl=en&amp;as_sdt=2,38">,
+            541 US 36, 124 SCt 1354, 158 LEd2d 177 (2004)</a> modified
+            the basis for admissibility to nontestimonial statements.
+            Determining “whether an unavailable child victim’s statement
+            is testimonial almost invariably ‘will depend on a variety
+            of considerations.’ ” <a
+            href="http://scholar.google.com/scholar_case?case=7982373201321184179&amp;q=218+Or+App+131&amp;hl=en&amp;as_sdt=2,38">State
+            ex rel Juv. Dept. v. S. P.,</a><a
+            href="http://scholar.google.com/scholar_case?case=7982373201321184179&amp;q=218+Or+App+131&amp;hl=en&amp;as_sdt=2,38">218
+            Or App 131, 149, 178 P3d 318 (2008)</a>. “The major
+            considerations include the primary purpose of the questioner
+            who elicited the statement, the primary purpose of the
+            declarant, and the ‘nature and extent of police or
+            prosecutorial involvement.’ ” <a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">Shelton</a><a
+            href="http://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=218+Or+App+652&amp;hl=en&amp;as_sdt=2,38">,
+            218 Or App at 658</a><em>.</em></p>
+            <h2 id="c._dhs_files"><strong>C. DHS Files</strong></h2>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?case=1616912230214443199&amp;q=97+Or+App+414&amp;hl=en&amp;as_sdt=2,38">State
+            v. Wattenbarger,</a><a
+            href="http://scholar.google.com/scholar_case?case=1616912230214443199&amp;q=97+Or+App+414&amp;hl=en&amp;as_sdt=2,38">97
+            Or App 414, 416–17, 776 P2d 1292,</a><a
+            href="http://scholar.google.com/scholar_case?case=1616912230214443199&amp;q=97+Or+App+414&amp;hl=en&amp;as_sdt=2,38">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?case=1616912230214443199&amp;q=97+Or+App+414&amp;hl=en&amp;as_sdt=2,38">308
+            Or 331 (1989)</a>, the Court of Appeals held that the trial
+            court should have conducted an <em>in camera</em>inspection
+            of CSD [now DHS] files to determine whether exculpatory
+            evidence exists which should be given to the defense. (See
+            Chapter 2, Discovery.) ''See also <a
+            href="http://scholar.google.com/scholar_case?case=10488446557267510536&amp;q=304+Or+428&amp;hl=en&amp;as_sdt=2,38">State
+            v. Warren,</a><a
+            href="http://scholar.google.com/scholar_case?case=10488446557267510536&amp;q=304+Or+428&amp;hl=en&amp;as_sdt=2,38">304
+            Or 428, 434–35, 746 P2d 711 (1987)</a>. Under ORS 135.873, a
+            trial judge is prohibited from delegating his statutory duty
+            to examine a file to the prosecutor, <a
+            href="http://scholar.google.com/scholar_case?case=8339434875904849421&amp;q=313+Or+607&amp;hl=en&amp;as_sdt=2,38">State
+            ex rel Dugan v. Tiktin</a><a
+            href="http://scholar.google.com/scholar_case?case=8339434875904849421&amp;q=313+Or+607&amp;hl=en&amp;as_sdt=2,38">,
+            313 Or 607, 617, 837 P2d 959 (1992)</a>, or defense counsel.
+            <a
+            href="http://scholar.google.com/scholar_case?case=11773063064391419285&amp;q=310+Or+541&amp;hl=en&amp;as_sdt=2,38">State
+            ex rel Carlile v. Lewis</a><a
+            href="http://scholar.google.com/scholar_case?case=11773063064391419285&amp;q=310+Or+541&amp;hl=en&amp;as_sdt=2,38">,
+            310 Or 541, 544–45, 800 P2d 786 (1990)</a>.</p>
+            <h1
+            id="viii._matters_recommended_to_raise_by_motions_in_limine"><strong>VIII.
+            Matters Recommended to Raise by Motions in
+            Limine</strong></h1>
+            <h2 id="a._scientific_evidence_objections"><strong>A.
+            Scientific Evidence Objections</strong></h2>
+            <p>“When proffered scientific evidence raises issues of
+            scientific validity, those issues should be addressed by the
+            trial court in a separate <a
+            href="http://www.leg.state.or.us/ors/040.html">OEC
+            104(1)</a> [preliminary questions] hearing, preferably in
+            advance of trial.” <a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=321+or+285&amp;hl=en&amp;as_sdt=2,38">State
+            v. O’Key</a><a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=321+or+285&amp;hl=en&amp;as_sdt=2,38">,
+            321 Or 285, 307, 899 P2d 663 (1995)</a>. One of the main
+            reasons to deal with this issue pretrial is to make certain
+            that the judge performs the “gatekeeper” function by
+            “…ensur[ing] that the trier of fact does not attach an undue
+            aura of reliability to ‘scientific’ evidence that is not
+            scientifically valid.” <a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=321+or+285&amp;hl=en&amp;as_sdt=2,38">Id.</a><a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=321+or+285&amp;hl=en&amp;as_sdt=2,38">at
+            302</a>. Some recent issues that have arisen are challenges
+            to vertical nystagmus tests, <a
+            href="http://scholar.google.com/scholar_case?case=8790413768869641350&amp;q=235+Ore.+App.+533&amp;hl=en&amp;as_sdt=2,38">State
+            v. Bevan</a><a
+            href="http://scholar.google.com/scholar_case?case=8790413768869641350&amp;q=235+Ore.+App.+533&amp;hl=en&amp;as_sdt=2,38">,
+            235 Or App 533, 233 P3d 819 (2010)</a>, as well as
+            challenges to diagnoses of sexual abuse absent physical
+            evidence, <a
+            href="http://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=347+Or+127&amp;hl=en&amp;as_sdt=2,38">State
+            v. Southard</a><a
+            href="http://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=347+Or+127&amp;hl=en&amp;as_sdt=2,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=347+Or+127&amp;hl=en&amp;as_sdt=2,38">347
+            Or 127,</a><a
+            href="http://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=347+Or+127&amp;hl=en&amp;as_sdt=2,38"></a><a
+            href="http://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=347+Or+127&amp;hl=en&amp;as_sdt=2,38">218
+            P3d 104 (2009)</a>.</p>
+            <p>Advantages to raising these issues pretrial include:</p>
+            <p>winning the admissibility argument at the trial court
+            level, developing and preserving a basis for an appeal, and
+            previewing the State’s evidence and potentially weakening it
+            at trial. (As to this last objective, many of the issues
+            affecting the admissibility analysis will also provide
+            useful cross material at trial, and in the admissibility
+            hearing without the jury present you can ask probing
+            questions with comparatively little risk even if you don’t
+            know the answers.)</p>
+            <p>Kevin Sali, <a
+            href="https://libraryofdefense.org/content/challenging-scientific-evidence-choosing-your-strategy">Challenging
+            Scientific Evidence: Choosing Your Strategy</a>, at Oregon
+            Library of Defense.</p>
+            <p>However, there are some disadvantages to challenging the
+            evidence pretrial. Filing a motion in limine allows the
+            state to prepare better against challenges to their
+            evidence. It also gives them a right to appeal the judge’s
+            decision where they would not be able to during trial. Sali,
+            <em>Challenging Scientific Evidence</em>,
+            <em>supra</em>.</p>
+            <h1 id="ix._stipulations"><strong>IX.
+            Stipulations</strong></h1>
+            <h2 id="a._entering_into_stipulations"><strong>A. Entering
+            into Stipulations</strong></h2>
+            <p>A stipulation is an agreement of the parties that a
+            particular piece of evidence or fact should be considered by
+            the fact finder without the usual need of a party to present
+            the evidence through a witness.</p>
+            <p>Stipulations can sometimes help the defense by limiting
+            the threats of prejudicial evidence and effective government
+            witnesses. Once the parties have entered into a stipulation,
+            however, the defense counsel must remain vigilant.
+            Additional proof of the stipulation is generally left to the
+            discretion of the court. If the offered proof is prejudicial
+            to the defense and not probative of anything more than the
+            stipulation, then the evidence is inadmissible and there
+            should be an objection. <a
+            href="http://scholar.google.com/scholar_case?case=11544243081392498322&amp;q=36+Or+App+187&amp;hl=en&amp;as_sdt=2,38">State
+            v. McKendall</a><a
+            href="http://scholar.google.com/scholar_case?case=11544243081392498322&amp;q=36+Or+App+187&amp;hl=en&amp;as_sdt=2,38">,
+            36 Or App 187, 198, 584 P2d 316 (1978)</a>, ''overruled on
+            other grounds by <a
+            href="http://scholar.google.com/scholar_case?case=12736811192249298395&amp;q=147+Or+App+314&amp;hl=en&amp;as_sdt=2,38">State
+            v. Lopez,</a><a
+            href="http://scholar.google.com/scholar_case?case=12736811192249298395&amp;q=147+Or+App+314&amp;hl=en&amp;as_sdt=2,38">147
+            Or App 314, 936 P2d 386 (1997)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=13283228121291592521&amp;q=261+Or+49&amp;hl=en&amp;as_sdt=2,38">State
+            v. Zimmerlee</a><a
+            href="http://scholar.google.com/scholar_case?case=13283228121291592521&amp;q=261+Or+49&amp;hl=en&amp;as_sdt=2,38">,
+            261 Or 49, 54, 492 P2d 795 (1972)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=8741797119518298430&amp;q=40+Or+App+285&amp;hl=en&amp;as_sdt=2,38">State
+            v. Turner,</a><a
+            href="http://scholar.google.com/scholar_case?case=8741797119518298430&amp;q=40+Or+App+285&amp;hl=en&amp;as_sdt=2,38">40
+            Or App 285, 290, 594 P2d 1304 (1979)</a>.</p>
+            <p>A further tool to limit additional evidence that
+            supplements the facts stipulated too is found in the
+            evidence code. OEC 403 reads:</p>
+            <p>Although relevant, evidence may be excluded if its
+            probative value is substantially outweighed by the danger of
+            unfair prejudice, confusion of the issues, or misleading the
+            jury, or by considerations of undue delay or needless
+            presentation of cumulative evidence.</p>
+            <p>So if there is already a stipulation to a fact then an
+            attorney should consider utilizing OEC 403 to limit
+            additional information about that fact as unfairly
+            prejudicial or cumulative.</p>
+            <h2 id="b._bilateral_stipulations"><strong>B. Bilateral
+            Stipulations</strong></h2>
+            <p>Common bilateral stipulations include such matters as
+            scientific reports, chain of custody, prior convictions and
+            reports of physical or mental examinations.</p>
+            <p>“A stipulation is the functional equivalent of a judicial
+            admission; indeed, the two terms are sometimes used
+            interchangeably.” <a
+            href="http://scholar.google.com/scholar_case?case=12557416436032681526&amp;q=202+Or+App+622&amp;hl=en&amp;as_sdt=2,38">State
+            v. Porter</a><a
+            href="http://scholar.google.com/scholar_case?case=12557416436032681526&amp;q=202+Or+App+622&amp;hl=en&amp;as_sdt=2,38">,
+            202 Or App 622, 626, 123 P3d 325 (2005) (referencing</a><a
+            href="http://scholar.google.com/scholar_case?case=12557416436032681526&amp;q=202+Or+App+622&amp;hl=en&amp;as_sdt=2,38">State
+            v. Anderson</a><a
+            href="http://scholar.google.com/scholar_case?case=12557416436032681526&amp;q=202+Or+App+622&amp;hl=en&amp;as_sdt=2,38">,
+            137 Or App 36, 42, 902 P2d 1206,</a><a
+            href="http://scholar.google.com/scholar_case?case=12557416436032681526&amp;q=202+Or+App+622&amp;hl=en&amp;as_sdt=2,38">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?case=12557416436032681526&amp;q=202+Or+App+622&amp;hl=en&amp;as_sdt=2,38">,
+            322 Or 362 (1995)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=10776397609506731053&amp;q=47+Or+App+823&amp;hl=en&amp;as_sdt=2,38">In
+            re Marriage of Kathrens</a><a
+            href="http://scholar.google.com/scholar_case?case=10776397609506731053&amp;q=47+Or+App+823&amp;hl=en&amp;as_sdt=2,38">,
+            47 Or App 823, 827, 615 P2d 1079 (1980)</a>). As such, it is
+            binding on the party entering into the stipulation. <a
+            href="http://scholar.google.com/scholar_case?case=5141787749147341547&amp;q=260+Or+410&amp;hl=en&amp;as_sdt=2,38">Bailey
+            v. Mead</a><a
+            href="http://scholar.google.com/scholar_case?case=5141787749147341547&amp;q=260+Or+410&amp;hl=en&amp;as_sdt=2,38">,
+            260 Or 410, 415, 492 P2d 798 (1971)</a>. However, if
+            additional evidence is introduced which is at variance with
+            the stipulation and is not objected to, it is permissible to
+            argue that the fact at issue is not proved. <a
+            href="http://scholar.google.com/scholar_case?case=1145261308501042235&amp;q=14+Or+App+187&amp;hl=en&amp;as_sdt=2,38">State
+            v. Knoke</a><a
+            href="http://scholar.google.com/scholar_case?case=1145261308501042235&amp;q=14+Or+App+187&amp;hl=en&amp;as_sdt=2,38">,
+            14 Or App 187, 194, 512 P2d 1353 (1973)</a>.</p>
+            <p>Parties cannot stipulate to admit evidence that would
+            otherwise be excluded by statute or case law. For instance,
+            polygraph test results are inadmissible even when stipulated
+            to by the parties. <a
+            href="http://scholar.google.com/scholar_case?case=4179317336293613019&amp;q=304+Or+221&amp;hl=en&amp;as_sdt=2,38">State
+            v. Lyon</a><a
+            href="http://scholar.google.com/scholar_case?case=4179317336293613019&amp;q=304+Or+221&amp;hl=en&amp;as_sdt=2,38">,
+            304 Or 221, 231, 744 P2d 231 (1987)</a>.</p>
+            <h2 id="c._stipulated_facts_trials"><strong>C. Stipulated
+            Facts Trials</strong></h2>
+            <p>A stipulated facts trial is often preferable to a guilty
+            plea. For example, in order to preserve certain issues for
+            appeal, such as the denial of a motion to suppress, a guilty
+            plea will not suffice. Trials are required, and a stipulated
+            facts trial is sufficient to preserve legal issues. <a
+            href="http://scholar.google.com/scholar_case?case=591620740753019240&amp;q=109+Or+App+495&amp;hl=en&amp;as_sdt=2,38">State
+            v. Wright</a><a
+            href="http://scholar.google.com/scholar_case?case=591620740753019240&amp;q=109+Or+App+495&amp;hl=en&amp;as_sdt=2,38">,
+            109 Or App 495, 497, 820 P2d 824 (1991)</a> (“…one purpose
+            of stipulating to the facts, rather than simply pleading
+            guilty, is to preserve issues for appeal…”). Specific issues
+            raised in the motion to suppress must be included in the
+            stipulated facts in order to be preserved for appeal. For
+            example, if the evidence suppressed was found in a house,
+            but the stipulated facts mentioned only a car, then the
+            issue raised in the motion to suppress may not be preserved
+            for appeal.</p>
+            <p>If a written jury waiver is not executed by the defendant
+            prior to trial, reversal is usually mandated. <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.001</a>; <a
+            href="http://scholar.google.com/scholar_case?case=12528261488671285749&amp;q=112+Or+App+22&amp;hl=en&amp;as_sdt=2,38">State
+            v. Huntley</a><a
+            href="http://scholar.google.com/scholar_case?case=12528261488671285749&amp;q=112+Or+App+22&amp;hl=en&amp;as_sdt=2,38">,
+            112 Or App 22, 24, 827 P2d 918 (1992)</a>. Although
+            stipulating to facts is not the same thing as pleading
+            guilty, the due process issues are similar. The trial court
+            must apply the same test to a motion to withdraw stipulated
+            facts that it applies to a motion to withdraw a guilty plea.
+            <a
+            href="http://scholar.google.com/scholar_case?case=591620740753019240&amp;q=109+Or+App+495&amp;hl=en&amp;as_sdt=2,38">Wright</a><a
+            href="http://scholar.google.com/scholar_case?case=591620740753019240&amp;q=109+Or+App+495&amp;hl=en&amp;as_sdt=2,38">,
+            109 Or App at 497</a>. Depending on the judge and
+            jurisdiction, there may be a certain form for a waiver of
+            jury trial and motion for a stipulated facts trial.</p>
+            <p>Occasionally, a careless prosecutor will submit a case on
+            stipulations, having omitted an essential element.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?case=15578627957872898153&amp;q=235+Or+App+462&amp;hl=en&amp;as_sdt=2,38">State
+            v. Turner</a><a
+            href="http://scholar.google.com/scholar_case?case=15578627957872898153&amp;q=235+Or+App+462&amp;hl=en&amp;as_sdt=2,38">,
+            235 Or App 462, 234 P3d 993 (2010)</a> (grant of judgment of
+            acquittal was appropriate where stipulated facts made no
+            direct mention of venue and contained no information from
+            which venue could be inferred). Alternatively, the facts
+            might be agreed on but the question of whether the facts
+            constitute a crime is still at issue and the judge is free
+            to acquit, given the stipulated facts. <em>See State v.
+            Williams</em>, 117 Or 238, 243 P 563 (1926). In such cases,
+            counsel should move for a judgment of acquittal.</p>
+            <p>For further consideration on stipulated fact trials, see
+            the discussion of conditional pleas in the November/December
+            2006 and January/February 2007 issues of <em>The Oregon
+            Defense Attorney</em>published by OCDLA.</p>
+            <h1
+            id="x._exclusion_of_witnesses_from_the_courtroom"><strong>X.
+            Exclusion of Witnesses from the Courtroom</strong></h1>
+            <p>As a general rule, defense counsel will want to move to
+            exclude witnesses from the courtroom under <a
+            href="http://www.leg.state.or.us/ors/040.html">OEC 615</a>.
+            State witnesses should be excluded when possible from all
+            pretrial hearings and prior to the start of voir dire
+            examination. An attorney should be sure that any such motion
+            to exclude is always on the record and be sure to state the
+            rule the motion is based upon. Defense counsel should
+            request that the court’s order be communicated to the
+            state’s witnesses as it is often difficult to monitor who is
+            coming in and out of a courtroom.</p>
+            <p>There may be strategic and tactical reasons not to
+            exclude witnesses from the courtroom. The defense witnesses
+            may be sympathetic or show ongoing family or community
+            support for the defendant. Likewise, a state’s witness might
+            be unsympathetic and their behavior or presence in the
+            courtroom may help the defense position in the eyes of the
+            jury. A decision and the appropriate motion should be made
+            at the very beginning of the trial process.</p>
+            <h2 id="a._statutory_basis_for_exclusion"><strong>A.
+            Statutory Basis for Exclusion</strong></h2>
+            <p><a href="http://www.oregonlaws.org/ors/40.385">OEC 615
+            (ORS 40.385)</a> reads in its entirety:</p>
+            <p>At the request of a party, the court may order witnesses
+            excluded until the time of final argument, and it may make
+            the order on its own motion. This rule does not authorize
+            exclusion of: (1) A party who is a natural person; (2) An
+            officer or employee of a party which is not a natural person
+            designated as its representative by its attorney; (3) A
+            person whose presence is shown by a party to be essential to
+            the presentation of the party’s cause; or (4) The victim in
+            a criminal case.</p>
+            <p>This rule authorizes the court (at the request of a party
+            or on its own initiative) to exclude witnesses until final
+            argument. The language of the rule could indicate to some
+            readers that the court must exclude all witnesses, so be
+            aware that defense witnesses may be subject to the same
+            exclusion.</p>
+            <p>According to the legislative commentary to OEC 615, the
+            time period of the exclusion potentially includes voir dire,
+            opening statements and offers of proof. It was enacted to
+            prevent a witness from being influenced by hearing the
+            testimony of a prior witness. <a
+            href="http://scholar.google.com/scholar_case?case=14449033922879411241&amp;q=83+Or+App+298&amp;hl=en&amp;as_sdt=2,38">State
+            v. Vosika</a><a
+            href="http://scholar.google.com/scholar_case?case=14449033922879411241&amp;q=83+Or+App+298&amp;hl=en&amp;as_sdt=2,38">,
+            83 Or App 298, 302, 731 P2d 449 (1987)</a>, <em>modified on
+            recons</em> <a
+            href="http://scholar.google.com/scholar_case?case=14801648045765530628&amp;q=85+Or+App+148&amp;hl=en&amp;as_sdt=2,38">85
+            Or App 148, 735 P2d 1273 (1987)</a>. The exclusion rule also
+            helps prevent a witness from learning the types of questions
+            the opposing lawyer may ask on cross-examination. <a
+            href="http://scholar.google.com/scholar_case?case=833838673175699493&amp;q=325+Or+15&amp;hl=en&amp;as_sdt=2,38">State
+            v. Larson</a><a
+            href="http://scholar.google.com/scholar_case?case=833838673175699493&amp;q=325+Or+15&amp;hl=en&amp;as_sdt=2,38">,
+            325 Or 15, 26, 933 P2d 958 (1997)</a>. The rule is a
+            modified version of <a
+            href="http://www.law.cornell.edu/rules/fre/rules.htm">Federal
+            Rule 615</a>. The federal rule specifically excludes
+            witnesses “[…] so that they cannot hear the testimony of
+            witnesses[…].”</p>
+            <p>In a criminal case, the trial court is required to
+            exclude witnesses at the request of a party unless the
+            opposing party objects. <a
+            href="http://scholar.google.com/scholar_case?case=1383019261825642346&amp;q=66+Or+App+337&amp;hl=en&amp;as_sdt=2,38">State
+            v. Cetto</a><a
+            href="http://scholar.google.com/scholar_case?case=1383019261825642346&amp;q=66+Or+App+337&amp;hl=en&amp;as_sdt=2,38">,
+            66 Or App 337, 339, 674 P2d 66 (1984)</a>; Legislative
+            Commentary to OEC 615.</p>
+            <p>If the opposing party objects, the court must exercise
+            its discretion and weigh the reasons offered by the
+            objecting party against the policy favoring exclusion. In
+            <em>State v. Bishop</em>, the court noted:</p>
+            <p>Thus, if the record contains some showing of good cause
+            for not excluding the witnesses, and if the trial court made
+            a reasonable choice between the good cause shown and the
+            policy favoring exclusion, its decision will not be
+            disturbed on appeal. But if the record contains no reason
+            for not excluding witnesses, or an insufficient reason, then
+            the trial court has abused its discretion.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?case=9473057231828161420&amp;q=7+or+app+558&amp;hl=en&amp;as_sdt=2,38">State
+            v. Bishop</a><a
+            href="http://scholar.google.com/scholar_case?case=9473057231828161420&amp;q=7+or+app+558&amp;hl=en&amp;as_sdt=2,38">,
+            7 Or App 558, 564, 492 P2d 509 (1972)</a>.</p>
+            <p>However, even where the trial court errs or fails to
+            exercise its discretion, it is not reversible error. The
+            record must show that the defendant was prejudiced. <a
+            href="http://scholar.google.com/scholar_case?case=833838673175699493&amp;q=325+Or+15&amp;hl=en&amp;as_sdt=2,38">State
+            v. Larson</a><a
+            href="http://scholar.google.com/scholar_case?case=833838673175699493&amp;q=325+Or+15&amp;hl=en&amp;as_sdt=2,38">,
+            325 Or 15, 28, 933 P2d 958 (1997)</a>.</p>
+            <h2 id="b._exceptions_to_the_exclusion_rule"><strong>B.
+            Exceptions to the Exclusion Rule</strong></h2>
+            <p>1. Under OEC 615(2), the court may not exclude witnesses
+            who are “an officer or employee of a party which is not a
+            natural person designated as its representative by its
+            attorney.” This is more likely to be an issue in civil
+            trials in which there may be a need for a single individual
+            to act as both witness and corporate representative in a
+            trial. In criminal cases, however, the state is a party and
+            is not a “natural person” and therefore may have its
+            designated representative/ witness present during all phases
+            of the trial.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?case=12560663699632388690&amp;q=319+Or+162.&amp;hl=en&amp;as_sdt=2,38">State
+            v. Cooper</a><a
+            href="http://scholar.google.com/scholar_case?case=12560663699632388690&amp;q=319+Or+162.&amp;hl=en&amp;as_sdt=2,38">,
+            319 Or 162, 874 P2d 822 (1994)</a>, the Oregon Supreme Court
+            held that the state may designate a city police officer, who
+            investigated and filed state criminal charges, as its
+            “officer” representative under exemption to the rule
+            governing exclusion of witnesses for “officer” designated as
+            party’s representative. Presumably this could be applied to
+            other representatives of the state such as DHS caseworkers,
+            probation officers or other representatives of investigating
+            state agencies.</p>
+            <p>As explained in footnote 2 of <a
+            href="http://scholar.google.com/scholar_case?case=12560663699632388690&amp;q=319+Or+162.&amp;hl=en&amp;as_sdt=2,38">Cooper</a>,
+            the “purpose of the order of exclusion under OEC 615 ‘is to
+            prevent any possibility that the testimony of one witness
+            may be influenced or tainted by what he learned from hearing
+            the testimony of another.’ <a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">State
+            v. Burdge</a><a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">,
+            295 Or 1, 9, 664 P2d 1076 (1983)</a>.”</p>
+            <p>The state’s witness can be excluded if allowing the
+            state’s witness to remain in the courtroom would unduly
+            impair defendant’s right to cross-examination; however, “a
+            criminal defendant is [only] ‘guarantee[d] an
+            <em>opportunity</em> for effective cross-examination, not
+            cross-examination that is effective in whatever way, and to
+            whatever extent, the defense might wish.’ ” <a
+            href="http://or.findacase.com/research/wfrmDocViewer.aspx/xq/fac.%5CSAC%5COR%5C1991%5C19910213_0041807.OR.htm/qx">State
+            v. Alexander</a><a
+            href="http://or.findacase.com/research/wfrmDocViewer.aspx/xq/fac.%5CSAC%5COR%5C1991%5C19910213_0041807.OR.htm/qx">,
+            105 Or App 566, 569, 805 P2d 743 (1991)</a> (quoting <a
+            href="http://scholar.google.com/scholar_case?case=11250065932511666215&amp;q=474+U.S.+15&amp;hl=en&amp;as_sdt=2,38">Delaware
+            v. Fernsterer,</a><a
+            href="http://scholar.google.com/scholar_case?case=11250065932511666215&amp;q=474+U.S.+15&amp;hl=en&amp;as_sdt=2,38">474
+            U.S. 15, 20, 106 S Ct 292 (1985)</a>). Since the
+            Confrontation Clause is implicated, counsel could consider
+            objecting to testimony of the state’s representative as a
+            violation under <a
+            href="http://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=541+US+36&amp;hl=en&amp;as_sdt=2,38">Crawford
+            v. Washington</a><a
+            href="http://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=541+US+36&amp;hl=en&amp;as_sdt=2,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=541+US+36&amp;hl=en&amp;as_sdt=2,38">supra</a>,
+            if the testimony of the officer could be influenced by the
+            testimony of other witnesses. If the officer does not
+            testify first or is called for redirect, the objection may
+            have an impact since their testimony could be tainted by the
+            prior witnesses. Counsel should brainstorm ideas regarding
+            how the non-exclusion of the state’s representative may
+            impact your client’s rights and raise them at trial.</p>
+            <p>The criminal defendant is a “natural person.” There is no
+            exception under this subsection that would apply to any
+            defense witness.</p>
+            <p>2. Under OEC 615(3), the court may not exclude witnesses
+            “whose presence is shown by a party to be essential to the
+            presentation of the party’s cause.” The Oregon Court of
+            Appeals has held that allowing a police officer witness to
+            remain in the courtroom despite exclusion of other witnesses
+            did not violate the defendant’s rights to cross-examination
+            and confrontation under Article I, section 11, of the Oregon
+            Constitution because the state had established that his
+            presence was essential to assist the prosecution under OEC
+            615(3). <a
+            href="http://or.findacase.com/research/wfrmDocViewer.aspx/xq/fac.%5CSAC%5COR%5C1991%5C19910213_0041807.OR.htm/qx">State
+            v. Alexander</a><a
+            href="http://or.findacase.com/research/wfrmDocViewer.aspx/xq/fac.%5CSAC%5COR%5C1991%5C19910213_0041807.OR.htm/qx">,</a><a
+            href="http://or.findacase.com/research/wfrmDocViewer.aspx/xq/fac.%5CSAC%5COR%5C1991%5C19910213_0041807.OR.htm/qx">supra</a>.</p>
+            <p>A defense investigator witness could presumably qualify
+            under this section if that investigator is providing ongoing
+            help or analysis during the trial. A defense attorney
+            relying on this exception will have to establish that the
+            investigator was essential to the defense presentation of
+            the case to the court.</p>
+            <p>3. Under OEC 615(4) the court may not exclude a witness
+            who is “the victim in a criminal case.” Who is a victim? <a
+            href="https://www.oregonlaws.org/ors/131.007">ORS
+            131.007</a> defines a victim as:</p>
+            <p>[T]he person or persons who have suffered financial,
+            social, psychological or physical harm as a result of a
+            crime and includes, in the case of a homicide or abuse of
+            corpse in any degree, a member of the immediate family of
+            the decedent and, in the case of a minor victim, the legal
+            guardian of the minor. In no event shall the criminal
+            defendant be considered a victim.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?case=13404318532825406044&amp;q=119+Or+App+487&amp;hl=en&amp;as_sdt=2,38">State
+            v. Stookey</a><a
+            href="http://scholar.google.com/scholar_case?case=13404318532825406044&amp;q=119+Or+App+487&amp;hl=en&amp;as_sdt=2,38">,
+            119 Or App 487, 850 P2d 1167 (1993)</a>, a victim’s fiancée
+            was not a “victim” entitled to remain in the courtroom
+            during testimony of other witnesses. The error, however, was
+            harmless.</p>
+            <p>The right of the victim to be present is found in Article
+            I, section 42(1)(a), of the Oregon Constitution which gives
+            victims the right “to be present at […]any critical stage of
+            the proceedings held in open court when the defendant will
+            be present.” Article I, section 42(6)(c), places the
+            determination of who is a victim under the authority of the
+            district attorney.</p>
+            <p>3a. The prosecuting district attorney or the police
+            agency that initially responded to or is investigating the
+            case is responsible for notifying the victim of the various
+            stages of the criminal proceedings. <a
+            href="https://www.oregonlaws.org/ors/147.417">ORS
+            147.417(1), (4)</a>. ORS 147.510(2) (which does not apply to
+            juvenile proceedings) requires the state to notify the court
+            “[a]t the beginning of each critical stage of the
+            proceeding” if the victim is present, and if not, whether
+            the victim has requested advance notice of the
+            proceedings.</p>
+            <p>Failure to notify a victim is not grounds for overturning
+            a conviction or adjudication and does not affect the
+            validity of a guilty plea. Article 1, section 42 (2), ORS
+            147.417 2(a)-(b).</p>
+            <p>However, <em>State v. Barrett</em>, 350 Or 390, 255 P3d
+            472 (2011), held that remanding the defendant’s case for
+            resentencing was an acceptable remedy to the violation of
+            the victim’s right to be notified of, and present at,
+            sentencing. The victim initially invoked her rights in a
+            timely manner and before defendant had been sentenced;
+            therefore, she was entitled to her proposed remedy of
+            resentencing, provided it did not violate the defendant’s
+            federal constitutional rights. Per the Supreme Court’s
+            interpretation of <a
+            href="http://scholar.google.com/scholar_case?case=11573208396862749601&amp;q=449+US+117&amp;hl=en&amp;as_sdt=2,38">United
+            States v. DiFrancesco</a><a
+            href="http://scholar.google.com/scholar_case?case=11573208396862749601&amp;q=449+US+117&amp;hl=en&amp;as_sdt=2,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=11573208396862749601&amp;q=449+US+117&amp;hl=en&amp;as_sdt=2,38">449
+            US 117, 101 S Ct 426, 66 L Ed 2d 328 (1980)</a>, “sentences
+            [are] not comparable to acquittals for double jeopardy
+            purposes,” <em>Barrett,</em>350 Or 390. and remanding the
+            case for resentencing was constitutional under the Double
+            Jeopardy Clause. Nevertheless, in a footnote the Court noted
+            that “had the prosecutor and the trial court engaged in the
+            colloquy required by ORS 147.510, this constitutional
+            violation likely would have been avoided.” <em>Id</em>.</p>
+            <h2
+            id="c._timing_of_motions_to_exclude_witnesses"><strong>C.
+            Timing of Motions to Exclude Witnesses</strong></h2>
+            <p>OEC 615 does not specify a time when counsel should move
+            to exclude witnesses, but since the purpose is to keep
+            witnesses from hearing testimony discussed at all phases of
+            the trial, it should be made as early as possible. It
+            appears that the motion should be allowed at any time if it
+            is not opposed<em>. See</em> <a
+            href="http://scholar.google.com/scholar_case?case=9473057231828161420&amp;q=7+or+app+558&amp;hl=en&amp;as_sdt=2,38">State
+            v. Bishop</a><a
+            href="http://scholar.google.com/scholar_case?case=9473057231828161420&amp;q=7+or+app+558&amp;hl=en&amp;as_sdt=2,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=9473057231828161420&amp;q=7+or+app+558&amp;hl=en&amp;as_sdt=2,38">supra</a>.
+            However, if an attorney waits too long, the trial court may
+            be able to justify its denial of the motion, and the denial
+            will not be deemed an abuse of discretion on appeal. <a
+            href="http://scholar.google.com/scholar_case?case=833838673175699493&amp;q=325+Or+15&amp;hl=en&amp;as_sdt=2,38">Larson</a><a
+            href="http://scholar.google.com/scholar_case?case=833838673175699493&amp;q=325+Or+15&amp;hl=en&amp;as_sdt=2,38">,
+            325 Or at 17</a>.</p>
+            <h1 id="xi._sequestration"><strong>XI.
+            Sequestration</strong></h1>
+            <p>While the exclusion of witnesses from the courtroom may
+            prohibit witnesses from hearing the testimony of other
+            witnesses with an ear toward conformity and consistency,
+            such an order alone will not prohibit the witnesses from
+            talking in the hall and communicating during the course of
+            the trial. Therefore, a “sequestration” order prohibiting
+            the witnesses from any contact with other witnesses may be
+            necessary to ensure the fairness of the proceedings.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">State
+            v. Burdge,</a><a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">295
+            Or 1, 664 P2d 1076 (1983)</a>. This preserves the witness’
+            memory and testimony and avoids tainting the testimony by
+            knowledge of other witnesses’ specific and actual
+            testimony.</p>
+            <p>It is important to note, however, that there is no clear
+            authorization for such an order under the rules of evidence
+            or Oregon case law. Defense counsel should be prepared to
+            justify such a motion through argument.</p>
+            <h2 id="a._stipulation_of_parties"><strong>A. Stipulation of
+            Parties</strong></h2>
+            <p>The best way for counsel to get an order forbidding
+            witnesses from communicating with each other is a
+            stipulation with the opposing party. If both parties
+            stipulate to such an order, the court can simply agree to
+            enforce the agreement of the parties. The “practice that
+            [the Oregon Supreme Court] encourages is that the witness
+            exclusion/sequestration agreements be formalized with the
+            court prior to the commencement of trial.” <a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">Burdge,</a><a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">295
+            Or at 5 n</a><a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38"></a><a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">1</a>.</p>
+            <p><em>Burdge</em> is the case generally relied on for
+            justification of such orders. An inquiry into sanctions for
+            violation of such an order in a trial in which the parties
+            stipulated to a sequestration order may be necessary. This
+            is the cleanest way to obtain the order since the method has
+            a foundation in case law.</p>
+            <h2
+            id="b._oregon_rules_of_evidence_and_statutory_basis_for_sequestration_orders"><strong>B.
+            Oregon Rules of Evidence and Statutory Basis for
+            Sequestration Orders</strong></h2>
+            <p>As stated above, there is no specific rule allowing a
+            court to issue such orders. However, <a
+            href="http://www.leg.state.or.us/ors/001.html">ORS
+            1.010(5</a><a
+            href="http://www.leg.state.or.us/ors/001.html">)</a> may be
+            a partial justification for such an order. The statute
+            reads, in part:</p>
+            <p>Every court of justice has power…:</p>
+            <p>(3) To provide for the orderly conduct of proceedings
+            before it or its officers.</p>
+            <p>(4) To compel obedience to its judgments, orders and
+            process, and to the orders of a judge out of court, in an
+            action, suit or proceeding pending therein.</p>
+            <p>(5) To control, in furtherance of justice, the conduct of
+            its ministerial officers, and of all other persons in any
+            manner connected with a judicial proceeding before it, in
+            every matter appertaining thereto.</p>
+            <p>Defense counsel should argue that the court has the
+            inherent power to order the witnesses (who are persons
+            connected with a judicial proceeding before it) to not
+            discuss their testimony with each other.</p>
+            <p>Furthermore, the purpose of the exclusion orders clearly
+            authorized by OEC 615 will be undermined if the witnesses
+            are permitted to discuss testimony in the hall outside the
+            courtroom.</p>
+            <h2 id="c._federal_case_law"><strong>C. Federal Case
+            Law</strong></h2>
+            <p>There is a slightly larger body of case law in the
+            federal system containing arguments justifying such a
+            sequestration order. For a short discussion of the federal
+            cases on this issue, a suggested source is <em>Oregon
+            Evidence</em> by Laird Kirkpatrick, at section 615.03[6]
+            (5th ed, 2007).</p>
+            <p>The federal cases focus on the undermining of the
+            purposes of the exclusion order. Defense counsel should
+            argue that the exclusion order can be made meaningless if
+            the witnesses can step from the courtroom and discuss their
+            testimony and the attorney’s lines of questioning with the
+            other witnesses.</p>
+            <h1
+            id="xii._the_rights_of_a_criminal_defendant"><strong>XII.
+            The Rights of a Criminal Defendant</strong></h1>
+            <p>The trial court can refuse counsel an opportunity to
+            consult with the client during a short recess in the trial
+            in the middle of the defendant’s direct examination and
+            before the beginning of cross-examination. <a
+            href="http://scholar.google.com/scholar_case?case=17420669249425667371&amp;q=488+US+272&amp;hl=en&amp;as_sdt=2,38">Perry
+            v. Leeke,</a><a
+            href="http://scholar.google.com/scholar_case?case=17420669249425667371&amp;q=488+US+272&amp;hl=en&amp;as_sdt=2,38">488
+            US 272, 283–84, 109 S Ct 594 (1989)</a>. However, for things
+            like an overnight recess, such an order would
+            unconstitutionally interfere with the defendant’s right to
+            consult with an attorney. <a
+            href="http://scholar.google.com/scholar_case?case=5139143882370725597&amp;q=425+US+80&amp;hl=en&amp;as_sdt=2,38">Geders
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?case=5139143882370725597&amp;q=425+US+80&amp;hl=en&amp;as_sdt=2,38">,
+            425 US 80, 96 S Ct 1330 (1976)</a>.</p>
+            <p>If there is a recess in the trial in the middle of
+            testimony by a witness, defense counsel may want to make a
+            special motion requesting that the prosecutor not discuss
+            testimony or facts of the case with the interrupted witness
+            during the recess.</p>
+            <p>Remember that a sequestration order would likely apply to
+            all witnesses including defense witnesses, so be sure to
+            inform defense witnesses as needed. Counsel should inform
+            defense witnesses that the order applies both inside and
+            outside the courthouse and that they could be courting
+            trouble if they discuss their testimony during a recess.
+            Depending on local courthouse layout and the local
+            neighborhood, a violation of such an order may be witnessed
+            by state witnesses, jurors or even the judge herself.</p>
+            <h1
+            id="xiii._enforcement_and_sanctions_of_exclusion_and_sequestration_orders"><strong>XIII.
+            Enforcement and Sanctions of Exclusion and Sequestration
+            Orders</strong></h1>
+            <h2 id="a._enforcement"><strong>A. Enforcement</strong></h2>
+            <p>Keep in mind that the witnesses need to be informed of
+            exclusion or sequestration orders. Counsel will want to ask
+            the judge to directly address the witnesses and have the
+            court inform the witnesses of the court’s order. This will
+            make a judge more likely to severely sanction any offenders
+            should there be a violation. Such notice also helps avoid
+            any misunderstandings or unintentional violations.</p>
+            <p>The best practical way to help enforce such orders may be
+            to place an observer with the witnesses waiting outside a
+            courtroom. Consider stationing a legal assistant or
+            nonwitness investigator in the hallway to monitor
+            conversations between state witnesses.</p>
+            <h2 id="b._sanctions"><strong>B. Sanctions</strong></h2>
+            <p>Rule 615 does not address the sanctions available for
+            violation of an exclusion order. The appropriate remedies
+            are within the discretion of the trial court, with
+            consideration to be given to whether the witness or parties
+            acted in bad faith and the extent of any resulting
+            prejudice. There is no presumption of prejudice. <a
+            href="http://scholar.google.com/scholar_case?case=12101465528965921911&amp;q=139+Or+App+294&amp;hl=en&amp;as_sdt=2,38">State
+            v. Larson,</a><a
+            href="http://scholar.google.com/scholar_case?case=12101465528965921911&amp;q=139+Or+App+294&amp;hl=en&amp;as_sdt=2,38">139
+            Or App 294, 911 P2d 953 (1996)</a>.</p>
+            <p>Counsel should suggest possible sanctions and request
+            that the court:</p>
+            <p>• refuse to allow the witness to testify;</p>
+            <p>• declare a mistrial;</p>
+            <p>• allow the violation to be brought out on
+            cross-examination of the witness;</p>
+            <p>• instruct the jury to weigh the credibility of the
+            witness in light of the witness’s knowledge of earlier trial
+            testimony;</p>
+            <p>• hold the witness in contempt.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?case=15045771437968205507&amp;q=295+Or+1&amp;hl=en&amp;as_sdt=2,38">State
+            v. Burdge</a>, the court noted that the sanction of
+            precluding a witness’s testimony in a criminal case was “too
+            grave a sanction” when the violation “was not intentional
+            and not procured by a connivance of counsel.” 295 Or at 14.
+            The court, also, stated that the trial court should review
+            its sanction options “in an escalating manner, first
+            considering whether contempt is a sufficient sanction, or
+            proceeding by instructing the jury as to the witness’s
+            violation of the order or, ultimately, the preclusion
+            sanction.” <em>Id.</em> at 15 n 11.</p>
+            <h1
+            id="xiv._preservation_of_error_and_final_note"><strong>XIV.
+            Preservation of Error and Final Note</strong></h1>
+            <p>Motions in limine are limited only by the rules of
+            evidence and the imagination of the moving attorney. If
+            there is a basis for exclusion of evidence, a defense
+            attorney can ask for exclusion through a motion in
+            limine.</p>
+            <p>If it is the defense’s own evidence that is excluded by a
+            preliminary motion in limine, be sure to make an offer of
+            proof to preserve the record for appeal. <a
+            href="http://scholar.google.com/scholar_case?case=2197181167717048409&amp;q=315+Or+292&amp;hl=en&amp;as_sdt=2,38">State
+            v. Busby,</a><a
+            href="http://scholar.google.com/scholar_case?case=2197181167717048409&amp;q=315+Or+292&amp;hl=en&amp;as_sdt=2,38">315
+            Or 292, 298-300, 844 P2d 897 (1993)</a>. See also Chapter
+            11, Making a Record and Offers of Proof.</p>
+            <p>Perhaps the most valuable use of a motion in limine is
+            that it avoids the jury hearing objections to evidence that
+            should be excluded, therefore the evidence is not
+            highlighted for them. If the motion is granted, the jury
+            does not hear the evidence. If it is denied, nothing is
+            lost, you just make the objection at trial. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?case=17199979887202295060&amp;q=296+Or+174&amp;hl=en&amp;as_sdt=2,38">State
+            v. Foster,</a><a
+            href="http://scholar.google.com/scholar_case?case=17199979887202295060&amp;q=296+Or+174&amp;hl=en&amp;as_sdt=2,38">296
+            Or 174, 182, 674 P2d 587 (1983)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=6077557752853540683&amp;q=298+Or+336&amp;hl=en&amp;as_sdt=2,38">State
+            v. McClure</a><a
+            href="http://scholar.google.com/scholar_case?case=6077557752853540683&amp;q=298+Or+336&amp;hl=en&amp;as_sdt=2,38">,
+            298 Or 336, 338–41, 692 P2d 579 (1984)</a>.</p>
+            <p>'=<em>XV. Additional Resources</em>'=</p>
+            <p><a
+            href="https://www.nacdl.org/Champion.aspx?id=16258&amp;terms=taint+hearing">Ashish
+            S. Joshi, “Taint Hearing: Scientific and Legal
+            Underpinnings,”</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=16258&amp;terms=taint+hearing">The
+            Champion</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=16258&amp;terms=taint+hearing">,
+            November 2010</a>.</p>
+            <center>
+            <p>This chapter originally prepared for the 1993 edition
+            by</p>
+            </center>
+            <center>
+            <p>Bob Homan, Public Defense Services of Lane County,
+            Eugene.</p>
+            </center>
+            <center>
+            <p>Updating and editing for the 2000 edition by Bob
+            Homan.</p>
+            </center>
+    </body>
+</html>

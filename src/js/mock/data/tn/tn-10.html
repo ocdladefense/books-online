@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </header>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 10. Cross-Examination</strong></p>
+            <p>By Bob Thuemmel'''<a href="#fn1" class="footnote-ref"
+            id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+            <p>This cross-examination section of the <em>OCDLA Trial
+            Notebook</em> has been broken down into two parts. You will
+            find the substantive law on cross-examination following this
+            section.</p>
+            <p>This section deals with the “practical tips” of
+            cross-examination. It has been written with the
+            less-experienced trial lawyer in mind, though it will
+            contain a tip or a reminder for the more seasoned. It only
+            represents things that I have learned and that work for me,
+            gathered over many years of mistakes and many trials and
+            errors.</p>
+            <p>In thinking about cross-examination, the following tips
+            come to mind.</p>
+            <h1 id="i._plan_your_cross_examination_carefully"><strong>I.
+            Plan Your Cross Examination Carefully</strong></h1>
+            <p>This first tip may be the most important one of all. Plan
+            your cross-examination in upcoming trials more carefully
+            than any other part of the trial. Not only does this help
+            organize what it is you want do, but it forces you to get to
+            know the testimony of the state’s witnesses inside and out.
+            Write yourself an outline. Some of us use notes in
+            cross-examination, some of us don’t. Even if you don’t use
+            notes, make yourself notes showing you a map of where you
+            want your cross to go and why you want to get there.</p>
+            <p>Many experienced lawyers will admit that for every hour
+            they spend in preparing for trial, they spend at least 45
+            minutes of that hour planning out cross-examination. It is
+            that important.</p>
+            <h1 id="ii._why_are_you_asking_that_question"><strong>II.
+            Why Are You Asking That Question?</strong></h1>
+            <p>In many ways this can be just as important as your
+            outline. For every question you want to ask on cross, ask
+            yourself, “Why am I asking that question?”</p>
+            <p>Cross-examination should accomplish a few basic things.
+            Hopefully, it should help to:</p>
+            <p>Discredit the witness and impeach the testimony given on
+            direct</p>
+            <p>Produce your client’s version of events and/or your
+            theory of defense</p>
+            <p>Create doubt about the state’s case.</p>
+            <p>Cross-examination is not the time to show the jury that
+            you are a smart or clever lawyer. In today’s jury climate,
+            getting and maintaining the trust of members of the jury is
+            a critical thing for the defense attorney to do. If
+            cross-examination questions are not carefully designed to
+            get to the issues that are important in the case, you can
+            hurt yourself in your effort to connect with the jury.</p>
+            <h1 id="iii._less_is_more"><strong>III. Less Is
+            More</strong></h1>
+            <p>Many lawyers find that the more trials they have done,
+            the fewer questions they will ask on cross-examination.
+            After a while, you will go in with questions only on where
+            you want or need to go, and you won’t spend time on things
+            you don’t need to ask. But this comes only from experience.
+            The more you do this work, the more refined your sense of
+            where you are going in cross will become.</p>
+            <p>This is not to say that you shouldn’t take your time and
+            be thorough in all the areas that are important to your
+            case. You should take all the time you need to do that,
+            including repeating some questions with a slightly different
+            spin to emphasize the answer you are getting. But going to
+            areas where you don’t need to go is an obvious waste of
+            time. Example: “Officer, you are getting paid overtime for
+            being here today, aren’t you? So these trials are good for
+            you because they increase your salary, don’t they?”</p>
+            <p>Remember, too, that with some witnesses, you should not
+            be afraid to say the two magic words: “No questions.” Before
+            beginning the cross of a minor witness in the state’s case,
+            you should always ask yourself:</p>
+            <p>Did this witness say anything that hurts my case?</p>
+            <p>Can I get them to say anything at all that would be
+            helpful to my case?</p>
+            <p>If the answers to both are “no,” then don’t cross-examine
+            the witness. If you do, you may find yourself wading into an
+            area of testimony you really wish you hadn’t opened up.
+            Everyone who has tried a case has had this happen to them,
+            and it can be uncomfortable!</p>
+            <h1 id="iv._make_it_interesting"><strong>IV. Make It
+            Interesting</strong></h1>
+            <p>Many times, jurors will be bored by the routine and
+            monotone presentation of the state’s case. Prosecution trial
+            mechanics can be downright boring, and jurors can easily
+            fall into that mood. That’s when it becomes your job to pick
+            up the pace and make it interesting.</p>
+            <p>You should feel like it is your duty to make your
+            cross-examination interesting to those people who are stuck
+            in the box, getting paid $10 per day to listen to what you
+            have to say. Keep it lively whenever you can, assuming the
+            subject matter provides for that. Keep it human, and down to
+            earth, and relatively friendly whenever you can. Give the
+            jurors a reason to sit up and pay attention. Of course,
+            every trial lawyer has to develop their own style of
+            courtroom presence. Remember, this stage of the trial should
+            be interesting.</p>
+            <h1 id="v._its_your_courtroom_control_it"><strong>V. It’s
+            Your Courtroom, Control It</strong></h1>
+            <p>When it’s time for cross-examination, you are in charge.
+            This doesn’t mean you should disregard courtroom protocol,
+            or wrestle for control with the trial judge or the deputy
+            district attorney, you should not. It does mean, however,
+            that you can and should control the witness on the
+            stand.</p>
+            <p>The best cop in the world may well be a good police
+            officer out on the street. She knows how to develop probable
+            cause, knows how to interview eyewitnesses, knows how to
+            fill out a search warrant affidavit, or knows how to conduct
+            field sobriety tests. But when that officer goes into a
+            courtroom and becomes a witness and when it comes time to
+            cross-examine her, she is not in control of how that goes,
+            you are.</p>
+            <p>This may seem easier said than done. But with some
+            practice, it gets easier to do. In order to do it, first of
+            all get back to your outline. An experienced trial attorney
+            will have a v-e-r-y skillful police witness on the stand
+            saying some very damaging things about their clients. The
+            conversation in those lawyers’ heads will go something like
+            this: “Boy, this guy is good! How am I going to lay a glove
+            on him?” The answer is usually: stick with your game plan.
+            When it is your turn, don’t feel that you need to begin your
+            cross by running around throwing water on the fires that the
+            witness started with his direct testimony. That is usually a
+            disorganized way to attack the witness. Worse, it can give
+            the clear message that you are upset and struggling with
+            what the witness has just been saying. You don’t want to do
+            that. Some of us feel that the old adage “never let ’em see
+            you sweat” applies with greater force in a courtroom. When a
+            witness has just spent some time clobbering your client,
+            start your cross by going exactly where you wanted to start
+            when you prepared your cross-examination. What was important
+            to you when you planned this all out in your office is still
+            important to you, and you’ll find ways of dealing with any
+            new issues that were brought up on direct. You should not be
+            “chained” to your planned cross, but you shouldn’t throw it
+            out and just start taking jabs at a witness who was
+            effective against your client. It will not work.</p>
+            <h1
+            id="vi._have_the_witness_answer_your_questions"><strong>VI.
+            Have the Witness Answer Your Questions</strong></h1>
+            <p>This tip is about control of the cross-examination in
+            your trial. The other way of saying this is: don’t let the
+            witness use your question as the place to give the speech
+            that he or she wants to make instead of answering your
+            question.</p>
+            <p>It seems so often these days that we see witnesses who
+            come into court “loaded for bear,” and by that I mean
+            witnesses who want to take it upon themselves to speak out
+            forcefully in favor of their position regardless of what
+            they are being asked. Their answers are non-responsive, and
+            pretty repetitive. They look at every one of your questions
+            as an opportunity to slip in a mini-argument about the
+            strength of their case.</p>
+            <p>You have to develop your own ways of dealing with this.
+            It depends on the style that you use in the courtroom.
+            However, there are some basic pointers that you can use,
+            such as:</p>
+            <p>Always bring the witness back to your question. Ask it
+            again. Ask the witness if he understands the question. Ask
+            the witness if they can answer the question. Then, ask them
+            for the answer.</p>
+            <p>Repeat this each time the witness wants to “go off” in
+            his own direction. Soon, you may find that the witness is
+            taking your lead on cross a little more than they were at
+            the outset.</p>
+            <p>If necessary, ask the judge to remind the witness to be
+            responsive to your questions.</p>
+            <p>Allow the jury time to see what’s going on. Most of them
+            will not appreciate it. I will often say, “Mr. Officer, I am
+            not here to waste the jury’s time and, hopefully, neither
+            are you. Is there some reason you are not able to give us an
+            answer to the question that I have asked you?” I have found
+            this approach often gets the job done, and you may discover
+            the witness is now responding directly to your questions and
+            the rest of the cross will go just as you want.</p>
+            <h1
+            id="vii._nail_the_witness_down_on_everything_they_have_written_about_the_case"><strong>VII.
+            Nail the Witness Down on Everything They Have Written About
+            the Case</strong></h1>
+            <p>It stands to reason that a person’s memory and reports
+            near the time of an event will be better and more
+            comprehensive than what they are saying now, months or years
+            later. I begin every cross-examination by referring to
+            police reports, telling jurors through the witness what they
+            are, having the witness agree with me that they tried to
+            write down everything important at the time and that they
+            have been trained to write comprehensive reports. I will
+            then get the witness (usually police witnesses) to agree
+            with this: “Without the reports in front of you, you can’t
+            even tell us the name of another person that you dealt with
+            in the month of (month of your client’s arrest), can you
+            officer?” They will always answer, “Nope, not without some
+            reports in front of me, I can’t.” When that happens, the
+            jury knows that police reports are important to police
+            witnesses and any discrepancies, omissions, or “recently
+            developed memory pieces” from this witness may be a little
+            suspect. You have effectively set the stage for those things
+            as you go into the rest of your cross.</p>
+            <p>Another variation will take place in multi-cop cases
+            where only one has written a report. When the non-writing
+            officer is on the witness stand, she will generally have
+            papers with her. I will begin my cross, knowing that this
+            witness has no notes or report of her own, by asking the
+            following:</p>
+            <p>“What’s that in front of you?”</p>
+            <p>The answer will be, “That’s Officer Jones’ police
+            report”—the primary, report-writing officer.</p>
+            <p>“Where’s your report?”</p>
+            <p>“I didn’t write one.”</p>
+            <p>“I’ve read Officer Jones’ report, there are no quotes
+            from you in that report, are there?”</p>
+            <p>“No.”</p>
+            <p>“You have a notebook. You sometimes make notes in the
+            field that do not turn into police reports? You keep your
+            notebooks? So...where are your notes?” (Of course by this
+            time, you know there are no notes!)</p>
+            <p>Here, your mission is to show the jury that this witness
+            is only giving them what Jones thinks about the case, and
+            they have already heard from Jones. This makes the jury
+            wonder about the testimony of the non-reporting officer that
+            is helpful to you.</p>
+            <h1 id="viii._common_beginner_mistakes"><strong>VIII. Common
+            Beginner Mistakes</strong></h1>
+            <p>If you were to survey deputy district attorneys and
+            judges, asking them, “What is the most common mistake made
+            by defense attorneys on cross-examination?” the answer would
+            be the same: “Most defense attorneys just go over and over
+            what the state has brought out on direct, hurting their
+            case.” You want to avoid that, even taking the “no
+            questions” approach if your only option with the witness is
+            to elicit something not helpful. Hopefully your organization
+            and use of your outline as a roadmap for your cross will
+            help you.</p>
+            <p>Another mistake is not listening. Often, lawyers will get
+            so caught up in what they are doing that they will forget to
+            l-i-s-t-e-n to what is happening from the witness stand.
+            This is a skill that we all need to work at improving all
+            the time. It is the skill that is the most important one a
+            lawyer can have.</p>
+            <h1
+            id="ix._know_the_rules_of_impeachment_and_dont_get_caught_up_in_them"><strong>IX.
+            Know the Rules of Impeachment and Don’t Get Caught Up in
+            Them</strong></h1>
+            <p>If you want to use a prior inconsistent statement, or a
+            treatise, or prior testimony, or impeach from the police
+            report or the manual by which this officer was trained: Know
+            how to do it. The mechanics involved in these skills should
+            come automatically to you as a courtroom trial lawyer, and
+            if you have any questions about them, relearn them from the
+            books you learned them from originally, or just sit and
+            practice with some friends. Do them often enough that doing
+            them is routine. You do not want to be caught on the wrong
+            side of an “improper foundation” argument or objection in
+            front of the jury.</p>
+            <h1 id="x._why_ask_why"><strong>X. Why Ask
+            Why?</strong></h1>
+            <p>Probably the most often overlooked rule in
+            cross-examination is this one. We risk getting carried away
+            in what we are trying to do, and if we’re not careful we can
+            venture into the most dangerous area in all of
+            cross-examination: the open-ended question. This can be your
+            own courtroom death sentence, and most skilled witnesses
+            will do everything they can to make it just that:</p>
+            <p>“So, Officer, you wanted to be completely thorough in
+            your investigation of this burglary, didn’t you? Why then
+            did you not give my client even the chance to explain to you
+            what you thought were suspicious circumstances before you
+            simply arrested him?”</p>
+            <p>“Counselor, I’ve been doing my job for 20 years. I don’t
+            like arresting people unless I am completely convinced that
+            they are guilty. In fact, I often lie awake at night
+            tormented about the possibility of an innocent person being
+            wrongly convicted, so because of that I am always so careful
+            in my investigations. And so far in my long career, I have
+            never testified against an innocent person, thank God. In
+            this case, among all the cases I have handled, the evidence
+            was simply overwhelming. And again, the reason I say that is
+            because of these things...”</p>
+            <p>You get the point. If cross-examination is about
+            controlling the witness and taking him where you want him to
+            go, it never makes sense to let him off the lead to go where
+            he wants to go. You will always regret it, because the
+            skillful witness will always take the chance to run away
+            from you and make you sorry you are a lawyer in that
+            courtroom.</p>
+            <p>There is only one time that you can get away from this
+            rule, and that is when you have effectively set the stage
+            for the “any answer helps” opportunity. By that I mean when
+            you are in a position to gain advantage from any direction
+            the witness wants to go in his answer. “Do you agree a
+            witness should always be truthful?” This is a good example
+            of an open-ended question that can rarely hurt you. There
+            aren’t many answers to that which hurt you. But before you
+            give a witness the floor on an open-ended or a “why”
+            question, stand back and imagine all the ways that they
+            could feed you an answer you would choke on. If you can
+            think of a way, so can they.</p>
+            <p>So always stay away from the open-ended or “why” question
+            on cross. Remind yourself again and again of this rule. You
+            only want to get out in cross what you want to get out.
+            Don’t hand the witness the microphone and essentially say,
+            “Go ahead, say the worst thing you can think of against my
+            client and it’s okay if you make me look foolish while
+            you’re doing it, too.”</p>
+            <h1
+            id="xi._what_to_do_when_you_dont_know_what_to_do"><strong>XI.
+            What To Do When You Don’t Know What To Do</strong></h1>
+            <p>As lawyers begin trying more cases, they often run into a
+            major witness for the state and they don’t know what to ask.
+            “I need to impeach this witness; what can I ask?”</p>
+            <p>In this situation, there are some basic areas that will
+            often help your case. Some of them include:</p>
+            <p>Take a look at the charges your client is facing. Imagine
+            all of the things that a person who was guilty of that crime
+            would do, or would say, or would have with them—all the
+            things you’d expect to be in that type of a case. Now, make
+            a list of the pieces that are missing in your case. Work
+            them into your outline of cross-examination and ask the
+            witness about the pieces that are not there.</p>
+            <p>What do you think an arsonist/burglar/drunk driver should
+            be like? What should they have with them? What
+            characteristics would they typically have? What is the
+            picture you see of that person when you close your eyes and
+            imagine them? Jot down all of your observations, then go
+            back through the police reports and see if those pieces are
+            present in your case. If not, you will want to exploit their
+            absence by pointing it out to the jury, since many of them
+            have the same expectations, too.</p>
+            <p>Defense attorneys everywhere have noticed that juries
+            today are expecting more of the state’s case because they
+            watch TV shows that are takeoffs on police science and
+            detective work, and they learn from those programs to expect
+            a lot from police investigations. We should use these
+            expectations in the courtroom.</p>
+            <p>It is never a waste of time in a courtroom to carefully
+            inquire into the parts of the investigation that are
+            missing, or are lacking, or did not happen, or got lost or
+            misplaced, or can’t be retested or re-examined for some
+            reason. Most jurors have a “limit” to how shoddy an
+            investigation is that they are willing to put up with, and
+            if your case can be shown to fall at or below that limit
+            your chances of an acquittal go up. Think carefully about
+            ways to demonstrate that the police work in this case was
+            not what people can normally expect, and frame your
+            questions to lead the witness through the topic. Remember,
+            you do not want to let the witness simply explain as they go
+            why things are not up to snuff.</p>
+            <p>Talk up your case. One of the lawyers I have admired most
+            along the way once told me, “Every time you talk to somebody
+            about your case, you learn something about it.” That
+            observation has proven itself true time and time again over
+            the years. Sit down with your friends, colleagues, family
+            members—anybody who will listen—and talk about your case.
+            You will get fresh insight into the weaknesses of the
+            state’s case. You can get ideas on why your case is strong
+            and of new things that you will want to cross-examine on. It
+            is never a waste of time to run your case past as many
+            people as you can when trial approaches and when it’s time
+            to plan out your cross-examination. This is very helpful to
+            you when you are making your mental list of the “things that
+            are not in the reports” as suggested above. You’ll be
+            surprised by the gems others will give you. Hopefully, you
+            have the chance to bounce your case off of as many
+            non-lawyers as possible.</p>
+            <h1 id="xii._anger_use_sparingly"><strong>XII. Anger: Use
+            Sparingly</strong></h1>
+            <p>When we prepare our cases for trial, we get to know the
+            facts very well. Often, we know some of the state’s
+            witnesses, and we come to know their characteristics in and
+            out of the courtroom. We learn to see subtle nuances or
+            inconsistencies in the evidence, or in procedures used, or
+            in statements made in reports or from the stand. Many of
+            those things can make us mad, convinced that we have a
+            lying, or at least an exaggerating, witness on our hands and
+            that it is our job to expose them to the jury for what they
+            are. How do you do it?</p>
+            <p>One of the best tips I ever got on this subject was to
+            “not get mad at a witness in the courtroom until every juror
+            knows why you are getting mad.” This means, before you show
+            your feelings, contempt for the person or the evidence that
+            you believe is false, lay the groundwork. Jurors want to
+            assume the best about every witness who comes in front of
+            them in the state’s case. That’s a given. It is ingrained in
+            the system we work in. If you go off on a mission in
+            cross-examination starting with your contempt for the person
+            on the stand, you will lose jurors. They will decide early
+            that you are picking on a witness for no reason and turn you
+            off. On the other hand, if the jurors can “connect the dots”
+            on the inconsistencies, or sloppy police work, or suspect
+            testimony, those parts that make you angry, then they may
+            well react to it the same way you do. They may disbelieve
+            and reject not just that evidence, but other things the
+            witness says. It is your job to slowly lay out the
+            groundwork to expose the fabrication or inconsistency.
+            Remember that many of the things we react to are very subtle
+            nuances in the testimony, things that lay people might not
+            ordinarily see or be concerned with. It becomes the trial
+            lawyer’s job to point them out, to point out the
+            significance of them and what they say about the evidence
+            brought to court by the witness.</p>
+            <p>Be slow and cautious before revealing distaste for the
+            witness or what the witness is trying to accomplish in
+            court. If you show your feelings at the right time, it can
+            be very effective. If you do it too early, it can cost you
+            your bond with the jury.</p>
+            <h1 id="xiii._conclusion"><strong>XIII.
+            Conclusion</strong></h1>
+            <p>The topic of cross-examination is overwhelming and there
+            are shelves full of books written on it. I recommend many of
+            those to you if you would like to learn more, but most of
+            all I recommend doing cross-examination as often as you can.
+            Try your cases whenever possible, cross-examine as much as
+            possible, try as many new approaches as you can and, sure,
+            make your own mistakes. You can not cross-examine without
+            making a few mistakes. I hope the ideas presented have been
+            useful to you in your effort to become a skilled trial
+            lawyer. They are not intended to be a treatise on the
+            subject, but I hope they can be a working outline for you as
+            you refine your skills and habits in the courtroom. Good
+            luck.</p>
+            <h1 id="cross_examinationsubstantive_case_law"><strong>Cross
+            Examination—Substantive Case Law</strong></h1>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>In preparing for trial, defense counsel should know the
+            statutory and constitutional law supporting the right to
+            cross-examine witnesses. The statutory right lies primarily
+            in Article VI of the <a
+            href="http://www.oregonlaws.org/ors/chapter/40">Oregon
+            Evidence Code</a>. The constitutional right to confrontation
+            of witnesses comes from Article I, section 11, of the <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution</a> and in the [#amendmentvi Sixth Amendment]
+            to the <a
+            href="http://www.law.cornell.edu/constitution/">United
+            States Constitution</a>. Kirkpatrick’s Oregon Evidence (5th
+            ed., 2011) is the best resource for state evidentiary law.
+            For federal authority, the most useful treatise is
+            <em>Weinstein’s Federal Evidence</em> (Weinstein, et al,
+            Matthew Bender &amp; Co: 1997). A discussion of prior
+            inconsistent statements may be found at the end of this
+            chapter.</p>
+            <p>The Library of Defense also has a section on Cross
+            Examination:</p>
+            <p><a
+            href="https://libraryofdefense.org/legal/cross"><span>https://libraryofdefense.org/legal/cross</span></a></p>
+            <h1 id="ii._scope_of_cross_examination"><strong>II. Scope of
+            Cross-Examination</strong></h1>
+            <h2 id="a._oregon_evidence_code"><strong>A. Oregon Evidence
+            Code</strong></h2>
+            <p><a href="http://www.oregonlaws.org/ors/40.370">Rule
+            611</a> generally limits the scope of cross-examination to
+            the subject matter of the direct exam and matters affecting
+            credibility of the witness.</p>
+            <h2
+            id="b._federal_constitutional_right_of_cross_examination_bias_and_interest"><strong>B.
+            Federal Constitutional Right of Cross-Examination; Bias and
+            Interest</strong></h2>
+            <p>1. In <a
+            href="http://scholar.google.com/scholar_case?q=Davis+v+Alaska&amp;hl=en&amp;as_sdt=2,38&amp;case=10881744166851417695&amp;scilh=0">Davis
+            v. Alaska</a><a
+            href="http://scholar.google.com/scholar_case?q=Davis+v+Alaska&amp;hl=en&amp;as_sdt=2,38&amp;case=10881744166851417695&amp;scilh=0">,
+            415 U.S. 308, 94 S Ct 1105, 39 L Ed2d 347 (1974)</a>, the
+            Court rendered its seminal pronouncement on the right to
+            cross-examine: Cross-examination is the principal means by
+            which the believability of a witness and the truth of his
+            testimony are tested. Subject always to the broad discretion
+            of a trial judge to preclude repetitive and unduly harassing
+            interrogation, the cross-examiner has traditionally been
+            allowed to impeach, i.e., discredit, the witness… A more
+            particular attack on the witness’s credibility is effected
+            by means of cross-examination directed toward revealing
+            possible biases, prejudices, or ulterior motives of the
+            witness as they may relate directly to issues or
+            personalities in the case at hand. The partiality of a
+            witness is subject to exploration at trial, and is always
+            relevant as discrediting the witness and affecting the
+            weight of his testimony. … We have recognized that the
+            exposure of a witness’s motivation in testifying is a proper
+            and important function of the constitutionally protected
+            right of cross-examination.</p>
+            <p><em>Id</em>. at 316, 94 S Ct at 1110 (citation
+            omitted).</p>
+            <p>2. The right to cross-examination includes
+            cross-examination about the witness’s plea-bargain. <a
+            href="http://scholar.google.com/scholar_case?q=Delaware+v+Van+Arsdall&amp;hl=en&amp;as_sdt=2,38&amp;case=7503274425707437064&amp;scilh=0">Delaware
+            v. Van Arsdall</a><a
+            href="http://scholar.google.com/scholar_case?q=Delaware+v+Van+Arsdall&amp;hl=en&amp;as_sdt=2,38&amp;case=7503274425707437064&amp;scilh=0">,
+            475 U.S. 673, 106 S Ct 1431, 89 L Ed2d 674 (1986)</a>;
+            Weinstein’s Federal Evidence at 607[03]). 3.The right to
+            cross-examination is satisfied by an opportunity to ask
+            questions, regardless of whether the witness is able to
+            answer. <a
+            href="http://scholar.google.com/scholar_case?q=US+v+owens&amp;hl=en&amp;as_sdt=2,38&amp;case=224477948605740836&amp;scilh=0">United
+            States v. Owens</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+owens&amp;hl=en&amp;as_sdt=2,38&amp;case=224477948605740836&amp;scilh=0">,
+            484 U.S. 554, 108 S Ct 838, 98 L Ed2d 951 (1988)</a>
+            (admission of testimony concerning prior, out-of-court
+            identification by witness unable to explain its basis
+            because of memory loss held not to violate Sixth Amendment
+            Confrontation Clause, which protects the “opportunity” to
+            cross-examine). 4. <a
+            href="http://scholar.google.com/scholar_case?q=olden+v+kentucky&amp;hl=en&amp;as_sdt=2,38&amp;case=15928010167740215357&amp;scilh=0">Olden
+            v. Kentucky</a><a
+            href="http://scholar.google.com/scholar_case?q=olden+v+kentucky&amp;hl=en&amp;as_sdt=2,38&amp;case=15928010167740215357&amp;scilh=0">,
+            488 U.S. 227, 109 S Ct 480, 102 L Ed2d 513 (1988)</a> (trial
+            court’s limitation on cross-examination, in sexual assault
+            case, as to cohabitation of complaining witness with third
+            party at time of trial violated the defendant’s Sixth
+            Amendment right of confrontation, and was not harmless
+            error). Olden is an extremely important case! 5. “[E]xposing
+            a witness’s reasons for fabrication in a specific case is at
+            the heart of the Confrontation Clause.” <a
+            href="http://scholar.google.com/scholar_case?q=sussman+v+jenkins&amp;hl=en&amp;as_sdt=2,38&amp;case=18092958089071639571&amp;scilh=0">Sussman
+            v. Jenkins</a><a
+            href="http://scholar.google.com/scholar_case?q=sussman+v+jenkins&amp;hl=en&amp;as_sdt=2,38&amp;case=18092958089071639571&amp;scilh=0">,
+            636 F3d 329, 353 (7</a><a
+            href="http://scholar.google.com/scholar_case?q=sussman+v+jenkins&amp;hl=en&amp;as_sdt=2,38&amp;case=18092958089071639571&amp;scilh=0">th</a><a
+            href="http://scholar.google.com/scholar_case?q=sussman+v+jenkins&amp;hl=en&amp;as_sdt=2,38&amp;case=18092958089071639571&amp;scilh=0">Cir.
+            2011)</a>. 6. <a
+            href="http://scholar.google.com/scholar_case?q=us+v+abel&amp;hl=en&amp;as_sdt=3,38&amp;case=1992297944682528264&amp;scilh=0">United
+            States v. Abel</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+abel&amp;hl=en&amp;as_sdt=3,38&amp;case=1992297944682528264&amp;scilh=0">,
+            469 U.S. 45, 52, 105 S Ct 465, 83 L Ed2d 450 (1984)</a>.
+            (“Proof of bias is almost always relevant because the jury,
+            as finder of fact and weigher of credibility, has
+            historically been entitled to assess all evidence which
+            might bear on the accuracy and truth of a witness’s
+            testimony.”) 7. When a “star” government witness is
+            involved, the importance of cross-examination is amplified.
+            <a
+            href="http://scholar.google.com/scholar_case?q=us+v+wesevich&amp;hl=en&amp;as_sdt=3,38&amp;case=7859411688624420350&amp;scilh=0">United
+            States v. Wesevich</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+wesevich&amp;hl=en&amp;as_sdt=3,38&amp;case=7859411688624420350&amp;scilh=0">,
+            666 F2d 984 (5th Cir. 1982)</a>. See also <a
+            href="http://scholar.google.com/scholar_case?q=us+v+morales-quinones&amp;hl=en&amp;as_sdt=3,38&amp;case=9920378959937207621&amp;scilh=0">United
+            States v. Morales-Quinones</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+morales-quinones&amp;hl=en&amp;as_sdt=3,38&amp;case=9920378959937207621&amp;scilh=0">,
+            812 F2d 604 (10th Cir. 1987)</a> (where the testimony of a
+            witness is crucial to the government’s case, the defendant
+            has a right to attack the witness’s credibility by a
+            wide-ranging cross-examination). 8. Evidence that a
+            prosecution witness is subject to reindictment by
+            prosecution is probative of potential bias, and is therefore
+            a proper subject of cross-examination under the
+            confrontation clause, even without evidence of a cooperation
+            agreement. <a
+            href="http://scholar.google.com/scholar_case?q=us+v+anderson&amp;hl=en&amp;as_sdt=4,77,130,140&amp;case=12647647077986048452&amp;scilh=0">United
+            States v. Anderson</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+anderson&amp;hl=en&amp;as_sdt=4,77,130,140&amp;case=12647647077986048452&amp;scilh=0">,
+            881 F2d 1128 (D.C. Circuit 1989)</a>.</p>
+            <h2
+            id="c._the_oregon_constitution_and_the_right_to_confrontationarticle_i_section_11"><strong>C.
+            The Oregon Constitution and the Right to
+            Confrontation—Article I, Section 11</strong></h2>
+            <p>1.The right to confrontation guaranteed to a criminal
+            defendant by the Oregon Constitution includes the right to
+            engage in effective cross-examination. <a
+            href="http://scholar.google.com/scholar_case?q=kitzman&amp;hl=en&amp;as_sdt=4,38&amp;case=1738248540239676021&amp;scilh=0">State
+            v. Kitzman</a><a
+            href="http://scholar.google.com/scholar_case?q=kitzman&amp;hl=en&amp;as_sdt=4,38&amp;case=1738248540239676021&amp;scilh=0">,
+            323 Or 589, 920 P2d 734 (1996)</a>. 2. The leading Oregon
+            case adopting the rule of <a
+            href="http://scholar.google.com/scholar_case?q=Davis+v+Alaska&amp;hl=en&amp;as_sdt=2,38&amp;case=10881744166851417695&amp;scilh=0">Davis
+            v. Alaska</a> is <a
+            href="http://scholar.google.com/scholar_case?q=hubbard&amp;hl=en&amp;as_sdt=4,38&amp;case=10478035907161230734&amp;scilh=0">State
+            v. Hubbard</a><a
+            href="http://scholar.google.com/scholar_case?q=hubbard&amp;hl=en&amp;as_sdt=4,38&amp;case=10478035907161230734&amp;scilh=0">,
+            297 Or 789, 688 P2d 1311 (1984)</a>. Hubbard holds that:
+            “The discretion of the trial judge to control the scope of
+            cross-examination pursuant to OEC 611(2) does not allow the
+            exclusion of evidence offered to impeach a witness for bias
+            or interest.” Id. at 799. The Hubbard court further stated
+            that the defendant has great latitude in cross-examining a
+            prosecution witness, particularly in cases where the witness
+            and the defendant give sharply conflicting accounts of the
+            facts and the outcome of the case rests heavily on the
+            credibility of witnesses. Id. at 794. <a
+            href="http://scholar.google.com/scholar_case?q=150+or+app+194&amp;hl=en&amp;as_sdt=4,38&amp;case=5184003428930334073&amp;scilh=0">State
+            v. Najibi</a><a
+            href="http://scholar.google.com/scholar_case?q=150+or+app+194&amp;hl=en&amp;as_sdt=4,38&amp;case=5184003428930334073&amp;scilh=0">,
+            150 Or App 194, 945 P2d 1093 (1997)</a>, continues the rule
+            requiring considerable latitude when cross-examining a
+            prosecution witness for bias or interest.</p>
+            <p>Beware of the appellate trend toward harmless error.
+            Curtailing the defense cross-examination may be harmless if
+            the jury had an adequate opportunity to assess witness
+            credibility, or if witness credibility was not important to
+            the outcome. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+titus&amp;hl=en&amp;as_sdt=4,38&amp;case=1361524093561498765&amp;scilh=0">State
+            v. Titus</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+titus&amp;hl=en&amp;as_sdt=4,38&amp;case=1361524093561498765&amp;scilh=0">,
+            328 Or 475, 982 P2d 1133 (1999)</a>; <em>State v. Najibi,
+            supra</em>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>Obviously the right to confront witnesses has been
+            expanded greatly by the United States Supreme Court’s
+            decision <a
+            href="http://scholar.google.com/scholar_case?q=crawford&amp;hl=en&amp;as_sdt=3,38&amp;case=7792517891204110362&amp;scilh=0">Crawford
+            v. Washington</a><a
+            href="http://scholar.google.com/scholar_case?q=crawford&amp;hl=en&amp;as_sdt=3,38&amp;case=7792517891204110362&amp;scilh=0">,
+            541 US 36, 124 S Ct 1354, 158 LE2d 177 (2004)</a>. The
+            principle overturning the Roberts analysis under the Sixth
+            Amendment to the United States Constitution for hearsay
+            statements was applied in Oregon in <a
+            href="http://scholar.google.com/scholar_case?q=state+v+page&amp;hl=en&amp;as_sdt=4,38&amp;case=1068434837933695198&amp;scilh=0">State
+            v. Page</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+page&amp;hl=en&amp;as_sdt=4,38&amp;case=1068434837933695198&amp;scilh=0">,
+            197 Or App 72, 104 P3d 616 (2005),</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+page&amp;hl=en&amp;as_sdt=4,38&amp;case=1068434837933695198&amp;scilh=0">rev
+            denied</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+page&amp;hl=en&amp;as_sdt=4,38&amp;case=1068434837933695198&amp;scilh=0">,
+            340 Or 673 (2006)</a>. Counsel should keep abreast of the
+            ever changing law around the right to confront witnesses in
+            Oregon. Further, counsel should make all objections under
+            the state and federal confrontation clauses in light of the
+            Oregon State Supreme Court’s decision in <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cook&amp;hl=en&amp;as_sdt=4,38&amp;case=9161167924142897205&amp;scilh=0">State
+            v. Cook</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cook&amp;hl=en&amp;as_sdt=4,38&amp;case=9161167924142897205&amp;scilh=0">,
+            340 Or 530, 135 P3d 260 (2006)</a> upholding the Roberts
+            analysis for hearsay under the Oregon constitutional
+            analysis under Article I, §11.</p>
+            <h2
+            id="d._confrontation_in_non_criminal_proceedings"><strong>D.
+            Confrontation in non-criminal proceedings</strong></h2>
+            <p>The constitutional rights to confrontation and compulsory
+            process only apply in criminal trials. Similar, albeit
+            reduced, rights exist in DMV hearings (<a
+            href="http://scholar.google.com/scholar_case?q=cole+dinsmore&amp;hl=en&amp;as_sdt=4,38&amp;case=16424439997629776128&amp;scilh=0">Cole/Dinsmore
+            v. DMV</a><a
+            href="http://scholar.google.com/scholar_case?q=cole+dinsmore&amp;hl=en&amp;as_sdt=4,38&amp;case=16424439997629776128&amp;scilh=0">,
+            336 Or 565, 87 P3d 1120 (2004)</a>), probation-revocation
+            hearings, <a
+            href="http://scholar.google.com/scholar_case?q=gonzalez&amp;hl=en&amp;as_sdt=4,38&amp;case=9472346329313948503&amp;scilh=0">State
+            v. Gonzalez</a><a
+            href="http://scholar.google.com/scholar_case?q=gonzalez&amp;hl=en&amp;as_sdt=4,38&amp;case=9472346329313948503&amp;scilh=0">,
+            212 Or App 1, 157 P3d 266 (2007)</a>, and FAPA hearings, <a
+            href="http://scholar.google.com/scholar_case?q=hemmingway+2012&amp;hl=en&amp;as_sdt=4,38&amp;case=13047154703485604883&amp;scilh=0">Hemingway
+            and Maurer</a><a
+            href="http://scholar.google.com/scholar_case?q=hemmingway+2012&amp;hl=en&amp;as_sdt=4,38&amp;case=13047154703485604883&amp;scilh=0">,
+            ___Or App___, ___P3d___ 2012 WL 19453 (Or App) (January 5,
+            2012)</a>.</p>
+            <h2 id="e._keep_the_door_closed"><strong>E. Keep the Door
+            Closed</strong></h2>
+            <p>When the trial judge curtails your cross-examination,
+            assert that the court is denying your client’s rights under
+            Article I, section 11, and the Sixth Amendment right to
+            confront the witnesses against him. Make an offer of
+            proof.</p>
+            <p>Also, watch the scope of questioning. Questioning that is
+            too broad may open the door on redirect examination for
+            damaging evidence which would otherwise have been
+            inadmissible. ''See <a
+            href="http://scholar.google.com/scholar_case?q=renly&amp;hl=en&amp;as_sdt=4,38&amp;case=4548550094913989536&amp;scilh=0">State
+            v. Renly</a><a
+            href="http://scholar.google.com/scholar_case?q=renly&amp;hl=en&amp;as_sdt=4,38&amp;case=4548550094913989536&amp;scilh=0">,
+            111 Or App 453, 457, 58, 827 P2d 1345 (1992)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=wolfe&amp;hl=en&amp;as_sdt=4,38&amp;case=7270513592012796221&amp;scilh=0">State
+            v. Wolfe</a><a
+            href="http://scholar.google.com/scholar_case?q=wolfe&amp;hl=en&amp;as_sdt=4,38&amp;case=7270513592012796221&amp;scilh=0">,
+            56 Or App 795, 798, 643 P2d 404 (1982)</a>.</p>
+            <p>Some cases on “opening the door” (also called curative
+            admissibility, or, in early cases, invited error) permit the
+            admission of otherwise inadmissible evidence. <a
+            href="http://scholar.google.com/scholar_case?q=adonri&amp;hl=en&amp;as_sdt=4,38&amp;case=15479462485934356240&amp;scilh=0">State
+            v. Adonri</a><a
+            href="http://scholar.google.com/scholar_case?q=adonri&amp;hl=en&amp;as_sdt=4,38&amp;case=15479462485934356240&amp;scilh=0">,
+            143 Or App 298, 923 P2d 658 (1996)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=us+v+cromer&amp;hl=en&amp;as_sdt=2,38&amp;case=4512127360373317465&amp;scilh=0">United
+            States v. Cromer</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+cromer&amp;hl=en&amp;as_sdt=2,38&amp;case=4512127360373317465&amp;scilh=0">,
+            389 F3d 662, 678–79 (2004)</a>. Be careful, and ask for a
+            ruling out of the presence of the jury if opening the door
+            is possible.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=howard+v+walker&amp;hl=en&amp;as_sdt=2,38&amp;case=15203041733867179275&amp;scilh=0">C.f. Howard
+            v. Walker</a><a
+            href="http://scholar.google.com/scholar_case?q=howard+v+walker&amp;hl=en&amp;as_sdt=2,38&amp;case=15203041733867179275&amp;scilh=0">,
+            406 F.3d 114 (2d Cir. 2005)</a> (error to hold that
+            cross-examination of state’s expert will open the door to
+            otherwise-inadmissible evidence)</p>
+            <p>The single best guide to effective cross-examination is
+            Larry Pozner and Roger Dodd’s comprehensive treatise
+            entitled <em>Cross Examination: Science and
+            Techniques</em>(Lexis Law Publishing).</p>
+            <h1 id="iii._impeachment_for_bias_or_interest"><strong>III.
+            Impeachment for Bias or Interest</strong></h1>
+            <p><a href="http://www.oregonlaws.org/ors/40.355">OEC
+            609(1)</a> provides:</p>
+            <p>The credibility of a witness may be attacked by evidence
+            that the witness engaged in conduct or made statements
+            showing bias or interest. However, before this can be done,
+            the statements must be related to the witness and the
+            conduct described, with the circumstances of times, places
+            and persons present, and the witness shall be asked whether
+            the witness made the statements or engaged in such conduct,
+            and, if so, allowed to explain. If the statements are in
+            writing, they shall be shown to the witness.</p>
+            <p>The Commentary to OEC 609(1) explains that “bias” takes
+            the form of friendly feeling or hostility toward a party,
+            while “interest” commonly takes the form of having a stake
+            in the outcome of the litigation. See also Kirkpatrick,
+            <em>Oregon Evidence</em>, p 491–513 (5th ed 2011), ''see
+            also <a
+            href="http://scholar.google.com/scholar_case?q=phillips&amp;hl=en&amp;as_sdt=4,38&amp;case=10345895478565570969&amp;scilh=0">State
+            v. Phillips</a><a
+            href="http://scholar.google.com/scholar_case?q=phillips&amp;hl=en&amp;as_sdt=4,38&amp;case=10345895478565570969&amp;scilh=0">,
+            314 Or 460, 840 P2d 666 (1992)</a>.</p>
+            <p>In <a
+            href="file:///Users/jennifer/Documents/Publications/Trial%20Notebook/2013%20edition%20-%20TNB/&#39;13%20revised%20chapters%20/chapters%20ready%20for%202013/ch%2010%20cross-exam/State%20v.%20Brown,%20299%20Or%20143,%20150,%20699%20P2d%201122%20(1985)">State
+            v. Brown</a><a
+            href="file:///Users/jennifer/Documents/Publications/Trial%20Notebook/2013%20edition%20-%20TNB/&#39;13%20revised%20chapters%20/chapters%20ready%20for%202013/ch%2010%20cross-exam/State%20v.%20Brown,%20299%20Or%20143,%20150,%20699%20P2d%201122%20(1985)">,
+            299 Or 143, 150, 699 P2d 1122 (1985)</a>, the Oregon Supreme
+            Court noted, “Completely aside from OEC 609(1), bias due to
+            friendship, family relationship, etc., and interest in the
+            form or amount of expert witness fees, etc., continue to be
+            viable forms of impeachment even though no conduct or
+            statement is involved.”</p>
+            <p>Moreover, “[t]he Oregon appellate courts have held
+            impeachment for bias or interest to be proper under the
+            following circumstances: [1] Where immunity had been granted
+            to a prosecution witness. <a
+            href="http://scholar.google.com/scholar_case?q=cox&amp;hl=en&amp;as_sdt=4,38&amp;case=11053455100572760823&amp;scilh=0">State
+            v. Cox</a><a
+            href="http://scholar.google.com/scholar_case?q=cox&amp;hl=en&amp;as_sdt=4,38&amp;case=11053455100572760823&amp;scilh=0">,
+            87 Or App 443, 742 P2d 694 (1987)</a>; [2] Where a
+            prosecution witness was facing a pending theft charge. <a
+            href="http://scholar.google.com/scholar_case?q=presley&amp;hl=en&amp;as_sdt=4,38&amp;case=14463979155956942221&amp;scilh=0">State
+            v. Presley</a><a
+            href="http://scholar.google.com/scholar_case?q=presley&amp;hl=en&amp;as_sdt=4,38&amp;case=14463979155956942221&amp;scilh=0">,
+            84 Or App 1, 733 P2d 452 (1987)</a>; [3] Where the victim
+            was contemplating a civil action against the defendant. <a
+            href="http://scholar.google.com/scholar_case?q=delucia&amp;hl=en&amp;as_sdt=4,38&amp;case=9619594716336017677&amp;scilh=0">State
+            v. DeLucia</a><a
+            href="http://scholar.google.com/scholar_case?q=delucia&amp;hl=en&amp;as_sdt=4,38&amp;case=9619594716336017677&amp;scilh=0">,
+            40 Or App 711, 596 P2d 585 (1979)</a>; [and 5] Where the
+            victim was potentially subject to criminal prosecution
+            himself. <a
+            href="http://scholar.google.com/scholar_case?q=sheeler&amp;hl=en&amp;as_sdt=4,38&amp;case=11800610575822129636&amp;scilh=0">State
+            v. Sheeler</a><a
+            href="http://scholar.google.com/scholar_case?q=sheeler&amp;hl=en&amp;as_sdt=4,38&amp;case=11800610575822129636&amp;scilh=0">,
+            15 Or App 96, 514 P2d 1370 (1973)</a>.” Kirkpatrick,
+            <em>Oregon Evidence</em>, 5th ed. at 520. Rule 609 (1) of
+            the Oregon Evidence Code also covers impeachment pertaining
+            to bias or interest.</p>
+            <p>Kirkpatrick, <em>Oregon Evidence</em>, 5th ed. at 520–21
+            has a comprehensive list of proper areas for impeachment for
+            bias or interest.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>Remember that OEC 806 allows you to impeach a hearsay
+            declarant just as if the declarant had testified as a
+            witness. <a
+            href="http://scholar.google.com/scholar_case?q=phillips&amp;hl=en&amp;as_sdt=4,38&amp;case=10345895478565570969&amp;scilh=0">State
+            v. Phillips</a><a
+            href="http://scholar.google.com/scholar_case?q=phillips&amp;hl=en&amp;as_sdt=4,38&amp;case=10345895478565570969&amp;scilh=0">,
+            314 Or 460, 840 P2d 666 (1992)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=dishman&amp;hl=en&amp;as_sdt=4,38&amp;case=15731565782647701744&amp;scilh=0">State
+            v. Dishman</a><a
+            href="http://scholar.google.com/scholar_case?q=dishman&amp;hl=en&amp;as_sdt=4,38&amp;case=15731565782647701744&amp;scilh=0">,
+            148 Or App 404, 939 P2d 1172 (1997)</a>.</p>
+            <h1 id="iv._use_of_false_names"><strong>IV. Use of False
+            Names</strong></h1>
+            <p>A witness’s use of false names or false identities is a
+            proper subject of cross-examination. <a
+            href="http://scholar.google.com/scholar_case?q=us+v+mansaw&amp;hl=en&amp;as_sdt=2,38&amp;case=8677201047420583435&amp;scilh=0">United
+            States v. Mansaw</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+mansaw&amp;hl=en&amp;as_sdt=2,38&amp;case=8677201047420583435&amp;scilh=0">,
+            714 F2d 785 (8th Cir. 1983)</a>.</p>
+            <h1
+            id="v._placing_the_witness_in_his_or_her_setting"><strong>V.
+            Placing the Witness in His or Her Setting</strong></h1>
+            <p>The cross examiner may place the witness in her proper
+            setting identifying her with her environment. <a
+            href="http://scholar.google.com/scholar_case?q=alford+v+us&amp;hl=en&amp;as_sdt=2,38&amp;case=7590657482453914475&amp;scilh=0">Alford
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=alford+v+us&amp;hl=en&amp;as_sdt=2,38&amp;case=7590657482453914475&amp;scilh=0">,
+            282 U.S. 687 (1931)</a>, quoted and relied on in <a
+            href="http://scholar.google.com/scholar_case?q=smith+v+illinois&amp;hl=en&amp;as_sdt=2,38&amp;case=17634522346433851790&amp;scilh=0">Smith
+            v. Illinois</a><a
+            href="http://scholar.google.com/scholar_case?q=smith+v+illinois&amp;hl=en&amp;as_sdt=2,38&amp;case=17634522346433851790&amp;scilh=0">,
+            390 U.S. 129 (1968)</a>. In <em>Alford</em>, the Court
+            stated:</p>
+            <p>It is the essence of a fair trial that reasonable
+            latitude be given the cross-examiner, even though he is
+            unable to state to the court what facts a reasonable
+            cross-examination might develop. Prejudice ensues from a
+            denial of the opportunity to place the witness in his proper
+            setting and put the weight of his testimony and his
+            credibility to a test, without which the jury cannot fairly
+            appraise them.</p>
+            <p>Be creative. If the witness comes from a negative setting
+            or environment, use it to your advantage.</p>
+            <h1 id="vi._contradiction"><strong>VI.
+            Contradiction</strong></h1>
+            <p>A witness may be impeached by evidence contradicting her
+            or his testimony. <a
+            href="http://scholar.google.com/scholar_case?q=burdge&amp;hl=en&amp;as_sdt=4,38&amp;case=15045771437968205507&amp;scilh=0">State
+            v. Burdge</a><a
+            href="http://scholar.google.com/scholar_case?q=burdge&amp;hl=en&amp;as_sdt=4,38&amp;case=15045771437968205507&amp;scilh=0">,
+            295 Or 1, 664 P2d 1076 (1983)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=4971854813684353874&amp;scilh=0">State
+            v. Gibson</a><a
+            href="http://scholar.google.com/scholar_case?q=gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=4971854813684353874&amp;scilh=0">,
+            338 Or 560, 113 P3d 423 (2005)</a>.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=98+or+app+478&amp;hl=en&amp;as_sdt=4,38&amp;case=12998015538090977385&amp;scilh=0">State
+            v. Clark</a><a
+            href="http://scholar.google.com/scholar_case?q=98+or+app+478&amp;hl=en&amp;as_sdt=4,38&amp;case=12998015538090977385&amp;scilh=0">,
+            98 Or App 478, 779 P2d 215 (1989)</a>, the court held that
+            evidence that a codefendant had been convicted for the same
+            transaction, although not admissible as substantive evidence
+            of defendant’s guilt, was admissible to contradict the
+            defendant’s testimony when the defendant opened the door to
+            such evidence.</p>
+            <p>Note: This method of impeachment is subject to the
+            qualification that a witness cannot be impeached on a
+            collateral matter. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+thompson&amp;hl=en&amp;as_sdt=4,38&amp;case=14362401638471714198&amp;scilh=0">State
+            v. Thompson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+thompson&amp;hl=en&amp;as_sdt=4,38&amp;case=14362401638471714198&amp;scilh=0">,
+            28 Or App 409, 559 P2d 1294 (1977)</a>; <em>see also Gibson,
+            ibid.</em></p>
+            <h1 id="vii._prior_conviction_of_a_crime"><strong>VII. Prior
+            Conviction of a Crime</strong></h1>
+            <p>This area of impeachment is covered by <a
+            href="http://www.oregonlaws.org/ors/40.355">Rule 609</a> of
+            the Oregon Evidence Code. The federal rule is <a
+            href="http://www.law.cornell.edu/rules/fre/rule_609">Federal
+            Rules of Evidence 609</a>. All felony convictions not more
+            than 15 years old are admissible. This includes misdemeanors
+            involving false statements or dishonesty. The Oregon
+            Legislature has decided that some crimes involve false
+            statements by their very nature. A partial list of these
+            crimes is found in the commentary to Rule 609, Oregon Rules
+            of Court, West Publishing, as well as in other publications
+            concerning the Oregon Evidence Code. The inchoate forms of
+            these crimes are also admissible to impeach the witness. A
+            class C felony that was treated as a misdemeanor is still
+            admissible because it was punishable as a felony. <a
+            href="http://scholar.google.com/scholar_case?q=298+or+173&amp;hl=en&amp;as_sdt=4,38&amp;case=6093729408997508525&amp;scilh=0">State
+            v. Smith</a><a
+            href="http://scholar.google.com/scholar_case?q=298+or+173&amp;hl=en&amp;as_sdt=4,38&amp;case=6093729408997508525&amp;scilh=0">,
+            298 Or 173, 691 P2d 89 (1984)</a>.</p>
+            <p>A trial judge has no discretion under OEC 403 to exclude
+            a felony conviction admissible under OEC 609 in a criminal
+            case. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+king&amp;hl=en&amp;as_sdt=4,38&amp;case=11538410328580647250&amp;scilh=0">State
+            v. King</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+king&amp;hl=en&amp;as_sdt=4,38&amp;case=11538410328580647250&amp;scilh=0">,
+            307 Or 332, 768 P2d 391 (1989)</a>. However, disclosing the
+            sentence imposed in addition to the conviction can raise
+            irrelevant and possibly prejudicial issues. In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+gallant&amp;hl=en&amp;as_sdt=4,38&amp;case=7203055924493834273&amp;scilh=0">State
+            v. Gallant</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gallant&amp;hl=en&amp;as_sdt=4,38&amp;case=7203055924493834273&amp;scilh=0">,
+            307 Or 152, 764 P2d 920 (1988)</a>, the state conceded error
+            when the prosecution brought up the sentence of probation
+            and a probation revocation for the prior crime used to
+            impeach the witness. The court, however, found that the
+            error was harmless.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+weinstein&amp;hl=en&amp;as_sdt=4,38&amp;case=3743117717226387044&amp;scilh=0">State
+            v. Weinstein</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+weinstein&amp;hl=en&amp;as_sdt=4,38&amp;case=3743117717226387044&amp;scilh=0">,
+            108 Or App 486, 814 P2d 565 (1991)</a>, the state again
+            conceded that it was prejudicial error for the trial court
+            to refuse to allow the defendant to impeach an assault
+            victim by showing that the victim was on probation and
+            therefore had a motive to lie about the details of a fight,
+            ''but see <a
+            href="http://scholar.google.com/scholar_case?q=state+v+pratt&amp;hl=en&amp;as_sdt=4,38&amp;case=10959810033604562275&amp;scilh=0">State
+            v. Pratt</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+pratt&amp;hl=en&amp;as_sdt=4,38&amp;case=10959810033604562275&amp;scilh=0">,
+            316 Or 561, 853 P2d 827 (1993)</a> (defense could not
+            introduce documents showing the government witness was on
+            probation for the crime he was being impeached for, the
+            terms of his probation, and that he was in violation of that
+            probation); and <a
+            href="http://scholar.google.com/scholar_case?q=state+v+archer&amp;hl=en&amp;as_sdt=4,38&amp;case=12043708080085069991&amp;scilh=0">State
+            v. Archer</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+archer&amp;hl=en&amp;as_sdt=4,38&amp;case=12043708080085069991&amp;scilh=0">,
+            150 Or App 505, 947 P2d 620 (1997)</a> (the state was
+            allowed to mention the felony status of defendant’s driving
+            while suspended conviction).</p>
+            <h1
+            id="viii._character_and_conduct_of_a_witness"><strong>VIII.
+            Character and Conduct of a Witness</strong></h1>
+            <p>Impeachment based on the character and the conduct of a
+            witness is covered under <a
+            href="http://www.oregonlaws.org/ors/40.350">Rule 608</a> of
+            the Oregon Evidence Code. Counsel should also review the
+            character evidence rules set forth in <a
+            href="http://www.oregonlaws.org/ors/40.170">OEC 404</a> and
+            <a href="http://www.oregonlaws.org/ors/40.175">405</a>. Such
+            impeachment does not generally include specific instances of
+            witness conduct.</p>
+            <h1
+            id="ix._inadequate_perception_and_lack_of_memory"><strong>IX.
+            Inadequate Perception and Lack of Memory</strong></h1>
+            <h2 id="a._mental_impairment"><strong>A. Mental
+            Impairment</strong></h2>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+gherasim&amp;hl=en&amp;as_sdt=4,38&amp;case=5648630733485670675&amp;scilh=0">State
+            v. Gherasim</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gherasim&amp;hl=en&amp;as_sdt=4,38&amp;case=5648630733485670675&amp;scilh=0">,
+            153 Or App 313, 956 P2d 1054 (1998)</a>, the defense was
+            allowed to present expert testimony regarding a witness who
+            suffered dissociative amnesia.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=us+v+robinson&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2009&amp;case=18055834613427300900&amp;scilh=0">United
+            States v. Robinson</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+robinson&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2009&amp;case=18055834613427300900&amp;scilh=0">,
+            583 F3d 1265 (10th Cir. 2009)</a>, the trial court erred by
+            precluding cross-examination of an informant on his mental
+            health history and his use of prescription medication.</p>
+            <p>''See also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+longoria&amp;hl=en&amp;as_sdt=4,38&amp;case=6130655072930531053&amp;scilh=0">State
+            v. Longoria</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+longoria&amp;hl=en&amp;as_sdt=4,38&amp;case=6130655072930531053&amp;scilh=0">,
+            17 Or App 1, 520 P2d 912 (1974)</a> (witness may be
+            impeached by defect of memory).</p>
+            <h2 id="b._use_of_or_dependency_on_intoxicants"><strong>B.
+            Use of or Dependency on Intoxicants</strong></h2>
+            <p>The general rule regarding impeaching a witness by
+            evidence of use of or dependency on intoxicants is found in
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+batchelor&amp;hl=en&amp;as_sdt=4,38&amp;case=10909598248310221966&amp;scilh=0">State
+            v. Batchelor</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+batchelor&amp;hl=en&amp;as_sdt=4,38&amp;case=10909598248310221966&amp;scilh=0">,
+            34 Or App 47, 50, 578 P2d 409 (1978)</a>: “The rules
+            supported by the majority of cases seem to be that for the
+            purpose of discrediting a witness evidence is not admissible
+            to show that he is a user of opium, morphine or similar
+            drugs, or to show the effect of such drugs, unless it is
+            proven that the witness was under their influence at the
+            time of the occurrences as to which he testifies, or at the
+            time of the trial, or that his mind or memory or powers of
+            observation were affected by the habit.”</p>
+            <h1 id="x._impermissible_areas_of_impeachment"><strong>X.
+            Impermissible Areas of Impeachment</strong></h1>
+            <h2 id="a._vouching"><strong>A. Vouching</strong></h2>
+            <p>A witness (expert or otherwise) may not give an opinion
+            on whether he or she believes another witness’s testimony in
+            court is truthful. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">State
+            v. Middleton</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">,
+            294 Or 427, 438, 657 P2d 1215 (1983)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+southard&amp;hl=en&amp;as_sdt=4,38&amp;case=16531670170009390370&amp;scilh=0">State
+            v. Southard</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+southard&amp;hl=en&amp;as_sdt=4,38&amp;case=16531670170009390370&amp;scilh=0">,
+            347 Or 127 218 P3d 104 (2009)</a>. A federal case stating
+            this rule is <a
+            href="http://scholar.google.com/scholar_case?q=us+v+akitoye&amp;hl=en&amp;as_sdt=2,38&amp;case=10371514342829510255&amp;scilh=0">United
+            States v. Akitoye</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+akitoye&amp;hl=en&amp;as_sdt=2,38&amp;case=10371514342829510255&amp;scilh=0">,
+            923 F2d 221 (1st Circuit 1991)</a>. An expert witness can
+            testify about another witness’s ability to perceive, if the
+            expert does not directly comment on the witness’s
+            trustworthiness. <em>See State v. Gherasim</em>, 153 Or App
+            313, 956 P2d 1054 (1998), and <a
+            href="http://scholar.google.com/scholar_case?q=state+v+stringer&amp;hl=en&amp;as_sdt=4,38&amp;case=15174543413982029831&amp;scilh=0">State
+            v. Stringer</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stringer&amp;hl=en&amp;as_sdt=4,38&amp;case=15174543413982029831&amp;scilh=0">,
+            292 Or 388, 639 P2d 1264 (1982)</a>.</p>
+            <p>See the section in Chapter 16 titled, “The Ethical and
+            Legal Problems of Prosecutorial Vouching” for more
+            detail.</p>
+            <h2 id="b._improper_bolstering"><strong>B. Improper
+            Bolstering</strong></h2>
+            <p>A prosecutor cannot create a foundation for
+            rehabilitation of a witness’s character for truthfulness by
+            asking defendant if witness has lied. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+carr&amp;hl=en&amp;as_sdt=4,38&amp;case=12223962124829776893&amp;scilh=0">State
+            v. Carr</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+carr&amp;hl=en&amp;as_sdt=4,38&amp;case=12223962124829776893&amp;scilh=0">,
+            302 Or 20, 725 P2d 1287 (1986)</a>; <em>see also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+charboneau&amp;hl=en&amp;as_sdt=4,38&amp;case=8838324916788203567&amp;scilh=0">State
+            v. Charboneau</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charboneau&amp;hl=en&amp;as_sdt=4,38&amp;case=8838324916788203567&amp;scilh=0">,
+            323 Or 38, 913 P2d 308 (1996)</a> (reversible error to allow
+            prosecutor to rehabilitate a witness by admission of a plea
+            agreement containing a condition that the witness would be
+            truthful);</em>State v. Middleton'', 295 Or 485, 668 P2d 371
+            (1983) (while an opposing party may offer evidence to rebut
+            an inference of bias or interest on part of a witness, the
+            fact that the witness was required to pass a polygraph test
+            before entering a plea agreement is inadmissible to rebut a
+            charge of interest or bias); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+walker&amp;hl=en&amp;as_sdt=4,38&amp;case=8554173397199556906&amp;scilh=0">State
+            v. Walker</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+walker&amp;hl=en&amp;as_sdt=4,38&amp;case=8554173397199556906&amp;scilh=0">,
+            140 Or App 472, 915 P2d 1039 (1996)</a> (police officer
+            cannot vouch for credibility of informant).</p>
+            <h1
+            id="xi._impeachment_with_prior_false_allegations_of_sexual_offenses"><strong>XI.
+            Impeachment with Prior False Allegations of Sexual
+            Offenses</strong></h1>
+            <p>As a general rule, impeachment with specific instances of
+            the witness’s conduct is inadmissible under <a
+            href="http://www.oregonlaws.org/ors/40.170">OEC 404(2)</a>
+            and <a
+            href="http://www.oregonlaws.org/ors/40.175">405(10)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+marshall&amp;hl=en&amp;as_sdt=4,38&amp;case=1921580370191220656&amp;scilh=0">State
+            v. Marshall</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+marshall&amp;hl=en&amp;as_sdt=4,38&amp;case=1921580370191220656&amp;scilh=0">,
+            312 Or 367, 373, 823 P2d 961 (1991)</a>.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leclair&amp;hl=en&amp;as_sdt=4,38&amp;case=1440952504434046625&amp;scilh=0">State
+            v. LeClair</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leclair&amp;hl=en&amp;as_sdt=4,38&amp;case=1440952504434046625&amp;scilh=0">,
+            83 Or App 121, 720 P2d 690 (1986),</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leclair&amp;hl=en&amp;as_sdt=4,38&amp;case=1440952504434046625&amp;scilh=0">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leclair&amp;hl=en&amp;as_sdt=4,38&amp;case=1440952504434046625&amp;scilh=0">303
+            Or 74 (1987)</a>, held that, notwithstanding the Evidence
+            Code’s exclusionary rules, when a defendant lays the proper
+            foundation, impeachment of the complainant with evidence
+            that on a prior occasion the complainant falsely alleged a
+            similar crime against another person, such impeachment is
+            constitutionally mandatory. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+arellano&amp;hl=en&amp;as_sdt=4,38&amp;case=17636535489059290379&amp;scilh=0">State
+            v. Arellano</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+arellano&amp;hl=en&amp;as_sdt=4,38&amp;case=17636535489059290379&amp;scilh=0">,
+            149 Or App 86, 941 P2d 1089 (1997)</a>, however, requires
+            the defense to present very clear and concise evidence of
+            prior falsehoods by the victim.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=redmond+v+kingston&amp;hl=en&amp;as_sdt=4,112,127,268,269,270,271,272,314,315,331,332,333,334,335,377,378&amp;case=6742635476527179977&amp;scilh=0">Redmond
+            v. Kingston</a><a
+            href="http://scholar.google.com/scholar_case?q=redmond+v+kingston&amp;hl=en&amp;as_sdt=4,112,127,268,269,270,271,272,314,315,331,332,333,334,335,377,378&amp;case=6742635476527179977&amp;scilh=0">,
+            240 F3d 590 (7</a><a
+            href="http://scholar.google.com/scholar_case?q=redmond+v+kingston&amp;hl=en&amp;as_sdt=4,112,127,268,269,270,271,272,314,315,331,332,333,334,335,377,378&amp;case=6742635476527179977&amp;scilh=0">th</a><a
+            href="http://scholar.google.com/scholar_case?q=redmond+v+kingston&amp;hl=en&amp;as_sdt=4,112,127,268,269,270,271,272,314,315,331,332,333,334,335,377,378&amp;case=6742635476527179977&amp;scilh=0">Cir.
+            2001)</a>. In this case, the court found a confrontation
+            violation where the defendant had been prohibited from cross
+            examining the alleged rape victim with respect to a prior
+            false claim that she had been forcibly raped. The evidence
+            was relevant to her motive to falsely accuse the defendant.
+            In an important passage, the court noted that “[t] false
+            charge ‘exception’ to the rape shield statute is not really
+            an exception, but rather a reminder of the limited meaning
+            of “sexual conduct” as defined by the statue.” <em>Id.</em>
+            at 592.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stamper&amp;hl=en&amp;as_sdt=2,38&amp;case=16207291431783162188&amp;scilh=0">United
+            States v. Stamper</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stamper&amp;hl=en&amp;as_sdt=2,38&amp;case=16207291431783162188&amp;scilh=0">,
+            766 F Supp 1396 (1991),</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stamper&amp;hl=en&amp;as_sdt=2,38&amp;case=16207291431783162188&amp;scilh=0">aff’d</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stamper&amp;hl=en&amp;as_sdt=2,38&amp;case=16207291431783162188&amp;scilh=0">959
+            F2d 231 (4th Cir. 1992)</a>, holds that, where evidence is
+            relevant to a legitimate defense theory, the [#amendmentvi
+            Sixth Amendment’s Confrontation Clause] trumps statutory
+            exclusionary rules such as the <a
+            href="http://www.law.cornell.edu/rules/fre/rule_412">Rape
+            Shield Law, FRE 412</a>. In <em>Stamper</em>the defendant
+            did not offer the evidence to show that the complainant had
+            a “mere propensity to fabricate.” Rather, he intended to use
+            it for the legitimate purpose of proving “a contrived
+            ulterior motive or plan.” <em>Id</em>. at 1402.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=commonwealth+v+bohannon&amp;hl=en&amp;as_sdt=2,38&amp;case=1168342011228461612&amp;scilh=0">Commonwealth
+            v. Bohannon</a><a
+            href="http://scholar.google.com/scholar_case?q=commonwealth+v+bohannon&amp;hl=en&amp;as_sdt=2,38&amp;case=1168342011228461612&amp;scilh=0">,
+            376 Mass 90, 378 NE2d 987, 990–21 (1978)</a> (holding that
+            excluding such evidence denied the defendant a fair
+            trial).</p>
+            <p><em>See also <a
+            href="http://scholar.google.com/scholar_case?q=fowler+v+sacramento&amp;hl=en&amp;as_sdt=2,38&amp;case=14524009080079724083&amp;scilh=0">Fowler
+            v. Sacramento County Sheriff's Dep’t</a><a
+            href="http://scholar.google.com/scholar_case?q=fowler+v+sacramento&amp;hl=en&amp;as_sdt=2,38&amp;case=14524009080079724083&amp;scilh=0">,
+            421 F3d 1027 (9th Cir. 2005)</a> (habeas relief granted when
+            trial court precluded cross-examination of the victim
+            relating to prior accusations: “a jury very well might
+            reasonably have concluded that [the complainant] tended to
+            misinterpret or misperceive the conduct, overreact, and then
+            perhaps unconsciously, exaggerate or embellish in recounting
+            the conduct so as to fit her subjective misinterpretation or
+            misperception.”</em>Id''. at 1038–39.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cox&amp;hl=en&amp;as_sdt=2,38&amp;case=6044485198527492286&amp;scilh=0">State
+            v. Cox</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cox&amp;hl=en&amp;as_sdt=2,38&amp;case=6044485198527492286&amp;scilh=0">,
+            298 Md 173, 468 A2d 319, 324 n2 (1983)</a> (prior false
+            allegation evidence generally is admissible; fact that
+            complaining witness made only one, rather than multiple such
+            allegations is no basis for excluding evidence of the single
+            falsity).</p>
+            <p>''But see <a
+            href="http://scholar.google.com/scholar_case?q=state+v+driver&amp;hl=en&amp;as_sdt=4,38&amp;case=4091161015946476649&amp;scilh=0">State
+            v. Driver</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+driver&amp;hl=en&amp;as_sdt=4,38&amp;case=4091161015946476649&amp;scilh=0">,
+            192 Or App 395, 86 P3d 53 (2004)</a> (prior recantation of
+            accusation against another person is not admissible by
+            statute and not required under the Oregon or federal
+            confrontation clauses).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=smith+grading+%26+paving&amp;hl=en&amp;as_sdt=2,38&amp;case=15983202336506610151&amp;scilh=0">United
+            States v. Smith Grading &amp; Paving, Inc.</a><a
+            href="http://scholar.google.com/scholar_case?q=smith+grading+%26+paving&amp;hl=en&amp;as_sdt=2,38&amp;case=15983202336506610151&amp;scilh=0">,
+            760 F2d 527, 531 (4th Cir. 1985)</a> (“Rule 608(b) should
+            not be read so broadly as to disallow the presentation of
+            extrinsic evidence that is probative of a material issue [on
+            a defendant’s guilt]”), <em>cert den</em>, 474 U.S. 1005
+            (1985).</p>
+            <p>Annotation: “Impeachment or Cross-Examination of
+            Prosecuting Witnesses in Sexual Offense Trial by Showing
+            that Similar Charges Were Made Against Other Persons,” 71
+            ALR 4th 469 (1989 and Supp. 1997).</p>
+            <h1
+            id="xii._cross_of_the_defendant_who_testifies_at_trial"><strong>XII.
+            Cross of the Defendant Who Testifies at Trial</strong></h1>
+            <p>When the accused in a criminal trial testifies in his own
+            behalf, he may be cross-examined to the same extent as any
+            other witness. <em>State v. Kelly</em>, 118 Or 397, 247 P
+            146 (1926). If the defendant does not submit to
+            cross-examination, the court may strike the direct
+            testimony. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cox&amp;hl=en&amp;as_sdt=4,38&amp;case=6962841382110865291&amp;scilh=0">State
+            v. Cox</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cox&amp;hl=en&amp;as_sdt=4,38&amp;case=6962841382110865291&amp;scilh=0">,
+            337 Or 477, 98 P3d 1103 (2004)</a>.</p>
+            <p>The federal rule is similar. As Weinstein points out: “A
+            defendant taking the stand is open to questioning on any
+            matter relevant to the case. For example, in one case, the
+            court noted that proffered testimony, limited as it might
+            have been, was intended to prove that the defendant was not
+            guilty. ‘The implications of the proffered testimony were
+            very broad and any question which would have elicited
+            testimony that was reasonably related to the inferences that
+            might reasonably be drawn from his direct testimony would be
+            possible.’ The court also noted that regardless of the
+            limits on cross-examination <a
+            href="http://www.law.cornell.edu/rules/fre/rule_611">Rule
+            611(b)</a> grants discretion to the trial judge to inquire
+            into additional matters as if the witness were on direct
+            examination. The court suggested that this could subject the
+            defendant witness to very broad questions on relevant
+            matters.” 4 McLaughlin, <em>Weinstein’s Federal
+            Evidence</em>, §611.04[1][e] (2000) (quoting <a
+            href="http://scholar.google.com/scholar_case?q=us+v+raper&amp;hl=en&amp;as_sdt=2,38&amp;case=7075871988132440352&amp;scilh=0">United
+            States v. Raper</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+raper&amp;hl=en&amp;as_sdt=2,38&amp;case=7075871988132440352&amp;scilh=0">,
+            676 F2d 841, 846 (D.C. Circuit 1982)</a>).</p>
+            <h1
+            id="xiii._constitutional_limitations_on_cross_examination_of_the_accused"><strong>XIII.
+            Constitutional Limitations on Cross-Examination of the
+            Accused</strong></h1>
+            <p>Counsel should pay extra attention in this area. Federal
+            and state authorities sometimes conflict and sometimes
+            don’t.</p>
+            <p>The Oregon Constitution prohibits impeachment of the
+            defendant’s trial testimony with prior inconsistent
+            statements elicited through illegal questioning. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+isom&amp;hl=en&amp;as_sdt=4,38&amp;case=18069363392063733694&amp;scilh=0">State
+            v. Isom</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+isom&amp;hl=en&amp;as_sdt=4,38&amp;case=18069363392063733694&amp;scilh=0">,
+            306 Or 587, 761 P2d 524 (1988)</a>.</p>
+            <p>Under the United States Constitution, the prosecution may
+            use statements procured without administering
+            <em>Miranda</em> warnings to impeach the defendant’s direct
+            testimony. <a
+            href="http://scholar.google.com/scholar_case?q=harris+v+new+york&amp;hl=en&amp;as_sdt=2,38&amp;case=11009927843640704556&amp;scilh=0">Harris
+            v. New York</a><a
+            href="http://scholar.google.com/scholar_case?q=harris+v+new+york&amp;hl=en&amp;as_sdt=2,38&amp;case=11009927843640704556&amp;scilh=0">,
+            401 U.S. 222 (1971)</a>. Involuntary statements cannot even
+            be used for impeachment. <a
+            href="http://scholar.google.com/scholar_case?q=mincey+v+arizona&amp;hl=en&amp;as_sdt=2,38&amp;case=4520535824589376380&amp;scilh=0">Mincey
+            v. Arizona</a><a
+            href="http://scholar.google.com/scholar_case?q=mincey+v+arizona&amp;hl=en&amp;as_sdt=2,38&amp;case=4520535824589376380&amp;scilh=0">,
+            437 U.S. 385 (1978)</a>.</p>
+            <p>The prosecution may use illegally obtained evidence to
+            impeach the defendant’s testimony, even where the evidence
+            is not admissible in the government’s case-in-chief. <a
+            href="http://scholar.google.com/scholar_case?q=us+v+havens&amp;hl=en&amp;as_sdt=2,38&amp;case=5701553927103704721&amp;scilh=0">United
+            States v. Havens</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+havens&amp;hl=en&amp;as_sdt=2,38&amp;case=5701553927103704721&amp;scilh=0">,
+            446 U.S. 620 (1980)</a>.</p>
+            <p>Illegally obtained evidence cannot be used to impeach a
+            defense witness other than the defendant. <a
+            href="http://scholar.google.com/scholar_case?q=james+v+illinois&amp;hl=en&amp;as_sdt=3,38&amp;case=13711608174434690192&amp;scilh=0">James
+            v. Illinois</a><a
+            href="http://scholar.google.com/scholar_case?q=james+v+illinois&amp;hl=en&amp;as_sdt=3,38&amp;case=13711608174434690192&amp;scilh=0">,
+            493 U.S. 307 (1990)</a>.</p>
+            <h1 id="prior_inconsistent_statements"><strong>Prior
+            Inconsistent Statements</strong></h1>
+            <h1 id="i._introductionsources_of_law"><strong>I.
+            Introduction/Sources of Law</strong></h1>
+            <h2
+            id="a._oec_613_ors_40.380_prior_statements_of_witnesses"><strong>A.
+            <a href="http://www.oregonlaws.org/ors/40.380">OEC 613 (ORS
+            40.380)</a> Prior Statements of Witnesses</strong></h2>
+            <p>1. Examining witness concerning prior statement. In
+            examining a witness concerning a prior statement made by the
+            witness, whether written or not, the statement need not be
+            shown nor its contents disclosed to the witness at that
+            time, but on request the same shall be shown or disclosed to
+            opposing counsel.</p>
+            <p>2. Extrinsic evidence of prior inconsistent statement of
+            witness. Extrinsic evidence of a prior inconsistent
+            statement by a witness is not admissible unless the witness
+            is afforded an opportunity to explain or deny the same, and
+            the opposite party is afforded an opportunity to interrogate
+            the witness thereon, or the interests of justice otherwise
+            require. This provision does not apply to admissions of a
+            party-opponent as defined in <a
+            href="http://www.oregonlaws.org/ors/40.450">Rule 801 (ORS
+            40.450)</a>.</p>
+            <h2 id="b._oec_8014a_fre_801d1a"><strong>B. OEC 801(4)(a)
+            (FRE 801(d)(1)(A))</strong></h2>
+            <p>Statements which are not hearsay. A statement is not
+            hearsay if:</p>
+            <p>Prior statement by witness. The declarant testifies at
+            the trial or hearing and is subject to cross-examination
+            concerning the statement, and the statement is::</p>
+            <p>(A) Inconsistent with the testimony of the witness and
+            was given under oath subject to the penalty of perjury at a
+            trial, hearing or other proceeding, or in a deposition;</p>
+            <p>(B) Consistent with the testimony of the witness and is
+            offered to rebut an inconsistent statement or an express or
+            implied charge against the witness of recent fabrication or
+            improper influence or motive; or</p>
+            <p>(C) One of identification of a person made after
+            perceiving the person.</p>
+            <h2 id="c._related_rules"><strong>C. <a
+            href="http://www.oregonlaws.org/ors/chapter/40">Related
+            Rules</a></strong></h2>
+            <p>1. <a href="http://www.oregonlaws.org/ors/40.040">OEC
+            106</a> When part of a transaction proved, whole admissible.
+            2. <a href="http://www.oregonlaws.org/ors/40.345">OEC
+            607</a>Who may impeach. 3. <a
+            href="http://www.oregonlaws.org/ors/40.355">OEC
+            609-1</a>Impeachment for bias or interest (No FRE!). 4. <a
+            href="http://www.oregonlaws.org/ors/40.370">OEC 611</a>Mode
+            and order of interrogation and presentation. 5. <a
+            href="http://www.oregonlaws.org/ors/40.375">OEC
+            612</a>Writing used to refresh memory. 6. <a
+            href="http://www.oregonlaws.org/ors/40.380">OEC 613</a>Prior
+            statements of witnesses. 7. <a
+            href="http://www.oregonlaws.org/ors/40.470">OEC
+            805</a>Hearsay within hearsay. 8. <a
+            href="http://www.oregonlaws.org/ors/40.475">OEC
+            806</a>Attacking and supporting credibility of
+            declarant.</p>
+            <p>Note: Unless otherwise indicated, federal rule is same
+            number.</p>
+            <h1
+            id="ii._law_of_prior_inconsistent_statements"><strong>II.
+            Law of Prior Inconsistent Statements</strong></h1>
+            <h2 id="a._general"><strong>A. General</strong></h2>
+            <p>Prior statements are generally inadmissible hearsay if
+            offered for truth. If prior statement is inconsistent with
+            witness’s present testimony, it is admissible to impeach
+            witness. Court must give limiting instruction if asked.
+            Query: Does anyone really believe juries distinguish between
+            substantive and impeachment evidence?</p>
+            <h2 id="b._types_of_statements_examples"><strong>B. Types of
+            Statements: Examples</strong></h2>
+            <p>1. Witness’s Prior Sworn Statement • deposition</p>
+            <p>• grand jury or preliminary hearing</p>
+            <p>2. Witness’s Prior Signed Statement • letter</p>
+            <p>• report (police or otherwise)</p>
+            <p>3.Third-party Statement, Signed or Adopted by Witness •
+            witness reads document and initials or adopts it as
+            accurate</p>
+            <p>4. Third-party Statement, Not Signed or Adopted by
+            Witness • defense investigator’s report recounting witness’s
+            statement</p>
+            <p>• police report, etc...</p>
+            <p>5. Prior Oral Statement of Witness • another person heard
+            witness say</p>
+            <h2 id="c._inconsistent"><strong>C.
+            Inconsistent</strong></h2>
+            <p>The word “inconsistent” is not defined by rule or
+            statute.</p>
+            <p>1. Generally The word “inconsistent” is not defined by
+            rule or statute. Generally, it “need not be a contradiction
+            in plain terms; it is enough if the proffered testimony as a
+            whole by what it says or omits affords some indication that
+            the fact was different from the testimony.” <a
+            href="http://scholar.google.com/scholar_case?q=us+v+barrett&amp;hl=en&amp;as_sdt=3,38&amp;case=11550634894278434942&amp;scilh=0">United
+            States v. Barrett</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+barrett&amp;hl=en&amp;as_sdt=3,38&amp;case=11550634894278434942&amp;scilh=0">,
+            539 F2d 244, 254 (lst Cir. 1976)</a>.</p>
+            <p>2. Material Variance The Oregon Supreme Court has held
+            that a statement is inconsistent if there is any material
+            variance between the statement and the direct testimony of
+            the witness. <a
+            href="http://scholar.google.com/scholar_case?q=rigelman+v+gilligan&amp;hl=en&amp;as_sdt=4,38&amp;case=12656522808753997682&amp;scilh=0">Rigelman
+            v. Gilligan</a><a
+            href="http://scholar.google.com/scholar_case?q=rigelman+v+gilligan&amp;hl=en&amp;as_sdt=4,38&amp;case=12656522808753997682&amp;scilh=0">,
+            265 Or 109, 506 P2d 710 (1973)</a>. The court further
+            advised trial judges to lean toward receiving such
+            statements in case of doubt to aid evaluating the testimony.
+            This liberal view of inconsistency is the preferred view.
+            See McCormick, <em>Evidence</em> §34 at page 74 (3d ed.,
+            1984); Kirkpatrick, <em>Oregon Evidence</em> p. 553 (5th
+            ed., 2011).</p>
+            <p>3. Omission v. Commission Prior statements may be used to
+            impeach as inconsistent as a result of what they don’t say
+            as well as what they do say. “Inconsistent statements have
+            been held to include omissions of material facts from
+            earlier statements, earlier statements that the witness
+            lacked knowledge of the subject, and silence under
+            circumstances where the witness would reasonably have been
+            expected to speak if the facts were as he or she now
+            testified.” Kirkpatrick, <em>Oregon Evidence</em> p. 553,
+            citing McCormick, <em>supra</em>, at 74–75.</p>
+            <p>4. Opinion McCormick also points out that a prior
+            expression of opinion may be seen as a prior inconsistent
+            statement even though it does not directly contradict the
+            fact asserted at trial. Thus a witness who testifies to
+            particular facts incriminating a defendant in a self-defense
+            assault case might be impeached by the prior general
+            statement, “it wasn’t his fault.” See generally, McCormick,
+            <em>Evidence</em>, §35 page 76.</p>
+            <p>5. Lack of Recollection If a witness claims not to
+            remember a material fact (e.g., “I don’t remember who ran
+            the red light”), he or she may be impeached with a prior
+            statement as to that fact (i.e., “the red car ran the red
+            light”). Similarly, the witness may be impeached if denying
+            memory of the prior statement. See Annot “Denial of
+            Recollection As Inconsistent with Prior Statement so as to
+            Render Statement Admissible,” 99 ALR 3d 934 (1980).</p>
+            <h2 id="d._foundations_for_impeachment"><strong>D.
+            Foundations for Impeachment</strong></h2>
+            <p>1. <a href="http://www.oregonlaws.org/ors/40.380">OEC
+            613(1)</a>—Examining the Witness (<a
+            href="http://www.law.cornell.edu/rules/fre/rule_613">FRE
+            613(a)</a>) This rule dispenses with the requirement that
+            the witness must be shown the statement before being asked
+            about it. The only mandatory safeguard is that the
+            cross-examining lawyer must disclose the statement to
+            opposing counsel if requested.</p>
+            <p>2. OEC 613(2)—Extrinsic Evidence of Statement (FRE
+            613(b)) This rule dispenses with the requirement that any
+            particular litany be repeated with the witness before the
+            inconsistent statement can be introduced. In fact, the
+            inconsistent statement can be introduced as extrinsic
+            evidence before the witness is ever asked about it. The rule
+            does impose two safeguards:</p>
+            <p>a. The witness must have an opportunity to explain or
+            deny the statement.</p>
+            <p>b. Opposing counsel must have the opportunity to
+            interrogate the witness on the statement.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>If you intend to introduce the inconsistent statement
+            with extrinsic evidence rather than on cross-examination, it
+            is important to make sure the witness will be available at a
+            later time.  You should request the court keep the
+            testifying witness under the court’s subpoena when that
+            witness is done testifying in the first instance.</p>
+            <h2
+            id="e._exceptions_to_oec_613_foundation_requirements"><strong>E.
+            Exceptions to OEC 613 Foundation Requirements</strong></h2>
+            <p>1. Prior Conduct If the witness’s trial testimony is
+            inconsistent with prior conduct rather than a prior
+            statement, the prior conduct could be proven by extrinsic
+            evidence without the safeguards of 613(2). See Legislative
+            Commentary to OEC 613; Weinstein &amp; Berger,
+            <em>Evidence</em>, §613, page 6 (1991).</p>
+            <p>Counsel must be careful that the conduct being introduced
+            is not a “statement” under <a
+            href="http://www.oregonlaws.org/ors/40.450">Rule 801</a>,
+            which includes “nonverbal conduct of a person, if it is
+            intended by him as an assertion....” ''See <a
+            href="http://scholar.google.com/scholar_case?q=us+v+praetorius&amp;hl=en&amp;as_sdt=3,38&amp;case=5014271044666585290&amp;scilh=0">United
+            States v. Praetorius</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+praetorius&amp;hl=en&amp;as_sdt=3,38&amp;case=5014271044666585290&amp;scilh=0">,
+            622 F2d 1054 (2nd Cir. 1979),</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+praetorius&amp;hl=en&amp;as_sdt=3,38&amp;case=5014271044666585290&amp;scilh=0">cert
+            denied</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+praetorius&amp;hl=en&amp;as_sdt=3,38&amp;case=5014271044666585290&amp;scilh=0">449
+            U.S. 860 (1980)</a> (Rule 613(b) applies to witness’s
+            failure to identify the defendant at an earlier trial
+            because that failure could be termed a statement rather than
+            conduct).</p>
+            <p>2. Admissions of Party Opponent Admissions of party
+            opponents are not hearsay and are specifically exempted from
+            the requirements of OEC 613.</p>
+            <p>3. <a href="http://www.oregonlaws.org/ors/40.475">OEC
+            806</a>—Impeaching Hearsay Declarant If a hearsay statement
+            has been admitted against a party, that party can impeach
+            the hearsay declarant just as if the person had actually
+            testified. This includes use of prior inconsistent
+            statements and the foundation requirements of OEC 613 are
+            not required.</p>
+            <p>4. Interests of Justice This provision was placed in the
+            rule to give the court some discretion to dispense with a
+            foundation in unusual circumstances, such as when a party
+            discovers an inconsistent statement after a witness has
+            become unavailable. Don’t count on generous application of
+            this rule.</p>
+            <p>5. Bias or Interest: Oregon Rule If the prior
+            inconsistent statement goes to the bias or interest of the
+            witness, <a href="http://www.oregonlaws.org/ors/40.355">OEC
+            609(1)</a> provides a different and more extensive
+            foundation before impeachment is allowed. It resembles the
+            Queen Caroline’s cases rules. 609(1) is meant to take
+            precedence over 613 if both apply. See Legislative
+            Commentary to 609(1). There is no equivalent federal
+            rule.</p>
+            <h2 id="f._problem_areas"><strong>F. Problem
+            Areas</strong></h2>
+            <p>1. Limits on Extrinsic Evidence The cases and
+            commentators talk about the court’s power to limit
+            impeachment on “collateral” matters. There is no general
+            agreement as to what this means or whether this “rule”
+            should be seen as reformulated under Rule 403 as a relevancy
+            and balancing question. See discussion in McCormick,
+            <em>supra</em>, §36, page 77–78; Kirkpatrick,
+            <em>supra</em>, p. 554.</p>
+            <p>Generally, if the statements concern facts which are
+            relevant to the issues in the case, impeachment will not be
+            “collateral.” Additionally, if the statements are otherwise
+            provable to discredit the witness’s testimony, i.e. to show
+            bias, interest, or lack of knowledge, then they will be
+            admitted on that basis. (Impeachment for bias or interest is
+            never collateral!)</p>
+            <p>2. <a href="http://www.oregonlaws.org/ors/40.345">OEC
+            607</a>—Impeaching Own Witness Traditional rules of evidence
+            did not permit a party to impeach his own witness. Rule 607
+            specifically permits this practice. This creates a potential
+            problem when a party calls a witness for the sole purpose of
+            eliciting a statement and then introducing the prior
+            statement in the guise of impeachment, which statement the
+            party really hopes will be accepted as fact. See discussion
+            in Weinstein &amp; Berger, <em>Weinstein’s Federal
+            Evidence</em> §607[01]; Kirkpatrick, <em>supra</em>, text
+            accompanying §607, p. 475. In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+staley&amp;hl=en&amp;as_sdt=4,38&amp;case=4605092880595551855&amp;scilh=0">State
+            v. Staley</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+staley&amp;hl=en&amp;as_sdt=4,38&amp;case=4605092880595551855&amp;scilh=0">,
+            165 Or App 395, 995 P2d 1217 (2000)</a>, the state could not
+            impeach a victim with prior statements to police simply
+            because she testified she could not remember the incident at
+            trial.</p>
+            <p>3. Impeachment Using Unconstitutionally Obtained
+            Statements Under federal law, a defendant may be impeached
+            using statements that were obtained in violation of
+            constitutional rights. <a
+            href="http://scholar.google.com/scholar_case?q=harris+v+new+york&amp;hl=en&amp;as_sdt=2,38&amp;case=11009927843640704556&amp;scilh=0">Harris
+            v. New York</a><a
+            href="http://scholar.google.com/scholar_case?q=harris+v+new+york&amp;hl=en&amp;as_sdt=2,38&amp;case=11009927843640704556&amp;scilh=0">,
+            401 U.S. 222 (1971)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=michigan+v+harvey&amp;hl=en&amp;as_sdt=3,38&amp;case=3851472689676611378&amp;scilh=0">Michigan
+            v. Harvey</a><a
+            href="http://scholar.google.com/scholar_case?q=michigan+v+harvey&amp;hl=en&amp;as_sdt=3,38&amp;case=3851472689676611378&amp;scilh=0">,
+            494 U.S. 344, 110 S Ct 1176 (1990)</a>. The Oregon
+            Constitution has been interpreted to disallow impeachment
+            use of statements seized in violation of Article I, section
+            12. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+isom&amp;hl=en&amp;as_sdt=4,38&amp;case=18069363392063733694&amp;scilh=0">State
+            v. Isom</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+isom&amp;hl=en&amp;as_sdt=4,38&amp;case=18069363392063733694&amp;scilh=0">,
+            306 Or 587 761 P2d 524 (1988)</a>.</p>
+            <p>4. Extrinsic Evidence When Witness Admits Statement When
+            the witness has been cross-examined about a prior
+            inconsistent statement and has admitted making it, can the
+            proponent of the statement still introduce it as extrinsic
+            evidence? Both Kirkpatrick and McCormick indicate that the
+            answer is unclear.</p>
+            <h2
+            id="g._prior_inconsistent_statements_as_substantive_evidenceoec_8014aa_fre_801d1a"><strong>G.
+            Prior Inconsistent Statements As Substantive Evidence—<a
+            href="http://www.oregonlaws.org/ors/40.450">OEC
+            801(4)(a)(A)</a> <a
+            href="http://www.law.cornell.edu/rules/fre/rule_801">(FRE
+            801(d)(1)(A))</a></strong></h2>
+            <p>If the prior inconsistent statement was given under oath
+            subject to the penalty of perjury, the rule changes prior
+            law to allow the statement as substantive evidence by
+            declaring that it is not hearsay. The rule requires the
+            statement to have been under oath at a trial, hearing or
+            other proceeding, or in a deposition.</p>
+            <p>The rule requires that the witness testify at the trial
+            and be subject to cross-examination about the statement.
+            However, the rule does not require that the prior statement
+            had been one subject to cross-examination. Therefore, grand
+            jury testimony inconsistent with a witness’s trial testimony
+            may be received as substantive evidence.</p>
+            <p>Note: This rule, in combination with <a
+            href="http://www.oregonlaws.org/ors/40.345">OEC 607</a> on
+            impeaching one’s own witness, creates a special type of
+            problem if the prosecution in a criminal case attempts to
+            convict based on the recanted sworn testimony of their own
+            witness. See Kirkpatrick, supra at VII-21 to 22; Weinstein
+            &amp; Berger, <em>supra</em>, 801–107; Goldman, “Guilt By
+            Intuition: The Insufficiency of Prior Inconsistent
+            Statements to Convict,” 65 North Carolina Law Review 1
+            (1986).</p>
+            <h1
+            id="iii._the_use_of_prior_statements_to_impeach"><strong>III.
+            The Use of Prior Statements to Impeach</strong></h1>
+            <h2 id="a._some_tactical_considerations"><strong>A. Some
+            Tactical Considerations</strong></h2>
+            <p>After understanding the legal framework outlined above,
+            the advocate must decide how to use the impeachment
+            material. The rule allows the lawyer to ignore the witness
+            and introduce the inconsistency through other witnesses.
+            Before choosing that path, however, you must determine if
+            that is the most effective way to present the impeachment.
+            Listed below are some of the questions which may be
+            important in choosing your method.</p>
+            <p>1. Is the inconsistency important to my case? How does it
+            help? How does it fit in to my “theory of defense?” 2. Will
+            the witness deny the prior statement? Can I make the witness
+            eat the statement if he or she does try to deny it? How? 3.
+            Will the impeachment impress the jury more if I do it with
+            the witness on the stand or by introducing the extrinsic
+            evidence? 4. How will the witness try to explain the
+            inconsistency? How will the prosecutor try to rehabilitate
+            the witness and can I anticipate that in my
+            cross-examination? There are no automatic answers to any of
+            these questions. Obviously, the advocate needs to have
+            identified and organized any inconsistencies prior to making
+            the decision whether or not to cross-examine and impeach the
+            witness. As a general rule, it would seem that impeachment
+            of the witness on the stand with a powerful inconsistency
+            would be more impressive drama and more likely to reach the
+            jury than a contradiction introduced by another witness
+            sometime later in the case. With that in mind, a general
+            approach for cross-examination is set forth below.</p>
+            <h2 id="b._examples"><strong>B. Examples</strong></h2>
+            <p>1. Police Reports. When the inconsistency is in a police
+            officer’s report, it is quite simple to go through an
+            extended litany with the officer about his training and
+            experience in writing reports and how important that aspect
+            of his training and job are. The officer has to concede that
+            he writes accurate reports and includes important details
+            and knows how important the reports are to other people as
+            well as to himself when he later needs to refresh his memory
+            before testifying. 2. Memory. Whenever the prior statement
+            was relatively close to the event you may want to attempt to
+            get the witness to concede how memory works. Most people
+            will admit that one’s memory is fresher closer to the event.
+            Some attorneys prefer to establish the time sequence and
+            leave the fresh memory argument for closing. 3. Deposition.
+            When the prior statement is from a deposition, you can and
+            should set the entire scene for the deposition: the fact
+            that there was a court reporter who administered an oath to
+            the witness; that the opposing attorney told the witness
+            that if any question was unclear the witness should request
+            clarification; that the attorney asked whether the witness
+            was experiencing any mental or physical problems that would
+            interfere with his ability to recall events or understand
+            the questions, and that the witness assured the attorney
+            there were none; that the reporter prepared a transcript and
+            gave the witness a copy to review; and that the witness
+            signed the transcript after reviewing it without making any
+            changes.</p>
+            <h1
+            id="iv._impact_on_other_parts_of_defense_case"><strong>IV.
+            Impact on Other Parts of Defense Case</strong></h1>
+            <h2 id="a._trial_preparation_discovery"><strong>A. Trial
+            Preparation &amp; Discovery</strong></h2>
+            <p>Gear your investigation and preparation toward finding as
+            many statements as possible. Use the discovery laws and
+            procedures to get as many reports as you can. (See Chapter
+            2, Discovery.) Any inconsistent statements by state
+            witnesses should be available under <em>Brady</em>, in
+            addition to the Jencks Act and <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.815</a>.</p>
+            <p>Have your investigator interview all potential state
+            witnesses and write reports. You may consider employing a
+            procedure where the investigator reads back the witness’s
+            statement to him from the report so that he can verify that
+            it is accurate. If the witness initials the report or orally
+            adopts it as correct, there will be much less room for him
+            to wriggle off the hook if he changes his story at
+            trial.</p>
+            <h2 id="b._voir_dire"><strong>B. Voir Dire</strong></h2>
+            <p>If you know you will be using prior inconsistent
+            statements during the trial, you may want to inject the
+            issue into the case during voir dire. Caveat: Proceed with
+            caution if your client is going to testify and is on his or
+            her third version of events. You might broach the issue by
+            asking some of the jurors why they think somebody might
+            change his or her story. You might suggest some answers to
+            them, but will often find that they can think of plenty of
+            appropriate answers themselves.</p>
+            <h2 id="c._choice_of_language"><strong>C. Choice of
+            Language</strong></h2>
+            <p>During the course of the trial, you will probably not
+            want to use the words “prior inconsistent statement” when
+            trying to communicate anything to the jury. Choose non-legal
+            language such as the witness “changed the story,” “couldn’t
+            keep his story straight,” “first version and second
+            version,” “the witness changed her tune,” etc.</p>
+            <h2 id="d._demonstrative_evidence"><strong>D. Demonstrative
+            Evidence</strong></h2>
+            <p>Use charts to illustrate the difference between the two
+            statements. You can use such devices during the impeachment,
+            during argument, or both.</p>
+            <h2 id="e._substantive_evidence_instruction"><strong>E.
+            Substantive Evidence Instruction</strong></h2>
+            <p>If you have used a prior inconsistent statement which was
+            admissible as substantive evidence under <a
+            href="http://www.oregonlaws.org/ors/40.450">OEC 801</a>, ask
+            the court to instruct the jury at the time the evidence
+            comes in and/or at the close of the case that this evidence
+            is not just hearsay but is admissible for the truth. Who
+            knows? Somebody on the jury might understand or just be
+            impressed.</p>
+            <h2 id="f._false_in_part_jury_instruction"><strong>F.
+            False-in-part Jury Instruction</strong></h2>
+            <p>UCrJI 1023 is a standard instruction about a witness
+            being distrusted if testimony is found to be false in part.
+            See also <a
+            href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.095(3)</a>. You will want to get this instruction and
+            preview it for the jury during closing argument.</p>
+            <h1 id="v._bibliography"><strong>V.
+            Bibliography</strong></h1>
+            <p><strong><em>Other helpful materials
+            include:</em></strong></p>
+            <p>Lisa Hay, “Cops, Lies and Videotape,” OCDLA 2011 Annual
+            Conference.</p>
+            <p>Lisa Maxfield, “Cross Examination of Child Sex Abuse
+            Complainants,” OCDLA Juvenile Law Seminar, April 2011.</p>
+            <p>Colette Tvedt, “Cross Examination in Sex Cases and
+            Dealing with the Client’s Confession,” OCDLA Sunny Climate
+            Seminar, November, 2010.</p>
+            <p>Alex Bassos, “Juvenile Breakout: Crossing the
+            Psychologist in Juvenile Proceedings,” OCDLA 2010 Annual
+            Conference.</p>
+            <p>Bruce Harvey, “Cross Examination,” OCDLA 2010 Annual
+            Conference.</p>
+            <p>Abraham Hutt, “Cross-Exam of the Officer in DUII Cases,”
+            OCDLA’s “DUII Defense: From the Stop to the Trial” Seminar,
+            March 2010.</p>
+            <p>Liann Crane, “Psychological Experts: Crossing the Squishy
+            Science,” OCDLA Winter Conference, December 2009.</p>
+            <p>John Henry Hingson, “Creative Cross-Examination of Cops,”
+            OCDLA 2009 Annual Conference.</p>
+            <p>Jodie English, “Cross Examining the Cop,” OCDLA’s Sunny
+            Climate Seminar, November 2007.</p>
+            <p>Several presentations at the OCDLA 2003 Winter
+            Conference, “Attacking Accepted Science.”</p>
+            <p>OCDLA’s “Cross Examination Seminar,” March 2003,
+            featuring Terence McCarthy, Chicago.</p>
+            <p>“D is for Delicate: Crossing the Fragile Witness (Child,
+            Victim, Mother),” by Lisa Wayne of Denver, and “C is for
+            Criminal: Confronting the Snitch on Cross,” by Steve Harmon,
+            California, both at the OCDLA 2006 Annual Conference.</p>
+            <p>“Cross-Examining Experts in the Behavioral Sciences”
+            Demosthenes Lorandos, Ann Arbor, Michigan, at the OCDLA’s “A
+            Vigorous Constitution” held March 2006.</p>
+            <p>“Cross Examination” Barry Engle, Portland, OCDLA New
+            Lawyers Seminar October 2005.</p>
+            <p>“How to Cross-Examine the State’s Experts,” by Michael
+            Burt, San Francisco, at OCDLA Death Penalty Seminar, October
+            2004.</p>
+            <p>“Aggressively Crossing the Cops,” Ken Walker, Portland,
+            OCDLA Search &amp; Seizure Seminar, September 2004.</p>
+            <p>“Explain It to Me Like I’m Three Years Old: Dumbing Down
+            the Expert Witness,” by Andrea Lyon, Chicago, from the OCDLA
+            2003 Annual Conference.</p>
+            <p>“Crossing Their Expert,” Denny LeBoeuf, Capital
+            Post-Conviction Project, New Orleans, at the OCDLA Death
+            Penalty Seminar, October 2002.</p>
+            <p>“How to Effectively Cross-Examine State Experts” Duane
+            McCabe, Bend, at the OCDLA seminar, “Inside the Laboratory,”
+            April 2002.</p>
+            <p>“Crossing the Cop on the Manuals” David Celuch, OCDLA
+            DUII Seminar, September 2001.</p>
+            <p>The OCDLA seminar, “Dynamic Cross Examination,” December
+            1999.</p>
+            <p>•David Lewis’ taped presentation and outline, “Cross to
+            Kill,” from OCDLA’s 1999 Annual Conference.</p>
+            <p>Annotation, “Denial of Recollection as Inconsistent with
+            Prior Statement so as to Render Statement Admissible,” 99
+            ALR 3d 934 (1980).</p>
+            <p>Annotation, “Use of Prior Inconsistent Statements for
+            Impeachment of Testimony of Witnesses Under Rule 613,
+            Federal Rules of Evidence, 40 ALR Fed. 629 (1978).</p>
+            <p><strong><em>Books:</em></strong></p>
+            <p>Larry Pozner &amp; Roger Dodd, <em>Cross Examination:
+            Science &amp; Technique.</em></p>
+            <p><em>Your Witness: Lessons on Cross-Examination and Life
+            from Great Chicago Trial Lawyers</em>, edited by Steven F.
+            Molo and James R. Figliuolo (Law Bulletin Publishing
+            Company).</p>
+            <p>William Carroll &amp; Michael Seng, Chapter 7,
+            <em>Eyewitness Testimony: Strategies and Tactics</em> (2nd
+            Ed, Thomson West: 2003) (“This chapter . . . deals with the
+            cross examiner’s approach to a witness who claims to have
+            observed an event and whose testimony, according to the
+            trial theory of the cross examiner, simply is mistaken or
+            overstated as a result of error, reasonable bias, or
+            suggestive influences”).</p>
+            <p>Terence F. MacCarthy, <em>MacCarthy on
+            Cross-Examination</em>, (ABA 2007).</p>
+            <p>Laird C. Kirkpatrick, <em>Oregon Evidence</em> (5th Ed.,
+            2011).</p>
+            <p>Charles McCormick, <em>McCormick on Evidence</em>(3d Ed.,
+            1984).</p>
+            <p>Weinstein &amp; Berger, <em>Weinstein’s Federal
+            Evidence</em> (Matthew Bender, Supplement (1991).</p>
+            <p>Edward Imwinkelried, <em>Evidentiary Foundations</em>(2nd
+            Ed., 1989).</p>
+            <p><strong><em>Champion Articles:</em></strong></p>
+            <p><a
+            href="http://www.nacdl.org/Champion.aspx?id=16219">Vida
+            Johnson, “A Primer on Crossing an Informant,” April
+            2011.</a></p>
+            <p><a
+            href="http://www.nacdl.org/Champion.aspx?id=16224">Jennifer
+            Brown, “Cross-Examining the Difficult Witness,” April
+            2011.</a></p>
+            <p><a href="http://www.nacdl.org/Champion.aspx?id=1092">Deja
+            Vishny, “Defending Unrecorded False Confession Cases,”
+            December 2007.</a></p>
+            <p><a href="http://www.nacdl.org/Champion.aspx?id=4755">Eric
+            Vos, “Experts: How to Identify Them, Confront Them, and Keep
+            Them Off the Stand,” June 2007.</a></p>
+            <p><a
+            href="http://www.nacdl.org/Champion.aspx?id=1312">William
+            Wolf, “Preparing to Cross-Examine an Expert Witness—Part 1,”
+            July 2004.</a></p>
+            <p><a
+            href="http://www.nacdl.org/Champion.aspx?id=1334">William
+            Wolf, “Preparing to Cross-Examine an Expert Witness—Part 2,”
+            August 2004.</a></p>
+            <p>Patrick Tuite, “Cross Examining the Rat,” November
+            1994.</p>
+            <center>
+            <p><em>This chapter originally prepared for the 1993 edition
+            by Tony Bornstein (Cross Examination)</em></p>
+            </center>
+            <center>
+            <p><em>and Steven Jacobson (Prior Inconsistent Statements),
+            Portland.</em></p>
+            </center>
+            <hr />
+            <references/>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1">The author would like to acknowledge the kind
+            assistance of Rankin Johnson IV for his work in editing and
+            providing updated case law material to this chapter.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

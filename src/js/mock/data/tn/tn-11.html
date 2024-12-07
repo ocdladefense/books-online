@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 11. Making a Record and Offers of
+            Proof</strong></p>
+            <p><strong><em>By Office of Public Defense
+            Services</em></strong></p>
+            <h1 id="i._the_rule_of_preservation"><strong>I. The Rule of
+            Preservation</strong></h1>
+            <p>“No matter claimed as error will be considered on appeal
+            unless the claim of error was preserved in the lower court
+            and is assigned as error in the opening brief in accordance
+            with this rule; provided that the appellate court may
+            consider an error of law apparent on the face of the
+            record.” <a
+            href="http://courts.oregon.gov/OJD/docs/OSCA/acs/records/FormatoftheOpeningBriefintheOregonCourtofAppeals.pdf">ORAP
+            5.45(1).</a></p>
+            <h1 id="ii._the_purpose_of_preservation"><strong>II. The
+            Purpose of Preservation</strong></h1>
+            <p>The preservation requirement is grounded in concerns of
+            fairness to the parties and the efficient administration of
+            justice. The adversary should be permitted to present its
+            position, and the trial court should be permitted to
+            understand and correct any error, thereby obviating the need
+            for an appeal. <a
+            href="http://scholar.google.com/scholar_case?case=15135726944817960012&amp;q=310+or+347&amp;hl=en&amp;as_sdt=4,38">State
+            v. Brown,</a><a
+            href="http://scholar.google.com/scholar_case?case=15135726944817960012&amp;q=310+or+347&amp;hl=en&amp;as_sdt=4,38">310
+            Or 347, 356, 800 P2d 259 (1990)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=307+or+183&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hitz,</a><a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=307+or+183&amp;hl=en&amp;as_sdt=4,38">307
+            Or 183, 188, 766 P2d 373 (l988)</a>.</p>
+            <h1
+            id="iii._statutory_limitations_on_the_ability_to_appeal"><strong>III.
+            Statutory Limitations on the Ability to Appeal</strong></h1>
+            <h2 id="a._guilty_and_no_contest_pleas"><strong>A. Guilty
+            and No Contest Pleas</strong></h2>
+            <p>1. Issues that Can <em>Not</em> be Appealed</p>
+            <p><a href="http://www.leg.state.or.us/ors/138.html">ORS
+            138.050</a> provides:</p>
+            <p>[A] defendant who has pleaded guilty or no contest may
+            take an appeal …only when the defendant makes a colorable
+            showing that the disposition:</p>
+            <p>(a) Exceeds the maximum allowable by law; or</p>
+            <p>(b) Is unconstitutionally cruel and unusual.</p>
+            <p>Example 1: The Court of Appeals held that a defendant
+            cannot appeal a trial court’s legally erroneous refusal to
+            consider a Measure 11 opt-out because the Measure 11
+            sentence actually imposed did not exceed the statutory
+            maximum. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+anderson&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=9324073310376370377&amp;scilh=0">State
+            v. Anderson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+anderson&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=9324073310376370377&amp;scilh=0">,
+            197 Or App 193, 104 P3d 1175,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+anderson&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=9324073310376370377&amp;scilh=0">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+anderson&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=9324073310376370377&amp;scilh=0">,
+            338 Or 583 (2005)</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>In cases where defendant will seek an opt-out, trial
+            counsel should consider a stipulated facts trial instead of
+            a guilty plea.</p>
+            <p>Example 2: The trial court’s imposition of a longer
+            sentence on an amended judgment raised the question of the
+            lower court’s jurisdiction to impose the longer sentence,
+            which was appealable. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+easton&amp;hl=en&amp;as_sdt=4,38&amp;case=916555342921927441&amp;scilh=0">State
+            v. Easton</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+easton&amp;hl=en&amp;as_sdt=4,38&amp;case=916555342921927441&amp;scilh=0">,
+            204 Or App 1, 126 P3d 1256 (2006)</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+easton&amp;hl=en&amp;as_sdt=4,38&amp;case=916555342921927441&amp;scilh=0">.</a></p>
+            <p>2. Limitations on Issues that May be Reviewed</p>
+            <p>ORS 138.222 limits what issues the courts may review,
+            e.g.,<em></em>stipulated sentences and any sentence within
+            the guidelines’ presumptive range may not be appealed.</p>
+            <p>A disposition that “exceeds the maximum allowable by law”
+            under ORS 138.050 does not include a sentence that was
+            imposed by means that violate the Due Process clause of the
+            federal constitution; the colorable claim that the sentence
+            exceeds the legal maximum must relate a statutory maximum.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cloutier&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=1921296845402728340&amp;scilh=0">State
+            v. Cloutier</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cloutier&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=1921296845402728340&amp;scilh=0">,
+            351 Or 68, 261 P3d 1234 (2011)</a><em>.</em></p>
+            <h2
+            id="b._conditional_pleas_for_appeals_of_pretrial_rulings"><strong>B.
+            Conditional Pleas for Appeals of Pretrial
+            Rulings</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.335</a> provides:</p>
+            <p>(3) With the consent of the court and the state, a
+            defendant may enter a conditional plea of guilty or no
+            contest reserving, in writing, the right, on appeal from the
+            judgment, to a review of an adverse determination of any
+            specified pretrial motion. A defendant who finally prevails
+            on appeal may withdraw the plea.</p>
+            <p>1. In Writing</p>
+            <p>The conditional plea must be in writing and the writing
+            must specify which pretrial ruling is being appealed. <a
+            href="http://scholar.google.com/scholar_case?case=3575148201376533644&amp;q=222+or+app+117&amp;hl=en&amp;as_sdt=4,38">See
+            City of Lake Oswego v. Albright,</a><a
+            href="http://scholar.google.com/scholar_case?case=3575148201376533644&amp;q=222+or+app+117&amp;hl=en&amp;as_sdt=4,38">222
+            Or App 117, 193 P3d 988 (2008)</a> (holding that a notation
+            on the plea petition that a defendant wish [for] a
+            “reservation of appeal rights” was not sufficient to specify
+            the ruling he wished to appeal, and thus the appellate court
+            could not review the denial of the motion to suppress after
+            the defendant’s guilty plea. The best practice is to make
+            sure that the plea petition and the judgment explicitly
+            state that it is a conditional plea and specify the
+            particular pretrial ruling being challenged. Be sure to
+            cross out any language in the petition that may be
+            inconsistent with a conditional plea. The defendant probably
+            can appeal only issues that relate to a count to which he or
+            she is pleading guilty. For example, if the issue at the
+            pretrial hearing relates to Count 1, and your client
+            conditionally pleads guilty to Counts 2 and 3, the appellate
+            court may say any error is harmless. It may also find no
+            harm if it can’t tell which count the pretrial issue relates
+            to. So if your case involves multiple counts, you need to be
+            clear that your pretrial issue relates to a count that was
+            pleaded to and not dismissed.</p>
+            <p>2. Possible Advantage</p>
+            <p>Unlike an appeal from a stipulated facts trial, the
+            appellant does not have to show that the error was harmful.
+            <a
+            href="http://scholar.google.com/scholar_case?case=12929889613416190278&amp;q=205+or+app+528&amp;hl=en&amp;as_sdt=4,38">State
+            v. Mastin</a><a
+            href="http://scholar.google.com/scholar_case?case=12929889613416190278&amp;q=205+or+app+528&amp;hl=en&amp;as_sdt=4,38">,
+            205 Or App 528, 134 P3d 1052 (2006)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=15902757729165816057&amp;q=182+or+app+505&amp;hl=en&amp;as_sdt=4,38">State
+            v. Dinsmore</a><a
+            href="http://scholar.google.com/scholar_case?case=15902757729165816057&amp;q=182+or+app+505&amp;hl=en&amp;as_sdt=4,38">,
+            182 Or App 505, 49 P3d 830 (2002)</a> (<em>Dinsmore I</em>).
+            An erroneous ruling is an automatic reversal.</p>
+            <p>3. Possible Disadvantages</p>
+            <p>Because a conditional plea is still a plea, <a
+            href="http://www.leg.state.or.us/ors/138.html">ORS
+            138.050</a> limits what sentencing issues can be appealed.
+            In addition, be careful what you state in the plea
+            agreement.<a
+            href="http://scholar.google.com/scholar_case?case=4669974170051790903&amp;q=200+or+app+432&amp;hl=en&amp;as_sdt=4,38"></a><a
+            href="http://scholar.google.com/scholar_case?case=4669974170051790903&amp;q=200+or+app+432&amp;hl=en&amp;as_sdt=4,38">State
+            v. Dinsmore</a><a
+            href="http://scholar.google.com/scholar_case?case=4669974170051790903&amp;q=200+or+app+432&amp;hl=en&amp;as_sdt=4,38">,
+            200 Or App 432, 116 P3d 226 (2005)</a> (<em>Dinsmore
+            II</em>), <a
+            href="http://scholar.google.com/scholar_case?q=state+v+dinsmore&amp;hl=en&amp;as_sdt=4,38&amp;case=8776825158791270990&amp;scilh=0">affirmed</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+dinsmore&amp;hl=en&amp;as_sdt=4,38&amp;case=8776825158791270990&amp;scilh=0">,
+            342 Or 1 (2006) (</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+dinsmore&amp;hl=en&amp;as_sdt=4,38&amp;case=8776825158791270990&amp;scilh=0">Dinsmore
+            III</a>). In <em>Dinsmore I</em>, the defendant entered a
+            conditional plea to negligent homicide, the lesser-included
+            offense of the charged second-degree manslaughter. Three
+            other charges were dismissed. After the defendant’s
+            successful appeal, the state brought back all of the
+            original charges and the jury convicted. In <em>Dinsmore
+            II</em>, the Court of Appeals held that the three dismissed
+            charges could not be revived absent a provision for that in
+            the original plea petition. The state, however, could bring
+            back the charge of manslaughter, because it had not been
+            dismissed. The Oregon Supreme Court held that the terms of
+            the plea agreement controlled <em>Dinsmore</em>
+            <em>III</em>. The state agreed to dismiss charges in
+            exchange for defendant’s conditional plea to negligent
+            homicide. Therefore, the state was entitled to retry her
+            only on the charge of negligent homicide (not manslaughter
+            as the Court of Appeals had concluded). 342 Or at 9.</p>
+            <p>On a related issue, the Supreme Court allowed a defendant
+            to withdraw his conditional guilty plea to two charges even
+            though the issue underlying the conditional plea involved
+            only one count. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+tannehil&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=4289500555894750606&amp;scilh=0">State
+            v. Tannehill</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+tannehil&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2004&amp;case=4289500555894750606&amp;scilh=0">,
+            341 Or 205, 141 P3d 584 (2006)</a> (statute intended to
+            permit the defendant to withdraw the entire plea if the
+            premise underlying one part of the plea turns out not to be
+            valid).</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>Stipulated facts trials and conditional pleas have
+            different consequences. Weigh the advantages and
+            disadvantages of both depending on each individual
+            situation. Depending on the wording of the plea agreement,
+            the court could consider the withdrawal of a conditional
+            plea after a successful appeal as a withdrawal of the entire
+            plea agreement. Accordingly, trial counsel should warn
+            clients of any possible adverse consequences.</p>
+            <h1 id="iv._how_to_preserve_issues_for_appeal"><strong>IV.
+            How to Preserve Issues for Appeal</strong></h1>
+            <h2 id="a._the_record"><strong>A. The Record</strong></h2>
+            <p>The court will not look outside the record to find
+            objections. <a
+            href="http://scholar.google.com/scholar_case?case=2845130564185435321&amp;q=333+or+163&amp;hl=en&amp;as_sdt=4,38">State
+            v. Terry</a><a
+            href="http://scholar.google.com/scholar_case?case=2845130564185435321&amp;q=333+or+163&amp;hl=en&amp;as_sdt=4,38">,
+            333 Or 163, 167, 37 P3d 157 (2001)</a>. So discussions in
+            chambers don’t count. If discussions do occur off the record
+            regarding a disputed issue, make sure that you later
+            summarize them for the record and submit exhibits if
+            necessary. Tapes played in court are usually not
+            transcribed, so offer those as exhibits.</p>
+            <h2 id="b._timing"><strong>B. Timing</strong></h2>
+            <p>Even the best of objections must be timely in order to be
+            “preserved.” <a
+            href="http://www.oregonlaws.org/ors/40.025">OEC</a><a
+            href="http://www.oregonlaws.org/ors/40.025"></a><a
+            href="http://www.oregonlaws.org/ors/40.025">103(1)(a)</a>.
+            An objection is “timely” if it is made as soon as its
+            applicability to the offered evidence is known to the
+            opponent of the evidence. <a
+            href="http://scholar.google.com/scholar_case?case=3892459732545137537&amp;q=315+or+273&amp;hl=en&amp;as_sdt=4,38">State
+            v. Keller,</a><a
+            href="http://scholar.google.com/scholar_case?case=3892459732545137537&amp;q=315+or+273&amp;hl=en&amp;as_sdt=4,38">315
+            Or 273, 283, 844 P2d 195 (1993)</a>. Timeliness may also be
+            determined by application of statutes, the Uniform Trial
+            Court Rules (UTCRs) or by Supplemental Local Rules. <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch04.pdf">UTCR
+            4.010</a>, for example, requires filing pretrial motions
+            under <a href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.037</a> (omnibus hearing statute) and ORS
+            135.805–135.873 (discovery statutes) not less than 21 days
+            before trial or within 7 days after arraignment, whichever
+            is later, unless otherwise permitted by the trial court, on
+            good cause shown. Failure to adhere to UTCR timetables can
+            result in a motion being denied as not timely, and therefore
+            not preserved for appellate review.</p>
+            <p>No objection is required when a party is not allowed to
+            make it. For example, a defendant is not required to object
+            to the trial court’s <em>sua sponte</em>modification of his
+            sentence on the ground that it lacked jurisdiction and
+            defendant was entitled to be present. <a
+            href="http://scholar.google.com/scholar_case?case=1709555689114323702&amp;q=158+or+app+238&amp;hl=en&amp;as_sdt=4,38">State
+            v. DeCamp</a><a
+            href="http://scholar.google.com/scholar_case?case=1709555689114323702&amp;q=158+or+app+238&amp;hl=en&amp;as_sdt=4,38">,
+            158 Or App 238, 973 P2d 922 (1999)</a> (“A party cannot be
+            expected to make an objection contemporaneously with a trial
+            court’s ruling or other action when the party is not on
+            notice of the trial court’s intended action and had no
+            opportunity”); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+whitlock&amp;hl=en&amp;as_sdt=4,38&amp;case=13040768263049672434&amp;scilh=0">State
+            v. Whitlock</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+whitlock&amp;hl=en&amp;as_sdt=4,38&amp;case=13040768263049672434&amp;scilh=0">,
+            187 Or App 265, 65 P3d 1114 (2003)</a>. Similarly, a party
+            is not required to preserve an issue that arises for the
+            first time when the court issues its written order. <a
+            href="http://scholar.google.com/scholar_case?q=327+or+84&amp;hl=en&amp;as_sdt=4,38&amp;case=3911860561615408357&amp;scilh=0">McCarthy
+            v. Oregon Freeze Dry, Inc.,</a><a
+            href="http://scholar.google.com/scholar_case?q=327+or+84&amp;hl=en&amp;as_sdt=4,38&amp;case=3911860561615408357&amp;scilh=0">327
+            Or 84, 95 n 6,</a><a
+            href="http://scholar.google.com/scholar_case?q=327+or+84&amp;hl=en&amp;as_sdt=4,38&amp;case=3911860561615408357&amp;scilh=0">modified
+            on recons.,</a><a
+            href="http://scholar.google.com/scholar_case?q=327+or+84&amp;hl=en&amp;as_sdt=4,38&amp;case=3911860561615408357&amp;scilh=0">327
+            Or 185 (1998)</a>.</p>
+            <h2 id="c._specificity"><strong>C. Specificity</strong></h2>
+            <p>Our state supreme court has<strong></strong>distinguished
+            raising an <em>issue</em>at trial vs. identifying a
+            <em>source</em> for a claimed position vs. making a
+            particular <em>argument</em>. “The first ordinarily is
+            essential, the second less so, the third the least.” <a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=307+or+183&amp;hl=en&amp;as_sdt=4,38">Hitz</a><a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=307+or+183&amp;hl=en&amp;as_sdt=4,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=307+or+183&amp;hl=en&amp;as_sdt=4,38">supra,</a><a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=307+or+183&amp;hl=en&amp;as_sdt=4,38">307
+            Or at 188</a>.</p>
+            <p>Frustration with the <em>Hitz</em> template prompted
+            Judge Landau writing for the Court of Appeals to describe
+            the preservation specificity inquiry as, “Did the trial
+            court have a realistic opportunity to make the right call?”
+            <a
+            href="http://scholar.google.com/scholar_case?case=14215759066266909731&amp;q=156+or+app+566&amp;hl=en&amp;as_sdt=4,38">State
+            v. Doern</a><a
+            href="http://scholar.google.com/scholar_case?case=14215759066266909731&amp;q=156+or+app+566&amp;hl=en&amp;as_sdt=4,38">,
+            156 Or App 566, 579, 967 P2d 1230 (1998)</a> (Landau, J.,
+            dissenting), <em>rev den,</em>328 Or 666 (1999).</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?case=14073553936707393523&amp;q=328+or+116&amp;hl=en&amp;as_sdt=4,38">State
+            v. Stevens</a><a
+            href="http://scholar.google.com/scholar_case?case=14073553936707393523&amp;q=328+or+116&amp;hl=en&amp;as_sdt=4,38">,
+            328 Or 116, 122, 970 P2d 215 (1998)</a><em>,</em> the court
+            seems to have endorsed Judge Landau’s view:</p>
+            <p>Although [the <em>Hitz</em>template] imparts some degree
+            of liberality to the preservation requirement, it does not
+            transform that requirement into a cursory search for some
+            common thread, however remote, between an issue on appeal
+            and a position that was advanced at trial. Instead, in
+            considering whether an objection at trial raised the “issue”
+            being advanced on appeal, an appellate court must view the
+            facts in light of the purposes of fairness and efficiency
+            that underlie the requirement.</p>
+            <p>The court in <em>Stevens</em> reviewed a trial-level
+            objection to evidence of Battered Woman Syndrome (BWS).
+            Trial counsel objected to the state’s BWS evidence, claiming
+            it was inadmissible profile evidence—an impermissible
+            comment on witness credibility—and challenged the state
+            expert’s qualifications. The court held those objections
+            insufficient to challenge on appeal; the admissibility of
+            BWS testimony under the framework for admitting scientific
+            evidence having been established in <a
+            href="http://scholar.google.com/scholar_case?case=16347591282643565388&amp;q=297+or+404&amp;hl=en&amp;as_sdt=4,38">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?case=16347591282643565388&amp;q=297+or+404&amp;hl=en&amp;as_sdt=4,38">,
+            297 Or 404, 687 P2d 751 (l984)</a> (“Of particular relevance
+            [on appeal], defendant never objected [at trial] to the
+            state’s evidence regarding the general acceptance of BWS as
+            a diagnosis, its 25-year history, the wide judicial usage of
+            BWS evidence, or the rate of error involved in BWS
+            diagnosis”). <em>Stevens,</em>328 Or<em></em>at
+            123<em>.</em></p>
+            <p>''Compare <a
+            href="http://scholar.google.com/scholar_case?case=10345895478565570969&amp;q=314+or+460&amp;hl=en&amp;as_sdt=4,38">State
+            v. Phillips</a><a
+            href="http://scholar.google.com/scholar_case?case=10345895478565570969&amp;q=314+or+460&amp;hl=en&amp;as_sdt=4,38">,</a><a
+            href="http://scholar.google.com/scholar_case?case=10345895478565570969&amp;q=314+or+460&amp;hl=en&amp;as_sdt=4,38">314
+            Or 460, 840 P2d 666 (1992)</a> (claim preserved when defense
+            counsel informed trial court that certain evidence was
+            offered for impeachment, but failed to cite governing rule
+            of evidence).</p>
+            <p>However, despite the acknowledged difficulties with the
+            <em>Hitz</em>framework, the court continues to analyze
+            specificity that way and has used that framework to
+            articulate the best practice for trial counsel. Recently, in
+            <em>State v. Haugen</em>the court cited <em>Hitz</em>when it
+            said that “[a] party ordinarily may preserve an issue for
+            review merely by raising an issue at trial; alternatively
+            (and preferably), a party may preserve an issue by raising
+            the issue, identifying a source for the party’s position,
+            and advancing a particular argument. <a
+            href="http://scholar.google.com/scholar_case?case=3084096068108981809&amp;q=349+or+174&amp;hl=en&amp;as_sdt=4,38">State
+            v. Haugen,</a><a
+            href="http://scholar.google.com/scholar_case?case=3084096068108981809&amp;q=349+or+174&amp;hl=en&amp;as_sdt=4,38">349
+            Or 174 (2010)</a><a
+            href="http://scholar.google.com/scholar_case?case=3084096068108981809&amp;q=349+or+174&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <h2
+            id="d._prejudice_harmless_error_and_offers_of_proof"><strong>D.
+            Prejudice (Harmless Error) and Offers of Proof</strong></h2>
+            <p><a href="http://www.oregonlaws.org/ors/40.025">OEC
+            103(1)</a> provides, “Evidential error is not presumed to be
+            prejudicial. Error may not be predicated upon a ruling which
+            admits or excludes evidence unless a substantial right of
+            the party is affected[.]” An appellate court will not
+            reverse if there is little likelihood that the error
+            affected the verdict. <a
+            href="http://scholar.google.com/scholar_case?case=11300443264671623389&amp;q=336+or+19&amp;hl=en&amp;as_sdt=4,38">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?case=11300443264671623389&amp;q=336+or+19&amp;hl=en&amp;as_sdt=4,38">,
+            336 Or 19, 77 P3d 1111 (2003)</a>; <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution Article VII (Amended), section 3</a>. Although
+            harmlessness is not strictly an issue of preservation, trial
+            counsel should understand the concepts of prejudice and
+            harmless error to guide the way issues are presented to the
+            trial court.</p>
+            <p>Trial counsel must make an <em>offer of proof</em> of the
+            evidence at issue. <a
+            href="http://scholar.google.com/scholar_case?case=9695401870308320317&amp;q=319+or+37&amp;hl=en&amp;as_sdt=4,38">State
+            v. Smith,</a><a
+            href="http://scholar.google.com/scholar_case?case=9695401870308320317&amp;q=319+or+37&amp;hl=en&amp;as_sdt=4,38">319
+            Or 37, 43, 872 P2d 966 (1994)</a>; OEC 103(1)(b). Offers of
+            proof are required in cases tried to the court. Offers are
+            required even as to evidence not permitted on
+            cross-examination. <a
+            href="http://scholar.google.com/scholar_case?case=16041972512008398863&amp;q=307+or+125&amp;hl=en&amp;as_sdt=4,38">State
+            v. Affeld</a><a
+            href="http://scholar.google.com/scholar_case?case=16041972512008398863&amp;q=307+or+125&amp;hl=en&amp;as_sdt=4,38">,
+            307 Or 125, 764 P2d 220 (1988)</a><a
+            href="http://scholar.google.com/scholar_case?case=16041972512008398863&amp;q=307+or+125&amp;hl=en&amp;as_sdt=4,38">.</a>
+            An offer of proof may be in the form of witness testimony or
+            witness affidavits. OEC 103(2). It is also permissible for
+            counsel to orally relate proposed evidence. <a
+            href="http://scholar.google.com/scholar_case?case=10345895478565570969&amp;q=314+or+460&amp;hl=en&amp;as_sdt=4,38">Phillips</a><a
+            href="http://scholar.google.com/scholar_case?case=10345895478565570969&amp;q=314+or+460&amp;hl=en&amp;as_sdt=4,38">,
+            314 Or at 466</a>. The purpose of an offer of proof is to
+            enable the appellate court to determine whether the ruling
+            was erroneous and, if so, harmful. Offers of proof should be
+            made outside the presence of the jury. OEC 103(3).</p>
+            <p>Refusal of a trial court to allow an offer of proof is
+            itself error. <a
+            href="http://scholar.google.com/scholar_case?case=10230288708523889266&amp;q=115+or+app+281&amp;hl=en&amp;as_sdt=4,38">State
+            v. Rodriguez,</a><a
+            href="http://scholar.google.com/scholar_case?case=10230288708523889266&amp;q=115+or+app+281&amp;hl=en&amp;as_sdt=4,38">115
+            Or App 281, 287, 840 P2d 711 (1992)</a><a
+            href="http://scholar.google.com/scholar_case?case=10230288708523889266&amp;q=115+or+app+281&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>A trial court ruling excluding evidence will be sustained
+            on appeal if any part of the offer of proof contains
+            inadmissible evidence. <a
+            href="http://scholar.google.com/scholar_case?case=862656230820145195&amp;q=231+or+425&amp;hl=en&amp;as_sdt=4,38">Smith
+            v. White,</a><a
+            href="http://scholar.google.com/scholar_case?case=862656230820145195&amp;q=231+or+425&amp;hl=en&amp;as_sdt=4,38">231
+            Or 425, 372 P2d 483 (l962)</a><a
+            href="http://scholar.google.com/scholar_case?case=862656230820145195&amp;q=231+or+425&amp;hl=en&amp;as_sdt=4,38">.</a>''
+            See also <a
+            href="http://scholar.google.com/scholar_case?case=15501599546856231654&amp;q=149+or+app+557&amp;hl=en&amp;as_sdt=4,38">State
+            v. Thomas,</a><a
+            href="http://scholar.google.com/scholar_case?case=15501599546856231654&amp;q=149+or+app+557&amp;hl=en&amp;as_sdt=4,38">149
+            Or App 557, 945 P2d 1056 (1997)</a><a
+            href="http://scholar.google.com/scholar_case?case=15501599546856231654&amp;q=149+or+app+557&amp;hl=en&amp;as_sdt=4,38">.</a>
+            So if your offer of proof includes, for example, hearsay
+            evidence from different people, segregate the offers of
+            proof and the theories of admissibility. If your offer of
+            proof includes both hearsay evidence and character evidence,
+            segregate the evidence and the theories of admissibility.
+            That way the trial court’s rulings on the various parts of
+            the evidence can be reviewed separately and the client may
+            ultimately prevail on at least some of it.</p>
+            <p>Similarly, your opponent’s evidence may not be entirely
+            inadmissible. Therefore, separate objections may need to be
+            made to specific portions of the evidence. <a
+            href="http://scholar.google.com/scholar_case?case=15135726944817960012&amp;q=310+or+347&amp;hl=en&amp;as_sdt=4,38">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?case=15135726944817960012&amp;q=310+or+347&amp;hl=en&amp;as_sdt=4,38">,
+            310 Or 347, 359, 800 P2d 259 (1990)</a> (a general objection
+            to the admission of evidence is insufficient to preserve
+            that issue for appellate review if any part of the evidence
+            is admissible); <a
+            href="http://scholar.google.com/scholar_case?case=728841621311285597&amp;q=153+or+app+527&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hasson</a><a
+            href="http://scholar.google.com/scholar_case?case=728841621311285597&amp;q=153+or+app+527&amp;hl=en&amp;as_sdt=4,38">,
+            153 Or App 527, 958 P2d 163 (1998)</a> (because defendant
+            made no objection to the latter portion of a 911 tape, the
+            admission of the entire tape was not error).</p>
+            <h1 id="v._specific_preservation_issues"><strong>V. Specific
+            Preservation Issues</strong></h1>
+            <h2 id="a._pretrial_preservation_issues"><strong>A. Pretrial
+            Preservation Issues</strong></h2>
+            <p>1. Demurrers</p>
+            <p>A demurrer is a challenge to the accusatory instrument.
+            Challenges to a particular sentencing scheme, therefore, may
+            not be litigated by demurrer. ''See <a
+            href="http://scholar.google.com/scholar_case?case=5728726604176517311&amp;q=%22319+Or+438%22&amp;hl=en&amp;as_sdt=4,38">State
+            v. Pinnell</a><a
+            href="http://scholar.google.com/scholar_case?case=5728726604176517311&amp;q=%22319+Or+438%22&amp;hl=en&amp;as_sdt=4,38">,
+            319 Or 438, 877 P2d 635 (1994)</a><a
+            href="http://scholar.google.com/scholar_case?case=5728726604176517311&amp;q=%22319+Or+438%22&amp;hl=en&amp;as_sdt=4,38">;</a>
+            <a
+            href="http://scholar.google.com/scholar_case?case=8459925346212069731&amp;q=146+Or+App+74&amp;hl=en&amp;as_sdt=4,38">State
+            v. Ysasaga,</a><a
+            href="http://scholar.google.com/scholar_case?case=8459925346212069731&amp;q=146+Or+App+74&amp;hl=en&amp;as_sdt=4,38">146
+            Or App 74, 78, 932 P2d 1182 (1997)</a><a
+            href="http://scholar.google.com/scholar_case?case=8459925346212069731&amp;q=146+Or+App+74&amp;hl=en&amp;as_sdt=4,38">.</a>
+            A demurrer “shall be in writing.” <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.610</a>.</p>
+            <p>A demurrer to an <em>indictment,</em> on the ground it is
+            not sufficiently definite and certain, is properly raised
+            under ORS 135.630(2). The same challenge to any other
+            accusatory instrument is properly raised under ORS
+            135.630(6). <a
+            href="http://scholar.google.com/scholar_case?case=11828624181824160705&amp;q=151+Or+App+750&amp;hl=en&amp;as_sdt=4,38">State
+            v. Morgan</a><a
+            href="http://scholar.google.com/scholar_case?case=11828624181824160705&amp;q=151+Or+App+750&amp;hl=en&amp;as_sdt=4,38">,
+            151 Or App 750, 951 P2d 187 (1997)</a><a
+            href="http://scholar.google.com/scholar_case?case=11828624181824160705&amp;q=151+Or+App+750&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>Demurrers claiming the facts stated do not constitute an
+            offense may be made pretrial or post-trial via a motion in
+            arrest of judgment. <a
+            href="http://scholar.google.com/scholar_case?case=16710719702767476896&amp;q=307+Or+554&amp;hl=en&amp;as_sdt=4,38">State
+            v. McKenzie,</a><a
+            href="http://scholar.google.com/scholar_case?case=16710719702767476896&amp;q=307+Or+554&amp;hl=en&amp;as_sdt=4,38">307
+            Or</a><a
+            href="http://scholar.google.com/scholar_case?case=16710719702767476896&amp;q=307+Or+554&amp;hl=en&amp;as_sdt=4,38">554,
+            560, 771 P2d 264 (l989)</a>; ORS 135.640. If made mid-trial
+            in a motion for acquittal, courts may treat such motions as
+            “premature motions in arrest of judgment.” <em>Id.</em> at
+            561. Such a motion “should be denied, with leave to renew it
+            after the verdict.” <em>Id.</em>; ''see <a
+            href="http://scholar.google.com/scholar_case?case=6827331566670650216&amp;q=328+Or+309&amp;hl=en&amp;as_sdt=4,38">State
+            v. Metcalf</a><a
+            href="http://scholar.google.com/scholar_case?case=6827331566670650216&amp;q=328+Or+309&amp;hl=en&amp;as_sdt=4,38">,
+            328 Or 309, 974 P2d 1189 (1999</a>) (motion of judgment of
+            acquittal improper after verdict). A claim that a statute is
+            vague or overbroad is considered a claim that the charging
+            instrument fails to state an offense.</p>
+            <p>Trial counsel should then make a post-verdict motion in
+            arrest of judgment to preserve the issue. <a
+            href="http://scholar.google.com/scholar_case?case=16444776925019672864&amp;q=342+Or+258&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hankins</a><a
+            href="http://scholar.google.com/scholar_case?case=16444776925019672864&amp;q=342+Or+258&amp;hl=en&amp;as_sdt=4,38">,
+            342 Or 258, 151 P3d 149 (2007)</a><a
+            href="http://scholar.google.com/scholar_case?case=16444776925019672864&amp;q=342+Or+258&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>2. Motions in Limine</p>
+            <p>Generally, trial counsel need not object during trial to
+            the receipt of evidence ruled admissible pretrial. <a
+            href="http://scholar.google.com/scholar_case?case=14874281511832725193&amp;q=323+Or+30&amp;hl=en&amp;as_sdt=4,38">State
+            v. Cole</a><a
+            href="http://scholar.google.com/scholar_case?case=14874281511832725193&amp;q=323+Or+30&amp;hl=en&amp;as_sdt=4,38">,
+            323 Or 30, 35, 912 P2d 907 (1996)</a><a
+            href="http://scholar.google.com/scholar_case?case=14874281511832725193&amp;q=323+Or+30&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>However, if your trial judge rules your pretrial motion
+            premature (or more likely says something like he or she
+            needs to hear some of the evidence before ruling), a timely
+            objection must be made at trial. <a
+            href="http://scholar.google.com/scholar_case?case=3654187041658162687&amp;q=130+Or+App+656&amp;hl=en&amp;as_sdt=4,38">State
+            v. Coleman,</a><a
+            href="http://scholar.google.com/scholar_case?case=3654187041658162687&amp;q=130+Or+App+656&amp;hl=en&amp;as_sdt=4,38">130
+            Or App 656, 663, 883 P2d 266 (1994</a>), <em>rev
+            den,</em>320 Or 569 (1995). And, even where a particular
+            argument was made in a pretrial motion <em>in limine</em>,
+            failure to raise that ground when objecting at trial
+            constitutes a failure to preserve the issue properly for
+            appeal. <a
+            href="http://scholar.google.com/scholar_case?case=7022868415443907239&amp;q=336+or+63&amp;hl=en&amp;as_sdt=4,38">State
+            v. Fanus,</a><a
+            href="http://scholar.google.com/scholar_case?case=7022868415443907239&amp;q=336+or+63&amp;hl=en&amp;as_sdt=4,38">336
+            Or 63, 88 n 27, 79 P3d 847 (2003)</a><a
+            href="http://scholar.google.com/scholar_case?case=7022868415443907239&amp;q=336+or+63&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>3. Motions to Suppress (also see Section E,
+            Constitutional Issues)</p>
+            <p>Motions to suppress must specify not only the grounds
+            upon which you are seeking suppression, but also what you
+            seek to suppress. If counsel does not identify the illegally
+            obtained evidence either in the motion or at the hearing,
+            there is no way to show harm on appeal. Consequently, if the
+            initial search was illegal, counsel must identify what
+            evidence was obtained by exploiting that initial search. <a
+            href="http://scholar.google.com/scholar_case?case=3400934262176087409&amp;q=339+Or+7&amp;hl=en&amp;as_sdt=4,38">See
+            State v. Hall</a><a
+            href="http://scholar.google.com/scholar_case?case=3400934262176087409&amp;q=339+Or+7&amp;hl=en&amp;as_sdt=4,38">,
+            339 Or 7, 115 P3d 908 (2005)</a> (to show exploitation,
+            defendant must establish a causal “but for” connection
+            between the subsequently discovered evidence and the
+            preceding illegality).</p>
+            <p>The usual rule that you must separate admissible evidence
+            from inadmissible evidence does not apply in cases where the
+            state bears the burden of proof, e.g., voluntariness of
+            statements. <a
+            href="http://scholar.google.com/scholar_case?case=367446218174503412&amp;q=340+Or+631&amp;hl=en&amp;as_sdt=4,38">State
+            v. Roble-Baker</a><a
+            href="http://scholar.google.com/scholar_case?case=367446218174503412&amp;q=340+Or+631&amp;hl=en&amp;as_sdt=4,38">,
+            340 Or 631, 136 P3d 22 (2006)</a>. In that case, the
+            defendant’s motion argued that at the time she made
+            incriminating statements, she was under compelling
+            circumstances and it became the state’s burden to show that
+            compelling circumstances did not exist at that time. On
+            appeal, defendant was not precluded from arguing alternative
+            points in time where <em>Miranda</em> warnings were
+            required. The court noted that the rule of <a
+            href="http://scholar.google.com/scholar_case?case=15135726944817960012&amp;q=310+Or+347+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?case=15135726944817960012&amp;q=310+Or+347+&amp;hl=en&amp;as_sdt=4,38">,
+            310 Or 347</a> (a general objection is insufficient to
+            preserve that issue for appeal if any part of the evidence
+            is admissible), which applies to the admission of evidence,
+            did not apply.</p>
+            <p>The Catch-22: evidence from an erroneously denied motion
+            to suppress may be rendered harmless if the defendant tries
+            to explain that evidence later in the trial. <a
+            href="http://scholar.google.com/scholar_case?case=414653003138835632&amp;q=335+Or+243&amp;hl=en&amp;as_sdt=4,38">State
+            v. McGinnis</a><a
+            href="http://scholar.google.com/scholar_case?case=414653003138835632&amp;q=335+Or+243&amp;hl=en&amp;as_sdt=4,38">,
+            335 Or 243, 64 P3d 1123 (2003)</a>. The same rule does not
+            apply where a defendant is compelled to testify in response
+            to an involuntary confession. In that case, the appellate
+            court does not consider the trial testimony, unless the
+            state can show that the defendant would have testified
+            regardless of the erroneous admission of the confession.</p>
+            <p>4. OEC 412 (Rape Shield Law) Motions</p>
+            <p>A defendant charged with any degree of rape, sodomy or
+            sex abuse, or with attempting any of those crimes, who
+            wishes to offer evidence of a victim’s past sexual behavior
+            <em>must</em>file a motion requesting admission of such
+            evidence, together with a written offer of proof, at least
+            15 days before trial. <a
+            href="http://scholar.google.com/scholar_case?case=15726066373349888381&amp;q=316+Or+63&amp;hl=en&amp;as_sdt=4,38">State
+            v. Lajoie,</a><a
+            href="http://scholar.google.com/scholar_case?case=15726066373349888381&amp;q=316+Or+63&amp;hl=en&amp;as_sdt=4,38">316
+            Or 63, 849 P2d 479 (1993)</a>, upheld the exclusion of
+            evidence for failing to meet OEC 412’s time requirement. In
+            <a
+            href="http://scholar.google.com/scholar_case?q=lajoie+v+thompson&amp;hl=en&amp;as_sdt=2,38&amp;case=12465877808564509255&amp;scilh=0">Lajoie
+            v. Thompson,</a><a
+            href="http://scholar.google.com/scholar_case?q=lajoie+v+thompson&amp;hl=en&amp;as_sdt=2,38&amp;case=12465877808564509255&amp;scilh=0">201
+            F3d 1166 (9th Circuit 2000)</a><a
+            href="http://scholar.google.com/scholar_case?q=lajoie+v+thompson&amp;hl=en&amp;as_sdt=2,38&amp;case=12465877808564509255&amp;scilh=0">,</a>
+            however the federal court said exclusion of 412 evidence for
+            violation of the 15-day rule violates the Sixth Amendment
+            compulsory process and confrontation guarantees.</p>
+            <h2 id="b._trial_preservation_issues"><strong>B. Trial
+            Preservation Issues</strong></h2>
+            <p>1. Motions for Mistrial</p>
+            <p>A motion for mistrial must be made contemporaneously with
+            the allegedly objectionable event. <a
+            href="http://scholar.google.com/scholar_case?case=12525491191298274071&amp;q=311+Or+223&amp;hl=en&amp;as_sdt=4,38">State
+            v. Walton,</a><a
+            href="http://scholar.google.com/scholar_case?case=12525491191298274071&amp;q=311+Or+223&amp;hl=en&amp;as_sdt=4,38">311
+            Or 223, 248, 809 P2d 81 (1991)</a><a
+            href="http://scholar.google.com/scholar_case?case=12525491191298274071&amp;q=311+Or+223&amp;hl=en&amp;as_sdt=4,38">.</a>
+            If the incident or remark is allowed to pass, the motion is
+            too late. <em>See <a
+            href="http://scholar.google.com/scholar_case?case=10420880005578098572&amp;q=115+Or+App+268&amp;hl=en&amp;as_sdt=4,38">State
+            v. Kolbe,</a><a
+            href="http://scholar.google.com/scholar_case?case=10420880005578098572&amp;q=115+Or+App+268&amp;hl=en&amp;as_sdt=4,38">115
+            Or App 268, 273, 838 P2d 612 (1992)</a><a
+            href="http://scholar.google.com/scholar_case?case=10420880005578098572&amp;q=115+Or+App+268&amp;hl=en&amp;as_sdt=4,38">,</a></em>rev
+            den,<em>315 Or 644 (1993); <a
+            href="http://scholar.google.com/scholar_case?case=16725495486307555850&amp;q=224+Or+App+145&amp;hl=en&amp;as_sdt=4,38">Simpson
+            v. Coursey,</a><a
+            href="http://scholar.google.com/scholar_case?case=16725495486307555850&amp;q=224+Or+App+145&amp;hl=en&amp;as_sdt=4,38">224
+            Or App 145, 197 P3d 68 (2008)</a><a
+            href="http://scholar.google.com/scholar_case?case=16725495486307555850&amp;q=224+Or+App+145&amp;hl=en&amp;as_sdt=4,38">.</a>
+            This is true even in case of prosecutor’s opening or closing
+            statements. <a
+            href="http://scholar.google.com/scholar_case?case=9306890451970369834&amp;q=130+Or+App+209&amp;hl=en&amp;as_sdt=4,38">State
+            v. Cooper,</a><a
+            href="http://scholar.google.com/scholar_case?case=9306890451970369834&amp;q=130+Or+App+209&amp;hl=en&amp;as_sdt=4,38">130
+            Or App 209, 880 P2d 514</a>,</em>rev den, <em>320 Or 325
+            (1994); <a
+            href="http://scholar.google.com/scholar_case?case=2838418223819881897&amp;q=143+Or+App+188&amp;hl=en&amp;as_sdt=4,38">State
+            v. Neal,</a><a
+            href="http://scholar.google.com/scholar_case?case=2838418223819881897&amp;q=143+Or+App+188&amp;hl=en&amp;as_sdt=4,38">143
+            Or App 188, 193–94</a>, 922 P2d 717,</em>rev den,'' 324 Or
+            488 (1996).</p>
+            <p>2. Motions for Acquittal</p>
+            <p>To challenge the sufficiency of the evidence on appeal,
+            trial counsel must have made a motion for a judgment of
+            acquittal in the trial court. ORS 136.445; <em>State v.
+            Carter,</em> 105 Or App 483, 485, 805 P2d 721 (1991). This
+            is true even in cases tried without a jury. <a
+            href="http://scholar.google.com/scholar_case?case=7521599211463316961&amp;q=116+or+app+252&amp;hl=en&amp;as_sdt=4,38">State
+            v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?case=7521599211463316961&amp;q=116+or+app+252&amp;hl=en&amp;as_sdt=4,38">,
+            116 Or App 252, 841 P2d 643 (1992)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=18086622996632920743&amp;q=113+Or+App+744&amp;hl=en&amp;as_sdt=4,38">State
+            v. Maestas,</a><a
+            href="http://scholar.google.com/scholar_case?case=18086622996632920743&amp;q=113+Or+App+744&amp;hl=en&amp;as_sdt=4,38">113
+            Or App 744, 833 P2d 1348 (1992)</a>. However, in a bench
+            trial, a closing argument that the state did not introduce
+            sufficient evidence of the elements of the crime functions
+            as the equivalent of a motion for judgment of acquittal for
+            the purposes of appellate review. <a
+            href="http://scholar.google.com/scholar_case?case=7601477799218658818&amp;q=188+Or+App+430&amp;hl=en&amp;as_sdt=4,38">State
+            v. Gonzalez,</a><a
+            href="http://scholar.google.com/scholar_case?case=7601477799218658818&amp;q=188+Or+App+430&amp;hl=en&amp;as_sdt=4,38">188
+            Or App 430, 71 P3d 573 (2003</a>).</p>
+            <p>Whether tried to the court or to a jury, the standard of
+            proof is the same. <a
+            href="http://scholar.google.com/scholar_case?case=15838161637154299958&amp;q=122+Or+App+531&amp;hl=en&amp;as_sdt=4,38">State
+            v. Jost/Oregon-Washington Recovery Co.,</a><a
+            href="http://scholar.google.com/scholar_case?case=15838161637154299958&amp;q=122+Or+App+531&amp;hl=en&amp;as_sdt=4,38">122
+            Or App 531, 858 P2d 881 (1993)</a><a
+            href="http://scholar.google.com/scholar_case?case=15838161637154299958&amp;q=122+Or+App+531&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>3. Evidentiary Issues</p>
+            <p>When the question to a witness is not objectionable but
+            the answer is, counsel must move to strike the testimony. An
+            objection to the question is not sufficient. <a
+            href="http://scholar.google.com/scholar_case?case=3892459732545137537&amp;q=315+or+273&amp;hl=en&amp;as_sdt=4,38">Keller</a><a
+            href="http://scholar.google.com/scholar_case?case=3892459732545137537&amp;q=315+or+273&amp;hl=en&amp;as_sdt=4,38">,
+            315 Or at 273</a>.</p>
+            <p>To move for a limiting instruction trial counsel must
+            have objected to the evidence in the first place. <a
+            href="http://scholar.google.com/scholar_case?case=14073553936707393523&amp;q=328+Or+116&amp;hl=en&amp;as_sdt=4,38">State
+            v. Stevens</a><a
+            href="http://scholar.google.com/scholar_case?case=14073553936707393523&amp;q=328+Or+116&amp;hl=en&amp;as_sdt=4,38">,
+            328 Or 116, 970 P2d 215 (1998)</a> (asking for a limiting
+            instruction to prohibit use of prior bad act as character
+            evidence unpreserved where there was no objection to the
+            evidence itself). For example, if the state offers hearsay
+            evidence intended to impeach a witness and trial counsel
+            does not object, the jury may consider the evidence for the
+            truth of the matter asserted. You may not later ask for a
+            limiting instruction.</p>
+            <p>4. Jury Instructions</p>
+            <p><a href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            59H</a> requires trial counsel to “except” to giving or the
+            failure to give jury instructions immediately after the
+            court instructs the jury. Trial counsel must do so in nearly
+            <em>all</em> <em>cases</em> in order to preserve a jury
+            instruction issue for appellate review. (Under the old rule,
+            the trial court’s failure to give a requested written jury
+            instruction did not require an exception.) The only
+            exception, as articulated in <em>State v. Toth,</em>is that
+            ORCP 59H does not preclude review when a trial court fails
+            to give an instruction that was not requested but is
+            required by law. <a
+            href="http://scholar.google.com/scholar_case?case=15596069999142383976&amp;q=239+Or+App+44&amp;hl=en&amp;as_sdt=4,38">State
+            v. Guardipee,</a><a
+            href="http://scholar.google.com/scholar_case?case=15596069999142383976&amp;q=239+Or+App+44&amp;hl=en&amp;as_sdt=4,38">239
+            Or App 44, 47-48, 243 P3d 149</a>, ''citing <a
+            href="http://scholar.google.com/scholar_case?case=10366116460225621292&amp;q=239+Or+App+44&amp;hl=en&amp;as_sdt=4,38">State
+            v. Toth,</a><a
+            href="http://scholar.google.com/scholar_case?case=10366116460225621292&amp;q=239+Or+App+44&amp;hl=en&amp;as_sdt=4,38">213
+            Or App 505, 509–10, 162 P3d 317 (2007)</a><a
+            href="http://scholar.google.com/scholar_case?case=10366116460225621292&amp;q=239+Or+App+44&amp;hl=en&amp;as_sdt=4,38">.</a>A
+            defendant does not preserve an error relating to the trial
+            court’s failure to give a requested instruction where the
+            trial court agreed to give an instruction, forgot to do so,
+            and the defendant did not except. <a
+            href="http://scholar.google.com/scholar_case?case=370856842547801009&amp;q=198+Or+App+358&amp;hl=en&amp;as_sdt=4,38">State
+            v. Derrick</a><a
+            href="http://scholar.google.com/scholar_case?case=370856842547801009&amp;q=198+Or+App+358&amp;hl=en&amp;as_sdt=4,38">,
+            198 Or App 358, 108 P3d 608 (2005)</a>.</p>
+            <p>Always submit jury instructions in writing pretrial or as
+            soon as the need for the instruction becomes apparent. ORCP
+            59A; <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch06.pdf">UTCR
+            6.060(1)</a>.</p>
+            <p>Be sure an instruction accurately states the law and is
+            supported by the facts. <a
+            href="http://scholar.google.com/scholar_case?case=11967289835549201648&amp;q=327+Or+99&amp;hl=en&amp;as_sdt=4,38">Hernandez
+            v. Barbo Machinery Co.,</a><a
+            href="http://scholar.google.com/scholar_case?case=11967289835549201648&amp;q=327+Or+99&amp;hl=en&amp;as_sdt=4,38">327
+            Or 99, 106, 957 P2d 147 (1998)</a> (“there is no error if
+            the instruction is not correct in all respects”); <a
+            href="http://scholar.google.com/scholar_case?case=16797547659336943435&amp;q=165+Or+App+317+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Moses,</a><a
+            href="http://scholar.google.com/scholar_case?case=16797547659336943435&amp;q=165+Or+App+317+&amp;hl=en&amp;as_sdt=4,38">165
+            Or App 317 (2000)</a> (where allegations in indictment
+            include necessary elements and evidence supports the
+            instruction requested, it was error to refuse to give the
+            instruction); <a
+            href="http://scholar.google.com/scholar_case?case=15586614719490779998&amp;q=164+Or+App+591+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Engen,</a><a
+            href="http://scholar.google.com/scholar_case?case=15586614719490779998&amp;q=164+Or+App+591+&amp;hl=en&amp;as_sdt=4,38">164
+            Or App 591 (1999</a>) (no error where proposed jury
+            instruction did not accurately state the law).</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>Do not assume uniform jury instructions are uniformly
+            accurate. <em>Cf. <a
+            href="http://scholar.google.com/scholar_case?case=13653867367597993388&amp;q=154+Or+App+227&amp;hl=en&amp;as_sdt=4,38">State
+            v. Foote,</a><a
+            href="http://scholar.google.com/scholar_case?case=13653867367597993388&amp;q=154+Or+App+227&amp;hl=en&amp;as_sdt=4,38">154
+            Or App 227, 960 P2d 900 (1998)</a> (holding that UCrJI No.
+            2718—failure to perform duties of a driver when property is
+            damaged—incorrectly stated law); <a
+            href="http://scholar.google.com/scholar_case?case=1428120296347445032&amp;q=154+Or+App+589&amp;hl=en&amp;as_sdt=4,38">State
+            v. Amini,</a><a
+            href="http://scholar.google.com/scholar_case?case=1428120296347445032&amp;q=154+Or+App+589&amp;hl=en&amp;as_sdt=4,38">154
+            Or App 589, 963 P2d 65 (1998)</a> (giving UCrJI No. 1122
+            about consequences of finding of guilty but insane over
+            defendant’s objection violated Article I, section
+            11),</em>reversed, ''331 Or 384 (2000); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lopez-minjarez&amp;hl=en&amp;as_sdt=4,38&amp;case=4134971553269762712&amp;scilh=0">State
+            v. Lopez-Minjarez,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lopez-minjarez&amp;hl=en&amp;as_sdt=4,38&amp;case=4134971553269762712&amp;scilh=0">350
+            Or 576, 260 P3d 439 (2011)</a> (holding that UCrJI 1053 on
+            accomplice liability for the “natural and probable
+            consequences” of the intended crime incorrectly stated the
+            law).</p>
+            <p>5. Stipulated Facts Trials</p>
+            <p>Do not concede guilt at a stipulated facts trial. For
+            example, do not stipulate to what is in essence a recitation
+            of the indictment. (For example, “Defendant stipulates that
+            on January 1, 2004, he knowingly caused physical injury to
+            Jane Doe.”) The state will argue that any error in the
+            pretrial hearing was harmless because the defendant agreed
+            to all the elements of guilt. Instead, stipulate that if the
+            case were to proceed to trial, the state could produce
+            evidence consistent with the police reports (that you will
+            make sure are introduced as exhibits). You can even
+            stipulate that the state could produce evidence that would
+            prove the elements of the offense. However, don’t forget
+            that the ruling from the pretrial hearing must be harmful.
+            That can be very difficult to show on appeal if the facts
+            were never presented at trial. If it is not apparent how the
+            object of the pretrial hearing fits in with the evidence
+            against defendant, the defendant will not be able to show
+            harm on appeal.</p>
+            <h2 id="c._post_trial_preservation_issues"><strong>C.
+            Post-trial Preservation Issues</strong></h2>
+            <p>1. Verdict Issues</p>
+            <p>Make objections to the verdict immediately upon its
+            receipt. <a
+            href="http://scholar.google.com/scholar_case?case=9186374011418120764&amp;q=114+Or+App+262&amp;hl=en&amp;as_sdt=4,38">State
+            v. Kelley,</a><a
+            href="http://scholar.google.com/scholar_case?case=9186374011418120764&amp;q=114+Or+App+262&amp;hl=en&amp;as_sdt=4,38">114
+            Or App 262, 265, 835 P2d 145 (1992)</a><a
+            href="http://scholar.google.com/scholar_case?case=9186374011418120764&amp;q=114+Or+App+262&amp;hl=en&amp;as_sdt=4,38">,</a>
+            <em>rev den,</em> 315 Or 312 (1993) (motion for new trial
+            based on inconsistent verdicts ten days after verdicts filed
+            untimely).</p>
+            <p>Object to the form of the verdict at the time the verdict
+            form is proposed. <em>Id.</em>(Waiver found where defendant
+            stated he had no objection to verdict form.)</p>
+            <p>When contesting the validity of the verdict, move for a
+            mistrial and a new trial. <a
+            href="http://scholar.google.com/scholar_case?case=7596931137394336930&amp;q=158+Or+App+65&amp;hl=en&amp;as_sdt=4,38">State
+            v. Vann,</a><a
+            href="http://scholar.google.com/scholar_case?case=7596931137394336930&amp;q=158+Or+App+65&amp;hl=en&amp;as_sdt=4,38">158
+            Or App 65, 973 P2d 354 (1999)</a> (mistrial is an allowable
+            post-trial order for irregular verdict because error was not
+            known until three weeks after verdict). ''But see <a
+            href="http://scholar.google.com/scholar_case?case=4863113810727803575&amp;q=322+Or+363&amp;hl=en&amp;as_sdt=4,38">State
+            ex rel Turner v. Frankel,</a><a
+            href="http://scholar.google.com/scholar_case?case=4863113810727803575&amp;q=322+Or+363&amp;hl=en&amp;as_sdt=4,38">322
+            Or 363, 908 P2d 293 (1995)</a> (mistrial enabling retrial on
+            charges is inappropriate where an irregularity in the
+            verdict and unusual jury polling procedure prevented a
+            finding of whether the jury was unable to reach a verdict);
+            <a
+            href="http://scholar.google.com/scholar_case?case=6827331566670650216&amp;q=328+Or+309+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Metcalf</a><a
+            href="http://scholar.google.com/scholar_case?case=6827331566670650216&amp;q=328+Or+309+&amp;hl=en&amp;as_sdt=4,38">,
+            328 Or 309</a> (motion in arrest of judgment and motion for
+            new trial are the only proper post-verdict motions).</p>
+            <p>2. Jury Polling</p>
+            <p>Jury polling must happen immediately after the verdict is
+            rendered. Object if the trial court denies a timely motion
+            to conduct a jury poll, and move for a mistrial. Once the
+            jury is dismissed, the trial court may take no further
+            action to administer or substantiate a jury poll. <a
+            href="http://scholar.google.com/scholar_case?case=7596931137394336930&amp;q=158+Or+App+65&amp;hl=en&amp;as_sdt=4,38">State
+            v. Vann,</a><a
+            href="http://scholar.google.com/scholar_case?case=7596931137394336930&amp;q=158+Or+App+65&amp;hl=en&amp;as_sdt=4,38">158
+            Or App 65, 973 P2d 354 (1999)</a><a
+            href="http://scholar.google.com/scholar_case?case=7596931137394336930&amp;q=158+Or+App+65&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>3. New Trial Motions</p>
+            <p>Let appellate counsel know if you file a motion for new
+            trial. If appellate counsel files a notice of appeal, it
+            will divest the trial court’s authority to hear your
+            motion.</p>
+            <p>Be sure your motion is filed within 10 days after the
+            entry of judgment. The motion also must be decided within 55
+            days of the judgment’s entry. If the motion is not decided
+            within 55 days, it “shall conclusively be considered
+            denied.” <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.535(3)</a>; <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP 64 A,
+            B, D to G</a>.</p>
+            <p>To move for a new trial based upon events occurring at
+            trial, trial counsel must have objected to the event when it
+            happened or when trial counsel first became aware of it. <a
+            href="http://scholar.google.com/scholar_case?case=6130655072930531053&amp;q=17+Or+App+1&amp;hl=en&amp;as_sdt=4,38">State
+            v. Longoria,</a><a
+            href="http://scholar.google.com/scholar_case?case=6130655072930531053&amp;q=17+Or+App+1&amp;hl=en&amp;as_sdt=4,38">17
+            Or App 1, 9, 520 P2d 912 (l974)</a><a
+            href="http://scholar.google.com/scholar_case?case=6130655072930531053&amp;q=17+Or+App+1&amp;hl=en&amp;as_sdt=4,38">.</a><a
+            href="http://scholar.google.com/scholar_case?case=6130655072930531053&amp;q=17+Or+App+1&amp;hl=en&amp;as_sdt=4,38"></a></p>
+            <p>Motions for new trial based upon grounds discovered
+            post-trial must be supported with affidavits. You must
+            detail why evidence supporting a new trial could not have
+            been discovered pre- or during trial with due diligence. The
+            evidence later discovered must be so compelling that, had it
+            been discovered and admitted, it may have changed the result
+            of the trial. <a
+            href="http://scholar.google.com/scholar_case?case=13627018570846048528&amp;q=320+or+111&amp;hl=en&amp;as_sdt=4,38">State
+            v. Arnold,</a><a
+            href="http://scholar.google.com/scholar_case?case=13627018570846048528&amp;q=320+or+111&amp;hl=en&amp;as_sdt=4,38">320
+            Or 111, 879 P2d 1272 (1994)</a>; ORCP 64.</p>
+            <h2 id="d._sentencing_preservation_issues"><strong>D.
+            Sentencing Preservation Issues</strong></h2>
+            <p>1. The Judgment</p>
+            <p>Always review the written judgment. Be sure it accurately
+            reflects the sentence announced in open court. Pay
+            particular attention to the imposition of fees and fines,
+            and to conditions of probation. Regardless of what the judge
+            said on the bench, <em>the written judgment controls the
+            sentence.</em> <a
+            href="http://scholar.google.com/scholar_case?case=9618405085926793754&amp;q=267+Or+527+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Swain/Goldsmith,</a><a
+            href="http://scholar.google.com/scholar_case?case=9618405085926793754&amp;q=267+Or+527+&amp;hl=en&amp;as_sdt=4,38">267
+            Or 527 (1974)</a><a
+            href="http://scholar.google.com/scholar_case?case=9618405085926793754&amp;q=267+Or+527+&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>2. Motions to Correct the Judgment</p>
+            <p>Counsel may move to correct any errors in the judgment
+            under <a href="http://www.leg.state.or.us/ors/138.html">ORS
+            138.083</a>. This is so even if a case is on appeal. Beware,
+            though, that motions to correct the judgment do not “cure”
+            the failure to object to portions of a sentence at the
+            sentencing hearing, and therefore do not revive previously
+            waived issues for appeal. <a
+            href="http://scholar.google.com/scholar_case?case=8763899615370124808&amp;q=163+Or+App+37+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Layton,</a><a
+            href="http://scholar.google.com/scholar_case?case=8763899615370124808&amp;q=163+Or+App+37+&amp;hl=en&amp;as_sdt=4,38">163
+            Or App 37 (1999)</a><a
+            href="http://scholar.google.com/scholar_case?case=8763899615370124808&amp;q=163+Or+App+37+&amp;hl=en&amp;as_sdt=4,38">,</a>
+            <em>rev den</em>, 330 Or 252 (2000). Furthermore, if the
+            motion is successful and results in a corrected or amended
+            judgment, be sure to alert appellate counsel to the new
+            judgment so that an amended notice of appeal can be filed if
+            necessary.</p>
+            <p>3. Presentence Report</p>
+            <p>Written motions to correct the criminal history contained
+            in the presentence report should be filed prior to
+            sentencing to preserve issues for appeal. <a
+            href="http://www.leg.state.or.us/ors/137.html">ORS
+            137.079</a>(4); 137.079(5)(c).</p>
+            <p>4. Merger</p>
+            <p>To preserve an argument for merger, you must move the
+            court for merger <em>and</em>explain why convictions merge.
+            A reviewing court will not review a merger argument that was
+            not advanced in the trial court.</p>
+            <p>5. Consecutive Sentences</p>
+            <p>When a defendant is sentenced for crimes arising from
+            <em>separate acts</em>, the judge may order the sentences to
+            run consecutively. ORS 137.123(2).</p>
+            <p>When a defendant is sentenced for crimes arising out of
+            the <em>same and uninterrupted course of conduct</em>, the
+            sentences shall be concurrent unless the court makes
+            required findings. ORS 137.123(5).</p>
+            <p>To preserve an issue about consecutive sentencing for
+            appeal, you must object to the consecutive sentencing,
+            request findings on the record, and then object to the
+            findings (i.e., not supported by the record). <a
+            href="http://scholar.google.com/scholar_case?case=9475365122391698512&amp;q=106+Or+App+557+&amp;hl=en&amp;as_sdt=4,38">See
+            State v. Racicot,</a><a
+            href="http://scholar.google.com/scholar_case?case=9475365122391698512&amp;q=106+Or+App+557+&amp;hl=en&amp;as_sdt=4,38">106
+            Or App 557 (1991)</a><a
+            href="http://scholar.google.com/scholar_case?case=9475365122391698512&amp;q=106+Or+App+557+&amp;hl=en&amp;as_sdt=4,38">.</a>
+            Merely requesting concurrent sentences will not preserve an
+            issue for appeal.</p>
+            <p>6. Departure Sentences</p>
+            <p>To preserve an objection to a departure sentence, counsel
+            must object to the fact of and reasons for the departure.
+            Each departure basis must be specifically addressed. <a
+            href="http://scholar.google.com/scholar_case?case=7535838304982959765&amp;q=108+Or+App+176&amp;hl=en&amp;as_sdt=4,38">State
+            v. Orsi/Gauthier,</a><a
+            href="http://scholar.google.com/scholar_case?case=7535838304982959765&amp;q=108+Or+App+176&amp;hl=en&amp;as_sdt=4,38">108
+            Or App 176 (1991</a>); <a
+            href="http://scholar.google.com/scholar_case?case=12840665341313816115&amp;q=121+Or+App+673+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Guzman,</a><a
+            href="http://scholar.google.com/scholar_case?case=12840665341313816115&amp;q=121+Or+App+673+&amp;hl=en&amp;as_sdt=4,38">121
+            Or App 673 (1993)</a><a
+            href="http://scholar.google.com/scholar_case?case=12840665341313816115&amp;q=121+Or+App+673+&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>7. Restitution</p>
+            <p>To preserve a restitution issue for appeal, it is
+            insufficient to simply object to restitution. A specific
+            objection must instead be lodged based on either the
+            <em>amount</em> of restitution assessed, or the <em>causal
+            connection</em>between the criminal conduct and the damaged
+            sustained<em>.</em> ORS 137.106; <a
+            href="http://scholar.google.com/scholar_case?case=1428879674687660645&amp;q=329+Or+127+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Edson,</a><a
+            href="http://scholar.google.com/scholar_case?case=1428879674687660645&amp;q=329+Or+127+&amp;hl=en&amp;as_sdt=4,38">329
+            Or 127 (1999)</a><a
+            href="http://scholar.google.com/scholar_case?case=1428879674687660645&amp;q=329+Or+127+&amp;hl=en&amp;as_sdt=4,38">.</a></p>
+            <p>8. SB 936 Credits</p>
+            <p>SB 936 allows the judge to grant or deny various prison
+            programs and credits. A silent judgment will be interpreted
+            by the Department of Corrections as a denial of all
+            programming, including good time credits. ORS 137.750(2).
+            (“The executing or releasing authority may consider the
+            defendant for the programs described in subsection (1) of
+            this section only upon order of the sentencing court
+            appearing in the judgment.”) So, again, be sure to check
+            your judgment!</p>
+            <h2 id="e._constitutional_issues"><strong>E. Constitutional
+            Issues</strong></h2>
+            <p>To properly preserve a constitutional issue, trial
+            counsel should be specific about which constitutional
+            provision he or she is relying on. For example, when trial
+            counsel used catchphrases from United States Supreme Court
+            cases, but he did not specifically cite the Sixth Amendment,
+            he did not preserve any Sixth Amendment argument. <a
+            href="http://scholar.google.com/scholar_case?case=1068434837933695198&amp;q=197+Or+App+72&amp;hl=en&amp;as_sdt=4,38">State
+            v. Page</a><a
+            href="http://scholar.google.com/scholar_case?case=1068434837933695198&amp;q=197+Or+App+72&amp;hl=en&amp;as_sdt=4,38">,
+            197 Or App 72, 104 P3d 616 (2005)</a><a
+            href="http://scholar.google.com/scholar_case?case=1068434837933695198&amp;q=197+Or+App+72&amp;hl=en&amp;as_sdt=4,38">.</a>
+            On the other hand, appellate courts have considered issues
+            preserved when trial counsel did not cite to specific
+            provisions. <a
+            href="http://scholar.google.com/scholar_case?case=1012976920634309065&amp;q=190+Or+App+532&amp;hl=en&amp;as_sdt=4,38">State
+            v. McCoin</a><a
+            href="http://scholar.google.com/scholar_case?case=1012976920634309065&amp;q=190+Or+App+532&amp;hl=en&amp;as_sdt=4,38">,
+            190 Or App 532, 79 P3d 342 (2003</a>), <em>rev den</em> 336
+            Or 422 (2004) (when defendant argued that “double counting
+            is improper” under state and federal constitutions, he
+            preserved argument under <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Article
+            I, section 12, of the Oregon Constitution</a> and the <a
+            href="http://www.law.cornell.edu/constitution/billofrights#amendmentv">Fifth
+            Amendment to the United States Constitution</a>); <a
+            href="http://scholar.google.com/scholar_case?case=5575575773082102123&amp;q=127+Or+App+283&amp;hl=en&amp;as_sdt=4,38">State
+            v. Cookman</a><a
+            href="http://scholar.google.com/scholar_case?case=5575575773082102123&amp;q=127+Or+App+283&amp;hl=en&amp;as_sdt=4,38">,
+            127 Or App 283, 873 P2d 335 (1994</a><a
+            href="http://scholar.google.com/scholar_case?case=5575575773082102123&amp;q=127+Or+App+283&amp;hl=en&amp;as_sdt=4,38">)</a>
+            (when defendant referred to “fundamental fairness,” he
+            preserved argument under the Due Process Clause). Again, the
+            key is to provide an explanation of the issue with
+            sufficient clarity so that the trial court has a chance to
+            consider the issue and correct the error.</p>
+            <p>In addition, counsel should specify whether he is relying
+            on the federal or state constitution or both. For example,
+            when the defendant framed his argument in the trial court in
+            terms of the Oregon Constitution, he did not preserve any
+            federal constitutional arguments, and when the defendant
+            framed his argument in terms of the federal constitution, he
+            did not preserve any state constitutional arguments. <a
+            href="http://scholar.google.com/scholar_case?case=15614940959952235001&amp;q=154+Or+App+358&amp;hl=en&amp;as_sdt=4,38">State
+            v. Baker</a><a
+            href="http://scholar.google.com/scholar_case?case=15614940959952235001&amp;q=154+Or+App+358&amp;hl=en&amp;as_sdt=4,38">,
+            154 Or App 358, 363 n 2, 961 P2d 913</a> <em>rev den</em>
+            327 Or 553 (1998) (no federal argument preserved); <a
+            href="http://scholar.google.com/scholar_case?case=8130396992702948373&amp;q=195+Or+App+656&amp;hl=en&amp;as_sdt=4,38">State
+            v. Warren</a><a
+            href="http://scholar.google.com/scholar_case?case=8130396992702948373&amp;q=195+Or+App+656&amp;hl=en&amp;as_sdt=4,38">,
+            195 Or App 656, 98 P3d 1129 (2004)</a> (no state
+            constitutional argument preserved); ''but <a
+            href="http://scholar.google.com/scholar_case?case=4426232214304832568&amp;q=182+Or+App+217&amp;hl=en&amp;as_sdt=4,38">see</a><a
+            href="http://scholar.google.com/scholar_case?case=4426232214304832568&amp;q=182+Or+App+217&amp;hl=en&amp;as_sdt=4,38">Freedom
+            Socialist Party v. Bradbury</a><a
+            href="http://scholar.google.com/scholar_case?case=4426232214304832568&amp;q=182+Or+App+217&amp;hl=en&amp;as_sdt=4,38">,
+            182 Or App 217, 225, 48 P3d 199 (2002)</a> (Landau, J.,
+            concurring) (positing that court should analyze issue first
+            under state constitution, even when trial counsel relied
+            exclusively on the federal constitution).</p>
+            <p>When courts analyze comparable state and federal
+            constitutional provisions differently, merely citing to the
+            specific constitutional provision is not enough to preserve
+            an issue. Appellate courts require trial counsel to provide
+            “analytic amplification.” <a
+            href="http://scholar.google.com/scholar_case?case=12771924856080038218&amp;q=186+Or+App+49&amp;hl=en&amp;as_sdt=4,38">State
+            v. Hayes</a><a
+            href="http://scholar.google.com/scholar_case?case=12771924856080038218&amp;q=186+Or+App+49&amp;hl=en&amp;as_sdt=4,38">,
+            186 Or App 49, 57, 61 P3d 960 (2003)</a><em>,</em> <em>rev
+            den</em> 339 Or 230 (2005) (citing to Fourth Amendment but
+            offering no separate analysis under that provision does not
+            preserve Fourth Amendment issue); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+riggs&amp;hl=en&amp;as_sdt=4,38&amp;case=294232735259624796&amp;scilh=0">State
+            v. Riggs</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+riggs&amp;hl=en&amp;as_sdt=4,38&amp;case=294232735259624796&amp;scilh=0">,
+            143 Or App 427, 923 P2d 683 (1996)</a> (citing Article I,
+            section 12, while making argument based exclusively on a
+            federal analysis does not preserve any issue under Article
+            I, section 12).</p>
+            <p>Remember—segregate admissible evidence from inadmissible
+            evidence if it appears your offer includes both. If your
+            offer of proof contains inadmissible evidence, the court’s
+            ruling excluding the evidence will be sustained on
+            appeal</p>
+            <h1 id="vi._additional_reference"><strong>VI. Additional
+            Reference</strong></h1>
+            <p><a
+            href="https://www.nacdl.org/Champion.aspx?id=14612&amp;terms=james+kraus">James
+            Kraus, “Virtual Testimony and Its Impact on the
+            Confrontation Clause,”</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=14612&amp;terms=james+kraus">The
+            Champion</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=14612&amp;terms=james+kraus">,
+            May 2010</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=14612&amp;terms=james+kraus">.</a></p>
+            <p><a
+            href="https://www.nacdl.org/Champion.aspx?id=14592&amp;terms=mimi+coffey">Mimi
+            Coffey, “Unjust Courtroom Practice: Always Seating the
+            Prosecution Closest to the Jury,”</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=14592&amp;terms=mimi+coffey">The
+            Champion</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=14592&amp;terms=mimi+coffey">,
+            March 2010</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=14592&amp;terms=mimi+coffey">.</a></p>
+            <p><a
+            href="https://www.nacdl.org/Champion.aspx?id=1636&amp;terms=george+stein">George
+            Stein, “The Six Commandments of Effective Appellate
+            Preparation,”</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=1636&amp;terms=george+stein">The
+            Champion</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=1636&amp;terms=george+stein">,
+            February 2009</a><a
+            href="https://www.nacdl.org/Champion.aspx?id=1636&amp;terms=george+stein">.</a></p>
+            <center>
+            <p>This chapter originally prepared for the 1993 edition by
+            Tom Bernier, Roseburg.</p>
+            </center>
+            <center>
+            <p>Updating, additions and editing by for the 2000 edition
+            by Monica Finch, Jennelle Hall, Walter Ledesma, and Ingrid
+            MacFarlane, State Public Defenders Office, Salem.</p>
+            </center>
+            <center>
+            <p>Updating, additions and editing for the 2007 edition by
+            Susan Drake and Meredith Allen, Office of Public Defense
+            Services, Salem.</p>
+            </center>
+            <center>
+            <p>Updating, additions and editing for the 2013 edition by
+            Alice Newlin-Cushing and Shawn Wiley, Office of Public
+            Defense Services.</p>
+            </center>
+    </body>
+</html>

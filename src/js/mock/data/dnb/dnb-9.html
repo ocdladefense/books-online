@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <p>2020 edition, with 2024 Update Update</p>
+            <h1 id="field_sobriety_tests"><strong>Field Sobriety
+            Tests</strong></h1>
+            <p><strong><em>By Peter Carini, Colin Andries and Trace
+            Schreiner</em></strong></p>
+            <p>There are new manuals as of 2023:</p>
+            <p><a
+            href="https://www.nhtsa.gov/sites/nhtsa.gov/files/2023-03/15911-SFST_Participant_Manual_2023-tag.pdf"><u>NHTSA
+            DWI Detection and Standardized Field Sobriety Test
+            Participant Manual – Feb. 2023</u></a></p>
+            <p><a
+            href="https://www.nhtsa.gov/sites/nhtsa.gov/files/2023-03/15911-SFST_Instructor_Guide_2023-tag.pdf"><u>DWI
+            Detection and SFST Instructor Guide – February
+            2023</u></a></p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>There are Field Sobriety Tests (FSTs) and there are NHTSA
+            Standardized Field Sobriety Test (SFSTs). They are similar
+            but serve a different purpose. Field sobriety tests are
+            found in <a
+            href="https://oregon.public.law/rules/oar_chapter_257_division_25">Division
+            25</a> of the Department of State Police Oregon
+            Administrative Rules<a href="#fn1" class="footnote-ref"
+            id="fnref1" role="doc-noteref"><sup>1</sup></a>. With a
+            field sobriety test the officer takes note of his
+            observation while the subject performs a test. There are no
+            standardized clues for field sobriety tests. There is
+            standardized criteria for assessing the subject’s
+            performance of the test. The observations of the officer are
+            used to explain the officer’s opinion that the person
+            appeared adversely effected by the intoxicating effects of
+            liquor and/or controlled substances, inhalants and/or
+            marijuana.</p>
+            <p>In comparison, Standardized Field Sobriety Tests have
+            standardized instruction, clues, and scoring criteria. The
+            scoring criteria is used to gather a rough approximation of
+            the subject’s blood alcohol concentration either being above
+            or below a blood alcohol level of 0.08 percent. The
+            standardized field sobriety tests are designed to establish
+            probable cause that the subject’s BAC at the time of the
+            test is unlawful. It is used to assist the officer in making
+            an arrest/no arrest decision. But, correlating the
+            performance of the Standardized Field Sobriety Test to blood
+            alcohol concentration, by the state, is prohibited by
+            law.</p>
+            <h2 id="february_2022"><strong>February 2022</strong></h2>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14705911059648412496&amp;q=shevyakov&amp;hl=en&amp;as_sdt=6,44"><em>State
+            v. Shevyakov</em>, 311 Or App 82, 489 P3d 580 (2021)</a></p>
+            <p>Asking for consent to search, including requesting that a
+            suspect perform FSTs, constitutes impermissible
+            interrogation unless the law precludes the use of the
+            person’s refusal against that person at trial.</p>
+            <p>Defendant appealed convictions for driving under the
+            influence of intoxicants (DUII), unlawful possession of
+            heroin, and unlawful possession of a controlled substance.
+            Defendant assigned error to the lower court’s denial of his
+            motion to suppress evidence of his performance on the
+            administered field sobriety tests (FSTs). On appeal,
+            Defendant argued that after invoking
+            his <em>Miranda</em> rights, the police officer
+            unconstitutionally interrogated him by asking him to perform
+            the FSTs. In response, the State argued that because FST’s
+            are not testimonial, the Defendant’s <em>Miranda</em> rights
+            had not been violated. The Court disagreed and concluded
+            that Defendant was impermissibly interrogated when the
+            police officer requested that he perform the FSTs after he
+            invoked his Miranda rights. Therefore, asking for consent to
+            search, including requesting that a suspect perform FSTs,
+            constitutes impermissible interrogation unless the law
+            precludes the use of the person’s refusal against that
+            person at trial. Reversed and remanded.</p>
+            <p>Summarized by: Corbin Moeller, <em>Willamette Law
+            Online.</em></p>
+            <p><strong><span class="underline">Practice
+            Tip</span></strong></p>
+            <blockquote>
+            <p>Carefully review each case for whether your client at
+            anytime invoked their <em>Miranda</em> rights and move to
+            suppress the results of any interrogation, including results
+            of SFSTs or a breath test, that occurred after invocation of
+            those rights. Declining to perform SFSTs could arguably be
+            an invocation of the right to silence since some of the
+            tests require speaking. After <em>Shevyakov</em> police may
+            need to move their investigation directly to service of a
+            blood draw warrant to gather further evidence of impairment
+            from your client after they invoke <em>Miranda</em>
+            rights.</p>
+            </blockquote>
+            <p><strong>[End 2022 Update]</strong></p>
+            <h1 id="ii._field_sobriety_tests"><strong>II. Field Sobriety
+            Tests</strong></h1>
+            <h2 id="a._statutory_definition"><strong>A. Statutory
+            Definition</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors801.html">ORS
+            801.272</a> “Field sobriety test” means a physical or mental
+            test, approved by the Department of State Police by rule
+            after consultation with the Department of Public Safety
+            Standards and Training, that enables a police officer or
+            trier of fact to screen for or detect probable impairment
+            from intoxicating liquor, cannabis, a controlled substance,
+            or an inhalant or any combination of intoxicating liquor,
+            cannabis, a controlled substance and an inhalant.</p>
+            <h2 id="b._field_tests_approved_by_rule"><strong>B. Field
+            Tests Approved by Rule</strong></h2>
+            <p>Approved field sobriety tests are enumerated and
+            described by <a
+            href="https://oregon.public.law/rules/oar_257-025-0012">OAR
+            257-025-0012</a>: <span class="underline"> </span></p>
+            <p>a. Horizontal Gaze Nystagmus (HGN).</p>
+            <p>b. Walk and Turn.</p>
+            <p>c. One Leg Stand.</p>
+            <p>d. Modified Finger to Nose.</p>
+            <p>e. Finger Count.</p>
+            <p>f. Alphabet.</p>
+            <p>g. Counting.</p>
+            <p>h. Internal Clock.</p>
+            <p>i. Romberg Balance.</p>
+            <p>Note: The Oregon Administrative Rules are silent as to
+            the clues to be noted or the criteria for performance
+            evaluation.</p>
+            <p>The following additional approved tests may be performed
+            by police officers who have completed the eight-hour “Drugs
+            That Impair Driving” curriculum:</p>
+            <ol>
+            <li><blockquote>
+            <p>Lack of Convergence.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pupil Size Estimation.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pulse Rate Examination.</p>
+            </blockquote></li>
+            </ol>
+            <p>A police officer may administer any, all, or none of the
+            field sobriety tests described in this rule as deemed
+            appropriate in the sole discretion of the police
+            officer.</p>
+            <h2
+            id="c._acts_signs_and_symptoms_of_intoxicant_impairment"><strong>C.
+            Acts, Signs and Symptoms of Intoxicant
+            Impairment</strong></h2>
+            <p><a
+            href="https://oregon.public.law/rules/oar_257-025-0010">OAR
+            257-025-0010</a> also lays out acts, signs and symptoms of
+            impairment that police are trained to look for. These are
+            often included in police reports, and if they are not in the
+            police report it is worth mentioning that the officer is
+            trained to look for these but must not have seen it since it
+            was not documented in the report:</p>
+            <p>1. Difficulty in walking or unusual walking.</p>
+            <p>2. Difficulty standing.</p>
+            <p>3. Difficulty following directions.</p>
+            <p>4. Odor of alcoholic beverage on the breath.</p>
+            <p>5. Flushed or pale appearance.</p>
+            <p>6. Speech difficulties or unusual speech patterns.</p>
+            <p>7. Disorderly or unusual conduct or demeanor.</p>
+            <p>8. Lack of muscular coordination or muscular tremors.</p>
+            <p>9. Evidence of mental disturbance.</p>
+            <p>10. Visual disorders or difficulties.</p>
+            <p>11. Sleepiness or drowsiness.</p>
+            <p>12. Dizziness.</p>
+            <p>13. Nausea or vomiting.</p>
+            <p>14. Mood swings.</p>
+            <h2 id="d._implied_consent"><strong>D. Implied
+            Consent</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.125</a> – Implied consent to field sobriety tests. Any
+            person who operates a vehicle upon premises open to the
+            public or the highways of the state shall be deemed to have
+            given consent to submit to field sobriety tests upon the
+            request of a police officer for the purpose of determining
+            if the person is under the influence of intoxicants if the
+            police officer reasonably suspects that the person has
+            committed the offense of driving while under the influence
+            of intoxicants in violation of ORS 813.010 or a municipal
+            ordinance. Before the tests are administered, the person
+            requested to take the tests shall be informed of the
+            consequences of refusing to take or failing to submit to the
+            tests under ORS 813.136.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.136</a> – Consequence of refusal or failure to submit to
+            field sobriety tests. If a person refuses or fails to submit
+            to field sobriety tests as required by ORS 813.135, evidence
+            of the person’s refusal or failure to submit is admissible
+            in any criminal or civil action or proceeding arising out of
+            allegations that the person was driving while under the
+            influence of intoxicants, if the police officer adequately
+            explains to the defendant that the field sobriety tests will
+            be “physical tests” only, not testimonial in nature, and
+            warns of the consequences of not taking the tests. <a
+            href="https://scholar.google.com/scholar_case?case=5165467123903813710&amp;q=State+v.+Rohrs,+157+Or+App+494+(1998)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rohrs</em>, 157 Or App 494 (1998)</a>(<em>citing State v.
+            Fish</em>, 321 Or 48 (1995).</p>
+            <h2 id="e._search_and_seizure"><strong>E. Search and
+            Seizure</strong></h2>
+            <p>Field sobriety tests are a search <a
+            href="https://scholar.google.com/scholar_case?case=8563449355723280526&amp;q=State+v.+Nagel,+320+Or+24+(1994)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nagel,</em> 320 Or 24 (1994)</a><em>,</em> and must be
+            supported by:</p>
+            <p>a. A warrant</p>
+            <p>b. Probable cause and exigent circumstances, or</p>
+            <p>i. Subjective and objective criteria required for
+            probable cause for field sobriety tests. <em>State v.
+            Nagel</em>, 320 Or 24 (1994).</p>
+            <p>ii. Physical manifestations of intoxication are not
+            required for an officer to have probable cause to order a
+            driver to submit to FSTs were a succession of driving
+            violations combined with the driver’s behavior indicate
+            intoxication. <a
+            href="https://scholar.google.com/scholar_case?case=3712446278887154480&amp;q=State+v.+Miller,+265+Or+App+442+(2014)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Miller</em>, 265 Or App 442 (2014)</a>.</p>
+            <p>iii. Slight odor, bloodshot eyes, and admission of
+            drinking not enough for objective probable cause. <a
+            href="https://scholar.google.com/scholar_case?case=8803079542427733321&amp;q=State+v.+Stroup,+147+Or+App+118+(1997)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Stroup</em>, 147 Or App 118 (1997)</a>, <em>but see</em>
+            <a
+            href="https://scholar.google.com/scholar_case?case=1108738939096197370&amp;q=State+v.+Leibrecht,+120+Or+App+617+(1993)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Liebrecht</em>, 120 Or App 617 (1993)</a>.</p>
+            <p>iv. If there is probable cause for a DUII arrest, exigent
+            circumstances exist for administration of FSTs to collect
+            additional evidence for the DUII offense. <a
+            href="https://scholar.google.com/scholar_case?case=5456640648643054858&amp;q=State+v.+Mazzola,+36+OR+804,+820+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mazzola</em>, 36 Or 804, 820 (2015)</a>.</p>
+            <p>c. Consent</p>
+            <p>i. Probable cause not required before officer can ask for
+            field sobriety tests. <a
+            href="https://scholar.google.com/scholar_case?case=11345926485025600625&amp;q=State+v.+Ramos,+149+Or+App+269+(1997)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ramos</em>, 149 Or App 269 (1997)</a>. But the officer
+            must have reasonable suspicion of DUII to expand the scope
+            of the investigation by inquiry or search. <a
+            href="https://scholar.google.com/scholar_case?case=14787812868823424503&amp;q=State+v.+Arreola-Botello,+365+Or+695+(2019)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Arreola-Botello</em>, 365 Or 695 (2019)</a><em>.</em></p>
+            <p>ii. State must show by preponderance of the evidence that
+            defendant’s consent to take field sobriety tests was
+            voluntary. <a
+            href="https://scholar.google.com/scholar_case?case=3413528597829384274&amp;q=State+v.+Maddux,+144+Or+App+34+(1996)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Maddux</em>, 144 Or App 34 (1996)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=14176194947410243413&amp;q=State+v.+Warner,+284+Or+147+(1978)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Warner</em>, 284 Or 147 (1978)</a>.</p>
+            <p>iii. Mere acquiescence to officer’s order is not consent.
+            <a
+            href="https://scholar.google.com/scholar_case?case=10336245165598353389&amp;q=State+v.+Freund,+102+Or+App+647+(1990)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Freund</em>, 102 Or App 647 (1990)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=7949744083349038674&amp;q=State+v.+Lowe,+144+Or+App+313+(1996)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lowe</em>, 144 Or App 313 (1996)</a>.</p>
+            <p>iv. Voluntariness of consent is determined by looking at
+            the totality of the circumstances. <a
+            href="https://scholar.google.com/scholar_case?case=119073993032675787&amp;q=State+v.+Parker,+317+Or+App+225+(1993)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Parker</em>, 317 Or App 225 (1993)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=3689660481377684602&amp;q=State+v.+Flores,+280+Or+273+(1977)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Flores</em>, 280 Or 273 (1977)</a>.</p>
+            <h3 id="update"><strong>2024 Update</strong></h3>
+            <blockquote>
+            <p>Please be advised of this recent Court of Appeals
+            decision hot off the press:</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=4589665089549931542&amp;q=State+v.+Shayna+Lynn+Hamilton,+330+Or+App+258&amp;hl=en&amp;as_sdt=4,38"><u><em>State
+            v. Shayna Lynn Hamilton</em>, 330 Or App 258
+            (2024)(A172776)</u></a>.</p>
+            <p>In this DUII case, the court determined that,
+            under <em>State v. Banks</em>, 364 Or 332 (2019), refusals
+            to perform FSTs—like refusals to perform breath tests—may be
+            admitted as evidence of guilt if the state proves that law
+            enforcement’s requests to perform the tests could be
+            “understood only as a request to submit to the physical act,
+            and not as a request that defendant provide constitutionally
+            significant consent to the tests.” (<em>Hamilton</em> at
+            260). The court reiterates that FSTs are a search that
+            implicate Article I, sec. 9, citing <a
+            href="https://scholar.google.com/scholar_case?case=8563449355723280526&amp;q=State+v.+Nagel,+320+Or+24&amp;hl=en&amp;as_sdt=4,38"><u><em>State
+            v. Nagel</em>, 320 Or 24</u></a> (1994)(FSTs “involve a
+            series of specialized and unusual acts designed to elicit
+            information that the defendant would not have exposed to the
+            public with the officer’s direction.” (<em>Hamilton</em> at
+            268).</p>
+            <p>The court did, however, allow the urine sample to be
+            admitted into evidence by reasoning that the defendant’s
+            consent to the urine test was sufficiently attenuated from
+            the original unlawful police conduct regarding the FSTs.</p>
+            </blockquote>
+            <p><strong>[End Update]</strong></p>
+            <h1 id="iii._standardized_field_sobriety_tests"><strong>III.
+            Standardized Field Sobriety Tests</strong></h1>
+            <h2 id="a._validation_studies"><strong>A. Validation
+            Studies</strong></h2>
+            <p><strong>1. Psychophysical Tests for DWI Arrests – June
+            1977</strong></p>
+            <p>Organization: Southern California Research Institute</p>
+            <p>Authors: Marcelline Burns and Herbert Moskowitz</p>
+            <p>Department of Transportation Number DOT HS 802 424</p>
+            <p><strong>2. Development &amp; Field Test of Psychophysical
+            Tests for DWI Arrests – March 1981</strong></p>
+            <p>Organization: Southern California Research Institute</p>
+            <p>Authors: V. Tharp, Marcelline Burns, and Herbert
+            Moskowitz.</p>
+            <p>Department of Transportation Number DOT HS 805 864</p>
+            <p><strong>3. Field Evaluation of a Behavioral Test Battery
+            for DWI – September 1983</strong></p>
+            <p>Organization: Office of Driver &amp; Pedestrian Research,
+            Problem-Behavior Research Division</p>
+            <p>Authors: Theodore E. Anderson, Robert M. Schweitz, and
+            Monroe B. Snyder</p>
+            <p>Department of Transportation Number DOT HS 806 475</p>
+            <p><strong>4. A Florida Validation Study of the Standardized
+            Field Sobriety Test (S.F.S.T.) Battery – Florida, 1998Bold
+            text</strong></p>
+            <p>Organization: Institute of Police Technology &amp;
+            Management, University of North Florida, Pinellas County
+            Sheriff’s Office, Southern California Research
+            Institute.</p>
+            <p>No DOT Number</p>
+            <p><strong>5. A Colorado Validation Study of the
+            Standardized Field Sobriety Test (SFST) Battery –November
+            1995</strong></p>
+            <p>Organization: Southern California Research Institute</p>
+            <p>Authors: Ellen Anderson and Marcelline Burns</p>
+            <p>No DOT Number</p>
+            <p><strong>6. Validation of the Standardized Field Sobriety
+            Test Battery at BAC’s Below .10 Percent, Final Report –
+            August 1998</strong></p>
+            <p>Organization: ANACAPA Sciences, Inc.</p>
+            <p>Authors: Jack Stuster and Marcelline Burns</p>
+            <p>Department of Transportation Number: DOT HS 808 839</p>
+            <h2 id="b._testing_battery"><strong>B. Testing
+            Battery</strong></h2>
+            <p>The Standardized Field Sobriety Test battery consist of
+            the Horizontal Gaze Nystagmus (HGN), Walk and Turn (WAT) and
+            One Leg Stand (OLS). These tests are not new. They have been
+            used in modified forms by the medical community to assess
+            neurological dysfunction. Alcohol intoxication is a
+            neurological dysfunction. Some symptoms of neurological
+            dysfunction can be measured by similar physical tests by
+            qualified physician and neurologists. It does not need
+            emphasis that police officers are not qualified physicians
+            and are ill-equipped to render medical opinions. Yet, in a
+            sense, that is what they do when assessing a suspect at
+            roadside.</p>
+            <p>The SFSTs are divided attention tasks. The subject is
+            required to perform a mental task, such as following
+            instructions, as well as the physical task of balancing. The
+            HGN and Vertical Gaze Nystagmus (VGN) tests are the
+            exception. It is important to remember that SFSTs do not
+            gauge a person’s ability to operate a motor vehicle. They
+            are used to offer a rough approximation of whether the
+            testing subject is at or above a specified blood alcohol
+            concentration (BAC).</p>
+            <p>Validation of the Standardized Field Sobriety Test
+            Battery at BACs Below 0.10 Percent – Final Report – August
+            1998. (Jack Stuster and Marcelline Burns)</p>
+            <p>Many individuals, including some judges, believe that the
+            purpose of a field sobriety test is to measure driving
+            impairment. For this reason, they tend to expect tests to
+            possess “face validity,” that is, tests that appear to be
+            related to actual driving tasks. Tests of physical and
+            cognitive abilities, such as balance, reaction time, and
+            information processing, have face validity, to varying
+            degrees, based on the involvement of these abilities in
+            driving tasks: that is, the tests seem to be relevant “on
+            the face of it.” Horizontal gaze nystagmus lacks face
+            validity because it does not appear to be linked to the
+            requirements of driving a motor vehicle. The reasoning is
+            correct, but it is based on the incorrect assumption that
+            field sobriety tests are designed to measure driving
+            impairment.</p>
+            <p>Driving a motor vehicle is a very complex activity that
+            involves a wide variety of tasks and operator capabilities.
+            It is unlikely that complex human performance, such as that
+            required to safely drive an automobile, can be measured at
+            roadside. The constraints imposed by roadside testing
+            conditions were recognized by the developers of NHTSA’s SFST
+            battery. As a consequence, they pursued the development of
+            tests that would provide statistically valid and reliable
+            indications of a driver’s BAC, rather than indications of
+            driving impairment. The link between BAC and driving
+            impairment is a separate issue, involving entirely different
+            research methods. Those methods have found driving to be
+            impaired at BAC’s as low as 0.02 percent, with a sharp
+            increase in impairment at about 0.07 percent (Moskowitz and
+            Robison, 1988; Stuster, 1997). Thus, SFST result help
+            officers to make accurate DWI arrest decisions even though
+            SFTS’s do not directly measure driving impairment.</p>
+            <p>Horizontal gaze nystagmus is the most accurate
+            diagnostics of BAC available to officers in the field. HGN’s
+            lack of face validity to driving tasks is irrelevant because
+            the objective of the test is to discriminate between drivers
+            above and below the statutory BAC limit, not to measure
+            driving impairment. Throughout the United States, DWI laws
+            permit arrest decisions to be made on the basis of the
+            statutory BAC limit, irrespective of a specific motorist’s
+            degree of impairment. Motorists also can be arrested at BACs
+            below the statutory limit if their driving performance is
+            demonstrably impaired by alcohol or other drugs.</p>
+            <p>CONCLUSIONS</p>
+            <p>The results of the study provide clear evidence of the
+            validity of the Standardized Field Sobriety Test Battery to
+            discriminate above or below 0.08 percent BAC. Further, study
+            results strongly suggest that the SFSTs also accurately
+            discriminate above or below 0.04 percent BAC.</p>
+            <p>Page 27-8. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=10812684624079740313&amp;q=State+v.+Morgan,+251+Or+App+99+(2012)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Morgan</em>, 251 Or App 99 (2012)</a>, where attorney
+            used <a href="https://www.oregonlaws.org/ors/40.430">OEC
+            706</a> and the above paragraph to challenge the value of
+            NHTSA SFSTs in a DUII/CS trial.</p>
+            <h2
+            id="c._three_test_battery_for_nhtsa_standardized_field_sobriety_tests"><strong>C.
+            Three-test battery for NHTSA Standardized Field Sobriety
+            Tests</strong></h2>
+            <p><strong>1. Horizontal Gaze Nystagmus – HGN</strong></p>
+            <p>Foundation for admissibility – see <a
+            href="https://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State+v.+O%E2%80%99Key,+321+Or.+285+(1995)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. O’Key</em>, 321 Or 285 (1995)</a>, for admissibility of
+            HGN test as scientific evidence. (Note: <em>O’Key</em> does
+            not discuss VGN and thus VGN is not admissible as it has not
+            been judicially authorized without a proper scientific
+            foundation being laid, and <em>O’Key</em> does not discuss
+            HGN in controlled substance cases).</p>
+            <p>a. Pre-test requirements, glasses or contacts, blindness,
+            obvious eye disorders, head injuries, sick, medications,
+            etc. (OSP form 41 questions)</p>
+            <p>b. Stimulus – can be an ink pen, pen light, finger, etc.
+            Small enough object so the testing subject can focus on it.
+            The stimulus should be held approximately 12 – 15 inches
+            away from the person’s face, slightly above eye level. The
+            person tested must hold their head still. (OAR
+            257-025-0020)</p>
+            <p>c. The first pass/passes are made to assure the person
+            tested can track the stimulus with both eyes. The officer
+            also needs to assure both pupils are relatively the same
+            size and resting nystagmus is not present. During these
+            passes the officer is focusing on both eyes together. During
+            the remainder of the test the officer is focusing on each
+            eye independently.</p>
+            <p>d. The next check is for smooth pursuit. The officer
+            should move the stimulus smoothly to the side, at a speed of
+            approximately two seconds from the center to the officer’s
+            right until reaching the far extreme. Then, the stimulus is
+            moved to the officer’s left to the extreme, taking
+            approximately four seconds. Each eye should be checked
+            twice.</p>
+            <p>e. The next check is for nystagmus at maximum deviation.
+            The officer should move the stimulus to the right until the
+            subject’s left eye reaches maximum deviation. Verify that no
+            white is showing in the corner of the eye. Hold the stimulus
+            steady for a minimum of four seconds. The officer is looking
+            for a distinct and sustained jerking of the eye. Check each
+            eye twice for each clue.</p>
+            <p>f. The next check is to determine if the angle of onset
+            of the nystagmus is before or after 45 degrees. Starting in
+            the center and moving to the 45-degree angle should take
+            four seconds. If jerking is noticed the officer should stop
+            the stimulus and be assured the jerking continues, then
+            determine if the angle is before or after 45 degrees. Verify
+            some white is still showing in the corner of the eye.
+            Generally speaking, the higher the BAC, the sooner the
+            jerking will start as the eye moves toward the side. If the
+            jerking begins prior to 45 degree, that person’s BAC could
+            be 0.08 or above. 50 minus the angle of onset is the
+            equation used to predict the BAC. (“Tharp Equation” 2008
+            NHTSA DRE Participant Manual, Session 4, pg. 12 of 46.) But
+            under ORS 813.010(1)(a) the state is precluded from using
+            the HGN test result as evidence that the defendant had a .08
+            percent or more. <em>State v. O’Key</em>, 321 Or 285, 322
+            (1995); <a
+            href="https://scholar.google.com/scholar_case?case=14339854165757692172&amp;q=State+v.+Fisken,+138+Or+App+396+(1996)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Fisken</em>, 138 Or App 396 (1996)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=7019001372857797085&amp;q=State+v.+Ross,+147+Or+App+634+(1997)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ross</em>, 147 Or App 634 (1997)</a>.</p>
+            <p>HGN Test Clues Summary: Six specific clues. Test
+            criterion is four or more clues.</p>
+            <p>g. Finally, the officer is trained to check for vertical
+            gaze nystagmus. Currently a sufficient scientific foundation
+            has not been established for vertical gaze nystagmus. <a
+            href="https://scholar.google.com/scholar_case?case=8790413768869641350&amp;q=State+v.+Bevan,+235+Or+App+533+(2010)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bevan,</em> 235 Or App 533 (2010)</a>.</p>
+            <p>h. If the officer does not administer the test as trained
+            the test is not admissible as scientific evidence. <a
+            href="https://scholar.google.com/scholar_case?case=9858324359824765560&amp;q=State+v.+Ingram,+238+Or+App+720+(2010)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ingram,</em> 238 Or App 720 (2010)</a>, <em>State v
+            O’Key</em>, 321 Or 285 (1995).</p>
+            <p>i. Administering officer is required to have training.
+            The only currently approved training in Oregon is the
+            National Highway Traffic Safety Administration (NHTSA)
+            24-hour course entitled “DWI Detection and Standardized
+            Field Sobriety Testing.”</p>
+            <p><code>Practice Tip</code></p>
+            <p>When dealing with HGN, keep it simple. The jury does not
+            understand HGN. A good cross-examination will highlight that
+            the HGN test is a complex examination. If it is not done
+            correctly, it is worthless as a scientific test. Do not use
+            the term “stimulus.” If the officer is using a pen, call it
+            a pen, not a stimulus. If the officer is using a finger,
+            call it a finger, not a stimulus. Point out that the test is
+            used by doctors in the controlled environment of a
+            physician’s office. Obviously, the roadside is not a
+            controlled environment, and moving lights and reflections
+            can corrupt the test, and that a physician would never
+            assess a person using that test in the conditions that the
+            officer gave the test to your client. Go to the scene and
+            see for yourself if there are distractions. Point out that
+            the subject perceived a still image of the finger or pen and
+            that the person is totally unaware that the eye is jerking.
+            The subject cannot control whether the eye jerks. It is
+            totally involuntary and unknown to the subject. If you are
+            lucky, some officers will say that a person with HGN has
+            poorer vision than he or she otherwise would have and it
+            could be a driving hazard. Jump on that and have fun.</p>
+            <p><strong>Eighty-Six Types of Nystagmus</strong></p>
+            <ol>
+            <li><blockquote>
+            <p>Acquired</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Ageotropic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Alternating Windmill</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Anticipatory</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Arthrokinetic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Associated</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Audio Kentetic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Baer’s</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Bartel’s</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Bechterew’s</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Bow tie</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Brun’s</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Caloric</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Centripetal</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Cervical</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Circular/Oblique</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Circumduction</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Compensatory</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Congenital</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Convergence</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Convergence-evoked</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Diagonal</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Dissociated</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Disjunctive</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Downbeat</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Drug-induced</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Elliptic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Epileptic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Faradic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Flash-induced</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Galvanic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Gaze-evoked Deviational</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Gaze-paretic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Geotropic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Gyratory</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Hereditary</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Horizontal</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Ictal</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Induced</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Intermittent Vertical</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Jerk</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Labyrinthine</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Latent/Manifest Latent</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Lateral Medullary</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Lid</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Miner’s</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Monocular Fixation</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Muscle-Paretic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Myasthenic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Neurasthenic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Oblique</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Occupational</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Optokinetic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Optomotor</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Optokinetic After-Induced</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Panoramic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pendular</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Periodic/Aperiodic Alternating</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Physiologic Endpoint</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Physiologic Fatigue</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Positional Alcohol Nystagmus I (PAN I)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Positional Alcohol Nystagmus II (PAN II)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Post-Optokinetic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pseudo Caloric</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pursuit After-induced</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pursuit Defect</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pseudo Spontaneous</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Radiary</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Railway</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Rebound</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Reflex</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Reverse Post-Optokinetic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>See-Saw</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Sigma</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Somatosensory</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Spontaneous</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Stepping Around</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Stransky’s</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Talantropia</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Torsional</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Unimacular</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Uniocular</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Upbeat</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Vertical</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Vestibular</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Vestibular-Basilar Artery Insufficiency</p>
+            </blockquote></li>
+            </ol>
+            <p><code>Practice Tip: “Distinct and Sustained”</code></p>
+            <p>All officers in Oregon are trained using the NHTSA method
+            for performing the HGN test. The officers are trained to
+            look for distinct and sustained nystagmus at maximum
+            deviation. Nowhere in the NHSTA manual does it define
+            “distinct.” A potential line of questioning may be, “How far
+            does the eye have to move (jerk) before it can be called
+            nystagmus?” “How fast does it have to jerk per second before
+            it can be called nystagmus?”</p>
+            <p><strong>2. Walk and Turn</strong></p>
+            <p>Psychophysical test. This test contains both a mental and
+            a physical component. The test has two phases: the
+            instruction phase and the walking phase.</p>
+            <p><em>Instructions:</em></p>
+            <ul>
+            <li><blockquote>
+            <p>Place your left foot on the line (real or imaginary).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Place your right foot on the line ahead of the left foot,
+            with the heal of your right foot against the toe of the left
+            foot.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Place your arms down at your side.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maintain this position until I have completed the
+            instructions. Do not start to walk until told to do so.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Do you understand the instructions so far? (Make sure
+            subject indicated understanding.)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>When I tell you to start, take nine heel-to-toe steps on
+            the line, turn, and take nine heel-to-toe steps down the
+            line.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>While you are walking, keep your arms at your sides,
+            watch your feet at all times, and count your steps out
+            loud.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Once you start walking, don’t stop until you have
+            completed the test.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Do you understand the instructions? (Make sure subject
+            understands.)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Instruct person to begin the test.</p>
+            </blockquote></li>
+            </ul>
+            <p><em>Clues:</em></p>
+            <ul>
+            <li><blockquote>
+            <p><span class="underline">Cannot keep balance while
+            listening to the instructions</span>. Record this clue if
+            subject does not maintain heel-to-toe position throughout
+            the instructions. (Feet must actually break apart or step
+            off the line.) Do not record this clue if the subject sways
+            or uses the arms to balance but maintains the heel-to-toe
+            position.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Starts too soon</span>. Record
+            this clue if subject starts walking before you tell them to
+            begin.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>S<span class="underline">tops while walking</span>. Do
+            not record this clue if the subject is merely walking
+            slowly.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Does not touch heel to
+            toe</span>. The subject leaves a space of one-half inch or
+            more between the heel and toe on any step.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Steps off the line</span>. The
+            subject steps so that one foot is entirely off the line.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Uses arms for balance</span>. The
+            subject raises one or both arms six or more inches from the
+            sides in order to maintain balance.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Improper turn</span>. The subject
+            removes the front foot from the line while turning. Also
+            record this clue if the subject has not followed directions
+            as instructed, i.e., spins or pivots around or loses balance
+            while turning. (Turning the wrong direction is not a
+            clue.)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Incorrect number of steps</span>.
+            Record this clue if the subject takes more or fewer than
+            nine steps in either direction.</p>
+            </blockquote></li>
+            </ul>
+            <p>WAT Test Clues Summary: Eight specific clues. Test
+            criterion is two or more clues.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Usually, there is not an actual line for the test. If you
+            want to risk having fun at the expense of the officer (maybe
+            you should save this for someone who the jury may already be
+            getting annoyed at) you can explore the imaginary line. For
+            example, “Officer, what color was your imaginary line? How
+            wide was your imaginary line? How far off of your imaginary
+            line did my client step? Did my client step off his
+            imaginary line?” You get the point.</p>
+            <p><strong>3. One Leg Stand</strong></p>
+            <p>Psychophysical test. This test contains both a mental and
+            a physical component. The test has two phases: the
+            instruction phase and the balance and count phase. During
+            the instruction phase the subject is instructed to stand in
+            a specific position while they receive a series of
+            instructions.</p>
+            <p><em>Instructions:</em></p>
+            <ul>
+            <li><blockquote>
+            <p>Please stand with your feet together and your arms down
+            at the sides, like this.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Do not start to perform the test until I tell you to do
+            so.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Do you understand the instructions so far?</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>When I tell you to start, raise either leg with the foot
+            approximately six inches off the ground, keeping the foot
+            parallel to the ground.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Keep both legs straight and your arms at your sides.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>While holding that position, count out loud in the
+            following manner: “one thousand one, one thousand two, one
+            thousand three,” and so on until told to stop.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Keep your arms to your sides at all times and keep
+            watching your raised foot.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Do you understand?</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Go ahead and perform the test. (Officer should always
+            time the 30 seconds. Test should be discontinued after 30
+            seconds.)</p>
+            </blockquote></li>
+            </ul>
+            <p><em>Clues:</em></p>
+            <ul>
+            <li><blockquote>
+            <p><span class="underline">The subject sways while
+            balancing</span>. This refers to side-to-side or
+            back-and-forth motion of the body or a swaying motion of the
+            foot, while the subject maintains the position.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Uses arms for balance</span>.
+            Subject moves arms six or more inches from the side of the
+            body in order to keep balance.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Hopping</span>. Subject is able
+            to keep one foot off the ground, but resorts to hopping in
+            order to maintain balance.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p><span class="underline">Puts foot down</span>. The
+            subject is not able to maintain the position, putting the
+            foot down one or more times during the 30 second count.</p>
+            </blockquote></li>
+            </ul>
+            <p>During the balance and count phase the subject is told to
+            stand on one leg, raising the other leg straight out in
+            front, about six inches off the ground, and count for 30
+            seconds, with their arms at their sides. The subject is also
+            told to watch their raised foot.</p>
+            <ul>
+            <li><blockquote>
+            <p>The officer is looking for four validated clues; (1)
+            raising arms, (2) swaying, (3) hopping, (4) putting foot
+            down.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The test needs to be timed by the officer.</p>
+            </blockquote></li>
+            </ul>
+            <p>OLS Test Clues Summary: Four specific clues. Test
+            criterion is two or more.</p>
+            <p><strong>4. Grading</strong></p>
+            <p>In order for testimony regarding whether defendant
+            “passed” or “failed” the SFSTs to be admissible, the state
+            needs to lay a proper foundation. <a
+            href="https://scholar.google.com/scholar_case?case=16260876675816212834&amp;q=State+v.+Beltran-Chavez,+286+Or+App+590+(2017)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beltran-Chavez,</em> 286 Or App 590 (2017)</a>. It is
+            error to allow a police officer to testify that the SFSTs
+            are “the product of scientific research.” <a
+            href="https://scholar.google.com/scholar_case?case=7210345234509381092&amp;q=State+v.+Eatinger,+298+Or+App+630+(2019)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Eatinger,</em> 298 Or App 630 (2019)</a>.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Some deputy DAs will be able to confuse a judge into
+            letting the officer opine whether the client passed or
+            failed the tests. Sometimes it is to your advantage to let
+            the state go down this path because your theory may be that
+            the officer made a mistake in thinking that the tests have a
+            “pass” or “fail” component and you want to “vamp” on that
+            theme. You can impeach with the NHTSA SFST manual if you
+            brought one to trial. Go to the 2018 student manual, Session
+            8, page 69 <strong>“SFST’s are a tool to assist you in
+            seeing visible signs of impairment and are not a pass/fail
+            test.</strong>”</p>
+            <p><code>More Practice Tips</code></p>
+            <p>Always order the training records of the police officers
+            involved. They can be ordered by sending an email with the
+            officer’s name and DPSST number to <a
+            href="mailto:dpsst.records@state.or.us">dpsst.records@state.or.us</a>
+            You will want to know when the officer was last trained in
+            SFSTs.</p>
+            <p>Get the NHTSA <a
+            href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/documents/sfst_full_participant_manual_2018.pdf"><span class="underline">SFST
+            participant</span></a> and <a
+            href="https://www.nhtsa.gov/sites/nhtsa.dot.gov/files/documents/sfst_full_instructor_manual_2018.pdf"><span class="underline">instructor
+            manuals</span></a> for review and for impeachment (also
+            contained in the DUII Notebook Resource Guide). <a
+            href="https://scholar.google.com/scholar_case?case=10812684624079740313&amp;q=State+v.+Morgan,+251+Or+App+99+(2012)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Morgan</em>, 251 Or App 99 (2012)</a>. A productive
+            subject of impeachment may arise if the officer testifies
+            that the standardized field sobriety tests are helpful in
+            determining if the defendant had the mental and physical
+            faculties to operate a motor vehicle safely. The better you
+            know the manuals’ content and organization; the more avenues
+            will be available for your creativity to manifest. The
+            better that you know all the training manuals, the more
+            relaxed you will be in trial.</p>
+            <p>Sometimes the best defense is the simplest. For example,
+            a nice theme is that the officer had already made up his
+            mind to arrest because he presumed that the driver, who he
+            never met before, was negatively affected, from the moment
+            he spoke to the client driver-side. The officer presumed
+            guilt. He judged like a biased judge would and he was not
+            open to the reasonable possibility that he may be wrong. You
+            can press that the officer is trained to be biased, and you
+            can show that if the officer had been trained to think in a
+            certain way, all officer/driver encounters are potentially
+            lethal. Sometimes you can get the jury to stand in the shoes
+            of your client and they may not think it fair to be judged
+            by someone who was not open to the reasonable possibility of
+            innocence. And, if you can get the jury to think that they
+            could not do the SFSTs better than your client without some
+            practice, all the better.</p>
+            <p>Drive the route your client drove if your client was
+            followed for a distance prior to the officer initiating the
+            stop. When you drive, record the route, beginning with where
+            the officer first takes note of your client. Observe the
+            scene of where the field sobriety tests were performed. If
+            there is an appreciable slope, you can demonstrate the slope
+            by placing a ball on the surface and record the movement. If
+            there are reflective surfaces in the direction that you
+            client was facing while doing the HGN test, flashing lights
+            reflecting off that surface may be a cause of the HGN
+            observed.</p>
+            <p>If the police contact and field sobriety tests were
+            recorded, have people who know the defendant watch the
+            recording and tell you whether the defendant is acting like
+            she normally does. While the witness may not know how the
+            defendant would look normally while doing something abnormal
+            like a field sobriety test, the witness may give an opinion
+            whether the defendant is walking, talking and otherwise
+            acting normally for her.</p>
+            <h2
+            id="d._top_ten_nhtsa_2018_dwi_manual_quotes_according_to_the_questionable_opinion_of_hugh_duvall"><strong>D.
+            Top Ten NHTSA 2018 DWI Manual Quotes (according to the
+            questionable opinion of Hugh Duvall)***</strong></h2>
+            <p>It was difficult to pick just ten quotes in this edition
+            (even though I cheated and doubled up on a couple of them).
+            Some are oldies but goodies, and some are brand-spanking
+            new…</p>
+            <p>1. “Effective DWI enforcers do not leap to the arrest/no
+            arrest decision.” (Session 4, p 4/36). While this can be
+            nuanced to mean that the officer is not to leap to a final
+            conclusion, it rubs against the common officer testimony
+            that she believed she had PC to arrest upon contact.</p>
+            <p> </p>
+            <p>2. “Your second task is
+            to <span class="underline">observe the driver’s exit and
+            walk</span> from the vehicle.” (Session 4, p 7/36). This is
+            useful where an officer testifies in response to a defense
+            question about whether the client had any difficulty exiting
+            his car with, “He might have. I don’t recall.” The officer
+            is either ignoring her training, or is ignorant of NHTSA
+            protocol.</p>
+            <p> </p>
+            <p>3. “Once the stop command has been communicated to the
+            suspect driver, the officer must closely observe the
+            driver’s actions and vehicle maneuvers during the stopping
+            sequence.” (Session 5, p 5/66). See comment in #2 above.</p>
+            <p> </p>
+            <p>4. “As soon as an officer gives the stop command, the
+            subject’s driving task becomes more complex. If subject is
+            under the influence, the subject may not be able to handle
+            this more complex driving very well.” (Session 5, p 25/66).
+            This is a useful governmental admission, where the client
+            shows no difficulty driving after the officer initiates the
+            stop.</p>
+            <p> </p>
+            <p>5. “There are a number of techniques you can use to
+            assess impairment while the driver is still behind the
+            wheel. Most of these techniques apply the concept of divided
+            attention.” (Session 6, p 15/28). This is useful where the
+            client has physical issues which prevent him from performing
+            the Walk and Turn or One Leg Stand tests. Bonus content:
+            Both the ABCs and Counting are considered divided attention
+            tasks. (See Session 6, pp 20-21/28.)</p>
+            <p> </p>
+            <p>6. “If any one of the SFST elements is changed, the
+            validity may be compromised.” (Session 8, p 17/95.)</p>
+            <p> </p>
+            <p>7. Under the Walk and Turn instructions: “This test may
+            lose its sensitivity if it is repeated several times.”
+            (Session 8, p 69/95). This is useful to explain to the jury
+            why they should not compare the officer’s performance (on
+            the video or in court) with the client’s at 2:30 a.m.</p>
+            <p> </p>
+            <p>8. “No matter how much evidence you collect, if it is not
+            presented clearly, completely, and convincingly in court,
+            the case may be lost.” (Session 12, p 7/42). While an
+            officer may testify that she is simply an unbiased witness
+            in the case, her training encourages her to advocate for a
+            conviction, otherwise, in the words of the NHTSA, “…the case
+            may be lost.”</p>
+            <p> </p>
+            <p>9. This is a “two-fer” – “Record the names and condition
+            of passengers in the vehicle and where they were located.”
+            (Session 12, p 19/42). And, “Make sure passengers are
+            identified, interviewed, and safely released.” (Session 12,
+            p 21/42). At least in my experience, investigating officers
+            frequently ignore passengers and fail to interview them.</p>
+            <p> </p>
+            <p>10. Last, but certainly not least: “The person on trial
+            is never a ‘lady’ or ‘gentleman,’ but is always ‘the
+            defendant.’” (Session 12, p 39/42).</p>
+            <ul>
+            <li><ul>
+            <li>Which I reserved the right to change at any time, for
+            any reason, exercising my unfettered discretion.</li>
+            </ul></li>
+            </ul>
+            <h2
+            id="e._advanced_roadside_impaired_driving_enforcement_aride"><strong>E.
+            Advanced Roadside Impaired Driving Enforcement
+            (ARIDE)</strong></h2>
+            <p>The <a
+            href="https://www.chp.ca.gov/programs-services/for-law-enforcement/drug-recognition-evaluator-program/aride-advanced-roadside-impaired-driving-enforcement">Advanced
+            Roadside Impaired Driving Enforcement</a> (ARIDE) program
+            was developed by NHTSA with input from the International
+            Association of Chiefs of Police (IACP) to address the gap in
+            training between the Standardized Field Sobriety Testing and
+            the Drug Evaluation and Classification (DEC) Program. ARIDE
+            is intended to bridge the gap between these two programs by
+            providing officers with general knowledge related to drug
+            impairment and by promoting the use of DREs in states that
+            have the DEC Program.<a href="#fn2" class="footnote-ref"
+            id="fnref2" role="doc-noteref"><sup>2</sup></a> An officer
+            must be trained in the SFSTs before enrolling in ARIDE
+            training. The purpose of ARIDE training is to “train law
+            enforcement officers to observe, identify, and articulate
+            signs of impairment related to drugs, alcohol or a
+            combination of both.” The training includes many of the
+            topics covered in greater detail in the DRE training: drugs
+            in the human body, observations of the eyes, the seven drug
+            categories, and effects of drug combinations. The ARIDE
+            training adds additional field sobriety tests to the
+            roadside lineup, including the Lack of Convergence test, the
+            Modified Romberg test, Finger to Nose test, and pupil
+            examinations. An officer trained in ARIDE will not be
+            permitted to testify as an expert, but will be allowed to
+            testify as to observations and performance on these
+            additional tests. Refer to Chapter 10, “DREs and Cannabis,”
+            to familiarize yourself with these tests. A copy of the 2018
+            ARIDE manual and matrix are included in the Resource
+            Guide. Be prepared to cross-examine officers that have been
+            trained using ARIDE.</p>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><a
+            href="https://oregon.public.law/rules/oar_chapter_257_division_25">https://oregon.public.law/rules/oar_chapter_257_division_25</a><a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><a
+            href="https://www.chp.ca.gov/programs-services/for-law-enforcement/drug-recognition-evaluator-program/aride-advanced-roadside-impaired-driving-enforcement">https://www.chp.ca.gov/programs-services/for-law-enforcement/drug-recognition-evaluator-program/aride-advanced-roadside-impaired-driving-enforcement</a>.<a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

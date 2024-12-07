@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2020 edition</p>
+            <h1 id="investigators_and_experts"><strong>Investigators and
+            Experts</strong></h1>
+            <p><strong><em>By Robert Crow and Eidar
+            Gonzales</em></strong></p>
+            <p>This chapter covers the special focus of investigators in
+            DUII cases. The end of the chapter covers expert witnesses
+            and provides lists of some possible experts available to the
+            DUII practitioner via the OCDLA <a
+            href="https://members.ocdla.org/directory/expert-witness/search">Expert
+            Witness Directory</a>.<a href="#fn1" class="footnote-ref"
+            id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+            <h1 id="i._duii_investigation"><strong>I. DUII
+            Investigation</strong></h1>
+            <p>The following subjects will be addressed in this
+            section:</p>
+            <p>• What information do I need?</p>
+            <ul>
+            <li><blockquote>
+            <p>Scene</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Witnesses</p>
+            </blockquote></li>
+            </ul>
+            <p>• Can I do it on my own or do I need an investigator?</p>
+            <p>• Funding for investigators.</p>
+            <h2 id="a._what_information_do_i_need"><strong>A. What
+            Information Do I Need?</strong></h2>
+            <p><strong>1. Scene</strong></p>
+            <p>Visiting the crime scene can be very valuable in DUII
+            cases. Knowing the roadway will help you understand why the
+            “bad driving” may have been due to environmental conditions
+            rather than your client’s intoxication. Often times the
+            “delayed response for pulling over” can be explained when
+            you see the roadway was narrow or the client chose a much
+            safer spot to pull over. You always learn something by
+            visiting the scene. For example, familiarizing yourself with
+            the terrain will be helpful in attacking the officer’s
+            conclusions about your client’s “poor performance” on the
+            standardized field sobriety tests.</p>
+            <p>There is no substitute for familiarizing yourself with
+            the roads, stop area and visiting the location personally,
+            so employing the assistance of an investigator can be a huge
+            help on the case. Beyond the obvious point that sometimes
+            two sets of eyes are better than one, an investigator can
+            also aid in trial preparation and developing exhibits. Since
+            the attorney cannot be a witness at trial, having an
+            investigator gather evidence and photographs creates a
+            valuable defense witness. An investigator can help by
+            recording measurements, obtaining photographs, maps, aerial
+            maps, and other tools to assist the jury in understanding
+            the scene.</p>
+            <p>Beneficial skills include comprehensive H&amp;P; medical
+            charting; having a medical/pathology background or autopsy
+            background; being multilinguistic; having a fearless
+            devotion to go where most people won’t; to ask the most
+            crucial questions at the most isolated or cold places, such
+            as under a bridge in the company of a guy holding a Bowie
+            knife itching to use it.</p>
+            <p><strong>2. Witnesses</strong></p>
+            <p>Let’s face it: in DUII trials, the witness lists often
+            are limited to the arresting officer, the officer
+            administering the breath test, a lab tech explaining the
+            breath test sample and extrapolating a BAC at the time of
+            driving, and possibly your client. Regardless of what a
+            judge instructs, human nature tells us the jury is going to
+            want to hear your client’s side of the story. Obtaining
+            witnesses (or video from the nearby area) in your favor who
+            can explain the scene, your client’s drinking pattern, and
+            your client’s driving can help you formulate a plan of
+            attack and construct a convincing story for the jury. Of
+            course, obtaining such witnesses is not always easy.</p>
+            <p>An investigator has many tools to track down witnesses
+            and contact information. Your investigator can interview
+            witnesses, take notes on their statements, and serve them
+            subpoenas for trial. Not to mention, in those rare instances
+            when a witness’s story suddenly changes at trial, your
+            investigator can testify to impeach the witness.</p>
+            <p>A licensed investigator can also serve as the middleman
+            in assisting cases, especially if the investigator is also a
+            notary, such as in securing civil compromises when
+            possible.</p>
+            <h2
+            id="b._can_i_do_it_on_my_own_or_do_i_need_an_investigator"><strong>B.
+            Can I Do It On My Own Or Do I Need An
+            Investigator?</strong></h2>
+            <p>Witness Interviews: People do not like lawyers; they do
+            not want to talk to us. However, sometimes people will be
+            more willing to talk to investigators. Investigators can get
+            information from witnesses when witnesses would otherwise
+            not speak to us. Additionally, tracking down witnesses is
+            not always easy and can be quite time consuming. An
+            investigator likely has resources the attorney does not to
+            track down witnesses and can find them more efficiently than
+            the attorney. Investigators can establish contact/initial
+            reviews but the attorney should speak with the witnesses
+            because the attorney will be trying the case.</p>
+            <p>Trial Testimony: Having an investigator who has
+            interviewed trial witnesses can be valuable if the need to
+            impeach a witness arises. Since the attorney cannot be both
+            advocate and witness, it is important to have someone
+            available who can testify.</p>
+            <p>Consumption of Time/Resources: Tracking down witnesses,
+            running background checks, photographing scenes, and
+            preparing trial exhibits can be very time consuming. The
+            attorney’s time can be spent more wisely preparing for trial
+            and preparing legal arguments. Hiring an investigator saves
+            the attorney time and ultimately can save the client’s money
+            by freeing up more of the attorney’s time.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Make sure your investigator understands the possible
+            defenses so you can utilize all of their skills in
+            accordance with how you might present the case.</p>
+            <h2 id="c._funding_for_investigators"><strong>C. Funding for
+            Investigators</strong></h2>
+            <p><strong>1. Court-Appointed Cases</strong></p>
+            <p>The Office of Public Defense Services provides resources
+            and funding for non-routine expenses (such as money for
+            investigators and experts). <a
+            href="https://www.oregon.gov/opds/provider/Pages/forms.aspx">In
+            order to obtain funding from OPDS</a>,<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> a non-routine expense
+            request must be submitted, along with a justification
+            statement outlining why it is necessary to employ the
+            assistance of an investigator. The standard fee allowed for
+            investigators, paid by PDSC, is $34/hour for English
+            speaking cases and $39/hour for bilingual cases (although
+            this may change in the future). Click the link above to
+            review instructions and get a fillable form. Also see the
+            appendices.</p>
+            <p>You may also write NRE@opds.ostate.or.us or call Jacob
+            Zachary, (541) 378-2478 ext. 70132, Nikita Gillis at ext.
+            82373, or Patti McCarter, ext 82500.</p>
+            <p><strong>2. Retained Cases</strong></p>
+            <p>In most cases when the attorney is retained, it is the
+            responsibility of the attorney, or client, to hire an
+            investigator. It is imperative that the attorney hire the
+            investigator in order to create confidentiality not only
+            between the investigator and client, but also investigator,
+            attorney and client. This does not mean, however, that the
+            attorney must pay for the investigator. Having the client
+            pay the investigator, through the attorney, will create the
+            necessary conditions for confidentiality between the
+            investigator, attorney and client. In cases in which the
+            client is paying for the investigator, having the client pay
+            the fee for the investigator to the attorney, and the
+            attorney placing the funds in the client trust account and
+            then disbursing it according to the fee agreement between
+            the client and investigator will create the requisite
+            conditions to establish confidentiality between
+            investigator, attorney and client.</p>
+            <p>In some cases, it is possible to obtain OPDS funding for
+            retained cases. If a client is indigent, an attorney may
+            seek funds from OPDS for an investigator. If a client has
+            previously been declared indigent, was appointed a public
+            defender and then later hires an attorney, the fact that the
+            client previously was declared indigent can serve as a
+            justification to OPDS to obtain state funding for an
+            investigator. If a client has not previously been declared
+            indigent, the client may ask the court verifier or a judge
+            to review their financial status in order to establish their
+            indigence so they can receive state funding for an
+            investigator. If the client is declared indigent, the
+            attorney would need to complete the same process as would be
+            required for a court-appointed case. Also, see <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.055</a>, Compensation and Expenses of Appointed Counsel,
+            which grants that an indigent client may receive state
+            funding for preparation, negotiation, and conduct of trial
+            even if he or she has retained counsel.</p>
+            <p>There are judges who do not understand the important
+            concept that just because someone has retained counsel, that
+            person is not necessarily precluded from getting PDSC
+            funding for “nonroutine expenses.” Do not take no from a
+            verifier or court without fighting for your client’s right
+            to put on a defense and to have financial assistance from
+            the state when they are unable to pay for “nonroutine” but
+            necessary expenses.</p>
+            <p>See the appendices for a sample motion,
+            affidavit/declaration and order. These examples are taken
+            from a case in which the client retained counsel, through
+            the assistance of family and friends, but was not
+            financially able to pay for other “nonroutine” but necessary
+            expenses. When the trial judge saw the client had retained
+            counsel, despite the verifier’s office finding the client
+            financially eligible for PDSC funding, he denied the request
+            for extraordinary expenses. The sample documents were filed,
+            and the judge reversed his ruling without a hearing.</p>
+            <h1 id="ii._for_investigators"><strong>II. For
+            Investigators</strong></h1>
+            <p>Investigators, like attorneys, have a code of ethics they
+            must follow in conducting their investigations. The Code of
+            Ethics for investigators can be found at <a
+            href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=835">OAR
+            259-061-0190</a> and at</p>
+            <p><a
+            href="https://libraryofdefense.ocdla.org/Code_of_Ethical_Conduct">OCDLA’s
+            Library of Defense</a> (secure login required).<a
+            href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a></p>
+            <p>Additional information for private investigators can be
+            found under DPSST as well.</p>
+            <h2 id="a._investigation_confidentiality"><strong>A.
+            Investigation Confidentiality</strong></h2>
+            <p>Confidentiality relating to investigators is important
+            and can be a liability if not protected. It is important not
+            to divulge any information relating to a case to anyone
+            other than the attorney on the case or the client. If
+            information must be shared, it should only be done with a
+            release of information signed by the client. But even with
+            permission from the client, it may altogether be limited in
+            the type of case information disclosed, and the best
+            interests to the client as determined by the attorney on the
+            case is to avoid inadvertently revealing factual information
+            to potential adverse parties.</p>
+            <h2 id="b._avoiding_the_practice_of_law"><strong>B. Avoiding
+            the Practice of Law</strong></h2>
+            <p>The investigator and attorney team is a very important
+            element in any case. Each member complements the other(s) to
+            develop the best possible case. However, it is important
+            that investigators know they are not allowed to practice
+            law. There is a fine line between conducting the function of
+            an investigator and an attorney. That line is generally
+            drawn at the following two points:</p>
+            <ul>
+            <li><blockquote>
+            <p>Giving legal advice.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Aiding in filling out legal paperwork.</p>
+            </blockquote></li>
+            </ul>
+            <p>If a client asks the investigator for legal advice, it is
+            important for the investigator to tell the client that only
+            the attorney can provide legal advice or answer legal
+            questions. The client should be instructed to contact the
+            attorney about any such questions.</p>
+            <h2 id="c._police_witnesses"><strong>C. Police
+            Witnesses</strong></h2>
+            <p>As you read through a report, take note of all of the
+            witnesses with whom the investigators spoke as well as the
+            details of their statements. You may want to contact the
+            witnesses while conducting the defense investigation to see
+            if any witness changes his or her story or provides
+            different details than those given to the police.</p>
+            <p>In addition to witnesses listed in the report, take care
+            to read through and look for other potential witnesses who
+            were not identified and spoken to by the police. These
+            witnesses may be valuable and/or key in a defense case. They
+            may even dispute what other state’s witnesses are
+            saying.</p>
+            <h2 id="d._neighborhood_canvassing"><strong>D. Neighborhood
+            Canvassing</strong></h2>
+            <p>When looking for witnesses not already identified, check
+            the areas in proximity to an incident. Witnesses may have
+            some valuable information for you even though they were not
+            spoken to at the time of the initial investigation. It is a
+            good rule of thumb to check residences on each side of a
+            location, i.e., north, south, east and west. Your goal is to
+            identify witnesses to the sights, sounds or knowledge of a
+            case. Even if someone doesn’t have direct evidence, they may
+            have some circumstantial evidence to provide.</p>
+            <h2 id="e._referrals_to_other_witnesses"><strong>E.
+            Referrals to Other Witnesses</strong></h2>
+            <p>When contacting witnesses in a case, remember that person
+            may know of others who may have beneficial information. It
+            is often a good idea to ask witnesses you interview if they
+            know of any other people who may have seen or heard the
+            incident or have knowledge about the case. The witness may
+            be able to give you names, addresses or phone numbers of
+            other potential witnesses. If followed, those leads may be
+            able to provide a clearer and more complete picture of the
+            details of the case.</p>
+            <p>Another thing to keep in mind when speaking to witnesses
+            is whether they have ongoing cases where they are
+            represented by counsel; establish that fact first—due
+            professional courtesy may be needed to obtain permission to
+            speak to any potential witnesses(s), provided the attorney
+            concedes.</p>
+            <h2 id="f._resources_for_dealing_with_witnesses"><strong>F.
+            Resources for Dealing with Witnesses</strong></h2>
+            <p>Many valuable resources on conducting investigations and
+            interviewing witnesses can be found online. <a
+            href="https://libraryofdefense.ocdla.org/Investigation_category">The
+            Library of Defense</a> has a thorough discussion on
+            investigations.<a href="#fn4" class="footnote-ref"
+            id="fnref4" role="doc-noteref"><sup>4</sup></a> Other OCDLA
+            resources include <a
+            href="https://ocdla.force.com/OcdlaProduct?id=01t0a000004OuYcAAK">The
+            Investigators’ Manual</a><a href="#fn5" class="footnote-ref"
+            id="fnref5" role="doc-noteref"><sup>5</sup></a> (with a
+            revised edition in the works for 2021), the <a
+            href="https://www.ocdla.org/contact-committee-oregon-legal-investigators-committee/">Oregon
+            Legal Investigators’ Committee</a><a href="#fn6"
+            class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a> and the <a
+            href="mailto:olic@ocdla.org?subject=Referral%20from%20OCDLA%20DUII%20Notebook%20-%20Request%20to%20Join%20Listserve">investigators’
+            listseve</a>.<a href="#fn7" class="footnote-ref" id="fnref7"
+            role="doc-noteref"><sup>7</sup></a> Additionally, there are
+            some good websites to site and utilize in conducting witness
+            interviews.</p>
+            <h2 id="g._complainantsvictims"><strong>G.
+            Complainants/Victims</strong></h2>
+            <p>The State of Oregon grants crime victims many rights,
+            including the right to refuse an interview, deposition, or
+            other discovery request by the criminal defendant or other
+            person acting on behalf of the criminal defendant. Oregon
+            Constitution Art. 1, §42.</p>
+            <p>Before interviewing any victim/complainant, check with
+            the attorney to make sure there is no “victim letter” in the
+            file, in which the victim has invoked his or her right to
+            refuse to speak to the defense team. If no victim letter
+            exists or the victim has not invoked the right not to speak
+            with us, you must still notify the victim of his or her
+            rights before speaking with himor her. You must inform the
+            victim of the following:</p>
+            <p>1) You work with the defense attorney for defendant (give
+            defendant’s name).</p>
+            <p>2) As a victim, she (or he) has certain rights, including
+            the right not to speak with you at all or that she may
+            request the presence of the district attorney while speaking
+            with you.</p>
+            <p>3) If the victim has not already told you she does not
+            want to speak with you, ask for confirmation that she does
+            want to speak to you now (over the phone or in person) and
+            obtain confirmation before continuing the interview.</p>
+            <p>Do this process each time you speak to the victim.</p>
+            <h2 id="h._police_training_and_policies"><strong>H. Police
+            Training and Policies</strong></h2>
+            <p><a
+            href="https://libraryofdefense.ocdla.org/Police_Interrogation_Techniques">Police
+            Interrogation Techniques</a>:</p>
+            <ul>
+            <li><blockquote>
+            <p>Crime Scene Investigation</p>
+            </blockquote></li>
+            </ul>
+            <blockquote>
+            <p><a
+            href="http://www.nfstc.org/wp-content/files/Crime-Scene-Investigation.pdf">http://www.nfstc.org/wp-content/files/Crime-Scene-Investigation.pdf</a></p>
+            <p>Written in cooperation with the US Department of Justice.
+            This is a guide for law enforcement and outlines the
+            procedure that should be followed in conducting an
+            investigation. It starts with the initial arrival at the
+            crime scene and proceeds through the documentation and
+            evaluation of the crime scene, to processing the crime
+            scene, and completing and recording the crime scene
+            investigation.</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>The Reid Technique of Interviewing and Interrogation</p>
+            </blockquote></li>
+            </ul>
+            <blockquote>
+            <p><a
+            href="http://law.uark.edu/documents/Judges-Reid-Technique.pdf">http://law.uark.edu/documents/Judges-Reid-Technique.pdf</a></p>
+            <p>Technique developed in the 1940s for interviewing and
+            interrogating suspects.</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>Law Enforcement Training</p>
+            </blockquote></li>
+            </ul>
+            <blockquote>
+            <p>All Oregon law enforcement must participate and complete
+            training by the Department of Public Safety Standards of
+            Training (DPSST). <a
+            href="mailto:https://libraryofdefense.ocdla.org/images/2/20/Basic_Police_DPSST_Training_Materials.pdf">This
+            link</a> provides a copy of the basic training manual new
+            police officers use.<a href="#fn8" class="footnote-ref"
+            id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+            </blockquote>
+            <h2 id="i._accessing_public_records"><strong>I. Accessing
+            Public Records</strong></h2>
+            <p>In many cases it will be helpful to access public
+            records, such as 911 calls, DMV records, and officer
+            training (DPSST records). Most departments have their own
+            specific way of handling requests for obtaining such
+            records.</p>
+            <ul>
+            <li><blockquote>
+            <p>The Library of Defense has a document on the
+            Investigation page outlining the procedure and costs for
+            many <a
+            href="https://libraryofdefense.ocdla.org/images/7/7e/Public_records.pdf">different
+            jurisdictions and departments</a><a href="#fn9"
+            class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a> (secure log in
+            required). (Note: Some information may not be up-to-date as
+            this manual goes to press but efforts to update it are
+            underway).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>DPSST records for officers can be obtained through a
+            request submitted by email. Information on obtaining such
+            records can be found <a
+            href="http://www.oregon.gov/dpsst/SC/Pages/RecordsRequests.aspx">here</a>.<a
+            href="#fn10" class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a></p>
+            </blockquote></li>
+            </ul>
+            <h2 id="j._what_to_look_for_in_a_search_warrant"><strong>J.
+            What to Look for in a Search Warrant</strong></h2>
+            <p>A search warrant provides a tool to law enforcement that
+            allows them to search areas and things that they would not
+            normally have access to due to the expectation of privacy
+            that the United States Constitution and Oregon Constitution
+            provide. As part of that exception, the law enforcement
+            investigator must show that he or she has the training,
+            experience and case information to show they know the items
+            they are looking for will be in the area or item they
+            describe.</p>
+            <p>As you read a search warrant, you will find that they
+            have different parts to them. Depending on the person
+            applying for the warrant, or affiant, the parts may be in a
+            different order, but the information should be the same. A
+            completed search warrant consists of the warrant itself and
+            a supporting affidavit. In the affidavit, the officer must
+            include specific information to justify to the court why the
+            warrant should be issued. This information includes:</p>
+            <ul>
+            <li><blockquote>
+            <p>Introduction of the affiant.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Training and experience of the affiant.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Probable cause information that will lead the judge to
+            believe the warrant is justified.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Request for the warrant to be authorized by the
+            judge.</p>
+            </blockquote></li>
+            </ul>
+            <p>As you read the warrant affidavit, make sure the affiant
+            describes in the training and experience section that he or
+            she has the training and experience necessary to support the
+            probable cause, e.g., knows that drug dealers have been
+            known to carry guns for protection, therefore is asking to
+            search for and seize any and all firearms.</p>
+            <p>A very important part of the search warrant is the
+            description, which must state with particularity the place
+            or items to be seized and searched. Make sure that
+            description, including the description of the address
+            numbers and the color of the front door, is accurate. There
+            have been times when the warrant describes one place but it
+            is served on a location that does not exactly match that
+            description. If the description is not correct, that may be
+            a reason for your employing attorney to file motions to
+            controvert or suppress.</p>
+            <p>You should note that the affiant does not have to be the
+            person who actually serves the warrant. If you read the
+            warrant, you will notice that in essence it states, “To any
+            police officer of the State of Oregon....” That allows any
+            officer to serve it, not just the affiant.</p>
+            <h1 id="iii._experts"><strong>III. Experts</strong></h1>
+            <p>Experts can be valuable people in a DUII case. Many of
+            our DUII cases involve breath test samples that were
+            gathered thirty minutes or perhaps even hours after our
+            client was driving. The state likely will call a witness
+            from the state crime lab to provide an estimation of what
+            the client’s blood alcohol content would have been at the
+            time of driving. The crime lab technician will discuss
+            retrograde extrapolation to suggest that the client’s BAC
+            had been dropping since the time of driving and he or she
+            likely was higher at the time of driving. In such cases, it
+            may be helpful to contact an expert who can help you with
+            the calculation to determine what would be an appropriate
+            estimation. The expert can also help you identify issues and
+            concerns in the sample, the pattern of drinking, and the
+            absorption/dissipation rates that will affect the rate at
+            which alcohol is eliminated and why the lab’s estimation
+            might be too high. Also see Chapter 11, “Breath, Blood and
+            Urine,” for a thorough analysis of retrograde extrapolation
+            and theories to refute.</p>
+            <h2 id="a._controlled_substances_cases"><strong>A.
+            Controlled Substances Cases</strong></h2>
+            <p>Experts can also be very helpful in controlled substance
+            DUII cases. An expert can help you identify what drugs in
+            your client’s system actually are controlled substances.
+            Sometimes the crime lab will list a drug as a controlled
+            prescription. Just because a drug is a controlled
+            prescription does not mean it is a controlled substance; it
+            is important to be able to point this out if the prosecutor
+            or a state’s witness suggests otherwise. An expert can help
+            you identify what symptoms, or vitals, should be expected
+            for your client based upon the substances found in your
+            client’s system. Not all controlled substances are the same,
+            and it is important to be able to point out when an
+            officer’s observations are inconsistent with what should be
+            noted for the substances in your client’s system. Getting
+            medical records or your client’s doctor can be extremely
+            persuasive to a jury.</p>
+            <h2 id="b._other_charges_accident_reconstruction"><strong>B.
+            Other Charges – Accident Reconstruction</strong></h2>
+            <p>Many DUII cases also involve other charges. For example,
+            we often find clients charged with reckless driving,
+            reckless endangering, failure to perform duties of a driver,
+            or criminal mischief when arrested for a DUII. A DUII case
+            in which an accident occurs with injury to another person
+            may involve charges of assault, or even criminally negligent
+            homicide or manslaughter. When a death occurs, the
+            difference between criminally negligent homicide,
+            manslaughter in the second degree, and manslaughter in the
+            first degree very well could be the conduct of the driver
+            and the manner of his driving. In such cases it could be
+            valuable to have an accident reconstructionist demonstrate
+            how the accident occurred and how your client’s driving
+            might not have been so bad after all. The difference in
+            driving in such a way as to demonstrate negligent driving or
+            in a manner that “manifests extreme indifference to the
+            value of human life” could be many months of prison. An
+            accident reconstructionist can help you develop a theory and
+            show a jury how the accident, and injury, were not caused by
+            your client’s extreme indifference to the value of human
+            life, but rather by the tragic confluence of many
+            independent factors.</p>
+            <h2 id="c._medical_experts"><strong>C. Medical
+            Experts</strong></h2>
+            <p>Injury cases also involve the issue of how bad the injury
+            is. The difference in the varying level of offenses can be
+            the extent of injury. Do not assume the state’s doctor, or
+            expert, will provide accurate information. Having an expert
+            conduct an independent review and possibly testify as a
+            witness at trial can help in convincing jurors that the
+            victim was not hurt as badly as the state suggests and thus
+            your client cannot be guilty of the more serious charge.</p>
+            <h2 id="d._jury_consultants"><strong>D. Jury
+            Consultants</strong></h2>
+            <p>Beyond providing insight as to the evidence at trial,
+            experts can also be valuable tools in preparing for trial.
+            Picking a jury is an art and requires your own individual
+            style. However, it is also important to remember you must be
+            able to read your voir dire in picking your jury. Jury
+            consultants can help you refine your style and better relate
+            to, and read, jurors. Experts can help you in preparing your
+            witnesses and client for testifying at trial. There is so
+            much more to testifying than simply what is said, and it is
+            important to make sure your witnesses are prepared and up to
+            the task.</p>
+            <p>It is important to obtain experts early on in preparing a
+            case. It is vitally important you, as the lawyer, understand
+            the issues and complexities of scientific evidence and other
+            evidence requiring specialized knowledge. It also is
+            important to remember that you understanding it is not
+            enough. You must make a jury understand the concepts and
+            evidence. As the lawyer, it is hard to do this without the
+            assistance of an expert because, as the lawyer, you cannot
+            provide testimony or evidence to a jury. I once witnessed
+            one of the most knowledgeable and experienced DUII attorneys
+            I know struggle to educate his jury because he could not get
+            any of the government’s witnesses to provide the answers he
+            knew to be true, but he, himself, could not testify or
+            provide that evidence to the jury. Without the assistance of
+            an expert witness, he could not properly educate his jury
+            because he did not have an admissible vehicle to do so.</p>
+            <h2 id="e._funding_for_experts"><strong>E. Funding for
+            Experts</strong></h2>
+            <p>See prior discussion in this chapter at section I. C. on
+            justifying and applying for PDSC funding.</p>
+            <h2 id="f._ocdla_expert_witness_directory"><strong>F. OCDLA
+            Expert Witness Directory</strong></h2>
+            <p>Search for expert witnesses across multiple categories in
+            the <a
+            href="https://members.ocdla.org/directory/expert-witness/search">OCDLA
+            Expert Witness Directory</a>.</p>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><a
+            href="https://members.ocdla.org/directory/expert-witness/search">https://members.ocdla.org/directory/expert-witness/search</a>.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><a
+            href="https://www.oregon.gov/opds/provider/Pages/forms.aspx">https://www.oregon.gov/opds/provider/Pages/forms.aspx</a>.<a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><a
+            href="https://libraryofdefense.ocdla.org/Code_of_Ethical_Conduct">https://libraryofdefense.ocdla.org/Code_of_Ethical_Conduct</a>.<a
+            href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><a
+            href="https://libraryofdefense.ocdla.org/Investigation_category">https://libraryofdefense.ocdla.org/Investigation_category</a>.<a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn5"><a
+            href="https://ocdla.force.com/OcdlaProduct?id=01t0a000004OuYcAAK">https://ocdla.force.com/OcdlaProduct?id=01t0a000004OuYcAAK</a>.<a
+            href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><a
+            href="https://www.ocdla.org/contact-committee-oregon-legal-investigators-committee">https://www.ocdla.org/contact-committee-oregon-legal-investigators-committee</a>.<a
+            href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7"><a
+            href="mailto:olic@ocdla.org">olic@ocdla.org</a>.<a
+            href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8"><a
+            href="https://libraryofdefense.ocdla.org/images/2/20/Basic_Police_DPSST_Training_Materials.pdf">https://libraryofdefense.ocdla.org/images/2/20/Basic_Police_DPSST_Training_Materials.pdf</a>.<a
+            href="#fnref8" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn9"><a
+            href="https://libraryofdefense.ocdla.org/images/7/7e/Public_records.pdf">https://libraryofdefense.ocdla.org/images/7/7e/Public_records.pdf</a>.<a
+            href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn10"><a
+            href="http://www.oregon.gov/dpsst/SC/Pages/RecordsRequests.aspx">http://www.oregon.gov/dpsst/SC/Pages/RecordsRequests.aspx</a>.<a
+            href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

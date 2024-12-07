@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </header>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 17. Mitigation, Negotiation &amp;
+            Sentencing</strong></p>
+            <p><strong>By Thad Betz</strong></p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>Negotiations with the prosecutor are a dance that begins
+            the day one begins representation. One might say that we as
+            defense attorneys have to work for peace (a plea deal) while
+            preparing for war (a trial). Many prosecutors have been
+            trained by defense attorneys to expect mitigation to come to
+            them in some specific forms if there is any discussion of a
+            pretrial resolution:</p>
+            <p>• Psycho-sexual evaluations</p>
+            <p>• Proof of treatment for any issues identified by the
+            Psycho-sexual report</p>
+            <p>• Other psychological evaluations for disorders such as
+            mental incapacity (extremely low IQ</p>
+            <p>• Bi-polar disorder</p>
+            <p>• Severe depression</p>
+            <p>• Obsessive compulsive disorder etc)</p>
+            <p>• Passed (one hopes) polygraphs (especially as to other
+            alleged victims or</p>
+            <p>• In the face of an allegation of a sex offense that does
+            not involve contact</p>
+            <p>• A “no contact with minors” polygraph)</p>
+            <p>• Substance abuse evaluations and attendant documentation
+            of successful compliance with an appropriate treatment
+            modality where use of controlled substances and/or alcohol
+            is alleged to have been part of the crime(s) alleged</p>
+            <p>• Attendance at AA/NA and/or SA meetings (with cards
+            and/or sheets showing attendance)</p>
+            <p>• Letters of support from the community members at
+            large</p>
+            <p>• Funds (if available) for payment of restitution and/or
+            compensatory fines</p>
+            <p>• Challenges (if any) to the credibility of the
+            person/child making the allegations (or to the credibility
+            of those championing the person/child as being truthful and
+            legal and factual challenges to the charges themselves and
+            how the legal/factual challenges could adversely impact the
+            outcome of the state’s theory of the case and/or desired
+            outcome.</p>
+            <p>Obviously, many of these can only occur if the accused is
+            out of Custody (see chapter 2, “Bail and Release”). but many
+            can be utilized even when the individual remains
+            incarcerated pending a final resolution.</p>
+            <p>Not all of these “tools” are practical in every case but
+            the use of some of them in every case is likely to aid the
+            Accused in attempting to lower the impact on the Accused
+            that may have been initially contemplated by the DDA
+            prosecuting the case. This chapter is to assist the
+            practitioner to identify which tools to use and, in some
+            cases, to not use in preparing your case for negotiations
+            and/or sentencing should a conviction ultimately occur
+            whether it be by a plea or conviction after trial.</p>
+            <h1 id="ii._mitigation"><strong>II. Mitigation</strong></h1>
+            <h2 id="a._psychosexual_evaluations"><strong>A. Psychosexual
+            Evaluations</strong></h2>
+            <p>Mitigating a sex offense accusation ought to literally
+            define the phrase “tightrope walking.” Provide too little
+            and your mitigation is vague and unhelpful. Provide too much
+            and you tip your client off the rope and open your client up
+            to unwarranted and unneeded additional scrutiny. Worse yet,
+            one provides evidence of uncharged conduct without proper
+            protection (OEC 407 and ORS 135.435) or provides aggravating
+            sentencing information.</p>
+            <p>A psychosexual evaluation can prove to be the most
+            important tool of mitigation.<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> A psychosexual
+            evaluation typically employs the same forensic methods as a
+            general psychological evaluation with additional tests,
+            inquires, and actuarial tools related to deviant sexual
+            behavior. The purposes of a psychosexual evaluation are,
+            generally speaking:</p>
+            <ul>
+            <li>Risk assessment.</li>
+            <li>Whether treatment can be effective in addressing the
+            risk at issue.</li>
+            <li>Helping develop a clinical treatment plan.</li>
+            <li>Pinpointing a sexual interest to alleviate concerns
+            about particular types of contact while on supervision.</li>
+            </ul>
+            <p>A competent psychologist will want to review your
+            client’s relevant medical and psychological records. School
+            records should be gathered for young clients as well. Of
+            course, any prior sex offense reports should be gathered.
+            (Counsel must naturally weigh what is worth disclosing to
+            the evaluator and what is not.)</p>
+            <p>Next, an evaluator will want to review discovery in the
+            case and any polygraph data (see discussion below) and
+            administer psychological testing as well as specific sexual
+            instruments. It is common practice for the evaluator to
+            obtain interviews from collateral sources. A collateral
+            source is commonly a spouse/partner, sibling, parents, or
+            someone who knows the client very well. Typically, the
+            evaluation is written from the perspective that the
+            allegations bear truth.</p>
+            <h2 id="b._the_interview"><strong>B. The
+            Interview</strong></h2>
+            <p>Clients should not be placed in a psychosexual interview
+            without a briefing by counsel concerning the procedures
+            used, topics covered, and an overview of testing
+            instruments.<br />
+            Far too many post-psychosexual interview conversations
+            between an attorney and client go like this:</p>
+            <p>Lawyer: The evaluation didn’t go well.</p>
+            <p>Client: What? I did exactly what my
+            cellie/friend/relative told me to do?</p>
+            <p>Lawyer: What did they tell you?</p>
+            <p>Client: To just lie on all the tests so that they’re
+            invalid, and tell the doctor that there’s nothing wrong with
+            me, I’m innocent, so why would I need treatment.</p>
+            <p>Lawyer: Perfect.</p>
+            <p>Client: Can you fix this?</p>
+            <p>So what should a client know? A client should know that
+            psychological instruments have built-in (purported) controls
+            and should understand the purpose of particular tests. For
+            example, there is no benefit to lie on a question such as “I
+            have never thought about hitting my children” or “I never
+            raise my voice when angry.” Misrepresentations on questions
+            like this result in conclusions that the examinee has
+            antisocial personality traits. Likewise, during the
+            interview portion of the examination, the accused will be
+            asked about treatment. If they express an unwillingness to
+            engage treatment or view it as unnecessary, an evaluator may
+            conclude that they are not amenable to treatment.</p>
+            <p>A psychosexual evaluation may be regarded as incomplete
+            by the state unless it contains a discussion by the accused
+            of the accusation. For a variety of reasons, this is often
+            not the most legally appropriate strategy. If it is your
+            wish that your client not communicate about the index
+            offense with the evaluator, a short note or phone call to
+            the evaluator is well advised in order to avoid any
+            potential discussion of the incident. In the vast majority
+            of cases, an evaluator is able to render a risk
+            determination without a specific discussion of the incident.
+            In some instances it is helpful to ask the evaluator to not
+            discuss the allegations with the accused but make the
+            determination based on an assumption that the allegations,
+            if true, would not change the testing scores or the ultimate
+            conclusion.</p>
+            <h2 id="c._psychological_instruments"><strong>C.
+            Psychological Instruments</strong></h2>
+            <p>Every evaluator uses their own combination of
+            psychological testing. Oftentimes, evaluators use general
+            personality instruments, control/deception tests,
+            psychopathy measures, and sexual interest scales.</p>
+            <p>Typical tests include:</p>
+            <ul>
+            <li>Millon Clinical Multiaxial Inventory-3 (MCMI-3). This
+            personality and psychopathology test seeks to provide
+            information on traits along Axis II and Axis I disorder.
+            There is also an adolescent version.</li>
+            <li>Personality Assessment Inventory (PAI). The PAI is a
+            self-administered objective test of personality and
+            psychopathology. The PAI contains scales designed to
+            determine whether or not the examinee is attempting to
+            portray themselves in a favorable or unfavorable manner.
+            These scales are typically what is used for the psychologist
+            to determine whether or not the examinee is “malingering” or
+            feigning more severe psychological symptoms—a most unhelpful
+            determination. There is also an adolescent version.</li>
+            <li>Hare Psychopathy Checklist (PCL-SV). This test reviews
+            background documents on the subject combined with a clinical
+            interview and then rates the individual on a scale to
+            determine overall level of psychopathy.</li>
+            <li>Paulus Deception Scales. This is a 40-item questionnaire
+            intended to measure socially desirable response, rather than
+            truthful response. The questions are intended to detect
+            whether the examinee is engaged in either “self-deception”
+            or “impression management.” In other words, is the examinee
+            attempting to portray themselves in a overly virtuous and
+            uncommon light (i.e., “I never swear”) or does the examinee
+            lack honest self-appraisal (e.g., “I am completely
+            rational”). In essence, the PDS is a tool designed to
+            determine whether or not an examinee is a reliable
+            self-reporter.</li>
+            <li>General Ability of Measure for Adults (GAMA). The GAMA
+            measures general mental ability in an IQ score.</li>
+            </ul>
+            <p>• Bumby Cognitive Scales. In this test, examinees respond
+            to a list of thinking errors focused on whether the subject
+            endorses sexual assault in any form.</p>
+            <ul>
+            <li>Abel Assessment of Sexual Interest-3 (AASI-3). This
+            instrument uses viewing time of particular stimuli (female,
+            male, various ages, etc.) to make conclusions about sexual
+            interest.</li>
+            <li>Penile Plethysmograph: It’s as bad as it sounds.</li>
+            <li>Internet Sex Screening Test (ISST). This instrument asks
+            the examinee to endorse or disavow a number of behaviors
+            related to internet use of sexually explicit material.</li>
+            <li>Child Abuse Material Instrument (CAMI). This tool has
+            more application in supervision of sex offenders convicted
+            of child pornography but can also be used in a forensic
+            evaluation of one facing such offenses (or for sentencing
+            mitigation).</li>
+            </ul>
+            <p>• Static-99R. This risk assessment tool became the first
+            “actuarial” method of measuring future risk. Contrary to
+            previous risk assessments, which were entirely subjective on
+            the part of the examiner, the Static-99R reflects back at
+            thousands of sex offenders and locates risk factors
+            associated with sexual recidivism. Recent research has found
+            the Static-99R to be <em>highly</em> overpredictive. Also
+            this is <em>the <span class="underline"> </span></em>tool
+            being used for risk assessment by the Oregon Department of
+            Correction, the Oregon Board of Parole and Post Prison
+            Supervision and the state police to determine risk of a
+            convicted offender. (Note: See OCDLA’s 2016 Winter
+            Conference presentation by BPPPS Chair Michael Wu: “Sex
+            Offender Classification and Implementation of House Bill
+            2549, Tiering the Sex Offender Registry,” and OCDLA’s 2017
+            Sex Crimes Seminar presentation by Emily Simon: “Tiers and
+            Fears: Navigating This Strange New World of Relief from Sex
+            Offender Registration.”)</p>
+            <ul>
+            <li>Sexual Violence Risk-20 (SVR-20) is a more subjective
+            measure and intended to account for changes in the
+            examinee’s life and circumstance.</li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Juvenile Sex Offender Assessment Protocol-II (J-SOAP-II)
+            remains, in most views, an experimental risk assessment tool
+            for juveniles and does not have enough data to be considered
+            actuarial.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Estimate of Risk of Adolescent Sex Offender Recidivism
+            (ERASOR) holds itself out to be the empirically valid risk
+            assessment tool that measures 25 factors.</p>
+            </blockquote></li>
+            </ul>
+            <blockquote>
+            <p>[Note: OCDLA’s <em><a
+            href="https://ocdla.force.com/Ocdla_Store_Item?id=a0wj0000000C5WmAAK">Mental
+            Health &amp; Criminal Defense</a></em> manual contains a
+            full chapter about clinical testing, with an extensive
+            review of these and other instruments.]</p>
+            <p>Occasionally prosecutors will request particular tests in
+            order to negotiate a case, likely because they have attended
+            a CLE or training that emphasized one particular test over
+            another. Practitioners should know that there is literature
+            criticizing any one of the above tests along racial lines,
+            overpredictive results, and lack of empirical data. Counsel
+            should request their evaluator to include relevant criticism
+            of any adverse result. For example, a younger offender who
+            has never been married or lived with an intimate partner and
+            victimized a family friend (and thus, a stranger) will score
+            as a high risk to reoffend despite having no criminal
+            history. However, as noted above, recent literature provides
+            ample data that the Static-99R is radically
+            overpredictive.</p>
+            </blockquote>
+            <p><strong>Practice Tips</strong></p>
+            <p>First, many prosecutors have “preferred” evaluators, and
+            some counties will only accept the evaluation of specific
+            evaluators from a specific list (Yamhill and Marion
+            counties, for example). If you practice in one of those
+            counties and not as a “local” practitioner, always find
+            someone who will give you the straight skinny on the
+            providers who made “the list” and which ones are more likely
+            prone to finding people to be sexual predators needing a
+            lifetime of treatment (yes, these providers do exist).</p>
+            <p>Second, be prepared to tell the prosecutor you are not
+            going to use someone from their list. Pick the provider you
+            trust and with whom you are most confident will give you an
+            honest evaluation. Get a copy of that provider’s CV, plus a
+            list of other cases they have been involved with, and the DA
+            offices that have accepted that provider’s expert opinion.
+            Be prepared to challenge the folks on the prosecutor’s list
+            as being biased. A successful argument to a judge could
+            state that if a provider is on a prosecutor’s list, then
+            that provider is at least implicitly biased because the
+            provider gets business based upon being on the list; and, if
+            the provider comes back with two many favorable
+            recommendations for the accused, they will not continue to
+            be on the list.</p>
+            <p>Third, be prepared to have multiple psychosexual
+            evaluations. In some instances, have two separate
+            evaluations completed, without having the two providers
+            collaborate and send both to the DDA. If the DDA still does
+            not want to accept, tell the DDA that your client will
+            submit to a provider on their list but will not fund it. If
+            the DDA agrees to fund it, then send the two evaluations you
+            have to that provider and insist on being present for any
+            interview.</p>
+            <p>Fourth, do not be afraid to have your client submit to an
+            evaluation where they have not admitted to the criminal
+            conduct. But you do not want them to discuss the criminal
+            conduct in the event the case may still go to trial. One can
+            easily tell the provider, “Here are the police
+            reports—conduct the evaluation as if the allegations are
+            true.” Many times, even if the provider accepts the facts as
+            true, your client will still be seen as a low risk to
+            “recidivate.”</p>
+            <h2 id="d._polygraphs"><strong>D. Polygraphs</strong></h2>
+            <blockquote>
+            <p>The use of polygraphs can be a helpful tool in
+            mitigation, despite obvious problems of admissibility. Types
+            of polygraphs that can be useful are an incident examination
+            (for example, “Did you have sexual intercourse with x”),
+            limited sexual history polygraph (“Not including [the
+            charged incident], have you had sexual contact with any
+            other minor”), full disclosure sexual history (anything and
+            everything type of contact), or a confirmatory test
+            (narrative explanation of an incident and then a question
+            about whether or not the statement was true).</p>
+            <p>Passed polygraphs can greatly help in negotiation or
+            mitigation of a sentence in order to show limited criminal
+            conduct, isolated conduct, negate the question of uncharged
+            conduct, and quell doubts about sexual deviancy.
+            Psychosexual evaluators also rely on polygraph results in
+            determining risk assessment.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Polygraph tests on a collateral issue or which undermine
+            the credibility of a state’s witness or theory can be
+            helpful. For example, if a minor complainant says she was
+            given alcohol and/or controlled substances by the accused,
+            and the accused denies the use, a passed polygraph can
+            undermine the credibility of that complainant on other
+            issues (like whether or not she gave the accused her correct
+            age).</p>
+            <h2 id="e._predisposition_treatment"><strong>E.
+            Predisposition Treatment</strong></h2>
+            <blockquote>
+            <p>Engagement with early treatment can prove a useful
+            mitigation tactic. Where a case is certain to plea, or has
+            little in the way of a defense (such as an age-based
+            prosecution with a victim under 16), engagement with a
+            therapist provides helpful resources on several fronts. Most
+            importantly, a psychosexual evaluator would typically view
+            engagement with treatment as positive, as it is evidence
+            that there are no barriers to treatment. Typically, counsel
+            should bar the treatment provider from discussing the case
+            at issue until sentencing is completed.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>In some counties, failure to engage in
+            post-incident/pre-plea treatment is a factor in
+            negotiations, and the failure to be in treatment might
+            remove a probation-style offer. Getting the accused into
+            some type of treatment modality is always helpful. In
+            addition, if there are allegations of controlled
+            substances/alcohol use related to the alleged incident, then
+            having the accused enroll in those treatment programs is a
+            good idea. Finally, many individuals accused of sex crimes,
+            especially crimes involving child pornography, suffer from
+            some mental health disorder such as depression, bi-polar
+            syndrome, OCD, or ADHD that may have contributed to the
+            conduct. Evaluations for all of these possible mitigation
+            issues can be woven into a psychosexual evaluation as well
+            as a sex offender treatment modality.</p>
+            <h2 id="f._letters_of_support"><strong>F. Letters of
+            Support</strong></h2>
+            <p>1. Get the names and contact information of possible
+            supporters from your client.</p>
+            <p>2. Contact supporters directly or have your investigator
+            contact them.</p>
+            <p>3. Have a plan for what you want from each person and get
+            a feeling for whether they can express the need you have in
+            a way that is persuasive to the DDA.</p>
+            <p>4. Let them write it in their own words and send to you
+            in a draft.</p>
+            <p>5. Review the drafts and make sure there is nothing
+            damaging or damning, and remember<br />
+            the old adage, “The road to hell is paved with good
+            intentions.”</p>
+            <p>6. If someone is particularly persuasive in person, do a
+            short video of that person giving their reasons for
+            supporting your client. Drop the video onto a CD or thumb
+            drive and provide it to the DDA. This can be very compelling
+            to both a DDA and a judge who can see and hear a person
+            rather than just speed reading a letter (this is also good
+            for sentencing to provide these videos to the judge).</p>
+            <p>7. Finalize the letters, save them as PDFs so they are
+            not subject to amendment, send them to the writer to make
+            sure that they approve and then send with your packet to the
+            DDA as part of your negotiations (see below).</p>
+            <h2
+            id="g._non_psychosexual_psychological_evaluations"><strong>G.
+            Non-Psychosexual Psychological Evaluations<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></strong></h2>
+            <blockquote>
+            <p>Many clients suffer from a variety of mental disabilities
+            that may or may not be relevant to your negotiations (for
+            example, see OCDLA manual on veterans, <a
+            href="https://ocdla.force.com/Ocdla_Store_Item?id=a0w0a000006ucX2AAI"><em>Still
+            at War: A Guide for Defenders, Prosecutors and Judges
+            Dealing with Oregon’s Veteran Defendant Crisis</em></a>).
+            Each potential disability can impact the behavior of the
+            accused. For example, a person who suffers from obsessive
+            compulsive disorder can explain how they meticulously kept
+            and categorized types of child pornography. In addition,
+            some disabilities can provide a defense regarding mental
+            states of <em>intentional</em> or <em>knowingly</em>
+            (similar to voluntary intoxication can negate intent in a
+            sexual encounter).</p>
+            </blockquote>
+            <h2 id="h._substance_abuse_evaluations"><strong>H. Substance
+            Abuse Evaluations</strong></h2>
+            <p>Generally, it is best to keep these to a letter from the
+            provider which says the following: Client came to my office
+            on this date for an evaluation. Based upon the applicable
+            criteria, it is recommended that the client engage in the
+            following treatment modality [describe the modality]. An
+            exception to this course is if you are going to rely on a
+            voluntary intoxication claim to negate the mental state of
+            the crime. If that is the case, you want a more complex and
+            detailed report from an expert who can also say that based
+            upon the BAC at the time of the crime (if you have it), the
+            reported behaviors of the person as observed by witnesses
+            and/or self report regarding consumption by the accused.</p>
+            <h1 id="iii._negotiations"><strong>III.
+            Negotiations</strong></h1>
+            <h2 id="a._the_dance"><strong>A. The Dance</strong></h2>
+            <p>An interesting law review article details what motivates
+            a prosecutor to engage in negotiations and drives their
+            feelings about obtaining resolutions. See <a
+            href="http://scholarship.law.marquette.edu/cgi/viewcontent.cgi?article=1132&amp;context=mulr">“Prosecutorial
+            Passion, Cognitive Bias, and Plea Bargaining,</a>” written
+            by Alafair Burke, a former Multnomah County DDA and now a
+            successful crime novelist.<a href="#fn3"
+            class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> The article provides
+            some insight into how to approach prosecutors and what, if
+            anything, motivates them to seek resolutions. Also, remember
+            that many things that motivate a prosecutor these days are
+            driven by “committees,” where the prosecutor takes your case
+            and your client’s story to a group of people with whom you
+            may not be dealing directly and who, in the end, do not have
+            to try the case if it does not settle. So, when negotiating
+            with a prosecutor, realize that some “hide” behind their
+            committees such that they can have cover by offering you
+            something not as attractive as first contemplated. Others
+            may move the committee to something you and the DDA agree on
+            if you have provided the DDA with the support necessary to
+            convince the committee that a particular resolution is
+            appropriate.</p>
+            <p>Therefore, before you start negotiations, have a firm
+            handle on a realistic resolution that is acceptable to your
+            client. Also recognize that many times, especially in court
+            appointed cases, the timing as to when to engage in
+            negotiations is critical. In many instances, a rush to get
+            an offer will be seen by a client as a “sell out.” Every
+            client must trust the attorney who represents them such that
+            if, and, or when the time comes to enter into negotiations
+            and/or accept the “final offer,” the client has faith enough
+            and trusts you to acknowledge an offer as being final and to
+            followyour recommendation whether or not to accept that
+            offer.</p>
+            <h2 id="b._discovery"><strong>B. Discovery</strong></h2>
+            <blockquote>
+            <p>Always file a “request for discovery” under <a
+            href="https://www.oregonlaws.org/ors/135.815">ORS
+            135.815</a> and make it clear to the DDA that it would be
+            unethical, and malpractice, to engage in plea negotiations
+            prior to being provided all of the discovery in the case. If
+            there is physical evidence from the execution of a search
+            warrant, then request a form be sent to the property
+            evidence room giving you or your agent permission to view,
+            copy or photograph the evidence. Request that the DDA make
+            an affirmative statement that all evidence has been provided
+            under ORS 135(1)(g) and 2(a)<a href="#fn4"
+            class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a>. Under the 2018 law (HB
+            4149, <em>infra),</em> this provision cannot be waived as a
+            condition of plea negotiations, so make sure you get an
+            affirmation from the DDA that it has been provided.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>The DDAs seem to be taking umbrage at this provision as
+            “officers of the court,” but it is simple to explain that no
+            matter what is said by any defense attorney, because it is
+            statutorily required to be produced prior to any plea or
+            sentencing, failure to obtain a letter in writing from the
+            DDA that they have completed their obligations and provided
+            all required under 135.815(1)(g) and (2)(a), if information
+            is discovered later, post-conviction relief proceeding
+            against the defense attorney would be fairly quick. Get
+            assurances that all of the statutory obligations had been
+            complied with by the DDA.</p>
+            <h2 id="c._starting_negotiations"><strong>C. Starting
+            Negotiations</strong></h2>
+            <blockquote>
+            <p>Each case involves it’s own rhythm for negotiations, and
+            each DDA is different. First, start with the statutory
+            scheme, <a href="https://www.oregonlaws.org/ors/135.405">ORS
+            135.405</a>-<a
+            href="https://www.oregonlaws.org/ors/135.415">135.415</a>.
+            Read and understand the various provisions of this statutory
+            scheme, especially with the passage of 2017 c.650 § 8<a
+            href="#fn5" class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a> and HB 4149 (2018)<a
+            href="#fn6" class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a>. Make sure that whenever
+            you send any mitigation to the DDA that you include a cover
+            letter and/or specific provision at the top of the email
+            and/or correspondence that unequivocally states: <em>“For
+            purposes of plea negotiations only pursuant to ORS
+            135.415.”</em> Also know your obligations as set forth by
+            the statute, sometimes it helps to let your client know them
+            as well. ORS 135.425 states the following:</p>
+            </blockquote>
+            <p>135.425 Responsibilities of defense counsel. </p>
+            <p>(1) Defense counsel shall conclude a plea agreement only
+            with the consent of the defendant, and shall insure that the
+            decision whether to enter a plea of guilty or no contest is
+            ultimately made by the defendant.</p>
+            <p>(2) To aid the defendant in reaching a decision, defense
+            counsel, after appropriate investigation, shall advise the
+            defendant of the alternatives available and of factors
+            considered important by the defense counsel or the defendant
+            in reaching a decision. </p>
+            <p><strong>Practice Tip</strong></p>
+            <p>If you plan on providing the DDA with mitigation, request
+            from them in advance an assurance that they will only use it
+            for purposes of negotiations, that the documents are
+            privileged and private, may not be used for any purpose
+            other than plea negotiations and must be returned to the
+            defense if no resolution is reached or after sentencing,
+            whichever comes later.</p>
+            <p>DDAs <em>want</em> to see this information and more
+            likely than not will agree to such a request. If not, point
+            out that your request is no different than a request by a
+            child abuse center to not further disseminate the materials
+            and return them to the CAC after the trial.</p>
+            <p>Finally, you can seek a protective order from the court
+            under ORS 135.873(2) or (3) for any information that you are
+            providing to the DDA and the Ccourt will determine the rules
+            regarding disclosure and production.</p>
+            <h2 id="d._draft_motions"><strong>D. Draft
+            Motions</strong></h2>
+            <p>Sometimes if there are specific legal issues in play, it
+            can be helpful to draft your motions (compel, suppress,
+            demurrer, etc.) and provide those drafts to the DDA.
+            Certainly this is a tactical decision as it <em>may</em>
+            give the DDA more opportunity to research the issues or, in
+            the case of suppression motions, confer with law enforcement
+            officers who might remember new details after seeing your
+            motion. However, sometimes it is helpful, especially in
+            cases where the filing of a potentially successful demurrer
+            could cause the DDA to have to return to a grand jury for a
+            new indictment.</p>
+            <h2 id="e._meet_in_person"><strong>E. Meet in
+            Person</strong></h2>
+            <p>Many DA offices, especially in serious cases, are now
+            <em>not</em> making initial offers but, rather, waiting for
+            the defense attorney to provide mitigation and an initial
+            offer. This is akin to bargaining against yourselves.
+            Therefore, it can be advantageous to provide your mitigation
+            packet to the DDA with a request for a personal meeting and
+            not requesting a specific resolution. Many times these are
+            accepted, and this can be very informative to see where the
+            prosecutor believes the floor to be, how the committee might
+            view the case, and what offer will be seen as so
+            unreasonable that negotiations would abruptly end. The
+            “ceiling” and “floor” are important to understand, so it is
+            best to be prepared not to ask for probation in a case that
+            screams for some prison sentence unless you have some strong
+            mitigation and legal or factual issues that support the
+            lower resolution.</p>
+            <h2 id="f._judicial_settlement_conferences"><strong>F.
+            Judicial Settlement Conferences</strong></h2>
+            <p><a href="https://www.oregonlaws.org/ors/135.432">ORS
+            135.432</a> sets forth the specific provisions for judicial
+            participation in plea negotiations. Many counties have
+            judges who are designated for judicial settlement
+            conferences or a JSC. Each of those judges, in turn, have
+            what they would like to have in front of them in order to
+            conduct an effective JSC. Some judges are more forceful with
+            the parties than others but all are, in part, acting under
+            the provision that no judge can bind the parties and that
+            all discussions, pursuant to statute, are “advisory.”</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>It seems to be advantageous to set up and engage in a JSC
+            before any initial discussions and before any offer has been
+            made by the DDA. In addition, check with the JSC judge in
+            advance to know what they expect to receive from you and how
+            far in advance of the JSC to expect it in order to be
+            prepared to conduct the JSC effectively.</p>
+            <h1 id="iv._sentencing"><strong>IV. Sentencing</strong></h1>
+            <p>Sentencing in a sexual offense case presents a number of
+            challenges ranging from probationary obligations, mandatory
+            prison sentences, maximum post-prison terms, parole issues
+            and collateral consequences such as sexual offender
+            registration obligations.</p>
+            <h2 id="a._mandatory_sentences"><strong>A. Mandatory
+            Sentences</strong></h2>
+            <p>There are a number of sex offenses that carry mandatory
+            prison terms. The traditional Measure 11 offenses are found
+            in <a href="https://www.oregonlaws.org/ors/137.700">ORS
+            137.700</a> and include:</p>
+            <ul>
+            <li>Rape in the First Degree under subsection 1(a), 1(c) and
+            1(d) (100 months)</li>
+            <li>Rape in the Second Degree (75 Months)</li>
+            <li>Sodomy in the First Degree under 1(a), 1(c), 1(d) (100
+            months)</li>
+            <li>Sodomy in the Second Degree (75 months)</li>
+            <li>Unlawful Sexual Penetration in the First Degree under
+            1(a) or 1(c) (100 months)</li>
+            <li>Unlawful Sexual Penetration in the Second Degree (75
+            months)</li>
+            <li>Sexual Abuse in the First Degree (75 months)</li>
+            <li>Using a Child in a Display of Sexually Explicit Conduct
+            (70 months)</li>
+            <li>Compelling Prostitution (70 months).</li>
+            </ul>
+            <p>These same penalties apply to juvenile offenders as young
+            as 15 under <a
+            href="https://www.oregonlaws.org/ors/137.707">ORS
+            137.707</a>.</p>
+            <p>Certain offenses, or subsections of offenses, demonstrate
+            mandatory minimums on steroids. Otherwise known as Jessica’s
+            Law, these penalties attach to crimes against children under
+            the age of 12.</p>
+            <p>The following all carry a mandatory minimum prison term
+            of 300 months:</p>
+            <ul>
+            <li>Rape in the First Degree</li>
+            <li>Sodomy in the First Degree</li>
+            <li>Unlawful Sexual Penetration in the First Degree</li>
+            <li>Kidnapping in the First Degree (when committed for the
+            purpose of one of the Jessica’s Law offenses)</li>
+            </ul>
+            <p>These requirements are found in ORS 137.700, et seq.</p>
+            <p>Likewise, ORS 137.690 requires a 25-year mandatory
+            minimum term for any “major felony sex crime” if the
+            offender has one or more prior convictions for a “major
+            felony sex crime.” Notably, these “priors” can emerge from
+            the same sentencing proceeding so long as they are from
+            separate criminal episodes.</p>
+            <h2 id="b._how_mandatory_is_mandatory"><strong>B. How
+            Mandatory Is Mandatory?</strong></h2>
+            <p><strong>1. Escape Clause Provisions</strong></p>
+            <p>ORS 137.712 governs exceptions to the mandatory minimum
+            provisions in some Measure 11 offenses. There are no
+            statutory exceptions for 137.690 nor for Jessica’s Law
+            offenses. The sex offenses that fall within the exceptions
+            to mandatory minimums are:</p>
+            <ul>
+            <li>Rape in the Second Degree</li>
+            <li>Sexual Abuse in the First Degree</li>
+            <li>Sodomy in the Second Degree</li>
+            <li>Unlawful Sexual Penetration in the Second Degree</li>
+            </ul>
+            <p>Each exception to a mandatory minimum has a number of
+            qualifications, which typically include the offender not
+            having priors within ORS 137.700, be an age-based offense,
+            and require the court to make particular findings. Once an
+            accused is out of the confines of ORS 137.700 they are
+            subject to the felony sentencing guidelines, which can
+            include either a downward durational departure or a downward
+            disposition to probation.</p>
+            <p><strong>2. Proportionality Clause</strong></p>
+            <p>The Oregon Supreme Court dropped a bombshell on Measure
+            11 when <a
+            href="https://scholar.google.com/scholar_case?case=15869527206720165540&amp;q=347+Or+47+(2009&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rodriguez/Buck</em></a>, 347 Or 47 (2009), was released.
+            Ms. Rodriguez was convicted of sexual abuse in the first
+            degree when the back of the victim’s head came into contact
+            with the accused’s clothed breasts. Mr. Buck’s hand remained
+            on the victim’s clothed buttock and the accused also wiped
+            dirt off the back of the victim’s shorts. Recognizing that
+            conduct such as sexual abuse in the first degree<a
+            href="#fn7" class="footnote-ref" id="fnref7"
+            role="doc-noteref"><sup>7</sup></a> can encompass a broad
+            range of behavior, the court found that this conduct was
+            “insufficiently grave” and “less severe than the cases in
+            the vast majority of…other reported first degree sexual
+            abuse cases since Measure 11 was passed.”</p>
+            <p><em>Rodriguez/Buck</em> predicated consideration of
+            disproportionality of the sentences on three nonexclusive
+            factors:</p>
+            <p>a. Comparison of the severity of the penalty and the
+            gravity of the crime (amount of time offender must spend in
+            jail or prison).</p>
+            <p>b. Comparison of penalties imposed for other related
+            crimes.</p>
+            <p>c. Criminal history of the accused.</p>
+            <p>They went on to consider the “specific circumstances of
+            the facts of accused’s conduct that come within the
+            statutory definition of the offense as well as other case
+            specific factors, such as characteristics of the accused and
+            the victim, the harm to the victim, and the relationship
+            between the accused and the victim.”</p>
+            <p>Following is a sampling of cases found not to be
+            disproportionate by the court:</p>
+            <ul>
+            <li><em><a
+            href="https://scholar.google.com/scholar_case?case=10239545500229839969&amp;q=%E2%80%A2%09Padilla,+277+Or+App+440+(2016)+&amp;hl=en&amp;as_sdt=4,38">Padilla</a>,</em>
+            277 Or App 440 (2016) (the accused rubbed his penis on the
+            victim and was found to be in a position of trust with the
+            victim, accused had no priors).</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=7863362754885069248&amp;q=%E2%80%A2%09State+v.+Camacho-Garcia,+268+Or+App+75+(2014&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Camcho-Garcia</em></a>, 268 Or App 75 (2014) (assessing
+            gravity of offense is “specific defendant’s particular
+            conduct toward the victim that constituted the crime, as
+            well as the general definition of the crime in the statute.
+            To determine whether the penalty is proportioned, it is
+            appropriate to consider the gravity of the instant conduct
+            in comparison with other criminal conduct in light of the
+            relative harm to victims and society and relative
+            culpability”).</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=5779068683595375273&amp;q=%E2%80%A2%E2%80%A2%09State+v.+Alwinger,+236+Or+App+240+(2010&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Alwinger</em></a>, 236 Or App 240 (2010) (25-year
+            mandatory minimum not disproportionate where defendant’s
+            conduct involved single act of digital penetration of
+            three-year-old child where defendant had sexually related
+            prior convictions).</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=16411196389150338552&amp;q=%E2%80%A2%09State+v.+Simonson,+243+Or+App+535,+259+P3d+962+(2011&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Simonson</em></a>, 243 Or App 535, 259 P3d 962 (2011)
+            (violation of Article I, section 16, where a penalty is
+            disproportionately severe when compared to a sentence that
+            may be imposed for other related crimes).<a href="#fn8"
+            class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a></li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=1767815239365968462&amp;q=%E2%80%A2%09State+v.+Burge,+252+Or+App+574,+288+P3d+565+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Burge</em></a>, 252 Or App 574, 288 P3d 565 (2012) (court
+            rejected state argument that <em>Simonson</em> was wrongly
+            decided and reversed the sentence imposed by the trial
+            court).</li>
+            <li><em><a
+            href="https://scholar.google.com/scholar_case?case=6075362930996189103&amp;q=%E2%80%A2+Sexton+v.+Persson,+268+Or.+App.+63,+&amp;hl=en&amp;as_sdt=4,38">Sexton
+            v. Persson</a>,</em> 268 Or App 63, 341 P.3d 881
+            (2014).</li>
+            </ul>
+            <p>In <em>Sexton,</em> the court clarified a footnote in
+            <em>Simonson</em> regarding the proportionality
+            analysis:</p>
+            <p>In a footnote in <em>Simonson,</em> we stated that
+            vertical proportionality is “measured by the sentences
+            available for the conduct at issue, not on what any
+            individual defendant actually receives” and appeared to
+            suggest that an analysis of vertical proportionality
+            requires a comparison with the minimum sentence available
+            for the more serious crime. <a
+            href="https://scholar.google.com/scholar_case?case=16411196389150338552&amp;q=%E2%80%A2%09State+v.+Simonson,+243+Or+App+535,+259+P3d+962+(2011&amp;hl=en&amp;as_sdt=4,38">243
+            Or App at 542 n. 8, 259 P3d 962</a>. However, as we have
+            explained on a number of occasions, <em>to determine whether
+            a sentence is disproportionate for purposes of an Article I,
+            section 16, we compare the actual sentence a defendant
+            received with the maximum sentence allowed for the greater
+            crime.</em> <em>See <a
+            href="https://scholar.google.com/scholar_case?case=13486734721687430013&amp;q=Barajas,+254+Or.App,+292+P.3d+636&amp;hl=en&amp;as_sdt=4,38">Barajas</a>,</em>
+            254 Or App at 111, 292 P3d 636; <em><a
+            href="https://scholar.google.com/scholar_case?case=13087511546355400147&amp;q=Dobash,+210+Or.App.+at+147,+149+P.3d+1235&amp;hl=en&amp;as_sdt=4,38">Dobash</a>,</em>
+            210 Or App at 147, 149 P3d 1235; <em>[<a
+            href="https://scholar.google.com/scholar_case?case=7772064987914525574&amp;q=Koch,+169+Or.+App">https://scholar.google.com/scholar_case?case=7772064987914525574&amp;q=Koch,+169+Or.+App</a>.,+7+P.3d+769&amp;hl=en&amp;as_sdt=4,38
+            Koch],</em> 169 Or App at 227, 7 P3d 769; <em>see also [<a
+            href="https://scholar.google.com/scholar_case?case=12498319768823710840&amp;q=Shumway,+291+Or">https://scholar.google.com/scholar_case?case=12498319768823710840&amp;q=Shumway,+291+Or</a>.,+630+P.2d+796+&amp;hl=en&amp;as_sdt=4,38
+            Shumway],</em> 291 Or at 163–64, 630 P2d 796 (comparing the
+            required sentence for intentional homicide with the required
+            sentence for aggravated intentional homicide). <em>To the
+            extent we suggested otherwise in the</em> Simonson
+            <em>footnote, that suggestion was contrary to precedent and
+            we disavow it.</em></p>
+            <p><em>Sexton v. Persson</em>, 268 Or App 63, 70, 341 P3d
+            881, 885 (2014) (emphasis supplied).</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>In both <em>Simonson</em> and <em>Burge</em>, the Court
+            of Appeals found that the crime of Rape III (sexual
+            intercourse or sexually deviant intercourse with a person
+            under the age of 16) was a more serious crime than the crime
+            of Sex Abuse II (sexual intercourse or deviant sexual
+            intercourse without consent). Counsel for the accused should
+            always review the crimes charged and compare to determine if
+            there is a proportionality argument under <em>Simonson</em>
+            and <em>Burge.</em></p>
+            <h2
+            id="c._presumptive_life_termsthree_strikes_law"><strong>C.
+            Presumptive Life Terms—“Three Strikes Law”</strong></h2>
+            <p>ORS 137.719 is a recidivist statute. This statute
+            proscribes a presumptive sentence of life without the
+            possibility of parole for an offender convicted of a felony
+            sex crime who has been sentenced for felony sex crimes in
+            two prior sentencing proceedings.</p>
+            <p>Counsel should note the following about this harsh
+            statute:</p>
+            <ul>
+            <li>The sentence is presumptive. In other words, any other
+            sentence “authorized by the rules of the Oregon Criminal
+            Justice Commission” is possible. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=3667663101840199273&amp;q=State+v.+Rhoades,+210+Or+App+280+(2006&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rhoades</em></a>, 210 Or App 280 (2006).</li>
+            <li>The requisite prior must arise from separate sentencing
+            proceedings. In other words, a defendant cannot be elevated
+            to a true life sentence in the same proceeding even if all
+            of the sentences arise from separate criminal episodes
+            joined together for trial.</li>
+            <li>What is a sentence and what is required to prove a prior
+            felony sentencing occurred? <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=1815099250042995009&amp;q=Gordon+v.+Hall,+232+Or+App+174+(2009&amp;hl=en&amp;as_sdt=4,38"><em>Gordon
+            v. Hall</em></a>, 232 Or App 174 (2009) (finding
+            pre-guidelines California probation to not constitute a
+            sentence); <a
+            href="https://scholar.google.com/scholar_case?case=5536297002389323418&amp;q=State+v.+Mollette,+255+Or+App+29+(2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mollette</em></a>, 255 Or App 29 (2013) (rejecting
+            unpreserved argument on the level of proof required at a
+            sentencing hearing).</li>
+            <li>The prior offenses, if from another jurisdiction, must
+            be nearly identical. “In sum, the text of ORS 137.719(3)
+            supports (as one of two alternative primary meanings) the
+            conclusion that a ‘comparable offense’ under ORS
+            13.719(3)(b)(B) must closely match the elements of an Oregon
+            felony sex crime, and the context of that statute indicates
+            that that more restrictive primary meaning is the one that
+            the legislature likely intended. Accordingly, we conclude
+            that the term ‘comparable offenses’ in that statute refers
+            to offenses with elements that are the same as or nearly the
+            same as the elements of an Oregon felony sex crime, not to
+            offenses that merely share a core similarity with such an
+            offense.” <a
+            href="https://scholar.google.com/scholar_case?case=12979638329294505410&amp;q=State+v.+Carlton,+361+OR+29,+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Carlton</em></a>, 361 Or 29, 43 (2016).</li>
+            <li>A true life term may violate the proportionality clause
+            of the Oregon Constitution. <em>See</em> <em><a
+            href="https://scholar.google.com/scholar_case?case=9663639334686484557&amp;q=State+v.+Davidson+271+Or+App+719+(2015&amp;hl=en&amp;as_sdt=4,38">State
+            v. Davidson</a>,</em> 271 Or App 719 (2015) (review allowed)
+            (finding such a sentence did violate proportionality where
+            the offenses were the defendant committed five acts of
+            public masturbation without indication of violence); <em><a
+            href="https://scholar.google.com/scholar_case?case=10013206507685383265&amp;q=State+v.+Sokell+273+Or+App+654+(2015&amp;hl=en&amp;as_sdt=4,38">State
+            v. Sokell</a>,</em> 273 Or App 654 (2015); <a
+            href="https://scholar.google.com/scholar_case?case=601009661443972066&amp;q=State+v.+Wheeler,+343+OR+652+(2007&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wheeler</em></a>, 343 OR 652 (2007); <a
+            href="https://scholar.google.com/scholar_case?case=11230482699140602688&amp;q=State+v.+Smith,+277+Or+App+709&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Smith</em></a>, 277 Or App 709 (2016) (not
+            disproportionate where the defendant had committed three
+            decades of sexual offenses even though conviction for
+            sentencing was for public masturbation); [<a
+            href="file:///Users/jennifer/Documents/Publications/Sex%20Crimes%20-%20Sherlag%20edit/chapters/">file:///Users/jennifer/Documents/Publications/Sex%20Crimes%20-%20Sherlag%20edit/chapters/</a>**%20ready%20for%20hyperlinks%2c%20indesign/betz%20-%20negotiation%2c%20mitigation%2c%20sentencing/State%20v.%20Althouse,%20259%20OR.%20668%20(2016
+            <em>State v. Althouse</em>], 259 Or 668
+            (2016)<em>.</em></li>
+            </ul>
+            <h2 id="d._two_strikes_law"><strong>D. Two Strikes
+            Law</strong></h2>
+            <p>In 2017 the governor signed into law Senate Bill 1050<a
+            href="#fn9" class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a>. This act uses the same
+            structure as ORS 137.719 and presumes a true life penalty
+            for any repeat offender of rape in the first degree, sodomy
+            in the first degree, unlawful sexual penetration in the
+            first degree (or equivalent offenses in another state or
+            federal court). Under the provisions of SB 1050, the priors
+            must be from a different sentencing proceeding, not the same
+            sentencing proceeding. See the appendix to this chapter for
+            the text of the bill and OCDLA’s bill summary prepared by
+            lobbyist Mary Sofia for the <a
+            href="https://ocdla.force.com/Ocdla_Store_Item?id=a0w0a000007KRmJAAW"><em>2017
+            Legislative Analysis</em></a>.</p>
+            <p>Notably, practitioners would have the same
+            proportionality challenges to the imposition of such a
+            sentence and the court can impose <em>a departure sentence
+            authorized by the rules of the Oregon Criminal Justice
+            Commission based upon findings of substantial and compelling
+            reasons.</em></p>
+            <h2 id="e._post_prison_supervision"><strong>E. Post-Prison
+            Supervision</strong></h2>
+            <p>An offender can be subject to lifetime post-prison
+            supervision if they fall within the confines of ORS 137.765.
+            This statute requires the state to show someone to have
+            “psychopathic personality features, sexually deviant arousal
+            patterns, or interest and a history of sexual assault and
+            present a substantial probability of committing a [serious
+            sexual offense].” If these facts, and more, can be proven to
+            a jury,<a href="#fn10" class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a> then the offender is
+            subjected to lifetime supervision. Notably, after 10 years a
+            person sentenced as a sexually violent dangerous offender
+            may petition the court for a reduction in sentence under ORS
+            137.771.</p>
+            <p>Regardless, an offender convicted of most sexual offenses
+            is subjected to a maximum determinate term of post-prison
+            supervision when added together with the term of
+            incarceration. Practitioners should also review ORS 144.635,
+            144.642, and <em>Weems v. Board of Parole and Post Prison
+            Supervision</em>, 347 Or 586 (2010), for other supervisory
+            issues.</p>
+            <h2 id="f._limitations_on_sentences"><strong>F. Limitations
+            on Sentences</strong></h2>
+            <p>Counsel should always review the sentencing limitations
+            that appear in the Felony Sentencing Guidelines such as the
+            “shift to I rule” and “200/400% rule.” <a
+            href="https://scholar.google.com/scholar_case?case=9212333958217021882&amp;q=State+v.+Worth,+274+Or+App+1+(2015&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Worth</em>, 274 Or App 1 (2015)</a> (consecutive sentence
+            structure violated the 400% rule where the court prescribed
+            a determinate dangerous offender sentence).</p>
+            <p><strong>1. Merger</strong></p>
+            <p>Merger is a complicated topic with an extensive body of
+            case law. The fundamental principle of merger is that
+            despite a finding of guilt on multiple offenses, the
+            separate offenses combine together become a single
+            conviction. <a
+            href="https://www.oregonlaws.org/ors/161.067">ORS
+            161.067</a> is the statutory basis for the argument as to
+            when convictions merge:</p>
+            <blockquote>
+            <p>(1) When the same conduct or criminal episode violates
+            two or more statutory provisions and each provision requires
+            proof of an element that the others do not, there are as
+            many separately punishable offenses as there are separate
+            statutory violations.</p>
+            </blockquote>
+            <p>(2) When the same conduct or criminal episode, though
+            violating only one statutory provision involves two or more
+            victims, there are as many separately punishable offenses as
+            there are victims. However, two or more persons owning joint
+            interests in real or personal property shall be considered a
+            single victim for purposes of determining the number of
+            separately punishable offenses if the property is the
+            subject of one of the following crimes:</p>
+            <p>(a) Theft as defined in ORS 164.015.</p>
+            <p>(b) Unauthorized use of a vehicle as defined in ORS
+            164.135.</p>
+            <p>(c) Criminal possession of rented or leased personal
+            property as defined in ORS 164.140.</p>
+            <p>(d) Criminal possession of a rented or leased motor
+            vehicle as defined in ORS 164.138.</p>
+            <p>(e) Burglary as defined in ORS 164.215 or 164.225.</p>
+            <p>(f) Criminal trespass as defined in ORS 164.243, 164.245,
+            164.255, 164.265 or 164.278.</p>
+            <p>(g) Arson and related offenses as defined in ORS 164.315,
+            164.325 or 164.335.</p>
+            <p>(h) Forgery and related offenses as defined in ORS
+            165.002 to 165.070.</p>
+            <p>(3) When the same conduct or criminal episode violates
+            only one statutory provision and involves only one victim,
+            but nevertheless involves repeated violations of the same
+            statutory provision against the same victim, there are as
+            many separately punishable offenses as there are violations,
+            except that each violation, to be separately punishable
+            under this subsection, must be separated from other such
+            violations by a sufficient pause in the defendant’s criminal
+            conduct to afford the defendant an opportunity to renounce
+            the criminal intent. Each method of engaging in deviate
+            sexual intercourse as defined in ORS 163.305, and each
+            method of engaging in unlawful sexual penetration as defined
+            in ORS 163.408 and 163.411 shall constitute separate
+            violations of their respective statutory provisions for
+            purposes of determining the number of statutory
+            violations.</p>
+            <p>There is an excellent collection of materials on merger
+            on OCDLA’s Library of Defense, which is regularly updated:
+            <a
+            href="https://libraryofdefense.ocdla.org/Merger">https://libraryofdefense.ocdla.org/Merger</a>.
+            Merger occurs most commonly in sex cases when the offenses
+            contain a lesser included or a functional equivalent, or
+            where the same offense occurs in quick succession so closely
+            in time that there is no sufficient pause between the
+            separate counts.</p>
+            <p>First, an indictment may charge offenses that are
+            essentially lesser-included offenses, functional
+            equivalents, or allege different theories of the same
+            statutory provision. All situations are ripe for merger.
+            This route to merger is found in subsection (1) of ORS
+            161.067, which only allows for separate convictions if three
+            conditions are met: the conduct was a single criminal
+            episode, (2) an accused’s acts violated two or more
+            statutory provisions, and (3) each statutory provisions
+            requires proof of an element that the other does not. <a
+            href="https://scholar.google.com/scholar_case?case=16624806431499218389&amp;q=State+v.+Pass,+264+Or+App+583+(2014)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Pass</em></a>, 264 Or App 583 (2014). Notably, the phrase
+            “criminal episode” is not altogether obvious and something
+            to be explored.</p>
+            <p>Examples of recent merger cases under subsection (1)
+            include:</p>
+            <ul>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=13175092480290426859&amp;q=%E2%80%A2%09State+v.+Breshears,+281+OR+App+552+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Breshears</em></a>, 281 Or App 552 (2016): the court held
+            that Sex Abuse 2 and Rape 3 merge because proving that a
+            victim is under 16 necessarily proves that victim is
+            incapable of consent, as Sex Abuse 2 requires.</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=16624806431499218389&amp;q=%E2%80%A2%09State+v.+Pass,+264+Or+App+583+(2014)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Pass</em></a>, 264 Or App 583 (2014): the court ruled
+            that Sex Abuse 2 and Sodomy 3 merge where each alleges
+            “deviate sexual intercourse” and the former alleging the
+            victim to be under 18 and the latter alleging the victim to
+            be under 16.</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=16406193930057274563&amp;q=black+270+Or+App&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Black</em></a>, 270 Or App 583 (2014): merger should
+            occur where different counts of Sex Abuse 1 allege different
+            subtheories of the offense, which are not separate statutory
+            provisions (forcible compulsion and physical helplessness);
+            <em>see also <a
+            href="https://scholar.google.com/scholar_case?case=18212446899463185480&amp;q=State+v.+Parkins,+346+Or+333+(2009)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Parkins</a></em>, 346 Or 333 (2009).</li>
+            </ul>
+            <p>Second, repeated acts of abuse under the same statutory
+            provision against a single victim in the same criminal
+            episode (there’s that phrase again) may merge unless the
+            State can prove there was a sufficient pause for an accused.
+            <a
+            href="https://scholar.google.com/scholar_case?case=17842030065685233164&amp;q=State+v.+McConville,+243+Or+App+275+(2011)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McConville</em></a>, 243 Or App 275 (2011).</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Although cases have repeatedly referenced the court as
+            the factfinder, there does not appear to be binding case law
+            regarding whether such a finding triggers
+            <em>Blakely/Apprendi</em> procedural protections. However,
+            <em>see</em> <em>State v. Reed</em>, 256 Or App 6 (2013),
+            holding that whether or not a pause exists is a question of
+            law and not fact).</p>
+            <p>Fundamentally, the state is tasked at sentencing with
+            determining whether or not there was a sufficient—or
+            sometimes referred to as “significant” (<a
+            href="https://scholar.google.com/scholar_case?case=11680379839801530401&amp;q=State+v.+Watkins,+236+OR+App+339+(2010&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Watkins</em></a>, 236 Or App 339 (2010))—pause between
+            criminal acts. If an accused is found to have “paused” and
+            then continued with other acts, then those acts or counts,
+            despite being part of the same criminal episode, would not
+            merge. Leading and recent cases are:</p>
+            <ul>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=6005865219940769848&amp;q=State+v.+Williams,+284+Or.+App.+194+(2017&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em></a>, 284 Or App 194 (2017): the Court
+            requiring merger between counts of sex abuse because [___]
+            “does not contain evidence that would allow a nonspeculative
+            interference ‘that something of significance’ occurred
+            between defendant’s sequential acts of touching.”</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=6406324873767010584&amp;q=State+v.+Quandry+Nelson+II,+282+Or.+App.+427+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Quandry Nelson II</em></a>, 282 Or App 427 (2016): Court
+            of Appeals reversed a trial court’s determination that there
+            was not a sufficient pause between Sex Abuse 1 and Sex Abuse
+            3; not finding evidence of a sufficient pause between two
+            counts of Sex Abuse 1 and one count of Sex Abuse 3 that
+            occurred in the same course of conduct in a confined space
+            and no “significant” event separated the various counts.
+            Specifically rejects state’s argument that successive acts
+            cannot constitute “same conduct or criminal episode.”</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=9654298393388318080&amp;q=%E2%80%A2%09State+v.+Avila,+283+Or+App+262+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Avila</em></a>, 283 Or App 262 (2016): merger not
+            precluded merely by the accused’s contact with different
+            body parts of victim.</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=11074940621667347972&amp;q=%E2%80%A2%09State+v.+West-Howell,+282+Or.App.+393+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. West-Howell</em></a>, 282 Or App 393 (2016): In this
+            case, the accused and victim were married and a physical
+            altercation began in the home and moved into the bedroom.
+            Inside of the bedroom an act of Sodomy 1 occurred (forcible
+            compulsion theory). The accused then choked the victim to
+            unconsciousness and tried to rape her. Failing that, he
+            again committed an act of forcible compulsion sodomy. The
+            court’s essential legal summary on merger between the
+            various counts of sodomy is that one crime must end before
+            another begins and each crime must be separated from the
+            others by a sufficient pause in the accused’s criminal
+            conduct to afford him an opportunity to renounce his
+            criminal intent. Here, strangling the victim and attempting
+            to rape her was the sufficient pause. <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=11437033599619419626&amp;q=State+v.+King,+261+Or+App+650+(2014&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. King</em></a>, 261 Or App 650 (2014), for what
+            intervening acts can constitute sufficient or significant
+            pauses.</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=3391408325339808287&amp;q=%E2%80%A2%09State+v.+Reeves,+250+Or+App+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Reeves</em></a>, 250 Or App 294 (2012): in order for the
+            downloading of child porn not to merge, the state must show
+            the files are not downloaded concurrently. <em>See also</em>
+            <a
+            href="https://scholar.google.com/scholar_case?case=14661633009986379479&amp;q=State+v.+Cale,+263+Or+App+635+(2014&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cale</em></a>, 263 Or App 635 (2014) (rejecting the
+            state’s argument that “Each time you take a picture of a
+            child, it’s a separate crime”).</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=13014506832170592896&amp;q=%E2%80%A2%09State+v.+Sanders,+185+OR+app+125+(2002&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Sanders</em></a>, 185 Or App 125 (2002): “Mere passage of
+            time by itself does not establish that one assault ended
+            before the other began.”</li>
+            <li><a
+            href="https://scholar.google.com/scholar_case?case=6533260003549794984&amp;q=%E2%80%A2%09State+v.+Dugan,+282+Or+App+768+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Dugan</em>, 282 Or App 768 (2016)</a>: Court rejected the
+            state’s argument that the mere sequential nature of an
+            accused’s touching and opportunity to retreat were
+            sufficient pauses that would bar merger. Here, the accused
+            touched the victim’s breasts and vagina over the course of
+            about ten minutes.</li>
+            </ul>
+            <p><strong>2. Criminal Episodes</strong></p>
+            <p>OCDLA’s <a
+            href="https://ocdla.force.com/Ocdla_Store_Item?id=a0wj00000038lpr"><em>Felony
+            Sentencing in Oregon: Guidelines, Statutes, Cases</em></a>
+            contains an excellent review of the nuances of criminal
+            episodes. By way of review, and important to the
+            practitioner in this context, a court may only consider
+            convictions for purposes of calculating the offender’s
+            criminal history that emerge in the same sentencing
+            proceeding if the convictions do not arise out of a single
+            criminal episode. <a
+            href="https://scholar.google.com/scholar_case?case=4898894899993456360&amp;q=State+v.+Cuevas,+358+OR+147&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cuevas</em></a>, 358 Or 147 (2015), at 149-50. In other
+            words, a “court may use a defendant’s convictions arising
+            from earlier criminal episodes to calculate the defendant’s
+            criminal history score with respect to a crime arising from
+            a later criminal episode.” <a
+            href="https://scholar.google.com/scholar_case?case=14733960523135553940&amp;q=State+v.+Witherspoon,+250+Or.App.+316,+280+P.3d+1004+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Witherspoon</em></a>, 250 Or App 316, 321, 280 P3d 1004
+            (2012).</p>
+            <p>Courts are now instructed to examine the evidentiary
+            record and determine if there is sufficient evidence to
+            demonstrate that crimes were committed on separate days,
+            even if they were ultimately discovered at the same time. In
+            <a
+            href="https://scholar.google.com/scholar_case?case=8056970442155399653&amp;q=State+v.+Dulfu,+282+Or+App+209&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Dulfu</em></a>, 282 Or App 209 (2016) (r<em>eview
+            accepted)</em>, the defendant’s contention was rejected—that
+            because all images of child pornography were discovered on a
+            single day it was one single criminal episode but, rather,
+            since the images were acquired on different days, they were
+            separate criminal episodes. This is an important case to
+            watch.</p>
+            <h2
+            id="g._constitutional_considerations_on_supervisory_conditions"><strong>G.
+            Constitutional Considerations on Supervisory
+            Conditions</strong></h2>
+            <p>Sex offense supervision is rife with enhanced
+            restrictions on associations and liberty. Generically, most
+            sex offense supervisions require treatment, polygraph
+            testing, refraining from frequenting places visited by
+            children, no contact with children, and obtaining permission
+            to use the internet, among a myriad of other conditions.
+            There is an emerging body of case law regarding whether or
+            not some of these restrictions violate constitutional rights
+            to intimate association<a href="#fn11" class="footnote-ref"
+            id="fnref11" role="doc-noteref"><sup>11</sup></a> and the
+            probationer’s right to remain silent.</p>
+            <p>The right to intimate association has long been
+            recognized in the United States Constitution and is
+            considered “central” to any notion of liberty. <a
+            href="https://scholar.google.com/scholar_case?case=6786088316489842364&amp;q=Roberts+v.+Jaycees,+468+US+609+(1984&amp;hl=en&amp;as_sdt=3,38"><em>Roberts
+            v. Jaycees</em></a>, 468 US 609 (1984). Additionally,
+            liberty restrictions which are part of a probation must not
+            be overbroad and are where less burdensome conditions
+            satisfy the same end. <a
+            href="https://scholar.google.com/scholar_case?case=8726912648629704858&amp;q=State+v.+Bassett,+269+Or+App+701+(2015&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bassett</em></a>, 269 Or App 701 (2015). Counsel should
+            object to association restrictions (reporting new “intimate
+            relationships,”) as not reasonably related to the purposes
+            of probation and not narrowly tailored sufficient to avoid
+            infringement on the probationer’s constitutional rights.
+            <em>See</em> <em>United States v. Brock,</em> 2017 WL
+            3027078 (2017) (vacating notification requirement for upon
+            establishment of “significant romantic relationship”).</p>
+            <p>Polygraphs are routinely ordered by sentencing courts,
+            required by probation officers, and are also incorporated
+            into sex offense treatment programs. Quite foreseeably, the
+            probationer is faced with a dilemma of refusing to take a
+            polygraph or disclose information that could be harmful to
+            their probation—or even lead to new charges. In <a
+            href="https://scholar.google.com/scholar_case?case=11974151542831798607&amp;q=United+States+v.+Antelope,+395+F.3d+1128&amp;hl=en&amp;as_sdt=3,38"><em>United
+            States v. Antelope</em></a>, 395 F.3d 1128 (Ninth Cir.
+            1995), the probationer refused to take polygraphs without
+            the government first granting immunity over any response he
+            may provide. As a result, his probation was revoked and he
+            was sentenced to prison. The Ninth Circuit reversed the
+            district court and required that any past sexual history
+            polygraph questions do not have to be answered by Antelope
+            (if may they trigger liability) until the government
+            provides immunity for those acts. Counsel should assure that
+            any conditions of probation involving mandatory polygraphs
+            allow for “use and derivative use immunity.”</p>
+            <p>There are also several Oregon cases that address this
+            issue—two of the main ones are <em><a
+            href="https://scholar.google.com/scholar_case?case=16457386607280044265&amp;q=State+v.+Tenbusch,+131+Or.+App.+634,+886+P.2d+1077+(1994)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Tenbusch</a>,</em> 131 Or App 634, 886 P2d 1077 (1994),
+            and <a
+            href="https://scholar.google.com/scholar_case?case=17735933406055629331&amp;q=State+v.+Gaither,+196+Or.+App.+131,+100+P.3d+768+(2004)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Gaither</em></a>, 196 Or App 131, 100 P3d 768 (2004)
+            (statement to probation officer regarding sexual history was
+            involuntary but defendant failed to show nexus between that
+            disclosure and later “voluntary” confession to police and
+            therefore confession to police admissible). Under Oregon
+            law, the accused has to show (1) the statement to probation
+            officer was involuntary and (2) facial nexus between that
+            statement and later statement to police. Also, the accused
+            can refuse to answer the questions presented and, if that
+            happens, then address whether that refusal constitutes a
+            violation of the terms and conditions of probation. <em>See
+            also <a
+            href="https://scholar.google.com/scholar_case?case=6698012894437410759&amp;q=United+States+v.+Saechao+,+418+F.3d+1073+(2005)&amp;hl=en&amp;as_sdt=3,38">United
+            States v. Saechao</a>,</em> 418 F.3d 1073 (2005) (holding
+            that probationer was compelled to give up information and
+            distinguishing<br />
+            <em>Tenbusch</em> and <em>Gaither</em> in footnote 6).<a
+            href="#fn12" class="footnote-ref" id="fnref12"
+            role="doc-noteref"><sup>12</sup></a></p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Read <em>Tenbusch, Gaither</em> and <em>Saechao;</em>
+            they are interwoven and give insight into how to advise your
+            client once they are faced with these Hobson’s choices while
+            on probation or post-prison supervision. <em>Saechao</em> is
+            a Reinhardt opinion with 22 Negative Treatments, so there
+            are lots of subsequent Ninth Circuit panels accepting the
+            <em>Saechao</em> analysis and holding and then distinguish
+            it.</p>
+            <blockquote>
+            <p>As the internet encroaches more on daily life, use
+            restrictions for probationers and convicted sex offenders
+            prove increasingly burdensome and often completely
+            unnecessary. The Supreme Court struck down a North Carolina
+            statute barring any sex offender from social network
+            websites as violative of free speech. <a
+            href="https://scholar.google.com/scholar_case?case=285661631352488303&amp;q=Packingham+v.+North+Carolina,+137+S.+Ct.+1730+(2017).&amp;hl=en&amp;as_sdt=3,38"><em>Packingham
+            v. North Carolina</em></a>, 137 S. Ct. 1730 (2017). In
+            <em>Brock</em>, <em>infra</em>, this restriction was found
+            acceptable in a probation context.</p>
+            </blockquote>
+            <h1 id="v._conclusion"><strong>V. Conclusion</strong></h1>
+            <p>Building successful arguments for plea negotiations and
+            sentencing starts early. Investigate the available tools,
+            think beyond the normal mitigation and discovery, and
+            determine what will be helpful versus hurtful to your
+            client. Unless you are obtaining an acquittal, your role as
+            a plea and sentencing negotiator is the most significant way
+            you will assist your client.</p>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup> </sup> Typically, a psychosexual
+            evaluation that is positive is given greater weight if the
+            case is a repeat case or especially aggravated. Generally,
+            most (not all but most) first time offenders with one
+            alleged victim will score well and many prosecutors expect a
+            clean psychosexual evaluation in those cases.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup> </sup> For a good discussion on mental
+            competency and how it plays into plea negotiations see
+            Robert Schehr and Chelsea French, <a
+            href="http://www.albanylawreview.org/Articles/vol79_3/1091%20Schehr%20PRODUCTION.pdf">“Mental
+            Competency Law and Plea Bargaining: Neurophenomenological
+            Critique,”</a> <em>Albany Law Review</em>, Vol 79.3.<a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><sup> </sup> Alafair S. Burke, “Prosecutorial
+            Passion, Cognitive Bias, and Plea Bargaining,” 91 Marq. L.
+            Rev. 183 (2007). Available at: <a
+            href="http://scholarship.law.marquette.edu/mulr/vol91/iss1/9/">http://scholarship.law.marquette.edu/mulr/vol91/iss1/9/</a>.<a
+            href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><p> (g) Any material or information that tends
+            to:</p>
+            <p>      (A) Exculpate the defendant;</p>
+            <p>      (B) Negate or mitigate the defendant’s guilt or
+            punishment; or</p>
+            <p>      (C) Impeach a person the district attorney intends
+            to call as a witness at the trial.</p>
+            <p>      (2)(a) The disclosure required by subsection (1)(g)
+            of this section shall occur without delay after arraignment
+            and prior to the entry of any guilty plea pursuant to an
+            agreement with the state. If the existence of the material
+            or information is not known at that time, the disclosure
+            shall be made upon discovery without regard to whether the
+            represented defendant has entered or agreed to enter a
+            guilty plea.</p>
+            <p>      (b) Nothing in subsection (1)(g) of this
+            section:</p>
+            <p>      (A) Expands any obligation under a statutory
+            provision or the Oregon or United States Constitution to
+            disclose, or right to disclosure of, personnel or internal
+            affairs files of law enforcement officers.</p>
+            <p>      (B) Imposes any obligation on the district attorney
+            to provide material or information beyond the obligation
+            imposed by the Oregon and United States Constitutions.<a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn5"><sup> </sup> (5) The district attorney may not
+            condition a plea offer on a requirement that the defendant
+            waive: (a) The disclosure obligation of ORS 135.815
+            (1)(g)[.]; or (b) The ability to receive the audio recording
+            of grand jury proceedings as permitted under section 3 of
+            this 2017 Act, if the indictment has been indorsed “a true
+            bill.”<a href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><p><sup> </sup> SECTION 2. (1) A prosecuting
+            attorney may not condition a defendant’s plea offer on: (a)
+            The defendant’s waiver of:<br />
+            (A) The disclosure obligation of ORS 135.815 (1)(g).<br />
+            (B) The ability to receive the audio recording of grand jury
+            proceedings as permitted</p>
+            <p>under ORS 132.270, if the indictment has been indorsed “a
+            true bill.”<br />
+            (b) A requirement that the defendant or the defense attorney
+            stipulate to the</p>
+            <p>unconstitutionality of an existing law.<br />
+            (2)(a) A plea agreement may not contain a provision
+            prohibited by subsection (1) of this</p>
+            <p>section.<br />
+            (b) A prohibited provision described in subsection (1) of
+            this section in a plea agreement</p>
+            <p>is contrary to public policy and is void and
+            unenforceable.<a href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn7"><sup> </sup> A bill before the 2017 legislative
+            session to restrict the type of conduct that can fall within
+            sexual abuse in the first degree was not passed.<a
+            href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8"><sup> </sup> Under Article I, section 16, a
+            “penalty” is the amount of time that an offender must spend
+            in prison for his “offense.” <a
+            href="https://scholar.google.com/scholar_case?case=15869527206720165540&amp;q=State+v.+Rodriguez/Buck,+347+Or+46,+217+P3d+659+(2009&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rodriguez/Buck</em></a>, 347 Or 46, 60, 217 P3d 659
+            (2009). An “offense” is a defendant’s “particular conduct
+            toward the victim that constitute[s] the crime.”
+            <em>Id</em>. at 62, 217 P3d 659. There are two bases on
+            which a particular sentence may violate the proportionality
+            principle. In the first, a sentence may be impermissible if
+            its severity is inappropriate, given the defendant’s
+            criminal act. See Id. at 63, 217 P3d 659 (illustrating
+            principle). In the second, a penalty is impermissible if it
+            is disproportionately severe when compared to a sentence
+            that may be imposed for other related crimes.<a
+            href="#fnref8" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn9"><sup> </sup> <a
+            href="https://olis.leg.state.or.us/liz/2017R1/Downloads/MeasureDocument/SB1050">https://olis.leg.state.or.us/liz/2017R1/Downloads/MeasureDocument/SB1050</a>.<a
+            href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn10">  S<em>tate v. Hopson</em>, 220 Or App 366
+            (2008).<a href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn11">  See <a
+            href="http://www.ocdla.org/pdfs/defense_attorney/da_2017-01-02-03.pdf">“We
+            Need To Talk”</a> in <em>The Oregon Defense Attorney,</em>
+            Jan/Feb/March 2017, for a thorough discussion of this issue
+            by Emily Seltzer.<a href="#fnref11" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn12">  In <em>Saechao</em>, “we distinguished the
+            situation in Murphy from one in which the probationer is
+            required to “<em>answer</em> ‘all reasonable inquiries.’ ”
+            418 F.3d 1073, 1078 (9th Cir. 2005). We held this condition
+            does violate the Fifth Amendment because, unlike the
+            condition in <em>Murphy</em>, the probationer is not
+            permitted to invoke the privilege against self-incrimination
+            without jeopardizing his supervised release.<a
+            href="#fnref12" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

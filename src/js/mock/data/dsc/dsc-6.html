@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </header>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 6 Experts and the Multidisciplinary Team
+            in Child Sex Abuse Cases</strong></p>
+            <p><strong>By Richard D. Cohen</strong></p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>Experts arrive in a curious form in child sex abuse
+            prosecutions in criminal and dependency cases. They arrive
+            to testify in the courtroom, and their testimony is
+            delivered as if it has scientific, medical, objective
+            foundation, but actually it is often founded on (or grounded
+            in) an absence of science or expertise that defies <a
+            href="https://www.oregonlaws.org/ors/40.410">OEC 702</a>.
+            They arrive without the scientific validity required by
+            <em><a
+            href="https://scholar.google.com/scholar_case?about=7599600639349121459&amp;q=Frye+v.+United+States,+293+F.+1013+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003">Frye</a></em>
+            and <em><a
+            href="https://scholar.google.com/scholar_case?case=827109112258472814&amp;q=Frye+v.+United+States,+293+F.+1013+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003">Daubert</a></em>
+            standards,<a href="#fn1" class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> or in Oregon, the <em><a
+            href="https://scholar.google.com/scholar_case?case=16347591282643565388&amp;q=State+v.+Brown,+297+Or+404&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004">Brown</a></em>
+            and <a
+            href="https://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State+v.+O%E2%80%99Key,+321+Or+285&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>O’Key</em></a>
+            standards.<a href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> Experts too often enter
+            the courtroom to bolster the state’s case by continuing the
+            less than honorable tradition of junk science that has
+            pervaded the world of child sex abuse investigation and
+            prosecution since the field exploded in the United States in
+            the late 1970s.</p>
+            <blockquote>
+            <p><strong>Core Concepts</strong></p>
+            </blockquote>
+            <p>There are two core concepts for the defense practitioner
+            to understand:</p>
+            <p>1. The legislature and the judiciary function in a manner
+            that assists the successful prosecution of child sex abuse
+            cases.</p>
+            <p>Beginning in 1989 and continuing through 1995, the Oregon
+            legislature created the Child Abuse Multidisciplinary Team
+            (MDT) system (<a
+            href="https://www.oregonlaws.org/ors/418.746">ORS
+            418.746</a> – <a
+            href="https://www.oregonlaws.org/ors/418.800">418.800</a>),
+            which formalized the partnership of the attorney general’s
+            office, district attorneys, DHS and child abuse assessment
+            centers.</p>
+            <p>2. There was an effort to create the appearance that
+            these entities function independently and objectively.</p>
+            <p>However, per statute at the county level, the district
+            attorney is in charge of the coordination and function of
+            child abuse investigation; at the state level, the attorney
+            general’s office functions with oversight and funding
+            contributions in connection with purportedly objective child
+            abuse assessment centers. Child abuse assessment centers
+            often function to <em>support</em>, rather than
+            <em>investigate</em>, the prosecution of reported child sex
+            abuse. They then provide the prosecution with expert
+            testimony that purports to come from neutral scientific
+            precepts.</p>
+            <p>The defense lawyer will most commonly encounter a state’s
+            expert in the form of a pediatrician or pediatric nurse
+            practitioner who is affiliated with a MDT regional
+            assessment center or child abuse assessment center, as well
+            as a non–medically trained interviewer connected to an
+            assessment center. The credentials of MDT interviewers range
+            from a bachelor’s degree to a Ph.D. Most interviewers at
+            most large facilities in Oregon have master’s degrees and
+            many are licensed clinical social workers, licensed
+            professional counselors, and licensed marriage and family
+            counselors.</p>
+            <p>Be prepared for the fact that judges frequently allow
+            detectives and DHS workers to be qualified as experts having
+            specialized knowledge and expertise when they do not. The
+            problem of trial judges supporting state efforts to exceed
+            the scope of what experts should be allowed to address under
+            OEC 702 is long-standing in Oregon. <a
+            href="https://scholar.google.com/scholar_case?case=6931044034072923715&amp;q=Middleton,+657+P2d+1215+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Middleton</em></a>, 294 Or 427, 657 P2d 1215 (1983), and
+            <a
+            href="https://scholar.google.com/scholar_case?case=14235864362426214514&amp;q=State+v.+Milbradt,+305+Or+621&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Milbradt</em></a>, 305 Or 621, 756 P2d 620 (1988), have
+            since the 1980s prohibited the introduction of both vouching
+            and syndrome evidence, yet the circuit courts and the Court
+            of Appeals denuded these cases; for a quarter century,
+            vouching and syndrome evidence, regardless of the intensity
+            of objection, have flooded into child sex abuse trials and
+            influenced the triers of fact.</p>
+            <p>The Oregon Supreme Court had a chance to address the core
+            issue of bad practice diagnosis in <a
+            href="https://scholar.google.com/scholar_case?case=16531670170009390370&amp;q=State+v.+Southard,+347+Or+127&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Southard</em></a>, 347 Or 127, 218 P3d 104 (2009), and
+            got the right conclusion via the wrong direction—by
+            asserting that in the absence of observable physical
+            symptoms, a diagnosis of sex abuse does not come into
+            evidence in a child sex abuse case because of its
+            prejudicial impact. <em>Southard</em> presented the Oregon
+            Supreme Court with an opportunity to correct decades of bad
+            law. The court should have ruled that in the absence of
+            observable physical symptoms, a diagnosis of sex abuse is
+            not based on medically objective data, lacks scientific
+            validity, and fails to meet the <em>Brown</em> and
+            <em>O’Key</em> standards.</p>
+            <p>In child sex abuse prosecutions, presumptions of
+            innocence and core defendant rights are overshadowed by a
+            statutory regime and judicial culture driven by a desire to
+            protect children. That leads to disconnects between how
+            evidence and law are normally applied when the desire to
+            protect children distorts the application of law and rules
+            of evidence.</p>
+            <p>This is particularly apparent in the inequitable
+            application of expert testimony rules in child sex abuse
+            prosecutions. Even post-<em>Lupoli</em> the state is allowed
+            to address how sexually abused children <em>report</em>,
+            what influences children to report, what can explain delayed
+            reporting, why children are commonly confused about specific
+            facts and details, and the fact that children in general
+            rarely self-generate a bad-motive complaint of sex abuse
+            against an individual. None of these areas of testimony
+            embrace solid scientifically validated principles. They are,
+            in fact, all examples of “syndrome” evidence.</p>
+            <p>A good working definition of syndrome evidence is
+            evidence of the characteristics or general way in which
+            human beings in a given situation will behave or conduct
+            themselves. In child sex abuse cases, interviewers,
+            physicians, and nurse practitioners regularly testify about
+            child’s behavior and whether those behaviors are common
+            among sexually abused children. Such testimony should
+            violate OEC 702 scientific validity, syndrome, and vouching
+            standards. Yet, even post-<em>Lupoli</em> and its purported
+            ban on vouching, such testimony regularly comes into
+            evidence.</p>
+            <p>In addition, the defense lawyer faces the challenge of
+            how to combat experts, both real and pseudo, with defense
+            experts when defending against charges of child sex abuse.
+            Many trial courts are quick to accept the expertise of the
+            government’s purported expert witnesses, but quick to
+            question the helpfulness and objective knowledge of defense
+            experts. The problem is compounded because sexual abuse of
+            children occurs too often in our society. In the legitimate
+            concern to protect children, bad methods were created and
+            are perpetuated in our courts.</p>
+            <p>Lastly, a majority of Oregon child abuse assessment
+            programs examine child abuse concerns based on a medical
+            model. The medical model was based on an incorrect
+            assumption that physical symptomatology would frequently be
+            helpful in defining whether or not a child had been sexually
+            abused. The medical models were established in the 1980s and
+            much of the scientific documentation of what is relevant
+            regarding physical symptomatology of child sex abuse
+            emanates from research between 1989 and 1995, post-dating
+            the medical model.</p>
+            <h1
+            id="ii._strategic_overview_the_road_from_and_to_hell_is_paved_with_good_intentions"><strong>II.
+            Strategic Overview: The Road From and To Hell Is Paved With
+            Good Intentions</strong></h1>
+            <p>It is important to understand how sex abuse investigation
+            and prosecution evolved in the United States and Oregon and
+            how it manifests itself contemporaneously. We who defend are
+            faced with very significant contemporary challenges stemming
+            from emotion substituting for reason, which impacts our
+            clients’ liberty and rights and our ability to successfully
+            advocate for our clients. More specifically, once the
+            possibility that sexual abuse may have occurred is
+            established, emotional concern supersedes a reasonable
+            analysis of facts and evidence as a basis to determine
+            outcome.</p>
+            <p>There have been two periods during which prosecution of
+            child sex abuse cases was driven by histrionics and
+            drama—from the mid-1970s to the mid-1990s, and at present.
+            The drama of the first period was partially redirected by
+            internationally recognized scientific documentation. The
+            pediatric and behavioral sciences debunked the
+            misrepresentation of medical, pediatric, and social work
+            experts. Many lives were permanently ruined during that time
+            by often disingenuous, dishonest, or grossly inaccurate
+            expert testimony. Too many children were removed from their
+            families because of erroneous convictions based on outright
+            falsities in expert testimony.</p>
+            <p>The following are two areas in which such falsities
+            occurred during the mid-1970s to the<br />
+            mid-1990s:</p>
+            <p>1. Pediatricians affiliated with government facilities
+            regularly testified that certain factors in the anogenital
+            presentation of Tanner stage I (preadolescent females) meant
+            that the child had, to a medical certainty, been sexually
+            abused. In fact, normative research from 1989 to 1995 by
+            forensic pediatricians with the highest international
+            standing proved that several of those factors were of no
+            significance as to whether a child had been sexually abused
+            or not.</p>
+            <p>2. Interviewers and medical personnel serving as state
+            experts testified that children do not make false
+            allegations. This misrepresentation has been debunked by
+            every significant behavioral science study that has
+            addressed the topic. The most famous study was published in
+            1987 and is generally referred to as the Jones and McGraw
+            study.<a href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> The first medical
+            director of CARES Northwest, the largest of Oregon’s MDT
+            child abuse assessment centers, misrepresented under oath
+            the existence of the study’s conclusions. The medical
+            director testified that the study supports the concept that
+            “young children never make false allegations about being
+            sexually abused.” This unfortunate twisting of factual
+            accuracy is addressed in <em><a
+            href="https://scholar.google.com/scholar_case?case=8362100222328130676&amp;q=Sistrunk+v.+Armenakis,+271+&amp;hl=en&amp;as_sdt=3,38">Sistrunk
+            v. Armenakis</a>,</em> 271 F3d 1174 (9th Cir. 2001).<a
+            href="#fn4" class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a></p>
+            <p>In education and testimony, MDT experts today continue to
+            propound scientifically invalid concepts and assertions in
+            child sex abuse prosecutions. So stilted is our legal
+            culture that our judges continue to embrace the
+            admissibility of MDT expert testimony without holding them
+            to scientific principles and with seeming ignorance or
+            indifference towards the historic acute misuse of such
+            testimony.</p>
+            <p>In recent years (or the second period of excessive
+            histrionics and drama in child sex abuse investigation), the
+            quality of child abuse assessment and interviewing has
+            deteriorated in Oregon for several clearly observable
+            reasons.</p>
+            <h2 id="a._subjective_bias"><strong>A. Subjective
+            Bias</strong></h2>
+            <p>A new generation of MDT pediatricians, pediatric nurse
+            practitioners and social workers are frequently ignorant of
+            historic studies and developments and engage in outmoded
+            practices that substitute subjective bias for objective
+            analysis in forming opinions about child sex abuse. This is
+            done in a form of advocacy, such as labeling themselves as
+            child abuse protection advocates or child abuse advocates.
+            Advocacy seems to override objectivity and methods connected
+            to scientific validity.</p>
+            <p>While <em>Southard</em> cut off the head and does not
+            allow testimony about the conclusion or diagnosis of child
+            sex abuse absent physical evidence, two major dangers
+            remain: 1) there is an increase in recent years of false
+            claims of physical symptomatology relevant to child sex
+            abuse and 2) although the MDT expert is,
+            post-<em>Lupoli</em> and <em>Southard</em>, not allowed to
+            testify about their conclusion, they are still frequently
+            allowed to testify about their observations and syndrome
+            assessments, which thus implies guilt on the part of a
+            specific defendant. The stream of interconnected general
+            commentaries introduced to legitimize the presence of sex
+            abuse in an individual case is harder to defend against.</p>
+            <h2 id="b._victimology"><strong>B. Victimology</strong></h2>
+            <p>Most existing MDT child abuse assessment center
+            interviewers are adherents of victimology. This is a
+            relatively new field and seems to be primarily inhabited by
+            child abuse advocates. The field looks at the relationship
+            between victims and their offenders and the impact of
+            offender behavior on victims. The field is weak on
+            scientifically valid studies and seems heavily influenced by
+            innate support for victims regardless of whether,
+            objectively, a person making an allegation is in fact, by
+            legal definition, a victim. This field tends to turn away
+            from research and science, preferring to underscore the
+            function of the MDT as embracing the comfortable elicitation
+            and documentation of victimization complaints.</p>
+            <p>This is the clear direction that the investigation of
+            child abuse and sex abuse has taken in recent years and is
+            one of the reasons for the increased dysfunction and a
+            reduced quality of objective investigation by DHS. The MDT
+            utilizes a simplified, subjective “embrace the victim”
+            approach to investigation. The 2012 edition of the <em><a
+            href="https://www.doj.state.or.us/wp-content/uploads/2017/06/oregon_interviewing_guidelines.pdf">Oregon
+            Interviewing Guidelines</a></em> eliminated much of the
+            research present in the 2004 and 1998 editions. The
+            guidelines remain poised to bolster the accuracy of
+            information received. But the guidelines have abandoned the
+            vast majority of information they previously contained that
+            assisted an investigator in understanding contextual
+            complications and in objectively analyzing<br />
+            whether a report is more or less likely to be accurate.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Be prepared for MDT experts who cite the work of Bruce D.
+            Perry, M.D., Ph.D., a psychiatrist and senior fellow of the
+            Child Trauma Academy in Houston, Texas, and an adjunct
+            professor of psychiatry and behavioral sciences at the
+            Feinberg School of Medicine in Chicago, Illinois, as well as
+            the work of Bessel A. van der Kolk, M.D., Medical Director
+            of The Trauma Center in Boston, Professor of Psychiatry at
+            Boston University Medical School and Co-Director of the
+            National Center for Child Traumatic Stress Complex Trauma
+            Network. The work of Dr. Perry and Dr. van der Kolk is
+            valuable and inspirational but largely conceptual and not
+            predicated on objective, scientifically validated studies,
+            nor does it purport to be. Their work is in some ways
+            reminiscent of Dr. Richard Gardner and Dr. Roland Summit who
+            in the early 1980s introduced child abuse investigators to
+            critically important concepts. Those concepts were
+            misapplied to a syndrome analysis, however, and now
+            simplifying adherents of Drs. Perry and van der Kolk distort
+            their conceptual work and misapply it to specific
+            situations. Much of the work of these doctors focuses on the
+            <em>impact</em> of victimization on children and thus is
+            less helpful to define <em>whether</em> children have been
+            victimized.</p>
+            <p>All of this begs the question: why are experts affiliated
+            with the MDT, whose expertise is supposed to be involved
+            with objective investigation, caught up in and being
+            governed by a methodology that assumes facts which are not
+            established nor subject to scientific validation?</p>
+            <h2
+            id="c._false_allegations_and_parental_alienation_gatekeeping"><strong>C.
+            False Allegations and Parental Alienation
+            (Gatekeeping</strong>)</h2>
+            <blockquote>
+            <p>A common but not exclusive source of false allegations of
+            sex abuse is a child influenced by a parent where that
+            parent is involved in extreme conflict with the other parent
+            who is the subject of the accusation. Some MDT experts will
+            claim they are familiar with the concept of “parental
+            alienation,” i.e., the process by which one parent
+            pervasively seeks to undermine the child’s relationship with
+            the other parent.</p>
+            <p>The concept of parental alienation, now called
+            gatekeeping, was popularized by Judith Wallerstein and Joan
+            Kelly, perhaps the two greatest giants in the field of
+            psychology dealing with child custody issues in the history
+            of that subcategory of the behavioral sciences. In early
+            publications, Wallerstein and Kelly describe it as a
+            “pathological alignment between an angry parent and the
+            child that arose from the dynamics of separation and
+            divorce.”<a href="#fn5" class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a></p>
+            <p>Oregon MDTs currently lack expertise to understand how a
+            high-conflict relationship between parents or caregivers can
+            influence the reporting of sex abuse by children. Many MDT
+            experts affiliated with the prosecution do not understand
+            that there is a difference between Dr. Perry’s use of the
+            term “alienation” and how that term has been understood for
+            40 years relevant to an aligned parent or trusted figure
+            undermining a child’s relationship with another parent and
+            influencing that child’s perceptions and reports about that
+            other person. This underscores the degree of contemporary
+            bias and ineptitude present in most child abuse assessment
+            centers in Oregon and underscores how their interviewers are
+            unable to objectively investigate child sex abuse
+            allegations.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Highlight the ignorance the interviewer has about
+            high-conflict relationships between parents and caregivers
+            and how that influences children’s reporting. Demonstrate
+            how the interviewer’s own conduct in the case impacts the
+            quality of evidence from a range of being not helpful to
+            being biased.</p>
+            <h2 id="d._dependency_work"><strong>D. Dependency
+            Work</strong></h2>
+            <blockquote>
+            <p>Defense lawyers who practice dependency law and defend
+            parents in juvenile court proceedings know that the standard
+            for deprivation of a parent’s liberty interest in their
+            children at a shelter hearing and prior to adjudication is
+            incredibly low and bears no practical relationship to
+            probable cause. Prior to adjudication, the juvenile court
+            system analysis tends to be predicated on concern over
+            evidence. There is a systemic misunderstanding of the core
+            balance between the importance of respecting parents’
+            rights, family liberty interests, and children’s rights to
+            be with their parents, and the judicial court concern, which
+            should be subject to substantiation through evidence before
+            disruption of those rights.</p>
+            <p>Defending the falsely accused is intensified by the
+            challenge of the ever increasing investigative dysfunction
+            of the Department of Human Services (DHS) Child Welfare
+            Services (CWS). Most long-term observers of DHS agree that
+            CWS has not functioned at a level of lower competence since
+            the inception of the Children’s Services Division (CSD) in
+            1971.</p>
+            </blockquote>
+            <h2 id="e._criminal_work"><strong>E. Criminal
+            Work</strong></h2>
+            <blockquote>
+            <p>Traditionally and contemporaneously, few trial judges can
+            withstand the concern aspect and render a decision in these
+            cases of not guilty. Child sex abuse cases should almost
+            always be tried to a jury, where there is at least the
+            possibility that discussing the need in <em>voir dire</em>
+            for objective, evidence-based judgment can overcome bias.
+            Prepare your client for the looks of communal dislike and
+            disgust towards him and you that, at best, appear on the
+            faces of many on the jury panel at the start of <em>voir
+            dire</em>.</p>
+            <p>The defense lawyer is particularly challenged in child
+            sex abuse cases by the fact that we<br />
+            live in a society not prone to making decisions based on
+            facts as opposed to emotion.<br />
+            Traditionally, a successful defense tactic points out how a
+            deficiency in the facts leaves reasonable doubt.
+            Traditionally, a successful defense tactic points out how a
+            biased investigation leaves unanswered questions and leads
+            to reasonable doubt. While these approaches should not be
+            abandoned, using these approaches alone runs a risk of being
+            unsuccessful in contemporary society. We in the defense bar
+            are being forced to play the prosecution’s game—stirring up
+            emotion to empathize with someone being a victim. We
+            actually may be arriving at the point where we must argue
+            that the facts show our <em>client</em> is the victim.</p>
+            </blockquote>
+            <p>Prosecutors understand “emotion over reason” because in
+            recent years their primary methodology has been to turn away
+            from discussion of evidence and facts and instead to weave a
+            story for the jury that skips over detail, consistency, and
+            intellectual integrity to focus instead on bullet point
+            pleas to the jury’s emotion for and connection with the
+            victim. “Beyond a reasonable doubt” is not much protection
+            when reason is not the vehicle for decision-making. When the
+            prosecution’s case is predicated on <em>avoiding</em>
+            reason, instructions as to the presumption of innocence,
+            reasonable doubt, and application of reasonable doubt do not
+            resonate with a jury that is prepared from the get-go to
+            decide guilt from a place of emotional concern for the
+            child.</p>
+            <p>The child abuse investigation/prosecution system is often
+            predicated on the validation of victimization rather than on
+            investigation of whether victimization has occurred. Child
+            abuse investigation methods often lack honesty, integrity,
+            scientific validity and objectivity. If we enthusiastically
+            combat, our methods are identified as prejudicial and
+            inadmissible. We in the defense bar need to educate general
+            society that the distortion of constitutional principles and
+            presumptions of guilt do not serve our society.</p>
+            <h2 id="f._child_sex_abuse_investigation"><strong>F. Child
+            Sex Abuse Investigation</strong></h2>
+            <p>To understand the interrelationship between defense
+            experts and the primary source of prosecution experts
+            (employees of the MDT in Oregon), it is helpful to have a
+            brief contextual understanding of the history of child abuse
+            investigation in the United States.</p>
+            <p>Child abuse investigation is a relatively recent
+            phenomenon. There are debatably two originating pioneers of
+            child abuse investigation in the United States—John Caffey,
+            a radiologist who in 1946 began writing about his
+            observations of the difference between images of long bone
+            injury in children and parental explanations, and
+            pediatrician Henry Kempe, who in the 1960’s wrote <em>The
+            Battered Child</em> which popularized child abuse to
+            national attention.</p>
+            <p>Child abuse investigation and the prosecutorial
+            approaches we encounter today began in the 1970s. In Oregon
+            at that time the most sophisticated child abuse
+            investigation center, in terms of pediatric overview, was
+            the Health Science Center in Portland. On a national scale
+            the Kempe Center, named after Henry Kempe, was founded in
+            Denver in 1972 to focus on assessment of child abuse. Dr.
+            Kempe largely popularized to the professional consciousness
+            the concept of the need to protect children from sexual
+            abuse in 1977–1978 with a lecture and subsequent article
+            entitled, “Sexual Abuse, Another Hidden Pediatric
+            Problem.”<a href="#fn6" class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a></p>
+            <p>To understand and strategize how to defend your client
+            against child sex abuse allegations, it is important to
+            remember that not only is the field extremely emotional and
+            reaction driven, but that it is also only about 40 years
+            old. The field of child sex abuse investigation has gone
+            through three essential phases:</p>
+            <p>• An arguably “true believer,” histrionic, sex-abuse
+            junk-science period.</p>
+            <p>• A reactive period, tamped down to a degree by
+            medical–behavioral science research.</p>
+            <p>• A period of the rebirth of junk science in deference to
+            victimology-advocacy.</p>
+            <h1
+            id="iii._the_development_of_experts_on_child_sex_abuse"><strong>III.
+            The Development of “Experts” on Child Sex
+            Abuse</strong></h1>
+            <p>Since the initiation of child abuse investigation, there
+            have been seminal developments that define expertise in the
+            field. One is in the field of pediatrics. Initially, it was
+            thought that pediatric assessment could determine a
+            significant number of child sexual abuse cases. Prior to
+            normative research being conducted, it was believed that
+            observed conditions—particularly in female preadolescent
+            children in the hymen and vaginal area—were
+            beyond-a-reasonable-doubt proof of sexual abuse.</p>
+            <p>Additionally, certain precepts, such as “children never
+            lie about abuse,” caused investigation techniques to focus
+            on assisting the child in <em>revealing</em> abuse.
+            Techniques were developed to contribute to the comfortable
+            reinforcement of a child’s retelling of abuse and not on
+            analysis of whether or not abuse occurred.</p>
+            <p>The behavioral sciences (psychology, child psychology,
+            child psychiatry, behavioral and developmental pediatrics,
+            counseling, and social welfare) began researching factors
+            that impact child sex abuse reporting. That research
+            essentially began in the mid-1970s with perhaps the best
+            known work produced by David Finkelhor and Lucy Berliner.
+            Additional early researchers and writers important to
+            behavioral science analysis of child sex abuse reporting
+            include John Conte, John Briere, Gail Goodman, William
+            Friedrich, and Sandra K. Hewitt. By the 1980s, in addition
+            to these individuals, Stephen Ceci, Maggie Bruck, Kathleen
+            Faller and others contributed to a significant body of
+            research relevant to how children should be questioned in
+            sex abuse investigations and the developing field of
+            suggestibility. <em>Suggestibility</em> is defined as the
+            vulnerability of human beings, and particularly young
+            children, to be influenced by others in perceiving facts
+            that then influence their subsequent reporting based on
+            external influences remembered and reported.</p>
+            <p>The low point of child abuse investigation and
+            prosecution—in terms of abhorrent methodology, extremely
+            biased expert analysis, and testimony and convictions based
+            on incompetent methodology and bias—was the 1980s.</p>
+            <p>A byproduct of the 1980s was Dr. Roland Summit’s Child
+            Sex Abuse Accommodation Syndrome.<a href="#fn7"
+            class="footnote-ref" id="fnref7"
+            role="doc-noteref"><sup>7</sup></a> Dr. Summit was then a
+            psychiatrist enmeshed with the Los Angeles forensic
+            community as a clinical assistant professor of psychiatry at
+            Harbor UCLA Medical Center in Torrance, California. He came
+            up with a list of typical reactions of children to sex abuse
+            that was then adopted, incorporated, and testified to as a
+            basis for expert identification of children who had been
+            victims of sex abuse. This was tragic. It is well accepted
+            in the behavioral sciences that there is no inherently
+            predictable manner in which a human being will react to a
+            particular stimulus. Dr. Summit himself ultimately disdained
+            the use of the Child Abuse Accommodation Syndrome as a
+            guidepost of red flags of concern for defining whether a
+            particular child may have been sexually abused.</p>
+            <p>Child abuse investigators and prosecutors commonly
+            misused Summit’s work to establish that if children had
+            certain conditions or symptoms, it meant beyond a reasonable
+            doubt that they had been sexually abused. Much of this
+            happened even after <em>Middleton</em> and <em>Milbradt</em>
+            were decided and their prohibition against the use of
+            syndrome evidence. Unfortunately this misuse, combined with
+            even sloppier and more inaccurate perceptions held by the
+            pediatric community, led to the profiling of abusers and
+            victims. None of the profiling was scientific; it was
+            experiential and subjective. This was devastating to fair
+            hearings and created tragic outcomes.</p>
+            <p>Most existing child abuse assessment centers in Oregon
+            date back to the late 1980s or early 1990s. Unfortunately,
+            they were founded at the height of the bias, incompetence
+            and junk science that invaded both the pediatric and
+            behaviorist approaches to child sex abuse investigation.</p>
+            <p>“Junk science” became a popular term for defense lawyers
+            and defense experts in the 1980s because defense experts and
+            many counsel understood that a substantial amount of medical
+            and behavioral science evidence that led to the conviction
+            of individuals accused of child sex abuse was based on
+            invalid expert assertions rather than legitimate scientific
+            principles.</p>
+            <p>The 1980s and early 1990s also saw an increase in the
+            number of therapists who viewed it as their mission to
+            assist children and adults in recovering repressed memories
+            that the therapist presupposed were the source of
+            trauma-driven behaviors in their clients. Therefore, the
+            therapist’s presupposition that the child or adult had been
+            sexually abused created a highly leading approach to help
+            their patient get in touch with that abuse and report
+            it.</p>
+            <p>Also during this time, state experts and prosecutors in
+            Oregon held a significant belief that Satanic Ritualistic
+            Abuse (SRA) existed as a prevalent societal problem leading
+            to the abuse of children. In the early 1990s, DHS and others
+            responsible for training around sex offender issues
+            presented a conference about SRA. Behavioral scientists
+            today believe that SRA as a common societal problem has the
+            same scientific validity as the theory that the moon is made
+            up of Swiss cheese. Most long-term psychiatrists and
+            psychologists have never encountered a SRA situation. Again,
+            the MDT shows no signs of reflective humility or lessons
+            learned based on the idiocy of some of its early
+            presuppositions. We who defend in the area of child sex
+            abuse allegations are up against the reality that endorses
+            the maxim that “those who do not learn from history repeat
+            it.”</p>
+            <p>Research from the 1980s and 1990s that current MDT
+            advocates sometimes ignore revealed the following:</p>
+            <p>• Documentation of normative genital findings in
+            non-abused prepubescent girls. That research by Dr. John
+            McCann from 1989 to 1992 debunked common forensic pediatric
+            representations and testimony about preadolescent female
+            anogenital conditions medically proving sex abuse.</p>
+            <p>• Guidelines for normative and concerning conditions in
+            children regarding the connection between physical
+            conditions of children and the likelihood of sex abuse,
+            developed in the early 1990s by Dr. Joyce Adams.</p>
+            <p>• The lack of reliability of repressed memory. Dr.
+            Elizabeth Loftus conducted substantial research in this area
+            in the 1980s and early 1990s. Her publication, <em>The Myth
+            of Repressed Memory</em>, had a national impact. Repressed
+            memory remains a debatable issue, but it is not debated by
+            mental health professions with licensing standards that
+            stipulate a therapist may not presuppose a condition and
+            then, in essence, brainwash a subject or patient into belief
+            in that condition. In the early 1990s, at least two
+            psychologists and one social worker lost their licenses in
+            Oregon for such conduct.</p>
+            <p>• A relatively small percentage of children (two to six
+            percent) actually self-generate a lie or a bad motive to
+            report sex abuse, as shown in studies of mass subjects
+            conducted by Jones and McGraw in 1987 and Oates in 2000.</p>
+            <p>• In the same studies, a bottom-line percentage of 33–35
+            percent of sex abuse reports by children were invalidated,
+            reflecting confusion, influence, secondary gain motivations
+            by people in powerful positions over the child, and
+            suggestive, misleading, contaminating investigation
+            procedures.</p>
+            <h1 id="iv._the_multidisciplinary_team_mdt"><strong>IV. The
+            Multidisciplinary Team (MDT)</strong></h1>
+            <p>Under federal influence from 1989 to 1995, Oregon enacted
+            the MDT statutes, <a
+            href="https://www.oregonlaws.org/ors/418.746">ORS
+            418.746</a>-<a
+            href="https://www.oregonlaws.org/ors/418.800">418.800</a>.</p>
+            <p>The MDT statutes create what, in function, appear to many
+            defense lawyers as a conspiracy between different
+            power-holding entities of government. It is not a
+            conspiracy. It is a statute that provides for coordinated
+            case-by-case implementation of practice standards for child
+            sex abuse investigation pursuant to the establishment of a
+            team approach for child abuse investigation in Oregon.
+            However, the lack of sophistication of many individuals and
+            the variables of weakness between different partners within
+            the MDT create several problems. This section will describe
+            how the MDT works.</p>
+            <h2 id="a._law_enforcement_and_dhs"><strong>A. Law
+            Enforcement and DHS</strong></h2>
+            <p>The MDT functions in essentially three ways:</p>
+            <p>• On a statewide level, the attorney general’s office at
+            the Department of Justice (DOJ) is empowered by statute to
+            engage in funding and oversight of child abuse investigation
+            in Oregon.</p>
+            <p>• The Child Abuse Multidisciplinary Intervention Advisory
+            Council (CAMI) of the Oregon DOJ is responsible for that
+            oversight and for applications from community providers,
+            generally child abuse centers for assessment, and the
+            administration of funds.</p>
+            <p>• Defense lawyers encounter the practical functions of
+            the MDT at the county level. By statute, the district
+            attorney in each county is supposed to be the head of the
+            MDT. In most counties, the head of the MDT is the district
+            attorney or an individual to whom the district attorney has
+            delegated that responsibility. In large district attorneys’
+            offices, there are often MDT units that focus on the
+            prosecution of child abuse cases. In Multnomah County, a
+            deputy district attorney on the MDT unit will prosecute both
+            the criminal and the juvenile court dependency facet of a
+            child abuse case when both exist. In most large counties, a
+            MDT deputy will be responsible for the prosecution in
+            criminal court, but a deputy assigned to juvenile court will
+            be responsible for the prosecution of a dependency
+            matter.</p>
+            <p>The MDT at the county level is, by statute, made up of
+            many individuals from predominantly local government
+            entities involved in working with children. The critical
+            members of the MDT are the district attorney’s office, law
+            enforcement, DHS Child Welfare Division, and the local child
+            abuse assessment center. Representatives from school
+            districts and mental health organizations can be other
+            members of the MDT, but generally they do not play a
+            significant role in the formation and structure of
+            investigation and prosecution of child abuse cases in
+            Oregon.</p>
+            <p>The district attorney’s office by statute is supposed to
+            establish a protocol for the investigation of child abuse
+            cases in each county. The defense should have a copy of the
+            protocol for each county relevant to that attorney’s sex
+            abuse defense practice.</p>
+            <p>The roles of the essential members of the MDT involved in
+            a prosecution of child sex abuse are as follows:</p>
+            <p>1. The District Attorney’s Office</p>
+            <p>Following reports from law enforcement and DHS, the
+            district attorney’s office is responsible for the
+            consideration and possible presentation to the grand jury
+            for indictment in<br />
+            a child sex abuse prosecution. In several counties the
+            district attorney’s office is also responsible for the
+            prosecution of child sex abuse cases in dependency matters
+            in juvenile court. In many counties the attorney general’s
+            office handles dependency matters in juvenile court.</p>
+            <p>2. Law Enforcement</p>
+            <p>Law enforcement is responsible for the initial
+            investigative response into matters where there is a
+            reasonable basis to believe child sex abuse has occurred.
+            Most large departments have detectives who receive the
+            initial reports from deputies and police officers who
+            respond to initial reports of abuse, and from DHS, as a
+            matter of cross-reporting. Cross-<br />
+            reporting between DHS and law enforcement is required by
+            statute and the relevant<br />
+            OAR in <a
+            href="https://secure.sos.state.or.us/oard/displayChapterRules.action?selectedChapter=86">Chapter
+            413</a>. Most frequently, detectives are responsible for the
+            evidence, the documents, and the case ultimately presented
+            to the district attorney’s office for review and
+            consideration for prosecution. The DA then decides if the
+            case will be presented to grand jury. If it is unlikely to
+            be a criminal case, more often than not DHS Child Protective
+            Services (CPS) will be in charge of case investigation where
+            there is a concern that sex abuse occurred.</p>
+            <p>Many detectives in Oregon have substantial experience in
+            attending MDT meetings, attending trainings put on by
+            regional assessment centers or large law enforcement
+            agencies. They have engaged, for many years, in work in
+            which their focus is investigation for testimony that can be
+            used at trial in child sex abuse cases.</p>
+            <p>Some smaller law enforcement departments will, by
+            practice, refer cases to larger departments so that a
+            detective who has more expertise in the investigation and
+            presentation of child sex abuse cases is in charge of the
+            matter. All larger counties have detectives whose primary
+            work is the investigation of child abuse.</p>
+            <p>Multnomah County has had for many years a CAT Team (Child
+            Abuse Team), which focused on the investigation and
+            presentation of child abuse cases.</p>
+            <p>In venues with smaller populations, follow-up on child
+            sex abuse reporting tends to be assigned to the more
+            experienced officers who often have established a long-term
+            working relationship with the DHS branch in their county and
+            with the prosecutor.</p>
+            <p>3. DHS</p>
+            <p>The recipient of child abuse reporting is by statute (ORS
+            <a
+            href="https://www.oregonlaws.org/ors/419B.015">419B.015</a>)
+            either the local law enforcement agency or DHS.</p>
+            <p>DHS may play a primary role in the initial investigation
+            of child sex abuse cases. The general rules of DHS are the
+            following:</p>
+            <p>DHS has a screening section, which responds to initial
+            reports of abuse and determines follow-up assignments. Child
+            Protective Services (CPS) is the section of DHS responsible
+            for investigation of child abuse, including child sex abuse.
+            Screening workers receive calls and make determinations
+            about whether or not the call merits a follow-up, a
+            short-term follow-up, or an immediate follow-up.</p>
+            <p>DHS makes an attempt to ascertain, during the early
+            stages of involvement, whether the primary focus is going to
+            be criminal investigation of the suspect for child sex
+            abuse, or child welfare–oriented, where there may well not
+            be a criminal prosecution but there is a sufficient level of
+            concern connected to the report to merit investigation,
+            follow-up, and protective action being taken. Per OAR
+            Chapter 413, from the inception of the case DHS refers to
+            the accused person as the alleged perpetrator.<a href="#fn8"
+            class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a></p>
+            <p>In the initial weeks of an MDT investigation, the degree
+            of focus on potential criminal prosecution may increase or
+            lessen, and the degree of focus on child welfare and child
+            protection may vary. As the distinct and overlapping roles
+            of DHS and law enforcement are better defined during the
+            initial stages, this is when law enforcement or DHS is more
+            likely to be primarily responsible for investigation.</p>
+            <p>The array of responses by law enforcement to a situation
+            may range from immediate arrest of a suspect, to ultimate
+            arrest of a suspect for prosecution, to a suspect first
+            being arrested on a warrant post-presentation to grand jury,
+            to a no-prosecution determination, or to an early-stage
+            determination that the level of evidence will not rise to
+            probable cause or an eventual successful opportunity for
+            prosecution.</p>
+            <p>As we know, police involvement is supposed to range from
+            probable cause assessment to the capacity to prove the case
+            beyond a reasonable doubt. Regarding DHS, the range of
+            assessment connected to standards of proof is much broader.
+            Even in situations in which law enforcement does not find
+            sufficient cause to enable prosecution, DHS may decide that
+            it can meet a more-likely-than-not or
+            preponderance-of-the-evidence standard in juvenile court.
+            Additionally, DHS has the option of safety planning or
+            entering founded dispositions based on a reasonable cause,
+            or a reasonable conclusion based on a substantial facts
+            standard, which is below the standard for probable
+            cause.</p>
+            <p>Both DHS and law enforcement have cross-reporting
+            requirements as a matter of statute (<a
+            href="https://www.oregonlaws.org/ors/419B.0175">ORS
+            419B.0175</a>) and policy. Cross-reporting means that DHS
+            and law enforcement report to one another when one is the
+            recipient of an initial call of child abuse and regarding
+            essential developments in the progress of an
+            investigation.</p>
+            <p>The importance of communication between DHS and law
+            enforcement is underscored by the fact that DHS, by
+            administrative rule, has a responsibility to interview the
+            suspect of a child sex abuse allegation, but DHS may defer
+            or avoid that responsibility if law enforcement has
+            conducted an interview of a suspect or made reasonable
+            efforts to interview a suspect.</p>
+            <p>To summarize, the negative outcomes for a suspect in a
+            child sex abuse allegation are<br />
+            listed below:</p>
+            <ul>
+            <li>Law enforcement may arrest based on probable cause or
+            the district attorney may prosecute.</li>
+            <li>DHS may file a petition in juvenile court and remove the
+            child or children from the custody of their parent or
+            parents or caregiver on a preponderance-of-the-evidence
+            standard.</li>
+            <li>DHS may enter an administrative conclusion of a Founded
+            Disposition for sex abuse, which can have sweeping
+            ramifications on employment and opportunities to work with
+            and volunteer with children. These conclusions are formed on
+            “a reasonable basis in substantial fact” standard and are
+            subject to challenge under the Oregon Administrative
+            Procedures Act.</li>
+            </ul>
+            <p>4. Local Child Abuse Assessment Center</p>
+            <p>The fourth critical member of the MDT is the local child
+            abuse assessment center.</p>
+            <p>There is a formal structure by statute for child abuse
+            assessment centers in Oregon. <a
+            href="http://www.caresnw.org/">CARES Northwest</a>, founded
+            in 1987, was the first such center in Oregon.</p>
+            <p>By statutory structure, regional assessment centers
+            conduct assessments and provide education and training to
+            fellow MDT members, including other child abuse assessment
+            centers.</p>
+            <p>There are five regional assessment centers in Oregon:</p>
+            <p>• <a href="http://www.caresnw.org/">CARES Northwest</a>,
+            Portland</p>
+            <p>• <a href="http://kidsfirstcenter.net/">Kids’ FIRST
+            Center</a>, Eugene</p>
+            <p>• <a href="https://www.kidscenter.org/">KIDS Center</a>,
+            Bend</p>
+            <p>• The <a href="http://cacjc.org/">Children’s Advocacy
+            Center of Jackson County</a>, Medford</p>
+            <p>• <a href="http://www.mtemily.org/">Mt. Emily Safe
+            Center</a>, La Grande</p>
+            <p>All five regional assessment centers have child abuse
+            assessment centers or interviewers and medical examiners who
+            are part of (for lack of a better term) satellite
+            educational and training systems connected to other child
+            abuse assessment centers. Some of the centers, which
+            function independently but operate within the sphere or
+            region of a regional assessment center, include:</p>
+            <p>• <a href="https://www.childrenscenter.cc/">The
+            Children’s Center</a>, Oregon City</p>
+            <p>• <a href="http://www.libertyhousecenter.org/">Liberty
+            House</a>, Salem</p>
+            <p>• <a href="https://www.abchouse.org/">ABC House</a>,
+            Albany</p>
+            <p>• <a href="http://www.thelighthouse4kids.org/">Lighthouse
+            for Kids</a>, Astoria</p>
+            <p>• <a href="http://www.klamathlakecares.org/">Klamath Lake
+            Cares</a>, Klamath Falls</p>
+            <p>• <a href="https://julietteshouse.org/">Juliette’s
+            House</a>, McMinnville</p>
+            <p>• <a href="http://www.amanicenter.org/">Amani Center</a>,
+            Columbia County</p>
+            <p>• <a href="http://www.douglascares.org/">Douglas
+            C.A.R.E.S.</a>, Roseburg</p>
+            <p>• <a href="http://www.cgcac.org/">Columbia Gorge
+            Children’s Advocacy Center</a>, Hood River</p>
+            <p>• <a href="http://www.co.josephine.or.us/">Josephine
+            County Child Advocacy Center</a>, Grants Pass</p>
+            <p>• <a
+            href="http://pendletonchildrenscenter.org/">Pendleton
+            Children’s Center</a>, Pendleton</p>
+            <p>• <a href="http://www.childabuseintervention.org/">Kids’
+            HOPE Center</a>, Coos Bay</p>
+            <p>• <a
+            href="https://www.childrensadvocacycenter.net/">Children’s
+            Advocacy Center of Lincoln County</a>, Newport</p>
+            <p>• <a href="https://www.tvpcweb.net/">Star Center at
+            Treasure Valley Pediatrics</a>, Ontario</p>
+            <p>Historically, children were often subjected to multiple
+            in-depth forensic interviews in the initial stages of a
+            child sex abuse assessment. Unfortunately, that still can
+            occur. One role of the centers is to lessen the need for
+            multiple in-depth interviews of children. This is both for
+            the child comfort’s and the recognition that multiple
+            interviews contaminate the value of a child’s report.</p>
+            <p>The general role of the center is a physical assessment
+            of and an interview assessment of a child. Regional
+            assessment centers and most child abuse assessment centers
+            are predicated on a medical model. Kids’ FIRST in Eugene is
+            not a medical model program.</p>
+            <p>Record-keeping, document-keeping, and the quality of
+            documentation varies from program to program. However,
+            programs generally follow current guideline recommendations
+            during interviews of children regarding sex abuse. The role
+            of a center<br />
+            is to:</p>
+            <p>• Assess the context and factors attendant to a sex abuse
+            complaint.</p>
+            <p>• Form an opinion or diagnosis about the level of
+            concern.</p>
+            <p>• Make treatment recommendations and refer a treatment
+            resource for the child.</p>
+            <p>• Interact with law enforcement and DHS regarding the
+            conduct of and make recommendations coming out of the
+            assessment.</p>
+            <p>• Provide expert testimony supporting prosecution in
+            criminal and dependency prosecutions.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Many prosecutors and DHS will discover only the
+            assessment report from a child abuse assessment. It is
+            important to subpoena the entire file. Studying intake notes
+            and background information received by the center, as well
+            as having an expert study the interviews and the entire
+            file, is essential for the defense. (Kids’ FIRST in Eugene
+            does not keep records of an interview other than a DVR of
+            the interview itself.) To get the entire file, submit a
+            motion and order for a pretrial subpoena pursuant to ORS
+            136.580 and file an appropriate protective order to allow
+            you to receive the DVR of the child’s interview.</p>
+            <h1
+            id="v._mdt_and_other_guidelines_for_interviewing_and_assessing_child_sex_abuse"><strong>V.
+            MDT and Other Guidelines for Interviewing and Assessing
+            Child Sex Abuse</strong></h1>
+            <blockquote>
+            <p>Since 1998, the CAMI section of the DOJ has published
+            guidelines regarding recommended practices for interviewing
+            children in child sex case cases. The original <em>Oregon
+            Interviewing Guidelines</em> were published in 1998 and
+            amended in 2004. The current <em>Oregon Interview
+            Guidelines</em> were published in October of 2012.</p>
+            <p>The CAMI interview guidelines make recommendations about
+            the manner in which an assessment should be conducted and
+            how children should be questioned regarding concern of sex
+            abuse. Unfortunately, the October 2012 Guidelines eliminate
+            a significant majority of the research that was the basis of
+            the 1998 and 2004 guidelines. Much of that research had to
+            do with how children are suggestible and the impact of
+            complex content, such as custody and parenting time
+            disputes. In fact, the 2004 guidelines had a specific
+            chapter dealing with the impact of children’s reporting on
+            conflict in custody and parenting time cases. With that
+            chapter eliminated, the current guidelines emphasize helping
+            children be comfortable reporting abuse. They ignore
+            guidance regarding how to engage in objective questioning or
+            interviewer-investigator analysis to help understand
+            different explanations for a child’s report.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>The 2012 Guidelines eliminate about 75 percent of the
+            previously contained research and national expert guidance,
+            which makes it harder to impeach state experts for failing
+            to follow much of their own published theory and research
+            regarding good practice. Eliminating nationally recognized
+            research and practice from the guidelines weakens the
+            standards interviewers are required to uphold, and be held
+            accountable to, when interviewing children.</p>
+            <p>The current Guidelines still pay homage to
+            well-recognized national guidelines, which do discuss such
+            things as context and alternative theories for a child’s
+            report. The vast majority of Oregon MDT interviewers will be
+            ignorant both of the specifics of the national guidelines
+            and the concepts they embrace.</p>
+            <p>Published national guidelines include the Guidelines for
+            Psychological Evaluations and Child Protection Matters,
+            published initially by the APA in 1999 and revised in 2013;
+            the American Academy of Child and Adolescent Psychiatry
+            Guidelines for Responding to Children Who Say They Have Been
+            Sexually Abused, published in 1996; the APSAC (American
+            Professional Society on the Abuse of Children) Guidelines
+            regarding the Commercial Sexual Exploitation of Children,
+            published in 2013; the National Children’s Alliance
+            Standards for the Interviewing of Children in Child Sex
+            Abuse Cases, published in 2011; and the National Institute
+            of Child Health Protocols Interviewing Guidelines for
+            Evidence Based Investigation and Interviews of Children,
+            published<br />
+            in 2013.</p>
+            <p>Additionally, there are medical guidelines for assessing
+            the physical conditions of children relevant to child sex
+            abuse. These guidelines reflect knowledge of pediatricians
+            and physicians that debunks early-stage beliefs referenced
+            earlier in this chapter. These include the CAMI-sponsored
+            DOJ Oregon Medical Guidelines, initially published in 1998
+            and revised in 2004; the American Academy of Pediatrics
+            Guidelines on the Evaluation of Children in the Primary Care
+            Setting When Sexual Abuse Is Suspected, Carole Jenny and the
+            Committee on Child Abuse and Neglect, 2013; the AAP
+            standards on Evaluation of Sexual Abuse in Children by Nancy
+            Kellogg and the Committee on Child Abuse and Neglect, 2005;
+            previous AAP standards were published in 1999 and 1991; and
+            Updated Guidelines for the Medical Assessment of Children
+            Who May Have Been Sexually Abused, published in 2015, Adams,
+            Kellogg, et. al., in the Journal of Adolescent
+            Gynecology.</p>
+            <p><strong>Interview Suggestions</strong></p>
+            <p>When encountering a government expert, defense
+            questioning should include:</p>
+            <p>• Where they received the background information that
+            guided their assessment and interaction with the child.</p>
+            <p>• If they self-generated any effort to receive background
+            materials.</p>
+            <p>• If they are open to receiving background information
+            from the suspect or from individuals who are not connected
+            to the alleged abuse or the MDT.</p>
+            <p>• If they have any knowledge about the history of the
+            relationship between the accuser and the accused.</p>
+            <p>• If they made any inquiry into the history of the
+            relationship between the accuser and<br />
+            the accused.</p>
+            <p>• If they know to whom the child first reported.</p>
+            <p>• If they know the history of the relationship between
+            the person reported to and<br />
+            the accused.</p>
+            <p>• If they made any effort to be informed about the
+            history of the relationship between the person reported to
+            and the accused.</p>
+            <p>• Whether they are collecting preliminary data based on a
+            part of the whole picture,<br />
+            data that excludes input from the suspect and others who may
+            not support the allegation of abuse.</p>
+            <p>• If they are familiar with the concept of “secondary
+            gain.” (Secondary gain is when there is a benefit or a
+            motive connected to a report that is not self-evident in the
+            report.)</p>
+            <p>• What effort they made in interviewing the child to
+            analyze the influence of others on the child’s report.</p>
+            <p>• Whether they made recommendations that impact the
+            child’s relationship with the suspect even though they did
+            not have any direct information from the suspect or sources
+            connected to the suspect. (This is different than a
+            <em>Southard</em> or <em>Lupoli</em> issue because you are
+            not asking about a specific conclusion, you are pointing out
+            that your client is being impacted without the expert being
+            informed about or hearing the other side of the story.)</p>
+            <p>• If, as a pediatrician or nurse practitioner,
+            interviewer, detective or caseworker, they operate as a team
+            or as community partners with prosecution, law enforcement,
+            DHS or the local child abuse assessment facility.</p>
+            <p>As a matter of law, <a
+            href="https://www.oregonlaws.org/ors/418.747">ORS
+            418.747</a>, they are part of a county team headed by the
+            district attorney in each county. Pursuant to <a
+            href="https://www.oregonlaws.org/ors/418.783">ORS
+            418.783</a> and <a
+            href="https://www.oregonlaws.org/ors/418.793">418.793</a>,
+            child abuse investigation is subject to the oversight of the
+            attorney general’s office and particularly so in the case of
+            the child abuse assessment center answerable to the attorney
+            general’s office. Generally, experts who are members of the
+            MDT established by statute are ignorant of the legal
+            structure of the MDT. Often, and particularly in the case of
+            child abuse assessment facility experts, they will try to
+            claim that they are independent or based in the medical or
+            behavioral sciences. In Lane County and Deschutes County the
+            district attorney delegates their statutory authority to the
+            regional assessment center. The Oregon Supreme Court clearly
+            recognizes the role of proxy or teammate of the prosecution
+            and law enforcement as vital to the function of a child
+            abuse assessment center, be it medical or behavioral in
+            structure, as any other function. [<a
+            href="https://scholar.google.com/scholar_case?case=1689712124358304376&amp;q=State+ex+rel.+Juv.+Dept.+v.+S.P">https://scholar.google.com/scholar_case?case=1689712124358304376&amp;q=State+ex+rel.+Juv.+Dept.+v.+S.P</a>.,+346+Or+592&amp;hl=en&amp;as_sdt=6,48
+            <em>State ex rel. Juv. Dept. v. S.P.</em>], 346 Or 592, 215
+            P3d 847 (2009).</p>
+            <p>• Whether the expert is familiar with the 2012 edition of
+            the <em>Oregon Interviewing Guidelines</em> published by the
+            DOJ.</p>
+            <p>• Whether the expert is aware that the DOJ or the
+            attorney general’s office is in charge or in an oversight
+            position regarding the quality of child abuse
+            investigation<br />
+            in Oregon.</p>
+            <p>• Whether the interviewer is aware of the recommendation
+            that children not be subjected to duplicate interviews.</p>
+            <p>• If they know how many times the child has been engaged
+            in conversation about the facts involving the allegation.
+            (MDT experts and interviewers like to misconstrue what an
+            interview is. They generally try and restrict its definition
+            to a formal structured conversation that addresses the
+            allegations. A better definition is any conversation in
+            which someone is talking to the child and the allegations
+            are a topic of conversation.)</p>
+            <p>• Whether they made any inquiry or are aware whether law
+            enforcement or DHS has made any inquiry into the motives of
+            individuals who engaged in conversation with the child about
+            the allegations.</p>
+            <p>• Whether the goal of a competent professional interview
+            is to elicit a child’s free recall as opposed to the
+            influenced statements of a child.</p>
+            <p>• What questions they asked the child to determine
+            whether the child’s information had been influenced by
+            someone else.</p>
+            <p>• If they are familiar with the term “contamination” as
+            used as a professional term relevant to a child’s
+            report.</p>
+            <p>• Whether they are familiar with the use of the term
+            “contamination” and its interrelationship with
+            suggestibility per the work of Dr. Stephen Ceci. (Dr. Ceci
+            is to the field of child sex abuse reporting and assessing
+            the accuracy of child’s reports as to what Einstein is to
+            physics. Many contemporary MDT experts are unfamiliar with
+            him.)</p>
+            <p>• Experts often refer to studies in general, which is a
+            tipoff that they do not have research or expert knowledge
+            regarding the studies they refer to. If that happens, make
+            specific inquiry about what specific studies and researchers
+            they are referring.</p>
+            <p>• Whether the expert is familiar with the significant
+            body of research that addresses human memory and its
+            relationship to the perception of and reporting of facts.
+            Most MDT experts lack knowledge in this area, and generally
+            there is a complete lack of knowledge relevant to the impact
+            of the brain’s function on memory. There is a general lack
+            of knowledge about how human memory functions. That means
+            there is a general lack of knowledge about how children’s
+            memory functions. In recent years, law and science have
+            developed a more sophisticated understanding of human memory
+            and its relationship to fact reporting. The Oregon Supreme
+            Court demonstrates a sophisticated understanding of the
+            issue relevant to eyewitness testimony in <a
+            href="https://scholar.google.com/scholar_case?case=13868935655718877167&amp;q=State+v.+Lawson&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lawson</em></a>, 352 Or 724, 291 P3d<br />
+            673 (2012).</p>
+            <p>• If they understand how children’s memory differs from
+            adult memory. (Be prepared to make hay with the fact that if
+            they do not understand how memory works, they probably
+            cannot helpfully address this question.)</p>
+            <p>• If they can name any researcher in the medical or
+            behavioral sciences who focuses on the relationship between
+            the function of the brain and the retention and reporting of
+            accurate information.</p>
+            <p>• If it is a case where the reporting is in any way
+            connected to custody, parenting time, or relationship
+            disputes, ask if they are familiar with any of the research
+            that addresses high-conflict relationships and the impact on
+            children’s reporting.</p>
+            <p>Be prepared for the fact that most experts affiliated
+            with the government have knowledge that comes from attending
+            seminars and in-house trainings that narrow the scope and
+            focus of information they are exposed to.</p>
+            <h1
+            id="vi._the_role_and_scope_and_availability_of_experts"><strong>VI.
+            The Role and Scope and Availability of Experts</strong></h1>
+            <p>When analyzing how to use your own expert, anticipating
+            the state’s use of an expert, and integrating law and
+            research for the scope of what you will be able to present
+            and defend against, here are some essential elements to bear
+            in mind:</p>
+            <h2 id="a._evidence"><strong>A. Evidence</strong></h2>
+            <p>Understand the traditional concept that expert testimony
+            can only come in under <a
+            href="https://www.oregonlaws.org/ors/40.410">OEC 702</a>, <a
+            href="https://www.oregonlaws.org/ors/40.415">703</a>, and <a
+            href="https://www.oregonlaws.org/ors/40.425">705</a>, and
+            whether it falls into one of three categories:</p>
+            <p>• It is scientifically valid.</p>
+            <p>• It is reflective of specialized knowledge on the part
+            of the expert that will be helpful to the trier of fact.</p>
+            <p>• Impeachment of state experts.</p>
+            <p>Essential cases that focus on the concept of scientific
+            validity are <em>Brown</em> in 1984 and <em>O’Key</em> in
+            1995. An essential difference between those two cases is
+            that <em>Brown</em> is predicated on federal standards under
+            <em>Fry</em>, and <em>O’Key</em> is predicated on federal
+            standards under <em>Daubert</em>. <em>Brown</em> and
+            <em>O’Key</em> articulate standards by which proffered
+            expert testimony can meet scientifically valid standards.
+            (Note: See the OCDLA manual, <a
+            href="https://ocdla.force.com/OcdlaProduct?id=01t0a000004OuYgAAK">Scientific
+            Evidence: A Manual for Oregon Defense Attorneys</a>, for
+            more on these cases and the issue generally.)</p>
+            <p>A significant development regarding the use of experts in
+            Oregon is the <em>Lupoli</em> decision of 2010, which bars
+            expert testimony that provides a direct commentary on the
+            credibility of a witness (vouching).</p>
+            <p>A significant case limiting the ability of medical
+            experts, interviewers, or others to comment on their
+            conclusions in a child sex abuse case in the form of
+            diagnosis or degree of concern is the <em>Southard</em>
+            case.</p>
+            <p>As noted earlier in this chapter, the long established
+            rulings of the Oregon Supreme Court that syndrome evidence
+            is inadmissible are often ignored when it comes to MDT and
+            government testimony but invoked when it comes to defense
+            witnesses. The critical cases in Oregon addressing the lack
+            of admissibility of syndrome evidence are <a
+            href="https://scholar.google.com/scholar_case?case=14235864362426214514&amp;q=State+v.+Milbradt,+305+Or+621&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Milbradt</em></a>, 305 Or 621, 756 P2d 620 (1988), and <a
+            href="https://scholar.google.com/scholar_case?case=6931044034072923715&amp;q=State+v.+Middleton,+294+Or+427&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Middleton</em></a>, 294 Or 427, 657, P2d 215 (1983).</p>
+            <p>The contention that child abuse victims or child sex
+            abuse victims can be identified by<br />
+            certain behaviors or that they react to sex abuse in
+            particular ways is called syndrome evidence, which is to say
+            that an individual behaves a certain way because that
+            individual falls into a particular classification. Syndrome
+            evidence may generally be attacked as not being subject to
+            scientific validation under <em>Brown</em> and
+            <em>O’Key</em>. It can also be attacked under
+            <em>Lupoli</em> because it is a way of asserting that an
+            individual’s claim is true based on observable conditions
+            that are based in turn on the expert’s opinion.</p>
+            <p>However, since <em>Lupoli</em>, the Court of Appeals has
+            allowed forms of syndrome evidence to come into evidence.
+            For example, <em>see <a
+            href="https://scholar.google.com/scholar_case?case=4274221626065474893&amp;q=State+v.+Althof,+273+Or+App+342+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Althof</a></em>, 273 Or App 342 (2015), <em>rev.
+            den.</em>, 358 Or 550 (2016) (detective allowed to testify
+            on reasons why victims of sexual abuse might delay
+            reporting); <a
+            href="https://scholar.google.com/scholar_case?case=18354380301966178629&amp;q=State+v.+Swinney,+269+Or+App+548&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Swinney</em></a>, 269 Or App 548, <em>rev. den.</em>, 357
+            Or 743 (2015) (detective allowed to testify that the events
+            described by victim constituted grooming); <a
+            href="https://scholar.google.com/scholar_case?case=6657060949646497118&amp;q=Criswell,+282+Or+App+146+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Criswell</em></a>, 282 Or App 146 (2016) (MDT interviewer
+            allowed to testify on phrases abused children may use when
+            they first disclose abuse to parents, even though the victim
+            used nearly identical wording in disclosing to mother;
+            stating rule as “an expert witness may describe
+            characteristics typical of an abuse victim and then apply
+            that understanding to the case at hand, so long as that
+            testimony does not rely on an assessment of the victim’s
+            credibility”). The better ruling is that such testimony
+            should not be allowed into evidence because it is conclusory
+            and indirect vouching, is syndrome evidence, is not subject
+            to scientific validation, and is often subject to the biases
+            and predisposition of the expert who is describing such
+            behavior or statements.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Defense counsel should make and preserve objections on
+            all of these grounds, make continuing objections, make
+            offers of proof, and consider new approaches. For example,
+            in <em><a
+            href="https://scholar.google.com/scholar_case?case=4882745624831201971&amp;q=State+v.+Thomas,+279+Or+App+98&amp;hl=en&amp;as_sdt=4,38">State
+            v. Thomas</a>,</em> 279 Or App 98, <em>rev. den.,</em> 360
+            Or 423 (2016), the Court of Appeals affirmed the trial
+            court’s exclusion of testimony by a defense expert
+            concerning a particular study where false memories of sex
+            abuse were created in children following a physical
+            examination, on hearsay grounds. At a 104 hearing, police
+            and other child abuse investigators will acknowledge that
+            their training and experience is learned anecdotally through
+            discussion with others, listening to speakers at seminars
+            and from reading various studies, then applied by them in
+            the field. The argument can then be made that testimony
+            about common characteristics or behaviors of abused children
+            simply parrots those hearsay sources.</p>
+            <h2 id="b._experts_for_the_defense"><strong>B. Experts for
+            the Defense</strong></h2>
+            <p>Defense experts in child sex abuse cases generally come
+            in two categories:</p>
+            <p>1. Pediatricians, pathologists, gynecologists, and
+            emergency room doctors.</p>
+            <blockquote>
+            <p>These are experts in the physical symptomatology and
+            conditions of children relevant to concerns of child sex
+            abuse.</p>
+            <p>The need for experts knowledgeable about the physical
+            condition of children significantly lessened a quarter
+            century ago with the elimination of government experts’
+            false beliefs about anogenital conditions wrongly presented
+            as proof of sex abuse of children. Unfortunately, in recent
+            years the number of MDT experts misrepresenting the physical
+            symptomatology connected to the sex abuse of children is on
+            the rise. Conditions that are clearly not attributable to
+            sex abuse are sometimes so attributed. More common is an
+            expert who misuses medical testimony to assert that a
+            condition could be symptomatic of sex abuse and therefore is
+            concerning for sex abuse.</p>
+            <p>There are some instances in which a medical expert may
+            still prove necessary and helpful. Such instances may
+            include situations in which a poorly informed medical
+            provider claims that a condition is symptomatic of child sex
+            abuse when it is not. There may also be instances where a
+            child reports severe intrusive penetrating rape suffered to
+            a painful degree on multiple occasions at a preadolescent
+            age, and medical experts differ on the likelihood of whether
+            or not such victimization will create long-term physical
+            trauma such as ancient healing, scarring, and transections.
+            Most studies relevant to the subject are not helpful as they
+            include all categories of child sex abuse when in the vast
+            majority of cases there is no physical evidence of sex
+            abuse. Most forms of sexual victimization of children are
+            not likely to create physical trauma. Exceptions include
+            acute trauma, STD transfer, and very painful trauma.</p>
+            <p>There are anogenital studies involving early-stage
+            adolescents who claim not to have been otherwise involved in
+            sexual activity where, generally speaking, there was
+            observable variance caused by trauma as a result of the
+            abuse.</p>
+            </blockquote>
+            <p>National experts on the topic of the anatomical condition
+            of children relevant to sex abuse include John McCann, Nancy
+            Kellogg, Shireen Atabaki, Joyce Adams, Carole Jenny,
+            Theodore Hariton, and Jan Paradise.</p>
+            <p>2. Behavioral science experts, such as child
+            psychiatrists, behavioral/developmental pediatricians
+            (psychologist and child psychologists), licensed clinical
+            social workers and professional counselors.</p>
+            <p>These are professionals with an expertise about
+            interviewing and understanding the context relevant to child
+            sex abuse allegations who can be helpful in the defense of
+            child sex abuse cases. Use such experts in two primary
+            categories:</p>
+            <p>a. Exploring the method in which children were asked
+            questions in interviews.</p>
+            <p>Were those methodologies appropriate? Did the methodology
+            create contamination of reports? Experts in this vein can be
+            helpful in underscoring some of the biases of the MDT
+            members involved in the investigation that led to the
+            prosecution.</p>
+            <p>b. The field of human memory.</p>
+            <p>This is a developing field in child sex abuse
+            reporting.</p>
+            <h2 id="c._suggestibility"><strong>C.
+            Suggestibility</strong></h2>
+            <p>The merger between individuals who have an understanding
+            about appropriate methodologies on how to interview children
+            and investigate child sex abuse, and who have<br />
+            an expertise on memory leads to experts who are
+            knowledgeable about the fields of suggestibility as they
+            apply to children’s reporting. Suggestibility is a body of
+            research, as mentioned previously, which goes back nearly 40
+            years. Suggestibility studies the degree to which children
+            can be influenced and how they are influenced in their
+            reporting of sex abuse and other matters.</p>
+            <p>Here are the most common sources of suggestibility:</p>
+            <ul>
+            <li>Parents, caregivers and relatives who are hostile to the
+            adult accused of sex abuse.</li>
+            <li>Former romantic partners who are hostile to the
+            recipient of a child sex abuse complaint, where the child of
+            the former romantic partner is the purported victim.</li>
+            <li>First responders, such as school counselors, DHS
+            workers, and law enforcement officers who may be
+            encountering a child confused about a boundary or a fact
+            subject to interpretation and who is then redirected into a
+            report of sex abuse with inaccurate details from the
+            predispositions, biases, and contaminating nature of the
+            interview.</li>
+            <li>Therapists and counselors. In addition to the problem of
+            therapists and counselors who, based on their own experience
+            or minimal training, suspect abuse when it has not occurred
+            and draw out abuse reporting through inappropriate
+            methodology, there is a more common approach engaged in by
+            therapists. Parents who are poorly motivated or who simply
+            may misunderstand normal childhood behavior and boundaries
+            commonly bring their children to a therapist who will assist
+            a child in reporting sexual abuse.</li>
+            </ul>
+            <blockquote>
+            <p>Therapy is not a competent setting for the elicitation of
+            disclosures of sexual abuse. There are distinct differences
+            between the therapeutic role and the forensic role.
+            Therapists respond to emotions, yet it is not their job to
+            make forensic determinations about the occurrence of facts.
+            Beyond that, even many licensed providers with Master’s
+            degrees in Oregon are extremely poorly trained about
+            appropriate methodology for interacting with children with
+            concerns for sex abuse and all too often use blatantly
+            inappropriate methods. Methods are used that are
+            contaminating and can be emotionally abusive to children or
+            can aid and abet the emotional abuse by others of a child.
+            Unfortunately, the ethics standards for a LCSW, LPC, and
+            LMFT are only six pages long and woefully inadequate.
+            Psychiatrists and psychologists are constrained by having to
+            engage in methods that are connected to the formation of
+            conclusions based on objective data. All this begs the
+            question that many counselors and therapists to whom parents
+            and DHS refer are not licensed or adequately licensed, and
+            they may lack both practical skills and ethical constraints
+            on their interaction with children who may have been
+            sexually abused.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>If a child’s report of sexual abuse is a product of inept
+            therapeutic intervention, the use of a well-qualified mental
+            health expert familiar with appropriate forensic
+            methodology, the appropriate limits of therapy, and the
+            ethical requirements of the relevant profession can be
+            extremely helpful to the defense.</p>
+            <blockquote>
+            <p>Suggestibility is a risk for all human beings and
+            particularly young children. Research has well established
+            that adults, let alone children, subjected to multiple
+            presentations of data will, when that data is repeatedly or
+            intensely presented, come to adopt it as true even when it
+            is not. Significant amounts of the research on
+            suggestibility relevant to child sex abuse reporting are
+            listed in the articles at the end of this chapter.</p>
+            <p>Some nationally and internationally renowned contemporary
+            experts on suggestibility and inappropriate methodology for
+            interacting with children in the investigation of sexual
+            abuse include psychologists Michael Lamb, Steven Lindsay,
+            Deborah Ann Poole, and Tom Lyon. Several of the researchers
+            mentioned previously in this chapter, such as Drs. Faller,
+            Goodman, Ceci and Loftus, remain active.</p>
+            <p>There are substantial challenges to the use of experts by
+            defense lawyers in criminal and dependency child sex abuse
+            defense cases.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>While there are exceptions, particularly in the more
+            rural areas of Oregon, most interviewers at child abuse
+            assessment centers engage in appropriate technical
+            formations of questions with children. This is often not the
+            case with field responders, who will excuse their
+            contaminating impact by claiming it is not actually a
+            forensic interview. A more sophisticated approach
+            understands that each time a child is interviewed about a
+            concern for sex abuse, it has a potential to influence and
+            contaminate the child’s report. Most experts available to
+            the defense will agree with this.</p>
+            <blockquote>
+            <p>Oregon Guidelines provide a reasonably good structure for
+            the type of questions that a child should be asked. Of
+            course, questions should vary in detail and complexity
+            depending on the child’s age and developmental stage.
+            Generally speaking, a competent interviewer should never ask
+            a child below the age of six about a date or timeframe for
+            an event. Concepts of time and event sequencing are beyond
+            the developmental capacity of young children. Sometimes
+            interviewers violate that and contaminate the report of a
+            child.</p>
+            <p>As noted, Oregon’s Guidelines are generally good in terms
+            of their advice regarding how an interviewer should form
+            questions. Dr. Kathleen Coulborn Faller of the University of
+            Michigan Family Assessment Clinic and School of Social Work
+            is a leading research-clinician in the United States on the
+            formation of questioning and the impact of formulated
+            questions on children in child sex abuse cases. Dr. Faller’s
+            work bridges the generations of child sex abuse assessment
+            and is contemporary in function and value. What quality and
+            comprehensive research and experience in the field of child
+            sex abuse assessment reveals is the Oregon practice is less
+            deficient in questions asked and extremely deficient in the
+            scope of investigation.</p>
+            <p>Dr. Faller recommends that guidelines or principles for
+            questioning children about possible sex abuse include:</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>Gather information from the child rather than asking the
+            child to confirm information from a caretaker or other
+            source. (This recommendation is commonly violated by MDT
+            interviewers in Oregon.)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Use as many open-ended questions as possible. (This
+            recommendation is generally followed by MDT interviewers in
+            Oregon.)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Attempt to obtain a narrative account of what happened
+            from the child. (This is followed with mixed results in
+            Oregon. Often the structure of MDT interviews in Oregon
+            seeks to narrow the narrative account to the suspected
+            concern.)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If open-ended questions are not effective, do not give
+            up. Use a more close-ended question. (This recommendation is
+            generally followed by the MDT in Oregon. However, once a
+            leading question or a close-ended question is introduced,
+            MDT interviews are often slow to get back to an open-ended
+            inquiry process.)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If you use a more close-ended question, place less
+            confidence in the information obtained. (Here, law
+            enforcement, DHS, and prosecutors are often deficient
+            because they often do not differentiate in the quality of
+            information received.)</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li>Close-ended questions that elicit a positive response
+            should be followed by a more open-ended one (e.g., Tell me
+            more about that). (This recommendation is frequently
+            violated by MDT interviewers in Oregon as more leading
+            questions or close-ended questions often follow the use of a
+            close-ended question.)</li>
+            <li>Explore alternative explanations for the concern about
+            sexual abuse (e.g., no sexual abuse occurred, child care
+            behavior mistaken for sexual behavior, advanced sexual
+            knowledge from other experiences). (This recommendation is
+            generally grossly violated by MDT practice in Oregon. Now,
+            per <em>Southard</em>, the defense cannot attack diagnoses
+            purporting to be based on a differential process that engage
+            in no differential analysis, so exposing this deficiency has
+            lesser impact.)</li>
+            </ul>
+            <p>As Dr. Faller has noted, “The appropriateness of a
+            question depends a great deal on its context.”</p>
+            <p>Dr. Faller has created a continuum of questions from
+            preferred to not preferred. Preferred questions include:</p>
+            <p>• Open-ended inquiry about a child’s well-being.</p>
+            <p>• Open abuse-related directive questions such as, “Do you
+            know why I’m talking to you?”</p>
+            <p>• Invitational questions like, “Tell me all you remember”
+            or “Tell me what happened.”</p>
+            <p>• Facilitating cueing such as, “Okay, anything else?” or
+            “What happened next?”</p>
+            <p>• Acute invitations such as, “What room were you in?” or
+            “Where was your mom?”</p>
+            <p>Less preferred questions that Dr. Faller identifies as
+            problems include:</p>
+            <p>• Multiple-choice questions, as in presenting a child
+            with multiple opportunities to choose. (In my experience,
+            these types of questions are confusing to children,
+            particularly young children, and provide crapshoot
+            data.)</p>
+            <p>• Forced restricted choice questions are very
+            contaminating. Examples of these kinds of questions are:
+            “Did he do it one time or more than one time?” “Did the
+            abuse happen during the day or night or both?” “When did
+            your mom talk to you about your daddy hurting you?”</p>
+            <p>• Direct questions can be highly leading and
+            contaminating such as a statement the child is asked to
+            confirm like: “Did Ralph touch your peepee?” “Did Ralph hurt
+            your peepee?” “Did he put his finger inside you?”</p>
+            <p>We all know that leading questions carry a danger of
+            narrowing a response to the information presented. A leading
+            question can also suggest the answer. With children, the
+            concerns for contamination about such questions heightens. A
+            grossly contaminating form of a leading question is one in
+            which a tag follows the lead. Dr. Faller provides a couple
+            of good examples of those types of questions: “Isn’t it true
+            that your brother put his penis in your mouth?” (an example
+            of a grossly leading question) or “Your stepfather is the
+            one who hurt you, isn’t he?” (an example of a leading
+            question with a tag).</p>
+            <p>The worst questions, and ones we fortunately rarely see,
+            are coercive. Parents, caregivers, and individuals with a
+            motive to influence a child’s statement may engage in this
+            form of questioning, though it is rare for a MDT
+            investigator to do so. An example of this would be: “If you
+            don’t tell me what I want you to, you won’t be able to see
+            your brother.” A rare MDT example might be: “I know this is
+            taking a long time but if you tell me what I need to know,
+            I’ll stop questioning you.”</p>
+            <p>Remember that in Oregon, and particularly at the larger
+            assessment facilities, errors occur more with the scope and
+            narrowness of the inquiry and not in the use of grossly
+            leading questions. What you may see with some frequency are
+            the following:</p>
+            <p>• Failure to return to open-ended questions after using a
+            leading prompt.</p>
+            <p>• Engaging in grossly leading questions such as, “I heard
+            you told your mommy about what Ronnie did to you,” or “Can
+            you tell me all about what Ronnie did to you?”</p>
+            <p>• The use of multiple-choice questions.</p>
+            <p>• The use of words, time sequence concepts, etc. that are
+            beyond the child’s developmental abilities.</p>
+            <p>• Inappropriate cueing. Following an appropriate question
+            like “Do you know why you’re here today?” with a structuring
+            statement like “I heard somebody did something bad to you,
+            can you tell me about that?” combines appropriate methods
+            and inappropriate methods and undermines the usefulness of
+            the information received.</p>
+            <p>A very limited number of medical experts are available to
+            the defense. Almost all forensic pediatricians are or have
+            been affiliated with child abuse assessment centers and are
+            reluctant or generally outright unwilling to work with the
+            defense.</p>
+            <p>To find a physician outside forensic pediatrics with
+            expertise about trauma to the anal or genital area who can
+            compete with a government forensic pediatrician or nurse
+            practitioner, look to emergency room physicians (both
+            current and former), pediatric gynecologists, and
+            pathologists.</p>
+            <p>There are a few psychologists and child psychologists in
+            the Pacific Northwest with substantial relevant experience
+            who are deeply conversant in the research and literature
+            about proper methods to interview and investigate child sex
+            abuse. These experts can address suggestibility of children
+            and methodologies that contaminate children’s reports. These
+            experts can also address, relevant to age and development,
+            how children receive, store and report experiences and what
+            factors can impact, in a general sense and not a specific
+            sense, on that reporting. This line of questioning will
+            generally survive a <em>Lupoli</em> challenge.</p>
+            <p>Post-<em>Southard</em>, very few cases present an
+            opportunity for a physical condition debate in child sex
+            abuse cases; that does not apply to dependency cases,
+            however.</p>
+            <p>Post-<em>Lupoli</em>, the state’s experts are frequently
+            allowed to comment on things like grooming and delayed
+            reporting and how they generally apply in child sex abuse
+            cases and reporting. Experts for the defense can be used to
+            rebut generalized surface syndrome expertise, help challenge
+            whether those concepts are valid as <a
+            href="https://www.oregonlaws.org/ors/40.410">OEC 702</a>
+            specialized knowledge, clinical observations, or valid as
+            OEC 702 scientifically valid conclusions. Defense experts
+            can help underscore that the state’s experts are operating
+            in a milieu of presumptive bias.</p>
+            <p>Almost all government experts called by the state in
+            criminal and juvenile cases come, not surprisingly, from
+            within the MDT itself. When dealing with experts affiliated
+            with medical child abuse assessment facilities, defense
+            counsel should be aware that they work in a team concept.
+            Pediatricians or nurse practitioners may somewhat creatively
+            construe knowledge and studies in ways beneficial to the
+            team cause. Regarding interviews and generalized concepts
+            about children who are sexually abused, the state all too
+            often presents the Master’s-level LPC or LCSW interviewer as
+            an “expert” about the child’s statements, factors common to
+            sex abuse, investigation and interview methodologies engaged
+            in, and the significance of questions and answers received
+            from a child. The state may try—and unfortunately all too
+            often is allowed by the court—to present testimony of
+            detectives or DHS as experts on: 1) how abused children
+            present, 2) how they commonly represent facts, and 3) how
+            they find a particular response matches up with a category
+            for victims per the experience of the observer. How that
+            gets past prohibitions on syndrome evidence and comments on
+            credibility may strike some as bizarre, but we work in a
+            state where many trial courts appear to bend over backwards
+            to ignore restrictions on the state’s evidence<br />
+            and to protect child victims.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>The selection and use of your own expert:</p>
+            <ol>
+            <li><blockquote>
+            <p>Ascertain whether the medical or behavioral sciences will
+            be the most fruitful source of expertise to assist your
+            case. In some cases, it will be both.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The Oregon Medical Guidelines, although published in 2004
+            by the DOJ, have generally up-to-date information that can
+            be used against misconstruing and misrepresentation by state
+            experts regarding the anogenital condition of a child.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If your expert is a behavioral scientist such as a
+            psychologist, clinical social worker, or professional
+            counselor, they should be familiar with the Oregon and
+            national guidelines standards regarding the interviewing and
+            assessment of children where there is a concern for sex
+            abuse.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>While the rules of evidence do not allow research and
+            treatises during direct examination, if you properly laid
+            the foundation by demonstrating the ignorance of the state’s
+            expert, you can then for the purposes of impeachment
+            introduce evidence through learned treatises about seminal
+            researchers and scientifically accepted conclusions of which
+            the expert was ignorant.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Make sure that all material available to the MDT is
+            available to your expert. While your expert, per
+            <em>Lupoli,</em> cannot comment on conclusions reached by
+            the MDT, they can comment on process and how distorted
+            process can create a distorted product.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Ask your expert whether certain actions and inquiries
+            were necessary to a fair and objective investigation or
+            inquiry into the present matter.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Once your expert has an opportunity to review materials
+            and if your expert is sufficiently sophisticated, make sure
+            you inquire in detail about their observations regarding
+            flaws in process and interviews that occurred during the MDT
+            investigation.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Make sure your expert is familiar with the MDT function
+            in Oregon. If not, supply them with the statutes from <a
+            href="https://www.oregonlaws.org/ors/418.746">ORS
+            418.746</a> to <a
+            href="https://www.oregonlaws.org/ors/418.800">418.800</a>.
+            That way, not only will your expert be knowledgeable, they
+            will impeach the child abuse assessment center’s
+            representations, which are most often misrepresentations
+            about their role and function. For example, in Multnomah
+            County and Washington County, experts affiliated with CARES
+            most often describe themselves as a medical center focused
+            on medical assessment and protection of the safety and
+            welfare of children. That mantra is generally repeated in
+            various different forms throughout Oregon. While it is not
+            untrue, it is highly misleading because it presents a
+            picture that is narrow and self-serving.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If your experience is not sufficient to recognize the
+            issues, consult with your expert before trial to see if
+            secondary gain, suggestibility, and contamination present as
+            legitimate concerns in the interviewing and investigation
+            relevant to the child’s report.</p>
+            </blockquote></li>
+            </ol>
+            <h1 id="vii._list_of_important_works"><strong>VII. List of
+            Important Works</strong></h1>
+            <p>Adams JA et al. (1995) Practice Guidelines: Descriptive
+            terminology in child sexual abuse medical evaluations.
+            American Professional Society on the Abuse of Children;
+            1-8.</p>
+            <p>Adams JA. (2001) Evolution of a classification scale:
+            medical evaluation of suspected child sexual abuse. Child
+            Maltreat; 6:31.</p>
+            <p>Adams JA, Botash AS, Kellogg N (2004) Differences in
+            hymeneal morphology between adolescent girls with and
+            without a history of consensual sexual intercourse. Arch Ped
+            Adolescent Med 158 (3): 280-285.</p>
+            <p>Adams JA, Kellogg ND, Farst KJ, et al. (2016) Updated
+            Guidelines for the Medical Assessment and Care of Children
+            Who May Have Been Sexually Abused. J Pediatric Adolescent
+            Gynecology 29:81.</p>
+            <p>Atabaki S, Paradise JE. (1999) The medical evaluation of
+            the sexually abused child: lessons from a decade of
+            research. Pediatrics; 104:178.</p>
+            <p>Baker A, Andre K (2008) Working with alienated children
+            and their targeted parents: Suggestions for sound practices
+            for mental health professionals Annals of Psychotherapy.
+            Summer 2008 ed.</p>
+            <p>Berenson AB, Herger AH, Hayes JM, Bailey RK, Emans SJ
+            (1992) Appearance of the hymen in prepubertal girls:
+            Pediatrics 89 (3) 387-394.</p>
+            <p>Berliner, L. &amp; Conte, J. (1990). The process of
+            victimization: The victim’s perspective. Child Abuse &amp;
+            Neglect, 14, 29-40.</p>
+            <p>Bourg, Wendy; et al (1999) A child interviewer’s
+            guidebook, Sage Publications.</p>
+            <p>Ceci, S. J., &amp; Bruck, M. (1993). The suggestibility
+            of children’s recollections: An historical review and
+            synthesis. Psychological Bulletin, 113, 403–439.</p>
+            <p>Ceci, S. J., &amp; Bruck, M. (1995). Jeopardy in the
+            courtroom: A scientific analysis of children’s testimony.
+            Washington, DC: American Psychological Association.</p>
+            <p>Ceci, S. J., Bruck, M., &amp; Rosenthal, R. (1995).
+            Children’s allegations of sexual abuse: Forensic</p>
+            <p>and scientific issues: A reply to commentators.
+            Psychology, Public Policy, &amp; Law, 1,</p>
+            <p>494-520.</p>
+            <p>Ceci, S. J., &amp; Leichtman, M. (1992). “I know that you
+            know that I know that you broke the</p>
+            <p>toy”: A brief report of recursive awareness among
+            3-year-olds. In S.J. Ceci, M. Leichtman,</p>
+            <p>&amp; M. Untick (Eds.), Cognitive and social factors in
+            early deception (pp. 1-9).</p>
+            <p>Ceci, S. J., &amp; Friedman, R. D. (2000). The
+            suggestibility of children: Scientific research and legal
+            implications. Cornell Law Review, 86, 34 – 108.</p>
+            <p>Ceci, S. J. &amp; Bruck, M. (2006). Children’s
+            Suggestibility: Characteristics and Mechanisms. Advances in
+            Child Development and Behavior, 34, 247-281.</p>
+            <p>Faller, K. C. (1988). Child sexual abuse: An
+            interdisciplinary manual for diagnosis, case management, and
+            treatment. New York: Columbia.</p>
+            <p>Faller, K. C. (1998) Interviewing for child sex abuse: A
+            forensic guide. Guilford Publications</p>
+            <p>Faller K.C. (2002) Understanding and Assessing Child
+            Sexual Maltreatment. Sage Publications.</p>
+            <p>Faller, K. C. (1998). The Parental Alienation Syndrome,
+            What is it and what data support it? Child Maltreatment, 3,
+            100-115.</p>
+            <p>Faller K.C. (2002) Understanding and Assessing Child
+            Sexual Maltreatment. Sage Publications.</p>
+            <p>Faller, K. C. (2007) Interviewing children about sexual
+            abuse: controversies and best practice. Oxford University
+            Press.</p>
+            <p>Faller K.C. (2007) Coaching children about sexual abuse:
+            A pilot study of professionals’ perceptions. Child Abuse
+            &amp; Neglect 31 (2007) 947–959.</p>
+            <p>Faller, K. C. (2008). Interviewing the prepubertal child
+            for possible sexual abuse. In C. Christian &amp; R. Reece
+            (Eds.), Child Abuse: Medical Diagnosis and Management (3rd
+            ed.). American Academy of Pediatrics.</p>
+            <p>Faller, K. C. (2008). Investigative interviewing of
+            children. In C. Renzetti &amp; J. Adelson (Eds.),
+            Encyclopedia of Interpersonal Violence. Thousand Oaks, CA:
+            Sage Publications.</p>
+            <p>Faller, K. C. (2010). Investigative interviewing of
+            children. In C. Renzetti &amp; J. Adelson (Eds.),
+            Encyclopedia of Interpersonal Violence. Thousand Oaks, CA:
+            Sage.</p>
+            <p>Faller, K. C. (2015). Forty years of forensic
+            interviewing of children suspected of sexual abuse,
+            1974-2014: Historical benchmarks. Social Sciences, 4(1),
+            34-65.</p>
+            <p>Finkelhor, D. (1979) Sexually victimized children. New
+            York: The Free Press.</p>
+            <p>Fontes, Lisa Aronson (2005) Child abuse and culture:
+            working with diverse families. Guilford Press.</p>
+            <p>Fontes, Lisa Aronson (2000) Interviewing immigrant
+            children and families about child maltreatment. Sage
+            Publications.</p>
+            <p>Friedrich WN, Fisher JL, Dittner CA, et al. (2001) Child
+            Sexual Behavior Inventory: normative, psychiatric, and
+            sexual abuse comparisons. Child Maltreat; 6:37.</p>
+            <p>Goodman, Stewart GS (1991) Suggestibility in children’s
+            testimony: Implications for sexual abuse investigations. APA
+            Journal 92-105.</p>
+            <p>Goodman GS et al (1994) Predictors of accurate and
+            inaccurate memories of traumatic events experienced in
+            childhood. Consciousness and Cognition 3 (3), 269-294.</p>
+            <p>Goodman-Brown, T.B., Edelstein, R.S., Goodman, G.S.,
+            Jones, D., &amp; Gordon, D.S. (2003). Why children tell: A
+            model of children’s disclosure of sexual abuse. Child Abuse
+            &amp; Neglect, 27, 525-540.</p>
+            <p>Goodman GS (2006) Children’s Eyewitness Memory: A Modern
+            History and Contemporary Journal of Social Issues Commentary
+            Volume 62, Issue 4 Pages 811–832.</p>
+            <p>Hariton, T Sexual Assault in Prepubertal Girls: “It is
+            normal to be normal” or is it? Evidence of Vaginal
+            Penetration in Prepubertal Girls, Medicine Science and the
+            Law published online September 2012</p>
+            <p>Hewitt Sandra K (1999) Assessing Allegations of Sexual
+            Abuse in Preschool Children, Understanding Small Voices.
+            Sage Publications.</p>
+            <p>Jenny C. et al (2013) The Evaluation of Children in the
+            Primary Care Setting When Sexual Abuse Is Suspected.
+            Pediatrics Journal</p>
+            <p>Jones, D., &amp; McGraw, E. M. (1987). Reliable and
+            fictitious accounts of sexual abuse to children. Journal of
+            Interpersonal Violence, and computer, 2(1), 27–45.</p>
+            <p>Kaplan R, Adams JA, Starling SP Giardino AP (2011) Child
+            Sex Abuse resource for professionals working with children
+            and families. STM Learning Inc.</p>
+            <p>Kelly J, Johnston J, 2001 The Alienated Child and A
+            Reformulation of Parental Alienation Syndrome, Family Ct.
+            Rev. Vol. 39 No. 3, July 249-266.</p>
+            <p>Klemfuss, J. Z. &amp; Ceci, S. J. (2012) Legal and
+            psychological on children’s competence to testify in court.
+            Developmental Review, 32, 268-286.</p>
+            <p>Kelogg N et al. 2005, The Evaluation of Sex Abuse in
+            Children. Pediatrics VOLUME 116 / ISSUE 2.</p>
+            <p>Kempe CH. (1978) Sexual abuse, another hidden pediatric
+            problem: the 1977 C. Anderson Aldrich lecture. Pediatrics
+            62:382.</p>
+            <p>Lawson, L., &amp; Chaffin, M. (1992). False negatives in
+            sexual abuse disclosure interviews. Journal of Interpersonal
+            Violence, 74.</p>
+            <p>Lamb Michael et al (2008) Tell me what happened:
+            structured investigative interviews of child victims and
+            witnesses. Hoboken, NJ: Wiley- Blackwell.</p>
+            <p>Lamb Michael et al. (2007) Child sexual abuse: Disclosure
+            Delay and Denial. Routledge Publications.</p>
+            <p>Lamb Michael et al. (2011) Children’s Testimony, second
+            edition. Wiley Blackwell.</p>
+            <p>Lindsay Stephan J. Don Read Psychology, Public Policy,
+            and Law Copyright 1995 by the American Psychological
+            Association Inc 1995, Vol. 1, No. 4, 846-908 “Memory Work”
+            and recovered memories of childhood sexual abuse: Scientific
+            evidence and public professional and personal issues.</p>
+            <p>Lindsay DS, J Briere, Journal of Interpersonal Violence,
+            1997 - jiv.sagepub.com. The controversy regarding recovered
+            memories of childhood sexual abuse pitfalls, bridges and
+            future directions.</p>
+            <p>Lindsay DS et al (2004) True photographs and false
+            memories. Psychol Sci. 2004 Mar;15(3):149-54.</p>
+            <p>Loftus, E. F. (1993). The reality of repressed memories.
+            American Psychologist, 48, 518–537.</p>
+            <p>Loftus, E. F. (1996). Eyewitness testimony. Cambridge,
+            MA: Harvard University Press. (Original work published
+            1979).</p>
+            <p>Loftus, E. F. (1997, September). Creating false memories.
+            Scientific American, 277, 70–75.</p>
+            <p>Loftus, E. F., &amp; Ketcham, K. (1994). The myth of
+            repressed memory. New York: St. Martin’s Press.</p>
+            <p>London, K., Bruck, M., Ceci, S.J., &amp; Shuman, D.W.
+            (2005). Disclosure of child sexual abuse: What does the
+            research tell us about the ways that children tell?
+            Psychology, Public Policy, and Law, 11(1), 194-226.</p>
+            <p>London, K., Bruck, M., Wright, D., &amp; Ceci, S. (2008).
+            Review of the contemporary literature on how children report
+            sexual abuse to others: Findings, methodological issues, and
+            implications for forensic interviewers. Memory, 16,
+            29-47.</p>
+            <p>London, K. &amp; Ceci, S. J. (Eds.) (2012). Special
+            Issue: Child Witness Research. Developmental Review, Volume
+            32, Issue 3, Pages 161-306.</p>
+            <p>Lyon, T. (2002). Scientific support for expert testimony
+            on child sexual abuse accommodation. In J.R. Conte (Ed.),
+            Critical issues in child sexual abuse, 107-138. Newbury
+            Park, CA: Sage.</p>
+            <p>Lyon, T. (2002). Scientific support for expert testimony
+            on child sexual abuse accommodation. In J.R. Conte (Ed.),
+            Critical issues in child sexual abuse, 107-138. Newbury
+            Park, CA: Sage.</p>
+            <p>Lyon T. Et al (2008) Coaching, truth induction, and young
+            maltreated children’s false allegations and false denials.
+            Child Development.</p>
+            <p>Lyon, T, Ahern, Quas (2011) Young children’s emerging
+            ability to make false statements, Developmental Psychology,
+            47, 61-66.</p>
+            <p>Lyon, T, Ahern, Scurich (2011) Interviewing children
+            versus tossing coins: Accurately assessing the diagnosticity
+            of children’s disclosures of abuse. Journal of Child Sexual
+            Abuse.</p>
+            <p>Mazzoni, G. A. L., Loftus, E. F., &amp; Kirsch, I.
+            (2001). Changing beliefs about implausible autobiographical
+            events: A little plausibility goes a long way. Journal of
+            Experimental Psychology: Applied, 7, 51–59.</p>
+            <p>McCann J, Voris J, Simon M, Wells R (1989) Perianal
+            findings and prepubertal children selected for non-abuse: a
+            descriptive study. Child Abuse and Neglect 13(2):
+            179-193.</p>
+            <p>McCann J, Wells R, Simon M, Voris J (1990) Genital
+            findings and prepubertal girls selected for non-abuse: a
+            descriptive study pediatrics; 86(3): 4 to 8-439.</p>
+            <p>McElvaney, R., Greene, S. &amp; Hogan, D. (2014). To tell
+            or not to tell? Factors influencing young people’s informal
+            disclosures of child sexual abuse. J Interpers Violence Mar;
+            29(5):928-47.</p>
+            <p>Newlin, Chris (2015) United States Office of Juvenile
+            Justice and Delinquency Prevention; Child forensic
+            interviewing: best practices.</p>
+            <p>Oates, R. K., Jones, D. P. H., Denson, A., Sirotnak, A.,
+            Gary, N., &amp; Krugman, R. (2000). Erroneous concerns about
+            child sexual abuse. Child Abuse &amp; Neglect, 24(1),
+            149–157.</p>
+            <p>Olafson, E., &amp; Lederman, C.S. (2006). The state of
+            the debate about children’s disclosure patterns in child
+            sexual abuse cases. Juvenile and Family Court Journal,
+            27-40.</p>
+            <p>Olafson, E., &amp; Lederman, C.S. (2006). The state of
+            the debate about children’s disclosure patterns in child
+            sexual abuse cases. Juvenile and Family Court Journal,
+            27-40.</p>
+            <p>Oates, R. K., Jones, D. P. H., Denson, A., Sirotnak, A.,
+            Gary, N., &amp; Krugman, R. (2000). Erroneous concerns about
+            child sexual abuse. Child Abuse &amp; Neglect, 24(1),
+            149–157.</p>
+            <p>Poole, D., &amp; Lamb, M. (1998). Investigative
+            interviews of children. Washington, DC: American
+            Psychological Association.</p>
+            <p>Poole Debra Ann and D Stephen Lindsay, 2001 Children’s
+            eyewitness reports after exposure to misinformation from
+            parents.</p>
+            <p>Poole, Deborah Ann (2016) Interviewing children the
+            science of conversation in forensic contexts. APA.</p>
+            <p>Poole, Debra Ann; Dickinson, Jason J.; and Brubacher,
+            Sonja P. (2014) “Sources of Unreliable Testimony from
+            Children,” Roger Williams University Law Review: Vol. 19:
+            Iss. 2, Article 4.</p>
+            <p>Principe, G., Kanaya, T., Ceci, S. J., &amp; Singh, M.
+            (2006). Believing is seeing: How rumors can engender false
+            memories in Preschoolers. Psychological Science, 17,
+            243-248.</p>
+            <p>Saywitz, Karen J, Goodman, Lyon (2002) Interviewing
+            children in and out of court. The APSAC handbook on child
+            maltreatment 349-377.</p>
+            <p>Sorensen, T., &amp; Snow, B. (1991). How children tell:
+            The process of disclosure in child sexual</p>
+            <p>abuse. Child Welfare, 70, 3-13.</p>
+            <p>Stahl P, (1999) Alienation and Alignment Of Children.
+            CALIFORNIA PSYCHOLOGIST, March Vol. 32, No. 3, p 23ff.</p>
+            <p>Summit, R. C. (1983). The child sexual abuse
+            accommodation syndrome. Child Abuse and Neglect, 7,
+            177-193.</p>
+            <p>Summit, R. C. (1992). Abuse of the child sexual abuse
+            accommodation syndrome. Journal of Child Sexual Abuse, 1(4),
+            53-163.</p>
+            <p>Staller, K.M., &amp; Nelson-Gardell, D. (2005) “A burden
+            in your heart”: lessons of disclosure from female
+            preadolescent and adolescent survivors of sexual abuse.
+            Child Abuse Negl. Dec;29(12):1415-32.</p>
+            <p>Thoennes, N., &amp; Tjaden, P. (1990). The extent,
+            nature, and validity of sexual abuse allegations in
+            custody/visitation disputes. Child Abuse &amp; Neglect, 14,
+            151–163.</p>
+            <p>Trocme N. and Bala (2005) False allegations of abuse and
+            neglect when parents separate. Child Abuse &amp; Neglect 29
+            1333–1345.</p>
+            <p>United States Office of Juvenile Justice and Delinquency
+            Prevention, Interviewing child witnesses and victims of sex
+            abuse. United States Department of Justice (2006).</p>
+            <p>US Department of Justice, Office of Violence Against
+            Women. September 2004, A national protocol for sexual
+            assault medical forensic evaluations adults/adolescents NCJ
+            206554. Available at www.ncjrs.org/pdffiles1/ovw/206554.pdf
+            (Accessed December 13, 2006).</p>
+            <p>Wallerstein, J. S., &amp; Kelly, 1. B. (1976). The
+            effects of parental divorce: Experiences of the child in
+            later latency. American Journal of Orthopsychiatry, 46(2).
+            256-269.</p>
+            <p>Wallerstein, J. S., &amp;Kelly, K. 8. (1980). Surviving
+            the breakup: How children and parents cope with divorce. New
+            and York: Basic Books.</p>
+            <references />
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup> </sup> <a
+            href="https://scholar.google.com/scholar_case?about=7599600639349121459&amp;q=Frye+v.+United+States,+293+F.+1013+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003"><em>Frye
+            v. United States</em></a>, 293 F. 1013 (D.C. Cir. 1923), <a
+            href="https://scholar.google.com/scholar_case?case=827109112258472814&amp;q=Frye+v.+United+States,+293+F.+1013+&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003"><em>Daubert
+            v. Merrill Dow Pharmaceuticals</em></a>, 509 US 579, 113
+            S.Ct. 2786, 125 L.Ed.2d 469 (1993).<a href="#fnref1"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup> </sup> <a
+            href="https://scholar.google.com/scholar_case?case=16347591282643565388&amp;q=State+v.+Brown,+297+Or+404&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Brown</em></a>, 297 Or 404, 687 P2d 751 (1984), <a
+            href="https://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State+v.+O%E2%80%99Key,+321+Or+285&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. O’Key</em></a>, 321 Or 285, 899 P2d 663 (1995).<a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><sup> </sup> Jones, D., &amp; McGraw, E. M.
+            (1987), “Reliable and Fictitious Accounts of Sexual Abuse to
+            Children,” <em>Journal of Interpersonal Violence</em>, 2(1),
+            27–45.<a href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><sup> </sup> <a
+            href="https://scholar.google.com/scholar_case?case=8362100222328130676&amp;q=Sistrunk+v.+Armenakis,+271+&amp;hl=en&amp;as_sdt=3,38"><em>Sistrunk
+            v. Armenakis</em>,</a> 292 F3d 669 (9th Cir., 2002).<a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn5"><sup> </sup> Wallerstein &amp; Kelly, 1976,
+            1980.<a href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><sup> </sup> <em>Pediatrics</em> 1978; 62 (3):
+            382-389.<a href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7"><sup> </sup> <em>Child Abuse &amp; Neglect</em>
+            Vol 7, pp. 177-193, 1983.<a href="#fnref7"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn8"><sup> </sup> OAR 413-015-0630.<a href="#fnref8"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

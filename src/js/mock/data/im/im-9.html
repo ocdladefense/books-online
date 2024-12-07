@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p>2010 edition</p>
+            <p><strong>Surveillance</strong></p>
+            <p><strong><em>Rick Templeton, revised by Brenda
+            Tam</em></strong></p>
+            <h1 id="introduction"><strong>Introduction</strong></h1>
+            <p>The professional surveillance investigator is continually
+            improving his skills. If anyone tells you they have mastered
+            the art of surveillance, they most likely have not even
+            begun to learn. The purpose of this chapter is to give the
+            professional investigator who may not specialize in
+            surveillance some tools that may act as a guideline to
+            conducting it successfully. There are many types of
+            investigations that require, or benefit from, surveillance.
+            Rather than attempt to address specifics here, I will
+            instead discuss items that are common in all surveillance
+            activities.</p>
+            <h1 id="learn_about_your_subject"><strong>Learn About Your
+            Subject</strong></h1>
+            <p>An important first step in any surveillance is to learn
+            about your subject. Begin by making sure you have received
+            all available information from your client. Your client will
+            not be impressed if you bring them information they already
+            have. Check for any criminal history including misdemeanors
+            and felonies. At times I find that the client will not want
+            to pay for this search but I perform it anyway. It can make
+            all the difference on the outcome of your case or, even more
+            importantly, keep you safe.</p>
+            <p>Conduct a DMV search to determine what vehicles your
+            subject may be using or find other individuals at the same
+            address. This may also provide other possible addresses and
+            identifiers for your subject. Depending on the allotted
+            budget for your case, you should consider running a thorough
+            background search that will show property owned by the
+            subject, along with a list of neighbors and possible
+            relatives. You don’t want to be parked in front of the
+            subject’s brother’s house, who happens to live nearby.</p>
+            <p>There are many free searches on the Internet that may
+            provide useful information. The information may not be as
+            current as the paid searches or provide exactly the
+            information you need. However, you can begin with these and
+            then move to other sources as needed. See also Chapter 5,
+            “Public Records and the Freedom of Information Act,” and
+            Chapter 6, “Computers and Computer Evidence.”</p>
+            <h1 id="basic_equipment"><strong>Basic
+            Equipment</strong></h1>
+            <p>There is very little equipment that is required to
+            conduct a successful surveillance. You will need a good
+            quality video camera and a tripod. Know how to operate your
+            equipment and be able to make adjustments quickly. When
+            filming from a vehicle it is best to have a tripod that
+            takes little room and makes use of suction cups to connect
+            it to the window. I also suggest the use of a cell phone,
+            laptop, binoculars and a</p>
+            <p>vehicle that blends in well in the area you are working.
+            Always keep extra tapes and batteries available. I also use
+            a handheld audio recorder to help take notes during
+            fast-paced activities.</p>
+            <p>Here are features I look for in every video camera:</p>
+            <p>1.<em>Optical Zoom.</em>This is far more important than
+            the digital zoom. You should obtain a camera with at least a
+            20x optical zoom. The optical zoom is a true representation
+            of what you would see if</p>
+            <p>you were closer to your subject. The digital zoom takes
+            what the camera sees and magnifies it. This is fine up to a
+            point but your video will become “pixelated” (blurry).</p>
+            <p>In the event that your subject is of such a distance that
+            you are not able to see them with your camera magnification,
+            you can add a doubler lens. The lenses actually range from
+            1.5x to 6x magnifications. This will still give you good
+            quality, however, the greater the magnification the more
+            light you will need to be able to use it effectively.</p>
+            <p>The use of higher magnification lenses will require the
+            use of a tripod with a micro adjustment. This means you can
+            move your camera an extremely small amount at a time without
+            your video image jumping around.</p>
+            <p>2.<em>Night Shot.</em>I use this feature often,
+            especially during the winter months. It works great for
+            obtaining plate numbers or an address in very low or no
+            light. The night shot features work using infrared (IR)
+            light and is limited to 10–15 feet. You can purchase
+            infrared adapters that will increase the usable length up to
+            100 feet or more. One thing to keep in mind is that if your
+            subject is using night vision equipment they will be able to
+            see exactly what you are doing. Infrared is not visible to
+            the naked eye, but it is very possible that anyone who
+            believes someone may be watching them may be using this
+            technology as well.</p>
+            <p>3.<em>Steady Shot.</em>This feature assists in keeping
+            your picture steady.</p>
+            <p>4.<em>Firewire or USB Connection.</em>With this feature
+            you can send a picture frame directly into a PC and then
+            email it to your client.</p>
+            <p>5.<em>Accessory Shoe.</em>You can get by without it but I
+            sometimes use extended IR lights or other attachments that
+            you can connect directly onto your camcorder and run them
+            from the camcorder battery.</p>
+            <p>6.<em>Video In and Video Out</em>. This is needed if you
+            want to use your camcorder for recording from another camera
+            or sending your video to another source for backup or
+            possible editing. There are times I use the video camera
+            only as a camera and not for recording, while at other times
+            I may only use the record function and not the camera.</p>
+            <h1 id="pre_surveillance_checklist"><strong>Pre-surveillance
+            Checklist</strong></h1>
+            <p>There is no excuse if you cannot get the footage your
+            client is paying you for because your camera batteries went
+            dead, you ran out of tape or you lost the subject because
+            you had to stop for gas. Once you are armed with information
+            about your subject (a good idea of what they look like, what
+            vehicles they may be driving, where they work and places
+            they frequent) you should run through the following
+            checklist before you start the surveillance:</p>
+            <p>•Full tank of gas. I have left a subject’s house and
+            traveled as far as 200 miles before the subject stopped at
+            their destination.</p>
+            <p>•Vehicle windows are clean for good visibility.</p>
+            <p>•Windows have been treated with water repellent outside
+            and fog repellent inside.</p>
+            <p>•Discover the quickest route to shopping, restaurants or
+            any place that your subject may travel to. Often you can
+            determine the most likely route they will take when leaving
+            their residence by knowing what establishments are nearby.
+            Look at what direction their car is facing or check for tire
+            tracks. This may tell you the direction they came from when
+            last arriving home and may assist in determining the most
+            likely route they will use.</p>
+            <p>•Extra video tapes. I have used up to four tapes on a
+            single subject in a day.</p>
+            <p>•Radio batteries are fully charged (two-person
+            surveillance).</p>
+            <p>•Plenty of change for parking meters. Be sure you also
+            carry some small bills. You may not have time to wait for
+            change when following your subject out of a restaurant or
+            store.</p>
+            <p>•Is your laptop computer fully charged? The laptop is an
+            important tool. You should have the ability to access the
+            same records from your vehicle that you access at the
+            office. This has been greatly simplified in recent years
+            with smart phones now providing access to the Internet.</p>
+            <p>•Have plenty of liquids with you and some food.
+            Caffeinated drinks will dehydrate you so drink water.</p>
+            <p>•Make sure your camera batteries are fully charged. You
+            should have at least eight hours of battery time available
+            for your camcorder. You can pick up a DC power inverter to
+            recharge your laptop, cell phone, camcorder, etc. for about
+            $50. For most applications a 300- to 500-watt continuous
+            power inverter will do the job. If possible charge these
+            items while the vehicle is running. It is best to mount your
+            converter as close to the battery as reasonably possible but
+            not above the battery unless you are using a fully sealed
+            dry cell battery.</p>
+            <h1
+            id="familiarization_and_vehicle_tips"><strong>Familiarization
+            and Vehicle Tips</strong></h1>
+            <p>Before you begin the assignment you should also
+            familiarize yourself with the neighborhood. If possible,
+            drive around the area the day before in a different vehicle.
+            At the very least, study maps of streets in the area. Get to
+            know all the exit points from your subject’s residence.
+            Determine a suitable location to conduct your
+            surveillance.</p>
+            <p>When conducting surveillance from your vehicle make sure
+            you choose a vehicle that fits the area. You will quickly
+            get noticed in a beat-up car in an upper-class neighborhood.
+            By now you should know what your subject drives or has
+            available. Don’t get a similar car that they will notice.
+            Everyone notices the same make and model of the car they
+            drive or have owned. If your subject has significant reason
+            to suspect surveillance, you should probably stay away from
+            using a van unless you can conduct a two-person
+            surveillance. With two people working the surveillance you
+            can easily leave one in the van while the other follows if
+            your subject goes mobile.</p>
+            <p>Make sure your vehicle is properly set up. Tinted windows
+            are a must for most applications. Nearly everyone is using
+            them these days so the fact that your windows are tinted
+            will not attract attention. States vary on the amount of
+            tint allowed. Oregon regulations currently require you to
+            have 35 percent light transmission or greater on all windows
+            in passenger vehicles. If you use a van or SUV this law does
+            pertain to windows behind the front seat. If you have your
+            vehicle professionally done plan on spending $225 and up
+            depending on the type of vehicle you are using. I find dark
+            sunscreens for the side windows also work great. They come
+            in different sizes, are very inexpensive and can be easily
+            removed for night driving. An inexpensive curtain rod and
+            some black felt can do wonders. At the very least you can
+            place your change of clothes behind you so you will not be
+            in silhouette.</p>
+            <h1 id="what_if_youre_discovered"><strong><em>What If You’re
+            Discovered?</em></strong></h1>
+            <p>If you happen to get noticed and are approached by
+            someone, a quick assessment of the situation will need to be
+            made. Do you admit to why you are there or do you say
+            nothing at all? What you do not do is misrepresent yourself
+            or be deceitful. (See Chapter 2, “Ethics for Criminal
+            Defense Investigators,” section on Personal and Professional
+            Ethics). If you choose to be silent about your purpose, do
+            it tactfully with the</p>
+            <p>hope that no further attention is called to your
+            presence. Alternatively, you could simply state that you are
+            doing surveillance without identifying your subject. A third
+            scenario could be that you tell them exactly what you are
+            doing there and they supply you with all kinds of useful
+            information. The scenarios are abundant, but the basic rules
+            of thumb are to not misrepresent yourself, be within the
+            bounds of the law (such as no trespassing), and remember
+            that you do not have to say anything about why you are
+            there.</p>
+            <h1 id="proper_dress"><strong><em>Proper
+            Dress</em></strong></h1>
+            <p>Dress appropriately for the day. Always bring a change of
+            clothes and be prepared to go from jeans to something
+            dressier. If you know your subject is going to a rodeo you
+            should dress the part. The key is to blend into the crowd,
+            and the little things can make a difference. Always take
+            extra clothes and footwear with you since you never know
+            when you will need to change to fit the occasion.</p>
+            <h1
+            id="batteries_and_power_requirements"><strong><em>Batteries
+            and Power Requirements</em></strong></h1>
+            <p>The prepared surveillance investigator always plans for
+            extended surveillance. If you are working a mild temperature
+            day and using only a camcorder, you will be using little
+            power. However, if you are running fans, monitors,
+            recorders, cooling or heating devices, your power
+            consumption can be quite high. Make sure the items you are
+            using require the least amount of power possible. I have
+            found that a safe rule to follow is to have sufficient power
+            to operate for one twelve-hour day. I recommend running two
+            separate batteries in your vehicle with an isolator so you
+            never have to worry about running down your starting
+            battery. I always carry 200 amp hours or more in every
+            vehicle and have never had a problem. Your batteries should
+            provide you with years of trouble free service as long as
+            you take care of them. Be sure to always keep a charge of 50
+            percent or greater in them. For cold climates, keeping the
+            battery fully charged will help. If you run a battery down
+            to nothing you greatly reduce the life of that battery. This
+            is especially true if you are not using a deep cycle
+            battery. Standard starting batteries are designed for high
+            output quickly and are not designed with reserve in mind.
+            They are simply not meant to be discharged and recharged on
+            a continuous basis. You may find it difficult or impossible
+            to place your second battery under the hood. Depending on
+            your vehicle, you might consider having it professionally
+            mounted underneath. This will probably cost you between
+            $150–$250 but it gets the battery out of the way. Custom
+            vehicle conversion shops can usually take care of this for
+            you. I have seen surveillance vehicles with two six-volt
+            golf cart batteries wired in parallel. This gives you a lot
+            of reserve power for a small price but is probably overkill
+            for most applications.</p>
+            <p>If you find that there is no place for your second
+            battery and you have no choice but to place the second
+            battery inside your vehicle make sure you do not use lead
+            acid batteries. There are many high quality dry cell or gel
+            cell batteries on the market. You will not find them at most
+            auto supply stores but Batteries Plus will usually have them
+            in stock. These will cost you about twice that of a lead
+            acid battery, but if you are using the battery inside it is
+            the way you want to go. Lead acid batteries vent harmful
+            gasses. I have had many sales people over the years tell me
+            this is not the case and to them I say they can breathe
+            whatever gasses they choose but it’s not for me. Batteries
+            contain a sulfuric acid electrolyte, which is a highly
+            corrosive poison that will produce hydrogen and oxygen
+            gasses when recharged and can explode. You may run them for
+            years and have no trouble but the first time your alternator
+            overcharges your battery you will want to be as far away as
+            possible. There is little danger as long as there is
+            sufficient air movement, like what you would find under the
+            hood of a car. Again there are always exceptions and some
+            automobiles are designed for batteries inside the car. Gel
+            cells are completely maintenance free, safe, and many of
+            them can be mounted on their side or even upside down and
+            they vent no gasses.</p>
+            <p>If you choose not to take the step of adding a second
+            battery, at least get yourself an excellent battery with a
+            good reserve capacity. This is one area where you should not
+            try and save money. Spend the extra few dollars to get the
+            best.</p>
+            <h1 id="the_day_has_arrived_practical_tips"><strong>The Day
+            Has Arrived: Practical Tips</strong></h1>
+            <p>Now that the day for your surveillance has arrived, the
+            timing should have been decided far in advance. However, if
+            you know nothing about your subject’s sleeping or work
+            schedule, it’s a good idea to arrive by 6:00 a.m. on the
+            first day. This is especially true if you are driving a
+            significant distance. Arrive after the subject has left and
+            you might as well have stayed home. You should already know
+            where you plan on setting up, so get there and plan on
+            staying for a while.</p>
+            <p>When arriving in a neighborhood early in the morning you
+            may not see anyone but always assume people are laying in
+            bed just waking up and may hear your vehicle. They probably
+            will not think much of it unless they don’t hear the door
+            open and shut. Just open the door, wait a second and then
+            shut it as you normally would without closing it so hard as
+            to attract attention, but loud enough that anyone listening
+            will hear it.</p>
+            <p>I find the use of window sunscreens extremely valuable.
+            If someone looks at your vehicle and sees the sunscreen in
+            the window, their mind automatically believes there is no
+            one inside.</p>
+            <p>Try and park at least two houses away from your subject’s
+            residence. Whenever possible park where the sun is to your
+            back. Your subject will tend not to look in the direction of
+            the sun, and even if they do, it makes it much less likely
+            that they will notice you. The position you choose should be
+            decided based upon your objectives. If your goal is to film
+            your subject outside their current location, you may want to
+            set up in a different area than if you are only interested
+            in determining their activity level or where they go during
+            the day.</p>
+            <p>Once your surveillance position is determined, commit to
+            it and avoid moving your vehicle unless mobile surveillance
+            is required.</p>
+            <p>Always take video at least once per hour even if no
+            activity is present. This will serve to prove you were at
+            the location if you are ever questioned about it. You should
+            have the address clearly visible at the start of your
+            surveillance or the street signs at the nearest intersection
+            to your subject. You should place items in your notes such
+            as a package being delivered nearby as a way to further
+            substantiate that you were there. Your subject may deny that
+            they are the person in the video. For this reason you will
+            want to have a good positive ID shot of your subject. Zoom
+            in to such a degree that your subject can be clearly
+            identified in the frame.</p>
+            <p>While there are many advantages to using digital video
+            cameras, the investigator should never forget that the
+            footage may be questioned in court. The images can be easily
+            manipulated by anyone with basic computer skills. To combat
+            this problem, you can simultaneously run an 8mm video camera
+            or take a few 35mm photos while filming and you will most
+            likely have no problems. See also Chapter 8, “Forensic
+            Photography.”</p>
+            <p>When conducting your surveillance keep the allotted
+            budget in mind and the best way to make use of it. Your
+            clients will not be your clients for long if you sit on an
+            empty house all day. I like to confirm the subject is home
+            by the middle of the day. There are many ways in which to do
+            this and many of them involve the use of pretext. Remember,
+            if you did your pre-surveillance work, you know their phone
+            number as well as the neighbor’s phone numbers and names,
+            and you have your change of clothes if needed. The use of
+            pretext is common, but also a highly controversial issue. I
+            do not express an opinion either way but feel it needs to be
+            mentioned since it is one of the tools used by many
+            investigators. [Editors’ Note: A pretext as referenced by
+            the original author is a means by which to conceal one’s
+            (the investigator’s) true purpose. Again, we refer you to
+            Chapter 2 on ethics (see <em>Gatti</em>, 330 OR 517 (2000).]
+            Each case is different and laws or ethics may prohibit you
+            from making contact with your subject. If you have questions
+            on this you should consult legal counsel.</p>
+            <p>In time, the surveillance expert will develop skills that
+            are difficult to teach. One example of this is to watch the
+            subject’s pets. If there is a dog in the house, they will
+            often know what time your subject will be returning and you
+            will find them sitting in the window as the arrival time
+            draws near. If that same dog is outside, they will know if
+            someone is moving closer to the front door or back door, and
+            you can get your camera ready before they ever make it
+            outside. This technique works on other animals as well. It
+            takes practice, but I can often tell if someone is near a
+            fish tank by watching the behavior of the fish. I can’t see
+            the occupant in the house but the fish can. Some people
+            laugh about this but I tell you it works. Of course I also
+            believe that it is best not to stare directly at the back of
+            someone’s head. Try it sometime and you may find that many
+            people quickly develop a feeling of being watched even if
+            they can’t see you. This is especially apparent with mobile
+            surveillance.</p>
+            <h1 id="mobile_surveillance"><strong>Mobile
+            Surveillance</strong></h1>
+            <p>When your subject leaves their location, it usually
+            becomes necessary to initiate mobile surveillance. Be
+            careful not to start your vehicle until your subject is
+            already moving away from you. How many days you will be
+            watching the subject will depend on how close you follow. No
+            one wants to lose sight of their subject, especially when
+            you have been waiting for hours or days for them to move,
+            but it is better to lose them than to get burned
+            (discovered). If you should lose sight of them, continue on
+            the path you last saw them and conduct a canvas of that
+            area. You might get lucky and find their car nearby.</p>
+            <p>The investigator new to surveillance almost always thinks
+            they have been burnt. Generally, someone looks three times
+            in your direction before becoming suspicious. If you truly
+            believe your subject is becoming suspicious, break off
+            immediately and do not return for the day. If you continue
+            following someone after they know you are there, not only
+            are you ruining your chance or any other investigator’s
+            chances for surveillance, but you could be charged with
+            stalking or violating investigator ethics rules. There are
+            several things you can do to decrease the chance of being
+            spotted: Keep a hat within reach and wear it part of the
+            time. Hang something from your mirror but nothing that will
+            reflect sunlight. Depending on your vehicle you may have
+            other items you can use to change the appearance, such as
+            covering fog lamps or driving lights to keep someone from
+            recognizing you.</p>
+            <p>I find it helpful to keep a cassette recorder near the
+            driver’s seat since the action often happens so fast it is
+            difficult to accurately recount everything after the fact,
+            and you can’t safely take notes while driving.</p>
+            <h1 id="dos_and_donts"><strong>Dos and Don’ts</strong></h1>
+            <p>Nothing in this section should be considered legal
+            advice.</p>
+            <h2
+            id="trespassing"><strong><em>Trespassing</em></strong></h2>
+            <p>Always know where you are. Don’t make the mistake of
+            thinking you are on public property just because there are
+            no signs stating otherwise. Keep in mind how your actions
+            will look to a court or jury. Even if you have permission to
+            sit on private land, but you used a pretext to obtain this
+            right, your credibility in front of a jury or judge will be
+            questionable. It is better to not get the footage you seek
+            than to lose the case or find yourself in legal trouble over
+            such a mistake.</p>
+            <h2
+            id="custody_and_handling_of_videotape"><strong><em>Custody
+            and Handling of Videotape</em></strong></h2>
+            <p>I recommend always keeping your original footage and be
+            able to clearly and positively identify the tape or
+            evidence. Keep close track of the chain of custody
+            (individuals who have access to the tape or other
+            evidence).</p>
+            <p>Never edit or tamper with the original tape. However, if
+            you are going to trial, prepare an edited version pertinent
+            to your testimony but have the original for comparison.</p>
+            <h2 id="privacy_consideration"><strong><em>Privacy
+            Consideration</em></strong></h2>
+            <p>Do not film your subject inside their home or any place
+            they have a reasonable expectation of privacy. Do not film
+            your subject if they’re in a location that is not viewable
+            to the general public. For example, if you have to climb a
+            tree to see your subject, they are not in public view.</p>
+            <h2 id="reports"><strong><em>Reports</em></strong></h2>
+            <p>Do not abbreviate or use industry jargon in reports. Use
+            proper writing techniques when preparing your reports.</p>
+            <h2 id="safety"><strong><em>Safety</em></strong></h2>
+            <p>Make the safety of yourself and others your first
+            priority. This is especially important to remember when
+            conducting mobile surveillance.</p>
+            <h1 id="conclusion"><strong>Conclusion</strong></h1>
+            <p>Surveillance is not about just sitting in a parked car,
+            waiting and watching. To make the best use of your time, do
+            your research and be prepared. Plan ahead so you have a
+            strategy for where to place yourself and when to do it, that
+            you have all the necessary equipment to best assist you in
+            doing the job, and that you have some assurance that you are
+            in a safe environment.</p>
+    </body>
+</html>

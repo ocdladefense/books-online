@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </header>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 14. Defense Witnesses</strong></p>
+            <p><strong><em>By Bob Moon, Brook Reinhard</em></strong></p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>The purpose of the <em>Trial Notebook</em>is to be able
+            to find legal authority quickly as issues arise during
+            trial. This chapter focuses on defense witnesses. (Note:
+            “defenses” is covered in Chapter 3). I intend to discuss the
+            foundational requirements for various types of affirmative
+            defense evidence, along with the types of evidence deemed
+            admissible by Oregon courts. Most of these citations are to
+            “the bible”: Laird Kirkpatrick’s <em>Oregon Evidence</em>,
+            5th edition, which is a book that sits on every trial
+            judge’s desk (and should be at your counsel table, too).</p>
+            <h1 id="ii._pretrial"><strong>II. Pretrial</strong></h1>
+            <p>You have worked hard on this case. You have received all
+            of the discovery, reviewed it with your client and have
+            hired an investigator. (You chose not to interview the
+            witnesses yourself because you did not want to become a
+            witness at trial.) Your investigator has located both fact
+            and character witnesses. You have had thorough discussions
+            with an expert you think will help you at trial (see the
+            next chapter). You’re feeling good – you know that pretrial
+            preparation is the key to winning cases. You have developed
+            a theme for trial.</p>
+            <h2
+            id="a._defense_obligation_to_provide_discovery"><strong>A.
+            Defense Obligation to Provide Discovery</strong></h2>
+            <p>Now that you have carefully crafted your case, the last
+            thing you want is a judge to rule that your witnesses cannot
+            testify because you failed to provide the state with
+            discovery (see Chapter 2 for further information on
+            discovery).</p>
+            <p><a href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.835</a> states, “Except as otherwise provided in ORS
+            135.855 and 135.873, the defense shall disclose to the
+            district attorney the following material and information
+            within the possession or control of the defense:</p>
+            <p>(1) The names and addresses of persons, including the
+            defendant, whom the defense intends to call as witnesses at
+            the trial, together with relevant written or recorded
+            statements or memoranda of any oral Statements of such
+            persons other than the defendant.</p>
+            <p>(2) Any reports or statements of experts, made in
+            connection with the particular case, including the results
+            of physical or mental examinations and of scientific tests,
+            experiments or comparisons that the defense intends to offer
+            in evidence at the trial.</p>
+            <p>(3) Any books, papers, documents, photographs or tangible
+            objects that the defense intends to offer into evidence at
+            the trial.</p>
+            <p>ORS 135.865 states, “[u]pon being apprised of any breach
+            of the duty imposed by the provisions of ORS 135.805 to
+            135.873 and 135.970, the court may order the violating party
+            to permit inspection of the material, or grant a
+            continuance, or refuse to permit a witness to testify, or
+            refuse to receive into evidence the material not disclosed,
+            or enter such other order as it considers appropriate.”</p>
+            <p>The court has the authority in the face of a discovery
+            violation to preclude that testimony of a witness. However,
+            to do so the court must find that: 1) actual prejudice to
+            the other party and 2) no other sanction, short of
+            exclusion, would remedy that prejudice. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ben&amp;hl=en&amp;as_sdt=2,38&amp;case=12035240523252647488&amp;scilh=0">State
+            v. Ben</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ben&amp;hl=en&amp;as_sdt=2,38&amp;case=12035240523252647488&amp;scilh=0">,
+            310 Or 309 (1990)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=141+Or+App+84+&amp;hl=en&amp;as_sdt=4,227&amp;case=7032097871369245791&amp;scilh=0">State
+            v. Lindquist</a><a
+            href="http://scholar.google.com/scholar_case?q=141+Or+App+84+&amp;hl=en&amp;as_sdt=4,227&amp;case=7032097871369245791&amp;scilh=0">,
+            141 Or App 84 (1996)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=johanesen&amp;hl=en&amp;as_sdt=4,227&amp;case=1835172276815993007&amp;scilh=0">State
+            v. Johanesen</a><a
+            href="http://scholar.google.com/scholar_case?q=johanesen&amp;hl=en&amp;as_sdt=4,227&amp;case=1835172276815993007&amp;scilh=0">,
+            110 Or App 348 (1991)</a>.</p>
+            <p>The courts have been paying more attention lately to
+            issue preservation, so if you find yourself on the wrong end
+            of a discovery violation and the judge is considering
+            sanctions, make sure to ask for less severe sanctions, and
+            for the trial court to make findings. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=Wyatt&amp;hl=en&amp;as_sdt=4,38&amp;case=3736674885283036567&amp;scilh=0">State
+            v. Wyatt</a><a
+            href="http://scholar.google.com/scholar_case?q=Wyatt&amp;hl=en&amp;as_sdt=4,38&amp;case=3736674885283036567&amp;scilh=0">,
+            331 Or 335 (2000)</a> (defendant failed to preserve his
+            argument that exclusion of the defense witness was too
+            severe of a sanction).</em>See also <a
+            href="http://scholar.google.com/scholar_case?q=cunningham&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2005&amp;case=8755222855041760979&amp;scilh=0">State
+            v. Cunningham</a><a
+            href="http://scholar.google.com/scholar_case?q=cunningham&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2005&amp;case=8755222855041760979&amp;scilh=0">,
+            197 Or App 264 (2005)</a>. In <em>Cunningham</em>, the
+            defense witness had notes that were not turned over. The
+            trial court excluded the witness testimony as a remedy, and
+            the defendant failed to seek a less severe remedy, or to ask
+            the judge for a recess so the prosecutor could review the
+            notes. The Court of Appeals therefore upheld the exclusion
+            of the witness testimony.</p>
+            <p>Prosecutors tell me that defense lawyers rarely provide
+            discovery. I am amazed when I hear this. The last thing I
+            want is for a judge to order sanctions because I haven’t
+            complied with the discovery requirement. More importantly,
+            however, providing discovery lets the prosecution know that
+            you have worked hard on the case and they are in trouble.
+            Many of my cases have been dismissed or we get tremendous
+            plea offers after providing the state with discovery.</p>
+            <p>Once you have complied with this discovery requirement,
+            the prosecutor may attempt to contact your witnesses. In <a
+            href="http://scholar.google.com/scholar_case?q=York&amp;hl=en&amp;as_sdt=4,38&amp;case=6155911183524569540&amp;scilh=0">State
+            v. York</a><a
+            href="http://scholar.google.com/scholar_case?q=York&amp;hl=en&amp;as_sdt=4,38&amp;case=6155911183524569540&amp;scilh=0">,
+            291 Or 535 (1981)</a>, the Oregon Supreme Court held that
+            the state may not order or advise a witness not to speak to
+            the defense. It is not improper, however, to advise
+            witnesses of the right to refuse to submit to an interview
+            by the defense. The same rules apply to the defense. Defense
+            witnesses can be advised by you of the right to refuse to
+            submit to a prosecutor or police officer interview. When
+            contacted, your witness might say, “I would rather say what
+            I have to say in court under oath” or “I would be glad to
+            discuss this case with you, but I would like to have the
+            defendant’s lawyer present.” However, you cannot advise your
+            witness not to talk to the prosecutor.</p>
+            <h2 id="b._subpoenas"><strong>B. Subpoenas</strong></h2>
+            <p>You just received a trial date, so it is time to issue
+            subpoenas. You know to issue these subpoenas as soon as
+            possible after receiving the trial date because if a
+            subpoena is not served, and you are asking for a
+            continuance, you know the judge’s first question will be,
+            “Counselor, when did you issue the subpoena?”</p>
+            <p>I tend to subpoena everyone who has the slightest
+            possibility of helping me on the case (excluding my
+            experts). Do not assume that because a witness is on the
+            state’s witness list that the person has been subpoenaed and
+            will show up at trial. If you might want the person there,
+            subpoena them. Never assume a “friendly” witness will appear
+            voluntarily. Tell them that it is simply your practice to
+            subpoena everybody. (I once had a defendant’s mother talk me
+            out of issuing a subpoena by assuring me that she would
+            certainly be there in court and then she didn’t show).</p>
+            <p>1. Out-of-State Subpoenas For out-of-state subpoenas,
+            follow the procedures in <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.623</a> et. seq. and give yourself a lot of lead time.
+            The procedures in both Oregon and the foreign jurisdiction
+            vary from county to county and state to state. In general,
+            however, you will need to file a motion for a certificate
+            for the out-of-state witness with the judge in your Oregon
+            criminal case. Attached to that motion should be your
+            affidavit explaining why the out-of-state witness is
+            material to your defense. If the state opposes your motion
+            or if there is otherwise a hearing, you will ask the Oregon
+            judge to find that the witness is “material” in your case.
+            If the judge agrees, the judge will sign a Certificate of
+            Out-of-State Witness.</p>
+            <p>A proceeding must then be initiated in the county in
+            which the witness resides. This proceeding would be an order
+            to show cause why the witness should not be compelled to
+            attend your Oregon trial. The foreign judge would set a
+            hearing date in the local court and issue a summons
+            commanding the witness to appear there. Again, consult the
+            local court to learn their procedures. At this hearing, you
+            will likely need someone to represent your Oregon client.
+            Sometimes either the district attorney’s office in the
+            out-of-state county or the public defenders’ office there
+            will help. Sometimes you have to hire private counsel for
+            this hearing.</p>
+            <p>At this hearing, the judge typically reconsiders your
+            position that this witness is “material” in the Oregon
+            proceeding. The judge will also make sure that commanding
+            the attendance of this out-of-state witness at your Oregon
+            trial is not unduly burdensome. The judge wants to be
+            assured that the out-of-state witness’s food, lodging, and
+            travel expenses will all be paid. Though you may have
+            out-of-state counsel representing your client, you should
+            try to appear by phone at this hearing to answer any of the
+            judge’s questions. Oftentimes the court expects a check for
+            an amount covering all of these expenses to be in the file
+            at the time of this hearing. If the judge finds that the
+            witness is material to your Oregon trial and that the check
+            you provided will cover the witness’s expenses, the judge
+            will issue an order commanding the appearance of that
+            witness at your Oregon trial. The judge will also serve that
+            witness with a summons commanding the appearance. The judge
+            will also give the check for expenses to the witness.</p>
+            <p>Again, procedures differ from county to county. Sometimes
+            we’ve found that the court has no procedures since no one
+            has ever tried to secure the attendance of the out-of-state
+            witness there. This procedure can take up to two months.</p>
+            <p>See the Appendix for forms on subpoenaing out-of-state
+            witnesses.</p>
+            <p>2. Police Officer Subpoenas If you are subpoenaing a
+            police officer, review ORS 136.595(2), which reads:</p>
+            <p>(2)(a) Every law enforcement agency shall designate an
+            individual or individuals upon whom service of subpoena may
+            be made. At least one of the designated individuals shall be
+            available during normal business hours. In the absence of
+            the designated individuals, service of subpoena pursuant to
+            paragraph (b) of this subsection may be made upon the
+            officer in charge of the law enforcement agency.</p>
+            <p>(b) If a peace officer’s attendance at trial is required
+            as a result of employment as a peace officer, a subpoena may
+            be served on such officer by delivering a copy personally to
+            the officer or to one of the individuals designated by the
+            agency that employs the officer. A subpoena may be served by
+            delivery to one of the individuals designated by the agency
+            that employs the officer only if the subpoena is delivered
+            at least 10 days before the date the officer’s attendance is
+            required, the officer is currently employed as a peace
+            officer by the agency, and the officer is present within the
+            state at the time of service.</p>
+            <p>(c) When a subpoena has been served as provided in
+            paragraph (b) of this subsection, the law enforcement agency
+            shall make a good faith effort to actually notify the
+            officer whose attendance is sought of the date, time and
+            location of the court appearance. If the officer cannot be
+            notified, the law enforcement agency shall contact the court
+            and a continuance may be granted to allow the officer to be
+            personally served.</p>
+            <p>(d) As used in this subsection, “law enforcement agency”
+            means the Oregon State Police, a county sheriff’s department
+            or a municipal police department.</p>
+            <p>I do office service if it can be done outside of 10 days
+            before trial. I read the statute to compel the attendance of
+            a police officer if the officer is personally served at any
+            time. I’ve found, however, that many police officers believe
+            that they do not need to comply with any subpoena unless it
+            is served at their office outside of 10 days before trial.
+            So if you serve an officer personally within the 10 days of
+            trial you may get an uproar. I’ve seen motions to quash
+            filed by the district attorney or even the attorney
+            general’s office and I once had a DA ask the judge for
+            sanctions against me (for serving an officer with a subpoena
+            during a trial) and to have me pay attorney’s fees. (This
+            request was denied and the officer was ordered to
+            testify.)</p>
+            <p>3. Medical Records If you want to subpoena medical
+            records, make sure you comply with the <a
+            href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/combined/index.html">HIPAA
+            Privacy Regulations 45 CFR §</a> 164.512.</p>
+            <p>In general, in a criminal case there are two main ways to
+            obtain medical records that are covered by HIPAA. You can
+            either get a signed consent or subpoena the documents after
+            you have obtained a qualified protective order.</p>
+            <p>a. Consent</p>
+            <p>The easiest and safest way to receive protected health
+            information is pursuant to a signed individual
+            authorization. An individual authorization to disclose
+            medical records must meet the specific HIPAA requirements of
+            45 CFR § 164.508 and any applicable state requirements. The
+            HIPAA regulations specify the terms of the authorization.
+            All authorizations must include:</p>
+            <p>A specific and meaningful description of the information
+            to be used and/or disclosed;</p>
+            <p>The name or other specific identification of the
+            person(s) or entity authorized to make the requested use
+            and/or disclosure;</p>
+            <p>The name or specific identification of the person(s) or
+            entity to whom the use and/or disclosure will be made;</p>
+            <p>A description of each purpose of the requested use or
+            disclosure (“at the request of the individual” is a
+            sufficient description of the purpose);</p>
+            <p>An expiration date, or an event that will trigger
+            expiration of the authorization;</p>
+            <p>A statement of the individual’s right to revoke the
+            authorization in writing, including exceptions to such
+            written revocation, and an explanation of how the individual
+            can exercise his or her revocation rights;</p>
+            <p>A statement that the information to be used and/or
+            disclosed may be subject to redisclosure by the recipient of
+            the information, in which case it is no longer subject to
+            the privacy standards;</p>
+            <p>The individual’s signature and date; and</p>
+            <p>If the signature belongs to an individual’s legal and/or
+            authorized representative, a description of that person’s
+            authority to act on behalf of the individual.</p>
+            <p>b.Subpoena/Qualified Protective Order</p>
+            <p>A covered entity may disclose protected health
+            information in the course of any judicial proceeding in
+            response to a HIPAA compliant subpoena. Under the HIPAA
+            regulations, the covered entity must be given “satisfactory
+            assurances” from the party seeking the information that
+            “reasonable efforts” have been made to secure a qualified
+            protective order.</p>
+            <p>A qualified protective order is an order from a court
+            that prohibits the parties from using or disclosing the
+            protected health information for any purpose other than the
+            litigation or proceeding, and requires the return or
+            destruction of the information (including all copies) at the
+            end of the litigation or proceeding.</p>
+            <p>HIPAA requirements for a subpoena are set forth in <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            55</a>. There must be documentation demonstrating compliance
+            with HIPAA.</p>
+            <p>4. Drug and Alcohol Records Like medical records, the two
+            ways for defense counsel to obtain drug and alcohol records
+            are through consent or through a subpoena that has been
+            issued in compliance with <a
+            href="http://www.law.cornell.edu/cfr/text/42">42 CFR</a> §
+            290dd-2. (A great book to guide you through these
+            regulations is <em>Confidentiality and Communication: A
+            Guide to the Federal Drug and Alcohol Confidentiality Law
+            and HIPAA</em>, Legal Action Center; et al. eds., 2006.)</p>
+            <p>a. Consent</p>
+            <p>Like medical records, the fastest and easiest way to get
+            drug and alcohol records is to have the person whose records
+            you want sign a consent form. Under both 42 CFR § 2 and <a
+            href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/combined/index.html">HIPAA</a>,
+            a proper consent form must be in writing and contain each of
+            the following items:</p>
+            <p>The name or general designation of the program making the
+            disclosure;</p>
+            <p>The name of the individual or organization that will
+            receive the disclosure;</p>
+            <p>The name of the patient who is the subject of the
+            disclosure;</p>
+            <p>The purpose or need for the disclosure;</p>
+            <p>A description of how much and what kind of information
+            will be disclosed;</p>
+            <p>The patient’s right to revoke the consent in writing, and
+            the exceptions to the right to revoke or, if the exceptions
+            are included in the programs notice, a reference to the
+            notice;</p>
+            <p>The program’s ability to condition treatment, payment,
+            enrollment or eligibility of benefits on the patient
+            agreeing to sign the consent, by stating either that the
+            program may not condition these services on the patient
+            signing the consent, or the consequences of the patient
+            refusing to sign the consent;</p>
+            <p>The date, event or condition upon which the consent
+            expires if not previously revoked;</p>
+            <p>The signature of the patient (and/or authorized person);
+            and</p>
+            <p>The date on which the consent is signed.</p>
+            <p>b. Subpoena</p>
+            <p>To issue a valid subpoena under the federal regulations
+            you must file a motion in your Oregon criminal case for an
+            “authorizing order” from the court. In the motion, you must
+            be careful not to disclose the name of the person whose drug
+            and alcohol records are sought. You should ask the court for
+            an <em>in camera</em>hearing to protect the confidentiality
+            of the person whose records are being sought. The drug and
+            alcohol treatment program which holds the records must be
+            served with notice of this hearing and given an opportunity
+            to make an oral or written statement to the court. 42 CFR §§
+            2.64(a),(b) 265(a),(b), 2.66(a). The easiest way to comply
+            with this rule is to serve the motion for the authorizing
+            order on the individual whose records are sought and the
+            drug and alcohol treatment program and give them notice of
+            the hearing. This issue often arises when the state seeks to
+            obtain drug and alcohol records in the course of a
+            termination of parental rights case. A copy of the State’s
+            form motion and order is in the Appendix.</p>
+            </ref>
+            <p>At the hearing, the court must determine there is “good
+            cause” to enable the court to issue an “authorizing order”
+            allowing you to subpoena the drug and alcohol records. A
+            court can find “good cause” only if it determines that the
+            public interest and the need for disclosure outweigh any
+            adverse effect that disclosure will have on the patient, the
+            doctor-patient relationship, and the effectiveness of the
+            program’s services. If the information sought is available
+            elsewhere, the court should not issue the order. 42 CFR §
+            2.64(d). The judge may examine the records <em>in
+            camera</em>before making a decision. 42 CFR § 2.64(c).</p>
+            <p>There are also general limits under 42 CFR Part 2 on the
+            scope of disclosure that a court may authorize, even when
+            “good cause” is present. Disclosure must be limited to the
+            information as essential to fulfill the purpose of the
+            order, and it must be restricted to those persons who need
+            the information for that purpose. The court should also take
+            any other steps that are necessary to protect the patient’s
+            confidentiality, including sealing court records from public
+            scrutiny. 42 CFR § 2.64(e).</p>
+            <p>A court may not authorize disclosure of “confidential
+            communications” by a patient to the program unless the
+            disclosure (a) is necessary to protect against a threat to
+            life or of serious bodily injury, or (b) is necessary to
+            investigate or prosecute an extremely serious crime, or (c)
+            it is in connection with a proceeding in which the patient
+            has already presented evidence concerning confidential
+            communications. In all other situations, not even a court
+            can order disclosure of confidential communications. 42 CFR
+            § 2.63.</p>
+            <p>After the court has considered the above issues and
+            signed an authorizing order, you can then issue your
+            subpoena to the drug and alcohol treatment program or the
+            patient.</p>
+            <p>5. Objections to Defense Subpoenas – Generally If anyone
+            files a motion to quash the subpoena, always remember that
+            in a criminal case your client has the right to compulsory
+            process under the [#amendmentvi Sixth Amendment of the U.S.
+            Constitution] and <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Article
+            1, section 11, of the Oregon Constitution</a>. Also remember
+            that these constitutional rights “trump” statutory
+            obligations. <a
+            href="http://scholar.google.com/scholar_case?q=keenan&amp;hl=en&amp;as_sdt=4,38&amp;case=4248861768743368311&amp;scilh=0">State
+            v. Keenan</a><a
+            href="http://scholar.google.com/scholar_case?q=keenan&amp;hl=en&amp;as_sdt=4,38&amp;case=4248861768743368311&amp;scilh=0">,
+            307 Or 515 (1989)</a>.</p>
+            <p>Now that you have had all of your subpoenas served, you
+            know to have the proofs of service filed with the court. You
+            do this because you know that if you have served a subpoena
+            and the witness doesn’t show up and you ask for a
+            continuance, the first thing the judge is going to ask is,
+            “Counselor, have you served a subpoena?” and you want to be
+            able to answer, “Yes, your Honor, and the proof of service
+            is in the file.”</p>
+            <h2 id="c._jail_witnesses"><strong>C. Jail
+            Witnesses</strong></h2>
+            <p>Clothing. “Incarcerated witnesses and defendants
+            appearing for trial must be dressed in neat, clean civilian
+            clothing, unless otherwise ordered by the court.” <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch03.pdf">UTCR
+            3.020</a>.</p>
+            <p>Shackles. A trial judge has the discretion to order
+            shackling of the defendant only if there is substantial
+            evidence of an immediate and serious risk of dangerous or
+            disruptive behavior or escape. <a
+            href="http://scholar.google.com/scholar_case?q=glick&amp;hl=en&amp;as_sdt=4,38&amp;case=685710406254972356&amp;scilh=0">State
+            v. Glick</a><a
+            href="http://scholar.google.com/scholar_case?q=glick&amp;hl=en&amp;as_sdt=4,38&amp;case=685710406254972356&amp;scilh=0">,
+            73 Or App 79, 697 P2d 1002 (1985)</a>. The judge must make
+            findings to support shackling. It is not sufficient to
+            simply rely on what the jail deputy or the prosecutor says.
+            <em>See <a
+            href="http://scholar.google.com/scholar_case?q=merrell&amp;hl=en&amp;as_sdt=4,38&amp;case=17043552943036504234&amp;scilh=0">State
+            v. Merrell</a><a
+            href="http://scholar.google.com/scholar_case?q=merrell&amp;hl=en&amp;as_sdt=4,38&amp;case=17043552943036504234&amp;scilh=0">,
+            170 Or App 400 (2000)</a>,</em>accord, <a
+            href="http://scholar.google.com/scholar_case?q=bird&amp;hl=en&amp;as_sdt=4,38&amp;case=12796160470620213925&amp;scilh=0">State
+            v. Bird</a><a
+            href="http://scholar.google.com/scholar_case?q=bird&amp;hl=en&amp;as_sdt=4,38&amp;case=12796160470620213925&amp;scilh=0">,
+            59 Or App 74, 77 (1982)</a>.</p>
+            <p>''See also <a
+            href="http://scholar.google.com/scholar_case?q=millican&amp;hl=en&amp;as_sdt=4,38&amp;case=16499477337284694401&amp;scilh=0">State
+            ex rel Juvenile Dept. of Multnomah County v. Millican</a><a
+            href="http://scholar.google.com/scholar_case?q=millican&amp;hl=en&amp;as_sdt=4,38&amp;case=16499477337284694401&amp;scilh=0">,
+            138 Or App 142, 906 P2d 857 (1995)</a>. Same considerations
+            apply to shackling of a juvenile in court trial. The Court
+            of Appeals concluded that because the trial court received
+            no evidence that child posed an immediate and serious risk
+            of dangerous or disruptive behavior and made no findings to
+            that effect, the denial of child’s motion to remove the leg
+            chains was error. The court found the error to be harmless,
+            however.</p>
+            <p><em>See also <a
+            href="http://scholar.google.com/scholar_case?q=bates&amp;hl=en&amp;as_sdt=4,227&amp;case=13913294372239479147&amp;scilh=0">State
+            v. Bates</a><a
+            href="http://scholar.google.com/scholar_case?q=bates&amp;hl=en&amp;as_sdt=4,227&amp;case=13913294372239479147&amp;scilh=0">,
+            203 Or App 245 (2005)</a>. Although the court cites with
+            approval the principles noted in</em>State ex rel Juvenile
+            Department of Multnomah County v. Millican<em>and</em>State
+            v. Glick, supra<em>, the court held that if there was any
+            error in requiring a defendant to wear a non-visible “stun
+            belt,” any such error was harmless under the facts of this
+            particular case.</em>Bates'' provides the most recent
+            thorough discussion of the prejudice involved in requiring
+            defendants to be shackled during trial.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>Make sure the judge conducts an inquiry outside the
+            jury’s presence before your client is seen by the jury in
+            restraints. The record must show a substantial justification
+            for the restraint; if not, it is a basis for reversal on
+            appeal.</p>
+            <p>If your client is seen in shackles by the jury and there
+            is no justification for the restraint, move for a
+            mistrial.</p>
+            <p>This analysis also applies to other jail witnesses,
+            although there are no Oregon appellate cases directly on
+            point.</p>
+            <h2 id="d._preparing_defense_witnesses"><strong>D. Preparing
+            Defense Witnesses</strong></h2>
+            <p>You are now within a few days of trial, and you have set
+            time aside to prepare your witnesses. Many of the witnesses
+            have never testified and are nervous. Witness preparation is
+            very important. You will talk to them about what to wear
+            (comfortable clothes “dressed up” enough to be respectful
+            for the jury and not out of character for the what the
+            person is – accountants should wear suits, not blue jeans,
+            and factory workers should wear clean comfortable clothes,
+            not a suit). They will want to know what they will be
+            testifying about and what to expect on
+            cross-examination.</p>
+            <p>I find this to be one of the most important functions of
+            a criminal defense lawyer. I know how precious time can be
+            before trial, but I don’t make the mistake of overlooking or
+            not spending enough time on this critical pretrial function.
+            I start off with witnesses by explaining the “rules of
+            testifying.” After going over the rules, I give them a form
+            to take home with them. The form reads:</p>
+            <p>==</p>
+            <center>
+            <p>THINGS TO REMEMBER WHEN TESTIFYING</p>
+            </center>
+            <p>==</p>
+            <p>1. <strong>LISTEN CAREFULLY TO THE QUESTION.</strong> Be
+            sure you understand the question completely before you give
+            an answer. Make sure you take enough time to be sure that
+            you understand the question before answering. If you do not
+            understand the question, ask the lawyer to repeat it.</p>
+            <p>2. <strong>MAKE SURE THE LAWYER HAS FINISHED ASKING THE
+            QUESTION BEFORE YOU ANSWER.</strong> You may be able to
+            anticipate the lawyer’s question and you may be anxious to
+            give the answer. When this happens, two people are talking
+            at the same time. It is very difficult for a court reporter
+            to take down what people are saying when two people are
+            talking at the same time. For that reason, it is a good
+            practice to take a breath after the lawyer asks a question
+            before you answer.</p>
+            <p>3. <strong>TELL THE TRUTH.</strong> When testifying,
+            honesty is the only policy. Not only is it a crime to lie
+            when testifying, it is often very obvious to the judge or
+            jury when a person is lying. If you are caught in a lie it
+            is likely that no one will believe anything you said. If you
+            are asked under oath whether you talked to me about your
+            testimony, <em>tell the truth</em>by saying that you talked
+            to me about your testimony and I told you that you had to
+            tell the truth.</p>
+            <p>4. <strong>DON’T GUESS.</strong> Remember that “I don’t
+            know” is an answer. If you don’t know the answer to
+            something, say you don’t know.</p>
+            <p>5. <strong>DON’T VOLUNTEER INFORMATION.</strong> Fully
+            answer the question that was asked of you but then
+            <em>stop</em><strong>.</strong> Don’t volunteer information
+            that was not part of the lawyer’s question.</p>
+            <p>6. <strong>WHEN YOU’RE BEING CROSS-EXAMINED, DON’T ARGUE
+            WITH THE PROSECUTOR.</strong> Lawyers and witnesses should
+            be courteous with each other in court. If the prosecutor
+            becomes angry or makes you think that he/she doesn’t believe
+            your testimony, remember to listen to the question, take a
+            deep breath and be courteous.</p>
+            <p>7. <strong>NEVER GET ANGRY OR LOSE YOUR TEMPER.</strong>
+            If the DA is trying to prove that you lose your temper
+            easily there is no better way to prove it than to have your
+            lose your temper on the stand. In any event, judges and
+            juries have a hard time believing someone who has lost their
+            temper.</p>
+            <p>8. <strong>TALK LOUD ENOUGH.</strong> The reason you are
+            testifying is because you have important information in this
+            case. Make sure the person in the back of the courtroom can
+            hear you. Try to look at either the judge or the jury when
+            you are testifying. They are trying to judge your
+            credibility and you are telling the truth, so look them in
+            the eye when you discuss the important facts you know about
+            this case.</p>
+            <p>9. <strong>NEVER SAY “NEVER” OR “ALWAYS.”</strong> These
+            are common exaggerations that all of us use that are usually
+            not correct.</p>
+            <p>10. <strong>ASK TO REVIEW RECORDS, IF NECESSARY.</strong>
+            If the other attorney is talking to you about a written
+            record or is reading from a written record, ask to look at
+            it to refresh your memory.</p>
+            <p>If you follow these rules, you will do fine when
+            testifying.</p>
+            <p>-------------------------------------------------------------------------------------------------</p>
+            <p>When I’m done explaining the rules to the witness, I
+            actually practice their testimony with them. I don’t simply
+            go over the areas I expect the witness to testify to. I have
+            the witness raise their right hand in my office, swear to
+            tell the truth, and I then go over their testimony question
+            by question.</p>
+            <p>I have found this to be a very important process.
+            Sometimes I learn new things about the case that I didn’t
+            know before. I try to help the witness become more effective
+            telling their story to the jury. I believe in the old adage
+            that says, “It is not what you say, but the way that you say
+            it.” If your client shot someone in self-defense and they
+            are explaining to a jury how terrified they were at the
+            moment they pulled the trigger, they better not deliver this
+            testimony deadpan.</p>
+            <p>Never tell a witness what to say. You can, however,
+            improve on their delivery of the truth to the jury.</p>
+            <p>Finally, anticipate areas of cross-examination, then get
+            stern, pretend to be the prosecutor, and ask the witness
+            good cross-examination questions and see how they handle
+            themselves.</p>
+            <h1 id="iii._trial_issues"><strong>III. Trial
+            Issues</strong></h1>
+            <p>It is now the morning of trial. You are nervous but ready
+            to go. Then, you find out one or more of the witnesses you
+            subpoenaed has not shown up for trial.</p>
+            <h2
+            id="a._defense_witness_not_showing_up_for_trial"><strong>A.
+            Defense Witness Not Showing Up for Trial</strong></h2>
+            <p>You will have to make a tactical decision. Do you want to
+            proceed to trial without the witness? If not, ask for a
+            postponement under ORS 136.070. The absence of a material
+            witness is normally basis for the postponement of the trial.
+            A record must be made showing that the witness could be
+            produced with a postponement and that the witness would
+            testify to a fact material to the defense. <a
+            href="http://scholar.google.com/scholar_case?q=otten&amp;hl=en&amp;as_sdt=4,38&amp;case=10191963438122714961&amp;scilh=0">State
+            v. Otten,</a><a
+            href="http://scholar.google.com/scholar_case?q=otten&amp;hl=en&amp;as_sdt=4,38&amp;case=10191963438122714961&amp;scilh=0">234
+            Or 219 (1963)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=niswender&amp;hl=en&amp;as_sdt=4,38&amp;case=4874988341480474949&amp;scilh=0">State
+            v. Niswender,</a><a
+            href="http://scholar.google.com/scholar_case?q=niswender&amp;hl=en&amp;as_sdt=4,38&amp;case=4874988341480474949&amp;scilh=0">79</a><a
+            href="http://scholar.google.com/scholar_case?q=niswender&amp;hl=en&amp;as_sdt=4,38&amp;case=4874988341480474949&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=niswender&amp;hl=en&amp;as_sdt=4,38&amp;case=4874988341480474949&amp;scilh=0">Or
+            App 539 (1986)</a>. Remind the judge of the right to
+            compulsory process under Article I, section 11, of the <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution</a> and the [#amendmentvi Sixth Amendment of
+            the U.S. Constitution]. Again, expect the judge to ask, “Is
+            the witness under subpoena?” and hopefully you will answer,
+            “The proof of service is in the file.”</p>
+            <p>If you have a hostile witness (you subpoena the person
+            who really committed the murder) and they don’t show up at
+            trial, ask the judge to take judicial notice of the proof of
+            service under <a
+            href="http://www.oregonlaws.org/ors/40.060">OEC 201</a>. You
+            can then argue to the jury that the witness had a motive for
+            ignoring this subpoena. Also remember that some prior
+            statements may be admissible if the witness is unavailable.
+            <em>See</em> <a
+            href="http://www.oregonlaws.org/ors/40.465">OEC 804</a>.</p>
+            <h2 id="b._defense_witnesses"><strong>B. Defense
+            Witnesses</strong></h2>
+            <p>The state has put on their case. You have moved for
+            judgment of acquittal and the motion has been denied. You
+            have carefully considered whether the state’s case is so
+            weak at this point that you are better off not calling any
+            defense witnesses. You were mindful of the warnings of many
+            trial judges who’ve seen defense lawyers, by offering
+            defense evidence, “snap defeat out of the jaws of victory.”
+            After carefully thinking it all through, you have decided to
+            call defense witnesses.</p>
+            <p>1. Foundational requirements or limitations a.
+            Corroboration or fact witnesses</p>
+            <p>“I saw defendant at the bar and he did not exhibit the
+            signs of intoxication.”</p>
+            <p>A corroboration or fact witness need only offer relevant
+            evidence under OEC 401. Under that rule, relevant evidence
+            means “evidence having any tendency to make existence of any
+            fact that is of consequence to the determination of the
+            action more probable or less probable than it would be
+            without the evidence.”</p>
+            <p>b. Character Witnesses</p>
+            <p>i. Truthfulness of Defense Witnesses</p>
+            <p>“I am aware of (the witness’) reputation in the community
+            for truthfulness. He has a reputation for being truthful. In
+            my opinion, he is truthful.”</p>
+            <p><a href="http://www.oregonlaws.org/ors/40.350">OEC
+            608(1)</a> reads:</p>
+            <p>The credibility of a witness may be attacked or supported
+            by evidence in the form of opinion or reputation, but:</p>
+            <p>1. The evidence may refer only to character for
+            truthfulness or untruthfulness; and</p>
+            <p>2. Evidence of truthful character is admissible only
+            after the character of the witness for truthfulness has been
+            attacked by opinion or reputation evidence or otherwise.</p>
+            <p>A character witness, whether testifying in the form of
+            reputation or opinion, will not be allowed to testify until
+            a foundation has been laid showing that the witness has
+            sufficient acquaintance with the reputation of the person in
+            the relevant community or sufficient personal contact with
+            the individual to have formed a personal opinion. The
+            contact must have been sufficiently recent so that there
+            will be a current basis for the testimony. <a
+            href="http://scholar.google.com/scholar_case?q=caffee&amp;hl=en&amp;as_sdt=4,38&amp;case=10102298705128331245&amp;scilh=0">State
+            v Caffee</a><a
+            href="http://scholar.google.com/scholar_case?q=caffee&amp;hl=en&amp;as_sdt=4,38&amp;case=10102298705128331245&amp;scilh=0">,
+            116 Or App 23, 27 (1992)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=maxwell&amp;hl=en&amp;as_sdt=4,38&amp;case=9146398680417398325&amp;scilh=0">State
+            v Maxwell</a><a
+            href="http://scholar.google.com/scholar_case?q=maxwell&amp;hl=en&amp;as_sdt=4,38&amp;case=9146398680417398325&amp;scilh=0">,
+            172 Or App 142, 150-56 (2001)</a>.</p>
+            <p>ii. Character Trait of Defendant</p>
+            <p>“Defendant has the character trait of being sexually
+            appropriate among young girls.”<em></em></p>
+            <p><a href="http://www.oregonlaws.org/ors/40.170">OEC
+            404(2)(a)</a> states: “Evidence of a person’s character is
+            not admissible for the purpose of proving that the person
+            acted in conformity therewith on a particular occasion,
+            except:</p>
+            <p>[Character of accused.] Evidence of a pertinent trait of
+            character offered by an accused, or by the prosecution to
+            rebut the same...”</p>
+            <p>Under Rule 404(2)(a), every criminal defendant may offer
+            evidence of a pertinent trait of character as a defense to
+            the charge. What constitutes a pertinent trait depends upon
+            the crime charged. A reputation for honesty would be
+            irrelevant to the crime of violence, and a reputation for
+            nonviolence would be irrelevant to the crime of larceny.</p>
+            <p>This evidence must be in the form of reputation or
+            opinion.</p>
+            <p>Examples of character trait evidence:</p>
+            <p>“Law-abiding,” <a
+            href="http://scholar.google.com/scholar_case?q=us+v+hewitt&amp;hl=en&amp;as_sdt=2,38&amp;case=2753185595322842335&amp;scilh=0">United
+            States v. Hewitt</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+hewitt&amp;hl=en&amp;as_sdt=2,38&amp;case=2753185595322842335&amp;scilh=0">,
+            634 F2d 277 (5th Cir. 1981)</a>. But note, in a narcotics
+            prosecution, evidence of a defendant’s reputation for “truth
+            and veracity” was held to be properly excluded as not a
+            pertinent trait. <a
+            href="http://scholar.google.com/scholar_case?q=united+states+v+jackson&amp;hl=en&amp;as_sdt=2,38&amp;case=8027750870592168118&amp;scilh=0">United
+            States v. Jackson</a><a
+            href="http://scholar.google.com/scholar_case?q=united+states+v+jackson&amp;hl=en&amp;as_sdt=2,38&amp;case=8027750870592168118&amp;scilh=0">,
+            588 F2d 1046 (5th Cir. 1979)</a>.</p>
+            <p>“Sexual propriety” in sex abuse cases, <a
+            href="http://scholar.google.com/scholar_case?q=enakiev&amp;hl=en&amp;as_sdt=4,38&amp;case=424881432093166491&amp;scilh=0">State
+            v. Enakiev</a><a
+            href="http://scholar.google.com/scholar_case?q=enakiev&amp;hl=en&amp;as_sdt=4,38&amp;case=424881432093166491&amp;scilh=0">,
+            175 Or App 589 (2001)</a>.</p>
+            <p>“Truthfulness and honesty,” <a
+            href="http://scholar.google.com/scholar_case?q=united+states+v+lechoco&amp;hl=en&amp;as_sdt=2,38&amp;case=4998433553805200710&amp;scilh=0">United
+            States v. Lechoco</a><a
+            href="http://scholar.google.com/scholar_case?q=united+states+v+lechoco&amp;hl=en&amp;as_sdt=2,38&amp;case=4998433553805200710&amp;scilh=0">,
+            542 F2d 84 (D.C. Cir. 1976).</a></p>
+            <p>Defendants who chose to offer evidence of a pertinent
+            trait of their character pursuant to this rule take a
+            certain element of risk. By doing so, they open the door to
+            rebuttal character evidence that the prosecutor would not
+            otherwise be able to offer.</p>
+            <p>If criminal defendants offer what is in essence character
+            evidence by their own testimony, the state is entitled to
+            rebut any false characterization.</p>
+            <p>Examples of a defendant “opening the door”:</p>
+            <p>Defendant portraying himself as a “good father” in a
+            sodomy case “opened the door” to purchasing marijuana at the
+            park with his daughter present. <a
+            href="http://scholar.google.com/scholar_case?q=guritz&amp;hl=en&amp;as_sdt=4,38&amp;case=1606577141443254943&amp;scilh=0">State
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=guritz&amp;hl=en&amp;as_sdt=4,38&amp;case=1606577141443254943&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=guritz&amp;hl=en&amp;as_sdt=4,38&amp;case=1606577141443254943&amp;scilh=0">Guritz</a><a
+            href="http://scholar.google.com/scholar_case?q=guritz&amp;hl=en&amp;as_sdt=4,38&amp;case=1606577141443254943&amp;scilh=0">,
+            134 Or App 262, 266 (1995)</a>.</p>
+            <p>Defendant’s testimony that he had “changed a great deal”
+            and how he now despised thieves and drug users “opened the
+            door” for a more recent conviction for resisting arrest and
+            fourth-degree assault. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+peoples&amp;hl=en&amp;as_sdt=4,38&amp;case=6245619397181463326&amp;scilh=0">State
+            v. Peoples</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+peoples&amp;hl=en&amp;as_sdt=4,38&amp;case=6245619397181463326&amp;scilh=0">,
+            146 Or App 565, 568–70 (1997)</a>.</p>
+            <p>iii. Character of Victim</p>
+            <p><a href="http://www.oregonlaws.org/ors/40.170">OEC
+            404(2)(a)</a> states: “Evidence of a person’s character is
+            not admissible for the purpose of proving that the person
+            acted in conformity therewith on a particular occasion,
+            except:</p>
+            <p>(b) [Character of victim.] Evidence of a pertinent trait
+            of character of the victim offered by an accused, or by the
+            prosecution to rebut the same…”</p>
+            <p>Any evidence of the victim’s character must be in the
+            form of opinion or reputation. <a
+            href="http://scholar.google.com/scholar_case?q=whitney-biggs&amp;hl=en&amp;as_sdt=4,38&amp;case=13379625241109611692&amp;scilh=0">State
+            v. Whitney-Biggs</a><a
+            href="http://scholar.google.com/scholar_case?q=whitney-biggs&amp;hl=en&amp;as_sdt=4,38&amp;case=13379625241109611692&amp;scilh=0">,
+            147 Or App 509, 527 (1997)</a> (evidence of assault of
+            character of victim is admissible on issue of
+            self-defense).</p>
+            <p>This is not a well-developed area of law – the defense
+            was unable to get in evidence of a victim’s reckless,
+            erratic or dangerous behavior in <a
+            href="http://scholar.google.com/scholar_case?q=lotches&amp;hl=en&amp;as_sdt=4,38&amp;case=4515700401942467466&amp;scilh=0">State
+            v. Lotches</a><a
+            href="http://scholar.google.com/scholar_case?q=lotches&amp;hl=en&amp;as_sdt=4,38&amp;case=4515700401942467466&amp;scilh=0">,
+            331 Or 455 (2000)</a>, and the fact that the witness had
+            never seen the victim become physically violent was not
+            admitted in <a
+            href="http://scholar.google.com/scholar_case?q=state+v+hicks+Ariz&amp;hl=en&amp;as_sdt=2,38&amp;case=3557922862444994295&amp;scilh=0">State
+            v. Hicks</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+hicks+Ariz&amp;hl=en&amp;as_sdt=2,38&amp;case=3557922862444994295&amp;scilh=0">,
+            133 Ariz 64 (1982)</a>, and the defense could not offer
+            evidence of a person’s “reputation” for giving property as
+            collateral for a debt and claiming it was stolen in <a
+            href="http://scholar.google.com/scholar_case?q=state+v+marshall&amp;hl=en&amp;as_sdt=4,38&amp;case=1921580370191220656&amp;scilh=0">State
+            v. Marshall</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+marshall&amp;hl=en&amp;as_sdt=4,38&amp;case=1921580370191220656&amp;scilh=0">,
+            312 Or 367 (1991)</a>. In each of these cases, the courts
+            found that the “character trait” evidence of the victim
+            really amounted to a defense effort to offer prohibited
+            specific act evidence about the victim. In <em>State v.
+            Ryel</em>, the defendant tried to introduce evidence of the
+            pertinent character trait of the victim and his associates
+            for violence, but the court never directly addressed the
+            issue because defendant framed his offer of proof as
+            evidence admissible under 404 generally instead of
+            specifically 404(2)(a).<strong></strong><a
+            href="http://scholar.google.com/scholar_case?q=ryel&amp;hl=en&amp;as_sdt=4,38&amp;case=15698826203087507560&amp;scilh=0">Ryel</a><a
+            href="http://scholar.google.com/scholar_case?q=ryel&amp;hl=en&amp;as_sdt=4,38&amp;case=15698826203087507560&amp;scilh=0">,
+            182 Or App 423 (2002) (Armstrong, J,</a><a
+            href="http://scholar.google.com/scholar_case?q=ryel&amp;hl=en&amp;as_sdt=4,38&amp;case=15698826203087507560&amp;scilh=0">dissenting</a><a
+            href="http://scholar.google.com/scholar_case?q=ryel&amp;hl=en&amp;as_sdt=4,38&amp;case=15698826203087507560&amp;scilh=0">)</a><strong>.</strong></p>
+            <p>iv. Bad Act Evidence</p>
+            <p>OEC 404(3) prohibits the use of evidence of other crimes,
+            wrongs or acts to prove character in order to show that a
+            person acted in conformity with that character. Rule 404(3)
+            does allow, however, the use of such evidence for other
+            purposes, such as to prove motive, opportunity, intent,
+            preparation, plan, knowledge, identity, or absence of
+            mistake or accident.</p>
+            <p>I’m sure that defense bar is painfully aware of this rule
+            as prosecutors try their best to offer “bad act” evidence
+            concerning defendants. However, Rule 404(3) evidence can
+            also be offered by defendant. Also, keep in mind that the
+            bad act is not even required to be criminal in order to be
+            admissible. <a
+            href="http://scholar.google.com/scholar_case?q=hardman&amp;hl=en&amp;as_sdt=4,38&amp;case=4326708741396664718&amp;scilh=0">State
+            v. Hardman</a><a
+            href="http://scholar.google.com/scholar_case?q=hardman&amp;hl=en&amp;as_sdt=4,38&amp;case=4326708741396664718&amp;scilh=0">,
+            196 Or App 522 at 531 n. 6 (2004)</a>.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=888+F2d+770,+776+%2811th+Cir&amp;hl=en&amp;as_sdt=4,121,253,254,255,262,263,264,265,266,267,316,317,318,325,326,327,328,329,330&amp;case=6280707891601171775&amp;scilh=0">US
+            v. Cohen</a><a
+            href="http://scholar.google.com/scholar_case?q=888+F2d+770,+776+%2811th+Cir&amp;hl=en&amp;as_sdt=4,121,253,254,255,262,263,264,265,266,267,316,317,318,325,326,327,328,329,330&amp;case=6280707891601171775&amp;scilh=0">,
+            888 F2d 770, 776 (11th Cir. 1989)</a>, the court held that
+            it was error to exclude prior “bad act” evidence offered by
+            a defendant where the defendant claimed that a third person
+            carried out the fraudulent scheme. Defendant offered
+            evidence that a third person had previously engaged in
+            similar fraud. The appellate court noted that “the standard
+            for admission is relaxed when evidence is offered by
+            defendant.” ''See also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+Saavedra&amp;hl=en&amp;as_sdt=2,38&amp;case=16288210398554285121&amp;scilh=0">State
+            v. Saavedra</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+Saavedra&amp;hl=en&amp;as_sdt=2,38&amp;case=16288210398554285121&amp;scilh=0">,
+            103 NM 282 (1985)</a>, where a defendant argued that the
+            actual perpetrator of the armed robbery and felony murder
+            for which he was charged was a third person. Defendant
+            offered evidence that the third person had been convicted of
+            committing eight robberies under circumstances highly
+            similar to the crime charged within the same two-month
+            period.</p>
+            <p>The key to admitting this type of evidence seems to be
+            how similar it is to the crime charged. If it is dissimilar,
+            it may not be admissible. <a
+            href="file:///Users/jennifer/Documents/publication%20committee/Placing%20Publications%20Online%20/LOD%20-%20pubs%20online/trial%20notebook%20chapters/scholar.google.com/scholar_case%3Fq=bockorny&amp;hl=en&amp;as_sdt=4,38&amp;case=18285332724516564550&amp;scilh=0">See</a><a
+            href="file:///Users/jennifer/Documents/publication%20committee/Placing%20Publications%20Online%20/LOD%20-%20pubs%20online/trial%20notebook%20chapters/scholar.google.com/scholar_case%3Fq=bockorny&amp;hl=en&amp;as_sdt=4,38&amp;case=18285332724516564550&amp;scilh=0"></a><a
+            href="file:///Users/jennifer/Documents/publication%20committee/Placing%20Publications%20Online%20/LOD%20-%20pubs%20online/trial%20notebook%20chapters/scholar.google.com/scholar_case%3Fq=bockorny&amp;hl=en&amp;as_sdt=4,38&amp;case=18285332724516564550&amp;scilh=0">State
+            v. Bockorny</a><a
+            href="file:///Users/jennifer/Documents/publication%20committee/Placing%20Publications%20Online%20/LOD%20-%20pubs%20online/trial%20notebook%20chapters/scholar.google.com/scholar_case%3Fq=bockorny&amp;hl=en&amp;as_sdt=4,38&amp;case=18285332724516564550&amp;scilh=0">,
+            125 Or App 479, 487 (1993)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=17561862137466467245&amp;scilh=0">State
+            v. Cole</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=17561862137466467245&amp;scilh=0">,
+            66 Or App 203 (1983)</a>.</p>
+            <p>v. Experts – see Chapter 14.</p>
+            <h2 id="c._offers_of_proof"><strong>C. Offers of
+            Proof</strong></h2>
+            <p>Hopefully, your defense evidence will come rolling in
+            without any problems. However, if the prosecutor objects and
+            the judge sustains an objection, you should make an offer of
+            proof (See Chapter 11, “Making a Record and Offers of
+            Proof”). Keep in mind that if the offer of proof contains
+            both admissible and inadmissible evidence, the entire offer
+            of proof can be rejected. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+howard&amp;hl=en&amp;as_sdt=4,38&amp;case=16041886326768141246&amp;scilh=0">State
+            v. Howard</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+howard&amp;hl=en&amp;as_sdt=4,38&amp;case=16041886326768141246&amp;scilh=0">,
+            49 Or App 391 (1980)</a>.</p>
+            <h2
+            id="d._witness_invoking_privilege_against_self_incrimination"><strong>D.
+            Witness Invoking Privilege Against
+            Self-Incrimination</strong></h2>
+            <p>The attorney must first seek a determination by the
+            court, outside the jury’s presence, as to whether the
+            witness will claim the privilege and is entitled to do so.
+            If not, the prosecutor can argue to the jury the defense’s
+            failure to call the witness. <a
+            href="http://scholar.google.com/scholar_case?q=froats&amp;hl=en&amp;as_sdt=4,38&amp;case=315323541146437388&amp;scilh=0">State
+            v. Froats</a><a
+            href="http://scholar.google.com/scholar_case?q=froats&amp;hl=en&amp;as_sdt=4,38&amp;case=315323541146437388&amp;scilh=0">,
+            47 Or App 819, 615 P2d 1078 (1980)</a>.</p>
+            <p>It is improper to call a witness to the stand knowing
+            that the only testimony the witness will give is the
+            invocation of privilege against self-incrimination.
+            <em>Howard, infra</em>. This is a basis for a mistrial.</p>
+            <p>Where the witness has been granted immunity by the state
+            and still refuses to testify, the defense has a right to put
+            that witness on the stand in front of the jury. Because the
+            refusal to testify in such a case is not privileged, the
+            jury is entitled to draw inferences from the refusal to
+            testify. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+bishop&amp;hl=en&amp;as_sdt=4,38&amp;case=13859641741001151338&amp;scilh=0">State
+            v. Bishop</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+bishop&amp;hl=en&amp;as_sdt=4,38&amp;case=13859641741001151338&amp;scilh=0">,
+            49 Or App 1023, 621 P2d 1196 (1980)</a>.</p>
+            <h2
+            id="e._the_constitutional_right_to_present_defense"><strong>E.
+            The Constitutional Right to Present Defense</strong></h2>
+            <p>If the judge rules that part of the defense you intend to
+            offer is inadmissible, remind the judge that you have a
+            constitutional right to present a defense.</p>
+            <h1 id="iv._conclusion"><strong>IV. Conclusion</strong></h1>
+            <p>The trial is over. The jury has come back with a not
+            guilty verdict. Do not poll the jury! Preparation has been
+            the key to your victory. Congratulations.</p>
+    </body>
+</html>

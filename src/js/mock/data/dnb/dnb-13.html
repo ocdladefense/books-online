@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <p>2020 edition</p>
+            <h1 id="mjoa_mistrial_and_objections"><strong>MJOA /
+            Mistrial and Objections</strong></h1>
+            <p><strong><em>By Joshua Pond &amp; Ben
+            Eder</em></strong></p>
+            <h1 id="motions_for_judgment_of_acquittal"><strong>Motions
+            for Judgment of Acquittal</strong></h1>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>The Motion for Judgment Of Acquittal (MJOA) is the
+            defense’s chance to ask the judge, “Please don’t let the
+            jury decide guilt in this case when you know the state has
+            not proven my client is guilty beyond a reasonable doubt.”
+            In essence, it is your chance to keep an unreasonable,
+            unjust result from happening. For this reason, the chance
+            for you to do so occurs only after the state has put on
+            their case-in-chief. This is not just the law, but makes
+            logical sense. If what you are saying is “Look at what the
+            state has presented, your honor; it’s simply not enough for
+            a reasonable jury to base a conviction upon,” then it is
+            only logical you would not be able to make such an assertion
+            until the state has indeed presented their case. Consider it
+            the mercy rule of litigation. For this reason, you can make
+            this motion both just after the state has completed their
+            case-in-chief and after you have presented your defense.</p>
+            <p>Since jeopardy has already attached by the time you can
+            make such a motion, the state may not re-charge your client
+            and is barred from future prosecution by double jeopardy. As
+            such, judges decide this motion in a light most favorable to
+            the state. This, mixed with the reverence judges give to
+            juries and their verdicts, makes winning an MJOA a very
+            tough task indeed. That said, anyone who thinks defending
+            the accused is easy is probably sitting in law school
+            orientation right now or has no real idea what criminal
+            defense truly is. Though a difficult task, it is your job to
+            be your client’s greatest advocate and, as such, you must be
+            well aware of the bases for getting MJOA’s granted and the
+            means through which you may do so. If this is a chance for
+            you to save your client from demise and future prosecution
+            for the alleged crime(s), it is your duty to know the ins
+            and outs of MJOA’s like the back of your hand and to make a
+            genuine, robust pitch for the judge to grant the motion. It
+            is time for you to go to the river, pick up your stones and
+            sling and face down that giant.</p>
+            <h1 id="ii._statutory_bases"><strong>II. Statutory
+            Bases</strong></h1>
+            <h2 id="a._ors_136.415"><strong>A. ORS 136.415</strong></h2>
+            <p>Oregon Revised Statute (ORS) <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">136.415</a>
+            says we citizens are to be considered innocent of any
+            alleged crime unless and until the state proves we are
+            guilty of that alleged crime, and they must not only prove
+            it, but prove it beyond a single reasonable doubt. The
+            legislature used the wonderful word “entitled” to say that a
+            citizen is entitled to an acquittal if the case was not
+            proven beyond a reasonable doubt. What this means is that we
+            do not simply have a right to such an acquittal, but we are
+            full-on entitled to one if the state fails to prove the
+            allegations beyond a reasonable doubt. To this end, ORS
+            10.095(6) says the court must, in every single jury trial,
+            instruct the jury “That in criminal cases a person is
+            innocent of a crime or wrong until the prosecution proves
+            otherwise, and guilt shall be established beyond reasonable
+            doubt.”</p>
+            <h2 id="b._ors._136.445"><strong>B. ORS.
+            136.445</strong></h2>
+            <p>So, what happens if you find yourself in a situation in
+            which the state has presented their case-in-chief and you
+            verily believe the evidence provided is insufficient to
+            support a conviction? Do you just wait to allow a jury of
+            six to twelve people potentially convict when your client is
+            in a situation in which they are entitled to that acquittal?
+            That is precisely what the MJOA is for, and the legislature
+            provided a statutory basis for such a motion. ORS 136.445
+            provides that a defendant may make an MJOA both at the close
+            of the state’s case and once “all the evidence” has been
+            presented. If the evidence that was presented is
+            insufficient to support a conviction, then the court
+            <em>shall</em> (I love it when they use that word) grant
+            this motion and, as aforementioned, jeopardy <em>shall</em>
+            bar future prosecution for the crime. The statute says a
+            court will consider all the evidence presented in making a
+            decision as to whether or not the evidence presented meets
+            the burden of proof beyond a reasonable doubt. Think about
+            that for a second—it must consider <em>all</em> the evidence
+            presented preceding the motion. The logical conclusion,
+            then, is that the court will consider any evidence you
+            yourself put on if you make an MJOA when the defense rests.
+            Now, we’ve all had things presented during our case-in-chief
+            that we wish we could undo, but—since we still have yet to
+            figure out how to unring a bell—think critically about
+            whether you want to make a second MJOA following your case
+            or whether you want to let that dog lie where you left it,
+            following the state’s case-in-chief. <a
+            href="http://scholar.google.com/scholar_case?case=7798038547240681978&amp;q=7+Or+App+383+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Nix,</em> 7 Or App 383 (1971).</a> That said, an MJOA
+            will not be granted, nor will its denial be grounds for an
+            appeal, if you do not ask for it, so as long as you or one
+            of your witnesses did not do the state’s job for them, make
+            that motion early and often!</p>
+            <h1 id="iii._constitutional_bases"><strong>III.
+            Constitutional Bases</strong></h1>
+            <h2 id="a._united_states_constitution"><strong>A. United
+            States Constitution</strong></h2>
+            <p>The Fifth and Fourteenth Amendments to the U.S.
+            Constitution, and the corresponding counterparts in Article
+            I of the Oregon Constitution, require the state to prove
+            each element beyond a reasonable doubt before a citizen
+            accused of a crime may be convicted thereof.</p>
+            <h2
+            id="b._article_i_section_11_of_the_oregon_constitution"><strong>B.
+            Article I, Section 11, of the Oregon
+            Constitution</strong></h2>
+            <p>The Oregon Constitution requires all material elements be
+            proven beyond a reasonable doubt where life or liberty is at
+            stake. The Oregon Supreme Court upheld this notion, that
+            every material element must be proven beyond a reasonable
+            doubt in criminal cases, in cases like <em>State v.
+            Quinn</em> and progeny. <a
+            href="http://scholar.google.com/scholar_case?case=11264397036353792082&amp;q=290+Or+383+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Quinn</em>, 290 Or 383 (1981)</a>.</p>
+            <h1
+            id="iv._procedural_aspects_of_the_motion_for_judgment_of_acquittal"><strong>IV.
+            Procedural Aspects of the Motion for Judgment of
+            Acquittal</strong></h1>
+            <h2 id="a._timing"><strong>A. Timing</strong></h2>
+            <p>As mentioned before, an MJOA may be made either at the
+            close of the state’s case-in-chief or at the end of the
+            presentation of all the evidence. If such a motion can only
+            be made during these two stages of a trial, it follows that
+            this motion cannot be made after the jury or judge has
+            reached a verdict. This logical conclusion was reached by
+            the Oregon Supreme Court in <em>State v. Metcalfe</em>, in
+            which they held an MJOA can only be made at the close of
+            “the state’s evidence or of all the evidence.” <a
+            href="http://scholar.google.com/scholar_case?case=6827331566670650216&amp;q=328+Or+309+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Metcalfe</em>, 328 Or 309 (1999)</a>.</p>
+            <p>Outside of very rare occasions where one can point to a
+            miscarriage of justice, one’s failure to raise an MJOA
+            waives any error on the court’s part, so make those motions!
+            <a
+            href="http://scholar.google.com/scholar_case?case=9559112972747530818&amp;q=238+Or+117+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v Moore</em>, 238 Or 117 (1964)</a>. Likewise, the court
+            cannot wait until a verdict is rendered before ruling on the
+            MJOA, it must make a ruling before the jury returns a
+            verdict. <a
+            href="http://scholar.google.com/scholar_case?case=5510213052459465070&amp;q=276+Or+853+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            ex rel Haas v. Schwabe</em>, 276 Or 853 (1976)</a>. This
+            means the timing requirements are binding on both the
+            parties and the court and, as such, you must object to their
+            failure to make a ruling when the time is right to do
+            so.</p>
+            <p>The court’s oral ruling on an MJOA is not binding on the
+            court until reduced to writing and filed with the clerk.
+            Therefore, if the court grants an MJOA, the attorney should
+            get the court to immediately enter a written order and file
+            it with the clerk to prevent the trial judge from revisiting
+            that decision.</p>
+            <h2
+            id="b._standards_under_which_the_court_will_consider_the_motion"><strong>B.
+            Standards Under Which the Court Will Consider the
+            Motion</strong></h2>
+            <p>The standard a state court will apply to an MJOA is
+            commonly known as “a light most favorable to the state.” To
+            use the words of the Oregon Supreme Court, “In reviewing a
+            trial court’s denial of a motion to acquit, the court must
+            treat all conflicts in the evidence as having been resolved
+            in the favor of the state and give the state the benefit of
+            all inferences that can be reasonably drawn from the proof.”
+            <a
+            href="http://scholar.google.com/scholar_case?case=2593583691123086380&amp;q=319+Or+121+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Cervantes</em>, 319 Or 121 (1994)</a>. In other words,
+            where there is a question, they will answer that question in
+            a light most favorable to the state. Now, the court makes it
+            clear it is not deciding whether or not the state proved the
+            defendant’s guilt beyond a reasonable doubt but, rather,
+            “whether the evidence is sufficient for a jury to so find.”
+            <em>Id</em> at 121.</p>
+            <p>As the court’s job, in the context of MJOA’s, appears to
+            be resolving questions as to whether or not the state proved
+            the material elements of the charge sufficiently, the court
+            requires counsel to state specifically where, why and how
+            the state failed to meet its obligations. This means, part
+            of the standard is specificity. One cannot simply say, “The
+            state did not do their job,” but, rather, must be specific
+            in stating the grounds for granting the MJOA. Cf. <a
+            href="http://scholar.google.com/scholar_case?case=14873709175684933191&amp;q=15+Or+App+498+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Martin</em>, 15 Or App 498 (1973)</a>. Not only must one
+            be specific in stating the grounds for an MJOA, but those
+            grounds must be specifically substantive in nature. The
+            court may not grant an MJOA on procedural grounds,
+            including, but not limited to, deficiencies in the charging
+            instrument. That is not to say you may not have motions
+            relevant thereto, just that the weapon you may use to attack
+            things on procedural grounds is not the MJOA. <a
+            href="http://scholar.google.com/scholar_case?case=9250834865384752954&amp;q=312+Or+646+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Wolfs</em>, 312 Or 646 (1992)</a>.</p>
+            <h1
+            id="v._substantive_grounds_for_the_motion_for_judgment_of_acquittal"><strong>V.
+            Substantive Grounds for the Motion for Judgment of
+            Acquittal</strong></h1>
+            <h2 id="a._inferences"><strong>A. Inferences</strong></h2>
+            <p>Not to be a Negative Nellie, but it is worth remembering
+            here, before delving into the substantive grounds for
+            winning an MJOA, that judges will view the facts that have
+            been presented <em>in a light most favorable to the
+            state</em>. This cannot be overstated and should not be
+            minimized. To defeat your enemy, you must know your enemy.
+            Not only may a judge interpret the facts that were presented
+            in a way that is slanted toward the state, but this “light
+            most favorable to the state” shines evenly upon facts that
+            were <em>not</em> presented. You heard me right. Facts can
+            even be inferred and need not actually have been presented
+            during the state’s case-in-chief. Again, I do not say all
+            this to discourage you from making these motions. Quite to
+            the contrary; in fact, I am encouraging you to know that
+            enemy well and set the standard for not just making these
+            motions, but winning them.</p>
+            <p>Take this inference example: If you simply heard what I
+            said and left it at that, your task of winning MJOA’s may
+            well seem insurmountable. Instead, know that a judge may
+            rely on inferred facts only if he or she knows that these
+            facts meet the two-part test set forth in <em>State v
+            Rainey</em>: “The jury may be left free to infer that fact
+            only when two requirements are satisfied: 1) sufficient
+            evidence has been offered of the existence of the fact(s)
+            giving rise to the inference to allow a rational factfinder
+            to find the underlying fact(s) beyond a reasonable doubt,
+            and 2) a rational factfinder could find that the inferred
+            fact follows more likely than not from the fact(s) giving
+            rise to the inference.” <a
+            href="http://scholar.google.com/scholar_case?case=4459043142057953350&amp;q=298+Or+459+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Rainey</em>, 298 Or 459 (1985)</a>.</p>
+            <p>So now you know, but also know that judges are not given
+            carte blanche to infer whatever they please and, while the
+            standard may be to give the state a good deal of the benefit
+            of the doubt, they still must meet that pesky burden of
+            proof beyond a reasonable doubt and the inference must be
+            one that a rational factfinder would make. Tough, yes, but
+            no longer insurmountable.</p>
+            <p>This inference example is just one example of the hurdles
+            you will have to clear at the substantive level, so let’s
+            get into it, shall we?</p>
+            <h2 id="b._venue"><strong>B. Venue</strong></h2>
+            <p>Alas, the failure of the state to prove venue is no
+            longer grounds for an MJOA, as the court held venue is no
+            longer a material element of a criminal charge. <a
+            href="http://scholar.google.com/scholar_case?case=11937582896782579663&amp;q=state+v+mills+2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mills</em>, 354 Or 350 (2013)</a>.</p>
+            <h2 id="c._identity_of_defendant"><strong>C. Identity of
+            Defendant</strong></h2>
+            <p>Here, the task can often be quite tough. One must not
+            only show the state failed to directly prove identity, but
+            even the inference that the defendant is the person in
+            question was insufficient. Meeting this inference is not
+            especially hard for the state, as the court has held that
+            having the same name is enough to meet the burden. See <a
+            href="http://www.oregonlaws.org/ors/40.135">OEC
+            311(1)(r)</a>. Now, that said, it’s worth noting that the
+            courts have interpreted this latter example as requiring the
+            names be identical and not just similar. In other words, if
+            they are relying on the “same name” inference, it must
+            literally be the exact same name. <a
+            href="http://scholar.google.com/scholar_case?case=11190788950872390434&amp;q=281+Or+281+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Garrett,</em> 281 Or 281 (1978)</a>. That’s not much but
+            it is something, and when one does not have much ammunition
+            in this area, something is certainly better than
+            nothing.</p>
+            <h2 id="d._driving"><strong>D. Driving</strong></h2>
+            <p>Operating a motor vehicle is defined by <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors801.html">ORS
+            801.370</a> and says, simply, that operation means “any
+            operation, towing, pushing, movement or otherwise
+            propelling.” While driving is not statutorily defined,
+            Oregon law equates “operation” with “driving.” In other
+            words, if you operate that car, you drove that car.</p>
+            <p>The general, established rule is that driving cannot be
+            inferred but must be specifically proven. <a
+            href="http://scholar.google.com/scholar_case?case=18104996629393878233&amp;q=288+Or+703+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Harris</em>, 288 Or 703 (1980)</a>. That said, be aware
+            of <em>State v Bilsborrow,</em> which seems to hold that
+            one, in fact, may infer driving. <a
+            href="http://scholar.google.com/scholar_case?q=bilsborrow&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2009&amp;case=15253499888490603167&amp;scilh=0"><em>State
+            v. Bilsborrow</em>, 230 Or App 413 (2009)</a>. In this case,
+            an MJOA was not granted where the evidence showed the
+            defendant was intoxicated, in the driver’s seat of the car
+            which was at the curb, parked, with the engine running, in
+            gear, no parking brake set and defendant foot on the brake.
+            While <em>Bilsborrow</em> did not directly overturn
+            <em>Harris,</em> their holding sure seems to indicate that a
+            jury may infer that the defendant drove. So, argue
+            <em>Harris</em>, but be ready for <em>Bilsborrow.</em>
+            Although a close read of <em>Bilsborrow</em> shows that the
+            Court of Appeals will review the entire record, not just the
+            evidence presented in the state’s case-in-chief. The
+            defendant in <em>Bilsborrow</em> testified and that evidence
+            was also evaluated when ruling on the JOA issue.</p>
+            <h2 id="e._motor_vehicle"><strong>E. Motor
+            Vehicle</strong></h2>
+            <p><a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors801.html">ORS
+            801.360</a> defines a motor vehicle as any vehicle
+            self-propelled or even designed for self-propulsion. So,
+            next time you go on that pub crawl, bring your skateboard,
+            not your bike.</p>
+            <h2 id="f._while"><strong>F. While</strong></h2>
+            <p>They must be intoxicated <em>while</em> they were
+            driving. This is generally clearly shown when it is proven
+            the defendant drove and was intoxicated, but keep this word
+            <em>while</em> in mind when handling cases in which your
+            client is found asleep at the wheel or was not found by the
+            police until after he drove. For example, if your client is
+            found by the police later at her home and she is intoxicated
+            at that point, has the state proven she was intoxicated
+            while she was driving?</p>
+            <h2 id="g._under_the_influence"><strong>G. Under the
+            Influence</strong></h2>
+            <p>This may be inferred and often is, especially considering
+            no chemical analysis need be done to convict someone of
+            DUII. What is or is not sufficient to prove whether or not
+            one is intoxicated is the topic of all but constant
+            discussion and debate, and to answer that question here
+            would take a tome of information. Suffice it to say that as
+            a DUII practitioner, a major part of your job is coming to
+            an intimate understanding of what it means for one to be
+            “intoxicated.” So, get out there and learn it backwards and
+            forward and challenge the state to an MJOA in nearly every
+            case. Talk to veteran DUII practitioners, get to know
+            scientific experts and DREs, partake in a “wet lab” at the
+            Oregon State Police academy, attend seminars and CLEs,
+            become a licensed <a href="https://www.nhtsa.gov/">NHTSA</a>
+            trainer, study the case law on point, do it all and know
+            what “under the influence” means more than anyone else in
+            the building before you step into that courthouse for
+            trial.</p>
+            <h2 id="h._premises_open_to_the_public"><strong>H. Premises
+            Open to the Public</strong></h2>
+            <p>Whether or not the area where the driving occurred was
+            “open to the public” is very context specific. I once heard
+            John Henry Hingson say he visits the scene of every DUII
+            case he tries. You may want to do the same. Often, whether
+            or not the particular premises were open to the public can
+            be easily inferred from the setting itself. For example, is
+            I-5 open to the public? Well, yes, there is not much
+            question there. Let us say, however, that you went to the
+            scene of your client’s DUII and saw that the entire area in
+            which he or she was driving was within an area plastered
+            with No Trespassing signs, what then? Well, you may have
+            proven your client was guilty of Trespass, but he or she is
+            not guilty of DUII. <a
+            href="http://scholar.google.com/scholar_case?case=9357745995497015976&amp;q=290+Or+899+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mulder</em>, 290 Or 899 (1981)</a>. I am certain you can
+            think of other such examples. Visit the scene, find out
+            whether or not the area was, in fact, open to the public at
+            the time of the alleged driving and make your pitch.</p>
+            <h1 id="motions_for_mistrial"><strong>Motions for
+            Mistrial</strong></h1>
+            <h1 id="i._introduction_1"><strong>I.
+            Introduction</strong></h1>
+            <p>A motion for a mistrial is essentially a tool of last
+            resort, when no other remedy will undo the damage done. Due
+            to double jeopardy and due process considerations, a motion
+            for a mistrial is very rarely granted when the moving party
+            is the prosecution. This section will focus on those
+            instances when the defense is the moving party.</p>
+            <h1 id="ii._procedure"><strong>II. Procedure</strong></h1>
+            <p>Object promptly, move to strike, then move for a
+            mistrial. Skip a step or take that step too late and you may
+            be out of luck.</p>
+            <p>Failing to object fails to preserve error in denial of a
+            motion for a mistrial. <a
+            href="http://scholar.google.com/scholar_case?case=2066337253296210407&amp;q=246+Or+218+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Latta,</em> 246 Or 218 (1967)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=8890151202043294968&amp;q=36+Or+App+217+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cooney,</em> 36 Or App 217 (1978)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=9340879640985666525&amp;q=19+Or+App+345+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Evans,</em> 19 Or App 345 (1974)</a>. If you are denied
+            an opportunity to present the objection and motion for a
+            mistrial then your motion is preserved under <a
+            href="https://scholar.google.com/scholar_case?case=12689862859835569472&amp;q=State+v.+Veatch,+223+Or+App+44+(2008&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Veatch</em>, 223 Or App 44 (2008)</a>.</p>
+            <p>Not moving to strike objectionable testimony fails to
+            preserve error in denial of motion for mistrial. <a
+            href="http://scholar.google.com/scholar_case?case=10748726166870492467&amp;q=2+Or+App+133+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Keith,</em> 2 Or App 133 (1974)</a>.</p>
+            <p>The objection and motions must be made promptly, at the
+            time in the case when the error occurs. <a
+            href="http://scholar.google.com/scholar_case?case=3209813651678146287&amp;q=22+Or+App+146+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Thompson,</em> 22 Or App 146 (1975)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=15480253433854472630&amp;q=112+Or+App+648+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Melton,</em> 112 Or App 648 (1993)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=1496043221002006040&amp;q=121+Or+App+449+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Tetukzvich,</em> 121 Or App 449 (1993)</a>.</p>
+            <p>If the motion fails, move for a curative instruction.</p>
+            <h1 id="iii._grounds"><strong>III. Grounds</strong></h1>
+            <h2
+            id="a._prosecutorial_misconduct_resulting_in_jeopardy_barring_retrial"><strong>A.
+            Prosecutorial Misconduct Resulting in Jeopardy Barring
+            Retrial</strong></h2>
+            <p>The key case to get jeopardy is a three-part test
+            articulated in <a
+            href="https://scholar.google.com/scholar_case?case=18139781197665756960&amp;q=State+v.+Kennedy,+295+Or+260,+666+P2d+1316+(1983)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kennedy</em>, 295 Or 260, 666 P2d 1316 (1983)</a>.</p>
+            <p>1. The official conduct is so prejudicial to the
+            defendant that it cannot be cured by means short of a
+            mistrial. The court so found and granted defendant’s motion
+            for mistrial. Defendant would not be able to have a fair
+            trial after the improper testimony. It would be a good idea
+            to put on the record why the conduct is so prejudicial and
+            why an instruction from the court cannot cure the harm.</p>
+            <p>2. The official knows that the conduct is improper and
+            prejudicial. If there were stipulations or orders by the
+            court or past mistrials on the same issue with the
+            prosecutor, this is all information that can help solidify
+            this point. Make sure you get evidence the prosecutor or
+            police officer actually knew it was improper.</p>
+            <p>3. The prosecution is indifferent to the resulting
+            mistrial or reversal. Build a record on the experience and
+            knowledge of the prosecutor/police officer. The age of the
+            case law. Police/DA training. Try and get the court to
+            inquire into this on the day of the mistrial so there is a
+            good record about what he or she knew.</p>
+            <h2
+            id="b._prosecutorial_misconduct_that_may_or_may_not_result_in_jeopardy"><strong>B.
+            Prosecutorial Misconduct That May or May Not Result in
+            Jeopardy</strong></h2>
+            <p>It is the prosecutor’s duty to ensure an accused citizen
+            receives a fair trial. Hold them to it! <em>State v.
+            Pointer,</em> 106 Or 589 (1923). The following
+            (non-exhaustive) list presents scenarios in which
+            prosecutorial action should lead to a mistrial:</p>
+            <ul>
+            <li><blockquote>
+            <p>Where the prosecution argued a defendant’s request for a
+            lesser-included offense instruction constituted an admission
+            of guilt. <a
+            href="http://scholar.google.com/scholar_case?case=6516851022079359010&amp;q=55+Or+App+98+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Johnson</em>, 55 Or App 98 (1981)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where prosecutor commented on the veracity and intent of
+            the defendant by stating, during an objection to defense
+            counsel’s request to reserve opening statement, that doing
+            so would permit defendant to “make up a story while the case
+            is going on.” <a
+            href="http://scholar.google.com/scholar_case?case=3111552181632184682&amp;q=4+Or+App+336&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Seeger</em>, 4 Or App 336 (1971)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution elicited evidence of defendant
+            invoking the right to silence after they were placed in
+            custody. <a
+            href="http://scholar.google.com/scholar_case?case=201987519745901381&amp;q=douglas+v+cupp&amp;hl=en&amp;as_sdt=3,38"><em>Douglas
+            v. Cupp</em>, 578 F2d 266 (1978)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution uses excessive emotional appeals to
+            confuse the issues and incite what I like to think of as
+            borderline bloodlust in the jurors. <a
+            href="http://scholar.google.com/scholar_case?case=8813813908158669211&amp;q=412+A2d+474+&amp;hl=en&amp;as_sdt=6,38"><em>Commonwealth
+            v. Watts</em>, 412 A2d 474 (1980)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution, in his or her opening statements,
+            comments on what the defendant will say later in the trial
+            and the defendant never testifies. <a
+            href="http://scholar.google.com/scholar_case?case=5243723038974498796&amp;q=433+A2d+397+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Turner</em>, 433 A2d 397 (1981)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution offers statements about the
+            percentage of defendants entering a plea or being found
+            guilty. <a
+            href="http://scholar.google.com/scholar_case?case=7476658415812100344&amp;q=31+Or+App+187+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Flores</em>, 31 Or App 187 (1977)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution improperly shifts the burden of
+            proof and invites adverse inferences by commenting on the
+            defense’s failure to call witnesses that the prosecution was
+            capable of calling as well. <a
+            href="http://scholar.google.com/scholar_case?case=16218754594308114963&amp;q=587%E2%80%A8SW2d859+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Valentine</em>, 587 SW2d859 (1979)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor fails to correct false testimony. <a
+            href="http://scholar.google.com/scholar_case?case=3169084205390622023&amp;q=432+A2d+688+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Towns,</em> 432 A2d 688 (1981)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor implies or states overtly the
+            defense was trying to mislead jury is grounds for a mistrial
+            where no curative instruction is provided. <em>Carter v.
+            State,</em> 356 S02d 67 (1978).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution repeatedly attempts to offer
+            inadmissible evidence for the purpose of making the defense
+            look as though it is attempting to keep information from the
+            jury. <a
+            href="http://scholar.google.com/scholar_case?case=7226551400970487260&amp;q=236+Or+521+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Nichols,</em> 236 Or 521 (1964)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution implants “within a question any
+            statement concerning his personal knowledge of the truth of
+            any disputed fact in issue where the burden of proving that
+            fact rests upon the party he represents.” <em>State v.
+            Matson,</em> 120 Or 666 (1927).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor, in argument, implies or states
+            overtly that he or she has evidence that would implicate the
+            defense but which the court has ruled inadmissible.
+            <em>State v. Newburn,</em> 178 Or 238 (1946).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor makes reference to other bad acts of
+            the defendant that were not admitted into evidence during
+            argument. Note, however, that a prosecutor may speak
+            generally to the illicit nature of the acts that were
+            allowed into evidence. <em>State v. Blodgett,</em> 50 Or 329
+            (1907).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor comments on the defendant’s
+            credibility by noting prior convictions not admitted into
+            evidence. <a
+            href="http://scholar.google.com/scholar_case?case=2062495432467471143&amp;q=29+Or+App+461+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Treit,</em> 29 Or App 461 (1977)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor referred to the fact that a
+            factfinder had previously ruled adversely to the defendant
+            on the same matters to be determined by the jury. <a
+            href="http://scholar.google.com/scholar_case?case=6719257288250001619&amp;q=36+Or+App+375+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Ray,</em> 36 Or App 375 (1978)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution refers to conviction during
+            cross-examination that it cannot prove. <a
+            href="http://scholar.google.com/scholar_case?case=5356376243587953802&amp;q=221+Or+428+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Rollo,</em> 221 Or 428 (1960)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor asks questions designed to belittle
+            and hold up for contempt the defendant or the defendant’s
+            witnesses. <em>State v. Motley,</em> 127 Or 415 (1928).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor elicits evidence that defendant, by
+            words and conduct, refused to voluntarily submit to the
+            officer’s inspection of a package. <a
+            href="http://scholar.google.com/scholar_case?case=674117688362608246&amp;q=660+SW2d+842+&amp;hl=en&amp;as_sdt=6,38"><em>Powell
+            v. State,</em> 660 SW2d 842 (1983)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor elicits evidence of the accused
+            exercising his or her right to counsel. <a
+            href="http://scholar.google.com/scholar_case?case=15595657885135695036&amp;q=127+Cal+App+3d+604+&amp;hl=en&amp;as_sdt=6,38"><em>People
+            v. Fabert,</em> 127 Cal App 3d 604 (1982)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=12703491438757667290&amp;q=573+F2d+1027+&amp;hl=en&amp;as_sdt=6,38"><em>Zemina
+            v. Solem,</em> 573 F2d 1027 (1978)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor informs the jury that the
+            defendant’s lawyer was present when search warrant was
+            executed. <a
+            href="http://scholar.google.com/scholar_case?case=8598589752430011708&amp;q=620+F2d+559+&amp;hl=en&amp;as_sdt=6,38"><em>US
+            v. McDonald,</em> 620 F2d 559 (1980)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecution implies the accused is guilty
+            because he hired a private attorney. <a
+            href="http://scholar.google.com/scholar_case?case=15347140115596709164&amp;q=721+F2d+1193+&amp;hl=en&amp;as_sdt=6,38"><em>Bruno
+            v. Rushen,</em> 721 F2d 1193 (1983)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor rhetorically asked the jury to let
+            its verdict answer the question of whether or not it would
+            drive on the same road as the defendant on the evening in
+            question. <a
+            href="http://scholar.google.com/scholar_case?case=3855976965320653334&amp;q=463+A2d+779+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Pineau,</em> 463 A2d 779 (1983)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor or the police officer draws a
+            correlation between defendant’s actions and his or her blood
+            alcohol content. <a
+            href="http://scholar.google.com/scholar_case?case=7019001372857797085&amp;q=147+Or+App+634+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Ross</em>, 147 Or App 634 (1997)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor asks any witness whether he or she
+            agrees or disagrees with any other witness’s testimony. <a
+            href="http://scholar.google.com/scholar_case?q=305+621&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0"><em>State
+            v. Milbradt</em>, 305 Or 621 (1988)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor elicits testimony about defendant
+            asserting a constitutional right and there is any likelihood
+            an adverse inference can be drawn from his or her doing
+            so. <a
+            href="http://scholar.google.com/scholar_case?q=65+mccartney&amp;hl=en&amp;as_sdt=4,38&amp;case=2665531135199893354&amp;scilh=0"><em>State
+            v. McCartney</em>, 65 Or App 766 (1983)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor tells the jury the defendant
+            requested a phone call during defendant’s interaction with
+            the police. <a
+            href="http://scholar.google.com/scholar_case?q=223+444&amp;hl=en&amp;as_sdt=4,38&amp;case=12689862859835569472&amp;scilh=0"><em>State
+            v. Veatch</em>, 223 Or App 444 (2008)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor, in his or her case-in-chief,
+            comments on defendant’s choice to remain silent during his
+            or her interaction with the police, be that silence before
+            or after defendant received <em>Miranda</em> warnings. <a
+            href="http://scholar.google.com/scholar_case?q=98+662&amp;hl=en&amp;as_sdt=4,38&amp;case=2514273646403856534&amp;scilh=0"><em>State
+            v. Marple</em>, 98 Or App 662 (1989)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor comments on defendant’s failure to
+            explain unanswered questions, which impermissibly implies
+            that it is defendant’s burden to prove any facts at
+            issue<em>.</em> <a
+            href="http://scholar.google.com/scholar_case?q=18+163&amp;hl=en&amp;as_sdt=4,38&amp;case=11428677914631887484&amp;scilh=0"><em>State
+            v. Macomber</em>, 18 Or App 163 (1974)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the prosecutor tells the jury the state’s evidence
+            was never contradicted or impeached in a trial in which the
+            defendant was the only possible witness who could have done
+            so. <a
+            href="http://scholar.google.com/scholar_case?q=239+577&amp;hl=en&amp;as_sdt=4,38&amp;case=16666660124446108400&amp;scilh=0"><em>State
+            v. Buck</em>, 239 Or 577 (1965)</a>.</p>
+            </blockquote></li>
+            </ul>
+            <h2 id="c._judicial_misconduct"><strong>C. Judicial
+            Misconduct</strong></h2>
+            <ul>
+            <li><blockquote>
+            <p>Where the trial judge makes a disparaging remark about
+            the ethnicity of the defendant. <a
+            href="http://scholar.google.com/scholar_case?case=1329142684484695899&amp;q=39+Or+App+467+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Medina,</em> 39 Or App 467 (1979)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the court, during a retrial following appeal,
+            informed the jury the defendant had previously been
+            convicted. <a
+            href="http://scholar.google.com/scholar_case?case=8074070499996129150&amp;q=56+Or+App+175+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Meyer,</em> 56 Or App 175 (1982)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where a judge’s “personal and official influence is
+            exerted to the unfair advantage of one of the parties, with
+            a corresponding detriment to the other.” <em>State v.
+            Lucas,</em> 24 Or 168 (1893).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the judge “not only received, but he acted upon the
+            information secretly conveyed to him by the members of his
+            staff.” <em>Bestel v. Bestel,</em> 153 Or 100 (1936).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the trial judge asked questions for the prosecutor,
+            suggested questions for the prosecutor, and generally
+            assisted the prosecutor in its efforts. <a
+            href="http://scholar.google.com/scholar_case?case=6093604233785951417&amp;q=710+F2d+431+&amp;hl=en&amp;as_sdt=6,38"><em>US
+            v. Singer,</em> 710 F2d 431 (1983)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the judge allows testimony from the officer
+            correlating HGN evidence with defendant’s BAC. <a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=321+Or.+285+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v O’Key</em>, 321 Or 285 (1995)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=138+396&amp;hl=en&amp;as_sdt=4,38&amp;case=14339854165757692172&amp;scilh=0"><em>State
+            v. Fisken,</em> 138 Or App 396 (1996)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the judge allows the officer to speculate as to BAC
+            at the time of driving. <a
+            href="http://caselaw.findlaw.com/or-court-of-appeals/1327009.html"><em>State
+            v. Johnson</em>, 219 Or App 200 (2008)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the judge allows the DRE officer to testify as to
+            the DRE protocol and make conclusions as to what controlled
+            substances defendant may or may not have been intoxicated by
+            and the DRE did not complete the mandatory 12-step protocol.
+            This is the case, even if only one of the 12 steps was not
+            completed. All 12 must be completed or a foundation cannot
+            be laid for the DRE’s expert testimony. <a
+            href="http://scholar.google.com/scholar_case?case=18357110716886964593&amp;q=194+Or+App+463+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Aman,</em> 194 Or App 463 (2004)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Where the judge allows the police officer to testify as
+            to what defendant’s BAC would have been had the defendant
+            taken the breath test<em>.</em> <a
+            href="http://scholar.google.com/scholar_case?q=109+444&amp;hl=en&amp;as_sdt=4,38&amp;case=13321051925591047868&amp;scilh=0"><em>State
+            v. Jacobs</em>, 109 Or App 444 (1991)</a>.</p>
+            </blockquote></li>
+            </ul>
+            <h2 id="d._jury_misconduct"><strong>D. Jury
+            Misconduct</strong></h2>
+            <ul>
+            <li><blockquote>
+            <p>Three jurors’ attendance at a DEA seminar in a marijuana
+            trial required a mistrial. <a
+            href="http://scholar.google.com/scholar_case?case=3036256839526787256&amp;q=54+Or+App+795+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Mapel,</em> 54 Or App 795 (1981)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>During its deliberations, one of the members of the jury
+            stated that if she had had as much to drink as the defendant
+            she would have been drunk and the other jurors agreed. <a
+            href="http://scholar.google.com/scholar_case?case=9744319940227556794&amp;q=658+SW2d+673+&amp;hl=en&amp;as_sdt=6,38"><em>McGary
+            v. State,</em> 658 SW2d 673 (1983)</a>.</p>
+            </blockquote></li>
+            </ul>
+            <h1 id="other_similar_motions"><strong>Other Similar
+            Motions</strong></h1>
+            <h1
+            id="i._motion_for_new_trial_motion_in_arrest_of_judgment"><strong>I.
+            Motion for New Trial &amp; Motion in Arrest of
+            Judgment</strong></h1>
+            <p>Once a verdict is rendered, an MJOA is no longer an
+            option, but your client will be entitled to a new trial if
+            you can show the evidence “lay so heavily against a verdict”
+            a reasonable jury simply could not have reached the result
+            it did. <a
+            href="http://scholar.google.com/scholar_case?case=14934739361087183855&amp;q=924+F+Supp+1025+&amp;hl=en&amp;as_sdt=6,38"><em>US
+            v. Martinez,</em> 924 F Supp 1025 (1996)</a>.</p>
+            <p>The grounds for a motion for a new trial are found in <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors019.html">ORS
+            19.430</a> and <a
+            href="http://www.oregonlegislature.gov/bills_laws/Pages/orcp.aspx">ORCP</a>
+            64 A, B, and D through G and <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors136.html">ORS
+            136.535(4)</a>. Straight to the point, ORCP 64 B(5) provides
+            that “[i]nsufficiency of the evidence to justify the verdict
+            or other decision” is a ground for moving for a new
+            trial.</p>
+            <p>Even if you think you are making an MJOA and phrase it as
+            such, the court is permitted to treat your MJOA as a motion
+            in arrest of judgment. There are two key differences between
+            the two kinds of motions.</p>
+            <p>First, an MJOA is squarely focused on whether or not the
+            state adequately proved each material element of the law in
+            question. A motion in arrest of judgment says the matter
+            should not go to the jury because of problems with the law
+            itself, such as situations in which the statute is
+            unconstitutionally vague or violates aspects of due
+            process.</p>
+            <p>The second – and more important – difference is to the
+            rights and consequences of your client. If the court grants
+            an MJOA, the state cannot appeal and future prosecution for
+            that offense is barred. This is not the case with a motion
+            in arrest of judgment. <a
+            href="http://scholar.google.com/scholar_case?case=16710719702767476896&amp;q=state+v+mckenzie+1989&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McKenzie,</em> 307 Or 554 (1989)</a>. <em>See also</em>
+            <a
+            href="http://www.oregonlegislature.gov/bills_laws/lawsstatutes/2013ors135.html">ORS
+            135.630</a>. <em>McKenzie</em> allows the court to treat an
+            MJOA as a motion in arrest of judgment, so just because you
+            call a chicken a duck, does not make it a duck.</p>
+            <p>The grounds for a motion in arrest of judgment are found
+            in ORS 135.630(1) and (4). A judge may only grant this
+            motion if it finds the grand jury lacked authority to indict
+            the crime charged or the facts as presented did not
+            constitute an offense.</p>
+            <h1 id="ii._motions_to_dismiss_with_prejudice"><strong>II.
+            Motions to Dismiss with Prejudice</strong></h1>
+            <p>Just like with the MJOA, a dismissal, even with
+            prejudice, lacks its full weight until it is reduced to
+            writing.</p>
+            <p>In fact, motions for dismissal require a step further
+            than an MJOA. Not only must a dismissal with prejudice be
+            reduced to writing, but it also must be written as an
+            acquittal before it bars future prosecution or reversal and
+            retrial following appeal. The sole exception is dismissal
+            with prejudice of a Class B or C misdemeanor. See ORS
+            136.130.</p>
+            <p>So, if you make that motion for dismissal on a Class A
+            misdemeanor or any level of felony, try to get it dismissed
+            with prejudice and when you win on that, make sure it is not
+            just reduced to writing but written as an acquittal. Not
+            only must you do this to make sure the boomerang never
+            returns, but the courts have held your failure to do so
+            actually preserves the state’s right to appeal for them. Not
+            good. <a
+            href="http://scholar.google.com/scholar_case?case=12206810492033004732&amp;q=154+Or+App+332&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Gunder,</em> 154 Or App 332, 964 P2d 265 (1998)</a>.</p>
+            <p><strong>Acknowledgments</strong></p>
+            <p>While I relied on many varied sources in the creation of
+            this chapter, I simply could not have done it without the
+            assistance and materials of Ben Eder, David McDonald and
+            Jeffrey Siefman.</p>
+            <p>—Joshua Pond</p>
+            <h1 id="objections_significant_case_law"><strong>Objections
+            — Significant Case Law</strong></h1>
+            <p><strong><em>By Ben Eder</em></strong></p>
+            <p>One of the best things you can have in your trial
+            notebook is a list of cases to cite when the prosecutor
+            makes an improper argument or the police officer offers
+            inadmissible evidence. After you object, it is important to
+            be able to point the judge to the authority for your
+            objection or motion for a mistrial. The objections need to
+            come immediately when the inadmissible evidence is offered,
+            and you need to ask for a mistrial at that time if that is
+            the remedy you are seeking. Here are some of the issues that
+            have arisen during my DUII trials. — Ben Eder</p>
+            <p><strong>Evidence of a previous arrest with similar
+            conduct is very prejudicial.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Reyes,+143+Or+App+594+%281996&amp;hl=en&amp;as_sdt=4,38&amp;case=3390971471754432216&amp;scilh=0"><em>State
+            v. Reyes</em>, 143 Or App 594 (1996)</a>
+            <span class="underline"> </span></p>
+            <p>The fact that the defendant had previously failed HGN in
+            an unrelated matter should not have come in as evidence that
+            defendant was therefore intoxicated by failing HGN in the
+            present case. Erroneous admission of the past arrest was
+            prejudicial and not harmless.</p>
+            <p><strong>A police officer can’t correlate actions with a
+            blood alcohol level.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ross,+147+Or+App+634+%281997&amp;hl=en&amp;as_sdt=4,38&amp;case=7019001372857797085&amp;scilh=0"><em>State
+            v. Ross,</em> 147 Or App 634 (1997)</a></p>
+            <p>The prosecutor can’t ask if defendant’s actions were
+            consistent with BAC level. In <em>Ross</em>, the prosecutor
+            asked the police officer if the defendant’s actions
+            corroborated the .08 breath test result. The court reversed
+            because a police officer is not qualified to give that
+            opinion no matter how many DUII arrests he or she has
+            made.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+219+Or+App+200+%282008%29&amp;hl=en&amp;as_sdt=4,38&amp;case=1053439246489985855&amp;scilh=0"><em>State
+            v. Johnson,</em> 219 Or App 200 (2008)</a></p>
+            <p>The police officer can’t speculate as to BAC at the time
+            of driving. In <em>Johnson</em>, the police officer
+            testified that it appeared Mr. Johnson was sobering up at
+            the time of the breath test therefore the .07 breath test
+            translated to .08 or .09 at the time of driving. The Court
+            of Appeals relied on <em>Ross</em> and affirmed that blood
+            alcohol levels must be proven by a chemical test.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jacobs,+109+Or+App+444+%281991&amp;hl=en&amp;as_sdt=4,38&amp;case=13321051925591047868&amp;scilh=0"><em>State
+            v. Jacobs,</em> 109 Or App 444 (1991)</a></p>
+            <p>The police can’t testify as to what defendant’s BAC would
+            have been had the defendant blown. Similar to <em>Ross</em>
+            and <em>Jacobs</em>, the only way the state can prove a
+            blood alcohol level over the legal limit is with a chemical
+            test, not based on a police officer’s observation and
+            experience.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fisken,+138+Or+App+396+%281996%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14339854165757692172&amp;scilh=0"><em>State
+            v. Fisken,</em> 138 Or App 396 (1996)</a></p>
+            <p>A police officer is not allowed to testify that your
+            client was over the legal limit or likely over the legal
+            limit because there were four or more clues observed on the
+            Horizontal Gaze Nystagmus test. This is reversible error, so
+            ask for a mistrial if the state offers evidence of blood
+            alcohol over the legal limit with HGN clues.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=4950640858793471677&amp;q=State+v.+Ohotto&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ohotto</em>, 261 Or App 70, 323 P3d 306 (2014)</a>.</p>
+            <p><strong>The police officer is not qualified to do
+            retrograde extrapolation because she or he lacks a
+            scientific foundation.</strong></p>
+            <p><strong>The prosecutor is not allowed to ask any witness
+            whether he or she agrees or disagrees with another witness’s
+            testimony.</strong> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Milbradt,+305+Or+621+%281988%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0"><em>State
+            v. Milbradt</em>, 305 Or 621 (1988)</a></p>
+            <p>This is not a DUII case, but this is an important case to
+            know for all trials where the prosecutor may ask your
+            witness if she agrees or disagrees with another witness.
+            Commonly they ask if they think the arresting police officer
+            is lying. Citing <em>Middleton</em>, the court in
+            <em>Milbradt</em> stated that in Oregon a witness, expert or
+            otherwise, may not give an opinion on whether he believes a
+            witness is telling the truth. An opinion that a person is
+            not deceptive, could not lie without being tripped up, and
+            would not betray a friend (to wit: the defendant) is
+            tantamount to the same thing.</p>
+            <p><strong>The prosecutor can’t tell the jury that the
+            verdict will/should be the same as if the jurors would want
+            the defendant on the road that evening.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pineau,+463+A2d+779+%28Me+1983%29&amp;hl=en&amp;as_sdt=4,20,38&amp;case=3855976965320653334&amp;scilh=0"><em>State
+            v. Pineau</em>, 463 A2d 779 (Me 1983)</a></p>
+            <p>The prosecutor can’t use the instinctive need to do what
+            is necessary to survive danger as a means for convicting
+            someone. In this case, the prosecutor rhetorically asked the
+            jury to let its verdict answer the question whether it would
+            drive on the same road as the defendant on the evening in
+            question. The conviction was reversed. Although this was not
+            an Oregon case, I think it has persuasive authority for
+            arguing that the state is not using the legal standard set
+            forth by the legislature.</p>
+            <p><strong>The prosecutor can’t infer that the state has
+            other evidence that is inadmissible.</strong></p>
+            <p><em>State v. Newburn</em>, 178 Or 238, 241 (1946)</p>
+            <p><strong>Don’t let the prosecutor suggest that evidence is
+            suppressed or forbidden by the evidence code; it is
+            reversible error.</strong></p>
+            <p><strong>Where the prosecutor referred to the fact that a
+            judge had previously ruled adversely to the defendant on the
+            same matters to be determined by the jury.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ray,+36+Or+App+375+%281978%29&amp;hl=en&amp;as_sdt=4,20,38&amp;case=6719257288250001619&amp;scilh=0"><em>State
+            v. Ray,</em> 36 Or App 375 (1978)</a></p>
+            <p><strong>The prosecutor can’t suggest guilt because most
+            of those arrested plead guilty.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Flores,+31+Or+App+187+%281977&amp;hl=en&amp;as_sdt=4,20,38&amp;case=7476658415812100344&amp;scilh=0"><em>State
+            v. Flores,</em> 31 Or App 187 (1977)</a></p>
+            <p>Stating that ninety percent of those indicted plead
+            guilty requires at least curative instruction. I would ask
+            for a mistrial. If the judge gives a curative instruction
+            rather than a mistrial, I would ask the judge to state that
+            the prosecutor’s comment was improper, disregards the
+            presumption of innocence, and that innocent people have to
+            plead not guilty to have their day in court, too.</p>
+            <p><strong>A comment on any exercise of a constitutional
+            right is usually reversible error.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McCartney,+65+Or+App+%281983%29&amp;hl=en&amp;as_sdt=4,20,38&amp;case=2665531135199893354&amp;scilh=0"><em>State
+            v. McCartney,</em> 65 Or App (1983)</a></p>
+            <p>You can ask for a mistrial or curative instruction if the
+            prosecution elicits testimony of defendant asserting a
+            constitutional right if there is any likelihood an adverse
+            inference can be drawn by the reference. The most common
+            comments on constitutional rights are commenting on
+            defendant’s silence or requesting an attorney.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Veatch,+223+Or+App+444+%282008&amp;hl=en&amp;as_sdt=4,20,38&amp;case=12689862859835569472&amp;scilh=0"><em>State
+            v. Veatch</em>, 223 Or App 444 (2008)</a></p>
+            <p>The court found it was improper for the prosecutor to
+            tell the jury that the defendant wanted to make a phone call
+            because the inference is that he would be calling for legal
+            advice.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Marple,+98+Or+App+662+%281989%29&amp;hl=en&amp;as_sdt=4,20,38&amp;case=2514273646403856534&amp;scilh=0"><em>State
+            v. Marple</em>, 98 Or App 662 (1989)</a></p>
+            <p>It was reversible error to comment on defendant’s silence
+            in the state’s case in chief. In <em>Marple</em>, the
+            defendant said, “I’d rather not say” when the police officer
+            asked what a small bag of drugs was. The right to remain
+            silent applies before <em>Miranda</em> so the state should
+            not have been able to offer Mr. Marple’s refusal to say what
+            was in the baggie.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=+112+Or+App+518&amp;hl=en&amp;as_sdt=4,20,38&amp;case=16474267560107978157&amp;scilh=0"><em>State
+            v. Mullenberg,</em> 112 Or App 518 (1992)</a></p>
+            <p><strong>Prosecutor commented about tape recording where
+            officer spoke, but defendant would not speak; cannot be
+            cured by an instruction.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Macomber,+18+Or+App+163+%281974&amp;hl=en&amp;as_sdt=4,20,38&amp;case=11428677914631887484&amp;scilh=0"><em>State
+            v. Macomber</em>, 18 Or App 163 (1974)</a></p>
+            <p>Improper to state, “defendant never explained” or “how
+            does the defendant explain.” This happens in closing
+            argument when the prosecutor doesn’t understand that the
+            defense has no burden to present evidence or testify.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=Douglas+v.+Cupp,+578+F2d+266+%281978%29&amp;hl=en&amp;as_sdt=3,20,38&amp;case=201987519745901381&amp;scilh=0"><em>Douglas
+            v. Cupp</em>, 578 F2d 266 (1978)</a></p>
+            <p><strong>Where the prosecution elicited evidence of
+            defendant invoking the right to silence after they were
+            placed in custody.</strong></p>
+            <p>[ <em>State v. Buck</em>, 239 Or 577 (1965)]</p>
+            <p>It is improper for the prosecutor to tell the jury that
+            the state’s evidence is “uncontradicted” or “unimpeached” if
+            the defendant himself is the only possible witness who could
+            contradict the evidence.</p>
+            <p><strong>The prosecutor shouldn’t infer that the defendant
+            will make up a story while the case is going
+            on.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Seeger,+4+Or+App+336+%281971%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3111552181632184682&amp;scilh=0"><em>State
+            v. Seeger</em>, 4 Or App 336 (1971)</a></p>
+            <p>Where prosecutor’s statement to the jury that the defense
+            counsel’s request to reserve opening statement would permit
+            defendant to “make up a story while the case is going
+            on.”</p>
+            <p><strong>The prosecutor can’t disparage a defense attorney
+            by calling him a pimp or unethical.</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lundbom,+96+Or+App+458+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15878925504596100461&amp;scilh=0"><em>State
+            v. Lundbom</em>, 96 Or App 458 (1989)</a></p>
+            <p>If the prosecutor argues that defense lawyers try and
+            hide the truth or that they are unethical because they
+            distort the facts then you can object and ask for a
+            mistrial. Similarly, the prosecutor should not refer to the
+            defense attorney as a pimp using a “hired gun” for an
+            expert.</p>
+    </body>
+</html>

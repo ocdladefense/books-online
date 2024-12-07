@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </header>
+            <p><strong>Public Records and the Freedom of Information
+            Act</strong></p>
+            <p><strong><em>Rhonda Coats and Lynette
+            Lazenby</em></strong></p>
+            <p>2010 edition</p>
+            <h3 id="public_records">Public Records</h3>
+            <p>Public records can be evidence or doorways to finding
+            other information. They are used extensively to locate
+            people and to track a person’s assets and activities through
+            contact with public agencies. Brainstorming ways that people
+            interact with government in order to pursue their paper
+            trails is a constant process for investigators. Public
+            records ordinarily do not require a subpoena.</p>
+            <p><em>Definition of a Public Record</em></p>
+            <p>Records can take many forms. The definition depends on
+            each state’s law. Some states are slow to include electronic
+            versions and specify just older forms, while others
+            acknowledge electronic only if it’s also “written.” Oregon
+            takes an inclusive view concerning any information created
+            or used by a public body, except by the state legislature,
+            staff and committees. They have their own disclosure rules.
+            The term “writing” includes, but is not limited to, maps,
+            faxes, electronic recordings, computer tape, microfiche,
+            photographs, tape, films, video tape, disks and email.</p>
+            <p><em>Databases</em></p>
+            <p>Records are massaged, sold or relayed into remotely
+            removed versions. Nuggets can be mined by marketers and
+            information brokers who resell them again to businesses,
+            attorneys, investigators and law enforcement agencies.
+            Public and commercial databases are heavily used as
+            platforms to launch further action. The more removed the
+            database is from the source, the more cautions apply. Most
+            databases seldom offer complete or up-to-the-minute
+            information, with the exception of some judicial networks or
+            other government services that are now indexed on the World
+            Wide Web.</p>
+            <p>When accessing commercial or government databases, it’s
+            important to know how current the files are and how far back
+            they date, as well as the supplier. The dates can differ per
+            record and per agency. Good providers answer these questions
+            or offer codes or bulletins, though commercial providers may
+            bury those “minor details” deep inside their system. Public
+            agencies are usually more upfront in cautioning the
+            limitations. This chapter is concerned more with accessing
+            original individual records, their copies, certified copies,
+            and compilations.</p>
+            <p><em>Originals, Copies and True Copies</em></p>
+            <p>Original records, not the databases, are more often the
+            smoking guns. But few can be released by law. Copies are
+            more likely to be actual evidence. They provide more content
+            or clues than you will usually find on databases. They can
+            have full text with notations, date-received stamps,
+            cross-indexing, forgotten sticky notes and other fascinating
+            additions that enhance the paper trail. They are carefully
+            archived. They are protected by laws from being altered or
+            destroyed for certain periods of time. They are often
+            microfilmed, photographed or electronically stored to where
+            your “original” may be only a copy of a photograph but that
+            is often considered close enough. Actual originals often
+            cannot be removed without a court order. The public is
+            allowed to view originals, with some exceptions, and can
+            request only copies. Remember, records are not just
+            documents. They may be original tape or video recordings or
+            other types of records.</p>
+            <p><em>Certified Copies</em></p>
+            <p>Courts accept certified copies for most purposes. Not all
+            records must be certified. It is usually up to the
+            requester. Attorneys often like to be asked if they want
+            that extra step taken before they are charged for the cost
+            and time. If you ask for a public record, you are usually
+            asked if you want it certified. If you are not asked, and
+            forget, you have to go back and ask all over again.
+            Certification requirements are in the state statutes. Fees
+            are set by law, rule, ordinance, policy or practice. The
+            Attorney General’s manual has a model certification format
+            with room for a seal.</p>
+            <p><em>Each State Has Its Own Brand of Sunshine</em></p>
+            <p>The definitions and steps to request public records from
+            all public entities, except federal agencies, differ in each
+            state. Each state has its own version of a public records
+            law, sometimes called a sunshine law. Some states
+            incorporate the federal Freedom of Information Act in the
+            name of their records law, which adds to the confusion
+            between state laws and the nationwide FOIA. Attempts to
+            suggest uniform public records laws for all states face
+            uphill battles from special interest groups and freedom
+            advocates who say the variety encourages new approaches and
+            easier amending. Some states have established separate
+            agencies to deal with public records issues. Others send
+            petitions to district attorneys, the Attorney General, the
+            secretary of state, the Governor’s office or other agencies
+            where potential conflicts of interest are apparent.</p>
+            <blockquote>
+            <p>You do not use the FOIA in Oregon unless you are
+            requesting a record from a federal agency. Though it is
+            slang to “Foy-yah” a request from any government, using that
+            term can lead to misunderstandings and wasted time. A memory
+            trigger is to think of the “F” for federal. The central
+            premise that public records are “for you” to see or copy is
+            the same in most states, but the federal act does not apply
+            to local, city, county or state records unless copies are in
+            a federal source. The 10-day clock, for instance, does not
+            apply in Oregon for non-federal records. More on the FOIA at
+            the end of this chapter.</p>
+            </blockquote>
+            <p><em>Exemptions to the State Public Records Law</em></p>
+            <blockquote>
+            <p>“Every person has a right to inspect any public record of
+            a public body in this state, except as otherwise expressly
+            provided by ORS 192.501 to 192.505.”</p>
+            </blockquote>
+            <p>Oregon’s sunshine law started out with this statement in
+            1973 and it still does. The devils are in the details. It is
+            the same with other states. The loopholes keep expanding as
+            more exceptions and categories of exclusions are added.
+            Agencies, industries and other special interest groups
+            convince lawmakers to close more records from the public
+            every two years. More than 300 types of “closed doors” now
+            exist. Investigators outside law enforcement or government
+            agencies continue to be cut off from public records access
+            when new laws are passed to protect personal privacy. They
+            are seldom named in closure exceptions. This is usually
+            because they are not watching or they have not generated a
+            lobby to explain or demand their need to access records
+            outside of discovery and subpoena tools.</p>
+            <p>Efforts to include Oregon licensed investigators’ access
+            to DMV and other vital records succeeded in the late ’90s.
+            Members in a statewide association of legal investigators
+            successfully lobbied to have the words “licensed
+            investigator” plugged into the list of the those privileged
+            to access motor vehicle records as allowed under the federal
+            act that went into effect in 1997. The group concurrently
+            lobbied to enact statewide licensing that same year and
+            changed their nonprofit’s name to the Oregon Association of
+            Licensed Investigators (OALI).</p>
+            <h3 id="driver_and_motor_vehicle_records">Driver and Motor
+            Vehicle Records</h3>
+            <p>Motor vehicle records get high-volume use, scrutiny and
+            blame for abuse. Many states are contracting to sell their
+            records in bulk to commercial database providers and no one
+            else. Some states, such as Pennsylvania, shut off this
+            supply after one illegal use was tracked back to a
+            provider’s lack of tight controls on their clients. Even if
+            bulk sales narrow or stop it is usually still possible to
+            get your own account or find a local retriever.</p>
+            <p>Oregon DMV account holders can choose to call a real
+            person during office hours to answer requests over the
+            phone. Information from the website states the
+            following:</p>
+            <p>IVR/DAVE is an automated record inquiry system available
+            only to established <a
+            href="http://www.odot.state.or.us/forms/dmv/6037grp.pdf">Record
+            Inquiry Account Holders</a>.  If approved for an account,
+            you are pre-qualified to receive record information. Account
+            holders have access to DMV's Interactive Voice Response
+            System (IVR/DAVE). For more information refer to the <a
+            href="http://www.odot.state.or.us/forms/dmv/6733.pdf">IVR/DAVE
+            User Guide</a>.<br />
+             <br />
+            Advantages for IVR/DAVE users include 24-hour access to
+            certain driver and vehicle record information, and overnight
+            turnaround time for prints ordered through the system. 
+            Through IVR/DAVE, you have the following six menu
+            choices:</p>
+            <ol>
+            <li>Listen to driver license name and address, description
+            and status.</li>
+            <li>Listen to vehicle description and ownership.</li>
+            <li>Order a three-year non-employment driving record.</li>
+            <li>Order a complete or certified court print driving
+            record.</li>
+            <li>Order a three-year employment driving record.</li>
+            <li>Order a vehicle record print.</li>
+            </ol>
+            <p>Need help navigating the IVR/DAVE system? Refer to the <a
+            href="http://www.odot.state.or.us/forms/dmv/6733.pdf">IVR/DAVE
+            User Guide</a>.  For more information:</p>
+            <ol>
+            <li>Call (503) 945-5310 for name or VIN search help;</li>
+            <li>Call (503) 986-3960 for billing questions;</li>
+            <li>Call (503) 945-7950 for account or password problems;
+            or</li>
+            <li>E-mail: <a
+            href="mailto:ODOTDMVRecordsPol@ODOT.state.or.us">ODOTDMVRecordsPol@ODOT.state.or.us</a>.</li>
+            </ol>
+            <p>Application information is on the Department of
+            Transportation DMV web site.</p>
+            <p>Oregon’s version of the national Drivers Privacy and
+            Protection Act (DPPA), like others, requires all account
+            holders and those who buy from resellers to log each record
+            request by case reference number, client or other tracking
+            clue. This is supposed to make it easier to double-back
+            should information be inappropriately released. If a
+            question comes up, investigators who do not keep a
+            DMV-dedicated log might have to search all their case files,
+            those of their operatives and anyone else who has called on
+            their business account. Keeping a separate log also serves
+            as billing information and prevents “sticker shock” when the
+            monthly invoices arrive. It’s easy to forget to log from the
+            field, but account privileges can be pulled if a failure to
+            comply is determined.</p>
+            <p>The DPPA has also made it more difficult to obtain
+            personal information, such as home addresses, from police
+            and accident reports. As the clamor for more privacy
+            increases, it is battled only by volunteer efforts and
+            investigators with scant funding locally and nationwide.</p>
+            <p>The loudest advocates for open records continue to be
+            journalists. They provide some of the best resources on how
+            to dig. Press organizations spearhead access efforts in
+            Oregon and lead charges across the nation, often in
+            conjunction with the state bar organizations or other
+            professional groups, but sometimes against them. The press
+            increasingly takes the position that media should not be
+            given special access to what is not open to the public. So
+            journalists, like others, can be shut out of unconditional
+            closures that prohibit any release of a record without
+            individual consent, such as a home address, student records,
+            or juvenile records.</p>
+            <p>Most exemptions to the Oregon records law are categorized
+            as conditional where agencies have some discretion to
+            release information. The custodian is required to evaluate
+            whether the public interest is better served by disclosure
+            than not. This can hinge on the identity of the requester,
+            although giving the identity is not required under the law.
+            The public interest flag is most effectively waved by the
+            press, police and other government agencies. It can be
+            hoisted by private parties but attempts are rarely
+            successful.</p>
+            <p>In addition, someone who is party to litigation or who
+            has filed a tort claim with a state agency is required to
+            notify the Attorney General when they make a records request
+            of that agency through the Public Records Law instead of
+            discovery tools. (The person’s attorney may request records
+            from that agency without getting the consent of the agency’s
+            legal counsel, but the attorney could violate the ethical
+            code by asking questions about what the records mean,
+            according to a 1996 opinion of the Oregon State Bar.)</p>
+            <p>The custodian is allowed to deny records to anyone
+            “reasonably likely” to become party to expected litigation
+            if the custodian shows it is likely to occur, except for
+            those requests for administrative hearings. Once the
+            litigation is concluded, the records are supposedly
+            available.</p>
+            <h3 id="investigation_records">Investigation Records</h3>
+            <p><em>Criminal Investigations</em></p>
+            <p>Police and other government agencies generally can
+            withhold records relating to a criminal investigation as
+            long as it is “ongoing.” Officer’s logs, incident reports
+            and arrest information are public record, but police still
+            have discretion to decide a “clear need” to withhold or
+            redact. Arrest information usually released to the public
+            via the media includes the suspect’s name, age, home, job
+            and marital status; mugshot, charges, terms for release,
+            name and other information of victim or reporting party;
+            place, time and circumstances of arrest; arresting
+            agency/officer/aiding agencies; the investigating
+            agency/officer, and anything that might help catch others
+            involved or those who got away. Each agency interprets
+            “clear need” to suit their own purposes and personnel
+            because state law is not more specific.</p>
+            <p><em>On the Job</em></p>
+            <p>Civil rights investigations of discrimination in the
+            workplace are closed except for the complaint itself. They
+            are available at the Bureau of Labor and Industries. Unfair
+            labor practice investigatory records can be withheld except
+            for the complaints at both the Employment Relations Board
+            and the Employees Benefit Board. Workplace safety
+            investigation records are closed except for the original
+            complaint filing and status. Professional and trade
+            licensing and regulatory boards vary according to which
+            parts of complaints, investigatory and other records can be
+            released. Application records are usually protected while
+            continuing education logs are often open. Other types of
+            investigations are handled by a variety of government
+            agencies with their own statutes and administrative
+            rules.</p>
+            <h3 id="records_retention">Records Retention</h3>
+            <p>Records in state, city, county and other political
+            subdivisions must follow retention procedures and minimum
+            time limits set by the state archivist. An investigator can
+            find these rules useful as a prompt for brainstorming the
+            specific or range of records that may show someone’s
+            dealings with various agencies. They outline common titles
+            of records and reports routinely kept by similar entities.
+            They show the range of divisions with an agency and the
+            variety of public bodies covered by the record retention
+            schedules. State, county and municipal schedules are listed
+            separately and further defined by department such as finance
+            or public works. If you’ve hit a dead end, a review of these
+            rules can bring new ideas. They are accessed in the Oregon
+            Administrative Rules for the Secretary of State’s Office,
+            Archives Division. See resource list at the end of the
+            chapter.</p>
+            <p><em>Altering a Record Is a Crime</em></p>
+            <p>It is a crime to knowingly destroy, conceal, remove or
+            falsely alter a public record.</p>
+            <h3 id="how_to_request_a_public_record">How to Request a
+            Public Record</h3>
+            <p><strong>• Know where to ask.</strong> Determine which
+            agency is the originator or custodian. While most public
+            bodies will allow inspection and copying of records as
+            allowed under law, they can refer you to the originator of
+            the record if it is another public agency. Knowing the
+            jurisdiction or boundaries of the agency is useful. If you
+            want an airport’s records, you might need to know if it is a
+            private, municipal, county or consortium airport. Finding
+            out how it is managed may be helpful later to interpret the
+            significance of certain actions or lack of them.</p>
+            <p><strong>• Get the right “addy.”</strong> Obtain the
+            correct name, address, phone, fax, email and website address
+            of the agency thought to keep the record.</p>
+            <p>• Get the name of the records unit or gatekeeper. If it’s
+            not on the website, call and ask. The keeper may be an
+            executive director, manager, a division head or clerk. You
+            may not need a person’s name, but it can help later.</p>
+            <p><strong>• Check the agency’s website for
+            instructions.</strong> Many public bodies post general
+            questions and answers for the public on the web.</p>
+            <p><strong>• Call first and ask for the record.</strong>
+            Depending on the delicacy of your need for information and
+            other factors, this may or may not be a step you want to
+            take first. Sometimes an informal request tips off the
+            keeper to destroy or alter the records, which is illegal but
+            many famous cases have shown it occurs.</p>
+            <p><strong>• Ask what format the original is in and how it
+            is released.</strong> Is it on paper, tape, disk or other
+            format? You could be told the type of data you seek “does
+            not exist” because it would have to be compiled. This may
+            require a minor instruction to a computer so always ask what
+            it would take to compile it. If you are told the agency does
+            not have the record, ask who does. Ask for a guess. It might
+            be a more informed guess than yours. Things change. Do not
+            assume it does not exist because they do not have it. If it
+            has been “sent to archives,” ask if that is an in-house
+            archives or the county or state archives. Ask where else the
+            record could be. Someone may be able to give useful
+            information over the phone or they may tell you to put your
+            request in writing. Most public bodies accept an informal
+            letter or email as a written request, but you may not need
+            to go to the effort of writing a formal request if an agency
+            volunteers to send the information or has already published
+            it elsewhere. Many files are on the web. The state library
+            in Salem as well as the state archives and some university
+            libraries are designated repositories for government
+            records. The University of Oregon in Eugene has an Oregon
+            Collection, for instance, that can often save a trip farther
+            north.</p>
+            <p><strong>• Ask about payment.</strong> Some agencies
+            require payment before the search is undertaken. Others let
+            you pay when it is concluded. Some do not accept anything
+            but exact change at the counter as they are not large enough
+            to keep enough cash on hand for a variety of currencies.
+            Showing up unprepared could delay your request another day,
+            and could cause you to repull a file and remark all the
+            pages you want to copy. Most places let you bring your own
+            copier, but you can still get charged for staff time to find
+            the records and prepare them for inspection.</p>
+            <p><strong>• Ask to see the record first.</strong> This is a
+            step that many people forget in this age of faxed requests
+            and express mail. It can actually save time and reduce the
+            copies needed when it is possible to visit the agency in
+            person. Oregon grants the right to see the original records
+            in most cases; then you can decide which ones to copy. You
+            may only need to take notes on an entire file and copy just
+            the pertinent pages. This is particularly handy when there
+            are long waits to get copies. The agency may ask that you
+            make an appointment to inspect records, and staff may stall
+            to a “reasonable” time which could be weeks if they are
+            understaffed. Some offices have tables or reader stations
+            where you can peruse in view of someone who is working, if
+            not watching you personally. Others may feel it is necessary
+            to dedicate an employee to make sure you don’t take or alter
+            the records. Some might charge you for this time. Don’t take
+            it as a personal affront to your integrity or reputation, or
+            attribute it to their fears you’ll find something.</p>
+            <p><strong>• Be aware of watchful eyes.</strong> Observers
+            often report back to officials or parties what pages were
+            copied, notes taken or how much time was spent. Overt or
+            covert cameras are not unlikely in some places. Many news
+            reporters have found angry messages when they returned to
+            their office, wanting to know why the agency or individual
+            was being scrutinized or when the story will run. Others are
+            often curious to know what you are looking at and could look
+            over your shoulder or at the scrap-paper notes you tossed in
+            the trash. Some investigators get tailed by anyone who
+            suspects what they are working on would interest a friend or
+            party. While you have the right to inspect records on site
+            you have to wait for them to be made available. You usually
+            cannot rummage through file cabinets or other storage
+            areas—though this is sometimes allowed, with obvious
+            problems for everyone. Sometimes you are told to leave the
+            file on a counter when you are done. You can usually ask to
+            hand it directly to someone so that it is not left sitting
+            out. They might remember you left it behind if it comes up
+            missing later.</p>
+            <p><strong>• Make a note of pages you wish to copy and check
+            your copies.</strong> It’s common to just attach paperclips
+            to pages you want copied and to hand over the file for that
+            purpose. However, when you ask for copies the original
+            records are usually not returned for your further perusal.
+            If you have not made a note of the pages by number, or how
+            many per section or topic, you may not be able to make sure
+            they are all there. Even if the quantity is the same you may
+            not realize until later whether harried clerks copied the
+            correct pages or both sides correctly. If you have to leave
+            the marked file in a batch where it sits around or gets
+            moved a lot, the clips could fall off. If your copies are
+            not what you wanted, you might have to submit another formal
+            request on the spot, when you get back to the office or when
+            they arrive by mail. Making notes can be time consuming,
+            even for quick job. Having them, however, can assist the
+            clerk to do it by mail and prevent your having to travel
+            back to another city. Copying entire files is a good idea if
+            they are small and the cost is not a problem. Court record
+            retrievers go after specific documents in case files that
+            can be relatively standard for most requests or specific to
+            each need. An investigator asking to “check” a case file,
+            pull a file, or copy a file should know for what purpose and
+            what they are looking for, and make sure they get all
+            volumes for a big or protracted case. Clerks often pull one
+            at a time and wait for you to ask for subsequent
+            volumes.</p>
+            <p><strong>• Redacting may be required by law on copies of
+            records before they can be viewed or copied
+            further.</strong> You may be asked to pay for the hourly
+            staff time to do this, or for the agency’s attorney to
+            advise what needs to be redacted. Oregon does not allow the
+            agency to charge for an agency attorney’s time to do the
+            actual redacting, only to review the request and pertinent
+            laws and give advice. Attorney and staff redacting costs are
+            often the biggest hurdle for the public to obtain public
+            records, after access issues and before copy fees.</p>
+            <p><strong>• If you are told it is not a public record, ask
+            if that is their official response.</strong> They may refer
+            you to the statute, which can be helpful, or ask you to put
+            your request in writing, or get someone more knowledgeable
+            who may know differently. Get the name and job title of who
+            denied access and what was said.</p>
+            <p><strong>• Read “The Manual.”</strong> Look at the
+            exemptions from disclosure in the Public Records Law to
+            compare with what you were told. You can get more
+            information on these in the <em>Attorney General’s Public
+            Records and Meetings Manual.</em> This is the bible to have
+            on hand. The manual includes a wealth of interpretive text,
+            letters of advice, opinions, orders, tables and indices that
+            flesh out the statutes. Older orders might be superceded by
+            newer amendments or could still apply. The manual is updated
+            every two years, coming out six months after each
+            legislative session ends. New laws can take effect
+            immediately and are most often flagged in the introduction.
+            One appendix table lists agencies or people covered by
+            statutes, the material affected and where those statutes may
+            be found that are outside the main public records law. These
+            are generally found in the laws affecting the agency’s
+            operation. Checking the manual for your type of request
+            might take anywhere from 5 to 20 minutes or longer. It can
+            go quicker than it sounds, and becomes quicker each time you
+            use the manual. New amendments, portions of the manual and
+            responses to petitions of denials (orders) are also indexed
+            on the Attorney General’s website. See Resource List.</p>
+            <p><strong>• If it is clear to you that the custodian was
+            right in denying your request,</strong> you could stop there
+            and look for another avenue. Or you could skip the legal
+            research entirely, write directly to the agency and wait for
+            their official denial or turnaround. But if you sit and
+            expect the record to arrive when it clearly may not you
+            could be wasting days or weeks instead of looking elsewhere.
+            The <em>Attorney General’s Public Records and Meetings
+            Manual</em> may provide an explanation of your situation and
+            options you could pass on to others.</p>
+            <p><strong>• Use a template to write a records request
+            letter.</strong> Oregon disclosure law does not require a
+            letter but some agencies do, which can be a good idea. It
+            establishes an easier record of the request, the timeline
+            and scope, and the identity and address of the requester. It
+            can be useful later to petition a denial or go to court.
+            Make it easy on yourself and use one of the templates
+            available to fill in the blanks for the name of the record
+            keeper, agency name, address and date. Be as specific as you
+            can regarding the records you seek. The rest is done for you
+            and all you do is print it out, or you can send it
+            electronically without even printing it. An original
+            signature is seldom needed. An electronic signature may be
+            kicked back if the agency is not yet set up to receive the
+            secure ones. The law and templates can be found linked from
+            Open Oregon, a website of the Freedom of Information
+            Coalition at <a
+            href="http://www.open-oregon.com">www.open-oregon.com</a>.</p>
+            <p><strong>• Be specific.</strong> Narrow the time period,
+            the names of people and the type of information. Gatekeepers
+            are able to deny or produce less if the wording can be
+            interpreted in other ways. They can cause repeated requests,
+            more charges or produce more volumes than you intended. If
+            you ask for all invoices to Vendor John Jones, they may
+            exclude all for Vendor J. Jones or Vendor 3507, for
+            instance, if they are having a bad hair day or that’s their
+            general attitude or policy on how to respond. Useful phrases
+            can be “those invoices referring to Vendor John Jones by
+            full name, partial name, or ID number or code.” Remember
+            that if you ask too narrowly for “invoices,” you might miss
+            donation receipts, for instance. You might also indicate a
+            cost ceiling of what you are willing to pay. Some people
+            even send blank checks but this is not recommended or
+            desirable.</p>
+            <p><strong>• Identifying yourself and your purpose.</strong>
+            This is tricky for several reasons. Normally it should not
+            be necessary to identify yourself or your purpose in order
+            to inspect or copy records at most public bodies. But the
+            law also closes some records to all but certain categories
+            of requesters. This is the only time an agency really can
+            require your name or purpose, but some do so by practice. If
+            you write a letter the same should apply, but it works
+            better to include your name and address. It is important to
+            realize that every request for a public record becomes one.
+            If you put your home address on a letter it can be disclosed
+            by that agency, even if it is confidential at the state
+            licensing board or elsewhere. Many law enforcement agencies
+            want to know your name and purpose in order to provide the
+            records. The purpose usually can be one general word such as
+            “investigation” or “defense.” If you are unsure ask your
+            attorneys what they prefer. The record clerks receiving your
+            request may be willing to suggest the minimum needed, but
+            may say more is needed than is really necessary. The purpose
+            is not required for most requests.</p>
+            <p><strong>• Sign, copy and mail your written records
+            request.</strong> Enclose a check if appropriate. Some
+            agencies do not want your check enclosed at this stage.
+            Asking for automatic acknowledgement of receipt from the
+            mailing service, whether through electronic or other
+            carriers, can let them know you are serious. Asking the
+            keeper to acknowledge response is generally not appreciated.
+            They are required to respond eventually. It’s better to seek
+            other ways to confirm delivery.</p>
+            <p><strong>• A cost estimate</strong> of the staff time and
+            copy fees may come back instead of the records themselves.
+            You may have to start your “reasonable” clock again with a
+            subsequent request and the money draft. You can narrow your
+            request and specify it not go over a certain dollar
+            figure.</p>
+            <p><strong>• If your written request is denied,</strong> go
+            back and look at the laws that apply. Compare what you
+            research to what the denial letter says. If you are adamant
+            you have a right to see or copy the records, you can
+            informally ask either the district attorney or the Attorney
+            General’s office for their informal opinion over the phone.
+            This may be all it takes to relay back to the gatekeeper. A
+            separate arm of the AG considers these requests, as opposed
+            to the assistant who serves as counsel to the state agencies
+            that might be denying release. They have to pay for legal
+            advice from the AG. You don’t.</p>
+            <p><strong>• Petitioning for order to release.</strong>
+            Requirements for petitioning are outlined in the public
+            records law and in the manual. A model petition letter is
+            available in the manual and on the websites. Petitions for
+            state agency release go to the Attorney General at the
+            Justice Building in Salem. Those for city or county agencies
+            go to the district attorney in the local county. Either must
+            decide within seven working days or it’s an automatic denial
+            of your petition and request. If the record is ordered to be
+            released, the agency has seven working days to comply or
+            take it to court. If your petition is denied, you can also
+            seek judicial review. Either side of state records disputes
+            must file in the Marion County District Court in Salem
+            instead of the county where the custodian or record is
+            located. Local challenges can be filed in the local county
+            court.</p>
+            <h1 id="the_freedom_of_information_act">The Freedom of
+            Information Act</h1>
+            <p>The Freedom of Information Act of 1974 does not define
+            the term “agency record” but the courts say it includes
+            photographs, computer tapes or databases if they already
+            existed at the time of the request. An agency has “control”
+            over a record if it has the power to dispose of it. An
+            agency does not have to compile or create a record or
+            database under the FOIA. You have the right to obtain this
+            information from these agencies even if they can be
+            collected from another source.</p>
+            <p>The FOIA does not apply to the federal courts, Congress
+            or the White House staff. It has nine major exemptions to
+            allowing access to records from other federal agencies.
+            These range from national security to oil wells. They
+            include aspects of law enforcement and “private matters”
+            deemed an invasion of personal privacy such as medical
+            records. The following resources are a few of the many
+            available on the FOIA:</p>
+            <p>• <strong>The Department of Justice Guide to the Freedom
+            of Information Act</strong> (2009 Edition) <a
+            href="http://www.justice.gov/oip/foia_guide09.htm">http://www.justice.gov/oip/foia_guide09.htm</a>.</p>
+            <p><strong>• Citizens Guide to Using FOIA</strong></p>
+            <p><a
+            href="http://www.fas.org/sgp/foia/citizen.html">http://www.fas.org/sgp/foia/citizen.html</a>.</p>
+            <p>• <strong>National Freedom of Information
+            Coalition</strong></p>
+            <p><a
+            href="http://www.nfoic.org">http://www.nfoic.org</a>.</p>
+            <p>• <strong>How to Use the Federal FOI Act</strong></p>
+            <p>Federal Open Government Guide, 10<sup>th</sup> ed.,
+            brochure on web, by mail. The Reporters Committee for
+            Freedom of the Press, 1001 Wilson Blvd, Suite 1100,
+            Arlington, VA 22209 (703) 807-2100, www.rcfp.org/foiact.</p>
+            <p>• <strong>Fully Automated Fill-in-the-Blanks FOIA Letter
+            Generator</strong></p>
+            <p>www.rcfp.org/foi_lett.html.</p>
+            <p>• <strong>The Electronic Freedom of Information
+            Act</strong></p>
+            <p>The EFOIA is undergoing controversial amendments all the
+            time. It is the biggest battle on the horizon for everyone
+            and the most encompassing. See www.rcfp.org for many
+            articles dealing with this issue.</p>
+            <p>• <strong>The Privacy Act</strong></p>
+            <p>The federal Privacy Act can be used to request
+            information only on yourself, or with a power of attorney or
+            other proof of representation. See FOIA links.</p>
+            <p>• <strong>Fair Credit Reporting Act</strong></p>
+            <p>The FCRA supersedes state law on financial records or
+            information obtained. It is constantly being amended.
+            Investigators have active lobbies. The mandates and
+            penalties are important to know for most investigations. It
+            is often abused unknowingly.</p>
+            <h1 id="oregon_resources">Oregon Resources</h1>
+            <p>• <strong>Attorney General’s Public Records and Meetings
+            Manual</strong> <a
+            href="http://www.doj.state.or.us/public_records/manual.shtml">http://www.doj.state.or.us/public_records/manual.shtml</a>.</p>
+            <p>• <strong>Oregon Bills &amp; Laws</strong></p>
+            <p>www.leg.state.or.us/billsset.htm.</p>
+            <p>• <strong>Oregon Bluebook Online</strong></p>
+            <p>Agency listings with statutes, rules, address, map, email
+            address, state audits, state record holdings, names, phone
+            numbers <a
+            href="http://bluebook.state.or.us/state/executive/executivehome.htm">http://bluebook.state.or.us/state/executive/executivehome.htm</a>.</p>
+            <p>• <strong>Directory of Archives Services and
+            Offices</strong></p>
+            <p><a
+            href="http://arcweb.sos.state.or.us/tour/directory.html">http://arcweb.sos.state.or.us/tour/directory.html</a>.</p>
+            <p>• <strong>Oregon State Email Retention and Disposition
+            FAQs</strong> <a
+            href="http://arcweb.sos.state.or.us/rules/OARS_100/OAR_166/166_300.html">http://arcweb.sos.state.or.us/rules/OARS_100/OAR_166/166_300.html</a>.</p>
+            <p><strong>• Open Oregon: A Freedom of Information
+            Coalition.</strong> Provides Templates for public records
+            requests and petitions citing Oregon law,
+            www.open-oregon.com.</p>
+            <h3 id="other_state_and_national_resources">Other State and
+            National Resources</h3>
+            <p><strong>• Reporters Committee for Freedom of the
+            Press.</strong> Portal to laws for all states, manuals and
+            many resources such as “Access to Electronic Records” and
+            “Tapping Officials’ Secrets” that investigators often use as
+            an easy reference for telephone taping laws in each state,
+            for example, as well as public records, <a
+            href="http://www.rcfp.org">www.rcfp.org</a>.</p>
+            <p><strong>• Society of Professional Journalists.</strong>
+            Runs state checks on accessibility and lobbies for
+            disclosure. Started Project Sunshine in 1990 to “focus
+            attention and energy on problems of steadily eroding access
+            to national, state and local government,” www.spj.org.</p>
+            <p><strong>• Student Press Law Center.</strong> Provides
+            template letter generator and other information, <a
+            href="http://www.splc.org">www.splc.org</a>.</p>
+            <p>• <strong>The Public Record Retriever Network.</strong>
+            BRB Publications network of companies sets industry
+            standards and publishes <em>on-the-record,</em> a quarterly
+            newsletter that updates public record policies and
+            procedures at the county, state and federal levels. The
+            library features books such as Find Public Records Fast and
+            The Sourcebook of Public Record Information, which profiles
+            20,000 government agencies in detail in over 2000 pages
+            (10<sup>th</sup> ed., March 2010), and what used to be The
+            2000 MVR Book is now two books: <em>The U.S. Motor Vehicle
+            Reference Book 2010</em> and <em>The MVR Decoder
+            Digest</em>, published August 2008.</p>
+            <h3 id="more_portals_to_public_records">More Portals to
+            Public Records</h3>
+            <p>Here is a sample of some free and some pay-to-pull
+            portals. Many more exist. [Editors’ Note: OCDLA does not
+            endorse the following, and readers should asses their
+            usefulness for themselves.]</p>
+            <p>• Free Public Records—www.freepublicrecords.com</p>
+            <p>• Access-central.com—www.access-central.com</p>
+            <p>'''• The Freedom Forum—www.freedomforum.org</p>
+            <p>• The Poynter Institute for Media Studies—<a
+            href="http://www.poynter.org/"><em><span>http://www.poynter.org/</span></em></a></p>
+            <p>'''• Internet Open Records
+            Project—www.openrecords.org</p>
+            <p>• Search Systems—www.pac-info.com</p>
+            <p>• Government Printing Office Database
+            List—http://www.lexisone.com/legalresearch/legalguide/gpo/government_printing_office_databases.htm</p>
+            <p>• Public Records Online, Real
+            Estate—www.netronline.com</p>
+            <p>• Public Access to Court Electronic
+            Records—www.pacer.psc.uscourts.gov</p>
+            <p>• Electronic Privacy Information Center—www.epic.org</p>
+            <p>• National Archives, Federal Register, Privacy
+            Act—http://www.gpoaccess.gov/nara/index.html</p>
+    </body>
+</html>

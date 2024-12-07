@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <p>2020 edition</p>
+            <h1 id="sentencing"><strong>Sentencing</strong></h1>
+            <p><strong><em>By Lisa Ludwig and Stacey
+            Reding</em></strong></p>
+            <p>2024 Update by Simon Whang</p>
+            <h3 id="update"><strong>2024 Update</strong></h3>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.010(6)(a)-(e)</a>
+            has now been modified in terms of minimum fines, creates
+            minimum fine of $500 for first time Bicycle DUII.</p>
+            <p>Both <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.020(3)</a>
+            and <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.235</a>
+            now read that the court “may not require defendant to attend
+            a victim impact panel” if the current offense was on a
+            bicycle that was not an electric assisted bicycle.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.400(3)</a>
+            provides that the mandatory license suspension per ORS <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">809.428</a>
+            or revocation per ORS <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">809.235</a>
+            does not apply for Bicycle DUIIs, unless it is an
+            electric-assisted bicycle.</p>
+            <p><strong>[End Update]</strong></p>
+            <h1 id="i._sentencing_and_related_suspensions"><strong>I.
+            Sentencing and Related Suspensions</strong></h1>
+            <p>Since 1983, Oregon law has provided that those convicted
+            of DUII are subject to certain mandatory sentencing
+            provisions, including a minimum of two days in jail or 80
+            hours of community service, a requirement of alcohol
+            evaluation and treatment, minimum fines based on the number
+            of prior convictions and the BAC, and license suspensions
+            based on number of prior suspensions. However, this does not
+            reduce the importance of advocacy at sentencing, where the
+            terms of the sentence can dictate where your client can live
+            and whether she can work for years to come.</p>
+            <p>Link to 2019 edition of DUII statutes, chapter 813,
+            Driving Under the Influence of Intoxicants.</p>
+            <h2 id="a._plea_bargaining_limited"><strong>A. Plea
+            Bargaining Limited</strong></h2>
+            <p><strong>1. ORS 813.170 Limits Plea-bargaining in DUII
+            Cases</strong></p>
+            <p>The statute reads as follows:</p>
+            <p>(1) Notwithstanding ORS 135.405 to 135.445, a person
+            charged with the offense of driving under the influence of
+            intoxicants shall not be allowed to plead “guilty” or “no
+            contest” to any other offense in exchange for a dismissal of
+            the offense charged. No district attorney or city attorney
+            shall make any motion and no judge shall enter any order in
+            derogation of this section. This section does not prohibit
+            diversion as provided under ORS 813.200.</p>
+            <p>(2) Notwithstanding ORS 135.881 to 135.901, a person
+            charged with the offense of driving under the influence of
+            intoxicants shall not be allowed to enter into any program
+            of supervised performance or diversion except as provided
+            under ORS 813.200.</p>
+            <p><strong>2. Oregon Attorney General Opinion No. 7493
+            (77–78 AG 1148, 1152–1153)</strong></p>
+            <p>The Oregon Attorney General answered the question as to
+            whether a prosecutor may later amend a citation charging a
+            driver with driving under the influence of intoxicants to
+            reckless or careless driving. The opinion reads in pertinent
+            part:</p>
+            <p>A prosecutor is not required to proceed on a charge just
+            because an arresting officer based his arrest on that
+            charge. There may have been probable cause for the arrest,
+            but insufficient evidence or other factors may persuade the
+            prosecutor not to proceed with that charge. Under the
+            prosecutorial discretion discussed above, a district
+            attorney may elect to proceed on another charge, such as
+            reckless or careless driving, if he has probable cause for
+            such a prosecution. There is, however, one significant
+            restriction on prosecutorial discretion with regard to the
+            charge of driving under the influence of intoxicants.
+            813.170(1) provides: A person charged with the offense of
+            driving under the influence of intoxicants shall not be
+            allowed to plead guilty or no contest to any other offense
+            charged. No district attorney shall make any motion and no
+            judge shall enter any order in derogation of this
+            section.</p>
+            <p>ORS 813.170(2) deals with plea agreement situations,
+            where a dismissal of a DUII charge is offered in return for
+            forfeiture of bail or a guilty or no contest plea to another
+            offense. The statute does not involve non-plea bargaining
+            situations where a prosecutor decides to drop or change a
+            charge solely based on analysis of available evidence and
+            the strength of the particular case, without any agreement
+            by defendant to plead guilty on another charge. This statute
+            was not intended to force a district attorney to prosecute a
+            DUII charge merely because an arrest is made on that
+            charge.</p>
+            <p><code>Practice Tip</code></p>
+            <p>As a matter of good practice some district attorneys,
+            when confronted with a DUII charge that is not supported by
+            sufficient evidence, may choose to unilaterally dismiss the
+            charge and file a charge of reckless or careless driving. In
+            those situations, the aforementioned Attorney General’s
+            Opinion is seen by district attorneys and judges as
+            permitting subsequent plea bargaining on a new charge of
+            reckless or careless driving. For example, the prosecutor
+            might unilaterally file a new charge of reckless driving and
+            then offer to reduce the charge of reckless driving to
+            careless driving in exchange for a plea or bail forfeiture
+            to careless driving.</p>
+            <p><strong>3. Reckless Driving</strong></p>
+            <p>Reckless driving is defined as follows: A person commits
+            the offense of reckless driving if the person recklessly
+            drives a vehicle upon a highway or other premises described
+            in this section in a manner that endangers the safety of
+            persons or property. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors811.html">ORS
+            811.140</a>. “Recklessly” in this section is defined in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors161.html">ORS
+            161.085</a> as “the condition of being aware of and
+            consciously disregarding a substantial and unjustifiable
+            risk that the result will occur or that the circumstance
+            exists.” Reckless driving is a class A misdemeanor. which
+            carries up to one year of imprisonment and/or a fine of
+            $6500. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">ORS
+            809.410(6)</a> provides for driver license suspension in the
+            event of conviction for reckless driving. A first conviction
+            carries a 90 day suspension. In the event of a second
+            conviction within five years, the period of suspension is
+            one year. And finally, in the event of a third or subsequent
+            conviction within five years, the period of suspension is
+            three years. ORS 809.420(1).</p>
+            <p><strong>4. Careless Driving</strong></p>
+            <p>Careless driving is defined at ORS 811.135 as follows: A
+            person commits the offense of careless driving if the person
+            drives any vehicle upon a highway or other premises
+            described in this section in a manner that endangers or
+            would be likely to endanger any person or property. Careless
+            driving is a class B traffic violation punishable by a basic
+            base fine of $237 plus fees and assessments, or a class A
+            violation if it contributes to an accident, subject to a
+            basic base fine of $421 plus fees and assessments. If
+            careless driving results in injury or death, ORS 811.135
+            provides for additional penalties including traffic safety
+            class, community services, fines up to $12,500, and license
+            suspension.</p>
+            <p><strong>5. ORS 813.170(2) restricts diversion agreements
+            in DUII cases to the structured program outlined in ORS
+            813.200 only.</strong></p>
+            <h2
+            id="b._no_merger_of_duii_and_reckless_driving"><strong>B. No
+            Merger of DUII and Reckless Driving</strong></h2>
+            <p>DUII and Reckless Driving do not merge. Each has an
+            element the other does not. A driver must be intoxicated for
+            DUII but you don’t have to drive recklessly to be guilty of
+            DUII. ORS 161.067. However, DUII and Reckless Driving
+            convictions arising from the same criminal episode should be
+            subject to concurrent sentences unless the requirements of
+            <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors137.html">ORS
+            137.123(5)</a> are met.</p>
+            <p><code>Practice Tip</code></p>
+            <p>At trial, ask for an instruction that says merely driving
+            intoxicated is not, by itself, enough to support a
+            conviction for reckless driving. If the state opposes,
+            because—they say—anytime you’re DUII, you’re reckless, then
+            arguably the two counts would merge under <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Blake,+348+Or+95,+&amp;hl=en&amp;as_sdt=6,38&amp;case=5655109256068549344&amp;scilh=0"><em>State
+            v. Blake</em>, 348 Or 95, 99, 228 P3d 560 (2010)</a> (crimes
+            with different elements merge if committing one necessarily
+            requires committing the other).</p>
+            <h2 id="c._sentencing_procedures"><strong>C. Sentencing
+            Procedures</strong></h2>
+            <p><strong>1. Time</strong></p>
+            <p>Unless waived by the defendant, the time appointed for
+            sentencing shall be at least two days after the plea or
+            verdict is received unless the court does not stay in
+            session. If the court does not intend to stay in session,
+            the sentence must be as remote as possible before
+            adjournment, but cannot be less than six hours after the
+            verdict, except with the consent of the defendant. ORS
+            137.020(2). Such time limitations are not applicable to
+            municipal and justice courts as they do not maintain regular
+            sessions. <em>Mayhew v. City of Eugene</em>, 56 Or 102
+            (1910).</p>
+            <p><strong>2. Substance</strong></p>
+            <p>The taking of evidence in aggravation or mitigation at
+            sentencing requires notice to the court and the adverse
+            party. ORS 137.080, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Brown,+44+Or+App+597&amp;hl=en&amp;as_sdt=6,38&amp;case=17544872091108377397&amp;scilh=0"><em>State
+            v. Brown</em>, 44 Or App 597 (1980)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Collins,+43+Or+App+265,+&amp;hl=en&amp;as_sdt=6,38&amp;case=1807586050583640556&amp;scilh=0"><em>State
+            v. Collins</em>, 43 Or App 265, 268 (1979)</a>.</p>
+            <p><strong>3. Personal Appearance of Accused</strong></p>
+            <p>While the defendant may waive appearance at a misdemeanor
+            trial (<a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.030</a>), personal appearance of the defendant at a
+            misdemeanor sentencing may be ordered by the court (ORS
+            137.030). Waiver of appearance at trial is discretionary and
+            may be denied by the court, especially when identity is an
+            issue. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ferguson,+84+Or+App+565+%281987&amp;hl=en&amp;as_sdt=4,38&amp;case=15295860364674011987&amp;scilh=0"><em>State
+            v. Ferguson</em>, 84 Or App 565 (1987)</a>. Appearance at
+            trial or sentencing by electronic means (video or telephone
+            conference) is permitted at the discretion of the court. A
+            defendant who is in custody in another jurisdiction may
+            “appear” for sentencing on a felony or misdemeanour charge
+            by means of “simultaneous electronic transmission” (ORS
+            137.040, which is described in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors131.html">ORS
+            131.045</a> and UTCR 4.080.)</p>
+            <p><strong>4. What to Cover at a Sentencing
+            Hearing</strong></p>
+            <p>Counsel may want to cover the following at a sentencing
+            hearing:</p>
+            <p>a. Plea bargain sentencing recommendation.</p>
+            <p>b. Defendant’s time served in jail.</p>
+            <p>c. The amount of bail or security posted.</p>
+            <p>d. Restitution.</p>
+            <p>e. Court costs and a report of attorney time in appointed
+            cases.</p>
+            <p>f. Explanation of detainers or parole or probation
+            currently in effect.</p>
+            <p>g. Explanation and challenges to defendant’s prior
+            record.</p>
+            <p>Consideration of a prior conviction at sentencing that is
+            constitutionally invalid may result in the case being
+            remanded for reconsideration of sentence. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Tucker,+404+US+443,&amp;hl=en&amp;as_sdt=3,38&amp;case=12413917962782149198&amp;scilh=0"><em>United
+            States v. Tucker</em>, 404 US 443, 92 S Ct 589, 30 LEd2d 592
+            (1972)</a>.</p>
+            <p>The constitutional validity of a prior conviction used to
+            enhance a subsequent offense may be challenged in the
+            subsequent prosecution. <a
+            href="http://scholar.google.com/scholar_case?q=Baldasar+v.+Illinois,+446+US+222,+100+S+Ct+1585,+64+LEd2d+169+%281980&amp;hl=en&amp;as_sdt=3,38&amp;case=13983888445126269959&amp;scilh=0"><em>Baldasar
+            v. Illinois</em>, 446 US 222, 100 S Ct 1585, 64 LEd2d 169
+            (1980)</a>. The use of a collateral attack is appropriate to
+            challenge the constitutional validity of the prior
+            conviction. The defendant need not rely on the
+            Post-Conviction Relief Act. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Grenvik,+291+Or+99,+&amp;hl=en&amp;as_sdt=4,38&amp;case=4887071307605378050&amp;scilh=0"><em>State
+            v. Grenvik</em>, 291 Or 99, 101, 628 P2d 1195 (1981)</a>. In
+            <em>Grenvik</em>, the court stated:</p>
+            <p>We hold...a defendant is able to challenge the use of
+            constitutionally invalid prior conviction in a subsequent
+            criminal proceeding whenever the court relies on the prior
+            conviction to enhance punishment. When a constitutionally
+            invalid prior conviction leads to punishment more onerous
+            than that to which a defendant might be subjected without a
+            prior offense, the sixth amendment prohibits its use. <a
+            href="http://scholar.google.com/scholar_case?q=City+of+Pendleton+v.+Standerfer,&amp;hl=en&amp;as_sdt=4,38&amp;case=18263455948401966112&amp;scilh=0"><em>City
+            of Pendleton v. Standerfer</em>, 297 Or 725, 688 P2d 68
+            (1984)</a>.</p>
+            <p>A valid waiver will not be presumed from a silent record.
+            <a
+            href="http://scholar.google.com/scholar_case?q=Burgett+v.+Texas,+389+US+109&amp;hl=en&amp;as_sdt=3,38&amp;case=2866164861650353522&amp;scilh=0"><em>Burgett
+            v. Texas</em>, 389 US 109, 88 S Ct 258, 19 LEd2d 319
+            (1967)</a>; <em>State v. Grenvik</em>, 291 Or 99, 101, 628
+            P2d 1195 (1981).</p>
+            <p>A conviction for DUII obtained when the defendant was
+            without the assistance of counsel and had not waived counsel
+            is invalid. <a
+            href="http://scholar.google.com/scholar_case?q=Brown+v.+Multnomah+County+District+Court,+280+Or+95,+570+P2d+52+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9670535638878437571&amp;scilh=0"><em>Brown
+            v. Multnomah County District Court</em>, 280 Or 95, 570 P2d
+            52 (1977)</a>.</p>
+            <p>Under ORS 813.470, on defendant’s presentation of a
+            certified copy of judgment of acquittal in a DUII case
+            clearly showing date of arrest and of finding, DMV must note
+            the acquittal on the driving record where driving privileges
+            were suspended from the same incident due to a .08 or higher
+            breath test resulting in an implied consent suspension.</p>
+            <p>h. Factual matters in mitigation concerning the offense
+            and personal matters in mitigation concerning the defendant
+            (age, marital status, employment, if defendant is a veteran,
+            education and other matters such as drug or alcohol programs
+            in which the defendant may have enrolled).</p>
+            <p>Entering your client into a <em>certified</em> treatment
+            program prior to a plea or a verdict of guilty is always a
+            good idea if your client has prior DUII convictions. You can
+            receive a free directory to certified treatment programs by
+            requesting the Treatment Program Directory from:</p>
+            <p><strong>Office of Mental Health and Addiction
+            Services</strong></p>
+            <p>Department of Human Resources</p>
+            <p>500 Summer Street NE #E86</p>
+            <p>Salem, OR 97310</p>
+            <p>Or you may call and ask for a copy of the booklet at the
+            following number: 503-945-5763, or download a copy from the
+            website: <a
+            href="http://www.oregon.gov/oha/amh/Pages/index.aspx">http://www.oregon.gov/oha/amh/Pages/index.aspx</a>.
+            You can also search for a provider at <a
+            href="http://findtreatment.samhsa.gov/TreatmentLocator/faces/quickSearch.jspx">http://findtreatment.samhsa.gov/TreatmentLocator/faces/quickSearch.jspx</a>.</p>
+            <p><strong>5. Under Oregon law defendants in criminal cases
+            have the right of allocution (the right to be heard by the
+            court prior to sentencing). <a
+            href="http://scholar.google.com/scholar_case?q=DeAngelo+v.+Schiedler+306+Or+91+%281988&amp;hl=en&amp;as_sdt=4,38&amp;case=5903235792208453855&amp;scilh=0"><em>DeAngelo
+            v. Schiedler</em> 306 Or 91 (1988)</a>.</strong></p>
+            <p><strong>6. The court may not, by its sentence, punish a
+            defendant for exercising the right to stand trial as opposed
+            to pleading guilty. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+52+Or+App+681+%281981%29&amp;hl=en&amp;as_sdt=4,38&amp;case=10659443127974322264&amp;scilh=0"><em>State
+            v. Smith</em>, 52 Or App 681 (1981)</a>.</strong></p>
+            <p><strong>7. In a DUII case, judges will sometimes permit a
+            short delay following sentencing before a defendant must
+            begin serving any confinement imposed so that the defendant
+            may make necessary personal arrangements. Check with local
+            defense counsel to find out what a particular jurisdiction
+            commonly does.</strong></p>
+            <p><strong>8. At the time the court pronounces sentence, the
+            defendant, if present, must be advised of the right to
+            appeal and other procedures for protecting appellate rights.
+            If the defendant is not present, the court must advise the
+            defendant in writing of the right to appeal and of the
+            procedure for protecting appellate rights. ORS 137.020(3).
+            As a practical matter, many courts request counsel to advise
+            the defendant of the right to appeal and the procedure for
+            protecting appellate rights.</strong></p>
+            <h2 id="d._terms_of_sentence"><strong>D. Terms of
+            Sentence</strong></h2>
+            <p><strong>1. Alcohol Screening Interview or
+            Evaluation</strong></p>
+            <p>Upon any conviction for DUII, the court must require the
+            convicted person to complete a screening interview, also
+            referred to as an evaluation, with the agency or
+            organization designated by the court. ORS 813.020. The cost
+            of the screening interview is set by statute ($150). The
+            purpose of the screening interview is to determine the level
+            of mandatory programming the person shall undertake. ADES
+            (Alcohol and Drug Evaluation Services) screeners determine
+            whether the person should be placed in an “Information
+            Program” or a “Rehabilitation Program.” Screeners also make
+            a referral to a <em>different</em> agency for treatment,
+            unless the jurisdiction is small enough that an exception is
+            made and screening and treatment are allowed to be done by
+            the same agency. ORS 813.025.</p>
+            <p><strong>2. Programming or Treatment</strong></p>
+            <p><em>By Heidi Brockman-Astrue, MA LPC NBCC MAC</em></p>
+            <p>Treatment is a mandatory component of a DUII sentence;
+            the court must order treatment as part of a sentence. ORS
+            813.020. The type of programming (Information or
+            Rehabilitation) is recommended by the screener who makes a
+            referral, but the treatment provider must only be certified
+            by the state and follow some minimum requirements in terms
+            of length and curriculum: at least four session over a
+            four-week period, with 12–20 hours of education, at least
+            one urinalysis test within the first two weeks. There are
+            also topics which must be covered in the program. <a
+            href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=1928">OAR
+            Division 54</a></p>
+            <p>In general, clients are required to demonstrate at least
+            90 days of documented abstinence, typically accomplished by
+            random urinalysis (UA) testing. There is no other
+            established standard for length of treatment, so programs
+            vary greatly in both length of stay and cost. These
+            variables are determined by individual programs and
+            (hopefully) the needs of each particular client.</p>
+            <p>In both the case of diversion and conviction, clients are
+            required to attend an appointment with a county sanctioned
+            Alcohol and Drug Evaluation Specialist (ADES). These
+            individuals often recommend a treatment provider, but it is
+            important to note that clients have the right to attend
+            treatment at any state certified DUII provider. It is
+            acceptable for clients to begin treatment prior to a formal
+            court referral, but whether or not the time counts toward
+            court requirements is at the discretion of the court and/or
+            ADES. <a
+            href="https://www.oregon.gov/oha/HSD/AMH/Pages/A-Z.aspx">Search
+            the Oregon Health Authority website for a list of ADES and
+            state-certified providers</a>. You can also view a PDF copy
+            of the directory (accessed February 1, 2020) in the Resource
+            Guide.</p>
+            <p>The ADES is responsible for the communication between
+            treatment and the courts. They are required to notify the
+            court monthly regarding each defendant’s treatment, and in
+            most counties, tend to be the individuals who monitor
+            reports from ignition interlock companies. Treatment
+            providers report on each client’s progress, UA results, and
+            ultimately completion status to the ADES who then informs
+            the court. It can be helpful to obtain a release of
+            information from the treatment program so that a client’s
+            legal counsel can also receive progress and completion
+            data.</p>
+            <p>The treatment process must include a formal evaluation
+            and a treatment plan that includes objectives and completion
+            criteria. During the course of treatment clients must
+            maintain regular appointments, participate in UA testing as
+            requested, and remain abstinent. If objectives are
+            completed, treatment fees are collected, and the client
+            demonstrates abstinence, the treatment provider can notify
+            the ADES of successful completion. For individuals with a
+            conviction, providers will also issue a DMV treatment
+            completion certificate.</p>
+            <p>The most common reasons for unsuccessful completion of
+            treatment include UAs positive for substance use,
+            non-attendance and unpaid treatment fees. For clients who
+            have insurance, it is now mandatory in Oregon for insurance
+            companies to cover treatment services for DUII (some
+            providers do not take insurance, so provider selection is
+            important when considering this option).</p>
+            <p><strong>3. Fines and Fees</strong></p>
+            <p>Misdemeanor DUII is subject to a $6250 statutory maximum
+            limit on the fine unless there was a minor in the motor
+            vehicle at the time of the offense over three years younger
+            than the driver, in which case the court may impose a fine
+            of up to $10,000.</p>
+            <p>Felony DUII is subject to the statutory maximum fine of
+            $125,000.</p>
+            <p>ORS 813.010(6) sets out mandatory minimum fines for DUII
+            convictions based on number of prior convictions and BAC.
+            For a third or subsequent conviction, the $2,000 fine can be
+            waived if the defendant is sentenced to a term of
+            imprisonment.</p>
+            <p>I</p>
+            <p>The legislature did not delineate how proof of BAC is to
+            be established so it must be a jury question, to be dealt
+            with after a guilty finding. ORS 813.010(6)(c).</p>
+            <p>A DUII conviction fee of $255 is added to the fine and
+            may be waived by the court. ORS 813.020(1)(a); 813.030.
+            Statutory fees and assessments generally run another $150.
+            ORS 813.020(3) adds a $5–$50 fee for the Victim Impact
+            Program, which may be imposed if the court requires
+            attendance at a Victim Impact Program. The offender is also
+            responsible for the $150 cost of an alcohol screening
+            pursuant to ORS 813.020 and 813.021. Costs may include
+            court-appointed attorney fees. ORS 161.665(1). The court may
+            waive some of the DUII conviction fee or allow for payment
+            on an installment basis. However, the court may add a
+            finance charge of $50 to $200 for amounts not paid within 30
+            days of entry of judgment. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors001.html">ORS
+            1.202</a>.</p>
+            <p>See Section IV, Estimated Costs to a Defendant Associated
+            with a Conviction for a First DUII Offense, and Section V.,
+            2018 Case Law Supplement, for more.</p>
+            <p><strong>4. Jail and/or Community Service and
+            Probation</strong></p>
+            <p>In addition to these costs, ORS 813.020(2) requires the
+            court to impose a sentence of at least 48 hours imprisonment
+            in the county correctional facility or the performance of
+            community service for a period of time as outlined in ORS
+            137.129(d), which is not less than 80 hours, nor more than
+            250 hours. A court may provide for the imprisonment to be
+            served in jail, minimum security facilities or inpatient
+            rehabilitation or treatment centers. 813.020(2)(a). <em>The
+            court may not suspend execution of this minimum sentence
+            although the sentence may be served at in-patient treatment
+            under ORS 813.020(2)(a).</em></p>
+            <p>Probationary periods for misdemeanor DUII are at the
+            discretion of the court but cannot exceed the five-year
+            limit set out in ORS 137.010(3). Probation (and post-prison
+            supervision) periods for felony DUII are set pursuant to the
+            rules of the Oregon Criminal Justice Commission sentencing
+            guidelines.</p>
+            <p>Community service: Many courts will approve community
+            service programs formulated either by the Department of
+            Community Corrections, by the district attorney’s office, or
+            some other court-approved agency, or by the convicted person
+            himself. The only requirement is that the benefit of the
+            community service work must run to a nonprofit
+            organization.</p>
+            <p><strong>5. License Suspension/Revocation and Hardship
+            Waiting Periods</strong></p>
+            <p>The court is also required to suspend a convicted
+            person’s driving privileges or right to apply for a license.
+            The suspension periods and hardship waiting periods are
+            discussed below.</p>
+            <p>a. First DUII conviction: ODL suspension = 1 year. ORS
+            809.420(2)(a). There is a 30-day waiting period for the
+            defendant to apply for a hardship permit. ORS
+            813.520(2).</p>
+            <p>b. Second DUII conviction within five years: ODL
+            suspension = 3 years. A hardship permit is not allowed in
+            this situation.</p>
+            <p>c. Second conviction beyond five years =1 year.</p>
+            <p>d. The court is required to revoke a person’s driving
+            privileges permanently upon a third or subsequent conviction
+            for “any combination” of the following offenses: DUII under
+            ORS 813.010, a “statutory counterpart” of DUII from another
+            jurisdiction, “an offense in another jurisdiction that
+            involved the impaired driving of a vehicle due to the use of
+            intoxicating liquor, a controlled substance, an inhalant or
+            any combination thereof,” or a driving offense that involves
+            operating a vehicle with a prohibited blood alcohol content.
+            ORS 809.235(1)(b). This does not include offenses in other
+            jurisdictions that proscribe a lower blood alcohol content
+            for persons under 21 years of age. ORS 809.235(1)(c).</p>
+            <p>If a driver is subject to a conviction suspension after
+            already being subject to an implied consent suspension, DMV
+            will credit that time toward the 30- or 90-day wait time. <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6826.pdf">See
+            DMV form 6826</a>.</p>
+            <p>ORS 809.235(2), provides for a method to petition a court
+            for the restoration of driving privileges. A petitioner must
+            wait at least ten years from the date that the petitioner is
+            either released on parole or post-prison supervision or
+            sentenced to probation if the probation is not revoked and
+            is discharged without a sentence of imprisonment. A
+            petitioner is be required to undergo a court-ordered
+            “psychological evaluation…to determine whether the person is
+            presently a threat to the safety of the public.” ORS
+            809.235(3)(d). The burden is on the petitioner to establish
+            by “clear and convincing evidence” that the petitioner is
+            “rehabilitated” and “does not pose a threat to the safety of
+            the public.” ORS 809.235(4). There is a requirement of SR 22
+            Insurance and an Ignition Interlock Device for five years to
+            get driving privileges after a court has granted
+            restoration.</p>
+            <p>e. If the DMV occupational license waiting period has
+            expired at the time of conviction, then the convicted
+            defendant will be eligible for an occupational license
+            immediately, unless within the previous 12-month period he
+            or she has been convicted of a major traffic offense as
+            defined in <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors153.html">ORS
+            153.500</a> or has failed or refused an Intoxilyzer test. If
+            so, he or she must wait 30 days from the date the court
+            orders the suspension in order to be eligible to apply for
+            an occupational license. If the waiting period has not
+            expired, the 30-day waiting period after conviction,
+            nonetheless, begins to run from the date the court orders
+            the suspension and the convicted defendant is eligible for
+            an occupational license at the end of the 30-day period or
+            upon the expiration of the occupational license waiting
+            period, whichever time is longer.</p>
+            <p>f. Hardship Permit applications are available in fillable
+            format <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6044fill.pdf">online</a>,
+            and a printable copy in Chapter 3, The File.</p>
+            <p>g. The Department of Transportation may not issue a
+            hardship permit authorizing a person to drive a commercial
+            motor vehicle. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors807.html">ORS
+            807.240(2)</a>.</p>
+            <p><strong>6. Restitution</strong></p>
+            <p>The restitution statute, ORS 137.103 et seq., applies
+            only if the defendant is convicted of, or admits to,
+            criminal activity resulting in injury to persons or damage
+            to property. Restitution may only be recovered from the
+            defendant if the defendant could be made to pay it in
+            damages in a civil case. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Young,+119+Or+App+470+%281993&amp;hl=en&amp;as_sdt=4,38&amp;case=11177081938908008006&amp;scilh=0"><em>State
+            v. Young</em>, 119 Or App 470 (1993)</a>. If a person is
+            convicted of DUII and the conviction involves injury to a
+            person or damage to property, the court may order
+            restitution as a condition of sentencing or probation. In
+            2003, the legislature modified the restitution statute to
+            remove from the court’s consideration the defendant’s
+            ability to pay. However, this statutory change is arguably
+            unconstitutional and should be challenged. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hval,+174+Or+App+164,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14283498132950308908&amp;scilh=0"><em>State
+            v. Hval</em>, 174 Or App 164, 180 (2001)</a> (hit-and-run
+            restitution statute, which does not contain a requirement
+            that the court consider a defendant’s ability to pay,
+            nevertheless requires a trial court to consider it); <a
+            href="http://scholar.google.com/scholar_case?q=State+v+NRL,+249+Or+App+321+%282012%29+&amp;hl=en&amp;as_sdt=4,38&amp;case=11845017635544696034&amp;scilh=0"><em>State
+            v NRL</em>, 249 Or App 321 (2012)</a> (finding that the
+            juvenile restitution statute does not violate Article I,
+            section 17, of the Oregon Constitution, despite that
+            statute’s failure to consider defendant’s ability to
+            pay).</p>
+            <p><strong>7. Vehicle Impoundment/Registration
+            Suspension</strong></p>
+            <p>Vehicles registered to persons convicted or vehicles used
+            in second or subsequent DUII offenses face mandatory
+            registration suspensions pursuant to ORS 809.010 for not
+            more than 120 days. Clear and convincing findings of
+            knowledge must be made where the vehicle owner is not the
+            defendant. A convicted defendant may also have his vehicle
+            impounded for a second conviction. ORS 809.700.</p>
+            <p><strong>8. Ignition Interlock Device (IID)</strong></p>
+            <p>Pursuant to ORS 813.602, once a person is
+            <em>convicted</em> of DUII or admitted into a diversion
+            program, the defendant will be required to have an ignition
+            interlock device installed in any vehicle operated by
+            defendant. The defendant will need to have the interlock
+            installed before a hardship permit is granted. ORS
+            813.602(1)(a). The interlock must remain on the vehicle for
+            the first one year after the ending date of the suspension
+            caused by the conviction (two years for the second or
+            subsequent conviction). ORS 813.602(1)(b). ORS 813.603(2). A
+            person who fails to have the IID installed, fails to submit
+            proof of installation, or tampers with the IID may have his
+            license suspended. ORS 813.602(6). Additionally, the
+            convicted defendant cannot avoid the IID requirement by
+            simply waiting out the six months. DMV will not fully
+            reinstate a convicted defendant until the defendant has the
+            interlock installed for one year (first conviction) or two
+            years (second or subsequent conviction). ORS 813.602.</p>
+            <p><strong>9. Ignition Interlock Standards and Procedures
+            Revised by 2017 Legislature</strong></p>
+            <p>Under HB 2638 in 2017, the legislature set new standards
+            and procedures regarding ignition interlock devices by
+            creating new provisions and amending ORS 813.200, 813.600,
+            813.602, 813.603, 813.630, 813.635 and 813.645. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">Read
+            the statutes beginning at 813.599 here</a>.</p>
+            <p>The bill established standards for those who provide
+            ignition interlock device services.</p>
+            <p>As of July 1, 2019, certification of those who provide
+            ignition interlock device services is under the obligation
+            of the Oregon State Police. The bill required employees of
+            service centers receive criminal background checks. It
+            requires service centers provider fees, sufficient to cover
+            the costs of administering the program. It establishes a
+            complaint process regarding service providers. Additionally,
+            it establishes an ignition interlock fund, separate from the
+            general fund, that shall consist of fees obtained from
+            issuance and renewal of service center certificates.</p>
+            <p>Procedures: The bill requires the service center document
+            by GPS the location of the ignition interlock device at the
+            time of a negative report. It requires service centers to
+            notify the court, the district attorney, and the Oregon
+            State Police, when a customer produces a negative report. It
+            authorizes courts to order additional participation in drug
+            and alcohol treatment if a person produces at least two
+            negative reports during the diversion agreement.</p>
+            <p><a
+            href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=5399">OAR
+            257-100-0005 through 257-100-0080</a> now cover Ignition
+            Interlock Devices with the Department of State Police.</p>
+            <p><strong>10. Juvenile Suspension Issues</strong></p>
+            <p>A juvenile (between age of 13 and 18 years) convicted or
+            adjudicated in juvenile court of any crime, violation,
+            infraction, or any offense involving the possession, use or
+            abuse of alcohol or controlled substances, faces an order of
+            denial of driving privileges of not less than 90 days on the
+            first order and not less than one year on a second or
+            subsequent order. ORS 809.260.</p>
+            <p><code>Practice Tip</code></p>
+            <p>The particulars of sentencing terms vary greatly from
+            county to county due to a disparity of resources available
+            to misdemeanor corrections programs. If you are unfamiliar
+            with the sentencing practices in a county you have to appear
+            in, you should call a local attorney to find out what is
+            customary.</p>
+            <h2
+            id="e._seizure_of_motor_vehicle_for_civil_forfeiture"><strong>E.
+            Seizure of Motor Vehicle for Civil Forfeiture</strong></h2>
+            <p>A motor vehicle may be seized and forfeited if the person
+            operating the vehicle is arrested or issued a citation for
+            driving while under the influence of intoxicants in
+            violation of ORS 813.010 and the person, within three years
+            prior to the arrest or issuance of the citation, has been
+            convicted of DUII or its statutory counterpart in another
+            jurisdiction, or certain other alcohol-related traffic
+            offenses. ORS 809.730. Note that the forfeiture is
+            authorized under this section upon arrest or citation, not
+            conviction, if the driver has a prior recent conviction.</p>
+            <p><code>Practice Tip</code></p>
+            <blockquote>
+            <p>Use of vehicle forfeiture is usually a matter of local
+            practice and can also be authorized by a local government
+            ordinance.</p>
+            </blockquote>
+            <h2
+            id="f._suspension_of_commercial_drivers_license_after_conviction"><strong>F.
+            Suspension of Commercial Drivers License After
+            Conviction</strong></h2>
+            <p>If the defendant is convicted of driving a commercial
+            motor vehicle under the influence, there are different BACs
+            and suspension lengths. The suspension is in addition to any
+            suspension the person would receive if he or she were
+            driving a regular motor vehicle. ORS 813.403(2).</p>
+            <p>The legal blood alcohol limit for the operation of a
+            commercial motor vehicle is .04. ORS 813.404(1)(d).</p>
+            <p>The suspension lengths for the Implied Consent Law:</p>
+            <p>If the defendant was not driving a vehicle containing
+            hazardous materials, the suspension for refusing a breath
+            test is three years. ORS 813.404(1)(a). If the defendant was
+            driving a vehicle containing hazardous materials, the
+            suspension length is five years. ORS 813.404(1)(c).</p>
+            <p>If the defendant blows above a .04 and is not driving a
+            vehicle containing hazardous materials, the suspension
+            length is for one year. ORS 813.404 (1)(b). If the defendant
+            is driving a vehicle containing hazardous materials and
+            blows over a .04, the length of the suspension is for three
+            years. ORS 813.404 (1)(d).</p>
+            <p>If the person has had their commercial drivers license
+            suspended for failure to perform duties of a driver of a
+            commercial motor vehicle, operating a commercial motor
+            vehicle under the influence, or has been suspended in
+            another state for an offense that would lead to suspension
+            for something other than a serious traffic infraction in
+            Oregon, the suspension length is for life. ORS 813.404
+            (2)</p>
+            <p><strong>Note</strong>: No hardship permit may be obtained
+            authorizing operation of a commercial motor vehicle. ORS
+            807.270(4).</p>
+            <h1 id="ii._felony_duii"><strong>II. Felony
+            DUII</strong></h1>
+            <h2 id="a._ors_813.0105_ors_813.011"><strong>A. ORS
+            813.010(5), ORS 813.011</strong></h2>
+            <p>The 1999 Oregon Legislative Assembly created the crime of
+            felony DUII. It is a class C felony. The maximum statutory
+            fine is $125,000 (<a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors161.html">ORS
+            161.625</a>) with a maximum term of imprisonment of five
+            years (ORS 161.605). However, like all felonies, the actual
+            time of incarceration is dictated by the Oregon Sentencing
+            Guidelines.</p>
+            <p>In 2010, Oregon voters passed Ballot Measure 73, which
+            made a third DUII in ten years a felony, and any DUII
+            committed subsequent to conviction of a felony DUII is a
+            felony. It is also imposed a required minimum sentence of 90
+            days. The felony ranking is triggered by two prior
+            convictions within ten years of the date of the current
+            offense. Convictions for boating under the influence of
+            intoxicants (BUII) count towards the ten-year total. Felony
+            DUII has a minimum Sentencing Guidelines ranking of 4D.</p>
+            <h2 id="b._ors_813.0105"><strong>B. ORS
+            813.010(5)</strong></h2>
+            <p>(5) Driving while under the influence of intoxicants is a
+            Class C felony if the defendant has been convicted of
+            driving while under the influence of intoxicants in
+            violation of this section or its statutory counterpart in
+            another jurisdiction at least three times in the 10 years
+            prior to the date of the current offense and the current
+            offense was committed in a motor vehicle. For purposes of
+            this subsection, a prior conviction for boating while under
+            the influence of intoxicants in violation of <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors830.html">ORS
+            830.325</a> or its statutory counterpart in another
+            jurisdiction, or for prohibited operation of an aircraft in
+            violation of <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors837.html">ORS
+            837.080(1)(a)</a> or its statutory counterpart in another
+            jurisdiction, shall be considered a prior conviction of
+            driving while under the influence of intoxicants.</p>
+            <h2 id="c._ballot_measure_73_duiis"><strong>C. Ballot
+            Measure 73 DUIIs</strong></h2>
+            <p>ORS 813.011 states:</p>
+            <p>(1) Driving under the influence of intoxicants under ORS
+            813.010 shall be a class C felony if the defendant has been
+            convicted of driving under the influence of intoxicants in
+            violation of ORS 813.010, or its statutory counterpart in
+            another jurisdiction, at least two times in the 10 years
+            prior to the date of the current offense.</p>
+            <p>(2) Once a person has been sentenced for a class C felony
+            under this section, the 10-year time limitation is
+            eliminated and any subsequent episode of driving under the
+            influence of intoxicants shall be a class C felony
+            regardless of the amount of time which intervenes.</p>
+            <p>(3) Upon conviction for a class C felony under this
+            section, the person shall be sentenced to a mandatory
+            minimum term of incarceration of 90 days, without reduction
+            for any reason.</p>
+            <p>The Oregon Court of Appeals has asserted no reduction or
+            suspension is allowed of the mandatory 90-day sentence under
+            ORS 813.011. In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+URIE&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=2851542883209174083&amp;scilh=0"><em>State
+            v. Urie</em>, 268 Or App 362
+            (2014)</a><span class="underline">,</span> the court held
+            that a trial court is not permitted to suspend execution of,
+            or reduce in any way, the 90-day mandatory minimum sentence
+            for felony DUII under ORS 813.011. In reference to the 90
+            days, ORS 813.011(3) uses the language “shall be sentenced,”
+            “mandatory minimum term” and “without reduction for any
+            reason.” The legislative history of 2010 Measure 73 confirms
+            the plain language of the statute by indicating that the
+            measure would cause “at least 90 days” to be imposed for a
+            felony DUII.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+URIE&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=10628352805372179006&amp;scilh=0"><em>State
+            v. Epps</em>, 271, Or App 232 (2015)</a>, the court
+            reaffirmed its ruling in Urie, that no reduction was allowed
+            under the statute. The court went further to address the
+            defendant’s argument that Measure 73, which created the
+            90-day minimum sentence, did not violate the single-subject
+            rule in Article IV, section 1(2)(d), of the Oregon
+            Constitution. The Epps court cited to <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+mercer&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=400258838584381318&amp;scilh=0"><em>State
+            v. Mercer</em>, 269 Or App 135
+            (2015)</a><span class="underline">,</span> in holding
+            Measure 73 did not violate Article IV, section 1(2)(d).</p>
+            <h2 id="d._predicates_and_proof"><strong>D. Predicates and
+            Proof</strong></h2>
+            <p>When a driver is charged with felony DUII or in certain
+            cases where a driver may be subject to enhanced license
+            suspensions because of alleged prior convictions, counsel
+            needs to evaluate whether she should file a challenge to the
+            alleged previous conviction pursuant to ORS 813.328. This
+            section requires that the notice of challenge be filed no
+            less than seven days prior to the first trial setting in the
+            case and provides for a pretrial hearing on the validity of
+            the prior convictions. See also <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.433</a> regarding the means of proving priors, and ORS
+            135.434 which sets out the form of the notice and the
+            burdens of proof when statutory enhancements are sought by
+            the state, as well as certain types of priors (uncounseled
+            or vacated convictions) which cannot be counted.</p>
+            <h2
+            id="e._sentencing_guidelines_crime_seriousness_ranking_and_criminal_history_score"><strong>E.
+            Sentencing Guidelines’ Crime Seriousness Ranking and
+            Criminal History Score</strong></h2>
+            <p>Minimum criminal history score is D. (Note: Pursuant to
+            <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=29695">OAR
+            213-004-0008</a>, “every two prior adult convictions of
+            person class A misdemeanors in the offender’s criminal
+            history shall be counted as one adult conviction of a person
+            felony for criminal history purposes.”) Thus, two prior DUII
+            or BUII convictions are equal to one person felony.</p>
+            <p>If the person convicted has additional DUIIs or person
+            crimes, her criminal history score can be a B (presumptive
+            sentence = 19 to 24 months prison) or an A (25 to 30 months
+            prison).</p>
+            <p>1. Crime Seriousness</p>
+            <p>The crime seriousness ranking for a felony DUII varies
+            depending upon which felony DUII statute is implicated. The
+            Oregon Criminal Justice Commission adopted <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=30030">OAR
+            213-018-0037</a> which establishes (1) if it is an ORS
+            813.011 (two prior DUII convictions in the last 10 years)
+            felony conviction, then it is a level 4 person felony on the
+            Crime Seriousness Scale and (2) if it is an ORS 813.010 (5)
+            (three prior DUII convictions in the last 10 years) it is a
+            level 6 person felony on the Crime Seriousness Scale.</p>
+            <p>2. Criminal History</p>
+            <p>Criminal history for sentencing on a felony DUII is
+            established by <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=29698">OAR
+            213-004-0009</a> which in relevant part states: (1) two
+            prior misdemeanor DUIIs shall be counted as a person felony;
+            (2) each prior felony DUII shall be counted as a person
+            felony; (3) any additional misdemeanor DUII shall be a
+            person misdemeanor.</p>
+            <h2 id="f._departure"><strong>F. Departure</strong></h2>
+            <p>If the state gives notice pursuant to ORS 136.765, and
+            proves an enhancement fact beyond a reasonable doubt (ORS
+            136.760 et. seq.), the court can impose an upward departure
+            sentence up to double the greater number in the presumptive
+            range. The court has discretion to impose a downward
+            durational departure to fewer months in prison, or a
+            downward dispositional departure to probation. Enhancement
+            and departure factors are listed at <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=265531">OAR
+            213-008-0002</a>.</p>
+            <p>In the case of felony DUII, it is crucial that the
+            defense begin preparing early to protect the client from a
+            possible prison sentence. A few suggestions:</p>
+            <p>a. Initiate a private evaluation and participation in a
+            certified treatment program immediately. OAR 213-008-002(I)
+            allows the court to depart downward to a probation sentence
+            (or a shorter prison sentence) if the court is satisfied
+            that treatment is available and more likely than prison to
+            reduce the risk of recidivism.</p>
+            <p>b. Consider requesting a pre-sentence investigation to
+            determine if the investigator identifies downward departure
+            factors that justify a shorter or non-prison
+            disposition.</p>
+            <p>Practice Tip</p>
+            <p>Prior to requesting a pre-sentence investigation, defense
+            counsel should satisfy herself, and<br />
+            educate the client, regarding the risks that a PSI can also
+            identify upward departure factors that would be brought to
+            the court’s attention and used by the prosecutor to request
+            an upward departure sentence.</p>
+            <p>c. One useful tool in any felony sentencing is a
+            Sentencing Memorandum analyzing each departure factor that
+            may apply. Refer to OCDLA’s <em>Felony Sentencing in
+            Oregon</em> for case law on how each departure factor has
+            been interpreted.</p>
+            <p>ORS 813.011 creates a mandatory term of incarceration of
+            90 days ‘without reduction for any reason’ whereas ORS
+            813.010 (5) does not establish any mandatory minimum
+            incarceration. Additionally, ORS 813.011 makes any
+            subsequent conviction for DUII another Class C Felony
+            regardless of the length of time between convictions, unlike
+            ORS 813.010 (5).</p>
+            <h2 id="g._double_and_triple_counting"><strong>G. Double and
+            Triple Counting</strong></h2>
+            <p>Time and time again, defendants have unsuccessfully
+            challenged the concept that their prior misdemeanor DUII
+            convictions are used to increase their new crime to a
+            felony, then used again to increase their criminal history
+            to at least one person felony, then used again to depart
+            their sentence for “persistent involvement.” The courts have
+            repeatedly affirmed the position that under OAR 213-008-0002
+            and 213-004-0009, prior convictions are used for both
+            criminal elements and crime seriousness. <a
+            href="http://scholar.google.com/scholar_case?q=McCoin,+190+Or+App+532+%282003%29&amp;hl=en&amp;as_sdt=4,38&amp;case=1012976920634309065&amp;scilh=0"><em>McCoin</em>,
+            190 Or App 532 (2003)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Eades,+208+Or+App+173+%282006%29%3B&amp;hl=en&amp;as_sdt=4,38&amp;case=4863606246704286635&amp;scilh=0"><em>Eades</em>,
+            208 Or App 173 (2006)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Forrest,+213+Or+App+151%282007%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17364863279772076040&amp;scilh=0"><em>Forrest</em>,
+            213 Or App 151 (2007)</a>.</p>
+            <p>The major point of contention which should still be
+            argued by counsel (and is not settled) is the “persistent
+            involvement” departure that is alleged for someone convicted
+            of a third or subsequent DUII. Under OAR 213-008-0002(2),
+            because the prior DUII convictions are a predicate element
+            of the felony DUII, there is no evidence that these priors
+            are “significantly different from the usual criminal conduct
+            captured by the aspect of the crime.” Therefore, there is no
+            statutory basis for an upward departure. Note: This argument
+            becomes far less persuasive when there are additional prior
+            convictions for DUII or other alcohol-related crimes.</p>
+            <h2
+            id="h._alternative_incarceration_programs_aips"><strong>H.
+            Alternative Incarceration Programs (AIPs)</strong></h2>
+            <p>Many counties will not allow individuals on any form of
+            AIP for ORS 813.011 felony DUII (two prior) based on the
+            language of the statute. ORS 813.011 states, “Upon
+            conviction for a class C felony under this section, the
+            person shall be sentenced to a mandatory minimum term of
+            incarceration of 90 days, without reduction for any reason.”
+            This language has led several counties to believe no
+            alternatives to physical custody are available. Even if the
+            judge orders the individual eligible for all AIPs the county
+            jail may not allow these programs.</p>
+            <p>Counsel should advise the defendant to actively engage in
+            inpatient or outpatient treatment as soon as possible.
+            Sometimes inpatient treatment can be substituted for time in
+            custody through “treatment dorms,” but options vary by
+            county.</p>
+            <h2 id="i._misdemeanor_treatment"><strong>I. Misdemeanor
+            Treatment</strong></h2>
+            <p>Whether earned misdemeanor treatment by the defendant at
+            the time of sentencing, or petitioned for many years down
+            the road, a felony DUII may be reduced to a class A
+            misdemeanor pursuant to <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors161.html">ORS
+            161.705</a>. This is an important factor to always keep in
+            mind. This will not retroactively affect the license
+            revocation but would certainly aide in some of the other
+            collateral consequences.</p>
+            <h2 id="j._collateral_consequences"><strong>J. Collateral
+            Consequences</strong></h2>
+            <p>1. License Suspension</p>
+            <p>Typically the most onerous burden on a defendant is the
+            lifetime license revocation. Pursuant to <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">ORS
+            809.235, 809.280, and 809.409</a>, the DMV <em>shall</em>
+            revoke the license of anyone convicted of a felony DUII
+            under ORS 813.010, or any individual convicted of a third or
+            subsequent DUII. Additionally, no hardship permit or
+            application will be permitted during this revocation per <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors807.html">ORS
+            807.250(4)</a>. Although the term “Life Time” Revocation is
+            used throughout the statutes and in ordinary language, a
+            defendant may apply for relief from the Revocation after ten
+            years. See ORS 809.409 for relief from revocation.</p>
+            <p>2. Felony Status</p>
+            <p>Felony status can affect defendants in a number of ways,
+            including: employment, housing, impeachment in future court
+            proceedings, possession of firearms (see <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors166.html">ORS
+            166.274</a>) and inability to sit on a jury. The defendant
+            should be fully informed of all these potential consequences
+            as soon as possible before proceeding with the case.</p>
+            <h2
+            id="k._other_post_conviction_pre_sentencing_strategies"><strong>K.
+            Other Post-Conviction Pre-Sentencing
+            Strategies</strong></h2>
+            <p>1. Negotiated Sentence</p>
+            <p>In some jurisdictions prosecutors may agree to a joint
+            sentencing recommendation even after a conviction at trial
+            due to a client’s impressive progress in
+            self-rehabilitation, or to avoid a laborious and
+            time-consuming sentencing hearing, or to avoid an appeal.
+            Consider setting sentencing over and initiating new
+            negotiations with your DA to recommend a long work-release
+            sentence or inpatient treatment program or a downward
+            departure to probation with an upward departure in the
+            length of the probation (up to 60 months total).</p>
+            <p>2. Timing</p>
+            <p>Many felony DUII clients will be eligible for boot camp
+            and other programs in the Department of Corrections.
+            Sometimes sentencing can be scheduled at a time that
+            minimizes the amount of time a client spends in the regular
+            DOC facility before shipping out on a platoon of boot
+            camp-bound inmates. DOC staff is usually very helpful in
+            answering questions about the various programs. See details
+            of available programs and other facilities at the <a
+            href="https://www.oregon.gov/doc/Pages/default.aspx">DOC
+            online</a>.</p>
+            <h2 id="l._fines"><strong>L. Fines</strong></h2>
+            <p>As a class C felony, the maximum fine for a felony DUII
+            is $125,000. However, ORS 813.010 (6) establishes the
+            minimum fine amounts for a DUII conviction. “In addition to
+            any other sentence that may be imposed, the court shall
+            impose one or more of the following fines on a person
+            convicted of driving while under the influence of
+            intoxicants as follows:</p>
+            <p>(a) For a person’s first conviction, a minimum of
+            $1,000.</p>
+            <p>(b) For a person’s second conviction, a minimum of
+            $1,500.</p>
+            <blockquote>
+            <p>(c) For a person’s third or subsequent conviction, a
+            minimum of $2,000 if the person is not sentenced to a term
+            of imprisonment.”</p>
+            </blockquote>
+            <p>While ORS 813.010 (6) seems to indicate a mandatory
+            minimum $2,000 fine for a 3<sup>rd</sup> DUII, the Court of
+            Appeals has ruled the $2,000 fine is not mandatory. In <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+frier&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=719960066160110906&amp;scilh=0"><em>State
+            v. Frier</em>, 264 Or App 541 (2014)</a>, the court held, a
+            sentence of incarceration, even if it is less than a year
+            and in a local jail, is “imprisonment” and thus the $2,000
+            minimum fine is not required. The sentencing court may
+            impose such a fine but is not required to do so.</p>
+            <h1
+            id="iii._requirements_for_an_occupational_license"><strong>III.
+            Requirements for an Occupational License</strong></h1>
+            <h2 id="a._for_refusing_or_failing_a_breath_test"><strong>A.
+            For Refusing or Failing a Breath Test</strong></h2>
+            <p>1. File application request.</p>
+            <p>2. Pay a $125 application filing and suspension
+            reinstatement fee (non-refundable).</p>
+            <p>3. File future proof of financial responsibility
+            (SR-22).</p>
+            <p>4. Complete any other requirements as necessary because
+            of other current suspensions or revocations.</p>
+            <h2
+            id="b._for_first_or_second_duii_conviction_suspensions"><strong>B.
+            For First or Second DUII Conviction
+            Suspensions</strong></h2>
+            <p>1. Same as requirements under A, 1–4.</p>
+            <p>2. A court recommendation.</p>
+            <p>3. A mental health recommendation, when the driving
+            record shows prior alcohol rehabilitation or diversion
+            within the last five years.</p>
+            <p>4. Ignition Interlock.</p>
+            <h1
+            id="iv._estimated_costs_to_a_defendant_associated_with_a_conviction_for_a_first_duii_offense"><strong>IV.
+            Estimated Costs to a Defendant Associated with a Conviction
+            for a First DUII Offense</strong></h1>
+            <p>Fee Chart</p>
+            <p>• DUII Conviction Fee (ORS 813.030) $255</p>
+            <p>• Court Imposed Minimum Fine<sup>1</sup>
+            $1,000–$2,000</p>
+            <p>• Victim Impact Program $20–$65</p>
+            <p>• Alcohol Treatment Program<sup>2</sup> $600–$10,000</p>
+            <p>• Attorney Fees<sup>3</sup></p>
+            <p>• No Trial</p>
+            <p>Court-Appointed Attorney $300+</p>
+            <p>If Retained $1,000+</p>
+            <p>• In Case of Jury Trial</p>
+            <p>Court-Appointed Attorney $600+</p>
+            <p>If Retained $4,000+</p>
+            <p>• Court Costs $15</p>
+            <p>• Insurance adjustments and SR-22 filing for three years
+            <sup>4</sup> $1,500</p>
+            <p>• Probation Fee <sup>5</sup> $540–$1,260</p>
+            <p>• Occupational License Fee $125</p>
+            <p>• DMV Suspension Hearing Costs $500–$2,500</p>
+            <p>• Ignition Interlock $600</p>
+            <blockquote>
+            <p>The above fees do not include costs associated with lost
+            work when suspended prior to an occupational license being
+            issued, lost time at treatment and at court, nor time lost
+            to community service or jail, or the cost of transportation
+            during the suspension period.</p>
+            </blockquote>
+            <p>Notes:</p>
+            <p><sup>1</sup> Mandatory fine pursuant ORS 813.010(6) is
+            $1,000 fine for first conviction, $1,500 fine for second
+            conviction and a $2,000 fine for a third conviction if the
+            offender is not imprisoned, a minimum $2000 for anyone
+            driving under the influence of .15 percent of blood
+            alcohol.</p>
+            <p><sup>2</sup> Figured as Level II at $20/hr for 30 hours
+            of treatment; if Level I, use $75.</p>
+            <p><sup>3</sup> These costs are approximations only.</p>
+            <p><sup>4</sup> Assuming approximately 110 to 280 percent
+            increase in insurance costs including SR-22 filing, the
+            figure used is $400 extra per annum.</p>
+            <p><sup>5</sup> $15 - 35/monthly for maximum of 36
+            months.</p>
+            <h1 id="v._2018_case_law_supplement"><strong>V. 2018 Case
+            Law Supplement</strong></h1>
+            <p>$2,000 Fine for Third DUII, $255 State Obligation, $60
+            Mandatory State Amount–Plain Error</p>
+            <p>Trial court plainly erred in imposing $2,000 fine for
+            defendant’s third DUII conviction because court erroneously
+            believed that the fine was mandatory rather than
+            discretionary when the sentence includes jail. Trial court
+            failed to exercise discretion when imposing a $255 fine.
+            Trial court had no authority to impose $60 mandatory state
+            amount.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12702652649181133824&amp;q=+State+v.+Larson,+289+Or+App+60+(2017&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Larson</span></em></a>, 289 Or App 60 (2017) (Per
+            Curiam)</p>
+            <p>$2,000 Fine for Third DUII—Plain Error</p>
+            <p>Trial court plainly erred in imposing $2,000 fine for
+            defendant’s third DUII conviction because court erroneously
+            believed that the fine was mandatory rather than
+            discretionary.</p>
+            <p><span class="underline"><a
+            href="https://scholar.google.com/scholar_case?case=14260957140648650943&amp;q=State+v.+Loudermilk,+288+Or+App+88+(2017)+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Loudermilk</em></a>, 288 Or App 88 (2017) (Per
+            Curiam)</span></p>
+            <p>Sentencing—Fines and Fees: DUII conviction fee not
+            included within statutory maximum fine for Class A
+            misdemeanor</p>
+            <p>Trial court’s imposition of a $6,200 fine and $255 DUII
+            conviction fee did not violate statutory maximums. Defendant
+            was convicted of DUII, a Class A misdemeanor, the maximum
+            fine for which is $6,250. The trial court imposed a $6,200
+            fine and a $255 DUII conviction fee, for a total financial
+            obligation of $6,455. Defendant argues that the conviction
+            fee must be included within the statutorily proscribed
+            maximum fine of $6,250. Based on the text and context of the
+            relevant statutory provisions, the legislature intended fees
+            and fines to be separate things. Because the fee and fine
+            were both within statutory limitations, the trial court did
+            not err.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12905025553874452112&amp;q=+State+v.+Coates,+288+Or+App+586+(2017&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Coates</span></em></a>, <span class="underline">288 Or
+            App 586 (2017) (Ortega, P.J.)</span></p>
+            <p>Multnomah County judgments have a box for “DUII
+            conviction fee $255” —Error to impose pre-marked $255 DUII
+            conviction fee on form judgment.</p>
+            <p>Judgments – DUII Conviction Fee: The court reverses a
+            $255 DUII conviction fee imposed in defendant’s
+            fourth-degree assault and second-degree criminal trespass
+            case. The court writes specifically to note that Multnomah
+            County used judgment forms that have the DUII conviction fee
+            already typed into the form under the “Money Award” section.
+            Accordingly, the DUII conviction fee is imposed unless it is
+            affirmatively deleted, even in non-DUII cases. A judgment
+            that carries a money award can be enforced by the state, and
+            therefore even an erroneous form may carry consequences for
+            a defendant.</p>
+            <p><span class="underline"><a
+            href="https://scholar.google.com/scholar_case?case=13326456716912326349&amp;q=+State+v.+Williams,+280+Or+App+631+(2016)+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em></a>, 280 Or App 631 (2016) (Per Curiam)
+            </span></p>
+            <p>The court reverses a $255 DUII conviction fee imposed in
+            defendant’s reckless driving and recklessly endangering
+            another person case. The court cited its decision in State
+            v. Williams.</p>
+            <p><span class="underline"><a
+            href="https://scholar.google.com/scholar_case?case=11480995082048622583&amp;q=State+v.+Macias,+288+Or+App+691+(2017)++&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Macias</em></a>, 288 Or App 691 (2017) (Per
+            Curiam)</span></p>
+            <p>The court reverses the imposition of $255 “DUII
+            conviction fees” in defendant’s trespass case. Defendant was
+            not convicted of DUII and the trial court erred in imposing
+            those amounts.</p>
+            <p><span class="underline"><a
+            href="https://scholar.google.com/scholar_case?case=17249968394378424074&amp;q=+State+v.+Brown,+285+Or+App+872+(2017)+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown</em></a>, 285 Or App 872 (2017) (Per
+            Curiam)</span></p>
+            <p>Plain error to impose court-appointed attorney where
+            record silent as to defendant ability to pay.</p>
+            <p><span class="underline"><a
+            href="https://scholar.google.com/scholar_case?case=5156132330402324100&amp;q=+State+v.+Hayes,+288+Or+App+698+(2017)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hayes</em></a>, 288 Or App 698 (2017) (Per
+            Curiam)</span></p>
+    </body>
+</html>

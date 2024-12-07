@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>OCDLAs Search &amp; Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">OCDLAs Search &amp; Seizure Manual</h1>
+                                    </header>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <div class="WordSection1">
+            <p>Although <em>Miranda</em> issues are not technically
+            search and seizure issues, they often arise together and
+            involve similar suppression analyses. For that reason, it is
+            imperative that defense counsel be able to spot and litigate
+            any potential <em>Miranda</em> issues that arise during or
+            following a client’s seizure. This chapter explains (1) the
+            circumstances under which the police have an obligation to
+            advise a person of their <em>Miranda</em> rights, (2) ways
+            in which police can violate those rights even after giving
+            the advisement, and (3) how to obtain suppression of
+            evidence derived from such a violation.</p>
+            <p><span id="i.-the-basics"></span></p>
+            <h2 id="i._the_basics">I. The Basics</h2>
+            <p>Article I, section 12, of the Oregon Constitution
+            provides that “[n]o person shall be…compelled in any
+            criminal prosecution to testify against himself.” To protect
+            against compelled self-incrimination, police officers “must
+            provide <em>Miranda</em> warnings to a suspect before
+            interrogating that suspect if the suspect is either in ‘full
+            custody’ or in ‘compelling circumstances.’<em>”</em> <a
+            href="https://scholar.google.com/scholar_case?case=5967376096191052066&amp;q=State+v.+Alapai,+308+Or+App+309&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Alapai</span></span>, 308 Or App
+            309, 313, ___P3d___ (2020)</a> (quoting <a
+            href="https://scholar.google.com/scholar_case?case=18338539717549834441&amp;q=State+v.+Courville+276+Or+App+672&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Courville,</span> 276 Or App 672, 677, 368 P3d 838
+            (2016))</a>.</p>
+            <p>The warnings must convey to the person that “he or she
+            has a right to remain silent and to consult with counsel and
+            that any statements that the person makes may be used
+            against the person in a criminal prosecution.” <a
+            href="https://scholar.google.com/scholar_case?case=5276877733118013104&amp;q=State+v.+Vondehn,+348+Or+462&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Vondehn</span></span>, 348 Or 462,
+            474, 236 P3d 691 (2010)</a>.</p>
+            <p><em>Miranda</em> warnings are not limited to police
+            officers; probation officers must also give such warnings
+            when asking questions during a custodial interrogation. [<a
+            href="https://scholar.google.com/scholar_case?case=11124495047966059584&amp;q=State+v.+M.S.S.K">https://scholar.google.com/scholar_case?case=11124495047966059584&amp;q=State+v.+M.S.S.K</a>.,+289+Or+App+450,+&amp;hl=en&amp;as_sdt=6,38
+            <span class="hyperlinkital">State v. M.S.S.K.</span>, 289 Or
+            App 450, 410 P3d 393 (2017)] (concluding that probation
+            officer should have given <em>Miranda</em> warnings to youth
+            who was in holding). Once a defendant invokes their right to
+            remain silent and to counsel, police interrogation must
+            immediately end. <a
+            href="https://scholar.google.com/scholar_case?case=10593845422341742759&amp;q=State+v.+Boyd,+360+Or+302&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Boyd</span>, 360 Or 302, 318, 380 P3d 941 (2016)</a>.</p>
+            <p>Additionally, “The state has the burden to prove, by a
+            preponderance of the evidence, that any statements by a
+            defendant were voluntarily made.” <a
+            href="https://scholar.google.com/scholar_case?case=10480327214580408777&amp;q=State+v.+Cazarez-Hernandez,+280+Or+App+312,&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Cazarez</span>-Hernandez</span>, 280
+            Or App 312, 314, 381 P3d 969 (2016)</a>.</p>
+            <p><span id="ii.-compelling-circumstances"></span></p>
+            <h2 id="ii._compelling_circumstances">II. Compelling
+            Circumstances</h2>
+            <p>When looking at whether a noncustodial situation is
+            nonetheless compelling, thus requiring <em>Miranda</em>
+            warnings, the court should look at the totality of the
+            circumstances, including: (1) the location of the encounter,
+            (2) the length of the encounter, (3) the amount of pressure
+            exerted on the defendant, and (4) the defendant’s ability to
+            terminate the encounter. <a
+            href="https://scholar.google.com/scholar_case?case=11378816250217420834&amp;q=State+v.+Grimm,+290+Or+App+173&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Grimm</span>, 290 Or App 173, 414 P3d 435 (2018)</a>.
+            These are not an exhaustive list of factors for the court to
+            consider but should serve as guideposts when looking at
+            whether “officers created the sort of police-dominated
+            atmosphere that <em>Miranda</em> warnings were intended to
+            counteract.” <em>Id.</em> at 178.</p>
+            <p><span id="a.-factors-to-consider-in-evaluating-whether-defendant-is-in-compelling-circumstances"></span></p>
+            <h3
+            id="a._factors_to_consider_in_evaluating_whether_defendant_is_in_compelling_circumstances">A.
+            Factors to Consider in Evaluating Whether Defendant Is in
+            Compelling Circumstances</h3>
+            <p><span id="character-of-the-questions"></span></p>
+            <h4 id="character_of_the_questions">1. Character of the
+            Questions</h4>
+            <p>“Pressure can also come in the form of the specific
+            questions that officers ask or accusations that they
+            make.”<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=14122578557867529537&amp;q=State+v.+Phillips,+302+Or+App+618&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Phillips</span>, 302 Or App 618, 626, 459 P3d 909
+            (2020)</a><span>. </span>“Circumstances do not become
+            compelling simply because a suspect knows that officers have
+            information that he or she may have committed a crime, or
+            because officers suggest that possibility.” <em>Id</em>. at
+            627. However, the encounter becomes more compelling when
+            officers use that information to explicitly contradict a
+            suspect’s assertions of innocence or engage in police
+            practices that are predicated on assumptions of a suspect’s
+            guilt. <em>Id</em>. Indeed, pressure that escalates over the
+            course of an interview such as “repeatedly confronting a
+            suspect with [the officer’s] knowledge that [the suspect] is
+            lying,” will increase the coercive, and thus compelling
+            nature of the encounter. <em>Id</em>. at 628.</p>
+            <p><span id="length-of-encounter"></span></p>
+            <h4 id="length_of_encounter">2. Length of Encounter</h4>
+            <p>A two-hour encounter with police was not, by itself,
+            sufficient to make the circumstances compelling.
+            <em>Id.</em> at 625 (2020).</p>
+            <p><span id="location-of-encounter"></span></p>
+            <h4 id="location_of_encounter">3. Location of Encounter</h4>
+            <p>Typically inviting officers into one’s home is going to
+            “Significantly reduce the likelihood that the circumstances
+            were inherently compelling.” <em>Id.</em> at 623 (2020).</p>
+            <p><span id="prior-police-activity"></span></p>
+            <h4 id="prior_police_activity">4. Prior Police Activity</h4>
+            <p>A confrontation between a third party and police officers
+            outside the presence of defendant is not likely to put the
+            defendant into compelling circumstances. <em>Id.</em> at 624
+            (2020).</p>
+            <p><span id="officers-demeanor"></span></p>
+            <h4 id="officers_demeanor">5. Officers’ Demeanor</h4>
+            <p>An officer’s calm and conversational tone is likely to
+            reduce how compelling an encounter is, while using an
+            aggressive tone, raising their voice, or threatening
+            defendant is likely to make the encounter more compelling.
+            <em>Id.</em> at 626 (2020).</p>
+            <p><span id="threat-to-get-a-warrant-or-to-arrest"></span></p>
+            <h4 id="threat_to_get_a_warrant_or_to_arrest">6. Threat to
+            Get a Warrant or to Arrest</h4>
+            <p>Providing a person a choice between cooperating or
+            arresting them places that person in compelling
+            circumstances.<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=13868463987388982373&amp;q=State+v.+Esquivel,+288+Or+App+755&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Esquivel</span>, 288 Or App 755, 407 P3d 879
+            (2017)</a><span>. </span></p>
+            <p><span id="physical-restraint"></span></p>
+            <h4 id="physical_restraint">7. Physical Restraint</h4>
+            <p>Typically, placing a defendant in handcuffs places that
+            person in compelling circumstances<span>. </span><a
+            href="https://scholar.google.com/scholar_case?case=16357980199270574819&amp;q=State+v.+Satchell,+209+Or+App+809&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Satchell</span>, 209 Or App 809, 810-11, 150 P3d 4
+            (2006)</a><span>. </span></p>
+            <p>Defendant was in compelling circumstances when officers
+            went “hands on” with defendant during a DUII investigation
+            to prevent defendant from confronting a witness. <a
+            href="https://scholar.google.com/scholar_case?case=12286230614670683075&amp;q=State+v.+Beeson,+307+Or+App+808&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Beeson</span>, 307 Or App 808, 819, 469 P3d 576
+            (2020)</a>.</p>
+            <div class="bon-update">
+            <p><span id="update"></span></p>
+            <h3 id="update">2024 Update</h3>
+            <p>As mentioned, whether the circumstances surrounding a
+            defendant’s interrogation are compelling depends on the
+            totality of the circumstances, including, but not limited
+            to, the length of the interrogation, the location of the
+            interrogation, the defendant’s ability to terminate the
+            interrogation, and the pressure exerted on the
+            defendant.<span>  </span>Applying those factors, in State v.
+            Reed, 371 Or 478 (2023), the Oregon Supreme Court held that
+            the defendant was in “compelling circumstances” because she
+            was meeting with her probation officer in a secured
+            building, when two police officers interrupted the meeting
+            and asked both her and her probation officer to stay while
+            they accused her of drug crimes.<span>  </span>Id.
+            480-81.<span>  </span>The court emphasized that although the
+            duration of the encounter was short, the other factors
+            weighed in favor of the defendant.<span>  </span>Id.
+            488-89.<span>  </span>First, the interrogation occurred in a
+            “police dominated atmosphere”— a small room in a secured
+            building that served as the place of employment for law
+            enforcement officers.<span>  </span>Id. at 489.<span> 
+            </span>Second, the defendant was not free to leave, she was
+            in the middle of a mandatory meeting with her probation
+            officer, she could not walk through the probation department
+            without an escort, the officers told the probation officer
+            not to excuse her from the meeting, and one officer stood in
+            the doorway.<span>  </span>Id.<span>  </span>Third, the
+            pressure exerted on the defendant was significant as the
+            officers implied that the questioning would be of interest
+            to the probation <span class="GramE">officer</span> and they
+            asked questions that “assumed her guilt” and accused her of
+            crimes.<span>  </span>Id. at 489-90.<span>  </span>Given
+            that the defendant was subject to probation conditions that
+            required her to obey all laws, answer all reasonable
+            inquiries by her probation officer, and consent to searches
+            at her probation officer’s request if he had reasonable
+            grounds to believe that evidence of a probation violation
+            would be found, the “defendant was in state-created
+            circumstances that carried a significant risk of undermining
+            her ability or willingness to exercise her constitutional
+            rights.”<span>  </span>Id. at 490.</p>
+            <p>Although it did not explicitly discuss those cases, Reed
+            undermined a line of Court of Appeals decisions suggesting
+            that certain law enforcement buildings (such as probation
+            offices and other police buildings) were not particularly
+            “compelling” under the first Roble-Baker factor.<span> 
+            </span>See, e.g., State v.
+            <span class="SpellE">Revette</span>, 318 Or App 749, 759
+            (2022) (reasoning that an interview in an unfamiliar
+            police-controlled office building “does not weigh heavily”
+            in favor of compelling circumstances).<span>  </span>Reed
+            emphasized that police-controlled buildings like probation
+            offices contribute heavily toward a finding of compelling
+            circumstances.</p>
+            </div>
+            <p><span id="b.-cases-where-defendant-was-in-compelling-circumstances"></span></p>
+            <h3
+            id="b._cases_where_defendant_was_in_compelling_circumstances">B.
+            Cases Where Defendant Was in Compelling Circumstances</h3>
+            <p>In <em>Esquivel</em>, 288 Or App 755, an interview done
+            at defendant’s door was compelling where officers gave the
+            defendant the option of either speaking to them then and
+            getting a citation or having the police get a warrant and
+            then arresting her. Given that choice, even though the
+            interview was done at defendant’s home and only lasted for
+            fifteen minutes, a reasonable person would have felt
+            compelled to answer the officer’s questions.</p>
+            <div class="bon-update">
+            <p><span id="update-1"></span></p>
+            <h3 id="update_1">2024 Update</h3>
+            <p>State v. Reed, 371 Or 478 (2023) (holding that the
+            circumstances were compelling when both legal and practical
+            barriers constrained the defendant’s ability to leave or
+            exercise her constitutional rights: the defendant was in a
+            police-secured building and could not walk around the
+            interior offices unattended, she was participating in a
+            mandatory meeting with her probation officer and subject to
+            probationary conditions that exposed her to liability if she
+            refused to cooperate, and two police officers asked
+            guilt-presumptive questions about her involvement in drug
+            crimes).</p>
+            </div>
+            <p><span id="c.-cases-where-defendant-was-not-in-compelling-circumstances"></span></p>
+            <h3
+            id="c._cases_where_defendant_was_not_in_compelling_circumstances">C.
+            Cases Where Defendant Was Not in Compelling
+            Circumstances</h3>
+            <p>In the absence of compelling circumstances, even when a
+            person invokes their right to silence and their right to an
+            attorney, subsequent questioning by the police do not render
+            the defendant’s statements involuntary. <a
+            href="https://scholar.google.com/scholar_case?case=1516889235966675925&amp;q=State+v.+Anderson,+285+Or+App+355+(2017)+&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Anderson</span>, 285 Or App 355, 396 P3d 984 (2017)</a>
+            (holding that because the defendant was not in custody and
+            the circumstances were not compelling, officers could
+            continue to ask questions even after the defendant handed
+            them a card invoking her right to silence and her right to
+            an attorney).</p>
+            <p>Traffic stops will not generally require <em>Miranda</em>
+            warnings at the onset if the stop is not occurring in a
+            place of confinement, is not overly long for the type of
+            stop, and the officer is not confronting the defendant with
+            circumstantial or testimonial evidence that would alert a
+            defendant that he is under arrest. In <a
+            href="https://scholar.google.com/scholar_case?case=2642428424205840130&amp;q=State+v.+Nelson,+285+Or+App+345&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Nelson</span>, 285 Or App 345, 397 P3d 536 (2017)</a>,
+            <em>Miranda</em> warnings were not required when defendant
+            gave incriminating statements after being stopped in his
+            driveway for a taillight infraction that morphed into a DUII
+            investigation. The officer told the defendant that he was
+            not free to leave but exercised no more restraint than in a
+            routine traffic stop. The stop was not overly long. And when
+            asked if he was arresting the defendant, the officer replied
+            that he had to complete his investigation and thus did not
+            notify defendant that he was under arrest.</p>
+            <p>Defendant was not in compelling circumstances when
+            officers came to her home and told her that they had
+            information that she was given a firearm from a person
+            arrested earlier in the day in the same trailer park where
+            defendant lived. <em>Philips</em>, 302 Or App at 631. The
+            court evaluated the following circumstances: 1) officers
+            encountered defendant outside of her home; <strong>' 2) the
+            officers did not request to enter defendant’s home, the
+            defendant invited them in; 3) the officer did not
+            immediately accept the defendant’s invitation to enter; 4)
+            once inside, the officer and the defendant continued to
+            engage in “comfortable” conversation and the officer’s
+            request that the defendant be honest with him did not make
+            the circumstances compelling; 5) once other officers
+            arrived, they only commenced a search at the invitation of
+            the defendant; and 6) after the discovery of methamphetamine
+            during the search the further nonconfrontational inquiry of
+            whether there were additional drugs did not make the
+            circumstances compelling. <em>Id.</em> at 632. Because the
+            overall tenor of the encounter was non-confrontational—the
+            defendant appeared to want to cooperate—a reasonable person
+            in the defendant’s position would not feel compelled to
+            respond to the officers’ questions. <em>Id.</em> at
+            632.</strong>'</p>
+            <p>By contrast, in <em>Grimm</em>, the trial court erred
+            when it found that defendant was not in compelling
+            circumstances when: 1) the questioning was done at a police
+            station, although defendant was there voluntarily, 2) the
+            interview was an hour and a half long, which in itself was
+            not unduly compelling, 3) the officer’s continued
+            questioning escalated the pressure on defendant to continue
+            to talk at every stage until the officer asked the defendant
+            “tell me what really happened,” and 4) although the
+            defendant was informed three times that he was free to go,
+            there was nothing on the record about when that advisement
+            was given and whether they were close in time to when the
+            questioning “intensified and became coercive.”
+            <em>Grimm</em>, 290 Or App at 185. The court noted that the
+            questions “went beyond the mere brief and noncoercive use of
+            incriminating evidence * * *and instead were calculated to
+            contradict defendant’s repeated assertions of innocence and
+            pressure him to continue talking.” As such, defendant’s
+            incriminating statements should have been suppressed.
+            <em>Id</em>. at 186.</p>
+            <p><span id="iii.-equivocal-invocations"></span></p>
+            <h2 id="iii._equivocal_invocations">III. Equivocal
+            Invocations</h2>
+            <p>When a person unequivocally invokes the right to counsel,
+            the interrogation must immediately cease. But if a person
+            invokes equivocally, then “officers may ask clarifying
+            questions, but those questions must be aimed at clarifying
+            whether the person intended to invoke that specific right.”
+            <a
+            href="https://scholar.google.com/scholar_case?case=5109792528949725190&amp;q=State+v.+Dodge,+297+Or+App+30&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Dodge</span>, 297 Or App 30, 33, 441 P3d 599 (2019)</a>.
+            An equivocal invocation is a “statement or request [that] is
+            subject to more than one reasonable interpretation, one of
+            which is that he or she is invoking the right to counsel.”
+            <em>Id.</em> at 40 (internal quotation marks omitted). That
+            is, a</p>
+            <div class="blockquote">
+            <p>“<span class="GramE">statement</span> that appears
+            tenuous or equivocal in isolation may be a sufficient
+            request for counsel when evaluated in the context of all of
+            the circumstances. The question is whether a reasonable
+            officer would have understood <em>at least one</em>
+            plausible meaning of the suspect’s statements or question to
+            be that defendant was <em>invoking</em> the right to
+            counsel.”</p>
+            </div>
+            <p><em>Id.</em> (internal quotation marks and citations
+            omitted).</p>
+            <p>“When confronted with an equivocal invocation, the only
+            permissible question that officers may ask must be a neutral
+            question that clarifies whether the person is invoking their
+            right to counsel. <em>Dodge</em>, 297 Or App at 41.
+            Clarification of any other right is insufficient.
+            <em>Id.</em> at 42. Merely asking if a person wants to keep
+            talking is not sufficient where it “deflect[s] that
+            invocation and risk[s] suggesting to the suspect either that
+            he does not have such a right or that the right will not be
+            honored.” <em>Id</em>.</p>
+            <p>Note that the duty to clarify an unequivocal invocation
+            does not exist under the Fifth Amendment, but inheres in
+            Article I, section 12. <a
+            href="https://scholar.google.com/scholar_case?case=15440954163208156868&amp;q=Sanelle,+287+Or+App+611+(2017)&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Sanelle</span></span>, 287 Or App
+            611, 404 P3d 611
+            (2017)</a><span class="MsoHyperlink">.</span></p>
+            <p><span id="a.-unequivocal-invocations"></span></p>
+            <h3 id="a._unequivocal_invocations">A. Unequivocal
+            Invocations</h3>
+            <p>The statement, “[<span class="SpellE">i</span>]t’s not
+            something I want to talk about,” was an unequivocal
+            invocation of defendant’s right to remain silent. <a
+            href="https://scholar.google.com/scholar_case?case=8719882384429692293&amp;q=State+v.+Nichols,+361+Or+101&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Nichols</span>, 361 Or 101, 390 P3d 1001 (2017)</a>.
+            Although the statement alone might be ambiguous, because it
+            immediately followed an officer’s
+            question<span class="GramE">—“</span>do you know about the
+            circumstances of [the decedent’s death]?—it indicated a
+            desires to not talk about any of those circumstances and
+            officers should have terminated their questioning.
+            <em>Nichols</em>, 361 Or 101.</p>
+            <p>After a defendant stated to officers while in custody, “I
+            appreciate the hospitality here, fellas, but I think I’m
+            going to get a lawyer,” officers made statements designed to
+            provoke additional responses from the defendant. Indeed, the
+            defendant eventually made incriminating statements. Because
+            defendant’s statements showed that he was reluctant to
+            continue without a lawyer, continuing to question him was
+            improper additional interrogation. <a
+            href="https://scholar.google.com/scholar_case?case=7760757409163728351&amp;q=State+v.+Wirkkala,+290+Or+App+263,&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Wirkkala</span></span>, 290 Or App
+            263, 414 P3d 421 (2018)</a>.</p>
+            <p>The statement, “shut your fucking mouth and quit talking
+            to me,” was an unequivocal invocation of the right to
+            silence, and officer’s questioning of the defendant a mere
+            ten minutes later required suppression. <a
+            href="https://scholar.google.com/scholar_case?case=12121470746931088714&amp;q=State+v.+Schrepfer,+288+Or+App+429&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Schrepfer</span></span>, 288 Or App
+            429, 406 P3d 1098 (2017)</a>.</p>
+            <div class="bon-update">
+            <p><span id="update-2"></span></p>
+            <h3 id="update_2">2024 Update</h3>
+            <p>During a custodial interrogation, when asked if he knew
+            his SID number, the defendant said, “I’m not giving you no
+            more information,” “I don’t want to talk to you
+            <span class="SpellE"><span class="GramE">any
+            more</span></span>,” and when officers attempted to clarify,
+            defendant said, “I don’t want to talk about anything. Just
+            lock me in the room over there.” The court held that those
+            statements were unequivocal invocations of the defendant’s
+            right to silence. <a
+            href="https://scholar.google.com/scholar_case?case=16794566682308133205&amp;q=State+v.+Williams,+320+Or+App+705&amp;hl=en&amp;as_sdt=4,38"><span>State
+            v. Williams, 320 Or App 705, 712, 514 P3d 501
+            (2022)</span></a>.</p>
+            </div>
+            <p><span id="b.-equivocal-invocations"></span></p>
+            <h3 id="b._equivocal_invocations">B. Equivocal
+            Invocations</h3>
+            <p>The defendant’s statement, “Sounds like I need a lawyer,”
+            was at least an equivocal invocation that a reasonable
+            officer would understand as asserting a desire for an
+            attorney. <em>Dodge</em>, 297 Or App at 40.</p>
+            <p>But the officer did not ask clarifying questions, he
+            merely said, “Okay,” and then, after defendant
+            <span class="GramE">stated</span> “that never happened,” the
+            officer asked, “It goes on from there,” before asking
+            whether the defendant wanted to keep talking. <em>Id.</em>
+            at 41. By not clarifying that the defendant had the right to
+            an attorney, the officer’s statement deflected the topic
+            from the invocation and risked suggesting that the defendant
+            did not have a right to counsel or that it would not be
+            honored. <em>Id.</em> at 42. Consequently, defendant’s
+            post-invocation statements had to be suppressed.</p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=5479687121957328025&amp;q=State+v.+Rose,+296+Or+App+99&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Rose</span>, 296 Or App 99, 437 P3d 1144
+            (2019)</a><span>, </span>following<span> </span>the Supreme
+            Court’s decision in <em>State v. Nichols</em>, the Court of
+            Appeals reversed its prior decision in 278 Or App 551 and
+            held that the statement, “I don’t have nothing to say,” was
+            at least an equivocal invocation that required an officer to
+            make further inquiries about whether defendant was invoking.
+            296 Or App at 108. There, following an hour-long
+            interrogation where the defendant denied being in possession
+            of sexually explicit photographs of children, the statement,
+            “I don’t have nothing to say,” when presented with the
+            photos could have been a register of shock or inability to
+            form a response, but because a reasonable officer could also
+            determine that it was an invocation, further inquiry about
+            invocation was required. Consequently, the statements that
+            were made after the equivocal invocation needed to be
+            suppressed.</p>
+            <p>The statement, “[w]ell can I, I, I really don’t want say
+            too much I would rather have my lawyer with me but,” was at
+            minimum an equivocal invocation of his right to silence. <a
+            href="https://scholar.google.com/scholar_case?case=6172965800746790681&amp;q=State+v.+Hickman,+289+Or+App+602&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Hickman</span>, 289 Or App 602, 410 P3d 1102 (2017)</a>.
+            The officer interrupted defendant and stated that that was
+            “completely [his] right,” but then continued after six
+            seconds of silence by saying
+            “[a]<span class="SpellE">nd</span> if that’s the way you
+            <span class="SpellE">wanna</span> go with it then that’s the
+            way we play it. We came here to try to get your side of it,
+            though, because we believe that there’s more to it.” The
+            officer’s mere recitation of a defendant’s rights is not
+            sufficient to resolve whether there was an invocation.
+            <em>Id</em>. Furthermore, the officer’s continued
+            interrogation six seconds afterward that led to defendant
+            making incriminating statements was not a change in
+            circumstance or a break in time sufficient to indicate a
+            voluntary waiver. <em>Id</em>. at 608.</p>
+            <p>When a defendant asks, “Where’s the lawyer?” the officers
+            have a duty to inquire as to whether the defendant is
+            asserting his right to counsel. <a
+            href="https://scholar.google.com/scholar_case?case=15440954163208156868&amp;q=State+v.+Sanelle,+287+Or+App+611,+&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><span class="hyperlinkital">Sanelle</span></span>,
+            287 Or App 611</a>. In
+            <span class="SpellE"><em>Sanelle</em></span> there was no
+            intervening action between the defendant’s question and the
+            officers’ continued interrogation. The officers told the
+            defendant that he would be appointed an attorney in two
+            days. The officers then repeated whether defendant
+            understood his rights and whether he would continue to talk
+            to them. The officers’ responses clarified that the
+            defendant had a right to a court-appointed attorney, but not
+            that he had the right to have an attorney be present to
+            assist him in the interview. Nor was it sufficient to ask
+            the defendant if he was willing to talk to them without also
+            informing him that he could have an attorney present.
+            <em>Id.</em> at 628.</p>
+            <p><span id="c.-no-invocation-at-all"></span></p>
+            <h3 id="c._no_invocation_at_all">C. No Invocation At
+            All</h3>
+            <p>The defendant must evince a present desire to have
+            counsel. The statement, “Do I need one?” in response to
+            officers going through the <em>Miranda</em> warnings was not
+            an equivocal invocation for counsel because it did not
+            express a “present desire” to invoke his right to counsel.
+            <a
+            href="https://scholar.google.com/scholar_case?case=5713547264146481331&amp;q=State+v.+Roberts,+291+Or+App+124&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Roberts</span>, 291 Or App 124, 418 P3d 41
+            (2018)</a>.</p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=16799911903839205753&amp;q=State+v.+Castillo,+295+Or+App+121&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Castillo</span>, 295 Or App 121, 433 P3d 467
+            (2018)</a>,<span> </span>during an interview concerning how
+            a three-month-old baby sustained physical injuries, the
+            defendant stated “I’m tired of these interviews. I want to
+            be with my family.” <em>Id</em>. at 129. In context, the
+            statement was not an invocation of the right to remain
+            silent, but the defendant’s statement to the officers to
+            show that their interpretation of the defendant’s demeanor
+            was incorrect. Immediately after those statements were made,
+            the defendant told the detectives to “bring in a lie
+            detector test,” which demonstrated the defendant’s intent to
+            continue with the interview and not invoke his right to
+            silence. <em>Id</em>. at 131 (ultimately the case was
+            reversed and remanded for the trial court to make factual
+            findings with respect to whether the state had met its
+            burden in proving that the defendant’s waiver of his right
+            against self-incrimination was voluntary).</p>
+            <p><span id="iv.-interrogation"></span></p>
+            <h2 id="iv._interrogation">IV. Interrogation</h2>
+            <p>For the purposes of Article I, section 12, “interrogation
+            refers to statements or questions, other than questions
+            normally attendant to arrest and custody, that are
+            reasonably likely to elicit an incriminating response.” <a
+            href="https://scholar.google.com/scholar_case?case=14726824813236399336&amp;q=State+v.+Swan,+363+Or+121&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Swan</span>, 363 Or 121, 124, 420 P3d 9 (2018)</a>
+            (internal quotation marks omitted). That is, following an
+            invocation, police can ask “routine booking questions,” as
+            well as direct questions such as if the defendant would like
+            a cup of water, but cannot ask questions that are “likely to
+            elicit some type of incriminating response.” <a
+            href="https://scholar.google.com/scholar_case?case=10593845422341742759&amp;q=State+v.+Boyd,+360+Or+302&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Boyd</span>, 360 Or 302, 380 P3d 941 (2016)</a>.</p>
+            <p><span id="a.-questions-likely-to-elicit-incriminating-information"></span></p>
+            <h3
+            id="a._questions_likely_to_elicit_incriminating_information">A.
+            Questions Likely to Elicit Incriminating Information</h3>
+            <p>In <em>Boyd</em>, the defendant asked a detective why he
+            had been detained. The detective, who had been present
+            during an earlier conversation when the defendant reacted
+            with disbelief and agitation after being told that his
+            girlfriend was dead, asked if the defendant remembered the
+            prior conversation about his girlfriend’s death. Based on
+            that prompt, the defendant asked to speak to the other
+            detective and made incriminating statements. Because the
+            defendant’s memory was at issue and the detective knew that
+            the defendant became agitated when discussing the death of
+            his girlfriend, the detective should have known that when he
+            inquired about what defendant recalled from the previous
+            conversation, it was likely to lead to incriminating
+            responses. <em>Boyd</em>, 360 Or at 322.</p>
+            <p>In<em><span> </span></em><a
+            href="https://scholar.google.com/scholar_case?case=9862467769837869339&amp;q=State+v.+Schmidtke,+290+Or+App+880&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Schmidtke</span></span>, 290 Or App
+            880, 417 P3d 563 (2018)</a><span>, </span>officers were
+            investigating a series of vehicle break-ins. An officer
+            encountered defendant and told him he was being detained and
+            placed him in handcuffs. After defendant was in handcuffs,
+            rather than providing <em>Miranda</em> warnings, the officer
+            told him that the officer was investigating thefts in the
+            area, the defendant’s parole officer wanted to speak to him,
+            and that the defendant was on video <span class="GramE">in
+            the area of</span> the crime and putting purportedly stolen
+            items in a storage facility. The defendant then made
+            incriminating statements.</p>
+            <p>The officer’s first statement—that he was detaining the
+            defendant and investigating theft—was routine, informing the
+            defendant that he was detained and the criminal activity
+            that the officer was investigating. But the officer’s second
+            statement—that defendant was spotted on video in the area
+            where the offense occurred—was a statement that went beyond
+            merely stating what the defendant was being charged with.
+            Rather, the officer used the statement to “let the defendant
+            know how and why he had been connected with the crime,” a
+            reasonable officer in that situation would have known that
+            it was likely to elicit an incriminating response.
+            <span class="SpellE"><em>Schmidtke</em></span>, 290 Or App
+            at 888.</p>
+            <p>A question about whether a person has
+            “<span class="GramE">any more</span>” of a controlled
+            substance when that person is in handcuffs is not a question
+            that is “normally attendant to arrest and custody,” and must
+            be <span class="SpellE">preceeded</span> by <em>Miranda</em>
+            warnings because it elicits exactly the type of
+            incriminating information that <em>Miranda</em> seeks to
+            protect against. <a
+            href="https://scholar.google.com/scholar_case?case=2921231370939426012&amp;q=State+v.+Lanier,+290+Or+App+8+(2018)&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Lanier</span>, 290 Or App 8, 413 P3d 1020
+            (2018)</a><span class="MsoHyperlink">.</span></p>
+            <div class="bon-update">
+            <p><span id="update-3"></span></p>
+            <h3 id="update_3">2024 Update</h3>
+            <p>In State v. Gold, 329 Or App 479 (2023), the defendant
+            was on probation for sex crimes and subject to conditions
+            that prohibited him from possessing any device with access
+            to the internet, and he was required to consent to a search
+            upon his probation officer’s reasonable belief that evidence
+            of a probation violation would be found.<span>  </span>Id.
+            at 480.<span>  </span>Police and the defendant’s probation
+            officers were monitoring the defendant’s email addresses and
+            learned that he had been accessing the internet through a
+            Kindle Fire.<span>  </span>Id. at 481.<span>  </span>The
+            officers initially sought the defendant’s consent to search
+            for the device, but he declined, so they arrested him for
+            violating the search-permission condition of his
+            probation.<span>  </span>Id. at 482-84.<span>  </span>The
+            defendant invoked his right to counsel, and while he was
+            waiting to be transported to jail, one of the officers laid
+            out their evidence against him for his mother and explained
+            what would likely happen to her house if they applied for
+            and obtained a warrant.<span>  </span>Id. at 483-86. Upon
+            observing the distress this was causing his
+            <span class="GramE">mother,</span> the defendant told the
+            police where the Kindle was hidden.<span>  </span>Id. at
+            488-89.</p>
+            <p>The court held, “we think the pressure law enforcement
+            put on defendant through its presentation of the evidence
+            against defendant was likely to elicit the incriminating
+            response that it did from defendant—viz., the location where
+            he had hidden the Kindle Fire,” which made it interrogation
+            under Art I, sec 12.<span>  </span>Id. at 495.<span> 
+            </span>Importantly, the court distinguished this case from
+            State v. Hatfield, 246 Or App 736 (2011), where the court
+            held that a request for consent to search is not
+            “interrogation” under Article I, section 12, because giving
+            “consent to search is not an incriminating
+            statement<span class="GramE">[.]”<span>  </span>Id.</span>
+            at 492.<span>  </span>According to the Gold court, even
+            though the officer’s conduct was aimed at getting the
+            defendant’s consent to search for the Kindle, it “was not a
+            mere request for consent to search.”<span>  </span>Id. at
+            492 n 7.<span>  </span>Rather, law enforcement conveyed to
+            the defendant that they wanted him to disclose the “location
+            of the Kindle Fire.”<span>  </span>Id. at 495.<span> 
+            </span></p>
+            </div>
+            <p><span id="b.-questions-unlikely-to-elicit-incriminating-information"></span></p>
+            <h3
+            id="b._questions_unlikely_to_elicit_incriminating_information">B.
+            Questions Unlikely to Elicit Incriminating Information</h3>
+            <p>As previously mentioned, an officer can ask “booking
+            questions” even after a person has invoked their right to
+            counsel. In <a
+            href="https://scholar.google.com/scholar_case?case=15173124923198268619&amp;q=State+v.+Fink&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Fink</span>, 285 Or App 302, 395 P3d 934 (2017)</a>, the
+            defendant was arrested for DUII. She was read
+            <em>Miranda</em> warnings and indicated that she understood
+            them. The defendant asserted her right to silence, but the
+            officer continued to ask biographical questions—eye color
+            and the defendant’s apartment number. The officer then asked
+            the defendant if she wanted the temperature in the patrol
+            car turned town. The defendant responded with incriminating
+            statements. Because the questions the officer asked after
+            the defendant’s invocation but prior to her statements were
+            routine booking questions, given close-in-time to the
+            <em>Miranda</em> warnings, defendant understood the purpose
+            of <em>Miranda</em>, the officer was polite and
+            professional, the questions were not likely to elicit
+            incriminating information.</p>
+            <p>Booking questions can extend to questions about a
+            person’s medical condition, even if those questions might
+            lead to an incriminating response, so long as the question
+            is not designed to elicit such a response—that is, the
+            officer cannot intend to extract incriminating information;
+            thus, the question must not evince an investigatory purpose.
+            <a
+            href="https://scholar.google.com/scholar_case?case=7379304859933334456&amp;q=State+v.+Montiel-Delvalle,+304+Or+App+699&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Montiel-Delvalle</span>, 304 Or App 699, 713, 468 P3d 995
+            (2020)</a>. In that case, the arresting officer asked the
+            defendant standard medical questions followed by more
+            specific questions about medical aid once the defendant told
+            him that he was hurt. The officer’s questions relating to
+            “why” the defendant was injured were, in context, not
+            designed to illicit incriminating information but to provide
+            medical care while the defendant was in custody.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>Some courts, including the Oregon Court of Appeals, have
+            held that asking a defendant to perform field sobriety tests
+            and to take a breath test do not amount to interrogation,
+            because each question is “normally attendant to arrest and
+            custody.” <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=14726824813236399336&amp;q=State+v.+Swan,+363+Or+121,+420+P3d+9+(2018)&amp;hl=en&amp;as_sdt=4,38"><em><span>Swan</span></em><span>,
+            363 Or</span></a> at 124-25 (collecting Oregon cases);
+            <span class="hyperlinkital"><span>South Dakota v.
+            Neville</span></span><span class="MsoHyperlink"><span>, 459
+            US 553, 564 n 15, 103 S Ct 916, 74 L Ed 2d 748
+            (1983)</span></span>; <a
+            href="https://scholar.google.com/scholar_case?case=6212167349704045859&amp;q=Pennsylvania+v.+Muniz,+496+US+582&amp;hl=en&amp;as_sdt=3,38"><span class="hyperlinkital"><span>Pennsylvania
+            v. Muniz</span></span><span>, 496 US 582, 110 S Ct 2638, 110
+            L Ed 2d 528 (1990)</span></a>. In <em>Muniz</em>, for
+            example, the Court held that the Fifth Amendment did not
+            preclude officers from asking the defendant to perform field
+            sobriety tests, because the questions and instructions “were
+            necessarily ‘attendant to’” the state’s DUII intake
+            procedure. 496 US at 604-05.</p>
+            <p>However, that reasoning should not survive scrutiny under
+            the Oregon Constitution, which has long held that neither
+            the legislature nor the police can circumvent the
+            constitution by creating rules or procedures designed to
+            generate evidence for use in a criminal
+            prosecution. <span class="hyperlinkital"><span>State v.
+            Connally</span></span><span class="MsoHyperlink"><span>, 339
+            Or 583, 587, 125 P3d 1254 (2005)</span></span>; <a
+            href="https://scholar.google.com/scholar_case?case=6384140653068058316&amp;q=State+v.+Soriano,+68+Or+App+642&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital"><span>State
+            v. Soriano</span></span><span>, 68 Or App 642, 662, 684 P2d
+            1220 (1984)</span></a>, <em>aff’d and opinion adopted</em>,
+            298 Or 392 (1984)<span>.</span></p>
+            <p>Thus, holding that it is not interrogation to ask a
+            defendant to perform field sobriety tests or take a
+            breath test because it is attendant to a standardized
+            process for <em>evidence gathering</em> in DUII cases would
+            be contrary to those principles and effectively create a
+            DUII exception to Article I, section 12.</p>
+            <p>Moreover, advocates should continue to press the issue,
+            given that a “no” response may be admissible as evidence of
+            a guilt if the request could “reasonably be understood
+            <em>only</em> as a request to provide physical cooperation
+            and not as a request for
+            <span class="GramE">constitutionally-significant</span>
+            consent to search.” <a
+            href="https://scholar.google.com/scholar_case?case=2673885208404789717&amp;q=State+v.+Banks,+364+Or+at+342&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Banks</span></em><span>, 364 Or 332, 342, 434 P3d 361
+            (2019)</span></a>. Upon meeting that burden, the state could
+            presumably still ask a jury “to infer from the fact of the
+            defendant’s refusal that he or she is saying, ‘I refuse to
+            perform field sobriety tests because I believe I will fail
+            them.’”</p>
+            <p>Additionally, a “yes” response discloses the defendant’s
+            state of mind by revealing his or her judgment about which
+            form of evidence—a refusal or the test results—will be the
+            least damaging at his or her ensuing DUII trial. </p>
+            <p>Lastly, a request to take field sobriety tests is
+            interrogation, notwithstanding that field sobriety tests
+            primarily involve the production of physical evidence.
+            '''<em>' First, field sobriety tests also require
+            testimonial responses in terms of demonstrating an ability
+            to follow instructions, display memory and comprehension,
+            and communicate those abilities to the officer through
+            specific actions. Second, Article I, section 12, directly
+            prohibits the state from requiring a defendant to
+            produce</em>physical evidence<em>as well as testimonial
+            evidence, including evidence of his performance on the field
+            sobriety tests and the breath-test evidence. Indeed,
+            in</em>Soriano<em>the Supreme Court, through the adoption of
+            the Court of Appeals’ decision, “also agreed that the word
+            ‘testify’ is not a limit on the protections that Article I,
+            section 12, affords: ‘We see no reason to construe the
+            Oregon Constitution to give protection from testifying but
+            not from furnishing evidence.’”
+            <span class="SpellE"><span class="hyperlinkital"><span>Vondehn</span></span></span><span class="MsoHyperlink"><span>,
+            348 Or at 469</span></span> (quoting</em>Soriano'', 68 Or
+            App at 646-57 n 4). </p>
+            </div>
+            <p><span id="v.-suppressing-evidence-obtained-from-a-prior-miranda-violation"></span></p>
+            <h2
+            id="v._suppressing_evidence_obtained_from_a_prior_miranda_violation">V.
+            Suppressing Evidence Obtained from a Prior Miranda
+            Violation</h2>
+            <p>When there is an Article I, section 12, violation, the
+            defendant’s testimonial statements must obviously be
+            suppressed. But so too must nontestimonial statements (like
+            consent to search) and—critically—physical evidence
+            subsequently discovered (like blood-alcohol content,
+            controlled substances, etc.).</p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=14726824813236399336&amp;q=State+v.+Swan,+363+Or+121,+420+P3d+9+(2018)&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">Swan</span>,
+            363 Or 121</a><span>, </span>the defendant was arrested for
+            DUII and advised of his <em>Miranda</em> rights.
+            <em>Swan</em>, 363 Or at 125. The defendant invoked his
+            right to counsel. <em>Id</em>. at 126. The officer
+            transported the defendant to the police station and provided
+            the defendant with an opportunity to consult with counsel.
+            <em>Id</em>. The officer took the defendant to the
+            Intoxilyzer room and, during the 15-minute observation
+            period, asked the defendant 28 DUII interview questions.
+            <em>Id.</em> The officer read the defendant the implied
+            consent warnings and asked the defendant to consent to a
+            breath test. <em>Id</em>. 126-27. The defendant again
+            invoked his right to counsel, and the officer said he had
+            already had that opportunity. <em>Id</em>. at 127. The
+            defendant consented to the breath test and blew a 0.18.
+            <em>Id</em>.</p>
+            <p>At trial, the state conceded that the officer had
+            violated the defendant’s Article I, section 12, right to
+            counsel by continuing to interrogate the defendant with the
+            DUII interview questions <em>after</em> defendant had
+            unequivocally invoked his right to counsel. <em>Id.</em> at
+            127-28. The state argued that it simply would not use those
+            statements at trial. <em>Id.</em> The defense responded that
+            those statements <em>and</em> any evidence that derived from
+            that violation must be suppressed. The trial court denied
+            the motion, and the Court of Appeals affirmed.</p>
+            <p>The Oregon Supreme Court agreed with the defendant and
+            reversed. The state was right to concede that the police
+            violated the defendant’s Article I, section 12, rights. When
+            a defendant is in custody and invokes his right to counsel,
+            police must cease all interrogation or provide a defendant
+            with an attorney—not just an opportunity to consult with
+            counsel. (Under the case law, a reasonable opportunity to
+            consult counsel satisfies a defendant’s Article I, section
+            11, right to counsel in DUII cases, but not Article,<br />
+            section 12.)</p>
+            <p>The court applied the five-factor test from<span>
+            </span><a
+            href="https://scholar.google.com/scholar_case?case=7372925076664245243&amp;q=State+v.+Jarnagin,+351+Or+App+703&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Jarnagin</span></span>, 351 Or App
+            703, 277 P3d 535 (2012)</a><span>, </span>to address whether
+            the defendant’s decision to consent to a breath test and the
+            results of his blood test derived from the earlier
+            constitutional violation. Those factors are:</p>
+            <div class="blockquote">
+            <p><span lang="EN-GB">“(1) the nature of the violation; (2)
+            the amount of time between the violation and any later
+            statements; (3) whether the suspect remained in custody
+            before making any later statements; (4) subsequent events
+            that may have dissipated the taint of the earlier violation;
+            and (5) the use that the state has made of the
+            <span class="SpellE">unwarned</span> statements.”</span></p>
+            </div>
+            <p>Before diving into the court’s application of the
+            factors, it is important to remember <strong>the state bears
+            both the burden of production and persuasion</strong> to
+            show that the defendant’s decision to take the breath test
+            was not the product of the Article I, section 12, '<em>'
+            violation.</em>Id.'' at 133.</p>
+            <p>The court analyzed the factors out of order, starting
+            with the second and third factors—the amount of time between
+            the violation and the defendant’s consent to take the breath
+            test and whether he remained in custody before consenting.
+            Those factors weighed in favor of suppression because no
+            time elapsed between the questioning done in violation of
+            the defendant’s right to counsel and the officer asking the
+            defendant to consent to a breath test. <em>Id.</em> at
+            132-33. “The latter followed immediately on the former.”
+            <em>Id.</em> at 132. Additionally, the defendant remained in
+            custody throughout that time. Therefore, “there was no break
+            in time, place, or custody between the officer’s repeated
+            Article I, section 12, violation and defendant’s decision to
+            take the breath test that might have attenuated the effect
+            of the violation.” Instead, this was a case where the
+            defendant’s decision to take the breath test and the prior
+            illegality “blended into a continuum.” <em>Id.</em></p>
+            <p>Turning to the fifth factor, the court focused heavily on
+            the fact that the state had failed to meet its burden. The
+            record did not include the 28 questions that the officer had
+            asked, and “more importantly,” the record did not include
+            the defendant’s answers to those questions. “Without that
+            information, there is no way of knowing whether the answers
+            that the officer elicited from defendant in violation of
+            Article I, section 12, affected defendant’s decision to
+            consent.”
+            <em>Id.</em>[[#_ftn1|<span class="MsoFootnoteReference"><span><span><span class="MsoFootnoteReference"><span>[1]</span></span></span></span></span>]]</p>
+            <p>Still analyzing the fifth factor, the court rejected the
+            state’s argument that the officer had probable cause to
+            arrest the defendant for DUII, so he would have asked the
+            defendant for consent to take the breath test regardless of
+            the earlier violation. The court explained that even if it
+            did not affect the <em>officer’s</em> decision to ask for
+            consent, the question is, did the violation affect the
+            <em>defendant’s</em> decision to take the test? Without
+            knowing the 28 DUII interview questions and the defendant’s
+            responses, the court “had no way of determining that
+            defendant’s decision did not derive from the immediately
+            preceding violation of his Article I, section 12, right to
+            counsel.” <em>Id.</em> at 133.</p>
+            <p>Next, the court analyzed the first factor—the nature of
+            the violation. The court determined that the violation in
+            <em>Swan</em> was different than violations in other cases
+            where the officers had merely failed to recognize that
+            borderline circumstances were
+            <span class="GramE">compelling</span> and that
+            <em>Miranda</em> was required. In <em>Swan</em>, the court
+            explained that the officer had just told the defendant he
+            had a right to have an attorney with him during questioning,
+            and, after advising him of that right, the defendant
+            expressly invoked counsel’s assistance in responding to
+            police questioning. Nevertheless, outside the presence of an
+            attorney, the officer asked the defendant <em>28
+            questions.</em> <strong>That was a repeated and flagrant
+            violation</strong>.</p>
+            <p>The court acknowledged that the officer had allowed the
+            defendant the opportunity to consult with a lawyer before
+            questioning him and that had mitigated the effect of the
+            violation. But ultimately the officer’s repeated disregard
+            for the defendant’s expressed right to counsel placed the
+            defendant in a more disadvantaged position, making it easier
+            and more likely for the officer to exploit that illegality
+            to obtain consent. <em>Id.</em> at 134.</p>
+            <p>The final factor analyzed, factor four, was whether there
+            were any subsequent events that dissipated the taint of the
+            earlier violation. The court concluded there were none. The
+            court rejected the state’s argument that he had an
+            opportunity to consult with counsel because that opportunity
+            occurred prior to the violation. Moreover, the defendant had
+            requested counsel again after the officer had requested
+            consent to take the breath test, and the officer denied his
+            request. “Far from dissipating the taint of the preceding
+            Article I, section 12, violation, the officer’s subsequent
+            denial reinforced it.” <em>Id.</em> at 135.</p>
+            <p>The court also rejected the state’s argument that the
+            implied consent warnings dissipated the taint of the
+            violation. The court first noted that the state had a record
+            problem because it had not offered the report into evidence.
+            The court then analyzed the state’s argument based on the
+            officer’s testimony that he had warned the defendant of a
+            few of the specific consequences, including that refusal
+            would be used against the defendant in court. <em>Id.</em>
+            The court explained that the implied consent warnings are
+            designed to tilt a defendant’s decision toward taking the
+            test, and there was nothing in the record to show that the
+            officer had “reminded the defendant that he was free
+            <em>not</em> to take the breath test.” <em>Id.</em>
+            (<em>emphasis added</em>).</p>
+            <p>Thus, the court concluded that the state failed to prove
+            that the defendant’s decision to take the breath test did
+            not derive from the earlier and repeated violations of the
+            defendant’s Article I, section 12, right to
+            counsel.[[#_ftn2|<span class="MsoFootnoteReference"><span><span><span class="MsoFootnoteReference"><span>[2]</span></span></span></span></span>]]
+            Consequently, the trial court erred by denying defendant’s
+            motion to suppress the results of the breath test. <em>See
+            also</em> <a
+            href="https://scholar.google.com/scholar_case?case=12782971683612831157&amp;q=State+v.+Taylor,+296+Or+App+278&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Taylor</span>, 296 Or App 278, 438 P3d 419 (2019)</a>
+            (applying the five-factor test and holding that the
+            defendant’s breath test results derived from a prior
+            <em>Miranda</em> violation and should have been
+            suppressed).</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=14930972119116286273&amp;q=307+Or+App+314&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Joaquin</span></a> the statement, “Can we wait for an
+            attorney to be here,” was at minimum an equivocal invocation
+            of counsel; detectives should only have confirmed whether he
+            did or did not want an attorney. 307 Or App 314, 322 (2020).
+            Repeating a defendant’s rights merely to keep the defendant
+            talking is not sufficient. <em>Id.</em> The defendant
+            subsequently confessed to killing his girlfriend and
+            consented to the search of his apartment, having photographs
+            taken of him, an inspection of the contents of his phone,
+            and the taking of DNA swabs.</p>
+            <p>The defendant’s consent was obtained late in the
+            interrogation when defendant had already made inculpatory
+            statements regarding the crime, his phone, marks on his
+            body, fingernail scrapings, and DNA. And “[t]here was no
+            break in time, place, or custody between the violation of
+            defendant’s right to counsel and his decision to consent.”
+            <em>Id.</em> at 326. Thus, like <em>Swan</em>, that physical
+            evidence was derivative of the <em>Miranda</em> violation
+            and had to be suppressed.</p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=7127031703443385500&amp;q=State+v.+Heise-Fay,+274+Or+App+196&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Heise</span>-Fay</span>, 274 Or App
+            196, 212, 360 P3d 615 (2015)</a><span> </span>the police
+            also used the defendant’s unlawfully obtained statements in
+            obtaining the defendant’s consent to search. 274 Or App at
+            210. There, the police had placed the defendant in
+            compelling circumstances when they surrounded her home in
+            search of a felon and convinced her to cooperate
+            <span class="GramE">in order to</span> avoid going to jail.
+            <em>Id</em>. at 198-99. The officer seized on that unlawful
+            interaction later in the encounter to obtain her consent to
+            search the home. He assured her that he had no intention of
+            taking her to jail. He asked her if she was going to
+            continue to be “honest and cooperative” and if she would
+            consent to a search of her residence. <em>Id</em>. at 210.
+            The defendant said she would. <em>Id</em>. The court
+            explained that the officer’s “coercive approach from earlier
+            in the encounter would have suggested to a reasonable person
+            that he would not take defendant to jail if she was honest
+            and <span class="GramE">cooperative—implying</span> that her
+            cooperation included consenting to the search of the
+            residence.” <em>Id</em>. As such, the earlier, coercive
+            encounter tainted the defendant’s decision to consent to
+            search. <em>Id</em>. And as explained above, the state
+            presented no evidence of attenuation. <em>Id</em>.</p>
+            <div class="bon-update">
+            <p><span id="update-4"></span></p>
+            <h3 id="update_4">2024 Update</h3>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=16794566682308133205&amp;q=State+v.+Williams,+320+Or+App+705&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em>, 320 Or App 705, 514 P3d 501 (2022)</a>,
+            the defendant was arrested for failing to register as a sex
+            offender, and officers sought a DNA sample from the
+            defendant to connect him to a cold-case rape kit from 2011.
+            Officers questioned the defendant in custody without
+            <em>Miranda</em> for nine minutes, with a focus on his
+            failure to register. When asked if he knew his SID, the
+            defendant said, “I’m not giving you no more information,”
+            and “I don’t want to talk to you anymore.” <em>Id</em>. at
+            712. When officers attempted to clarify, defendant said, “I
+            don’t want to talk about anything. Just lock me in the room
+            over there.” <em>Id</em>. After some back and forth – where
+            the officers tried to question the defendant about the 2011
+            case, he again invoked, and the officers tried to persuade
+            him to speak and took him to a holding cell for a few
+            minutes, the defendant agreed to give DNA samples.</p>
+            <p>The court held that the DNA samples “derived from” the
+            <em>Miranda</em> violation and should have been suppressed.
+            Under the <span class="SpellE"><em>Jarnagin</em></span>
+            factors, the nature of the violation was flagrant, the
+            four-minute period in the holding cell did not meaningfully
+            attenuate his consent, the defendant remained continually in
+            custody, and although defendant consented, that consent did
+            not dissipate the taint because the detective’s responses to
+            the defendant’s questions about the DNA sample were
+            misleading. <em>Id</em>. at 715-22. <span></span></p>
+            </div>
+            <p><span id="vi.-derivative-evidence-obtained-after-belated-miranda-warnings"></span></p>
+            <h2
+            id="vi._derivative_evidence_obtained_after_belated_miranda_warnings">VI.
+            Derivative Evidence Obtained after Belated Miranda
+            Warnings</h2>
+            <p>If police initially fail to inform a defendant of their
+            <em>Miranda</em> rights but later correct themselves and
+            deliver the warnings, any “post-<em>Miranda</em> statements
+            are only admissible if the state establishes that the police
+            ‘effectively and accurately informed the defendant of his or
+            her Article I, section 12, rights.’” <a
+            href="https://scholar.google.com/scholar_case?case=13843868674613597468&amp;q=State+v.+Edgar,+297+Or+App+193&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Edgar</span>, 297 Or App 193, 198, 441 P3d 234 (2019)</a>
+            (quoting <a
+            href="https://scholar.google.com/scholar_case?case=7127031703443385500&amp;q=State+v.+Heise-Fay,+274+Or+App+196&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Heise</span>-Fay</span>, 274 Or App
+            196, 211, 360 P3d 615 (2015)</a>. By questioning first and
+            warning later, the demonstration of police authority and
+            violation of the defendant’s constitutional rights
+            “communicate to a defendant that he or she has no real
+            choice to remain silent.” <em>Edgar</em>, 297 Or App at 198.
+            Consequently, a trial court cannot assume that the
+            recitation of the <em>Miranda</em> warnings served “the
+            intended informative function.”
+            <span class="SpellE"><em>Vondehn</em></span>, 348 Or at
+            481.</p>
+            <p>To determine whether belated warnings are effective, the
+            court should examine “all relevant circumstances” with
+            reference to the
+            <span class="SpellE"><em>Jarnagin</em></span> factors. <a
+            href="https://scholar.google.com/scholar_case?case=5967376096191052066&amp;q=State+v.+Alapai,+308+Or+App+309&amp;hl=en&amp;as_sdt=4,38">State
+            v. <span class="SpellE">Alapai</span>, 308 Or App 309, 315,
+            P3d (2020)</a><span> </span></p>
+            <p>When the warned and unwarned questioning blend into “one
+            continuum,” the belated warnings are unlikely to purge the
+            taint of the unwarned questioning; conversely, when the
+            warned questioning represents a “markedly different
+            experience from the unwarned questioning,” they are more
+            likely to have attenuated the taint. <em>Edgar</em>, 297 Or
+            App at 199-200 (internal quotations marks and citations
+            omitted).</p>
+            <p><span id="a.-belated-warnings-effective"></span></p>
+            <h3 id="a._belated_warnings_effective">A. Belated Warnings
+            Effective</h3>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=5967376096191052066&amp;q=State+v.+Alapai,+308+Or+App+309&amp;hl=en&amp;as_sdt=4,38"><span class="SpellE"><span class="hyperlinkital">Alapai</span></span>,
+            308 Or App 309</a><span>, </span>the<span> </span>trial
+            court suppressed unwarned statements made to an officer who
+            was investigating the defendant for hit-and-run. But once a
+            second officer arrived and told the defendant that he did
+            not know what the defendant and the first officer spoke
+            about, the defendant, unprompted, stated that he had run
+            from the scene of an accident. The second officer, who did
+            not know that the first officer had not given the defendant
+            the <em>Miranda</em> warnings, gave the warnings.
+            <span>After the defendant stated that he understood his
+            rights, the officer questioned him about his alcohol
+            consumption and then asked him to submit to field sobriety
+            tests. The defendant failed those tests. </span>Because the
+            prior violation took place in front of the defendant’s home,
+            in a “barely custodial” setting, and the first officer
+            suspended his questioning of the defendant while waiting for
+            the second officer, whose arrival terminated the small talk
+            between the defendant and the first officer, these facts
+            combined with the second officer’s statement that he did not
+            know what had been discussed prior to his arrival,
+            attenuated the taint of the defendant’s prior unwarned
+            statement.<span> </span></p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=12286230614670683075&amp;q=State+v.+Beeson,+307+Or+App+808&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Beeson</span>, 307 Or App 808, 827, 479 P3d 576
+            (2020)</a><span>, </span>the court affirmed the trial
+            court’s denial of a motion to suppress a
+            post-<em>Miranda</em>-violation breath test. There, the
+            nature of the violation was not particularly flagrant, the
+            officers failed to <em>Mirandize</em> the defendant after
+            they had restrained him during a DUII investigation when he
+            suddenly moved to confront a witness who had unexpectedly
+            arrived at the scene (at which point he should have been
+            advised of his <em>Miranda</em> rights). <em>Id</em>. at
+            824. After the defendant calmed down, he proceeded to
+            perform field sobriety tests (FSTs) that he had previously
+            agreed to perform at the outset of the stop. After the FSTs,
+            the defendant was arrested for DUII. The officer began to
+            question the defendant, who responded that he had nothing to
+            say. Another officer advised the defendant of his
+            <em>Miranda</em> rights and confirmed that he understood
+            them. The defendant was taken to jail where he consented to
+            a breath test about 35-40 minutes after the initial
+            <em>Miranda</em> violation.</p>
+            <p>On reconsideration, the court concluded that two factors
+            purged the taint of the initial violation: (1) an officer
+            read the defendant his <em>Miranda</em> warnings prior to
+            the breath test, and (2) the defendant was transported to
+            another location, the police station. <em>Id.</em> at 825
+            (on reconsideration modified and adhered to as modified).
+            The court also did not regard the <em>Miranda</em> violation
+            as particularly flagrant or egregious because it was a
+            quintessential example of a change in circumstances that an
+            officer could reasonably fail to recognize necessitated
+            <em>Miranda</em> warnings.</p>
+            <p>Finally, the court concluded that the state did not make
+            use of any unwarned statements. In reaching that conclusion,
+            the court treated the Miranda violation as occurring after
+            the defendant had already agreed to perform the FSTs. Id. at
+            826. For those reasons, the court held that the defendant’s
+            consent to the breath test was attenuated from the Miranda
+            violation.</p>
+            <p><span id="b.-belated-warnings-ineffective"></span></p>
+            <h3 id="b._belated_warnings_ineffective">B. Belated Warnings
+            Ineffective</h3>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=13520053921971424452&amp;q=State+v.+Mast,+301+Or+App+809&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Mast</span>, 301 Or App 809, 459 P3d 938
+            (2020)</a><span class="MsoHyperlink">,</span><span>
+            </span>belated <em>Miranda</em> warnings were not sufficient
+            to purge the taint from the defendant’s statements, sobriety
+            tests, or breath test. There, officers located a crashed
+            truck, which they determined was the
+            <span class="GramE">defendant’s</span>. Upon meeting
+            officers at the crash site, the defendant appeared
+            intoxicated. An officer confronted him with his belief that
+            he had crashed the truck while intoxicated. At that point,
+            the defendant should have been—but was not—advised of his
+            <em>Miranda</em> rights. The defendant admitted to driving
+            while intoxicated. A second officer took over the
+            investigation and read the defendant the <em>Miranda</em>
+            warnings before administering field sobriety tests and
+            transporting the defendant to the jail for a breath test.
+            The belated <em>Miranda</em> warnings did not attenuate the
+            defendant’s unwarned statements from the warned statements.
+            The statements that the defendant made to each officer were
+            largely the same. Questioning by the second officer was not
+            a substantial break because the second officer was present
+            throughout the encounter. Moreover, the second officer had
+            referenced the defendant’s unwarned statements, further
+            erasing any break between the two officers’ conduct. The two
+            rounds of interrogation took place at the same time and
+            place. Finally, the officer did not tell the defendant that
+            his unwarned statements could not be used against him in a
+            future prosecution, which although not required would have
+            given defendant a more “meaningful” choice to waive his
+            Article I, section 12, rights.</p>
+            <p>The court also held that even though the field sobriety
+            <span class="GramE">tests</span> and breath tests were done
+            at different places and times, because they were the result
+            of a continuous encounter those factors contributed little.
+            As such, despite the belated Miranda '<em>' warnings the
+            results of the field sobriety
+            <span class="GramE">tests</span> and breath test also had to
+            be suppressed.</em>See also<em><a
+            href="https://scholar.google.com/scholar_case?case=13843868674613597468&amp;q=State+v.+Edgar,+297+Or+App+193&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">Edgar</span>,
+            297 Or App at 203</a><span class="MsoHyperlink">
+            </span><span> </span>(holding that because there was no
+            significant change in circumstances between the warned and
+            unwarned statements, the belated</em>Miranda'' warnings did
+            not purge the taint of the unwarned statements).</p>
+            <p><span id="c.-defendant-initiates-further-conversation-after-invoking-voluntary-waiver"></span></p>
+            <h3
+            id="c._defendant_initiates_further_conversation_after_invoking_voluntary_waiver">C.
+            Defendant Initiates Further Conversation After Invoking
+            (Voluntary Waiver)</h3>
+            <p>Only the defendant can <em>waive</em> <em>Miranda</em>
+            protections once he has invoked those rights. <a
+            href="https://scholar.google.com/scholar_case?case=17992117021882044990&amp;q=State+v.+Gillespie,+295+Or+App+702&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Gillespie</span>, 295 Or App 702, 711, 436 P3d 65
+            (2019)</a>. “To demonstrate that a suspect has waived a
+            prior invocation of the right to counsel, the state must
+            show not only that the suspect initiated [further
+            conversation] with the police in a way that ‘evinced a
+            willingness and a desire for a generalized discussion about
+            the investigation’ but also that the suspect’s waiver was
+            knowing and voluntary under the totality of the
+            circumstances.” <a
+            href="https://scholar.google.com/scholar_case?case=15173124923198268619&amp;q=State+v.+Fink,+285+Or.+App.+302&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Fink</span>, 285 Or App 302, 312, 395 P3d 934 (2017)</a>
+            (quoting <a
+            href="https://scholar.google.com/scholar_case?case=14782304553442317443&amp;q=State+v.+Meade,+327+Or.+335&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Meade</span>, 327 Or 335, 341, 963 P2d 656 (1998)</a>
+            (“[W]e hold that defendant, without prompting from the
+            police, initiated further conversation that evinced a
+            willingness and a desire for a generalized discussion about
+            the investigation. Defendant’s physical gestures cut off
+            further questions by the officers. Having asserted control
+            over the conversation, he then chose to reopen the topic of
+            the investigation.”)).</p>
+            <p>Once a court makes that determination, it must then
+            decide whether the defendant’s waiver was voluntary,
+            knowing, and intelligent and, thus, valid. That test, under
+            both the state and federal constitutions, “is whether, under
+            the totality of the circumstances, it is apparent that the
+            ‘defendant’s will <span class="GramE">was</span> not
+            overborne and his capacity for self-determination was not
+            critically impaired.’” <a
+            href="https://scholar.google.com/scholar_case?case=17992117021882044990&amp;q=State+v.+Gillespie,+295+Or+App+702&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">Gillespie</span></a>,
+            295 Or App at 711-12 (quoting <a
+            href="https://scholar.google.com/scholar_case?case=17598485157862425090&amp;q=State+v.+Acremant,+338+Or+302&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Acremant</span></span>, 338 Or 302,
+            324, 108 P3d 1139 (2005</a>)).</p>
+            <p>In <em>State v. Gillespie</em>, the court held that the
+            defendant’s post-invocation waiver was voluntary and that
+            his subsequent incriminating statements were admissible.
+            There, two detectives intended to interview the defendant
+            concerning a fatal stabbing. The defendant was being held in
+            the Clark County Jail in Washington. After the detectives
+            explained the defendant’s rights, the defendant asked if
+            they could talk with the video recorder off. The detectives
+            declined to do so, and the defendant invoked. The detectives
+            then asked the defendant if he had an attorney. The
+            defendant told them he did not. The detectives told the
+            defendant he would be charged with murder and extradited
+            back to Oregon and that they could not proceed to talk to
+            him with the video off because he had just invoked. The
+            detectives then told the defendant that the interrogation
+            was over and that they would leave. Before they could do so,
+            however, the defendant began asking questions about
+            extradition, whether he faced federal charges, and whether
+            his girlfriend knew about the charges. The detectives
+            reiterated that they could not talk further because he had
+            invoked. The defendant told them that he did not want his
+            girlfriend involved and he turned toward the camera and
+            said: “I do not want an attorney any longer. I am willing to
+            talk to you guys.” The detectives told the defendant that he
+            could reinvoke at any time. The defendant then made
+            incriminatory statements.</p>
+            <p>The defendant voluntarily waived his <em>Miranda</em>
+            rights. The record reflects that the defendant was aware of
+            the nature of his rights and the detectives did not induce
+            or overbear defendant’s ability to remain silent. The
+            detectives: (1) refused to turn off the recording device in
+            light of the defendant’s invocation; (2) acknowledged the
+            defendant’s invocation immediately when it was made; (3)
+            tried to terminate the encounter; (4) explained to the
+            defendant that his invocation required them to terminate the
+            encounter; and (5) made a “clear and explicit explanation to
+            defendant that he needed to be very clear that he no longer
+            wanted an attorney if he wanted to continue the interview”
+            and (6) informed him that he continued to have the power to
+            reinvoke his right to counsel. <a
+            href="https://scholar.google.com/scholar_case?case=17992117021882044990&amp;q=State+v.+Gillespie,+295+Or+App+702&amp;hl=en&amp;as_sdt=4,38"><span class="SpellE"><span class="hyperlinkital">Gillispie</span></span>,
+            295 Or App at 716</a>. As such, the incriminating statements
+            were not the product of an unlawful continued interrogation
+            after the defendant had invoked.</p>
+            <p><span id="vii.-defendants-post-miranda-statements-must-be-knowing-and-voluntary"></span></p>
+            <h2
+            id="vii._defendants_post_miranda_statements_must_be_knowing_and_voluntary">VII.
+            Defendant’s Post-Miranda Statements Must Be Knowing and
+            Voluntary</h2>
+            <p>“The provision of <em>Miranda</em> warnings is not a
+            guarantee that statements made after the warnings are
+            voluntary.”<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=10191076012984996382&amp;q=State+v.+Jackson,+364+Or+1&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Jackson</span>, 364 Or 1, 21, 430 P3d 1067, 1078
+            (2018)</a><span>. </span>By statute, “A confession or
+            admission of a defendant, whether in the course of judicial
+            proceedings or otherwise, cannot be given in evidence
+            against the defendant when it was made under the influence
+            of fear produced by threats.” <a
+            href="http://www.oregonlaws.org/ors/136.425">ORS
+            136.425(1)<span>.</span></a> The state must prove that in
+            making a statement, “defendant’s free will was not overborne
+            and his capacity for self-determination was not critically
+            impaired, and that he made his statements without inducement
+            from fear or promises.” <em>Id</em>. at 22. The defendant
+            must also have the requisite comprehension to knowingly and
+            intelligently waive his <em>Miranda</em> rights. <a
+            href="https://scholar.google.com/scholar_case?case=5997619005638850993&amp;q=State+v.+Norgren,+287+Or+App+165&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Norgren</span>, 287 Or App 165, 170, 401 P3d 1275
+            (2017)</a>, <em>rev dismissed</em>, 363 Or 40 (2018)
+            (holding that it was error for trial court to allow
+            incriminating statements made after <em>Miranda</em>
+            warnings were given, but where the defendant was clearly
+            having a break from reality by running around in the woods,
+            naked, and believing that he was a sasquatch). Statements
+            made in that condition were not knowing or intelligent.
+            <em>Id</em>. The state bears a “heavy” burden to prove that
+            under the totality of the circumstances defendant’s waiver
+            was knowingly, voluntarily, and intelligently made. <a
+            href="https://scholar.google.com/scholar_case?case=5606574929076707628&amp;q=State+v.+Ward,+367+Or+188&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Ward</span>, 367 Or 188, 200, 367 P3d 420 (2020)</a>. To
+            overcome the presumption that statements
+            post-<em>Miranda</em> were not voluntary, the state must
+            offer “clear evidence” that, at the time of the later
+            confession, “the delusion hopes or fears, under the
+            influence of which the original confession was obtained,
+            were entirely dispelled.” <em>Jackson</em>, 364 Or at
+            33.</p>
+            <p>The passing of time <em>can</em> ease the state’s burden
+            to show that a defendant voluntarily waived his
+            <em>Miranda</em> rights following the provision of the
+            warnings. <em>Id.</em> at 204. But any value that accrues to
+            the passage of time is diluted if a defendant is held in
+            jail without a lawyer or a significant amount of time passes
+            between the warnings and the questioning. <em>Id.</em> at
+            205. The state should also elicit evidence of what the
+            defendant said before the warnings were given to determine
+            whether any initial <em>Miranda</em> violation impacted the
+            defendant’s later statements. <em>Id.</em> at 206.</p>
+            <p><em>Jackson</em> established a framework to determine
+            whether the state had met its burden to prove voluntariness.
+            First, it “is helpful to begin with the issue of whether the
+            officers who interrogated the defendant induced him to make
+            admissions by influence of hope or fear.” <em>Id.</em> at
+            22. If the answer is “yes,” then “the next question is
+            whether the state has demonstrated that, in view of the
+            totality of circumstances, the defendant’s admissions were
+            nonetheless the product of the defendant's free will. <a
+            href="https://scholar.google.com/scholar_case?case=11729595629462934077&amp;q=State+v.+Vasquez-Santiago,+301+Or+App+90&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Vasquez-Santiago</span>, 301 Or App 90, 107, 456 P3d 270,
+            280 (2019)</a> (citing <em>Jackson</em>, 301 Or App at
+            27-28). “The ‘totality of the circumstances’ subject to
+            examination includes the individual characteristics and
+            circumstances of the defendant, in addition to the
+            circumstances of the interrogation.” <em>Id.</em> (quoting
+            <em>Jackson</em>, 301 Or App at 28).</p>
+            <p><span id="a.-defendants-post-miranda-statements-were-not-knowing-and-voluntary"></span></p>
+            <h3
+            id="a._defendants_post_miranda_statements_were_not_knowing_and_voluntary">A.
+            Defendant’s Post-Miranda Statements Were Not Knowing and
+            Voluntary</h3>
+            <p>In <em>Jackson</em>, the defendant was accused of
+            multiple murders. During a multi-day custodial
+            interrogation, the defendant made inculpatory statements
+            following the giving of the <em>Miranda</em> warnings. The
+            trial court suppressed two sets of
+            <span class="GramE">statements</span> and the state filed an
+            interlocutory appeal. For the first set of statements, the
+            state induced the defendant into telling them what they
+            wanted to hear by isolating the defendant—who suffered from
+            severe disabilities—from his care provider, removed his cell
+            phone, did not permit him to make any phone calls despite
+            his request to do so, and continued to question him “for a
+            significant length of time and told him that they would
+            continue to do so until they were ‘working together.’”
+            <em>Id.</em> at 31-32. Only after that would the detectives
+            permit the defendant to speak with his family. <em>Id.</em>
+            Moreover, they told the defendant that if he confessed, it
+            might eliminate him as a suspect from other crimes. But if
+            he did not confess, then the detectives would pursue the
+            maximum possible sentence. Under the totality of the
+            circumstances, the defendant’s statement following those
+            inducements was not voluntary.</p>
+            <p>With respect to the second statement, which was made on
+            the second day of interrogation after the defendant had been
+            re-<em>Mirandized</em> when the defendant was allowed to
+            call his sister from the interrogation room, the call to his
+            family member did not alleviate the prior inducement, it was
+            “part of the inducement of the earlier admissions, and,
+            ultimately, was carried out in the interrogation room, with
+            the interrogating detectives placing, listening in on, and
+            participating in the call.” <em>Id.</em> at 35. The
+            defendant had not been released from custody between the
+            first and second statements. No time separated the
+            interrogation from the defendant’s telephone conversation.
+            Thus, the improper coercion that had led to the defendant’s
+            compelled admissions during the interrogation were not
+            dispelled by the time of the telephone call and the trial
+            court was correct to suppress those statements.
+            <em>Id.</em></p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=5606574929076707628&amp;q=State+v.+Ward,+367+Or+188&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">Ward</span>,
+            367 Or 188</a>, the defendant was arrested in Union County
+            for a murder that took place in Washington County. The
+            defendant was read the Miranda '<em>' warnings when he was
+            initially arrested and when he was brought to the Union
+            County Jail. Despite the defendant telling the investigating
+            officers that he was not going to speak with them, the
+            officers reread</em>Miranda'' and then continued to
+            interrogate the defendant.</p>
+            <p>After being held in the Union County Jail for four days,
+            the defendant was transported to the Washington County Jail.
+            Before departing the defendant was read the <em>Miranda</em>
+            <span class="GramE">warnings, but</span> made no statements
+            on the four- to five-hour drive to Washington County. When
+            the defendant arrived in Washington County, he was taken to
+            a soft interview room. At that point, without rereading the
+            <em>Miranda</em> warnings or asking the defendant if he
+            wanted to waive his <em>Miranda</em> rights, the detectives
+            began asking the defendant about the murder. The
+            conversation appeared <span class="GramE">relaxed</span> and
+            the defendant made incriminating statements. The trial court
+            ruled that the first interrogation had violated the
+            defendant’s rights by asking questions after an unequivocal
+            invocation. However, it admitted statements made after the
+            second interview in Washington County.</p>
+            <p>The Court of Appeals held that state did not carry its
+            burden to prove that the statements made in the second
+            interview were voluntarily made. First, “any value that the
+            passage of time might normally provide was diluted in this
+            case by the fact that defendant was held in jail during that
+            entire time without the benefit of advice from counsel.”
+            <em>Id.</em> at 205. Thus, being held in custody for four
+            days in between the first and second interrogation did not
+            “minimize the harm from the earlier violation.” <em>Id.</em>
+            Second, any value from the renewed <em>Miranda</em> warnings
+            was undermined because those warnings were given at the
+            beginning of a five-hour trip to Washington County. Third,
+            the state impaired its ability to prove that the results of
+            the first interrogation did not impact the defendant’s
+            decision to make statements in the second interview by only
+            playing a recording of the interview following the
+            defendant’s invocation. <em>Id.</em> at 206. Consequently,
+            there was no way to know whether the statements that the
+            defendant made or the questions that officer posed during
+            the first interview affected the defendant’s decision to
+            participate in the second interview. <em>Id.</em> at 206-07.
+            Taking all these circumstances together, the state failed to
+            prove that defendant knowingly, intelligently, and
+            voluntarily waived his Article I, section 12, rights.
+            <em>Id.</em> at 208.</p>
+            <p><em>Vasquez-Santiago</em>, 301 Or App 90, applied the
+            <em>Jackson</em> framework to an interrogation of a
+            defendant with an IQ of 53 who was accused of murder. 301 Or
+            App at 92-105. There, detectives improperly induced a
+            confession by implicitly, if not explicitly, stating that
+            the defendant’s infant son and other family members were
+            detained by police and were suffering and that only the
+            defendant’s confession would secure their release.
+            <em>Id.</em> at 118. Those interrogation techniques played
+            on a parent’s instinct to care for their child. <em>Id.</em>
+            As such, the state did not prove that the techniques did not
+            “critically impair” the defendant’s free will by inducing a
+            statement out of the defendant’s fear for his family and an
+            implicit promise that the detectives could do something
+            about freeing them. <em>Id.</em></p>
+            <p>The state failed to carry its heavy burden to show that
+            the defendant knowingly, intelligently and voluntarily
+            waived his right to counsel after he had invoked his right
+            not to speak without an attorney present. <a
+            href="https://scholar.google.com/scholar_case?case=13951971946185560389&amp;q=State+v.+Dean,+309+Or+App+249&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Dean</span>, 309 Or App 249, 261 (2021)</a>. There, the
+            defendant was arrested and questioned by detectives about
+            several robberies. After invoking, a detective continued to
+            explain to the defendant the incriminating evidence against
+            him. <em>Id.</em> at 258-59. The defendant sought to
+            interrupt the detective several times but was stopped by the
+            detective who continued to lay out the evidence after
+            explaining to the defendant, multiple times, that he would
+            not accept any of the defendant’s statements because the
+            defendant had invoked his right to counsel. <em>Id.</em> at
+            259. After an hour break, the defendant signaled the
+            detectives that he wanted to talk and gave incriminating
+            statements. <em>Id.</em> at 254. The state did not meet its
+            burden for several reasons. First, the detective continued
+            to explain the evidence even though it was
+            <em>provoking</em> statements from the defendant while
+            simultaneously preventing the defendant from responding.
+            <em>Id.</em> at 263. Second, the detective “primed” the
+            defendant to respond to him by laying out the evidence and
+            then leaving the defendant in a cell for an hour to consider
+            the evidence against him. <em>Id.</em> at 263. Third, the
+            “break” did little to attenuate the violation when the
+            defendant was in contact with the same detectives throughout
+            the break. <em>Id.</em> at 264. Fourth, simply restating the
+            defendant’s rights did not further clarify them when the
+            detective had violated <span class="GramE">those very same
+            rights prior</span>. <em>Id.</em> at 265.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=11210754797395429973&amp;q=State+v.+Simmons,+302+Or+App+133&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Simmons</span>, 302 Or App 133, 138 (2020)</a>, a
+            detective improperly induced the defendant into making
+            statements by telling the defendant that “if the defendant
+            was willing to talk with him that maybe something could be
+            done. Maybe he could talk with the DA’s Office, maybe he’d
+            dismiss the charges.” Those statements communicated to
+            defendant that there would be a benefit in continuing to
+            talk to the detective. That is, the detective’s statements
+            gave the defendant hope that by continuing to talk,
+            defendant would receive a more lenient result. Because the
+            detective’s statements gave the defendant hope for a more
+            lenient result, they induced statements contrary to the
+            <em>Miranda</em> warnings and should have been suppressed.
+            <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=13283332651489502502&amp;q=State+v.+Belle,+281+Or+App+208&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Belle</span>, 281 Or App 208, 211, 216 (2016)</a>
+            (holding a detective’s promise to a suspect, who was a
+            member of the National Guard, that a matter could be handled
+            at the state level and not under the military code, was the
+            type of promise of a benefit prohibited by <a
+            href="http://www.oregonlaws.org/ors/136.425">ORS
+            136.425(1</a><span class="MsoHyperlink">))</span>.</p>
+            <p><span id="b.-defendants-post-miranda-statements-were-knowing-and-voluntary"></span></p>
+            <h3
+            id="b._defendants_post_miranda_statements_were_knowing_and_voluntary">B.
+            Defendant’s Post-Miranda Statements Were Knowing and
+            Voluntary</h3>
+            <p>The defendant’s statements were not induced or overborne
+            when made during a five-hour-long interview: the defendant
+            was given regular breaks at his request, the officers did
+            not accompany the defendant on his breaks except at his
+            request, the defendant drove himself to the police station,
+            <em>Miranda</em> warnings were read to the defendant, the
+            defendant chose when to answer questions and when not to,
+            the tone of the interview was direct but quiet and “decent,”
+            and even though an officer made a misrepresentation, it was
+            not a misrepresentation that suggested to the defendant that
+            it would be beneficial for him to do or say a particular
+            thing. <a
+            href="https://scholar.google.com/scholar_case?case=9916266329198713167&amp;q=State+v.+Pryor,+309+Or+App+12&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Pryor</span>, 309 Or App 12, 21-25, ___P3d___ (2021)</a>.
+            Furthermore, although the investigating detective made
+            comments about how the defendant would be perceived as a
+            monster if he did not confess, the detective did not offer
+            anything in exchange for the defendant’s confession.
+            <em>Id.</em> at 20.</p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=2109864036169275179&amp;q=State+v.+Chavez-Meza,+301+Or+App+373&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Chavez-Meza</span>, 301 Or App 373, 456 P3d 322
+            (2019)</a><span>, </span>the state proved that defendant’s
+            statements were voluntary and not overborne when the
+            interviewing detectives, although minimizing the defendant’s
+            conduct, did not promise the defendant that he would not be
+            prosecuted, there was no implied promise that if the
+            defendant did not confess that his wife would be alerted to
+            the allegations of sexually abusing a child. Moreover, when
+            the defendant ultimately did provide incriminating
+            statements, it was during a fact-intensive part of the
+            interview, long after <em>Miranda</em> warnings were given,
+            and not when the officers were exerting the most pressure,
+            and it appeared that the defendant made the statements to
+            unburden himself. <em>Id.</em> at 392.</p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=684289885486523306&amp;q=State+v.+Bush,+291+Or+App+407&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. Bush</span>, 291 Or App 407, 421 P3d 403
+            (2018)</a>,<span> the </span>defendant’s<span> </span>waiver
+            was knowing despite the fact that he was visibly under the
+            influence of a controlled substance. The interviewing
+            officer initially provided the <em>Miranda</em> warnings,
+            the defendant asked appropriate questions and sought
+            clarification for words he did not understand, and he
+            appeared to become more coherent overtime, including when he
+            ultimately waived his right to remain silent two and a half
+            hours after he was arrested. Consequently, the defendant’s
+            intoxication did not preclude a knowing waiver.</p>
+            <p><span id="vi.-harmlessness"></span></p>
+            <h2 id="vi._harmlessness">VI. Harmlessness</h2>
+            <p>Permitting the state to introduce an unmirandized
+            statement can be harmless on appeal under Article I, section
+            12, of the Oregon Constitution where the statement is
+            cumulative of other uncontested evidence. <a
+            href="https://scholar.google.com/scholar_case?case=11702135745901137097&amp;q=State+v.+Forshee,+300+Or+App+739&amp;hl=en&amp;as_sdt=4,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Forshee</span></span>, 300 Or App
+            739, 758 (2019)</a>. In
+            <span class="SpellE"><em>Forshee</em></span>, a jury found
+            defendant guilty of murder. <em>Id.</em> The defendant
+            stipulated that he had shot and killed the
+            <span class="GramE">victim, but</span> argued that he had
+            done so under the influence of an extreme emotional
+            disturbance (EED). The question was whether the trial court
+            erred by permitting the state to introduce the defendant’s
+            statement, “I shot the guy,” after he was ordered to the
+            ground by a police officer and before being read
+            <em>Miranda</em> warnings. <em>Id.</em> at 757. The Court of
+            Appeal did not address whether <em>Miranda</em> was required
+            because it found that if there was error, it was harmless.
+            <em>Id.</em> at 765-66. The court concluded that whatever
+            relevance the statement had to undermining his EED defense
+            was merely cumulative of other properly admitted evidence,
+            such as his planning leading up to the shooting (scheduling
+            a cab to take him to the scene of the shooting and getting a
+            neighbor to look after his dogs), the defendant’s correction
+            of the 911 caller misidentifying the building that the
+            shooting had occurred in, other unchallenged statements made
+            to police indicating that the defendant had as much as he
+            could take with the victim, and expert testimony that the
+            defendant’s calm demeanor and planning were not signs of
+            EED. Thus, any error was harmless because the challenged
+            statement did not add much if anything to the other
+            evidence, which showed the defendant’s planning and ability
+            to respond appropriately even after the shooting.
+            <em>Id.</em> at 765-66.</p>
+            </div>
+            <div style="mso-element:footnote-list">
+            <p><br />
+            </p>
+            <hr />
+            <div id="ftn1" style="mso-element:footnote">
+            <p>[[#_ftnref1|<span class="MsoFootnoteReference"><span><span class="MsoFootnoteReference"><span>[1]</span></span></span></span>]]
+            In reviewing the fifth factor, the court distinguished Mr.
+            Swan’s case from <a
+            href="https://scholar.google.com/scholar_case?case=4067349480524752498&amp;q=State+v.+Delong,+357+Or+365&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Delong</span></em><span>, 357 Or 365, 350 P3d 433
+            (2015)</span></a>. In <em>Delong</em>, the police had failed
+            to <em>Mirandize</em> the defendant prior to questioning.
+            There, the defendant made an <em>exculpatory</em> statement
+            in response to the officer’s question and then invited the
+            officers to search his car. Thus, in <em>Delong</em>, the
+            defendant’s invitation to search did not derive from the
+            earlier <em>Miranda</em> violation. In contrast, in
+            <em>Swan</em>, because the state had not developed the
+            record regarding the questions asked and the defendant’s
+            responses, there was no way to know if the defendant had
+            incriminated himself with his answers, or if he had
+            responded, like in Delong, with in an exculpatory
+            manner.</p>
+            </div>
+            <div id="ftn2" style="mso-element:footnote">
+            <p>[[#_ftnref2|<span class="MsoFootnoteReference"><span><span class="MsoFootnoteReference"><span>[2]</span></span></span></span>]]
+            At the end of that analysis, the court again distinguished
+            <em>Swan</em> from <em>Delong</em>. <em>See Swan</em>, 363
+            Or at 136-37 for that discussion.</p>
+            </div>
+            </div>
+    </body>
+</html>

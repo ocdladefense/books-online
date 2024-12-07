@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <header id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </header>
+            <p>2020 edition</p>
+            <h1 id="voir_dire_opening_closing"><strong>Voir Dire,
+            Opening &amp; Closing</strong></h1>
+            <p><strong><em>By Russell Barnett, III &amp; Edward
+            Kroll</em></strong></p>
+            <h1 id="voir_dire"><strong>Voir Dire</strong></h1>
+            <p><em>Russell Barnett, III</em></p>
+            <h1 id="i._voir_dire_is_an_art_not_a_science"><strong>I.
+            Voir Dire Is an Art, Not a Science</strong></h1>
+            <p>How to learn to voir dire: Watch other lawyers. As an
+            observer you independently see what works and what doesn’t.
+            The panel will react to questions by both sides when the
+            lawyers aren’t watching. You can read the panel’s facial
+            expressions and body language. Laughter is a universal
+            barrier breaker.</p>
+            <p>Remember that voir dire is not an appendage to a trial;
+            it is a key element of the trial, where the seeds of your
+            defense or narrative are first sown.</p>
+            <h1 id="ii._the_rules_of_jury_selection"><strong>II. The
+            Rules of Jury Selection</strong></h1>
+            <h2 id="a._statutes"><strong>A. Statutes</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">Link
+            to 2019 edition of Oregon Revised Statutes, Chapter 136,
+            Criminal Trials</a>.</p>
+            <p><strong>1. ORS 136.005 Challenge to jury
+            panel.</strong></p>
+            <p>(1) The district attorney or the defendant in a criminal
+            action may challenge the jury panel on the ground that there
+            has been a material departure from the requirements of the
+            law governing the selection of jurors. (2) A challenge to
+            the panel shall be made before the voir dire examination of
+            the jury.</p>
+            <p><strong>2. ORS 136.210 Jury number;
+            examination.</strong></p>
+            <p>(1) Except as provided in subsection (2) of this section,
+            in criminal cases the trial jury shall consist of 12 persons
+            unless the parties consent to a lessern number. It shall be
+            formed, except as otherwise provided in ORS 136.220 to ORS
+            136.250, in the same manner provided by <a
+            href="http://www.oregonlegislature.gov/bills_laws/Pages/orcp.aspx">ORCP</a>
+            57 B, D (1)(a), D(1)(b), D(1)(g) and E. When the full number
+            of jurors has been called, they shall thereupon be examined
+            as to their qualifications, first by the court, then by the
+            defendant, then by the state. After they have been passed
+            for cause, peremptory challenges, if any, shall be exercised
+            as provided in ORS 136.230. (2) In criminal cases in the
+            circuit courts in which the only charges to be tried are
+            misdemeanors, the trial jury shall consist of six
+            persons.</p>
+            <p><strong>3. ORS 136.220 Challenge for implied
+            bias.</strong></p>
+            <p>A challenge for implied bias shall be allowed for any of
+            the following causes and no other:</p>
+            <p>a. Consanguinity or affinity within the fourth degree to
+            the person alleged to be injured by the offense charged in
+            the accusatory instrument, to the complainant or to the
+            defendant.</p>
+            <p>b. Standing in the relation of guardian and ward,
+            attorney and client, physician and patient, master and
+            servant, debtor and creditor, principal and agent or
+            landlord and tenant with the:</p>
+            <ul>
+            <li><blockquote>
+            <p>Defendant</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Person alleged to be injured by the offense charged in
+            the accusatory instrument or</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Complainant.</p>
+            </blockquote></li>
+            </ul>
+            <p>c. Being a member of the family, a partner in business
+            with or in the employment of any person referred to in
+            subsection (2) (a), (b) or (c) of this section or a surety
+            in the action or otherwise for the defendant.</p>
+            <p>d. Having served on the grand jury which found the
+            indictment or on a jury of inquest which inquired into the
+            death of a person whose death is the subject of the
+            indictment or information.</p>
+            <p>e. Having been one of a jury formerly sworn in the same
+            action, and whose verdict was set aside or which was
+            discharged without a verdict after the cause was submitted
+            to it.</p>
+            <p>f. Having served as a juror in a civil action, suit or
+            proceeding brought against the defendant for substantially
+            the same act charged as an offense.</p>
+            <p>g. Having served as a juror in a criminal action upon
+            substantially the same facts, transaction or criminal
+            episode.</p>
+            <p><strong>4. ORS 136.230 Peremptory
+            challenges.</strong></p>
+            <p>(1) If the trial is upon an accusatory instrument in
+            which one or more of the crimes charged is punishable with
+            imprisonment in a Department of Corrections institution for
+            life or is a capital offense, both the defendant and the
+            state are entitled to 12 peremptory challenges, and no more.
+            In any trial before more than six jurors, both are entitled
+            to six. In any trial before six jurors, both are entitled to
+            three. (2) Peremptory challenges shall be taken in writing
+            by secret ballot as follows:</p>
+            <p>The defendant may challenge two jurors and the state may
+            challenge two, and so alternating, the defendant exercising
+            two challenges and the state two until the peremptory
+            challenges are exhausted. After each challenge the panel
+            shall be filled and the additional juror passed for cause
+            before another peremptory challenge is exercised. Neither
+            party shall be required to exercise a peremptory challenge
+            unless the full number of jurors is in the box at the time.
+            The refusal to challenge by either party in order of
+            alternation does not prevent the adverse party from
+            exercising that adverse party’s full number of challenges,
+            and such refusal on the part of a party to exercise a
+            challenge in proper turn concludes that party as to the
+            jurors once accepted by that party. If that party’s right of
+            peremptory challenge is not exhausted, that party’s further
+            challenges shall be confined, in that party’s proper turn,
+            to such additional jurors as may be called. (3)
+            Notwithstanding subsection (2) of this section, the
+            defendant and the state may stipulate to taking peremptory
+            challenges orally. (4) Peremptory challenges are subject to
+            <a
+            href="http://www.oregonlegislature.gov/bills_laws/Pages/orcp.aspx">ORCP
+            57 D(4)</a>.</p>
+            <p><strong>5. ORS 136.240 Challenge of accepted
+            juror.</strong></p>
+            <p>If the peremptory challenges of the moving party are not
+            already exhausted, the court may for good cause shown permit
+            a challenge to be taken to any juror before the jury is
+            completed and sworn, notwithstanding the juror challenged
+            may have been theretofore accepted.</p>
+            <p><strong>6. ORS 136.250 Taking of challenges; number of
+            challenges if two or more defendants.</strong></p>
+            <p>All peremptory challenges may be taken by the state or
+            the defendant, but when several defendants are tried
+            together, the defendants are entitled to the number of
+            challenges they would have had if each defendant had been
+            tried separately. When two or more defendants are tried
+            together, the state is entitled to the same total number of
+            peremptory challenges as the sum of peremptory challenges
+            the defendants could have exercised.</p>
+            <p><strong>7. ORS 136.260 Selection of alternate jurors;
+            peremptory challenges.</strong></p>
+            <p>(1) In the trial of a person charged with a felony, the
+            court may in its discretion, after the jury is impaneled and
+            sworn, direct the calling of one to six additional jurors to
+            be known, as “alternate jurors.” Such jurors shall be drawn
+            from the same qualifications as other jurors in the case.
+            They shall be subject to the same examination and be
+            challenged in the same manner as other jurors. In the
+            drawing of alternate jurors, the names of the jurors excused
+            for cause or on peremptory challenges in the selection of
+            the jury to which such jurors shall serve as alternates
+            shall be excluded from the names from which such drawing is
+            made. (2) Each side is entitled to the following peremptory
+            challenges in addition to those otherwise allowed by
+            statute: If one or two alternate jurors are to be impaneled,
+            each side is entitled to one peremptory challenge. If three
+            or four alternate jurors are to be impaneled, each side is
+            entitled to one peremptory challenge. If five or six
+            alternate jurors are to be impaneled, each side is entitled
+            to three peremptory challenges. (3) The additional
+            peremptory challenges may be used against an alternate juror
+            only, and the other peremptory challenges allowed by statute
+            shall not be used against an alternate juror.</p>
+            <p><strong>8. ORS 136.270 Oath, rules governing conduct and
+            attendance of alternate jurors at trial.</strong></p>
+            <p>Alternate jurors shall take the same oath and shall be
+            subject to the same laws, orders and rules, including any
+            order preventing the separation of the jury during the
+            trial, shall be seated near the other jurors in the case,
+            with equal opportunity and facilities for seeing and hearing
+            the proceedings and shall attend at all times upon the trial
+            of the case in company with the other jurors.</p>
+            <p><strong>9. ORS 136.280 Substitution of alternate for
+            juror dying or becoming disabled; dismissal.</strong></p>
+            <p>If, before the final submission of the case, any juror
+            dies or is unable to perform the duty because of illness or
+            other cause which the court deems sufficient, the juror
+            shall be dismissed from the case. Except as provided by <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors163.html">ORS
+            163.150</a>, the court shall cause to be drawn the name of
+            an alternate juror, who shall then become a member of the
+            jury as though the alternate juror had been selected as one
+            of the original jurors. Any alternate juror not selected to
+            become a member of the jury shall be dismissed from the case
+            upon its final submission to the jury.</p>
+            <h2 id="b._case_law"><strong>B. Case Law</strong></h2>
+            <p><strong>1. Purpose of Voir Dire</strong></p>
+            <p>Voir dire is a statutorily authorized <em>and important
+            part of jury trial.</em> We need not elaborate on the fact
+            that inquiry into a prospective juror’s previous experience
+            in litigation as a party, witness or juror is generally
+            considered an important part of voir dire, relevant both to
+            challenges for cause and peremptory challenges. <em>It is
+            ordinarily the rule</em> that once a juror has been sworn,
+            counsel can make no subsequent inquiry into whether
+            extraneous events in a juror’s life during the course of
+            trial have affected his objectivity. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Miller,+10+Or+App+636,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1056700984892349006&amp;scilh=0"><em>State
+            v. Miller</em>, 10 Or App 636, 638 639, 501 P2d 326
+            (1972)</a> (emphasis added); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Williams,+123+Or+App+546,+860+P2d+860+%281993%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3186253560461884422&amp;scilh=0"><em>State
+            v. Williams</em>, 123 Or App 546, 860 P2d 860 (1993)</a>
+            (the purpose of voir dire is to ascertain whether to
+            challenge for cause and whether to challenge
+            peremptorily).</p>
+            <p><strong>2. Challenge for Implied Bias</strong></p>
+            <p>State is not complainant referred to in ORS 136.220
+            because state is not a person. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+313+Or+356,+836+P2d+1308+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0"><em>State
+            v. Rogers</em>, 313 Or 356, 836 P2d 1308 (1992)</a>. “It is
+            the general rule that a police officer is not disqualified
+            from jury service on that ground alone, but her employment
+            may well serve in a particular case as a proper basis for
+            challenge on the ground of implied bias.” <a
+            href="http://scholar.google.com/scholar_case?q=Parks+v.+Cupp,+5+Or+App+51,+&amp;hl=en&amp;as_sdt=4,38&amp;case=18321811267924910561&amp;scilh=0"><em>Parks
+            v. Cupp,</em> 5 Or App 51, 53, 481 P2d 372 (1971)</a>.
+            <em>But see</em> <a
+            href="http://scholar.google.com/scholar_case?q=Hernandez+v.+State,+563+SW2d+947+%28Tex+Crim+App+1978%29&amp;hl=en&amp;as_sdt=4,38,44&amp;case=15273117369772998129&amp;scilh=0"><em>Hernandez
+            v. State</em>, 563 SW2d 947 (Tex Crim App 1978)</a> (where
+            the court held a prospective juror’s predisposition to
+            believe police testimony amounts to a cause for
+            challenge).</p>
+            <p><strong>3. Challenge for actual bias—can the juror try
+            the case impartially without prejudice to the rights of the
+            challenging party?</strong></p>
+            <p>Whether juror is actually biased is a question of fact
+            that the court determines within its discretionary powers.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tucker,+315+Or+321,+845+P2d+904+%281993%29&amp;hl=en&amp;as_sdt=4,38,44&amp;case=7650970981978288883&amp;scilh=0"><em>State
+            v. Tucker</em>, 315 Or 321, 845 P2d 904 (1993)</a> (trial
+            court’s decision will not be interfered with unless it was
+            an abuse of discretion); initial responses by jurors should
+            be given more weight when determining the juror’s true frame
+            of mind as opposed to later statements that the juror would
+            be fair. <a
+            href="http://scholar.google.com/scholar_case?q=Lambert+v.+Sisters+of+St.+Joseph,+277+Or+223,+560+P2d+262+%281977%29&amp;hl=en&amp;as_sdt=4,38,44&amp;case=5321681249226893236&amp;scilh=0"><em>Lambert
+            v. Sisters of St. Joseph</em>, 277 Or 223, 560 P2d 262
+            (1977)</a> (abuse of discretion found when trial judge
+            refused to excuse juror for actual bias).</p>
+            <p><strong>4. Challenges for Cause</strong></p>
+            <p>See ORS 136.210(1)</p>
+            <blockquote>
+            <p><a
+            href="http://www.oregonlegislature.gov/bills_laws/Pages/orcp.aspx">ORCP
+            57 D(1)(a), D(1)(b), and D(1)(g)</a></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors010.html">ORS
+            10.030</a></p>
+            <p>Senate Bill 936, section 9b(3)(a).</p>
+            </blockquote>
+            <p>The qualifications for a juror are that the juror must be
+            a citizen of the United States, an inhabitant of the county
+            for the year next proceeding the time he/she is drawn or
+            called, that he/she is over eighteen years of age, and of a
+            sound mind. A juror is improperly summoned if called more
+            than once in any one year. A juror may not be convicted of,
+            or sentenced for, a felony within the last fifteen years and
+            must be a registered voter.</p>
+            <p>a. Proper challenge of a juror for cause. “We submit the
+            matter for the court’s consideration.” <em>State v.
+            Nagel</em>, 185 Or 486, 495, 202 P2d 640 (1949).</p>
+            <p>b. Waiver occurs if cause challenge is not properly
+            asserted and preserved. Peremptory challenge of a juror
+            improperly allowed to remain (because of implied bias)
+            waives the right to object on appeal. <em>Twitchell v.
+            Thompson,</em> 78 Or 285, 289, 153 P 45 (1915); <em>State v.
+            Humphrey,</em> 63 Or 540, 546, 128 P 824 (1912); “A party
+            whose peremptory challenges have not been exhausted is not
+            in a position to complain of the overruling of his challenge
+            for cause to a juror who afterwards serves on the panel.”
+            <em>Lambert v. Sisters of St. Joseph</em>, 277 Or 223, 229,
+            560 P2d 262 (1977); “The overruling of a good challenge for
+            cause, thereby compelling the use of a peremptory challenge,
+            is not prejudicial error where it does not appear that the
+            challenger was compelled to accept an objectionable
+            juror<em>.” State v. Megorden</em>, 49 Or 259, 263–264, 88 P
+            306 (1907). A challenge to a juror for implied bias is
+            waived unless submitted before the jury is sworn<em>.</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=Holmgren+v.+Westport+Tow+Boat+Company,+260+Or+445,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=16669167090704569930&amp;scilh=0"><em>Holmgren
+            v. Westport Tow Boat Company</em>, 260 Or 445, 447, 490 P2d
+            739 (1971)</a>. The failure to object to a juror’s
+            incompetence waives the right to object later<em>. State v.
+            McDonald</em>, 8 Or 113, 119 (1879). If the court refuses to
+            excuse a juror as incompetent on the defendant’s challenge
+            for cause during voir dire, the defendant must explain to
+            the court that she was ultimately forced to accept an
+            objectionable juror because of the use of a peremptory
+            challenge to remove the juror in question. This must be done
+            in order to preserve the error. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Griffin,+19+Or+App+822,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=5269748161267917421&amp;scilh=0"><em>State
+            v. Griffin</em>, 19 Or App 822, 825, 529 P2d 399
+            (1979)</a>.</p>
+            <p><strong>5. Peremptory Challenges</strong></p>
+            <p>a. Improper to challenge a juror based on race. <a
+            href="http://scholar.google.com/scholar_case?q=Baston+v.+Kentucky,+476+US+79,+106+S+Ct+1712,+90+LEd2d+69+%281986%29&amp;hl=en&amp;as_sdt=3,38,44&amp;case=11558261102149383532&amp;scilh=0"><em>Baston
+            v. Kentucky</em>, 476 US 79, 106 S Ct 1712, 90 LEd2d 69
+            (1986)</a> (Equal Protection Clause of the Fourteenth
+            Amendment forbids race-based challenges); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ross,+154+Or+App+121,+961+P2d+241+%281998%29+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=3188757707531469268&amp;scilh=0"><em>State
+            v. Ross</em>, 154 Or App 121, 961 P2d 241 (1998)</a> (DUII
+            case reversed and remanded for a new trial after prosecutor
+            used peremptory challenges of African-American prospective
+            jurors and trial court relied on its personal knowledge
+            about prosecutor in making assessment of whether or not
+            purposeful discrimination occurred); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Millage,+125+Or+App+92,+864+P2d+868+%281993%29&amp;hl=en&amp;as_sdt=4,38,44&amp;case=15958837177666184405&amp;scilh=0"><em>State
+            v. Millage</em>, 125 Or App 92, 864 P2d 868 (1993</a>)
+            (whether prosecutor intentionally discriminated is a
+            question of fact, trial court properly found that
+            prosecutor’s peremptory challenge of minority prospective
+            juror did not violate defendant’s constitutional
+            rights).</p>
+            <p>b. Establishing purposeful discrimination. 1) Prima facie
+            case of purposeful discrimination is shown when it is shown
+            that juror is a member of a cognizable racial group and that
+            the prosecutor has exercised a peremptory challenge to
+            remove from the jury panel a member of the defendant’s race
+            and relevant circumstances of the jury selection process
+            that raise an inference that the prosecution exercised the
+            peremptory challenge for the purpose of excluding a member
+            of the defendant’s race (pattern of strikes and nature of
+            questions asked). Then, the burden shifts and requires a 2)
+            race-neutral explanation by the prosecutor for the
+            peremptory challenge. Finally, the burden shifts back to the
+            defendant to establish that the reason given was 3) a
+            pretext for discrimination.</p>
+            <p>c. Improper challenge to a juror based on gender. [<a
+            href="http://scholar.google.com/scholar_case?q=J.E.B.+v.+Alabama+ex+rel.+T.B">http://scholar.google.com/scholar_case?q=J.E.B.+v.+Alabama+ex+rel.+T.B</a>.,+511+U.S.+127,+&amp;hl=en&amp;as_sdt=3,38,44&amp;case=7113990036820068030&amp;scilh=0
+            <em>J.E.B. v. Alabama ex rel. T.B.</em>, 511 US 127, 114 S
+            Ct 1419, 128 LEd89 (1994)] <span class="underline"> </span>
+            (Equal Protection Clause of the Fourteenth Amendment forbids
+            gender-based challenges).</p>
+            <p>d. Timely peremptory challenge. Counsel must exercise a
+            peremptory challenge in a timely manner because there is no
+            abuse of discretion in denying the exercise of a peremptory
+            challenge not made in a timely manner. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mulvihill,+35+Or+App+627,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=17929374025688942478&amp;scilh=0"><em>State
+            v. Mulvihill</em>, 35 Or App 627, 629, 582 P2d 43
+            (1978)</a>.</p>
+            <p><strong>6. Questions to the Jury</strong></p>
+            <p>a. Improper to ask questions regarding juror’s religion,
+            unless relevant to the facts of the case. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Barnett,+251+Or+234,+445+P2d+124+%281968%29&amp;hl=en&amp;as_sdt=4,38,44&amp;case=10062399597194376366&amp;scilh=0"><em>State
+            v. Barnett</em>, 251 Or 234, 445 P2d 124 (1968)</a> (citing
+            Article I, section 6, of the Oregon Constitution).</p>
+            <p>b. Improper for court to prohibit defense counsel’s
+            questions of jury about defendant’s prior conviction(s).
+            “[A] defendant should be allowed latitude in voir dire
+            questioning about matters relevant to trial in order to
+            intelligently exercise his peremptory challenges. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ziebert,+34+Or+App+497,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=16624573161735973256&amp;scilh=0"><em>State
+            v. Ziebert</em>, 34 Or App 497, 501, 579 P2d 275 (1978)</a>
+            (reversible error for the trial court to prohibit defense
+            counsel from inquiring whether jurors might be prejudiced by
+            the defendant’s prior conviction).</p>
+            <p>c. Rehabilitative questioning. The exercise of the
+            court’s discretion must be guided by legal principles when a
+            juror has a strongly held opinion adverse to a party. “The
+            purpose of rehabilitative questioning is investigation, not
+            persuasion.” <a
+            href="http://scholar.google.com/scholar_case?q=Lane+County+v.+Walker,+30+Or+App+715,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=6614715555598292584&amp;scilh=0"><em>Lane
+            County v. Walker</em>, 30 Or App 715, 722, 568 P2d 676
+            (1977</a>), and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nefstad,+309+Or+523,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=7306155306787329924&amp;scilh=0"><em>State
+            v. Nefstad</em>, 309 Or 523, 533, 789 P2d 1326 (1990</a>).
+            If a juror says that he has formed an opinion from reading
+            the newspaper, but when questioned by the judge says that he
+            will form his opinion based upon the evidence, the
+            overruling of a challenge to that juror is not reversible
+            error. <em>State v. Ingram</em>, 23 Or 434, 435, 31 P 1049
+            (1893).</p>
+            <p>d. Answers Given By Jurors</p>
+            <ul>
+            <li><blockquote>
+            <p>The trial judge is not bound by the answers given by
+            jurors in determining the qualifications of a juror.
+            <em>State v. Brumfield</em>, 104 Or 506, 529, 209 P 120
+            (1922).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is presumed that the answers of jurors on voir dire
+            are honestly given. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McDonald,+231+Or+24,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=15079387766853863376&amp;scilh=0"><em>State
+            v. McDonald</em>, 231 Or 24, 37, 361 P2d 1001, <em>cert
+            den</em> 370 US 903 (1962)</a>. A juror who lies on voir
+            dire may prejudice the defendant sufficiently to require a
+            new trial<em>.</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Holcomb,+131+Or+App+453,+886+P2d+14+%281994%29&amp;hl=en&amp;as_sdt=4,38,44&amp;case=12260089906593899676&amp;scilh=0"><em>State
+            v. Holcomb</em>, 131 Or App 453, 886 P2d 14 (1994)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is essential to designate voir dire examination on
+            appeal if a point relied upon for reversal pertains to
+            qualifications of jurors. “Where an appellant fails to
+            provide us with a record essential to review matters claimed
+            to be error, we do not speculate as to what the record might
+            have shown had it been properly designated<em>.”</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Krohn,+15+Or+App+63,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=10516428404259173749&amp;scilh=0"><em>State
+            v. Krohn</em>, 15 Or App 63, 67, 514 P2d 1359
+            (1973)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>In order for error in accepting an arguably biased juror
+            to be preserved, the entire record must be before the
+            appellate court. <em>State v. Tom (a Chinaman),</em> 8 Or
+            177, 179 (1879); accord<em>, State v. Stigers</em>, 122 Or
+            113, 121, 256 P2d 649 (1927); exception to rule, <em>State
+            v. Miller</em>. 46 Or 485, 489, 81 P 363 (1905).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It may be necessary to make an offer of proof to preserve
+            error. <em>State v. Nefstad,</em> <em>supra</em>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Merely because a juror has an opinion that the defendant
+            is guilty does not automatically disqualify that juror,
+            <em>State v. Olberman</em>, 33 Or 556, 557, 55 P 866 (1899),
+            even if it would take evidence to change that opinion,
+            <em>State v. McDaniel</em>, 39 Or 161, 168, 65 P 520
+            (1901).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If a juror separates due to illness, and sits on another
+            case in the eight-day meantime, defense counsel could not
+            re-voir dire about this, so a mistrial should have been
+            allowed<em>.</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Miller,+10+Or+App+636,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=1056700984892349006&amp;scilh=0"><em>State
+            v. Miller</em>, 10 Or App 636, 638–639, 501 P2d 326
+            (1972)</a>.</p>
+            </blockquote></li>
+            </ul>
+            <p>e. Form and Scope of Voir Dire Questions</p>
+            <ul>
+            <li><blockquote>
+            <p>It is error to prohibit defense counsel from asking,
+            “From what you have heard or read have you formed or
+            expressed an opinion as to the guilt of Joseph Kelly,
+            indicted with Steeves<em>?” State v. Steeves</em>, 29 Or 85,
+            94, 98, 43 P 947 (1896).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is improper to ask a prospective juror, “If you were
+            acting as a district attorney in this case, would you be
+            willing to have a man who was in your present state of mind
+            sit on a jury in a case that you were conducting?” The
+            examination should be conducted as to disclose bias in favor
+            of or against either side. <em>State v. Wakefield</em>, 111
+            Or 615, 619–20, 628 P 115 (1924). The examination should
+            also be so conducted as to disclose bias in favor of or
+            against either side. <em>See State v. Hoffman</em>, 85 Or
+            276, 280, 166 P 765 (1917).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is improper to single out a class of witnesses
+            (informers, Ethiopians, descendants of the African race,
+            ministers) and ask the juror if more credence would be
+            attributed to that class. “These questions are so apparently
+            improper that we do not feel called upon to enter into
+            discussion of them.” <em>State v. Hoffman</em>, 85 Or 276,
+            280, 166 P 765 (1917). <em>But compare with</em> <a
+            href="http://scholar.google.com/scholar_case?q=Ham+v.+South+Carolina,+409+US+524+%281973%29&amp;hl=en&amp;as_sdt=3,38,44&amp;case=12792373168322254671&amp;scilh=0"><em>Ham
+            v. South Carolina</em>, 409 US 524 (1973)</a>; <em>cf.</em>,
+            <a
+            href="http://scholar.google.com/scholar_case?q=Ristaino+v.+Ross,+424+US+589+%281976%29&amp;hl=en&amp;as_sdt=3,38,44&amp;case=2181089807604070716&amp;scilh=0"><em>Ristaino
+            v. Ross</em>, 424 US 589 (1976)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is appropriate to ask juror what her attitudes are
+            regarding organizations such as the Black Panther Party. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dixon,+5+Or+App+113,&amp;hl=en&amp;as_sdt=4,38,44&amp;case=16181340917948872217&amp;scilh=0"><em>State
+            v. Dixon</em>, 5 Or App 113, 123, 481 P2d 629
+            (1971)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is appropriate to question prospective jurors about
+            racial bias. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Williams,+123+Or+App+546,+860+P2d+860+%281993%29&amp;hl=en&amp;as_sdt=4,38,44&amp;case=3186253560461884422&amp;scilh=0"><em>State
+            v. Williams</em>, 123 Or App 546, 860 P2d 860
+            (1993)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is permissible to forbid voir dire inquiry about
+            jurors’ view of penalty (death). <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Shumway,+44+Or+App+657,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=15946659926451456296&amp;scilh=0"><em>State
+            v. Shumway</em>, 44 Or App 657, 666, 607 P2d 191 (1980)</a>,
+            <em>modified on other grounds</em>, <a
+            href="http://scholar.google.com/scholar_case?q=291+Or+153,+630+P2d+796+%281981&amp;hl=en&amp;as_sdt=4,38,44&amp;case=12498319768823710840&amp;scilh=0">291
+            Or 153, 630 P2d 796 (1981)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Objection on the basis that a hypothetical voir dire
+            question based upon what the facts may or may not show was
+            inappropriate. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Elam,+37+Or+App+365,+&amp;hl=en&amp;as_sdt=4,38,44&amp;case=14326533266005700622&amp;scilh=0"><em>State
+            v. Elam</em>, 37 Or App 365, 372, 587 P2d 491 (1978) (fn
+            5)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Each party in a criminal case must be afforded a
+            reasonable opportunity on voir dire to conduct “pertinent
+            inquiries” to ascertain whether the prospective jurors
+            possess conscientious scruples or other moral obstacles
+            which are likely to interfere with their proper application
+            of the law. The court reversed the conviction where the
+            trial judge refused to permit inquiry as follows: “Do you
+            believe in self-defense?” <a
+            href="http://scholar.google.com/scholar_case?q=Everly+v.+State,+395+NE2d+254+%28Ind+1979%29&amp;hl=en&amp;as_sdt=4,15,38&amp;case=13150061344830856653&amp;scilh=0"><em>Everly
+            v. State</em>, 395 NE2d 254 (Ind 1979)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>A rape defendant has the right to ask, “Have you or any
+            members of your family been involved previously with a rape
+            or proceeding involving a sexual crime?” A defendant has a
+            right to probe for prejudice and to inquire into the past
+            victimization among the jurors of crimes similar to those
+            with which the defendant stands accused. <a
+            href="http://scholar.google.com/scholar_case?q=Commonwealth+v.+Fulton,+413+A2d+742+%28Pa+Superior+Ct+1979%29&amp;hl=en&amp;as_sdt=4,38,39&amp;case=16355593849329394292&amp;scilh=0"><em>Commonwealth
+            v. Fulton</em>, 413 A2d 742 (Pa Superior Ct 1979)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>It is reversible error for the trial court to restrict
+            the defense examination of jurors as to their understanding
+            of a defense (in this case insanity). <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hawkins,+376+So2d+943+%28La+1979%29&amp;hl=en&amp;as_sdt=4,19,38&amp;case=15394483022559433698&amp;scilh=0"><em>State
+            v. Hawkins</em>, 376 So2d 943 (La 1979)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Time limits on voir dire can be imposed. However, if the
+            purpose of voir dire (to challenge for cause or
+            peremptorily) is thereby thwarted, it will result in
+            reversible error. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Williams,+123+Or+App+546,+860+P2d+860+%281993%29&amp;hl=en&amp;as_sdt=4,19,38&amp;case=3186253560461884422&amp;scilh=0"><em>State
+            v. Williams</em>, 123 Or App 546, 860 P2d 860 (1993)</a>.
+            <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Loke,++%281994%29&amp;hl=en&amp;as_sdt=4,38&amp;case=10039093010395563004&amp;scilh=0"><em>State
+            v. Loke</em>, 131 Or App 751, 886 P2d 507 (1994)</a>
+            (reversible error to limit defendant to 32 minutes for voir
+            dire.)</p>
+            </blockquote></li>
+            </ul>
+            <p>f. Improper Voir Dire by Prosecution or Judge</p>
+            <p>Move for mistrial. Improper questioning of a jury
+            regarding insurance required a mistrial. “You cannot unring
+            a bell nor unscramble an egg.” <a
+            href="http://scholar.google.com/scholar_case?q=Leishman+v.+Taylor,+199+Or+546,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5951059900871684990&amp;scilh=0"><em>Leishman
+            v. Taylor</em>, 199 Or 546, 558, 263 P2d 605 (1954)</a>.</p>
+            <p><em>Examples of Improper Prosecution Voir Dire</em></p>
+            <ul>
+            <li><blockquote>
+            <p>Asked of a juror who previously sat in <em>State v.
+            Anchoberry</em>, a co-defendant separately tried from the
+            defendant Morris, “Who was the juror who wanted to convict
+            both defendants on the Anchoberry case?” <em>State v.
+            Morris</em>, 83 Or 429, 435, 163 P 567 (1917).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>District Attorney: “And you think you have reasonable
+            grounds for supposing that a crime has been committed?”</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>Juror: “Yes, I think I have.”</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>District Attorney: “I think any reasonable man would have
+            that impression.” <em>State v. Morris</em>, 83 Or 429,
+            <em>supra.</em></p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>The prosecutor asked a juror if he was aware that
+            probably 9of the persons indicted actually plead guilty and
+            that of the other 10% that go to trial, probably 70, 80 or
+            90% are convicted. This was highly prejudicial and required
+            a mistrial. The judge’s comment, in front of the jury, “If
+            you are going to move for a mistrial now, it would be
+            denied,” in all probability was seen by the jury as
+            condoning the improper remarks of the prosecutor and lending
+            support to the inferences the comments suggest. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Flores,+31+Or+App+187,+570+P2d+94+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3689660481377684602&amp;scilh=0"><em>State
+            v. Flores</em>, 31 Or App 187, 570 P2d 94 (1977)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>“Now, the statute may require the judge to give a life
+            sentence for murder, but it doesn’t mean that she stays for
+            that length of time. The parole board can let him out the
+            next day or at any other time.” Such a comment by a
+            prosecutor on voir dire is inappropriate, but was invited by
+            numerous equally inappropriate statements by defense
+            counsel, so the error was invited and would not occasion a
+            reversal. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wampler,+30+Or+App+931,&amp;hl=en&amp;as_sdt=4,38&amp;case=2670080781900899159&amp;scilh=0"><em>State
+            v. Wampler</em>, 30 Or App 931, 935, 569 P2d 46
+            (1978)</a>.</p>
+            </blockquote></li>
+            </ul>
+            <h1
+            id="iii._the_purpose_of_jury_selection_is_to_find_people_who_will_invest_in_your_theory"><strong>III.
+            The Purpose of Jury Selection Is to Find People Who Will
+            Invest in Your Theory</strong></h1>
+            <h2
+            id="a._jurors_come_from_every_socio_economic_cultural_and_political_background"><strong>A.
+            Jurors Come from Every Socio-Economic, Cultural and
+            Political Background</strong></h2>
+            <p>Every trial is an opportunity for you to communicate your
+            theory of the case to this group of different people.
+            Depending on your theory of the case, some jurors will not
+            even listen to it, others will consider it, and some will
+            invest in it. For this reason, you must watch members of the
+            venire. Find the leaders who will invest in your theory in
+            voir dire. Watch how different people on the panel react to
+            the various statements. Does the man in seat 11 roll his
+            eyes when the woman in seat 3 speaks? Does seat 4 nod when
+            seat 3 speaks? Do seat 14 and 15 seem to be very friendly
+            with one another?</p>
+            <h2 id="b._have_an_honest_conversation"><strong>B. Have an
+            Honest Conversation</strong></h2>
+            <p>Have an honest conversation with panel members and the
+            panel as a whole with the goal of selecting a fair and
+            impartial group to decide the facts of your case. In so
+            doing, you want the jury to like you, agree with your facts,
+            and to believe that what you say is credible.</p>
+            <h2 id="c._reduce_information_to_a_single_theory"><strong>C.
+            Reduce Information to a Single Theory</strong></h2>
+            <p>Although jury selection is not the time or place to try
+            your case, apart from finding jurors who are biased for or
+            against your client, a general key to solid trial
+            preparation is reducing voluminous amounts of information to
+            a single theory that is easily communicated and reinforced
+            through every stage of the trial, including voir dire. Some
+            simple examples are:</p>
+            <ul>
+            <li><blockquote>
+            <p>“.08 is a line in the sand, below a .08 means that you
+            are not impaired.”</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>“If there is no evidence of bad driving, therefore
+            performance on FSTs is irrelevant because FSTs are supposed
+            to measure one’s ability to drive.”</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>“The result of the Intoxilyzer inflated the defendant’s
+            BAC level because it was taken two hours after driving.”</p>
+            </blockquote></li>
+            </ul>
+            <p>Your theory may be communicated in voir dire by asking
+            questions using examples for panel members to respond to
+            about how they feel about a standard (.08), or an opinion
+            (FST), or the accuracy of machines (Intoxilyzer), or the
+            science of alcohol absorption and dissipation (below a .08
+            at time of driving).</p>
+            <h2
+            id="d._plant_seedshighlight_favorable_language_in_instructions"><strong>D.
+            Plant Seeds/Highlight Favorable Language in
+            Instructions</strong></h2>
+            <p>During jury selection, you may plant seeds that will
+            later be developed and grow during the trial. One method to
+            plant seeds is to review the jury instructions for favorable
+            language. You may ask opinions of panel members and whether
+            or not they will follow such instruction, all the while
+            <em>highlighting favorable language with subtle
+            repetitiveness</em>. In addition, you may <em>gather
+            commitment from jurors</em> to adhere to the legal
+            instructions that you believe will help determine your case.
+            Some examples are:</p>
+            <p><strong>1. UCrJI 1009:</strong> “Reasonable doubt exists
+            when, after careful and impartial consideration of all the
+            evidence in the case you are not convinced to a moral
+            certainty that the defendant is guilty.”</p>
+            <p><strong>2. UCrJI 2701:</strong> “Oregon law provides that
+            it is not unlawful for a person to drive a vehicle after
+            having consumed intoxicating liquor. It is unlawful,
+            however, for that person to drive a vehicle if the person is
+            under the influence of intoxicating liquor.</p>
+            <p>“In this case, you do not have to find that
+            [<em>defendant’s name</em>] was drunk or intoxicated, as
+            those terms are commonly understood. ‘Under the influence of
+            intoxicating liquor’ means that [<em>defendant</em>]’s
+            physical or mental faculties were adversely affected by the
+            use of intoxicating liquor to a noticeable or perceptible
+            degree.</p>
+            <p>“ ‘Under the influence of intoxicating liquor’ includes
+            not only the well-known and easily recognized conditions and
+            degrees of intoxication, but also any abnormal mental or
+            physical condition that results from consuming intoxicating
+            liquor and that deprives the person of that clearness of
+            intellect or control that the person would otherwise
+            possess.”</p>
+            <p>Note: Prosecutors often omit the word “adverse” when
+            discussing “under the influence” in voir dire. Merely
+            “affected” is a lower standard than “adversely affected.” If
+            this occurs, object and have the judge instruct the jury
+            with the appropriate language. Adversely affected vs.
+            affected also ties in with many other aspects of the DUII
+            trial (example: alcohol influence report: “What effects do
+            you feel from the alcohol? You may be affected without being
+            adversely affected”).</p>
+            <p><strong>3. UCrJI 2709:</strong> “Although a witness may
+            be allowed to state an opinion whether another person was
+            under the influence of intoxicants, you are not required to
+            accept that opinion. To determine the value you will give to
+            a witness’s opinion, you should consider such things as the
+            witness’s ability to form the opinion, the witness’s
+            believability, how the witness reached that opinion, the
+            experience of the witness, and the witness’s opportunity to
+            observe the defendant.”</p>
+            <p><strong>4. UCrJI 2711:</strong> “It is up to you to
+            determine what weight you will give to breath test evidence.
+            You are not required to accept such evidence. You should
+            give the breath test evidence such weight as you feel is
+            appropriate in reaching your verdict.”</p>
+            <h1 id="iv._jury_selection_in_the_courtroom"><strong>IV.
+            Jury Selection in the Courtroom</strong></h1>
+            <p><code>Practice Tip</code></p>
+            <p>Jury selection begins before you and your client enter
+            the courthouse. Potential jurors are entering the same
+            building, parking in the same vicinity, getting coffee in
+            the same places around the courthouse. You and you client
+            must be aware of this. Prior to the day of trial, you must
+            prepare your client for “good trial day behavior.” You
+            client must be instructed to avoid making any comments about
+            being a defendant in a trial when near the courthouse; to
+            not wear the “Budweiser” t-shirt; to not get a ride from a
+            friend if they have pot leaf and/or alcohol-themed bumper
+            stickers. Remember, potential jurors are all around the
+            courthouse.</p>
+            <p>This caution applies to the lawyer as well. It is
+            embarrassing at best when you tell a fellow lawyer in line
+            at Starbucks that you are trying another drunk driving case
+            for the same drunk client again today, only to have a
+            potential juror during voir dire say she overheard you
+            talking about your case in line getting coffee. Likewise
+            refrain from comments about your hangover, party plans for
+            the weekend, or anything you would not want a juror to know.
+            Potential jurors are everywhere. It is also a good practice
+            to request the judge instruct the jurors to wear their juror
+            identification when they are within three to four blocks of
+            the courthouse. Most judges welcome this request, and the
+            jurors gain an understanding of the importance of their
+            role; more importantly, it may save you or your client
+            profound embarrassment.</p>
+            <h1 id="a._pre_selection_work"><strong>A. Pre-selection
+            Work</strong></h1>
+            <p>Most counties in Oregon (except Multnomah) have jury
+            books—the names and backgrounds of panel members. This is a
+            helpful tool to prepare your list or chart of the panel
+            ahead of time. Multnomah County now has panel lists without
+            background information, so at least know the name of the
+            jurors and the order in which they will be seated ahead of
+            time. Prepare your worksheet before the jury is called.
+            Also, try to beat the prosecutor to the table closest to the
+            jury box. If your client has a great demeanor have them sit
+            closest to the jury; if not, you sit close to the jury.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Finding jurors who will invest in your theory is not
+            always about conservative vs. liberal—I have often had
+            conservative jury foremen and women who invested in my case.
+            It is important to be flexible, if you are practicing in a
+            conservative county or have a conservative jury pool and
+            your facts permit it, a government intrusion theory may work
+            better than reasonable doubt theory.</p>
+            <h1 id="b._eye_contact"><strong>B. Eye Contact</strong></h1>
+            <p>When the jury arrives, you and your client should make
+            eye contact in a friendly and sincere manner. Give your
+            client a notepad to write on while jurors are asked
+            questions from the court. Show interest in their background
+            and highlight personal information on your worksheet (law
+            enforcement, MADD members, served on a criminal or civil
+            jury, etc.).</p>
+            <p>After the court asks questions, it’s your turn! As soon
+            as you stand up the butterflies will go away. Be yourself!
+            Be confident! Welcome laughter!</p>
+            <h1
+            id="c._take_immediate_command_of_the_courtroom"><strong>C.
+            Take Immediate Command of the Courtroom</strong></h1>
+            <ul>
+            <li><blockquote>
+            <p>Introduce everyone:</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Your client—by name.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The prosecutor—by name. Never again state the
+            prosecutor’s name in trial. Henceforth, refer to “the
+            prosecutor.”</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Yourself.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The bailiff—by name. Bailiffs are people too. The bailiff
+            has more intimate contact with the jury than anyone in the
+            courtroom. If the bailiff likes you, and hopefully your
+            client, it will show and may rub off on the jury.</p>
+            </blockquote></li>
+            </ul>
+            <h1 id="d._ask_open_ended_questions_and_listen"><strong>D.
+            Ask Open-ended Questions – and Listen</strong></h1>
+            <p>As a general rule, keep it short and ask open-ended
+            questions designed to get the jurors to talk—then listen,
+            and follow up.</p>
+            <p>1. Exception to the Rule: When “educating” jurors about a
+            defense or laying a foundation for a question about the
+            defense.</p>
+            <p>2. This is the opposite of cross-examination, so ask
+            “why” and “explain more fully” types of questions.</p>
+            <p>a. But, just as in cross-examination, know when to stop.
+            A juror’s response that he does not know if he can be fair
+            to the defendant’s DUII trial is enough to trigger a
+            challenge for cause, or at least use of one of your
+            peremptory challenges. Asking “why” may well result in an
+            answer that effectively poisons the other five jurors, such
+            as, “Because a drunk driver killed my four-year-old
+            granddaughter last year.”</p>
+            <p>b. Don’t ask questions just to hear yourself talk. If the
+            court has already asked the jurors certain questions or they
+            have been answered on a juror questionnaire, <em>never</em>
+            repeat that question. You do not want the juror to think you
+            have ignored her previous identical answer. Let the new DA
+            make that mistake; surprisingly, they often will.</p>
+            <h1 id="e._utilize_the_juror_questionnaire"><strong>E.
+            Utilize the Juror Questionnaire</strong></h1>
+            <p>Don’t merely repeat what is on it—use it as a springboard
+            for other questions.</p>
+            <h1 id="f._utilize_the_judges_questioning"><strong>F.
+            Utilize the Judge’s Questioning</strong></h1>
+            <p>Judges range from making cursory statements to extensive
+            questioning of jurors. Where the questioning is extensive,
+            what more can you learn? Are you going to be able to
+            “impeach” jurors who have already told the judge they will
+            be fair?</p>
+            <p>Ask yourself if you really need to ask any question. With
+            a good juror questionnaire, and extensive questioning by the
+            judge, you may know everything you can learn already. Have
+            you considered asking no questions on voir dire, passing the
+            panel for cause and sitting back politely as the flustered
+            DA begins repeating the identical questions six times over
+            without respite? Remember, you still have your peremptory
+            challenges.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Talk to your judge and the DA before trial; if there are
+            questions you would like for the judge to ask the panel,
+            most judges are happy to include information-gathering
+            questions in the preliminary “judge questions.”</p>
+            <h1 id="g._address_the_entire_panel"><strong>G. Address the
+            Entire Panel</strong></h1>
+            <p>1. Ask permission to address the panel as a whole to
+            “speed things up” (no judge has ever denied this
+            request).</p>
+            <p>2. Introduce yourself, your client, the prosecutor, and
+            all witnesses for both parties. Ask if the juror knows any
+            of them.</p>
+            <p>3. Explain the purpose of voir dire so as not to
+            embarrass or put anyone on the spot; explain that it is not
+            cross-examination; encourage jurors to talk back to you.</p>
+            <p>4. Sample on En Masse</p>
+            <ul>
+            <li><blockquote>
+            <p>Are any of you non-drinkers?</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Has anyone here been a witness in a criminal matter?</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Are you acquainted with, related to, or have you applied
+            to be a law enforcement officer (including police, sheriff,
+            prison guard, district attorney or employee of any of the
+            above).</p>
+            </blockquote></li>
+            </ul>
+            <h1
+            id="v._sample_voir_dire_questions_stolen_from_the_great_ones_you_know_who_they_are"><strong>V.
+            Sample Voir Dire Questions Stolen from the “Great Ones” (you
+            know who they are)</strong></h1>
+            <p>One way to start off —just touch on these things, don’t
+            read the entire question sequence:</p>
+            <p>“Good morning, my name is _______, I am Mr. (first and
+            last name)’s attorney.</p>
+            <p>“This is a time for both sides to select a jury, it’s
+            called Voir Dire: It’s a time for the attorneys to have a
+            conversation with the panel about legal concepts and
+            individual biases—the goal is to impanel six to twelve
+            people who will be fair and impartial—listen to both sides
+            and make up their own mind about the evidence.</p>
+            <p>“I will ask questions to each of you individually and to
+            the panel as a whole. Please feel free to participate at any
+            time.</p>
+            <p>“Let’s start with some questions about basic protections
+            all people charged with a crime have and some of the legal
+            principles that you will apply in this case.”</p>
+            <h1 id="a._the_presumption_of_innocence"><strong>A. The
+            Presumption of Innocence</strong></h1>
+            <p>“Ms./Mr._______________, what can you tell me about the
+            presumption of innocence?”</p>
+            <p>“Our system asks you as a juror to do a very difficult
+            task—and that is to presume __________ is innocent of any
+            criminal allegations.” Ms./Mr._______________, how could you
+            possibly do this? He is charged with Driving Under the
+            Influence of Intoxicating Liquor. He must have done
+            something wrong?”</p>
+            <p>“Does knowing that he is charged with a particular crime
+            mean he has done something illegal? Why or why not?”</p>
+            <p>“Has anyone ever contested any government action—like a
+            traffic ticket?”</p>
+            <p>“Ms./Mr. ________________, why did you contest it?”</p>
+            <p>“Can we all agree to follow this instruction and presume
+            _________________ innocent? Can we all agree to wait until
+            the entire case has been presented before deciding this
+            case?”</p>
+            <h1 id="b._states_burden"><strong>B. State’s
+            Burden</strong></h1>
+            <p>“The next legal concept that we will discuss involves the
+            burdens and obligations placed on the state, the prosecutor,
+            Mr. (or Ms.) ________________________.”</p>
+            <p>“I will begin this topic with a trick question, for the
+            entire panel: What does ________________ need to do to prove
+            to you that he is not guilty of these charges? Nothing,
+            right? Why?”</p>
+            <p>“The state shoulders the entire burden of proving the
+            charges against ______________. But, government must meet a
+            specific standard of proof before an individual can be
+            criminally punished. Is this fair to require just one side,
+            the government’s side, to have the entire burden of
+            gathering, producing and proving the evidence for your
+            decision of guilty or not guilty? Why?”</p>
+            <p>“In the criminal trial forum, you are not selecting whose
+            case you like better—the prosecution or the defense—you are
+            measuring only one side. Did the prosecution rise to the
+            highest legal standard of proof—proof beyond a reasonable
+            doubt.”</p>
+            <p>“Ms./Mr.____________________, are you comfortable
+            measuring just one side—the state. Let me put it to you this
+            way: _________________ does not need to testify, call one
+            witness, raise one objection or make any argument
+            whatsoever, and you could still find him not guilty—how, if
+            the evidence in this case did not rise to the level for
+            conviction?”</p>
+            <h1 id="c._proof_beyond_a_reasonable_doubt"><strong>C. Proof
+            Beyond a Reasonable Doubt</strong></h1>
+            <p>“Mr./Ms._______________, what does ‘proof beyond a
+            reasonable doubt’ mean to you? Not beyond all doubt, but you
+            must be convinced to a moral certainty.”</p>
+            <p>“Ms./Mr.______________________________, you said that you
+            served on a jury before—was that a criminal or a civil
+            case?”</p>
+            <p>If criminal: “So, a criminal case, like this one,
+            requires the prosecutor to meet the highest burden of
+            proof—beyond a reasonable doubt—because a criminal
+            defendant’s liberty is at stake if convicted of a
+            crime.”</p>
+            <p>“Unlike civil cases where the standard is a preponderance
+            of the evidence—meaning in a civil case if you’re convinced
+            fifty-plus percent that one side is right—then you can
+            decide in their favor. Criminal cases are far different. It
+            requires one side, the prosecutor, to prove its case. If
+            after you consider all the evidence you are not convinced to
+            a <em>moral certainty</em> that the defendant is guilty—you
+            have reasonable doubt.”</p>
+            <p>“Will everyone agree that if you’re not convinced to a
+            moral certainty that ________________ is guilty, you should
+            find him not guilty?”</p>
+            <p>“Will everyone agree that it is the prosecution and only
+            the prosecution’s burden to establish by proof beyond a
+            reasonable doubt that _________________ is guilty?”</p>
+            <h1 id="d._innocence_vs._not_guilty"><strong>D. Innocence
+            vs. Not Guilty</strong></h1>
+            <p>“In some countries criminal cases have three potential
+            verdicts—like in Scotland, where the verdict possibilities
+            are Innocence, Not Proven, and Guilty.”</p>
+            <p>“In our system there are only two possible verdicts that
+            a jury may return guilty or not guilty.”</p>
+            <p>“Ms./Mr._____________________, is there a difference
+            between not guilty and innocence? Why?”</p>
+            <p>“Will you be issuing a verdict of innocence—no. Why?”</p>
+            <p>“Would you be comfortable issuing a not guilty verdict if
+            the state did not prove its case, but you were not certain
+            about absolute innocence? Why?”</p>
+            <p>“In some countries there is no jury and only a judge
+            decides the case. Our system is that of the citizenry—power
+            held by six to twelve people. Why is it important to have a
+            jury of citizens vs. just a judge to decide this case?”</p>
+            <h1 id="e._case_specifics"><strong>E. Case
+            Specifics</strong></h1>
+            <p>Note: See Chapter 11, “DRE &amp; Cannabis,” for suggested
+            voir dire questions to ask in a cannabis DUII trial.</p>
+            <p>“What is the BAC limit in Oregon? .08. Is that a line in
+            the sand? Why or why not?”</p>
+            <p>“The prosecutor must prove beyond a reasonable doubt to a
+            moral certainty that _______________’s blood alcohol level
+            as shown by chemical analysis or breath test was a .08 or
+            higher, or that his mental and/or physical abilities were
+            <em>adversely affected</em> by alcohol.”</p>
+            <p>“Conviction based on opinion? Why or why not?”</p>
+            <p>“Does anyone know what an infrared spectrometer does?”
+            Use examples of machine error here.</p>
+            <h1 id="f._witness_testimony"><strong>F. Witness
+            Testimony</strong></h1>
+            <p>“Let’s talk about the witnesses—you will have testimony
+            from police and non-police witnesses.”</p>
+            <p>“When you hear a police officer’s opinion, is that more
+            credible than a non-officer—why or why not? Is it possible
+            for police to make mistakes?”</p>
+            <p>“Is it possible for a police officer to be biased, jaded
+            after numerous encounters (hammers are always looking for a
+            nail), or have an opinion before the investigation of a type
+            or class of citizens, or are they objective like a
+            scientist?”</p>
+            <p>“Ms./Mr._____________________, you said that you had
+            friends/family in law enforcement—who and what
+            department?”</p>
+            <p>“Will this influence you in any way in favor of an
+            opinion or the testimony of a police officer just because
+            they are an officer?”</p>
+            <p>“Offended if I cross-examine officer? My job is to point
+            out inconsistency, mistakes, incorrect and/or biased
+            opinions.”</p>
+            <h1 id="g._specific_juror_biases"><strong>G. Specific Juror
+            Biases</strong></h1>
+            <p>“Does anyone on the panel abstain from drinking
+            alcohol—all together?”</p>
+            <p>“The law in Oregon provides that it is not illegal to
+            drink alcohol and then drive a vehicle—it is illegal to
+            drive <em>a vehicle while under the influence of
+            alcohol</em>—impaired by alcohol.”</p>
+            <p>“Ms./Mr.________________, what do you think about the
+            law—allowing someone to drive after consuming alcohol? Why
+            or why not?”</p>
+            <p>“Can everyone follow this instruction of law that you
+            must find that ________________had not just had alcohol, but
+            was under the influence before a guilty verdict may be
+            reached?”</p>
+            <p>“Ms./Mr._______________, how do you know when someone’s
+            drunk—unable to safely drive—adversely impaired? What are
+            the symptoms vs. other non-intoxication impairments?”</p>
+            <p>Insert theory facts—apply instruction and ask whether
+            jurors will be able to be fair.</p>
+            <p>“Does anyone not want to be a juror on this case for any
+            reason?”</p>
+            <p>“Does anyone feel that they cannot be a fair and
+            impartial juror for any reason?”</p>
+            <p>“What is the most important concept to you that we’ve
+            discussed? Why?”</p>
+            <p>• State’s Burden of Proof and Gathering Evidence</p>
+            <p>• Presumption of Innocence</p>
+            <p>• Proof Beyond a Reasonable Doubt</p>
+            <p>• Innocence vs. Not Guilty</p>
+            <p>• Police Testimony and Non-Police Testimony</p>
+            <p>• Injuries/Natural vs. Intoxication</p>
+            <p>• Tests and Intoxilyzer</p>
+            <h1 id="vi._trial_tips"><strong>VI. Trial Tips</strong></h1>
+            <ul>
+            <li><blockquote>
+            <p>If you are thoroughly prepared in all aspects of your
+            case, voir dire will not be so nerve-wracking and
+            embarrassing to you. It will, however, be an opportunity for
+            you to seek out and find the leader of your jury.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Watch the people, not the papers in front of you like
+            most lawyers.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Pitch your theory to other people to see its
+            responsiveness in general. If your client can afford it, try
+            a focus group with temporary labor employees, then do your
+            opening statement (all confidential rights protected),
+            create questionnaires and fix any weaknesses and exploit
+            strengths.</p>
+            </blockquote></li>
+            </ul>
+            <p><em>Bill Uhle (ed., 2004):</em> As a practical matter,
+            most courts allow approximately thirty minutes for defense
+            voir dire. Develop an objective for your voir dire that is
+            obtainable given the number of jurors involved and the time
+            available. The most important objective of voir dire is to
+            select jurors who will actually apply constitutional
+            provisions to the facts they are going to hear. The
+            constitutional provisions that are always applicable in a
+            DUII trial and are difficult to get jurors to apply are: 1)
+            the state’s burden of gathering and producing the evidence,
+            2) defendant’s presumption of innocence, and 3) proof beyond
+            a reasonable doubt. These constitutional provisions sound
+            great to all of us (as well as to jurors), but in a criminal
+            trial involving drinking, driving and credibility of police,
+            these provisions become difficult for jurors to actually
+            apply. Jurors will often pay “lip service” to these
+            constitutional provisions. For example, for jurors to acquit
+            somebody they are <em>clearly convinced</em> was under the
+            influence may be very difficult for them, even though being
+            clearly convinced is insufficient under the reasonable doubt
+            standard.</p>
+            <p>If you can develop your own style of convincing jurors to
+            truly apply these constitutional provisions and convince
+            them that applying these constitutional provisions is the
+            right thing to do, you will be well on your way to a not
+            guilty verdict.</p>
+            <h1 id="opening_statement"><strong>Opening
+            Statement</strong></h1>
+            <p><em>Edward Kroll</em></p>
+            <p>Your opening statement in a DUII case is the first time
+            the jurors will hear directly why your client is not guilty.
+            This is really your only chance to establish the narrative
+            of the case. Once evidence starts, you will be
+            cross-examining hostile witnesses (police officers), with
+            very little chance to dictate how the story is told. Thus,
+            your opening must be a persuasive story which will set the
+            tone for the remainder of trial.</p>
+            <h1 id="i._preparation_before_opening"><strong>I.
+            Preparation Before Opening</strong></h1>
+            <h2 id="a._know_your_jury"><strong>A. Know Your
+            Jury</strong></h2>
+            <p>If you have done a thorough and effective voir dire, you
+            should have a good idea of the makeup of your jury. Some
+            juries are very intelligent. Some juries are very emotional.
+            Some juries are just plain dumb. You should do your best to
+            tailor your opening to the particular traits of your jury.
+            If it’s clear that there are several “leaders” and several
+            “followers,” you want to convince the leaders. If the
+            leaders happen to be scientists or analytic types, a more
+            fact-based style can be appealing. If the leaders appear to
+            be more emotion-driven, then stay away from long recitations
+            of what the evidence will show.</p>
+            <h2 id="b._know_the_prosecutor"><strong>B. Know the
+            Prosecutor</strong></h2>
+            <p>Your knowledge of prosecutors will increase with time and
+            experience. In large counties, such as Multnomah, you may
+            have never seen (or even heard of) the prosecutor before
+            today. In smaller counties, you may get to know each
+            prosecutor and his or her individual traits. Regardless of
+            whether you have prior familiarity, you should carefully
+            observe your opponent during voir dire and his or her
+            opening. It is to our detriment that the prosecution gets to
+            go first with openings. They get to set the tone and frame
+            the narrative. You will want to ensure that your
+            presentation and tone provide a suitable counterpoint to
+            theirs. This doesn’t mean be their polar opposite.</p>
+            <p>For example, your opponent may be very high-energy and
+            over the top with their statements of guilt. In this
+            situation, perhaps you are cool, calm, and collected,
+            stating that the evidence clearly won’t show everything that
+            the prosecutor promised.</p>
+            <p>Or your opponent may be direct and blunt, without much
+            fanfare. Depending on your jury, you may choose to counter
+            this with warmth, compassion and carefully measured emotion.
+            I find that it’s helpful to set yourself apart from the
+            prosecutor and give the jury something of yours to latch on
+            to and follow.</p>
+            <h2 id="c._know_yourself"><strong>C. Know
+            Yourself</strong></h2>
+            <p>Despite the above discussion, you must take care not to
+            force things in opening. If you are not naturally ebullient
+            or emotional, trying to force it just looks awkward. The
+            more trials you do, the more you will find your own style.
+            The more natural and genuine you can be, the better. That
+            said, here are some things you should always be aware of in
+            your presentation.</p>
+            <p>1. Always make eye contact with the jurors. I’ve seen
+            many attorneys lose jurors’ trust or focus because the
+            attorney looks everywhere but at the jurors. These are the
+            people who are deciding your client’s fate. You need them on
+            your side. How can they trust someone who won’t look at
+            them?</p>
+            <p>2. Do your best to move away from notes and podiums. I
+            see this frequently with young lawyers. They hold their
+            notes or the podium like a life preserver, looking down
+            frequently to check their place and make sure they’re not
+            forgetting things. Stop it. It makes you look nervous and
+            stilted. I love it when I see a prosecutor use their notes
+            or a podium in opening, because I know that I can trample
+            them (in personality, if not facts…). The more you can move
+            away from notes and podiums, the more natural you will
+            become. The more natural your presentation, the more the
+            jury will like it. Think of a conversation you have with
+            friends. You don’t use notes. The opening statement is a
+            conversation with 6 or 12 friends who need to be convinced
+            of the right thing to do.</p>
+            <p>3. Put yourself in the jurors’ shoes. If you have to
+            constantly look at your notes to remember the facts of the
+            case, what impression does that send to the jury? In any
+            case, you should be the person who knows all the facts and
+            details of the case, without having to look them up. A quick
+            and ready knowledge of the case shows that you are
+            competent, prepared, and intelligent.</p>
+            <p>4. This goes hand-in-hand with the above discussion, but
+            move around a bit! Now that you’re not tied to a podium,
+            there’s no need to stand stock-still. Move around the well.
+            For people who aren’t comfortable moving about, try this:
+            pick three or four fixed geographic locations in the well,
+            perhaps by counsel table, the witness box, the back of the
+            well, and a couple feet from the jury bench. Make a key
+            statement at a location, then move to the next one, while
+            transitioning to your next key statement. This keeps you
+            moving around and when you stop, the jury subconsciously
+            understands that you’re making an important point. Then you
+            walk on to the next location while transitioning, and when
+            you stop – boom, another important point.</p>
+            <p>5. This is more a personal preference, but take your
+            hands out of your pockets. Hands are for gesturing to
+            emphasize a point. College professors lecture with their
+            hands in their pockets. We’re not professors. We are
+            advocates. We are courtroom lawyers. Putting your hands in
+            your pockets can hunch your shoulders and make you slouch.
+            Nobody likes that. The jurors should see you as strong and
+            upright. If you really must put your hands in your pockets,
+            then make sure you don’t mess up your suit pocket flaps when
+            you take your hands out.</p>
+            <p>6. Don’t be too academic or “lawyerly” with the jury. You
+            can appear confident, capable, and intelligent without
+            sounding high-falutin’. The jurors aren’t lawyers. They
+            don’t speak legalese. Less is more. For example, your client
+            did not “bring his vehicle to a stop,” he parked his car. He
+            didn’t “exit his vehicle,” he got out of his truck. The
+            state won’t “fail to prove its case beyond a reasonable
+            doubt,” your client is not guilty.</p>
+            <p>7. Avoid long discussions of “beyond a reasonable doubt”
+            and other legal concepts. It’s the judge’s job to instruct
+            the jury. You can hammer on the burden of proof in closing,
+            but it fits awkwardly into opening, and can lead you into
+            impermissible argument.</p>
+            <p>8. Lastly, whatever your personal style, be confident in
+            your case. You are telling these jurors why the state’s case
+            is baloney. You need to believe it. As far as that jury is
+            concerned, you must appear confident in your narrative and
+            your case. That’s really the most important thing of all. If
+            you look nervous, timid, or unsure of your statements, why
+            should the jury go along with you?</p>
+            <h1 id="ii._narrative"><strong>II. Narrative</strong></h1>
+            <p>Opening is not the time to go into voluminous detail
+            about the case. It’s the time to tell your side of the
+            story, succinctly and persuasively.</p>
+            <h2 id="a._theory"><strong>A. Theory</strong></h2>
+            <p>You must have a cohesive theory as to why your client is
+            not guilty. I’ve found that making the theory broad and
+            universally acceptable helps win over jurors. No juror is
+            going to agree that DUII is an acceptable thing to do. Very
+            few jurors (and none that make it on to your actual jury
+            panel) will agree that police lie, fabricate, or stretch the
+            truth. But almost all jurors will agree that police need to
+            be thorough – in fact, their job requires an extra degree of
+            thoroughness and care. They’ll agree that police can make
+            mistakes. Because of this, they’ll probably agree that if
+            that extra degree of care isn’t taken, society can suffer.
+            They’ll probably agree that if the police make mistakes,
+            innocent people can get convicted. It’s not because of
+            police malice, but human error. They’ll agree that happens,
+            and that citizens shouldn’t be punished for it. And now
+            that’s your broad theory. Jurors can get behind that. And if
+            you show them the facts of this case fit that broad,
+            universally acceptable theory, they will feel comfortable
+            voting not guilty, because they no longer have to think the
+            police officer is lying or malicious – just mistaken or
+            careless.</p>
+            <h2 id="b._facts"><strong>B. Facts</strong></h2>
+            <p>Sticking with the above theory – police carelessness /
+            lack of thorough investigation– let’s discuss some common
+            facts that can play into this. Perhaps your client was
+            stopped only for speeding. Perhaps he did not do the
+            Walk-and-Turn or One Leg Stand due to injury. Perhaps he
+            declined the breath test. How can these facts play into your
+            theory?</p>
+            <p>All officers have some training on “non-standard” FSTs.
+            There are other, simple tests they could have done, such as
+            a finger-count or alphabet test, but they did not – because
+            they jumped to conclusions, because they weren’t thorough.
+            They could have gotten a warrant for a blood draw so we
+            would know exactly what the BAC was, but they did not –
+            because they weren’t thorough.</p>
+            <p>With these facts, you’re arguing your broad, universally
+            acceptable narrative. Had the police gone the extra mile –
+            the mile that society trusts them to go – they would have
+            taken two minutes and done these extra tests. They would
+            have taken the extra half hour and gotten the blood draw
+            warrant. But they didn’t. Not because they’re liars, not
+            because they hate Mr. Client, but because they just weren’t
+            thorough and careful. And now the state is making Mr. Client
+            pay the price for their lack of care.</p>
+            <p>Naturally, your facts must fit your theory. If your
+            client ran her car into a tree, puked on herself, and blew a
+            .15, you will probably need to choose a different theory
+            than the ones we just discussed.</p>
+            <h1 id="iii._nuts_and_bolts"><strong>III. Nuts and
+            Bolts</strong></h1>
+            <p>So far, we’ve discussed broad topics of preparation and
+            narrative. Now we need to work on putting everything
+            together.</p>
+            <h2 id="a._delivery"><strong>A. Delivery</strong></h2>
+            <p>We touched on this above. Don’t use notes, don’t be
+            rigid, and be an effective counterpoint to whatever the
+            prosecutor did.</p>
+            <h2 id="b._damaging_evidence"><strong>B. Damaging
+            Evidence</strong></h2>
+            <p>Unless you are exceptionally lucky, there are going to be
+            damaging facts against your client. You must have a
+            rational, succinct explanation for them. Did client swerve
+            while driving? A squirrel ran into the road. Did client
+            smell of alcohol and admit drinking? It’s only a crime to
+            drive <em>while intoxicated</em>. Did client do badly on
+            SFSTS? She was nervous, it was late, and it was cold
+            out.</p>
+            <p>If you don’t address damaging facts, the jury will wonder
+            why. This isn’t to say that you must explain away every
+            single thing. Often, the prosecution just throws a ton of
+            stuff out there to see what sticks. If you delve into each
+            statement or detail, your opening will be boring and you
+            appear defensive. Put yourself in the prosecutor’s or
+            jurors’ shoes. Which facts are <em>most</em> damaging? How
+            do we explain those?</p>
+            <p>In your narrative, be careful not to admit the evidence
+            is damaging. Your narrative is a story, from your client’s
+            point of view. So, don’t say something like, “Officer Jones
+            saw Mr. Client swerve, but what really happened was that a
+            squirrel ran into the road.” Instead say, “Mr. Client was
+            driving along perfectly fine until a squirrel ran in the
+            road.” When it’s from your client’s point of view, it can be
+            seen as reasonable, what anyone would do under the
+            circumstances. Plus, it humanizes the client. If you just
+            stand there trying to refute what the prosecutor said,
+            you’re not setting up a proper narrative.</p>
+            <h2 id="c._helpful_evidence"><strong>C. Helpful
+            Evidence</strong></h2>
+            <p>Unless you’re exceptionally unlucky, there will always be
+            some useful evidence for you. I’m not sure what they’re
+            teaching prosecutors in DUII school lately, but it’s the
+            rare prosecutor who will ever acknowledge your client did
+            things right. Lots of things. And it’s the rare prosecutor
+            who will acknowledge that the police did something
+            wrong.</p>
+            <p>In a typical DUII case, when you stand up to speak, the
+            jury has probably heard a parade of horrible things your
+            client said and did. Time to tell them some of the stuff
+            that was done right, and time to tell them where the police
+            went wrong. Again, don’t be over inclusive here. Pick out a
+            few key details and make those the linchpins of your
+            theory.</p>
+            <p>If the prosecutor has indeed put on his or her “parade of
+            horribles,” the jury may be surprised to hear that your
+            client parked his car correctly, that he produced the
+            requested documents appropriately, and that the SFSTS were
+            conducted incorrectly. If tests (e.g., blood draw in a
+            refusal case) weren’t done, the prosecutor probably hasn’t
+            mentioned this. The jury may be surprised to hear that if
+            the police had been thorough, we would have definite proof
+            of BAC here today. But, they weren’t, and so we don’t.</p>
+            <h2 id="d._technical_evidence"><strong>D. Technical
+            Evidence</strong></h2>
+            <p>In general, openings should not be overly technical. You
+            run the risk or boring of confusing the jury. Nevertheless,
+            some cases hinge on such evidence. To avoid getting bogged
+            down, try to keep technical discussions short and simple.
+            Even if you’re not planning to call an expert of your own to
+            testify, chat with one beforehand. Ask him or her how best
+            to communicate a complicated concept (e.g., retrograde
+            extrapolation) to an unscientific jury.</p>
+            <h2 id="e._visual_aids"><strong>E. Visual Aids</strong></h2>
+            <p>There are many studies that show people learn better by
+            hearing and seeing. This doesn’t mean that you need a visual
+            aid in every opening. But I like to have something, even a
+            little thing for the jury to look at. In an extremely
+            complex case, I’ll often have a powerpoint that highlights
+            parts of my statements. In a simpler case, that often seems
+            like overkill. I’ve had good results simply using an easel
+            with butcher paper and some markers to write out a few key
+            points. Most courtrooms have these. Or you can have a few
+            Google Earth pictures of the scene and the road to show.</p>
+            <p>Another fun thing can be if the prosecutor brings charts
+            or writes stuff on the board or easel. If they leave those
+            things accessible, have some fun with them. If they’ve
+            written down all the bad stuff your client did, write the
+            good stuff, in a different color, right next to (or over!)
+            the bad stuff. Write in the stuff the police did wrong.
+            Enjoy it. As long as you’re respectful and not obnoxious
+            about it, the jury tends to like it.</p>
+            <p>If the prosecutor has brought things from his or her
+            office (e.g., blown-up jury instructions on posterboard,
+            etc.), don’t try to write on those. The judge and the
+            prosecutor will yell at you. That’s no fun. One thing I’ve
+            seen a very excellent DUII attorney (Bob Thuemmel) do is
+            bring in e-z-peel stickers/sticky notes so he can plaster
+            the prosecution’s stuff with them, without altering or
+            damaging the posterboards at all. No one can get mad about
+            that.</p>
+            <h2 id="f._lies_or_mistakes"><strong>F. Lies or
+            Mistakes</strong></h2>
+            <p>As discussed above, it’s the rare jury that will buy into
+            a theory that the police are lying. Do your best to avoid
+            setting up a “Who will you believe” question in your
+            opening. Given that option, almost every jury will believe
+            the uniformed police officer over you or your client.
+            Instead, attempt to harmonize as much of the defense case
+            and the prosecution case as you can. Then it’s much simpler
+            to bring out testimony, and later, closing argument, showing
+            that no one is accusing the police of lying. To find Mr.
+            Client not guilty, no one has to think the police lied. All
+            that happened here is that the police made an honest, human
+            mistake. But that mistake is why Mr. Client is here. And
+            that mistake is why he’s not guilty.</p>
+            <h1 id="iv._tactical_and_legal_considerations"><strong>IV.
+            Tactical and Legal Considerations</strong></h1>
+            <p>One of the best things about being the defense is that we
+            can’t really mistrial ourselves. The prosecution has a lot
+            of holes they can step into, leading to a do-over. That
+            can’t really happen to us. So, it may sometimes be
+            worthwhile to push the envelope a bit. Note: I’m not
+            advocating for anyone to go overboard here. Edging up to the
+            line is acceptable (and I encourage it – effective advocacy
+            is tenacious advocacy), but running across it and flaunting
+            it just brings trouble. There are few things more damaging
+            to your credibility than to have the judge admonish you in
+            front of the jury. Having the prosecution’s objections
+            sustained is one thing, but not all prosecutors wear suits
+            and sit at counsel table. Some of them sit behind the bench
+            in black robes, waiting for a chance to punish you. Be
+            aware.</p>
+            <h2 id="a._argument"><strong>A. Argument</strong></h2>
+            <p>As the jury instruction says, opening statement is not to
+            argue the facts but to present them as you expect them to
+            come out. Here’s an area where we can edge up to the line.
+            In closing argument, you can go full-out and say, “Officer
+            Jones was careless and his investigation was clearly
+            incomplete.” You probably can’t say that in opening. But you
+            can deliver the exact same message just by changing a few
+            words. Opening is for telling the jury what <em>you
+            think</em> the evidence will show, right? So why not tell
+            them, “Folks, you’re going to hear about what steps Officer
+            Jones took. And, frankly, I think you’re going to hear that
+            he didn’t take many. In fact, he didn’t even conduct a test
+            that’s so simple – a finger-count test – that it would have
+            taken just one more minute in the field.” Is that statement
+            argumentative? Possibly. But it also shows exactly what I
+            think the evidence will be. Another example: “The field
+            sobriety tests were designed to make people fail.” That’s
+            argument. Save it for closing. Why not say, “You’re going to
+            see and hear just how easy it is to fail these tests –
+            you’re going to hear that just a single step off an
+            imaginary line gives a police officer enough ‘clues’ to say
+            that someone failed. And because of that, you’re going to
+            see why these tests shouldn’t be relied upon.” Those are all
+            true statements. The facts will very likely bear them out. I
+            don’t see a problem here. Play with the wording, and you’ll
+            be surprised just how much you can say to the jury without
+            it being labeled as argument.</p>
+            <h2 id="b._dealing_with_objections"><strong>B. Dealing with
+            Objections</strong></h2>
+            <p>Even if you (correctly!) think you’re on the proper side
+            of the line, you must still be aware of the prosecutor.
+            Their job is to rain on your parade. This is where knowing
+            their tendencies can be important. Some prosecutors will
+            simply sit back and object only if you clearly go over the
+            line. Some are hyper vigilant and will object to things as
+            much as they can. In any case, when you receive an objection
+            stop talking. Don’t start arguing or explaining your side
+            (even if you’re right). If the judge wants to hear from you,
+            they will ask you. If the objection is sustained shake it
+            off, and don’t let it bother you. If the jury sees you
+            getting rattled, they remember. I usually just nod and say,
+            “No problem, Judge, I’ll rephrase” and carry right on.</p>
+            <p>Don’t engage with the prosecutor. Don’t even look at
+            them. If they make a silly objection, don’t react.
+            Sometimes, the prosecutor may make silly speaking objections
+            – “Objection, judge. Defense counsel is arguing and that’s
+            obviously improper in opening statement He’s supposed to
+            stick to what the evidence will show!” I love it when a
+            prosecutor does this. Whether you’re arguing or not, tell
+            the court you’ll rephrase and say the exact same thing you
+            just did – simply preface it with a humble smile to the jury
+            and the phrase, “The evidence will show [exactly what you
+            just said].” Most jurors are perceptive, and they can pick
+            up on the humor. Just be warned – be humble, and be polite.
+            If you overdo it or venture into smirks, eye-rolls, or other
+            such smarmy territory, the jury will dislike you, and
+            rightly so.</p>
+            <h2 id="c._making_objections"><strong>C. Making
+            Objections</strong></h2>
+            <p>Most prosecutors are pretty good about avoiding
+            objectionable material in opening. After all, they’re the
+            ones that can get a mistrial and have to go tell all their
+            prosecutor buddies about how they screwed up opening. So
+            they tend to be pretty careful. Despite that, you should
+            always be vigilant.</p>
+            <p>Everyone’s style is different, however. If you object too
+            often (even rightly so), the jury may not appreciate it.
+            They definitely won’t appreciate it if you keep getting
+            overruled. Some defense lawyers like to keep the prosecution
+            on their toes with objections, others are more
+            laissez-faire. It’s really up to you, and how you want to
+            play it. What we discussed above cuts both ways. If the
+            prosecutor is veering into argument feel free to object, but
+            be prepared for them to simply rephrase and continue.</p>
+            <p>However, you should always be on the lookout for certain
+            things. Never let the prosecutor comment on your client
+            wanting to make a phone call or speak to a lawyer. Never let
+            them comment on questions your client chose not to answer.
+            Never let them comment on what your client might say if she
+            testifies. If the prosecution goes into this territory you
+            must object, and be prepared to ask for a mistrial or a
+            curative instruction. Generally I prefer asking for a
+            mistrial first, since all a curative instruction really does
+            is highlight the inadmissible evidence. <em>See
+            generally</em> <a
+            href="http://scholar.google.com/scholar_case?case=18086768368779132840&amp;q=329+US+211&amp;hl=en&amp;as_sdt=6,38"><em>Fiswick
+            v. United States</em>, 329 US 211, 218 (1946)</a>. If you
+            don’t get your mistrial, however, you need to ask for a
+            curative instruction, as failure to do so may waive error by
+            the court in not granting a mistrial. <em>See generally</em>
+            <a
+            href="http://scholar.google.com/scholar_case?case=7476658415812100344&amp;q=31+or+app+187&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Flores</em>, 31 Or App 187, 190, (1977)</a>.</p>
+            <h2 id="d._judicial_admissions"><strong>D. Judicial
+            Admissions</strong></h2>
+            <p>Statements made during opening, although not evidence,
+            may constitute a “judicial admission,” which the state may
+            use in meeting its burden of proof. <a
+            href="http://scholar.google.com/scholar_case?case=3148164800414900105&amp;q=29+or+app+827&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Adams</em>, 29 Or App 827, (1997)</a>; ORE 801(4)(b);
+            <em>Cf.</em> <a
+            href="http://scholar.google.com/scholar_case?case=15283993131582328902&amp;q=56+or+app+6&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Howell</em>, 56 Or App 6, (1982)</a>. So don’t agree to
+            any of the elements of DUII if you intend to challenge that
+            element. This includes things like date, venue, and public
+            highways/premises open to the public.</p>
+            <p>Be aware of what you say about your client, especially if
+            he is not testifying or you haven’t decided yet. If you say
+            something like, “Mr. Client will tell you [facts]” during
+            your opening, you may be perilously close to forfeiting his
+            right to remain silent. The difference between a statement
+            like that and something like “Mr. Client didn’t feel Officer
+            Jones treated him fairly, which is why he declined the
+            breath test,” is that the latter statement doesn’t refer to
+            anything Mr. Client might say when he’s on the stand. And,
+            the prosecutor can’t stand up in closing and say, “We don’t
+            know what was in Mr. Client’s head because he didn’t
+            testify.” That would be a mistrial. But if you said that Mr.
+            Client would <em>testify</em> to that and he doesn’t…you’re
+            walking the razor’s edge.</p>
+            <h1 id="v._conclusion"><strong>V. Conclusion</strong></h1>
+            <p>I’ll turn to Bill Uhle, another excellent DUII lawyer and
+            the 2004 <em>DUII Trial Notebook</em> editor to
+            conclude:</p>
+            <p>“Your opening statement should be used to outline your
+            theory of defense. In a DUII trial, your theory of defense
+            is limited only by your imagination in coming up with a
+            logical explanation as to why, using the facts and the law,
+            your client did not commit the crime of DUII beyond a
+            reasonable doubt. Having a viable theory of defense gives
+            your defense direction and something to hang onto [even]
+            when the state’s case is overwhelming.”</p>
+            <h1 id="closing_argument"><strong>Closing
+            Argument</strong></h1>
+            <p><em>Edward Kroll</em></p>
+            <h1 id="i._introduction"><strong>I.
+            Introduction</strong></h1>
+            <p>The closing statement is your last word in any trial.
+            It’s here that you sum up all the evidence, argue your
+            theory of defense, and show why all the questions you asked
+            in voir dire and cross-examination were important. It’s here
+            that you show why the state hasn’t come close to proving its
+            case. It’s here where you ask the jury to find your client
+            not guilty.</p>
+            <p>Unless you’re reading this manual out of order, you’ve
+            already looked at the chapter on opening statements. Several
+            of the concepts discussed there will be mentioned again
+            here.</p>
+            <h1 id="ii._preparation_before_closing"><strong>II.
+            Preparation Before Closing</strong></h1>
+            <h2 id="a._know_your_case"><strong>A. Know Your
+            Case</strong></h2>
+            <p>Unlike opening, closing is sometimes more off-the-cuff.
+            You almost always know what day (and usually right around
+            what time) you will be opening, giving you a better chance
+            to think it through and prepare it. Closing can sneak up on
+            you, especially if a witness is very brief or a judge
+            decides to keep the jury into the lunch hour so you can
+            close. This isn’t to say you should plan to freestyle your
+            closing without preparation. Just be aware that you likely
+            won’t have as much preparation. That’s why knowing your case
+            – both the objective facts and your theory of defense – is
+            important. Being able to flow smoothly in closing can help
+            persuade the jury, far more than a bunch of “um, uh, ah” and
+            fumbling with notes.</p>
+            <h2 id="b._know_your_jury"><strong>B. Know Your
+            Jury</strong></h2>
+            <p>At the end of the case, you’ll have spent at least a
+            solid day with these 6–12 folks, possibly longer. If you’ve
+            paid attention during trial, you may have some small idea
+            how they’re feeling. This can be difficult as even the worst
+            poker player is hard to read when you put him or her on a
+            jury. Hopefully you’ve been able to gauge some bit of their
+            moods or reactions to key evidence, such as how they
+            appeared when the police testified, or during your client’s
+            testimony (if you put him on the stand). Based on what
+            you’ve observed, you can make alterations to what you were
+            going to say, or how you planned to say it.</p>
+            <h2 id="c._listen_to_the_prosecutor"><strong>C. Listen to
+            the Prosecutor</strong></h2>
+            <p>As usual, the state gets to go first. You should pay
+            close attention to what the prosecutor says to see what he
+            or she thinks are the state’s biggest strengths and biggest
+            weaknesses. Perhaps you’ll agree, perhaps you won’t. But you
+            need to understand what angles they will be pushing. We’ll
+            discuss what to say often below, but for now, just realize
+            that you will have to counter some of their points, even if
+            you didn’t necessarily plan to. Otherwise, the jury may be
+            left wondering why you didn’t mention it.</p>
+            <h2 id="d._be_natural"><strong>D. Be Natural</strong></h2>
+            <p>As discussed in the openings chapter, I’m a big advocate
+            of moving around the courtroom, ditching the podium, and
+            shedding your notes. Closing is the time to harness your
+            inner orator, and you don’t want to be tied to notes or a
+            podium like crutches. Besides, by this point, you had better
+            know the case facts and your theory of defense by heart. If
+            you don’t know either of these, the jury will clearly see
+            this and they will conclude that you are not confident in
+            your case. And if you’re not confident, how can they be?</p>
+            <h1
+            id="iii._narrative_what_do_you_actually_say"><strong>III.
+            Narrative – What Do You Actually Say?</strong></h1>
+            <h2 id="a._theory_1"><strong>A. Theory</strong></h2>
+            <p>Your entire closing should be built around your theory of
+            the case. From voir dire to opening to cross you should be
+            planting this theory with the jury and nurturing it. As
+            mentioned in the openings chapter, I find that broad, easily
+            supportable theories do best and resonate most with jurors.
+            Whatever your theory is, every single piece of your case is
+            tied to it, culminating with this closing. Don’t lose sight
+            of your theory. That’s the idea you want the jury to take
+            with them when they go into that room and start talking.
+            Make sure your theory is concise and easily conveyed. Too
+            many closings fail due to disorganization, rambling, and
+            needless repetition.</p>
+            <h2 id="b._demonstrative_aids"><strong>B. Demonstrative
+            Aids</strong></h2>
+            <p>If the prosecutor has any experience, he or she likely
+            has some visual aids with them. These can range from
+            self-created charts listing out all the things your client
+            did wrong to blown-up jury instructions on posterboard, or
+            anything in between. Regardless, most competent prosecutors
+            have something for the jury to look at. Whether they do or
+            not, you often should.</p>
+            <p>What you use/draw/create will depend on the facts of your
+            case. Again as mentioned in Opening Statement, the
+            prosecutor will almost never mention what your client did
+            right. So point this out. Draw your own chart. For example,
+            perhaps your client was pulled over for speeding and
+            weaving:</p>
+            <p><span class="underline">State</span>
+            <span class="underline">Mr. Client</span></p>
+            <ul>
+            <li><blockquote>
+            <p>Weaved twice • Used turn signals appropriately</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>15 mph over the speed limit • No sudden acceleration or
+            braking</p>
+            </blockquote>
+            <p>• Obeyed traffic signals</p>
+            <p>• Pulled over in a timely manner</p>
+            <p>• Parked appropriately</p>
+            <p>• Used flashers</p></li>
+            </ul>
+            <p>If the state made a chart, draw over it in a different
+            color. If they brought a pre-made chart, don’t write on it
+            directly – that will just get you yelled at. Instead, break
+            out some sticky notes and plaster their nice posterboard
+            with notes showing everything Mr. Client did right. This
+            also works for physical observations:</p>
+            <blockquote>
+            <p><span class="underline">State</span>
+            <span class="underline">Mr. Client</span></p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>Red, watery eyes • He’s a smoker and it was 2:00 a.m.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Odor of alcohol • He admitted drinking</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Slow production of documents • He took care with his
+            movements, as</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Poor balance during FSTs. he was in the presence of an
+            armed officer</p>
+            </blockquote></li>
+            </ul>
+            <blockquote>
+            <p>• No balance problems getting out of the car</p>
+            <p>• The <em>only</em> balance problems were during these
+            awkward tests</p>
+            <p>• Appropriately and calmly answered questions</p>
+            </blockquote>
+            <p>Etcetera. Overwhelm the state’s evidence with your own.
+            The jurors often don’t think about all the things your
+            client did right, and the state’s not going to mention them.
+            But just think about an intoxicated, impaired, or drunk
+            person – would they be able to do all of these things?</p>
+            <h2 id="c._specific_arguments"><strong>C. Specific
+            Arguments</strong></h2>
+            <p>It is difficult to give a blueprint for a “standard” DUII
+            closing as there are so many moving parts, and a great deal
+            depends on the evidence and cross-examination of the police
+            in your particular case. Nevertheless, there are certain
+            areas you should often touch on. We’ve discussed several of
+            these above – lack of “bad driving” and rational and obvious
+            explanations for physical appearance. We’ll touch on a few
+            more below.</p>
+            <p><strong>1. FSTs</strong></p>
+            <p>The state loves FSTs. They love to spend hours (well, it
+            feels like hours) talking about how badly your client did on
+            these tests. Assuming you have the facts to make the
+            argument (cross-examination of the officer will be key),
+            turn the FSTs on their head.</p>
+            <p>a. HGN</p>
+            <p>It’s an involuntary movement of the eyes. It does not
+            cause any vision problems. It does not cause any
+            reaction-time issues. The person doesn’t see the world hitch
+            and jitter in their vision. It merely shows that alcohol has
+            been consumed. Mr. Client admitted to having a drink! If
+            he’d said he had nothing to drink, then this test would show
+            him to be a liar, but that’s not the case here.</p>
+            <p>b. Walk-and-Turn</p>
+            <p>It’s a crazy test. If you step off the line, you will
+            naturally miss heel-to-toe as well, unless you do something
+            crazy. (Demonstrate a crazy step that is somehow off-line
+            but still heel-to-toe – this usually involves putting my
+            feet at right angles to each other. If you’ve gauged the
+            jury’s mood correctly, this can make them laugh.) And so if
+            you step off the line once, you’ve committed two “clues.”
+            And that’s all it takes to fail. The state says this test
+            should be easy. Well, how many of us walk this way on a
+            daily basis? Weekly? Monthly? Yearly? Oh, right, we never
+            do.</p>
+            <p>c. One-Leg Stand</p>
+            <p>How many of us can stand on one leg without swaying
+            <em>at all</em> for 30 seconds? I mean, this test presumes
+            that the average person should be able to stand on one foot,
+            with no sway, for 30 seconds. Preposterous. And if you sway,
+            you’ll put your arms out for balance, or put your foot down.
+            And boom, you’ve failed the test.</p>
+            <p>d. General Performance</p>
+            <p>Remind the jury that these tests aren’t done in a vacuum.
+            The police officer says they’re easy, but he does them on a
+            daily basis. He’s used to them. He’s not nervous when he
+            does them. He hasn’t been pulled over by an armed person.
+            He’s not in danger of going to jail if his nerves get the
+            better of him. In a controlled, safe environment, we could
+            probably all do these tests fine. But in the dark, on the
+            side of the road, your heart hammering out of your chest,
+            the state expects people to do these tests just fine?
+            Nonsense.</p>
+            <p><strong>2. Scientific Evidence</strong></p>
+            <p>Here, you’re probably dealing with a breath test result,
+            or some sort of back-extrapolation rubbish from a state
+            “expert.” Ideally, during cross you would have shown that
+            the state expert’s scientific evidence was just so much
+            noise. Perhaps you had an expert of your own testify during
+            the defense case. If you intend to tackle scientific
+            evidence during closing, do so succinctly. The concepts are
+            nebulous and difficult to grasp. Make sure you can
+            communicate your argument clearly to a jury without getting
+            hung up on things. Whether or not you had an expert during
+            your case, it can be worthwhile to talk to one beforehand.
+            He or she can often give you some pointers on how best to
+            explain certain technical concepts to a lay jury.</p>
+            <p>If you’re challenging the Inoxilyzer result, you need to
+            be prepared to argue why it was not accurate in this case.
+            Perhaps your client did well on the FSTs and had very little
+            bad driving, but inexplicably produced quite a high blow.
+            Ask the jury – will they trust objective facts that show
+            someone in control of their mental and physical faculties,
+            or will they trust a machine they know nothing about?</p>
+            <p><strong>3. Refusals</strong></p>
+            <p>The state will often use some sort of analogy about a
+            young child asking his parents to stay home from school
+            because he’s sick, but when the parents ask to take the
+            kid’s temperature, the kid says “No, just believe me, I have
+            a terrible fever.” The state argues that the kid’s reasoning
+            and Mr. Client’s are the same – they know an actual test
+            will show the truth, that no fever exists, and that Mr.
+            Client was intoxicated.</p>
+            <p>Countering this argument depends a great deal on how you
+            handled cross. The Closing Argument chapter is not the place
+            to discuss cross-examination techniques, but ideally you’ll
+            have at least gotten the officer to admit that he or she did
+            not get a blood draw after a breath test refusal. Then you
+            can argue that it’s the state’s burden and the state’s
+            burden alone to provide evidence. And we know just how
+            possible it is for the state to get this evidence. But they
+            chose not to. We could be here with concrete evidence –
+            proof, one way or another. But the police refused to do
+            this. Much like the child who refuses the thermometer, why
+            did the state refuse to produce evidence? It’s their burden,
+            isn’t it? There – we’ve (hopefully…) turned the state’s
+            analogy back on them. This argument works even better if
+            your client refused the breath test but asked for a blood
+            test.</p>
+            <p><strong>4. Lies or Mistakes?</strong></p>
+            <p>There is almost always going to be a discrepancy with
+            what the police saw / believed, and what you want the jury
+            to do. The jury will be wrestling with this. “Modern” juries
+            want to believe the police are on their side and will always
+            tell the truth. Such juries will react rather negatively to
+            claims that the police are lying or fabricating. Unless you
+            have a specific, provable lie, you want to avoid making the
+            jury decide if they believe the officer or not. If they’re
+            put in this position, it will end badly for your client.
+            Instead, through your case theory and your
+            cross-examination, show that the police simply made
+            mistakes. They weren’t thorough. They didn’t record any part
+            of the encounter. They didn’t go the extra mile to get a
+            blood draw. They didn’t give alternative field tests that
+            don’t involve bizarre balancing acts. They simply jumped to
+            a conclusion and stuck with it. It doesn’t make them bad or
+            malicious people. It makes them human. But humans make
+            mistakes, and that’s why this jury is here – because the
+            police made a mistake and Mr. Client is caught up<br />
+            in it.</p>
+            <p>Framing the issue this way sidesteps calling the police
+            liars or even challenging their credibility. It gives the
+            jury an option to vote not guilty without having to decide
+            that the police are lying. For better or worse, the police
+            have – by far – the upper hand in a credibility contest, so
+            don’t go there unless you have something concrete.</p>
+            <p><strong>5. Meet Damaging Evidence Head-On</strong></p>
+            <p>Sometimes, you’ll have a case with one or two (or more…)
+            pieces of particularly bad evidence. Your client rates
+            themselves a 9 on the 1–10 scale of sobriety, with 10 being
+            the most drunk he’s ever been, or tells the officer “I’m
+            really drunk,” or almost hits a bus full of nuns and
+            puppies. If you run away from this and don’t address it in
+            some form during closing, the prosecutor will hammer on this
+            in rebuttal: “Did you notice how Mr. Kroll didn’t even
+            <em>mention</em> the nuns and the puppies that his client
+            endangered with his drunk driving?” When you have bad facts,
+            you need to give the jury some sort of framework to work
+            around them. This is where your theory of the case comes
+            back. From the very beginning of your case, you should be
+            aware of the very worst facts for you, and your theory must
+            have some part that addresses this. If you meet challenges
+            like this without shrinking away and let the jury see that
+            it doesn’t bother you, perhaps they’ll realize that this is
+            just one piece of evidence that doesn’t fit in with
+            everything else you’ve brought to light. Then they can work
+            around it to get to not guilty.</p>
+            <h1 id="iv._tactical_and_legal_considerations_1"><strong>IV.
+            Tactical and Legal Considerations</strong></h1>
+            <h2 id="a._length"><strong>A. Length</strong></h2>
+            <p>There’s no hard-and-fast rule about length with your
+            closing. As with everything, it’ll depend on your particular
+            case. That said, beware of the closing that rambles on or
+            repeats unnecessarily. Jurors get bored, and if you’re
+            making the same points over and over, you come across as
+            dull and uninspiring.</p>
+            <p>If you have a lot of ground to cover, then it’s fine to
+            take a while, as long as you keep the pace moving and don’t
+            repeat yourself. The main issue that confounds defense
+            attorneys is that in closings, the prosecutor gets the first
+            <em>and</em> the last word. So many attorneys feel they have
+            to cram as much into their closing as possible, taking apart
+            everything the prosecutor said during their first closing
+            <em>and</em> anticipating and rebutting arguments the
+            prosecutor will make in their rebuttal closing. In a perfect
+            world, we would be able to do this in a timely fashion, but
+            it’s often unwieldy. Focus on telling your story and
+            strongly communicating your theory. That’s really the best
+            way to go about it.</p>
+            <p>Don’t worry so much about anticipating rebuttal
+            arguments. Ask the jury to do it for you: “Folks, I’m about
+            to sit down, and this is the last you’ll hear from me. But
+            Mr. Prosecutor over there gets to have the last word, so
+            that you’ll go to that jury room with his arguments in your
+            ears. He’s going to get up here and tell you why I’m wrong.
+            Well, that’s because it’s his burden. He’s got to prove his
+            case to you. That’s why he gets to talk so much. It’s why he
+            got to go first in opening, first with the evidence, and
+            first in closing. So while he’s up here, talking to you
+            <em>again</em>, I’m asking you all – ask yourselves, what
+            would Mr. Kroll say if he got a chance to respond? What
+            logical, reasonable answers would he give – what ones has he
+            already given?”</p>
+            <p>Now, I’m not saying do this verbatim. Everyone has to
+            tailor it to themselves. But this can accomplish a few
+            things - you don’t have to anticipate rebuttal arguments,
+            you can play the “underdog” card, and if the prosecutor
+            takes a long rebuttal, it may turn the jury off.</p>
+            <p>All that being said, sometimes Shakespeare is right –
+            “Brevity is the soul of wit.” One of the most effective
+            closings I’ve seen was when the police really dropped the
+            ball in a case – witness statements were omitted, suspect
+            statements were omitted, tests weren’t done properly – and
+            despite that, there was a substantial amount of damaging
+            evidence against the client. The defense attorney’s closing
+            was very short – just a minute or two – and basically
+            said</p>
+            <p>“Folks, we deserve better from the police. They were
+            careless in this case. Not malicious, not bad, but
+            incredibly careless. That’s not acceptable. But if you think
+            it is acceptable, then I’m not going to be able to change
+            your mind. If you’re comfortable with this level of effort,
+            go back there and convict in five minutes. But if you think
+            we, as a society, deserve more, if we deserve competence,
+            then send a message. Find [Mr. Client] not guilty.”</p>
+            <p>The jury did indeed come back not guilty. After three
+            hours of deliberation, but still. That kind of argument and
+            timing isn’t for every case, or really, for many cases at
+            all. Just keep in mind the power that a few well-chosen
+            words can sometimes have under the right circumstances.</p>
+            <h2 id="b._making_objections"><strong>B. Making
+            Objections</strong></h2>
+            <p>As in opening, objections to the prosecutor’s closing
+            should be fairly rare. It’s argument, and pretty much
+            anything goes. Your main objections are likely to be:</p>
+            <ul>
+            <li><blockquote>
+            <p>If the prosecutor comments on facts that aren’t in
+            evidence.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the prosecutor comments on your client remaining
+            silent, either to the police or at trial.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the prosecutor tries to scare the jury, e.g. “Next
+            time, it might not be puppies and nuns that Mr. Client
+            endangers – it might be your whole entire family!” or “Don’t
+            let the defendant walk out of the courtroom acquitted
+            because next time it might be one of you at the end of his
+            barrel.” <a
+            href="http://scholar.google.com/scholar_case?case=17945590909564275749&amp;q=43+or+app+619&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Reynolds</em>, 43 Or App 619 (1979)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the prosecutor says that the state’s evidence is
+            “uncontradicted” or “unimpeached” if your client is the only
+            possible person who could contradict the evidence. <a
+            href="http://scholar.google.com/scholar_case?case=16666660124446108400&amp;q=239+or+577&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Buck</em>, 239 Or 577 (1965)</a>.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the prosecutor makes derogatory personal statements
+            about you or your client.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the prosecutor <em>personally</em> vouches for a
+            witness, e.g. “<em>I</em> believe Officer Smith.” Note that
+            say-<br />
+            ing “<em>You</em> should believe Officer Smith,” or “Officer
+            Smith has no reason to lie” are probably permissible.</p>
+            </blockquote></li>
+            </ul>
+            <p>If the prosecutor does any of these things, you must
+            preserve the record. Generally, you need to request both a
+            mistrial and a curative instruction. Just asking for a
+            mistrial (without curative instruction) can waive the appeal
+            on the lack of a curative instruction. <em>See
+            generally</em> <a
+            href="http://scholar.google.com/scholar_case?case=7476658415812100344&amp;q=31+Or+App+187&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Flores</em>, 31 Or App 187, 190, (1977)</a>.</p>
+            <p>If your objection isn’t for something listed here, then
+            it’s likely better not to object, as you’ll simply be
+            overruled and look silly or awkward in front of the
+            jury.</p>
+            <h2 id="c._taking_objections"><strong>C. Taking
+            Objections</strong></h2>
+            <p>Basically, unless you find venture into the no-no
+            territory discussed above, you shouldn’t draw an objection.
+            It’s argument, after all. But if you do draw an objection
+            for something not taboo, don’t let it upset you. Don’t
+            engage with the prosecutor. Don’t even respond to them. See
+            if the judge wants to hear from you or will just overrule
+            the objection. If the judge wants a response to a silly
+            objection,<br />
+            you can often simply say “Judge, this is my argument,” which
+            should suffice. If the prosecutor’s objection is sustained,
+            accept it and say, “No problem, judge, I’ll rephrase/move
+            on.” Don’t let anything ruffle you.</p>
+            <h1 id="v._conclusion_1"><strong>V. Conclusion</strong></h1>
+            <p>Closing argument is the last time we talk to the jury.
+            Don’t confuse it with <em>Law &amp; Order</em> – this isn’t
+            the place to go over the top. It’s the place to succinctly,
+            intelligently, and persuasively show the jury why your
+            theory of the case makes sense, and why the state – the
+            police and the prosecution – haven’t met their burden.</p>
+    </body>
+</html>
