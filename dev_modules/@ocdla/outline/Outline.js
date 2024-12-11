@@ -97,7 +97,7 @@ export default class Outline {
       }
 
       // Case: The item is at the same level as the previous
-      if (level == prevLevel) {
+      if (parent && level == prevLevel) {
         parent.adopt(outline);
 
         prevOutline = outline;
@@ -105,7 +105,7 @@ export default class Outline {
       }
 
       // Case: The item is at a deeper level and should be nested into the previous outline
-      if (level > prevLevel) {
+      if (parent && level > prevLevel) {
         parent = prevOutline;
         parent.adopt(outline);
 
@@ -116,10 +116,11 @@ export default class Outline {
       // Case: The item is at a shallower level and should be nested into the last outline that would be its parent
       if (level < prevLevel) {
         // We need to find the correct parent, so go backwards until we are at the right level.
-        while (level <= parent.level) {
+        while (parent && level <= parent.level) {
           parent = parent.parent;
         }
-        parent.adopt(outline);
+        if (parent)
+          parent.adopt(outline);
 
         prevOutline = outline;
         return;

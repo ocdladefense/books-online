@@ -365,23 +365,21 @@ export default class BooksOnlineController {
    * Renders the content of a book chapter, including the chapter HTML and an outline of the chapter's sections.
    *
    * @param {string} book - The book shortname identifier.
-   * @param {string} unit - The unit (chapter / section / appendix) identifier.
+   * @param {string} unit - The unit identifier. This could be for example a chapter number, section identifier, or an appendix identifier.
    * @return {void}
    */
   renderContent(book, unit) {
     // Display the content of the chapter.
     let chapterReady = this.fetchChapter(book, unit).then((html) => {
-      const unit = document.createElement("div");
-      unit.setAttribute("id", "body");
-      const doc = document.createElement("div");
-      doc.innerHTML = html;
-      let sections = doc.querySelectorAll("header, section");
-      for (let i = 0; i < sections.length; i++) {
-        unit.appendChild(sections[i]);
-      }
 
-      // TODO: Jsx this
-      document.querySelector("#body").replaceWith(unit);
+      const parser = new DOMParser();
+
+      const doc2 = parser.parseFromString(html, "text/html");
+      // import node function
+
+      let sections = doc2.querySelectorAll("header, section");
+
+      document.querySelector("#body").replaceChildren(...sections);
     });
 
     // Display the outline of the chapter once the content has been rendered.

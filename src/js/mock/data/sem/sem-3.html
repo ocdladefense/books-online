@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Scientific Evidence: A Manual for Oregon Defense Attorneys</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Scientific Evidence: A Manual for Oregon
+Defense Attorneys</h1>
+                                    </section>
+            <p>2012 edition</p>
+            <p><strong>Procedural Issues</strong></p>
+            <p>Chapter 4 explains the standard under Oregon law for the
+            admissibility of scientific evidence. This chapter discusses
+            procedural issues associated with the admissibility
+            determination, along with some strategic considerations. It
+            is written from the perspective of a defense attorney
+            challenging the state’s evidence, but the discussion is also
+            relevant to defense attorneys seeking to admit their own
+            scientific evidence.</p>
+            <section id="i._challenging_the_evidence" class="level1">
+            <h1><strong>I. Challenging the Evidence</strong></h1>
+            <section id="a._right_to_challenge" class="level2">
+            <h2><strong>A. Right to Challenge</strong></h2>
+            <p>When the state seeks to admit any form of scientific
+            evidence, you have a right to insist that a foundation first
+            be laid. You do not have the burden of identifying some flaw
+            in the evidence; the burden is on the proponent.<a
+            href="#fn1" class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a></p>
+            <p>This is true even for types of evidence that have
+            previously been held admissible by Oregon appellate courts
+            (although, as discussed in Chapter 4, the foundational
+            requirement in that situation is less rigorous). Note that
+            the proponent’s burden is not merely to present evidence
+            <em>sufficient</em>for a finding of validity, but to
+            persuade the court by a preponderance of the evidence that
+            the evidence <em>is</em>valid.<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            <p>Although certain tactical decisions depend on the
+            circumstances, you have much to gain and little to lose by
+            challenging the state’s scientific evidence at some point.
+            In addition, if there is a dispute over whether some portion
+            of the state’s evidence requires the laying of a scientific
+            evidence foundation, it is generally in your interests to
+            argue that it does. If the trial court determines that it
+            does not and admits it without the foundational inquiry, and
+            an appellate court concludes that this determination was
+            wrong, that is grounds for reversal—even if the evidence, as
+            presented at trial, would have satisfied the necessary
+            foundational requirement.<a href="#fn3" class="footnote-ref"
+            id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+            </section>
+            <section id="b._timing_of_challenge" class="level2">
+            <h2><strong>B. Timing of Challenge</strong></h2>
+            <p>You have two basic options with respect to timing—you can
+            file a pretrial motion to exclude the evidence, or wait
+            until the state attempts to introduce the evidence at trial.
+            Both strategies have advantages and disadvantages.</p>
+            <p>If you want the admissibility determination made at a
+            pretrial hearing, you should have that right. In <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;case=4487336251714325364&amp;scilh=0">State
+            v. O’Key</a>,<a href="#fn4" class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a> the leading Oregon case
+            on scientific evidence admissibility, the court expressed a
+            preference for pretrial determinations.<a href="#fn5"
+            class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a></p>
+            <p>In addition, <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.037</a>gives you the right to a pretrial omnibus hearing
+            to determine issues including “[s]uppression of evidence.”
+            “Suppression” has been interpreted quite broadly for
+            purposes of another statute (<a
+            href="http://www.leg.state.or.us/ors/138.html">ORS
+            138.060</a>, governing the state’s right to take
+            interlocutory appeals); at least in that context, it is not
+            limited to constitutionally based suppression motions.<a
+            href="#fn6" class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a></p>
+            <p>You may want to include a separate motion for an omnibus
+            hearing along with your substantive motion.</p>
+            <p>The advantages of a pretrial determination of
+            admissibility include:</p>
+            <p><em>• Predictability and enhanced ability to
+            prepare.</em>A pretrial determination allows you to prepare
+            for trial knowing whether the state’s scientific evidence,
+            which may be critical evidence, is coming in. Of course, the
+            same is true for the state, so this factor cuts both
+            ways.</p>
+            <p><em>• Better decision making environment for the
+            court.</em>Again, the admissibility determination can be a
+            highly complex one. It may involve extensive, intricate
+            testimony on complicated topics and lengthy documentary
+            exhibits. Accordingly, it may be a difficult determination
+            for a trial judge to make in a well- reasoned manner “on the
+            fly.” If you have good arguments for admissibility that you
+            want the court to consider carefully, a pretrial hearing may
+            be the best option. <a href="#fn7" class="footnote-ref"
+            id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+            <p>• <em>No references to inadmissible evidence.</em>If you
+            wait until the attempted introduction of the evidence to
+            mount your challenge, the jury may hear about evidence that
+            is ultimately deemed inadmissible. This exposure could occur
+            during, for example, voir dire or opening statements. You
+            may conclude that this potential tainting requires a
+            pretrial determination.<a href="#fn8" class="footnote-ref"
+            id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+            <p>The disadvantages to a pretrial motion include:</p>
+            <p><em>• Appealability of a favorable decision.</em>If you
+            win a pretrial motion to exclude scientific evidence, the
+            state has a right to appeal that decision.<a href="#fn9"
+            class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a></p>
+            <p>By contrast, the state cannot appeal a mid-trial ruling.
+            This is obviously a key consideration.<a href="#fn10"
+            class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a></p>
+            <p>Indeed, for this reason the state itself may ask for a
+            pretrial hearing on the admissibility of its evidence,
+            especially if you have alerted the prosecutor to the fact
+            that you intend to challenge it.</p>
+            <p>• <em>Enhanced state preparation.</em>The prosecutor may
+            not anticipate a serious admissibility challenge, or may not
+            fully think through all of the testimonial and documentary
+            evidence that could be required to lay the necessary
+            foundation. Putting the state on notice through a pretrial
+            motion makes it more likely that the prosecutor will show up
+            prepared.</p>
+            <p>Ultimately, there is no universally applicable rule. The
+            decision whether to challenge the state’s evidence before or
+            during trial is a case-by-case decision.</p>
+            <p>If you decide to make a mid-trial challenge, you should
+            have a right to insist that the admissibility hearing,
+            including the presentation of evidence in support of and in
+            opposition to admissibility, be held outside the jury’s
+            presence.<a href="#fn11" class="footnote-ref" id="fnref11"
+            role="doc-noteref"><sup>11</sup></a></p>
+            <p>Generally, this is what you want. The admissibility
+            inquiry will often be a searching one. You want the freedom
+            to ask probing questions that will build your record and set
+            up your argument for exclusion, without having to worry
+            about any effect on the jury. In addition, the rules of
+            evidence do not apply at an admissibility hearing, and some
+            of the otherwise inadmissible evidence that will be offered
+            by the state in support of admissibility could improperly
+            bolster the expert’s testimony in the jury’s eyes.<a
+            href="#fn12" class="footnote-ref" id="fnref12"
+            role="doc-noteref"><sup>12</sup></a></p>
+            <p>If you do file a pretrial motion and some or all of the
+            state’s evidence is determined to be admissible, you may
+            need to make additional objections during trial for
+            preservation purposes.<a href="#fn13" class="footnote-ref"
+            id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
+            </section>
+            </section>
+            <section id="ii._framing_the_pretrial_motion"
+            class="level1">
+            <h1><strong>II. Framing the Pretrial Motion</strong></h1>
+            <section id="a._substantive_issues" class="level2">
+            <h2><strong>A. Substantive Issues</strong></h2>
+            <p>Substantively, the first step is identifying the evidence
+            that you want to exclude. The interplay between substance
+            and procedure can be somewhat tricky here.</p>
+            <p>Before trial, you may not know exactly what scientific
+            evidence the state intends to use. The state is obliged to
+            disclose all expert reports and related materials, as well
+            as all statements (or memoranda of statements) of witnesses,
+            including expert witnesses.<a href="#fn14"
+            class="footnote-ref" id="fnref14"
+            role="doc-noteref"><sup>14</sup></a></p>
+            <p>Not all expert testimony, however, will be associated
+            with discoverable reports or statements, and you may not be
+            able to predict the substance of the expert’s testimony from
+            the discovery materials.<a href="#fn15" class="footnote-ref"
+            id="fnref15" role="doc-noteref"><sup>15</sup></a></p>
+            <p>Moreover, the admissibility of scientific evidence is not
+            considered in the abstract, but in light of the purpose for
+            which the proponent intends to offer it.<a href="#fn16"
+            class="footnote-ref" id="fnref16"
+            role="doc-noteref"><sup>16</sup></a></p>
+            <p>The discovery statutes do not, by themselves, require the
+            state to identify the purpose for which any type of evidence
+            will be offered.</p>
+            <p>Accordingly, you need to think carefully before
+            identifying the evidence that you want to exclude. One
+            option is to move for the exclusion of all scientific
+            evidence as to which the state fails to lay a sufficient
+            foundation at the hearing. If you take this route, you
+            should probably also identify the specific categories of
+            evidence that you know about, as broadly as possible. This
+            will make it difficult for the state to claim, at trial,
+            that it did not realize that a certain category of evidence
+            needed to be screened at the pretrial hearing and that it
+            should have an additional opportunity to lay a foundation
+            during the trial.<a href="#fn17" class="footnote-ref"
+            id="fnref17" role="doc-noteref"><sup>17</sup></a></p>
+            <p>With respect to the purpose for which the evidence is
+            offered, you can draft your motion broadly enough to seek
+            preclusion of the evidence for any purpose, and then deal
+            with any specifically identified purposes at the hearing.
+            You may want to ask the court to require the prosecutor to
+            identify one or more purposes for the evidence at some
+            point, whether or not such identification is required by the
+            discovery statutes. As discussed above, the purpose for
+            which the evidence is offered is relevant to the
+            admissibility analysis, and without one or more identified
+            purposes the court cannot perform its gatekeeping
+            function.</p>
+            <p>With respect to your supporting brief (or “points and
+            authorities”), you need to balance the competing concerns
+            common to many pretrial motions—the benefit of identifying
+            specific issues to focus the court’s attention, weighed
+            against the risk of offering the prosecutor a roadmap
+            outlining all of the evidence necessary to defeat your
+            motion. Again, this is a case-by-case decision. One thing to
+            be careful of—if you do go with a more minimalist approach,
+            you need to ensure that at some point you specifically
+            identify all of the factors within the admissibility
+            analysis that you want the court to consider. Otherwise, you
+            may be deemed to have waived any argument with respect to
+            any factors not so identified.<a href="#fn18"
+            class="footnote-ref" id="fnref18"
+            role="doc-noteref"><sup>18</sup></a></p>
+            </section>
+            <section id="b._procedural_issues" class="level2">
+            <h2><strong>B. Procedural Issues</strong></h2>
+            <p>The issued raised in a scientific evidence admissibility
+            hearing may be more complex, and may involve more extensive
+            and technical evidence, than those involved in the more
+            common pretrial motions. In light of the nature and amount
+            of evidence related to admissibility, it may be unrealistic
+            to expect that you will be able to process and analyze the
+            relevant materials as quickly as you can in other contexts.
+            With such materials, you may need time not only to review
+            them yourself, but also to discuss them with a consulting
+            expert.<a href="#fn19" class="footnote-ref" id="fnref19"
+            role="doc-noteref"><sup>19</sup></a></p>
+            <p>Accordingly, if new evidence or discovery is disclosed
+            for the first time at or shortly before the admissibility
+            hearing, you may find it appropriate to ask for a
+            continuance—or, in the alternative, for exclusion of some
+            portion of the state’s foundational evidence as a remedy for
+            the untimely disclosure. To make a record for either type of
+            request, you may want to outline, in your moving papers, the
+            specific reasons making timely production important and a
+            proposed schedule. If you are seeking some materials through
+            subpoenas, this can be worked out in your proposed
+            schedule.<a href="#fn20" class="footnote-ref" id="fnref20"
+            role="doc-noteref"><sup>20</sup></a></p>
+            <p>Even if the court declines to adopt your proposal, the
+            record will show that the state is responsible for any delay
+            if its untimely disclosure necessitates a continuance.</p>
+            </section>
+            </section>
+            <section id="iii._the_hearing" class="level1">
+            <h1><strong>III. The Hearing</strong></h1>
+            <section id="a._evidence" class="level2">
+            <h2><strong>A. Evidence</strong></h2>
+            <p>The rules of evidence, other than those involving
+            privileges, do not apply at an admissibility hearing.<a
+            href="#fn21" class="footnote-ref" id="fnref21"
+            role="doc-noteref"><sup>21</sup></a></p>
+            <p>This has several implications, particularly with respect
+            to documentary evidence. Especially if the method or
+            technique at issue has not previously been approved by any
+            Oregon appellate court, much of the evidence at the hearing
+            may consist of documents such as reference books, technical
+            articles, and laboratory reports.<a href="#fn22"
+            class="footnote-ref" id="fnref22"
+            role="doc-noteref"><sup>22</sup></a></p>
+            <p>The hearsay rule does not apply at this stage (although
+            it does apply if, after the admissibility determination, the
+            proponent attempts to introduce such materials as trial
+            evidence).</p>
+            <p>Oregon law provides little guidance regarding the
+            standards governing admissibility at hearings not governed
+            by the evidence rules. Documentary and other evidence should
+            be allowed in if there is some plausible way that it could
+            assist the court in the admissibility determination. With
+            respect to authentication, no set procedure has been
+            established. A representation of counsel—for example, that
+            you are submitting true and accurate copies of identified
+            materials—may or may not suffice. To be certain, absent a
+            prior stipulation you may want to bring authenticating
+            affidavits to the hearing.</p>
+            <p>The trial court is also entitled to take judicial notice
+            of facts or materials that are relevant to the admissibility
+            determination. This is considered judicial notice of
+            “legislative facts,” and the standard is more relaxed than
+            the standard applicable to judicial notice of “adjudicative
+            facts.”<a href="#fn23" class="footnote-ref" id="fnref23"
+            role="doc-noteref"><sup>23</sup></a></p>
+            <p>Be prepared to take full advantage of these generally
+            lenient rules for the admissibility of documents. For
+            scientific evidence in particular, documentary evidence will
+            often be more persuasive and authoritative than testimony.
+            Even the materials that generally support the method at
+            issue—for example, standardized protocols or research
+            articles—may include statements about limitations or
+            uncertainties. Your research may also turn up articles or
+            other publications critical of the method, or materials that
+            call into question the method’s usefulness in the context of
+            your case. If so, consider getting these materials into the
+            record.</p>
+            <p>Be careful, though, that you do not unwittingly fill in
+            gaps in the state’s foundation. It bears repeating that your
+            prosecutor may not have fully prepared for the hearing or
+            anticipated all of the issues that you will raise. If you
+            have a good argument that the state’s foundational evidence
+            is insufficient and if your proposed exhibits include
+            material that could cure that insufficiency, it may be best
+            to leave well enough alone. You may also consider the
+            intermediate route of asking the state’s expert, on
+            cross-examination, to agree with certain statements in your
+            materials. The expert may do so, in which case you will have
+            established your points without bolstering the state’s case
+            in the process.</p>
+            </section>
+            <section id="b._the_states_expert" class="level2">
+            <h2><strong>B. The State’s Expert</strong></h2>
+            <p>When planning your cross-examination of the state’s
+            expert, consider the same issue discussed above with respect
+            to documents—the possibility that your cross-examination
+            will end up filling in any gaps in the state’s foundation.
+            Both at trial and in any appeal, the state should be limited
+            to the foundational record it establishes at the
+            admissibility hearing. Accordingly, before cross-examining
+            the state’s expert at length think carefully about the
+            record as it stands and whether a probing cross-examination
+            is more likely to make the overall record better or worse
+            for the state.</p>
+            <p>If you decide to cross-examine the state’s expert, it is
+            often useful to probe beneath the surface of the witness’s
+            direct examination testimony, which is often quite
+            conclusory. Chapter 4 discusses the factors the proponent
+            must address in a hearing on scientific evidence
+            admissibility; these include, for exam- ple, the degree to
+            which the method is accepted in the relevant scientific
+            community and the method’s error rate.<a href="#fn24"
+            class="footnote-ref" id="fnref24"
+            role="doc-noteref"><sup>24</sup></a></p>
+            <p>The prosecutor may attempt to develop this evidence
+            through a series of perfunctory yes/ no questions: “Is this
+            method generally accepted in the scientific community?”
+            “Yes.” “Is the error rate considered acceptable?” “Yes.”</p>
+            <p>If you decide that the benefits of a thorough cross
+            outweigh the risks, this is the sort of testimony on which
+            you should focus. For example, as to the “acceptance in the
+            community” question: what is the witness’s basis for stating
+            that the method is generally accepted in the relevant
+            scientific community? What sorts of contacts does that
+            witness have in the scientific community (particularly
+            outside the laboratory in which the witness works)? Have
+            they discussed this method? When? What was discussed? Has
+            the witness been to conferences at which the validity or
+            usefulness of this method was discussed? Read publications?
+            Which ones? What did they say? What is the citation
+            information (author, journal title, etc.) for these
+            references? The answers to such questions can be especially
+            revealing when the purported expert is in reality
+            essentially a technician, trained in the application of a
+            method but not an authority on the underlying science.</p>
+            <p>You should also be allowed to ask questions that go to
+            the witness’s credibility, including any motivations that
+            may affect the witness’s testimony, or personal or
+            professional biases in favor of the state or against your
+            client or similarly situated persons. As discussed above,
+            the admissibility determination is not governed by a
+            “sufficiency of the evidence” standard; instead, the court
+            must decide whether validity has been established by a
+            preponderance of the evidence.<a href="#fn25"
+            class="footnote-ref" id="fnref25"
+            role="doc-noteref"><sup>25</sup></a> Accordingly,
+            credibility questions are entirely proper.</p>
+            <p>Because the evidence rules do not apply, the state is not
+            obliged to present supporting testimony through live
+            witnesses; it may submit such testimony through
+            affidavits.<a href="#fn26" class="footnote-ref" id="fnref26"
+            role="doc-noteref"><sup>26</sup></a></p>
+            <p>If it is important to you to examine any witness, you
+            should subpoena that witness to the admissibility
+            hearing.</p>
+            <p><strong>C. Your Own Expert</strong></p>
+            <p>The defense, of course, has the right to call its own
+            expert at the admissibility hearing. Think carefully,
+            however, before doing so. The state will have an opportunity
+            to conduct the same searching, comprehensive
+            cross-examination of your expert that you will be conducting
+            of the state’s. This pretrial opportunity can be a
+            significant tactical advantage, one that should not be
+            lightly handed over to the state.</p>
+            <p>This is especially true in light of the particular
+            function of the admissibility hearing. The court, in its
+            “gatekeeping” function, is not charged with determining
+            which side’s scientific evidence is “better,” but only
+            whether either side’s evidence is sufficiently valid and
+            legitimate to satisfy the admissibility standard.<a
+            href="#fn27" class="footnote-ref" id="fnref27"
+            role="doc-noteref"><sup>27</sup></a></p>
+            <p>A court facing a “battle of the experts” at the
+            admissibility stage may simply let all of the evidence in
+            and let the jury sort it out, which may indeed be the
+            correct approach under the governing standard.<a
+            href="#fn28" class="footnote-ref" id="fnref28"
+            role="doc-noteref"><sup>28</sup></a></p>
+            <p>The result is that you will have given the state a shot
+            at your expert without gaining much in the process.</p>
+            <p>Of course, there are circumstances in which this basic
+            calculus will shift. For example, your expert may be in a
+            position to testify about virtually indisputable scientific
+            principles, ignored or misapplied by the state’s expert,
+            that seriously undermine the validity of the state’s
+            proffered evidence. Alternatively, if you have disclosed
+            your expert as a trial witness and the state has
+            successfully moved for a pretrial hearing on the
+            admissibility of that expert’s testimony, the state will
+            have an opportunity to examine your expert before trial in
+            any event. In that situation, your expert’s pretrial
+            testimony in support of your challenge to the state’s
+            evidence may come at little additional cost.</p>
+            <hr />
+            <references/>
+            </section>
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup>''See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BPerry&amp;hl=en&amp;as_sdt=4%2C38&amp;case=11157625546996503150&amp;scilh=0">State
+            v. Perry</a>, 347 Or 110, 122 (2009); <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;case=4487336251714325364&amp;scilh=0">State
+            v. O’Key</a>, 321 Or 285, 307 n 29 (1995) (en banc).</sup><a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup><em>O’Key</em>, 321 Or at 307 n
+            29.</sup><a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><sup><em>See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BEvans&amp;hl=en&amp;as_sdt=4%2C38&amp;as_ylo=2008&amp;case=2942309039410473689&amp;scilh=0">State
+            v. Evans</a>, 236 Or App 467, 470,</em>modified on
+            reconsideration'', 238 Or App 466 (2010).</sup><a
+            href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><sup>321 Or 285 (1995) (en banc).</sup><a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn5"><sup><em>See id.</em>at 307 n 29 (“When
+            proffered scientific evidence raises issues of scientific
+            validity, those issues should be addressed by the trial
+            court in a separate <a
+            href="http://www.oregonlaws.org/ors/40.030">OEC 104</a>(1)
+            hearing, preferably in advance of trial.”); ''see also <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BSTanley&amp;hl=en&amp;as_sdt=4%2C38&amp;case=17749038009195895843&amp;scilh=0">State
+            v. Stanley</a>, 30 Or App 33, 38 (1977) (“Evidence which
+            carries an unusual potential for prejudice should be ruled
+            upon preliminarily, prior to trial in the case of state’s
+            evidence . . . .”).</sup><a href="#fnref5"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><sup>See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BHoare&amp;hl=en&amp;as_sdt=4%2C38&amp;case=16085012781129889838&amp;scilh=0">State
+            v. Hoare</a>, 20 Or App 439, 443-45 (1975); <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BKoennecke&amp;hl=en&amp;as_sdt=4%2C38&amp;case=5636794740304898694&amp;scilh=0">State
+            v. Koennecke</a>, 274 Or 169, 172-73 (1976) (en
+            banc).</sup><a href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7"><sup>For the same reason, if you are in a
+            county that customarily schedules pretrial hearings to begin
+            on the scheduled trial date, you may consider asking the
+            court to instead schedule your pretrial hearing further in
+            advance of your trial, particularly if you expect your
+            hearing to be a complex or time-consuming one. If told about
+            the nature and extent of the evidence that will be presented
+            and the legal issues that will be argued, the court may
+            agree that an earlier pretrial hearing is appropriate, and
+            may even decide that post-hearing briefing would be
+            appropriate.</sup><a href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8"><sup>In <em>State v. Stanley</em>, 30 Or App at
+            35, the defendant successfully moved to exclude the state’s
+            breath test evidence, after a mid-trial admissibility
+            hearing held (over the defendant’s objection) in the jury’s
+            presence. The Court of Appeals upheld the trial court’s
+            denial of the defendant’s motion for a mistrial, explaining:
+            “Where there was no pretrial motion, where both attorneys
+            had mentioned breathalyzer evidence prior to the officer’s
+            testimony, and where the reason for the exclusion of the
+            evidence reflects negatively upon the reliability of that
+            evidence, we cannot say as a matter of law that the hearing
+            of foundation evidence before the jury influenced the jury
+            in their fact-finding and that there was, therefore, as a
+            matter of law, uninvited prejudice and abuse of discretion.”
+            <em>Id.</em>at 38.</sup><a href="#fnref8"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn9"><sup><em>See</em>ORS 138.060(1)(c); <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2Bhoare&amp;hl=en&amp;as_sdt=4%2C38&amp;case=16085012781129889838&amp;scilh=0">Hoare</a>,
+            20 Or App at 444-45.</sup><a href="#fnref9"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn10"><sup><em>See Hoare</em>, 20 Or App at 444-45
+            (“When a defendant raises an objection to evidence in
+            advance of trial, he takes the risk that the state may have
+            an opportunity to obtain review of an adverse decision it
+            would otherwise be deprived of if the objection were made
+            during the course of the proceedings.”).</sup><a
+            href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn11"><sup><em>See <a
+            href="http://www.oregonlaws.org/ors/40.030">OEC
+            104(3)</a>(hearings on preliminary matters other than the
+            admissibility of confessions should be conducted outside the
+            jury’s presence “when the interests of justice require”);
+            OEC 103(3) (“In jury cases, proceedings shall be conducted,
+            to the extent practicable, so as to prevent inadmissible
+            evidence from being suggested to the jury by any means . . .
+            .”). If you litigate this issue, be aware that the Ninth
+            Circuit has held that the identical federal rule does not
+            mandate a hearing outside the jury’s presence, but leaves
+            some discretion with the trial court.</em>See, e.g.<em>, <a
+            href="http://scholar.google.com/scholar_case?q=United%2BStates%2Bv.%2BMendoza-Paz&amp;hl=en&amp;as_sdt=3%2C38&amp;case=2954323162186492370&amp;scilh=0">United
+            States v. Mendoza-Paz</a>, 286 F3d 1104, 1113 (9th Cir
+            2002). The same rule will probably also apply under Oregon
+            law. OEC 104(3) cmt.;</em>see also <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BSTanley&amp;hl=en&amp;as_sdt=4%2C38&amp;case=17749038009195895843&amp;scilh=0">State
+            v. Stanley</a>, 30 Or App at 35-38 (pre–Evidence Code case
+            holding that trial courts have discretion in this area). Be
+            sure to emphasize any particular facts of your case that
+            would make it inappropriate for the admissibility hearing to
+            take place with the jury present.</sup><a href="#fnref11"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn12"><sup>As with most general rules, there are
+            exceptions to this one. For example, if you have a
+            devastating attack on an expert’s credibility or the
+            validity of her method, launching that attack with the jury
+            present but before the substantive testimony is offered may
+            create a skeptical atmosphere for that testimony.</sup><a
+            href="#fnref12" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn13"><sup><em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BPerry&amp;hl=en&amp;as_sdt=4%2C38&amp;case=11157625546996503150&amp;scilh=0">State
+            v. Perry</a>, 347 Or 110, 116-17 (2009) (discussing the
+            “limits to the utility of motions <em>in limine</em>”: “A
+            general [pretrial] ruling that a certain type of evidence
+            (even scientific evidence) is minimally relevant under OEC
+            401 and OEC 702 does not relieve a party of the obligation
+            to make specific objections to discrete pieces of that
+            evidence at trial, if the dynamics of the trial process
+            reveal other grounds for objection.” (footnotes
+            omitted)).</sup><a href="#fnref13" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn14"><sup>''See <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.815(1)(a), (c)</a>.</sup><a href="#fnref14"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn15"><sup>The Oregon Court of Appeals has held that
+            although the discovery statutes require the disclosure of
+            the name and address of an expert witness, they do not
+            require “the disclosure of the capacity in which a witness
+            will testify nor the content of the testimony”; instead,
+            “[i]t is incumbent upon defense counsel to investigate those
+            matters after the district attorney has provided the
+            information required by statute.” <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BCaulder&amp;hl=en&amp;as_sdt=4%2C38&amp;case=10140729064411467372&amp;scilh=0">State
+            v. Caulder</a>, 75 Or App 457, 460 (1985).</sup><a
+            href="#fnref15" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn16"><sup>''See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;case=4487336251714325364&amp;scilh=0">State
+            v. O’Key</a>, 321 Or 285, 302 (1995) (en banc)
+            (“[S]cientific validity for one purpose is not necessarily
+            scientific validity for other, unrelated purposes.” (quoting
+            <a
+            href="http://scholar.google.com/scholar_case?q=Daubert%2Bv.%2BMerrell%2BDow%2BPharms.&amp;hl=en&amp;as_sdt=3%2C38&amp;case=827109112258472814&amp;scilh=0">Daubert
+            v. Merrell Dow Pharms.</a>, 509 US 579 (1993)) (alteration
+            in original)).</sup><a href="#fnref16" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn17"><sup>Oregon appellate courts have not
+            addressed the specific procedural questions considered here,
+            such as: the sufficiency of a “global” motion directed
+            generally to all scientific evidence that the State may
+            offer; or whether the state, after losing a pretrial
+            admissibility hearing, is entitled to another opportunity to
+            lay a foundation either at a second pretrial hearing or at
+            trial. There is a good argument that a “global” motion
+            should be sufficient, and that the state should only get one
+            chance to lay its foundation. The statutes and case law make
+            it clear that a defendant should have the right to have
+            scientific evidence admissibility issues determined before
+            trial. In light of the state’s obligation to provide
+            pretrial discovery and its burden to demonstrate the
+            validity of any scientific evidence it wants to offer, the
+            defendant should have the right to litigate this issue once,
+            before trial, based on whatever evidence the state chooses
+            to put forth at the time of the hearing.</sup><a
+            href="#fnref17" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn18"><sup><em>See <a
+            href="http://scholar.google.com/scholar_case?q=state%2Bv.%2Bperry&amp;hl=en&amp;as_sdt=4%2C38&amp;case=11157625546996503150&amp;scilh=0">State
+            v. Perry</a>, 347 Or 110, 122 (2009) (“In general, we agree
+            with the premise of the state’s argument: In multifactor
+            foundation cases like the present one, for example, the
+            trial court reasonably might assume that some factors are
+            not in dispute if no one mentioned them.”);</em>id. ''at 123
+            n 14 (“[W]here a trial court has ruled that certain evidence
+            is admissible as ‘scientific evidence,’ a party ordinarily
+            may not predicate a claim of reversible error on the court’s
+            failure to address one or more criteria that the party did
+            not argue.”).</sup><a href="#fnref18" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn19"><sup>As discussed in Chapter 1, the importance
+            of such consultation has constitutional implications that
+            should be raised whenever you are litigating issues, such as
+            timing or confidentiality, that bear on your use of a
+            consulting expert.</sup><a href="#fnref19"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn20"><sup>Remember that a specific order is
+            required if you want to demand production of subpoenaed
+            materials before the trial or hearing at which those
+            materials may be introduced. ''See <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.580(2)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state%2Bv.%2Bcartwright&amp;hl=en&amp;as_sdt=4%2C38&amp;case=7394397540061486567&amp;scilh=0">State
+            v. Cartwright</a>, 336 Or 408, 414-16 (2004).</sup><a
+            href="#fnref20" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn21"><sup>''See <a
+            href="http://www.oregonlaws.org/ors/40.030">OEC 104(1)</a>;
+            <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;case=4487336251714325364&amp;scilh=0">O’Key</a>,
+            321 Or at 303 n 23.</sup><a href="#fnref21"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn22"><sup><em>See, e.g.</em>, <em>O’Key</em>, 321
+            Or at 309 n 35 (listing various types of documents that
+            trial courts may consider); <em>id.</em>at 308 n 34
+            (discussing the “scientific publications and reports of
+            research” introduced in the trial court proceeding).</sup><a
+            href="#fnref22" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn23"><sup><em>See id.</em>at 309 n 35; ''see also
+            <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BBranch&amp;hl=en&amp;as_sdt=4%2C38&amp;case=15362706364615377068&amp;scilh=0">State
+            v. Branch</a>, 243 Or App 309, 323 (2011) (noting that in
+            this context, “a court may rely on sources of relevant
+            information that are essentially nonadjudicative and take
+            judicial notice of the legislative facts necessary to
+            determine whether the proffered scientific evidence is
+            admissible”).</sup><a href="#fnref23" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn24"><sup>''See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;case=4487336251714325364&amp;scilh=0">O’Key</a>,
+            321 Or at 312-14.</sup><a href="#fnref24"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn25"><sup><em>Id.</em>at 307 n 29.</sup><a
+            href="#fnref25" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn26"><sup><em>See, e.g.</em>, <em>id.</em>at 309 n
+            35 (including affidavits in the list of materials a trial
+            court may consider at an admissibility hearing). Federal
+            courts have generally concluded that the confrontation
+            clause in the federal Sixth Amendment does not apply at pre-
+            trial hearings, <em>see, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=United%2BStates%2Bv.%2BHernandez%2B778&amp;hl=en&amp;as_sdt=3%2C38&amp;as_ylo=2008&amp;case=12967271380885242286&amp;scilh=0">United
+            States v. Hernandez</a>, 778 F Supp 2d 1211, 1224-26 (D NM
+            2011) (surveying federal case law), but the United States
+            Supreme Court has not addressed the issue. The Oregon
+            Supreme Court has held that the corresponding right under
+            Article I, section 11 of the Oregon constitution applies in
+            at least some pretrial contexts. ''See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BKitzman&amp;hl=en&amp;as_sdt=4%2C38&amp;case=1738248540239676021&amp;scilh=0">State
+            v. Kitzman</a>, 323 Or 589, 602-06 (1996). Accordingly, if
+            you want to object to the admissibility of an affidavit or
+            other non-live testimony, you may want to invoke both
+            constitutional provisions.</sup><a href="#fnref26"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn27"><sup><em>See O’Key</em>, 321 Or at 301 n 18
+            (“A trial court, acting as a gatekeeper, does not sit as a
+            trier of fact to determine which side has presented the more
+            credible (or more persuasive) expert or scientific
+            evidence.”).</sup><a href="#fnref27" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn28"><sup><em>See infra</em>Chapter 7, Part
+            IV.</sup><a href="#fnref28" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

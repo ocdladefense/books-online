@@ -37,7 +37,7 @@ import ss5b from "./data/ss/ss-5b.html";
 import ss5c from "./data/ss/ss-5c.html";
 import ss6 from "./data/ss/ss-6.html";
 import ss7 from "./data/ss/ss-7.html";
-import ss8 from "./data/ss/ss-8.html";
+//import ss8 from "./data/ss/ss-8.html";
 import ss9 from "./data/ss/ss-9.html";
 import ss10 from "./data/ss/ss-10.html";
 
@@ -165,10 +165,27 @@ import dsc18 from "./data/dsc/dsc-18.html";
 import dsc19 from "./data/dsc/dsc-19.html";
 import dscBibliography from "./data/dsc/dsc-bibliography.html";
 
+import semIntroduction from "./data/sem/sem-introduction.html";
+import sem1 from "./data/sem/sem-1.html";
+import sem2 from "./data/sem/sem-2.html";
+import sem3 from "./data/sem/sem-3.html";
+import sem4 from "./data/sem/sem-4.html";
+import sem5 from "./data/sem/sem-5.html";
+import sem6 from "./data/sem/sem-6.html";
+import sem7 from "./data/sem/sem-7.html";
+
 export { BonMock };
 
 class BonMock extends HttpMock {
   imports = {
+    "/sem/introduction": semIntroduction,
+    "/sem/1": sem1,
+    "/sem/2": sem2,
+    "/sem/3": sem3,
+    "/sem/4": sem4,
+    "/sem/5": sem5,
+    "/sem/6": sem6,
+    "/sem/7": sem7,
     "/fsm/foreword": fsmForeword,
     "/fsm/outline": fsmOutline,
     "/fsm/1": fsm1,
@@ -203,7 +220,7 @@ class BonMock extends HttpMock {
     "/ss/5c": ss5c,
     "/ss/6": ss6,
     "/ss/7": ss7,
-    "/ss/8": ss8,
+    //"/ss/8": ss8,
     "/ss/9": ss9,
     "/ss/10": ss10,
     "/mhcd/1": mhcd1,
