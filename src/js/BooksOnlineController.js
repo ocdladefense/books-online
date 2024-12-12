@@ -14,6 +14,7 @@ import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
+import Url from "@ocdla/lib-http/Url";
 
 /**
  * Controller for the Books Online application.
@@ -82,13 +83,27 @@ export default class BooksOnlineController {
 
     // Build the table of contents.
     const tocReady = indexReady.then(() => {
-      // Create a table of contents from the XML loaded.
-      const index = TableOfContents.fromXml(
-        this.#index,
-        "part",
-        "chapter",
-        "appendix"
-      );
+      // Get the book from the URL.
+      const book = this.getBook();
+
+      // Filter the table of contents for the current book.
+      let index = null;
+      if (!book) {
+        index = TableOfContents.fromXml(
+          this.#index,
+          "book"
+        );
+      }
+      else {
+        const filteredXml = this.#index.querySelector(`book[shortName="${book}"]`);
+        index = TableOfContents.fromXml(
+          filteredXml,
+          "part",
+          "chapter",
+          "appendix"
+        );
+      }
+        
 
       // Create a root
       const tocContent = View.createRoot(document.querySelector("#toc"));
@@ -129,6 +144,7 @@ export default class BooksOnlineController {
         document.querySelector("#toc-sidebar"),
         this.changeChapter
       );
+      
 
       const newSelectedChapter = document.getElementById("fsm-1");
       if (newSelectedChapter) {
@@ -337,24 +353,34 @@ export default class BooksOnlineController {
    * @return {void}
    */
   updateBreadcrumbs(id) {
-    const unit = this.#index.querySelector(`#${id}`);
-    const unitName = unit.getAttribute("name");
-    const unitHref = id.replaceAll("-", "/");
+    let breadCrumbs = [];
+    const unit = this.#index.querySelector(`#${id}`) || this.#index.querySelector(`book[shortName='${id}']`);
 
+    if (id.indexOf("-") > -1) {
+      // This is a chapter in a book
+      const unitName = unit.getAttribute("name");
+      const unitHref = id.replaceAll("-", "/");
+
+      breadCrumbs.push({
+        href: unitHref,
+        label: unitName,
+      })
+    }
+
+    const books = this.getBookList();
+    console.log(books);
+    
     const bookNode = unit.closest("book");
     const bookName = bookNode.getAttribute("name");
     const bookHref = bookNode.getAttribute("shortName");
 
-    const breadCrumbs = [
-      {
-        href: bookHref,
-        label: bookName,
-      },
-      {
-        href: unitHref,
-        label: unitName,
-      },
-    ];
+
+    breadCrumbs.unshift({
+      href: '/' + bookHref,
+      label: bookName,
+      entries: books
+    })
+
     const breadcrumbRoot = View.createRoot(
       document.getElementById("breadcrumbs")
     );
@@ -378,6 +404,10 @@ export default class BooksOnlineController {
       // import node function
 
       let sections = doc2.querySelectorAll("header, section");
+
+      // Some entries have 2 or less sections, such as introductions, forewords, etc
+      if (sections.length <= 2)
+        sections = doc2.querySelectorAll("body");
 
       document.querySelector("#body").replaceChildren(...sections);
     });
@@ -473,4 +503,28 @@ export default class BooksOnlineController {
       this.getNodeChildrenEventHandler(e, elem, fn)
     );
   }
+
+  getBook() {
+    let url = new Url(window.location.href);
+    let id = url.getPath();
+    return id.split("/")[1];
+  }
+  getChapter() {
+    let url = new Url(window.location.href);
+    let id = url.getPath();
+    return id.split("/")[2];
+  }
+
+  getBookList() {
+    const books = TableOfContents.fromXml(
+      this.#index,
+      "book"
+    ).getEntries();
+
+    return books.map(b => ({
+      label: b.getName(),
+      href: b.getHref()
+    }));
+  }
+  
 }

@@ -19,8 +19,8 @@ export default class TableOfContents {
     const entries = items.map((item) => {
       return new Entry(
         item.getAttribute("name"),
-        item.getAttribute("label"),
-        item.id
+        item.getAttribute("label") || item.getAttribute("name"),
+        item.id || item.getAttribute("shortName")
       );
     });
     return new TableOfContents(entries);
