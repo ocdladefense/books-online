@@ -86,55 +86,8 @@ export default class BooksOnlineController {
       // Get the book from the URL.
       const book = this.getBook();
 
-      // Filter the table of contents for the current book.
-      let index = null;
-      if (!book) {
-        index = TableOfContents.fromXml(
-          this.#index,
-          "book"
-        );
-      }
-      else {
-        const filteredXml = this.#index.querySelector(`book[shortName="${book}"]`);
-        index = TableOfContents.fromXml(
-          filteredXml,
-          "part",
-          "chapter",
-          "appendix"
-        );
-      }
-        
-
-      // Create a root
-      const tocContent = View.createRoot(document.querySelector("#toc"));
-
-      // Get our entries in our toc
-      const tocEntries = index.getEntries();
-
-      // Render the toc into the toc div
-      // We need to return here so that we actually wait for the toc to be rendered
-      return tocContent.render(
-        <Sidebar sticky={true}>
-          <ul id="toc-sidebar" class="list-none">
-            {tocEntries.map((entry) => {
-              return (
-                <Sidebar_Item_Left
-                  active={false}
-                  id={entry.getId()}
-                  href={entry.getHref()}
-                  heading={entry.isChapter() ? entry.getHeading() : null}
-                  label={entry.getName()}
-                >
-                  <span class="font-bold">
-                    {entry.isChapter() ? entry.getHeading() : null}
-                  </span>
-                  <div>{entry.getName()}</div>
-                </Sidebar_Item_Left>
-              );
-            })}
-          </ul>
-        </Sidebar>
-      );
+      return this.changeBook(book);
+    
     });
 
     tocReady.then(() => {
@@ -144,7 +97,9 @@ export default class BooksOnlineController {
         document.querySelector("#toc-sidebar"),
         this.changeChapter
       );
+
       
+     
 
       const newSelectedChapter = document.getElementById("fsm-1");
       if (newSelectedChapter) {
@@ -153,11 +108,13 @@ export default class BooksOnlineController {
         newSelectedChapter.classList.add("bg-black");
       }
       // Render the chapter.
-      // const book = tocItem.dataset.book;
-      // const chapter = tocItem.dataset.chapter;
-      this.renderContent("fsm", "1");
+      const book = this.getBook() || 'fsm';
+      const chapter = this.getChapter() || '1';
+      this.renderContent(book, chapter);
+      this.updateBreadcrumbs(`${book}-${chapter}`);
+      
 
-      this.updateBreadcrumbs("fsm-1");
+      
     });
 
     // // Full-screen modal.
@@ -166,8 +123,11 @@ export default class BooksOnlineController {
 
     // customElements.define("word-count", WordCount, { extends: "p" });
 
+    
+
     this.renderContent = this.renderContent.bind(this);
     this.changeChapter = this.changeChapter.bind(this);
+    this.changeBook = this.changeBook.bind(this);
   }
 
   /**
@@ -186,6 +146,12 @@ export default class BooksOnlineController {
 
     e.preventDefault();
     e.stopPropagation();
+
+    if (e.type === "change" && e.target.id === "breadcrumbs-dropdown") {
+      console.log(e);
+      this.changeBook(e);
+
+    }
 
     if (e.type === "hashchange") {
       let newId = e.newURL.split("#")[1];
@@ -256,6 +222,67 @@ export default class BooksOnlineController {
     return false;
   }
 
+  changeBook(container) {
+    let book = container;
+    if (container instanceof Element) 
+      book = container.querySelector("#breadcrumbs-dropdown").value;
+    
+    if (book[0] == "/") 
+      book = book.substring(1);
+    
+    
+    // Filter the table of contents for the current book.
+    let index = null;
+    if (!book) {
+      index = TableOfContents.fromXml(
+        this.#index,
+        "book"
+      );
+    }
+    else {
+      const filteredXml = this.#index.querySelector(`book[shortName="${book}"]`);
+      index = TableOfContents.fromXml(
+        filteredXml,
+        "part",
+        "chapter",
+        "appendix"
+      );
+    }
+    
+
+    // Create a root
+    const tocContent = View.createRoot(document.querySelector("#toc"));
+
+    // Get our entries in our toc
+    const tocEntries = index.getEntries();
+
+    console.log("HERE", tocEntries);
+
+    // Render the toc into the toc div
+    // We need to return here so that we actually wait for the toc to be rendered
+    return tocContent.render(
+      <Sidebar sticky={true}>
+        <ul id="toc-sidebar" class="list-none">
+          {tocEntries.map((entry) => {
+            return (
+              <Sidebar_Item_Left
+                active={false}
+                id={entry.getId()}
+                href={entry.getHref()}
+                heading={entry.isChapter() ? entry.getHeading() : null}
+                label={entry.getName()}
+              >
+                <span class="font-bold">
+                  {entry.isChapter() ? entry.getHeading() : null}
+                </span>
+                <div>{entry.getName()}</div>
+              </Sidebar_Item_Left>
+            );
+          })}
+        </ul>
+      </Sidebar>
+    );
+  }
 
 
   /**
@@ -303,6 +330,8 @@ export default class BooksOnlineController {
     const id = container.children[0].id;
     const book = id.split("-")[0];
     const unit = id.split("-")[1];
+
+    if (!unit) this.changeBook(book);
 
     this.updateBreadcrumbs(id);
 
@@ -381,10 +410,18 @@ export default class BooksOnlineController {
       entries: books
     })
 
-    const breadcrumbRoot = View.createRoot(
-      document.getElementById("breadcrumbs")
-    );
-    breadcrumbRoot.render(<Breadcrumbs crumbs={breadCrumbs} />);
+
+      const breadcrumbRoot = View.createRoot(
+        document.getElementById("breadcrumbs")
+      );
+      breadcrumbRoot.render(<Breadcrumbs crumbs={breadCrumbs} />);
+
+      this.delegate(
+        "change",
+        document.querySelector("#breadcrumbs"),
+        this.changeBook
+      );
+
   }
 
   /**
