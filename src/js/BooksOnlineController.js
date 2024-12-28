@@ -15,6 +15,7 @@ import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 import Url from "@ocdla/lib-http/Url";
+import Hammer from "hammerjs/hammer.js";
 
 /**
  * Controller for the Books Online application.
@@ -56,7 +57,7 @@ export default class BooksOnlineController {
             Top
           </button>
           {/* <div class='flex flex-col lg:flex-row'> */}
-          <div class="lg:grid lg:grid-cols-6">
+          <div class="grid lg:grid-cols-6" id="touch-area">
             <div id="toc"></div>
             <div
               id="document"
@@ -98,7 +99,60 @@ export default class BooksOnlineController {
         this.changeChapter
       );
 
+
+      // This uses the Hammer.js library to detect panning on the page.
+      const toc = document.querySelector("#toc");
+      const tocContent = toc.firstChild;
+      const bookContent = document.querySelector("#document");
+      const outline = document.querySelector("#outline");
       
+      const touchArea = document.querySelector("#touch-area");
+      const hammer = new Hammer(touchArea);
+
+      // listen to events...
+      hammer.on("panright panleft", (ev) => {
+          const delta = ev.deltaX;
+          const outlineContent = outline.firstChild || outline;
+          
+        console.log(delta);
+        // Update the TOC's position based on the delta
+
+        if (delta !== 0) {
+          requestAnimationFrame(() => {
+            toc.style.transform = `translateX(${Math.min(delta, 110)}px)`;
+            bookContent.style.transform = `translateX(${Math.min(delta, 110)}px)`;
+          });
+        }
+        
+
+        outline.style.transform = 'translateX(100%)';
+        outlineContent.classList.add('show');
+        outlineContent.classList.remove('hidden');
+        tocContent.classList.add('show');
+        tocContent.classList.remove('hidden');
+
+
+        touchArea.classList.add('grid-cols-2');
+
+        // If the pan event ends, check if the TOC should be fully shown or hidden
+        if (ev.isFinal) {
+          if (delta > 50) {
+            // Fully show the TOC
+            toc.style.transform = 'translateX(0)';
+            bookContent.style.transform = 'translateX(0)';
+          // } else if (delta < -50) {
+          //   // Fully show the Outline
+          } else {
+            // Hide the TOC
+            touchArea.classList.remove('grid-cols-2');
+            toc.classList.remove('show');
+            tocContent.classList.add('hidden');
+            toc.style.transform = 'translateX(-100%)';
+            bookContent.style.transform = 'translateX(0%)';
+          }
+        }
+      });
+
      
 
       const newSelectedChapter = document.getElementById("fsm-1");
@@ -122,6 +176,7 @@ export default class BooksOnlineController {
     // window.modal = this.modal;
 
     // customElements.define("word-count", WordCount, { extends: "p" });
+
 
     
 
