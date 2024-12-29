@@ -12,7 +12,7 @@ export function revealTOC(ev) {
     // Revealing the TOC
     if (delta > 0) {
         requestAnimationFrame(() => {
-            toc.style.transform = `translateX(${Math.min(delta, 210)}px)`;
+            toc.style.transform = `translateX(${Math.min(delta, toc.offsetWidth + 10)}px)`;
         });
         hideOutline();
         tocContent.classList.remove('hidden');
@@ -20,7 +20,7 @@ export function revealTOC(ev) {
     // Revealing the Outline
     else if (delta < 0) {
         requestAnimationFrame(() => {
-            outline.style.transform = `translateX(${Math.max(delta, -210)}px)`;
+            outline.style.transform = `translateX(${Math.max(delta, (outline.offsetWidth + 10) * -1)}px)`;
         });
         hideTOC();
         outlineContent.classList.remove('hidden');
@@ -34,13 +34,13 @@ export function revealTOC(ev) {
         if (delta > 50) {
             // Fully show the TOC
             requestAnimationFrame(() => {
-            toc.style.transform = `translateX(200px)`;
+            toc.style.transform = `translateX(${toc.offsetWidth}px)`;
             });
         }
         else if (delta < -50) {
             // Fully show the Outline
             requestAnimationFrame(() => {
-                outline.style.transform = `translateX(-200px)`;
+                outline.style.transform = `translateX(-${outline.offsetWidth}px)`;
             })
         } else {
             hideOutline();
