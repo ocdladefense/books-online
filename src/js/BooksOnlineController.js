@@ -16,6 +16,7 @@ import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 import Url from "@ocdla/lib-http/Url";
 import Hammer from "hammerjs/hammer.js";
+import { revealTOC } from "/dev_modules/@ocdla/hammer-wrapper/HammerWrapper.js";
 
 /**
  * Controller for the Books Online application.
@@ -57,8 +58,8 @@ export default class BooksOnlineController {
             Top
           </button>
           {/* <div class='flex flex-col lg:flex-row'> */}
-          <div class="grid lg:grid-cols-6" id="touch-area">
-            <div id="toc"></div>
+          <div class="lg:grid lg:grid-cols-6" id="touch-area">
+            <div id="toc" class="fixed top-0 right-[100%] z-10 md:static md:top-auto md:right-auto bg-white"></div>
             <div
               id="document"
               class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
@@ -68,7 +69,7 @@ export default class BooksOnlineController {
                 class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased overflow-wrap break-words"
               ></div>
             </div>
-            <div id="outline"></div>
+            <div id="outline" class="fixed top-0 left-[100%] z-10 md:static md:top-auto md:left-auto bg-white"></div>
           </div>
         </div>
         <Footer
@@ -101,57 +102,13 @@ export default class BooksOnlineController {
 
 
       // This uses the Hammer.js library to detect panning on the page.
-      const toc = document.querySelector("#toc");
-      const tocContent = toc.firstChild;
-      const bookContent = document.querySelector("#document");
-      const outline = document.querySelector("#outline");
       
       const touchArea = document.querySelector("#touch-area");
-      const hammer = new Hammer(touchArea);
-
-      // listen to events...
-      hammer.on("panright panleft", (ev) => {
-          const delta = ev.deltaX;
-          const outlineContent = outline.firstChild || outline;
-          
-        console.log(delta);
-        // Update the TOC's position based on the delta
-
-        if (delta !== 0) {
-          requestAnimationFrame(() => {
-            toc.style.transform = `translateX(${Math.min(delta, 110)}px)`;
-            bookContent.style.transform = `translateX(${Math.min(delta, 110)}px)`;
-          });
-        }
-        
-
-        outline.style.transform = 'translateX(100%)';
-        outlineContent.classList.add('show');
-        outlineContent.classList.remove('hidden');
-        tocContent.classList.add('show');
-        tocContent.classList.remove('hidden');
-
-
-        touchArea.classList.add('grid-cols-2');
-
-        // If the pan event ends, check if the TOC should be fully shown or hidden
-        if (ev.isFinal) {
-          if (delta > 50) {
-            // Fully show the TOC
-            toc.style.transform = 'translateX(0)';
-            bookContent.style.transform = 'translateX(0)';
-          // } else if (delta < -50) {
-          //   // Fully show the Outline
-          } else {
-            // Hide the TOC
-            touchArea.classList.remove('grid-cols-2');
-            toc.classList.remove('show');
-            tocContent.classList.add('hidden');
-            toc.style.transform = 'translateX(-100%)';
-            bookContent.style.transform = 'translateX(0%)';
-          }
-        }
+      const hammer = new Hammer(touchArea, {
+        inputClass: Hammer.TouchInput
       });
+      // listen to events...
+      hammer.on("panright panleft", (ev) => revealTOC(ev));
 
      
 

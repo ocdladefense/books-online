@@ -8,7 +8,6 @@ import "/themes/books-online/css/toc.css";
 import "/themes/books-online/css/modal.css";
 import "/themes/books-online/css/tools.css";
 import "/themes/books-online/css/desktop.css";
-import "/themes/books-online/css/mobile.css";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 
 
