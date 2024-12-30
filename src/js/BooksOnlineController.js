@@ -16,7 +16,7 @@ import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 import Url from "@ocdla/lib-http/Url";
 import Hammer from "hammerjs/hammer.js";
-import { revealTOC } from "/dev_modules/@ocdla/hammer-wrapper/HammerWrapper.js";
+import { panHandler } from "/dev_modules/@ocdla/hammer-wrapper/HammerWrapper.js";
 
 /**
  * Controller for the Books Online application.
@@ -107,8 +107,10 @@ export default class BooksOnlineController {
       const hammer = new Hammer(touchArea, {
         inputClass: Hammer.TouchInput
       });
+      hammer.get("pan").set({ threshold: 20 });
+
       // listen to events...
-      hammer.on("panright panleft", (ev) => revealTOC(ev));
+      hammer.on("panright panleft panend pancancel", (ev) => panHandler(ev));
 
      
 
@@ -394,6 +396,9 @@ export default class BooksOnlineController {
    * @return {void}
    */
   updateBreadcrumbs(id) {
+    // Sanitize fragments from the id
+    id = id.split("#")[0];
+
     let breadCrumbs = [];
     const unit = this.#index.querySelector(`#${id}`) || this.#index.querySelector(`book[shortName='${id}']`);
 
@@ -444,7 +449,12 @@ export default class BooksOnlineController {
    * @return {void}
    */
   renderContent(book, unit) {
+    // Sanitize fragments from the unit
+    const fragment = unit.split("#")[1];
+    unit = unit.split("#")[0];
+
     // Display the content of the chapter.
+    console.log(book, unit);
     let chapterReady = this.fetchChapter(book, unit).then((html) => {
 
       const parser = new DOMParser();
@@ -459,6 +469,8 @@ export default class BooksOnlineController {
         sections = doc2.querySelectorAll("body");
 
       document.querySelector("#body").replaceChildren(...sections);
+
+      
     });
 
     // Display the outline of the chapter once the content has been rendered.
@@ -518,6 +530,15 @@ export default class BooksOnlineController {
 
       // Add the callback function to the intersection observer.
       outline.addIntersectionObserver(handleIntersection);
+
+
+    });
+
+    outlineReady.then(() => {
+      // TODO: Current behavior scrolls to the top after briefly visiting the fragment.
+      // Scroll to the fragment if it exists
+      if (fragment && document.getElementById(fragment)) 
+        document.getElementById(fragment).scrollIntoView();
     });
 
     // Future feature: Setting up WebC-ORS and WebC-OAR components here.

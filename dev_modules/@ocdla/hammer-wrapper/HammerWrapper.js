@@ -1,6 +1,6 @@
 
 
-export function revealTOC(ev) {
+export function panHandler(ev) {
     const toc = document.querySelector("#toc");
     const tocContent = toc.firstChild;
 
@@ -25,32 +25,35 @@ export function revealTOC(ev) {
         hideTOC();
         outlineContent.classList.remove('hidden');
     }
+
+    console.log(delta);
     
 
     // If the pan event ends, check if the TOC should be fully shown or hidden
     if (ev.isFinal || ev.isCancelled) {
+        console.log("Pan ended");
+        if (Math.abs(delta) < 50) 
+            hideAll();
 
-        // If we panned more than 50px, show the full TOC
+        // If we panned more than 50px, show the full menu
         if (delta > 50) {
             // Fully show the TOC
             requestAnimationFrame(() => {
             toc.style.transform = `translateX(${toc.offsetWidth}px)`;
             });
         }
-        else if (delta < -50) {
+        if (delta < -50) {
             // Fully show the Outline
             requestAnimationFrame(() => {
                 outline.style.transform = `translateX(-${outline.offsetWidth}px)`;
             })
-        } else {
-            hideOutline();
-            hideTOC();
         }
     }
 
 }
 
 export function hideTOC() {
+    console.log("Hide TOC");
     const toc = document.querySelector("#toc");
     const tocContent = toc.firstChild;
 
@@ -61,6 +64,7 @@ export function hideTOC() {
 }
 
 export function hideOutline() {
+    console.log("Hide Outline");
     const outline = document.querySelector("#outline");
     const outlineContent = outline.firstChild;
 
@@ -71,6 +75,7 @@ export function hideOutline() {
 }
 
 export function hideAll() {
+    console.log("Hide all");
     hideOutline();
     hideTOC();
 }
