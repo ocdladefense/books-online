@@ -26,12 +26,9 @@ export function panHandler(ev) {
         outlineContent.classList.remove('hidden');
     }
 
-    console.log(delta);
-    
 
     // If the pan event ends, check if the TOC should be fully shown or hidden
     if (ev.isFinal || ev.isCancelled) {
-        console.log("Pan ended");
         if (Math.abs(delta) < 50) 
             hideAll();
 
@@ -53,7 +50,6 @@ export function panHandler(ev) {
 }
 
 export function hideTOC() {
-    console.log("Hide TOC");
     const toc = document.querySelector("#toc");
     const tocContent = toc.firstChild;
 
@@ -64,7 +60,6 @@ export function hideTOC() {
 }
 
 export function hideOutline() {
-    console.log("Hide Outline");
     const outline = document.querySelector("#outline");
     const outlineContent = outline.firstChild;
 
@@ -75,7 +70,6 @@ export function hideOutline() {
 }
 
 export function hideAll() {
-    console.log("Hide all");
     hideOutline();
     hideTOC();
 }

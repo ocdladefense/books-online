@@ -110,7 +110,7 @@ export default class BooksOnlineController {
       hammer.get("pan").set({ threshold: 20 });
 
       // listen to events...
-      hammer.on("panright panleft panend pancancel", (ev) => panHandler(ev));
+      hammer.on("panright panleft panend pancancel doubletap", (ev) => panHandler(ev));
 
      
 
