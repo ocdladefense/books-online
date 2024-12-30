@@ -53,7 +53,7 @@ export default class BooksOnlineController {
             onclick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            class="fixed bottom-0 right-0 z-10 rounded-lg p-4 bg-black text-white"
+            class="fixed bottom-0 right-0 z-20 rounded-lg p-4 bg-black text-white"
           >
             Top
           </button>
@@ -500,14 +500,16 @@ export default class BooksOnlineController {
         // We only want the first entry. It's possible to scroll through multiple headings at once.
         const entry = intersectingEntries[0];
         const id = entry.target.id;
-        const outlineListItem = document.getElementById(`${id}-outline-item`);
+        const outlineListItem = document.querySelector(`[id='${id}-outline-item']`);
 
         // When we see a new item, we want to make sure the outline sidebar is scrolling to it.
-        outlineListItem.scrollIntoView({
-          behavior: "instant",
-          block: "nearest",
-          inline: "center",
-        });
+        if (outlineListItem != null) {
+          outlineListItem.scrollIntoView({
+            behavior: "instant",
+            block: "nearest",
+            inline: "center",
+          });
+        }
 
         // Add the active class styling to the current item.
         outlineListItem.classList.add("bg-black");
