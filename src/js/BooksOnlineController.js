@@ -159,16 +159,13 @@ export default class BooksOnlineController {
     e.stopPropagation();
 
     if (e.type === "change" && e.target.id === "breadcrumbs-dropdown") {
-      console.log(e);
       this.changeBook(e);
-
     }
 
     if (e.type === "hashchange") {
       let newId = e.newURL.split("#")[1];
       let newElem = document.getElementById(newId);
 
-      console.log("Hashchange scroll into view");
       newElem.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -189,7 +186,6 @@ export default class BooksOnlineController {
     // e.stopPropagation();
 
     if ("view-section" == action) {
-      console.log("view-section call to scroll into view");
       let marker = document.querySelector("#modal #section-" + s);
       marker.scrollIntoView({
         behavior: "smooth",
@@ -246,6 +242,7 @@ export default class BooksOnlineController {
     
     // Filter the table of contents for the current book.
     let index = null;
+    let entryChapter = null;
     if (!book) {
       index = TableOfContents.fromXml(
         this.#index,
@@ -253,7 +250,9 @@ export default class BooksOnlineController {
       );
     }
     else {
+      // This gets only the chapters in the book selected
       const filteredXml = this.#index.querySelector(`book[shortName="${book}"]`);
+      entryChapter = filteredXml.getAttribute("entry");
       index = TableOfContents.fromXml(
         filteredXml,
         "part",
@@ -269,7 +268,7 @@ export default class BooksOnlineController {
     // Get our entries in our toc
     const tocEntries = index.getEntries();
 
-    console.log("HERE", tocEntries);
+
 
     // Render the toc into the toc div
     // We need to return here so that we actually wait for the toc to be rendered
@@ -416,7 +415,6 @@ export default class BooksOnlineController {
     }
 
     const books = this.getBookList();
-    console.log(books);
     
     const bookNode = unit.closest("book");
     const bookName = bookNode.getAttribute("name");
@@ -460,7 +458,6 @@ export default class BooksOnlineController {
     
 
     // Display the content of the chapter.
-    console.log(book, unit);
     let chapterReady = this.fetchChapter(book, unit).then((html) => {
 
       const parser = new DOMParser();
@@ -522,7 +519,6 @@ export default class BooksOnlineController {
 
         //When we see a new item, we want to make sure the outline sidebar is scrolling to it.
         if (outlineListItem != null) {
-          console.log("Outline call to scrollIntoView");
           outlineListItem.scrollIntoView({
             behavior: "instant",
             block: "nearest",
@@ -548,7 +544,6 @@ export default class BooksOnlineController {
 
     outlineReady.then(() => {
       // Scroll to the fragment if it exists
-      console.log("Our call to scrollIntoView");
       if (fragment && document.querySelector(`[id='${fragment}`)) 
         requestAnimationFrame(() => {
           document.querySelector(`[id='${fragment}`).scrollIntoView();
