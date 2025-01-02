@@ -168,6 +168,7 @@ export default class BooksOnlineController {
       let newId = e.newURL.split("#")[1];
       let newElem = document.getElementById(newId);
 
+      console.log("Hashchange scroll into view");
       newElem.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -188,6 +189,7 @@ export default class BooksOnlineController {
     // e.stopPropagation();
 
     if ("view-section" == action) {
+      console.log("view-section call to scroll into view");
       let marker = document.querySelector("#modal #section-" + s);
       marker.scrollIntoView({
         behavior: "smooth",
@@ -384,6 +386,9 @@ export default class BooksOnlineController {
 
     this.renderContent(book, unit);
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const newRoute = `/${book}/${unit || ""}`;
+    this.updateHistory(newRoute);
   }
 
   /**
@@ -515,18 +520,24 @@ export default class BooksOnlineController {
         const id = entry.target.id;
         const outlineListItem = document.querySelector(`[id='${id}-outline-item']`);
 
-        // When we see a new item, we want to make sure the outline sidebar is scrolling to it.
+        //When we see a new item, we want to make sure the outline sidebar is scrolling to it.
         if (outlineListItem != null) {
+          console.log("Outline call to scrollIntoView");
           outlineListItem.scrollIntoView({
             behavior: "instant",
             block: "nearest",
             inline: "center",
           });
+
+          // Add the active class styling to the current item.
+          outlineListItem.classList.add("bg-black");
+          outlineListItem.classList.add("text-white");
+
+          // Update the address bar for the fragment we are looking at
+          this.updateHistory(`#${id}`);
         }
 
-        // Add the active class styling to the current item.
-        outlineListItem.classList.add("bg-black");
-        outlineListItem.classList.add("text-white");
+        
       };
 
       // Add the callback function to the intersection observer.
@@ -536,10 +547,12 @@ export default class BooksOnlineController {
     });
 
     outlineReady.then(() => {
-      // TODO: Current behavior scrolls to the top after briefly visiting the fragment.
       // Scroll to the fragment if it exists
-      if (fragment && document.getElementById(fragment)) 
-        document.getElementById(fragment).scrollIntoView();
+      console.log("Our call to scrollIntoView");
+      if (fragment && document.querySelector(`[id='${fragment}`)) 
+        requestAnimationFrame(() => {
+          document.querySelector(`[id='${fragment}`).scrollIntoView();
+        });
     });
 
     // Future feature: Setting up WebC-ORS and WebC-OAR components here.
@@ -598,6 +611,11 @@ export default class BooksOnlineController {
       label: b.getName(),
       href: b.getHref()
     }));
+  }
+
+  updateHistory(newRoute) {
+    const history = window.history;
+    history.replaceState({}, '', newRoute);
   }
   
 }
