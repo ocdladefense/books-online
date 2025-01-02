@@ -1,6 +1,11 @@
 
 
 export function panHandler(ev) {
+
+    // Maximum screen width where Hammer.js gestures are enabled
+    const maxWidth = 1023;
+    if (window.innerWidth > maxWidth) return;
+
     const toc = document.querySelector("#toc");
     const tocContent = toc.firstChild;
 
@@ -49,7 +54,7 @@ export function panHandler(ev) {
 
 }
 
-export function hideTOC() {
+function hideTOC() {
     const toc = document.querySelector("#toc");
     const tocContent = toc.firstChild;
 
@@ -59,7 +64,7 @@ export function hideTOC() {
     });
 }
 
-export function hideOutline() {
+function hideOutline() {
     const outline = document.querySelector("#outline");
     const outlineContent = outline.firstChild;
 
@@ -69,7 +74,7 @@ export function hideOutline() {
     });
 }
 
-export function hideAll() {
+function hideAll() {
     hideOutline();
     hideTOC();
 }

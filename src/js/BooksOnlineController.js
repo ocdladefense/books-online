@@ -59,7 +59,7 @@ export default class BooksOnlineController {
           </button>
           {/* <div class='flex flex-col lg:flex-row'> */}
           <div class="lg:grid lg:grid-cols-6" id="touch-area">
-            <div id="toc" class="fixed top-0 right-[100%] z-10 md:static md:top-auto md:right-auto bg-white"></div>
+            <div id="toc" class="fixed top-0 right-[100%] z-10 h-screen shadow-2xl lg:shadow-none lg:h-auto lg:static lg:top-auto lg:right-auto bg-white"></div>
             <div
               id="document"
               class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
@@ -69,7 +69,7 @@ export default class BooksOnlineController {
                 class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased overflow-wrap break-words"
               ></div>
             </div>
-            <div id="outline" class="fixed top-0 left-[100%] z-10 md:static md:top-auto md:left-auto bg-white"></div>
+            <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white"></div>
           </div>
         </div>
         <Footer
@@ -102,14 +102,11 @@ export default class BooksOnlineController {
 
 
       // This uses the Hammer.js library to detect panning on the page.
-      
       const touchArea = document.querySelector("#touch-area");
       const hammer = new Hammer(touchArea, {
         inputClass: Hammer.TouchInput
       });
       hammer.get("pan").set({ threshold: 20 });
-
-      // listen to events...
       hammer.on("panright panleft panend pancancel doubletap", (ev) => panHandler(ev));
 
      
@@ -450,8 +447,12 @@ export default class BooksOnlineController {
    */
   renderContent(book, unit) {
     // Sanitize fragments from the unit
-    const fragment = unit.split("#")[1];
-    unit = unit.split("#")[0];
+    let fragment;
+    if (unit != undefined) {
+      fragment = unit.split("#")[1];
+      unit = unit.split("#")[0];
+    }
+    
 
     // Display the content of the chapter.
     console.log(book, unit);
