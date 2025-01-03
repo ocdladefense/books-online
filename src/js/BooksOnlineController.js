@@ -41,14 +41,15 @@ export default class BooksOnlineController {
         ></div>
         <header class="container mx-auto flex w-full flex-col bg-white lg:h-32 top-of-page">
           <Navbar />
-          <div id="breadcrumbs">
-            <Breadcrumbs items={[]} />
-          </div>
+          
         </header>
 
 
         {/* <Main cols='3' /> */}
         <div class="container mx-auto border-x">
+        <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent">
+            <Breadcrumbs items={[]} />
+          </div>
           <button
             onclick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });

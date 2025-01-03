@@ -24,7 +24,7 @@ export function panHandler(ev) {
     const delta = ev.deltaX + currentOffset;
 
     
-    // Revealing the TOC
+    // Translate the TOC and outline
     if (delta !== 0) {
         requestAnimationFrame(() => {
             toc.style.transform = `translateX(${constrainNumber(delta, 0, toc.offsetWidth + 10)}px)`;
@@ -36,7 +36,7 @@ export function panHandler(ev) {
     }
 
 
-    // If the pan event ends, check if the TOC should be fully shown or hidden
+    // If the pan event ends, check if the TOC or outline should be hidden
     if (ev.isFinal || ev.isCancelled) {
         // If the pan gesture is closing, but isn't opening the other menu.
         const deltaThreshold = 50;
@@ -45,11 +45,13 @@ export function panHandler(ev) {
         const deltaExceedsThreshold = Math.abs(ev.deltaX) > deltaThreshold;
         const isClosingGesture = deltaExceedsThreshold && deltaUnderOffset && menuIsOpen;
 
-        if (Math.abs(delta) < 50 || isClosingGesture) 
+        if (Math.abs(delta) < deltaThreshold || isClosingGesture) 
             hideAll();
 
+
+
         // If we panned more than 50px, show the full menu
-        if (delta > 50 && !isClosingGesture) {
+        if (delta > deltaThreshold && !isClosingGesture) {
             // Fully show the TOC
             requestAnimationFrame(() => {
             toc.style.transform = `translateX(${toc.offsetWidth}px)`;
@@ -57,7 +59,9 @@ export function panHandler(ev) {
             hideOutline();
             currentOffset = toc.offsetWidth;
         }
-        if (delta < -50 && !isClosingGesture) {
+
+
+        if (delta < -deltaThreshold && !isClosingGesture) {
             // Fully show the Outline
             requestAnimationFrame(() => {
                 outline.style.transform = `translateX(-${outline.offsetWidth}px)`;
