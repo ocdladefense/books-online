@@ -111,7 +111,10 @@ We may be able to reduce the programming complexity of any given feature by intr
 ```
 
 
-# Pandoc general notes
+# Pandoc
+OCDLA uses [Pandoc](https://pandoc.org/MANUAL.html) for publishing workflows requiring conversion between HTML and Wikitext formats.
+
+## General notes
 * [Pandoc documentation](https://pandoc.org/MANUAL.html) can be found at: https://pandoc.org/MANUAL.html.
 * By default Pandoc converts from Pandoc markdown to HTML.
 * You can use Pandoc from the command line: <code>echo "# I am a heading" | pandoc</code>.
