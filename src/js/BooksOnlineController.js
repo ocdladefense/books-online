@@ -107,7 +107,7 @@ export default class BooksOnlineController {
         inputClass: Hammer.TouchInput
       });
       hammer.get("pan").set({ threshold: 20 });
-      hammer.on("panright panleft panend pancancel doubletap", (ev) => panHandler(ev));
+      hammer.on("pan doubletap", (ev) => panHandler(ev));
 
      
 
