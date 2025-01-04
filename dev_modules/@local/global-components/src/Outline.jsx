@@ -6,7 +6,7 @@ import Link from './Defaults';
 
 export default function Outline({ children }) {
     return (
-        <aside class='sticky top-0 hidden h-[87.5vh] overflow-y-scroll lg:block'>
+        <aside class='sticky top-0 hidden h-full lg:h-[87.5vh] overflow-y-scroll lg:block'>
             {recursiveRender(children)}
         </aside>
     );

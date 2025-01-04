@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
 import BreadcrumbItem from './BreadcrumbItem';
+import BreadcrumbDropdown from './BreadcrumbDropdown';
 /* eslint-enable */
 
 export default function Breadcrumbs({ crumbs = [] }) {
@@ -12,6 +13,14 @@ export default function Breadcrumbs({ crumbs = [] }) {
                     const seperatorString =
                         i !== crumbs.length - 1 ? ' / ' : ' ';
 
+                    if (crumb.entries)
+                        return (
+                            <>
+                                <BreadcrumbDropdown {...crumb} />
+                                {seperatorString}
+                            </>
+                        );
+                    console.log(crumb);
                     return (
                         <>
                             <BreadcrumbItem {...crumb} />
