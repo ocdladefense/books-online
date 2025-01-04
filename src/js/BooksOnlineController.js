@@ -67,7 +67,7 @@ export default class BooksOnlineController {
             >
               <div
                 id="body"
-                class="flex flex-col gap-4 leading-10 tracking-widest subpixel-antialiased overflow-wrap break-words"
+                class="flex flex-col gap-4 subpixel-antialiased overflow-wrap break-words"
               ></div>
             </div>
             <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white"></div>
