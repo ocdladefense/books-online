@@ -1,4 +1,5 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
+// The new home of everything View related.
 /* eslint-disable no-unused-vars */
 import { vNode } from "@ocdla/view";
 import Navbar from "@ocdla/global-components/src/Navbar";

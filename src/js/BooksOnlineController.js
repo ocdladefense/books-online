@@ -15,6 +15,8 @@ import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
 import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 import Url from "@ocdla/lib-http/Url";
+
+// Is this the best syntax for these imports?
 import Hammer from "hammerjs/hammer.js";
 import { panHandler } from "/dev_modules/@ocdla/hammer-wrapper/HammerWrapper.js";
 
@@ -27,7 +29,7 @@ export default class BooksOnlineController {
   #index;
 
   constructor() {
-    window.addEventListener("hashchange", this);
+    
 
     // Create the base view using jsx.
     const body = document.querySelector("body");
@@ -80,10 +82,23 @@ export default class BooksOnlineController {
         />
       </>
     );
+
+
+    // This uses the Hammer.js library to detect panning on the page.
+    const touchArea = document.querySelector("#touch-area");
+    const hammer = new Hammer(touchArea, {
+      inputClass: Hammer.TouchInput
+    });
+    hammer.get("pan").set({ threshold: 20 });
+    hammer.on("pan doubletap", (ev) => panHandler(ev));
+
+
     const indexReady = this.getIndex().then((xml) => {
       this.#index = xml;
     });
 
+
+    // I think you're doing at least two things here; probably three.
     // Build the table of contents.
     const tocReady = indexReady.then(() => {
       // Get the book from the URL.
@@ -93,53 +108,34 @@ export default class BooksOnlineController {
     
     });
 
+
+
     tocReady.then(() => {
-      // Add event listener for the toc
-      this.delegate(
-        "click",
-        document.querySelector("#toc-sidebar"),
-        this.changeChapter
-      );
 
-
-      // This uses the Hammer.js library to detect panning on the page.
-      const touchArea = document.querySelector("#touch-area");
-      const hammer = new Hammer(touchArea, {
-        inputClass: Hammer.TouchInput
-      });
-      hammer.get("pan").set({ threshold: 20 });
-      hammer.on("pan doubletap", (ev) => panHandler(ev));
-
-     
-
+      /* @Katelyn will rework this if necessary.
       const newSelectedChapter = document.getElementById("fsm-1");
+      
       if (newSelectedChapter) {
         newSelectedChapter.classList.add("text-white");
         newSelectedChapter.classList.add("border-black");
         newSelectedChapter.classList.add("bg-black");
       }
+      */
+
+
+      // Rudimetnary routing.
+      const book = this.getUrlPart(1) || 'fsm';
+      const chapter = this.getUrlPart(2) || '1';
+      const fragment = this.getUrlPart(3) || '';
       // Render the chapter.
-      const book = this.getBook() || 'fsm';
-      const chapter = this.getChapter() || '1';
       this.renderContent(book, chapter);
       this.updateBreadcrumbs(`${book}-${chapter}`);
-      
-
-      
     });
 
-    // // Full-screen modal.
-    // this.modal = new Modal();
-    // window.modal = this.modal;
 
-    // customElements.define("word-count", WordCount, { extends: "p" });
-
-
-    
-
-    this.renderContent = this.renderContent.bind(this);
-    this.changeChapter = this.changeChapter.bind(this);
-    this.changeBook = this.changeBook.bind(this);
+  // this.renderContent = this.renderContent.bind(this);
+    // this.changeChapter = this.changeChapter.bind(this);
+    // this.changeBook = this.changeBook.bind(this);
   }
 
   /**
@@ -158,6 +154,13 @@ export default class BooksOnlineController {
 
     e.preventDefault();
     e.stopPropagation();
+
+
+    /* Here we can handle click/touch events which get interpreted as changing books or changing chapter.*/
+    // This doesn't handle Outline.
+    if(e.type == "click") {
+
+    }
 
     if (e.type === "change" && e.target.id === "breadcrumbs-dropdown") {
       this.changeBook(e);
@@ -202,35 +205,7 @@ export default class BooksOnlineController {
     }
   }
 
-  /**
-   * Load the specified chapter of Oregon Revised Statutes (ORS).
-   * Display the chapter in a modal and scroll to the specified section.
-   * @param {integer} c The ORS chapter to display.
-   * @param {integer} s The ORS section to display.
-   * @returns {boolean} false
-   */
-  async displayOrs(c, s) {
-    let chapterNum = parseInt(c);
-    let sectionNum = parseInt(s);
 
-    throw new Error("Need to perform fetch request here.");
-    // let chapter = await OregonLegislatureNetwork.fetchOrs({chapter: chapterNum});
-
-    // let vols = Ors.buildVolumes();
-    let toc = chapter.buildToc();
-    let html = chapter.toString();
-    html = OrsParser.replaceAll(html);
-
-    this.modal.show();
-    this.modal.leftNav(toc);
-    this.modal.html(html);
-    this.modal.title("ORS Chapter " + chapterNum);
-    let marker = document.querySelector("#modal #section-" + sectionNum);
-    marker.scrollIntoView();
-    // modal.titleBar(vols);
-
-    return false;
-  }
 
   changeBook(container) {
     let book = container;
@@ -298,37 +273,6 @@ export default class BooksOnlineController {
   }
 
 
-  /**
-   * Retrieves the index from the specified URL and parses it into an XML document.
-   *
-   * @return {Document} The parsed XML document.
-   */
-  async getIndex() {
-    let client = new HttpClient();
-
-    let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
-
-    let xml = await resp.text();
-
-    const parser = new DOMParser();
-
-    return parser.parseFromString(xml, "application/xml");
-  }
-
-  /**
-   * Fetches the specified chapter of a book from the OCDLA publications website.
-   *
-   * @param {string} book - The title of the book to fetch a chapter from.
-   * @param {string} chapter - The chapter number to fetch.
-   * @return {string} The text content of the chapter.
-   */
-  async fetchChapter(book, chapter) {
-    const url = `https://pubs.ocdla.org/${book}/${chapter}`;
-    const req = new Request(url);
-    const client = new HttpClient();
-    const resp = await client.send(req);
-    return resp.text();
-  }
 
   /**
    * Changes the currently selected chapter in the table of contents.
@@ -391,6 +335,74 @@ export default class BooksOnlineController {
     this.updateHistory(newRoute);
   }
 
+
+
+
+
+
+ /** Let's deprecate these in favor of a single getUrlPart() method. */
+  getBook() {
+   let url = new Url(window.location.href);
+    let id = url.getPath();
+    return id.split("/")[1];
+  }
+  getChapter() {
+    let url = new Url(window.location.href);
+    let id = url.getPath();
+    return id.split("/")[2];
+  }
+
+  getFragment() {
+    let url = new Url(window.location.href);
+    let id = url.getPath();
+    return id.split("/")[2];
+  }
+
+
+
+
+  getUrlPart(index) {
+     let url = new Url(window.location.href);
+    let parts = url.getPath().split(/[\/\#]/);
+
+    return parts[index];
+  }
+
+
+    /**
+   * Fetches the specified chapter of a book from the OCDLA publications website.
+   *
+   * @param {string} book - The title of the book to fetch a chapter from.
+   * @param {string} chapter - The chapter number to fetch.
+   * @return {string} The text content of the chapter.
+   */
+  async fetchChapter(book, chapter) {
+    const url = `https://pubs.ocdla.org/${book}/${chapter}`;
+    const req = new Request(url);
+    const client = new HttpClient();
+    const resp = await client.send(req);
+    return resp.text();
+  }
+
+  /**
+   * Retrieves the index from the specified URL and parses it into an XML document.
+   *
+   * @return {Document} The parsed XML document.
+   */
+  async getIndex() {
+    let client = new HttpClient();
+
+    let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
+
+    let xml = await resp.text();
+
+    const parser = new DOMParser();
+
+    return parser.parseFromString(xml, "application/xml");
+  }
+
+
+
   /**
    * Updates the breadcrumbs based on the given Chapter ID.
    *
@@ -434,11 +446,7 @@ export default class BooksOnlineController {
       );
       breadcrumbRoot.render(<Breadcrumbs crumbs={breadCrumbs} />);
 
-      this.delegate(
-        "change",
-        document.querySelector("#breadcrumbs"),
-        this.changeBook
-      );
+
 
   }
 
@@ -449,14 +457,8 @@ export default class BooksOnlineController {
    * @param {string} unit - The unit identifier. This could be for example a chapter number, section identifier, or an appendix identifier.
    * @return {void}
    */
-  renderContent(book, unit) {
-    // Sanitize fragments from the unit
-    let fragment;
-    if (unit != undefined) {
-      fragment = unit.split("#")[1];
-      unit = unit.split("#")[0];
-    }
-    
+  renderContent(book, unit) {  
+
 
     // Display the content of the chapter.
     let chapterReady = this.fetchChapter(book, unit).then((html) => {
@@ -472,103 +474,17 @@ export default class BooksOnlineController {
       if (sections.length <= 2)
         sections = doc2.querySelectorAll("body");
 
-      document.querySelector("#body").replaceChildren(...sections);
-
-      
+      document.querySelector("#body").replaceChildren(...sections); 
     });
 
-    // Display the outline of the chapter once the content has been rendered.
-    const outlineReady = chapterReady.then(() => {
-      const outline = Outline.fromCurrentDocument();
 
-      // Books-Online content is in section tags with .level1, .level2, etc.
-      outline.outline(
-        ".level1",
-        ".level2",
-        ".level3",
-        ".level4",
-        ".level5",
-        ".level6"
-      );
-
-      // Display the outline in the sidebar
-      const outlineRoot = View.createRoot(document.querySelector("#outline"));
-      outlineRoot.render(
-        <OutlineSidebar>{outline.getNested()}</OutlineSidebar>
-      );
-
-      // Callback function used to detect where the user is on the page.
-      const handleIntersection = (observedEntries) => {
-        // Filter out entries that are not intersecting
-        const intersectingEntries = observedEntries.filter(
-          (entry) => entry.isIntersecting
-        );
-
-        // Make sure we have at least one entry remaining
-        if (intersectingEntries.length == 0) return;
-
-        // Iterate through our outline items and clear their styles.
-        outline.clearAllActive(
-          ".bg-black.text-white",
-          document.querySelector("#outline")
-        );
-
-        // We only want the first entry. It's possible to scroll through multiple headings at once.
-        const entry = intersectingEntries[0];
-        const id = entry.target.id;
-        const outlineListItem = document.querySelector(`[id='${id}-outline-item']`);
-
-        //When we see a new item, we want to make sure the outline sidebar is scrolling to it.
-        if (outlineListItem != null) {
-          outlineListItem.scrollIntoView({
-            behavior: "instant",
-            block: "nearest",
-            inline: "center",
-          });
-
-          // Add the active class styling to the current item.
-          outlineListItem.classList.add("bg-black");
-          outlineListItem.classList.add("text-white");
-
-          // Update the address bar for the fragment we are looking at
-          this.updateHistory(`#${id}`);
-        }
-
-        
-      };
-
-      // Add the callback function to the intersection observer.
-      outline.addIntersectionObserver(handleIntersection);
-
-
-    });
-
-    outlineReady.then(() => {
-      // Scroll to the fragment if it exists
-      if (fragment && document.querySelector(`[id='${fragment}`)) 
-        requestAnimationFrame(() => {
-          document.querySelector(`[id='${fragment}`).scrollIntoView();
-        });
-    });
-
-    // Future feature: Setting up WebC-ORS and WebC-OAR components here.
-    // const refsReady = outlineReady.then(() => {
-
-    //})
-
-    // const refsReady = outlineReady.then(() => {
-    //   // Process all citations in this document. List the citations as HTML links.  These links can be selected by the customer to navigate to where the source is referenced in the chapter.
-    //   let refContainer = document.querySelector("#all-refs");
-    //   let citations = document.querySelectorAll(".cite");
-    //   let refs = document.querySelectorAll("[references], .cite");
-
-    //   document.addEventListener("click", this);
-    //   BooksOnlineController.convert(".document");
-    //   formatReferences(citations);
-    //   doRefs(refs, refContainer);
-    // });
+    // Fire a custom event when the chapter is ready.
+    // Fire a custom "onChapterContentRendered" event.
   }
 
+
+
+// @jbernal - Should go away; instead use our handleEvent() method.
   getNodeChildrenEventHandler(e, elem, fn) {
     e.preventDefault();
     e.stopPropagation();
@@ -580,22 +496,15 @@ export default class BooksOnlineController {
     fn(container);
   }
 
+// @jbernal - Should go away; instead use our handleEvent() method.
+  /*
   delegate(type, elem, fn) {
     return elem.addEventListener(type, (e) =>
       this.getNodeChildrenEventHandler(e, elem, fn)
     );
   }
+*/
 
-  getBook() {
-    let url = new Url(window.location.href);
-    let id = url.getPath();
-    return id.split("/")[1];
-  }
-  getChapter() {
-    let url = new Url(window.location.href);
-    let id = url.getPath();
-    return id.split("/")[2];
-  }
 
   getBookList() {
     const books = TableOfContents.fromXml(
