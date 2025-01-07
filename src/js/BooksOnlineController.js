@@ -414,7 +414,7 @@ export default class BooksOnlineController {
 
 
     // Display the content of the chapter.
-    let chapterReady = this.fetchChapter(book, unit).then((html) => {
+    this.fetchChapter(book, unit).then((html) => {
 
       const parser = new DOMParser();
 
@@ -428,11 +428,14 @@ export default class BooksOnlineController {
         sections = doc2.querySelectorAll("body");
 
       document.querySelector("#body").replaceChildren(...sections); 
+
+      // Fire a custom event when the chapter is ready.
+      // Fire a custom "onChapterContentRendered" event.
+      const bookRendered = new CustomEvent("onChapterContentRendered");
+
+      // Dispatch the event.
+      document.dispatchEvent(bookRendered);
     });
-
-
-    // Fire a custom event when the chapter is ready.
-    // Fire a custom "onChapterContentRendered" event.
   }
 
 
