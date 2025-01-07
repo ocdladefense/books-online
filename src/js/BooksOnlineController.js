@@ -2,8 +2,6 @@
 /* eslint-disable no-unused-vars */
 import { vNode, View } from "@ocdla/view";
 
-// Unused imports
-// import {formatReferences,doRefs} from "../../dev_modules/citations/citations.js";
 import "@ocdladefense/html/html.js";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import TableOfContents from "@ocdla/table-of-contents";
@@ -12,8 +10,6 @@ import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 import Url from "@ocdla/lib-http/Url";
 import App from "./App.jsx";
-
-// Is this the best syntax for these imports?
 
 
 /**
@@ -154,11 +150,13 @@ export default class BooksOnlineController {
   }
 
   /**
-   * Updates the view state of the application to show the specified book and unit.
-   *
-   * @param {string} book The book to show.
-   * @param {string} [unit] The unit to show within the book.
+   * Updates the view state of the application based on the specified book and unit.
+   * If no book is specified, the entire catalog of BON is shown.
+   * If no unit is specified, the table of contents for the book is shown and the default unit for the book is selected.
+   * @param {string} [book=null] The name of the book to update the view state for.
+   * @param {string} [unit=null] The identifier of the unit (e.g., chapter) within the book to update the view state for.
    */
+  
   updateViewState(book = null, unit = null) {
     
     this.updateBreadcrumbs(book, unit);
@@ -183,6 +181,18 @@ export default class BooksOnlineController {
     this.updateHistory(newRoute);
   }
 
+  /**
+   * Filters the XML index to generate a TableOfContents object.
+   *
+   * If no book is provided, the top level book elements in the XML index are used to generate the
+   * TableOfContents object. If a book is provided, a filtered version of the
+   * XML index is used. The filtered index includes only children of the book
+   * element with the provided shortName.
+   *
+   * @param {string} [book] The shortName of the book to filter by.
+   * @return {TableOfContents} A TableOfContents object based on the filtered
+   *   XML index.
+   */
   filterXmlForToc(book = null) {
     if (!book) {
       return TableOfContents.fromXml(
@@ -202,6 +212,13 @@ export default class BooksOnlineController {
     }
   }
 
+  /**
+   * Renders the table of contents into the toc div.
+   *
+   * @param {OrsTocEntry[]} tocEntries The entries to render in the table of contents.
+   * @returns {Promise<void>} A promise that resolves when the table of contents
+   *   has been rendered.
+   */
   renderTableOfContents(tocEntries) {
     // Create a root
     const tocContent = View.createRoot(document.querySelector("#toc"));
@@ -231,8 +248,6 @@ export default class BooksOnlineController {
       </Sidebar>
     );
   }
-
-
 
   /**
    * Changes the currently selected TOC style in the table of contents.
@@ -282,13 +297,21 @@ export default class BooksOnlineController {
     }
   }
 
+  /**
+   * Gets a part of the current URL path by its index.
+   *
+   * @param {number} index
+   *   The index of the part to get.
+   *
+   * @return {string}
+   *   The part of the URL path at the given index.
+   */
   getUrlPart(index) {
      let url = new Url(window.location.href);
     let parts = url.getPath().split(/[\/\#]/);
 
     return parts[index];
   }
-
 
     /**
    * Fetches the specified chapter of a book from the OCDLA publications website.
@@ -322,14 +345,15 @@ export default class BooksOnlineController {
     return parser.parseFromString(xml, "application/xml");
   }
 
-
-
-  /**
-   * Updates the breadcrumbs based on the given Chapter ID.
-   *
-   * @param {string} id - The ID of the chapter in the XML index.
-   * @return {void}
-   */
+/**
+ * Updates the breadcrumb navigation based on the selected book and unit.
+ *
+ * Constructs a breadcrumb trail for the current view state, using the book and optionally the unit
+ * within the book. Renders the breadcrumb trail using the Breadcrumbs component.
+ *
+ * @param {string} [book=null] - The short name identifier of the book.
+ * @param {string} [unit=null] - The identifier of the unit (e.g., chapter) within the book.
+ */
   updateBreadcrumbs(book = null, unit = null) {
     let breadCrumbs = [];
 
@@ -398,8 +422,11 @@ export default class BooksOnlineController {
     });
   }
 
-
-
+  /**
+   * Retrieves a list of books from the index.
+   *
+   * @return {Array.<{label: string, href: string}>} An array of objects with label and href properties.
+   */
   getBookList() {
     const books = TableOfContents.fromXml(
       this.#index,
@@ -412,13 +439,27 @@ export default class BooksOnlineController {
     }));
   }
 
+/**
+ * Updates the browser's history state with a new route.
+ *
+ * Modifies the current history entry to reflect the new route provided,
+ * without reloading the page.
+ *
+ * @param {string} newRoute - The new route to set in the browser's history.
+ */
+
   updateHistory(newRoute) {
     const history = window.history;
     history.replaceState({}, '', newRoute);
   }
 
+  /**
+   * Retrieves the default entry for a given book. This is the book chapter, section, or appendix that is displayed when the book is first loaded.
+   *
+   * @param {string} book - The short name of the book.
+   * @return {string} The default entry ID for the book.
+   */
   getDefaultBookEntry(book) {
-    console.log(this.#index.querySelector(`book[shortName="${book}"]`).getAttribute("entry"));
     return this.#index.querySelector(`book[shortName="${book}"]`).getAttribute("entry");
   }
   

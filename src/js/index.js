@@ -32,10 +32,6 @@ document.addEventListener("change", controller);
 
 // Enable the loading of the chapter outline upon completion of the chapter content render.
 document.addEventListener("onChapterContentRendered", new Outliner());
-document.addEventListener('onChapterContentRendered', function(event) {
-  console.log('Event triggered!');
-  // Rest of the event listener code
-});
 
 // This uses the Hammer.js library to detect panning on the page.
 const touchArea = document.querySelector("#touch-area");
