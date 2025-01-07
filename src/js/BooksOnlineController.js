@@ -29,7 +29,6 @@ export default class BooksOnlineController {
 
   constructor() {
     
-
     // Create the base view using jsx.
     const body = document.querySelector("body");
     const root = View.createRoot(body);
@@ -65,29 +64,21 @@ export default class BooksOnlineController {
 
     tocReady.then(() => {
 
-      /* @Katelyn will rework this if necessary.
-      const newSelectedChapter = document.getElementById("fsm-1");
-      
-      if (newSelectedChapter) {
-        newSelectedChapter.classList.add("text-white");
-        newSelectedChapter.classList.add("border-black");
-        newSelectedChapter.classList.add("bg-black");
-      }
-      */
-
-
-      // Rudimetnary routing.
-      const book = this.getUrlPart(1);
-      const unit = this.getUrlPart(2);
+      // Initial routing for BON.  Get the book and unit from the URL, and the fragment if any.
+      const book = this.getUrlPart(1) || null;
+      const unit = this.getUrlPart(2) || null;
       const fragment = this.getUrlPart(3) || '';
       // Render the chapter.
       this.updateViewState(book, unit);
+
+
+      // If there is a fragment, scroll to it.
+      if (fragment) {
+        const scrollTarget = document.querySelector(`[id = "${fragment}"]`);
+        if (scrollTarget) scrollTarget.scrollIntoView();
+      }
     });
 
-
-  // this.renderContent = this.renderContent.bind(this);
-    // this.changeChapter = this.changeChapter.bind(this);
-    // this.changeBook = this.changeBook.bind(this);
   }
 
   /**
@@ -111,19 +102,23 @@ export default class BooksOnlineController {
     /* Here we can handle click/touch events which get interpreted as changing books or changing chapter.*/
     // This doesn't handle Outline.
     if(e.type == "click") {
-      if (e.target.closest('#toc-sidebar a') !== null) {
-        const bookUnitId = e.target.closest('#toc-sidebar a').id;
+      if (target.closest('#toc-sidebar a') !== null) {
+        const bookUnitId = target.closest('#toc-sidebar a').id;
         const book = bookUnitId.split("-")[0];
         let unit = bookUnitId.split("-")[1] || null;
         
         this.updateViewState(book, unit);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+      if (target.closest('#outline a') !== null) {
+        const outlineItem = target.closest('#outline a');
+        window.location = outlineItem.href;
+      }
     }
 
     /* This handles the dropdown to change books. */
-    if (e.type === "change" && e.target.id === "breadcrumbs-dropdown") {
-      const book = e.target.value.substring(1);
+    if (e.type === "change" && target.id === "breadcrumbs-dropdown") {
+      const book = target.value.substring(1);
       this.updateViewState(book);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -412,28 +407,6 @@ export default class BooksOnlineController {
     });
   }
 
-
-
-// @jbernal - Should go away; instead use our handleEvent() method.
-  getNodeChildrenEventHandler(e, elem, fn) {
-    e.preventDefault();
-    e.stopPropagation();
-    const target = e.target;
-    const children = [...elem.children];
-    const container = children.filter((child) => child.contains(target))[0];
-
-    if (!container) return false;
-    fn(container);
-  }
-
-// @jbernal - Should go away; instead use our handleEvent() method.
-  /*
-  delegate(type, elem, fn) {
-    return elem.addEventListener(type, (e) =>
-      this.getNodeChildrenEventHandler(e, elem, fn)
-    );
-  }
-*/
 
 
   getBookList() {
