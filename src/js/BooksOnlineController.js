@@ -56,8 +56,8 @@ export default class BooksOnlineController {
     const tocReady = indexReady.then(() => {
       // Get the book from the URL.
       const book = this.getUrlPart(1);
-
-      return this.changeBook(book);
+      const tocEntries = this.filterXmlForToc(book).getEntries();
+      return this.renderTableOfContents(tocEntries);
     
     });
 
@@ -77,12 +77,11 @@ export default class BooksOnlineController {
 
 
       // Rudimetnary routing.
-      const book = this.getUrlPart(1) || 'fsm';
-      const chapter = this.getUrlPart(2) || '1';
+      const book = this.getUrlPart(1);
+      const unit = this.getUrlPart(2);
       const fragment = this.getUrlPart(3) || '';
       // Render the chapter.
-      this.renderContent(book, chapter);
-      this.updateBreadcrumbs(`${book}-${chapter}`);
+      this.updateViewState(book, unit);
     });
 
 
@@ -115,21 +114,18 @@ export default class BooksOnlineController {
       if (e.target.closest('#toc-sidebar a') !== null) {
         const bookUnitId = e.target.closest('#toc-sidebar a').id;
         const book = bookUnitId.split("-")[0];
-        const unit = bookUnitId.split("-")[1] || this.getDefaultBookEntry(book);
-        if (unit == null) this.changeBook(book);
-        this.setActiveTocStyle(book, unit);
-        this.updateBreadcrumbs(book, unit);
-        this.renderContent(book, unit);
+        let unit = bookUnitId.split("-")[1] || null;
+        
+        this.updateViewState(book, unit);
         window.scrollTo({ top: 0, behavior: "smooth" });
-
-        const newRoute = `/${book}/${unit || ""}`;
-        this.updateHistory(newRoute);
       }
     }
 
     /* This handles the dropdown to change books. */
     if (e.type === "change" && e.target.id === "breadcrumbs-dropdown") {
-      this.changeBook(e.target.value);
+      const book = e.target.value.substring(1);
+      this.updateViewState(book);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     if (e.type === "hashchange") {
@@ -171,17 +167,39 @@ export default class BooksOnlineController {
     }
   }
 
-
-
-  changeBook(book) {
-    // Remove leading slash if it exists
-    if (book.startsWith("/")) book = book.substring(1);
+  /**
+   * Updates the view state of the application to show the specified book and unit.
+   *
+   * @param {string} book The book to show.
+   * @param {string} [unit] The unit to show within the book.
+   */
+  updateViewState(book = null, unit = null) {
     
-    // Filter the table of contents for the current book.
-    let index = null;
-    let entryChapter = null;
+    this.updateBreadcrumbs(book, unit);
+
+    // If there is no book, show the entire catalog of BON and return.
     if (!book) {
-      index = TableOfContents.fromXml(
+      const tocEntries = this.filterXmlForToc().getEntries();
+      this.renderTableOfContents(tocEntries);
+      return;
+    }
+
+    // If there is no unit, render the table of contents for the book and select the default unit for the book.
+    if (unit == null) {
+      const tocEntries = this.filterXmlForToc(book).getEntries();
+      this.renderTableOfContents(tocEntries);
+      unit = this.getDefaultBookEntry(book);
+    }
+    this.setActiveTocStyle(book, unit);
+    this.renderContent(book, unit);
+    
+    const newRoute = `/${book}/${unit}`;
+    this.updateHistory(newRoute);
+  }
+
+  filterXmlForToc(book = null) {
+    if (!book) {
+      return TableOfContents.fromXml(
         this.#index,
         "book"
       );
@@ -189,23 +207,18 @@ export default class BooksOnlineController {
     else {
       // This gets only the chapters in the book selected
       const filteredXml = this.#index.querySelector(`book[shortName="${book}"]`);
-      entryChapter = filteredXml.getAttribute("entry");
-      index = TableOfContents.fromXml(
+      return TableOfContents.fromXml(
         filteredXml,
         "part",
         "chapter",
         "appendix"
       );
     }
-    
+  }
 
+  renderTableOfContents(tocEntries) {
     // Create a root
     const tocContent = View.createRoot(document.querySelector("#toc"));
-
-    // Get our entries in our toc
-    const tocEntries = index.getEntries();
-
-
 
     // Render the toc into the toc div
     // We need to return here so that we actually wait for the toc to be rendered
@@ -331,38 +344,30 @@ export default class BooksOnlineController {
    * @param {string} id - The ID of the chapter in the XML index.
    * @return {void}
    */
-  updateBreadcrumbs(id) {
-    // Sanitize fragments from the id
-    id = id.split("#")[0];
-
+  updateBreadcrumbs(book = null, unit = null) {
     let breadCrumbs = [];
-    const unit = this.#index.querySelector(`#${id}`) || this.#index.querySelector(`book[shortName='${id}']`);
 
-    if (id.indexOf("-") > -1) {
-      // This is a chapter in a book
-      const unitName = unit.getAttribute("name");
-      const unitHref = id.replaceAll("-", "/");
-
-      breadCrumbs.push({
-        href: unitHref,
-        label: unitName,
-      })
-    }
-
-    const books = this.getBookList();
-    
-    const bookNode = unit.closest("book");
+    const bookNode = this.#index.querySelector(`book[shortName='${book}']`) || this.#index.firstElementChild;
     const bookName = bookNode.getAttribute("name");
-    const bookHref = bookNode.getAttribute("shortName");
-
-
-    breadCrumbs.unshift({
-      href: '/' + bookHref,
+    const bookShortName = bookNode.getAttribute("shortName");
+    const books = this.getBookList();
+    breadCrumbs.push({
+      href: '/' + bookShortName,
       label: bookName,
       entries: books
     })
 
+    if (unit) {
+      // This is a chapter in a book
+      const unitId = book + '-' + unit;
+      const unitNode = bookNode.querySelector(`[id='${unitId}']`);
+      const unitName = unitNode.getAttribute("name");
 
+      breadCrumbs.push({
+        href: '/' + book + '/' + unit,
+        label: unitName,
+      })
+    }
       const breadcrumbRoot = View.createRoot(
         document.getElementById("breadcrumbs")
       );
