@@ -112,11 +112,24 @@ export default class BooksOnlineController {
     /* Here we can handle click/touch events which get interpreted as changing books or changing chapter.*/
     // This doesn't handle Outline.
     if(e.type == "click") {
+      if (e.target.closest('#toc-sidebar a') !== null) {
+        const bookUnitId = e.target.closest('#toc-sidebar a').id;
+        const book = bookUnitId.split("-")[0];
+        const unit = bookUnitId.split("-")[1] || this.getDefaultBookEntry(book);
+        if (unit == null) this.changeBook(book);
+        this.setActiveTocStyle(book, unit);
+        this.updateBreadcrumbs(book, unit);
+        this.renderContent(book, unit);
+        window.scrollTo({ top: 0, behavior: "smooth" });
 
+        const newRoute = `/${book}/${unit || ""}`;
+        this.updateHistory(newRoute);
+      }
     }
 
+    /* This handles the dropdown to change books. */
     if (e.type === "change" && e.target.id === "breadcrumbs-dropdown") {
-      this.changeBook(e);
+      this.changeBook(e.target.value);
     }
 
     if (e.type === "hashchange") {
@@ -160,14 +173,9 @@ export default class BooksOnlineController {
 
 
 
-  changeBook(container) {
-    let book = container;
-    if (container instanceof Element) 
-      book = container.querySelector("#breadcrumbs-dropdown").value;
-    
-    if (book[0] == "/") 
-      book = book.substring(1);
-    
+  changeBook(book) {
+    // Remove leading slash if it exists
+    if (book.startsWith("/")) book = book.substring(1);
     
     // Filter the table of contents for the current book.
     let index = null;
@@ -228,64 +236,51 @@ export default class BooksOnlineController {
 
 
   /**
-   * Changes the currently selected chapter in the table of contents.
+   * Changes the currently selected TOC style in the table of contents.
    *
-   * Updates the breadcrumbs, removes the active class from the previously selected chapter,
-   * adds the active class to the newly selected chapter, and renders the content of the new chapter.
+   * Removes the active class from the previously selected chapter,
+   * adds the active class to the newly selected chapter.
    *
-   * @param {HTMLElement} container - The container element of the chapter to select.
+   * @param {string} book - The container element of the chapter to select.
+   * @param {string} unit - The chapter, section, or appendix to select.
    * @return {void}
    */
-  changeChapter(container) {
-    const id = container.children[0].id;
-    const book = id.split("-")[0];
-    const unit = id.split("-")[1];
-
-    if (!unit) this.changeBook(book);
-
-    this.updateBreadcrumbs(id);
-
+  setActiveTocStyle(book, unit) {
+    
     const toc = document.getElementById("toc");
-
-    const oldSelectedChapter = toc.querySelector(
+    const oldSelectedUnit = toc.querySelector(
       ".text-white.border-black.bg-black"
     );
-    if (oldSelectedChapter) {
-      oldSelectedChapter.setAttribute(
+    if (oldSelectedUnit) {
+      oldSelectedUnit.setAttribute(
         "class",
         "group hover:bg-neutral-100 flex flex-col gap-2 border-b px-4 py-2"
       );
 
-      const h = oldSelectedChapter.querySelector("h1");
+      const h = oldSelectedUnit.querySelector("h1");
       if (h)
         h.setAttribute(
           "class",
           "text-blue-400 group-hover:text-blue-500 font-bold"
         );
 
-      const p = oldSelectedChapter.querySelector("p");
+      const p = oldSelectedUnit.querySelector("p");
       if (p) p.setAttribute("class", "");
     }
 
     // Add the active class to the current item.
-    const newSelectedChapter = document.getElementById(id);
-    if (newSelectedChapter) {
-      newSelectedChapter.setAttribute(
+    const newSelectedToc = document.getElementById(`${book}-${unit}`);
+    if (newSelectedToc) {
+      newSelectedToc.setAttribute(
         "class",
         "text-white border-black bg-black flex flex-col gap-2 border-b px-4 py-2"
       );
-      const h = newSelectedChapter.querySelector("h1");
+      const h = newSelectedToc.querySelector("h1");
       if (h) h.setAttribute("class", "font-bold");
 
-      const p = newSelectedChapter.querySelector("p");
+      const p = newSelectedToc.querySelector("p");
       if (p) p.setAttribute("class", "text-white");
     }
-
-    this.renderContent(book, unit);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-
-    const newRoute = `/${book}/${unit || ""}`;
-    this.updateHistory(newRoute);
   }
 
   getUrlPart(index) {
@@ -451,6 +446,11 @@ export default class BooksOnlineController {
   updateHistory(newRoute) {
     const history = window.history;
     history.replaceState({}, '', newRoute);
+  }
+
+  getDefaultBookEntry(book) {
+    console.log(this.#index.querySelector(`book[shortName="${book}"]`).getAttribute("entry"));
+    return this.#index.querySelector(`book[shortName="${book}"]`).getAttribute("entry");
   }
   
 }
