@@ -6,15 +6,16 @@ import Outline from "@ocdla/outline";
 export default class Outliner {
 
     constructor() {
+        this.outline = Outline.fromCurrentDocument();
+        this.renderOutline();
+        this.outline.addIntersectionObserver(this.handleIntersection);
         this.handleIntersection = this.handleIntersection.bind(this);
     }
 
     handleEvent(event) {
         if (event.type === 'onChapterContentRendered') {
             // Call the constructor
-            this.outline = Outline.fromCurrentDocument();
-            this.renderOutline();
-            this.outline.addIntersectionObserver(this.handleIntersection);
+            this.constructor();
         }
       }
   

@@ -55,7 +55,7 @@ export default class BooksOnlineController {
     // Build the table of contents.
     const tocReady = indexReady.then(() => {
       // Get the book from the URL.
-      const book = this.getBook();
+      const book = this.getUrlPart(1);
 
       return this.changeBook(book);
     
@@ -287,32 +287,6 @@ export default class BooksOnlineController {
     const newRoute = `/${book}/${unit || ""}`;
     this.updateHistory(newRoute);
   }
-
-
-
-
-
-
- /** Let's deprecate these in favor of a single getUrlPart() method. */
-  getBook() {
-   let url = new Url(window.location.href);
-    let id = url.getPath();
-    return id.split("/")[1];
-  }
-  getChapter() {
-    let url = new Url(window.location.href);
-    let id = url.getPath();
-    return id.split("/")[2];
-  }
-
-  getFragment() {
-    let url = new Url(window.location.href);
-    let id = url.getPath();
-    return id.split("/")[2];
-  }
-
-
-
 
   getUrlPart(index) {
      let url = new Url(window.location.href);
