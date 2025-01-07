@@ -9,7 +9,7 @@ let currentOffset = 0;
  *
  * @private
  */
-export function panHandler(ev) {
+export default function panHandler(ev) {
 
     // Maximum screen width where Hammer.js gestures are enabled
     const maxWidth = 1023;

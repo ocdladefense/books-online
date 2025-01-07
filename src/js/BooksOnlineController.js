@@ -6,18 +6,15 @@ import { vNode, View } from "@ocdla/view";
 // import {formatReferences,doRefs} from "../../dev_modules/citations/citations.js";
 import "@ocdladefense/html/html.js";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
-import Outline from "@ocdla/outline";
 import TableOfContents from "@ocdla/table-of-contents";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs.jsx";
 import Sidebar from "@ocdla/global-components/src/Sidebar.jsx";
-import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 import Sidebar_Item_Left from "@ocdla/global-components/src/SidebarItemLeft.jsx";
 import Url from "@ocdla/lib-http/Url";
 import App from "./App.jsx";
 
 // Is this the best syntax for these imports?
-import Hammer from "hammerjs/hammer.js";
-import { panHandler } from "/dev_modules/@ocdla/hammer-wrapper/HammerWrapper.js";
+
 
 /**
  * Controller for the Books Online application.
@@ -36,41 +33,35 @@ export default class BooksOnlineController {
 
 
 
-    // This uses the Hammer.js library to detect panning on the page.
-    const touchArea = document.querySelector("#touch-area");
-    const hammer = new Hammer(touchArea, {
-      inputClass: Hammer.TouchInput
-    });
-    hammer.get("pan").set({ threshold: 20 });
-    hammer.on("pan doubletap", (ev) => panHandler(ev));
-
-
     const indexReady = this.getIndex().then((xml) => {
       this.#index = xml;
     });
 
 
-    // I think you're doing at least two things here; probably three.
-    // Build the table of contents.
+    // Initial render of the table of contents.
     const tocReady = indexReady.then(() => {
       // Get the book from the URL.
       const book = this.getUrlPart(1);
       const tocEntries = this.filterXmlForToc(book).getEntries();
       return this.renderTableOfContents(tocEntries);
-    
     });
 
 
 
-    tocReady.then(() => {
+    const pageReady = tocReady.then(() => {
 
       // Initial routing for BON.  Get the book and unit from the URL, and the fragment if any.
       const book = this.getUrlPart(1) || null;
       const unit = this.getUrlPart(2) || null;
-      const fragment = this.getUrlPart(3) || '';
+      
       // Render the chapter.
-      this.updateViewState(book, unit);
+      return this.updateViewState(book, unit);
+    });
 
+
+    pageReady.then(() => {
+      // Get the fragment from the URL.
+      const fragment = this.getUrlPart(3) || "";
 
       // If there is a fragment, scroll to it.
       if (fragment) {

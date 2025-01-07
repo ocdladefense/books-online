@@ -10,6 +10,8 @@ import "/themes/books-online/css/tools.css";
 import "/themes/books-online/css/desktop.css";
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import Outliner from "./Outliner.js";
+import Hammer from "hammerjs";
+import panHandler from '@ocdla/hammer-wrapper';
 
 
 import { BonMock } from "./mock/BonMock.js";
@@ -30,5 +32,17 @@ document.addEventListener("change", controller);
 
 // Enable the loading of the chapter outline upon completion of the chapter content render.
 document.addEventListener("onChapterContentRendered", new Outliner());
+document.addEventListener('onChapterContentRendered', function(event) {
+  console.log('Event triggered!');
+  // Rest of the event listener code
+});
+
+// This uses the Hammer.js library to detect panning on the page.
+const touchArea = document.querySelector("#touch-area");
+const hammer = new Hammer(touchArea, {
+  inputClass: Hammer.TouchInput
+});
+hammer.get("pan").set({ threshold: 20 });
+hammer.on("pan doubletap", (ev) => panHandler(ev));
 
 
