@@ -23,7 +23,7 @@ export default function App({ }) {
 
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
-        <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent">
+        <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
           <Breadcrumbs items={[]} />
         </div>
         <button
@@ -36,7 +36,7 @@ export default function App({ }) {
         </button>
         {/* <div class='flex flex-col lg:flex-row'> */}
         <div class="lg:grid lg:grid-cols-6" id="touch-area">
-          <div id="toc" class="fixed top-0 right-[100%] z-10 h-screen shadow-2xl lg:shadow-none lg:h-auto lg:static lg:top-auto lg:right-auto bg-white"></div>
+          <div id="toc" class="fixed top-0 right-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:right-auto bg-white"></div>
           <div
             id="document"
             class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
@@ -46,7 +46,7 @@ export default function App({ }) {
               class="flex flex-col gap-4 subpixel-antialiased overflow-wrap break-words"
             ></div>
           </div>
-          <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white"></div>
+          <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white"></div>
         </div>
       </div>
       <Footer
