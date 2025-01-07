@@ -159,12 +159,11 @@ export default class BooksOnlineController {
   
   updateViewState(book = null, unit = null) {
     
-    this.updateBreadcrumbs(book, unit);
-
     // If there is no book, show the entire catalog of BON and return.
     if (!book) {
       const tocEntries = this.filterXmlForToc().getEntries();
       this.renderTableOfContents(tocEntries);
+      this.updateBreadcrumbs();
       return;
     }
 
@@ -176,6 +175,7 @@ export default class BooksOnlineController {
     }
     this.setActiveTocStyle(book, unit);
     this.renderContent(book, unit);
+    this.updateBreadcrumbs(book, unit);
     
     const newRoute = `/${book}/${unit}`;
     this.updateHistory(newRoute);
