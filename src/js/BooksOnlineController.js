@@ -149,6 +149,8 @@ export default class BooksOnlineController {
     }
   }
 
+
+
   /**
    * Updates the view state of the application based on the specified book and unit.
    * If no book is specified, the entire catalog of BON is shown.
@@ -156,7 +158,6 @@ export default class BooksOnlineController {
    * @param {string} [book=null] The name of the book to update the view state for.
    * @param {string} [unit=null] The identifier of the unit (e.g., chapter) within the book to update the view state for.
    */
-  
   updateViewState(book = null, unit = null) {
     
     // If there is no book, show the entire catalog of BON and return.
@@ -181,6 +182,8 @@ export default class BooksOnlineController {
     this.updateHistory(newRoute);
   }
 
+
+  
   /**
    * Filters the XML index to generate a TableOfContents object.
    *
