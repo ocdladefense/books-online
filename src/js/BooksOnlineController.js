@@ -22,6 +22,12 @@ export default class BooksOnlineController {
 
   constructor() {
     
+
+    const book = this.getUrlPart(1) || null;
+    const unit = this.getUrlPart(2) || null;
+    const fragment = this.getUrlPart(3) || "";
+
+
     // Create the base view using jsx.
     const body = document.querySelector("body");
     const root = View.createRoot(body);
@@ -35,36 +41,19 @@ export default class BooksOnlineController {
 
 
     // Initial render of the table of contents.
-    const tocReady = indexReady.then(() => {
-      // Get the book from the URL.
-      const book = this.getUrlPart(1);
+    indexReady.then(() => {
       const tocEntries = this.filterXmlForToc(book).getEntries();
-      return this.renderTableOfContents(tocEntries);
+      this.renderTableOfContents(tocEntries);
+    });
+
+
+    // Render the chapter.
+    indexReady.then(() => {
+      this.updateViewState(book, unit);
     });
 
 
 
-    const pageReady = tocReady.then(() => {
-
-      // Initial routing for BON.  Get the book and unit from the URL, and the fragment if any.
-      const book = this.getUrlPart(1) || null;
-      const unit = this.getUrlPart(2) || null;
-      
-      // Render the chapter.
-      return this.updateViewState(book, unit);
-    });
-
-
-    pageReady.then(() => {
-      // Get the fragment from the URL.
-      const fragment = this.getUrlPart(3) || "";
-
-      // If there is a fragment, scroll to it.
-      if (fragment) {
-        const scrollTarget = document.querySelector(`[id = "${fragment}"]`);
-        if (scrollTarget) scrollTarget.scrollIntoView();
-      }
-    });
 
   }
 

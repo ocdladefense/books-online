@@ -23,7 +23,20 @@ if (USE_MOCK) {
 let controller = new BooksOnlineController();
 
 window.addEventListener("hashchange", controller);
+
+/*
+    pageReady.then(() => {
+      // Get the fragment from the URL.
       
+
+      // If there is a fragment, scroll to it.
+      if (fragment) {
+        const scrollTarget = document.querySelector(`[id = "${fragment}"]`);
+        if (scrollTarget) scrollTarget.scrollIntoView();
+      }
+    });
+ */
+     
 // Enable selection of various chapters in the table of contents.
 document.addEventListener("click", controller);
 
