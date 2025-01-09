@@ -34,7 +34,7 @@ export default class BooksOnlineController {
     root.render(<App />);
 
 
-
+/*
     const indexReady = this.getIndex().then((xml) => {
       this.#index = xml;
     });
@@ -52,7 +52,7 @@ export default class BooksOnlineController {
       this.updateViewState(book, unit);
     });
 
-
+*/
 
 
   }
@@ -305,7 +305,7 @@ export default class BooksOnlineController {
     return parts[index];
   }
 
-    /**
+  /**
    * Fetches the specified chapter of a book from the OCDLA publications website.
    *
    * @param {string} book - The title of the book to fetch a chapter from.
