@@ -42,14 +42,14 @@ export default class BooksOnlineController {
 
     // Initial render of the table of contents.
     indexReady.then(() => {
-      const tocEntries = this.filterXmlForToc(book).getEntries();
+      const tocEntries = book !== null ? this.getChapterList(book).getEntries() : this.getBookList().getEntries();
       this.renderTableOfContents(tocEntries);
     });
 
 
     // Render the chapter.
     indexReady.then(() => {
-      this.updateViewState(book, unit);
+      this.updatePageData(book, unit);
     });
 
 
@@ -83,7 +83,7 @@ export default class BooksOnlineController {
         const book = bookUnitId.split("-")[0];
         let unit = bookUnitId.split("-")[1] || null;
         
-        this.updateViewState(book, unit);
+        this.updatePageData(book, unit);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
       if (target.closest('#outline a') !== null) {
@@ -95,7 +95,7 @@ export default class BooksOnlineController {
     /* This handles the dropdown to change books. */
     if (e.type === "change" && target.id === "breadcrumbs-dropdown") {
       const book = target.value.substring(1);
-      this.updateViewState(book);
+      this.updatePageData(book);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -147,11 +147,11 @@ export default class BooksOnlineController {
    * @param {string} [book=null] The name of the book to update the view state for.
    * @param {string} [unit=null] The identifier of the unit (e.g., chapter) within the book to update the view state for.
    */
-  updateViewState(book = null, unit = null) {
+  updatePageData(book = null, unit = null) {
     
     // If there is no book, show the entire catalog of BON and return.
     if (!book) {
-      const tocEntries = this.filterXmlForToc().getEntries();
+      const tocEntries = this.getBookList().getEntries();
       this.renderTableOfContents(tocEntries);
       this.updateBreadcrumbs();
       return;
@@ -159,7 +159,7 @@ export default class BooksOnlineController {
 
     // If there is no unit, render the table of contents for the book and select the default unit for the book.
     if (unit == null) {
-      const tocEntries = this.filterXmlForToc(book).getEntries();
+      const tocEntries = this.getChapterList(book).getEntries();
       this.renderTableOfContents(tocEntries);
       unit = this.getDefaultBookEntry(book);
     }
@@ -172,37 +172,22 @@ export default class BooksOnlineController {
   }
 
 
-  
-  /**
-   * Filters the XML index to generate a TableOfContents object.
-   *
-   * If no book is provided, the top level book elements in the XML index are used to generate the
-   * TableOfContents object. If a book is provided, a filtered version of the
-   * XML index is used. The filtered index includes only children of the book
-   * element with the provided shortName.
-   *
-   * @param {string} [book] The shortName of the book to filter by.
-   * @return {TableOfContents} A TableOfContents object based on the filtered
-   *   XML index.
-   */
-  filterXmlForToc(book = null) {
-    if (!book) {
-      return TableOfContents.fromXml(
-        this.#index,
-        "book"
-      );
-    }
-    else {
-      // This gets only the chapters in the book selected
-      const filteredXml = this.#index.querySelector(`book[shortName="${book}"]`);
-      return TableOfContents.fromXml(
-        filteredXml,
-        "part",
-        "chapter",
-        "appendix"
-      );
-    }
+
+  getChapterList(book) {
+      const elems = this.#index.querySelectorAll(`book[shortName="${book}"] > * > part, chapter, appendix`);
+      return TableOfContents.fromXml(elems);
   }
+
+  getBookList() {
+    const elems = this.#index.querySelectorAll('book');
+    return TableOfContents.fromXml(elems);
+  }
+
+  /*
+    getBooksList() { let elems = this.#index.querySelectorAll(“book”);  return TableOfContents.fromXml(elems)}
+
+    getChapterList(book) { // same as above but let elements = this.#index.querySelectorAll(“book[shortName=blah] etc”); return TableOfContents.fromXml(elems); }
+  */
 
   /**
    * Renders the table of contents into the toc div.
@@ -352,11 +337,17 @@ export default class BooksOnlineController {
     const bookNode = this.#index.querySelector(`book[shortName='${book}']`) || this.#index.firstElementChild;
     const bookName = bookNode.getAttribute("name");
     const bookShortName = bookNode.getAttribute("shortName");
-    const books = this.getBookList();
+    const books = this.getBookList().getEntries();
+    
+    const bookEntries = books.map(b => ({
+      label: b.getName(),
+      href: b.getHref()
+    }));
+
     breadCrumbs.push({
       href: '/' + bookShortName,
       label: bookName,
-      entries: books
+      entries: bookEntries
     })
 
     if (unit) {
@@ -414,22 +405,7 @@ export default class BooksOnlineController {
     });
   }
 
-  /**
-   * Retrieves a list of books from the index.
-   *
-   * @return {Array.<{label: string, href: string}>} An array of objects with label and href properties.
-   */
-  getBookList() {
-    const books = TableOfContents.fromXml(
-      this.#index,
-      "book"
-    ).getEntries();
 
-    return books.map(b => ({
-      label: b.getName(),
-      href: b.getHref()
-    }));
-  }
 
 /**
  * Updates the browser's history state with a new route.

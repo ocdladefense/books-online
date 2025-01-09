@@ -7,20 +7,32 @@ export default class TableOfContents {
     this.#entries = entries;
   }
 
-  static fromXml(doc) {
-    let selectors = Array.from(arguments).map((arg) =>
-      typeof arg === "string" ? arg.toLowerCase().trim() : arg
-    );
-    selectors.shift();
+  // static fromXml(doc) {
+  //   let selectors = Array.from(arguments).map((arg) =>
+  //     typeof arg === "string" ? arg.toLowerCase().trim() : arg
+  //   );
+  //   selectors.shift();
 
-    // Take a comma separated string of html selectors
-    const items = [...doc.querySelectorAll(selectors.join(","))];
+  //   // Take a comma separated string of html selectors
+  //   const items = [...doc.querySelectorAll(selectors.join(","))];
 
-    const entries = items.map((item) => {
+  //   const entries = items.map((item) => {
+  //     return new Entry(
+  //       item.getAttribute("name"),
+  //       item.getAttribute("label") || item.getAttribute("name"),
+  //       item.id || item.getAttribute("shortName")
+  //     );
+  //   });
+  //   return new TableOfContents(entries);
+  // }
+
+  static fromXml(elems) {
+    elems = Array.from(elems);
+    const entries = elems.map((elem) => {
       return new Entry(
-        item.getAttribute("name"),
-        item.getAttribute("label") || item.getAttribute("name"),
-        item.id || item.getAttribute("shortName")
+        elem.getAttribute("name"),
+        elem.getAttribute("label") || elem.getAttribute("name"),
+        elem.id || elem.getAttribute("shortName")
       );
     });
     return new TableOfContents(entries);
