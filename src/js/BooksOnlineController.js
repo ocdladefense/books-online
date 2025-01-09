@@ -40,12 +40,6 @@ export default class BooksOnlineController {
     });
 
 
-    // Initial render of the table of contents.
-    indexReady.then(() => {
-      const tocEntries = book !== null ? this.getChapterList(book).getEntries() : this.getBookList().getEntries();
-      this.renderTableOfContents(tocEntries);
-    });
-
 
     // Render the chapter.
     indexReady.then(() => {
@@ -119,8 +113,6 @@ export default class BooksOnlineController {
       return false;
     }
 
-    // e.preventDefault();
-    // e.stopPropagation();
 
     if ("view-section" == action) {
       let marker = document.querySelector("#modal #section-" + s);
@@ -148,46 +140,31 @@ export default class BooksOnlineController {
    * @param {string} [unit=null] The identifier of the unit (e.g., chapter) within the book to update the view state for.
    */
   updatePageData(book = null, unit = null) {
-    
-    // If there is no book, show the entire catalog of BON and return.
-    if (!book) {
-      const tocEntries = this.getBookList().getEntries();
-      this.renderTableOfContents(tocEntries);
-      this.updateBreadcrumbs();
-      return;
-    }
 
-    // If there is no unit, render the table of contents for the book and select the default unit for the book.
-    if (unit == null) {
-      const tocEntries = this.getChapterList(book).getEntries();
-      this.renderTableOfContents(tocEntries);
-      unit = this.getDefaultBookEntry(book);
-    }
+    unit = !unit && book ? this.getDefaultBookEntry(book) : unit;
+    const tocEntries = book ? this.getChapterList(book).getEntries() : this.getBookList().getEntries();
+    this.renderTableOfContents(tocEntries);
+    this.updateBreadcrumbs(book, unit);
+
+    if (!book) return;
     this.setActiveTocStyle(book, unit);
     this.renderContent(book, unit);
-    this.updateBreadcrumbs(book, unit);
     
     const newRoute = `/${book}/${unit}`;
     this.updateHistory(newRoute);
   }
 
-
-
   getChapterList(book) {
-      const elems = this.#index.querySelectorAll(`book[shortName="${book}"] > * > part, chapter, appendix`);
-      return TableOfContents.fromXml(elems);
+    console.log(book);
+    const elems = this.#index.querySelectorAll(`book[shortName="${book}"] > * > :is(part, chapter, appendix)`);
+    console.log(elems);
+    return TableOfContents.fromXml(elems);
   }
 
   getBookList() {
     const elems = this.#index.querySelectorAll('book');
     return TableOfContents.fromXml(elems);
   }
-
-  /*
-    getBooksList() { let elems = this.#index.querySelectorAll(“book”);  return TableOfContents.fromXml(elems)}
-
-    getChapterList(book) { // same as above but let elements = this.#index.querySelectorAll(“book[shortName=blah] etc”); return TableOfContents.fromXml(elems); }
-  */
 
   /**
    * Renders the table of contents into the toc div.
