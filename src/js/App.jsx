@@ -18,8 +18,8 @@ export default function App() {
   const [index, setIndex] = useState(null);
   const [book, setBook] = useState("fsm");
   const [chapter, setChapter] = useState("1");
-  const [breadcrumbs, setBreadcrumbs] = useState([]);
-  const [toc, setToc] = useState([]);
+  const [breadcrumbs, setBreadcrumbs] = useState(null);
+  const [toc, setToc] = useState(null);
 
   /* @SullivanKE: Executes once during page load to fetch the index file.
    setIndex does not trigger updates if it is inside an async function.
@@ -29,8 +29,8 @@ export default function App() {
   useEffect(() => {
     async function fetchIndexFile() {
       const index = await loadIndex();
-      console.log("index set");
       setIndex(index);
+      console.log("index set");
     };
     fetchIndexFile();
   }, []);
@@ -42,9 +42,13 @@ export default function App() {
   This was the only way I could make the breadcrumbs render on page load, and not only when the chapter changed.
    */
   useEffect(() => {
-    if(!index) return;
-      const crumbs = getBreadcrumbs(book, chapter);
+    let doCrumbs = async () => {
+      if(!index) return;
+      const crumbs = await getBreadcrumbs(book, chapter);
       setBreadcrumbs(crumbs);
+    };
+
+    doCrumbs();
   },[index, book, chapter]);
 
 
@@ -72,7 +76,7 @@ export default function App() {
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
         <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
-          <Breadcrumbs items={breadcrumbs} />
+          {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
         </div>
         <button
           onclick={() => {

@@ -73,7 +73,8 @@ export async function getContent(book, unit) {
 
 
 
-export function getBreadcrumbs(book = null, unit = null) {
+export async function getBreadcrumbs(book = null, unit = null) {
+  const index = await loadIndex();
   const bookNode = index.querySelector(`book[shortName='${book}']`) || index.firstElementChild;
   const books = getBookList(index).getEntries();
   const bookEntries = books.map(b => ({ label: b.getName(), href: b.getHref() }));
