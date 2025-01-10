@@ -69,19 +69,11 @@ async function renderContent(book, unit) {
   });
 }
 
-async function getIndex() {
-  let client = new HttpClient();
-  let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
-  let xml = await resp.text();
-  const parser = new DOMParser();
-  return parser.parseFromString(xml, "application/xml");
-}
 
 
 
-export default function App({ }) {
+export default function App({ index }) {
 
-  const [index, setIndex] = useState(null);
   const [html, setHtml] = useState(null);
   const [book, setBook] = useState("fsm");
   const [chapter, setChapter] = useState("1");
@@ -93,13 +85,7 @@ export default function App({ }) {
    index is then set as a promise and unpacked later.
    I don't like this solution and I feel like it is a work around for something that has a more direct solution.
    */
-  useEffect(() => {
-    function fetchIndexFile() {
-      const newIndex = getIndex();
-      setIndex(newIndex);
-    };
-    fetchIndexFile();
-  }, []);
+
 
 
   /* @SullivanKE: Executes every time the book or chapter changes.
@@ -108,7 +94,7 @@ export default function App({ }) {
   This was the only way I could make the breadcrumbs render on page load, and not only when the chapter changed.
    */
   useEffect(() => {
-    function updateBreadcrumbs(index, book = null, unit = null) {
+    function updateBreadcrumbs(book = null, unit = null) {
       const bookNode = index.querySelector(`book[shortName='${book}']`) || index.firstElementChild;
       const books = getBookList(index).getEntries();
       const bookEntries = books.map(b => ({ label: b.getName(), href: b.getHref() }));
@@ -133,15 +119,15 @@ export default function App({ }) {
 
       setBreadCrumbs(crumbs);
     }
-    if (index)
-      index.then((data) => updateBreadcrumbs(data, book, chapter));
+
+    updateBreadcrumbs(book, chapter);
 
     async function fetchData() {
       let __html = await renderContent(book, chapter);
       setHtml(__html);
     }
     fetchData();
-  }, [book, chapter, index]);
+  }, [book, chapter]);
 
   // This should be executed just once when the page loads.
   // useEffect(function () { setHeading("Hello World!"); }, []);
