@@ -43,6 +43,10 @@ document.addEventListener("click", controller);
 // Enable selection of books from the dropdown menu.
 document.addEventListener("change", controller);
 
+/*
+@jbernal - Currently causing an error in the console.
+Not sure how to fix yet, but haven't looked closedly.  
+
 // Enable the loading of the chapter outline upon completion of the chapter content render.
 document.addEventListener("onChapterContentRendered", new Outliner());
 
@@ -53,5 +57,5 @@ const hammer = new Hammer(touchArea, {
 });
 hammer.get("pan").set({ threshold: 20 });
 hammer.on("pan doubletap", (ev) => panHandler(ev));
-
+*/
 
