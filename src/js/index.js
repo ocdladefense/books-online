@@ -27,21 +27,10 @@ if (USE_MOCK) {
   HttpClient.register("https://pubs.ocdla.org/", new BonMock());
 }
 
-async function getIndex() {
-  let client = new HttpClient();
-  let resp = await client.send(new Request("https://pubs.ocdla.org/index"));
-  let xml = await resp.text();
-  const parser = new DOMParser();
-  return parser.parseFromString(xml, "application/xml");
-}
-
-const index = await getIndex();
-
-
 // Create the base view using jsx.
 const container = document.querySelector("#app");
 const root = View.createRoot(container);
-root.render(<App index={index} />);
+root.render(<App />);
 
 
 /*

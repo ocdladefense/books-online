@@ -2,90 +2,38 @@
 // The new home of everything View related.
 /* eslint-disable no-unused-vars */
 import { vNode, useEffect, useState } from "@ocdla/view";
-import HttpClient from "@ocdla/lib-http/HttpClient.js";
+
 import Navbar from "@ocdla/global-components/src/Navbar";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs";
 import Footer from "@ocdla/global-components/src/Footer";
-import TableOfContents from "@ocdla/table-of-contents";
-
-
-const USE_HAMMER = false;
 
 
 
-/**
- * Fetches the specified chapter of a book from the OCDLA publications website.
- *
- * @param {string} book - The title of the book to fetch a chapter from.
- * @param {string} chapter - The chapter number to fetch.
- * @return {string} The text content of the chapter.
- */
-async function fetchChapter(book, chapter) {
-  const url = `https://pubs.ocdla.org/${book}/${chapter}`;
-  const req = new Request(url);
-  const client = new HttpClient();
-  const resp = await client.send(req);
-  const html = await resp.text();
-
-  return html;
-}
-
-function getChapterList(index, book) {
-  const elems = index.querySelectorAll(`book[shortName="${book}"] > * > :is(part, chapter, appendix)`);
-  return TableOfContents.fromXml(elems);
-}
-
-function getBookList(index) {
-  const elems = index.querySelectorAll('book');
-  return TableOfContents.fromXml(elems);
-}
+import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent } from "./helper";
 
 
-
-/**
-   * Renders the content of a book chapter, including the chapter HTML and an outline of the chapter's sections.
-   *
-   * @param {string} book - The book shortname identifier.
-   * @param {string} unit - The unit identifier. This could be for example a chapter number, section identifier, or an appendix identifier.
-   * @return {void}
-   */
-async function renderContent(book, unit) {
-
-
-  // Display the content of the chapter.
-  return fetchChapter(book, unit).then((html) => {
-
-    const parser = new DOMParser();
-
-    const doc2 = parser.parseFromString(html, "text/html");
-    // import node function
-
-    let sections = doc2.querySelectorAll("header, section");
-    let fragment = doc2.createDocumentFragment();
-    fragment.append(...sections);
-    const s = new XMLSerializer();
-
-    return s.serializeToString(fragment);
-  });
-}
-
-
-
-
-export default function App({ index }) {
+export default function App() {
 
   const [html, setHtml] = useState(null);
+  const [index, setIndex] = useState(null);
   const [book, setBook] = useState("fsm");
   const [chapter, setChapter] = useState("1");
-  const [breadCrumbs, setBreadCrumbs] = useState([]);
-  const [tableOfContents, setTableOfContents] = useState([]);
+  const [breadcrumbs, setBreadcrumbs] = useState([]);
+  const [toc, setToc] = useState([]);
 
   /* @SullivanKE: Executes once during page load to fetch the index file.
    setIndex does not trigger updates if it is inside an async function.
    index is then set as a promise and unpacked later.
    I don't like this solution and I feel like it is a work around for something that has a more direct solution.
    */
-
+  useEffect(() => {
+    async function fetchIndexFile() {
+      const index = await loadIndex();
+      console.log("index set");
+      setIndex(index);
+    };
+    fetchIndexFile();
+  }, []);
 
 
   /* @SullivanKE: Executes every time the book or chapter changes.
@@ -94,36 +42,16 @@ export default function App({ index }) {
   This was the only way I could make the breadcrumbs render on page load, and not only when the chapter changed.
    */
   useEffect(() => {
-    function updateBreadcrumbs(book = null, unit = null) {
-      const bookNode = index.querySelector(`book[shortName='${book}']`) || index.firstElementChild;
-      const books = getBookList(index).getEntries();
-      const bookEntries = books.map(b => ({ label: b.getName(), href: b.getHref() }));
+    if(!index) return;
+      const crumbs = getBreadcrumbs(book, chapter);
+      setBreadcrumbs(crumbs);
+  },[index, book, chapter]);
 
-      const crumbs = [
-        {
-          href: '/' + bookNode.getAttribute("shortName"),
-          label: bookNode.getAttribute("name"),
-          entries: bookEntries
-        }
-      ];
 
-      if (unit) {
-        const unitId = book + '-' + unit;
-        const unitNode = bookNode.querySelector(`[id='${unitId}']`);
 
-        crumbs.push({
-          href: '/' + book + '/' + unit,
-          label: unitNode.getAttribute("name"),
-        });
-      }
-
-      setBreadCrumbs(crumbs);
-    }
-
-    updateBreadcrumbs(book, chapter);
-
+  useEffect(() => {
     async function fetchData() {
-      let __html = await renderContent(book, chapter);
+      let __html = await getContent(book, chapter);
       setHtml(__html);
     }
     fetchData();
@@ -139,12 +67,12 @@ export default function App({ index }) {
       <header class="container mx-auto flex w-full flex-col bg-white lg:h-32 top-of-page">
         <Navbar />
       </header>
-
+  
 
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
         <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
-          <Breadcrumbs items={breadCrumbs} />
+          <Breadcrumbs items={breadcrumbs} />
         </div>
         <button
           onclick={() => {
