@@ -6,6 +6,7 @@ import { vNode, useEffect, useState } from "@ocdla/view";
 import Navbar from "@ocdla/global-components/src/Navbar";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs";
 import Footer from "@ocdla/global-components/src/Footer";
+import TableOfContents from "./components/TableOfContents";
 
 
 
@@ -19,7 +20,7 @@ export default function App() {
   const [book, setBook] = useState("fsm");
   const [chapter, setChapter] = useState("1");
   const [breadcrumbs, setBreadcrumbs] = useState(null);
-  const [toc, setToc] = useState(null);
+  const [toc, setToc] = useState([]);
 
   /* @SullivanKE: Executes once during page load to fetch the index file.
    setIndex does not trigger updates if it is inside an async function.
@@ -43,13 +44,13 @@ export default function App() {
    */
   useEffect(() => {
     let doCrumbs = async () => {
-      if(!index) return;
+      if (!index) return;
       const crumbs = await getBreadcrumbs(book, chapter);
       setBreadcrumbs(crumbs);
     };
 
     doCrumbs();
-  },[index, book, chapter]);
+  }, [index, book, chapter]);
 
 
 
@@ -61,6 +62,16 @@ export default function App() {
     fetchData();
   }, [book, chapter]);
 
+  useEffect(() => {
+
+    let doToc = async () => {
+      if (!index) return;
+      const tocEntries = await getChapterList(book);
+      setToc(tocEntries);
+    }
+    doToc();
+  }, [index, book])
+
   // This should be executed just once when the page loads.
   // useEffect(function () { setHeading("Hello World!"); }, []);
 
@@ -71,7 +82,7 @@ export default function App() {
       <header class="container mx-auto flex w-full flex-col bg-white lg:h-32 top-of-page">
         <Navbar />
       </header>
-  
+
 
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
@@ -88,7 +99,9 @@ export default function App() {
         </button>
         {/* <div class='flex flex-col lg:flex-row'> */}
         <div class="lg:grid lg:grid-cols-6" id="touch-area">
-          <div id="toc" class="fixed top-0 right-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:right-auto bg-white"></div>
+          <div id="toc" class="fixed top-0 right-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:right-auto bg-white">
+            <TableOfContents entries={toc} />
+          </div>
           <div
             id="document"
             class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"

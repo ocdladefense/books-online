@@ -31,9 +31,11 @@ export async function loadChapter(book, chapter) {
   return html;
 }
 
-export function getChapterList(index, book) {
+export async function getChapterList(book) {
+  const index = await loadIndex();
   const elems = index.querySelectorAll(`book[shortName="${book}"] > * > :is(part, chapter, appendix)`);
-  return TableOfContents.fromXml(elems);
+  const toc = TableOfContents.fromXml(elems);
+  return toc.getEntries();
 }
 
 export function getBookList(index) {
