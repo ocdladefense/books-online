@@ -56,12 +56,17 @@ window.addEventListener("hashchange", controller);
 
 // Enable selection of various chapters in the table of contents.
 document.addEventListener("click", controller);
+*/
 
+// Enable the loading of the chapter outline upon completion of the chapter content render.
+//document.addEventListener("onChapterContentRendered", new Outliner());
+
+
+/*
 // Enable selection of books from the dropdown menu.
 document.addEventListener("change", controller);
 
-// Enable the loading of the chapter outline upon completion of the chapter content render.
-// document.addEventListener("onChapterContentRendered", new Outliner());
+
 
 // This uses the Hammer.js library to detect panning on the page.
 

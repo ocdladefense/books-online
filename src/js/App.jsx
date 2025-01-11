@@ -7,10 +7,11 @@ import Navbar from "@ocdla/global-components/src/Navbar";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs";
 import Footer from "@ocdla/global-components/src/Footer";
 import TableOfContents from "./components/TableOfContents";
+import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
 
 
 
-import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent } from "./helper";
+import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent, outliner } from "./helper";
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
   const [chapter, setChapter] = useState("1");
   const [breadcrumbs, setBreadcrumbs] = useState(null);
   const [toc, setToc] = useState([]);
+  const [outline, setOutline] = useState([]);
 
   /* @SullivanKE: Executes once during page load to fetch the index file.
    setIndex does not trigger updates if it is inside an async function.
@@ -58,16 +60,28 @@ export default function App() {
     async function fetchData() {
       let __html = await getContent(book, chapter);
       setHtml(__html);
+      const chapterRendered = new CustomEvent("onChapterContentRendered", { detail: { doc: __html } });
+      document.dispatchEvent(chapterRendered);
     }
     fetchData();
   }, [book, chapter]);
 
   useEffect(() => {
+    function doOutline() {
+      const __outline = outliner(html);
+      setOutline(__outline);
+      //outliner.addIntersectionObserver(outliner.handleIntersection);
+    }
+    doOutline();
+  }, [html, book, chapter]);
+
+
+  useEffect(() => {
 
     let doToc = async () => {
       if (!index) return;
-      const tocEntries = await getChapterList(book);
-      setToc(tocEntries);
+      const __toc = await getChapterList(book);
+      setToc(__toc);
     }
     doToc();
   }, [index, book])
@@ -115,7 +129,9 @@ export default function App() {
               <div dangerouslySetInnerHTML={html}> </div>
             </div>
           </div>
-          <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white"></div>
+          <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white">
+            <OutlineSidebar>{outline}</OutlineSidebar>
+          </div>
         </div>
       </div>
       <Footer
