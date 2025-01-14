@@ -33,16 +33,19 @@ export async function loadChapter(book, chapter) {
   return parser.parseFromString(html, "text/html");
 }
 
-export async function getChapterList(book) {
-  const index = await loadIndex();
+export function getChapterList(book, index) {
+  if (!index) return '';
   const elems = index.querySelectorAll(`book[shortName="${book}"] > * > :is(part, chapter, appendix)`);
   const toc = TableOfContents.fromXml(elems);
   return toc.getEntries();
 }
 
 export function getBookList(index) {
+  if (!index) return null;
   const elems = index.querySelectorAll('book');
-  return TableOfContents.fromXml(elems);
+  const toc = TableOfContents.fromXml(elems);
+  const bookList = toc.getEntries();
+  return bookList.map(b => ({ label: b.getName(), href: b.getHref().substring(1) }));
 }
 
 
@@ -75,28 +78,17 @@ export async function getContent(book, unit) {
 
 
 export async function getBreadcrumbs(book = null, unit = null) {
-  const index = await loadIndex();
-  const bookNode = index.querySelector(`book[shortName='${book}']`) || index.firstElementChild;
-  const books = getBookList(index).getEntries();
-  const bookEntries = books.map(b => ({ label: b.getName(), href: b.getHref() }));
+  const crumbs = [];
 
-  const crumbs = [
-    {
-      href: '/' + bookNode.getAttribute("shortName"),
-      label: bookNode.getAttribute("name"),
-      entries: bookEntries
-    }
-  ];
+  // if (unit) {
+  //   const unitId = book + '-' + unit;
+  //   const unitNode = bookNode.querySelector(`[id='${unitId}']`);
 
-  if (unit) {
-    const unitId = book + '-' + unit;
-    const unitNode = bookNode.querySelector(`[id='${unitId}']`);
-
-    crumbs.push({
-      href: '/' + book + '/' + unit,
-      label: unitNode.getAttribute("name"),
-    });
-  }
+  //   crumbs.push({
+  //     href: '/' + book + '/' + unit,
+  //     label: unitNode.getAttribute("name"),
+  //   });
+  // }
 
  return crumbs;
 }

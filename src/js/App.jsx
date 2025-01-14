@@ -21,6 +21,7 @@ export default function App() {
   const [html, setHtml] = useState(null);
   const [index, setIndex] = useState(null);
   const [book, setBook] = useState("fsm");
+  const [bookList, setBookList] = useState(null);
   const [chapter, setChapter] = useState("1");
   const [breadcrumbs, setBreadcrumbs] = useState(null);
   const [toc, setToc] = useState([]);
@@ -34,6 +35,11 @@ export default function App() {
     };
     fetchIndexFile();
   }, []);
+
+  useEffect(() => {
+    const __bookList = getBookList(index);
+    setBookList(__bookList);
+  }, [index]);
 
   useEffect(() => {
     let doCrumbs = async () => {
@@ -66,10 +72,9 @@ export default function App() {
 
 
   useEffect(() => {
-
-    let doToc = async () => {
+    function doToc() {
       if (!index) return;
-      const __toc = await getChapterList(book);
+      const __toc = getChapterList(book, index);
       setToc(__toc);
     }
     doToc();
@@ -78,6 +83,17 @@ export default function App() {
   // This should be executed just once when the page loads.
   // useEffect(function () { setHeading("Hello World!"); }, []);
 
+  useEffect(() => {
+    console.log("rendered");
+    console.log("chapter", chapter);
+    console.log("book", book);
+    //console.log("html", html);
+    //console.log("index", index);
+    //console.log("bookList", bookList);
+    //console.log("toc", toc);
+    //console.log("outline", outline);
+    //console.log("breadcrumbs", breadcrumbs);
+  })
 
 
   return (
@@ -92,7 +108,7 @@ export default function App() {
       <div class="container mx-auto border-x">
         <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
 
-          <BookPicker onBookChange={setBook} />
+          <BookPicker onBookChange={setBook} books={bookList} />
           {/* {breadcrumbs && <Breadcrumbs items={breadcrumbs} />} */}
         </div>
         <button
