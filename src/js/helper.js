@@ -42,10 +42,15 @@ export function getChapterList(book, index) {
 
 export function getBookList(index) {
   if (!index) return null;
-  const elems = index.querySelectorAll('book');
-  const toc = TableOfContents.fromXml(elems);
-  const bookList = toc.getEntries();
-  return bookList.map(b => ({ label: b.getName(), href: b.getHref().substring(1) }));
+  const elems = [...index.querySelectorAll('book')];
+  const bookList = elems.map((elem) => {
+        return {
+          name: elem.getAttribute("name"),
+          shortName: elem.getAttribute("shortName"),
+          default: elem.getAttribute("default")
+        }
+      });
+  return bookList;
 }
 
 

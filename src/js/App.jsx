@@ -108,7 +108,7 @@ export default function App() {
       <div class="container mx-auto border-x">
         <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
 
-          <BookPicker onBookChange={setBook} books={bookList} />
+          <BookPicker onBookChange={setBook} onChapterChange={setChapter} books={bookList} currentBook={book} />
           {/* {breadcrumbs && <Breadcrumbs items={breadcrumbs} />} */}
         </div>
         <button
