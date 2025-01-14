@@ -7,11 +7,12 @@ import Navbar from "@ocdla/global-components/src/Navbar";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs";
 import Footer from "@ocdla/global-components/src/Footer";
 import TableOfContents from "./components/TableOfContents";
-import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
+import OutlineSidebar from "@ocdla/global-components/src/OutlineSidebar.jsx";
+import Outline from "@ocdla/outline";
 
 
 
-import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent, outliner } from "./helper";
+import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent } from "./helper";
 
 
 export default function App() {
@@ -24,6 +25,9 @@ export default function App() {
   const [toc, setToc] = useState([]);
   const [outline, setOutline] = useState([]);
 
+  // const items = [
+  //   { content: "foo", href: "/bar" }
+  // ];
   /* @SullivanKE: Executes once during page load to fetch the index file.
    setIndex does not trigger updates if it is inside an async function.
    index is then set as a promise and unpacked later.
@@ -60,20 +64,31 @@ export default function App() {
     async function fetchData() {
       let __html = await getContent(book, chapter);
       setHtml(__html);
-      const chapterRendered = new CustomEvent("onChapterContentRendered", { detail: { doc: __html } });
-      document.dispatchEvent(chapterRendered);
+      // const chapterRendered = new CustomEvent("onChapterContentRendered", { detail: { doc: __html } });
+      // document.dispatchEvent(chapterRendered);
     }
     fetchData();
   }, [book, chapter]);
 
+  // useEffect(() => {
+  //   const chapterRendered = new CustomEvent("onChapterContentRendered");
+  //   document.dispatchEvent(chapterRendered);
+  // }, [html]);
+
   useEffect(() => {
     function doOutline() {
-      const __outline = outliner(html);
+      const outlineOptions = { selectors: [".level1", ".level2", ".level3"] };
+      const outline = new Outline(outlineOptions);
+      outline.create();
+      const __outline = outline.getNested();
       setOutline(__outline);
-      //outliner.addIntersectionObserver(outliner.handleIntersection);
     }
     doOutline();
-  }, [html, book, chapter]);
+  }, [html]);
+
+  // useEffect(() => {
+  //   console.log('Component re-rendered with new outline state:', outline);
+  // }, [outline]);
 
 
   useEffect(() => {
@@ -130,7 +145,9 @@ export default function App() {
             </div>
           </div>
           <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white">
-            <OutlineSidebar>{outline}</OutlineSidebar>
+            <aside class='sticky top-0 hidden h-full lg:h-[87.5vh] overflow-y-scroll lg:block overflow-x-clip'>
+              <OutlineSidebar items={outline} />
+            </aside>
           </div>
         </div>
       </div>

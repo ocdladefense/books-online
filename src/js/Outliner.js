@@ -1,7 +1,7 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode, View } from "@ocdla/view";
-import OutlineSidebar from "@ocdla/global-components/src/Outline.jsx";
+import OutlineSidebar from "@ocdla/global-components/src/OutlineSidebar.jsx";
 import Outline from "@ocdla/outline";
 export default class Outliner {
 
@@ -21,7 +21,7 @@ export default class Outliner {
   
     renderOutline() {
         // Books-Online content is in section tags with .level1, .level2, etc.
-        this.outline.outline(
+        this.outline.create(
           ".level1",
           ".level2",
           ".level3",
@@ -69,8 +69,6 @@ export default class Outliner {
           // Add the active class styling to the current item.
           outlineListItem.classList.add("bg-black");
           outlineListItem.classList.add("text-white");
-
-        
         }
       };
 }

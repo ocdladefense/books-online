@@ -14,20 +14,6 @@ export async function loadIndex() {
   return index;
 }
 
-export function outliner(html) {
-  const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      const outline = new Outline(doc);
-      outline.outline(
-        ".level1",
-        ".level2",
-        ".level3",
-        ".level4",
-        ".level5",
-        ".level6"
-      );
-      return outline.getNested();
-    }
 
 /**
  * Fetches the specified chapter of a book from the OCDLA publications website.
