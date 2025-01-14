@@ -5,6 +5,7 @@ import { vNode, useEffect, useState } from "@ocdla/view";
 
 import Navbar from "@ocdla/global-components/src/Navbar";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs";
+import BookPicker from "@ocdla/global-components/src/BookPicker";
 import Footer from "@ocdla/global-components/src/Footer";
 import TableOfContents from "./components/TableOfContents";
 import OutlineSidebar from "@ocdla/global-components/src/OutlineSidebar.jsx";
@@ -12,7 +13,7 @@ import Outline from "@ocdla/outline";
 
 
 
-import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent } from "./helper";
+import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent, loadChapter } from "./helper";
 
 
 export default function App() {
@@ -25,14 +26,6 @@ export default function App() {
   const [toc, setToc] = useState([]);
   const [outline, setOutline] = useState([]);
 
-  // const items = [
-  //   { content: "foo", href: "/bar" }
-  // ];
-  /* @SullivanKE: Executes once during page load to fetch the index file.
-   setIndex does not trigger updates if it is inside an async function.
-   index is then set as a promise and unpacked later.
-   I don't like this solution and I feel like it is a work around for something that has a more direct solution.
-   */
   useEffect(() => {
     async function fetchIndexFile() {
       const index = await loadIndex();
@@ -42,12 +35,6 @@ export default function App() {
     fetchIndexFile();
   }, []);
 
-
-  /* @SullivanKE: Executes every time the book or chapter changes.
-  It also updates when the index is loaded.
-  Index is a promise right now I know it shouldn't be unpacked more than once.
-  This was the only way I could make the breadcrumbs render on page load, and not only when the chapter changed.
-   */
   useEffect(() => {
     let doCrumbs = async () => {
       if (!index) return;
@@ -58,37 +45,24 @@ export default function App() {
     doCrumbs();
   }, [index, book, chapter]);
 
-
-
   useEffect(() => {
     async function fetchData() {
       let __html = await getContent(book, chapter);
       setHtml(__html);
-      // const chapterRendered = new CustomEvent("onChapterContentRendered", { detail: { doc: __html } });
-      // document.dispatchEvent(chapterRendered);
     }
     fetchData();
   }, [book, chapter]);
 
-  // useEffect(() => {
-  //   const chapterRendered = new CustomEvent("onChapterContentRendered");
-  //   document.dispatchEvent(chapterRendered);
-  // }, [html]);
-
   useEffect(() => {
-    function doOutline() {
-      const outlineOptions = { selectors: [".level1", ".level2", ".level3"] };
-      const outline = new Outline(outlineOptions);
-      outline.create();
-      const __outline = outline.getNested();
-      setOutline(__outline);
+    async function doOutline() {
+      let doc = await loadChapter(book, chapter);
+      const opts = { selectors: [".level1", ".level2", ".level3"] };
+      const outline = new Outline(opts);
+      setOutline(outline.build(doc));
     }
     doOutline();
-  }, [html]);
+  }, [book, chapter]);
 
-  // useEffect(() => {
-  //   console.log('Component re-rendered with new outline state:', outline);
-  // }, [outline]);
 
 
   useEffect(() => {
@@ -105,6 +79,7 @@ export default function App() {
   // useEffect(function () { setHeading("Hello World!"); }, []);
 
 
+
   return (
     <div id="the-app-container">
       <div class='fixed right-0 z-10 flex w-max gap-2 bg-white p-4 lg:left-0 lg:p-2'></div>
@@ -116,7 +91,9 @@ export default function App() {
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
         <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
-          {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
+
+          <BookPicker onBookChange={setBook} />
+          {/* {breadcrumbs && <Breadcrumbs items={breadcrumbs} />} */}
         </div>
         <button
           onclick={() => {

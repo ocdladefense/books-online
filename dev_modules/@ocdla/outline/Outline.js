@@ -10,36 +10,34 @@ export default class Outline {
       },
       fn: this.handleIntersection,
     },
-    doc: document,
     itemClassName: "outline-item",
     rootClassName: "outline-content",
   };
  
-  #config = Outline.DEFAULTS;
+  #config = {};
 
   // The flat array of items in the outline.
   #items;
 
   constructor(props) {
-    this.#config = {...this.#config, ...props};
-    this.#items = new Array();
+    this.#config = {...Outline.DEFAULTS, ...props};
   }
 
-  /**
-   * Returns the flat array of items in the outline in order of appearance.
-   * @returns {Array<OutlineEntry>} Flat array of all outline items in order.
-   */
-  getFlattened() {
-    return this.#items;
-  }
+  // /**
+  //  * Returns the flat array of items in the outline in order of appearance.
+  //  * @returns {Array<OutlineEntry>} Flat array of all outline items in order.
+  //  */
+  // getFlattened() {
+  //   return this.#items;
+  // }
 
-  /**
-   * Nests children based on their level into other outline items.
-   * @returns {Array<OutlineItems>} Nested array of top level outline items with order of appearance preserved.
-   */
-  getNested() {
-    return Outline.nestChildren(this.#items);
-  }
+  // /**
+  //  * Nests children based on their level into other outline items.
+  //  * @returns {Array<OutlineItems>} Nested array of top level outline items with order of appearance preserved.
+  //  */
+  // getNested() {
+  //   return Outline.nestChildren(this.#items);
+  // }
 
   // /**
   //  * Creates an outline from the current document.
@@ -55,15 +53,14 @@ export default class Outline {
    * Searches the instanced document for the outline items based on the selectors passed in and maintains the hierarchy based on the order of arguments passed in.
    * @param {...String} selectors List of selectors to search for in order of importance.
    */
-  create() {
+  build(node, flattened=false) {
     let selectors = this.#config.selectors;
-    let doc = this.#config.doc;
 
     // Take a comma separated string of html selectors
-    const elems = [...doc.querySelectorAll(selectors.join(","))];
+    const elems = [...node.querySelectorAll(selectors.join(","))];
 
     // Process all headings with anchor links and styling
-    this.#items = elems.map((elem) => {
+    const items = elems.map((elem) => {
       const header = elem.children[0];
       const label = header.textContent;
       if (!elem.id)
@@ -84,19 +81,20 @@ export default class Outline {
 
       return new OutlineEntry(label, elem.id, level);
     });
+    return flattened ? items : Outline.nestChildren(items); 
   }
 
   /**
    * Nests children based on their level into other outlines.
-   * @param {Array<Outline>} outlines
+   * @param {Array<Outline>} items
    * @returns {Array<Outline>} Array of top level outline objects. The array itself is the outline tree.
    */
-  static nestChildren(outlines) {
+  static nestChildren(items) {
     const root = new OutlineEntry();
     let parent = root;
     let prevOutline = null;
 
-    outlines.map((outline) => {
+    items.map((outline) => {
       const level = outline.level;
       let prevLevel = prevOutline ? prevOutline.level : 1;
 

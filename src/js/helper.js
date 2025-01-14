@@ -29,7 +29,8 @@ export async function loadChapter(book, chapter) {
   const resp = await client.send(req);
   const html = await resp.text();
 
-  return html;
+  const parser = new DOMParser();
+  return parser.parseFromString(html, "text/html");
 }
 
 export async function getChapterList(book) {
@@ -57,15 +58,12 @@ export async function getContent(book, unit) {
 
 
   // Display the content of the chapter.
-  return loadChapter(book, unit).then((html) => {
+  return loadChapter(book, unit).then((doc) => {
 
-    const parser = new DOMParser();
-
-    const doc2 = parser.parseFromString(html, "text/html");
     // import node function
 
-    let sections = doc2.querySelectorAll("header, section");
-    let fragment = doc2.createDocumentFragment();
+    let sections = doc.querySelectorAll("header, section");
+    let fragment = doc.createDocumentFragment();
     fragment.append(...sections);
     const s = new XMLSerializer();
 
