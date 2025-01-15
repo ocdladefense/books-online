@@ -7,7 +7,7 @@ import Navbar from "@ocdla/global-components/src/Navbar";
 import Breadcrumbs from "@ocdla/global-components/src/Breadcrumbs";
 import BookPicker from "@ocdla/global-components/src/BookPicker";
 import Footer from "@ocdla/global-components/src/Footer";
-import TableOfContents from "./components/TableOfContents";
+import TableOfContents from "@ocdla/global-components/src/TableOfContents.jsx";
 import OutlineSidebar from "@ocdla/global-components/src/OutlineSidebar.jsx";
 import Outline from "@ocdla/outline";
 

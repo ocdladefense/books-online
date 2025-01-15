@@ -18,13 +18,12 @@ export default function OutlineSidebar({ items }) {
             {items.map(item => {
                 return (
                     <li>
-                        <Link
-                            extraClasses='flex px-4 py-2'
+                        <a
+                            class='flex px-4 py-2 hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2'
                             href={'#' + item.href}
-                            label={item.content}
                             id={item.href + '-outline-item'}>
                             {item.content}
-                        </Link>
+                        </a>
                         {item.children && item.children.length > 0
                             ? <OutlineSidebar items={item.children} />
                             : ''}
