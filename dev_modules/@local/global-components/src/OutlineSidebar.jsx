@@ -1,16 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Link from './Defaults';
-/* eslint-enable */
-
-// export default function OutlineSidebar({ items }) {
-//     return (
-//         <aside class='sticky top-0 hidden h-full lg:h-[87.5vh] overflow-y-scroll lg:block overflow-x-clip'>
-//             {recursiveRender(items)}
-//         </aside>
-//     );
-// }
 
 export default function OutlineSidebar({ items }) {
     return (
