@@ -25,6 +25,10 @@ export default class Entry {
     return "/" + this.getId().replace("-", "/");
   }
 
+  getUnit() {
+    return this.getId().split("-")[1];
+  }
+
   isChapter() {
     return this.#label.includes("Chapter");
   }

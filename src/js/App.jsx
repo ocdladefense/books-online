@@ -122,7 +122,7 @@ export default function App() {
         {/* <div class='flex flex-col lg:flex-row'> */}
         <div class="lg:grid lg:grid-cols-6" id="touch-area">
           <div id="toc" class="fixed top-0 right-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:right-auto bg-white">
-            <TableOfContents entries={toc} />
+            <TableOfContents onChapterChange={setChapter} currentChapter={chapter} entries={toc} />
           </div>
           <div
             id="document"
@@ -132,7 +132,6 @@ export default function App() {
               id="body"
               class="flex flex-col gap-4 subpixel-antialiased overflow-wrap break-words"
             >
-              <button style="background-color:#000;" onclick={() => { setBook("fsm"); setChapter("2"); }}>Load next chapter</button>
               {!html && <p>Loading...</p>}
               <div dangerouslySetInnerHTML={html}> </div>
             </div>
