@@ -19,37 +19,43 @@ import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent, loa
 export default function App() {
 
   const [html, setHtml] = useState(null);
-  const [index, setIndex] = useState(null);
+  // const [index, setIndex] = useState(null);
   const [book, setBook] = useState("fsm");
   const [bookList, setBookList] = useState(null);
   const [chapter, setChapter] = useState("1");
-  const [breadcrumbs, setBreadcrumbs] = useState(null);
+  // const [breadcrumbs, setBreadcrumbs] = useState([]);
   const [toc, setToc] = useState([]);
   const [outline, setOutline] = useState([]);
 
+  // useEffect(() => {
+  //   async function fetchIndexFile() {
+  //     const index = await loadIndex();
+  //     setIndex(index);
+  //     console.log("index set");
+  //   };
+  //   fetchIndexFile();
+  // }, []);
+
   useEffect(() => {
-    async function fetchIndexFile() {
+    async function doBookList() {
       const index = await loadIndex();
-      setIndex(index);
-      console.log("index set");
-    };
-    fetchIndexFile();
+      const __bookList = getBookList(index);
+      setBookList(__bookList);
+    }
+    doBookList();
   }, []);
 
-  useEffect(() => {
-    const __bookList = getBookList(index);
-    setBookList(__bookList);
-  }, [index]);
 
-  useEffect(() => {
-    let doCrumbs = async () => {
-      if (!index) return;
-      const crumbs = await getBreadcrumbs(book, chapter);
-      setBreadcrumbs(crumbs);
-    };
+  // useEffect(() => {
+  //   function doCrumbs() {
+  //     if (!index) return;
+  //     const chapterNode = index.querySelector(`[id='${book}-${chapter}']`);
+  //     const crumbs = [{ href: '/' + book + '/' + chapter, label: chapterNode.getAttribute("name") }];
+  //     setBreadcrumbs(crumbs);
+  //   };
 
-    doCrumbs();
-  }, [index, book, chapter]);
+  //   doCrumbs();
+  // }, [index, book, chapter]);
 
   useEffect(() => {
     async function fetchData() {
@@ -72,13 +78,13 @@ export default function App() {
 
 
   useEffect(() => {
-    function doToc() {
-      if (!index) return;
+    async function doToc() {
+      const index = await loadIndex();
       const __toc = getChapterList(book, index);
       setToc(__toc);
     }
     doToc();
-  }, [index, book])
+  }, [book])
 
   // This should be executed just once when the page loads.
   // useEffect(function () { setHeading("Hello World!"); }, []);

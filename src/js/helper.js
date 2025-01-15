@@ -83,19 +83,7 @@ export async function getContent(book, unit) {
 
 
 export async function getBreadcrumbs(book = null, unit = null) {
-  const crumbs = [];
-
-  // if (unit) {
-  //   const unitId = book + '-' + unit;
-  //   const unitNode = bookNode.querySelector(`[id='${unitId}']`);
-
-  //   crumbs.push({
-  //     href: '/' + book + '/' + unit,
-  //     label: unitNode.getAttribute("name"),
-  //   });
-  // }
-
- return crumbs;
+ return [];
 }
 //if (index)
 //  index.then((data) => updateBreadcrumbs(data, book, chapter));
