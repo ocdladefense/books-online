@@ -15,8 +15,9 @@ import panHandler from '@ocdla/hammer-wrapper';
 
 
 
-import { loadIndex, getChapterList, getBookList, getContent, loadChapter } from "./helper";
+import { loadIndex, getChapterList, getBookList, getContent, loadChapter, addIntersectionObserver } from "./helper";
 
+const USE_HAMMER = true;
 
 export default function App() {
   // Get routing from the URL
@@ -31,6 +32,7 @@ export default function App() {
   const [breadcrumbs, setBreadcrumbs] = useState([]);
   const [toc, setToc] = useState([]);
   const [outline, setOutline] = useState([]);
+  const [interectionElems, setIntersectionElems] = useState([]);
 
 
   useEffect(() => {
@@ -58,6 +60,7 @@ export default function App() {
     async function fetchData() {
       let __html = await getContent(book, chapter);
       setHtml(__html);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
     fetchData();
   }, [book, chapter]);
@@ -68,11 +71,14 @@ export default function App() {
       const opts = { selectors: [".level1", ".level2", ".level3"] };
       const outline = new Outline(opts);
       setOutline(outline.build(doc));
-      outline.addIntersectionObserver(doc);
+      setIntersectionElems(outline.build(doc, true));
     }
     doOutline();
   }, [book, chapter]);
 
+  useEffect(() => {
+    setTimeout(() => { addIntersectionObserver(interectionElems) }, 0);
+  }, [interectionElems]);
 
 
   useEffect(() => {
@@ -85,7 +91,6 @@ export default function App() {
   }, [book])
 
   useEffect(() => {
-    const USE_HAMMER = true;
     if (USE_HAMMER) {
       // A timeout of 0 will execute code after the current execution stack has finished, which is after the component has rendered.
       // This is a work around for us not having useLayoutEffect.
