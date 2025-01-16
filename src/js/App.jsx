@@ -17,13 +17,20 @@ import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent, loa
 
 
 export default function App() {
+  // Get routing from the URL
+  const urlParts = window.location.pathname.split('/');
+  const _book = urlParts[1] || 'fsm';
+  const _chapter = urlParts[2] || '1';
+
+  const [book, setBook] = useState(_book);
+  const [chapter, setChapter] = useState(_chapter);
 
   const [html, setHtml] = useState(null);
   // const [index, setIndex] = useState(null);
-  const [book, setBook] = useState("fsm");
+  // const [book, setBook] = useState("fsm");
+  // const [chapter, setChapter] = useState("1");
   const [bookList, setBookList] = useState(null);
-  const [chapter, setChapter] = useState("1");
-  // const [breadcrumbs, setBreadcrumbs] = useState([]);
+  const [breadcrumbs, setBreadcrumbs] = useState([]);
   const [toc, setToc] = useState([]);
   const [outline, setOutline] = useState([]);
 
@@ -46,16 +53,16 @@ export default function App() {
   }, []);
 
 
-  // useEffect(() => {
-  //   function doCrumbs() {
-  //     if (!index) return;
-  //     const chapterNode = index.querySelector(`[id='${book}-${chapter}']`);
-  //     const crumbs = [{ href: '/' + book + '/' + chapter, label: chapterNode.getAttribute("name") }];
-  //     setBreadcrumbs(crumbs);
-  //   };
-
-  //   doCrumbs();
-  // }, [index, book, chapter]);
+  useEffect(() => {
+    async function doCrumbs() {
+      const index = await loadIndex();
+      const bookNode = index.querySelector(`[shortName='${book}']`);
+      const chapterNode = index.querySelector(`[id='${book}-${chapter}']`);
+      const crumbs = [{ href: '/' + book, label: bookNode.getAttribute("name") }, { href: '/' + book + '/' + chapter, label: chapterNode.getAttribute("name") }];
+      setBreadcrumbs(crumbs);
+    };
+    doCrumbs();
+  }, [book, chapter]);
 
   useEffect(() => {
     async function fetchData() {
@@ -71,6 +78,7 @@ export default function App() {
       const opts = { selectors: [".level1", ".level2", ".level3"] };
       const outline = new Outline(opts);
       setOutline(outline.build(doc));
+      outline.addIntersectionObserver(doc);
     }
     doOutline();
   }, [book, chapter]);
@@ -89,17 +97,17 @@ export default function App() {
   // This should be executed just once when the page loads.
   // useEffect(function () { setHeading("Hello World!"); }, []);
 
-  useEffect(() => {
-    console.log("rendered");
-    console.log("chapter", chapter);
-    console.log("book", book);
-    //console.log("html", html);
-    //console.log("index", index);
-    //console.log("bookList", bookList);
-    //console.log("toc", toc);
-    //console.log("outline", outline);
-    //console.log("breadcrumbs", breadcrumbs);
-  })
+  // useEffect(() => {
+  //   console.log("rendered");
+  //   console.log("chapter", chapter);
+  //   console.log("book", book);
+  //   //console.log("html", html);
+  //   //console.log("index", index);
+  //   //console.log("bookList", bookList);
+  //   //console.log("toc", toc);
+  //   //console.log("outline", outline);
+  //   //console.log("breadcrumbs", breadcrumbs);
+  // })
 
 
   return (
@@ -115,7 +123,7 @@ export default function App() {
         <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
 
           <BookPicker onBookChange={setBook} onChapterChange={setChapter} books={bookList} currentBook={book} />
-          {/* {breadcrumbs && <Breadcrumbs items={breadcrumbs} />} */}
+          {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
         </div>
         <button
           onclick={() => {

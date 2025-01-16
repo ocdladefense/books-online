@@ -4,7 +4,6 @@ import { vNode } from '@ocdla/view';
 /* eslint-enable */
 
 export default function Breadcrumbs({ items = [] }) {
-    console.log(items);
     return (
         <section class='flex items-center border border-t-0 p-4 capitalize text-black lg:h-16'>
             <ul class='flex flex-wrap items-center whitespace-pre'>
