@@ -10,10 +10,12 @@ import Footer from "@ocdla/global-components/src/Footer";
 import TableOfContents from "@ocdla/global-components/src/TableOfContents.jsx";
 import OutlineSidebar from "@ocdla/global-components/src/OutlineSidebar.jsx";
 import Outline from "@ocdla/outline";
+import Hammer from "hammerjs";
+import panHandler from '@ocdla/hammer-wrapper';
 
 
 
-import { loadIndex, getChapterList, getBookList, getBreadcrumbs, getContent, loadChapter } from "./helper";
+import { loadIndex, getChapterList, getBookList, getContent, loadChapter } from "./helper";
 
 
 export default function App() {
@@ -24,24 +26,12 @@ export default function App() {
 
   const [book, setBook] = useState(_book);
   const [chapter, setChapter] = useState(_chapter);
-
   const [html, setHtml] = useState(null);
-  // const [index, setIndex] = useState(null);
-  // const [book, setBook] = useState("fsm");
-  // const [chapter, setChapter] = useState("1");
   const [bookList, setBookList] = useState(null);
   const [breadcrumbs, setBreadcrumbs] = useState([]);
   const [toc, setToc] = useState([]);
   const [outline, setOutline] = useState([]);
 
-  // useEffect(() => {
-  //   async function fetchIndexFile() {
-  //     const index = await loadIndex();
-  //     setIndex(index);
-  //     console.log("index set");
-  //   };
-  //   fetchIndexFile();
-  // }, []);
 
   useEffect(() => {
     async function doBookList() {
@@ -94,6 +84,23 @@ export default function App() {
     doToc();
   }, [book])
 
+  useEffect(() => {
+    const USE_HAMMER = true;
+    if (USE_HAMMER) {
+      // A timeout of 0 will execute code after the current execution stack has finished, which is after the component has rendered.
+      // This is a work around for us not having useLayoutEffect.
+      setTimeout(() => {
+        console.log("Using hammer");
+        const touchArea = document;
+        const hammer = new Hammer(touchArea, {
+          inputClass: Hammer.TouchInput
+        });
+        hammer.get("pan").set({ threshold: 20 });
+        hammer.on("pan doubletap", (ev) => panHandler(ev));
+      }, 0);
+    }
+  }, []);
+
   // This should be executed just once when the page loads.
   // useEffect(function () { setHeading("Hello World!"); }, []);
 
@@ -120,9 +127,10 @@ export default function App() {
 
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
-        <div id="breadcrumbs" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
-
+        <div id="bookpicker" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
           <BookPicker onBookChange={setBook} onChapterChange={setChapter} books={bookList} currentBook={book} />
+        </div>
+        <div id="breadcrumbs" class="bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
           {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
         </div>
         <button

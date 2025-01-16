@@ -1,6 +1,5 @@
 import HttpClient from "@ocdla/lib-http/HttpClient.js";
 import TableOfContents from "@ocdla/table-of-contents";
-import Outline from "@ocdla/outline";
 
 let index;
 
@@ -78,12 +77,3 @@ export async function getContent(book, unit) {
     return s.serializeToString(fragment);
   });
 }
-
-
-
-
-export async function getBreadcrumbs(book = null, unit = null) {
- return [];
-}
-//if (index)
-//  index.then((data) => updateBreadcrumbs(data, book, chapter));
