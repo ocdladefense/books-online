@@ -4,7 +4,7 @@ import { vNode } from '@ocdla/view';
 /* eslint-enable */
 
 export default function BookPicker({ onBookChange, onChapterChange, books, currentBook }) {
-    if (!books) return '';
+    books = books || [];
     return (
         <section class='flex items-center border border-t-0 p-4 capitalize text-black lg:h-16'>
             <ul class='flex flex-wrap items-center whitespace-pre'>

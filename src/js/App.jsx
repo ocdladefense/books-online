@@ -77,7 +77,7 @@ export default function App() {
   }, [book, chapter]);
 
   useEffect(() => {
-    setTimeout(() => { addIntersectionObserver(interectionElems) }, 0);
+   addIntersectionObserver(interectionElems);
   }, [interectionElems]);
 
 
@@ -91,10 +91,10 @@ export default function App() {
   }, [book])
 
   useEffect(() => {
-    if (USE_HAMMER) {
+    if (!USE_HAMMER) return;
       // A timeout of 0 will execute code after the current execution stack has finished, which is after the component has rendered.
       // This is a work around for us not having useLayoutEffect.
-      setTimeout(() => {
+      // setTimeout(() => {
         console.log("Using hammer");
         const touchArea = document;
         const hammer = new Hammer(touchArea, {
@@ -102,8 +102,8 @@ export default function App() {
         });
         hammer.get("pan").set({ threshold: 20 });
         hammer.on("pan doubletap", (ev) => panHandler(ev));
-      }, 0);
-    }
+      //}, 0);
+    // }
   }, []);
 
   // This should be executed just once when the page loads.
@@ -159,8 +159,7 @@ export default function App() {
               id="body"
               class="flex flex-col gap-4 subpixel-antialiased overflow-wrap break-words"
             >
-              {!html && <p>Loading...</p>}
-              <div dangerouslySetInnerHTML={html}> </div>
+              <div dangerouslySetInnerHTML={html}>Loading...</div>
             </div>
           </div>
           <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white">
