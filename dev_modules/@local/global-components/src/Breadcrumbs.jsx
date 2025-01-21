@@ -8,15 +8,12 @@ export default function Breadcrumbs({ items = [] }) {
         <section class='flex items-center border border-t-0 p-4 capitalize text-black lg:h-16'>
             <ul class='flex flex-wrap items-center whitespace-pre'>
                 {items.map((item, i) => {
-                    const seperatorString =
-                        i !== items.length - 1 ? ' / ' : ' ';
+                    const seperatorString = i !== items.length - 1 ? ' / ' : ' ';
                     return (
-                        <>
-                            <li>
-                                <a href={item.href}>{item.label}</a>
-                            </li>
-                            {seperatorString}
-                        </>
+                        <li>
+                            <a href={item.href}>{item.label}</a>
+                            <span>{seperatorString}</span>
+                        </li>
                     );
                 })}
             </ul>
