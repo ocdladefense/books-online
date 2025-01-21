@@ -92,34 +92,16 @@ export default function App() {
 
   useEffect(() => {
     if (!USE_HAMMER) return;
-      // A timeout of 0 will execute code after the current execution stack has finished, which is after the component has rendered.
-      // This is a work around for us not having useLayoutEffect.
-      // setTimeout(() => {
-        console.log("Using hammer");
-        const touchArea = document;
-        const hammer = new Hammer(touchArea, {
-          inputClass: Hammer.TouchInput
-        });
-        hammer.get("pan").set({ threshold: 20 });
-        hammer.on("pan doubletap", (ev) => panHandler(ev));
-      //}, 0);
-    // }
+    console.log("Using hammer");
+    const touchArea = document;
+    const hammer = new Hammer(touchArea, {
+      inputClass: Hammer.TouchInput
+    });
+    hammer.get("pan").set({ threshold: 20 });
+    hammer.on("pan doubletap", (ev) => panHandler(ev));
   }, []);
 
-  // This should be executed just once when the page loads.
-  // useEffect(function () { setHeading("Hello World!"); }, []);
 
-  // useEffect(() => {
-  //   console.log("rendered");
-  //   console.log("chapter", chapter);
-  //   console.log("book", book);
-  //   //console.log("html", html);
-  //   //console.log("index", index);
-  //   //console.log("bookList", bookList);
-  //   //console.log("toc", toc);
-  //   //console.log("outline", outline);
-  //   //console.log("breadcrumbs", breadcrumbs);
-  // })
 
 
   return (
@@ -136,7 +118,7 @@ export default function App() {
           <BookPicker onBookChange={setBook} onChapterChange={setChapter} books={bookList} currentBook={book} />
         </div>
         <div id="breadcrumbs" class="bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
-          {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
+          <Breadcrumbs items={breadcrumbs} />
         </div>
         <button
           onclick={() => {
