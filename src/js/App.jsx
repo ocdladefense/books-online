@@ -27,8 +27,13 @@ export default function App() {
 
   const [book, setBook] = useState('fsm');
   const [chapter, setChapter] = useState('1');
-  const [html, setHtml] = useState(null);
-  const [bookList, setBookList] = useState(null);
+  const [title, setTitle] = useState();
+  const [chapterTitle, setChapterTitle] = useState();
+  const [chapterAuthors, setChapterAuthors] = useState();
+  const [bookShortName, setBookShortName] = useState('fsm');
+  const [edition, setEdition] = useState();
+  const [html, setHtml] = useState();
+  const [bookList, setBookList] = useState();
   const [breadcrumbs, setBreadcrumbs] = useState([]);
   const [toc, setToc] = useState([]);
   const [outline, setOutline] = useState([]);
@@ -50,6 +55,22 @@ export default function App() {
       const index = await loadIndex();
       const bookNode = index.querySelector(`[shortName='${book}']`);
       const chapterNode = index.querySelector(`[id='${book}-${chapter}']`);
+
+      const title = bookNode.querySelector('meta[name="title"]').getAttribute("content");
+      const edition = bookNode.querySelector('meta[name="edition"]').getAttribute("content");
+      const editor = bookNode.querySelector('meta[name="editor"]').getAttribute("content");
+      const label = chapterNode.getAttribute("label");
+      const name = chapterNode.getAttribute("name");
+      const chapterTitle = `${label} - ${name}`;
+      const authorNode = chapterNode.querySelector("meta[name='authors']");
+      const chapterAuthors = (authorNode && authorNode.getAttribute("content")) || editor;
+
+      setTitle(title);
+      setEdition(edition);
+      setChapterTitle(chapterTitle);
+      setChapterAuthors(chapterAuthors);
+      setBookShortName(book.toUpperCase());
+      
       const crumbs = [{ href: '/' + book, label: bookNode.getAttribute("name") }, { href: '/' + book + '/' + chapter, label: chapterNode.getAttribute("name") }];
       setBreadcrumbs(crumbs);
     };
@@ -122,9 +143,8 @@ export default function App() {
         </div>*/}
         <div class="bg-ocdla-dark-blue text-white p-16 pb-20">
           <p>OCDLA Books Online</p>
-          <h1 class="text-4xl font-bold">Felony Sentencing in Oregon: Guidelines, Statutes, Cases</h1>
-          
-          <p class="mt-4">2019 edition. Includes January 2024 update by Jennelle Meeks Barton.</p>  
+          <h1 class="text-4xl font-bold">{title}</h1>
+          <p class="mt-4">{edition}</p>  
         </div>
         <button
           onclick={() => {
@@ -143,9 +163,9 @@ export default function App() {
             id="document"
             class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
           >
-          <h2 class="text-3xl font-bold my-0">Chapter 1 - Introduction</h2>
-          <h3 class="my-0">Edited by Jesse Wm. Barton</h3>  
-              <h2 style="border-radius: 0px 0px 8px 8px; z-index:100;" class="my-0 sticky top-0 p-4 bg-ocdla-dark-blue text-white">FSM | Chapter 1 - Introduction</h2>
+          <h2 class="text-3xl font-bold my-0">{chapterTitle}</h2>
+          <h3 class="my-0">{chapterAuthors}</h3>  
+              <h2 style="border-radius: 0px 0px 8px 8px; z-index:100;" class="my-0 sticky top-0 p-4 bg-ocdla-dark-blue text-white">{bookShortName} | {chapterTitle}</h2>
               <div dangerouslySetInnerHTML={html}>Loading...</div>
           </div>
           <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white">
