@@ -135,10 +135,10 @@ export default function App() {
 
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
-        {/*<div id="bookpicker" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
+        <div id="bookpicker" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
           <BookPicker onBookChange={setBook} onChapterChange={setChapter} books={bookList} currentBook={book} />
         </div>
-        <div id="breadcrumbs" class="bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
+        {/*<div id="breadcrumbs" class="bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
           <Breadcrumbs items={breadcrumbs} />
         </div>*/}
         <div class="bg-ocdla-dark-blue text-white p-16 pb-20">
