@@ -25,8 +25,8 @@ export default function App() {
   const _book = urlParts[1] || 'fsm';
   const _chapter = urlParts[2] || '1';
 
-  const [book, setBook] = useState(_book);
-  const [chapter, setChapter] = useState(_chapter);
+  const [book, setBook] = useState('fsm');
+  const [chapter, setChapter] = useState('1');
   const [html, setHtml] = useState(null);
   const [bookList, setBookList] = useState(null);
   const [breadcrumbs, setBreadcrumbs] = useState([]);
@@ -107,18 +107,24 @@ export default function App() {
   return (
     <div id="the-app-container">
       <div class='fixed right-0 z-10 flex w-max gap-2 bg-white p-4 lg:left-0 lg:p-2'></div>
-      <header class="container mx-auto flex w-full flex-col bg-white lg:h-32 top-of-page">
+      <header class="container mx-auto flex w-full flex-col bg-white top-of-page">
         <Navbar />
       </header>
 
 
       {/* <Main cols='3' /> */}
       <div class="container mx-auto border-x">
-        <div id="bookpicker" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
+        {/*<div id="bookpicker" class="sticky top-0 z-5 bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
           <BookPicker onBookChange={setBook} onChapterChange={setChapter} books={bookList} currentBook={book} />
         </div>
         <div id="breadcrumbs" class="bg-white lg:static lg:top-auto lg:z-auto lg:bg-transparent overflow-x-clip">
           <Breadcrumbs items={breadcrumbs} />
+        </div>*/}
+        <div class="bg-ocdla-dark-blue text-white p-16 pb-20">
+          <p>OCDLA Books Online</p>
+          <h1 class="text-4xl font-bold">Felony Sentencing in Oregon: Guidelines, Statutes, Cases</h1>
+          
+          <p class="mt-4">2019 edition. Includes January 2024 update by Jennelle Meeks Barton.</p>  
         </div>
         <button
           onclick={() => {
@@ -137,16 +143,14 @@ export default function App() {
             id="document"
             class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
           >
-            <div
-              id="body"
-              class="flex flex-col gap-4 subpixel-antialiased overflow-wrap break-words"
-            >
+          <h2 class="text-3xl font-bold my-0">Chapter 1 - Introduction</h2>
+          <h3 class="my-0">Edited by Jesse Wm. Barton</h3>  
+              <h2 style="border-radius: 0px 0px 8px 8px; z-index:100;" class="my-0 sticky top-0 p-4 bg-ocdla-dark-blue text-white">FSM | Chapter 1 - Introduction</h2>
               <div dangerouslySetInnerHTML={html}>Loading...</div>
-            </div>
           </div>
           <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white">
             <aside class='sticky top-0 hidden h-full lg:h-[87.5vh] overflow-y-scroll lg:block overflow-x-clip'>
-              <OutlineSidebar items={outline} />
+              {/* <OutlineSidebar items={outline} /> */}
             </aside>
           </div>
         </div>

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <books>
     <!-- http://localhost:8080/?book=fsm&id=appendix-a -->
+    <!-- The foreword and introduction of a book, when compared to the main chapters, are collectively referred to as the "front matter" of the book; they are the introductory sections that come before the main body of text containing the chapters. 
+Key points about front matter:
+Includes:
+This section usually includes the title page, copyright page, dedication, preface (if present), foreword (if present), introduction, and table of contents. 
+Purpose:
+The front matter serves to provide context and background information about the book, often explaining the author's motivations and the book's overall purpose. -->
     <book name="Felony Sentencing Manual" shortName="fsm" default="1">
-        <parts>
-            <part label="Foreword" id="fsm-foreword" name="Foreword"/>
-            <part label="Outline" id="fsm-outline" name="Sentencing Outline"/>
-        </parts>
+        <parts></parts>
         <chapters>
+            <chapter label="Foreword" id="fsm-foreword" name="Foreword"/>
+            <chapter label="Outline" id="fsm-outline" name="Sentencing Outline"/>
             <chapter label="Chapter 1" id="fsm-1" name="Introduction"/>
             <chapter label="Chapter 2" id="fsm-2" name="Crime Seriousness Rankings"/>
             <chapter label="Chapter 3" id="fsm-3" name="Criminal History Scoring"/>
