@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+          "lod-light": "rgb(219 228 243)",
+          "ocdla-dark-blue": "rgb(28 30 60)"
+      },
       fontFamily: {
         sans: ['"Open Sans"', "Verdana", ...defaultTheme.fontFamily.sans],
       },
