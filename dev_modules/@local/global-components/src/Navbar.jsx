@@ -11,19 +11,19 @@ import Button from './Button';
 
 export default function Navbar() {
     return (
-        <nav class='flex flex-col border border-0 border-b lg:h-16 lg:flex-row lg:border lg:border-t-0'>
+        <nav style="position:sticky;" class='flex flex-col border border-0 border-b lg:h-16 lg:flex-row lg:border lg:border-t-0'>
             <ul class='flex size-full flex-col items-start lg:flex-row lg:items-center'>
                 <li class='size-full lg:size-max'>
                     <ul class='flex flex-col items-center lg:flex-row'>
                         <Logo typeNavbar={true} />
-                        <Navlink href='https://oregon.public.law/rules'>
+                        {/*<Navlink href='https://oregon.public.law/rules'>
                             Oregon Administrative Rules
                         </Navlink>
                         <Navlink
                             // href='https://oregon.public.law/statutes'
                             href='/toc'>
                             Oregon Revised Statutes
-                        </Navlink>
+                        </Navlink>*/}
                     </ul>
                 </li>
                 <DividerMobile />
@@ -42,15 +42,16 @@ export default function Navbar() {
                         <DividerDesktop />
                         <li class='size-full'>
                             <ul class='flex flex-row-reverse items-center lg:flex-row'>
-                                <Profile
-                                    bg='bg-[#516490]'
-                                    label='G'
-                                />
-                                <DividerDesktop />
                                 <Button
                                     href='/'
                                     label='GIVE FEEDBACK'
                                 />
+                                <DividerDesktop />
+                                <Profile
+                                    bg='bg-[#516490]'
+                                    label='G'
+                                />
+                                
                             </ul>
                         </li>
                     </form>
