@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2010 edition</p>
+            <p><strong>Mitigation</strong></p>
+            <p><strong><em>Jackie Page, revised by Rhonda
+            Coats</em></strong></p>
+            <section id="introduction_to_mitigation" class="level1">
+            <h1><strong>Introduction to Mitigation</strong></h1>
+            <p>“Mitigation” literally means “to make less severe or
+            painful.” In the world of criminal defense, mitigation is a
+            term used to describe either 1) immediate circumstances to
+            the commission of a crime, or 2) life circumstances of one’s
+            client that contributed to the commission of a crime.
+            Mitigation may be a single fact or an entire body of
+            information used to explain why a criminal act occurred or
+            to put the criminal act into the context of your client’s
+            life circumstances or mental health. “Mitigation” does not
+            mean “excuse.” Prosecutors tend to equate mitigation
+            evidence with an attempt by the defense to make excuses for
+            a criminal act. There is a profound difference between an
+            explanation for an act and an excuse. In the case of a
+            criminal act, an explanation does not take away or eliminate
+            guilt; it puts the criminal act into perspective, and thus
+            may potentially diminish guilt.</p>
+            <p>Refer to ORS 137.080–137.100 to become acquainted with
+            aggravating and mitigating circumstances relevant to
+            sentencing. Prior to Ballot Measure 11, the language in
+            these statutes was relevant to criminal cases in general.
+            Now, for all practical purposes, these statutes are relevant
+            only for misdemeanor crimes and non-Measure 11 felonies.</p>
+            <p>Considering the legal decisions that will be made, it is
+            critical to gather complete information regarding your
+            client’s behavior, strengths, needs and life history. This
+            effort will be based on the principle that in order to fully
+            understand a client, it is necessary to examine both the
+            individual and the environmental factors that have affected
+            him or her in life and development.</p>
+            <p>From the standpoint of an individual, it is vital to
+            comprehend the client’s strengths, thought processes, moral
+            position and identity, as well as any exposure to trauma.
+            From the environmental standpoint it is vital to examine the
+            contexts in which a client lives and has lived (family,
+            friends, education, employment, criminal history, etc.).
+            After gathering all of the information it is possible to
+            gather on a particular client, one must synthesize this
+            information into a format that is conducive to a criminal
+            defense case. This is all in addition to the case fact
+            investigation.</p>
+            <p>The American Bar Association’s Supplemental Guidelines
+            for Mitigation in Capital Case Defense defines mitigation
+            evidence as follows:</p>
+            <p>Mitigation evidence includes, but is not limited to,
+            compassionate factors stemming from the diverse frailties of
+            humankind, the ability to make a positive adjustment to
+            incarceration, the realities of incarceration and the actual
+            meaning of a life sentence, capacity for redemption,
+            remorse, execution impact, vulnerabilities related to mental
+            health, explanations of patterns of behavior, negation of
+            aggravating evidence regardless of its designation as an
+            aggravating factor, positive acts or qualities, responsible
+            conduct in other areas of life (e.g. employment, education,
+            military service, as a family member), any evidence bearing
+            on the degree of moral culpability, and any other reason for
+            a sentence less than death.</p>
+            <p>Although you are not conducting a mitigation
+            investigation with the purpose of saving your client from a
+            possible sentence of death, you are using mitigation
+            evidence in an attempt to improve the outcome of your
+            client’s case.</p>
+            <p>While the passing of Measure 11 removed the ability of
+            defendants to present mitigation evidence to a judge in the
+            hope of receiving a discretionary sentence, presenting
+            mitigation evidence to a prosecutor became the alternative
+            to the sentencing forum. The intended goal is to alter the
+            final charging instrument.</p>
+            </section>
+            <section id="mitigation_investigation" class="level1">
+            <h1><strong>Mitigation Investigation</strong></h1>
+            <p>As a facts investigator conducting a mitigation
+            investigation on a non-capital case you must review all of
+            the police reports, lab reports, photographs, interview
+            recordings, the charging instrument and any and all other
+            evidence the state provides or is known to the defense team.
+            This evidence will provide your beginning point and may also
+            contain mitigation evidence as well. It is essential to
+            understand your client’s entire life story in order to
+            understand what led to their current criminal charge(s).</p>
+            <section id="identify_mitigation_issues_and_gather_records"
+            class="level2">
+            <h2><strong><em>Identify Mitigation Issues and Gather
+            Records</em></strong></h2>
+            <p>Multiple in-depth interviews with your client are
+            essential to establish a detailed social history that
+            includes family and educational histories; medical,
+            substance and mental health histories; military and
+            occupational histories; birth event, religion and criminal
+            histories, as well as all other factors specific to your
+            client. The client-reported history needs to be verified by
+            in-depth interviews with family, friends, significant
+            others, teachers, neighbors, professionals, treatment
+            providers and anyone else who has had an impact in any way
+            upon your client. You will need a HIPPA release for
+            information form and a general release for information form
+            both signed by your client. You will also need every member
+            of the client’s family that you will be obtaining records on
+            to sign one as well. It may be helpful to have them sign
+            several of each type as not all agencies will accept a
+            photocopy of a signed release. See Chapter 5, Public
+            Records/FOIA, regarding the specific suggestions for
+            obtaining records.</p>
+            <p>Obtaining a complete social history on your client is
+            extremely time-consuming. When possible you should have the
+            copies certified, as this will make them more readily
+            admissible in court. Each record can potentially lead to
+            additional records you will need to obtain. The following is
+            merely a sample list of the kinds of records you will need
+            to obtain.</p>
+            <p>•Birth certificates (client/family).</p>
+            <p>•Birth records (including mother’s prenatal care
+            records).</p>
+            <p>•Medical records, including early childhood for all
+            family members.</p>
+            <p>•Parents’ marriage/divorce/death certificates.</p>
+            <p>•Client’s marriage/divorce records.</p>
+            <p>•All police reports, response calls and incident reports
+            involving or mentioning your client.</p>
+            <p>•Social service, child welfare, and public assistance
+            records.</p>
+            <p>•Juvenile justice records.</p>
+            <p>•Military records, including parents’ records.</p>
+            <p>•All prior Department of Corrections records.</p>
+            <p>•Current jail records on a monthly basis while your
+            client is in custody.</p>
+            <p>•Mental health records for client and family.</p>
+            <p>•Probation and post-prison supervision records.</p>
+            <p>•All media – news articles and television news clips,
+            including any comments individuals may have provided as an
+            editorial comment on a media web site.</p>
+            <p>If possible, obtain family generational information two
+            or three generations back. For juvenile Measure 11 clients,
+            complete the Developmental Assessment Format with your
+            client, included as Appendix E. Depending on the information
+            your records search turns up, you may need to enlist the
+            assistance of an education consultant to interpret the
+            language contained in reports such as IEP’s (Individualized
+            Education Plan).</p>
+            <p>It is imperative before you embark on a mitigation
+            investigation to discuss in detail with the attorney exactly
+            what you need to do in order to develop the information you
+            will be seeking. Many jurisdictions aren’t set up to allow
+            the time needed for you to conduct a thorough mitigation
+            investigation. Your attorney will need to be prepared to
+            request the additional time from the court to assure that
+            the investigation not only occurs, but that it is complete.
+            If your client was appointed an attorney by the court, the
+            Office of Public Defense Services is paying for the legal
+            representation, the facts investigation, and any experts and
+            mental health professionals for the client. Regardless of
+            your particular payment arrangement, a mitigation
+            investigation is extremely time-consuming and expensive.
+            Most places charge fees for copies of records and generally
+            inform you before they make the copies what the fees will
+            be. These records also take a great deal of time to obtain,
+            especially military records, so plan accordingly.</p>
+            <p>You will need to develop a much deeper, trusting
+            relationship with your client in order to obtain the social
+            history that will point you toward all of the resources you
+            will need. As your relationship develops you will be able to
+            get more detailed and intimate information about your
+            client’s childhood and home life. Regardless of the trust
+            built and the time spent with your client, you may
+            experience reluctance and resistance to your questions. Your
+            client and his or her family may not understand why you want
+            to know such personal, and most likely embarrassing,
+            humiliating, and painful information. Your client and the
+            family may be protective of their closely held secrets. You
+            must be supportive, reassuring and nonjudgmental, while
+            expressing how necessary the information is in seeking an
+            acquittal or at least a lesser sentence.</p>
+            <p>Check with your attorney before asking your client to
+            write anything down, but it is generally helpful for both
+            the client and your investigation if they provide a list of
+            the schools they’d attended, towns lived in, jobs held, etc.
+            Being able to participate as an active member of his own
+            defense team often helps a client feel that they have some
+            say in how the investigation is proceeding. You must adapt
+            to each particular client and mold yourself around his or
+            her needs. Inform the attorney about your methods and
+            techniques for gathering information— the attorney is the
+            primary source of direction and the person who will utilize
+            the information you receive. The attorney will also let you
+            know exactly how they want to receive the information,
+            whether in detailed written reports, verbal reports, or
+            simply just the original records you obtain.</p>
+            <p>Many aspects of the assessment tool in Appendix E can be
+            modified for gathering information from your adult clients
+            as well.</p>
+            </section>
+            </section>
+            <section id="effective_ways_to_present_mitigation_evidence"
+            class="level1">
+            <h1><strong>Effective Ways to Present Mitigation
+            Evidence</strong></h1>
+            <p>Discuss with the case attorney how he or she wants you to
+            present the information you obtain. Records obtained from
+            schools, hospitals, law enforcement agencies and the like
+            may be placed categorically into binders with a table of
+            contents. Include an index in the records section, as well
+            as in the section containing your interview reports.</p>
+            <p>A Life Story is your client’s social history written as
+            the “story” of your client’s life. Included in the Life
+            Story is a complete chronology of every significant event in
+            your client’s life and should include a genealogy (a family
+            tree showing graphically any relatives that suffered from
+            alcohol and drug addictions, mental illnesses or
+            criminality, and death. Violent deaths should be graphically
+            set apart as well). As you create your chronology you will
+            discern patterns and recurring issues in your client’s life.
+            Patterns of any sort will be useful in determining potential
+            case themes, as well as in helping to identify any mental
+            health issues that</p>
+            <p>may not have been addressed prior to your investigation.
+            Childhood photographs, school pictures, sports pictures,
+            report cards and family photos can say much more than some
+            Life Stories can. The family information you
+            <em>don’t</em>find can sometimes tell you more about how
+            your client grew up than volumes of records can.</p>
+            <p>If you have a client that has been convicted of a crime
+            and will be having a separate sentencing hearing, your
+            client’s attorney can present a “defendant’s Pre-sentence
+            Report” for the court’s consideration. The more organized
+            the material, the better it will be received.</p>
+            </section>
+            <section id="conclusion" class="level1">
+            <h1><strong>Conclusion</strong></h1>
+            <p>Mitigation can make a significant difference in the
+            outcome of your client’s case. As the mitigation
+            investigator, it’s up to you to identify and obtain
+            everything available that you can use to tell the story your
+            client isn’t able to tell without you.</p>
+            <p>It would be beneficial for you to attend at least one
+            seminar a year on mitigation investigation. “What” happened
+            in your client’s criminal case begs the questions of “why”
+            and “how,” and mitigation is how you answer those questions.
+            Here are a few organizations that offer mitigation
+            seminars:</p>
+            <p>•The Sentencing Project—<a
+            href="http://www.sentencingproject.org/">www.sentencingproject.org</a></p>
+            <p>•National Legal Aid and Defender Association<a
+            href="http://www.nlada.org/">www.nlada.org</a></p>
+            <p>•National Association of Sentencing Advocates—<a
+            href="http://www.sentencingproject.org/nasa">www.sentencingproject.org/nasa</a></p>
+            <p>•Oregon Criminal Defense Lawyers Association—<a
+            href="http://www.ocdla.org/">www.ocdla.org</a></p>
+            <p>•National Association of Criminal Defense Lawyers—<a
+            href="http://www.nacdl.org/">www.nacdl.org</a>and</p>
+            <p><a
+            href="http://www.criminaljustice.org/">www.criminaljustice.org</a></p>
+            <p>•Washington Association of Criminal Defense Lawyers—<a
+            href="http://www.wacdl.org/">www.wacdl.org</a></p>
+            <p>•Office of Defender Services—<a
+            href="http://www.fd.org/">www.fd.org</a></p>
+            <p>='''</p>
+            <center>
+            <p>Appendix A</p>
+            </center>
+            <p>'''=</p>
+            <center>
+            <p>Authorization for Release of Information</p>
+            </center>
+            <p>NAME: SSN: TO: (name of agency)</p>
+            <p>DOB: I hereby authorize my agent, , Attorney at Law, or
+            his agent, , to request and receive for the purpose of Legal
+            representation on my behalf, documents or information
+            relating in any manner to me. I further release custodians
+            and possessors of such information from any and all
+            liability for its disclosure to my agent.</p>
+            <p>This authority includes, but is not limited to, the
+            inspection, copying, and receipt of documents, photographs,
+            and all other written or recorded information and the
+            receipt of oral information, and I hereby request that all
+            persons cooperate fully in providing the requested
+            information.</p>
+            <p>The authority herein granted includes, but is not limited
+            to medical reports of physical and/or mental disorders,
+            specifically including reports relating to drug and/or
+            alcohol abuse, infection with human immunodeficiency virus
+            (HIV), and sickle cell anemia. (In accordance with 42 CFR
+            Part 2; 42 USC 290DD-3, and 21 USC 1175.)</p>
+            <p>The authority herein granted includes but is not limited
+            to, the following: Internal Revenue Service, Selective
+            Service, Military, Veteran’s Administration, Law Enforcement
+            and Penal Correctional Facilities, Oregon State Public
+            Welfare Division, social Security Administration, Banking
+            and/or Financial Institutions, Medical and/or Psychiatric
+            Facilities or Personnel, Treatment Programs, doctors,
+            Psychiatrists, Psychologists, Counselors, Attorneys,
+            Educational Institutions, Places of Employment,
+            Apartment/House Rentals, or any other person or entity
+            together with their agencies, departments, representatives,
+            officials and agents .</p>
+            <p>I further authorize that this consent shall remain valid
+            from my date of signature until the termination of
+            representation by , or until otherwise revoked, and that
+            photocopies of this document be accepted with the same
+            authority as the original. I understand that this release of
+            information may be revoked by me in writing at any time with
+            the exception of material or information that has already
+            been released in conformity with the directive of this
+            release prior to revocation. I have gone over this
+            Authorization For Release Of Information and fully
+            understand its contents.</p>
+            <p>Dated , 2001</p>
+            <p>Witnessed By:</p>
+            <p>(Client Name)</p>
+            <p>='''</p>
+            <center>
+            <p>Appendix B</p>
+            </center>
+            <p>'''=</p>
+            <center>
+            <p>Authorization to Disclose Medical Records</p>
+            </center>
+            <p>This authorization must be written, dated and signed by
+            the patient or by a person authorized by law to give
+            authorization.</p>
+            <p>TO: (name of agency)</p>
+            <p>I authorize (health care provider) to release a copy of
+            the medical information</p>
+            <p>for (patient) to (attorney/investigator name and mailing
+            address.)</p>
+            <p>The information will be used on my behalf for the
+            following purpose(s): in representing me in a legal claim
+            for damages arising out of the incident which required me to
+            receive medical care.</p>
+            <p>By initialing the spaces below, I specifically authorize
+            the release of the following medical records, if such
+            records exist:</p>
+            <p>All hospital records (including nursing records and
+            progress notes)</p>
+            <p>Transcribed hospital reports</p>
+            <p>Clinician office chart notes</p>
+            <p>Medical reports needed for</p>
+            <p>Dental records continuity of care</p>
+            <p>Physical therapy</p>
+            <p>Most recent 5-year history</p>
+            <p>Emergency and urgency</p>
+            <p>Laboratory reports care records</p>
+            <p>Pathology reports</p>
+            <p>Billing statements</p>
+            <p>Diagnostic imaging reports</p>
+            <p>Other:</p>
+            <p>Please send the entire medical records (ALL information)
+            to the above-named recipient. The recipient understands this
+            record may be voluminous and agrees to pay all reasonable
+            charges associated with providing this records.</p>
+            <p>*HIV/AIDS-related records</p>
+            <p>*Mental health information</p>
+            <p>*Genetic testing information</p>
+            <p><code>**Drug/alcohol diagnosis, treatment or referral information: </code></p>
+            <p><em>* Must be initialed to be included in other
+            documents.</em></p>
+            <p><em>** Federal Regulation 42 CFR Part 2 requires a
+            description of how much and what kind of information is to
+            be disclosed.</em></p>
+            <p>This authorization is limited to the following
+            treatment:</p>
+            <p>This authorization is limited to the following time
+            period:</p>
+            <p>This authorization is limited to a workers’ compensation
+            claim for injuries of (date).</p>
+            <p>This authorization may be revoked at any time. The only
+            exception is when action has been taken in reliance on the
+            authorization. Unless revoked earlier, this consent will
+            expire 180 days from the date of signing or shall remain in
+            effect for the period reasonably needed to complete the
+            request.</p>
+            <p>(date) ( signature of patient)</p>
+            <p>(date) ( signature of person authorized by law)</p>
+            <p>(date) ( signature of witness)</p>
+            </section>
+    </body>
+</html>

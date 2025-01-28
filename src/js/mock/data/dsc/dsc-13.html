@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </section>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 13. The Art of Jury
+            Selection</strong></p>
+            <p><strong>By Whitney Boise</strong></p>
+            <section id="introduction" class="level1">
+            <h1><strong>Introduction</strong></h1>
+            <p>You cannot win your jury trial in voir dire, but you can
+            lose it. If you are unable to identify and strike the
+            individuals off your jury panel who are unwilling to
+            consider acquitting your client, you have lost.</p>
+            <p>Despite being called jury selection, the process should
+            be called jury deselection.<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> Voir dire is not about
+            finding the people you want on the jury; rather, it is about
+            identifying those jurors whose life experiences, attitudes
+            and opinions would make it difficult if not impossible for
+            them to return a verdict of not guilty. This is especially
+            true in sex cases where potential jurors will have intense
+            emotional feelings and predetermined beliefs about the facts
+            of the case and your client. <a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            <p>There are four main goals of voir dire:</p>
+            <p>1. Identify jurors biased against your case.</p>
+            <p>2. Develop the themes of your case.</p>
+            <p>3. Introduce the jury to the bad facts of your case.</p>
+            <p>4. Establish credibility and rapport with the jury.</p>
+            <p>To do this effectively requires defense counsel to first
+            and foremost be a good listener. In achieving each of these
+            goals you are focused on the primary purpose of voir dire,
+            which is to identify biased jurors and to challenge them for
+            cause. What you are not trying to do is identify those
+            jurors who will be predisposed to your case, because in
+            doing so you are simply identifying them for the prosecutor
+            to strike.</p>
+            </section>
+            <section id="i._identifying_biased_jurors" class="level1">
+            <h1><strong>I. Identifying Biased Jurors</strong></h1>
+            <blockquote>
+            <p>Potential jurors come to the courtroom with their own set
+            of opinions and beliefs based on their life experiences. It
+            is highly unlikely that hearing from you, who they have
+            never met and of whom they are most likely very suspicious,
+            will change these opinions and attitudes. Attempting to
+            convince jurors to change will only alienate them, stop
+            dialog and encourage them to argue with you. For this reason
+            you are not looking to educate them about your belief in the
+            case but to find those predisposed against your case and
+            then to challenge them for cause. This process of
+            deselecting jurors can only be done by getting the potential
+            jurors to talk about their opinions and beliefs.</p>
+            <p>Realize that most jurors have very strong feelings about
+            allegations of any sex crime. From the moment the jurors are
+            first seated and the judge reads the allegations against
+            your client, you will feel a hush and tenseness—as if all of
+            the air has been sucked from the courtroom. You will need to
+            deal with and acknowledge these strong feelings at the
+            outset.</p>
+            <p>A good way to begin to defuse such feelings is for the
+            attorney to acknowledge having these same types of feelings
+            about the case as everyone else in the courtroom and asking
+            whether anyone under these circumstances can get a fair
+            trial. By self-disclosing, the attorney creates an
+            atmosphere which allows the jurors to open up and admit
+            their own biases and prejudices. Rather than saying “I have
+            those feelings,” try, “We all have those feelings.”</p>
+            <p>When a potential juror gives you a response in voir dire
+            clearly indicating that she will be biased against your case
+            or client, do not despair and try and change that person’s
+            mind. Also, do not worry that the person sitting next to
+            them is going to have their values changed by what the other
+            juror is saying. People’s belief systems are not that easily
+            altered. Rather, when you get that negative response towards
+            your case, your client or you, reward and encourage that
+            person’s honesty by thanking them. That is the first step in
+            setting up a challenge for cause. The other steps in setting
+            up a challenge for cause are discussed later in this
+            chapter.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>When a juror expresses negative feelings about the
+            defendant, defense counsel, or legal principles like beyond
+            a reasonable doubt for sex offenses, you must take it in
+            stride. An effective response to such a negative comment is,
+            “Yes, I know many people have that opinion. Could you tell
+            me your reasons for feeling that way?” This is a much better
+            approach than simply thanking them for being honest and
+            moving as fast as you can to the next juror. Allowing that
+            type of juror to vent can cause other jurors to question the
+            validity of the hostile juror’s opinions, and also reaffirms
+            your commitment to listen and be interested in what every
+            juror has to say. A quick dodge and retreat by defense
+            counsel can have the opposite effect.</p>
+            <blockquote>
+            <p>The greatest impediment to an open dialogue and an
+            environment of disclosure in voir dire arises when the judge
+            is allowed to frame the issue as whether a potential juror
+            is a fair and impartial person. The issue must be framed by
+            the defense attorney as whether the opinions and beliefs
+            formed by a prospective juror, over their lifetime,
+            predispose them to be biased against the defense’s case. The
+            defense attorney must frame the issue in this way or she
+            will never be able to identify jurors predisposed against
+            her case, and the jurors will simply parrot back to counsel
+            and the court that they can be “fair and impartial.” The
+            consequence of this scenario is that the defense attorney
+            does not discover ammunition to challenge jurors for cause
+            and may not even learn enough information to wisely make
+            preemptory challenges.</p>
+            </blockquote>
+            <p>The second greatest impediment to an open dialogue and an
+            environment of disclosure arises from defense counsel’s
+            inherent difficulty in functioning not as an advocate but as
+            a good listener during this most important phase of the
+            case. Attorneys are not trained to be good listeners. They
+            are trained to think of questions, anticipate the answers,
+            and think of the next question or response while the answer
+            is being given, only partially listening to the answer and
+            probably not looking directly at the person answering the
+            entire time. Becoming a good listener is a life skill,
+            generally practiced by attorneys when they are <em>not</em>
+            in the courtroom or engaged in their professional lives.
+            Train yourself to use that skill to its fullest in voir
+            dire. If you find yourself talking more than the prospective
+            jurors, recognize you are lecturing, not listening, and
+            change your approach fast.</p>
+            </section>
+            <section id="ii._developing_the_theories_of_your_case"
+            class="level1">
+            <h1><strong>II. Developing the Theories of Your Case<a
+            href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a></strong></h1>
+            <p>Voir dire is the only time during the trial where the
+            defense lawyer gets to go first. For that reason, she can
+            begin framing the issues, or the themes, which will be
+            important in the case. The attorney should not, however, try
+            to educate the jurors through a lecture about an issue.
+            Instead, the attorney allows the jurors to educate
+            themselves about life experiences which are consistent with
+            the theories in the case. The following are some statements
+            and questions which are designed to locate jurors biased
+            against your case but also have the effect of developing one
+            of your defense theories.</p>
+            <p>1. The defense in this case is that Mr. _____ did not
+            sexually abuse this child. In other words, the child is not
+            telling the truth. Are you willing to consider a defense of
+            this nature?</p>
+            <p>2. Some people think that a child would never lie about
+            something as serious as sexual abuse; others think children
+            do lie about such serious topics. What do you think?</p>
+            <p>3. Did you teach your child not to lie? Where you
+            successful?</p>
+            <p>4. Have you caught a child lying to you? Have you
+            suspected a child was lying to you?</p>
+            <p>5. How do you determine when someone is telling the truth
+            if they are a good liar?</p>
+            <p>6. Do you believe children can be motivated to lie to
+            please adults?</p>
+            <p>From these questions, you can see that a theme in this
+            case is that children may lie about serious issues, even
+            those whose parents have tried to discourage such behavior.
+            A second theme may be that some people are just good liars
+            and the only way we can tell if they are telling the truth
+            is if their story is consistent. The attorney is not
+            lecturing the jurors about these themes but allowing the
+            jurors to be open to the defense and allow the jurors to
+            educate other potential jurors. More importantly, at the
+            same time the lawyer is achieving the primary goal of
+            identifying biased jurors to then challenge them for
+            cause.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>In addition to lies, false accusations can be the product
+            of a child’s memory being confused, contaminated or
+            manipulated. Consequently, depending on the facts of your
+            case you may want to ask potential jurors whether they
+            believe these are possible explanations for a false
+            allegation of child abuse. To successfully defend a case of
+            child abuse you must elicit facts during trial, which
+            present a coherent reason why the child has made the false
+            allegation. Ideally, you are able to point to a specific
+            reason, such as a child custody battle in which one parent
+            is poisoning the child against the other parent. However,
+            sometimes your reason is more nebulous—like, we know this
+            child has a reputation for not being truthful and craves
+            attention. It is imperative, however, to give the jury a
+            reason to disbelieve the child’s allegation. If you fail to
+            do this, it is unlikely you will win.</p>
+            </section>
+            <section
+            id="iii._discussing_the_bad_facts_and_areas_of_likely_bias_against_the_defense"
+            class="level1">
+            <h1><strong>III. Discussing the Bad Facts and Areas of
+            Likely Bias Against the Defense</strong></h1>
+            <blockquote>
+            <p>Use voir dire to disclose the bad evidence in your case
+            and to explore areas of likely bias against the defense. As
+            you are preparing for trial, make a list of all the things
+            most worrisome about the case. You should be asking yourself
+            what facts you are most afraid of the jury hearing and what
+            conclusions they will draw when they hear the evidence. What
+            things will the defense do that could cause a negative
+            reaction by jurors? Your goal is to identify those potential
+            jurors predisposed against your case because of these facts
+            and then strike them from the jury. The following questions
+            are examples for beginning discussion of bad facts or other
+            areas of concern:</p>
+            <p>1. We are going to ask you to take a hard look at the
+            police work in this case. The police are not on trial, but
+            how they performed their job is. How do you feel when you
+            hear someone being critical of the police?</p>
+            <p>2. You will learn that Mr. _____ has previously been
+            convicted of theft from a department store. Does that make
+            you think he is probably guilty of the charges in this case?
+            Why or why not?</p>
+            <p>3. As you can see, Mr. _____ is African American. Do you
+            think that prejudice against African Americans is a thing of
+            the past?</p>
+            <p>In a child sex abuse case, you need to prepare the jury
+            that you are going to cross-examine a very vulnerable child.
+            Ask them if they will be offended if you do this. Ask them
+            if they think it is fair and just that you be allowed to ask
+            the child questions. Ask them if they think a just result
+            could be reached in the trial if you were not allowed to ask
+            the child questions.</p>
+            <p>Again, you are disclosing to the jury those things that
+            concern you about the defense, before the jury hears them in
+            the case itself. You want jurors to talk openly; you are not
+            trying to change anyone’s mind. While doing this, you are
+            also identifying those jurors who are unwilling to listen to
+            such a defense or who are unwilling to consider your
+            client’s innocence given the specific facts of your
+            case.</p>
+            </blockquote>
+            </section>
+            <section id="iv._creating_an_environment_of_disclosure"
+            class="level1">
+            <h1><strong>IV. Creating an Environment of
+            Disclosure</strong></h1>
+            <section id="a._beginning_voir_dire" class="level2">
+            <h2><strong>A. Beginning Voir Dire</strong></h2>
+            <blockquote>
+            <p>Empathize with prospective jurors. They don’t want to be
+            there and they don’t want to discuss personal matters with
+            strangers or sound stupid when answering questions that are
+            hard to understand. They neither know nor have any reason to
+            like you or your client. They don’t apply legal principles
+            in their daily lives. Experience these feelings, then ask
+            yourself, “What would I want to hear from the defense
+            attorney” that would change those feelings or make the
+            difficult task of jury service less stressful. You want to
+            conduct voir dire in a way that jurors begin to see you as
+            trustworthy and knowledgeable about the law and that you
+            care about your client. Then you have the rest of the trial
+            to prove that. You do this by being prepared to try the
+            case, understanding the facts better than anyone else in the
+            courtroom, treating the judge and opposing counsel with
+            respect, and interacting with your client like you genuinely
+            like her.</p>
+            <p>As discussed earlier, the defense lawyer cannot simply
+            allow jurors to say they are a fair person in response to
+            whether they can sit in judgment on a case. Most people
+            perceive themselves as fair—versus prejudiced—and want to be
+            fair to others. Yet, all potential jurors come to the
+            courtroom with their own set of beliefs and opinions formed
+            over years from personal experiences. It is these
+            experiences and beliefs which may make jurors inappropriate
+            to sit on your case.</p>
+            <p>I introduce this concept to potential jurors in the
+            following way:</p>
+            <p>“Each of you come into this courtroom with your own set
+            of opinions, beliefs and life experiences. I don’t want to
+            change those opinions or beliefs—I just want to talk about
+            them with you. I assume that each of you is a fair person.
+            However, the opinions and beliefs you have formed from your
+            life experience may cause you to not be an appropriate juror
+            for this case.”</p>
+            <p>To illustrate this concept, use the example of a juror
+            sitting on a driving under the influence of intoxicants case
+            where that juror had previously been seriously injured in an
+            automobile accident caused by a drunk driver. Most potential
+            jurors will acknowledge that there is a very good chance a
+            person in this position would be predisposed against a
+            defendant charged with a DUII and for that reason would not
+            be an appropriate juror for that case.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Say to the jury, “It is never easy to talk in front of a
+            room full of strangers. But I ask you to be honest, be blunt
+            in telling me what you think, and to know that there are no
+            wrong answers. I may bungle a question, and if so, tell me
+            you don’t understand.”</p>
+            <p>People are much more likely to agree they should not sit
+            on a case if it would not be an appropriate case for them,
+            as opposed to they’re not “a fair person.”</p>
+            </section>
+            <section id="b._establishing_credibility_and_rapport"
+            class="level2">
+            <h2><strong>B. Establishing Credibility and
+            Rapport</strong></h2>
+            <p>If a juror does not feel at ease with you, it will be
+            difficult for the two of you to have an open conversation.
+            There must be a level of trust and rapport for you to
+            meaningfully share information. Lawyers who are opinionated
+            and judgmental and try to change others’<br />
+            opinions will not have an open dialogue in voir dire and
+            consequently will not identify<br />
+            and remove biased jurors.</p>
+            <p>Attorneys who listen to what jurors are saying, however,
+            who follow up with open-ended questions and are genuinely
+            interested in what the person has to say will learn
+            substantially more about the potential jurors. One way to
+            develop such trust is through self-disclosure about
+            attitudes, fears, feelings and life experiences. For
+            example:</p>
+            <p>1. Standing before you today I am really nervous because
+            I feel like I have Mr. _____’s<br />
+            life in my hands. How many of you feel an anxiety about
+            sitting on this case?</p>
+            <p>2. Are we kidding ourselves when the judge instructed you
+            to presume Mr. _____ innocent as he sits before you
+            today?</p>
+            <blockquote>
+            <p>3. Or, as Detroit lawyer Steve Fishman says in voir dire,
+            “When you pass by a police car with a motorist pulled over
+            to the side of the road and out of the car, do you think,
+            Gee, I wonder what that guy is presumed innocent of?” Of
+            course not, so are we kidding ourselves that as Ms. _____
+            sits here today we presume her innocent?”</p>
+            <p>On the other hand, when attorneys try to be too familiar
+            with jurors, going on and on about how grateful they are for
+            the juror’s attendance, discussing how important jurors are
+            to the system and disclosing awkward facts about themselves
+            it can be counterproductive, and jurors may feel they are
+            being manipulated by the defense attorney.</p>
+            <p>Talk to jurors like you do with a friend or neighbor. Get
+            rid of lawyer words. We like people, and are more readily
+            persuaded by them, when we can relate to them. Few jurors
+            will relate to a lawyer who is obnoxious or condescending.
+            If a prospective juror breaks down crying, you need to show
+            empathy for their emotions, acknowledge the difficulty of
+            their disclosure, give them a bit of time to recompose, and
+            consider asking if the juror would like you to ask the court
+            for a brief recess. If a potential juror becomes angry at
+            you or threatens you or your client, thank them for their
+            honesty and make a strategy call—whether to immediately
+            start developing a challenge for cause (which is likely to
+            give them the opportunity to continue venting to the panel)
+            or to back off and ask for a show of hands from others who
+            may feel the same way, and then circle back to the hostile
+            juror to make a challenge for cause.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Discuss the individual trial judge’s voir dire practices
+            in advance. Seek the flexibility to address some questions
+            to the panel as a whole in addition to questioning jurors
+            individually. And remember, challenging for cause sends a
+            clear message to other potential jurors that<br />
+            they should not be as forthcoming in their answers if they
+            want to serve on the jury.<br />
+            For this reason you may want to wait until the conclusion of
+            voir dire to begin challenging potential jurors for
+            cause.</p>
+            </section>
+            <section id="c._open_ended_questions" class="level2">
+            <h2><strong>C. Open-Ended Questions</strong></h2>
+            <p>The way you ask your questions will affect the amount of
+            information you learn from the jurors. Leading or
+            closed-ended questions will only supply you with yes or no
+            answers, while open ended questions will get them talking
+            and expressing their opinions. These opinions can then be
+            expanded on by questions like the following:</p>
+            <ul>
+            <li>“Please tell me a little more about that.”</li>
+            <li>“Can you explain that for me?”</li>
+            <li>“Is there a particular reason you feel that way?”</li>
+            <li>Can you give me an example?</li>
+            <li>“How do you think that affected you?”</li>
+            <li>“I am not sure I understand; can you explain a little
+            more?”</li>
+            <li>“Why do you think that is?”</li>
+            <li>“How many of you feel this way? Can you show me with
+            your hands?”</li>
+            </ul>
+            <p>Use the phrase “how many of you” as opposed to “do any of
+            you,” as it suggests that other people share the view and it
+            is all right for the prospective juror to admit such a
+            belief. If<br />
+            you find that you are doing most of the talking during voir
+            dire and are not successfully finding out about jurors’
+            opinions and beliefs, it is most likely because you are not
+            asking open-ended questions.</p>
+            <p>Be attuned to equivocal answers that often require more
+            direct versus open-ended questions to resolve. For example,
+            if a juror responds to the question “Have you, or any close
+            friend or relative, ever been the victim of a sex crime?”
+            with “I don’t think so,” don’t take that for “no.” You need
+            to find out more. One approach is to say to the juror
+            “Sorry, but I may be misunderstanding your answer, because
+            it sounds like you are expressing some degree of
+            uncertainty.” Ask if the juror is hesitant to say yes or no
+            and would they help you to understand why.</p>
+            <p>When open-ended questions are posed to the entire panel,
+            often no one will respond. Such general questions will only
+            get the most outspoken jurors to participate. It will be
+            easy to draw out the opinions and beliefs of these
+            individuals. Your goal is to get the other jurors to talk.
+            It will be easier to draw information out of these
+            individuals by specifically asking them open-ended
+            questions. When you are prepared to move on to a new topic,
+            it is then possible to ask the entire panel a question such
+            as:</p>
+            <p>1. I would like to ask you as a group—how many of you
+            agree with what Mr. Smith just said? Can all of you who
+            agree raise your hand?</p>
+            <p>2. Are there any panel members who disagree with Mr.
+            Smith on this issue?</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>One method is to have a set of neutral but relevant
+            questions to ask individual jurors, to get the less
+            talkative ones over the fear of talking in public. For
+            example, in a child sex case, ask about the juror’s exposure
+            to children in the same age bracket as the alleged victim,
+            or their interaction with children in that age bracket. Or
+            ask if they have ever been pulled over by police for a
+            traffic infraction. Or formulate follow-up questions from
+            the individual’s written questionnaire, e.g., what did your
+            husband do for a living before he retired? In other words,
+            formulate questions that deal with everyday life experiences
+            of the juror without emotional implications or that cause a
+            person to fear that they may be giving “the wrong”
+            answer.</p>
+            </section>
+            <section id="d._positive_feedback" class="level2">
+            <h2><strong>D. Positive Feedback</strong></h2>
+            <blockquote>
+            <p>Each time a prospective juror discloses a bias while
+            displaying difficulty in making the disclosure, take a
+            moment to acknowledge that. Reinforce that their honesty and
+            willingness to meaningfully participate in the jury
+            selection process is vital to our criminal justice system.
+            This approach will facilitate further disclosures and help
+            others to honestly discuss their beliefs. Jurors must
+            believe that there is never a wrong answer to your questions
+            so they will feel free to answer them honestly.</p>
+            </blockquote>
+            </section>
+            </section>
+            <section id="v._formulating_questions_to_use_in_voir_dire"
+            class="level1">
+            <h1><strong>V. Formulating Questions to Use in Voir
+            Dire</strong></h1>
+            <blockquote>
+            <p>Because you are the one “breaking the ice” in getting
+            prospective jurors to feel comfortable and start talking, it
+            is usually best to start with neutral but germane topics
+            evoking common experiences for most adults. For example, in
+            a child sex abuse case involving a young teenager, start by
+            discussing experience with children. Any one or two word
+            responses from a juror should prompt you to ask
+            conversational follow-up questions aimed at getting the
+            juror to talk. Here are some sample questions:</p>
+            <p>1. Have you had much contact with young teenage
+            girls?</p>
+            <p>2. Do you have knowledge or opinions about what teenage
+            girls know about adult sexuality?</p>
+            <p>3. Do you think a child of 13–14 cares what their parents
+            think, or are they independent-minded?</p>
+            <p>In preparing voir dire questions, start by listing every
+            topic pertinent to the defense or prosecution about which
+            people are likely to have personal experience or strong
+            opinions. For example, does the case involve sex abuse,
+            violence, domestic violence, drugs, alcohol, mental illness,
+            firearms, felons, or race? Then draft a series of open-ended
+            questions on each of those topics designed to get
+            prospective jurors talking about their experiences and
+            beliefs. In a case where the defendant was intoxicated,
+            draft a series of questions about alcohol that begin with
+            the juror’s experience before moving on to questions related
+            to the theory of defense:</p>
+            </blockquote>
+            <ul>
+            <li>Do you drink alcohol?</li>
+            <li>How often do you drink?</li>
+            <li>Have you drunk alcohol in the past?</li>
+            <li>Is there a reason why you choose not to drink? Would you
+            share that with me?</li>
+            <li>Have you drunk to the point of intoxication?</li>
+            <li>Have you heard about “alcoholic blackouts”?</li>
+            <li>Do you have any specialized knowledge, education, or
+            training in the field of<br />
+            </li>
+            </ul>
+            <p>alcohol abuse?</p>
+            <p>You must identify a theme or themes that are central to
+            your theory of defense and formulate voir dire questions
+            designed to learn whether prospective jurors are open to
+            considering your defense. Avoid questions that sound like
+            you are trying to sell your theory of defense. And never use
+            the words “theory of defense” in speaking with jurors. For
+            example, in a case where the theory was the fallibility of
+            human memory, the series of questions was as follows:</p>
+            <ul>
+            <li>Do you have any specialized knowledge, education or
+            training about how human memory works?</li>
+            <li>Who thinks that our memories are like video recordings
+            of events, that we accurately remember whatever we
+            experience?</li>
+            <li>Do you think a person’s memory of an event can change
+            over time? What factors could cause that?</li>
+            <li>Have you heard about memories being altered by exposure
+            to the suggestions of other people?</li>
+            <li>Have you ever discussed a past event with a friend or
+            family member and both of you are certain it happened a
+            different way?</li>
+            <li>Have you ever changed your opinion of a person based on
+            what your family or friends said about the person—based on
+            what you have heard from trusted sources, rather than your
+            personal experience?</li>
+            <li>Have you ever misjudged a person based on
+            misinformation—bad information, or things that turned out to
+            be untrue?</li>
+            </ul>
+            <p>It is best to draft more questions on a given topic than
+            what you end up asking jurors. This gives you flexibility in
+            the courtroom and ready alternatives if one or more of your
+            questions regularly gets limited response.</p>
+            <p>What follows are additional questions you may want to ask
+            or modify for use in sex cases:</p>
+            <p>1. We need to talk about a difficult topic, sex abuse. By
+            just a show of hands, who here has been the victim of a sex
+            crime, or has a family member that was a victim? Do you feel
+            comfortable talking about this in front of the panel, or
+            would you feel more comfortable discussing such matters
+            outside the presence of the jury panel?</p>
+            <p>2. I would like to start with some general questions and
+            ask for a show of hands. Has anyone been involved with a
+            group or organization that deals with physical or sexual
+            abuse?</p>
+            <p>3. Who here has any specialized knowledge relating to
+            physical or sexual abuse, either by education, training,
+            personal study, occupation or experience? This would include
+            investigating abuse, treating abuse victims, or any other
+            way of gaining some degree of knowledge beyond that of the
+            average person.</p>
+            <p>4. Who here has suspected that someone had been sexually
+            abused? If so, what made you suspicious?</p>
+            <p>5. By just a show of hands, who here has had a close
+            friend or relative who was the victim of sex abuse? Do you
+            feel comfortable talking about this in front of the panel or
+            would you like me to ask the judge to allow you to talk
+            about it outside the presence of the other jurors?</p>
+            <p>6. Everyone is against child abuse. No one likes a child
+            molester. The question I have is: Are you able to separate
+            your feelings about child abuse from how you feel about Mr.
+            ____ as he sits here today accused of the crime?</p>
+            <p>a. How do you separate those feelings?</p>
+            <p>b. How do you feel about Ms. ____ as she sits here?</p>
+            <p>c. Would you agree that if you cannot honestly separate
+            those feelings, you are prejudicing the case and are
+            prejudiced against Mr. ____?</p>
+            <p>7. Has anyone had a family member or close friend who was
+            the victim of a serious non-<br />
+            sexual assault?</p>
+            <p>8. Has anyone here been the victim of a serious
+            non-sexual assault?</p>
+            <p>9. Do you think you are usually able to tell when a child
+            is lying? Why do you think that?</p>
+            <p>a. Do you think this ability to tell when a child is
+            lying is different with a stranger, rather than your own
+            child?</p>
+            <p>b. What sorts of things do you look for to determine
+            whether a child is lying?</p>
+            <p>10. Child sex abuse does happen. It has happened since
+            the beginning of time. Understandably, our culture abhors
+            child sex abuse. Some groups advocate the death penalty for
+            such crimes. We, as a society, want to protect our children.
+            To do so, we want to believe children when they make
+            allegations of abuse. Yet, under such circumstances, can we
+            give a person charged with such a crime a fair trial?</p>
+            <p>11. Mr. ____, do you feel that every allegation of sexual
+            molestation should be considered true? Why or why not?</p>
+            <p>12. Have you ever promised your child that if they told
+            you a person did something bad to them, you would believe
+            them no matter what?</p>
+            <p>13. If an adult praises a child for reporting sex abuse
+            and reinforces what the child says, what effect could that
+            have on the child? Why?</p>
+            <p>14. Have you ever volunteered to work with children in
+            the past?</p>
+            <p>a. Given the number of false allegations, how do you feel
+            about working with<br />
+            children now?</p>
+            <p>b. Why?</p>
+            </section>
+            <section id="vi._introduce_the_court_staff" class="level1">
+            <h1><strong>VI. Introduce the Court Staff</strong></h1>
+            <blockquote>
+            <p>Most people act like the court staff are not in the room.
+            These are important people who you must acknowledge. How the
+            court staff feel about you will not go unnoticed by the
+            jury. Introduce them by name and tell the jury a little bit
+            about their duties. You cannot imagine how important this
+            little kindness can be.</p>
+            </blockquote>
+            </section>
+            <section id="vii._voir_dire_in_private" class="level1">
+            <h1><strong>VII. Voir Dire in Private</strong></h1>
+            <blockquote>
+            <p>Due to the sensitive nature of many of the questions
+            asked of jurors in sex cases, some jurors feel uncomfortable
+            discussing a topic in front of the entire panel. It is a
+            good idea to ask the judge beforehand whether she will allow
+            individual, sequestered voir dire. If so, before you begin
+            asking questions, let the jurors know you will be discussing
+            topics that are private, sensitive or possibly embarrassing,
+            and, consequently, if they would like to answer some
+            questions outside of the entire panel, the judge will let
+            the discussion on these topics be held in a more private
+            setting.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Many judges want to move the case along and will
+            initially view a request for sequestered voir dire with
+            hostility as a waste of time. If you think your judge would
+            likely be in that camp, an alternative is, as part of the
+            preface, to explain to jurors that you need to ask them very
+            personal questions regarding experiences with sexual abuse,
+            acknowledge the topic is likely to be emotionally difficult
+            for anyone with personal experiences, and say that if any of
+            them feel the need to have the discussion on a topic in a
+            more private forum, they should alert you and you will seek
+            the court’s permission when the time comes. The judge is
+            more likely to wait and see if the need arises with a
+            particular juror rather than admonish you at the outset that
+            it would never be allowed.</p>
+            </section>
+            <section id="viii._challenge_for_cause" class="level1">
+            <h1><strong>VIII. Challenge for Cause</strong></h1>
+            <p>There are a number of reasons potential jurors can be
+            challenged for cause under the Oregon Rules of Civil
+            Procedure. These include a person’s mental or physical
+            defect, which makes them incapable of performing the duties
+            of a juror <a
+            href="https://oregoncivpro.com/orcp-57-jurors/">ORCP
+            57D(1)(b)</a>. This article focuses on challenges for actual
+            bias. “Actual bias is the existence of a state of mind on
+            the part of a juror that satisfies the court, in the
+            exercise of sound discretion, that the juror cannot try the
+            issue impartially and without prejudice to the substantial
+            rights of the party challenging the juror.” ORCP
+            57D(1)(g).</p>
+            <blockquote>
+            <p>When a juror is challenged for actual bias, “[t]he test
+            of a juror’s disqualification is the probability of bias or
+            prejudice as determined by the court.” <a
+            href="https://scholar.google.com/scholar_case?case=1008787569744245968&amp;q=State+v.+Montez,+309+Or+564,+789+P2d+1352+(1990&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Montez</em></a>, 309 Or 564, 575, 789 P2d 1352 (1990); <a
+            href="https://scholar.google.com/scholar_case?case=5321681249226893236&amp;q=Lambert+v.+Sisters+of+St.+Joseph,+277+Or+223,+560+P2d+262+(1977&amp;hl=en&amp;as_sdt=4,38"><em>Lambert
+            v. Sisters of St. Joseph</em></a>, 277 Or 223, 230, 560 P2d
+            262 (1977). This test guarantees voir dire in areas relevant
+            to a juror’s qualifications, including case-specific issues
+            and individual predispositions or biases. <a
+            href="https://scholar.google.com/scholar_case?case=10062399597194376366&amp;q=State+v.+Barnett,+251+Or+234,+445+P2d+124+(1968&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Barnett</em></a>, 251 Or 234, 238, 445 P2d 124 (1968). It
+            is those individual predispositions and biases which the
+            attorney, ever so delicately and inoffensively,<br />
+            must probe.</p>
+            <p>When you have identified an individual you want to
+            challenge for cause, this is the one time during voir dire
+            in which you may want to use leading—rather than
+            open-ended—questions to get the jurors to admit their
+            biases. At this point, you do not ask whether they can be
+            fair or impartial in this case. Instead, you say, “I can
+            only imagine how difficult it would be for you to sit on a
+            case of this nature.” If the juror is clearly upset and
+            freely agreeing with you, you may want to solidly lock in
+            the challenge for cause with a statement such as, “From your
+            previous answers, it sounds like you are saying you do not
+            feel like this would be an appropriate case for you to sit
+            on...because you do not feel like you can fairly listen to
+            the case and be impartial to Mr. ____’s defense.”</p>
+            <p>If you intend to challenge a juror who is not being
+            overtly hostile, there is one last question to ask before
+            telling the judge, “I challenge this juror for cause”: ask
+            the juror for permission to have them excused:</p>
+            <p>“It sounds like you would like me to ask the judge to
+            excuse you from the jury because<br />
+            you do not believe you can be fair in this particular case.
+            Is that correct?”</p>
+            <ul>
+            <li>* *</li>
+            </ul>
+            <p>“[Upon affirmance by the juror] Thank you. Then your
+            honor, I would challenge<br />
+            for cause.”</p>
+            <p>People who are the victims of sex abuse or the parents of
+            victims of sex abuse will understandably admit that they
+            have very strong emotions about such abuse. They may admit
+            to still being angry or upset over what happened to them or
+            their child. They will admit that the abuse has changed
+            their life forever and that of other family members. They
+            will admit that they have fears the abuse may happen to
+            another member of their family. If you present to abuse
+            victims that these are all natural and understandable
+            feelings, they will often agree that their experiences
+            prevent them from being an appropriate juror for this case.
+            For those victims who will not agree that they should not
+            sit on this case, you will have to use a peremptory
+            challenge.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>Know that the prosecutor and judge will have the
+            opportunity to question the juror you challenge for cause,
+            and will invariably focus on the juror’s ability to follow
+            the legal principles the judge will instruct them to
+            apply.</p>
+            <p>In many cases, trial courts confronted with biased and
+            partial jurors use their significant discretion to try and
+            rehabilitate jurors by asking a loaded question: After you
+            hear the evidence and my charge on the law, and considering
+            the oath you take as a juror, can you set aside your
+            preconceptions and decide this case solely on the evidence
+            and the law? Not surprisingly, jurors confronted with this
+            question from the Court almost always say “yes.” <em><a
+            href="https://scholar.google.com/scholar_case?case=3992228095192638873&amp;q=Walls+v.+Kim,+250+Ga.+App.+259,+549+S.E.+2d+797,+799+(Ga.+2001&amp;hl=en&amp;as_sdt=4,11">Walls
+            v. Kim</a>,</em> 250 Ga. App. 259, 549 S.E. 2d 797, 799 (Ga.
+            2001).</p>
+            <p>In <em><a
+            href="https://scholar.google.com/scholar_case?case=4217812054262780487&amp;q=In+Ivey+v.+State,+258+Ga.+App.+587&amp;hl=en&amp;as_sdt=4,11">Ivey
+            v. State</a>,</em> 258 Ga. App. 587, 574 S.E. 2d 663 (2002),
+            the Georgia Court of Appeals found such an effort to
+            “rehabilitate” a prospective juror improper and that the
+            court abused its discretion in refusing to excuse the juror
+            for cause because the record as a whole failed bias.
+            <em>Id</em>. at 594.</p>
+            <p>“Where a prospective juror, who has been asked whether he
+            or she can be fair and impartial in this case answers under
+            oath a plain ‘No,’ and provides an explanation for the
+            inability to be fair and impartial, the court should limit
+            further questions to clarification of the answer.”</p>
+            <p><em>Id.</em> at 592. <em><a
+            href="https://scholar.google.com/scholar_case?case=14311982663998019348&amp;q=O%E2%80%99Dell+v.+Miller,+565+S.E.+2d.+407,+411+(W.+Va.+2002&amp;hl=en&amp;as_sdt=4,49">O’Dell
+            v. Miller</a>,</em> 565 S.E. 2d. 407, 411 (W. Va. 2002);
+            <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=7423942851441182289&amp;q=Montgomery+v.+Commonwealth,+819+S.W.+713,+719+(Ky.+1991&amp;hl=en&amp;as_sdt=ffffffffffffe04">Montgomery
+            v. Commonwealth</a></em>, 819 S.W. 713, 719 (Ky. 1991).</p>
+            <p>Where a prospective juror says they have a bias and
+            explains the reason for that bias, the defense must object
+            to any question from the court or prosecution that goes
+            beyond simply asking the juror to clarify or expand on their
+            statements and beliefs. The selection of an impartial jury
+            is the cornerstone of a fair trial. The defense should
+            object that empaneling a biased juror violates client’s due
+            process right to a fair trial.</p>
+            <p>“[t]he purpose of rehabilitative questioning is
+            investigation, not persuasion. It is to determine whether
+            the juror is able and likely to set aside his views, not to
+            persuade him to do so, or to elicit pro forma answers to
+            leading questions.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=6614715555598292584&amp;q=Lane+County+v.+Walker,+30+Or+App+715,+568+P2d+676+(1977&amp;hl=en&amp;as_sdt=4,38"><em>Lane
+            County v. Walker</em></a>, 30 Or App 715, 722, 568 P2d 676
+            (1977).”</p>
+            <p>The defense should also object under the federal
+            constitution that the seating of a bias juror violates the
+            Sixth Amendment right to an impartial jury.</p>
+            </section>
+            <section id="ix._conclusion" class="level1">
+            <h1><strong>IX. Conclusion</strong></h1>
+            <p>The difference between winning and losing a criminal
+            trial is often determined by whether you (the lawyer) are
+            able to locate and then remove potential jurors from the
+            panel, whose opinions, beliefs and/or life experiences make
+            them biased against your client’s case. To remove these
+            negative jurors, you cannot let the prosecution and the
+            judge frame the issue as whether these individuals are “fair
+            people.” The issue in voir dire must be whether this
+            potential juror is appropriate for<br />
+            this case.</p>
+            <p>Good luck and get out there and try some cases.</p>
+            </section>
+            <section id="x._bibliography" class="level1">
+            <h1><strong>X. Bibliography</strong></h1>
+            <p><strong>Articles</strong></p>
+            <p>Barone, Patrick T., &amp; Skinner, Michael B., “Breaking
+            the Spell of the Magic Question During Voir Dire,” <em>The
+            Champion</em> (March 2015), p. 22 (presenting advice for
+            challenging judges’ efforts to improperly rehabilitate
+            biased jurors in voir dire).</p>
+            <p>Bennett, Judge Mark W., “The Presumption of Innocence and
+            Trial Court Judges: Our Greatest Failing,” <em>The
+            Champion</em> (April 2015), p. 20.</p>
+            <p>Brayer, Patrick, “<em>Batson</em>, Empowerment, and New
+            Jury Models: The Case for ‘Open Inquiry’,” <em>The
+            Champion</em> (July 2009), p. 26.</p>
+            <p>Freter, Kim, “Arguments Against the ‘Open Inquiry’ Method
+            of Jury Selection,” <em>The Champion</em> (July 2009), p.
+            27.</p>
+            <p>Kammen, Richard, “Creating an Environment Where Jurors
+            Want to Tell Lawyers Their Secrets,” <em>The Champion</em>
+            (Nov. 2012), p. 26.</p>
+            <p>McGinn, Randy, “Addressing the Ten Scariest Criminal
+            Issues in Voir Dire,” <em>The Champion</em> (August 2005),
+            p. 26.</p>
+            <p>Moreno, Linda &amp; Guastaferro, Joe, “The Truth and
+            Nothing But: How Juror Questionnaires Help Get You There,”
+            <em>The Champion</em> (July 2009),<br />
+            p. 20.</p>
+            <p>Sison, Fredilyn, “This Time With Feeling: The ‘In the
+            Moment’ Approach to Selecting a Jury, <em>The Champion</em>
+            (July 2009), p. 44.</p>
+            <p><strong>Books</strong></p>
+            <p>Hollander, Nancy, &amp; Bergman, Barbara, <em>Everytrial
+            Criminal Defense Resource Book</em> (Thomson Reuters 2013)
+            (chapters on jury selection, challenges for cause,
+            peremptory challenges and other selection issues).</p>
+            <p>Ramirez, Linda Friedman, <em>Cultural Issues in Criminal
+            Defense</em> (Juris Publishing, Inc., 3d ed. 2010) (two
+            chapters on cultural issues in voir dire and jury
+            selection).</p>
+            <p>Manuals &amp; Trial Guides</p>
+            <p><em>The Trial Notebook,</em> OCDLA.</p>
+            <p><em>Voir Dire: Effective Approaches for Picking the
+            Perfect Jury</em>, NACDL.</p>
+            <references />
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup> </sup> Sonia Chopra, a trial consultant
+            for NJP Litigation Consulting, discussed the process of jury
+            de-selection, in her article for <em>Plaintiff
+            Magazine</em>, February 2014, “<a
+            href="http://www.njp.com/articles/Chopra_The-art-of-jury-de-selection_Plaintiff-article.pdf">The
+            Art of Jury De-Selection</a>.”<a href="#fnref1"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup> </sup> I wish to acknowledge OCDLA member
+            Terri Wood of Eugene, from whom many of the ideas in this
+            article were taken. Ideas came from her written materials
+            and from a continuing legal education seminar at which she
+            spoke on her voir dire from <em>State v. Obremski</em>, a
+            notorious sex abuse case which resulted in an acquittal on
+            all charges.<a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"> An excellent article on voir dire, which this
+            author consulted prior to writing this article, is
+            “Developing the Theory of the Case in Voir Dire and Opening
+            Statement,” by Jeff Kearney, The Kearney Law Firm, written
+            for the Criminal Defense Lawyers Project, October 4–5,
+            2001.<a href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 13. Motion for Judgment of
+            Acquittal</strong></p>
+            <p><strong><em>By Rankin Johnson, IV</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>The motion for judgment of acquittal tests whether the
+            prosecution’s evidence is legally sufficient to prove the
+            elements of the offense. A true judgment of acquittal,
+            whether granted at trial or on appeal or subsequent review,
+            is final and prevents a retrial.</p>
+            </section>
+            <section id="ii._primary_authority" class="level1">
+            <h1><strong>II. Primary Authority</strong></h1>
+            <section id="a._statutory" class="level2">
+            <h2><strong>A. Statutory</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.445</a> provides: “In any criminal action the defendant
+            may, after close of the state’s evidence, or of all the
+            evidence, move the court for a judgment of acquittal. The
+            court shall grant the motion if the evidence introduced is
+            such as would not support a verdict against the defendant.
+            The acquittal shall be a bar to another prosecution for the
+            same offense.”</p>
+            </section>
+            <section id="b._constitutional" class="level2">
+            <h2><strong>B. Constitutional</strong></h2>
+            <p>There is a constitutional right to acquittal if the
+            state’s evidence is insufficient. <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution, Article I, section 2</a>; <a
+            href="http://www.law.cornell.edu/constitution/">U.S.
+            Constitution, Amendments V and XIV</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+harris&amp;hl=en&amp;as_sdt=4,38&amp;case=18104996629393878233&amp;scilh=0">State
+            v. Harris</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+harris&amp;hl=en&amp;as_sdt=4,38&amp;case=18104996629393878233&amp;scilh=0">,
+            288 Or 703, 609 P2d 798 (1980)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=wright+v+west&amp;hl=en&amp;as_sdt=2,38&amp;case=11705113260695675872&amp;scilh=0">Wright
+            v. West</a><a
+            href="http://scholar.google.com/scholar_case?q=wright+v+west&amp;hl=en&amp;as_sdt=2,38&amp;case=11705113260695675872&amp;scilh=0">,
+            505 US 277, 112 S Ct 2482, 120 L Ed 2d 225 (1992)</a>.
+            Failure to assert a federal right may preclude federal
+            review in a habeas corpus petition.</p>
+            </section>
+            </section>
+            <section id="iii._the_standard" class="level1">
+            <h1><strong>III. The Standard</strong></h1>
+            <p>A criminal defendant is entitled to judgment of acquittal
+            if “after viewing the evidence in the light most favorable
+            to the prosecution, any rational trier of fact could not
+            have found the essential elements of the crime beyond a
+            reasonable doubt.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v+king&amp;hl=en&amp;as_sdt=4,38&amp;case=11538410328580647250&amp;scilh=0">State
+            v. King</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+king&amp;hl=en&amp;as_sdt=4,38&amp;case=11538410328580647250&amp;scilh=0">,
+            307 Or 332, 339, 768 P2d 391 (1989)</a> (quoting <a
+            href="http://scholar.google.com/scholar_case?q=jackson+v+virginia&amp;hl=en&amp;as_sdt=2,38&amp;case=304542350697975194&amp;scilh=0">Jackson
+            v. Virginia</a><a
+            href="http://scholar.google.com/scholar_case?q=jackson+v+virginia&amp;hl=en&amp;as_sdt=2,38&amp;case=304542350697975194&amp;scilh=0">,
+            443 U.S. 307, 319 (1979)</a>). The “light most favorable”
+            standard is generous to the state. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cervantes&amp;hl=en&amp;as_sdt=4,38&amp;case=2593583691123086380&amp;scilh=0">See,
+            e.g., State v. Cervantes</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cervantes&amp;hl=en&amp;as_sdt=4,38&amp;case=2593583691123086380&amp;scilh=0">,
+            319 Or 121, 873 P2d 316 (1994)</a> (inferring venue in Coos
+            County from, <em>inter alia</em>, the involvement of the
+            Coos County Victim’s Coordinator and the location in the
+            city of Coos Bay). <a
+            href="http://scholar.google.com/scholar_case?q=hennagir&amp;hl=en&amp;as_sdt=4,38&amp;case=17326196155933088536&amp;scilh=0">State
+            v. Hennagir,</a><a
+            href="http://scholar.google.com/scholar_case?q=hennagir&amp;hl=en&amp;as_sdt=4,38&amp;case=17326196155933088536&amp;scilh=0">246
+            Or App 456, 266 P3d 128 (2011)</a> (discussing permissible
+            inferences).</p>
+            <p>A true motion for judgment of acquittal relates solely to
+            the sufficiency of the state’s proof, i.e., whether the
+            evidence is sufficient to prove the elements of the offense.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lovins&amp;hl=en&amp;as_sdt=4,38&amp;case=4717676486840327607&amp;scilh=0">See,
+            e.g., State v. Lovins</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lovins&amp;hl=en&amp;as_sdt=4,38&amp;case=4717676486840327607&amp;scilh=0">,
+            177 Or App 534, 537, 33 P3d 1060 (2001)</a> (so stating). It
+            is not a basis to attack the indictment or the statute. For
+            example,<em><a
+            href="http://scholar.google.com/scholar_case?q=state+v+hankins&amp;hl=en&amp;as_sdt=4,38&amp;case=16444776925019672864&amp;scilh=0">State
+            v. Hankins</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+hankins&amp;hl=en&amp;as_sdt=4,38&amp;case=16444776925019672864&amp;scilh=0">,
+            342 Or 258, 151 P3d 149 (2007)</a>. It may, however, focus
+            on a legal question rather than a factual one. For example,
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+kurtz&amp;hl=en&amp;as_sdt=4,38&amp;case=10543972518163045231&amp;scilh=0">State
+            v. Kurtz</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+kurtz&amp;hl=en&amp;as_sdt=4,38&amp;case=10543972518163045231&amp;scilh=0">,
+            233 Or App 573, 228 P3d 583 (2010)</a> (judgment of
+            acquittal should have been granted because a tribal officer
+            is not a police officer for purposes of attempt to elude
+            statute).</em>See also <a
+            href="http://scholar.google.com/scholar_case?q=State+v+depeche&amp;hl=en&amp;as_sdt=4,38&amp;case=3682600256222719028&amp;scilh=0">State
+            v. Depeche</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+depeche&amp;hl=en&amp;as_sdt=4,38&amp;case=3682600256222719028&amp;scilh=0">,
+            242 Or App 147, 252 P3d 861 (2011)</a> (where facts are not
+            in dispute, motion for judgment of acquittal is reviewed as
+            a question of law)</p>
+            </section>
+            <section id="iv._the_procedure" class="level1">
+            <h1><strong>IV. The Procedure</strong></h1>
+            <section id="a._move_early_and_often" class="level2">
+            <h2><strong>A. Move Early and Often</strong></h2>
+            <p>The motion is typically made at the end of the state’s
+            case and again at the end of all the evidence. See
+            “Repairing the Error,” below. Beyond those statutory points,
+            motions have been submitted after the state’s opening
+            statement, <a
+            href="http://scholar.google.com/scholar_case?q=state+v+keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">State
+            v. Keaton</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">,
+            15 Or App 477, 516 P2d 490 (1973</a>), and after the case is
+            submitted to the jury, <a
+            href="http://scholar.google.com/scholar_case?q=state+v+brawley&amp;hl=en&amp;as_sdt=4,38&amp;case=17905615691386672013&amp;scilh=0">State
+            v. Brawley</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+brawley&amp;hl=en&amp;as_sdt=4,38&amp;case=17905615691386672013&amp;scilh=0">,
+            4 Or App 229, 476 P2d 942 (1970)</a> (trial court had no
+            duty to rule). The trial court lacks the authority to grant
+            a post-verdict motion for judgment of acquittal. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+metcalfe&amp;hl=en&amp;as_sdt=4,38&amp;case=6827331566670650216&amp;scilh=0">State
+            v. Metcalfe</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+metcalfe&amp;hl=en&amp;as_sdt=4,38&amp;case=6827331566670650216&amp;scilh=0">,
+            328 Or 309, 974 P2d 1189 (1999)</a>. <em>Metcalfe</em>
+            considers constitutional double-jeopardy issues but not the
+            constitutional right to a judgment of acquittal, and could
+            be attacked in the right case.</p>
+            <p>It is customary to make the motion outside the presence
+            of the jury, but the defense might benefit from the jury
+            hearing counsel’s argument about why the evidence is
+            inadequate.</p>
+            </section>
+            </section>
+            <section id="b._be_specific" class="level1">
+            <h1><strong>B. Be Specific</strong></h1>
+            <p>Be specific about why the state’s evidence is not
+            sufficient. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+schoen&amp;hl=en&amp;as_sdt=4,38&amp;case=13133284754498181521&amp;scilh=0">State
+            v. Schoen</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+schoen&amp;hl=en&amp;as_sdt=4,38&amp;case=13133284754498181521&amp;scilh=0">,
+            229 Or App 427, 211 P3d 948 (2009)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=state+v+schoen&amp;hl=en&amp;as_sdt=4,38&amp;case=17079383019159282747&amp;scilh=0">rev’d
+            on other grounds</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+schoen&amp;hl=en&amp;as_sdt=4,38&amp;case=17079383019159282747&amp;scilh=0">348
+            Or 207, 228 P3d 1207 (2010)</a> (discussing preservation for
+            motions for judgment of acquittal). “[A] general motion for
+            judgment of acquittal without specifying any theory on which
+            the state’s proof was legally insufficient…preserves no
+            ground for challenge on appeal.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v+schodrow&amp;hl=en&amp;as_sdt=4,38&amp;case=13287498715634484965&amp;scilh=0">State
+            v. Schodrow</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+schodrow&amp;hl=en&amp;as_sdt=4,38&amp;case=13287498715634484965&amp;scilh=0">,
+            187 Or App 224, 231 n 5, 66 P3d 547 (2003)</a>.</p>
+            <p>A challenge to the sufficiency of the evidence made
+            during closing argument in a bench trial might permit
+            appellate review of that issue. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mccants/walker&amp;hl=en&amp;as_sdt=4,38&amp;case=9405803151417170391&amp;scilh=0">State
+            v. McCants/Walker</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mccants/walker&amp;hl=en&amp;as_sdt=4,38&amp;case=9405803151417170391&amp;scilh=0">,
+            231 Or App 570, 576, 220 P3d 436 (2009)</a>, ''rev’d on
+            other grounds sub nom <a
+            href="http://scholar.google.com/scholar_case?q=state+v+baker-krofft&amp;hl=en&amp;as_sdt=4,38&amp;case=5202285168927391131&amp;scilh=0">State
+            v. Baker-Krofft</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+baker-krofft&amp;hl=en&amp;as_sdt=4,38&amp;case=5202285168927391131&amp;scilh=0">,
+            348 Or 655, 239 P3d 226 (2010)</a>. But it would be foolish
+            to risk it; counsel should move for judgment of acquittal in
+            a bench trial just as in a jury trial.</p>
+            <section id="c._insist_on_a_ruling" class="level2">
+            <h2><strong>C. Insist on a Ruling</strong></h2>
+            <p>Oregon courts must rule on the motion before the jury’s
+            verdict; once the jury returns a verdict, the court cannot
+            grant a judgment of acquittal. <em>Metcalfe</em>, 328 Or
+            309.</p>
+            <p>A ruling that the state has not carried its burden of
+            proof is dispositive; the state cannot appeal, and a
+            subsequent prosecution is prevented by double-jeopardy
+            principles. See “VI., Effect of a Judgment of Acquittal,”
+            below.</p>
+            <p>By contrast, a ruling that the accusatory instrument is
+            insufficient or varies too widely from the proof permits a
+            subsequent prosecution. <em>Id</em>. Counsel should not
+            raise these issues mid-trial as a motion for judgment of
+            acquittal. The court cannot properly rule on the sufficiency
+            of the accusatory instrument at that time and they are not
+            preserved for appeal. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+hankins&amp;hl=en&amp;as_sdt=4,38&amp;case=16444776925019672864&amp;scilh=0">Hankins</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+hankins&amp;hl=en&amp;as_sdt=4,38&amp;case=16444776925019672864&amp;scilh=0">,
+            342 Or 258</a>.</p>
+            </section>
+            <section id="d._repairing_the_error" class="level2">
+            <h2><strong>D. Repairing the Error</strong></h2>
+            <p>A trial court has discretion to grant the state’s motion
+            to reopen the case. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            58B</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+agee&amp;hl=en&amp;as_sdt=4,38&amp;case=13277037048279210809&amp;scilh=0">State
+            v. Agee</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+agee&amp;hl=en&amp;as_sdt=4,38&amp;case=13277037048279210809&amp;scilh=0">,
+            223 Or App 729, 196 P3d 1060 (2008)</a>. The court’s
+            discretion might be more limited, and is more likely to be
+            exercised in your favor, if the defense has offered evidence
+            before the motion is made. So, in the right case, it would
+            be worth not making the motion at the close of the state’s
+            case, putting on evidence (preferably completely unrelated
+            to the gap in the state’s case) and then making the motion.
+            <em>Id</em>. (discussing factors to guide the exercise of
+            discretion). <em>Agee</em> cites <a
+            href="http://scholar.google.com/scholar_case?q=creasey+v+hogan&amp;hl=en&amp;as_sdt=4,38&amp;case=9803439886607974100&amp;scilh=0">Creasey
+            v. Hogan</a><a
+            href="http://scholar.google.com/scholar_case?q=creasey+v+hogan&amp;hl=en&amp;as_sdt=4,38&amp;case=9803439886607974100&amp;scilh=0">,
+            292 Or 154, 169, 637 P2d 114 (1981)</a>, for the proposition
+            that the court should not reopen evidence once the jury
+            starts deliberating, but a trial court might find the motion
+            untimely once the jury is out. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+brust&amp;hl=en&amp;as_sdt=4,38&amp;case=13311948472602009288&amp;scilh=0">State
+            v. Brust</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+brust&amp;hl=en&amp;as_sdt=4,38&amp;case=13311948472602009288&amp;scilh=0">,
+            158 Or App 455, 974 P2d 734 (1999)</a> (suggesting that the
+            trial court has discretion to rule on an MJOA at that time,
+            and reviewing on appeal after the trial court rules on the
+            merits.) The court cannot grant an MJOA post-verdict. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+metcalfe&amp;hl=en&amp;as_sdt=4,38&amp;case=6827331566670650216&amp;scilh=0">Metcalfe</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+metcalfe&amp;hl=en&amp;as_sdt=4,38&amp;case=6827331566670650216&amp;scilh=0">,
+            328 Or 309</a>.</p>
+            <p>Evidence produced during the defense case will be
+            considered by the trial court on a renewed motion at the end
+            of the case, and may cure any error in the mid-trial ruling.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+nix&amp;hl=en&amp;as_sdt=4,38&amp;case=7798038547240681978&amp;scilh=0">State
+            v. Nix</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+nix&amp;hl=en&amp;as_sdt=4,38&amp;case=7798038547240681978&amp;scilh=0">,
+            7 Or App 383, 491 P2d 635 (1971)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+stothoff&amp;hl=en&amp;as_sdt=4,38&amp;case=8278750875777650437&amp;scilh=0">State
+            v. Stothoff</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stothoff&amp;hl=en&amp;as_sdt=4,38&amp;case=8278750875777650437&amp;scilh=0">,
+            99 Or App 197, 781 P2d 412 (1989)</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stothoff&amp;hl=en&amp;as_sdt=4,38&amp;case=8278750875777650437&amp;scilh=0">.</a>
+            Defense counsel should object to this procedure on due
+            process and equal protection grounds; the defendant should
+            not be in a worse position than an otherwise identical
+            defendant for whom the trial court rules correctly and
+            grants the motion made at the close of the state’s case.
+            ''See <a
+            href="http://scholar.google.com/scholar_case?q=349+Or+371&amp;hl=en&amp;as_sdt=4,38&amp;case=5033888829277784561&amp;scilh=0">State
+            v. Moore/Coen</a><a
+            href="http://scholar.google.com/scholar_case?q=349+Or+371&amp;hl=en&amp;as_sdt=4,38&amp;case=5033888829277784561&amp;scilh=0">,
+            349 Or 371, 245 P3d 101 (2010)</a> (where defendant takes
+            the stand to refute improperly-admitted evidence, that
+            testimony may not be offered by the state on retrial).</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>A court’s oral ruling on a motion for judgment of
+            acquittal is not final, and the court can reverse itself if
+            there has been no material change in the record or the
+            party’s positions. For example, <a
+            href="http://scholar.google.com/scholar_case?q=state+v+sperry&amp;hl=en&amp;as_sdt=4,38&amp;case=14648365195182811754&amp;scilh=0">State
+            v. Sperry</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+sperry&amp;hl=en&amp;as_sdt=4,38&amp;case=14648365195182811754&amp;scilh=0">,
+            149 Or App 690, 945 P2d 546 (1997)</a>. So once the trial
+            court has made a ruling, change the record or your position
+            on something as quickly as possible.</p>
+            <p>There are no reported decisions relating to an erroneous
+            denial of a motion for judgment of acquittal in a district
+            court followed by a <em>de novo</em> appeal to a circuit
+            court, but it presents a similar problem. If the state
+            corrected the error in the circuit court, the defendant
+            would be penalized for the district judge’s error because a
+            correct ruling would preclude a retrial. In the right case,
+            counsel should argue that a <em>de novo</em> circuit court
+            trial is a lesser remedy than the acquittal to which the
+            defendant is entitled.</p>
+            </section>
+            </section>
+            <section id="v._applying_the_standard" class="level1">
+            <h1><strong>V. Applying the Standard</strong></h1>
+            <section id="a._elements" class="level2">
+            <h2><strong>A. Elements</strong></h2>
+            <p>Whether a fact is an element, a defense or affirmative
+            defense, or something else is not always clear, especially
+            in light of <a
+            href="http://scholar.google.com/scholar_case?q=apprendi&amp;hl=en&amp;as_sdt=2,38&amp;case=4053038751252355308&amp;scilh=0">Apprendi
+            v. New Jersey</a><a
+            href="http://scholar.google.com/scholar_case?q=apprendi&amp;hl=en&amp;as_sdt=2,38&amp;case=4053038751252355308&amp;scilh=0">,
+            530 US 466, 120 S Ct 2348, 147 L Ed 2d 435 (2000)</a>, and
+            its progeny. <em>See State v. Tamler</em>, 19 Or 528, 25 P
+            71 (1890) (cited with approval in <a
+            href="http://scholar.google.com/scholar_case?q=19+Or+528&amp;hl=en&amp;as_sdt=4,228&amp;case=4505996890159348119&amp;scilh=0">State
+            v. Vasquez-Rubio</a><a
+            href="http://scholar.google.com/scholar_case?q=19+Or+528&amp;hl=en&amp;as_sdt=4,228&amp;case=4505996890159348119&amp;scilh=0">,
+            323 Or 275, 917 P2d 494 (1996)</a>), explaining how to
+            distinguish elements and offenses). ''See <a
+            href="http://scholar.google.com/scholar_case?q=State+v+kirkland&amp;hl=en&amp;as_sdt=4,38&amp;case=9229490139767765493&amp;scilh=0">also</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+kirkland&amp;hl=en&amp;as_sdt=4,38&amp;case=9229490139767765493&amp;scilh=0">State
+            v. Kirkland</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+kirkland&amp;hl=en&amp;as_sdt=4,38&amp;case=9229490139767765493&amp;scilh=0">,
+            241 Or App 40, 249 P3d 554</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+kirkland&amp;hl=en&amp;as_sdt=4,38&amp;case=9229490139767765493&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+kirkland&amp;hl=en&amp;as_sdt=4,38&amp;case=9229490139767765493&amp;scilh=0">(2011)</a>
+            (rejecting defense argument that statutory provision
+            establishing prima facie evidence of intent created
+            additional elements). Counsel should argue that a disputed
+            fact is an element, or in the alternative an ordinary
+            defense, as to which the state bears the burden of proof.
+            MJOAs relating to ordinary defenses are discussed below.</p>
+            <p>If the indictment unambiguously alleges more than
+            required, such as alleging that the defendant acted
+            “knowingly” when the statute only requires recklessness, the
+            state must prove the allegations of the indictment. <a
+            href="http://scholar.google.com/scholar_case?q=State+v+lane&amp;hl=en&amp;as_sdt=4,38&amp;case=5946506349124367722&amp;scilh=0">State
+            v. Lane</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+lane&amp;hl=en&amp;as_sdt=4,38&amp;case=5946506349124367722&amp;scilh=0">,
+            341 Or 433, 440, 144 P3d 927 (2006)</a>. For purposes of
+            this rule, ambiguous allegations will be construed against
+            the defendant. <a
+            href="http://scholar.google.com/scholar_case?q=State+v+reigard&amp;hl=en&amp;as_sdt=4,38&amp;case=982654894246439687&amp;scilh=0">State
+            v. Reigard</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+reigard&amp;hl=en&amp;as_sdt=4,38&amp;case=982654894246439687&amp;scilh=0">,
+            243 Or App 442, 259 P3d 966 (2011)</a>.</p>
+            </section>
+            <section id="b._intent" class="level2">
+            <h2><strong>B. Intent</strong></h2>
+            <p>Where the crime requires intent beyond the intent to do
+            the act, such as the intent to commit a crime inside in the
+            case of burglary, the state’s evidence is less likely to be
+            sufficient. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+chatelain&amp;hl=en&amp;as_sdt=4,228&amp;case=4469255675155070880&amp;scilh=0">State
+            v. Chatelain</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+chatelain&amp;hl=en&amp;as_sdt=4,228&amp;case=4469255675155070880&amp;scilh=0">,
+            347 Or 278, 220 P3d 41 (2009)</a> (applying rule).</em>But
+            see <a
+            href="http://scholar.google.com/scholar_case?q=State+v+mcatee&amp;hl=en&amp;as_sdt=4,38&amp;case=15057421668856355368&amp;scilh=0">State
+            v. McAtee</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+mcatee&amp;hl=en&amp;as_sdt=4,38&amp;case=15057421668856355368&amp;scilh=0">,
+            245 Or App 233, 261 P3d 1284 (2011)</a> (finding intent to
+            defraud based largely on the defendant’s possession of a
+            stolen credit card).</p>
+            <p>A diminished-capacity defense under ORS 161.300 serves to
+            negate intent. If the evidence of diminished capacity were
+            so strong that no rational juror could find intent beyond a
+            reasonable doubt in light of the evidence, defendant is
+            entitled to judgment of acquittal. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+stockett&amp;hl=en&amp;as_sdt=4,228&amp;case=2826693844288292223&amp;scilh=0">State
+            v. Stockett</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+stockett&amp;hl=en&amp;as_sdt=4,228&amp;case=2826693844288292223&amp;scilh=0">,
+            278 Or 637, 643–644, 565 P2d 739 (1977)</a> (discussing the
+            state’s burden of proof when evidence of mental illness
+            tends to negate intent). But appellate decisions relating to
+            MJOA rulings tend to focus on the absence of evidence.
+            Courts rarely discuss when evidence is so strong that no
+            rational juror could disbelieve it.</p>
+            </section>
+            <section id="c._venue" class="level2">
+            <h2><strong>C. Venue</strong></h2>
+            <p>The state may fail to prove venue inadvertently by
+            forgetting to ask the necessary questions. Counsel should be
+            alert for that issue, but the trial court may permit the
+            state to reopen, and reviewing courts will be generous with
+            the inferences that may be drawn to prove venue. For
+            example,'' <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cervantes&amp;hl=en&amp;as_sdt=4,38&amp;case=2593583691123086380&amp;scilh=0">State
+            v. Cervantes</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cervantes&amp;hl=en&amp;as_sdt=4,38&amp;case=2593583691123086380&amp;scilh=0">,
+            319 Or 121, 873 P2d 316 (1994)</a>.</p>
+            <p>The state may also be unable to prove venue because the
+            nature of the evidence complicates or precludes proving any
+            location. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ritchie&amp;hl=en&amp;as_sdt=4,38&amp;case=13952706301259713802&amp;scilh=0">State
+            v. Ritchie</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ritchie&amp;hl=en&amp;as_sdt=4,38&amp;case=13952706301259713802&amp;scilh=0">,
+            228 Or App 412, 423, 208 P3d 981 (2009)</a>,</em>aff’d in
+            part, rev’d in part on other <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ritchie&amp;hl=en&amp;as_sdt=4,38&amp;case=9430304018237972744&amp;scilh=0">grounds</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ritchie&amp;hl=en&amp;as_sdt=4,38&amp;case=9430304018237972744&amp;scilh=0">State
+            v. Ritchie</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ritchie&amp;hl=en&amp;as_sdt=4,38&amp;case=9430304018237972744&amp;scilh=0">,
+            349 Or 572, 248 P3d 405 (2011)</a> (state failed to prove
+            venue of downloaded child pornography on a laptop
+            computer).</p>
+            </section>
+            <section id="d._variance" class="level2">
+            <h2><strong>D. Variance</strong></h2>
+            <p>In addition to the statutory elements of an offense, the
+            defendant is entitled to fair warning of the state’s theory
+            of the facts. Fair warning must be sufficient to enable the
+            defendant to present a defense. <em>State v. Smith</em>, 182
+            Or 497, 500–01, 188 P2d 998 (1948); <a
+            href="http://scholar.google.com/scholar_case?q=russell+v+united+states&amp;hl=en&amp;as_sdt=2,38&amp;case=14634095171418512820&amp;scilh=0">Russell
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=russell+v+united+states&amp;hl=en&amp;as_sdt=2,38&amp;case=14634095171418512820&amp;scilh=0">,
+            369 US 749, 82 S Ct 1038, 8 L Ed 2d 240 (1962)</a>.</p>
+            <p>If the state’s evidence is sufficient to prove the
+            defendant’s guilt of a different offense than the charged
+            offense, there is a variance between the pleading and the
+            proof. If the variance is “material,” the defendant is
+            entitled to acquittal. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+duvall&amp;hl=en&amp;as_sdt=4,38&amp;case=14617356779189319018&amp;scilh=0">State
+            v. Duvall</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+duvall&amp;hl=en&amp;as_sdt=4,38&amp;case=14617356779189319018&amp;scilh=0">,
+            187 Or App 316, 67 P3d 424 (2003)</a> (discussing rule,
+            citing cases). If the variance is not material, i.e., if the
+            defendant is not prejudiced, there is no remedy for the
+            variance. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+woodward&amp;hl=en&amp;as_sdt=4,38&amp;case=2405426905271498499&amp;scilh=0">State
+            v. Woodward</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+woodward&amp;hl=en&amp;as_sdt=4,38&amp;case=2405426905271498499&amp;scilh=0">,
+            187 Or App 233, 66 P3d 556 (2003)</a>. If the defendant is
+            convicted notwithstanding a material variance, the remedy is
+            a new trial. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+alben&amp;hl=en&amp;as_sdt=4,38&amp;case=2572731446902269833&amp;scilh=0">State
+            v. Alben</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+alben&amp;hl=en&amp;as_sdt=4,38&amp;case=2572731446902269833&amp;scilh=0">,
+            139 Or App 236, 911 P2d 1239 (1996)</a>. As discussed under
+            “Repairing the Error,” above, it is anomalous for a
+            defendant who wins on appeal to be in a worse position than
+            a defendant who wins at trial, and that issue would be worth
+            raising in the right case.</p>
+            <p>If the state seeks to amend the indictment in response to
+            the defendant’s argument about variance, the defendant
+            should object. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+wimber&amp;hl=en&amp;as_sdt=4,38&amp;case=14206351166239180581&amp;scilh=0">State
+            v. Wimber</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+wimber&amp;hl=en&amp;as_sdt=4,38&amp;case=14206351166239180581&amp;scilh=0">,
+            315 Or 103, 113–114, 843 P2d 424 (1992)</a> (regarding what
+            amendments are proper).</em>Wimber'' discusses, but does not
+            resolve, the proper remedy following an objection to a
+            material variance.</p>
+            <p>A ruling on a defense motion for acquittal by reason of a
+            variance may not bar a retrial. <a
+            href="http://www.leg.state.or.us/ors/131.html">ORS
+            131.535</a>; <a
+            href="http://www.leg.state.or.us/ors/136.html">136.490</a>;
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=15515020858899097701&amp;scilh=0">State
+            v. Freeman</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=15515020858899097701&amp;scilh=0">,
+            127 Or App 640, 873 P2d 1107 (1994)</a> (trial court
+            dismissed with prejudice accusatory instrument alleging
+            wrong date; Court of Appeals held dismissal was error). But,
+            if the vague terms of the indictment threaten the defendant
+            with a double-jeopardy violation because there are multiple
+            acts as to which jeopardy might attach, defendant should
+            argue that a retrial is barred. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+roper&amp;hl=en&amp;as_sdt=4,38&amp;case=1914091927799971406&amp;scilh=0">State
+            v. Roper</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+roper&amp;hl=en&amp;as_sdt=4,38&amp;case=1914091927799971406&amp;scilh=0">,
+            34 Or App 273, 277, 578 P2d 479 (1978)</a>,</em>reversed on
+            other grounds'', <a
+            href="http://scholar.google.com/scholar_case?q=state+v+roper&amp;hl=en&amp;as_sdt=4,38&amp;case=12855253330119406694&amp;scilh=0">286
+            Or 621 (1979)</a> (noting that a variance might be
+            prejudicial if it exposed the defendant to a possible
+            double-jeopardy violation). If the accusatory instrument
+            alleges one theory, but the proof is another theory so
+            closely related that the two would have to be joined for
+            trial, retrial may be barred by statutory double jeopardy
+            under ORS 131.535.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>Be prepared to explain how the variance prejudiced you.
+            If your understanding of the charges was affected by the
+            police reports or other discovery, explain how and offer
+            them as exhibits or provide other evidence of their
+            contents. ''See <a
+            href="http://scholar.google.com/scholar_case?q=shadley+rowe&amp;hl=en&amp;as_sdt=4,38&amp;case=6598167694774828075&amp;scilh=0">State
+            v. Shadley/Spencer/Rowe</a><a
+            href="http://scholar.google.com/scholar_case?q=shadley+rowe&amp;hl=en&amp;as_sdt=4,38&amp;case=6598167694774828075&amp;scilh=0">,
+            16 Or App 113, 517 P2d 324 (1973)</a> (discovery may provide
+            specificity as to vague terms in the indictment).</p>
+            </section>
+            <section id="e._corroboration" class="level2">
+            <h2><strong>E. Corroboration</strong></h2>
+            <p>Counsel should watch for situations where corroboration
+            is necessary: ORS 136.425 (confession); ORS 136.440
+            (accomplice testimony). A confession can be corroborated by
+            contemporaneous admissions. <a
+            href="http://scholar.google.com/scholar_case?q=manzella&amp;hl=en&amp;as_sdt=4,38&amp;case=3578560651698077678&amp;scilh=0">State
+            v. Manzella</a><a
+            href="http://scholar.google.com/scholar_case?q=manzella&amp;hl=en&amp;as_sdt=4,38&amp;case=3578560651698077678&amp;scilh=0">,
+            306 Or 303, 759 P2d 1078 (1988)</a>. The state does not need
+            to corroborate facts relating to the degree, but it does
+            need to corroborate facts distinguishing separately named
+            and classified crimes. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+chatelain&amp;hl=en&amp;as_sdt=4,228&amp;case=4469255675155070880&amp;scilh=0">State
+            v. Chatelaine</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+chatelain&amp;hl=en&amp;as_sdt=4,228&amp;case=4469255675155070880&amp;scilh=0">,
+            347 Or 278, 220 P3d 41 (2009)</a>.</p>
+            </section>
+            <section id="f._lesser_included_offenses" class="level2">
+            <h2><strong>F. Lesser-included Offenses</strong></h2>
+            <p>A motion for judgment of acquittal can be used to reduce
+            a count to a lesser-included charge if the evidence is
+            sufficient as to the lesser but not to the greater. <em>See
+            Chatelaine</em>, 347 Or 278 (applying rule). The jury’s
+            tendency to compromise might prejudice the defendant even if
+            the jury ultimately convicts only on the lesser charge. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+christener&amp;hl=en&amp;as_sdt=2,38&amp;case=3332353106106376380&amp;scilh=0">See</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+christener&amp;hl=en&amp;as_sdt=2,38&amp;case=3332353106106376380&amp;scilh=0">State
+            v. Christener</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+christener&amp;hl=en&amp;as_sdt=2,38&amp;case=3332353106106376380&amp;scilh=0">,
+            71 NJ 55, 362 A2d 1153 (1976)</a>, ''modified by <a
+            href="http://scholar.google.com/scholar_case?q=state+v+wilder&amp;hl=en&amp;as_sdt=2,38&amp;case=5915695274761333473&amp;scilh=0">State
+            v. Wilder</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+wilder&amp;hl=en&amp;as_sdt=2,38&amp;case=5915695274761333473&amp;scilh=0">,
+            193 NJ 398, 939 A2d 781 (2008)</a> (so stating, listing
+            authorities).</p>
+            <p>A partial acquittal judgment (as to one count or reducing
+            to a lesser-included charge) should be promptly announced to
+            the jury. This action may aid the defense by implying the
+            weakness of the state’s case in general, and foreclose
+            premature (though forbidden) deliberation and compromise in
+            the jury room. Counsel should consider whether disclosing
+            the court’s reasoning to the jury would benefit the
+            defendant.</p>
+            </section>
+            <section id="g._defenses" class="level2">
+            <h2><strong>G. Defenses</strong></h2>
+            <p>Once raised, an ordinary (non-affirmative) defense such
+            as self-defense or entrapment must be disproved by the state
+            beyond a reasonable doubt. <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.055(1)</a>. “‘Raised by the defendant’ means either
+            notice in writing before commencement of trial or
+            affirmative evidence by a defense witness in the defendant’s
+            case in chief.” ORS 161.055(3). Thus, if a defense has been
+            “raised” by pretrial notice and the state fails to present
+            evidence sufficient to support a rational determination that
+            it has been disproved beyond a reasonable doubt, a motion
+            for judgment of acquittal should be made specifying the
+            failure of proof at the end of the state’s case and renewed
+            at the close of all the evidence. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=pranger&amp;hl=en&amp;as_sdt=4,38&amp;case=334992971639680451&amp;scilh=0">State
+            v. Pranger</a><a
+            href="http://scholar.google.com/scholar_case?q=pranger&amp;hl=en&amp;as_sdt=4,38&amp;case=334992971639680451&amp;scilh=0">,
+            110 Or App 237, 822 P2d 714 (1991)</a>,</em>rev den ''313 Or
+            75, 828 P2d 458 (1992) (considering whether the trial court
+            should have granted judgment of acquittal based on an
+            ordinary defense).</p>
+            <p>Even an affirmative defense, as to which the defendant
+            bears the burden of proof, could be so strong as to require
+            a defense verdict as a matter of law. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+darnall&amp;hl=en&amp;as_sdt=4,38&amp;case=11005910880226696677&amp;scilh=0">State
+            v. Darnall</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+darnall&amp;hl=en&amp;as_sdt=4,38&amp;case=11005910880226696677&amp;scilh=0">,
+            47 Or App 161, 614 P2d 120 (1980)</a>.</p>
+            <p>Despite the obscure language of ORS 161.305, partial
+            responsibility is not an affirmative defense; it provides,
+            redundantly, for the admission of evidence relating to
+            intent. The state bears the burden of proving intent. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+stockett&amp;hl=en&amp;as_sdt=4,228&amp;case=2826693844288292223&amp;scilh=0">State
+            v. Stockett</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+stockett&amp;hl=en&amp;as_sdt=4,228&amp;case=2826693844288292223&amp;scilh=0">,
+            278 Or. 637, 643–644, 565 P2d 739 (1977)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=mullaney+wilbur&amp;hl=en&amp;as_sdt=2,38&amp;case=1049931246973296361&amp;scilh=0">Mullaney
+            v. Wilbur</a><a
+            href="http://scholar.google.com/scholar_case?q=mullaney+wilbur&amp;hl=en&amp;as_sdt=2,38&amp;case=1049931246973296361&amp;scilh=0">,
+            421 US 684, 95 S Ct 1881, 44 L Ed 2d 508 (1975).</a> The
+            defense bears the burden of proof as to mental disease or
+            defect. ORS 161.305.</p>
+            </section>
+            <section id="h._sentencing_factors" class="level2">
+            <h2><strong>H. Sentencing Factors</strong></h2>
+            <p>A motion for judgment of acquittal is appropriate for any
+            element as to which the defendant is entitled to a jury
+            trial. The Court of Appeals has reviewed such a motion
+            relating to commercial drug offense factors, <a
+            href="http://scholar.google.com/scholar_case?q=lupercio&amp;hl=en&amp;as_sdt=4,38&amp;case=15137270074937770538&amp;scilh=0">State
+            v. Lupercio-Quezada</a><a
+            href="http://scholar.google.com/scholar_case?q=lupercio&amp;hl=en&amp;as_sdt=4,38&amp;case=15137270074937770538&amp;scilh=0">,
+            224 Or App 515, 198 P3d 973 (2008)</a>, and an upward
+            departure, <a
+            href="http://scholar.google.com/scholar_case?q=skaggs&amp;hl=en&amp;as_sdt=4,38&amp;case=2917131084582957706&amp;scilh=0">State
+            v. Skaggs</a><a
+            href="http://scholar.google.com/scholar_case?q=skaggs&amp;hl=en&amp;as_sdt=4,38&amp;case=2917131084582957706&amp;scilh=0">,
+            239 Or App 13, 244 P3d 380 (2010)</a>.</p>
+            </section>
+            <section id="i._constitutional_issues" class="level2">
+            <h2><strong>I. Constitutional Issues</strong></h2>
+            <p>Whether a statute is unconstitutionally overbroad can be
+            raised as a motion for judgment of acquittal. <a
+            href="http://scholar.google.com/scholar_case?q=ryan&amp;hl=en&amp;as_sdt=4,38&amp;case=15652313928435357988&amp;scilh=0">State
+            v. Ryan</a><a
+            href="http://scholar.google.com/scholar_case?q=ryan&amp;hl=en&amp;as_sdt=4,38&amp;case=15652313928435357988&amp;scilh=0">,
+            350 Or 670, 261 P3d 1189 (2011)</a> (rejecting on the merits
+            defense argument that his stalking conviction violated his
+            free speech rights under Article I, section 8, of the Oregon
+            Constitution).</p>
+            </section>
+            </section>
+            <section id="vi._effect_of_judgment_of_acquittal"
+            class="level1">
+            <h1><strong>VI. Effect of Judgment of
+            Acquittal</strong></h1>
+            <p>As discussed above, a ruling that the state has not
+            carried its burden is final. It cannot be appealed and it
+            precludes subsequent prosecution. The scope of the
+            protection provided by a judgment of acquittal will depend
+            on the language of the accusatory instrument, by the
+            substantive law providing that accusatory instruments are
+            read broadly and, possibly, by the discovery, which can have
+            the effect of clarifying the indictment.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>If the accusatory instrument does not clearly capture all
+            conduct for which the defendant might be prosecuted, the
+            defendant might benefit from clarity (strengthening a
+            double-jeopardy argument in the event of a future
+            prosecution) or from obscurity (providing double-jeopardy
+            arguments if other events form the basis for a future
+            prosecution.) Counsel should decide whether to provide
+            police reports or other evidence attached to a pleading, to
+            call witnesses, or otherwise offer evidence about the likely
+            scope of the accusatory instrument. ''See <a
+            href="http://scholar.google.com/scholar_case?q=shadley+rowe&amp;hl=en&amp;as_sdt=4,38&amp;case=6598167694774828075&amp;scilh=0">State
+            v. Shadley/Spencer/Rowe</a><a
+            href="http://scholar.google.com/scholar_case?q=shadley+rowe&amp;hl=en&amp;as_sdt=4,38&amp;case=6598167694774828075&amp;scilh=0">,
+            16 Or App 113, 517 P2d 324 (1973)</a> (discovery may provide
+            specificity as to vague terms in the indictment).</p>
+            <p>A ruling that the state has not carried its burden of
+            proof is dispositive; the state cannot appeal, and a
+            subsequent prosecution is prevented by double-jeopardy
+            principles, both by statute, ORS 136.445, and under the
+            Oregon and federal constitutions. For example,<a
+            href="http://scholar.google.com/scholar_case?q=wolfs&amp;hl=en&amp;as_sdt=4,38&amp;case=9250834865384752954&amp;scilh=0">State
+            v. Wolfs</a><a
+            href="http://scholar.google.com/scholar_case?q=wolfs&amp;hl=en&amp;as_sdt=4,38&amp;case=9250834865384752954&amp;scilh=0">,
+            312 Or 646, 649, 826 P2d 623 (1992)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=US+v+scott&amp;hl=en&amp;as_sdt=2,38&amp;case=2790712085792076051&amp;scilh=0">United
+            States v. Scott</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+scott&amp;hl=en&amp;as_sdt=2,38&amp;case=2790712085792076051&amp;scilh=0">,
+            437 US 82, 93, 98–99, 98 S Ct 2187, 57 L Ed2d 65 (1978)</a>.
+            But see “Repairing the Error,” above.</p>
+            <p>A nominal judgment of acquittal does not provide
+            double-jeopardy protection if the motion is granted on the
+            basis of a variance between the pleading and the proof, <a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=15515020858899097701&amp;scilh=0">State
+            v. Freeman</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=15515020858899097701&amp;scilh=0">,
+            127 Or App 640, 873 P2d 1107 (1994)</a>, or a defect in the
+            indictment, <em>State v. Wolfs</em>, 312 Or 646, 653, 826
+            P2d 623 (1992). Because a true judgment of acquittal
+            provides greater protection than a nominal judgment of
+            acquittal granted on a basis other than the sufficiency of
+            the state’s case, trial counsel should consider moving for a
+            judgment of acquittal before attacking the statute or
+            accusatory instrument through, e.g., a motion in arrest of
+            judgment.</p>
+            </section>
+            <section id="vii._conclusion" class="level1">
+            <h1><strong>VII. Conclusion</strong></h1>
+            <p>There are two important things to remember about MJOAs.
+            First, a favorable ruling on an MJOA is as good as an
+            acquittal after trial. It precludes any further prosecution,
+            and the state cannot appeal. (However, in response to your
+            motion, and prior to a ruling, the court has the discretion
+            to allow the state to reopen.)</p>
+            <p>Second, a true MJOA is based on the state’s failure to
+            offer sufficient evidence to prove an element. There are
+            several reported cases involving issues that looked like
+            MJOAs, but were actually something else, such as demurrers
+            or motions in arrest of judgment. Favorable rulings on those
+            motions do not necessarily result in double jeopardy
+            protection or preclude subsequent prosecution. Counsel
+            should be aware of the difference.</p>
+            </section>
+    </body>
+</html>

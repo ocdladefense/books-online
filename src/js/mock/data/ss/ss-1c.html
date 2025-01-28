@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Search and Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Search and Seizure Manual</h1>
+                                    </section>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <p><span id="i.-was-the-government-action-a-seizure"></span></p>
+            <section id="i._was_the_government_action_a_seizure"
+            class="level1">
+            <h1>I. Was the Government Action a Seizure?</h1>
+            <p>Both Article 1, section 9, of the Oregon Constitution and
+            the Fourth Amendment require that seizures be reasonable.
+            What constitutes an unreasonable seizure differs depending
+            on whether it is analyzed under the State or the Federal
+            Constitution and whether it involves the seizure of a person
+            or property.</p>
+            <p><span id="a.-article-1-section-9-seizures"></span></p>
+            <section id="a._article_1_section_9_seizures"
+            class="level2">
+            <h2>A. Article 1, Section 9, Seizures</h2>
+            <p><span id="article-1-section-9-seizures-of-a-person"></span></p>
+            <section id="article_1_section_9_seizures_of_a_person"
+            class="level3">
+            <h3>1. Article 1, Section 9, Seizures of a Person</h3>
+            <p>“[T]here are three generally recognized categories of
+            street encounters between policeman and citizen. In
+            descending order of justification, they are: (1) arrest,
+            justified only by probable cause; (2) temporary restraint of
+            the citizen’s liberty (a ‘stop’), justified by reasonable
+            suspicion (or reliable indicia) of the citizen’s criminal
+            activity; and (3) questioning without any restraint of
+            liberty (mere conversation), requiring no justification.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Warner,+284+Or+147,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14176194947410243413&amp;scilh=0"><em>State
+            v. Warner</em>, 284 Or 147, 161, 585 P2d 681, 689
+            (1978)</a>. “The thing that distinguishes ‘seizures’—that
+            is, ‘stops’ and ‘arrests’—from encounters that are ‘mere
+            conversation’ is the imposition, either by physical force or
+            through some ‘show of authority,’ of some restraint on the
+            individual’s liberty.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ashbaugh,+349+Or+297,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5545000798507464990&amp;scilh=0"><em>State
+            v. Ashbaugh</em>, 349 Or 297, 309, 244 P3d 360, 366
+            (2010)</a>. Thus, “[a] ‘seizure’ of a person occurs under
+            Article I, section 9, of the Oregon Constitution: (a) if a
+            law enforcement officer intentionally and significantly
+            restricts, interferes with, or otherwise deprives an
+            individual of that individual’s liberty or freedom of
+            movement; or (b) if a reasonable person under the totality
+            of the circumstances <em>would</em> believe that (a) above
+            has occurred.” <em>Ashbaugh</em>, 349 Or at 316.</p>
+            <p>“Under that test, the lodestar for determining whether an
+            officer has seized a defendant under Article I, section 9,
+            is whether the officer restricted the defendant’s liberty or
+            freedom of movement by a show of authority, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rodgers/Kirkeby,+347+Or+610,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14615796947142643999&amp;scilh=0"><em>State
+            v. Rodgers/<span class="SpellE">Kirkeby</span>,</em> 347 Or
+            610, 621–22, 227 P3d 695 (2010)</a>, which may be
+            established through, among other circumstances, the content
+            of the officer’s questions to the defendant or the officer’s
+            manner or actions during the encounter, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Levias,+242+Or+App+264,&amp;hl=en&amp;as_sdt=4,38&amp;case=4431664405211415366&amp;scilh=0"><em>State
+            v. <span class="SpellE">Levias</span>,</em> 242 Or App 264,
+            266–67, 255 P3d 611 (2011)</a>. Moreover, a reasonable
+            person would believe that an officer’s actions amounted to
+            such a show of authority ‘if the person knew that he or she
+            was the subject of a criminal investigation.’ <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Radtke,+242+Or+App+234,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11347500395050478426&amp;scilh=0"><em>State
+            v. Radtke,</em> 242 Or App 234, 239, 255 P3d 543
+            (2011)</a>.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Zaccone,+245+Or+App+560,+&amp;hl=en&amp;as_sdt=4,38&amp;case=16643744271575039336&amp;scilh=0"><em>State
+            v. Zaccone</em>, 245 Or App 560, 565, 261 P3d 1287, 1289-90
+            (2011)</a> <em>rev den</em>, 355 Or 381 (2014). “Because of
+            the diversity of potential police-citizen encounters, the
+            inquiry necessarily is fact-specific and requires an
+            examination of the totality of the circumstances involved.”
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Backstrand,+354+Or+392&amp;hl=en&amp;as_sdt=4,38&amp;case=915527787294543186&amp;scilh=0"><em>State
+            v. <span class="SpellE">Backstrand</span>,</em> 354 Or 392,
+            399, 313 P3d 1084, 1091 (2013)</a>. Thus, “[a] seizure
+            exists if, under the totality of the circumstances, an
+            officer’s conduct would be reasonably perceived ‘as coercive
+            in the sense that it would cause the citizen to reasonably
+            believe that the officer is intentionally restraining the
+            citizen’s liberty or freedom of movement in a significant
+            way—that is, in a way that exceeds the bounds of ordinary
+            social encounters between private citizens.’” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Zamora-Martinez&amp;hl=en&amp;as_sdt=4,38&amp;case=10670609546124935074&amp;scilh=0"><em>State
+            v. Zamora-Martinez</em>, 264 Or App 50 (2014)</a> (citing
+            <em>Ashbaugh,</em> 349 Or 297). Thus, the question is
+            whether, based on the totality of the circumstances, a
+            reasonable person would believe that an officer had
+            explicitly or implicitly conveyed to defendant that he was
+            not free to terminate the encounter or otherwise go about
+            his ordinary affairs. <em>Zamora-Martinez</em>, 264 Or App
+            <span class="GramE">50 .</span> “The duration of the
+            detention or intensity of the officer’s actions can convert
+            a stop into an arrest under Article I, section 9.” <a
+            href="https://scholar.google.com/scholar_case?case=12774543105933018456&amp;q=State+v.+Hebrard,+244+Or+App+593&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Hebrard</span></em>, 244 Or App 593,
+            598, 260 P3d 759 (2011).</a> “A seizure ends when a
+            reasonable person under the totality of the circumstances
+            would no longer believe that his or her liberty is being
+            restricted.” <a
+            href="https://scholar.google.com/scholar_case?case=9171265758116477907&amp;q=Lowell,+275+Or.+App&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Lowell</em>, 275 Or App 365, 373, 364 P3d 34
+            (2015)</a>.</p>
+            <p><span id="a.-stops"></span></p>
+            <section id="a._stops" class="level4">
+            <h4>a. Stops</h4>
+            <p><span id="i.-requests-for-identification"></span></p>
+            <section id="i._requests_for_identification" class="level5">
+            <h5>i. Requests for Identification</h5>
+            <p>In 2013 the Oregon Supreme Court addressed what facts can
+            transform a mere conversation into a stop-level seizure in a
+            series of cases.
+            In <span class="SpellE"><em>Backstrand</em></span><em>,
+            <span class="SpellE">Highley</span>,</em> and <em>Anderson,</em> the
+            court addressed whether an officer’s request for
+            identification automatically converted a police-citizen
+            encounter into a seizure under Article I, section 9.</p>
+            <p>Prior to those cases, the Court of Appeals had
+            consistently held that “[w]<span class="SpellE">hen</span>
+            an officer takes and retains an individual’s identification,
+            the officer has stopped the person.” <a
+            href="https://scholar.google.com/scholar_case?case=8028963281094326363&amp;q=State+v.+Smith,+252+Or+App+518&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Smith</em>, 252 Or App 518, 522-23, 287 P3d 1210
+            (2012</a>) (citing <a
+            href="https://scholar.google.com/scholar_case?case=9720659628709115222&amp;q=State+v.+Ayles,+348+Or+622&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. <span class="SpellE">Ayles</span></em>, 348 Or 622, 628,
+            237 P3d 805 (2010)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=5874840115423331282&amp;q=State+v.+Thompkin,+341+Or+368&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. <span class="SpellE">Thompkin</span></em>, 341 Or 368,
+            378-79, 143 P3d 530 (2006)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=7111050516055208352&amp;q=State+v.+Lay,+242+Or+App+38&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lay</em>, 242 Or App 38, 44, 252 P3d 850 (2011</a><a
+            href="https://scholar.google.com/scholar_case?case=7111050516055208352&amp;q=State+v.+Lay,+242+Or+App+38&amp;hl=en&amp;as_sdt=4,38">)</a>;
+            <em>Radtke</em>, 242 Or App at 239–40).</p>
+            <p>The supreme court had also held that
+            “[w]<span class="SpellE">hen</span> an officer conducts a
+            warrant check or other investigation that could result in
+            the defendant’s immediate citation or arrest, the officer
+            has stopped the person.” <em>Id.</em> (citing <a
+            href="https://scholar.google.com/scholar_case?case=3400934262176087409&amp;q=State+v.+Hall,+339+Or+7&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hall</em>, 339 Or 7, 10, 115 P3d 908 (2005)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=12352775074485366637&amp;q=State+v.+Parker,+242+Or+App+387&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Parker</em>, 242 Or App 387, 394, 255 P3d 624
+            (2011)</a>).</p>
+            <p>In <span class="SpellE"><em>Backstrand</em></span>,
+            however, the court held that requesting identification from
+            a citizen and verifying that identification do not alone
+            effectuate a <em>per se</em> seizure, but that the “content
+            of the questions, the manner of asking them, or other
+            actions that police take (along with the circumstances in
+            which they take them) [might] convey to a reasonable person
+            that the police are exercising their authority to coercively
+            detain the citizen[.]” 354 Or at 412. That is, the court
+            announced the following general rule:</p>
+            <p>“[P]<span class="SpellE">olice</span> requests for
+            information or cooperation do not implicate Article I,
+            section 9, <span class="GramE">as long as</span> the officer
+            does no more than seek the individual’s cooperation through
+            noncoercive questioning and conduct. A request for
+            identification, in and of itself, is not a seizure. Nor is
+            an officer’s act of checking the validity of that
+            identification, in and of itself, a seizure. For a request
+            and verification of identification to amount to a seizure,
+            something more is required on an officer’s part. Either
+            through the context, the content or manner of questioning,
+            or the other circumstances of the encounter, the officer
+            must convey to a reasonable person that the officer is
+            exercising his or her authority to significantly restrain
+            the citizen’s liberty or freedom of movement.”</p>
+            <p><em>Id.</em> at 417.</p>
+            <p>In
+            <span class="SpellE"><em>Backstrand</em></span><em>,</em>
+            the court held that the defendant was not seized when a
+            police officer approached him inside an adult store because
+            he thought the defendant was a minor, asked him how old he
+            was, and asked to see his identification and after holding
+            it for 10–15 seconds returned it to defendant. <em>Id.</em>
+            at 414-416. The court concluded that, because there was no
+            “accompanying exercise of authority to restrain,” and the
+            officer was not “overbearing, intimidating, or coercive in
+            his demeanor or behavior,” a reasonable person would not
+            believe “that the officer had <em>significantly</em>
+            restricted his or her liberty” (emphasis in original).
+            <em>Id.</em> at 414. The court reasoned that a reasonable
+            person engaged in an age-restricted activity would expect to
+            be questioned about his or her age. For example,
+            “proof-of-age requests and examinations are customarily made
+            * * * by private proprietors of businesses (bartenders,
+            clerks of stores where alcohol or tobacco are sold) as well
+            as by law enforcement personnel.” <em>Id</em>. at 415.
+            Accordingly, asking a person’s age is not conduct that is
+            “significantly beyond that accepted in ordinary social
+            intercourse.” <em>Id</em>. at 416.</p>
+            <p>Importantly, the court affirmed its prior holding in
+            <em>Hall</em> by expressly treating it as an example of a
+            properly analyzed seizure and distinguishing it from
+            <span class="SpellE"><em>Backstrand</em></span> '<em>' on
+            its facts.</em>Id.<em>at 411-12. The court explained that
+            in</em>Hall<em>an officer had parked next to the defendant
+            as the defendant was walking along a street and motioned for
+            the defendant to approach. As the defendant neared the
+            patrol car, the officer got out of his car and asked for the
+            defendant’s identification, which he briefly retained while
+            requesting a warrant check. The officer then returned the
+            identification, and while awaiting the results of the
+            warrant check, asked defendant if he was carrying any
+            weapons, knives, or illegal drugs and then for consent to
+            search.</em>Id.<em>at 411 (recounting the facts
+            in</em>Hall'').</p>
+            <p><em>Hall</em> held that the encounter became a seizure
+            when the officer asked for the defendant’s identification
+            and ran the warrants check. The
+            <span class="SpellE"><em>Backstrand</em></span> '<em>' court
+            explained that, at that point, the defendant was aware that
+            he was the subject of a pending warrant
+            <span class="GramE">check</span> and, because of that fact,
+            it was “difficult to posit” that a reasonable person would
+            have felt free to leave (discussing the legal analysis
+            in</em>Hall<em>).</em>Id.'' at 412.</p>
+            <p>In addition to that fact, the officer “‘did nothing to
+            dispel what would have been an objectively reasonable belief
+            that defendant was restrained from leaving until [the
+            officer] had received the results of the warrant check.
+            Instead, immediately upon returning [the] defendant’s
+            identification card, [the officer] questioned [the]
+            defendant about whether [the] defendant was carrying any
+            weapons, knives, or illegal drugs, and he asked [the]
+            defendant for consent to search [his] person.’” <em>Id.</em>
+            (quoting <em>Hall</em>)<em>.</em></p>
+            <p>Thus, while a warrant check alone may not constitute a
+            <em>per se</em> stop in every case, if the officer fails to
+            inform the person that they are free to leave and then asks
+            potentially incriminating questions or for consent to
+            search, the circumstances taken together may amount to a
+            stop.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=12797329831767625602&amp;q=State+v.+Highley&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Highley</span></span></a><a
+            href="https://scholar.google.com/scholar_case?case=12797329831767625602&amp;q=State+v.+Highley&amp;hl=en&amp;as_sdt=6,38">,
+            354 Or 459, 313 P3d 1068 (2013)</a>, the police officer’s
+            request for the defendant’s identification, probationary
+            status check, and request for consent to search did not
+            constitute a seizure. The officer called out to the driver
+            of a vehicle that the defendant was
+            <span class="GramE">in</span> and the officer then talked
+            only to the driver. The defendant and another occupant
+            walked away from the car, went to an apartment, and then
+            returned of their own accord. The officer said nothing to
+            the defendant and other person during this time while the
+            defendant and the other person “milled” around the car. As
+            they milled around, the officer asked the defendant if he
+            was still on probation. The defendant replied that he was
+            not. The officer then asked the defendant for his
+            <span class="GramE">identification, and</span> held the
+            defendant’s license only long enough to write down the
+            license number. The officer informed the defendant that he
+            had confirmed he was no longer on probation and then asked
+            the defendant for consent to search his pockets. None of
+            these interactions elevated the encounter to a seizure.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=12797329831767625602&amp;q=State+v.+Highley&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Anderson</em></a><span class="MsoHyperlink"><em>,</em>
+            </span><a
+            href="https://scholar.google.com/scholar_case?case=12797329831767625602&amp;q=State+v.+Highley&amp;hl=en&amp;as_sdt=6,38">354
+            Or 440, 313 P3d 1113 (2013)</a>, the content of officers’
+            requests for identification from the occupants of a stopped
+            vehicle, the manner in which the requests were made, and the
+            overall context of the contact did not convey to the
+            occupants that they were not allowed to leave, as required
+            to elevate the encounter to level of seizure. Their brief
+            verbal exchanges and inquiries did not communicate an
+            exercise of authority to restrain the occupants of the
+            vehicle; the officers’ tone and manner were not overbearing
+            or controlling; the content of the brief verbal exchange was
+            not coercive; the officers took no physical action other
+            than to approach the parked car; and the fact that officers
+            outnumbered occupants by one would not cause a reasonable
+            person to believe that officers were significantly
+            restricting his or her liberty.</p>
+            <p>After that trio of cases, the Court of Appeals concluded
+            in <a
+            href="https://scholar.google.com/scholar_case?case=3830885959253480511&amp;q=264+Or+App+754&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Thompson</em></a>, that a request for identification and
+            warrants check are now to be treated as factors in the
+            totality-of-the-circumstances analysis, but do not
+            “necessarily and always mean that the person was stopped.”
+            <span class="MsoHyperlink">264 Or App 754, 759-60, 333 P3d
+            1125 (2014)</span>. The <em>Thompson</em> court noted that
+            <span class="SpellE"><em>Backstrand</em></span> left open
+            the possibility that if the officer does not promptly return
+            the identification, that might still amount to a <em>per
+            se</em> seizure:</p>
+            <p>“The one possibly remaining <em>per se</em> rule is this:
+            When an officer takes a person’s identification card and
+            retains it for <em>more than a reasonable time</em>, the
+            encounter is a stop. Briefly retaining an identification
+            card is not a ‘significant’ restraint of a person’s liberty
+            or freedom of movement, but at several places, the court in
+            <span class="SpellE"><em>Backstrand</em></span> implies that
+            an unreasonably extended retention is.”</p>
+            <p><em>Thompson</em>, 264 Or App at 760 (emphasis in
+            original). The <em>Thompson</em> court did not ultimately
+            resolve the question of whether such conduct amounts to a
+            <em>per se</em> seizure, because the state had failed to
+            meet its burden of establishing that the officer had only
+            briefly retained possession of the identification. That fact
+            when combined with the other factors in the case (three
+            officers present, officer asked the defendant to change her
+            location, officer asked for her identification, officer told
+            her that they suspected drug activity on the premises, and
+            officer asked if she was a drug user) allowed the court to
+            conclude with “no difficulty” that the defendant had been
+            seized.</p>
+            <div class="practice-tip">
+            <p>Practice Tips</p>
+            <p>Winning the Stop Despite
+            <span class="SpellE"><strong><em>Backstrand</em></strong></span></p>
+            <p>Develop the facts relevant to establishing the “show of
+            authority.” Many important facts will not be included in the
+            police report, making it necessary to elicit them <em>at the
+            suppression hearing</em>.</p>
+            <p>Establish, e.g., number officers, number of cars, lights,
+            sirens, air horn or other loud or intimidating noises, hand
+            gestures, body language, tone of voice, specific questions,
+            topic of the questions, police conduct toward other people
+            at the scene, implication of wrongdoing, accusation of
+            wrongdoing, location of the encounter, requests, directives
+            or instructions, attempts to control defendant’s movements
+            or requests to change defendant’s location or position.</p>
+            <p>After incorporating the newly elicited facts, it may be
+            necessary to argue that the stop occurred earlier in the
+            encounter than the point identified in the written motion to
+            suppress.</p>
+            <p>In that scenario, first argue that the stop occurred at
+            the earliest moment at which it is arguable; then argue that
+            the stop occurred by the time that the show of authority was
+            at its height.</p>
+            <p>If an attorney fails to identify the conduct constituting
+            the initial stop, the Court of Appeals may conclude that the
+            officer gathered enough evidence to establish reasonable
+            suspicion between the time that the initial stop occurred
+            and the later time that the attorney argued that the stop
+            occurred. In that situation, the client may lose on appeal,
+            even if the officer lacked reasonable suspicion at the time
+            of the initial stop.</p>
+            <p>The Court of Appeals has since identified several factors
+            which, in addition to a request for I.D., amount to a
+            stop:</p>
+            <p><span><span>·<span>     
+            </span></span></span><span>Accusing the defendant of a law
+            violation. </span><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jackson&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=13608023209169072636&amp;scilh=0"><span class="practiplink"><em><span>State
+            v.
+            Jackson</span></em></span></a><span class="practiplink"><span>,
+            268 Or App 139 (2014)</span></span> <span>(officer accused
+            the defendant of committing a traffic
+            infraction).</span></p>
+            <p><span><span>·<span>       </span></span></span>Openly
+            investigating a potential law violation.<span> </span><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rodriguez-Perez,+&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=9829294346599375193&amp;scilh=0"><span class="practiplink"><em>State
+            v.
+            Rodriguez-Perez</em></span></a><span class="practiplink">,
+            262 Or App 206, (2014)</span>.</p>
+            <p><span><span>·<span>       </span></span></span>Age- or
+            identity-related crime where the circumstances support a
+            reasonable inference that defendant’s I.D. was being checked
+            to confirm its validity. Rodriguez-Perez, 262 Or App
+            206.</p>
+            <p><span><span>·<span>       </span></span></span>The
+            defendant’s awareness that the I.D. was being used to run a
+            warrants check might be sufficient. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Campbell,+263+Or+App+315&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=16058655463843972551&amp;scilh=0"><span class="practiplink"><em>State
+            v. Campbell</em></span></a><span class="practiplink">, 263
+            Or App 315, 319 (2014)</span> (“An individual’s awareness
+            that the officer is using the individual’s identification to
+            run a warrant check is among the circumstances that may
+            contribute to a reasonable belief that an individual’s
+            liberty is significantly restricted.”).</p>
+            <p><span><span>·<span>       </span></span></span>Holding
+            onto a defendant’s I.D. for an unreasonable amount of time.
+            <em>Thompson</em>, 264 Or App 754.</p>
+            <p><span><span>·<span>       </span></span></span>The
+            context in which the request for I.D. was made would cause a
+            reasonable person to think he or she could not continue to
+            go about his or her affairs without providing
+            it<span class="GramE">.
+            <span class="InternetLink"><span>,</span></span></span><span class="InternetLink"><span>
+            <em>Zamora-Martinez</em>, 264 Or App 50</span></span>.</p>
+            <p><span><span>·<span>       </span></span></span>An
+            officer’s “terse” or “firm” tone of voice can convey an
+            assertion of authority that, combined with investigatory
+            questioning, indicates that the person is not free to leave.
+            <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+norton&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2015&amp;case=11346291797805166821&amp;scilh=0"><span class="practiplink"><em>State
+            v. Norton</em></span></a><span class="practiplink">, 270 Or
+            App 584, 349 P3d 576 (2015)</span>.</p>
+            </div>
+            <div class="bon-update">
+            <p><span class="slettext bon-update-label">2024
+            Update</span> After requesting and obtaining the defendant’s
+            license, the officer did not proceed with verifying the
+            identification or asking any questions about the
+            identification, as a person might reasonably expect; rather,
+            he retained the identification and questioned the defendant
+            about the contents of his bag. <a
+            href="https://scholar.google.com/scholar_case?case=4174866559579557139&amp;q=State+v.+McKibben,+320+Or+App+26&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. McKibben</span></em>, 320 Or App 26, 31–32, 512 P3d 464
+            (2022)</a>. A<span> reasonable person in the defendant’s
+            position would understand that the officer’s retention of
+            the defendant’s identification while questioning him was a
+            show of authority that restrained his “liberty or freedom of
+            movement.”</span><span></span></p>
+            </div>
+            <p><span id="ii.-retention-of-identification"></span></p>
+            </section>
+            <section id="ii._retention_of_identification"
+            class="level5">
+            <h5>ii. Retention of Identification</h5>
+            <div class="bon-update">
+            <p><span class="snumtext bon-update-label">2024
+            Update</span> Retaining a person’s driver’s license or ID
+            for longer than reasonably necessary to verify the person’s
+            identity, driving status, and warrant status—or not promptly
+            returning it after receiving the results of those checks—can
+            result in the seizure of the person. <a
+            href="https://scholar.google.com/scholar_case?case=2916394850968553956&amp;q=State+v.+Orman,+322+Or+App+707+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Orman</em>, 322 Or App 707</a> (2022) (November 16,
+            2022). There, the defendant, a passenger in a car, was
+            stopped without reasonable suspicion when an officer
+            retained his ID “past a ‘reasonable period for purposes of
+            examining and verifying <span class="GramE">it[</span>,]’”
+            and in particular, failed to return it after the officer was
+            informed by dispatch that the license was “clean.”
+            <em>Id</em>. at 716-17. In addition, multiple officers
+            reported to the scene and essentially guarded the defendant,
+            and the questions that the police asked defendant conveyed
+            to defendant that he was suspected of criminal
+            activity. </p>
+            </div>
+            <p><span id="iii.-directives"></span></p>
+            </section>
+            <section id="iii._directives" class="level5">
+            <h5>iii. Directives</h5>
+            <div class="bon-update">
+            <p><span class="snumtext bon-update-label">2024
+            Update</span> The courts have held time and again that
+            directives restricting hand movement are Article I, section
+            9, seizures. <a
+            href="https://scholar.google.com/scholar_case?case=4454362307845720271&amp;q=State+v.+Najar,+287+Or.+App.+98,+&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Najar</span>, 287 Or App. 98, 106, 401 P3d 1205
+            (2017)</a> (officers seized the defendant when they told
+            him, “Can I—keep your hands where I can see them. Go in with
+            one hand”); <a
+            href="https://scholar.google.com/scholar_case?case=15527009292132900722&amp;q=State+v.+Rudnitskyy,+266+Or.+App.+560,+564,+338+P.3d+742+(2014)&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Rudnitskyy</span></span>, 266 Or
+            App. 560, 564, 338 P3d 742 (2014)</a>, <em>rev den</em>, 357
+            Or 112, 346 P3d 1213 (2015) (the defendant was seized by
+            order to place his hands on the dashboard); <a
+            href="https://scholar.google.com/scholar_case?case=4387962067650639559&amp;q=v.+Courtney,+242+Or+App+321&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Courtney</span>, 242 Or App 321, 333, 255 P3d 577, 584
+            (2011)</a> (Stating that the factor that weighed most
+            significantly in the court’s determination that the
+            defendant was seized was that “[the officer] directed
+            defendant to put his hands on top of his head, with his
+            fingers interlaced.”); <a
+            href="https://scholar.google.com/scholar_case?case=2568903446581971495&amp;q=State+v.+Shaw,+230+Or.+App.+257&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Shaw</span>, 230 Or App. 257, 264-65, 215 P3d
+            105<span>,</span></a> <em>rev den</em>, 347 Or 365, 222 P3d
+            1091 (2009) (the defendant was seized by order to show his
+            hands to the officer); <a
+            href="https://scholar.google.com/scholar_case?case=4553052139396766927&amp;q=)%3B+State+v.+Ruiz,+196+Or.+App.+324,&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Ruiz</span>, 196 Or App. 324, 326-27, 101 P3d 824
+            (2004)</a>, <em>rev den</em>, 338 Or 363, 109 P3d 797 (2005)
+            (the defendant was seized by an order to remove his hand
+            from his pocket). “In our ‘ordinary affairs,’ we have the
+            freedom to move our hands freely, and a command from an
+            armed, uniformed officer limiting that freedom most
+            certainly communicates to a person that she is not free to
+            go about her ordinary affairs (at least not without
+            provoking a responsive use of force).” <a
+            href="https://scholar.google.com/scholar_case?case=15021741305239128728&amp;q=State+v.+Soto-Navarro,+309+Or+App+218&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Soto-Navarro</span>, 309 Or App 218, 228–29, 482 P3d 150,
+            156–57 (2021)</a>.</p>
+            <p>Similarly, an officer may seize a person by directing the
+            person’s movements. <em>See, e.g.,</em>
+            <span class="hyperlinkital">State v.
+            <span class="SpellE">Mastin</span></span><span class="MsoHyperlink">,
+            203 Or App 366, 371, 124 P3d 1275 (2005)</span>,
+            <span class="SpellE"><em>adh’d</em></span> <em>to on
+            recons</em>, 205 Or App 528, 134 P3d 1052 (2006) (police
+            officer’s directive to defendant to “get back in the
+            vehicle” from which he had just exited constituted a stop);
+            <a
+            href="https://scholar.google.com/scholar_case?case=8952025990231286692&amp;q=State+v.+Crandall,+197+Or+App+591&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Crandall</span>, 197 Or App 591, 595, 108 P3d 16, 18
+            (2005)</a>, <span class="SpellE"><em>rev’d</em></span>
+            <em>on other grounds</em>, 340 Or 645 (2006) (defendant was
+            stopped when officer “told him to ‘stop’ and to ‘come here’
+            to where [the officer] was standing”).</p>
+            <p>Moreover, even relatively casual questioning by an
+            officer can convert a “mere conversation” into a “stop” when
+            the questioning requires a person to change directions, move
+            at the officer’s request, or alter his or her course of
+            conduct. <em>See</em> <span class="hyperlinkital">State v.
+            Rocha-Ramos</span><span class="MsoHyperlink">, 161 Or App
+            306, 985 P2d 217 (1999)</span> (officer stopped defendant
+            when she asked the defendant if he could sit down and wait
+            rather than use the bathroom and blocked his route of travel
+            to the bathroom); <a
+            href="https://scholar.google.com/scholar_case?case=3331069043970639167&amp;q=State+v.+Johnson,+105+Or+App+587&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Johnson</span>, 105 Or App 587, 590, 805 P2d 747
+            (1991)</a> (holding that the defendant was seized after
+            police encountered the defendant in a parking lot and asked
+            if he knew anything about a fight that had been reported in
+            the area, whether he had anything in his pocket, and then
+            said, “I can’t see you back there, can you step out [from
+            behind the bush]?”); <em>but see</em> <a
+            href="https://scholar.google.com/scholar_case?case=14151775089004578063&amp;q=State+v.+Cline,+264+Or.+App.+293&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Cline</em>, 264 Or App. 293, 299, 330 P3d 1255 (2014)</a>
+            (officer’s request to “stay where you are” or “stay there,”
+            as defendant began to approach the police cruiser, was not a
+            show of authority necessary for a seizure, but a <em>de
+            minimis</em> request that, at most, slightly altered the
+            location of an ongoing, casual, and consensual
+            conversation).</p>
+            </div>
+            <p><span id="iv.-accusations-of-wrongdoingsubject-of-an-investigation"></span></p>
+            </section>
+            <section
+            id="iv._accusations_of_wrongdoingsubject_of_an_investigation"
+            class="level5">
+            <h5>iv. Accusations of Wrongdoing/Subject of an
+            Investigation</h5>
+            <div class="bon-update">
+            <p><span class="snumtext bon-update-label">2024
+            Update</span> “[W]<span class="SpellE">hen</span> an officer
+            ‘makes a direct and unambiguous accusation’ that an
+            individual has committed a violation or crime, the officer
+            has stopped that individual.” <em>Jackson</em>, 268 Or App
+            at 149<em>.</em> Similarly, an officer seized a defendant
+            when the officer asked the defendant if she possessed
+            illegal drugs, the defendant took offense to the question,
+            and the officer told her “[<span class="SpellE">i</span>]t
+            would be easy to prove me wrong * * * [b]y showing me that
+            your purse doesn’t contain drugs.” <a
+            href="https://scholar.google.com/scholar_case?case=1928020853632247960&amp;q=State+v.+Nelson,+294+Or+App+793&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Nelson</em>, 294 Or App 793, 798, 433 P3d 370
+            (2018).</a></p>
+            <p>Additionally, police conduct rises to the level of a stop
+            “if a reasonable person in defendant’s position would be
+            aware that he was the subject of a police investigation.”
+            <span class="SpellE"><em>Levias</em></span>, 242 Or App at
+            268<em>;</em> <em>Radtke</em>, 242 Or App at 239 (a
+            reasonable person would believe that an officer’s actions
+            amounted to such a show of authority “if the person knew
+            that he or she was the subject of a criminal
+            investigation”). Where an officer did not tell the defendant
+            (who had expressed concern about a possible warrant) that
+            the warrant check came back clear and instead directed the
+            defendant to stand at the front of the patrol car, it was
+            reasonable to infer that the defendant was the subject of a
+            continuing investigation, and hence stopped.
+            <em>Zaccone</em>, 246 Or App at 567.</p>
+            <p>Similarly, in <a
+            href="https://scholar.google.com/scholar_case?case=9405048362025042461&amp;q=State+v.+Brown,+293+Or+App+772,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Brown,</em> 293 Or App 772, 774-76, 427 P3d 221
+            (2018</a>), the court held that an officer seized the
+            defendant when the officer followed the defendant’s car for
+            several minutes and, when the defendant parked in a vacant
+            lot, the officer approached the defendant, asked if she had
+            permission to be there, and asked whether she had drugs. The
+            court concluded that a reasonable person in the defendant’s
+            position would understand that the officer “was intent on
+            questioning her and, having pursued her conspicuously for an
+            extended time and tracked her down to the back side of a
+            deserted building, would not allow her to leave until he did
+            so.” <em>Id.</em> at 781. That is, even if an officer does
+            not accuse the defendant of a crime, an officer’s targeted
+            scrutiny of the defendant can
+            <span class="GramE">effect</span> a seizure. In <a
+            href="https://scholar.google.com/scholar_case?case=9332424352328267042&amp;q=State+v.+Leiby,+293+Or+App+293,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Leiby</span></em>, 293 Or App 293,
+            294-95, 427 P3d 1141 (2018)</a>, an officer, acting on a
+            hunch, followed the defendant’s car for several minutes and,
+            when defendant parked and got out, approached defendant and
+            asked, “Do you want to tell me why you’re trying to avoid
+            me?” The court concluded that the officer seized defendant.
+            <em>Id.</em> at 299. The court reasoned
+            <span class="GramE">that two facts</span> turned the
+            encounter into a seizure. First, the officer “followed
+            defendant in an obvious fashion on a road,” which would
+            convey to a reasonable person in defendant’s position that
+            the officer was scrutinizing him. <em>Id.</em> at 298.
+            Second, the officer’s statement about the defendant avoiding
+            him, “[a]<span class="SpellE">lthough</span> framed as a
+            question,” was “confrontational in the context of this
+            interaction.” <em>Id.</em> The court explained that the
+            officer’s question implied that defendant had “a duty to
+            stop and interact with” the officer and that the defendant’s
+            behavior was “nefarious and warrant[ed] explanation.”
+            <em>Id.</em></p>
+            <p>Although the “subject of a police investigation” factor
+            remains valid, the <em>Nelson</em> court drew a fine
+            distinction between a direct accusation of criminal activity
+            and conduct conveying mere suspicion. <em>Nelson</em>, 294
+            Or App '''' at 798.</p>
+            <p>“Other cases in which officers accused persons of drug
+            use or possession are instructive here. In <em>State v. K.
+            A. M.</em>, 361 Or 805, 807-08, 812-13, 401 P3d 774 (2017),
+            the Supreme Court held that an officer stopped a youth when
+            he effectively accused the youth’s friend of methamphetamine
+            use and entered, without explanation, a bedroom in which the
+            youth and his friend were waiting. The combination ‘created
+            a coercive atmosphere that reasonably conveyed that [the
+            youth and his friend] were suspected of illegal drug use and
+            were not free to leave until [the officer] had completed his
+            inquiry.’ <em>Id.</em> at 811, 401 P3d 774. The court also
+            noted ‘other circumstances’ supporting a stop, including
+            that the officer asked the youths whether they ‘had anything
+            illegal on them, a question that, given [the officer’s]
+            prior accusation of methamphetamine use, reasonably added to
+            the coercive pressure.’ <em>Id.</em> Similarly, in
+            <em>Allen</em>, 224 Or App. at 531, 198 P3d 466, we held
+            that an officer had stopped the defendant when he told her
+            that he ‘knew she was coming from a dope house’ and ‘that if
+            she was honest and gave [him] the
+            <span class="GramE">dope</span> [he] would give her a
+            citation’ (brackets in original). We explained that the
+            officer’s statements were tantamount to an announcement that
+            ‘the officer had just seen defendant break the law.’
+            <em>Id.</em> In contrast, in <em>State v. Baker</em>, 154 Or
+            App. 358, 360, 961 P2d 913, <em>rev den</em>, 327 Or 553,
+            971 P2d 409 (1998), we held that the officer did not stop
+            the defendant, whom he saw coming out of a known ‘crack
+            house,’ when the officer asked defendant, ‘[D]id you buy any
+            good crack in there?’ <em>Baker</em> is distinguished from
+            <em>Allen</em> because ‘the officer asked the defendant a
+            question and did not announce that he had seen the defendant
+            break the law.’ <em>State v.
+            <span class="SpellE">Morfin</span>-Estrada</em>, 251 Or App.
+            158, 166 n. 4, 283 P3d 378, <em>rev den</em>, 352 Or 565,
+            291 P3d 737 (2012) (internal quotation marks and brackets
+            omitted).” <em>Id.</em></p>
+            </div>
+            <div class="bon-update">
+            <p><span class="snumtextindent bon-update-label">2024
+            Update</span> In <a
+            href="https://scholar.google.com/scholar_case?case=4778643793558607786&amp;q=State+v.+Reyes-Herrera,+369+Or+54&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Reyes-Herrera</em>, 369 Or 54, 67-68, 500 P3d 1
+            (2021)</a>, the Oregon Supreme Court held that questions
+            posed by an officer can effectuate a stop even if they do
+            not amount to a “direct and unambiguous accusation” as the
+            Court of Appeals had seemed to suggest was required in <a
+            href="https://scholar.google.com/scholar_case?case=1928020853632247960&amp;q=State+v.+Nelson,+294+Or+App+793&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nelson</em>, 294 Or App 793, 798, 433 P3d 370 (2018)</a>.
+            Rather, a stop occurs whenever police convey that they are
+            investigating criminal activity under circumstances that
+            would cause a reasonable person to believe that the person
+            must remain and respond to the police.</p>
+            <p>In <em>Reyes-Herrera</em>, a uniformed police officer
+            approached the defendant in an alley to investigate a
+            possible drug deal. The officer told the defendant he was
+            not in trouble and was free to leave. The officer then told
+            the defendant that he had observed him walk away from a
+            conversation with another man who was counting money. He
+            then asked the defendant whether he had purchased drugs from
+            the man and whether he possessed drugs. The defendant
+            answered, “no,” twice, and the officer asked for consent to
+            search him.</p>
+            <p>The court concluded that the totality of the
+            circumstances was such that reasonable people in the
+            defendant’s position would believe that they “must remain
+            where they are and respond.” <em>Id</em>. at 67-68. As such,
+            the defendant was seized. <em>Id</em>. at 66-68.</p>
+            <p>In distinguishing some of the court’s prior cases that
+            had held certain police questioning amounted to “mere
+            conversation,” the court noted that, when the officer
+            approached the defendant, he did not explain that he had a
+            <span class="SpellE">noninvestigative</span> purpose.
+            <em>Id</em>. at 66. Nor did the officer simply ask for the
+            defendant’s identification. <em>Id</em>. Instead, the
+            officer asked the defendant questions that conveyed that the
+            officer suspected him of drug activity, which were
+            “compounded” by requesting the defendant’s consent to search
+            after the defendant had twice answered “no” to the officer’s
+            questions. <em>Id</em>. at 66-67.</p>
+            <p>Notably, the court rejected the state’s argument that
+            “the line between relaxed conversation and coercive
+            questioning depends on whether a court determines that an
+            officer made a declarative statement or asked a question, or
+            whether the officer’s comments fit the textbook definition
+            of an accusation.” <em>Id</em>. at 61. Instead, the totality
+            of circumstances determines whether the encounter amounted
+            to a stop. <em>Id</em>. at 68. A person is stopped if a
+            reasonable person would believe that they must “remain where
+            they are and respond” to the questioning. <em>Id</em>.;
+            <em>see also</em> <a
+            href="https://scholar.google.com/scholar_case?case=17012307280056129254&amp;q=State+v.+Bryars,+319+Or+App+464&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. <span class="SpellE">Bryars</span></em>, 319 Or App 464,
+            473-74, 510 P3d 261 (2022)</a> (drug-related questioning
+            followed by request for consent to search equates to a
+            seizure).</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=2763617386960982024&amp;q=State+v.+Alcaraz,+318+Or+App+179&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Alcaraz</em>, 318 Or App 179, 508 P3d 13
+            (2022)</a>, <em>rev allowed</em>, 370 Or 197 (2022), the
+            court held that the defendant was stopped when a sheriff’s
+            deputy in a marked patrol boat asked the defendant, who was
+            actively fishing, if he had the required fishing license;
+            moreover, fishing regulations obligated the defendant to
+            submit to a fishing license inspection. According to the
+            court,</p>
+            <div class="blockquote">
+            <p>“A reasonable person in defendant’s position—that is, a
+            person actively fishing from a boat on a public lake, who is
+            required to have a fishing license and submit to its
+            inspection upon request—would not believe that, upon a
+            sheriff’s deputy asking him if he had a license, he could
+            simply start up his boat and motor away without
+            answering.”</p>
+            </div>
+            <p><em><span>Id.</span></em><span> at</span><span> 188;
+            <em>see also</em> </span><a
+            href="https://scholar.google.com/scholar_case?case=2156137898728910073&amp;q=State+v.+Almahmood,+308+Or+App+795&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. <span class="SpellE">Almahmood</span></span></em><span>,
+            308 Or App 795, 482 P3d 88 (2021)</span></a><span> (holding
+            t</span><span>hat a passenger on a </span>TriMet<span> train
+            was seized when uniformed police officers boarded the train,
+            announced a fare check, told passengers to display proof of
+            their paid fares, </span>and<span> began checking
+            passengers’ fares row by row).</span></p>
+            <p>Vague expression of generalized suspicion does not
+            necessarily amount to a stop. <a
+            href="https://scholar.google.com/scholar_case?case=7334027607758721645&amp;q=State+v.+Thier,+322+Or+App+680+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. <span class="SpellE">Thier</span></em>, 322 Or App
+            680</a> (November 16, 2022). In
+            <span class="SpellE"><em>Thier</em></span>, the court held
+            that an officer did not seize the defendant when he
+            approached her as she stepped out of her car, asked “what
+            was going on,” told her that they “had a lot of problems in
+            the area,” and asked if she had her ID “with her by chance.”
+            <span>Citing </span><a
+            href="../docx/State%20v.%20Anderson,%20354%20Or%20440,%20450%20(2013)"
+            title="wikilink"><em>State v. Anderson</em>, 354 Or 440, 450
+            (2013)</a><span>, '<em>' the court noted that </span>police
+            officers are free to approach people in public spaces and
+            request information or question them—without it amounting to
+            a seizure—even where the person is discomforted by the
+            officer’s presence or questions.
+            <span class="SpellE"></em><span>Thier</span><em></span><span>,
+            322 Or App at 683. </span>Such an encounter may become a
+            stop, however, where the officer “makes a direct and
+            unambiguous accusation” that the individual committed a
+            crime. <a
+            href="https://scholar.google.com/scholar_case?case=1928020853632247960&amp;q=State+v.+Nelson,+294+Or+App+793,+(2018)&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Nelson</span></em>, 294 Or App 793, 797 (2018)</a>. But
+            the officer can make “statements conveying possible
+            suspicion” or general
+            “<span class="SpellE">inquir</span>[<span class="SpellE">ies</span>]
+            about criminal activity,” without necessarily converting the
+            encounter into a stop.</em><span>Id.</span>''</p>
+            <p>The <span class="SpellE"><em>Thier</em></span> court
+            concluded that the officer’s initial statements, in
+            conjunction with his actions, and his request for the
+            defendant’s identification, were not sufficient—in the
+            totality of the circumstances—to cause a reasonable person
+            to believe that their freedom of movement was significantly
+            restrained. In particular, the officer did not retain the
+            defendant’s ID nor ask any further questions while in
+            possession of it, because he observed the defendant’s meth
+            pipe <em>before</em> she handed over her ID.</p>
+            <p>By contrast in <a
+            href="https://scholar.google.com/scholar_case?case=3443761064380936212&amp;q=State+v.+Elbinger,+322+Or+App+498&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. <span class="SpellE">Elbinger</span></em>, 322 Or App
+            498</a> (October 26, 2022), the court held that an officer
+            had seized the defendant when the officer approached the
+            defendant, who was sitting in a parked car, and asked the
+            defendant about his relationship to a shoplifter, whom the
+            officer told the defendant had just been arrested, and
+            radioed a description of the defendant to another officer.
+            The <span class="SpellE"><em>Elbinger</em></span> court
+            explained that “probing the defendant’s connection” to a
+            person that police had just taken into custody created a
+            “more coercive atmosphere” that amounted to seizure, despite
+            the officer joking with defendant and speaking jovially with
+            him.</p>
+            <p>That holding is significant because it expands the
+            principle that a person is stopped when an officer conveys a
+            belief that <em>the person</em> committed a crime, but under
+            <span class="SpellE"><em>Elbinger</em></span>, a stop also
+            exists when officers probe a person’s “connection” to some
+            other person who is accused of a crime.</p>
+            </div>
+            <div class="bon-update">
+            <p><span class="snumtext bon-update-label">2024
+            Update</span> When an officer approaches a person on the
+            street and engages the person in conversation, the officer
+            must make clear the non-investigatory nature of the contact
+            or request for information; otherwise, even mildly
+            accusatory questioning may amount to a stop. <em>State v.
+            Winter</em>, 328 Or App 747 (2023). In <em>Winter</em>, the
+            officer observed the defendant talking to another woman in
+            front of a residence and then leave on foot. <em>Id.</em> at
+            748. The officer turned his car around, parked, and called
+            out to the defendant by asking “how she was doing.”
+            <em>Id.</em> The officer did not turn on his overhead lights
+            or block defendant’s path. <em>Id.</em> The officer asked
+            why the defendant had parted ways from the other person when
+            he drove by. <em>Id.</em> The defendant said that she had
+            been dropping off some clothes to be washed. <em>Id.</em>
+            The officer asked if the defendant was “staying clean,” and
+            she admitted that she had not been, because she was an
+            addict. <em>Id.</em> The officer asked if she had “anything”
+            on her person, and she admitted to having needles.
+            <em>Id.</em> The officer asked to search a zippered pouch in
+            her bag, she consented, and he found methamphetamine residue
+            inside. <em>Id.</em> at 749.</p>
+            <p>In concluding that the officer’s questions leading up to
+            the request for consent constituted a stop, the court
+            distinguished this case from <a
+            href="https://scholar.google.com/scholar_case?case=5545000798507464990&amp;q=State+v.+Ashbaugh,+349+Or+297,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ashbaugh,</em><span> 349 Or 297, 309, 244 P3d 360, 366
+            (2010)</span></a> <strong>' where the officer had made clear
+            that he had a non-investigatory basis for engaging the
+            defendant in conversation as well as <a
+            href="https://scholar.google.com/scholar_case?case=17088229038358732339&amp;q=State+v.+Anderson,+354+Or+440+(2013)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Anderson,</em> <span>354 Or 440, 450
+            (2013),</span></a></strong>' where the officer’s conduct
+            “conveyed that the officers were interested in whatever
+            information the [defendant] might be able to provide.”
+            <em>Id.</em> at 751-52.</p>
+            <p>Here, the officer did not ask defendant about her
+            “current condition” out of concern for her health or merely
+            to get a better understanding of the
+            <span class="GramE">circumstances;</span> <em>id.</em> at
+            752, he did not articulate any non-investigatory reason for
+            contacting <span class="GramE">her;</span> <em>id.</em> at
+            752, rather, he hailed the defendant from the street,
+            inquired about her drug use, and asked if she had “anything
+            on her.” <em>Id.</em> at 753. That is a stop under
+            <em>Reyes-Herrera</em>. <em>Id.</em></p>
+            </div>
+            <p><span id="b.-traffic-stops"></span></p>
+            </section>
+            </section>
+            <section id="b._traffic_stops" class="level4">
+            <h4>b. Traffic Stops</h4>
+            <p><span id="i.-overhead-lights"></span></p>
+            <section id="i._overhead_lights" class="level5">
+            <h5>i. Overhead Lights</h5>
+            <p>Using overhead lights to require a motorist to pull over
+            will nearly always constitute a stop. <a
+            href="https://scholar.google.com/scholar_case?case=16665922016439871629&amp;q=State+v.+Middleton,+302+Or+App+339&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Middleton</em>, 302 Or App 339, 345, 459 P3d 918, 923
+            (2020)</a> (“[I]t is undisputed that [the officer] acted in
+            a manner that, in most circumstances, would constitute a
+            seizure, specifically a ‘stop’” by following a vehicle with
+            his overhead lights on.”). Specifically, if an officer has
+            “observed someone commit a traffic violation and engaged in
+            the same conduct to investigate the traffic violation, there
+            would be no question that [the officer] had ‘stopped’ the
+            person.” <em>Id</em>. (citing <em>State v. Watson</em>, 353
+            Or 768, 774, 305 P3d 94 (2013)). <em>See also</em> [<a
+            href="https://1.next.westlaw.com/Link/Document/FullText?findType=Y&amp;serNum=2021330937&amp;pubNum=0000641&amp;originatingDoc=I107acd00545811ea851bfabee22f40c8&amp;refType=RP&amp;fi=co_pp_sp_641_622&amp;originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.Search">https://1.next.westlaw.com/Link/Document/FullText?findType=Y&amp;serNum=2021330937&amp;pubNum=0000641&amp;originatingDoc=I107acd00545811ea851bfabee22f40c8&amp;refType=RP&amp;fi=co_pp_sp_641_622&amp;originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.Search</a>)
+            <em>Rodgers/<span class="SpellE">Kirkeby</span></em>, 347 Or
+            at 622-23, 227 P3d 695] (citing several criminal statutes
+            that apply when a driver fails to stop when directed to do
+            so by a law enforcement officer).</p>
+            <p><span id="ii.-non-targeted-efforts-to-impart-community-safety-related-information-or-provide-assistance-gerrish-and-holmes"></span></p>
+            </section>
+            <section
+            id="ii._non_targeted_efforts_to_impart_community_safety_related_information_or_provide_assistance_gerrish_and_holmes"
+            class="level5">
+            <h5>ii. Non-Targeted Efforts to Impart Community-Safety
+            Related Information or Provide Assistance (Gerrish and
+            Holmes)</h5>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=13631088195192288981&amp;q=State+v.+Holmes,+311+Or+400,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Holmes</em>, 311 Or 400, 813 P2d 28 (1991)</a><em>,</em>
+            and <a
+            href="https://scholar.google.com/scholar_case?case=7687816023066934186&amp;q=State+v.+Gerrish,+311+Or+506,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Gerrish</em>, 311 Or 506, 815 P2d 1244 (1991)</a>, the
+            supreme court created a limited exception to the general
+            rule that police use of overhead lights to stop a vehicle is
+            a seizure. In <em>Holmes</em>, the court held that the
+            defendant-driver was not seized when a police officer
+            standing in the middle of the highway flagged down the
+            defendant’s car to inform him of a detour due to a car
+            accident. 311 Or at 412. Importantly, the officer had set up
+            a roadblock with a pattern of flares and a patrol car, and
+            the accident scene was in view of approaching drivers.
+            <em>Id</em>. at 402. The court reasoned that, because the
+            accident scene was “lit up like a Christmas tree,” the
+            limited and specific nature of the police encounter would
+            have been immediately clear to motorists. <em>Id</em>. at
+            411. Further, the officer did not question the defendant or
+            request any identification, and the “intrusion was tailored
+            in direction and manner to be insignificantly intrusive.”
+            <em>Id</em>. <em>Gerrish</em> involved a similar roadblock,
+            where police blocked the only road out of a resort
+            <span class="GramE">in an attempt to</span> find witnesses
+            to a shooting. 311 Or at 508. This court, relying on the
+            reasoning it employed in <em>Holmes</em>, held that the
+            officer did not seize the driver of a car that stopped at
+            the roadblock. <em>Gerrish</em>, 311 Or at 513.</p>
+            <p>“Together, <em>Holmes</em> and <em>Gerrish</em> stand for
+            the limited proposition that a law enforcement officer
+            constitutionally may halt and briefly detain a person
+            passing through a public area as a means to engage the
+            citizen long enough to impart information or seek the
+            citizen’s cooperation or assistance.”
+            <span class="MsoHyperlink"><em>State v. Fair</em>, 353 Or
+            588, 598, 302 P3d 417, 425 (2013).</span></p>
+            <p>Additionally, where an officer uses overhead lights in
+            circumstances that objectively indicate that the officer is
+            doing so to warn oncoming traffic of a roadway hazard or
+            where the defendant indicates that he or she needs
+            assistance, the use of overhead lights does not necessarily
+            establish that the officer is exercising his authority to
+            restrain. <a
+            href="https://scholar.google.com/scholar_case?case=4874586633247569999&amp;q=State+v.+Blair,+171+Or+App+162&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Blair</em>, 171 Or App 162, 170-71 (2000)<span>,
+            </span><em><span>rev den</span></em><span>, 332 Or 137
+            (2001).</span></a></p>
+            <p><span id="iii.-spotlight"></span></p>
+            </section>
+            <section id="iii._spotlight" class="level5">
+            <h5>iii. Spotlight</h5>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=16372086854668886913&amp;q=State+v.+Aronson,+247+Or.App.+422,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Aronson</em>, 247 Or App. 422, 424, 271 P3d 121
+            (2011)</a>, <em>rev den</em>, 352 Or 33, 281 P3d 611 (2012),
+            a deputy watched the defendant, who appeared to be
+            intoxicated, drive into a shopping center parking lot and
+            park. The deputy stopped his patrol car at an angle behind
+            the defendant’s vehicle, “leaving between one and a half and
+            three car lengths between the two cars. The distance between
+            the two cars would have allowed defendant to pull out of the
+            parking space had he chosen to do so.” <em>Id.</em> The
+            deputy did not activate his lights after stopping but, for
+            officer safety reasons, directed his spotlight at
+            defendant’s car to illuminate it. The court relied on two
+            cases: <a
+            href="https://scholar.google.com/scholar_case?case=7589975094287831890&amp;q=State+v.+Deptuch,+95+Or.App.+54&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Deptuch</span></em>, 95 Or App 54,
+            767 P2d 471</a>, <span class="SpellE"><em>adh’d</em></span>
+            <em>to as modified on recons</em>., 96 Or App 228, 772 P2d
+            442 (1989), and <a
+            href="https://scholar.google.com/scholar_case?case=6831999860410196287&amp;q=State+v.+Calhoun,+101+Or.App.+622&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. Calhoun</span>, 101 Or App 622, 624, 792 P2d 1223
+            (1990)</a><a
+            href="https://scholar.google.com/scholar_case?case=6831999860410196287&amp;q=State+v.+Calhoun,+101+Or.App.+622&amp;hl=en&amp;as_sdt=6,38"><span>,
+            </span></a>to hold that the use of the spotlight did not
+            constitute a seizure.</p>
+            <p>In both cases the court had held that the shining of a
+            spotlight did not convert the encounter into a seizure
+            because it was not a show of authority that directly
+            restrained liberty or prevented the defendants from
+            leaving.</p>
+            <p><span class="GramE">In light of</span> those cases, the
+            court held that because the officer in <em>Aronson</em> had
+            not parked so close to the defendant’s vehicle to actually
+            prevent the defendant from leaving, the officer had not
+            stopped the defendant. The court did not resolve the
+            question of whether it would have been a stop had the use of
+            the light impaired the defendant’s ability to safely drive
+            away, because those facts had not been elicited at the
+            suppression hearing.</p>
+            <p>Under a more modern analysis, the focus of any
+            spotlight-based argument should not be on whether the
+            defendant was physically prevented from leaving but whether
+            the spotlight communicated to the defendant that he or she
+            was the subject of a criminal investigation. That is, the
+            light alone may not constitute a seizure (assuming it does
+            not impair the defendant’s vision and ability to safely
+            drive away), but in the context of questions related to
+            criminal activity or other circumstances may amount to a
+            seizure if the totality of the circumstances convey that the
+            defendant was the target of a criminal investigation.</p>
+            <p><span id="iv.-physically-blocking-a-vehicle"></span></p>
+            </section>
+            <section id="iv._physically_blocking_a_vehicle"
+            class="level5">
+            <h5>iv. Physically Blocking a Vehicle</h5>
+            <p>Blocking a vehicle in a parking lot or driveway usually
+            amounts to a stop. In <a
+            href="https://scholar.google.com/scholar_case?case=5156127704362586475&amp;q=State+v.+Dendy,+294+Or+App+539&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Dendy</em>, 294 Or App 539, 542, 432 P3d 357, 359
+            (2018)</a>, the defendant argued that “at the time of the
+            stop—that is, when they blocked in his car—the officers
+            lacked reasonable suspicion that defendant had committed
+            DUII or was about to commit DUII.” The state did not contest
+            that defendant was stopped as soon as the officers blocked
+            in his car, and the court did not disagree, citing <em>State
+            v.</em> <a
+            href="https://scholar.google.com/scholar_case?case=18199827204461831712&amp;q=Thacker,+264+Or.+App.+150&amp;hl=en&amp;as_sdt=6,38"><em>Thacker</em>,
+            264 Or App. 150</a>, 156, 331 P3d 1036 (2014). <em>See
+            also</em> <a
+            href="https://scholar.google.com/scholar_case?case=10627487901160209001&amp;q=State+v.+Guest,+207+Or.App.+395&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Guest,</em> 207 Or App. 395, 397, 142 P3d 482 (2006</a>),
+            (“The question whether [the officer] stopped defendant upon
+            first pulling into the parking lot depends, in turn, on
+            whether [the] patrol car blocked defendant’s truck,
+            preventing him from leaving the scene.”). <em>Id.</em> at
+            400; <em>cf.</em> <em>Aronson,</em> 247 Or App at 427-28
+            (holding that no stop occurred, relying in part of the fact
+            that “the officer did not park his car in a way that
+            prevented defendant from leaving—there was sufficient space
+            between the patrol car and defendant’s vehicle that
+            defendant could have backed out of the parking space and
+            driven away”).</p>
+            <p><span id="v.-passengers-in-the-vehicle"></span></p>
+            </section>
+            <section id="v._passengers_in_the_vehicle" class="level5">
+            <h5>v. Passengers in the Vehicle</h5>
+            <p>Passengers in cars that are stopped for traffic
+            violations are not themselves automatically stopped for
+            purposes of Article I, section 9. <a
+            href="https://scholar.google.com/scholar_case?case=17261216463947336805&amp;q=State+v.+Stevens,+364+Or+91,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Stevens,</em> 364 Or 91, 100, 430 P3d 1059 (2018)</a>.
+            Unlike the federal constitution, the Oregon Constitution
+            does not contain a “categorical” rule that such passengers
+            are seized. <em>Id.</em> Despite the absence of a
+            categorical rule, however, the <em>circumstances</em> of the
+            stop may effectuate a seizure of both driver and passenger.
+            A passenger may be seized when police stop a car if there is
+            “something more than the bare fact that the driver was
+            pulled over for a traffic violation.” [<a
+            href="https://scholar.google.com/scholar_case?case=13534434842727509996&amp;q=State+v.+T.+T">https://scholar.google.com/scholar_case?case=13534434842727509996&amp;q=State+v.+T.+T</a>.,+308+Or+App+408&amp;hl=en&amp;as_sdt=6,38
+            <em>State v. T. T.,</em> 308 Or App 408, 418, 479 P3d 598
+            (2021)]. The need for “something more” stems from the
+            courts’ rationale behind the absence of a categorical rule
+            in Oregon’s constitution, which is premised on “the
+            proposition that the passengers in a car stopped for a
+            traffic or criminal offense would not understand that the
+            officer’s show of authority in stopping the driver extended
+            to them.” <em>Stevens</em>, 364 Or at 100.</p>
+            <p>However, “If passengers, under the totality of the
+            circumstances, would understand that the officer’s show of
+            authority in stopping the driver extended to them or that
+            the officer was independently restricting their movement
+            apart from the stop of the driver, the passenger is seized.”
+            <a
+            href="https://scholar.google.com/scholar_case?case=7083025856292965933&amp;q=State+v.+Payne,+310+Or+App+672&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Payne</em>, 310 Or App 672, __P3d __ (April 14, 2021)</a>
+            (where driver failed to pull over immediately, the officer
+            “flanked” the vehicle and motioned to the driver to pull
+            over, and, after the driver ultimately complied, the officer
+            approached the vehicle with his gun drawn, the passenger was
+            seized).</p>
+            <div class="bon-update">
+            <p><span class="snumtext bon-update-label">2024
+            Update</span> Police questioning or accusations that
+            implicate all passengers in a vehicle can effectively seize
+            everyone in the vehicle. '''' <a
+            href="https://scholar.google.com/scholar_case?case=8485847630902159803&amp;q=State+v.+Vannoy,+326+Or+App+11+(2023)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. <span class="SpellE">Vannoy</span></em>, 326 Or App 11
+            (2023)</a> (May 17, 2023) In that case, the defendant, a
+            passenger in a car, was stopped under Article I, section 9,
+            when an officer stopped the car, asked the driver how much
+            marijuana was in the vehicle, asked the defendant “about
+            marijuana,” asked the defendant to step out of the car so
+            that he could search it pursuant to the driver’s consent,
+            picked up the defendant’s purse from inside the car and
+            asked for her consent to search it.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p><span class="SpellE"><em>Vannoy</em></span> <strong>'
+            focused heavily on the fact that the officer’s question
+            about drugs in the vehicle “requested information that
+            implicated all occupants of the vehicle.” When an officer
+            asks questions that implicate all occupants of a vehicle
+            (e.g., asking whether there are guns or drugs in the car),
+            attorneys should be prepared to cite
+            <span class="SpellE"><em>Vannoy</em></span></strong>' and
+            argue that the questioning created a seizure of all
+            occupants.</p>
+            </div>
+            </div>
+            <p><span id="vi.-walking-a-drug-dog-around-a-vehicle"></span></p>
+            </section>
+            <section id="vi._walking_a_drug_dog_around_a_vehicle"
+            class="level5">
+            <h5>vi. Walking a Drug Dog Around a Vehicle</h5>
+            <p>The Court of Appeals has held that walking a drug
+            detection dog around the outside of a vehicle does not
+            automatically constitute a seizure of the passengers because
+            it would not cause a reasonable person to believe that the
+            officer had “intentionally and significantly deprived
+            defendant of liberty or freedom of movement.” <a
+            href="https://scholar.google.com/scholar_case?case=16283336045762478862&amp;q=State+v.+Sexton,+278+Or+App+1,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Sexton</em>, 278 Or App 1, 7, 378 P3d 83 (2016)</a>. This
+            court has further held that a momentary blocking of the
+            passenger door while a drug-detection dog sniffs that area
+            of the vehicle is insufficient to establish a stop of the
+            passenger and convers only “possible suspicion” of criminal
+            activity—not a direct accusation. <a
+            href="https://scholar.google.com/scholar_case?case=3363450346684882012&amp;q=State+v.+Rosales,+291+Or+App+762&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Rosales</em>, 291 Or App 762, 766, 423 P3d 112
+            (2018)</a>. Nonetheless, the dog sniff is a factor in the
+            totality-of-circumstances analysis.</p>
+            <div class="bon-update">
+            <p><span class="snumtext bon-update-label">2024
+            Update</span> <span>“[A]<span class="SpellE">bsent</span> an
+            independent constitutional justification, a drug-detecting
+            dog * * * generally cannot, consistent with Article I,
+            section 9, sniff a car for drugs during a traffic stop.”
+            </span><a
+            href="https://scholar.google.com/scholar_case?case=10000504885377878652&amp;q=State+v.+Soto-Navarro,+309+Or+App+218&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Soto-Navarro</span></em><span>, 309 Or App 218, 223, 482
+            P3d 150 (2021)</span></a><span>.</span><span></span></p>
+            </div>
+            <p><span id="vii.-hand-signals"></span></p>
+            </section>
+            <section id="vii._hand_signals" class="level5">
+            <h5>vii. Hand Signals</h5>
+            <p>When a fully uniformed police officer holds up his hand
+            and waves down a moving vehicle, the failure to stop exposes
+            the driver to being arrested for attempting to elude, <a
+            href="http://www.oregonlaws.org/ors/811.540">ORS
+            811.540(1)(b)(A</a>), a Class C felony. That statute
+            provides:</p>
+            <p>(1) A person commits the crime of fleeing or attempting
+            to elude a police officer if:</p>
+            <p>(a) The person is operating a motor vehicle; and</p>
+            <p>(b) A police officer who is in uniform and prominently
+            displaying the police officer’s badge of office * * * gives
+            a visual or audible signal to bring the vehicle to a stop,
+            including <em>any signal by hand</em>, voice, emergency
+            light or siren * * <span class="GramE">* .</span></p>
+            <p>ORS 811.540 (1)(b)(A) (emphasis added).</p>
+            <p>Moreover, failing to stop for an officer’s hand signal
+            could constitute the Class A misdemeanor of interfering with
+            a peace officer, <a
+            href="http://www.oregonlaws.org/ors/162.247">O</a><a
+            href="http://www.oregonlaws.org/ors/162.247">RS 162.247</a>.
+            A person commits that crime if, knowing that the other
+            person is a peace officer, the person
+            “[r]<span class="SpellE">efuses</span> to obey a lawful
+            order by the peace officer.” ORS 162.247(1)(b).
+            Consequently, when an officer uses a hand signal to direct a
+            person to stop their vehicle, the officer has “stopped” the
+            person. <span class="MsoHyperlink"><em>State v. Turner</em>,
+            221 Or App 621, 625, 191 P3d 697 (2008)</span> (holding that
+            a bicyclist’s liberty was significantly restricted when a
+            uniformed officer motioned with his hand for the bicyclist
+            to pull over.)</p>
+            <p><span id="viii.-scope-of-a-traffic-stop"></span></p>
+            </section>
+            <section id="viii._scope_of_a_traffic_stop" class="level5">
+            <h5>viii. Scope of a Traffic Stop</h5>
+            <p>Under <a
+            href="https://scholar.google.com/scholar_case?case=8723521141579919272&amp;q=State+v.+Arreola-Botello,+365+Or+695&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Arreola-Botello</em>, 365 Or 695, 714, 451 P3d 939
+            (2019)</a>, an officer who stops a driver for a traffic
+            infraction must focus their actions on investigating the
+            infraction, ascertaining the identity of the driver, and
+            issuing a traffic citation. Officers cannot extend the
+            duration or subject-matter scope of a traffic stop without
+            independent constitutional justification. In other words, if
+            an officer does not have reasonable suspicion of some other
+            crime, the officer cannot use a traffic stop to conduct a
+            criminal investigation or take other investigative actions
+            that are unrelated to the purpose of the stop.</p>
+            <p><span id="c.-arrests"></span></p>
+            </section>
+            </section>
+            <section id="c._arrests" class="level4">
+            <h4>c. Arrests</h4>
+            <p>An “arrest” is a seizure that infringes on a person’s
+            liberty more than does a “stop” and must be supported by
+            probable cause. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Morgan,+106+Or+App+138&amp;hl=en&amp;as_sdt=4,38&amp;case=7081467508544983968&amp;scilh=0"><span class="hyperlinkital">State
+            v. Morgan</span>, </a><span class="MsoHyperlink">106 Or App
+            138, 141, 806 P2d 713 (1991)</span>. By statute, an
+            “‘[a]<span class="SpellE">rrest</span>’ means to place a
+            person under actual or constructive restraint or to take a
+            person into custody for the purpose of charging that person
+            with an offense.” <a
+            href="http://www.oregonlaws.org/ors/133.005">ORS
+            133.005(1).</a></p>
+            <p><span id="i.-guns-drawn"></span></p>
+            <section id="i._guns_drawn" class="level5">
+            <h5>i. Guns Drawn</h5>
+            <p>Where police approached a vehicle with guns drawn and
+            issued orders, they effected an arrest. <a
+            href="https://scholar.google.com/scholar_case?case=2689386759410356428&amp;q=State+v.+Shaw,+3+Or+App+346&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Shaw</em>, 3 Or App 346, 348, 473 P2d 159
+            (1970)<span>.</span></a></p>
+            <p>The court assumed that defendant was “arrested” when
+            police surrounded his home with guns drawn and ordered him
+            out of his house. <a
+            href="https://scholar.google.com/scholar_case?case=11761240685670529957&amp;q=State+v.+White,+115+Or+App+104&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. White</em>, 115 Or App 104, 110, 838 P2d 605, 608
+            (1992)<em>.</em></a></p>
+            <p><span id="ii.-handcuffing"></span></p>
+            </section>
+            <section id="ii._handcuffing" class="level5">
+            <h5>ii. Handcuffing</h5>
+            <p>In most cases, handcuffing a person automatically
+            converts a stop into an arrest. <a
+            href="https://scholar.google.com/scholar_case?case=12774543105933018456&amp;q=State+v.+Hebrard,+244+Or+App+593&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Hebrard</span></em>, 244 Or App 593,
+            598, 260 P3d 759 (2011</a>); <em>see also</em> <a
+            href="https://scholar.google.com/scholar_case?case=12121689432908439099&amp;q=State+v.+Koester,+117+Or+App+139&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Koester</em>, 117 Or App 139, 141-42, 843 P2d 968
+            (1992</a>); <a
+            href="https://scholar.google.com/scholar_case?case=10257640224594192300&amp;q=State+v.+Quinn,+112+Or+App+608,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Quinn</em>, 112 Or App 608, 612, 831 P2d 48
+            (1992</a>).</p>
+            <p>When confronting a handcuffing case, the court has on
+            occasion looked first at whether the handcuffing was
+            justified by the officer-safety exception; and then, only
+            after concluding it was not, declared that the defendant was
+            “arrested” and determined whether the police had the
+            necessary probable cause. <em>See
+            <span class="SpellE">Hebrard</span></em>, 244 Or App at
+            598-99 (“Because officer safety concerns did not justify the
+            handcuffing, we conclude that the handcuffing converted the
+            stop into an arrest of defendant.”); <a
+            href="https://scholar.google.com/scholar_case?case=11431238308393177306&amp;q=Medinger,+235+Or+App+88,&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. <span class="SpellE">Medinger</span></span>, 235 Or App
+            88, 93, 230 P3d 76 (2010)</a> (concluding that defendant was
+            “arrested” only after determining that handcuffing defendant
+            and placing him in back of patrol car was not justified by
+            safety concerns); <a
+            href="https://scholar.google.com/scholar_case?case=12875519339742922087&amp;q=State+v.+Werowinski,+179+Or+App+522&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Werowinski</span></em>, 179 Or App
+            522, 528, 40 P3d 545 (2002</a>) (same), <a
+            href="https://scholar.google.com/scholar_case?case=1890298602266383521&amp;q=State+v.+Johnson,+120+Or+App+151,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Johnson</em>, 120 Or App 151, 158, 851 P2d 1160</a>,
+            <em>rev den,</em> 318 Or 26 (1993) (same), <a
+            href="https://scholar.google.com/scholar_case?case=7081467508544983968&amp;q=Morgan,+106+Or+App&amp;hl=en&amp;as_sdt=6,38"><em>Morgan,</em>
+            106 Or App at 142</a> (same).</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=10311075253386103865&amp;q=State+v.+Ayvazov,+246+Or+App+641&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Ayvazov</span></em>, 246 Or App 641,
+            645, 267 P3d 196 (2011)</a>, this court acknowledged in
+            <em>dicta</em> that a more precise analytical framework
+            would be to acknowledge that handcuffing an individual
+            entails the imposition of actual restraint and is thus an
+            arrest regardless of its justification. Such an arrest may
+            be justified by one of two exceptions to the warrant
+            requirement: the officer safety exception or probable cause.
+            That is, the first issue is to determine the level of the
+            seizure, and the second is to determine whether that level
+            of seizure was justified. That analysis acknowledges the
+            real level of restriction imposed—actual physical
+            restraint.</p>
+            <p>Moreover, regardless of whether the officer is
+            subjectively “detaining” the person in handcuffs for officer
+            safety purposes or for the purpose of taking the person to
+            jail, the state must establish the elements of the two
+            potential justifications (officer-safety exception to the
+            warrant requirement or probable cause of a crime). <a
+            href="https://scholar.google.com/scholar_case?case=12121689432908439099&amp;q=State+v.+Koester,+117+Or+App+139&amp;hl=en&amp;as_sdt=6,38"><em>Koester</em></a><a
+            href="https://scholar.google.com/scholar_case?case=12121689432908439099&amp;q=State+v.+Koester,+117+Or+App+139&amp;hl=en&amp;as_sdt=6,38">,
+            117 Or App</a> <span class="MsoHyperlink">at</span> <a
+            href="https://scholar.google.com/scholar_case?case=12121689432908439099&amp;q=State+v.+Koester,+117+Or+App+139&amp;hl=en&amp;as_sdt=6,38">141-42</a>
+            (holding that the defendant was under arrest even though the
+            officer told the defendant at the time he was handcuffed and
+            placed in a patrol car that he was being handcuffed for
+            safety reasons). That is, regardless of the officer’s
+            subjective intentions, “[t]he duration of the detention or
+            intensity of the officer’s actions can convert a stop into
+            an arrest under Article I, section 9.”
+            <span class="SpellE"><em>Hebrard</em></span>, 244 Or App at
+            598<em>.</em></p>
+            <div class="bon-update">
+            <p><span class="snumtext bon-update-label">2024
+            Update</span> The fact of prior handcuffing—even if
+            justified by the officer-safety exception—is highly relevant
+            to establishing that the defendant was “arrested” later
+            after the handcuffs were removed. Other relevant factors
+            include the number of police officers involved, their
+            purpose in being on the scene, and the kinds of questions
+            they posed to the defendant. <a
+            href="https://scholar.google.com/scholar_case?case=12620787645678385752&amp;q=State+v.+Madden,+315+Or+App+787&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Madden</span></em><span>, 315 Or App 787, 793-94, 502 P3d
+            746 (2021)</span></a><span>.</span></p>
+            </div>
+            <p><span id="iii.-physical-restraint"></span></p>
+            </section>
+            <section id="iii._physical_restraint" class="level5">
+            <h5>iii. Physical Restraint</h5>
+            <p>The state conceded and the court agreed that the
+            “defendant was in custody when the state concedes that he
+            was—when the officers went ‘hands on’ with him.” <a
+            href="https://scholar.google.com/scholar_case?case=12286230614670683075&amp;q=State+v.+Beeson,+307+Or+App+808&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Beeson</em>, 307 Or App 808, 819, 479 P3d 576, 583–84
+            (2020</a><span class="MsoHyperlink">)</span>, <em>opinion
+            <span class="SpellE">adh’d</span> to as modified on
+            recons</em>, 309 Or App 787 (2021) (holding that the
+            defendant was in custody for purposes of <em>Miranda</em>
+            warnings when officers restrained him from confronting the
+            victim of the hit and run incident at issue).</p>
+            <p><span id="iv.-verbal-assertion-youre-under-arrest."></span></p>
+            </section>
+            <section id="iv._verbal_assertion_youre_under_arrest."
+            class="level5">
+            <h5>iv. Verbal Assertion: “You’re under arrest.”</h5>
+            <p>At least for the purposes of establishing the offense of
+            third-degree escape, telling a person that he or she is
+            under arrest (or using “words manifesting the intent to
+            arrest”) are sufficient to impose “constructive restraint”
+            and thus sufficient to establish that the person was in
+            “custody.” <a
+            href="https://scholar.google.com/scholar_case?case=4247821730340144668&amp;q=State+v.+Thomas,+229+Or+App+453,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Thomas</em>, 229 Or App 453, 456, 211 P3d 979, 980
+            (2009)</a>. <em>Thomas</em> thus provides a basis to argue
+            that the officer must have probable cause prior to
+            announcing that a person is under arrest.</p>
+            <p><span id="article-1-section-9-seizures-of-property"></span></p>
+            </section>
+            </section>
+            </section>
+            <section id="article_1_section_9_seizures_of_property"
+            class="level3">
+            <h3>2. Article 1, Section 9, Seizures of Property</h3>
+            <p>“A seizure of property occurs when there is a significant
+            interference with a person’s possessory or ownership
+            interests in property” by the government.
+            <span class="hyperlinkital">State v.
+            Owens</span><span class="MsoHyperlink">, <strong>' 302 Or
+            196, 206-07, 729 P2d 524, 530 (1986)</span></strong>' (“The
+            seizure of an article by the police and the retention of it
+            (even temporarily) is a significant intrusion into a
+            person’s possessory interest in that ‘effect.’”). In
+            addition, the fact that a seized item may be contraband does
+            not prevent a defendant from having a
+            cognizable property interest, as well as a privacy interest,
+            in the item. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Elkins,+245+Or+279,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10792987360411848412&amp;scilh=0"><em>State
+            v. Elkins,</em> 245 Or 279, 290, 422 P2d 250 (1966)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Galloway,+198+Or+App+585&amp;hl=en&amp;as_sdt=4,38&amp;case=1922939885825220342&amp;scilh=0"><em>State
+            v. Galloway</em>, 198 Or App 585, 109 P3d 383 (2005)</a>
+            (police infringed on defendants’ possessory interests in
+            garbage that they left in garbage cans outside their homes
+            for curbside collection when police, without a warrant,
+            seized and searched the garbage for evidence of drugs;
+            defendants retained protected possessory interests in the
+            contents of the garbage cans while the cans sat at the
+            curbside awaiting collection, until collection by the trash
+            collection companies actually occurred, and therefore the
+            evidence found by police was subject to suppression). <a
+            href="https://scholar.google.com/scholar_case?case=1427228166667138422&amp;q=State+v.+Lien/Wilverding,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Lien/<span class="SpellE">Wilverding</span>,</em> 364 Or
+            750, 778, 441 P3d 185, 200 (2019)</a> <em>(“</em>Defendants
+            had privacy interests in their garbage as their bin sat at
+            the curb for regular collection by the sanitation company *
+            * * Because the police directed that private actor,
+            Republic’s manager, to segregate and then to bring their
+            private information in their garbage to the police for
+            exposure in a search, the police bear responsibility for
+            invading defendants’ privacy interests in
+            their garbage.”).</p>
+            <p>Under Oregon Constitution, where defendant placed paper
+            wad under his automobile seat, police officer “seized” that
+            paper wad when he picked it up). <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ali,+105+Or+App+193,+&amp;hl=en&amp;as_sdt=4,38&amp;case=7762577579871970188&amp;scilh=0"><em>State
+            v. Ali</em>, 105 Or App 193, 803 P2d 1231 (1991)</a>. Thus,
+            an officer must <span class="GramE">actually take</span>
+            possession of the property in order for the action to
+            constitute a seizure. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Finch,+86+Or+App+315,++&amp;hl=en&amp;as_sdt=4,38&amp;case=73040905651617508&amp;scilh=0"><em>State
+            v. Finch</em>, 86 Or App 315, 739 P2d 66 (1987)</a> (no
+            “seizure” occurred, for purpose of state or federal
+            prohibition against unreasonable searches and seizures, when
+            police officer unsuccessfully attempted to remove cigarette
+            case from defendant’s pocket; nothing in records suggested
+            that officer did not intend to allow defendant to retain
+            case once defendant grabbed it back from officer).</p>
+            <p>Property may also be “seized” by show of authority
+            without physical force. The test is what an objectively
+            reasonable person would believe under the circumstances, and
+            whether the property has been seized necessarily involves a
+            fact-specific inquiry. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Juarez-Godinez,+326+Or+1,+++&amp;hl=en&amp;as_sdt=4,38&amp;case=7895236840933680238&amp;scilh=0"><em>State
+            v. Juarez-Godinez</em>, 326 Or 1, 942 P2d 772 (1997)</a>
+            (although, after driver’s arrest, driver retained possessory
+            interest in the car and, in normal circumstances, could have
+            transferred possession of it to one of his passengers and
+            directed that it be driven away, car was “seized” where,
+            after driver denied consent to search, officer told driver
+            and his companions that another officer and his dog were
+            coming to check the car, as officer’s statements were and
+            reasonably could have been interpreted as curtailing, by a
+            show of authority, driver’s rights to transfer possession
+            of, and direct the movements of, the car). However, the
+            Court of Appeals determined that no seizure of defendant’s
+            family residence occurred by show of authority, for purposes
+            of state constitutional guarantee against unreasonable
+            searches and seizures, because the interference was
+            threatened, but never effected. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Berg,+223+Or+App+387,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1677537207463667818&amp;scilh=0"><em>State
+            v. Berg</em>, 223 Or App 387, 196 P3d 547 (2008)</a>
+            <em>opinion <span class="SpellE">adh’d</span> to as modified
+            on recons</em>, 228 Or App 754, 208 P3d 1006 (2009), <em>rev
+            den</em>, 346 Or 361 (2009). On the other hand, when police
+            actually “secure[d]” a defendant’s car and motel room for a
+            significant <span class="GramE">period of time</span>
+            following a lawful stop, the car and room were seized. <a
+            href="https://scholar.google.com/scholar_case?case=341261488933402196&amp;q=State+v.+Dowdy,+117+Or+App+414&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Dowdy</em>, 117 Or App 414, 418, 844 P2d 263, 265
+            (1992)</a>.</p>
+            <p>If a person abandons property, they do not retain any
+            possessory or privacy interests in that property. Thus, a
+            police officer can take the <span class="GramE">items</span>
+            and it will not constitute a seizure. <em>Compare</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Brown,+348+Or+293,+&amp;hl=en&amp;as_sdt=4,38&amp;case=3527051351458921462&amp;scilh=0"><em>State
+            v. Brown</em>, 348 Or 293, 232 P3d 962 (2010)</a> (defendant
+            relinquished possessory and privacy interest in bags that
+            defendant disclaimed ownership of and voluntarily left in a
+            hotel room, and therefore the search of bags did not violate
+            defendant’s state constitutional rights in identity theft
+            prosecution; defendant abandoned the bags in a locked hotel
+            room to which she would not have later had access to)
+            <em>with</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cook,+332+Or+601&amp;hl=en&amp;as_sdt=4,38&amp;case=16846212980635962965&amp;scilh=0"><em>State
+            v. Cook</em>, 332 Or 601, 34 P3d 156 (2001)</a> (defendant
+            did not lose or relinquish his constitutionally protected
+            possessory and privacy interests in duffel bag and clothing
+            by leaving such items on ground and walking away from them
+            when he agreed to talk to police officer, even though
+            defendant repeatedly denied ownership of the items, where
+            defendant told officer that he was sorting through clothing
+            to find useable items, and he only relinquished immediate
+            physical possession of the items when officer instructed him
+            to step out of the area near the dumpster where he was doing
+            the sorting). Furthermore, “no warrant is required for the
+            opening and seizure of the contents of transparent
+            containers or containers that otherwise announce their
+            complete contents. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Heckathorne,+347+Or+474,+&amp;hl=en&amp;as_sdt=4,38&amp;case=13519218138997564733&amp;scilh=0"><em>State
+            v. <span class="SpellE">Heckathorne</span></em>, 347 Or 474,
+            483, 223 P3d 1034, 1039 (2009)</a>.</p>
+            <p><span id="b.-fourth-amendment-seizures"></span></p>
+            </section>
+            </section>
+            <section id="b._fourth_amendment_seizures" class="level2">
+            <h2>B. Fourth Amendment Seizures</h2>
+            <p><span id="fourth-amendment-seizures-of-a-person"></span></p>
+            <section id="fourth_amendment_seizures_of_a_person"
+            class="level3">
+            <h3>1. Fourth Amendment Seizures of a Person</h3>
+            <p>A person is “seized” under the Fourth Amendment only
+            when, by means of physical force or show of authority, the
+            person’s freedom of movement is restrained. The test is
+            whether, in view of all of the circumstances surrounding the
+            incident, a reasonable person would have believed that they
+            were not free to leave; as long as person to whom questions
+            are put remains free to disregard questions and walk away,
+            there has been no intrusion upon that person’s liberty or
+            privacy as would under the Constitution require some
+            particularized and objective justification. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Mendenhall,+446+US+544&amp;hl=en&amp;as_sdt=3,38&amp;case=17693639495652176381&amp;scilh=0"><em>United
+            States v. Mendenhall</em>, 446 US 544, 100 S Ct 1870, 64 L
+            Ed 2d 497 (1980)</a>. Therefore, a person must be confined
+            physically or submit to a show of authority
+            <span class="GramE">in order for</span> a seizure to have
+            occurred. [<a
+            href="http://scholar.google.com/scholar_case?q=California+v.+Hodari+D">http://scholar.google.com/scholar_case?q=California+v.+Hodari+D</a>.,+499+US+621&amp;hl=en&amp;as_sdt=3,38&amp;case=3128854250640310684&amp;scilh=0
+            <em>California v. Hodari D.</em>, 499 US 621, 111 S Ct 1547,
+            113 L Ed 2d 690 (1991)] (even if police officer’s pursuit of
+            defendant on suspicion of narcotics transaction was a “show
+            of authority” enjoining defendant to halt, defendant was not
+            “seized” until officer physically tackled him since
+            defendant did not comply with that show of authority and,
+            thus, cocaine abandoned by defendant while he was running
+            was not fruit of seizure and was not subject to exclusion);
+            <em>United States v. White</em>, 295 Fed Appx 186 (9th Cir
+            2008) (not reported) (encounter between defendant and police
+            officer prior to defendant’s flight was not a seizure, but
+            rather a consensual encounter, and, thus, defendant’s
+            voluntary abandonment of the handgun during his flight was
+            not the fruit of a seizure; although officer did not
+            explicitly tell defendant that he was free to leave during
+            encounter, the officer merely asked questions, and defendant
+            was free to leave the encounter at any time).</p>
+            <div class="blockquote">
+            <p>“An arrest occurs when, in view of all the circumstances,
+            a reasonable person would have believed he was not free to
+            leave. <span class="MsoHyperlink"><em>Florida v. Royer,</em>
+            460 US 491, 502-03 (1983)</span>. No bright line rule is
+            established, but important factors include whether the
+            agents drew their weapons, the threatening presence of
+            several officers, the use of abusive language, the volume of
+            the agents’ voices, physical touching of the individual, and
+            the length of time the individual is detained. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Sharpe,+470+US+675,+685+%281985%29&amp;hl=en&amp;as_sdt=3,38&amp;case=11139179932396474159&amp;scilh=0"><em>United
+            States v. Sharpe,</em> 470 US 675, 685 (1985)</a>;
+            <em>Mendenhall,</em> 446 U.S. 544. Our review must consider
+            ‘the law enforcement purposes to be served by the
+            [detention] as well as the time reasonably needed to
+            effectuate those purposes.’ <em>Sharpe,</em> 470 US at
+            685.”</p>
+            </div>
+            <p><em>United States v.
+            <span class="SpellE">Dadd</span></em>, 963 F2d 380 (9th Cir
+            1992). However, something short of an actual arrest may
+            still be a seizure.</p>
+            <p>Like the Oregon Constitution, the Fourth Amendment
+            distinguishes between arrests, stops, and casual encounters.
+            Therefore, not all personal interaction between police and
+            citizens involves a seizure, and a seizure exists only when
+            an officer, by means of physical force or show of authority,
+            has in some way restrained a citizen’s liberty. “Even when
+            law enforcement officers have no basis for suspecting a
+            particular individual, they may pose questions, ask for
+            identification, and request consent to search
+            luggage—provided they do not induce cooperation by coercive
+            means.” <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Drayton,+536+US+194&amp;hl=en&amp;as_sdt=3,38&amp;case=2279225853676723279&amp;scilh=0"><em>United
+            States v. Drayton</em>, 536 US 194, 201, 122 S Ct 2105,
+            2110, 153 L Ed 2d 242 (2002)</a>.
+            <span class="GramE">But,</span> “whenever a police officer
+            accosts an individual and restrains his freedom to walk
+            away, he has ‘seized’ that person,” and, regardless of
+            whether it is a full-blown arrest, Fourth Amendment
+            protections will apply. <a
+            href="http://scholar.google.com/scholar_case?q=Terry+v.+Ohio,+392+US+1&amp;hl=en&amp;as_sdt=3,38&amp;case=17773604035873288886&amp;scilh=0"><em>Terry
+            v. Ohio</em>, 392 US 1, 16, 88 S Ct 1868, 1877, 20 L Ed 2d
+            889 (1968)</a>. Likewise, whether the encounter is an
+            arrest, stop, or mere encounter will depend on the facts of
+            the <span class="GramE">particular case</span> because the
+            proper inquiry necessitates consideration of all the
+            surrounding circumstances. <em>Drayton</em>, 536 US 194
+            (plainclothes police officers did not “seize” passengers on
+            bus when, as part of routine drug and weapons interdiction
+            effort, they boarded bus at rest stop and began asking
+            passengers questions, notwithstanding officers’ failure to
+            explicitly inform passengers that they were free to refuse
+            to cooperate, and notwithstanding that one officer
+            maintained presence at front of bus near exit, where
+            officers did not draw or brandish their weapons, made no
+            intimidating movements, left aisle free so that passengers
+            could exit, and spoke to passengers one by one and in
+            polite, quiet voice). In Fourth Amendment terms, a traffic
+            stop entails a “seizure” of the driver and passengers even
+            though the purpose of the stop is limited and the resulting
+            detention quite brief. <a
+            href="http://scholar.google.com/scholar_case?q=Brendlin+v.+California,+551+US+249,&amp;hl=en&amp;as_sdt=3,38&amp;case=8605561828750110049&amp;scilh=0"><span class="SpellE"><em>Brendlin</em></span>
+            <em>v. California</em>, 551 US 249, 127 S Ct 2400, 168 L Ed
+            2d 132 (2007)</a> (passenger in automobile that was pulled
+            over by police officer for traffic stop was “seized” under
+            the Fourth Amendment from moment automobile came to halt on
+            roadside and, therefore, was entitled to challenge
+            constitutionality of traffic stop; any reasonable passenger
+            would have understood police officers to be exercising
+            control to the point that no one in the automobile was free
+            to depart without police permission). However, the
+            government does not violate a person’s right not to be
+            stopped when its agents do not
+            <span class="SpellE"><span class="GramE">effect</span></span>
+            the stop, or when the person voluntarily stops. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Al+Nasser,+555+F3d+722+&amp;hl=en&amp;as_sdt=3,38&amp;case=7961924821073640399&amp;scilh=0"><em>United
+            States v. Al Nasser</em>, 555 F3d 722 (9th Cir
+            2009)</a>.</p>
+            <p><span id="fourth-amendment-seizures-of-property"></span></p>
+            </section>
+            <section id="fourth_amendment_seizures_of_property"
+            class="level3">
+            <h3>2. Fourth Amendment Seizures of Property</h3>
+            <p>Under the Fourth Amendment, “[a] ‘seizure’ of property
+            occurs when there is some meaningful interference with an
+            individual’s possessory interests in that property.” <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Jacobsen,+466+US+109,+&amp;hl=en&amp;as_sdt=3,38&amp;case=16573686290496533405&amp;scilh=0"><em>United
+            States v. Jacobsen</em>, 466 US 109, 113, 104 S Ct 1652,
+            1656, 80 L Ed 2d 85 (1984)</a>. For
+            example, in <span class="SpellE"><em>Soldal</em></span><em><span> v.
+            Cook County</span></em> the Court found that a seizure had
+            occurred when a trailer home was forcibly removed. <a
+            href="http://scholar.google.com/scholar_case?q=506+U.S.+56,+&amp;hl=en&amp;as_sdt=3,38&amp;case=14717725552279830473&amp;scilh=0">506
+            US 56, 113 S Ct 538, 121 L Ed 2d 450 (1992)</a>.
+            Furthermore, destruction of property is “seizure” under the
+            Fourth Amendment. <a
+            href="http://scholar.google.com/scholar_case?q=Fuller+v.+Vines,+36+F3d+65&amp;hl=en&amp;as_sdt=3,38&amp;case=13176299376918737302&amp;scilh=0"><em>Fuller
+            v. Vines</em>, 36 F3d 65 (9th Cir 1994)</a> <em>overruled on
+            other grounds by</em> [<a
+            href="http://scholar.google.com/scholar_case?q=Robinson+v.+Solano+Cnty">http://scholar.google.com/scholar_case?q=Robinson+v.+Solano+Cnty</a>.,+278+F3d+1007&amp;hl=en&amp;as_sdt=3,38&amp;case=9025313375118238787&amp;scilh=0
+            <em>Robinson v. Solano
+            <span class="SpellE">Cnty</span>.</em>, 278 F3d 1007 (9th
+            Cir 2002)]. On the other hand, in <em>Arizona v. Hicks</em>,
+            no “seizure” occurred, for purposes of Fourth Amendment,
+            where officer merely recorded serial numbers of stereo
+            system he observed in plain view. <a
+            href="http://scholar.google.com/scholar_case?q=480+US+321,&amp;hl=en&amp;as_sdt=3,38&amp;case=17874488096474801732&amp;scilh=0">480
+            US 321, 107 S Ct 1149, 94 L Ed 2d 347 (1987)</a>.
+            Additionally, persons “who voluntarily abandon property lack
+            standing to complain of its search or seizure.” <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Nordling,+804+F2d+1466,+&amp;hl=en&amp;as_sdt=3,38&amp;case=7960976173707907292&amp;scilh=0"><em>United
+            States v. <span class="SpellE">Nordling</span>,</em> 804 F2d
+            1466, 1469 (9th Cir 1986)</a>; <em>United States v.
+            Ferguson</em>, 33 Fed Appx 849 (9th Cir 2002) (not reported)
+            (defendant had abandoned residence, where his actions were
+            not consistent with any reasonable expectation of privacy,
+            and therefore he lacked standing to complain of search.
+            Prior to police entry into residence in search of medical
+            information, defendant told aid personnel that house and its
+            contents were not his, defendant produced identification
+            listing his address as being in another city and told police
+            the information was correct, and when released by police
+            defendant got into his car and drove away). Whether property
+            has been abandoned is a question of intent and is to be
+            determined <span class="GramE">in light of</span> the
+            totality of the circumstances. One factor is physical
+            relinquishment of the property. <em>United States v.
+            <span class="SpellE">Knaub</span></em>, 81 F3d 171 (9th Cir
+            1996), <em>cert den</em>, 519 US 875, 117 S Ct 194, 136 L Ed
+            2d 131
+            (1996)<span style="mso-comment-reference:_1;mso-comment-date:20210603T1941"></span><span class="MsoCommentReference"><span><a
+            href="#_msocom_1"
+            title="wikilink">[1</a>]<span> </span></span></span>
+            (physical abandonment of vehicle). However,</p>
+            <div class="blockquote">
+            <p>“In the ordinary case, the Court has viewed a seizure of
+            personal property as <em>per se</em> unreasonable within the
+            meaning of the Fourth Amendment unless it is accomplished
+            pursuant to a judicial warrant issued upon probable cause
+            and particularly describing the items to be seized.
+            <sup></sup> <em>See</em>, <em>e.g., Marron v. United
+            States,</em> 275 US192, 196, 48 S Ct 74, 76, 72
+            <span class="SpellE">L.Ed</span>. 231 (1927). Where law
+            enforcement authorities have probable cause to believe that
+            a container holds contraband or evidence of a crime, but
+            have not secured a warrant, the Court has interpreted the
+            Amendment to permit seizure of the property, pending
+            issuance of a warrant to examine its contents, if the
+            exigencies of the circumstances demand it or some other
+            recognized exception to the warrant requirement is present.
+            <em>See</em>, <em>e.g., Arkansas v. Sanders,</em> 442 US753,
+            761, 99 S Ct 2586, 2591, 61 L Ed 2d235 (1979); <em>United
+            States v. Chadwick,</em> 433 US1, 97 S Ct 2476, 53 L Ed
+            2d538 (1977); <em>Coolidge v. New Hampshire,</em> 403 US443,
+            91 S Ct 2022, 29 L Ed 2d564 (1971). <sup></sup> For example,
+            ‘objects such as weapons or contraband found in a public
+            place may be seized by the police without a warrant,’
+            <em>Payton v. New York,</em> 445 US573, 587, 100 S Ct 1371,
+            1380, 63 L Ed 2d639 (1980), because, under these
+            circumstances, the risk of the item’s disappearance or use
+            for its intended purpose before a warrant may be obtained
+            outweighs the interest in possession.”</p>
+            </div>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Place,+462+US+696,+&amp;hl=en&amp;as_sdt=3,38&amp;case=5031844227599510007&amp;scilh=0"><span class="hyperlinkital">United
+            States v. Place</span>, 462 US 696, 701-02, 103 S Ct 2637,
+            2641, 77 L Ed 2d 110 (1983)</a> (agents made a “seizure” of
+            traveler’s luggage for purposes of the Fourth Amendment
+            when, following his refusal to consent to a search, a
+            government agent told the traveler that he was going to take
+            the luggage to a federal judge to secure the issuance of a
+            search warrant and held it for 90 minutes without informing
+            the defendant of the place to which they were transporting
+            the luggage, the length of time he might be dispossessed of
+            the luggage, and what arrangements would be made for the
+            return of the luggage if the investigation dispelled their
+            suspicions).</p>
+            <p>“In determining the reasonableness of a detention, we
+            look to both (1) the absolute length of the detention,
+            ‘regardless of the police officers’ assiduousness in seeking
+            probable cause,’ and (2) the context of the <em>Terry</em>
+            stop length, i.e., ‘whether law enforcement officers unduly
+            extended the detention by their lack of diligence.’” <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Macias-Encinas&amp;hl=en&amp;as_sdt=3,38&amp;as_ylo=2010&amp;case=5834562795343821696&amp;scilh=0"><em>United
+            States v. Macias-Encinas</em>, 430 Fed Appx 582 (9th Cir
+            2011)</a> (citations omitted); <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+%24191,910.00+in+U.S.+Currency,+16+F3d+1051+&amp;hl=en&amp;as_sdt=3,38&amp;case=10877471725721921240&amp;scilh=0"><em>United
+            States v. $191,910.00 in
+            <span class="SpellE">USCurrency</span></em>, 16 F3d 1051
+            (9th Cir 1994)</a> (police officers failed to act with
+            reasonable diligence to obtain dog to perform drug sniff on
+            airplane passenger’s luggage, so that officers’ detention of
+            luggage without warrant and without probable cause violated
+            passenger’s Fourth Amendment rights, even assuming that
+            length of detention was not, in absolute terms, excessive,
+            where officers knew more than one hour before arrival of
+            passenger’s flight that passenger would be on plane, and
+            that passenger was suspected of narcotics activity, but
+            failed to make any arrangements for dog to conduct drug
+            sniff test until after seizure of luggage). Conversely, a
+            brief detention of airline passenger’s luggage after it had
+            been checked but before it was delivered to cargo hold did
+            not constitute “seizure” for Fourth Amendment purposes, as
+            detention was insufficient to constitute meaningful
+            interference with possessory interest. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Brown,+884+F2d+1309++&amp;hl=en&amp;as_sdt=3,38&amp;case=13168619256669860324&amp;scilh=0"><em>United
+            States v. Brown</em>, 884 F2d 1309 (9th Cir 1989)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Johnson,+990+F2d+1129+&amp;hl=en&amp;as_sdt=3,38&amp;case=5125038546303337240&amp;scilh=0"><em>United
+            States v. Johnson</em>, 990 F2d 1129 (9th Cir 1993)</a>
+            (airline passenger’s luggage was not seized, for Fourth
+            Amendment purposes, when narcotics officers removed luggage
+            from airport tarmac and took it to airline office so that
+            dog could sniff it for narcotics, as sniff test did not
+            interfere with passenger’s custody of luggage; passenger had
+            checked his luggage late and agreed to allow airlines to
+            send it on next plane if necessary and drug sniffing
+            procedure was completed prior to time luggage would have
+            been placed on airplane, absent indication of presence of
+            narcotics). An addressee’s possessory interest boils down to
+            an interest in the package’s timely delivery.
+            “[L]<span class="SpellE">aw</span> enforcement interactions
+            with packages that cause a <em>de minimis</em> interference
+            with the flow of delivery do not implicate the Fourth
+            Amendment.” <em>United States v. Villalobos</em>, 2007 WL
+            2688123 (D Or Sept. 5, 2007) (citations omitted) (not
+            reported) (when a letter was removed from the outgoing
+            inmate mailbox for a few minutes while a detective
+            photocopied the envelope, the process did not interfere with
+            the flow of the delivery of the letter because it occurred
+            after normal business hours. Accordingly, the Court found
+            that the detective’s interference with the individual’s
+            possessory interest in the timely delivery of the letter was
+            <em>de minimis,</em> and did not violate her Fourth
+            Amendment rights); <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+England,+971+F2d+419+&amp;hl=en&amp;as_sdt=3,38&amp;case=3570192643865867969&amp;scilh=0"><em>United
+            States v. England</em>, 971 F2d 419 (9th Cir 1992)</a>
+            (Detention of mailed packages for dog-sniff test for
+            narcotics was not “seizure” within meaning of Fourth
+            Amendment, even though packages were removed from assigned
+            holding areas in preparation for inspection; one package
+            arrived on schedule despite detention, and other package
+            could easily have been placed on regularly scheduled flight
+            had no cocaine been discovered).</p>
+            </div>
+            </section>
+            </section>
+            </section>
+    </body>
+</html>

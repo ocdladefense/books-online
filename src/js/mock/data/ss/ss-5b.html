@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Search and Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Search and Seizure Manual</h1>
+                                    </section>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <div class="WordSection1">
+            <p><span id="i.-overview"></span></p>
+            <section id="i._overview" class="level2">
+            <h2>I. Overview</h2>
+            <p>A motion to controvert is a challenge to the good faith,
+            truthfulness and/or accuracy of the affiant’s
+            representations in the affidavit in support of a search
+            warrant. It differs from a motion to suppress—in the context
+            of a search pursuant to a search warrant—which accepts the
+            content <span class="GramE">affidavit, but</span> argues
+            that evidence should nevertheless be suppressed. A motion to
+            controvert, by contrast, pointedly argues that something
+            about the affidavit reflects some degree of inaccuracy or
+            dishonesty on the part of the affiant.</p>
+            <p>An affiant who is reckless with his presentation of the
+            facts, who knowingly leaves out information that undermines
+            probable cause, or who fails—even after obtaining the
+            warrant but before its execution—to return to the magistrate
+            upon learning new facts which undermine probable cause, can
+            and should be challenged through a motion to controvert.</p>
+            <p><span id="ii.-statutory-basis"></span></p>
+            </section>
+            <section id="ii._statutory_basis" class="level2">
+            <h2>II. Statutory Basis</h2>
+            <p>The controlling statute in this area is <a
+            href="http://www.oregonlaws.org/ors/133.693">ORS
+            133.693</a><span class="MsoHyperlink">,</span> which
+            provides:</p>
+            <div class="blockquote">
+            <p><span lang="EN-GB">“(1) Subject to the provisions of
+            subsection (2) of this section, in any proceeding on a
+            motion to suppress evidence, the moving party shall be
+            entitled to contest, by cross-examination or offering
+            evidence, the good faith, accuracy and truthfulness of the
+            affiant with respect to the evidence presented to establish
+            probable cause for search and seizure.</span></p>
+            <p><span lang="EN-GB">“(2) If the evidence sought to be
+            suppressed was seized by authority of a search warrant, the
+            moving party shall be allowed to contest the good faith,
+            accuracy and truthfulness of the affiant as to the evidence
+            presented before the issuing authority only upon
+            supplementary motion, supported by affidavit, setting forth
+            substantial basis for questioning such good faith, accuracy
+            and truthfulness.</span></p>
+            <p><span lang="EN-GB">“(3) In any proceeding under
+            subsection (2) of this section, the moving party shall have
+            the burden of proving by a preponderance of the evidence
+            that the evidence presented before the issuing authority was
+            not offered in good faith, was not accurate and was not
+            truthful.</span></p>
+            <p><span lang="EN-GB">“(4) When the motion to suppress
+            challenges evidence seized as the result of a warrantless
+            search, the burden of proving by a preponderance of the
+            evidence the validity of the search is on the
+            prosecution.</span></p>
+            <p><span lang="EN-GB">“(5) The court shall determine
+            whether, under applicable law, any inaccuracy,
+            untruthfulness or lack of good faith requires
+            suppression.”</span></p>
+            </div>
+            <p><span id="iii.-procedure"></span></p>
+            </section>
+            <section id="iii._procedure" class="level2">
+            <h2>III. Procedure</h2>
+            <p><span id="a.-the-affidavit-and-motion"></span></p>
+            <section id="a._the_affidavit_and_motion" class="level3">
+            <h3>A. The Affidavit and Motion</h3>
+            <p>To challenge the good faith, truthfulness or accuracy of
+            an affidavit, the defendant must file a motion to controvert
+            and an affidavit. (A motion to suppress challenging a
+            warrant does not require an affidavit, but a motion to
+            controvert does.)</p>
+            <p>The affidavit must present a “substantial basis for
+            questioning such good faith, accuracy and truthfulness” of
+            the affiant. <a
+            href="http://www.oregonlaws.org/ors/133.693">ORS
+            133.693(2)</a>. In other words, the defense affidavit must
+            assert that the affiant (usually the officer or detective)
+            either lied, was reckless with the truth, or omitted
+            something from his affidavit.</p>
+            <p>Without an affidavit, or with an insufficient affidavit,
+            the judge can and will deny the request for an evidentiary
+            hearing, although anecdotal experience would suggest
+            <span class="GramE">a majority of</span> prosecutors and
+            judges are unaware of this fact. But once a defendant has
+            set forth a substantial basis for questioning the affiant’s
+            good faith, accuracy, and/or truthfulness, he is entitled to
+            present testimony to controvert information in the search
+            warrant affidavit. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Modrell-Lydall,+128+Or+App+372&amp;hl=en&amp;as_sdt=4,38&amp;case=2255909408718833971&amp;scilh=0"><em>State
+            v. <span class="SpellE">Modrell</span>-Lydall</em>, 128 Or
+            App 372, 876 P2d 315 (1994)</a>.</p>
+            <p>A motion to controvert should (1) explicitly request an
+            evidentiary hearing, (2) explicitly state that without those
+            portions of the affidavit that are inaccurate, untruthful
+            or—as a result of an omission—misleading, the warrant fails
+            to establish probable cause either that evidence exists or
+            that it will be found in a particular location, and (3)
+            identify the evidence to be suppressed.</p>
+            <p><span id="b.-the-hearing"></span></p>
+            </section>
+            <section id="b._the_hearing" class="level3">
+            <h3>B. The Hearing</h3>
+            <p>At the evidentiary hearing, the burden is on the
+            defendant to demonstrate the inaccuracies and/or omissions.
+            The standard is by a preponderance. Whether an affidavit for
+            search warrant is true and accurate is a question of fact
+            rather than of law. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cole,+78+Or+App+450,&amp;hl=en&amp;as_sdt=4,38&amp;case=17290550720876061881&amp;scilh=0"><em>State
+            v. Cole,</em> 78 Or App 450, 717 P2d 221,</a> <em>rev
+            allowed,</em> 301 Or 445, 723 P2d 325, <em>rev
+            dismissed,</em> 202 Or 297, 728 P2d 529 (1986).</p>
+            <p>Like any other evidentiary hearing, the inaccuracy of
+            facts contained within the affidavit in support of a search
+            warrant is a question of fact to be determined by the trial
+            court. Thus, if a defendant contends that the facts recited
+            were inaccurate and presents evidence contradicting them,
+            the trial court may resolve the claim against him if it
+            finds his witnesses incredible. As explained succinctly in
+            <em>State v. Mellinger, supra</em>, defendant’s evidence may
+            conflict with the affiant’s statements, but the trial court
+            is not required to believe it. Furthermore, the appellate
+            court is compelled to accept the facts as found by the trial
+            court so long as they are supported by the record. <a
+            href="http://scholar.google.com/scholar_case?q=Ball+v.+Gladden,+250+Or+485,&amp;hl=en&amp;as_sdt=4,38&amp;case=5017369683279103061&amp;scilh=0"><em>Ball
+            v. Gladden</em>, 250 Or 485, 443 P2d 621 (1968)</a>.</p>
+            <p>On the other hand, the discovery of untruths—as opposed
+            to mere inaccuracies—in the affidavit permits the trial
+            court to distrust the remaining statements. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Keeney,+323+Or+309,+&amp;hl=en&amp;as_sdt=4,38&amp;case=692743433217500&amp;scilh=0"><em>State
+            v. Keeney, et al,</em> 323 Or 309, 918 P2d 419 (1996)</a>,
+            where the trial court found the officer’s affidavit to be
+            untruthful, notably because of statements relating to the
+            credibility of the informants. The trial court chose to
+            suppress <span class="GramE">all of</span> the evidence
+            obtained as the result of the warrant, and the Supreme Court
+            agreed.</p>
+            <p><span id="c.-the-trial-courts-review-of-the-affidavit-following-a-successful-evidentiary-hearing"></span></p>
+            </section>
+            <section
+            id="c._the_trial_courts_review_of_the_affidavit_following_a_successful_evidentiary_hearing"
+            class="level3">
+            <h3>C. The Trial Court’s Review of the Affidavit Following a
+            Successful Evidentiary Hearing</h3>
+            <p>Assuming the evidentiary hearing is successful, and the
+            trial judge finds material omissions or inaccuracies, the
+            judge should review the affidavit anew to determine if it
+            still provides probable cause. The process is always one of
+            subtraction, rather than addition. That is, even in those
+            situations where key facts were known but omitted, those
+            facts are not added to the affidavit but may be considered
+            only to the extent they weaken the force of the other
+            evidence in the affidavit. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Goecks,+%27&amp;hl=en&amp;as_sdt=4,38&amp;case=3807361014800606581&amp;scilh=0"><em>State
+            v. <span class="SpellE">Goecks</span></em>, 265 Or App</a>
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Goecks,+%27&amp;hl=en&amp;as_sdt=4,38&amp;case=3807361014800606581&amp;scilh=0">158,
+            333 P3d 1227</a><span class="MsoHyperlink"><span> (2014)
+            </span></span>(“‘Although the court does not ‘correct’ an
+            affidavit by adding evidence, we have held that ‘one way of
+            subtracting from an affidavit is to use the additional
+            information developed on the motion to controvert in order
+            to weaken the force of the officer’s statements in the
+            affidavit.’ <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pelster/Boyer,+172+Or+App+596,+&amp;hl=en&amp;as_sdt=4,38&amp;case=7590112332102882729&amp;scilh=0"><em>State
+            v. <span class="SpellE">Pelster</span>/Boyer,</em> 172 Or
+            App 596, 599, 21 P3d 106,</a> <em>rev den</em>, 332 Or 632
+            (2001).”)</p>
+            <p>The difference between permissibly considering the
+            omissions versus the prohibition against adding them to the
+            affidavit might be a semantic one, but in practical effect,
+            the judge can consider the omitted information that comes
+            out of the hearing on the motion to controvert, but never
+            against the defendant. Under no circumstances can the
+            evidentiary hearing be used to supplement the affidavit in
+            the state’s favor.</p>
+            <p>As noted in the chapter on motions to suppress, some case
+            law suggests that deference has historically been given to
+            the original magistrate, in terms of reasonable inferences,
+            even though a determination of probable cause is a legal
+            question that has only one correct answer. (See the prior
+            chapter for a discussion on the continuing salience of
+            “deference” in this context.) But once an affidavit has been
+            controverted, no deference should be given to the issuing
+            magistrate. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Culley,+198+Or+App+366,&amp;hl=en&amp;as_sdt=4,38&amp;case=6739352352974124259&amp;scilh=0"><em>State
+            v. Culley</em>, 198 Or App 366, 108 P3d 1179 (2005)</a>. In
+            <em>Culley</em>, the trial court properly conducted its
+            probable cause review, without the ordinary deference to the
+            decision of the issuing magistrate, once the affidavit of
+            probable cause had been successfully controverted. The
+            affidavit’s description of a named citizen informant was
+            inaccurate, since it omitted the fact that the person was
+            under the influence of intoxicants when providing
+            information to police and may have had a motive to lie. The
+            trial court, in testing the affidavit for probable cause
+            “anew,” properly required more corroboration for the
+            informant’s information than might otherwise be needed for a
+            named citizen informant. Because such corroboration was
+            “wholly lacking,” the trial court properly suppressed the
+            evidence seized pursuant to the warrant.</p>
+            <p>Furthermore, as noted above, a judge who has found
+            untruths—as opposed to mere inaccuracies—in the original
+            affidavit has authority to distrust (<em>i.e</em>.,
+            disregard) the entirety of the affidavit. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=692743433217500&amp;q=State+v.+Keeney,+323+Or+309,+&amp;hl=en&amp;as_sdt=6,38"><em>Keeney,
+            et al,</em> 323 Or 309</a>. An example of a mere inaccuracy
+            would be continuous misspelling of the defendant’s name in
+            an affidavit. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Derrah,+191+Or+App+511,+&amp;hl=en&amp;as_sdt=4,38&amp;case=7133725862763835051&amp;scilh=0"><em>State
+            v. <span class="SpellE">Derrah</span>,</em> 191 Or App 511,
+            84 P3d 1084 (2004)</a>. In
+            <span class="SpellE"><em>Derrah</em></span>, the trial court
+            correctly struck the references to the defendant’s name, but
+            the Court of Appeals found that enough information remained
+            to establish probable cause.</p>
+            <p><span id="iv.-grounds-for-controverting"></span></p>
+            </section>
+            </section>
+            <section id="iv._grounds_for_controverting" class="level2">
+            <h2>IV. Grounds for Controverting</h2>
+            <p><span id="a.-when-credibility-of-the-informant-might-reflect-on-the-credibility-of-the-affiant"></span></p>
+            <section
+            id="a._when_credibility_of_the_informant_might_reflect_on_the_credibility_of_the_affiant"
+            class="level3">
+            <h3>A. When Credibility of the Informant Might Reflect on
+            the Credibility of the Affiant</h3>
+            <p>It is well established that a motion to controvert is not
+            allowed to challenge the statements of an informant (either
+            named or unnamed), or any other witness whose statements are
+            contained in the affidavit. <a
+            href="http://www.oregonlaws.org/ors/133.693">ORS 133.693</a>
+            allows a defendant to contest <em>only</em> the affiant’s
+            statements. ORS 133.693(1). <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hitt,+305+Or+458,&amp;hl=en&amp;as_sdt=4,38&amp;case=3491586164040308530&amp;scilh=0"><em>State
+            v. <span class="SpellE">Hitt</span></em>, 305 Or 458, 735
+            P2d 415 (1988)</a>.</p>
+            <p><em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Esplin,+314+Or+296,&amp;hl=en&amp;as_sdt=4,38&amp;case=11181656791690110462&amp;scilh=0"><em>State
+            v. Esplin</em>, 314 Or 296, 839 P2d 211 (1992)</a> '''' (a
+            defendant does not have the right, under either ORS 133.693
+            or under the warrant clause of the Oregon Constitution, to
+            challenge the good faith, accuracy, or truthfulness of an
+            unnamed informant whose statements were included in the
+            affidavit supporting a search warrant).</p>
+            <p>Nevertheless, the informant’s dishonesty, lack of
+            credibility or lack of personal knowledge can be offered in
+            support of a motion to controvert if there is evidence that
+            the affiant was aware of the informant’s dishonesty or
+            inaccuracy and nevertheless failed to disclose such
+            information in the affidavit or failed to corroborate the
+            informant’s information. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=7107114884124774990&amp;q=State+v.+Goecks,+265+Or+App+&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Goecks</em></span>,
+            265 Or App 158</a> (“To reiterate—the issue, as set forth in
+            more detail below—concerns the ‘accuracy’ of the affiant in
+            relating in his affidavit his knowledge of the relevant
+            circumstances, not the ‘accuracy’ of the information
+            provided to him by the informant.”).</p>
+            <p>In fact, one of the more frequent grounds for motions to
+            controvert involves failure of the affiant to include
+            information relevant to the informant’s honesty or accuracy.
+            See '''' <a
+            href="https://scholar.google.com/scholar_case?case=6739352352974124259&amp;q=State+v.+Culley,+198+Or+App+366,+&amp;hl=en&amp;as_sdt=6,38"><em>Culley</em>,
+            198 Or App 366</a>. The affidavit’s description of a named
+            citizen informant was inaccurate, since it omitted the fact
+            that the person was under the influence of intoxicants when
+            providing information to police and may have had a motive to
+            lie. The trial court, in testing the affidavit for probable
+            cause “anew,” properly required more corroboration for the
+            informant’s information than might otherwise be needed for a
+            named citizen informant. Because such corroboration was
+            “wholly lacking,” the trial court properly suppressed the
+            evidence seized pursuant to the warrant.</p>
+            <p>Because the affiant did not supply information about a
+            named informant’s criminal background that he knew at the
+            time he applied for a warrant, the affidavit is reviewed
+            anew in the light of the omitted facts. After inserting that
+            information, the magistrate must determine, under the
+            totality of the circumstances, whether the informant is
+            reliable. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Strance,&amp;hl=en&amp;as_sdt=4,38&amp;case=18009229657219335958&amp;scilh=0"><em>State</em>
+            <em>v.</em> <span class="SpellE"><em>Strance</em></span>,
+            118 Or App 645, 848 P2d 1226 (1993)</a>.</p>
+            <p><em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=also+State+v.+Mellinger,+52+Or+App+21,&amp;hl=en&amp;as_sdt=4,38&amp;case=16037735822628469864&amp;scilh=0"><em><span>also
+            </span>State v. Mellinger</em>, 52 Or App 21, 26–27, 627 P2d
+            897 (1981)</a>. Statements in an affidavit in support of a
+            motion to controvert may contest the good faith of the
+            affiant by demonstrating that the affiant was not forthright
+            <span class="GramE">with regard to</span> an informant’s
+            character or omitted relevant facts concerning the
+            circumstances of the informant’s contact or the events.</p>
+            <p>A defendant who alleges that a self-disclosed
+            confidential informant would testify that she related
+            hearsay information to the affiant but that the affiant
+            reported it as the informant’s first-hand information has
+            set forth a substantial basis for questioning the affiant’s
+            good faith, accuracy and truthfulness and should have been
+            permitted to put on testimony to controvert the affidavit.
+            <a
+            href="https://scholar.google.com/scholar_case?case=2255909408718833971&amp;q=State+v.+Modrell-Lydall,+128+Or+App+372&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Modrell</em></span><em>-Lydall</em>,
+            128 Or App 372</a>.</p>
+            <p><span id="b.-where-to-look-for-grounds-to-controvert"></span></p>
+            </section>
+            <section id="b._where_to_look_for_grounds_to_controvert"
+            class="level3">
+            <h3>B. Where to Look for Grounds to Controvert</h3>
+            <p>If the defendant can identify the informant, sending an
+            investigator to interview him or her may reveal that the
+            affidavit reflects more than what the informant
+            <span class="GramE">actually said</span>, or it might have
+            left out additional and material information that undermines
+            the reliability of the affiant’s assertions.</p>
+            <p>Never ignore a person who is quoted in an affidavit but
+            will not be testifying at trial. Perhaps because the affiant
+            knows he or she will not be called as a witness for the
+            trial, the affiant might not have been as careful with the
+            witness’s statements as she should have been. Thus, an
+            investigator should interview, for example, neighbors whose
+            statements are only relevant to the search warrant but will
+            not likely be witnesses at trial. If such an otherwise
+            uninvolved witness denies making claims that the affiant
+            attributed to her, she can be a very powerful witness in a
+            motion to controvert.</p>
+            <p>Omissions are the most fruitful grounds for challenging
+            an affidavit. It is simply contrary to human nature to
+            include in an affidavit every harmful fact that might
+            undermine the probable cause the affiant is seeking to
+            demonstrate.</p>
+            <p>One way to uncover omissions is to develop a sense for
+            what quality police work would normally entail. If the
+            affidavit claims that the defendant resides at a particular
+            address, but it makes no mention of the address listed in
+            the DMV database, it is reasonable to suspect that the DMV
+            database will list an address different than the one to be
+            searched. No affiant in trying to verify a person’s address
+            would ignore DMV or (if in Portland) the Portland Police
+            Bureau Database or the name of the power subscriber at that
+            address. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stockton,+120+Or+App+111,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14668372280192897413&amp;scilh=0"><em>State
+            v. Stockton</em>, 120 Or App 111, 852 P2d 227 (1993)</a>
+            (“Here, the affiants knew that one of the verbal accounts
+            from the utility company was incorrect. They also knew that
+            the written records indicated that Howell was the only power
+            subscriber. We conclude that it was not objectively
+            reasonable for the affiants to believe that defendant was a
+            power subscriber at Larson Drive without further
+            verification. Particularly, in view of the lack of evidence
+            linking defendant to the Larson property, the failure to
+            verify this information constitutes bad faith.”).</p>
+            <p>When the affidavit cites other
+            <span class="GramE">police</span> reports relied on by the
+            affiant, read those carefully, as the summary in the
+            affidavit may leave out contradictory information.</p>
+            <p>If the affidavit mentions the defendant’s arrest history,
+            does it also note which charges resulted in acquittal or
+            dismissal?</p>
+            <p>What exactly is the payment arrangement with the
+            informant? Named informants who are going to testify at
+            trial may get paid to go to grand jury and trial, in
+            addition to any payments they may have received for
+            controlled buys. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=5719807258028239202&amp;q=State+v.+Payne,+150+Or+App+469,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Payne,</em> 150 Or App 469, 946 P2d 353 (1997)</a>.
+            Omission of the benefits the informant is expecting to
+            receive for their information could constitute bad
+            faith.</p>
+            <p><span id="c.-a-change-in-circumstance-between-the-issuance-and-execution-of-the-warrant"></span></p>
+            </section>
+            <section
+            id="c._a_change_in_circumstance_between_the_issuance_and_execution_of_the_warrant"
+            class="level3">
+            <h3>C. A Change in Circumstance Between the Issuance and
+            Execution of the Warrant</h3>
+            <p>Information that undermines probable cause that is
+            obtained after the warrant is signed but before it is
+            executed requires the affiant to return to the magistrate
+            with a new affidavit that contains the new information.</p>
+            <p>If the police—after they have obtained a search warrant
+            but prior to its execution—obtain information that
+            undermines the probable cause requirement, the Fourth
+            Amendment to the United States Constitution obligates them
+            to return to the magistrate for a new finding of probable
+            cause. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Marin-Buitrago,+734+F2d+889+&amp;hl=en&amp;as_sdt=3,38&amp;case=1436764504688996751&amp;scilh=0"><em>United
+            States v. Marin-Buitrago</em>, 734 F2d 889 (2d Cir
+            1984)</a>.</p>
+            <p>“Certain restrictions are placed on the execution of
+            search warrants to ensure that probable cause, as well as
+            the veracity of the information in the affidavit, exists
+            when the warrant is executed.” <em>Id.</em> at 894; <em>see
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Jacobs,+986+F2d+1231,+&amp;hl=en&amp;as_sdt=3,38&amp;case=5857412027649604360&amp;scilh=0"><em>United
+            States v. Jacobs</em>, 986 F2d 1231, 1235 (8th Cir 1993)</a>
+            '''' (“Furthermore, we think the officers had a duty to
+            provide the magistrate judge with any information which
+            would undercut the warrant’s validity. The officers could
+            not simply rest on a warrant they had already received when
+            this information came to light.”).</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Bowling,+900+F2d+926+&amp;hl=en&amp;as_sdt=3,38&amp;case=15820409685955008313&amp;scilh=0"><em>United
+            States v. Bowling</em>, 900 F2d 926 (6th Cir. 1990)</a>, the
+            court observed that a line of cases interpreting Federal
+            Rule of Criminal Procedure 41(e), which requires the
+            execution of a warrant within ten days, “evidences a strong
+            concern that probable cause may dissipate between the time
+            of a warrant’s issuance and its execution.” The court in
+            <em>Bowling</em> went on to state that the law is clear that
+            probable cause must exist at both points in time<em>,
+            i.e.</em>, when the warrant is issued and when it is
+            executed. And, when new facts come to light after the
+            warrant’s issuance, the officers must reappraise the issuing
+            magistrate, and their failure to do so is relevant to a
+            determination of whether they relied on the warrant in good
+            faith.</p>
+            <p><em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Washington+v.+Reichenbach,+153+Wash+2d+126,+&amp;hl=en&amp;as_sdt=6,38&amp;case=1504089872065111793&amp;scilh=0"><em>Washington
+            v. Reichenbach</em>, 153 Wash 2d 126, 101 P3d 80 (2004)</a>
+            '''' (where officer obtained search warrant on information
+            that a person would be driving to Vancouver to buy drugs,
+            but after the warrant was issued the person called the
+            officer to say that the defendant had been unable to obtain
+            the drugs, the officer’s failure to so inform the issuing
+            magistrate rendered the warrant invalid at the time of its
+            execution).</p>
+            <p>While there are a variety of circumstances where an
+            affiant might learn more information before executing the
+            search warrant, one of the most common involves the
+            execution of the search warrant on a multi-resident
+            dwelling. The affiant may believe, before arriving, that
+            there are many people living at one residence, only
+            discovering upon arrival that there are multiple separate
+            units/residences at one location. The difference likely
+            impacts whether a warrant sufficient for one unit provides
+            probable cause for another. Before the police can search
+            that second unit, they need to get a new search warrant.</p>
+            <p>Lastly, although affiants frequently rely on the same
+            boilerplate for each affidavit as it relates to their
+            training and experience, anecdotal experience suggests that
+            some affiants have one affidavit for a drug dealer’s home
+            (when the training and experience focuses on how often
+            evidence is found at a suspect’s home) and another affidavit
+            for a drug dealer’s stash house (when the training and
+            experience focuses on how often drug dealers will keep
+            drugs, money and firearms at any location <em>other
+            than</em> their home). Obtain as many affidavits sworn to by
+            that affiant as <span class="GramE">possible, and</span>
+            determine if he or she intentionally omitted certain parts
+            of their training and experience because it contradicts the
+            assertions applicable in the instant case.</p>
+            </div>
+            </section>
+            </section>
+    </body>
+</html>

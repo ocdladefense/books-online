@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </section>
+            <p>2010 edition</p>
+            <p><strong>Measure 11 and Major Felonies</strong></p>
+            <p><strong><em>Michael Zerwas</em></strong></p>
+            <section id="introduction" class="level1">
+            <h1><strong>Introduction</strong></h1>
+            <p><em>“The case, like so much in the world of espionage,
+            was a haze of ambiguity, in which everything from
+            intelligence data to Dr. Lee’s activities was subject to
+            interpretation. Often what mattered was who the interpreters
+            were, and what perspective they brought.”</em></p>
+            <p>—The New York Times <em>on the Wen Ho Lee case.</em></p>
+            <p>In 1994, the voters approved a mandatory minimum
+            sentencing law known as Measure 11. Measure 11 has changed
+            the balance of power in the justice system. So too has it
+            changed many aspects of the criminal defense practice.
+            Clients now face the prospect of spending a significant
+            portion of their lives in the care of the Department of
+            Corrections, whether or not they have ever committed a crime
+            before. Attorneys have the increased onus of advising
+            clients who, under the old guidelines, may have had a
+            significant opportunity to win at trial. If they lost, they
+            would likely have had a sentencing judge willing and able to
+            assess the individual and the sentence thoughtfully and
+            fairly. Like the death penalty, Measure 11 has raised the
+            stakes of punishment to a degree that the approach to
+            defending Measure 11 clients has become more often a task of
+            negotiation than of litigation. (For the list of Measure 11
+            crimes and sentences, refer to Appendix A.)</p>
+            <p>So why would this affect the investigator? The short
+            answer is that it shouldn’t. Each client, each case, each
+            injustice deserves the best our profession has to offer. The
+            reality is that Measure 11 has impacted both the intensity
+            and the manner in which we work.</p>
+            <p>This chapter is intended to serve as a general guide to
+            thinking about the investigation of any case, with an
+            emphasis on the major case and with references to what can
+            be done specifically in Measure 11 cases. The
+            characteristics that distinguish the Measure 11 case from
+            other cases provide an outline for the investigation and
+            perhaps guide us into a philosophical approach, much like
+            the death penalty provokes its own special philosophical and
+            practical approaches. This is not a how-to manual. I assume
+            a good basic knowledge of the art of investigation and,
+            since many aspects of practice differ from county to county,
+            there will be little reference to specific agency
+            resources.</p>
+            <p>1 OCDLA mourns the loss of longtime member Michael
+            Zerwas, who died in a tragic accident in January 2010.</p>
+            </section>
+            <section id="bad_guys_and_badder_guys" class="level1">
+            <h1><strong>Bad Guys and Badder Guys</strong></h1>
+            <p>What separates the major crime from the minor crime? The
+            distinction is mostly arbitrary. A single heroin dealer can
+            cause more deaths and social woe than a serial killer, and a
+            thief who takes an heirloom worth virtually nothing on the
+            market can cause more suffering than if he had beaten his
+            victim senseless. Our</p>
+            <p>depersonalized “nation of laws” has taken on the task of
+            defining, redefining and over-defining crime seriousness
+            and, so no one feels cheated when one person pays less for
+            an action than another, has imposed such draconian measures
+            as mandatory minimums. In order to ensure that no crime
+            victim feels slighted in the eye-for-an-eye scheme of
+            things, the judiciary has defined every complainant as a
+            victim and the level of victimization that person is
+            entitled to. And, just to make certain that all misery is
+            created equal and anyone is entitled to be a victim, society
+            has gone to extraordinary lengths to protect its complaining
+            witnesses from scrutiny.</p>
+            <p>This is not to understate the impact that the guilty have
+            on their victims but to decry the systematization, the
+            imposition by the state of one punishment fitting every
+            similar criminal act, without regard to real impact and
+            without regard to the best resolution for everyone involved.
+            Judicial power has shifted to an office intensely more
+            rooted in politics and less likely to focus on the
+            individual, whether that individual be the accused or the
+            accuser, the harmer or the harmed. Indeed, there have been
+            numerous notable cases nationwide of prosecutors fervently
+            denying in the face of overwhelming evidence that a
+            convicted person might possibly be innocent.</p>
+            <p>So, in determining a major crime from a minor crime we
+            all pull out our handy sentencing guideline charts, factor
+            in prosecutorial zeal, add points for press coverage, assess
+            the effect of social prejudice, attempt to factor out our
+            own prejudices, and produce our score for crime
+            seriousness.</p>
+            <p>That said, there are a number of factors in the serious
+            crime category that help define the process of
+            investigation. First, the majority of crimes in this
+            category have a named victim with a defined harm. Second,
+            the mental state of the accused plays an important part in
+            both the charging of the crime and understanding the
+            incident. Third, the crimes are likely going to be
+            investigated by more experienced officers, prosecuted by
+            more experienced prosecutors and likely held to stricter
+            judicial standards.</p>
+            </section>
+            <section id="information" class="level1">
+            <h1><strong>Information</strong></h1>
+            <p>Information being our business, this is the opportunity
+            to shine. All three of the above factors lend themselves to
+            scrutiny and assessment. It is important to think through
+            every aspect of the incident and its participants, and to
+            make certain that all relevant information is obtained,
+            including as much useful peripheral information as
+            possible.</p>
+            <p>Analyze the pretrial discovery. Do you have everything?
+            Likely not. Remember that the state only has the obligation
+            to turn over what it has, and even then we often have to go
+            to some extremes to get good quality reproductions or access
+            to original evidence. How many times have you found ten
+            pages of worthless black and white copies of photographs in
+            the discovery packet or a similarly useless photocopy of a
+            knife? Or page after page of transcripts rife with the word
+            “inaudible”? How often have you seen a full crime lab
+            analysis? (What I usually see is a one-paragraph report that
+            says something like “tested positive for the presence of
+            human blood.”) Do you have the 9-1-1 tapes? If so, do you
+            have anything more than the originating call? If you have
+            medical records, do you have follow-up reports? Do you have
+            the ambulance or EMS reports? Do you have the videotape of
+            the CARES evaluation? Do you have autopsy photographs? Are
+            there likely to be police bureau internal documents
+            generated? Do you have them? Should you have them?</p>
+            <section id="in_camera_process" class="level2">
+            <h2><strong>In Camera <em>Process</em></strong></h2>
+            <p>Possibly the most important aspect of discovery is the
+            <em>in camera</em>motion. Many of the Measure 11 cases are
+            sex cases and the relevant information is difficult to
+            obtain. Through the <em>in camera</em>process we get the
+            opportunity to access normally confidential records on
+            complainants. The most common are child abuse</p>
+            <p>cases where school records, prior medical and
+            psychological records and juvenile justice records may
+            indicate patterns contrary to some widely held theories of
+            child behavior in situations of child abuse: a pattern of
+            lying or accusatory behavior, medical referrals, counseling
+            or psychiatric referrals, etc. The absolute importance of
+            doing the <em>in camera</em>hearing early is that the
+            records may bring to light areas of investigation previously
+            unknown and may point to other records that may require yet
+            another <em>in camera</em>inspection. I can’t emphasize this
+            strongly enough—if nothing else, get the standard litany of
+            subpoenas served quickly so when the motions are ready the
+            bulk of the information is available. If other leads develop
+            along the way or if additional leads are found in the first
+            batch of records, you are not faced with a time crunch near
+            trial. I have even seen cases where defense issues arise
+            after the initial review of material and a second <em>in
+            camera</em>is held to assess the material in light of the
+            new issues.</p>
+            </section>
+            <section id="police_reports" class="level2">
+            <h2><strong><em>Police Reports</em></strong></h2>
+            <p>Read the police reports carefully and pay attention to
+            the summary reports that may refer to what other officers,
+            fire and medical personnel do at the scene. Did other people
+            write reports, take notes, or participate in a manner that
+            might merit an interview or a subpoena? If you are having a
+            bail hearing and the state’s burden is to show why your
+            client should be held in custody, can you use that venue to
+            discover what has</p>
+            <p>not been written in a report? Always try to read between
+            the lines. What isn’t being said and why? Is a rookie
+            officer trying to play detective and interpreting something
+            in an inappropriate way? Is this masking the truth in some
+            way? Pay attention to the words! Officers often give away
+            their biases. Police try to protect complainants because,
+            rightly or wrongly, they see that as their job. But there
+            appears to be an innate human desire to be truthful which
+            can lead to verbal cues. For example, if you have a report
+            in which the officer consistently writes that the
+            complainant said this or stated that and then throws in that
+            the complainant <em>claimed</em>that something happened,
+            this could be a subtle signal that the officer had some
+            doubt. Keep that potential in mind when doing your
+            interviews or forensic examinations.</p>
+            <p>Occasionally, internal documents are generated by the
+            police. These are never intended for discovery but may
+            include useful or even exculpatory information. I had a case
+            a number of years back that involved an extended low-speed
+            chase through the streets of Portland. The client was
+            charged with, among other things, recklessly endangering two
+            unnamed civilian pedestrians who, I suppose, could have been
+            injured if they had walked in front of the vehicle. It was
+            almost an accident that we discovered an “After Action
+            Report” generated by the precinct commander which was
+            intended to justify the way the chase was conducted. In that
+            report the commander, who had debriefed the officers
+            involved, concluded that the officers were justified in not
+            forcing a stop earlier in the pursuit because “no civilians
+            were in danger.” Needless to say, that commander was not
+            testifying for the state, but we got him under subpoena as
+            soon as we found this document. (As an aside, the lieutenant
+            who wrote the report developed a serious case of amnesia
+            when I attempted to talk to him.) Internal reports such as
+            this are likely to be done in cases where there is potential
+            civil action against the police or media scrutiny. 9-1-1
+            tapes can be useful in discerning whether a supervisor has
+            been called to respond after an incident.</p>
+            </section>
+            <section id="databases" class="level2">
+            <h2><strong><em>Databases</em></strong></h2>
+            <p>While on the subject of police reports, when I have a
+            case involving a large number of witnesses or a lot of
+            evidence I like to use a computer database to keep control
+            of the paper. There is nothing more frustrating than trying
+            to find all references in a thousand pages of discovery to
+            one obscure witness or piece of evidence prior to an
+            interview. I use Microsoft Access, but there are other
+            interrelational databases that will work just as well, and
+            there are databases designed specifically for the
+            investigator. My only issue with the commercial legal
+            databases is that they try to be all things to all people
+            and can become too cumbersome. My databases are constantly
+            evolving and are often designed to fit the needs of a
+            specific case. In its simplest form, the database involves
+            Bates-stamping the documents and assigning each document a
+            specific code. I use the document code as the primary key in
+            the table, with the first page number of that document as a
+            cross reference so each member of the defense team can
+            quickly locate that document. It is important for there to
+            be one set of discovery kept in pristine condition in page
+            order.</p>
+            <p>The other database fields can include type of document, a
+            brief summary of the document, a list of names and objects
+            mentioned in that document, and the author of the document.
+            Beyond this basic information the database can get as
+            involved as you wish, with linked tables for additional
+            information. Most sophisticated programs will even allow you
+            to insert your own documents, such as investigation reports.
+            Another approach is to build your table around the
+            individual witnesses. The most important detail in using
+            databases is to be consistent with the data. For instance,
+            if you are dealing with multiple weapons make certain you
+            always refer to each weapon by a distinct identifier. The
+            “black gun” must always be the “black gun” and not sometimes
+            “Bruce’s gun.” Or, assign a unique code to each piece of
+            data. This way your queries and searches will be complete
+            and consistent. I have found that the primary mistake I make
+            in designing databases is to get too complex with too much
+            information. As a result I get bogged down in data entry.
+            Learning to design your own database is a good investment of
+            time, even if you are using commercial case management
+            software.</p>
+            <p>An example of a simple and useful database project occurs
+            when we do 9-1-1 research in Multnomah County. We get a
+            computer printout of all the police radio activity assigned
+            to an incident. (While listening to the tapes I often
+            discover radio activity and even 9-1-1 calls that do not get
+            assigned to an incident.) It lists the time of the activity,
+            the unit generating the activity, the officer(s) in that
+            unit, a status code for the activity, and often a summary of
+            the activity in something resembling English. The document
+            is chronological. By reproducing this document in a database
+            one time, you can then isolate and organize the information
+            in many ways. When you have ten units involved in a search
+            for a suspect, with very little effort you can produce a
+            report that isolates each unit’s broadcasts (an extremely
+            useful format for cross- examination). Or you can produce a
+            report that only displays when each unit arrives, helpful in
+            determining if there are any holes in a perimeter. No matter
+            how you want to organize the information or isolate bits of
+            the information you only need enter the data once.</p>
+            <p>Though often a luxury we don’t have, pre-indictment
+            investigation can occasionally yield amazing results. I have
+            had luck in cases where our client has a reasonable
+            explanation for what happened and there are witnesses the
+            police haven’t located or are completely unaware of. There
+            is sometimes a risk in investigating before you have much
+            information to work with. I like to begin an interview with
+            as much information at hand so I know what to ask. Sometimes
+            you only get one shot at a witness and you want that
+            interview to be as thorough and as meaningful as possible.
+            Still, it is great to get a case out of Measure 11 territory
+            before it becomes a prosecutor’s negotiation tool. Do
+            everything you can to get that jump-start on a case, and be
+            certain to advise any witnesses that you will likely be back
+            with more questions when you have had an opportunity to see
+            all the facts.</p>
+            <p>After digesting the discovery, prioritize the case and
+            organize responsibilities. The most effective defenses are
+            put together by defense teams that work well together,
+            communicate what they are working on, and share
+            responsibility.</p>
+            </section>
+            </section>
+            <section id="motivating_factors" class="level1">
+            <h1><strong>Motivating Factors</strong></h1>
+            <section id="complainants" class="level2">
+            <h2><strong><em>Complainants</em></strong></h2>
+            <p>A number of factors drive Measure 11 and other major
+            cases. One factor is the increasing awareness and definition
+            of “victim.” (One of my favorite attorneys long ago told me
+            that he advocates referring to “victims” as complainants.
+            This has been a great mental tool for me over the years and
+            allows me to keep a perspective that is more amenable to
+            unbiased investigation. I will use the term “complainant”
+            here.) Additionally, prosecutors seem to be much more
+            sensitive to the wishes of complainants. When possible,
+            developing a rapport with the complainant can be effective
+            in resolving a case. Whether the client is bang-on guilty
+            and almost certain of losing in trial, or not as guilty as
+            the indictment reads, or not guilty (or even innocent), the
+            complainant is likely to have a singular view of what
+            happened. Often part of that view is that we are part and
+            parcel with the defendant and therefore complicitous in the
+            crime. In these situations, much can be accomplished by at
+            least offering the complainant an explanation of the defense
+            role in their case, a humanized view of the client, an
+            explanation of what the client may be facing as punishment
+            if convicted, and sometimes (if you detect flexibility in
+            the complainant’s attitude) some possible resolutions. As we
+            all know, talking to complainants involves a certain amount
+            of dexterity and caution. They often have been advised,
+            subtly, that speaking with the defense is not to their
+            benefit. They often have strong predisposed notions toward
+            the defendant, the case, and the defense. And, of course,
+            they must be notified of their rights per ORS 135.970.</p>
+            <p>In those instances where the complainant is reluctant to
+            speak with the defense, determine whether they would like to
+            talk outside the scope of the incident. In many cases, they
+            will be willing to do that and are interested in our
+            perspective of the justice process as it relates to their
+            case. A large portion of the public perceives guilt and
+            innocence in very concrete terms. An introduction to the
+            nuances of intent, degree of injury, and fair punishment may
+            be advantageous. Since many of our cases are aimed at
+            negotiation, having a complainant who is more likely to be a
+            tad more sympathetic is an ultimate advantage to the client.
+            These conversations are often a dance, since we have to be
+            cautious about what we can and should reveal. It is highly
+            recommended that before discussing your client’s “issues” in
+            the sense of drug addiction, past treatment, current
+            treatment, psychological issues or prior convictions, you
+            get both a clear understanding from the attorney as to what
+            can be discussed and an understanding from the client that
+            you are going to be discussing these aspects of his or her
+            life. Just as we consider ourselves experts at ferreting out
+            lies and obfuscation, so do many of the people we contact.
+            Most approach us from a position of distrust to begin with,
+            and we can do considerable harm in not being honest. I would
+            much rather state that I am not allowed to discuss
+            something, or preferably that I don’t know for certain, than
+            to try to worm around an issue.</p>
+            <p>Of course, there are those cases where the complainant
+            will be highly sympathetic, if not to the client then to the
+            degree of punishment the state wishes to extract. This
+            happens most often in domestic violence cases where the
+            Assault IV turns into a Measure 11 case with the tacked-on
+            kidnap charge. The domestic violence case often churns up
+            the legal maneuvering to a high-pitched frenzy. I have seen
+            complainants go to extravagant lengths to protect the
+            clients in these cases. Prosecutors can be in a tough
+            situation when a witness or complainant changes her story
+            and decides living out of state is preferable to the
+            defendant spending 70 or more months in prison.</p>
+            <p>Because of this, hearsay exceptions often play a huge
+            role in these cases. I highly recommend becoming familiar
+            with these exceptions so you can recognize what may exclude
+            (or include) a statement under them.</p>
+            <p>•OEC 803(2), Excited Utterance.</p>
+            <p>•OEC 803(3), State of Mind.</p>
+            <p>•OEC 803(4), Medical Diagnosis or Treatment.</p>
+            <p>•OEC 803(18a)(b), Acts of Abuse.</p>
+            <p>•OEC 803(24), Acts of Abuse.</p>
+            <p>•OEC 803(26), Domestic Violence.</p>
+            <p>These are areas in which our jobs as fact finders often
+            get into gray areas. A complainant intent on protecting the
+            guilty by concocting an improbable story in total contrast
+            to the available evidence and prior statements can be more
+            harmful to the client than one presenting a solid account of
+            the truth. A witness making himself unavailable can hurt
+            more than help the case if that allows the state to present
+            statements made in the heat of anger rather than more
+            reasoned accounting of fact. If there is any reason to
+            suspect that witnesses you have interviewed may avoid
+            appearing at trial and they have given you useful
+            information, remember that it may fall on you to show the
+            witness is unavailable. While I may feel comfortable
+            challenging the recanting complainant with evidence, I am
+            never comfortable suggesting the legal arguments of a case.
+            Often, this is a good opportunity to have the attorney
+            involved in the interview.</p>
+            <p>Remember that much can be learned even in general
+            discussion with a complainant. A single face-to-face
+            rejection can reveal bias or sympathy in the manner it is
+            delivered. It can reveal whether there is an understanding
+            of the process. It can reveal how articulate the witness
+            will be. I recall one attempted interview where, with just
+            the introduction of myself I could see the complainant’s
+            very soul drain from her body. That one physical reaction
+            said to me that she could make a dramatic witness and might
+            be amenable to something that would save her from the ordeal
+            of going on the witness stand to relive the incident. Of
+            course, there is always a temptation to read too much into
+            these contacts, but each piece of information is part of the
+            puzzle; if other information confirms your suspicions, you
+            are better off than if you didn’t try. If you accomplish
+            nothing substantive in the course of complainant contact,
+            you should at least be comfortable with having acted
+            professionally, and if you manage to leave without having
+            closed the door to future contact your time has been well
+            spent.</p>
+            </section>
+            <section id="the_state" class="level2">
+            <h2><strong><em>The State</em></strong></h2>
+            <p>Another driving factor in the major case is the state’s
+            investment in the case. As I mentioned earlier, these cases
+            carry high stakes for the state as well as for the defense.
+            The state is politically driven, both inside and outside the
+            district attorney’s office. It is important to keep an eye
+            on what is available to move the state to negotiate. The
+            most obvious fear the state has is the fear of defeat, which
+            can result in public spectacle at some level. (One of my
+            favorite <em>Oregonian</em>headlines from some years back
+            was, “Jury Fails to Convict.” Fortunately for the prosecutor
+            on that case the obvious media bias landed on the jury and
+            not the DDA.) One way to keep the fear of losing alive is to
+            investigate the case. Even when everything about a case
+            suggests negotiation and settlement, maintaining a trial
+            posture with investigation can be important and, I believe,
+            can win months of freedom for the client in the negotiation
+            process.</p>
+            <p>While investigating the facts is the sexier way to win a
+            case, the facts are often your worst enemy. Sometimes the
+            facts just get worse the more you investigate. Few things
+            are more disheartening than coming back from a day in the
+            field with a list of additional crimes your client may have
+            committed, not totally uncommon when investigating sex abuse
+            cases.</p>
+            <p>Always remember that facts sometimes do lie, complainants
+            can lie, cops can and do lie, and we do not lie. I often
+            think what a wonderful advantage we have in our truth. If
+            our truth lets the most horrendous criminal walk back into
+            society, someone else has failed, and the someone who failed
+            likely did so out of laziness or ineptness or lack of
+            resources. If our truth devastates the defense case, so be
+            it. Our truth is largely protected. (One major proviso here
+            is the mandatory reporting law. It is possible that if we
+            report child abuse by our client, using reliable information
+            which is not part of the case we are working on, the
+            attorney <em>may</em>be required to report it to the
+            authorities. Investigators should discuss mandatory
+            reporting with the attorneys they work with.)</p>
+            <p>With major cases my experience is that judicial rulings
+            are often much more favorable to the state. A search and
+            seizure issue that is routinely won by the defense in a
+            possession of controlled substances case may be a dead loser
+            in a rape case. Thorough investigation can bolster pretrial
+            motions. Are there potential neighborhood witnesses to a
+            questionable stop or illegal search? Have you looked at the
+            evidence, checked out sight lines and lighting? Have you
+            been to the scene, obtained the 9-1-1 tapes? Obtained press
+            coverage? In their hunger to feed the public appetite for
+            excitement, television reporters may have done some legwork
+            for you in finding peripheral witnesses or have interviewed
+            relatives.</p>
+            <p><em>“I want tell you about the town of Stockbridge,
+            Massachusetts, where this happened. Here, they got three
+            stop signs, two police officers, and one police car, but
+            when we got to the Scene of the Crime there was five police
+            officers and three police cars.”</em></p>
+            <p><em>“And they was using up all kinds of cop equipment
+            that they had hanging around the police officer’s station.
+            They was taking plaster tire tracks, footprints, dogsmelling
+            prints, and they took 27 eight-by-ten</em></p>
+            <p><em>color glossy photographs with circles and arrows and
+            a paragraph on the back of each one explaining what each one
+            was to be used as evidence against us.”</em>(Arlo Guthrie,
+            “Alice’s Restaurant”)</p>
+            <p>And then there are the police. They are becoming more
+            specialized, with specially trained teams to handle
+            different crimes. This also leads to a need to justify the
+            specialized training, the special teams, and the extra
+            manpower. This can lead to bias and, indeed, to illegal and
+            unethical practices by the police. While not likely the
+            norm, look for signs of overzealous and misleading
+            activities by the police when these expensive operations are
+            involved.</p>
+            <p>On a slow night there may be a lot of bored cops happy to
+            assign themselves to a hot incident, increasing the
+            opportunity to trample on evidence or create evidence out of
+            nothing. The more they do, the more there is to analyze.</p>
+            </section>
+            <section id="intent" class="level2">
+            <h2><strong><em>Intent</em></strong></h2>
+            <p><em>“Prosecutors had no hard evidence that he planned to
+            give away the secrets, but they reasoned that the simple
+            absence of an innocent explanation showed his criminal
+            intent.”</em></p>
+            <p><em>—</em>The New York Times <em>on the Wen Ho Lee
+            espionage case.</em></p>
+            <p>Intent is another major player in the major case. It is
+            an extremely difficult area to attack, given how furtive
+            intent can be to meet the legal standard. Effective
+            cooperation between experts and investigators can play a
+            significant role here. While diminished capacity is not an
+            extremely popular defense, the distinction between the
+            clearly intentional crime and the clearly accidental
+            incident can be very narrow. Here there is a special need to
+            pay attention to preludes to an incident. Why did the client
+            carry a weapon? What emotional factors led up to the
+            incident? Did intoxicants play a role? What is the normal
+            level of susceptibility for the client to being led? In
+            co-defendant cases, what actual role did the client play and
+            what knowledge did the client have of the co-defendant’s
+            intent? What is the historical relationship between the
+            client and the complainant? Is there a basis to argue
+            battered spouse syndrome? Regardless of the actual outcome
+            of a confrontation, what words did any witnesses hear? Can
+            forensics tell you something helpful, such as the pattern of
+            shots fired, whether they were random or whether there were
+            warning shots? Is it possible or even likely that the
+            offending bullet ricocheted or tumbled?</p>
+            <p>Investigation works in both directions with psychological
+            evaluations. Pre-evaluation investigation can help the
+            psychologist conduct a more thorough evaluation, especially
+            if there are prior diagnoses. Post-evaluation investigation
+            can bolster the results of the evaluation. Especially in
+            guilty except for insanity arguments, the events in a
+            client’s life leading up to an incident can go a long way to
+            explain the incident in the context of mental disease or
+            defect. There are times when you may want your client
+            evaluated quickly, and there have been rare times when I
+            included the expert in some of my interviews. A recent
+            example was a case of a father stabbing his adult son where
+            the son was most aware of the father’s behavior leading up
+            to the incident and we were aware of prior diagnoses. Be
+            aware that there are risks involved in this since the expert
+            may have to disclose all information relied upon to come to
+            a diagnosis.</p>
+            </section>
+            <section id="mitigation" class="level2">
+            <h2><strong><em>Mitigation</em></strong></h2>
+            <p>Mitigation does play a role in Measure 11 investigations.
+            Prosecution response to mitigation evidence can vary widely,
+            from the prosecutor who is very sensitive to mitigation to
+            the prosecutor who feels that it has no place in the
+            process. Still, it just can’t hurt to do it. One way I have
+            seen defense attorneys utilize mitigation</p>
+            <p>is to find some, any, factual basis to put a sympathetic
+            witness on the stand in trial if only to give the jury the
+            opportunity to see something positive about the client’s
+            life. Mitigation is also a good way to keep the client
+            constructively involved in the case. Encourage the client to
+            develop a list of positive references and to solicit letters
+            of support. Look for aspects of the client's life that may
+            show how the client may benefit from boot camp if eligible.
+            (Mitigation is discussed in Chapter 18.)</p>
+            </section>
+            <section id="the_client" class="level2">
+            <h2><strong><em>The Client</em></strong></h2>
+            <p>There is, of course, the issue of the client. Just as
+            there is no typical case, there is no typical client. The
+            person who has never been in trouble before can be charged
+            with a serious crime as easily as the most hardened
+            criminal. The “nicest” client can be as blind to the issues
+            of the case as the most recalcitrant client. Some factors
+            are somewhat consistent. The serious case generally takes
+            longer to resolve. The client is more likely to spend that
+            time in custody. During this time, it is easy for the client
+            to feel as though the case is being ignored. Often, the
+            client will come under the influence of a “jailhouse
+            lawyer.” On more than one occasion I have been surprised
+            when a client has come up with either a factual argument or
+            even a legal argument that had been overlooked by the
+            professionals. Still, client control can become a serious
+            problem. You may have 30 cases while the client has only
+            one. You may have nothing but bad news for the client.</p>
+            <p>And often, because of the penalties involved, the client
+            is frightened and backed into a corner. Just as we often
+            have to project ourselves into a complainant’s psyche, we
+            also need to do the same for our clients.</p>
+            <p>Perhaps the best we can do is to keep the client apprised
+            of and involved in his or her own case. An explanation about
+            why it takes time to prepare the case can keep the
+            relationship running much more smoothly. Effectively working
+            with clients often requires a combination of personal and
+            professional interactions that can be both exhausting and
+            exhilarating. In the end, what matters is that a
+            relationship of trust is developed and sustained.</p>
+            </section>
+            </section>
+            <section
+            id="elements_of_the_crime_and_the_art_of_interviewing"
+            class="level1">
+            <h1><strong>Elements of the Crime and the Art of
+            Interviewing</strong></h1>
+            <p>It is important to be familiar with the statutory
+            elements of a crime. I carry a copy of the ORS with me and
+            do a quick read of the relevant statute, as well as the
+            lesser included crimes, immediately before an interview. The
+            other imperative in working a Measure 11 case is to be
+            familiar with the 1997 legislation known as SB 1049.</p>
+            <p>In a few cases this may be your client’s safety net.
+            Probably the trickiest element of 1049 is the Robbery II
+            element “that, if the defendant represented by words or
+            conduct that the defendant was armed with a dangerous
+            weapon, the representation did not reasonably put the victim
+            in fear of imminent physical injury.” Occasionally you will
+            find the complainant who just was not afraid and told the
+            defendant to take a hike.</p>
+            <p>This is where the art of interviewing comes into play.
+            The logical question may be, “Were you reasonably in fear of
+            imminent physical injury?” The good investigator will ask
+            something along the lines of, “What were you thinking when
+            that happened?” Think about the different responses you
+            might get to those two questions. Question one gets a yes or
+            no response with no real insight into the incident and the
+            critical information needed. Question two gets the equivocal
+            response that can lead to other questions. “Did you really
+            think he had a gun in his pocket?” “Did he look more scared
+            than you?” “Did he take his hand out of his pocket?” “Why
+            did you give him the money?” Or, “Why didn’t you give him
+            the money?” This, of course, applies to nearly any
+            interview. Once you have extracted the relevant information
+            to put the vital question in perspective and the witness has
+            had the opportunity to reassess the incident you can be in a
+            position to ask, “So is it fair to say that you were not in
+            fear of being shot?” (Appendix B summarizes SB 1049.)</p>
+            <p>The more you know about the crime and the more you know
+            about what it takes to be guilty of a crime in the technical
+            sense the better investigator you will be.</p>
+            </section>
+            <section id="conclusion_investigation_as_a_production"
+            class="level1">
+            <h1><strong>Conclusion: Investigation as a
+            Production</strong></h1>
+            <p>For years I have had the opportunity through volunteer
+            work with the Portland Opera to observe truly professional
+            theatrical productions come to fruition. My involvement
+            begins about three weeks before production when the chorus,
+            supers, stage managers, conductor and director come together
+            in a warehouse to begin rehearsing the staging. In the
+            course of that month the principal singers come to town, the
+            orchestra rehearses with the conductor, the props are
+            gathered and the set is installed in the theater. The
+            principals are added to the staging rehearsals, the staging
+            is adjusted and readjusted, the lighting designer and the
+            costume shop and the stage hands all work on their
+            contributions and a week before production we move into the
+            actual theater with the actual set and fine-tune the
+            performance. The final component, the audience, is added. I
+            wish I could say that every performance and every production
+            were winners.</p>
+            <p>Criminal investigation can be like this. Each element of
+            the case needs to be explored and revised. New characters
+            and new information are added as trial preparation
+            continues. The script is analyzed for meaning as each new
+            element is added. The investigation often determines the
+            staging of this legal production and, indeed, which audience
+            it is played to.</p>
+            <p>Most importantly, in the major-crime case production the
+            investigator must be prepared to retrieve the information
+            that is available. During each element of the investigation,
+            the investigator must be aware of the structure under which
+            she or he is operating. The incident itself may well lose
+            importance as other aspects of the case come to life, but it
+            is the incident on which most of our material is based.
+            Witnesses are approached about the incident but end up
+            providing information about suppression issues or mitigation
+            or bias. It is this holistic, organic vision that I
+            advocate. The more integrated you are with the grand scheme,
+            the more likely you are to support the defense
+            function—guilt or innocence aside.</p>
+            <p>='''</p>
+            <center>
+            <p>Appendix A</p>
+            </center>
+            <p>'''=</p>
+            <center>
+            <p>Measure 11 Crimes and Sentences</p>
+            </center>
+            <table>
+            <tbody>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Arson I</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>90 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Assault I</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>90 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Assault II</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>70 months*</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Attempted
+            Aggravated Murder</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>120 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Compelling
+            Prostitution</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>70 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Conspiracy
+            Agg Murder</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>120 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Attempted
+            Murder</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>90 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Conspiracy
+            Murder</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>90 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Kidnapping
+            I</p></td>
+            <td style="border:0.0007in solid #000000;padding:0in;"><p>90
+            months, 300 months**</p></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Kidnapping
+            II</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>70 months*</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Manslaughter
+            I</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>120 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Manslaughter
+            II</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>75 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Aggravated
+            Murder</p></td>
+            <td style="border:0.0007in solid #000000;padding:0in;"><p>30
+            years to life</p></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Murder</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>300
+            months**</p></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Rape I</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>100
+            months, 300 months**</p></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Rape II</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>75 months*</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Robbery I</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>90 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Robbery
+            II</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>70 months*</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Sexual
+            Abuse I</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>75 months*</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Sexual
+            Penetration I</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>100
+            months, 300 months**</p></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Sexual
+            Penetration II</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>75 months*</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Sodomy I</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>100
+            months, 300 months**</p></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><p>Sodomy
+            II</p></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>75 months*</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>Using a Child in a Display of</p>
+            </center>
+            <center>
+            <p>Sexually Explicit Conduct</p>
+            </center></td>
+            <td
+            style="border:0.0007in solid #000000;padding:0in;"><center>
+            <p>70 months</p>
+            </center></td>
+            </tr>
+            <tr>
+            <td style="border:0.0007in solid #000000;padding:0in;"></td>
+            <td style="border:0.0007in solid #000000;padding:0in;"></td>
+            </tr>
+            </tbody>
+            </table>
+            <center>
+            <p>*ORS 137.712 may authorize court to impose sentence of
+            less than M11 minimum.</p>
+            </center>
+            <center>
+            <p>**300-month minimum applies only to adult defendants and
+            for crimes committed on or after April 24, 2006
+            (137.700).</p>
+            </center>
+            <center>
+            <p>For additional information, refer to the most current
+            Oregon Sentencing Guidelines Grid, available through the
+            Oregon Criminal Defense Lawyers Association.</p>
+            </center>
+            <p>='''</p>
+            <center>
+            <p>Appendix B</p>
+            </center>
+            <p>'''=</p>
+            <center>
+            <p>Senate Bill 1049—</p>
+            </center>
+            <center>
+            <p>Measure 11 Changes, Misdemeanor/Violation Election</p>
+            </center>
+            <p>SB 1049 allows persons charged with Robbery II, Assault
+            II, and Kidnapping II to be sentenced to a non- Measure 11
+            sentence under certain circumstances. Permits persons whose
+            crimes were committed before the effective date of the act,
+            including persons who have already been convicted and
+            sentenced, to be sentenced or resentenced under the
+            provisions of the act under certain circumstances. Adds
+            Measure 11–level sentences for three additional
+            offenses.</p>
+            <p>Robbery II, Assault II, Kidnapping II</p>
+            <p>If it finds substantial and compelling reasons, the court
+            may impose a guideline, rather than a M11 sentence, for:</p>
+            <p>(A) Assault II, but only if:</p>
+            <p>(1) the victim was not physically injured by a deadly
+            weapon, and</p>
+            <p>(2) the victim did not suffer a “significant physical
+            injury” (as defined in the bill), and</p>
+            <p>(3) the defendant does not have one of the disqualifying
+            prior convictions within the requisite time period.</p>
+            <p>(B) Robbery II, but only if:</p>
+            <p>(1) the victim did not suffer a significant physical
+            injury, and</p>
+            <p>(2) if the defendant represented by words or conduct that
+            the defendant was armed with a dangerous weapon, the
+            representation did not reasonably put the victim in fear of
+            imminent significant physical injury and</p>
+            <p>(3) if the defendant represented by words or conduct that
+            the defendant was armed with a deadly weapon,</p>
+            <p>the representation did not reasonably put the victim in
+            fear of imminent physical injury, and</p>
+            <p>(4) the defendant does not have one of the disqualifying
+            prior convictions within the requisite time period.</p>
+            <p>(C) Kidnapping II , but only if:</p>
+            <p>(1) the victim was a t least 12 years of age, and</p>
+            <p>(2) the defendant does not have one of the disqualifying
+            prior convictions within the requisite time period.</p>
+            <p>The court may make a <em>dispositional</em>departure to
+            probation if it finds that there is an additional
+            substantial and compelling reason not relied on to justify
+            the initial departure and if it also finds that a sentence
+            of probation will be more effective than a prison term in
+            reducing the risk of recidivism and that a sentence of
+            probation will better serve to protect society.</p>
+            <p>The foregoing provisions apply to persons whose crimes
+            are committed on or after October 4, 1997 (the effective
+            date of SB 1049).</p>
+            </section>
+    </body>
+</html>

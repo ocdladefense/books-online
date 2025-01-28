@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2013 edition</p>
+            <p><strong><em>Lisa Ludwig</em></strong></p>
+            <section id="i._rules_for_introduction" class="level1">
+            <h1><strong>I. Rules for Introduction</strong></h1>
+            <section id="a._uniform_trial_court_rules_utcrs"
+            class="level2">
+            <h2><strong>A. Uniform Trial Court Rules (<a
+            href="http://courts.oregon.gov/OJD/programs/utcr/utcrrules.page">UTCRs</a>)</strong></h2>
+            <p>Marking Exhibits – UTCR 6.080 provides that “before the
+            commencement of the trial” the parties must mark the
+            plaintiff’s exhibits consecutively from 1 through 99 and the
+            defendant’s exhibits from 101 through 199. Parties may use
+            their own labels, or labels may be requested from the
+            court.</p>
+            <p>In addition, “parties shall submit to the court at the
+            time of trial a list of premarked exhibits,” except that
+            exhibits “not reasonably anticipated to be used,”
+            impeachment exhibits, and exhibits not available at the
+            trial’s start need not be premarked.</p>
+            <p>Hazardous Evidence – UTCRs 6.140, 6.150, 6.160, 6.170 and
+            6.180 govern the use of weapons, controlled substances and
+            hazardous materials in the courtroom. Under UTCR 6.140, a
+            party intending to offer a hazardous substance into evidence
+            must file a motion at least 28 days before trial or hearing
+            seeking a court order regulating the substance’s handling,
+            use and disposition. Under UTCR 6.150, all firearms must be
+            unloaded and “either rendered inoperable or have a trigger
+            guard installed,” guns and ammunition must be kept separate,
+            knives must be sheathed or otherwise protected, needles must
+            be covered or sealed in a transparent bag and “chemicals,
+            pharmaceutical, and biological substances” must be in an
+            unbreakable transparent tube. (Under UTCR 1.100, exception
+            to these requirements may be had “for good cause shown.” An
+            example of good cause would be when compliance with the
+            UTCRs affects a mechanical operation and mechanical
+            operation is an issue. See 1990 Commentary to UTCRs.)</p>
+            <p>Drugs as Evidence – Under UTCR 6.160, unless otherwise
+            cleared by the court only a “representative sample” of a
+            controlled substance may be brought into the courtroom, heat
+            sealed in a transparent container. Jurors shall be advised
+            whether any substances to be handled in the jury room are
+            dangerous and shall be instructed on proper handling. UTCR
+            6.170. Pretrial stipulations can be used to prevent
+            introduction of exhibits especially prejudicial to the
+            defense.</p>
+            </section>
+            <section id="b._discovery_statutes" class="level2">
+            <h2><strong>B. Discovery Statutes</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.805–873</a> regulate pretrial discovery “in all criminal
+            prosecutions in which the charging instrument has been
+            brought in a court of record.” ORS 135.805(1). In addition
+            to requiring reciprocal discovery of witnesses and their
+            recorded statements (see ORS 135.815(1)(2) and 135.835(1)),
+            Oregon’s discovery laws require the prosecution to disclose
+            to the defense “any reports or statements of
+            experts…including results of physical or mental examinations
+            and scientific tests, experiments or comparisons” which the
+            prosecutor intends to offer at trial, and “any books,
+            papers, documents, photographs or tangible objects” intended
+            to be offered at trial. ORS 135.815(3)(4).</p>
+            <p>The defense must disclose the same items to the
+            prosecution. ORS 135.835(2)(3).</p>
+            <p>The rules of discovery apply to exhibits offered for
+            impeachment purposes. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+young&amp;hl=en&amp;as_sdt=4,38&amp;case=7245829628872315828&amp;scilh=0">State
+            v. Young</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+young&amp;hl=en&amp;as_sdt=4,38&amp;case=7245829628872315828&amp;scilh=0">,
+            94 Or App 683, 767 P2d 90 (1989)</a>.</p>
+            </section>
+            <section id="c._materials_in_possession_of_a_third_party"
+            class="level2">
+            <h2><strong>C. Materials in Possession of a Third
+            Party</strong></h2>
+            <p>A<em></em>subpoena <em>duces tecum</em> directed to a
+            third party cannot be used as a discovery device to command
+            the pretrial production of evidence to be used at trial
+            without express permission of the court. However, a subpoena
+            <em>duces tecum</em> can be used to command a third party to
+            bring evidence to court for use at trial or for <em>in
+            camera</em> inspection. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cartwright&amp;hl=en&amp;as_sdt=4,38&amp;case=7394397540061486567&amp;scilh=0">State
+            v. Cartwright,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cartwright&amp;hl=en&amp;as_sdt=4,38&amp;case=7394397540061486567&amp;scilh=0">336
+            Or 408, 416, 85 P3d 305 (2004)</a>. If the court reviews the
+            materials or documents and then refuses access, the
+            proponent must have the evidence marked as an exhibit and
+            made part of the record to preserve this issue for appeal.
+            <a
+            href="http://scholar.google.com/scholar_case?q=wulff&amp;hl=en&amp;as_sdt=4,38&amp;case=2514715787028224648&amp;scilh=0">Wulff
+            v. Sprouse-Reitz Co., Inc.,</a><a
+            href="http://scholar.google.com/scholar_case?q=wulff&amp;hl=en&amp;as_sdt=4,38&amp;case=2514715787028224648&amp;scilh=0">262
+            Or 293, 311–12, 498 P2d 766 (1972)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+harvey&amp;hl=en&amp;as_sdt=4,38&amp;case=7524546662407277177&amp;scilh=0">State
+            v. Harvey,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+harvey&amp;hl=en&amp;as_sdt=4,38&amp;case=7524546662407277177&amp;scilh=0">203
+            Or App 343, 125 P3d 792 (2005).</a></p>
+            <p>ORCP 55 requires that a subpoena <em>duces tecum</em>must
+            be served 14 days prior to production of the evidence. Also
+            note ORCP 55H has special requirements for individually
+            identifiable health information: to wit HIPAA. Counsel
+            should review that subsection prior to attempting to obtain
+            health care records. See Appendix A.</p>
+            </section>
+            <section id="d._jury_view" class="level2">
+            <h2><strong>D. Jury View</strong></h2>
+            <p>A jury view may be ordered under <a
+            href="https://www.lexis.com/research/buttonTFLink?_m=786d5b858730ce21781df474204533f6&amp;_xfercite=%3Ccite%20cc%3D%22USA%22%3E%3C%21%5BCDATA%5BORS%20%A7%2010.100%5D%5D%3E%3C%2Fcite%3E&amp;_butType=4&amp;_butStat=0&amp;_butNum=4&amp;_butInline=1&amp;_butinfo=ORCODE%2010.100&amp;_fmtstr=FULL&amp;docnum=1&amp;_startdoc=1&amp;wchp=dGLbVzk-zSkAz&amp;_md5=ce207f1bac75c6dfe8177108ec4c5192">ORS
+            10.100</a> (formerly ORS 17.230) at the discretion of a
+            court to assist the jury to understand the evidence. <a
+            href="https://www.lexis.com/research/buttonTFLink?_m=786d5b858730ce21781df474204533f6&amp;_xfercite=%3Ccite%20cc%3D%22USA%22%3E%3C%21%5BCDATA%5BORS%20%A7%2010.100%5D%5D%3E%3C%2Fcite%3E&amp;_butType=3&amp;_butStat=2&amp;_butNum=5&amp;_butInline=1&amp;_butinfo=%3Ccite%20cc%3D%22USA%22%3E%3C%21%5BCDATA%5B266%20Ore.%20154%5D%5D%3E%3C%2Fcite%3E&amp;_fmtstr=FULL&amp;docnum=1&amp;_startdoc=1&amp;wchp=dGLbVzk-zSkAz&amp;_md5=98463ddb444eb29991276af657ff4d9b">Baumbach
+            v. Poole</a><a
+            href="https://www.lexis.com/research/buttonTFLink?_m=786d5b858730ce21781df474204533f6&amp;_xfercite=%3Ccite%20cc%3D%22USA%22%3E%3C%21%5BCDATA%5BORS%20%A7%2010.100%5D%5D%3E%3C%2Fcite%3E&amp;_butType=3&amp;_butStat=2&amp;_butNum=5&amp;_butInline=1&amp;_butinfo=%3Ccite%20cc%3D%22USA%22%3E%3C%21%5BCDATA%5B266%20Ore.%20154%5D%5D%3E%3C%2Fcite%3E&amp;_fmtstr=FULL&amp;docnum=1&amp;_startdoc=1&amp;wchp=dGLbVzk-zSkAz&amp;_md5=98463ddb444eb29991276af657ff4d9b">,
+            266 Or 154, 511 P2d 1219 (1973).</a> A trial court is
+            authorized by ORS 10.100 to determine whether a view of the
+            scene of the crime should be granted to assist a jury in its
+            deliberations; a trial court was within its discretion to
+            deny a criminal defendant a jury view where the defendant
+            made no showing of any need for or even the desirability of
+            a jury view and the court made the view contingent on
+            defendant’s assumption of the cost of the view, which the
+            defendant refused to pay. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+henry&amp;hl=en&amp;as_sdt=4,38&amp;case=1588094957450034971&amp;scilh=0">State
+            v. Henry</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+henry&amp;hl=en&amp;as_sdt=4,38&amp;case=1588094957450034971&amp;scilh=0">,
+            24 Or App 535, 546 P2d 769 (1976)</a>.</p>
+            </section>
+            <section id="e._constitutional_requirements" class="level2">
+            <h2><strong>E. Constitutional Requirements</strong></h2>
+            <p>Pretrial disclosure of exhibits the prosecution intends
+            to offer is in some cases constitutionally required. Under
+            the U.S. Constitution, production is required by the Sixth
+            Amendment’s rights to be confronted with witnesses and to
+            have compulsory process, and by the Fifth Amendment’s
+            guarantee that no person shall be deprived of liberty
+            without due process of law. <a
+            href="http://scholar.google.com/scholar_case?q=arizona+v+youngblood&amp;hl=en&amp;as_sdt=2,38&amp;case=14445531523312297888&amp;scilh=0">See</a><a
+            href="http://scholar.google.com/scholar_case?q=arizona+v+youngblood&amp;hl=en&amp;as_sdt=2,38&amp;case=14445531523312297888&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=arizona+v+youngblood&amp;hl=en&amp;as_sdt=2,38&amp;case=14445531523312297888&amp;scilh=0">Arizona
+            v. Youngblood</a><a
+            href="http://scholar.google.com/scholar_case?q=arizona+v+youngblood&amp;hl=en&amp;as_sdt=2,38&amp;case=14445531523312297888&amp;scilh=0">,
+            488 US 51, 109 S Ct 333, 102 LEd2d 281 (1988)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=united+states+v.+nixon&amp;hl=en&amp;as_sdt=2,38&amp;case=5132513257326080850&amp;scilh=0">United
+            States v. Nixon</a><a
+            href="http://scholar.google.com/scholar_case?q=united+states+v.+nixon&amp;hl=en&amp;as_sdt=2,38&amp;case=5132513257326080850&amp;scilh=0">,
+            418 US 683, 94 S Ct 3090, 41 LEd2d 1039 (l974)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=brady+v+maryland&amp;hl=en&amp;as_sdt=2,38&amp;case=9550433126269674519&amp;scilh=0">Brady
+            v. Maryland</a><a
+            href="http://scholar.google.com/scholar_case?q=brady+v+maryland&amp;hl=en&amp;as_sdt=2,38&amp;case=9550433126269674519&amp;scilh=0">,
+            373 US 83, 83 S Ct 1194, 10 LEd2d 215 (1963).</a> Oregon
+            courts have yet to consider and decide whether our state
+            constitution requires any greater disclosure than that
+            required by the United States Constitution. <a
+            href="http://scholar.google.com/scholar_case?q=huskey&amp;hl=en&amp;as_sdt=4,38&amp;case=8354147306599627471&amp;scilh=0">State
+            ex rel Juvenile Dept. v. Huskey</a><a
+            href="http://scholar.google.com/scholar_case?q=huskey&amp;hl=en&amp;as_sdt=4,38&amp;case=8354147306599627471&amp;scilh=0">,
+            130 Or App 419, 882 P2d 1127 (1994)</a>.</p>
+            </section>
+            <section id="f._preservation_of_evidence_by_government"
+            class="level2">
+            <h2><strong>F. Preservation of Evidence by
+            Government</strong></h2>
+            <p>The Due Process Clause of the Fourteenth Amendment
+            “guarantees for a criminal defendant access to evidence in
+            the state’s possession that “is material either to guilt or
+            to punishment….” <em>Brady v. Maryland</em>, <em>supra</em>,
+            373 US 83 (1963). To support a claim of denial of due
+            process on the ground that constitutionally material
+            evidence was lost, the defendant must make some showing that
+            either the state acted in bad faith in failing to preserve
+            the evidence or that the evidence sought to be discovered
+            will be favorable. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hendershott&amp;hl=en&amp;as_sdt=4,38&amp;case=6094068297050914696&amp;scilh=0">State
+            v. Hendershott</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hendershott&amp;hl=en&amp;as_sdt=4,38&amp;case=6094068297050914696&amp;scilh=0">,
+            131 Or App 531, 535, 887 P2d</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hendershott&amp;hl=en&amp;as_sdt=4,38&amp;case=6094068297050914696&amp;scilh=0">351
+            (1994)</a>, <em>rev den</em>320 Or 587, 890 P2d 993 (1995)
+            (citing <em>Arizona v. Youngblood</em>, <em>supra,</em> 488
+            US 51 (1988)); <em>State ex rel Juv. Dept. v. Huskey,
+            supra,</em> 130 Or App 419 (1994), <em>rev den</em>320 Or
+            567, 889 P2d 1299 (1995). Where the state has not acted in
+            bad faith, the defendant must show that the claim of
+            favorableness is genuine, not speculation, <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hockings&amp;hl=en&amp;as_sdt=4,38&amp;case=16930023407497755701&amp;scilh=0">State
+            v. Hockings</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hockings&amp;hl=en&amp;as_sdt=4,38&amp;case=16930023407497755701&amp;scilh=0">,
+            29 Or App 139, 143, 562 P2d 587 (1977),</a> <em>rev
+            den</em>279 Or 301 (1977), <em>cert den</em> 434 US 1049, 98
+            S Ct 899, 54 L Ed 2d 802 (1978), and that comparable
+            evidence cannot be obtained “by other reasonably available
+            means.” <a
+            href="http://scholar.google.com/scholar_case?q=calif+v.+trombetta&amp;hl=en&amp;as_sdt=2,38&amp;case=13283072995230934974&amp;scilh=0">California
+            v. Trombetta</a><a
+            href="http://scholar.google.com/scholar_case?q=calif+v.+trombetta&amp;hl=en&amp;as_sdt=2,38&amp;case=13283072995230934974&amp;scilh=0">,
+            467 US 479, 489, 104 S Ct 2528, 81 L Ed2d 413
+            (1984)</a>.</p>
+            <p><a href="http://www.oregonlaws.org/ors/40.565">OEC
+            1004(1)</a> precludes the admission of testimony describing
+            the contents of a “lost” or “destroyed” original recording
+            if the party offering that testimony “lost” or “destroyed”
+            the original. OEC 1004(1); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+nelsen&amp;hl=en&amp;as_sdt=4,38&amp;case=382588124739981087&amp;scilh=0">State
+            v. Nelsen</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+nelsen&amp;hl=en&amp;as_sdt=4,38&amp;case=382588124739981087&amp;scilh=0">,
+            219 Or App 443, 450 (2008)</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>If the government loses or destroys physical evidence,
+            consider seeking the Less Satisfactory Evidence instruction,
+            UCrJI 1030.</p>
+            </section>
+            <section id="g._no_alteration_after_introduction"
+            class="level2">
+            <h2><strong>G. No Alteration After
+            Introduction</strong></h2>
+            <p>Once an exhibit is introduced, it may not be altered
+            without the court’s permission or control because “[o]ne of
+            the constitutional rights of an accused person is to meet
+            his witnesses face to face and be tried upon the evidence as
+            it is produced in court, and not upon evidence after it has
+            been mutilated and manipulated by hostile parties….”
+            <em>State v. Fitzgerald</em>, 111 Or 455, 466, 227 P 306
+            (1924).</p>
+            </section>
+            </section>
+            <section id="ii._rules_for_admission" class="level1">
+            <h1><strong>II. Rules for Admission</strong></h1>
+            <section id="a._physical_evidence_admissibleors_41.660"
+            class="level2">
+            <h2><strong>A. Physical Evidence Admissible—<a
+            href="http://www.leg.state.or.us/ors/041.html">ORS
+            41.660</a></strong></h2>
+            <p>Whenever an object, cognizable by the senses, has such a
+            relation to the fact in dispute as to afford a reasonable
+            grounds of belief respecting it, or to make an item in the
+            sum of the evidence, the object may be exhibited to the
+            jury, or its existence, situation and character may be
+            proved by witnesses. The exhibition of the object to the
+            jury shall be regulated by the sound discretion of the
+            court.</p>
+            </section>
+            <section id="b._relevanceoec_402_and_403" class="level2">
+            <h2><strong>B. Relevance—<a
+            href="http://www.oregonlaws.org/ors/40.155">OEC 402</a> and
+            <a
+            href="http://www.oregonlaws.org/ors/40.160">403</a></strong></h2>
+            <p>The admissibility of physical evidence is limited by OEC
+            402 and 403. OEC 402 provides that only relevant evidence is
+            admissible. Under OEC 403:</p>
+            <p>Although relevant, evidence may be excluded if its
+            probative value is substantially outweighed by the danger of
+            unfair prejudice, confusion of the issues, or misleading the
+            jury, or by considerations of undue delay or needless
+            presentation of cumulative evidence.</p>
+            </section>
+            <section id="c._photographs_of_victims_and_defendants"
+            class="level2">
+            <h2><strong>C. Photographs of Victims and
+            Defendants</strong></h2>
+            <p>In criminal homicide trials, <a
+            href="http://www.leg.state.or.us/ors/041.html">ORS
+            41.415</a> specifically provides that “a photograph of the
+            victim while alive shall be admissible evidence when offered
+            by the district attorney to show the general appearance and
+            condition of the victim while alive.”</p>
+            <p>The court has decided ORS 41.415’s directive precludes
+            balancing under OEC 403. <em>State v. Rose</em>, 313 Or 19,
+            28, 828 P2d 1006 (1992). <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,228&amp;case=7306155306787329924&amp;scilh=0">State
+            v. Nefstad</a><a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,228&amp;case=7306155306787329924&amp;scilh=0">,
+            309 Or 523, 588–61, 789 P2d 1326 (1990)</a>. Arguments under
+            OEC 402 and 403 should continue to be made in cases in which
+            ORS 41.415 does not apply (i.e., in non-murder cases and in
+            murder cases where the photograph offered is not of the
+            victim while alive demonstrating general appearance and
+            condition pre-death). <em>But</em> <em>see</em> <em>State v.
+            Rose</em>, <em>supra</em> (defendant failed to object on
+            grounds of relevance to admission of videotape of victim’s
+            body at crime scene and hospital, and trial court’s
+            conclusion that evidence’s probative value was not
+            substantially outweighed by its potential for unfair
+            prejudice was upheld on appeal); <em>State v. Nefstad</em>,
+            <em>supra</em> (photos of victim alive and dead, offered for
+            comparison purposes, relevant to prove victim killed
+            intentionally); <a
+            href="http://scholar.google.com/scholar_case?q=eby&amp;hl=en&amp;as_sdt=4,38&amp;case=2333123045874007660&amp;scilh=0">State
+            v. Eby</a><a
+            href="http://scholar.google.com/scholar_case?q=eby&amp;hl=en&amp;as_sdt=4,38&amp;case=2333123045874007660&amp;scilh=0">,
+            63 Or App 35, 39, 663 P2d 778</a>, <a
+            href="http://scholar.google.com/scholar_case?q=eby&amp;hl=en&amp;as_sdt=4,38&amp;case=1744773698988871942&amp;scilh=0">rev’d
+            on other grounds,</a><a
+            href="http://scholar.google.com/scholar_case?q=eby&amp;hl=en&amp;as_sdt=4,38&amp;case=1744773698988871942&amp;scilh=0">296
+            P2d 63 (1983)</a> (over OEC 403 objection court upheld
+            admission of photos of the victim’s corpse where relevant
+            “to show such matters as how and where the victim died, the
+            location of the wound on the victim’s body and the bullet’s
+            trajectory”).</p>
+            <p>Other appellate cases show creative use of photos by the
+            government. In <a
+            href="http://scholar.google.com/scholar_case?q=lerch&amp;hl=en&amp;as_sdt=4,38&amp;case=17561678087631916044&amp;scilh=0">State
+            v. Lerch</a><a
+            href="http://scholar.google.com/scholar_case?q=lerch&amp;hl=en&amp;as_sdt=4,38&amp;case=17561678087631916044&amp;scilh=0">,
+            63 Or App 707, 666 P2d 840 (1983)</a>, the court admitted a
+            photo of defendant naked from the waist up to show he had
+            sufficient strength to strangle the victim.</p>
+            <p>Neither the United States Constitution nor the Oregon
+            Constitution requires a search warrant or its equivalent
+            before the state may take pictures of or inspect defendant’s
+            torso because, once defendant became a prisoner, he enjoyed
+            few rights regarding his privacy. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=hudson+v+palmer&amp;hl=en&amp;as_sdt=2,38&amp;case=18363352680081999614&amp;scilh=0">Hudson
+            v. Palmer</a><a
+            href="http://scholar.google.com/scholar_case?q=hudson+v+palmer&amp;hl=en&amp;as_sdt=2,38&amp;case=18363352680081999614&amp;scilh=0">,
+            468 U.S. 517, 526, 104 S Ct 3194, 82 L Ed2d 393 (1984)</a>
+            (prisoner does not have subjective expectation of privacy in
+            prison cell); <a
+            href="http://scholar.google.com/scholar_case?q=bell+v.+wolfish&amp;hl=en&amp;as_sdt=2,38&amp;case=4537162703993098019&amp;scilh=0">Bell
+            v. Wolfish</a><a
+            href="http://scholar.google.com/scholar_case?q=bell+v.+wolfish&amp;hl=en&amp;as_sdt=2,38&amp;case=4537162703993098019&amp;scilh=0">,
+            441 U.S. 520, 558, 99 S Ct 1861, 60 L Ed2d 447 (1979)</a>
+            (visual cavity search of prisoner does not violate Fourth
+            Amendment); <a
+            href="http://scholar.google.com/scholar_case?q=sterling+v.+cupp&amp;hl=en&amp;as_sdt=2,38&amp;case=5961877578503688579&amp;scilh=0">Sterling
+            v. Cupp, 290 Or 611, 620, 625 P2d 123 (1981)</a> (“Those
+            sentenced to prison forfeit many rights that accompany
+            freedom”). Once defendant was imprisoned, he lacked the
+            right to privacy that he enjoyed when he was not in prison.
+            Among the rights that he forfeited was the right to keep his
+            personal appearance – including any distinguishing marks
+            such as tattoos – from being known to the state. The state
+            thus reasonably could compel defendant to remove his shirt
+            so that he could be photographed. The state’s directive that
+            defendant remove his shirt so that police could photograph
+            his tattoos therefore was not a violation of Article I,
+            section 9, of the Oregon Constitution or the Fourth
+            Amendment to the United States Constitution.
+            [../../../../Publications/Trial%20Notebook/2013%20edition%20-%20TNB/'13%20revised%20chapters%20/chapters%20ready%20for%202013/ch%2004%20exhibits/scholar.google.com/scholar_case%3Fq=tiner&amp;hl=en&amp;as_sdt=4,38&amp;case=3126793400230442400&amp;scilh=0
+            State v.
+            Tiner][../../../../Publications/Trial%20Notebook/2013%20edition%20-%20TNB/'13%20revised%20chapters%20/chapters%20ready%20for%202013/ch%2004%20exhibits/scholar.google.com/scholar_case%3Fq=tiner&amp;hl=en&amp;as_sdt=4,38&amp;case=3126793400230442400&amp;scilh=0
+            , 340 Or 551 (2006). ]However, the Oregon Court of Appeals
+            makes a distinction between the privacy rights of convicted
+            felons and the rights of individuals subject to pretrial
+            detention, holding that removing and photographing an
+            arrested person’s boots without a warrant was a seizure
+            under Article I, section 9. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hartman&amp;hl=en&amp;as_sdt=4,38&amp;case=18012494884593197333&amp;scilh=0">State
+            v. Hartman</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hartman&amp;hl=en&amp;as_sdt=4,38&amp;case=18012494884593197333&amp;scilh=0">,
+            238 Or App 582, 591 (Or. Ct. App 2010)</a><em>.</em></p>
+            <p>This area is ready for the defense to be more aggressive
+            and creative.</p>
+            <p>'==<em>D. Police Reports Not Admissible—<a
+            href="http://www.leg.state.or.us/ors/040.html">ORS
+            40.460</a>/<a
+            href="http://www.oregonlaws.org/ors/40.460">OEC
+            803(8)</a></em>'==</p>
+            <p>The police report itself is inadmissible under OEC
+            803(8)(b). However, OEC 803(5) permits an officer who
+            testifies in a criminal trial to read relevant parts of his
+            report into the record when he has insufficient present
+            recollection to testify fully and accurately. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+scally&amp;hl=en&amp;as_sdt=4,38&amp;case=15007350417203773406&amp;scilh=0">State
+            v. Scally,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+scally&amp;hl=en&amp;as_sdt=4,38&amp;case=15007350417203773406&amp;scilh=0">92
+            Or App 149, 151 (1988)</a>. Practitioners should consider a
+            confrontation challenge to this conduct if it occurs at
+            trial.</p>
+            </section>
+            <section
+            id="e._other_written_witness_statements_may_be_admissible_for_impeachmentors_40.460oec_8035"
+            class="level2">
+            <h2><strong>E. Other Written Witness Statements May be
+            Admissible for Impeachment—ORS 40.460/OEC
+            803(5)</strong></h2>
+            <p>An exception to the general rule of hearsay exclusion is
+            “a memorandum or record concerning a matter about which a
+            witness once had knowledge but now has insufficient
+            recollection” to be able to testify fully and accurately. If
+            the memorandum is shown to have been made or adopted by the
+            witness when the matter was fresh in the witness’ memory and
+            to be accurate, the memorandum may be read into evidence
+            <em>“but may not itself be received as an exhibit unless
+            offered by an adverse party</em>” (emphasis added).
+            Kirkpatrick explains that the purpose of the rule is to
+            prevent writings received under this exception from
+            receiving greater emphasis in the jury room than testimony
+            given on the witness stand. <em>Oregon Evidence</em>,
+            744–746 (5<sup>th</sup> ed. 2007).</p>
+            </section>
+            <section
+            id="f._authenticating_evidenceoec_article_ix_rules_901902"
+            class="level2">
+            <h2><strong>F. Authenticating Evidence—<a
+            href="http://www.oregonlaws.org/ors/40.505">OEC Article IX
+            (Rules 901</a>–<a
+            href="http://www.oregonlaws.org/ors/40.510">902</a>)</strong></h2>
+            <p>Authentication and identification are aspects of
+            relevancy under Rule 402 and are dependent “upon fulfillment
+            of a condition of fact” under <a
+            href="http://www.oregonlaws.org/ors/40.030">Rule 104</a>.
+            See Legislative Commentary to OEC 901.</p>
+            <p>Some examples of authentication and identification that
+            satisfy minimum foundational requirements are set out in OEC
+            901 and include:</p>
+            <p>1. Handwriting</p>
+            <p>(a) Testimony by a witness with knowledge that a matter
+            is what it is claimed to be; or</p>
+            <p>(b) Nonexpert opinion as to the genuineness of
+            handwriting, based upon familiarity not acquired for
+            purposes of the litigation; or</p>
+            <p>(c) Comparison by the trier of fact or by expert
+            witnesses with specimens which have been authenticated.
+            <em>State v. Cahill</em>, 208 Or 538, 293 P2d 169
+            (1956).</p>
+            <p>2. Voice</p>
+            <p>(a) Identification of a voice, whether heard firsthand or
+            through mechanical or electronic transmission or recording,
+            by opinion based upon hearing the voice at any time under
+            circumstances connecting it with the alleged speaker. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+miller&amp;hl=en&amp;as_sdt=4,227&amp;case=7846730680636045369&amp;scilh=0">State
+            v. Miller,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miller&amp;hl=en&amp;as_sdt=4,227&amp;case=7846730680636045369&amp;scilh=0">6
+            Or App 366, 487 P2d 1387 (1971)</a>.</p>
+            <p>(b) Telephone conversations, by evidence that a call was
+            made to the number assigned at the time by the telephone
+            company to a particular person or business, if:</p>
+            <p>(A) In the case of a person, circumstances, including
+            self-identification, show the person answering to be the one
+            called; or</p>
+            <p>(B) In the case of a business, the call was made to a
+            place of business and the conversation related to business
+            reasonably transacted over the telephone.</p>
+            <p>3. Photos</p>
+            <p>In general, any method of authentication or
+            identification that provides evidence “sufficient to support
+            a finding that the matter in question is what its proponent
+            claims” will satisfy Rule 901. A photograph need not be
+            authenticated by the photographer; rather, a witness with
+            knowledge may testify to a depiction’s accuracy. A writing
+            need not be authenticated by the writer; a witness with
+            demonstrable knowledge may authenticate. Maps, drawings and
+            diagrams, if they are within the limitations of <a
+            href="http://www.oregonlaws.org/ors/40.160">OEC 403</a>,
+            need not be drawn to scale.</p>
+            <p>Absolute certainty by a witness making an identification
+            is not necessarily required. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=united+states+v+johnson&amp;hl=en&amp;as_sdt=4,72,73,78,79,80,86,88,93,114,129,134,135,141,142,143,149,151,156,258,259,260,261,310,311,321,322,323,324,373,374,383&amp;case=16551069140869186520&amp;scilh=0">United
+            States v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?q=united+states+v+johnson&amp;hl=en&amp;as_sdt=4,72,73,78,79,80,86,88,93,114,129,134,135,141,142,143,149,151,156,258,259,260,261,310,311,321,322,323,324,373,374,383&amp;case=16551069140869186520&amp;scilh=0">,
+            637 F2d 1224, 1247–48 (9th Circuit 1980)</a>.</p>
+            <p>4. Chain of Custody</p>
+            <p>Exhibits unique and particularly distinctive usually need
+            no chain of custody shown; however, if an item is not easily
+            recognizable or distinguishable from other similar items,
+            proof of the chain of custody may be required. See
+            <em>Oregon Evidence</em>, 667. Chain of custody problems
+            generally affect physical evidence’s weight rather than
+            admissibility. <em>Id</em>. <em>But see</em> <a
+            href="http://scholar.google.com/scholar_case?q=fox+v+olsen&amp;hl=en&amp;as_sdt=2,38&amp;case=16967388623123717588&amp;scilh=0">Fox
+            v. Olsen</a><a
+            href="http://scholar.google.com/scholar_case?q=fox+v+olsen&amp;hl=en&amp;as_sdt=2,38&amp;case=16967388623123717588&amp;scilh=0">,
+            87 Or App 173, 741 P2d 924,</a><a
+            href="http://scholar.google.com/scholar_case?q=fox+v+olsen&amp;hl=en&amp;as_sdt=2,38&amp;case=16967388623123717588&amp;scilh=0">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?q=fox+v+olsen&amp;hl=en&amp;as_sdt=2,38&amp;case=16967388623123717588&amp;scilh=0">(1987)</a>
+            (appellate court affirmed trial court exclusion of blood
+            test results where there was no affidavit or testimony from
+            person who transferred blood to a tray from which laboratory
+            results read), and <a
+            href="http://scholar.google.com/scholar_case?q=white+v+keller&amp;hl=en&amp;as_sdt=4,38&amp;case=6782631099957028855&amp;scilh=0">White
+            v. Keller</a><a
+            href="http://scholar.google.com/scholar_case?q=white+v+keller&amp;hl=en&amp;as_sdt=4,38&amp;case=6782631099957028855&amp;scilh=0">,
+            188 Or 378, 388, 215 P2d 986 (1950)</a> (exclusion of car
+            parts purchased several months after accident: “It is
+            elementary that before a material object may be admitted in
+            evidence, it must be shown that there has been no
+            substantial change in condition since the time in issue”).
+            Chain of custody issues are within the discretion of the
+            court, so the criminal defense attorney should be prepared
+            to demonstrate chain of custody.</p>
+            <p>5. Self-Authenticating Exhibits</p>
+            <p>Under Rule 902, some exhibits are self-authenticating.
+            These include: domestic public documents under seal,
+            officially signed domestic public documents that are
+            certified, officially certified foreign public documents,
+            certified copies of public records, official publications,
+            newspapers and periodicals, trade inscriptions, acknowledged
+            documents, commercial paper, documents presumed
+            authenticated under law, and documents bearing the seal of a
+            tribal government. This rule, like 901, addresses only
+            admissibility. The ultimate decision on authenticity is for
+            the trier of fact.</p>
+            </section>
+            <section id="g._documentsoec_article_10_rules_10021005"
+            class="level2">
+            <h2><strong>G. Documents—<a
+            href="http://www.oregonlaws.org/ors/40.550">OEC Article
+            10</a> (Rules 1002–1005)</strong></h2>
+            <p>The broad rule of <a
+            href="http://www.oregonlaws.org/ors/40.555">OEC 1002</a> is
+            “to prove the content of a writing, recording or photograph,
+            the original writing, recording or photograph is required,
+            except as otherwise provided.” If a photograph, for example,
+            is offered for independent probative value (e.g., identity),
+            the original is required unless an exception applies. <a
+            href="http://www.oregonlaws.org/ors/40.560">Rule 1003</a>
+            provides a “duplicate is admissible to the same extent as an
+            original” unless a “genuine question” is raised as to the
+            original’s authenticity, or “in the circumstances it would
+            be unfair to admit the duplicate.” Rule 1003 is a
+            significant qualification of Rule 1002: in most cases an
+            original writing, recording or photograph is not required.
+            Kirkpatrick suggests one instance of unfairness in admitting
+            a duplicate may be when the original has been lost or
+            destroyed, making it impossible to verify the accuracy of
+            the duplicate. See <em>Oregon Evidence</em>, 933–934.</p>
+            <p><a href="http://www.oregonlaws.org/ors/40.565">Rule
+            1004</a> is a further limitation on the requirement of
+            originals. When an original has been lost or destroyed, is
+            not obtainable, is in the opposing party’s possession or
+            concerns a collateral matter, other evidence of the contents
+            of a writing, recording or photograph will suffice. Under <a
+            href="http://www.oregonlaws.org/ors/40.570">Rule 1005</a>,
+            the contents of an official record or document may be proved
+            by certified copy (under Rule 902(4)), or may be testified
+            to be correct by a witness who has compared it with the
+            original.</p>
+            </section>
+            <section id="h._chartsoec_1006" class="level2">
+            <h2><strong>H. Charts—<a
+            href="http://www.oregonlaws.org/ors/40.575">OEC
+            1006</a></strong></h2>
+            <p>Rule 1006 allows a party to summarize voluminous
+            materials into charts and PowerPoint presentations as long
+            as originals are produced in discovery.</p>
+            </section>
+            <section id="i._live_testimony_from_criminalists"
+            class="level2">
+            <h2><strong>I. Live Testimony from
+            Criminalists</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/475.html">ORS
+            475.235</a> provides that in all prosecutions for controlled
+            substances a certified copy of the signed analytical report
+            shall be <em>prima facie</em> evidence of the results, and
+            if the defendant wants to challenge it, she can subpoena the
+            criminalist to trial.</p>
+            <p><strong><em>However</em></strong>, requiring the
+            defendant to subpoena the criminalist who prepared the
+            laboratory report introduced by the state violates
+            defendant’s right to confront witnesses. <a
+            href="http://scholar.google.com/scholar_case?q=birchfield&amp;hl=en&amp;as_sdt=4,38&amp;case=7020372050195544789&amp;scilh=0">State
+            v. Birchfield</a><a
+            href="http://scholar.google.com/scholar_case?q=birchfield&amp;hl=en&amp;as_sdt=4,38&amp;case=7020372050195544789&amp;scilh=0">,
+            342 Or 624, 157 P3d 216 (2007)</a>.</p>
+            <p>If the lab report is received over the defendant’s
+            objection without a criminalist to lay the foundation, it is
+            reversible error. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+willis&amp;hl=en&amp;as_sdt=4,38&amp;case=2792614373878967283&amp;scilh=0">State
+            v. Willis</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+willis&amp;hl=en&amp;as_sdt=4,38&amp;case=2792614373878967283&amp;scilh=0">,
+            348 Or 566, 571, 238 P3d 714 (2010).</a>''See also <a
+            href="http://scholar.google.com/scholar_case?q=melendez+v.+massachusetts&amp;hl=en&amp;as_sdt=2,38&amp;case=7136706767059629384&amp;scilh=0">Melendez-Diaz
+            v. Massachusetts</a><a
+            href="http://scholar.google.com/scholar_case?q=melendez+v.+massachusetts&amp;hl=en&amp;as_sdt=2,38&amp;case=7136706767059629384&amp;scilh=0">,
+            557 US, 129 S Ct 2527, 174 L Ed 2d 314 (2009)</a>.</p>
+            </section>
+            <section id="j._digital_documents_and_evidence"
+            class="level2">
+            <h2><strong>J. Digital Documents And Evidence</strong></h2>
+            <p>New <a
+            href="http://courts.oregon.gov/OJD/programs/utcr/utcrrules.page">UTCR</a>
+            6.190 effective August 1, 2011:</p>
+            <p>6. 190 EVIDENCE SUBMITTED IN AN ELECTRONIC FORMAT</p>
+            <p>(1) Any exhibit or testimony to be presented to the court
+            in an electronic</p>
+            <p>format shall be compatible with the court’s electronic
+            equipment.</p>
+            <p>(2) Prior to trial or hearing, a party intending to offer
+            electronic evidence</p>
+            <p>must make sure it is in a format compatible with the
+            court’s equipment. A</p>
+            <p>party is responsible for the cost, if any, incurred by
+            the court as a result of the</p>
+            <p>party’s use of the court’s electronic equipment or in
+            repairing the court’s</p>
+            <p>electronic equipment as a result of a party’s use of
+            it.</p>
+            <p>(3) Parties may use their own equipment to present
+            electronic evidence.</p>
+            <p>However, parties using their own equipment may need to
+            make their</p>
+            <p>equipment available to the court, opposing parties, and
+            the jury.</p>
+            <p>(4) It is a party’s responsibility to provide any
+            technical support needed in</p>
+            <p>presenting the party’s evidence and in making its
+            evidence compatible with</p>
+            <p>the court’s electronic equipment or in using the party’s
+            own equipment.</p>
+            <p>This may be great news for counsel dealing with DA’s who
+            bring in PowerPoint presentations and their own projectors
+            and screens to wow the jury.</p>
+            </section>
+            <section id="k._when_the_trial_is_over" class="level2">
+            <h2><strong>K. When the Trial Is Over</strong></h2>
+            <p><a
+            href="http://courts.oregon.gov/OJD/programs/utcr/utcrrules.page">UTCR</a>6.120
+            Governs DISPOSITION OF EXHIBITS</p>
+            <p>Requires counsel to take custody of their own exhibits at
+            the end of the trial (though some courts have the practice
+            of keeping exhibits in criminal cases).</p>
+            <p>Requires counsel to return the exhibits to the trial
+            court upon the court’s request if a notice of appeal is
+            filed.</p>
+            </section>
+            </section>
+            <section id="iii._practical_tips_for_handling_and_admitting"
+            class="level1">
+            <h1><strong>III. Practical Tips for Handling and
+            Admitting</strong></h1>
+            <section id="a._prepare_a_master_exhibit_list"
+            class="level2">
+            <h2><strong>A. Prepare a Master Exhibit List</strong></h2>
+            <p>In advance of trial, prepare a master list of all
+            exhibits you intend to offer at trial. Include check-offs
+            for exhibits having been identified, offered and received
+            for both the prosecution and the defense. This will assure
+            that, for appellate purposes, all of your admissible
+            exhibits actually make it into the record. It will also help
+            you track the evidence in the case and enable you to object
+            when the prosecution begins relying on evidence from
+            excluded exhibits. A sample exhibit list may be found at the
+            end of this chapter.</p>
+            <p>Prepare a blank exhibit list and keep your own record of
+            every exhibit the state offers by number and
+            description.</p>
+            </section>
+            <section id="b._prepare_exhibits_before_trial"
+            class="level2">
+            <h2><strong>B. Prepare Exhibits Before Trial</strong></h2>
+            <p>Before trial is underway, mark your exhibits in the order
+            you intend to offer them. Exhibits of several pages in
+            length should be securely fastened together and marked to
+            indicate a single unit. Maps should bear directions.</p>
+            <p>Review foundational questions with the witnesses through
+            whom you intend to offer your exhibits before the trial
+            begins. Laying a foundation at trial with an ill-prepared
+            witness can be frustrating at best and potentially fatal on
+            appeal if key foundational questions and answers are
+            lacking.</p>
+            <p>Once in a while you will have unique exhibits that have
+            to be disclosed to the state prior to trial, and the
+            prosecutor may try to use (or even introduce) your exhibits
+            before you get a chance. To address this, mark your exhibits
+            <em>before</em> trial, so that even if the DA introduces
+            them, they will be marked with a defense sticker. Also,
+            allow the DA to see your materials before trial, but store
+            them at your office until the day you plan to introduce
+            them.</p>
+            </section>
+            <section id="c._use_the_courtroom_clerk_or_not"
+            class="level2">
+            <h2><strong>C. Use the Courtroom Clerk (or
+            Not)</strong></h2>
+            <p>Some courts require attorneys to use the courtroom clerk
+            to handle exhibits during trial. This system makes it easier
+            for the attorney to track the status of various exhibits. On
+            the other hand, some attorneys may prefer to control the
+            presentation of exhibits and thereby emphasize certain
+            exhibits.</p>
+            </section>
+            <section id="d._use_specific_referents" class="level2">
+            <h2><strong>D. Use Specific Referents</strong></h2>
+            <p>When using your exhibits, do not permit witnesses to
+            describe things as “this much” bigger, smaller, louder,
+            etc., or as “right here” or “right there.” For someone
+            reviewing your case’s paper record, that is no description
+            at all. Use colors and specific markings and refer to them
+            during testimony. Always ask witnesses to identify the
+            exhibit <strong>by number</strong> when they are referring
+            to it.</p>
+            </section>
+            <section
+            id="e._consider_stipulations_and_limiting_instructions"
+            class="level2">
+            <h2><strong>E. Consider Stipulations and Limiting
+            Instructions</strong></h2>
+            <p>Prior to trial, consider stipulating to uncontested
+            issues in order to reduce the impact of potentially
+            prejudicial exhibits of your opponent. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=zimmerlee&amp;hl=en&amp;as_sdt=4,38&amp;case=13283228121291592521&amp;scilh=0">State
+            v. Zimmerlee</a><a
+            href="http://scholar.google.com/scholar_case?q=zimmerlee&amp;hl=en&amp;as_sdt=4,38&amp;case=13283228121291592521&amp;scilh=0">,
+            261 Or 49, 492 P2d 795 (1972)</a>. A proposed stipulation
+            that does not cover all purposes for which an exhibit is
+            offered preserves the exhibit’s admissibility. <em>See</em>
+            <em>State v. Rose</em>, <em>supra</em>.</p>
+            <p>Also consider limiting instructions when particularly
+            gruesome or frightening exhibits have come in. If an exhibit
+            is capable of prejudicing a juror forced to sit with it
+            while deliberating, ask that the exhibit remain in the
+            courtroom unless and until summoned by the jury.</p>
+            </section>
+            <section
+            id="f._voir_dire_about_inflammatory_physical_evidence"
+            class="level2">
+            <h2><strong>F. Voir Dire about Inflammatory Physical
+            Evidence</strong></h2>
+            <p>If your case contains gruesome photos, you can ask jurors
+            about whether they have particular sensitivity to explicit
+            or violent content that might interfere with their ability
+            to be objective and fair to your client. If they say yes,
+            this can be a basis for a cause challenge and it is also a
+            chance to preview the concepts to the jury so the state
+            loses some of the shock value when the actual images are
+            shown.</p>
+            </section>
+            <section id="g._inspect_and_use_the_states_evidence"
+            class="level2">
+            <h2><strong>G. Inspect and Use the State’s
+            Evidence</strong></h2>
+            <p>Do not rely on the police reports to adequately describe
+            the physical evidence. Go to the police property room and
+            view the evidence yourself. You can learn all kinds of good
+            information – i.e., in an arson case the police seized a
+            lighter alleged to have been used to start a fire, but
+            inspection of the seized and bagged lighter revealed that it
+            was broken and inoperable.</p>
+            <p>When the evidence is sensitive, dangerous or potentially
+            inflammatory, it is important for counsel to get familiar
+            with it and handle it <em>before</em> the evidence is shown
+            to the jury. With the court’s permission, you should open
+            exhibit bags, handle firearms and other weapons to inspect
+            and get used to them so you are at ease when the jury sees
+            you handling them.</p>
+            </section>
+            <section id="h._take_note_of_how_the_evidence_is_stored"
+            class="level2">
+            <h2><strong>H. Take Note of How the Evidence Is
+            Stored</strong></h2>
+            <p>For example, storage in plastic bags can compromise
+            fingerprints on surfaces, so if the state seized an object
+            and stored it in a plastic bag, they may have destroyed
+            important fingerprint evidence.</p>
+            </section>
+            <section id="i._publish_to_the_jury" class="level2">
+            <h2><strong>I. Publish to the Jury</strong></h2>
+            <p>If a piece of evidence will help the jury understand the
+            testimony (like a map or photo), you should obtain the
+            court’s permission to publish the exhibit to the jury during
+            testimony.</p>
+            </section>
+            <section id="j._redact_in_advance" class="level2">
+            <h2><strong>J. Redact in Advance</strong></h2>
+            <p>If you plan to use a document or other recorded statement
+            and know that a portion is objectionable, or if you know the
+            state plans to use such an exhibit and part of it is
+            objectionable, create your own redacted copy in advance and
+            have it available to use if the court allows part of the
+            evidence in.</p>
+            </section>
+            <section id="k._use_transcripts_to_impeach" class="level2">
+            <h2><strong>K. Use Transcripts to Impeach</strong></h2>
+            <p>Impeachment with a recorded prior inconsistent statement
+            can be a time-consuming nightmare that aggravates the judge
+            and the jury unless counsel either:</p>
+            <p>• prepares audio- or video-clips in advance and has each
+            segment marked and ready to play; or</p>
+            <p>• uses a written, certified transcript of the audio- or
+            video-recording.</p>
+            <p>Tactics will dictate the best choice, but be sure to
+            prepare in advance to impeach with prior statements.</p>
+            </section>
+            </section>
+            <section id="iv._exhibits_as_demonstrative_evidence"
+            class="level1">
+            <h1><strong>IV. Exhibits as Demonstrative
+            Evidence</strong></h1>
+            <p>Once you have cleared the hurdles of admissibility,
+            exhibits make immediate and lasting impressions. Studies
+            have demonstrated that jurors retain much more information
+            derived from a visual exhibit compared to verbal testimony.
+            Use of exhibits can also help the litigator organize and
+            focus case presentation. Be creative and use exhibits as
+            early and often as possible.</p>
+            <section id="a._opening_statement" class="level2">
+            <h2><strong>A. Opening Statement</strong></h2>
+            <p>Assuming you have a stipulation or judicial permission,
+            use pictures, diagrams and lists to help set the stage for
+            your case. Tactics might require holding some exhibits
+            back.</p>
+            </section>
+            <section id="b._direct_and_cross_examination"
+            class="level2">
+            <h2><strong>B. Direct and Cross-Examination</strong></h2>
+            <p>After a photograph or any piece of demonstrative evidence
+            has been received, pass it to the jury. Delay only
+            diminishes the impact.</p>
+            </section>
+            <section id="c._closing_argument" class="level2">
+            <h2><strong>C. Closing Argument</strong></h2>
+            <p>Reuse previously received exhibits. Consider enlarging
+            specific jury instructions concerning key elements and
+            defenses.</p>
+            </section>
+            <section id="d._specific_techniques" class="level2">
+            <h2><strong>D. Specific Techniques</strong></h2>
+            <p>Demonstrative evidence (as opposed to “real” evidence –
+            tangible evidence that is historically connected to the
+            case) can be used to illustrate just about anything.</p>
+            <p>1. Foam core and enlarging for photos, maps and diagrams.
+            Available at photo stores, print shops and legal support
+            businesses. You can even email the exhibits to them for
+            enlargement/production.</p>
+            <p>2. Maps—from MapQuest, Google Maps, Google Earth,
+            Microsoft Streets &amp; Trips and many others. Google Earth
+            and similar satellite photo programs can zoom in to street
+            level and produce great overhead “scene” photos.</p>
+            <p>3. Booking photos—easily available from the police and
+            often useful in cases such as resisting arrest, DUII, and
+            domestic violence.</p>
+            <p>4.Your own photos. There is no substitute for your own
+            visit to the scene. It is almost always helpful in giving
+            you a sense of the space and location, and you can often
+            take your own photos to portray the location in a way that
+            shows the things you want the jury to see: how level the FST
+            surface really was, how close the porn store was to the
+            place where your client was stopped for prostitution, the
+            damage to your client’s vehicle, how dark the scene of the
+            eyewitness I.D. was, etc. [Editor’s note: Also see the OCDLA
+            <em>Investigator’s Manual</em>, Chapter 8, “Forensic
+            Photography.”]</p>
+            <p>5. Acetate overlays for diagrams. These are simple to
+            prepare and avoid cluttered or overly marked up exhibits. A
+            creative example of this technique was used by OCDLA member
+            Ken Lerner and his investigator Wendy Kunkel in an
+            eyewitness identification case. Mr. Lerner displayed a large
+            picture of the human eye to the jury and added layers of
+            cloudy acetate over the eye corresponding to the witnesses’
+            various problems in observing the incident. Eventually, the
+            eye was almost completely invisible.</p>
+            <p>6. PowerPoint and related computer software products.</p>
+            <p>• Accident reconstruction animation can be prepared as a
+            demonstrative exhibit for use in vehicular homicide or
+            assault cases.</p>
+            <p>• Genogram to show client’s family history and relevant
+            traits (drug abuse, mental illness, suicide, physical and
+            sexual abuse, etc.) for sentencing proceedings.</p>
+            <p>• Relationship chart showing co-defendants, witnesses or
+            family relationships – for use in complex cases with lots of
+            parties, witnesses, snitches, etc.</p>
+            <ul>
+            <li>Timelines – simple diagrams or complex ones using
+            software like Timemap.</li>
+            </ul>
+            <p>Counsel can arrange a PowerPoint lesson from another
+            lawyer, office staff or professional trainer, or order the
+            materials on effective use of PowerPoint from OCDLA’s 2011
+            Annual Conference, “Using PowerPoint to Win Cases” by Tom
+            Plunkett.</p>
+            <p>7. Video and audio devices. Don’t count on the court to
+            have playback devices. Bring your own tested equipment.
+            Rental equipment is available from legal support businesses,
+            and technicians for trial can be hired.</p>
+            <p>8. Models and replicas. Everything from anatomically
+            correct models to the Styrofoam heads found in wig shops.
+            You can also bring in a can of Malt Liquor like the one the
+            witness drank, or a tire iron like the one the police claim
+            was used.</p>
+            <p>9. A tape measure or other measuring device. When
+            distance is an issue, bring your tape measure and show the
+            equivalent distance in the courtroom.</p>
+            <p>Many of these items are more affordable than you think.
+            They are readily available through local retail stores, copy
+            or printing shops and blueprint companies.</p>
+            <center>
+            <p><em>This chapter originally prepared for the 1993 edition
+            by Ingrid MacFarlane,</em></p>
+            </center>
+            <center>
+            <p><em>State Public Defenders Office, Salem.</em></p>
+            </center>
+            <center>
+            <p><em>Updating and editing for the 2000 edition by David M.
+            Audet, Hillsboro.</em></p>
+            </center>
+            <center>
+            <p><em>Updating and editing for the 2007 edition by Lisa
+            Ludwig, Portland.</em></p>
+            </center>
+            </section>
+            </section>
+    </body>
+</html>

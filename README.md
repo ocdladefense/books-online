@@ -20,6 +20,30 @@ A better reading experience for OCDLA's Books Online subscribers.
 git submodule deinit -f path/to/submodule
 ```
 
+### How to handle children in React
+In React, the children prop allows you to pass components or elements as content between the opening and closing tags of another component. Here's how you can use it...
+
+### Creating a Simple Custom JSX Parser /w Practical Example
+https://dev.to/mike-at-redspace/creating-a-simple-custom-jsx-parser-w-practical-example-1p8h
+
+### What is "Mounting" in React js?
+https://stackoverflow.com/questions/31556450/what-is-mounting-in-react-js
+
+
+
+### Demystifying JSX: building your own JSX parser from scratch
+https://blog.bitsrc.io/demystifying-jsx-building-your-own-jsx-parser-from-scratch-caecf58d7cbd
+
+### JSX In Depth
+https://legacy.reactjs.org/docs/jsx-in-depth.html
+
+### Understanding the Virtual DOM Structure in React
+https://medium.com/@princybhalu11/understanding-the-virtual-dom-structure-in-react-d437d2e526e0
+
+### What is the difference between children and childNodes in JavaScript?
+https://stackoverflow.com/questions/7935689/what-is-the-difference-between-children-and-childnodes-in-javascript
+
+
 ### Remove the submodule directory from the superproject's .git/modules directory
 
 ```javascript
@@ -177,3 +201,84 @@ pandoc --standalone --metadata title="OCDLA Felony Sentencing Manual" -f docx+st
 ```bash
 pandoc --standalone --metadata title="OCDLA Felony Sentencing Manual" -f mediawiki -t html5 input/fsm-1.wiki -o output/fsm-1.html --bibliography=test.bib
 ```
+
+
+
+# View
+View rendering consists of five or more phases.
+
+
+1. Component definition - either through strings or function references.
+
+2. JSX parsing - component references written in JSX syntax are replaced with transformer invocations per the JSX specification.
+
+3. Component execution - Component functions are invoked recursively to produce a virtual node tree representing HTML elements.
+  Two concepts are involved in component execution:
+      a. Components return virtual nodes but aren't virtual nodes themselves.
+      b. Virtual nodes are plain JavaScript objects that represent HTML elements: tag name, attributes and children.
+      c. Components can return type <code>Fragment</code>.
+4. Node diffing / node reconciliation - compare the the old virtual node tree with the new virtual node tree; use an algorithm that identifies the least number of updates to mark relevant nodes as needing updating (CRUD).
+
+5. Target platform manipulations: DOM manipulation - Perform the relevant DOM manipulations
+
+
+## Query: When a node in the new tree has more children than the corresponding node in the old tree, the diffing algorithm needs to determine how to handle the additional children. Here's a general approach:
+
+1. Keyed Children:
+### If keys are used:
+If the children have keys, the algorithm can efficiently match the children in the new tree to the children in the old tree based on their keys.
+### New Children:
+Any children in the new tree that don't have a matching key in the old tree are considered new and will be added to the DOM.
+### Removed Children:
+Any children in the old tree that don't have a matching key in the new tree are considered removed and will be removed from the DOM.
+
+2. Unkeyed Children:
+### Without keys:
+If the children don't have keys, the algorithm falls back to a simpler approach.
+### Index-based Matching:
+The algorithm will try to match children based on their index in the list.
+### Excess Children:
+If the new tree has more children than the old tree, the extra children will be added to the end of the list.
+### Missing Children:
+If the new tree has fewer children than the old tree, the extra children in the old tree will be removed from the end of the list.
+
+
+
+
+Important Points:
+Props are Read-Only: Child components cannot directly modify their props. They should treat props as immutable.
+Data Flow: Data flows from parent to child components.
+State Management: If you need to manage complex state updates that affect multiple components, consider using a state management library like Redux or Context API.
+
+
+## Moutings
+In React, component mounting refers to the process of creating and inserting a component instance into the DOM (Document Object Model). It's the initial phase of a component's lifecycle.
+Here's a breakdown of what happens during mounting:
+
+### Construction:
+The component's constructor is called, allowing you to initialize the component's state and bind event handlers.
+
+### Render:
+The component's render() method is called, which returns the JSX structure that represents the component's UI.
+
+### DOM Insertion:
+React takes the JSX returned by render() and converts it into actual DOM nodes, which are then inserted into the specified location in the DOM tree.
+
+## Lifecycle Methods Involved in Mounting:
+### constructor():
+Called before the component is mounted, typically used for initializing state and binding methods.
+
+### getDerivedStateFromProps():
+Called right before the initial render and on subsequent updates when props change. It's used to derive state from props.
+
+### render():
+The heart of the component, responsible for returning the JSX to be rendered.
+componentDidMount():
+Called immediately after the component is mounted to the DOM. This is a good place to perform side effects like fetching data from an API or setting up event listeners.
+Why Mounting Matters:
+Initialization:
+Mounting provides a place to initialize the component's state and perform any necessary setup.
+Side Effects:
+You can execute side effects (e.g., API calls) in componentDidMount(), which ensures they happen after the component has been rendered to the DOM.
+Integration:
+Mounting is how your React components become part of the actual web page, allowing users to interact with them.

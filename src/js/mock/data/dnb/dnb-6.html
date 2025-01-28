@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2020 edition, with 2024 Update</p>
+            <section id="diversion" class="level1">
+            <h1><strong>Diversion</strong></h1>
+            <p><strong><em>By Edward LeClaire</em></strong></p>
+            <p>2024 Update by Simon Whang</p>
+            </section>
+            <section id="i._in_general" class="level1">
+            <h1><strong>I. In General</strong></h1>
+            <section id="update" class="level3">
+            <h3><strong>2024 Update</strong></h3>
+            <p>Note the updated information relating to BUIIs in this
+            Notebook Chapter 1, part 4 (Biking Under the Influence of
+            Intoxicants) may apply to Diversion. These BUII changes do
+            <em>not</em> apply to electric assisted bicycles, or
+            e-bikes.</p>
+            <p>Both <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.020(3)</a>
+            and <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.235</a>
+            now read that the court “may not require defendant to attend
+            a victim impact panel” if the current offense was on a
+            bicycle.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">813.400(3)</a>
+            provides that the mandatory license suspension per ORS <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">809.428</a>
+            or revocation per ORS <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">809.235</a>
+            does not apply for Bicycle DUIIs.</p>
+            <p>Per 2023 Oregon Laws Ch. 135, Sec. 1, <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.645</a> no longer requires a hearing when a Diversion
+            Participant petitions for removal of the ignition interlock
+            device when they are eligible.
+            <strong><em>However</em></strong>,</p>
+            <p>“If the defendant is required to participate in a
+            treatment program as a condition of diversion, a letter
+            signed by a treatment counselor from the treatment program
+            in which the defendant is enrolled stating that the
+            defendant has entered into and is in compliance with the
+            treatment program.” (813.645(3)(c).</p>
+            <p>This is in addition to the no negative report from the
+            IID provider already required.</p>
+            <p><a
+            href="https://www.courts.oregon.gov/forms/Pages/duii-diversion.aspx">Amended
+            Diversion forms</a> were updated and adopted per Chief
+            Justice Order 23-028, effective January 1, 2024.</p>
+            <p>• DUII Diversion Form 1, “Petition &amp; Agreement DUII
+            Diversion,” amends lists of controlled substances with
+            updated statutory wording (“intoxicants”); adds “if ordered”
+            to the requirement to attend a victim impact panel; and adds
+            wording relating to new statutory provisions about electric
+            assisted bicycles.</p>
+            <p>• DUII Diversion Form 2, “Order re: DUII Diversion,”
+            amends provisions relating to victim impact panel
+            requirements and bicycles; replaces lists of controlled
+            substances with updated statutory wording (“intoxicants”);
+            and adds wording relating to new statutory provisions about
+            electric assisted bicycles.</p>
+            <p>• DUII Diversion Form 3, “Statement of Eligibility,”
+            amends similarly to Form 2.</p>
+            <p>• DUII Diversion Form 4, “Petition to Plead Guilty or No
+            Contest,” amends similarly to Form 2.</p>
+            <p>• DUII Diversion Form 9, “Motion to Vacate Use of IID as
+            Condition of Diversion Agreement, and Declaration in
+            Support,” adds checkbox for the statutory treatment
+            compliance letter requirement.</p>
+            <p><strong>[End Update]</strong></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">Read
+            the complete DUII Diversion statutes</a>.</p>
+            <p>Diversion is a statutory program whereby certain
+            offenders can earn a dismissal of the DUII charge. Instead
+            of heading to trial and possibly negotiating a guilty plea,
+            Oregon law allows certain first-time offenders (see below
+            for eligibility) the option of diversion.</p>
+            <p>In spite of many recent legislative changes, the basics
+            of diversion have remained the same: defendants enter a plea
+            of guilty, pay a filing fee, and have a year to do an
+            evaluation, complete treatment, and attend a victim’s impact
+            panel. A few additional requirements such as only drive a
+            vehicle with a validly installed ignition interlock device
+            and refrain from using intoxicants during the diversion
+            agreement now apply. At the end of the diversion if they
+            have successfully met the requirements, the charge is
+            dismissed. Although the charge is dismissed the arrest stays
+            on the record because it is non-expungeable if dismissed as
+            a result of the DUII diversion program.</p>
+            <p>If unsuccessful, the conviction is entered and the
+            defendant is sentenced. Thus, it is no surprise that so many
+            defendants opt for diversion instead of a trial. Diversion
+            agreements account for 43 percent of DUII offenses every
+            year. See <em><a
+            href="https://www.oregon.gov/ODOT/Safety/Documents/DUII_DataBook2009-2013.pdf">DUII
+            Data Book for Oregon Counties, 2009–2013</a></em> (Oregon
+            Dept. of Transportation, still the most current
+            edition).</p>
+            <p>Because a DUII cannot be dismissed by plea negotiations
+            (see ORS 813.170), the best result for a DUII case may be an
+            entry into diversion. While other states may allow a
+            “DUI/DWI” charge to be reduced to a “wet reckless,” Oregon
+            does not. Also, a DUII conviction in Oregon requires a judge
+            to impose the same requirements found in diversion of the
+            evaluation, treatment, and victim’s impact panel. ORS
+            813.020. This means that a person who chooses diversion
+            completes the same basic requirements they would have
+            completed had they been convicted and put on probation –
+            without the jail, without the bigger fine, without the
+            mandatory license suspension, and without the permanent
+            conviction on their record.</p>
+            <p>Thus, a diversion entry is often the best result for a
+            DUII charge in that it results in a dismissal of the charge.
+            Whether or not a particular defendant should enter diversion
+            depends on the facts of the case and ultimately on the
+            defendant’s choice.</p>
+            <p><code>Practice Tip</code></p>
+            <p>If your diversion-eligible client decides to take their
+            case to trial, consider having them sign an acknowledgement
+            that you advised them of their option to enter diversion and
+            they declined it and chose to try the case. An example of a
+            diversion eligible case that you may want to take to trial
+            is a cannabis DUII where your client had not recently used
+            cannabis.</p>
+            <p>1. The current diversion statute was enacted in 1981 and
+            has been amended many times since then. It seems that every
+            legislature makes changes to the DUII and diversion
+            statutes. See Appendix A for the complete statute(s).</p>
+            <p>2. Diversion agreements by law are available at all
+            courts in the state (ORS 813.200(2)). The <a
+            href="https://www.courts.oregon.gov/forms/Pages/duii-diversion.aspx">Oregon
+            Judicial Department</a> also posts the forms on the website
+            for download. Some jurisdictions have their own diversion
+            forms so check with the court on which form is
+            preferred.</p>
+            <p>3. If your client is in the military and facing the
+            possibility of being called to active duty the court cannot
+            deny entry into diversion on the grounds that the potential
+            deployment may affect your client’s ability to complete the
+            diversion requirements.</p>
+            <p>813.220(12) has been added to the “matters to be
+            considered by the court in determining to allow a diversion
+            agreement.” This subsection states that the court may
+            <em>not</em> deny a diversion petition solely on the basis
+            that Petitioner is a member of the Armed Forces of the
+            United States, the reserve components of the United States
+            or the National Guard and has been called or demonstrates
+            that Petitioner will be called to active duty, and the
+            military service will impair Petitioner’s ability to
+            complete the Diversion Program. [2011 c. 197 sec. 1].</p>
+            <p>4. In keeping with the legislature’s intent to
+            accommodate men and women who are on active military status,
+            813.233 was added to the diversion statute allowing for
+            participation in a comparable treatment program authorized
+            “by a government entity in another jurisdiction.” While the
+            DUII evaluator’s offices in many counties have routinely
+            allowed for civilian diversion petitioners to participate in
+            out-of-state treatment programs so long as those programs
+            comport with Oregon’s treatment requirements, 813.233 seems
+            to allow for a little more flexibility in terms of the type
+            of treatment program that a service member participates in
+            while deployed in another jurisdiction.</p>
+            <p>5. ORS 813.240 The current diversion filing fee is $490.
+            See ORS 813.240.[2012 c. 81 sec. 4&amp;5].</p>
+            <p>6. The ignition interlock device. The ignition interlock
+            device requirement is not actually found within the
+            diversion statutes (e.g., 813.200 et seq.). Rather, that
+            code provision is found at ORS 813.602(3), which
+            specifically requires:</p>
+            <p>(3)(a) Except as provided in paragraph (b) of this
+            subsection, the court shall require as a condition of a
+            driving while under the influence of intoxicants diversion
+            agreement that an approved ignition interlock device be
+            installed and used in any vehicle operated by the person
+            during the period of the agreement when the person has
+            driving privileges.</p>
+            <p>Nothing in this statute actually requires a person in
+            diversion to install such a device. Rather, it is written as
+            a limitation on the vehicles a person in diversion may drive
+            <em>when they have driving privileges</em>. The exceptions
+            to this requirement include <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6941.pdf">a
+            medical exception</a>, ORS 813.602(7), and an <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6874.pdf">employment
+            exception</a>, ORS 813.606. These forms are available in
+            Chapter 3, The File, as Appendix F and G.</p>
+            <p>2015 HB 2660/SB 397 made several changes to the diversion
+            law regarding the ignition interlock device requirement
+            aspect of the diversion agreement.</p>
+            <p>HB 2660, Sec 1 Section 1 (as amended by Section 11 of SB
+            397): Gives the court in a DUII diversion case discretion
+            whether to order IID if the defendant submitted to a
+            chemical test of his or her breath, blood or urine with
+            result less than .08 percent by weight and the chemical test
+            detected presence of alcohol only.</p>
+            <p>SB 397 Section 2: Imposes duty on provider who installed
+            IID to notify court or court’s designee, and DA or city
+            prosecutor of the occurrence of a “negative report.” Defines
+            “negative report.” Authorizes ODOT to further define by rule
+            “test violation.” Requires provider to download all reports
+            each time provider has access to IID; provider shall submit
+            “negative reports” within seven days of download.</p>
+            <p>SB 397 Section 3: Person with IID may not have it removed
+            until person submits to ODOT a certificate issued by
+            provider of IID that device did not record a negative report
+            for the last 90 consecutive days; suspension period shall
+            continue until person submits said certificate.</p>
+            <p>SB 397 Section 4: Person in DUII diversion program may
+            move to vacate IID requirement if person can establish
+            absence of negative report for at least six consecutive
+            months and compliance with treatment program. Requires
+            evidentiary hearing, findings by court by preponderance of
+            evidence. Typically you can file a motion and order with the
+            6 month certificate and completion of outpatient treatment
+            as exhibits and ask the court to remove the IID requirement.
+            Often the DA will not object so send the proof to the DA and
+            ask for their position before filing.</p>
+            <p>SB 397 Section 7: Streamlines fee waiver provisions for
+            costs of leasing, installing and maintaining IID.</p>
+            <p>The <a
+            href="https://www.oregon.gov/ODOT/Forms/DMV/6874.pdf">employer
+            exemption</a> may also apply when the client is driving
+            employer owned vehicles.</p>
+            </section>
+            </section>
+            <section id="ii._pleawaiver_of_rights" class="level1">
+            <h1><strong>II. Plea/Waiver of Rights</strong></h1>
+            <p>1. DUII diversion agreements must be accompanied by a
+            plea of guilty or no-contest. ORS 813.200(4)(a) (effective
+            January 1, 2004). The plea may only be accepted as part of
+            the diversion agreement, so clients do not have to worry
+            that the judge will deny the petition and then find them
+            guilty. Additionally, entry of conviction is withheld until
+            such time as the diversion agreement is terminated. See the
+            diversion agreement listed in Appendix C. Thus, a client who
+            has entered Diversion may reply that they have not been
+            convicted of the charge.</p>
+            <p>2. Defendants waive former jeopardy rights as to other
+            charges based on the same criminal episode. ORS
+            813.200(4)(g). This means that while the DUII charge can be
+            resolved in diversion, any other remaining charges will need
+            to either be negotiated with the state or will need to go to
+            trial. Some counties have enacted regular procedures whereby
+            some additional charges such as Reckless Driving or Failure
+            to Perform the Duties of a Driver can similarly be
+            dismissed.</p>
+            <p>3. Lawyers need to be aware that speedy trial waivers
+            mean that when old cases come back from warrant status, the
+            waiver may prevent the case from being dismissed for speedy
+            trial reasons. <em>See, e.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcqueen&amp;hl=en&amp;as_sdt=4,38&amp;case=7984813083458472785&amp;scilh=0"><em>State
+            v. McQueen,</em> 153 Or App 277 (1998)</a> (46-month delay
+            was caused by defendant and speedy trial did not mandate
+            dismissal).</p>
+            </section>
+            <section id="iii._costs_of_duii_diversion_program"
+            class="level1">
+            <h1><strong>III. Costs of DUII Diversion
+            Program</strong></h1>
+            <p>Although the specific costs to an individual will vary,
+            each one will invariably include: the filing fee ($490), the
+            diagnostic assessment ($150 plus a monitoring fee if
+            applicable), the victim’s impact panel (no more than $65),
+            treatment (whatever that costs, is sometimes covered by
+            insurance), and lawyer’s fees.</p>
+            <p>Defendants agree to pay court-appointed attorney fees as
+            part of the diversion agreement. ORS 813.200(4)(i). However,
+            the court may still waive all or part of the court-appointed
+            attorney fees.</p>
+            <p>The fee for the diagnostic assessment is $150 and shall
+            be made to the agency performing it. ORS 813.240(2).
+            Practitioners should be aware and inquire locally of
+            procedures and standards to waive some or all of this fee
+            with their local diagnostic assessment agency.</p>
+            <p>The addition of the interlock ignition device requirement
+            has caused some administrative problems. Some counties have
+            used their probation departments to supervise this
+            requirement, while other counties’ court administrators have
+            authorized the court’s designated evaluating agency to
+            charge extra fees to those who opt to install an ignition
+            interlock device.</p>
+            <p>If the defendant has posted bail or security, counsel may
+            move the court to apply it against the diversion fee. If it
+            is not so applied, the bail or security is continued on
+            deposit with the court until the conclusion of the case and
+            may be applied in the event the defendant’s diversion
+            agreement is terminated and the defendant is returned to the
+            court for prosecution. Some counties automatically apply
+            bail/security to any outstanding monies owed, such as
+            diversion fees.</p>
+            <p>Note: Be careful. Such a request may need to be done in
+            advance of a “show-cause” hearing. <em>See, e.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=VARGAS+GARCIA&amp;hl=en&amp;as_sdt=4,38&amp;case=6415259669606821793&amp;scilh=0"><em>State
+            v. Vargas-Garcia,</em> 217 Or App 70 (2007)</a>, where
+            defendant admitted he had not paid and asked for security to
+            be applied to the fees, the court concluded that termination
+            was lawful result.</p>
+            <p>ORS 813.200(4)(c) provides that in addition to the filing
+            fee, the defendant must pay (according to the defendant’s
+            ability) the expenses of the program of treatment indicated
+            necessary by the diagnostic assessment. The cost of this
+            program may vary from county to county and may depend upon
+            the defendant’s ability to pay. Counsel should be prepared
+            to inform the defendant as to the range of availability
+            within the local area, and the potential to apply at the
+            program for partial state funding based on indigence. See
+            ORS 813.270(1) relative to the Intoxicated Driver Program
+            Fund. If your client has the benefit of health insurance it
+            is possible that client’s insurance may pay for some of the
+            costs of the treatment program. The Affordable Care Act will
+            likely assist many defendants with their treatment costs as
+            they go through diversion.</p>
+            <p>The diversion agreement also authorizes the court to
+            order attendance at a victims’ panel if the county has a
+            victim impact program at a cost of no less than $5 and no
+            more than $50. ORS 813.235. Note that the operative word in
+            ORS 813.235 is “may.” Some treatment providers have
+            indicated that the victim impact panel causes sufficient
+            emotional discomfort to cause some with serious addiction
+            problems or certain psychological conditions to relapse.
+            Thus, it may be necessary to ask the court to waive the
+            normal victim impact panel requirement.</p>
+            <p>Each defendant should be aware that he or she may be
+            subject to the fines and fees on a conviction for the DUII
+            if he or she is not successful. Such fees include mandatory
+            minimum of $1,000 for a first offense and go up $500 for
+            each subsequent offense. There is a minimum fine of $2,000
+            for a person convicted of DUII who had a BAC of .15% or
+            greater. Additionally, the maximum fine for a DUII is
+            $10,000 if the offense was committed in a motor vehicle and
+            there was a passenger in the motor vehicle who was under the
+            age of 18 and at least three years younger than the driver.
+            See ORS 813.010(6)&amp;(7).</p>
+            <p><code>Practice Tip</code></p>
+            <p>If your client has a problem with gambling, he may be
+            able to complete gambling treatment at the same time as the
+            drug/alcohol treatment, for which certain state funding may
+            be available. See ORS 413.520 &amp; 413.522.</p>
+            <p>One of the issues involving DUII diversion that should be
+            remembered is the costs associated with completing the
+            program. In the diversion agreement, the client is required
+            to agree to pay the costs and fees associated with
+            participating in diversion. A judge is allowed to consider
+            the client’s ability to pay and may reduce or eliminate some
+            of the fees. The judge is not, however, required to consider
+            the client’s ability to pay when setting the fees. This is
+            in contrast to the requirement that the court make a
+            determination of a defendant’s ability to pay when fixing
+            attorney fees in other criminal cases.</p>
+            <p>The Court of Appeals dealt with arguments involving
+            judges’ misunderstanding of the law that they could consider
+            ability to pay when setting fee amounts. In both <a
+            href="https://scholar.google.com/scholar_case?case=15631033510463248281&amp;q=State+v.+Soto,+268+Or+App+822+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Soto</em>, 268 Or App 822
+            (2015)</a><span class="underline">,</span> and <a
+            href="https://scholar.google.com/scholar_case?case=8318795474164464668&amp;q=State+v.+Johnson,+269+Or+App+497+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Johnson</em>, 269 Or App 497 (2015)</a>, the Court of
+            Appeals held the trial courts misinterpreted the law in
+            deciding they did not have discretion to waive DUII
+            diversion fines and fees. Despite this misinterpretation,
+            the Court of Appeals also stated failure to consider ability
+            to pay is not appealable because imposition of the fines and
+            fees did not expose the defendants to a greater sentence
+            (fine/fee) than is allowed by law.</p>
+            <p>Thus, it is important to remember that although a judge’s
+            refusal to reduce fees and fines may not be appealable, the
+            judge does have the authority to consider it and do so. We,
+            therefore, should be educating our judges that they do have
+            the power to hear argument for reduction in fees and fines
+            and may reduce or eliminate these costs.</p>
+            </section>
+            <section id="iv._procedures_for_filing_the_petition"
+            class="level1">
+            <h1><strong>IV. Procedures for Filing the
+            Petition</strong></h1>
+            <p>1. ORS 813.210(1) provides that a petition for the DUII
+            diversion agreement must be filed within 30 days after the
+            date of the defendant’s first appearance on the summons,
+            unless a later filing date is allowed by the court upon a
+            showing of good cause. Good cause may be found to exist: 1)
+            where a defendant appears without counsel in a county
+            justice court and requests that the case be removed to the
+            county district court, 2) where the defendant is later
+            appointed counsel for the first time based on indigency, or
+            3) when discovery has not been received. Legislative history
+            reveals that the 30-day period was designed to give the
+            defendant an opportunity to review discovery. Another
+            example of good cause to extend the 30-day deadline might be
+            for the purpose of filing a petition for post-conviction
+            relief relative to a prior DUII conviction which would
+            otherwise disqualify the defendant from the diversion
+            program. Another example is where a defendant had two
+            pending charges for DUII and the other charge was dismissed
+            or acquitted. In such cases, the state’s argument has often
+            been that the petition was not filed within 30 days. The
+            creative practitioner will file within the first 30 days to
+            get around this future argument. Additionally, lawyers
+            should be careful not to trust the court dates and should
+            actually file the petition within the thirty days, as the
+            diversion entry dates set by the court are not always within
+            the 30-day period.</p>
+            <p>The filing of a demurrer, motion to suppress or motion
+            for an omnibus hearing does not constitute good cause. ORS
+            813.210(1)(a).</p>
+            <p>ORS 813.200(c) allows the filing of the petition up to 14
+            days from the date the prosecuting attorney sends the
+            laboratory test results of blood/urine test.</p>
+            <p>Note: Always file the petition and serve a copy on the
+            prosecutor within 30 days of arraignment or eligibility.
+            This triggers the prosecutor’s 15-day timeline to file an
+            objection and to request a hearing. ORS 813.210(5). If no
+            hearing is requested within the timeline, the court shall
+            determine whether to allow or deny the petition. ORS
+            813.220(1).</p>
+            <p>2. The trend has been for the court to inform the
+            defendant of the diversion program and provide petition
+            forms at an initial appearance, setting an arraignment and
+            possible filing of the petition a short time later. Such a
+            procedure often excludes court-appointed counsel for the
+            indigent if the defendant petitions for diversion.</p>
+            <p>3. A copy of the petition must be served upon the
+            district attorney, who may, within 15 days after the date of
+            service, file with the court a written objection to the
+            petition and request a hearing. ORS 813.210(4). The rules of
+            evidence do not apply at such a hearing. <a
+            href="http://www.oregonlaws.org/ors/40.015">ORS
+            40.015(4)(I)</a>. However, one can argue that due process
+            considerations place certain limits on the prosecution’s use
+            of hearsay. <em>See, e.g.,</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson&amp;hl=en&amp;as_sdt=4,227&amp;case=14374620811724939218&amp;scilh=0"><em>State
+            v. Johnson,</em> 221 Or App 394 (2008)</a>, using the
+            due-process balancing test of [<a
+            href="https://scholar.google.com/scholar_case?case=2547302101631979186&amp;q=U.S.+v.+Comito,+177+F3d+1166+(9th+Cir">https://scholar.google.com/scholar_case?case=2547302101631979186&amp;q=U.S.+v.+Comito,+177+F3d+1166+(9th+Cir</a>.,+1999)&amp;hl=en&amp;as_sdt=3,38
+            <em>U.S. v. Comito</em>, 177 F3d 1166 (9th Cir., 1999)].</p>
+            <p>a. ORS 813.250(4) provides that no statement made by the
+            defendant about the offense with which the defendant is
+            charged shall be offered or received in evidence in any
+            criminal or civil action or proceeding arising out of the
+            same conduct which is the basis of the charge of driving
+            while under the influence of intoxicants if this statement
+            was made during the course of the rehabilitation program and
+            to a person employed by the program.</p>
+            <p>b. Statements made by the defendant in court at the
+            district attorney’s objection hearing to the petition might
+            later be used against the defendant, however.</p>
+            <p>Note: The district attorney may object on specific
+            grounds. You may be able to force the district attorney to
+            identify the basis for objection under a due process notice
+            argument. If they are forced to elect or do elect, then
+            object to their changing the basis after the time has
+            expired.</p>
+            </section>
+            <section id="v._eligibility_for_diversion" class="level1">
+            <h1><strong>V. Eligibility for Diversion</strong></h1>
+            <p>Eligibility is governed by statute and is provided for in
+            <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.215</a>.</p>
+            <p>The contents of the diversion petition include a sworn
+            statement that the defendant meets the criteria set out in
+            ORS 813.215. See ORS 813.200(4)(i). Note that although a
+            judge “shall deny the petition if defendant failed to appear
+            at arraignment,” ORS 813.220(6), a defendant need not swear
+            about appearing at the arraignment.</p>
+            <p><code>Practice Tip</code></p>
+            <p>When in doubt, openly litigate. If you have doubts as to
+            a legal decision regarding a client’s potential eligibility
+            concerning, for example, prior “treatment” in conjunction
+            with a legal matter, such matters should be addressed prior
+            to or at the time of entry into diversion so that a
+            prosecutor is barred by the doctrine of <em>res
+            judicata</em> from moving at a later date to revoke the
+            diversion based on a previously undisclosed
+            ineligibility.</p>
+            <section id="a._prior_treatment" class="level2">
+            <h2><strong>A. Prior Treatment</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+warrington&amp;hl=en&amp;as_sdt=4,227&amp;case=8981722186421914847&amp;scilh=0"><em>State
+            v. Warrington</em>, 219 Or App 566, 184 P3d 1160 (2008)</a>.
+            Defendant’s own voluntary course of alcohol rehabilitation
+            treatment eight years prior did not disqualify her from
+            being eligible for diversion. A disqualifying “similar
+            alcohol or drug rehabilitation program” is one in which a
+            defendant participates to avoid a substantial, judicially
+            imposed adverse consequence.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+wright&amp;hl=en&amp;as_sdt=4,227&amp;case=818558220060966766&amp;scilh=0"><em>State
+            v. Wright</em>, 204 Or App 724, 131 P3d 838 (2006)</a>.
+            Defendant’s participation in treatment as ordered by a judge
+            in juvenile court in regard to her custodial rights was
+            sufficiently similar so as to preclude her eligibility for
+            diversion.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+young&amp;hl=en&amp;as_sdt=4,227&amp;case=5828083572374395040&amp;scilh=0"><em>State
+            v. Young</em>, 196 Or App 708, 103 P3d 1180 (2004)</a>.
+            Defendant’s participation in a county “STOP” drug
+            rehabilitation program was sufficiently similar to preclude
+            eligibility for diversion.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+dunbrasky&amp;hl=en&amp;as_sdt=4,227&amp;case=9765971374109483091&amp;scilh=0"><em>State
+            v. Dunbrasky</em>, 122 Or App 90, 856 P2d 1054 (1993)</a>.
+            Court-ordered participation in a drug and alcohol treatment
+            program as part of a conviction for possession of
+            methamphetamine was sufficiently similar to preclude
+            eligibility for diversion because it was accepted by
+            defendant in exchange for a milder sanction.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=10893804257721833840&amp;q=State+v.+Schatz,+225+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Schatz</em>, 225 Or App 688, 202 P3d912 (2009)</a>. Where
+            defendant is convicted of a prior PCS and received a
+            presumptive sentence, there is no proof that he participated
+            in a similar program to “avoid a substantial, judicially
+            imposed adverse consequence.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+parker&amp;hl=en&amp;as_sdt=4,227&amp;as_ylo=2010&amp;case=3137791098006001408&amp;scilh=0"><em>State
+            v. Parker</em>, 235 Or App 40, 230 P3d 55 (2010)</a>. Where
+            defendant previously “agreed” to undergo a drug evaluation
+            and treatment for a prior drug conviction but then failed to
+            complete the evaluation and failed to engage in treatment,
+            defendant had not previously “participated” in a similar
+            treatment program. Note: the trial court did not mention
+            anything about exercising its discretion under 813.220 to
+            deny diversion on the grounds that defendant was unlikely to
+            comply with treatment. If your client is in a similar fact
+            situation as Parker, be prepared to argue why your client is
+            now ready and willing to participate in treatment. It is
+            advisable for the client to enter treatment or attend AA
+            voluntarily to demonstrate their commitment to
+            participate.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+bentley&amp;hl=en&amp;as_sdt=4,227&amp;as_ylo=2010&amp;case=7256473146877467894&amp;scilh=0"><em>State
+            v. Bentley</em>, 239 Or App 18, 243 P3d 859 (2010)</a>.
+            Diversion denied where defendant had been ordered to
+            complete treatment as a condition of a prior DUII conviction
+            within the previous ten-year period.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lagrassa&amp;hl=en&amp;as_sdt=4,227&amp;as_ylo=2010&amp;case=12892487970159098318&amp;scilh=0"><em>State
+            v. LaGrassa</em>, 235 Or App 150, 230 P3d 96 (2010)</a>.
+            Diversion denied where defendant had been previously ordered
+            to undergo drug and alcohol treatment as a condition of
+            post-prison supervision. The court rejects the distinction
+            between treatment imposed administratively by the Department
+            of Corrections or the court. Treatment is “similar” if it is
+            imposed by a government actor to avoid a substantial adverse
+            consequence. As a practice tip, it is a good idea to examine
+            if the treatment was in fact similar as to what Oregon
+            defines as treatment under OAR 415-054-0020. So compare what
+            your client actually did because you might be able to aruge
+            it is not similar to treatment in Oregon.</p>
+            </section>
+            <section id="b._commercial_drivers_license_cdl"
+            class="level2">
+            <h2><strong>B. Commercial Driver’s License
+            (CDL)</strong></h2>
+            <p>The 2005 Legislative Assembly added a requirement that a
+            defendant not “have” a commercial driver license at the time
+            of the offense. The 2007 legislature amended this provision
+            again, striking “have” and replacing it with “holds”. This
+            appears to be in light of <a
+            href="http://scholar.google.com/scholar_case?q=state+v+orueta&amp;hl=en&amp;as_sdt=4,227,228&amp;case=11275591004384239430&amp;scilh=0"><em>State
+            v. Orueta</em>, 343 Or 118, 164 P3d 267 (2007)</a>, which
+            affirmed that defendant was not eligible for diversion as he
+            “had” a commercial driver license (CDL), and that the
+            statutory provision did not violate constitutional
+            prohibitions.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.215</a>(1)(h) states “the defendant did not hold a
+            commercial driver license on the date of the commission of
+            the offense.” In <a
+            href="https://scholar.google.com/scholar_case?case=2041458256388276970&amp;q=State+v.+Crisafi,+271+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Crisafi</em>, 271 Or App 267 (2015)</a>, the Court of
+            Appeals clarified its reading of the statute and the term
+            “hold.” The court ruled that a person who has an active
+            commercial drivers license (CDL) is ineligible to enter a
+            DUII diversion program, even if the CDL is invalid and
+            subject to cancellation. In <em>Crisafi</em>, the defendant
+            argued he was eligible for diversion because ODOT improperly
+            renewed his CDL without the requisite medical certificate.
+            The court held that the validity of the CDL is not the
+            correct question. The correct question when a CDL has been
+            issued is whether the CDL has “expired or been canceled or
+            revoked.” A CDL that is “subject to cancellation” has not
+            been canceled for the purposes of ORS 813.215(1)(h).</p>
+            </section>
+            <section id="c._physical_injury" class="level2">
+            <h2><strong>C. Physical Injury</strong></h2>
+            <p>The state often objects to a DUII entering into diversion
+            based on either “physical injury” and/or an additional
+            charge of Assault IV. This is an ongoing procedural problem
+            that has yet to be conclusively addressed by the appellate
+            courts. Options to consider include: a) moving to enter
+            diversion initially, based on lack of proof of physical
+            injury, or b) severing the DUII charge in order to reserve
+            the right to enter diversion once acquitted on the Assault
+            IV. Notably, in <a
+            href="http://scholar.google.com/scholar_case?q=state+v+romanov&amp;hl=en&amp;as_sdt=4,227,228&amp;case=12493700033909647493&amp;scilh=0"><em>State
+            v. Romanov</em>, 210 Or App 198, 149 P3d 1224 (2006)</a>,
+            the defendant won the eligibility hearing by distinguishing
+            the DUII from the facts of the Assault IV, which were
+            alleged to have happened in his garage, a premise not open
+            to the public. Thus, having won the eligibility by
+            differentiating the elements of the charges, a prosecution
+            of the Assault IV was not barred by the doctrine of issue
+            preclusion, as defendant had already proved it was a
+            separate issue. This means that issue preclusion applies
+            when the state argues causation and fails to prove the
+            injury at a hearing on the merits.</p>
+            <p>For definition of physical injury <em>see</em> <a
+            href="https://scholar.google.com/scholar_case?case=13331643843801980031&amp;q=State+ex+rel+Juv.+Department+v.+Salmon,+83+Or+App+238,+730+P2d+1285+(1986).&amp;hl=en&amp;as_sdt=4,38"><em>State
+            ex rel Juv. Department v. Salmon,</em> 83 Or App 238, 730
+            P2d 1285 (1986)</a>.</p>
+            </section>
+            </section>
+            <section id="vi._objections_based_on_prior_convictions"
+            class="level1">
+            <h1><strong>VI. Objections Based on Prior
+            Convictions</strong></h1>
+            <section
+            id="a._a_defendant_with_prior_convictions_may_still_be_able_to_get_into_diversion_if_there_is_a_defect_with_the_prior_conviction."
+            class="level2">
+            <h2><strong>A. A defendant with prior convictions may still
+            be able to get into diversion if there is a defect with the
+            prior conviction.</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=koellermeier&amp;hl=en&amp;as_sdt=4,227,228&amp;case=5459413842629865208&amp;scilh=0"><em>State
+            v. Koellermeier</em>, 75 Or App 126, 704 P2d 1169
+            (1985)</a>. The issue is whether the prior conviction was
+            constitutional, similar to the standard for post-conviction
+            relief. However, case law since Kollermeier has developed
+            some distinctions and specific standards. Note that in <a
+            href="http://scholar.google.com/scholar_case?q=probst&amp;hl=en&amp;as_sdt=4,227,228&amp;case=4748958881503709322&amp;scilh=0"><em>State
+            v. Probst</em>, 339 Or 612, 124 P3d 1237 (2005)</a>, the
+            Oregon Supreme Court abrogated <a
+            href="http://scholar.google.com/scholar_case?q=grenvik&amp;hl=en&amp;as_sdt=4,227,228&amp;case=4887071307605378050&amp;scilh=0"><em>State
+            v. Grenvik</em>, 291 Or 99, 628 P2d 1195 (1981)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=pendleton+v+standerfer&amp;hl=en&amp;as_sdt=4,227,228&amp;case=18263455948401966112&amp;scilh=0"><em>City
+            of Pendleton v. Standerfer</em>, 297 Or 725, 688 P2d 68
+            (1984)</a>, upon which <em>Kollermeier</em> was based. Under
+            <em>Probst</em>, the standard of making such a “collateral
+            attack” on a prior conviction is essentially the same as in
+            a post-conviction proceeding. A defendant has to show a
+            defect, such as lack of counsel, and then show how that
+            resulted in an involuntary plea. <em>Probst</em> at 629.</p>
+            <p>1. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+boyer&amp;hl=en&amp;as_sdt=4,227,228&amp;case=6238478742819750204&amp;scilh=0"><em>State
+            v. Boyer</em>, 87 Or App 643, 743 P2d 1116 (1987)</a>. You
+            cannot collaterally attack prior conviction at a contested
+            entry hearing if the defendant was represented in the prior
+            conviction. However, you may be able to PCR it and thus
+            establish eligibility. A prior conviction may not be
+            considered “uncounseled” if the defendant obtained the
+            advice of an attorney even if that attorney did not appear
+            in court with the defendant. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+conklin&amp;hl=en&amp;as_sdt=4,227,228&amp;case=1253680279535980783&amp;scilh=0"><em>State
+            v. Conklin</em>, 87 Or App 669, 743 P2d 779 (1987)</a>.</p>
+            <p>2. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+maynard&amp;hl=en&amp;as_sdt=4,227,228&amp;case=15746560142393112572&amp;scilh=0"><em>State
+            v. Maynard</em>, 85 Or App 631, 738 P2d 210 (1987)</a>. The
+            assistance of counsel on a prior diversion is moot, as the
+            prior diversion itself is a disqualifier.</p>
+            <p>3. <a
+            href="http://scholar.google.com/scholar_case?q=91+or+app+312&amp;hl=en&amp;as_sdt=4,227&amp;case=14007716767346181112&amp;scilh=0"><em>State
+            v. Olson</em>, 91 Or App 312, 754 P2d 630 (1988)</a>.
+            Uncounseled “out-of-state” conviction(s) may be collaterally
+            attacked and do not bar eligibility.</p>
+            <p>4. <em>State v. Manfredonia</em>, 105 Or App 537, 805 P2d
+            738 (1991). It may be, and some judges have held, that it is
+            the defendant’s burden to establish that the prior
+            conviction was uncounseled. This case said that when the
+            defendant testified about eligibility the DA should have
+            cross-examined about the prior. An open question is whether
+            the DA can call the defendant as their own witness. If the
+            DA has not given you discovery of the prior conviction, you
+            can call the DA as your witness first to avoid a possible
+            perjury charge on your client.</p>
+            <p>5. <a
+            href="http://scholar.google.com/scholar_case?q=92+or+app+355&amp;hl=en&amp;as_sdt=4,38&amp;case=6750189768850458412&amp;scilh=0"><em>State
+            v. Barnes</em>, 92 Or App 355, 758 P2d 419 (1988)</a>.
+            Diversion may not be denied based on anything defendant was
+            required to do as a result of an uncounseled conviction.
+            This is when the DAs object because defendant went through
+            the old rehabilitation program on a DUII infraction.</p>
+            <p>6. <a
+            href="http://scholar.google.com/scholar_case?q=meyrick&amp;hl=en&amp;as_sdt=4,38&amp;case=3868546510032013217&amp;scilh=0"><em>State
+            v. Meyrick</em>, 313 Or 125, 831 P2d 666 (1992)</a>. Is
+            there a record that your client’s prior waiver of counsel
+            and subsequent conviction passed constitutional muster? In
+            <em>Meyrick</em> the court held that a colloquy on the
+            record between the trial court and defendant wherein the
+            court, in some fashion, explains the risks of
+            self-representation as the preferred means of assuring that
+            a defendant understands the risks of self-representation. If
+            your client waived counsel and was convicted in a municipal
+            court or some other court where there is no record, you may
+            have a good shot of getting your client into diversion in
+            that situation.</p>
+            </section>
+            <section
+            id="b._is_the_prior_conviction_sufficiently_similar"
+            class="level2">
+            <h2><strong>B. Is the prior conviction sufficiently
+            similar?</strong></h2>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=6911857466307072683&amp;q=State+v.+Guzman,+366+Or+18+(2019&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Guzman</em>, 366 Or 18 (2019)</a>, restricts the prior
+            court rulings on what counts as a counterpart. Examine the
+            out-of-state prior conviction to see how the elements match
+            the Oregon legal standard. The standard in Colorado of
+            driving while impaired to the slightest degree was
+            sufficiently dissimilar to Oregon’s noticeable/perceptible
+            degree standard and therefore did not count as a prior
+            conviction. Likewise, a Kansas statute that said driving or
+            attempting to drive while impaired was not the statutory
+            counterpart to Oregon because attempted DUII is not the same
+            as DUII in Oregon.</p>
+            </section>
+            </section>
+            <section
+            id="vii._factors_determining_petitioners_suitability_for_diversion813.220"
+            class="level1">
+            <h1><strong>VII. Factors Determining Petitioner’s
+            Suitability for Diversion—813.220</strong></h1>
+            <p>Matters to be considered by court in determining to allow
+            diversion agreement; reasons for denial. The court will look
+            at a number of factors in determining not only petitioner’s
+            eligibility but also their suitability for diversion.
+            Subsections 2 through 5 enumerate the discretionary factors
+            that a court may consider in either allowing or denying a
+            diversion petition. If you have a good argument why your
+            client should get into diversion over the state’s objection
+            on one issue, be prepared to argue why the court should not
+            exercise its discretion to deny diversion based on any one
+            of the discretionary factors. Getting into treatment early
+            satisfies several of the following in your client’s
+            favor.</p>
+            </section>
+            <section
+            id="viii._right_of_victim_to_be_present_at_hearingors_813.222"
+            class="level1">
+            <h1><strong>VIII. Right of Victim to be Present at
+            Hearing—ORS 813.222</strong></h1>
+            <p>If a DUII results in damage to property to one other than
+            the defendant, the victim of the property damage shall be
+            notified by the district attorney or city attorney that the
+            defendant may be eligible for diversion and that if there is
+            a hearing on a petition for diversion, the victim has a
+            right to be present and heard at the hearing.</p>
+            </section>
+            <section id="ix._duration_of_agreementors_813.230813.250"
+            class="level1">
+            <h1><strong>IX. Duration of Agreement—ORS
+            813.230–813.250</strong></h1>
+            <p>1. The agreement is for a period of one year. ORS
+            813.230(3).</p>
+            <p>2. When the court denies a petition for diversion, it
+            shall continue the offense proceeding against the defendant.
+            ORS 813.230(4). The plea petition cannot be used against the
+            defendant if a court denied it.</p>
+            <p>3. At the conclusion of the period of diversion, the
+            defendant may move for an order dismissing the charge with
+            prejudice. ORS 813.250(1).</p>
+            <p>4. If the defendant does not move for dismissal with
+            prejudice, six months after the conclusion of the diversion
+            period if the court finds the defendant fully complied with
+            and performed the conditions of the diversion agreement and
+            with notice to the district attorney or city attorney, the
+            court may on its own motion enter an order dismissing the
+            charge of DUII with prejudice. ORS 813.250(3). See the form
+            at Appendix D.</p>
+            </section>
+            <section
+            id="x._petition_for_extension_of_diversion_periodors_813.225"
+            class="level1">
+            <h1><strong>X. Petition for Extension of Diversion
+            Period—ORS 813.225</strong></h1>
+            <p>1. Within 30 days prior to the end of the period for the
+            DUII diversion agreement, a defendant may petition the court
+            for an extension to complete the DUII diversion program.
+            Each defendant is allowed only one extension, and the
+            maximum extension period is 180 days.</p>
+            <p><code>Practice Tip</code></p>
+            <p>Always request 180 days when requesting an extension.
+            Make sure to file the request for an extension prior to the
+            end of the year. You only get one request, so ask for the
+            maximum. Also note: some courts will set a review hearing
+            close to or prior to the end of the 180 days. Make sure to
+            count the actual days, in that such a review hearing may be
+            before the expiration of the 180 days.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?case=12109847110525669557&amp;q=maul&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Maul</em>, 341 Or 80, 136 P3d 1123 (2006)</a>. The
+            maximum length of extension is 180 days and a court does not
+            have authority to extend or “toll” beyond that time.</p>
+            <p>2. ORS 813.225 has been amended to accommodate diversion
+            participants that are serving in the military on active
+            duty. A petitioner on active duty may ask the court for an
+            extension at any time prior to the end of the diversion
+            period. ORS 813.225(1)(b). An extension granted to service
+            personnel under this section may be extended by the court as
+            necessary to allow defendant sufficient time to complete
+            diversion. 813.225(7). It would seem as if the court is not
+            bound by the absolute 180-day rule of 813.225(5) when
+            granting an extension under this subsection.</p>
+            <p>However, in order for the court to grant an extension
+            under subsection (7) petitioner must be able to show:</p>
+            <p>• They are a member of the Armed Forces of the United
+            States, Reserves or National Guard;</p>
+            <p>• They are on active duty or will be called to active
+            duty; and</p>
+            <p>• That military service will impair petitioner’s ability
+            to complete the conditions of the diversion agreement and no
+            comparable treatment program under 813.233 is available.</p>
+            <p>The crux of subsection (7)(c), <em>supra</em>, is that if
+            a petitioner is called to active duty but is perhaps
+            stationed at a base or facility that offers a treatment
+            program comparable to a diversion program, then petitioner
+            must take advantage of that program and proceed along the
+            statutory diversion timeline. But, if petitioner is perhaps
+            deployed to an area where no comparable treatment is
+            available, such as a combat zone or forward support base,
+            then the indefinite extension of (7)(c) would apply.</p>
+            <section id="february_2022_update" class="level2">
+            <h2><strong>February 2022 Update</strong></h2>
+            <p>In December 2021, the Chief Justice issued a new CJO
+            order, <a
+            href="https://libraryofdefense.ocdla.org/images/0/0b/CJO_2021_058.pdf">21-056</a>,
+            affecting DUII diversion timelines.</p>
+            <p>At the time of this writing the order continues all the
+            current time extensions in DUII diversions that are in place
+            as of February 2022, but extends them until 60 days after
+            the COVID-19 state of emergency ends.</p>
+            <p>Some were previously set to expire on December 31, 2021,
+            but are extended.</p>
+            <p><strong>[End 2022 Update]</strong></p>
+            </section>
+            </section>
+            <section id="xi._termination_of_diversionors_813.255"
+            class="level1">
+            <h1><strong>XI. Termination of Diversion—ORS
+            813.255</strong></h1>
+            <p>1. If the court terminates the diversion agreement, the
+            court must enter the judgment of conviction and sentence the
+            defendant.</p>
+            <p>At any time before the court dismisses with prejudice the
+            charge of DUII, the court on its own motion or on the motion
+            of the district attorney or city attorney may order the
+            defendant to appear and show cause why the court should not
+            terminate the diversion agreement. ORS 813.255(1).</p>
+            <p>The standard of proof at a show-cause hearing is a
+            preponderance of the evidence. ORS 813.255(3)(a). If the
+            defendant fails to appear at the show-cause hearing or if at
+            the show-cause hearing the court finds by a preponderance of
+            the evidence the defendant failed to fulfill the terms of
+            the diversion agreement, or the defendant did not qualify
+            for the diversion agreement under the criteria in ORS
+            813.215, the court shall terminate the diversion agreement
+            and continue the offense. ORS 813.255(3). Check to see if
+            the notice was sent to both the defendant and attorney. Also
+            did it state the reason for the revocation as required under
+            ORS 813.255?</p>
+            <p>In the event of proposed termination of the DUII
+            diversion agreement, if termination is disputed the court
+            may follow such procedures as will enable it to fairly
+            determine the existence of the requisite facts.</p>
+            <p>Defendant has a right to an attorney at the diversion
+            termination hearing. <a
+            href="http://scholar.google.com/scholar_case?q=vest&amp;hl=en&amp;as_sdt=4,38&amp;case=2491816941106792892&amp;scilh=0"><em>State
+            v. Vest,</em> 88 Or App 101, 744 p2d 288 (1987)</a>. <em>And
+            see</em> <a
+            href="http://scholar.google.com/scholar_case?q=gaino&amp;hl=en&amp;as_sdt=4,38&amp;case=4371968618531323638&amp;scilh=0"><em>State
+            v. Gaino</em>, 210 Or App 107, 149 P3d 1229 (2006)</a>.</p>
+            <p>Note that if the court terminates, at sentencing, the
+            court may take into account at time of sentencing any
+            partial fulfillment by the defendant of the terms of the
+            diversion agreement. ORS 813.255(4). In the sad situation
+            where a defendant is being sentenced for failure to pay
+            fees, but has otherwise completed the diversion
+            requirements, a judge may be persuaded with this statute to
+            avoid the result of requiring another course of attendance
+            at an evaluation, treatment, and the victim impact
+            panel.</p>
+            <p>2. The court shall allow a diversion participant serving
+            on active military duty to appear at a show cause hearing by
+            telephone or other communication device so long as
+            petitioner’s military service permits such an
+            appearance.</p>
+            <p>If defendant is unable to appear telephonically, the
+            court shall stay the show cause proceedings. 813.255(4).</p>
+            <section id="february_2022_update_1" class="level2">
+            <h2><strong>February 2022 Update</strong></h2>
+            <p>At the end of the section add the following Practice
+            Tip:</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15481596277005763939&amp;q=State+v.+Zook,+307+Or+App+49&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Zook</em>, 307 Or App 49 (2020)</a>, now allows a court
+            some discretion about whether to terminate someone from
+            diversion. The operative language is whether the person has
+            made a “good faith effort” to complete the requirements and
+            terms of the diversion agreement. Prior to <em>Zook</em>,
+            most courts interpreted the diversion statutes to be
+            inflexible, which left no discretion to the judge to
+            continue a person on diversion if there was a violation.</p>
+            <p>Use <em>Zook</em> to convince your judge to extend that
+            ruling in your case, showing how your client has made a good
+            faith effort.</p>
+            <p><strong>[End 2022 Update]</strong></p>
+            </section>
+            </section>
+            <section id="xii._termination_based_on_non_payment"
+            class="level1">
+            <h1><strong>XII. Termination Based on
+            Non-Payment</strong></h1>
+            <p>1. In <a
+            href="http://scholar.google.com/scholar_case?q=83+or+app+684&amp;hl=en&amp;as_sdt=4,38&amp;case=17090967717796096061&amp;scilh=0"><em>State
+            v. Hunt</em>, 83 Or App 684, 732 P2d 956 (1987)</a>, the
+            defendant had entered the DUII diversion program and the
+            agreement required him to pay certain fees within one year.
+            At the end of the diversion period, the court terminated the
+            diversion agreement and reinstated the charge because
+            defendant had not paid the required fees. Counsel was then
+            appointed and the court was asked to reconsider on the
+            grounds of defendant’s indigency, which it concluded was not
+            relevant. The Court of Appeals reversed a subsequent
+            conviction for DUII and remanded for reconsideration of
+            termination of diversion with instructions.</p>
+            <p>2. In <a
+            href="http://scholar.google.com/scholar_case?q=cardew&amp;hl=en&amp;as_sdt=4,38&amp;case=8033944243666490933&amp;scilh=0"><em>State
+            v. Cardew</em>, 168 Or App 610, 7 P3d 631 (2000)</a>, the
+            court terminated the diversion agreement of the defendant
+            who did not make his monthly payments as scheduled towards
+            the diversion filing fee, nor did he appear in court
+            immediately after missing such payments as required by the
+            diversion agreement. ORS 813.255.</p>
+            <p>3. In <a
+            href="http://scholar.google.com/scholar_case?q=VARGAS+GARCIA&amp;hl=en&amp;as_sdt=4,38&amp;case=6415259669606821793&amp;scilh=0"><em>State
+            v. Vargas-Garcia</em>, 217 Or App 70 (2007)</a>, defendant
+            admitted to not paying fees, and the court concluded that
+            the statute is inflexible and that the trial court must
+            terminate when fees are not paid.</p>
+            <p>4. <a
+            href="http://scholar.google.com/scholar_case?q=reed&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2011&amp;case=11653022388280274715&amp;scilh=0"><em>State
+            v. Reed</em>, 241 Or App 47, 249 P3d 557 (2011)</a>, yields
+            another harsh result regarding non-payment. After nearly
+            eight months had lapsed after the end of the one-year
+            diversionary period, the court on its own motion sent notice
+            to the state that it intended to dismiss the DUII charge
+            pursuant to 813.255(3) because the evaluation, treatment and
+            victim’s panel had been completed. The state objected
+            because the diversion fees were still outstanding. During a
+            several month period that the court continued the matter,
+            defendant paid $355 of the $358 diversion fee. The court
+            waived the remaining $3 still owed and dismissed the charge.
+            The Court of Appeals reversed. The court agreed with the
+            state’s argument that implicit in the statutory scheme is an
+            agreement that all fees not reduced or waived by the court
+            must be paid by the end of the diversionary period, whether
+            that be the original one-year or the 180-day extension.</p>
+            <p>It is worth noting that defendant in this case also
+            managed to pick up a second DUII after the end of the
+            one-year period that the court found did not violate the
+            diversion agreement because defendant was not bound to the
+            agreement beyond the one-year period.</p>
+            <p>5. <a
+            href="http://scholar.google.com/scholar_case?q=rowland&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2010&amp;case=3295083661640795905&amp;scilh=0"><em>State
+            v. Rowland</em>, 234 Or App 494, 228 P3d 670 (2010)</a>.
+            Another case following <em><a
+            href="https://scholar.google.com/scholar_case?case=15085183164363522714&amp;q=State+v.+Maul&amp;hl=en&amp;as_sdt=4,38">State
+            v. Maul</a></em> that all requirements of diversion must be
+            complete within the statutory time frame. Here the trial
+            court dismissed the DUII charge because defendant had paid
+            his fees three months after the expiration of his SB 35
+            extension. The Court of Appeals reversed.</p>
+            </section>
+            <section id="xiii._driving_record_and_insurance"
+            class="level1">
+            <h1><strong>XIII. Driving Record and Insurance</strong></h1>
+            <p>1. The court shall notify the Department of
+            Transportation within 48 hours after allowing the petition
+            in a form agreed to by the State Court Administrator. The
+            Motor Vehicles Division shall make the diversion agreement a
+            part of the defendant’s operating record. ORS
+            813.230(2).</p>
+            <p>The Oregon Motor Vehicles Division explained how they
+            would enter a diversion agreement into their records in a
+            “Traffic Court Newsletter,” Volume 12, No. 2, July 1982:</p>
+            <p>New File Added to Diversion Segments—A new file on driver
+            records will now show when a diversion agreement has been
+            terminated. Here’s an example of a terminated diversion and
+            an explanation of the fields:</p>
+            <p>(a) (b) (c) (d) (e) (f)</p>
+            <p>DIVR 12/04/81 D-LINC 819999 T 12/21/82</p>
+            <p>a. Diversion.</p>
+            <p>b. Effective date of diversion agreement.</p>
+            <p>c. Type and location of court authorizing diversion
+            agreement.</p>
+            <p>d. Court docket number, if six digits or less.</p>
+            <p>e. Terminated (This field will be blank if the agreement
+            has not been terminated</p>
+            <p>or DMV has not been notified that it was terminated.)</p>
+            <p>f. Original ending date of diversion agreement.</p>
+            <p>Traffic courts should notify DMV when a diversion
+            agreement has been terminated so it can be put on the
+            driver’s record. This may be the only way for another court
+            to know that the driver previously entered a diversion
+            program but did not complete that program.</p>
+            <p>DMV does <em>not</em> supply a form for this purpose. Any
+            letter or form submitted by the court and signed by the
+            judge stating that an agreement has been terminated will be
+            accepted by the Division.</p>
+            <p>2. The Oregon Motor Vehicles Division explained the
+            probable effect of diversions under this law in the “Traffic
+            Court Newsletter” Volume 11, No. 4, December 1981:</p>
+            <p>DUII Diversions and Insurance—There have been quite a few
+            questions and concerns expressed about how the insurance
+            industry will treat the new DUII Diversion program. The new
+            law provides that these diversion must be reported to DMV
+            and that they must appear on the three-year abstract of
+            driving record available to insurance companies and others
+            under ORS 486.056.</p>
+            <p>(Note: Now under <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors802.html">ORS
+            802.220–802.230</a>.)</p>
+            <p>3. Insurance</p>
+            <p>DMV personnel talked with the state insurance
+            commissioner’s office and several insurance industry
+            representatives and can pass along this information.
+            Insurance companies normally request driving records only
+            when writing original (new) business. This occurs when a
+            person first obtains insurance or changes companies. Records
+            are usually not ordered for policy renewals unless a
+            high-cost, at-fault claim or several at-fault claims have
+            occurred. Records also are rarely obtained during the policy
+            term. This may occur if the company learns of a major change
+            in auto use or a major driving incident. Thus, a person’s
+            insurance carrier will not necessarily become aware of a
+            DUII diversion even though it’s on the DMV record.</p>
+            <p><em>There is no SR-22 filing required in connection with
+            a DUII diversion</em> <em>entry on the driver’s record</em>.
+            When a driver requests an insurance company to make an SR-22
+            filing, the company is immediately aware of the person’s
+            DUII arrest. Thus by participating in the diversion program,
+            the person saves the extra cost of the SR-22 filing, does
+            not “self-report” the incident to the insurance company, and
+            may avoid increased premiums and/or nonrenewal. However, an
+            SR-22 filing is required if the person seeks a
+            hardship/occupational license. Therefore, it might be in the
+            person’s interests to “tough it out” and not drive if the
+            suspension length is for only 90 days. (First DUII
+            convictions <em>do</em> carry a mandatory suspension and an
+            SR-22 is needed for a hardship/occupational license, and for
+            three years following the suspension period.) The other
+            option is to purchase temporary supplemental insurance from
+            another insurance company solely for the SR-22
+            requirement.</p>
+            <p>DMV does <em>not</em> automatically notify or send
+            records to insurance companies when an accident, conviction,
+            suspension or other entry is made. Records are sent only
+            upon individual request.</p>
+            <p>Rating procedures currently filed with the insurance
+            commissioner provide that an insurance policy can be
+            canceled mid-term for only a few specific reasons, such as
+            license suspension. The DUII diversion entry on a driver’s
+            record cannot be used for mid-term cancellation. It could,
+            however, be considered by a company in deciding whether or
+            not to renew the policy <em>or</em> by the insurance agent
+            to write the policy through a substandard carrier.</p>
+            <p>The effect of a DUII diversion on insurance premiums, in
+            cases where the company at some point does find out about
+            it, will vary from company to company.</p>
+            <p>Preferred insurance companies request random checks of
+            motor vehicle records at the time of policy renewals in
+            about twenty percent of all cases.</p>
+            </section>
+            <section id="xiv._the_mental_health_division_evaluation"
+            class="level1">
+            <h1><strong>XIV. The Mental Health Division
+            Evaluation</strong></h1>
+            <p>Oregon Administrative Rules 415-054-0461 through
+            415-054-570, explain the criteria used to place DUII
+            diversion clients into a Level I, Level II or Level III
+            program and the qualifications for evaluators. The level of
+            program is a subject of increasing interest as expense to
+            the client greatly increases in the most involved Level II
+            program, and insurance companies may begin adjusting rates
+            based on the classification.</p>
+            <p><a
+            href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=1928">Link
+            to Oregon Administrative Rules Chapter 415, Addiction
+            Services, Division 54, DUII Alcohol/Other Drug Information
+            And DUII Alcohol/Other Drug Rehabilitation Programs; Alcohol
+            And Drug Evaluation And Screening Specialist</a></p>
+            </section>
+    </body>
+</html>

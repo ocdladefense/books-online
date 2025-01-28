@@ -1,0 +1,2517 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </section>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 8. She Said What?: Hearsay
+            Evidence</strong></p>
+            <p><strong><em>By Bryan Francesconi</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>Many of Oregon’s hearsay rules are either specific to sex
+            crimes cases or likely to arise in that type of prosecution.
+            This chapter provides an in-depth analysis of those rules,
+            including case law and practice tips. Confrontation Clause
+            principles that further limit the scope of these rules when
+            the statements are “testimonial” and offered for the truth
+            of the matter asserted are first examined and then discussed
+            in the context of each of the following hearsay rules:</p>
+            <ul>
+            <li><blockquote>
+            <p>Complaint of sexual misconduct under <a
+            href="https://www.oregonlaws.org/ors/40.460">OEC 803</a>
+            18(a)(b)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Statements concerning an act of abuse under OEC 803
+            18(a)(b)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Statements for purpose of medical diagnosis under OEC 803
+            (4)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Excited utterance under OEC 803(2)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Existing mental, emotional or physical condition under
+            OEC 803(3)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Domestic violence exception under OEC 803(26)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Residual hearsay exception under OEC 803(28a) and <a
+            href="https://www.oregonlaws.org/ors/40.465">OEC
+            804</a>(3)(f)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Multiple hearsay under <a
+            href="https://www.oregonlaws.org/ors/40.470">OEC 805</a></p>
+            </blockquote></li>
+            </ul>
+            <p>It must always be kept in mind that the hearsay rules and
+            the Confrontation Clause are not coextensive: evidence may
+            be admissible under the Confrontation Clause, yet be
+            inadmissible under Oregon’s hearsay rules; conversely,
+            evidence may be admissible as a hearsay exception, yet be
+            inadmissible under the Confrontation Clause. If the hearsay
+            declarant testifies at trial and is subject to full and
+            effective cross-examination about the statement, the
+            confrontation requirement is satisfied. <a
+            href="https://scholar.google.com/scholar_case?case=3436824241753418822&amp;q=California+v.+Green,+399+US+149+(1970)&amp;hl=en&amp;as_sdt=3,38"><em>California
+            v. Green</em></a>, 399 US 149 (1970). <a
+            href="https://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=crawford&amp;hl=en&amp;as_sdt=3,38"><em>Crawford</em></a>
+            does not change that.</p>
+            <p>The chapter concludes with an examination of several
+            other Oregon evidence rules that commonly arise in sex crime
+            cases: recanted hearsay and impeachment of an absent
+            declarant under OEC 806; witness competency under OEC 601;
+            and learned treatise and the basis for expert opinion under
+            OEC 703 and 706.</p>
+            </section>
+            <section
+            id="ii._the_constitutional_framework_of_admissibility_of_accusers_prior_statements"
+            class="level1">
+            <h1><strong>II. The Constitutional Framework of
+            Admissibility of Accuser’s Prior Statements</strong></h1>
+            <p>When the state seeks to introduce statements of an
+            accuser, three distinct rights of a criminal defendant come
+            into play. First, a criminal defendant has the right to
+            exclude hearsay statements from her trial under the Oregon
+            Evidence Code. Second, a defendant has a right to confront
+            one’s accuser under the Sixth Amendment to the United States
+            Constitution. Third, and distinct from the Oregon analysis,
+            a criminal defendant has the right to challenge hearsay
+            evidence under Article I, section 11, of the Oregon
+            Constitution.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=crawford&amp;hl=en&amp;as_sdt=3,38"><em>Crawford
+            v. Washington</em></a>, 541 US 36 (2004), provides the
+            federal confrontation analysis which prohibits the
+            “admission of testimonial statements of a witness who did
+            not appear at trial unless he was unavailable to testify,
+            and the defendant had a prior opportunity for
+            cross-examination.”</p>
+            <p>For determining admissibility of hearsay statements under
+            Oregon’s constitution, our courts use the two-part test set
+            out in <a
+            href="https://scholar.google.com/scholar_case?case=18130169725366408619&amp;q=Ohio+v.+Roberts,+448+US+56+(1980)&amp;hl=en&amp;as_sdt=3,38"><em>Ohio
+            v. Roberts</em></a>, 448 US 56 (1980). <a
+            href="https://scholar.google.com/scholar_case?case=26180234170216142&amp;q=State+v.+Campbell,+299+Or+633+(1985)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Campbell</em>, 299 Or 633 (1985)</a>: courts must
+            evaluate whether the declarant is “unavailable” at the time
+            of trial and must determine whether the statement qualifies
+            under a firmly rooted hearsay exception or itself possesses
+            “sufficient indicia of reliability.” Note that the Oregon
+            Evidence Code definition of “unavailable” is not necessarily
+            the same as under state law or the federal confrontation
+            clause. <em>See, e.g.,</em> [<a
+            href="https://scholar.google.com/scholar_case?case=1665187790609905707&amp;q=See,+e.g">https://scholar.google.com/scholar_case?case=1665187790609905707&amp;q=See,+e.g</a>.,+State+v.+George,+146+Or+App+449&amp;hl=en&amp;as_sdt=4,38
+            <em>State v. George</em>], 146 Or App 449, 453 n 2 (1997),
+            discussed <em>infra</em>.</p>
+            <section id="a._the_federal_confrontation_clause"
+            class="level2">
+            <h2><strong>A. The Federal Confrontation
+            Clause</strong></h2>
+            <p>1. When is a statement “testimonial” for purposes of the
+            Confrontation analysis?</p>
+            <p>In <em>Crawford</em>, the United States Supreme Court
+            turned the focus of the confrontation analysis toward
+            whether the statements at issue were “testimonial.” 541 US
+            at 59. It did so in order to address the “principal evil”
+            targeted by the Confrontation Clause, which was the “use of
+            ex parte examinations as evidence against the accused.”
+            <em>Id.</em> at 50. The Court identified a “testimonial”
+            statement as one that was “made under circumstances which
+            would lead an objective witness reasonably to believe that
+            the statement would be available for use at a later trial.”
+            <em>Id.</em> at 51-52. The Court observed that “testimony”
+            is “[a] solemn declaration or affirmation made for the
+            purpose of establishing or proving some fact.” <em>Id.</em>
+            at 51. In <em><a
+            href="https://scholar.google.com/scholar_case?case=1299825562389616034&amp;q=Davis+v.+Washington,+547+US+813+(2006)&amp;hl=en&amp;as_sdt=3,38">Davis
+            v. Washington</a>,</em> 547 US 813 (2006), the Court offered
+            an expanded discussion of what else constitutes a
+            testimonial statement:</p>
+            <p>Statements are nontestimonial when made in the course of
+            police interrogation under circumstances objectively
+            indicating that the primary purpose of the interrogation is
+            to enable police assistance to meet an ongoing emergency.
+            They are testimonial when the circumstances objectively
+            indicate that there is no such ongoing emergency, and that
+            the primary purpose of the interrogation is to establish or
+            prove past events potentially relevant to later criminal
+            prosecution.</p>
+            <p>Although that definition focused on the purpose of an
+            “interrogation,” the Court emphasized that statements made
+            in the absence of interrogation were not necessarily
+            nontestimonial: “[I]t is in the final analysis the
+            declarant’s statements, not the interrogator’s questions,
+            that the Confrontation Clause requires us to evaluate.”
+            <em>Id.</em> at 822–23 n 1.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=8419060361922891900&amp;q=Ohio+v.+Clark,+135+S.Ct.+2173+(2015)&amp;hl=en&amp;as_sdt=3,38"><em>Ohio
+            v. Clark</em></a>, 135 S.Ct. 2173 (2015), the Supreme Court
+            stated the test for whether a statement is “testimonial” is
+            whether it was given with the primary purpose “to create an
+            out-of-court substitute for trial testimony,” at 2180. In
+            <em>Clark,</em> the Court held that a three-year-old
+            victim’s statement to his preschool teacher identifying
+            defendant as the person who had caused his injuries was not
+            testimonial.</p>
+            <p>2. Does it matter if the statement was made to a private
+            citizen through CARES<br />
+            or DHS?</p>
+            <p>In <em>Ohio v. Clark</em>, the Supreme Court addressed
+            for the first time “whether statements to persons other than
+            law enforcement officers are subject to the Confrontation
+            Clause,” 135 S.Ct. at 2181, and concluded: “Because at least
+            some statements to individuals who are not law enforcement
+            officers could conceivably raise confrontation concerns, we
+            decline to adopt a categorical rule excluding them from the
+            Sixth Amendment’s reach. Nevertheless, such statements are
+            much less likely to be testimonial than statements to law
+            enforcement officers.” <em>Id</em>.</p>
+            <p>In <em><a
+            href="https://scholar.google.com/scholar_case?case=12876579549763277259&amp;q=State+v.+Mack,+337+Or+586+(2004)&amp;hl=en&amp;as_sdt=4,38">State
+            v. Mack</a>,</em> 337 Or 586 (2004), the Oregon Supreme
+            Court confronted the question of whether videotaped
+            statements made by a three-year-old to a DHS caseworker were
+            testimonial. On two separate occasions, the investigating
+            police officer videotaped a three-year-old child witness’s
+            interview by a DHS caseworker, whom police had asked to
+            conduct the interviews. Arguing that the statements were
+            nontestimonial, the state relied upon the fact that the
+            interview itself had not been performed by a police officer.
+            The court did not find the distinction critical, concluding
+            that there was no relevant distinction between a child’s
+            statements to the caseworker and the testimonial statements
+            the court held to be inadmissible in [<a
+            href="https://a.next.westlaw.com/Link/Document/FullText?findType=Y&amp;serNum=2004190005&amp;originatingDoc=I1218813474b511dbb29ecfd71e79cb92&amp;refType=RP&amp;originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.UserEnteredCitation">https://a.next.westlaw.com/Link/Document/FullText?findType=Y&amp;serNum=2004190005&amp;originatingDoc=I1218813474b511dbb29ecfd71e79cb92&amp;refType=RP&amp;originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.UserEnteredCitation</a>)
+            <em>Crawford</em>.] The court reasoned that the caseworker
+            was functioning as an agent for the police because the
+            questioning had been at the officer’s request and structured
+            with law enforcement goals in mind. The court concluded that
+            when a private citizen is working as a “proxy” for the
+            police and gathering information to assist a police
+            investigation, the gathered statements shall be deemed
+            testimonial. [<a
+            href="https://a.next.westlaw.com/Link/Document/FullText?findType=Y&amp;serNum=2004190005&amp;originatingDoc=I1218813474b511dbb29ecfd71e79cb92&amp;refType=RP&amp;originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.UserEnteredCitation">https://a.next.westlaw.com/Link/Document/FullText?findType=Y&amp;serNum=2004190005&amp;originatingDoc=I1218813474b511dbb29ecfd71e79cb92&amp;refType=RP&amp;originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.UserEnteredCitation</a>)
+            <em>Id.</em>] at 593.</p>
+            <p>In <em><a
+            href="https://scholar.google.com/scholar_case?case=1689712124358304376&amp;q=346+Or+592+(2009)&amp;hl=en&amp;as_sdt=4,38">State
+            ex rel. Juvenile Dep’t of Multnomah Cty</a>. v. S.P.</em>,
+            346 Or 592 (2009), a pediatrician and a social worker, both
+            working for CARES, interviewed a child. The state argued
+            that there is a “world of difference” when medical personnel
+            and a social worker, rather than DHS staff, are involved.
+            The Oregon Supreme Court disagreed. “Service as a proxy for
+            the police appears to be a primary function of CARES. CARES
+            receives a significant amount of its funding from the
+            Department of Justice. As a condition of receiving those
+            funds, CARES must train its workers in ‘legally sound’
+            interview techniques.” <em>Id.</em> at 620. “We cannot see
+            why the involvement of physicians and social workers, if
+            those physicians and social workers are acting as proxies
+            for police officers, presents any less risk [in the
+            production of testimonial evidence].” <em>Id.</em> at
+            621.</p>
+            <p>3. Is the testimonial determination based on the
+            perspective of the declarant or<br />
+            the listener?</p>
+            <p>In <em>Ohio v. Clark, supra</em>, the Supreme Court
+            examined both the primary purpose of the listener and the
+            primary purpose of the hearsay declarant. <em>Id</em>. at
+            2181-82.</p>
+            <p>In <em>Mack</em>, the Oregon Supreme Court focused on the
+            law enforcement goals of the listener (the DHS worker) in
+            determining the conversation was testimonial. Does that mean
+            that it is the listener’s motivations that are paramount?
+            Not necessarily. By comparison, in <a
+            href="https://scholar.google.com/scholar_case?case=7760334710314411852&amp;q=camarena&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Camarena</em></a>, 334 Or 28 (2008), the Oregon Supreme
+            Court articulated that when evaluating the testimonial
+            nature of a 9-1-1 call, the relevant inquiry can be the
+            perspectives of the declarant. 344 Or at 40 (statements made
+            to 9-1-1 about an attack were partially testimonial). In
+            reaching its conclusions about which parts of the call<br />
+            were testimonial, the court focused on the language in
+            <em>Davis</em> that the Confrontation Clause requires
+            analysis of “the declarant’s statements, not the
+            interrogator’s questions.” <em>Id.</em> at 40 (quoting
+            <em>Davis</em>, 547 US at 822–23, n 1). Thus, a court should
+            consider the perspectives of both, the listener and the
+            declarant.</p>
+            <blockquote>
+            <p>If either party had goals associated with law
+            enforcement, the encounter was testimonial. In <em>Multnomah
+            Cty. v. S.P., supra,</em> 346 Or at 613, the Oregon Supreme
+            Court made clear that the testimonial analysis is not to be
+            focused on the intent of one party, but rather the totality
+            of the circumstances surrounding the declaration. If any
+            party to the conversation had law enforcement goals, those
+            statements were testimonial. “Thus, in <em>Mack</em> and
+            <em>Camarena</em>, this court emphasized that whether a
+            statement is testimonial depends on an objective analysis of
+            the contents and circumstances of the statement, rather than
+            an attempt to determine only the subjective intentions of
+            the questioner or the declarant. We infer the purpose of an
+            interrogation from the totality of the circumstances in
+            which it took place and the results that it yielded.”
+            <em>Id.</em></p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>If either the declarant who made the statement or the
+            listener who heard the statement had motivations to aid a
+            police investigation, those motivations should establish
+            that the statement was testimonial and your client has a
+            right to cross-examine the declarant.</p>
+            </section>
+            </section>
+            <section
+            id="b._analyzing_hearsay_under_the_oregon_confrontation_clause"
+            class="level1">
+            <h1><strong>B. Analyzing Hearsay Under the Oregon
+            Confrontation Clause</strong></h1>
+            <blockquote>
+            <p>Article I, section 11, of the Oregon Constitution will
+            often substantially curtail state efforts to introduce
+            hearsay evidence in a criminal trial. Under the <em>Ohio v.
+            Roberts</em> test adopted by the Oregon Supreme Court in
+            <em>Campbell, supra,</em> and reaffirmed in <a
+            href="https://scholar.google.com/scholar_case?case=12256749275543318001&amp;q=State+v.+Moore,+334+Or+328+(2002)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moore</em></a>, 334 Or 328 (2002), hearsay statements are
+            admissible in Oregon trial courts, absent a testifying
+            witness, only when the state makes two showings: (1)
+            unavailability and (2) “indicia of reliability.” Reliability
+            can be presumed if the statements are being introduced under
+            a “firmly rooted hearsay exception.” If not, reliability can
+            be established upon a showing that the statement bears
+            “particularized guarantees of trustworthiness.” The
+            proponent of the evidence has the burden to prove each of
+            these elements by a preponderance of the evidence. <a
+            href="https://scholar.google.com/scholar_case?case=11061074037943511476&amp;q=State+v.+Nielson,+316+Or+611+(1993&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nielson</em></a>, 316 Or 611 (1993).</p>
+            </blockquote>
+            <p>1. What constitutes unavailability under the Oregon
+            Constitution for admission<br />
+            of hearsay evidence?</p>
+            <blockquote>
+            <p>Article I, section 11, and the Sixth Amendment provide a
+            more stringent showing of unavailability by the prosecution
+            than is required by the Evidence Code. See, e.g., <a
+            href="https://scholar.google.com/scholar_case?case=1665187790609905707&amp;q=State+v.+George,+146+Or+App+449,+(1997&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. George</em></a>, 146 Or App 449, 453 n 2 (1997)
+            (“‘Unavailability’ under OEC 804 is not necessarily the same
+            as under the confrontation clauses of Article I, section 11,
+            of the Oregon Constitution, or the Sixth Amendment to the
+            United States Constitution”). The state must avail itself of
+            all (or almost all) available methods to produce the witness
+            in court.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=14596102390979143335&amp;q=State+v.+Harris,+279+Or+App+446&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Harris</em></a>, 279 Or App 446 (2016)<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a>, the Court of Appeals
+            reversed a trial court’s decision to allow in a 9-1-1 call
+            from a minor victim after the minor failed to show on the
+            morning of trial. In concluding that the state’s efforts had
+            been constitutionally sufficient, the trial court relied
+            upon the personal service of the minor, their efforts in the
+            previous days to call her, and the prosecutor’s conversation
+            with the minor’s guardian on the day of trial where they
+            were told that “She is…refusing to appear.” Id. at 449. In
+            opposition, the defense argued that the state still had
+            methods at its disposal and its refusal to use them should
+            be determinative:</p>
+            </blockquote>
+            <p>When a witness declines to appear despite having been
+            validly subpoenaed, the state has many options to compel
+            that witness to testify, ranging from persuasion to invoking
+            the trial court’s contempt power. If the state declines to
+            pursue any of those options, and the record does not reflect
+            that further efforts would have been futile, then the state
+            has failed to show a good-faith effort.</p>
+            <p><em>Id.</em> at 454. The Court of Appeals agreed:</p>
+            <p>Although frequently phrased in terms of whether the state
+            made a good-faith effort to secure the witnesses’
+            attendance, the test for unavailability is, ultimately, one
+            of necessity. As the court pointed out in <em>State v.
+            Moore</em>, the unavailability requirement ‘flows logically’
+            from those cases in which courts allowed the use of
+            out-of-court statements in ‘circumstances of genuine
+            necessity’ – that is, cases in which confrontation, in the
+            classic sense, was impossible.</p>
+            <blockquote>
+            <p><em>Id.</em> The Court of Appeals held that properly
+            serving a witness alone is insufficient to meet
+            constitutional unavailability for purposes of Article I,
+            section 11. <em>Id.</em> at 455. In reaching this
+            conclusion, the court highlighted that the case record did
+            not show the witness was beyond the court’s jurisdiction or
+            could not have been located through good-faith efforts. And
+            while the court was not willing to create a <em>per se</em>
+            rule requiring the state to seek contempt to establish
+            unavailability, the court stressed that the state failed in
+            that case to pursue that option, along with the option to
+            request a set-over. <em>See</em> <em>Id.</em> at 456, n
+            1.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>At a minimum, under <a
+            href="https://scholar.google.com/scholar_case?case=3431242362629837602&amp;q=Barber+v.+Page,+390+US+719+(1968&amp;hl=en&amp;as_sdt=3,38"><em>Barber
+            v. Page</em></a>, 390 US 719 (1968), the state must avail
+            itself of applicable statutes in order to secure witnesses.
+            Those statutes include the material witness statute, ORS
+            136.608 et seq. Similarly, the state must, in the right
+            circumstances, implicate the Uniform Act to Secure the
+            Attendance of Witnesses from Without a State in Criminal
+            proceedings. <em>Page</em>, 390 U.S. at 723-4 n 4. Under
+            Oregon law, <em>State v. Harris, supra</em>, gets quite
+            close to requiring the state to undertake all reasonable
+            means, including sending law enforcement to the declarant’s
+            residence on the day of trial and potentially requesting a
+            material witness warrant.</p>
+            <blockquote>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=14596102390979143335&amp;q=State+v.+Harris,+279+Or+App+446&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Harris</em></a>, 362 Or 55, 57 (2017), the Oregon Supreme
+            Court reversed the Court of Appeals decision on prejudice
+            grounds. At the trial court, the court had suggested that
+            the trial be set over for one day to give the state
+            additional time to “make whatever further efforts it wishes
+            to make” to obtain the presence of their critical witness.
+            The prosecutor agreed to that plan but the defendant
+            objected. At the Supreme Court, the state first argued that
+            the state had made sufficient efforts to establish
+            constitutional unavailability. The Supreme Court
+            disagreed:</p>
+            </blockquote>
+            <p>[I]n light of the foregoing case law, the state’s
+            contention that Article I, section 11, requires only that it
+            have subpoenaed a witness is untenable. The constitutional
+            confrontation guarantee requires the state to do more than
+            select one from any number of reasonable means of securing
+            the presence of a witness and call it a day. Reliance on
+            hearsay in lieu of live testimony must be a matter of
+            “necessity.” The state must have exhausted all reasonably
+            available means of producing the witness.</p>
+            <blockquote>
+            <p><em>Harris</em>, 362 Or at 62. However, the Oregon
+            Supreme Court then held that a determination regarding
+            whether the state made sufficient efforts was not irrelevant
+            in Harris because the defendant had invited the error by
+            objecting to the set over. “In this case, defendant objected
+            to the state being granted the time to pursue other means of
+            producing the victim as a witness. Under those
+            circumstances, defendant is in no position to complain that
+            the trial court erred in concluding that the victim was
+            unavailable for confrontation purposes and in admitting the
+            9-1-1 recording of her report.” <em>Id</em>. at 67</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Defense counsel should do your best to not expressly
+            object to the set over. Instead, focus your language and
+            arguments on the reasons any further delay will harm your
+            client such as age of the case, custody status, availability
+            of defense witnesses, and so on. Also, you can focus your
+            arguments on the state’s request to do their jobs now when
+            they could have taken these steps earlier. Finally, if there
+            is going to be a continuance, try and limit it to as short a
+            period of time as the court will allow.</p>
+            <p>2. What constitutes “reliability” under the Oregon
+            Constitution?</p>
+            <blockquote>
+            <p>Under <a
+            href="https://scholar.google.com/scholar_case?case=18130169725366408619&amp;q=roberts+448+US&amp;hl=en&amp;as_sdt=3,38"><em>Roberts</em></a>,
+            reliability can be inferred when the evidence falls within a
+            firmly rooted hearsay exception. Without that, a court must
+            exclude the evidence absent a showing of “particularized
+            guarantees of trustworthiness.” The <em>Roberts</em> Court
+            created a shortcut method of establishing reliability in
+            certain situations so as to “respond[] to the need for
+            certainty in the workaday world of conducting criminal
+            trials.” 448 US at 65-66. Applying the “indicia of
+            reliability” requirement, the Oregon courts have already
+            held the following qualify:</p>
+            </blockquote>
+            <ul>
+            <li>Complaints of sexual misconduct under <a
+            href="https://www.oregonlaws.org/ors/40.460">OEC
+            803</a>(18a)(a) – <a
+            href="https://scholar.google.com/scholar_case?case=26180234170216142&amp;q=State+v.+Campbell,+299+Or+633+(1985)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Campbell</em>,</a> 299 Or 633 (1985).</li>
+            <li>Excited utterances under OEC 803(2) – <a
+            href="https://scholar.google.com/scholar_case?case=7760334710314411852&amp;q=camarena&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Camarena</em></a>, 334 Or 28, 38-41 (2008).</li>
+            <li>Statements for purposes of medical diagnosis or
+            treatment under OEC 803(4) – <a
+            href="https://scholar.google.com/scholar_case?case=17614319642649657600&amp;q=State+v.+Shelton,+218+Or+App+652&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Shelton</em></a>, 218 Or App 652, 657 (2008).</li>
+            <li>Statements against a party causing unavailability of the
+            declarant under <a
+            href="https://www.oregonlaws.org/ors/40.465">OEC
+            804</a>(3)(g) – <a
+            href="https://scholar.google.com/scholar_case?case=8165480541913146685&amp;q=State+v.+Supanchick,+245+Or+App+651&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Supanchick</em></a>, 245 Or App 651, 657-58 (2011).</li>
+            <li>Statements of a co-conspirator under <a
+            href="https://www.oregonlaws.org/ors/40.450">OEC
+            801</a>(4)(b) – <a
+            href="https://scholar.google.com/scholar_case?case=6574059849444768938&amp;q=State+v.+Cornell,+109+Or+App+396&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cornell</em></a>, 109 Or App 396 (1992).</li>
+            </ul>
+            <p>The following hearsay rules are not firmly rooted:</p>
+            <ul>
+            <li>Statements relating to domestic violence under OEC
+            803(26) – <a
+            href="https://scholar.google.com/scholar_case?case=5241533916347286109&amp;q=State+v.+Wilcox,+180+Or+App+557,+(2002)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wilcox</em></a>, 180 Or App 557, 563-65 (2002).</li>
+            <li>Statements falling under the residual hearsay exception
+            under OEC 803(28)(a) – <a
+            href="https://scholar.google.com/scholar_case?case=15850133192959927092&amp;q=Idaho+v.+Wright,+437+US+805+(1990)&amp;hl=en&amp;as_sdt=3,38"><em>Idaho
+            v. Wright</em></a>, 437 US 805 (1990).</li>
+            <li>Statements against penal interest under OEC 804 (3) – <a
+            href="https://scholar.google.com/scholar_case?case=11061074037943511476&amp;q=State+v.+Nielson,+316+Or+611+(1993&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nielsen</em></a>, 316 Or 611, 623 (1993).</li>
+            </ul>
+            <p>Additionally, one kind of statement falls within its own
+            category, allowing the presumption of reliability despite
+            its status as not firmly rooted because internal procedures
+            related to the statement are sufficient to per se guarantee
+            reliability:</p>
+            <ul>
+            <li>Statements concerning an act of abuse under OEC
+            803(18a)(b) – <a
+            href="https://scholar.google.com/scholar_case?case=4548550094913989536&amp;q=State+v.+Renly,+111+Or+App+453&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Renly</em></a>, 111 Or App 453, 460-62 (1992).</li>
+            </ul>
+            <p>3. What kinds of statements have “particularized
+            guarantees of trustworthiness?”</p>
+            <p>In situations when a statement’s admissibility is not
+            presumed, a trial court must determine whether a statement
+            has “sufficient indicia of reliability.” Reliability can be
+            established upon a showing that the statement bears
+            “particularized guarantees of trustworthiness” based upon a
+            totality of the circumstances evaluation. <em>Roberts</em>,
+            448 US at 65–66; <em>State v. Nielsen</em>, 316 Or at
+            622-23.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=323007978573713309&amp;q=State+v.+Farber,+295+Or+199+(1983&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Farber</em></a>, 295 Or 199 (1983), the Oregon Supreme
+            Court laid out four reliability factors that may be
+            considered when making this totality of the circumstances
+            evaluation: (1) whether the declaration contained assertions
+            of past fact, (2) whether the declarant had personal
+            knowledge of the identity and role of the participants in
+            the crime, (3) whether it was possible the declarant was
+            relying upon faulty recollection, and (4) whether the
+            circumstances under which the statements were made provided
+            reason to believe the declarant had misrepresented the
+            defendant’s involvement in the crime. These factors are not
+            exhaustive, nor are all four required to admit declarations.
+            <em>Id.</em> at 209-10.</p>
+            <p>It is important to note that when making a reliability
+            determination, a trial court cannot use other evidence
+            presented at trial to corroborate the truth of the contested
+            statement. Instead, the totality of circumstances
+            surrounding the statement itself is determinative. The
+            circumstances are those “surround[ing] the making of the
+            statement and [those] that render the declarant particularly
+            worthy of belief.” <em>Nielsen</em>, 316 Or at 622-23. The
+            United States Supreme Court discussed the reason a trial
+            court cannot consider external corroborative evidence in
+            <em>Idaho v. Wright</em>:</p>
+            <p>To be admissible under the Confrontation Clause, hearsay
+            evidence used to convict a defendant must possess indicia of
+            reliability by virtue of its inherent trustworthiness, not
+            by reference to other evidence at trial. . . .</p>
+            <p>“[T]he use of corroborating evidence to support a hearsay
+            statement’s ‘particularized guarantees of trustworthiness’
+            would permit admission of a presumptively unreliable
+            statement by bootstrapping on the trustworthiness of other
+            evidence at trial, a result we think at odds with the
+            requirement that hearsay evidence admitted under the
+            Confrontation Clause be so trustworthy that
+            cross-examination of the declarant would be of marginal
+            utility.</p>
+            <p>497 US at 823.</p>
+            <section
+            id="c._limitations_on_the_confrontation_protections"
+            class="level2">
+            <h2><strong>C. Limitations on the Confrontation
+            Protections</strong></h2>
+            <p>Under both Article I, section 11, of the Oregon
+            Constitution and the Sixth Amendment, the Confrontation
+            protections apply only when a declarant does not testify.
+            This is because “[t]he confrontation concerns are assuaged
+            when a defendant has the opportunity to test the declarant
+            under the “crucible of cross-examination.” <a
+            href="https://scholar.google.com/scholar_case?case=3436824241753418822&amp;q=California+v.+Green,+399+US+149,+158+(1970)&amp;hl=en&amp;as_sdt=3,38"><em>California
+            v. Green</em></a>, 399 US 149, 158 (1970).</p>
+            <p>A particularly frustrating situation occurs when a
+            declarant does testify but a defendant cannot adequately
+            inquire about the declarant’s memory of the contested events
+            due to physical or mental limitations. Unfortunately, the
+            right of confrontation compels physical presence on the
+            stand but not necessarily a meaningful opportunity to delve
+            into particular matters with that individual. In <a
+            href="https://scholar.google.com/scholar_case?case=224477948605740836&amp;q=United+States+v.+Owens,+484+US+554+(1988&amp;hl=en&amp;as_sdt=3,38"><em>United
+            States v. Owens</em></a>, 484 US 554 (1988), the Supreme
+            Court held that the Sixth Amendment afforded no protection
+            when a declarant who had previously identified the accused
+            could no longer do so by the time of trial. Admitting the
+            prior identification as substantive evidence, the Court
+            wrote: “It is sufficient that the defendant has the
+            opportunity to bring out such matters as the witness’s bias,
+            his lack of care and attentiveness, his poor eyesight, and
+            even, (what is often a prime objective of cross-examination)
+            the very fact that he has a bad memory.” <em>Owens</em>, 484
+            US at 559. <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=11250065932511666215&amp;q=Delaware+v.+Fensterer,+474+US+15,+19+(1985)&amp;hl=en&amp;as_sdt=3,38">Delaware
+            v. Fensterer</a></em>, 474 US 15, 19 (1985); <a
+            href="https://scholar.google.com/scholar_case?case=17047576258488690231&amp;q=State+v.+Bailey,+270+Or+App+146&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bailey</em></a>, 270 Or App 146, 149 (where five-year-old
+            victim testified at sex abuse trial that she could not
+            remember most of the events in question, she was not
+            “unavailable”).</p>
+            <p>A witness’s refusal to answer questions in a helpful or
+            relevant manner does not create constitutional
+            unavailability. <em>See, e.g., <a
+            href="https://scholar.google.com/scholar_case?case=13274640433687924720&amp;q=State+v.+Sullivan,+217+Or+App+208,+(2007&amp;hl=en&amp;as_sdt=4,38">State
+            v. Sullivan</a></em>, 217 Or App 208, 212-13 (2007);<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=15938501625883247361&amp;q=Quintero,+110+Or+App+247&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Quintero</em></a>, 110 Or App 247 (1991) (wife resorted
+            to answer all cross questions with<br />
+            “I don’t know”).</p>
+            <p>Additionally, the Confrontation protections only apply if
+            the statement is hearsay, i.e., offered for the truth of the
+            matter asserted. In <em>Crawford</em>, 541 US at 59 n 9,
+            Justice Scalia noted that the Confrontation Clause does not
+            bar testimonial statements when they are not hearsay,
+            because they are not being introduced for the truth of the
+            matter asserted: “The Clause also does not bar the use of
+            testimonial statements for purposes other than establishing
+            the truth of the matter asserted.” Post <em>Crawford</em>,
+            Oregon adopted the same analysis in <a
+            href="https://scholar.google.com/scholar_case?case=4671969792401582846&amp;q=State+v.+Nelson,+224+Or+App+193,+(2008&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nelson</em></a>, 224 Or App 193, 195-199 (2008):
+            “Admission of that statement was proper under <a
+            href="https://www.oregonlaws.org/ors/40.470">OEC 806</a> as
+            impeachment of a hearsay declarant and, because the
+            statement was not offered for its truth, defendant’s Sixth
+            Amendment right to confrontation was not violated.”</p>
+            </section>
+            </section>
+            <section id="iii._common_hearsay_issues_in_sex_crimes_cases"
+            class="level1">
+            <h1><strong>III. Common Hearsay Issues in Sex Crimes
+            Cases</strong></h1>
+            <section id="a._complaint_of_sexual_misconduct_oec_80318aa"
+            class="level2">
+            <h2><strong>A. Complaint of Sexual Misconduct – OEC
+            803(18a)(a)</strong></h2>
+            <p><a href="https://www.oregonlaws.org/ors/40.460">OEC
+            803</a>(18a)(a), working in tandem with OEC 803(18a)(b),
+            allows in the fact of a complaint but not any particular
+            details such as location or perpetrator. The rule is
+            intended to give the state a method to rebut the argument
+            that the act was consensual or did not occur and to address
+            situations when a report to law enforcement was delayed. By
+            itself the rule is of minimal utility to the state because
+            incident details may not be introduced under the rule.</p>
+            <p>A party may present evidence under this rule that a
+            complaint was made, but the party cannot present the details
+            of the complaint, including the identity of the alleged
+            perpetrator or other facts surrounding the alleged offense.
+            Legislative Commentary to Rule 803(18a)(a). The purpose of
+            the exception is to allow corroboration of the victim’s
+            assertion that a sexual act was nonconsensual. <a
+            href="https://scholar.google.com/scholar_case?case=2353576351429810447&amp;q=State+v.+Hackett,+49+Or+App+857+(1980&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hackett</em></a>, 49 Or App 857, 861 (1980).</p>
+            <p>The history of case law in regards to this rule is
+            muddled on whether it includes certain particulars to
+            establish the illicit nature of the conduct and lack of
+            consent. However, when the legislature revamped OEC 803 to
+            include subsection (b), it added the very specific
+            admonishment that subsection (a) shall only be used to
+            establish “the fact the complaint was made.” This
+            legislative clarification implicitly overruled the history
+            of confusing case law on the topic. <em>See, e.g., <a
+            href="https://scholar.google.com/scholar_case?case=17626295304269482344&amp;q=State+v.+Waites,+7+Or+App+137&amp;hl=en&amp;as_sdt=4,38">State
+            v. Waites</a>,</em> 7 Or App 137, 140-41 (1971); <em><a
+            href="https://scholar.google.com/scholar_case?case=5824941318249934854&amp;q=State+v.+Wilson,+20+Or+App+553&amp;hl=en&amp;as_sdt=4,38">State
+            v. Wilson</a>,</em> 20 Or App 553, 557 (1975); <a
+            href="https://scholar.google.com/scholar_case?case=18042733405354387786&amp;q=State+v.+Emery,+4+Or+App+527&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Emery</em></a>, 4 Or App 527, 529 n 1 (1971); <a
+            href="https://scholar.google.com/scholar_case?case=12854957964873265890&amp;q=State+v.+Arnold,+133+Or+App+647&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Arnold</em></a>, 133 Or App 647, 651 (1995).</p>
+            <p>OEC 803(18a)(a) does not preclude use of other hearsay
+            exceptions to introduce details of the alleged crime. The
+            nature of the rule’s purpose creates an overlap between it
+            and OEC 801(4)(a)(B) (admission of prior consistent
+            statements – <em>see <a
+            href="https://scholar.google.com/scholar_case?case=18060802363160729785&amp;q=State+v.+Newberry,+39+Or+App+119&amp;hl=en&amp;as_sdt=4,38">State
+            v. Newberry</a>,</em> 39 Or App 119, 121 (1979)) and OEC 803
+            (2) (excited utterances). However, the state may not
+            introduce evidence under the residual hearsay exception that
+            is otherwise barred by OEC 803(18a)(a).</p>
+            <p>Confrontation Clause Analysis: OEC 803(18a)(a) is a
+            firmly rooted hearsay exception. <em>See <a
+            href="https://scholar.google.com/scholar_case?case=5598897907968858801&amp;q=State+v.+Stevens,+311+Or+119,+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Stevens</a></em>, 311 Or 119, 142 (1991). But
+            unavailability may prevent the state from introducing
+            evidence under the rule based on federal and state
+            constitutional rights to confront the witness. To the extent
+            the allegation of sexual misconduct is testimonial, it is
+            subject to exclusion unless the declarant testifies at the
+            trial or the defendant had a prior opportunity to
+            cross-examine the declarant about the statement. Generally
+            the state’s attempt to introduce evidence under OEC
+            803(18a)(a) absent the declarant testifying will be undone
+            by the defendant’s constitutional confrontation rights.</p>
+            </section>
+            <section
+            id="b._child_hearsay_about_sexual_abuse_oec_80318ab"
+            class="level2">
+            <h2><strong>B. Child Hearsay about Sexual Abuse – OEC
+            803(18a)(b)</strong></h2>
+            <blockquote>
+            <p>When a declarant testifies at trial and is subject to
+            cross-examination, the declarant’s prior statements to other
+            witnesses are generally admissible when they pertain to the
+            current allegations of illicit sexual conduct so long as the
+            proponent of the evidence provided proper notice. This
+            hearsay rule allows the state to call a parade of adult
+            witnesses retelling the child’s story, as well as describing
+            the child’s demeanor when speaking of the abuse. This lends
+            credibility to the child’s testimony through repetition.
+            Furthermore, the testimony of articulate adults may greatly
+            augment the child’s trial testimony, which is not uncommonly
+            incomplete and somewhat inconsistent with earlier
+            statements. <em>See</em> <em><a
+            href="https://scholar.google.com/scholar_case?case=17047576258488690231&amp;q=State+v.+Bailey,+270+Or+App+146&amp;hl=en&amp;as_sdt=4,38">State
+            v. Bailey</a>, supra</em> (no need to assess reliability of
+            statements where child testified even though unable to
+            recall most of the events at issue).</p>
+            <p>By comparison, when a declarant does not testify at
+            trial, the statements are only admissible under OEC
+            803(18a)(b) provided all of the following:</p>
+            </blockquote>
+            <ul>
+            <li>The victim was chronologically or mentally under 12
+            years old when they originally<br />
+            </li>
+            </ul>
+            <p>made the statement.</p>
+            <ul>
+            <li>The proponent of the evidence provided proper
+            notice.</li>
+            <li>The proponent establishes that the time, content, and
+            circumstances of the statement provide indicia of
+            reliability.</li>
+            <li>The proponent presents corroborative evidence of the act
+            of abuse and of the alleged perpetrator’s opportunity to
+            participate in the conduct.</li>
+            </ul>
+            <p><strong>Practice Tip</strong></p>
+            <p>The state is rarely able to introduce hearsay statements
+            under this rule absent a declarant testifying. For such an
+            effort to be successful, it must establish all of the
+            following by a preponderance of the evidence for each
+            statement:</p>
+            <ol>
+            <li><blockquote>
+            <p>The declarant was chronologically or biologically under
+            the age of 12 when the statement was made (requirement of
+            the rule).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>There is hearsay corroborative evidence that the
+            declarant suffered an act of abuse (rule requirement).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>There is hearsay corroborative evidence that the
+            defendant had opportunity to impose the abuse (rule
+            requirement).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The statements have “reliability” as laid out in the
+            11-factor OEC 803(18a)(b) test (rule requirement).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The declarant is unavailable (constitutional
+            requirement).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The statements were nontestimonial as defined in
+            <em>Crawford v. Washington</em> (constitutional
+            requirement).</p>
+            </blockquote></li>
+            </ol>
+            <p>Hearsay statements must meet certain statutorily imposed
+            requirements of <a
+            href="https://www.oregonlaws.org/ors/40.460">OEC
+            803</a>(18a)(b) regardless of whether the declarant
+            testifies. In both situations, certain notice and
+            particularity requirements must be met.</p>
+            <p>The proponent of hearsay statements must provide notice
+            to the opposing party no later than 15 days before trial
+            unless good cause is shown justifying the failure. Providing
+            discovery or a witness list in lieu of the notice is
+            insufficient. <em>See <a
+            href="https://scholar.google.com/scholar_case?case=10869958370183668481&amp;q=McKinzie,+186+Or+App+384&amp;hl=en&amp;as_sdt=4,38">State
+            v. McKinzie</a></em>, 186 Or App 384, 392 (2003) (providing
+            a videotape of hearsay statements was insufficient notice).
+            But new notice is not necessary upon retrial unless the
+            proponent of the evidence seeks to introduce different
+            statements. <a
+            href="https://scholar.google.com/scholar_case?case=18228404694431431292&amp;q=State+v.+Kelly,+276+Or+App+507&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kelly</em></a>, 276 Or App 507 (2016) (notice not
+            required on retrial if properly provided prior to original
+            trial).</p>
+            <p>The legislature did not provide a specific statutory
+            definition for the term “particular statements.” While the
+            requirement is clearly an anti-ambush provision, case law
+            suggests that goal can be met so long as the defense is
+            given sufficient guidance on where it can find the
+            statements. In <a
+            href="https://scholar.google.com/scholar_case?case=2634521372818142164&amp;q=State+v.+Chase,+240+Or+App+541+(2011&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Chase</em></a>, 240 Or App 541 (2011), the Court of
+            Appeals required the proponent of the evidence to lay out
+            the substance of the statement and identify the witness
+            through whom the statement would be introduced. However,
+            subsequent cases have held the state met the particularity
+            requirement by merely identifying the locations of the
+            statements rather than detailing them. <a
+            href="https://scholar.google.com/scholar_case?case=861911797896053519&amp;q=State+v+Riley,+258+Or+App+246+(2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v Riley</em></a>, 258 Or App 246 (2013) (affidavit directing
+            defense to look to statements on specific pages of discovery
+            sufficient); <a
+            href="https://scholar.google.com/scholar_case?case=14110139433655726914&amp;q=State+v+Ashkins,+263+Or+App+208+(2014)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v Ashkins</em></a>, 263 Or App 208 (2014) (despite failing
+            to identify specific pages, notice was sufficient when it
+            referenced the specific date, location, and parties present
+            for the conversation). Still, the court maintains that the
+            state fails to meet particularity requirements when it cites
+            only to the entirety of the discovery. <a
+            href="https://scholar.google.com/scholar_case?case=16526184649836631967&amp;q=State+v.+Edblom,+257+Or+App+22+(2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Edblom</em></a>, 257 Or App 22 (2013).</p>
+            <p>Admissibility when the declarant is unavailable: The
+            Oregon Evidence Code defines unavailability in <a
+            href="https://www.oregonlaws.org/ors/40.465">OEC 804</a>.
+            The drafters of OEC 803(18a)(b) expanded that definition
+            within the context of this rule, allowing a trial court to
+            find legal unavailability if the declarant has a substantial
+            lack of memory of the subject matter of the statement, is
+            presently incompetent to testify, is unable to communicate
+            about the abuse or sexual conduct based on fear or similar
+            reason, or is substantially likely, as established by expert
+            testimony, to suffer lasting severe emotional trauma from
+            testifying. OEC 803(18a)(b). When the declarant is not
+            testifying for any of these reasons, the court must examine
+            the declarant outside the presence of the jury and on the
+            record to determine whether the declarant is “unavailable.”
+            The court shall conduct the examination immediately prior to
+            the commencement of the trial. The defendant has an Article
+            I, section 11, right to be present and to examine the
+            declarant at the preliminary hearing. <a
+            href="https://scholar.google.com/scholar_case?case=1738248540239676021&amp;q=State+v.+Kitzman,+323+Or+589+(1996&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kitzman</em></a>, 323 Or 589 (1996).</p>
+            <p>Note that some of the OEC 803(18a)(b) grounds for
+            unavailability would not render the witness “unavailable”
+            under the confrontation clauses; e.g., if the child presents
+            with a substantial lack of memory or is unable to respond to
+            some questions due to emotional trauma. If the declarant is
+            constitutionally “available” and testifies, a defendant
+            cannot use this section to argue exclusion. <a
+            href="https://scholar.google.com/scholar_case?case=17047576258488690231&amp;q=State+v.+Bailey,+270+Or+App+146&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bailey</em></a>, 270 Or App 146 (2015) (defense
+            unsuccessfully argued rule’s reliability analysis required
+            victim’s testimony excluded where complainant was unable to
+            remember nearly anything about the allegation).</p>
+            <p>If the state proves that the declarant is “unavailable,”
+            the court next determines the reliability of the evidence.
+            OEC 803(18a)(b) lists 11 nonexclusive factors for a court to
+            consider when making a reliability determination. A trial
+            court must also make detailed findings on the record
+            regarding the hearsay corroborative evidence justifying the
+            hearsay’s admission. <a
+            href="https://scholar.google.com/scholar_case?case=4548550094913989536&amp;q=Renly,+111+Or+App+&amp;hl=en&amp;as_sdt=4,38"><em>Renly</em></a>,
+            111 Or App at 468. Any exclusion of evidence as a result of
+            this hearing is immediately appealable by the state under
+            [<a
+            href="https://www.oregonlaws.org/?search=ORS+138.060">https://www.oregonlaws.org/?search=ORS+138.060</a>.
+            ORS 138.060].</p>
+            <p>The court must also determine the statements are
+            corroborated. Without the required corroborative evidence, a
+            trial court cannot admit hearsay statements when the
+            declarant is unavailable. The corroborative evidence itself
+            cannot be hearsay. <em>Renly</em>, 111 Or App at 466;
+            <em>see also <a
+            href="https://scholar.google.com/scholar_case?case=336307828228840831&amp;q=State+v.+Mayer,+146+Or+App+86+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Mayer</a></em>, 146 Or App 86 (1997). That safeguard is
+            meant to ensure a defendant is not convicted based upon
+            hearsay alone, even when the hearsay is admissible under
+            some other exception. The corroborative evidence must
+            establish both that sexual abuse occurred and the defendant
+            had the opportunity to perpetrate it. But the evidence can
+            be “general in nature” and need not pertain to specific
+            allegations, and it need not be admissible at trial. <a
+            href="https://scholar.google.com/scholar_case?case=2994318378946002036&amp;q=State+v.+Reed,+173+Or+App+185&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Reed</em></a>, 173 Or App 185, 197 (2001) (corroboration
+            in the form of an eye witness who described uncharged
+            conduct that was at least arguably inappropriate but on a
+            different date held sufficient).</p>
+            <p>OEC 803(18a)(b) does not preclude the state from
+            attempting to introduce hearsay statements under another
+            hearsay exception. In <a
+            href="https://scholar.google.com/scholar_case?case=5246288985279010869&amp;q=State+v.+Leahy,+190+Or+App+147+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Leahy</em></a>, 190 Or App 147 (2003), the Oregon Court
+            of Appeals, in <em>dicta</em>, indicated that the state’s
+            failure to admit hearsay under OEC 803(18a)(b) was not
+            necessarily determinative because the statements could also
+            come in under other provisions. <em>Leahy</em>, 190 Or at
+            151 (hearsay statements potentially admissible under the
+            medical hearsay exception).</p>
+            <p>Confrontation Clause Analysis: Regarding reliability,
+            while OEC 803(18a)(b) has been held to not constitute a
+            firmly rooted hearsay exception, its procedures are
+            considered sufficient to protect a defendant’s right to
+            confrontation under the state constitution, thereby creating
+            a de facto exception. <em>Renly</em>, <em>supra</em> at 460.
+            However, the Sixth Amendment and Article I, section 11,
+            provide significant additional safeguards and often call
+            into question the constitutionality of OEC 803(18a)(b) when
+            the declarant is “unavailable.” <em>See, e.g., <a
+            href="https://scholar.google.com/scholar_case?case=1665187790609905707&amp;q=State+v.+George,+146+Or+App+449&amp;hl=en&amp;as_sdt=4,38">State
+            v. George</a></em>, 146 Or App 449, 453 n 2 (1997). See
+            discussion of constitutional “unavailability” earlier in
+            this chapter.</p>
+            <p>In addition, most statements gathered within the context
+            of OEC 803(18a)(b) are “testimonial.” As a result, the
+            portions of OEC 803(18a)(b) that attempt to allow hearsay
+            statements absent the declarant testifying will usually be
+            undone by the defendant’s confrontation rights. <em>See [<a
+            href="https://scholar.google.com/scholar_case?case=1689712124358304376&amp;q=State+ex+rel.+v.+S.P">https://scholar.google.com/scholar_case?case=1689712124358304376&amp;q=State+ex+rel.+v.+S.P</a>.,+346+Or+592+(2009)+&amp;hl=en&amp;as_sdt=4,38
+            State ex rel. v. S.P.],</em> 346 Or 592 (2009) (CARES
+            transcripts excluded where child does not testify).</p>
+            </section>
+            <section
+            id="c._statements_for_purpose_of_medical_diagnosis_oec_8034"
+            class="level2">
+            <h2><strong>C. Statements for Purpose of Medical Diagnosis –
+            OEC 803(4)</strong></h2>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=11052839865061159908&amp;q=State+v.+Moen,+309+Or+45&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moen</em></a>, 309 Or 45, 54-65 (1990), the Oregon
+            Supreme Court held there are three requirements for
+            admissibility under <a
+            href="https://www.oregonlaws.org/ors/40.460">OEC 803(4):</a>
+            (1) the statement must be made for the purpose of medical
+            diagnosis or treatment, (2) it must describe or relate
+            medical history, past or present symptoms, pain or
+            sensations, or the inception or character of the cause or
+            source of the pain, and (3) it must be “reasonably
+            pertinent” to diagnosis or treatment. Whether a statement
+            meets the requirements of OEC 803(4) is a preliminary
+            question of fact for the trial court based upon the
+            preponderance of the evidence standard. <a
+            href="https://www.oregonlaws.org/ors/40.030">OEC 104</a>(1);
+            <a
+            href="https://scholar.google.com/scholar_case?case=5092356779570799427&amp;q=State+v.+Booth,+124+Or+App+282,+(1993&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Booth</em></a>, 124 Or App 282, 286 (1993).</p>
+            <p>The statements need not be made to a physician.
+            “Statements to hospital attendants, ambulance drivers, or
+            even members of the family or friends may be within the
+            scope of the exception.” Legislative Commentary to Rule
+            803(4); <a
+            href="https://scholar.google.com/scholar_case?case=4459043221258059894&amp;q=State+ex+rel.+Juv.+Dept.+v.+Cornett,+121+Or+App+264,+(1993)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            ex rel. Juv. Dept. v. Cornett</em></a>, 121 Or App 264, 270
+            (1993). The rule also qualifies for statements made to
+            mental health professionals. <em>In re C.</em>, 121 Or App
+            264 (1993).</p>
+            <blockquote>
+            <p>The declarant does not have to be the victim. OEC 803(4),
+            by its terms, does not require the declarant be the person
+            diagnosed or treated. Rather, the rule refers broadly to
+            “statements” describing their purpose and nature, without
+            any reference to the declarant’s status. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=17962958180696925126&amp;q=State+v.+Bauman,+98+Or+App+316&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bauman</em></a>, 98 Or App 316, 319- 320 (1989)
+            (statements by mother of the victim admissible under this
+            rule).</p>
+            <p>Admissibility under this rule comes down to whether the
+            statement was gathered for purposes of treatment or for the
+            primary purpose of investigating and prosecuting a crime.
+            Statements to a physician consulted only for the purpose of
+            enabling the physician to testify do not qualify. <em><a
+            href="https://scholar.google.com/scholar_case?case=9594017920909486083&amp;q=189+Or+145+(1950&amp;hl=en&amp;as_sdt=4,38">Henderson
+            v. Union P.R. Co.</a>,</em> 189 Or 145 (1950). However, a
+            child abuse evaluative agency’s interview of a victim
+            qualifies under the rule because at least one of the
+            agency’s purposes is to accurately diagnose the child for
+            purpose of therapy. <em><a
+            href="https://scholar.google.com/scholar_case?case=11449573115599662066&amp;q=State+v.+Logan,+105+Or+App+556&amp;hl=en&amp;as_sdt=4,38">State
+            v. Logan</a>,</em> 105 Or App 556, 561-62 (1991). <em>See
+            also <a
+            href="https://scholar.google.com/scholar_case?case=8200394792556709303&amp;q=State+v.+Barkley,+315+Or+420,+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Barkley</a></em>, 315 Or 420, 426 (1993) (trial court
+            reasonably concluded that the child (a) knew that the
+            purpose of the interview was to obtain a medical diagnosis
+            or treatment and (b) that she had to be truthful to advance
+            that medical diagnosis or treatment and thus statements were
+            “made for purposes of medical diagnosis or treatment”).
+            Likewise, a child’s demonstration on a videotape of the
+            nature of the sexual abuse by using anatomically correct
+            dolls is hearsay, but it is admissible under this rule if it
+            is for the purpose of medical diagnosis or treatment.
+            <em>Barkley</em>, at 423.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>OEC 803(4) is predicated on the theory that hearsay
+            statements to a medical professional are sufficiently
+            reliable because a patient’s desire for proper treatment or
+            diagnosis would outweigh any motive to falsify. Case law
+            supports that a defendant may argue the rule’s
+            inapplicability when the evidence shows that a purported
+            victim was too immature to understand the statements were
+            being made for purposes of treatment or diagnosis. <em>See
+            <a
+            href="https://scholar.google.com/scholar_case?case=5092356779570799427&amp;q=State+v.+Booth,+124+Or+App+282+(1994&amp;hl=en&amp;as_sdt=4,38">State
+            v. Booth</a></em>, 124 Or App 282 (1994) (finding sufficient
+            evidence that the three-year-old child was aware they were
+            talking to a doctor); <a
+            href="https://scholar.google.com/scholar_case?case=336307828228840831&amp;q=State+v.+Mayer,+146+Or+App+86+(1997&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mayer</em>,</a> 146 Or App 86 (1997) (finding sufficient
+            evidence in the record the child was aware that purpose of
+            examination and interview was for medical diagnosis and
+            treatment); <a
+            href="https://scholar.google.com/scholar_case?case=16934373391397210427&amp;q=State+v.+Alvarez,+110+Or+App+230+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Alvarez</em></a>, 110 Or App 230 (1991) (court concluding
+            it was reasonable to infer from all the circumstances that
+            the victim understood she was making statements for purpose
+            of medical examination); <a
+            href="https://scholar.google.com/scholar_case?case=11449573115599662066&amp;q=State+v.+Logan,+105+Or+App+556&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Logan</em></a>, 105 Or App (1991) (“We cannot say as a
+            matter of law that a four-year-old child is too young to
+            understand the nature of a medical examination. The decision
+            must be based on the facts in each case”).</p>
+            <p>The relevant statement must describe or relate medical
+            history, past or present symptoms, pain or sensations, or
+            the inception or character of the cause or source of the
+            pain. Often<br />
+            the critical question within the context of OEC 803(4) is
+            one of causation. Statements as to fault do not themselves
+            generally qualify under the rule. Likewise, statements of
+            the identity of the abuser are usually not admissible.
+            However, the household member exception to this rule
+            instructs that identity is admissible when the abuser is a
+            member of the victim’s household. The exception is justified
+            because “statements of identity to a physician by a child
+            sexually abused by a family member are of a type physicians
+            reasonably rely on in composing a diagnosis and course of
+            treatment.” <a
+            href="https://scholar.google.com/scholar_case?case=14449033922879411241&amp;q=State+v.+Vosika,+83+Or+App+298+(1987&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Vosika</em></a>, 83 Or App 298 (1987); <em>see also <a
+            href="https://scholar.google.com/scholar_case?case=8200394792556709303&amp;q=State+v.+Barkley,+315+Or+420,+&amp;hl=en&amp;as_sdt=4,38">Barkley</a></em>,
+            315 Or at 426-27; <a
+            href="https://scholar.google.com/scholar_case?case=17584469484978220143&amp;q=State+v.+Jensen,+313+Or+587,+(1992).+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Jensen</em></a>, 313 Or 587, 590-98 (1992).</p>
+            <p>Confrontation Clause Analysis: A defendant’s
+            confrontation rights may provide the criminal defendant with
+            significant additional safeguards but only when a declarant
+            does not testify. Oregon case law designates OEC 803(4) as a
+            firmly rooted hearsay exception. <em>State v. Moen</em>, 309
+            Or 45, 62-63 (1990). <em>See also Mayer</em>, 146 Or App at
+            575 (court refused to undertake a reliability analysis even
+            though there were internal inconsistencies in the
+            declarant’s statements because 803(4) is a firmly rooted
+            exception). However, if a declarant is not testifying at
+            trial, the constitutional definition of “unavailability”
+            will still prevail.</p>
+            <blockquote>
+            <p>In <em>State ex rel Juv. Dept. of Multnomah County v.
+            S.P.,</em> 346 Or 592 (2009), the Oregon<br />
+            Supreme Court held that statements made to child abuse
+            professionals are testimonial. While acknowledging that the
+            CARES interview process “serves multiple concurrent
+            purposes,” the court also admitted that involvement of law
+            enforcement in the CARES process is “pervasive” and thus
+            statements to it must be construed as testimonial.
+            <em>Id.</em> at 616. In so concluding, the court rejected
+            the argument that the testimonial label can apply only to
+            police officers or other governmental officials, and it
+            rejected the argument that forensic evaluations are
+            conducted first for purposes of diagnosis and treatment.
+            <em>Id.</em> at 619, 623. <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=3611040018503679389&amp;q=State+v.+Pitt,+209+Or+App+270+(2006+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Pitt</a></em>, 209 Or App 270 (2006) (statements made to
+            a Lane County Child Advocacy Center interviewer are
+            testimonial).</p>
+            </blockquote>
+            <p>Unlike statements made to CARES or other child advocacy
+            personnel or doctors, statements made within the hospital
+            setting to nurses or doctors often will not be deemed
+            testimonial. <em>[<a
+            href="https://scholar.google.com/scholar_case?case=8142038058609832072&amp;q=State+ex+rel.+Juv.+Dept.+v.+K.S">https://scholar.google.com/scholar_case?case=8142038058609832072&amp;q=State+ex+rel.+Juv.+Dept.+v.+K.S</a>.,+229+Or+App+50+(2009&amp;hl=en&amp;as_sdt=4,38
+            State ex rel. Juv. Dept. v. K.S.],</em> 229 Or App 50
+            (2009). <em>See also State v. Bella</em>, 231 Or App 420,
+            429 (2009) (rejecting defense argument that a physician’s
+            mandatory reporter status created a per se testimonial
+            situation).</p>
+            </section>
+            <section id="d._excited_utterance_oec_8032" class="level2">
+            <h2><strong>D. Excited Utterance – OEC 803(2)</strong></h2>
+            <p>In order for a hearsay statement to qualify as an excited
+            utterance, it must meet three requirements:</p>
+            <p>(1) There must be a “startling event or condition.”</p>
+            <p>(2) The statement must be made while the declarant was
+            under the stress or excitement of that condition, using a
+            subjective standard.</p>
+            <p>(3) The statement must be related to the event or
+            condition.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8877466298312506640&amp;q=State+v.+Carlson,+311+Or+201+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Carlson</em></a>, 311 Or 201 (1991). Case law has further
+            broken down the second element into a factor test in which a
+            trial court should consider: (a) the lapse of time between
+            the event and the statement, (b) the content of statement,
+            and (c) the mental and physical condition of the declarant
+            at the time of the statement. <a
+            href="https://scholar.google.com/scholar_case?case=10896580991922974799&amp;q=State+v.+Wolfs,+119+Or+App+262+(1993&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wolfs</em></a>, 119 Or App 262 (1993).</p>
+            <blockquote>
+            <p>For purposes of the exception, the relevant question is
+            not whether “an event or condition is [] inherently
+            startling”; rather, the crucial question is whether the
+            event has a startling effect on the declarant.
+            <em>Carlson</em>, 311 Or at 216 (1991) (wife calling husband
+            a liar during police questioning held to qualify); <a
+            href="https://scholar.google.com/scholar_case?case=6370945567542715086&amp;q=State+v.+Cunningham,+337+Or+528,++(2004)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cunningham</em></a>, 337 Or 528, 540 (2004) (phone calls
+            made by victim to mother prior to her death detailing her
+            plans to meet with the defendant qualified).</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p><em>Cunningham</em> and <em>Carlson</em> demonstrate the
+            circular logic of the rule—essentially, an event is
+            startling if the declarant is startled. As a barrier to
+            admission of evidence, this element is limited. However, the
+            opponent of the evidence should force the proponent to
+            identify the startling event in order to later limit the
+            scope of statements that relate to it.</p>
+            <blockquote>
+            <p>The majority of cases analyzing OEC 803(2) focus on the
+            requirement the declarant be under the stress or excitement
+            of the event when the statement was made because it relates
+            directly to the rationale for the exception. To determine
+            this question, the trial court shall consider: (1)
+            time—meaning, before there has been time to contrive and
+            misrepresent, (2) content of the statement, and (3) the
+            mental and physical condition of the declarant at the time
+            of the statement. <em>Cunningham</em>, 337 Or at 543.</p>
+            <p>Lapse of time: The element of time is the most important
+            of the three factors, but it is also context specific. <a
+            href="https://scholar.google.com/scholar_case?case=17002558602969746285&amp;q=State+v.+Underwood,+266+Or+App+274&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Underwood</em></a>, 266 Or App 274, 278 (2014)
+            (statements made five days later was not too long). The
+            factor is less a matter of the actual time passed and more a
+            matter of whether the time passed permitted reflective
+            thought between the event and the statement. <em>Id.</em>
+            Admissibility “is not determined by a stop-watch which
+            counts the number of minutes that elapse from the moment of
+            the exciting event to the utterance of the declaration, but,
+            by a determination of whether or not the sway of the
+            exciting event still dominated the declarant when he spoke.”
+            <a
+            href="https://scholar.google.com/scholar_case?case=10317712495400570040&amp;q=State+v.+Hutchison,+222+Or+533&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hutchison</em></a>, 222 Or 533, 541–42 (1960). This is
+            “particularly true” when there is evidence the declarant
+            “did in fact engage in a reflective thought process during
+            [the] time interval.” <a
+            href="https://scholar.google.com/scholar_case?case=6525744334431707590&amp;q=+Zeller+v.+Dahl,+262+Or+515,++(1972&amp;hl=en&amp;as_sdt=4,38"><em>Zeller
+            v. Dahl</em></a>, 262 Or 515, 519 (1972).</p>
+            <p>For example, a phone call made approximately three hours
+            after a strangulation to the point of unconsciousness was
+            within the range, <a
+            href="https://scholar.google.com/scholar_case?case=653787057071775788&amp;q=State+v.+Blaylock,+267+Or+App+455+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Blaylock</em></a>, 267 Or App 455 (2014), as were
+            statements by a rape victim approximately one hour later,
+            <em>State v. Jones</em>, 20 Or App 533 (1975). However, in
+            <a
+            href="https://scholar.google.com/scholar_case?case=17098336790467683715&amp;q=State+v.+Mahoney,+33+Or+App+73&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mahoney</em></a>, 33 Or App 73, 77 (1978), the court held
+            that one hour following an attempted sexual assault and
+            physical assault was too long when the statements were not
+            made at the first opportunity but after about an hour of
+            sobering up and only gradually implicating the defendant.
+            Unlike in <em>Underwood</em>, in <em>Waites, Mahoney,</em>
+            and <em>Emery</em>, there was no showing the declarants were
+            under any ongoing stress or fear.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>The “time” factor is the most important factor in
+            determining whether the statement was made under the stress
+            of the startling event. However, it is the most
+            unpredictable in the case law, because the courts seem
+            particularly concerned not just with the amount of time but
+            what happened during that time. In practice, this means that
+            during a Rule 104 hearing, the sequence of events between
+            the event and the declaration, particularly any statements
+            made by the declarant, are likely to be the most
+            persuasive.</p>
+            <blockquote>
+            <p>Content of utterance: This factor looks to the content of
+            the statement itself in order to determine whether the
+            statement was made after reflection, i.e., whether at the
+            time of the statement, the stress “propelled” “the event
+            itself to speak through the tongue of the declarant.” <a
+            href="https://scholar.google.com/scholar_case?case=10317712495400570040&amp;q=State+v.+Hutchison,+222+Or+533&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hutchison</em></a>, 222 Or 533, 537 (1960). <em>See</em>
+            <a
+            href="https://scholar.google.com/scholar_case?case=177749979364901287&amp;q=State+v.+Mace,+67+Or+App+753,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mace</em>,</a> 67 Or App 753, 757 (1984) (whether
+            statement made in response to questions); <em>Zeller</em>,
+            262 Or at 520 (analyzing any statements indicating
+            deliberative thought and whether the statement was
+            self-serving); <em>Mahoney</em>, 33 Or App at 76 (whether
+            the declarant actually changed his response to a given
+            question); <em>Cunningham</em>, 337 Or at 544 (adamancy
+            about a particular course of action); <a
+            href="https://scholar.google.com/scholar_case?case=17428520884492494563&amp;q=State+v.+Hollywood,+67+Or+App+546&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hollywood</em>,</a> 67 Or App 546, 549 (1984)
+            (specificity about when the startling event occurred).</p>
+            <p>Mental and physical condition of declarant: The mental
+            and physical condition of the declarant typically weigh in
+            favor of admissibility because rarely is the “excited”
+            declarant calm, rational, and disinterested. Case law
+            consistently leans on this element to make a determination
+            about whether a declarant was under the stress of the event.
+            Examples include: declarant appearing visibly upset and
+            crying, <em>Mace</em>, at 759; declarant suffering from the
+            physical effects of the event, <em>Blaylock</em>, at 468;
+            yelling, <em>Carlson</em>, at 216; and even sternness,
+            <em>Cunningham,</em> at 544.</p>
+            <p>The final requirement is that the statement must be
+            related to the event or condition. It is important to narrow
+            the specific event or condition triggering the statement as
+            much as possible. In cases when the startling event is one
+            of a series of potentially startling events—e.g., an
+            argument, followed by an assault, followed by the
+            assailant’s return to the declarant’s home—the courts will
+            tend to allow statements about prior events as “related.”
+            The “related to” requirement is not a barrier to admission
+            of these statements so long as “the subject matter of the
+            statement is such as would likely be evoked by the event.”
+            <a
+            href="https://scholar.google.com/scholar_case?case=3039463394505661406&amp;q=State+v.+Stonaker,+149+Or+App+728&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Stonaker</em></a>, 149 Or App 728, 743 (1997) (allowing
+            in multiple conversations over a period of seventeen minutes
+            because second related to first). <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=9929350804358086990&amp;q=State+v.+Yong,+206+Or+App+522+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Yong</a></em>, 206 Or App 522 (2006) (allowing in
+            conversation from five days earlier because “related to”
+            recent conversation).</p>
+            <p>Confrontation Clause Analysis: The excited utterance
+            exception is the penultimate example a nontestimonial
+            statement under <em>Crawford. Davis v. Washington</em>, the
+            seminal Sixth Amendment case defining testimonial
+            statements, was itself an excited utterance case. <em>See
+            also</em> <a
+            href="https://scholar.google.com/scholar_case?case=7760334710314411852&amp;q=State+v.+Camarena,+344+Or++&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Camarena</em></a>, <em>supra,</em> 344 Or at 30 (holding
+            initial conversation between 9-1-1 operator and victim
+            nontestimonial. However, once the initial details of the
+            assault had been gathered, all subsequent statements to the
+            9-1-1 operator were testimonial). Further, OEC 803(2) is a
+            firmly rooted hearsay exception under Article I, section 11.
+            <em>See State v. Camarena</em>, 208 Or App 575, 581
+            (2006).</p>
+            </blockquote>
+            </section>
+            <section
+            id="e._existing_mental_emotional_or_physical_condition_oec_8033"
+            class="level2">
+            <h2><strong>E. Existing Mental, Emotional, or Physical
+            Condition – OEC 803(3)</strong></h2>
+            <p>OEC 803(3) allows in statements by a declarant in the
+            following three situations:</p>
+            <p>(1) Statements of an existing physical condition to prove
+            the declarant’s physical condition at the time the
+            statements were made.</p>
+            <p>(2) Statements of existing mental or emotional condition
+            to prove the mental or emotional condition of the declarant
+            at the time the statements were made.</p>
+            <p>(3) Statements of mental or emotional condition or state
+            of mind, including intent, plan, motive, or design, to prove
+            subsequent conduct in accordance with that state of mind or
+            mental or emotional condition. Importantly, this subsection
+            only applies to the future plans of the declarant.</p>
+            <p>The plain language of the rule allows for the declarant’s
+            statements about how the declarant was feeling at the time
+            of the event but does not allow for hearsay to prove events
+            from the declarant’s past. So what happens when the
+            declarant’s feelings are based upon events in the past; for
+            example, when someone is currently experiencing fear based,
+            at least partially, on prior experiences?</p>
+            <p>OEC 803(3) expressly disallows the use of this rule to
+            backdoor in prior bad acts evidence: “A statement of a
+            declarant’s then existing state of mind … but not including
+            a statement of memory or belief to prove the fact remembered
+            or believed… .” <em>See also</em>, Commentary to Rule
+            803(3)), reprinted in Laird C. Kirkpatrick, Oregon Evidence
+            § 803.03(2) (6th ed 2013) (“The subsection excludes
+            statements of memory or belief, to prove the fact remembered
+            or believed. This exclusion is necessary to avoid the
+            virtual destruction of the hearsay rule”).</p>
+            <p>However, recent case law has interpreted OEC 803(3) to
+            mean that a declarant’s then-existing feelings of fear are
+            admissible, even when probative of prior bad acts of the
+            defendant. For example, in <em>State v. Blaylock</em>, 267
+            Or App 455, 460-62 (2015), the Oregon Court of Appeals held
+            statements admissible under OEC 803(3) when the victim told
+            a coworker the night before her disappearance, “I hope he is
+            not drunk when I get home.” The state argued that statement
+            was admissible under OEC 803(3) because it showed the
+            “victim’s state of mind on that date when she left work” and
+            was relevant to the defendant’s “claim of self-defense,” as
+            well as the defendant’s theory “that [the victim] was the
+            one with the alcohol problem not [the d]efendant.” The
+            defense argued that the statements were really intended to
+            prove the defendant’s violence prior to the declaration and
+            that he was a drunk (also prior conduct). The trial court
+            admitted the statements and the Court of Appeals affirmed.
+            “[E]ven if a statement merely reflects the declarant’s state
+            of mind or reasonably supports an inference as to the
+            declarant’s state of mind, it constitutes an assertion of
+            the declarant’s state of mind for purposes of OEC 803(3).” A
+            statement of then-existing fear meets the test of OEC
+            803(3). <a
+            href="https://scholar.google.com/scholar_case?case=653787057071775788&amp;q=Blaylock,+267+Or+App+&amp;hl=en&amp;as_sdt=4,38"><em>Blaylock</em></a>,
+            267 Or App at 461-62. <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=11953837704038904332&amp;q=State+v.+Garcia,+206+Or+App+745&amp;hl=en&amp;as_sdt=4,38">State
+            v. Garcia</a></em>, 206 Or App 745, 750 (2006) (holding that
+            statements detailing fear were admissible because the
+            victim’s fear was a directly relevant element to the crime
+            of coercion).</p>
+            <blockquote>
+            <p>The holding in <em>Blaylock</em> is problematic because
+            it did not address the portion of OEC 803(3) that expressly
+            disavows the use of this rule to backdoor in prior bad acts
+            evidence. As the defense in <em>Blaylock</em> correctly
+            argued but the Court of Appeals did not directly address,
+            when the state moves to introduce evidence about a
+            declarant’s then-existing state of mind, it is usually doing
+            so not because the fear itself is relevant to an element,
+            but rather because the fear demonstrates something that
+            happened in the declarant’s past. As Laird Kirkpatrick
+            wrote:</p>
+            <p>The problem with admitting a victim’s statement that the
+            victim is fearful of the defendant or a third person is that
+            the victim’s state of mind is not a relevant issue in a
+            murder prosecution. The statement generally has relevance
+            only to show that the person feared was the assailant or
+            that the person did something to make the victim fearful.
+            Thus, the purpose for which the statement has relevance is
+            not the usage allowed by Rule 803(3).</p>
+            </blockquote>
+            <p>Laird C. Kirkpatrick, <em>Oregon Evidence</em> § 803.3(3)
+            (6th ed. 2013).</p>
+            <blockquote>
+            <p>This was also the position the Oregon Supreme Court took
+            in <a
+            href="https://scholar.google.com/scholar_case?case=5651425698453625745&amp;q=State+v.+Mendez,+308+Or+9+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mendez</em></a>, 308 Or 9 (1989), when it refused to
+            allow the defendant to introduce a statement by the victim
+            thathe feared a third party, Moen, would kill him. The trial
+            court disallowed the evidence be-cause it was intended to
+            show a past event—namely that Moen had done something to
+            cause the victim to fear him—and the rule did not allow for
+            those kinds of “declarations in mem-ory pointed backwards to
+            the past.” <em>Id.</em> at 17, n 12. The Oregon Supreme
+            Court agreed.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>Focus on why the declarant’s state of mind is itself
+            relevant to the elements of the charged crime. Usually it is
+            not, and the state is really introducing those statements in
+            an effort to establish prior events in the declarant’s life.
+            The rule expressly disallows use of the rule in<br />
+            this manner.</p>
+            <blockquote>
+            <p>Statements of a declarant’s future intent are only
+            admissible to prove the declarant’s future conduct, not the
+            future conduct of another person. See Legislative Commentary
+            to OEC 803(3) (the rule “render[s] statements of intent by a
+            declarant admissible only to prove the declarant’s future
+            conduct, not the future conduct of another person”). This
+            includes exclusion of statements by the declarant that the
+            declarant and the defendant intended to do a certain act
+            together. <em>See <a
+            href="https://scholar.google.com/scholar_case?case=15952071332896190443&amp;q=State+v.+Engweiler,+118+Or+App+132&amp;hl=en&amp;as_sdt=4,38">State
+            v. Engweiler</a></em>, 118 Or App 132, 36 (1993) (a
+            declarant cannot know of others future intentions with
+            sufficient accuracy). However, statements of future intent
+            from a victim may be deemed admissible to rebut a claimed
+            defense of consent or self-defense. <em>See Engweiler</em>,
+            118 Or App at 135-36 (victim’s statements of dislike
+            admissible to rebut defense of consent in rape
+            prosecution).</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>If a statement comes in under this rule, consider asking
+            for a limiting instruction under Rule 105. Such an
+            instruction may be necessary (even if ineffective) to
+            prevent the jury from considering the statement for the
+            truth of the factual ascertain contained within it. <em>See
+            <a
+            href="https://scholar.google.com/scholar_case?case=16302940737552748233&amp;q=State+v.+Johnson,+340+Or+319&amp;hl=en&amp;as_sdt=4,38">State
+            v. Johnson</a></em>, 340 Or 319, 345-46 (2006) (court finds
+            error in defense’s failure to ask for limiting instruction
+            when statement only introduced to prove venue under OEC
+            803(3)).</p>
+            <p>Confrontation Clause Analysis: Statements introduced
+            under OEC 803(3) will rarely constitute testimonial
+            assertions in violation of <em>Crawford</em>. The rationale
+            articulated by the Oregon Supreme Court in <em>State v.
+            Johnson</em>, 340 Or 319 (2006), illustrates this. In
+            <em>Johnson</em>, the state sought to introduce statements
+            of the murder victim that helped establish she had traveled
+            to the defendant’s house prior to her death. While the
+            <em>Johnson</em> court did not yet have the benefit of
+            <em>Davis</em> to aid in discerning the meaning of the term
+            “testimonial,” its reasoning nonetheless was persuasive.
+            “Although we are unsure at this juncture of the precise
+            scope of the term ‘testimonial’ as the Supreme Court used it
+            in <em>Crawford</em>, we agree with the state that the
+            concept does not include ‘the statements made by an
+            unsuspecting victim of a crime before that crime has even
+            occurred.’ ” <em>Id.</em> at 347.</p>
+            <p>Surprisingly, Oregon courts do not appear to have
+            addressed whether OEC 803(3) is a firmly rooted hearsay
+            exception. As a result, defense counsel will need to be
+            prepared to argue both that it is not and that the state
+            failed to make a sufficient showing the statement bears
+            “particularized guarantees of trustworthiness” based upon a
+            totality of the circumstances evaluation. <em>Ohio v.
+            Roberts</em>, 448 US at 65–66; <a
+            href="https://scholar.google.com/scholar_case?case=11061074037943511476&amp;q=State+v.+Nielsen,+316+Or+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nielsen</em></a>, 316 Or at 622-23. Constitutional
+            unavailability also still applies and is required, to the
+            extent the challenged statements are “reliable.”</p>
+            </section>
+            <section id="f._domestic_violence_exception_oec_80326"
+            class="level2">
+            <h2><strong>F. Domestic Violence Exception – OEC
+            803(26)</strong></h2>
+            <p>A statement regarding allegations of domestic violence is
+            admissible under the rule when it was made within 24 hours
+            of the incident, it was recorded or made to a police officer
+            or medical professional, and the trial court made a
+            reliability determination.</p>
+            <p>In <em><a
+            href="https://scholar.google.com/scholar_case?case=13829144869902643768&amp;q=State+ex+rel.++243+Or+App+335&amp;hl=en&amp;as_sdt=4,38">State
+            ex rel. Juvenile Dep’t of Washington Cty. v.
+            C.M.C</a>.,</em> 243 Or App 335, 337-40 (2011), the Court of
+            Appeals held that the domestic violence hearsay exception is
+            intended to refer to persons living in the same residence in
+            a relationship akin to that of spouses. <em>Id.</em> at 337.
+            “[T]he exception does not apply to, for example, simple
+            roommates or dorm mates. Nor, as dispositive here, does it
+            apply to minor children and parents who live in the same
+            residence.” <em>Id.</em> at 339-340.</p>
+            <p>The reliability factors under this rule are heavily
+            skewed towards admissibility. The defense should instead
+            focus on the constitutionally required factors for
+            reliability under Article I, section 11. As discussed in
+            Kirkpatrick, the statutory “reliability” factors laid out in
+            <a href="https://www.oregonlaws.org/ors/40.460">OEC
+            803</a>(26) are of minimal practical value and are skewed
+            towards admissibility. Laird C. Kirkpatrick, Oregon Evidence
+            § 803.26(3) (6th ed 2013). The first listed factor—personal
+            knowledge—is presumably satisfied by the fact the declarant
+            is the victim. The second listed factor—corroborative
+            evidence—is likely satisfied by the injury. Furthermore,
+            corroborative evidence is not allowed to be used as a factor
+            under the Article I, section 11, test of reliability, as
+            discussed below. The third listed factor—timing of the
+            statement—will skew towards admissibility since the rule
+            requires the statement to have been made within the past 24
+            hours. The fourth listed factor – whether the statement was
+            made by leading questions – is probably the most neutral of
+            factors and thus itself may be useful. The fifth listed
+            factor – subsequent statements by the declarant – would be
+            helpful if it was neutral. However, it is followed up by the
+            following: “recantation by a declarant is not sufficient
+            reason for denying admission of a statement under this
+            subsection.” With that, the legislature managed to take a
+            neutral and helpful factor, and skew it also in the
+            direction of admissibility.</p>
+            <p>Furthermore, the rule does not identify reliability
+            factors already constitutionally required, such as such as
+            the circumstances under which the statement was made, the
+            nature of the prior relationship between the parties,
+            whether the declarant had motive to fabricate,<br />
+            whether there was a history of prior complaints, and whether
+            those prior complaints were well-founded.</p>
+            <p>No Oregon case has directly and fully analyzed whether
+            the state may introduce a challenged statement regarding
+            sexual abuse under the domestic violence hearsay exception
+            when it fails to avail itself of OEC 803(18a)(b). But the
+            defense should prevail in excluding the statements for three
+            persuasive reasons.</p>
+            <p>First, OEC 803(18a)(b) was codified to admit hearsay
+            statements in sexual abuse prosecutions predicated on very
+            specific safeguards for admissibility. Use of the residual
+            hearsay exception or the domestic violence exception in lieu
+            of the more tailored exception would abrogate the
+            protections of OEC 803(18a)(b). While cases have found that
+            OEC 803(18a)(b) hearsay evidence may also come in under
+            firmly rooted hearsay exceptions such as excited
+            utterance<br />
+            or medical hearsay, no court has ruled such evidence may
+            come in under the domestic violence exception. And multiple
+            courts have expressly held that such evidence cannot come in
+            under the catch-all residual exception, OEC 803(28)(a).
+            <em>See e.g. <a
+            href="https://scholar.google.com/scholar_case?case=11328902977519716996&amp;q=State+v.+Harris,+78+Or+App+490&amp;hl=en&amp;as_sdt=4,38">State
+            v. Harris</a>,</em> 78 Or App 490, 492 (1986).</p>
+            <p>Second, in <em>Harris</em> and <a
+            href="https://scholar.google.com/scholar_case?case=26180234170216142&amp;q=Campbell,+299+Or+&amp;hl=en&amp;as_sdt=4,38"><em>Campbell</em></a>,
+            299 Or at 640, dicta indicates catch-all provisions cannot
+            be used in lieu of OEC 803(18a)(b).</p>
+            <p>Third, in <a
+            href="https://scholar.google.com/scholar_case?case=14939085411995917560&amp;q=State+v.+Torres,+206+Or+App+436&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Torres</em></a>, 206 Or App 436, 440-41 (2006), having
+            failed to abide by the pro-per procedures of OEC
+            803(18a)(b), the state made a series of hearsay exception
+            arguments, including the domestic violence exception. The
+            Court of Appeals summarily disregarded all of those
+            arguments, including the domestic violence exception, as
+            inappropriate vehicles for admissibility.</p>
+            <p>Confrontation Clause Analysis: <em>Crawford v.
+            Washington</em> and the Sixth Amendment provide significant
+            additional safeguards and call into question the
+            constitutionality of OEC 803(26) when the declarant does not
+            testify, because most statements gathered within the context
+            of the rule are deemed “testimonial.” This is especially
+            true when the statements, as articulated within the statute,
+            are gathered by law enforcement. Statements shall be
+            categorized as testimonial when they “were made under
+            circumstances which would lead an objective witness
+            reasonably to believe that the statement would be available
+            for use at a later trial.” <em>Crawford</em>, 542 US at 52.
+            The statements are also testimonial “when the circumstances
+            objectively indicate that there is no such ongoing
+            emergency, and that the primary purpose of the interrogation
+            is to establish or prove past events potentially relevant to
+            later criminal prosecution.” <em>Davis</em>, 547 US at
+            822.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=14257325966023637638&amp;q=State+v.+Haggblom,+228+Or+App+541&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Haggblom</em></a>, 228 Or App 541, 543 (2009), the state
+            attempted to use the rule to introduce a tape-recorded
+            statement the victim made to police officers. While the
+            trial court did not agree with the defendant’s
+            <em>Crawford</em> arguments, the Court of Appeals did and
+            refused to find the failure “harmless.” “As noted, the state
+            concedes—and we agree—that admission of the victim’s
+            recorded statement violated defendant’s confrontation right.
+            Accordingly, the only question remaining is whether that
+            error was harmless.” <em>Id.</em> at 544-45. <em>See
+            also</em> <a
+            href="https://scholar.google.com/scholar_case?case=16884407332233009865&amp;q=State+v.+Mendoza-Lazaro,+225+Or+App+57&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mendoza-Lazaro</em>,</a> 225 Or App 57, 62 (2008) (“Here,
+            the court admitted the statements at issue under OEC
+            803(26)(a), which allows the admission of hearsay statements
+            of the content of domestic violence reports if there are,
+            among other things, ‘sufficient indicia of reliability.’
+            Because the admission of the statements—again, the only
+            evidence from which a reasonable factfinder could conclude
+            that the victim’s children witnessed defendant’s conduct—was
+            the result of the very type of inquiry of which
+            <em>Crawford</em> disapproved, correcting the error would
+            comport with the ends of justice”).</p>
+            <p>In addition, OEC 803(26) does not constitute a firmly
+            rooted hearsay exception under Article I, section 11,
+            bringing constitutional reliability into play. In <a
+            href="https://scholar.google.com/scholar_case?case=5241533916347286109&amp;q=State+v.+Wilcox,+180+Or+App+557&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wilcox</em>,</a> 180 Or App 557, 563-65 (2002), the Court
+            of Appeals addressed the role that corroborative evidence
+            should play in the Oregon constitutional evaluation when the
+            statements are “testimonial.” Turning to the reliability
+            test, the <em>Wilcox</em> court first addressed the role
+            that corroborative evidence should play in the
+            constitutional evaluation: “OEC 803(26)(b)(B) treats the
+            existence of independent corroborative evidence as a factor
+            supporting the reliability of the statements of a domestic
+            violence victim. However, under the constitutional analysis,
+            other evidence presented at trial that corroborates the
+            truth of a hearsay statement cannot be used to show that the
+            statement itself has particularized guarantees of
+            trustworthiness.” <em>Id.</em> at 564 (citing to
+            <em>Nielsen</em>, 316 Or at 628-29).</p>
+            <p>The <em>Wilcox</em> court did ultimately admit the
+            statements because they were detailed and specific and they
+            were made under surrounding circumstances—including the time
+            of disclosure, the victim’s demeanor, and the lack of any
+            evident motive to fabricate—that support their
+            trustworthiness.</p>
+            </section>
+            <section id="g._residual_hearsay_oec_80328a_and_oec_8043h"
+            class="level2">
+            <h2><strong>G. Residual Hearsay – OEC 803(28)(a) and OEC
+            804(3)(h)<a href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></strong></h2>
+            <p><a href="https://www.oregonlaws.org/ors/40.460">Rule
+            803</a>(28) and <a
+            href="https://www.oregonlaws.org/ors/40.465">Rule
+            804</a>(3)(h)<a href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> create catch-all hearsay
+            provisions that are intended to be strictly construed only
+            to circumstances when no other hearsay provision could apply
+            and justice requires admission. Courts have established a
+            six-factor test for admission: (1) the evidence is not
+            admissible under any other exception, (2) the evidence
+            carries equivalent circumstantial guaranties of
+            trustworthiness, (3) the evidence is relevant, (4) the
+            evidence is more probative of the point in question than any
+            other evidence the proponent can introduce, (5) admission of
+            the evidence would serve the general purposes of justice and
+            of the evidence code, and (6) the proponent of the evidence
+            has given reasonable advance notice of the intent to offer
+            it.</p>
+            <p>In <em>State v. <a
+            href="https://scholar.google.com/scholar_case?case=26180234170216142&amp;q=Campbell,+299+Or+&amp;hl=en&amp;as_sdt=4,38">Campbell</a></em>,
+            299 Or 633, 638-39 (1985), the Oregon Supreme Court
+            disallowed the trial court’s use of the rule in a sex
+            offense prosecution. As the higher court noted, the
+            legislature made clear within the commentary that it
+            intended to “expressly circumscribe the authority of the
+            judicial system to create categories of hearsay which will
+            be admissible under the residual exception” and “the
+            authority of trial courts is limited to admitting hearsay
+            very rarely in exceptional cases where the particular
+            circumstances of the declarant and the out-of-court
+            statement are demonstrably trustworthy.” <em>Id.</em> at
+            638-39.</p>
+            <p>The rule requires that a proponent of a statement must
+            provide proper notice “sufficiently in advance of the trial
+            or hearing, or as soon as practicable after it becomes
+            apparent that such statement is probative of the issues at
+            hand.” The notice must indicate the intent to introduce the
+            statement under the residual hearsay exception, the
+            particulars of the statement, and the name and address of
+            the declarant. “I forgot” is not a sufficient defense, see
+            Kirkpatrick, Oregon Evidence § 803.28(3)(b), but providing
+            proper notice under another hearsay provision likely will
+            satisfy, <em>see <a
+            href="https://scholar.google.com/scholar_case?case=2015294919775881907&amp;q=State+v.+Rodriguez-Castillo,+210+Or+App+479&amp;hl=en&amp;as_sdt=4,38">State
+            v. Rodriguez-Castillo</a></em>, 210 Or App 479, 495-96
+            (2007).</p>
+            <p>The drafters of the Evidence Code were clearly worried
+            that providing for this exception had the potential to imbue
+            courts with the unfettered ability to let in hearsay at
+            their discretion. In an attempt to make clear how rarely
+            courts should apply this rule, the legislature wrote:</p>
+            <p>Because exceptional cases like Dallas County may arise in
+            the future, the Legislative Assembly adopted this residual
+            hearsay exception in Rule 803 and a similar one in Rule
+            804(2)(d). It intends that these provisions be used very
+            rarely, and only in situations where application of the
+            hearsay rule and its other exceptions would result in
+            injustice. These rules are not a broad grant of authority to
+            trial judges to admit hearsay statements.</p>
+            <p>Legislative Commentary to Rule 803(28).</p>
+            <p>This exception should not be used as a means of avoiding
+            difficult questions regarding whether or not a hearsay
+            statement fits within another exception. Kirkpatrick, Oregon
+            Evidence § 803.28(3)(e). The trial court should clearly find
+            that no other exception will authorize the statement’s
+            receipt before admission under this rule is allowed.
+            <em>Id.</em> Further, the exception should not be used as a
+            means of avoiding express restrictions contained in other
+            hearsay exceptions. <em>Id. See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=15434024835752328572&amp;q=State+v.+Cazares-Mendez,+350+Or+491&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cazares-Mendez</em>,</a> 350 Or 491, 513 (2011);
+            <em>State v. Campbell</em>, 299 Or at 640; <em>State v.
+            Harris</em>, 78 Or App 490 (1986); <a
+            href="https://scholar.google.com/scholar_case?case=1601175964331178435&amp;q=State+v.+Kayfes,+213+Or+App+543&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kayfes</em></a>, 213 Or App 543, 552-54 (2007).</p>
+            <p>Confrontation Clause Analysis: No Oregon case has
+            analyzed OEC 803(28a) from the perspective of
+            <em>Crawford</em>. In <em>Idaho v. Wright</em>, 437 US 805,
+            817 (1990), the United States Supreme Court held that the
+            residual hearsay exception should not be considered a
+            “firmly rooted exception” for purposes of confrontation.</p>
+            <p>However, in <a
+            href="https://scholar.google.com/scholar_case?case=5640674339213098510&amp;q=State+v.+Swader,+72+Or+App+593&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Swader</em></a>, 72 Or App 593, 602-05 (1985) (overruled
+            on other grounds),<a href="#fn4" class="footnote-ref"
+            id="fnref4" role="doc-noteref"><sup>4</sup></a> the Court of
+            Appeals started from the proposition that the residual
+            hearsay exception is not firmly rooted. Turning to
+            reliability, the Court of Appeals noted that the
+            constitutionally delineated reliability factors are
+            substantially similar but not synonymous with the OEC
+            803(24) reliability factors. Rule 803(24) may provide “a
+            convenient supplementary guidepost to confrontation clause
+            analysis without [being] a test of general application.”
+            <em>Id.</em> The guarantees of trustworthiness set a high
+            bar and the proponent must be able to articulate why the
+            circumstances of the statement themselves present a
+            “motivational basis for truth-telling.” In <a
+            href="https://scholar.google.com/scholar_case?case=5187853402102656576&amp;q=State+v.+Apperson,+85+Or+App+429&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Apperson</em></a>, 85 Or App 429, 432-33 (1987), the
+            Court of Appeals refused to find trustworthiness in
+            statements of an alleged domestic violence victim to police.
+            Unlike statements made under belief of impending death,
+            statements against pecuniary or proprietary interest,
+            statements concerning family history, and statements made to
+            police “lack the motivational basis for truth-telling that
+            the specific exceptions in the rule have.”
+            <em>Apperson</em>, 85 Or App at 433.</p>
+            </section>
+            <section id="h._multiple_hearsay_oec_805" class="level2">
+            <h2><strong>H. Multiple Hearsay – <a
+            href="https://www.oregonlaws.org/ors/40.470">OEC
+            805</a></strong></h2>
+            <p>If a layer of hearsay does not fit an exception, the
+            entirety of the statement is inadmissible. Each link in the
+            chain must bear sufficient marks of trustworthiness, as
+            established by the admission of each under an approved
+            hearsay exception or itself qualifying as hearsay. Common
+            examples include an excited utterance in a police report
+            that constitutes a business record, a medical statement in a
+            hospital record that falls under the business record
+            exception.</p>
+            <p><strong>Identifying Multiple Hearsay
+            Exceptions</strong></p>
+            <p>Each portion of a multiple hearsay statement must
+            “conform with an exception” to the hearsay rule for double
+            hearsay to be admissible. For example, in <a
+            href="https://scholar.google.com/scholar_case?case=17962958180696925126&amp;q=State+v.+Bauman,+98+Or+App+316&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bauman</em></a>, 98 Or App 316, 320-21 (1989), the Court
+            of Appeals excluded statements of a victim made to an
+            officer through her mother. “Both arguments apply to the
+            issue of admissibility of the child’s statement to her
+            mother, but do not address the issue regarding her mother’s
+            statement to the police officer.” <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=4179317336293613019&amp;q=State+v.+Lyon,+83+Or+App+592+(1987&amp;hl=en&amp;as_sdt=4,38">State
+            v. Lyon</a></em>, 83 Or App 592 (1987) (defendant’s
+            statements against interest excluded because told to
+            non-testifying father).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=16278556314467059458&amp;q=State+ex+rel++Pfaff,+164+Or+App+470+(1999&amp;hl=en&amp;as_sdt=4,38"><em>State
+            ex rel Juvenile Dep’t v. Pfaff</em></a>, 164 Or App 470
+            (1999), provides instruction on the rule’s applicability
+            within the context of CARES. In <em>Pfaff</em>, a juvenile
+            petitioner moved to suppress as double hearsay statements by
+            the victim brother to his mother, who then repeated the
+            alleged statements to a CARES worker. At trial, all
+            witnesses denied that the alleged conduct had occurred and
+            the state sought to introduce the prior statements under OEC
+            803(18a)(b). On appeal, the child ultimately conceded that
+            the victim’s statements to mother were admissible under OEC
+            803(18a)(b), but alleged that the mother’s retelling of the
+            statements to the CARES employee constituted a “second leg”
+            of hearsay that lacked an exception.<a href="#fn5"
+            class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a> The state responded that
+            the mother’s portion of hearsay should qualify under the
+            medical hearsay exception, or a statement against penal
+            interest, or under the residual hearsay exception.
+            Ultimately the Court of Appeals concluded that the medical
+            hearsay exception applied and admitted the double hearsay
+            statement as substantive evidence. <em>Pfaff</em>, 164 Or
+            App at 475-76.</p>
+            <blockquote>
+            <p>By comparison, in <a
+            href="https://scholar.google.com/scholar_case?case=62597404401401256&amp;q=State+v.+Beaty,+127+Or+App+448+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beaty</em></a>, 127 Or App 448 (1991), the defendant
+            sought to introduce statements under circumstances similar
+            to those at issue in <em>Pfaff</em>. The <em>Beaty</em>
+            defendant was seeking to introduce statements allegedly made
+            by the victim and his mother to a third-party witness, who
+            thereafter relayed the statements to CSD. The court refused
+            to allow their introduction because, unlike in
+            <em>Pfaff</em>, the medical hearsay exception was not
+            available:</p>
+            <p>The CSD worker’s testimony would be hearsay, because he
+            would testify about what Debbie Gray told him about what the
+            mother and the children had said. To be admissible, each
+            level of hearsay must satisfy an exception to the hearsay
+            rule. OEC 805. Even if the mother’s and the children’s
+            statements were relevant and admissible under OEC 803(3),
+            the statement by Debbie Gray to the CSD worker does not fall
+            within any exception in OEC 803 or OEC 804 to the
+            prohibition against hearsay testimony. See OEC 802. The
+            trial court did not err in excluding it.</p>
+            </blockquote>
+            <p>127 Or App at 454.</p>
+            <blockquote>
+            <p>This rule controls the admission of translated
+            statements. If the translator is not at trial, the
+            statements are likely inadmissible. In <a
+            href="https://scholar.google.com/scholar_case?case=12407681997102566530&amp;q=State+v.+Rodriguez-Castillo,+345+Or+39+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rodriguez-Castillo</em></a>, 345 Or 39 (2008), the Oregon
+            Supreme Court held that an interpreter’s translation of a
+            victim’s, witness’s, or accused’s statements constituted
+            multiple hearsay. Each level of multiple hearsay must meet a
+            valid hearsay exception, and the translators work may meet
+            the residual exception. <em>Id.</em> In <a
+            href="https://scholar.google.com/scholar_case?case=9767836111395882991&amp;q=State+v.+Enis,+212+Or+App+240&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ennis</em></a>, 212 Or App 240, 254-55 (2007), the Court
+            of Appeals held that each level of hearsay in a multiple
+            hearsay situation must satisfy confrontation. Considering
+            <em>Ennis</em> and <em>Rodriguez-Castillo</em> in
+            conjunction, the work of a translator constitutes hearsay
+            that affords confrontation. Thus the state bears the burden
+            of establishing constitutional unavailability if the
+            translator does not appear at trial. Absent such a showing,
+            the statements are inadmissible. It is important to note
+            that no Oregon court has yet to address the issue.</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Along with the <em>Crawford</em> and <em>Roberts</em>
+            objections, defense counsel should object on general hearsay
+            grounds. If the state does not provide proper notice under
+            the residual exception, the state does not properly identify
+            the rule, or the trial court does not make proper findings
+            of fact, the statements should be excluded. Furthermore,
+            complete objections will prevent the Court of Appeals from
+            deeming the statements admissible under the “right for the
+            wrong reasons” doctrine.</p>
+            <blockquote>
+            <p>Confrontation Clause Analysis: For statements the state
+            seeks to introduce under OEC 805, <em>Crawford</em> bars
+            admissibility only if both of its articulated requirements
+            are violated at any hearsay level. Put another way,
+            exclusion is not appropriate if at each level of hearsay
+            either the statement was not testimonial or the declarant
+            testified. Thus, if one level of hearsay is deemed
+            testimonial but the declarant testifies, the entirety of the
+            statement is admissible. Likewise, if at one level the
+            declarant does not testify but the statement is deemed
+            nontestimonial, the statement is admissible. However, if at
+            one level of hearsay both predicates are violated, the
+            entirety of the statement is excluded at all levels. For
+            example, in <em>State v. Ennis</em>, 212 Or App 240 (2007),
+            defendant sought to exclude statements made by a
+            co-defendant to a cellmate and two of the co-defendant’s
+            friends that were thereafter relayed to police. The
+            defendant argued <em>Crawford</em> barred the testimony of
+            everyone because the co-defendant never testified. The
+            <em>Ennis</em> court agreed that the testimonial analysis
+            articulated in <em>Crawford</em> applied to each level of
+            hearsay:</p>
+            <p>[I]t seems necessarily to follow from the United States
+            Supreme Court’s analysis in <em>Crawford</em> that the rule
+            of that case would apply to each level of hearsay.
+            Consequently, the Confrontation Clause principle enunciated
+            in <em>Crawford</em> is implicated only if one or more
+            levels of multilevel hearsay involve both a testimonial
+            statement and the unavailability of—and lack of prior
+            opportunity to cross-examine—the declarant of that
+            statement. Conversely, it is insufficient if, for example,
+            an unavailable declarant makes a nontestimonial statement to
+            another person, and that person then makes a testimonial
+            statement regarding the former, but is available for
+            cross-examination. Stated another way, in order for
+            <em>Crawford</em> to apply to a multilevel hearsay
+            statement, the two prerequisites to that application—a
+            testimonial statement and an unavailable declarant—must
+            coincide on at least one level.</p>
+            </blockquote>
+            <p>212 Or App at 254-55. The <em>Ennis</em> court ultimately
+            found no <em>Crawford</em> violation because the cellmate
+            and his two friends had testified at trial and the
+            co-defendant’s statements to his friends were not
+            testimonial.</p>
+            <p>Due to the amorphous nature of OEC 805, no Oregon cases
+            have directly addressed an <em>Ohio v. Roberts</em>
+            confrontation challenge. However, as <em>Ennis</em>
+            established, each link in the chain of hearsay must survive
+            constitutional scrutiny. As a result, defense counsel should
+            be prepared to argue that each subsection of “testimonial”
+            hearsay within a multiple hearsay statement is not reliable,
+            does not bear “particularized guarantees of
+            trustworthiness,” and is not admissible under a firmly
+            rooted hearsay exception.</p>
+            </section>
+            <section
+            id="i._recanted_hearsay_and_impeachment_of_an_absent_declarant_oec_806"
+            class="level2">
+            <h2><strong>I. Recanted Hearsay and Impeachment of an Absent
+            Declarant – <a
+            href="https://www.oregonlaws.org/ors/40.475">OEC
+            806</a></strong></h2>
+            <p>Once a hearsay statement has been admitted, the declarant
+            has in effect become a witness. Therefore, in fairness, the
+            declarant’s credibility has become an issue in the case and
+            the trial court must afford the non-offering party the
+            opportunity to present any evidence relevant to the
+            declarant’s credibility. Such evidence may include
+            inconsistent statements, poor recollection or memory issues,
+            character for lack of truthfulness, prior criminal
+            convictions, and bias or interest. Once a party attacks the
+            declarant’s credibility, the other party can likewise
+            introduce evidence that bolsters the same. The rule does not
+            require a declarant to testify.</p>
+            <p>OEC 806 allows for all kinds of impeachment evidence,
+            including bias evidence, not just prior inconsistent
+            statements and prior convictions. Furthermore, when evidence
+            is admitted under Rule 806, the procedural requirements of
+            the underlying rules do not apply. For example, in <a
+            href="https://scholar.google.com/scholar_case?case=10345895478565570969&amp;q=State+v.+Phillips,+314+Or+460+(1992&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Phillips</em></a>, 314 Or 460 (1992), in response to the
+            state’s successful introduction of statements of an absent
+            four-year-old declarant victim in a sex abuse prosecution,
+            the defense moved to introduce a prior statement that “her
+            daddy told her she had to say bad things about [defendant]
+            in court.” While agreeing with the state that the
+            particulars of the statement did not constitute a prior
+            inconsistent statement, the Oregon Supreme Court admitted
+            the statement anyway because “[t]he testimony that defendant
+            sought to introduce here purports to include elements of
+            relationship, motive, and coercion and may have led to a
+            showing of bias or interest on the part of the child.” 314
+            Or at 468.</p>
+            <p>The party seeking to introduce the statement does not
+            have an affirmative burden to produce or attempt to produce
+            the declarant and the procedural requirements of the other
+            underlying rules similarly do not apply. Put another way,
+            OEC 806 is its own avenue of admissibility.</p>
+            <p>OEC 806 expressly waived the procedural requirement under
+            <a href="https://www.oregonlaws.org/ors/40.380">OEC 613</a>
+            (prior inconsistent statements) that the declarant be given
+            an opportunity to explain or deny prior inconsistent
+            statements. Similarly, in <em>Phillips</em> the Oregon
+            Supreme Court held that the foundational requirements for <a
+            href="https://www.oregonlaws.org/ors/40.360">OEC
+            609-1(1)</a> (bias evidence) were irrelevant when the moving
+            party was seeking to introduce bias evidence under OEC 806:
+            “We conclude that the legislature did not intend that
+            testimony impeaching a hearsay declarant by evidence that
+            the declarant engaged in conduct or made statements showing
+            bias or interest be subject to the foundation requirements
+            of [<a
+            href="http://www.westlaw.com/Link/Document/FullText?findType=L&amp;pubNum=1006369&amp;cite=ORRREVR609-1&amp;originatingDoc=I027af89df5a611d98ac8f235252e36df&amp;refType=LQ&amp;originationContext=document&amp;vr=3.0&amp;rs=cblt1.0&amp;transitionType=DocumentItem&amp;contextData=(sc.UserEnteredCitation">http://www.westlaw.com/Link/Document/FullText?findType=L&amp;pubNum=1006369&amp;cite=ORRREVR609-1&amp;originatingDoc=I027af89df5a611d98ac8f235252e36df&amp;refType=LQ&amp;originationContext=document&amp;vr=3.0&amp;rs=cblt1.0&amp;transitionType=DocumentItem&amp;contextData=(sc.UserEnteredCitation</a>)
+            OEC 609-1(1)], and we hold that those foundation
+            requirements do not apply to impeachment of a hearsay
+            declarant.” 314 Or at 471.</p>
+            <p>The timing in regards to the order of the statements is
+            generally irrelevant under OEC 806. When the inconsistent
+            statement was made after the admitted hearsay statement, the
+            rule allows for admission. After all, if the declarant had
+            been testifying, it would all be prior inconsistent
+            statements anyway. Likewise, in the normal situation,
+            statements inconsistent to the admitted declaration that
+            occurred prior to the declaration will normally remain
+            admissible under the rule. The only potential exception
+            would occur if the admitted hearsay consists of former
+            testimony at a trial or deposition, thereby giving the
+            opposing party a previous opportunity to cross-examine about
+            the inconsistent statement.</p>
+            <p>The prosecutor’s impeachment back door is a danger even
+            when the prosecutor elicits the statement first. Rule 806
+            creates a potential trap for a defense attorney who
+            introduces out-of-court statements of the defendant in a
+            case when the defendant does not take the stand. By
+            introducing a client’s statements through another witness,
+            defense counsel puts their client’s credibility at issue and
+            makes admissible the client’s prior convictions to the
+            extent they are admissible under the relevant rules. In <a
+            href="https://scholar.google.com/scholar_case?case=17533031270000671105&amp;q=State+v.+Verardo,+263+Or+App+452&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Verardo</em></a>, 263 Or App 452, 453 (2014), the Court
+            of Appeals held this was true even if the state introduced
+            the statements the first time and the defense was simply
+            having the witness repeat it. The state elicited defendant’s
+            statements as those of a party opponent; thus, the
+            statements were not hearsay and not impeachment evidence.
+            However, when defendant elicited the statements during his
+            case-in-chief, he proffered them for the truth of the matter
+            asserted, i.e., that he had not been involved in the
+            robbery. Unlike the state, defendant introduced the
+            statements as exculpatory hearsay statements. And, as the
+            court concluded, eliciting the statements for that purpose
+            triggered OEC 806: “When, as here, a defendant elicits
+            evidence of his own hearsay statement as exculpatory
+            evidence, the defendant puts his own credibility at issue
+            just as if he had testified and, accordingly, the defendant
+            is subject to impeachment under OEC 806.<sup>”</sup>
+            <em>Id.</em> at 92.</p>
+            <p>Confrontation Clause Analysis: For statements the state
+            seeks to introduce under OEC 806, <em>Crawford</em> and
+            <em>Roberts</em> will not be a potential hurdle to
+            admissibility because impeachment evidence does not
+            necessitate confrontation protections. In <a
+            href="https://scholar.google.com/scholar_case?case=4671969792401582846&amp;q=State+v.+Nelson,+224+Or+App+193&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nelson</em></a>, 224 Or App 193, 195-96 (2008), the Court
+            of Appeals addressed a <em>Crawford</em> challenge to
+            evidence the state sought to introduce under Rule 806. At
+            trial, the defendant introduced a note from his former
+            cellmate that purported to grant him the authority to begin
+            receiving his former cellmate’s unemployment checks. Since
+            the former cellmate refused to testify, the state used Rule
+            806 to introduce statements made by the cellmate to a
+            detective to the effect that the letter was forged. The
+            defendant objected on <em>Crawford</em> grounds. Noting that
+            the statement was introduced for impeachment reasons rather
+            than as substantive evidence, the court ruled that
+            <em>Crawford’s</em> protections did not apply because
+            nonhearsay uses of out-of-court statements are “in effect
+            nontestimonial uses.” <em>Id.</em> at 197-99 (citing
+            Kirkpatrick, 4 Federal Evidence § 8:27, 213-14 (3d ed.
+            2007)). Concluding that <em>Crawford</em> preserved the use
+            of hearsay statements by nontestifying declarants, the court
+            held that “[a]dmission of that statement was proper under
+            OEC 806 as impeachment of a hearsay declarant and, because
+            the statement was not offered for its truth, defendant’s
+            Sixth Amendment right to confrontation was not violated.”
+            <em>Id.</em></p>
+            </section>
+            </section>
+            <section
+            id="iv._other_common_evidence_rules_in_sex_crimes_cases"
+            class="level1">
+            <h1><strong>IV. Other Common Evidence Rules in Sex Crimes
+            Cases</strong></h1>
+            <section id="a._witness_competency_rules_601_and_602"
+            class="level2">
+            <h2><strong>A. Witness Competency – Rules <a
+            href="https://www.oregonlaws.org/ors/40.310">601</a> and <a
+            href="https://www.oregonlaws.org/ors/40.315">602</a></strong></h2>
+            <p>The Oregon Evidence Code puts forth the following
+            requirements for witness competence: (1) the witness was
+            able to perceive (<a
+            href="https://www.oregonlaws.org/ors/40.310">Rule 601</a>),
+            (2) the witness was able to communicate the perception to
+            others (Rule 601), (3) the witness had personal knowledge of
+            the matter (<a
+            href="https://www.oregonlaws.org/ors/40.315">Rule 602</a>),
+            and (4) the witness took an oath or affirmation to testify
+            truthfully.</p>
+            <p>Under the old rules, a competency hearing was mandatory
+            for children under 10 years old. With the publishing of the
+            evidence code, the legislature dispensed with this
+            requirement. Now the decision to evaluate is solely that of
+            the trial court.<a href="#fn6" class="footnote-ref"
+            id="fnref6" role="doc-noteref"><sup>6</sup></a> The ruling
+            of the trial court regarding competency will normally be
+            upheld on appeal, provided an adequate record is made
+            supporting the ruling. Laird C. Kirkpatrick, Oregon Evidence
+            § 601.03[7] (6th ed. 2013). If the Oregon Court of Appeals
+            is to reverse, it will almost solely be in situations when a
+            witness was excluded.</p>
+            <p>Children or the mentally disabled will be deemed
+            competent to testify if they are physically able to perceive
+            events in question and possess relevant personal knowledge.
+            Under Rule 601, limited mental capacity does not itself
+            render a witness incompetent. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=17234883859428442852&amp;q=State+v.+Lantz,+44+Or+App+695&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lantz</em></a>, 44 Or App 695, 699-700 (1980) (“A
+            mentally disabled person of limited intelligence or
+            intellectual abilities may nevertheless be able to perceive
+            events, recall them, and accurately relate the recollection
+            from the witness stand. The evidence of [the victim’s]
+            mental condition does not demonstrate that she is unable to
+            perceive events or relate her perceptions as a witness”).
+            <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=14235864362426214514&amp;q=State+v.+Milbradt,+305+Or+621+(1988)+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Milbradt</a></em>, 305 Or 621 (1988) (holding that two
+            mentally impaired sex abuse victims should have been allowed
+            to testify).</p>
+            <p>Rule 601 “establishes a liberal standard for competency
+            of witnesses.” Kirkpatrick, Oregon Evidence § 601.03(1). A
+            competent witness need only be able to recognize the
+            necessity of telling the truth, to have personal knowledge
+            and recollection of the relevant events, and be able to
+            communicate that knowledge to the jury. <em>State v.
+            Lantz,</em> 44 Or App 695, 700 (1980). Whether a person who
+            has the ability to perceive and recount an event will do so
+            accurately and truthfully “is to be tested by
+            cross-examination and not by a motion to disqualify the
+            witness as incompetent.” <em>Id.</em></p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=9273944402785086529&amp;q=State+v.+Kelly,+244+Or+App+105&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kelly</em></a>, 244 Or App 105, 109 (2011), the defense
+            argued that suggestive pretrial questioning by CARES
+            rendered the minor victim’s allegations of sexual abuse
+            unreliable. In support for the argument, the defense
+            analogized the victim’s testimony to other categories of
+            evidence that may be excluded on the basis of unreliability
+            such as coerced confession, polygraph tests, and hypnosis.
+            On its way to rejecting that argument, the Court of Appeals
+            held that such reliability assessments are a question of
+            credibility for the trier of fact to weigh in its
+            deliberations, rather than a question of admissibility for
+            the court to determine in the first instance. <em>Id.</em>
+            at 110. <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=14262039095202028907&amp;q=Bumgarner,+219+Or+App+&amp;hl=en&amp;as_sdt=4,38">Bumgarner</a></em>,
+            219 Or App at 633.</p>
+            <p>When a witness’s competency to testify is questioned,
+            only counsel or the court are allowed to ask questions. <a
+            href="https://scholar.google.com/scholar_case?case=16080137528769008672&amp;q=State+v.+Doud,+190+Or+218+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Doud</em></a>, 190 Or 218 (1950). The defendant has a
+            constitutional right under Article I, section 11, of the
+            Oregon Constitution to be present at that hearing and to
+            allow defense counsel the opportunity to question. <a
+            href="https://scholar.google.com/scholar_case?case=1738248540239676021&amp;q=State+v.+Kitzman,+323+Or+589+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kitzman</em></a>, 323 Or 589 (1996). The trial court will
+            not be bound by the rules of evidence, other than privilege.
+            Rule 104(1). There is no authority under the Oregon Evidence
+            Code for a trial judge to order pretrial competency
+            examinations of prospective witnesses by outside experts.
+            Laird C. Kirkpatrick, Oregon Evidence § 601.03[3] (6th ed.
+            2013). In <a
+            href="https://scholar.google.com/scholar_case?case=10517510464066952630&amp;q=State+v.+Hiatt,+303+Or+60+(1987&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hiatt</em></a>, 303 Or 60 (1987), the Oregon Supreme
+            Court refused to overturn a trial court’s refusal to order a
+            pretrial psychological examination of an alleged rape
+            victim:</p>
+            <p>[Defendant] contends that if the court is responsible for
+            determinations of competency—defined by OEC 601 as the
+            ability to perceive and to relate those perceptions—a court
+            must also be authorized to order a psychological examination
+            to determine whether a psychological disorder impairs a
+            witness’s ability to perceive reality, to recollect events
+            or to communicate about them. We are not persuaded by these
+            arguments. The OEC provisions that authorize a trial judge
+            to admit expert testimony in court and to exclude
+            incompetent witnesses does not imply a right to call on
+            experts to evaluate the credibility or competency of
+            witnesses in an out-of-court proceeding.</p>
+            <p><em>Id.</em> at 66.</p>
+            <p>Confrontation Clause Analysis: OEC 601 is not an
+            evidentiary rule of admissibility. Therefore when analyzing
+            whether <em>Crawford</em> or <em>Roberts</em> confrontation
+            applies, the defense must determine under what hearsay
+            exception the statement is sought to be introduced. <em>See
+            [<a
+            href="https://scholar.google.com/scholar_case?case=1689712124358304376&amp;q=State+ex+rel.+v.+S.P">https://scholar.google.com/scholar_case?case=1689712124358304376&amp;q=State+ex+rel.+v.+S.P</a>.,+346+Or+592&amp;hl=en&amp;as_sdt=4,38
+            State ex rel. Juvenile Dep’t of Multnomah Cty. v.
+            S.P].</em>, 346 Or 592, 607 (2009) (after child found
+            incompetent to testify, state sought to introduce
+            incompetent declarant’s statements to CARES under OEC
+            803(18)(a)(b). Affirmed Court of Appeals decision to exclude
+            under <em>Crawford</em> as testimonial because agency works
+            in tandem with law enforcement).</p>
+            <p>Unavailability under OEC 601 will constitute
+            constitutional unavailability. <em>See <a
+            href="https://scholar.google.com/scholar_case?case=5598897907968858801&amp;q=See+State+v.+Stevens,+311+Or+119&amp;hl=en&amp;as_sdt=4,38">State
+            v. Stevens</a></em>, 311 Or 119, 142 (1991) (holding
+            constitutional unavailability is present when the state made
+            good-faith efforts coupled with extensive testimony about
+            the children’s inability to testify).</p>
+            </section>
+            <section
+            id="b._learned_treatise_and_the_basis_for_expert_opinion_oec_702_703_and_706"
+            class="level2">
+            <h2><strong>B. Learned Treatise and the Basis for Expert
+            Opinion – OEC <a
+            href="https://www.oregonlaws.org/ors/40.410">702</a>, <a
+            href="https://www.oregonlaws.org/ors/40.415">703</a>,<br />
+            and <a
+            href="https://www.oregonlaws.org/ors/40.430">706</a></strong></h2>
+            <p>An expert may give an opinion about an issue in a case if
+            the testimony “will assist the trier of fact to understand
+            the evidence or a fact in issue.” <a
+            href="https://www.oregonlaws.org/ors/40.410">OEC 702</a>. An
+            expert’s opinion may be based on facts or data that would be
+            inadmissible as evidence, provided they are “of a type
+            reasonably relied upon by experts in the particular field in
+            forming opinions or inferences upon the subject.” OEC 703.
+            Learned treatises are not admissible as substantive
+            evidence, but they may be used for the purpose of impeaching
+            a witness.</p>
+            <p><a href="https://www.oregonlaws.org/ors/40.415">OEC
+            703</a> was originally a restrictive rule, intended to limit
+            the sources of data upon which an expert may rely. However,
+            once the rule was changed to allow experts to rely upon
+            hearsay, the rule became permissive. Of course, an expert
+            may rely upon their own observations as treating physicians
+            always must. An expert may also ground their opinions upon
+            the statements of other witnesses. Counsel may also ask the
+            expert hypothetical questions, but the details of the
+            question must be consistent with actual evidence in the
+            case. Finally, experts may rely upon hearsay under the
+            theory that this is how experts such as treating physicians
+            come to conclusions every day. As Oregon no longer adheres
+            to the “facts in evidence” requirement for expert opinion,
+            the hearsay need not have been admitted nor even be
+            admissible at trial.</p>
+            <p>Theoretically, the types of hearsay an expert is allowed
+            to consider are limited to those types of evidence that are
+            of “a type reasonably relied upon by experts in the
+            particular field.” Thus counsel can move to exclude an
+            expert’s conclusions under <a
+            href="https://www.oregonlaws.org/ors/40.030">OEC 104(1)</a>
+            if the expert is relying upon data that is not “of a kind
+            and manner that experts would usually rely upon.” To make
+            this argument, counsel may need to present an independent
+            expert hypothesizing on whether it is “reasonable” for the
+            opinion expert to be relying upon the kinds of hearsay at
+            issue. See Kirkpatrick, Oregon Evidence § 703.03[2].</p>
+            <p>A testifying expert may rely upon and convey the opinion
+            of another expert as part of the basis for his or her own
+            opinion. The opinion of the other expert need not have been
+            admitted into evidence or be admissible so long as it is
+            “reasonable” for the testifying expert to have relied upon
+            it. The Commentary to <a
+            href="https://www.oregonlaws.org/ors/40.415">OEC 703</a>
+            cites to a physician basing their diagnosis on the opinions
+            from nurses, technicians, and other doctors in support for
+            this broad allowance.</p>
+            <p>At the time of codification, the drafters of OEC 703
+            indicated that they believed there<br />
+            were creating another hearsay exception.<a href="#fn7"
+            class="footnote-ref" id="fnref7"
+            role="doc-noteref"><sup>7</sup></a> However, ensuing case
+            law and Laird Kirkpatrick have persuasively established that
+            the evidence is admissible under OEC 703 because it is<br />
+            not hearsay:</p>
+            <p>The statement in the Commentary that Rule 703 “in effect
+            … represents another exception to the hearsay rule” is
+            unsound. When an out-of-court statement relied on by an
+            expert is admitted under Rule 703, it is not hearsay because
+            it is not being admitted for the truth of the matter
+            asserted, but only to explain the basis for the expert’s
+            opinion.</p>
+            <p>Laird C. Kirkpatrick, Oregon Evidence § 703.03(5).
+            <em>See also <a
+            href="https://scholar.google.com/scholar_case?case=5932752089687354832&amp;q=McCathern+v.+Toyota+Motor+Corp,+332+Or+59&amp;hl=en&amp;as_sdt=4,38">McCathern
+            v. Toyota Motor Corp</a></em>, 332 Or 59, 70 (2011) (
+            “[P]laintiff offered the evidence of the details surrounding
+            the 15 other rollover accidents only to provide the
+            foundation necessary to explain Wallingford’s opinions, not
+            for its truth. . . . Consequently, by definition, that
+            information was not “hearsay”). <em>See also [<a
+            href="https://scholar.google.com/scholar_case?case=2534482676255620947&amp;q=Oberg+v.+Honda+Motor+Co">https://scholar.google.com/scholar_case?case=2534482676255620947&amp;q=Oberg+v.+Honda+Motor+Co</a>.,+316+Or+263&amp;hl=en&amp;as_sdt=4,38
+            Oberg v. Honda Motor Co.]</em>, 316 Or 263, 269–70 (1993)
+            (excerpts of documents read to jury admitted for limited
+            purpose that defendants had notice of defective design and
+            not for truth were not hearsay).</p>
+            <p>By comparison, in <a
+            href="https://scholar.google.com/scholar_case?case=4882745624831201971&amp;q=State+v.+Thomas,+279+Or+App+98+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Thomas</em></a>, 279 Or App 98 (2016), the Court of
+            Appeals declined to allow the introduction of specific
+            studies underlying an expert’s testimony when the proponent
+            of the evidence failed to establish that the expert’s
+            opinion was specifically grounded in those studies. While
+            acknowledging that OEC 703 does not itself authorize the
+            admission of otherwise inadmissible evidence, the defense
+            argued that the rule allows for the admission of studies the
+            expert relied upon as a foundation for their expert’s
+            opinion. <em>Id.</em> at 105-106. The court agreed with that
+            proposition but disagreed that there was sufficient evidence
+            in the record to establish that these particular studies
+            were the foundational basis for the expert’s
+            conclusions.</p>
+            <p>Learned treatises are not admissible as substantive
+            evidence, but they may be used for the purpose of impeaching
+            a witness. <em>Travis v. Unruh</em>, 66 Or App 562 (1984).
+            The official legislative commentary to OEC 803(18a)
+            provides, in relevant part:</p>
+            <blockquote>
+            <p>“The Legislative Assembly did not adopt the federal
+            hearsay exception for learned treatises which appears as
+            subsection (18) of [<a
+            href="http://www.westlaw.com/Link/Document/FullText?findType=L&amp;pubNum=1004365&amp;cite=USFRER803&amp;originatingDoc=I2d0693c8f39611d9b386b232635db992&amp;refType=LQ&amp;originationContext=document&amp;vr=3.0&amp;rs=cblt1.0&amp;transitionType=DocumentItem&amp;contextData=(sc.DocLink">http://www.westlaw.com/Link/Document/FullText?findType=L&amp;pubNum=1004365&amp;cite=USFRER803&amp;originatingDoc=I2d0693c8f39611d9b386b232635db992&amp;refType=LQ&amp;originationContext=document&amp;vr=3.0&amp;rs=cblt1.0&amp;transitionType=DocumentItem&amp;contextData=(sc.DocLink</a>)
+            Fed R Evid 803]. It wishes to retain the Oregon practice of
+            using treatises in the cross-examination of expert
+            witnesses. Learned treatises should not be admitted as
+            substantive evidence as they are likely to be misunderstood
+            and misapplied in the absence of expert assistance and
+            supervision.” Legislative Commentary to Rule 803, reprinted
+            in Laird C. Kirkpatrick, Oregon Evidence § 803.18
+            (6<sup>th</sup> Ed 2013).</p>
+            </blockquote>
+            <p>Although OEC 703 “recognize[s] that experts often rely on
+            facts and data supplied by third parties,” the rule “does
+            not give carte blanche to admitting otherwise inadmissible
+            hearsay.” <em>[<a
+            href="https://scholar.google.com/scholar_case?case=16490986903285548143&amp;q=Mission+Ins.+Co.+v.+Wallace+Security+Agy">https://scholar.google.com/scholar_case?case=16490986903285548143&amp;q=Mission+Ins.+Co.+v.+Wallace+Security+Agy</a>.,+Inc.,+84+Or+App+525,+&amp;hl=en&amp;as_sdt=4,38
+            Mission Ins. Co. v. Wallace Security Agy., Inc.,]</em> 84 Or
+            App 525, 528–29 (1987). In <a
+            href="https://scholar.google.com/scholar_case?case=7944571944479754150&amp;q=Kahn+v.+Pony+Express,+173+Or+App+127+&amp;hl=en&amp;as_sdt=4,38"><em>Kahn
+            v. Pony Express,</em></a> 173 Or App 127 (2011), a civil
+            plaintiff sought to introduce the ruminations of the
+            plaintiff’s family’s physician through a testifying
+            psychologist. On direct examination, the psychologist
+            testified that in forming his opinions about the
+            relationship between the decedent plaintiff and her
+            daughter, he relied in part on information he received from
+            the family physician, including that the decedent was a
+            nurturing parent eager to learn. Because those observations
+            and statements were outside the scope of the psychologist’s
+            actual opinion, they were inadmissible hearsay.
+            <em>Kahn</em>, 173 Or App at 154.</p>
+            </section>
+            </section>
+            <section id="v._conclusion" class="level1">
+            <h1><strong>V. Conclusion</strong></h1>
+            <p>Hearsay almost always plays a critical role in a sex
+            prosecution. After all, the government will go to great
+            lengths to use prior statements from the victim and other
+            witnesses to bolster and corroborate their case. The
+            unfortunate reality is that the Oregon legislature has been
+            and will continue to be all too willing to give prosecutors
+            generous avenues of admissibility within this area of
+            criminal practice. The good news is that a prepared counsel
+            will be ready to fight these efforts on three distinct
+            battle fields: Article I, section 11, the Sixth Amendment,
+            and the individual code provisions. Knowing the factors and
+            issues at play at each level may not always lead to
+            exclusion, but it often will. And there is always that next
+            appeal!</p>
+            <references />
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup> </sup> Reversed on prejudice grounds in
+            <em>State v. Harris</em>, 362 Or 55, 57 (2017). However, the
+            unavailability analysis from the Court of Appeals case
+            remains persuasive. “We conclude that to establish
+            unavailability for Article I, section 11, purposes, the
+            state must show that it is unable to produce a witness after
+            exhausting reasonable means of doing so. In most cases, the
+            state will not be allowed simply to rely on a subpoena.”<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup> </sup> OEC 804(3)(h) used to be listed
+            under OEC 803(24). Be wary of case law searches under the
+            various code provisions.<a href="#fnref2"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn3">  Rule 804(3)(h) is a redundant rule that adds
+            an unavailability element. However, given the constitutional
+            requirements of Article 1, section 11, the distinction is
+            virtually irrelevant. <em>See</em> Kirkpatrick, <em>Oregon
+            Evidence</em> § 804.09(3).<a href="#fnref3"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><sup> </sup> <em>State v. Swader</em>, 299 Or
+            729, 731 (1985), was overruled on grounds that the use of
+            the residual hearsay rule is inappropriate when OEC 803(18a)
+            is applicable.<a href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn5"><sup> </sup> Both parties agreed that the
+            mother’s portion would constitute a prior inconsistent
+            statement but that was not sufficient for purposes of appeal
+            because the statement was necessary as substantive
+            evidence.<a href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><sup> </sup> “[T]he Legislative Assembly
+            believes that the adoption of Rule 601 works no change in
+            Oregon law with regard to competency, except in the case of
+            a witness less than 10 years of age. Although no longer
+            required by ORS 44.030 to examine separately a child who is
+            under 10 years of age for competency, a trial court still
+            may do so to determine whether the child is a competent
+            witness under this Article.” Or. Rev. Stat. Ann. § 40.310.<a
+            href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7"><sup> </sup> “In effect, it represents another
+            exception to the hearsay rule.” Legislative Commentary to
+            Rule 703 reprinted in Laird C. Kirkpatrick, Oregon Evidence
+            § 703.02 (6th ed. 2013).<a href="#fnref7"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

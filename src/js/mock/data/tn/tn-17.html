@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 17. Jury Instructions</strong></p>
+            <p><strong><em>By Robert S. Raschio</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>Interestingly, litigators often spend a great deal of
+            time and energy on the stages of trial before the jury
+            instructions and then allow the court to deflate the jury
+            with the Uniform Criminal Jury Instructions. Even the Bar
+            Committee advises the Uniform Instructions are a framework
+            and the court and counsel rely too much on them. Jury
+            instructions are important weapons in a defendant’s arsenal.
+            An order from the judge to the jury compels the jurors to
+            act in a particular way. If the judge accepts your
+            instruction, she will be ordering the jury to follow your
+            interpretation of the law. Convictions are overturned on
+            appeal because of the failure of a judge to give a properly
+            requested defense instruction or because of the judge giving
+            an improper instruction.</p>
+            <p>Start working on your jury instructions when you start
+            work on your case. When you draft an instruction, you are
+            applying the law that governs your case. The instructions
+            should be connected to the opening statement, the theory of
+            the case and the closing argument.</p>
+            <p>Jury instructions are your final message to the jury.</p>
+            </section>
+            <section id="ii._statutes_and_local_rules" class="level1">
+            <h1><strong>II. Statutes and Local Rules</strong></h1>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.320</a>—Questions of fact are for the jury to decide and
+            the court instructs on all matters of law.</p>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.325</a>—No jury instructions regarding punishment except
+            in murder and insanity cases.</p>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.330</a>—Refers to the ORCPs and the polling of
+            juries.</p>
+            <p><a href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.100</a>—Views of premises by a jury.</p>
+            <p><a href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            58(B–D)</a>—Jury selection, instruction of duties and jury
+            questions format. ORCP 58(A) is not specifically authorized
+            for use in criminal cases. ORS 136.330.</p>
+            <p><a href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            59</a>—Refers to the process of jury instructions and
+            deliberations.</p>
+            <p><a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch06.pdf">UTCR
+            6.060</a>—Proposed jury instructions and verdict forms.</p>
+            <p><a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch06.pdf">UTCR
+            6.070</a>—Jury Instructions.</p>
+            <p>Practice Tip</p>
+            <p><a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR.pdf">Uniform
+            Trial Court Rules and Supplementary Local Rules</a></p>
+            <p>Uniform Trial Court Rules should be consulted when you
+            are preparing your jury instructions. Rereading the rules
+            helps keep instructions to the jury in focus. Local trial
+            court rules should also be consulted as they may affect
+            timing, preparation or contents of jury instructions. There
+            is further discussion of each of the above rules throughout
+            this chapter.</p>
+            </section>
+            <section id="iii._requesting_instructions" class="level1">
+            <h1><strong>III. Requesting Instructions</strong></h1>
+            <section id="a._draft_your_own_special_instructions"
+            class="level2">
+            <h2><strong>A. Draft Your Own Special
+            Instructions</strong></h2>
+            <p>Legal research leads to new or different interpretations
+            of the law. Good writing skills can clarify and make dry,
+            uniform instructions more interesting. Change commonly used
+            uniform instructions such as the vague mental state
+            instructions. Replace terms, such as “alibi,” that have
+            strong negative connotations. Use federal court jury
+            instructions as a way to get judges to start thinking
+            “outside the box.” The court, however, is not required to
+            use the exact language requested by counsel. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">State
+            v. Charles</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">,
+            293 Or 273, 647 P2d 897 (1982),</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">reversed
+            on other grounds</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">,</a>
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+sandoval&amp;hl=en&amp;as_sdt=4,38&amp;case=7686916681686140395&amp;scilh=0">State
+            v. Sandoval</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+sandoval&amp;hl=en&amp;as_sdt=4,38&amp;case=7686916681686140395&amp;scilh=0">,
+            342 Or 506, 156 P3d 60</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+sandoval&amp;hl=en&amp;as_sdt=4,38&amp;case=7686916681686140395&amp;scilh=0">(2007)</a>.
+            Note the language in UTCR 6.060(4) regarding form
+            requirements.</p>
+            <p><em>State v. Sandoval</em>is a case study on how the law
+            is changed through jury instructions. The Uniform Jury
+            Instructions, along with a special instruction from the
+            state objected to by the defense, lead to an abrogation of
+            the state supreme court’s former opinion on the duty to
+            retreat and a reevaluation of said duty, finding there is
+            none under Oregon law. Timely objections and special
+            instructions can change the lay of the land.</p>
+            <p>First, prior to reading the Uniform Criminal Jury
+            Instructions, review the law of your case, decide on your
+            defense and write the jury instructions of your dreams.
+            Specifically, write a jury instruction directing the jury to
+            the law that wins your case. Outline the defense in clear
+            terms. If you can write it with supporting law, the court
+            has to read it. Once read, the court has told the jury to
+            follow your defense.</p>
+            <p>Second, review the Uniform Criminal Jury
+            Instructions.</p>
+            <p>Third, modify the Uniform Criminal Jury Instructions to
+            meet the law of the case that accurately messages your
+            theory of the case. See the Appendix for a modified
+            instruction on serious physical injury. The instruction
+            incorporates the language of the UCrJI and the language of
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+higgins&amp;hl=en&amp;as_sdt=4,38&amp;case=15005768727774143937&amp;scilh=0">State
+            v. Higgins</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+higgins&amp;hl=en&amp;as_sdt=4,38&amp;case=15005768727774143937&amp;scilh=0">,
+            165 Or App 442, 998 P2d 222 (2000)</a>, to communicate to
+            the jury that the physical injury needs to be more profound
+            than the state would have it.</p>
+            <p>Fourth, review your defense again. Go to the statutes and
+            see if there is supporting language there for an
+            instruction. When you use the language of the statute, the
+            court’s discretion is limited only to the question of
+            whether there is evidence in the record to support the
+            instruction. Since you prepared the instruction, you will
+            make sure the evidence is in the record!</p>
+            <p>Finally, when writing the instructions remember to:</p>
+            <p>• Use short, direct sentences.</p>
+            <p>• Avoid negative sentences.</p>
+            <p>• Avoid legalese—use concrete, not abstract words.</p>
+            <p>There is a wealth of special instructions already written
+            on the Library of Defense page; use them or write your own.
+            <a
+            href="https://libraryofdefense.org/legal/jury-instructions"><span>https://libraryofdefense.org/legal/jury-instructions</span></a>.</p>
+            </section>
+            <section
+            id="b._when_proposed_instructions_should_be_submitted"
+            class="level2">
+            <h2><strong>B. When Proposed Instructions Should Be
+            Submitted</strong></h2>
+            <p>In general, proposed instructions should be submitted by
+            the parties at the commencement of trial. <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch06.pdf">UTCR
+            6.060(6)</a>. Prompt submission of jury instructions is
+            especially important if the litigator is asking the court to
+            deliver some instructions before opening statements.
+            Proposed instructions shall be in writing. UTCR 6.060(1).
+            Proposed instructions upon questions of law developed by the
+            evidence, which could not be reasonably anticipated, may be
+            submitted at any time before the court has instructed the
+            jury. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            59A</a>. If the proposed instruction is not from the Uniform
+            Instructions, there must be a statement citing the statute,
+            decision or other legal authority which supports the
+            requested instruction. UTCR 6.060(4)(f). No identifying
+            information or authority can be on the copy presented to the
+            jury. UTCR 6.070.</p>
+            <p>An instruction first requested after the parties have
+            concluded their closing arguments may be refused. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+radford&amp;hl=en&amp;as_sdt=4,38&amp;case=4225415998701905491&amp;scilh=0">State
+            v. Radford</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+radford&amp;hl=en&amp;as_sdt=4,38&amp;case=4225415998701905491&amp;scilh=0">,
+            101 Or App 665, 793 P2d 324 (1990)</a>.</p>
+            </section>
+            <section id="c._form_of_instructions" class="level2">
+            <h2><strong>C. Form of Instructions</strong></h2>
+            <p>The original plus one copy of the written jury
+            instructions and verdict form should be submitted to the
+            court. UTCR 6.060(2). Remember to check local rules for
+            variations. Do not request instructions that may be relevant
+            to the case but are not helpful to the defense. If you
+            request an instruction, you cannot object to it later. Be
+            careful.</p>
+            <p>It is normally appropriate to list requested Uniform
+            Oregon Jury Instructions by number and title rather than
+            copying them verbatim. However, if the uniform instruction
+            has blanks that need to be filled in, the person preparing
+            the instruction should type up the uniform instruction with
+            the blanks filled in. UTCR 6.060(3). Copies of key
+            instructions in your file may assist you in preparing
+            opening statement and closing argument.</p>
+            <p>Practice Tip</p>
+            <p>Counsel should consider challenging or drafting
+            alternatives to the Uniform Oregon Jury Instructions. They
+            are advisory and not always accurate reflections of the
+            current state of the law. The Oregon Supreme Court recently
+            commented on the Reckless instruction, UCrJI 1036, stating,
+            “the current Uniform Criminal Jury Instruction defining
+            ‘recklessly’ exhibits the same deficiency that we discuss in
+            this opinion. The bare terms ‘particular result’ and
+            ‘particular circumstance’ do not adequately convey to a jury
+            the required link between reckless conduct and the results
+            or circumstances specified in the underlying criminal
+            statute. Furthermore, a trial court should not instruct the
+            jury that the mental state relates to both a result and a
+            circumstance, unless that is accurate in the context of the
+            particular crimes.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v+crosby&amp;hl=en&amp;as_sdt=4,38&amp;case=10006178173306648171&amp;scilh=0">State
+            v. Crosby</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+crosby&amp;hl=en&amp;as_sdt=4,38&amp;case=10006178173306648171&amp;scilh=0">,
+            342 Or 419, 154 P3d 97 (2007)</a>.</p>
+            <p>Counsel should challenge UCrJI’s that do not accurately
+            state the law or context of the law. Counsel can use the
+            opportunity to propose alternative instructions that set out
+            the defense theory of the case or narrow the state’s theory
+            of criminal conduct. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+sandoval&amp;hl=en&amp;as_sdt=4,38&amp;case=7686916681686140395&amp;scilh=0">State
+            v. Sandoval</a>, supra; see also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lang&amp;hl=en&amp;as_sdt=4,38&amp;case=7636991056905200477&amp;scilh=0">State
+            v. Lang</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lang&amp;hl=en&amp;as_sdt=4,38&amp;case=7636991056905200477&amp;scilh=0">,
+            215 Or App 15, 168 P3d 310 (2007)</a>.</p>
+            </section>
+            <section
+            id="d._sending_written_or_recorded_instructions_to_the_jury"
+            class="level2">
+            <h2><strong>D. Sending Written or Recorded Instructions to
+            the Jury</strong></h2>
+            <p>Either party may request the court to reduce the jury
+            instructions to writing or to record the jury instructions
+            during an oral charge to the jury and give the written or
+            recorded instructions to the jury to use during
+            deliberations. ORCP 59B. The request must be made prior to
+            trial, ORCP 59B, and the party making the request has the
+            responsibility for recording the instructions or reducing
+            them to writing. The statutory language is mandatory and
+            failure to comply with a party’s request may be reversible
+            error. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+looper&amp;hl=en&amp;as_sdt=4,38&amp;case=9773670006857059997&amp;scilh=0">State
+            v. Looper</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+looper&amp;hl=en&amp;as_sdt=4,38&amp;case=9773670006857059997&amp;scilh=0">,
+            76 Or App 231, 234–235, 708 P2d 1190 (1985)</a>;
+            <em>replacing opinion</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+looper&amp;hl=en&amp;as_sdt=4,38&amp;case=8832359813299407155&amp;scilh=0">77
+            Or App 660, 713 P2d 1099 (1986)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+etchison&amp;hl=en&amp;as_sdt=4,38&amp;case=9717614438239477095&amp;scilh=0">State
+            v. Etchison</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+etchison&amp;hl=en&amp;as_sdt=4,38&amp;case=9717614438239477095&amp;scilh=0">,
+            142 Or App 396, 921 P2d 1333 (1996)</a>.</p>
+            <p>A party may not want the jury to have the instructions.
+            Attorneys are frequently concerned that despite the court’s
+            warning, the jury might attach undue significance to a
+            particular instruction. Many judges are tape recording and
+            providing the instructions to the jury on their own
+            initiative. Counsel should object to the court doing the act
+            <em>sua sponte</em>if there is a concern about the jury
+            attaching too much emphasis to a specific instruction.</p>
+            </section>
+            <section id="e._limiting_instructions" class="level2">
+            <h2><strong>E. Limiting Instructions</strong></h2>
+            <p>Upon request, the court must give a jury a limiting
+            instruction when evidence which is admissible to one party
+            or for one purpose but not to another party or for another
+            purpose is admitted. <a
+            href="http://www.oregonlaws.org/ors/40.035">Oregon Evidence
+            Code Rule 105 (ORS 40.035)</a>. A timely objection and
+            request to limit is vital, otherwise the issue may be
+            waived. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+stevens&amp;hl=en&amp;as_sdt=4,38&amp;case=14073553936707393523&amp;scilh=0">State
+            v. Stevens</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stevens&amp;hl=en&amp;as_sdt=4,38&amp;case=14073553936707393523&amp;scilh=0">,
+            328 Or 116, 970 P2d 215 (1998)</a>. This situation may
+            present a difficult tactical decision for the litigator who
+            may not want to highlight potentially prejudicial
+            evidence.</p>
+            <p>A limiting instruction is inadequate under the
+            [#amendmentvi Sixth Amendment] of the federal Constitution
+            if evidence of a non-testifying co-defendant’s confession is
+            admitted at trial and it inculpates another defendant being
+            tried with the non-testifying co-defendant. <a
+            href="http://scholar.google.com/scholar_case?q=bruton+v+us&amp;hl=en&amp;as_sdt=3,38&amp;case=4310998141337802851&amp;scilh=0">Bruton
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=bruton+v+us&amp;hl=en&amp;as_sdt=3,38&amp;case=4310998141337802851&amp;scilh=0">,
+            391 U.S. 123 (1968)</a>.</p>
+            </section>
+            <section id="f._presumptions_and_inferences" class="level2">
+            <h2><strong>F. Presumptions and Inferences</strong></h2>
+            <p>An instruction requiring a jury to draw an inference from
+            certain facts is almost always unnecessary if not improper.
+            <a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.320</a>, <a
+            href="http://scholar.google.com/scholar_case?q=state+v+rainey&amp;hl=en&amp;as_sdt=4,38&amp;case=4459043142057953350&amp;scilh=0">State
+            v. Rainey</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rainey&amp;hl=en&amp;as_sdt=4,38&amp;case=4459043142057953350&amp;scilh=0">,
+            298 Or 459, 693 P2d 635 (1985)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+short&amp;hl=en&amp;as_sdt=4,38&amp;case=2806886081714640923&amp;scilh=0">State
+            v. Short</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+short&amp;hl=en&amp;as_sdt=4,38&amp;case=2806886081714640923&amp;scilh=0">,
+            88 Or App 567, 571, 746 P2d 742 (1987)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=100+or+app+153&amp;hl=en&amp;as_sdt=4,38&amp;case=5577106847463214326&amp;scilh=0">State
+            v. Campbell</a><a
+            href="http://scholar.google.com/scholar_case?q=100+or+app+153&amp;hl=en&amp;as_sdt=4,38&amp;case=5577106847463214326&amp;scilh=0">,
+            100 Or App 153, 785 P2d 370 (1990)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mccormick&amp;hl=en&amp;as_sdt=4,38&amp;case=684477162701655532&amp;scilh=0">State
+            v. McCormick</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mccormick&amp;hl=en&amp;as_sdt=4,38&amp;case=684477162701655532&amp;scilh=0">,
+            280 Or 417, 421, 571 P2d 499 (1977)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=55+or+app+98&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">State
+            v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?q=55+or+app+98&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">,
+            55 Or App 98, 103, 637 P2d 211 (1981)</a>; ''but see <a
+            href="http://scholar.google.com/scholar_case?q=state+v+hines&amp;hl=en&amp;as_sdt=4,38&amp;case=7311775359223326180&amp;scilh=0">State
+            v. Hines</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+hines&amp;hl=en&amp;as_sdt=4,38&amp;case=7311775359223326180&amp;scilh=0">,
+            84 Or App 681, 735 P2d 618 (1987)</a> (allows the Inference
+            Uniform Jury Instruction).</p>
+            <p>In <em>Hines</em>, Judge Young writes an impassioned
+            dissent on why the Inference instruction is in direct
+            conflict with the Beyond A Reasonable Doubt instruction and
+            should not be read. Counsel should consider excepting to the
+            instruction and citing the dissent’s logic that the
+            instruction dilutes the standard of proof by requiring
+            juries to apply their “common sense” to every element of the
+            crime.</p>
+            <p>A judge may not instruct the jury to find a presumed fact
+            against the accused. <a
+            href="http://www.oregonlaws.org/ors/40.125">OEC 309 (ORS
+            40.125)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+rainey&amp;hl=en&amp;as_sdt=4,38&amp;case=4459043142057953350&amp;scilh=0">State
+            v. Rainey</a>, supra''. Instructing on presumptions that
+            shift the burden of proof violates due process. <a
+            href="http://scholar.google.com/scholar_case?q=sandstrom+v+montana&amp;hl=en&amp;as_sdt=3,38&amp;case=5244531001775040757&amp;scilh=0">Sandstrom
+            v. Montana</a><a
+            href="http://scholar.google.com/scholar_case?q=sandstrom+v+montana&amp;hl=en&amp;as_sdt=3,38&amp;case=5244531001775040757&amp;scilh=0">,
+            442 U.S. 510 (1979)</a>.</p>
+            </section>
+            <section id="g._alternate_theories" class="level2">
+            <h2><strong>G. Alternate Theories</strong></h2>
+            <p>When a defendant is charged with one crime under
+            alternate theories, the jury must be instructed that to
+            convict, the jurors must agree on the manner in which the
+            crime was committed. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+boots&amp;hl=en&amp;as_sdt=4,38&amp;case=1999623020499346969&amp;scilh=0">State
+            v. Boots</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+boots&amp;hl=en&amp;as_sdt=4,38&amp;case=1999623020499346969&amp;scilh=0">,
+            308 Or 371, 780 P2d 725 (1989)</a>. However, jurors do not
+            have to agree on a single body of evidence to find facts
+            sufficient to convict. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+king&amp;hl=en&amp;as_sdt=4,227&amp;case=2321359412652446727&amp;scilh=0">State
+            v. King</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+king&amp;hl=en&amp;as_sdt=4,227&amp;case=2321359412652446727&amp;scilh=0">,
+            114 Or App 32 (1992)</a>. An instruction that suggests
+            otherwise will be properly denied. <em>Ibid</em>.</p>
+            </section>
+            <section id="h._weaker_and_less_satisfactory_evidence"
+            class="level2">
+            <h2><strong>H. Weaker and Less Satisfactory
+            Evidence</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.095(7) and (8)</a> require the court to instruct a jury
+            on the conclusions it may draw if a party produces evidence
+            that is weaker and less satisfactory than it might have
+            produced. However, this instruction should generally not be
+            given in criminal cases, except in those rare instances
+            where because of an asserted defense the defendant has the
+            burden of proof on an issue in the case. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mains&amp;hl=en&amp;as_sdt=4,38&amp;case=591568204280161830&amp;scilh=0">State
+            v. Mains</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mains&amp;hl=en&amp;as_sdt=4,38&amp;case=591568204280161830&amp;scilh=0">,
+            295 Or 640, 646–648, 669 P2d 1112 (1983)</a>. A defendant
+            has the right to request an instruction that is modified,
+            like UCrJI 1025, to apply only to the responsibilities of
+            the prosecution. <em>State v. Mains</em>, 295 Or at 648 n.
+            5.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+west&amp;hl=en&amp;as_sdt=4,38&amp;case=2160135614954602375&amp;scilh=0">State
+            v. West</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+west&amp;hl=en&amp;as_sdt=4,38&amp;case=2160135614954602375&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+west&amp;hl=en&amp;as_sdt=4,38&amp;case=2160135614954602375&amp;scilh=0">145
+            Or App 322, 930 P2d 858 (1996)</a>, the trial court properly
+            refused to give this instruction even though the officer who
+            administered the field sobriety tests in a DUII case did not
+            testify. The defendant failed to show that the testimony of
+            the absent officer would have been any stronger than another
+            officer who observed the tests.</p>
+            <p>Though the instruction is rarely given, counsel should
+            propose it when there is an inference to be made from the
+            evidence the state did not produce that said evidence would
+            be adverse to its position, such as the state has something
+            to hide or it possesses or could have possessed stronger
+            evidence and has failed to produce it for the jury. If there
+            is evidence in the record to support the instructions, it
+            should be given. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcdonnell&amp;hl=en&amp;as_sdt=4,38&amp;case=10311469811852261655&amp;scilh=0">State
+            v. McDonnell</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcdonnell&amp;hl=en&amp;as_sdt=4,38&amp;case=10311469811852261655&amp;scilh=0">,
+            313 Or 478, 837 P2d 941 (1992)</a>.</p>
+            <p>In evaluating whether the trial court abused its
+            discretion in not delivering the less satisfactory evidence
+            instruction, it must be determined whether the party
+            requesting it has demonstrated that the evidence was
+            reasonably available and regarding an issue of fact that a
+            jury would find such evidence stronger and more satisfactory
+            than that offered. <em>Ibid</em>.</p>
+            </section>
+            <section
+            id="i._sequence_of_instructionbefore_or_after_argument"
+            class="level2">
+            <h2><strong>I. Sequence of Instruction—Before or After
+            Argument</strong></h2>
+            <p>The sequence of a trial is within the discretion of the
+            trial judge. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            58A</a>. ORCP 58 sets out the order of proceedings in a jury
+            trial and has instruction following argument, ORCP 58B(5)
+            and (6), but a judge can exercise her discretion and
+            instruct before argument. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ness&amp;hl=en&amp;as_sdt=4,38&amp;case=7195242915268683261&amp;scilh=0">State
+            v. Ness</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ness&amp;hl=en&amp;as_sdt=4,38&amp;case=7195242915268683261&amp;scilh=0">,
+            54 Or App 530, 535–536, 635 P2d 1025 (1981)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ness&amp;hl=en&amp;as_sdt=4,38&amp;case=809412038487264564&amp;scilh=0">aff’d
+            on other grounds</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ness&amp;hl=en&amp;as_sdt=4,38&amp;case=809412038487264564&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ness&amp;hl=en&amp;as_sdt=4,38&amp;case=809412038487264564&amp;scilh=0">294
+            Or 8, 653 P2d 548 (1982)</a>. This unfortunately allows the
+            government to literally have the last word with the
+            jury.</p>
+            </section>
+            </section>
+            <section id="iv._giving_the_instructions" class="level1">
+            <h1><strong>IV. Giving the Instructions</strong></h1>
+            <section
+            id="a._when_is_it_error_to_refuse_to_give_an_instruction"
+            class="level2">
+            <h2><strong>A. When Is it Error to Refuse to Give an
+            Instruction?</strong></h2>
+            <p>In general, the court’s failure to give a particular
+            instruction is not error when counsel fails to request it.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+pinnell&amp;hl=en&amp;as_sdt=4,38&amp;case=5728726604176517311&amp;scilh=0">State
+            v. Pinnell</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+pinnell&amp;hl=en&amp;as_sdt=4,38&amp;case=5728726604176517311&amp;scilh=0">,
+            319 Or 438, 877 P2d 635 (1994)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cardwell&amp;hl=en&amp;as_sdt=4,38&amp;case=1367164579897644907&amp;scilh=0">State
+            v. Cardwell</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cardwell&amp;hl=en&amp;as_sdt=4,38&amp;case=1367164579897644907&amp;scilh=0">,
+            22 Or App 240, 538 P2d 372 (1975)</a>.</p>
+            <p>The trial court must give a party’s requested instruction
+            if there is evidence to support it and it correctly states
+            the law. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=16144305656520724246&amp;scilh=0">State
+            v. Freeman</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=16144305656520724246&amp;scilh=0">,
+            109 Or App 472, 474–475, 820 P2d 37 (1991)</a> (Self
+            Defense), <a
+            href="http://scholar.google.com/scholar_case?q=state+v+boyce&amp;hl=en&amp;as_sdt=4,38&amp;case=11428040662327452885&amp;scilh=0">State
+            v. Boyce</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+boyce&amp;hl=en&amp;as_sdt=4,38&amp;case=11428040662327452885&amp;scilh=0">,
+            120 Or App 299, 852 P2d 276 (1993)</a> (Lesser Included
+            Charges), <a
+            href="http://scholar.google.com/scholar_case?q=state+v+branch&amp;hl=en&amp;as_sdt=4,38&amp;case=14530783859993517536&amp;scilh=0">State
+            v. Branch</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+branch&amp;hl=en&amp;as_sdt=4,38&amp;case=14530783859993517536&amp;scilh=0">,
+            208 Or App 286, 144 P3d 1010 (2006)</a> (Defense of
+            Another), <a
+            href="http://scholar.google.com/scholar_case?q=state+v+dahrens&amp;hl=en&amp;as_sdt=4,38&amp;case=6908870880832052169&amp;scilh=0">State
+            v. Dahrens</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+dahrens&amp;hl=en&amp;as_sdt=4,38&amp;case=6908870880832052169&amp;scilh=0">,
+            192 Or App 283, 84 P3d 1122 (2004)</a> (Self Defense/Defense
+            of Property), <a
+            href="http://scholar.google.com/scholar_case?q=223+or+app+526&amp;hl=en&amp;as_sdt=4,38&amp;case=16293835115787288478&amp;scilh=0">State
+            v. Hogevoll</a><a
+            href="http://scholar.google.com/scholar_case?q=223+or+app+526&amp;hl=en&amp;as_sdt=4,38&amp;case=16293835115787288478&amp;scilh=0">,
+            223 Or App 526, 196 P3d 1008 (2008)</a> (Game Case
+            Instructions connecting statute, administrative laws, and
+            the published rules).</p>
+            <p>Note: It is not error to give instructions that are
+            “inaccurate and incomplete.” <a
+            href="http://scholar.google.com/scholar_case?q=moine&amp;hl=en&amp;as_sdt=4,38&amp;case=450051862735102775&amp;scilh=0">State
+            v. Moine</a><a
+            href="http://scholar.google.com/scholar_case?q=moine&amp;hl=en&amp;as_sdt=4,38&amp;case=450051862735102775&amp;scilh=0">,
+            128 Or App 530, 877 P2d 94,</a><a
+            href="http://scholar.google.com/scholar_case?q=moine&amp;hl=en&amp;as_sdt=4,38&amp;case=450051862735102775&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=moine&amp;hl=en&amp;as_sdt=4,38&amp;case=450051862735102775&amp;scilh=0">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?q=moine&amp;hl=en&amp;as_sdt=4,38&amp;case=450051862735102775&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=moine&amp;hl=en&amp;as_sdt=4,38&amp;case=450051862735102775&amp;scilh=0">320
+            Or 492 (1994)</a>. Likewise, a judge does not have to give
+            an instruction in the form requested, and it is not error
+            for the court to refuse to give a requested instruction if a
+            different instruction adequately covers the subject matter
+            of the instruction requested. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+forsythe&amp;hl=en&amp;as_sdt=4,38&amp;case=6153734852423092689&amp;scilh=0">State
+            v. Forsyth</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+forsythe&amp;hl=en&amp;as_sdt=4,38&amp;case=6153734852423092689&amp;scilh=0">,
+            20 Or App 624, 633, 533 P2d 176 (1975)</a>. A requested
+            instruction is always properly refused unless it should be
+            given in the terms in which it was proposed. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+francis&amp;hl=en&amp;as_sdt=4,38&amp;case=2214582288184074439&amp;scilh=0">State
+            v. Francis</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+francis&amp;hl=en&amp;as_sdt=4,38&amp;case=2214582288184074439&amp;scilh=0">,
+            284 Or 621, 626, 588 P2d 611 (1978)</a> (the defendant
+            requested an instruction on “intent” when the indictment
+            alleged “knowledge”); ''see also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+owens&amp;hl=en&amp;as_sdt=4,38&amp;case=1728655609573412359&amp;scilh=0">State
+            v. Owens</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+owens&amp;hl=en&amp;as_sdt=4,38&amp;case=1728655609573412359&amp;scilh=0">,
+            159 Or App 80, 979 P2d 284 (1999)</a>.</p>
+            <p>A trial judge has the discretion to instruct on all
+            questions and issues arising from the evidence even without
+            a request. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+pruett&amp;hl=en&amp;as_sdt=4,38&amp;case=17946107346209145462&amp;scilh=0">State
+            v. Pruett</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+pruett&amp;hl=en&amp;as_sdt=4,38&amp;case=17946107346209145462&amp;scilh=0">,
+            24 Or App 555, 559, 546 P2d 415 (1976)</a>.</p>
+            </section>
+            <section
+            id="b._defendants_right_to_have_an_instruction_stating_his_theory_of_the_case"
+            class="level2">
+            <h2><strong>B. Defendant’s Right to Have an Instruction
+            Stating His Theory of the Case</strong></h2>
+            <p>A defendant is entitled to have his theory of the case
+            presented to the jury if there is any evidence from which
+            the jurors could infer that the required elements of the
+            defense were present and if he has submitted an instruction
+            that correctly states the law. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+menaugh&amp;hl=en&amp;as_sdt=4,38&amp;case=4026784392129241644&amp;scilh=0">State
+            v. Menaugh</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+menaugh&amp;hl=en&amp;as_sdt=4,38&amp;case=4026784392129241644&amp;scilh=0">,
+            152 Or App 389, 954 P2d 177 (1998)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcbride&amp;hl=en&amp;as_sdt=4,38&amp;case=2418153602390643395&amp;scilh=0">State
+            v. McBride</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcbride&amp;hl=en&amp;as_sdt=4,38&amp;case=2418153602390643395&amp;scilh=0">,
+            287 Or 315, 319, 599 P2d 449 (1979)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=107+or+app+647&amp;hl=en&amp;as_sdt=4,38&amp;case=6158437807357357267&amp;scilh=0">State
+            v. Smith</a><a
+            href="http://scholar.google.com/scholar_case?q=107+or+app+647&amp;hl=en&amp;as_sdt=4,38&amp;case=6158437807357357267&amp;scilh=0">,
+            107 Or App 647, 813 P2d 1086 (1991)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=ketchum&amp;hl=en&amp;as_sdt=4,38&amp;case=17193635982789990247&amp;scilh=0">State
+            v. Ketchum</a><a
+            href="http://scholar.google.com/scholar_case?q=ketchum&amp;hl=en&amp;as_sdt=4,38&amp;case=17193635982789990247&amp;scilh=0">,
+            206 Or App 635, 138 P3d 860 (2006)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=thaxton&amp;hl=en&amp;as_sdt=4,38&amp;case=14665064939821070749&amp;scilh=0">State
+            v. Thaxton</a><a
+            href="http://scholar.google.com/scholar_case?q=thaxton&amp;hl=en&amp;as_sdt=4,38&amp;case=14665064939821070749&amp;scilh=0">,
+            190 Or App 351, 79 P3d 897 (2003)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=dollar&amp;hl=en&amp;as_sdt=4,38&amp;case=14039337307095702684&amp;scilh=0">State
+            v. Dollar</a><a
+            href="http://scholar.google.com/scholar_case?q=dollar&amp;hl=en&amp;as_sdt=4,38&amp;case=14039337307095702684&amp;scilh=0">,
+            181 Or App 354, 45 P3d 1014 (2002)</a> (right to instruction
+            on joint ownership). Theory of the case appears to refer to
+            affirmative defenses or lesser-included offenses that are
+            supported by the evidence. <a
+            href="http://scholar.google.com/scholar_case?q=harper&amp;hl=en&amp;as_sdt=4,38&amp;case=13701829555605665470&amp;scilh=0">State
+            v. Harper</a><a
+            href="http://scholar.google.com/scholar_case?q=harper&amp;hl=en&amp;as_sdt=4,38&amp;case=13701829555605665470&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=harper&amp;hl=en&amp;as_sdt=4,38&amp;case=13701829555605665470&amp;scilh=0">132
+            Or App 29, 888 P2d 19 (1994)</a>.</p>
+            <p><em>Harper</em> also contains a list of cases concerning
+            theory-of-case instructions.</p>
+            <p>Practice Tip</p>
+            <p>Preservation of Error. Make your record. If you fail to
+            except to the court’s instructions after the jury has been
+            sent out to deliberate, the Court of Appeals will not review
+            the instruction even if it is a plain error in the record.
+            <a
+            href="http://scholar.google.com/scholar_case?q=rodriguez-castillo&amp;hl=en&amp;as_sdt=4,38&amp;case=2015294919775881907&amp;scilh=0">State
+            v. Rodriguez-Castillo</a><a
+            href="http://scholar.google.com/scholar_case?q=rodriguez-castillo&amp;hl=en&amp;as_sdt=4,38&amp;case=2015294919775881907&amp;scilh=0">,
+            210 Or App 497 (2007)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=rodriguez-castillo&amp;hl=en&amp;as_sdt=4,38&amp;case=12407681997102566530&amp;scilh=0">reversed
+            on different grounds</a><a
+            href="http://scholar.google.com/scholar_case?q=rodriguez-castillo&amp;hl=en&amp;as_sdt=4,38&amp;case=12407681997102566530&amp;scilh=0">345
+            Or 39, 188 P3d 268 (2008)</a>.</p>
+            <p>Further, if the court answers a question from the jury
+            during deliberations attempting to clarify a jury
+            instruction, you should except to it at the time of the
+            reinstruction to properly preserve your issue. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+crosby&amp;hl=en&amp;as_sdt=4,38&amp;case=10006178173306648171&amp;scilh=0">State
+            v. Crosby</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+crosby&amp;hl=en&amp;as_sdt=4,38&amp;case=10006178173306648171&amp;scilh=0">,
+            342 Or 419, 154 P3d 97 (2007)</a>.</p>
+            </section>
+            <section id="c._required_instructions" class="level2">
+            <h2><strong>C. Required Instructions</strong></h2>
+            <p>1. A defendant has a statutory right to have the jury
+            instructed on the presumption of innocence. <a
+            href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.095(6)</a>. The instruction may be constitutionally
+            required in some cases in order to insure due process of
+            law, <a
+            href="http://scholar.google.com/scholar_case?q=taylor+v+kentucky&amp;hl=en&amp;as_sdt=3,38&amp;case=13527670584910869759&amp;scilh=0">Taylor
+            v. Kentucky</a><a
+            href="http://scholar.google.com/scholar_case?q=taylor+v+kentucky&amp;hl=en&amp;as_sdt=3,38&amp;case=13527670584910869759&amp;scilh=0">,
+            436 U.S. 478 (1978)</a>, but is not required in all cases.
+            <a
+            href="http://scholar.google.com/scholar_case?q=+kentucky+v+whorton&amp;hl=en&amp;as_sdt=3,38&amp;case=17451387527035519400&amp;scilh=0">Kentucky
+            v. Whorton</a><a
+            href="http://scholar.google.com/scholar_case?q=+kentucky+v+whorton&amp;hl=en&amp;as_sdt=3,38&amp;case=17451387527035519400&amp;scilh=0">,
+            441 U.S. 786 (1979)</a>.</p>
+            <p>2. A judge must instruct on proof beyond a reasonable
+            doubt. ORS 10.095(6). UCrJI 1006 is not statutorily
+            required, nor is any other particular definition. <a
+            href="http://scholar.google.com/scholar_case?q=castrejon&amp;hl=en&amp;as_sdt=4,38&amp;case=16214258506025523918&amp;scilh=0">State
+            v. Castrejon</a><a
+            href="http://scholar.google.com/scholar_case?q=castrejon&amp;hl=en&amp;as_sdt=4,38&amp;case=16214258506025523918&amp;scilh=0">,
+            317 Or 202, 856 P2d 616 (1993)</a>. Constitutional arguments
+            were not preserved. The Supreme Court held that the U.S.
+            Constitution neither prohibits nor requires trial courts to
+            give a particular definition of “reasonable doubt.” <a
+            href="http://scholar.google.com/scholar_case?q=victor+v+nebraska&amp;hl=en&amp;as_sdt=3,38&amp;case=14901262596618575557&amp;scilh=0">Victor
+            v. Nebraska</a><a
+            href="http://scholar.google.com/scholar_case?q=victor+v+nebraska&amp;hl=en&amp;as_sdt=3,38&amp;case=14901262596618575557&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=victor+v+nebraska&amp;hl=en&amp;as_sdt=3,38&amp;case=14901262596618575557&amp;scilh=0">511
+            U.S. 1, 114 S Ct 1239, 127 L Ed 2d 583 (1994)</a>. An
+            instruction defining “reasonable doubt” as “grave
+            uncertainty” and “actual substantial doubt” violates due
+            process because it suggests a higher degree of doubt than is
+            required for acquittal. <a
+            href="http://scholar.google.com/scholar_case?q=cage+v+louisiana&amp;hl=en&amp;as_sdt=3,38&amp;case=5456517076227148529&amp;scilh=0">Cage
+            v. Louisiana</a><a
+            href="http://scholar.google.com/scholar_case?q=cage+v+louisiana&amp;hl=en&amp;as_sdt=3,38&amp;case=5456517076227148529&amp;scilh=0">,
+            498 U.S. 39, 111 S Ct 328, 112 L Ed2d 339 (1990)</a>.</p>
+            <p>“Unless a reasonable doubt instruction misleads the jury
+            to believe it can convict on a lesser degree of proof than
+            that required, the court will not find error.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v+pratt&amp;hl=en&amp;as_sdt=4,38&amp;case=10959810033604562275&amp;scilh=0">State
+            v. Pratt</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+pratt&amp;hl=en&amp;as_sdt=4,38&amp;case=10959810033604562275&amp;scilh=0">,
+            316 Or 561, 853 P2d 827 (1993)</a>.</p>
+            <p>3. A judge must instruct on the functions of the court
+            and jury. ORS 10.095 (1). 4. The court must instruct the
+            jury completely on each element of the offense charged. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+brown&amp;hl=en&amp;as_sdt=4,38&amp;case=15135726944817960012&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+brown&amp;hl=en&amp;as_sdt=4,38&amp;case=15135726944817960012&amp;scilh=0">,
+            310 Or 347, 355, 800 P2d 259 (1990)</a>. 5. A judge must
+            instruct about the defendant’s constitutional right not to
+            testify if the defendant requests the instruction. <a
+            href="http://scholar.google.com/scholar_case?q=88+or+app+185&amp;hl=en&amp;as_sdt=4,227&amp;case=10907886711269872740&amp;scilh=0">State
+            v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?q=88+or+app+185&amp;hl=en&amp;as_sdt=4,227&amp;case=10907886711269872740&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=88+or+app+185&amp;hl=en&amp;as_sdt=4,227&amp;case=10907886711269872740&amp;scilh=0">88
+            Or App 185, 744 P2d 600 (1987)</a>.</p>
+            </section>
+            </section>
+            <section
+            id="v._taking_exceptions_and_avoiding_pitfalls_when_drafting_your_own_instructions"
+            class="level1">
+            <h1><strong>V. Taking Exceptions (And Avoiding Pitfalls When
+            Drafting Your Own Instructions)</strong></h1>
+            <p>Exceptions must be taken immediately after the court
+            instructs the jury. ORCP 59H. General exceptions fail to
+            preserve error for purposes of appellate review. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis&amp;hl=en&amp;as_sdt=4,38&amp;case=15288509211178614473&amp;scilh=0">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis&amp;hl=en&amp;as_sdt=4,38&amp;case=15288509211178614473&amp;scilh=0">,
+            52 Or App 187, 190, 627 P2d 884 (1981)</a>. Failure to
+            except to a trial court’s instruction on a specific theory
+            generally bars appellate relief on that theory. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+brown&amp;hl=en&amp;as_sdt=4,38&amp;case=15135726944817960012&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+brown&amp;hl=en&amp;as_sdt=4,38&amp;case=15135726944817960012&amp;scilh=0">,
+            310 Or 347, 355, 800 P2d 259 (1990)</a>. Also state how the
+            error will prejudice your client if that is not obvious from
+            your specific exception. Beware of exceptions made in
+            chambers and off the record. The following are examples of
+            specific exception language:</p>
+            <p>Argumentative instructions are instructions that state
+            the law in language weighted in favor of one side and are
+            properly rejected. <a
+            href="http://scholar.google.com/scholar_case?q=208+or+441&amp;hl=en&amp;as_sdt=4,38&amp;case=11194883438230169081&amp;scilh=0">State
+            of Oregon v. Story</a><a
+            href="http://scholar.google.com/scholar_case?q=208+or+441&amp;hl=en&amp;as_sdt=4,38&amp;case=11194883438230169081&amp;scilh=0">,
+            208 Or 441, 447, 301 P2d 1043 (1956)</a>.</p>
+            <p>Comment on the evidence. “The judge shall not instruct
+            with respect to matters of fact, nor comment thereon.” <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            59E</a>. Language that provides a hint of the court’s
+            evaluation of the evidence is objectionable. <a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">State
+            v. Nefstad</a><a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">,
+            309 Or 523, 542, 789 P2d 1326 (1990)</a>;</p>
+            <p>Repetitious instructions may emphasize one side’s theory
+            of the case or confuse the jury. <a
+            href="http://scholar.google.com/scholar_case?q=harper&amp;hl=en&amp;as_sdt=4,38&amp;case=13701829555605665470&amp;scilh=0">State
+            v. Harper</a><a
+            href="http://scholar.google.com/scholar_case?q=harper&amp;hl=en&amp;as_sdt=4,38&amp;case=13701829555605665470&amp;scilh=0">,
+            132 Or App 29, 888 P2d 19 (1994)</a>.</p>
+            <p>Abstract (misleading) instruction. Take exception if the
+            instruction relates to an issue that is not before the jury.
+            <a
+            href="http://scholar.google.com/scholar_case?q=columbia+county+v+randall&amp;hl=en&amp;as_sdt=4,38&amp;case=15319237740128742941&amp;scilh=0">Columbia
+            County v. Randall</a><a
+            href="http://scholar.google.com/scholar_case?q=columbia+county+v+randall&amp;hl=en&amp;as_sdt=4,38&amp;case=15319237740128742941&amp;scilh=0">,
+            49 Or App 643, 620 P2d 937 (1980)</a>.</p>
+            <p>Complex or incomplete instructions. <a
+            href="http://scholar.google.com/scholar_case?q=brazeal&amp;hl=en&amp;as_sdt=4,38&amp;case=16329548636455230149&amp;scilh=0">State
+            v. Brazeal</a><a
+            href="http://scholar.google.com/scholar_case?q=brazeal&amp;hl=en&amp;as_sdt=4,38&amp;case=16329548636455230149&amp;scilh=0">,
+            247 Or 611, 431 P2d 840 (1967)</a>.</p>
+            <p>Instructions that have the effect of directing a verdict
+            on an element of the offense.</p>
+            <p>Inference instructions are related to comments on the
+            evidence. They tell the jury how to treat a particular piece
+            of evidence. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+rainey&amp;hl=en&amp;as_sdt=4,38&amp;case=4459043142057953350&amp;scilh=0">State
+            v. Rainey</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rainey&amp;hl=en&amp;as_sdt=4,38&amp;case=4459043142057953350&amp;scilh=0">,
+            298 Or 459, 693 P2d 635 (1985</a>). Such instructions can
+            also be said to shift the burden of proof. <a
+            href="http://scholar.google.com/scholar_case?q=hayward&amp;hl=en&amp;as_sdt=4,38&amp;case=4530655500458094229&amp;scilh=0">State
+            v. Hayward</a><a
+            href="http://scholar.google.com/scholar_case?q=hayward&amp;hl=en&amp;as_sdt=4,38&amp;case=4530655500458094229&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=hayward&amp;hl=en&amp;as_sdt=4,38&amp;case=4530655500458094229&amp;scilh=0">327
+            Or 397, 963 P2d 667 (1998)</a>.</p>
+            <p>Misstates the law. <em>Brazeal, supra</em>, <a
+            href="http://scholar.google.com/scholar_case?q=lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">State
+            v. Lockwood</a><a
+            href="http://scholar.google.com/scholar_case?q=lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">,
+            43 Or App 639, 603 P2d 1231 (1979)</a>.</p>
+            <p>There is no need to except if the judge fails to give
+            your requested instruction. ORCP 59H.</p>
+            <p>For an instruction standing alone to constitute
+            reversible error, it must be such as would have prejudiced
+            the defendant when the instructions are considered as a
+            whole. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+bird&amp;hl=en&amp;as_sdt=4,38&amp;case=12796160470620213925&amp;scilh=0">State
+            v. Bird</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+bird&amp;hl=en&amp;as_sdt=4,38&amp;case=12796160470620213925&amp;scilh=0">,
+            59 Or App 74, 79, 650 P2d 949 (1982)</a>.</p>
+            </section>
+            <section id="vi._lesser_included_offense_instructions"
+            class="level1">
+            <h1><strong>VI. Lesser-Included Offense
+            Instructions</strong></h1>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.460 and 136.465</a> are the statutory bases for
+            lesser-included offenses. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+washington&amp;hl=en&amp;as_sdt=4,38&amp;case=13329618912934150282&amp;scilh=0">State
+            v. Washington</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+washington&amp;hl=en&amp;as_sdt=4,38&amp;case=13329618912934150282&amp;scilh=0">,
+            273 Or 829, 543 P2d 1058 (1975)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=state+v+palaia&amp;hl=en&amp;as_sdt=4,38&amp;case=3599204735919406166&amp;scilh=0">State
+            v. Palaia</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+palaia&amp;hl=en&amp;as_sdt=4,38&amp;case=3599204735919406166&amp;scilh=0">,
+            289 Or 463, 614 P2d 1120 (1980)</a>, discuss the general
+            principles that govern when lesser-included offense
+            instructions must be given. The only limitation on the court
+            for giving a lesser-included instruction is that there must
+            be evidence supporting the instruction in the record.
+            <em>Washington</em>, 273 Or at 495–96.</p>
+            <section id="a._attempts" class="level2">
+            <h2><strong>A. Attempts</strong></h2>
+            <p>Is the other crime an attempt to commit the crime charged
+            in the charging instrument? Attempts are always
+            lesser-included offenses.</p>
+            </section>
+            <section id="b._lesser_grade_or_degree" class="level2">
+            <h2><strong>B. Lesser Grade or Degree</strong></h2>
+            <p>Is the other crime of a lesser grade or degree? Such
+            crimes are not always lesser-included offenses. The
+            litigator must analyze the elements of each offense. Are the
+            elements of the lesser crime included in the greater crime?
+            Arson II is a lesser-included offense of Arson I. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=1102725072857495791&amp;scilh=0">State
+            v. Gibson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=1102725072857495791&amp;scilh=0">,
+            42 Or App 575, 600 P2d 962,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=1102725072857495791&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=1102725072857495791&amp;scilh=0">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=1102725072857495791&amp;scilh=0">288
+            Or 173 (1979)</a>. Assault 3 is not a lesser-included
+            offense of Assault 2. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+connell&amp;hl=en&amp;as_sdt=4,38&amp;case=11942443591507020032&amp;scilh=0">State
+            v. Connell</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+connell&amp;hl=en&amp;as_sdt=4,38&amp;case=11942443591507020032&amp;scilh=0">,
+            129 Or App 144, 876 P2d 867 (1994)</a>. However, Assault 4
+            is a lesser-included of Assault 2. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+higgins&amp;hl=en&amp;as_sdt=4,38&amp;case=15005768727774143937&amp;scilh=0">State
+            v. Higgins</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+higgins&amp;hl=en&amp;as_sdt=4,38&amp;case=15005768727774143937&amp;scilh=0">,
+            165 Or App 442, 998 P2d 222 (2000)</a>. Misdemeanor DWS is
+            not always a lesser-included of felony DWS. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+edwards&amp;hl=en&amp;as_sdt=4,38&amp;case=14488649401805766993&amp;scilh=0">State
+            v. Edwards</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+edwards&amp;hl=en&amp;as_sdt=4,38&amp;case=14488649401805766993&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+edwards&amp;hl=en&amp;as_sdt=4,38&amp;case=14488649401805766993&amp;scilh=0">123
+            Or App 519, 860 P2d 846 (1993)</a>.</p>
+            <p>Review the elements of the offenses and related case law
+            carefully.</p>
+            </section>
+            <section id="c._lesser_and_included" class="level2">
+            <h2><strong>C. Lesser and Included</strong></h2>
+            <p>Is the other crime lesser and included in the language of
+            the charging instrument? Reckless Burning is a
+            lesser-included of Arson I. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+merideth&amp;hl=en&amp;as_sdt=4,38&amp;case=7746360761937873610&amp;scilh=0">State
+            v. Merideth</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+merideth&amp;hl=en&amp;as_sdt=4,38&amp;case=7746360761937873610&amp;scilh=0">,
+            149 Or App 164, 942 P2d 803 (1997)</a>. DUII can be a
+            lesser-included of criminally negligent homicide. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+devereau&amp;hl=en&amp;as_sdt=4,38&amp;case=6225184669482202397&amp;scilh=0">State
+            v. Devereaux</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+devereau&amp;hl=en&amp;as_sdt=4,38&amp;case=6225184669482202397&amp;scilh=0">,
+            20 Or App 358, 531 P2d 749 (1975)</a>.</p>
+            </section>
+            <section id="d._evidence" class="level2">
+            <h2><strong>D. Evidence</strong></h2>
+            <p>Is there evidence to support a finding of guilt for the
+            lesser-included offense?</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">State
+            v. Farrar</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">,
+            309 Or 132, 786 P2d 161 (1990)</a>.</p>
+            </section>
+            <section id="e._order_of_deliberations" class="level2">
+            <h2><strong>E. Order of Deliberations</strong></h2>
+            <p>The 1997 Oregon Legislature amended <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.460</a> requiring juries to find a defendant not guilty
+            of the charged offense before they could consider a
+            lesser-included offense. The statute is not
+            unconstitutional. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+horsley&amp;hl=en&amp;as_sdt=4,38&amp;case=11557063373981299681&amp;scilh=0">State
+            v. Horsley</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+horsley&amp;hl=en&amp;as_sdt=4,38&amp;case=11557063373981299681&amp;scilh=0">,
+            169 Or App 438, 8 P3d 1021 (2000)</a>.</p>
+            <p>Failure to give a factually appropriate lesser-included
+            offense instruction violates the [#amendmentviii Eighth
+            Amendment] and Due Process Clause of the <a
+            href="http://www.law.cornell.edu/constitution/amendmentxiv">Fourteenth
+            Amendment</a> to the United States Constitution. <a
+            href="http://scholar.google.com/scholar_case?q=beck+v+alabama&amp;hl=en&amp;as_sdt=3,38&amp;case=1316988763160329501&amp;scilh=0">Beck
+            v. Alabama</a><a
+            href="http://scholar.google.com/scholar_case?q=beck+v+alabama&amp;hl=en&amp;as_sdt=3,38&amp;case=1316988763160329501&amp;scilh=0">,
+            447 U.S. 625 (1980)</a>. Lesser-included instructions must
+            be given to the jury if the facts support it. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+leckenby&amp;hl=en&amp;as_sdt=4,38&amp;case=12061235822237890275&amp;scilh=0">State
+            v. Leckenby</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leckenby&amp;hl=en&amp;as_sdt=4,38&amp;case=12061235822237890275&amp;scilh=0">,
+            200 Or App 684, 117 P3d 273 (2005)</a>.</p>
+            <p>A defendant is entitled to submit a lesser-included
+            offense instruction even if the lesser included offense is a
+            violation. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+rafal&amp;hl=en&amp;as_sdt=4,38&amp;case=15023315279830690320&amp;scilh=0">State
+            v. Rafal</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rafal&amp;hl=en&amp;as_sdt=4,38&amp;case=15023315279830690320&amp;scilh=0">,
+            21 Or App 114, 117–118, 533 P2d 1397 (1975)</a> (Possession
+            of Marijuana); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cuffee&amp;hl=en&amp;as_sdt=4,38&amp;case=827264397110532723&amp;scilh=0">State
+            v. Cuffee</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cuffee&amp;hl=en&amp;as_sdt=4,38&amp;case=827264397110532723&amp;scilh=0">,
+            87 Or App 293, 742 P2d 637 (1987)</a> (Reckless/Careless
+            Driving).</p>
+            <p>When a defendant requests a lesser-included offense
+            instruction, trial judges must resolve doubts about the
+            propriety of giving the requested instruction in favor of
+            the instruction. <a
+            href="http://scholar.google.com/scholar_case?q=632+P2d+493&amp;hl=en&amp;as_sdt=4,227&amp;case=17087456626427547122&amp;scilh=0">State
+            v. Miller</a><a
+            href="http://scholar.google.com/scholar_case?q=632+P2d+493&amp;hl=en&amp;as_sdt=4,227&amp;case=17087456626427547122&amp;scilh=0">,
+            53 Or App 493, 498 n. 4, 632 P2d 493 (1981)</a>.</p>
+            <p>If there are facts in evidence that support giving a
+            lesser-included offense instruction, a defendant does not
+            have a valid objection if the prosecution asks the court to
+            give the instruction. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+keaton&amp;hl=en&amp;as_sdt=4,227&amp;case=13407315658875788659&amp;scilh=0">State
+            v. Keaton</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+keaton&amp;hl=en&amp;as_sdt=4,227&amp;case=13407315658875788659&amp;scilh=0">,
+            15 Or App 477, 484, 516 P2d 490 (1973)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+goldsberry&amp;hl=en&amp;as_sdt=4,227&amp;case=16195584826369958063&amp;scilh=0">State
+            v. Goldsberry</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+goldsberry&amp;hl=en&amp;as_sdt=4,227&amp;case=16195584826369958063&amp;scilh=0">,
+            30 Or App 1087, 1090, 569 P2d 646 (1977)</a>.</p>
+            <p>A defendant cannot complain about the failure to instruct
+            if a defense to the principal charge is a complete defense
+            to the lesser-included offense. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+stoneberg&amp;hl=en&amp;as_sdt=4,227&amp;case=7694696740465284254&amp;scilh=0">State
+            v. Stoneberg</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stoneberg&amp;hl=en&amp;as_sdt=4,227&amp;case=7694696740465284254&amp;scilh=0">,
+            15 Or App 601, 604–605, 517 P2d 333 (1973)</a>.</p>
+            <p>Under the appropriate facts, a defendant may request a
+            lesser-included offense instruction even though the
+            defendant denies committing the act charged. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+thayer&amp;hl=en&amp;as_sdt=4,227&amp;case=441167448723098891&amp;scilh=0">State
+            v. Thayer</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+thayer&amp;hl=en&amp;as_sdt=4,227&amp;case=441167448723098891&amp;scilh=0">,
+            32 Or App 193, 197–98, 573 P2d 758 (1978)</a>; ''contrast
+            with <a
+            href="http://scholar.google.com/scholar_case?q=state+v+farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">State
+            v. Farrar</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">309
+            Or 132, 167–68. 786 P2d 161, 184 (1990)</a>.</p>
+            </section>
+            </section>
+            <section id="vii._deadlocked_juries" class="level1">
+            <h1><strong>VII. Deadlocked Juries</strong></h1>
+            <p>A “dynamite” or “Allen” charge is an instruction to the
+            jury “that although no juror is expected to yield a
+            conscientiously held opinion, the jury has a duty to decide
+            the case if it can conscientiously do so, and that if a
+            majority of a jury is for either conviction or acquittal,
+            the minority ought to consider whether a contrary view may
+            be reasonable or correct.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v+marsh&amp;hl=en&amp;as_sdt=4,38&amp;case=4173875041331252335&amp;scilh=0">State
+            v. Marsh</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+marsh&amp;hl=en&amp;as_sdt=4,38&amp;case=4173875041331252335&amp;scilh=0">,
+            260 Or 416, 423, 490 P2d 491 (1971)</a>. This charge has
+            been specifically repudiated in Oregon. <em>Id</em>. UCrJI
+            1023 is based on instructions approved in <em>State v.
+            Marsh, supra,</em> and <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ortega&amp;hl=en&amp;as_sdt=4,38&amp;case=8196396146427159433&amp;scilh=0">State
+            v. Ortega</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ortega&amp;hl=en&amp;as_sdt=4,38&amp;case=8196396146427159433&amp;scilh=0">,
+            20 Or App 345, 531 P2d 756 (1975)</a>. The instruction
+            applies in cases involving unanimous and non-unanimous
+            verdicts. <em>State v. Ortega, supra</em>. It is not a
+            required instruction and giving it or refusing to so
+            instruct is within the discretion of the trial judge.
+            <em>State v. Marsh, supra</em>, 260 Or at 443.</p>
+            <p>The litigator must also consider the circumstances in
+            which a jury is instructed to continue deliberating. In <a
+            href="http://scholar.google.com/scholar_case?q=142+or+app+56&amp;hl=en&amp;as_sdt=4,38&amp;case=10519538871465515430&amp;scilh=0">State
+            v. Hutchinson</a><a
+            href="http://scholar.google.com/scholar_case?q=142+or+app+56&amp;hl=en&amp;as_sdt=4,38&amp;case=10519538871465515430&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=142+or+app+56&amp;hl=en&amp;as_sdt=4,38&amp;case=10519538871465515430&amp;scilh=0">142
+            Or App 56, 920 P2d 1105,</a><a
+            href="http://scholar.google.com/scholar_case?q=142+or+app+56&amp;hl=en&amp;as_sdt=4,38&amp;case=10519538871465515430&amp;scilh=0">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?q=142+or+app+56&amp;hl=en&amp;as_sdt=4,38&amp;case=10519538871465515430&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=142+or+app+56&amp;hl=en&amp;as_sdt=4,38&amp;case=10519538871465515430&amp;scilh=0">324
+            Or 654 (1997)</a>, it was error to instruct the jury to
+            continue deliberating immediately after reviewing a note
+            with them that made it clear they were eight to four in
+            favor of a conviction.</p>
+            <p>Exceptions to a “dynamite” charge should be made
+            immediately after the instruction is given and the objection
+            should be specific. <a
+            href="http://scholar.google.com/scholar_case?q=17+or+app+242&amp;hl=en&amp;as_sdt=4,38&amp;case=15619798003343290251&amp;scilh=0">State
+            v. Johnson/Mitchell</a><a
+            href="http://scholar.google.com/scholar_case?q=17+or+app+242&amp;hl=en&amp;as_sdt=4,38&amp;case=15619798003343290251&amp;scilh=0">,
+            17 Or App 242, 245, 521 P2d 355 (1974)</a>.</p>
+            </section>
+            <section id="viii._reinstruction" class="level1">
+            <h1><strong>VIII. Reinstruction</strong></h1>
+            <p><a href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            59D</a> permits a judge, at the request of the jury, to
+            reinstruct the jury on a point of law. The judge may
+            instruct the jury orally or in writing, but must do so in
+            the presence of, or after notice to, the parties or their
+            counsel. It is within the discretion of the court as to
+            whether the jury’s request will be honored. <a
+            href="http://scholar.google.com/scholar_case?q=200+or+275&amp;hl=en&amp;as_sdt=4,38&amp;case=3793813965212495199&amp;scilh=0">State
+            v. Vaughn</a><a
+            href="http://scholar.google.com/scholar_case?q=200+or+275&amp;hl=en&amp;as_sdt=4,38&amp;case=3793813965212495199&amp;scilh=0">,
+            200 Or 275, 277, 265 P2d 249 (1954)</a>. The extent of
+            reinstruction is within the discretion of the court. This
+            discretion includes giving additional instructions beyond
+            those requested or to repeat all of the instructions
+            previously given. <a
+            href="http://scholar.google.com/scholar_case?q=4+or+app+219&amp;hl=en&amp;as_sdt=4,38&amp;case=556607294773041602&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=4+or+app+219&amp;hl=en&amp;as_sdt=4,38&amp;case=556607294773041602&amp;scilh=0">,
+            4 Or App 219, 222, 475 P2d 973 (1970)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=holleman&amp;hl=en&amp;as_sdt=4,38&amp;case=12846781298723969746&amp;scilh=0">State
+            v. Holleman</a><a
+            href="http://scholar.google.com/scholar_case?q=holleman&amp;hl=en&amp;as_sdt=4,38&amp;case=12846781298723969746&amp;scilh=0">,
+            225 Or 7, 8–9, 357 P2d 264 (1960)</a>. Reinstruction out of
+            the presence of and without notice to counsel violates the
+            ORCP and is error, ORCP 59D; <a
+            href="http://scholar.google.com/scholar_case?q=huntley+v+reed&amp;hl=en&amp;as_sdt=4,38&amp;case=10769533860258506454&amp;scilh=0">Huntley
+            v. Reed</a><a
+            href="http://scholar.google.com/scholar_case?q=huntley+v+reed&amp;hl=en&amp;as_sdt=4,38&amp;case=10769533860258506454&amp;scilh=0">,
+            276 Or 591, 556 P2d 122 (1976)</a>, but may not be
+            reversible error, <a
+            href="http://scholar.google.com/scholar_case?q=55+or+app+729&amp;hl=en&amp;as_sdt=4,38&amp;case=2485085933874839130&amp;scilh=0">State
+            v. White</a><a
+            href="http://scholar.google.com/scholar_case?q=55+or+app+729&amp;hl=en&amp;as_sdt=4,38&amp;case=2485085933874839130&amp;scilh=0">,
+            55 Or App 729, 639 P2d 1291 (1982)</a>. There was no error
+            in denying the defendant’s motion to reinstruct the jury
+            after the jury accidentally erased tape-recorded
+            instructions. <a
+            href="http://scholar.google.com/scholar_case?q=etchison&amp;hl=en&amp;as_sdt=4,38&amp;case=9717614438239477095&amp;scilh=0">State
+            v. Etchison</a><a
+            href="http://scholar.google.com/scholar_case?q=etchison&amp;hl=en&amp;as_sdt=4,38&amp;case=9717614438239477095&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=etchison&amp;hl=en&amp;as_sdt=4,38&amp;case=9717614438239477095&amp;scilh=0">142
+            Or App 396, 927 P2d 1333 (1996)</a>.</p>
+            </section>
+            <section id="ix._suggested_resources" class="level1">
+            <h1><strong>IX. Suggested Resources</strong></h1>
+            <p>Ryan Scott, “Moving the Goal Posts: How Special Jury
+            Instructions Can Alter Playing Field to Your Advantage, “
+            OCDLA 2011 Annual Conference.</p>
+            <p>Thomas Lundy, “Duplicity,” a three-part series in <em>The
+            Champion</em>, October, 2011.</p>
+            <center>
+            <p>This chapter originally prepared for the 1993 edition by
+            Phil Margolin, Portland.</p>
+            </center>
+            <center>
+            <p>Updating, additions and editing for the 2000 edition by
+            David M. Audet, Hillsboro.</p>
+            </center>
+            <center>
+            <p>Updating and editing for the 2007 edition by Robert S.
+            Raschio, The Dalles.</p>
+            </center>
+            </section>
+    </body>
+</html>

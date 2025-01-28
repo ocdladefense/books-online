@@ -1,0 +1,2794 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </section>
+            <p>2020 edition, with 2024 Update</p>
+            <section id="violations_and_related_charges" class="level1">
+            <h1><strong>Violations and Related Charges</strong></h1>
+            <p><strong><em>By Mark Cogan &amp; Jeff Turnoy, updated by
+            Timothy Grishkevich</em></strong></p>
+            </section>
+            <section
+            id="i._introduction_how_to_view_traffic_violations_and_crimes_as_part_of_the_duii_case"
+            class="level1">
+            <h1><strong>I. Introduction: How to View Traffic Violations
+            and Crimes as Part of the DUII Case</strong></h1>
+            <section id="a._traffic_violations" class="level2">
+            <h2><strong>A. Traffic Violations</strong></h2>
+            <p>Traffic violations and misdemeanor crimes are routinely a
+            part of a DUII. In general, it is a traffic violation which
+            gives a police officer cause to pull the vehicle over. It is
+            during the interaction with the driver that the officer
+            usually “develops” the probable cause which they need in
+            order to ask the driver to step out of the vehicle and
+            perform field sobriety tests.</p>
+            <p>Common traffic violations that occur along with a DUII
+            include speeding, failure to maintain lane, failure to obey
+            a traffic control device (running a red light/stop sign),
+            failure to signal 100 ft prior to making a turn, and
+            careless driving. Other traffic violations can occur once
+            the stop has been made, such as refusing to provide a breath
+            sample and driving without valid insurance.</p>
+            <p>Traffic violations can present their own problems
+            regarding license suspensions and revocations, and although
+            the suspension/revocation will be concurrent to the DUII
+            suspension/revocation, the prospect of a second suspension
+            is often what drives the strategy in handling a violation
+            case.</p>
+            </section>
+            <section id="b._crimes" class="level2">
+            <h2><strong>B. Crimes</strong></h2>
+            <p>In addition to traffic violations, other crimes often
+            accompany a DUII. These include reckless driving, reckless
+            endangerment, failure to perform the duties of a driver when
+            property is damaged, criminal mischief in the second degree,
+            assault in the fourth degree, and driving while suspended,
+            which can also be a traffic violation.</p>
+            <p>While felony charges can also be part of a DUII, this
+            chapter will concentrate on the routine misdemeanor offenses
+            which a DUII can lead to.</p>
+            </section>
+            <section id="c._penalties" class="level2">
+            <h2><strong>C. Penalties</strong></h2>
+            <p>Traffic violations are often treated as separate from the
+            DUII, and depending on what court the violation is filed in,
+            and whether it is a prosecutor or a police officer who is
+            handling the violation case, the ticket may be able to be
+            dismissed as part of a diversion or other negotiated
+            agreement.</p>
+            <p>Misdemeanor crimes carry their own penalties, including
+            possible jail time, license suspensions/revocations, and
+            financial penalties. It is important to remember that for
+            many clients, the worst part of a DUII case is the license
+            suspension. If there are multiple other misdemeanor crimes
+            which accompany the DUII, that can lead to very severe
+            suspensions/revocations, including the habitual offender
+            revocation.</p>
+            <p>Choosing a strategy that can effectively resolve the
+            other crimes is vital to a successful outcome in a DUII
+            case. If multiple charges are filed, options such as a civil
+            compromise may be available. Given your county and your
+            client’s prior DUII history, a district attorney may be
+            willing to dismiss or reduce the other misdemeanor crimes as
+            part of a negotiated settlement or diversion agreement.</p>
+            </section>
+            </section>
+            <section
+            id="ii._traffic_violations_elements_defenses_sentencing_and_possible_suspensions"
+            class="level1">
+            <h1><strong>II. Traffic Violations: Elements, Defenses,
+            Sentencing (and Possible Suspensions)</strong></h1>
+            <p>“To lawfully stop and detain a person for a traffic
+            infraction, an officer must have probable cause to believe
+            that that infraction has been committed. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Isley,+182+Or+App+186,+48+P3d+179+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=4317734247745680828&amp;scilh=0"><em>State
+            v. Isley</em>, 182 Or App 186, 190, 48 P3d 179 (2002)</a>.
+            ‘Probable cause exists if, at the time of the stop, the
+            officer subjectively believes that the infraction occurred
+            and if that belief is objectively reasonable under the
+            circumstances.’ <em>Id.</em> ‘[A]n officer’s subjective
+            belief that a traffic infraction occurred is objectively
+            reasonable if, and only if, the facts as the officer
+            perceived them actually satisfy the elements of a traffic
+            infraction.’ <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tiffin,+202+Or+App+199,+121+P3d+9+%282005%29&amp;hl=en&amp;as_sdt=4,38&amp;case=2092395731333655702&amp;scilh=0"><em>State
+            v. Tiffin</em>, 202 Or App 199, 204, 121 P3d 9 (2005)</a>.”
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wentworth,+252+Or+App+129,++284+P3d+1250+%282012%29&amp;hl=en&amp;as_sdt=4,38&amp;case=10182236381244046006&amp;scilh=0"><em>State
+            v. Wentworth</em>, 252 Or App 129, 133, 284 P3d 1250
+            (2012)</a>.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors811.html">Link
+            to DUII statutes, Chapter 811</a>.</p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors153.html">Link
+            to Violations and Fines, Chapter 153</a>.</p>
+            <section id="a._speeding" class="level2">
+            <h2><strong>A. Speeding</strong></h2>
+            <p><strong>1. ORS 811.100 (Basic Rule
+            Violation)</strong></p>
+            <p>a. (1) A person commits the offense of violating the
+            basic speed rule if the person drives a vehicle upon a
+            highway at a speed greater than is reasonable and prudent,
+            having due regard to all of the following:</p>
+            <ul>
+            <li><blockquote>
+            <p>The traffic</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The surface and width of the highway</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The hazard at intersections</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Weather</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Visibility</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Any other conditions then existing</p>
+            </blockquote></li>
+            </ul>
+            <p>b. Violating the Basic Rule is a Class B traffic
+            violation if the person drives at a speed that is not
+            reasonable and prudent under the circumstances, given the
+            conditions. 811.100(4).</p>
+            <p>A Class B traffic violation carries the following
+            financial penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p>c. Suspension if driving over 100 mph: 30–90 days,
+            presumptive fine is $1,150. 811.109(5).</p>
+            <p>d. 811.109(4): Up to a 30-day suspension if speeding more
+            than 30 mph and one prior speeding ticket within the past
+            year.</p>
+            <p><strong>2. 811.105 (speeds that are evidence of
+            violation, meaning no posted speed)</strong></p>
+            <p>If a person travels at a higher rate of speed than the
+            following, they are in violation of the Basic Rule:</p>
+            <ul>
+            <li><blockquote>
+            <p>15 mph in an alley or narrow residential roadway.
+            811.105(2)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>20 mph in a business district. 811.105(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>25 mph in any public park. 811.105(2)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>25 mph on a highway in a residential district if:</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>The residence district is not located within a city,
+            and</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The highway is neither an arterial nor a collector
+            highway. 811.105(2)(d)(A)(B).</p>
+            </blockquote></li>
+            </ul>
+            <ul>
+            <li><blockquote>
+            <p>55 mph in locations not otherwise described.
+            811.105(2)(e)</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>3. 811.109 (penalties for violation of a specific
+            speed limit or posted speed, 811.109(1)(3))</strong></p>
+            <ul>
+            <li><blockquote>
+            <p>Speed from 1 to 10 mph in excess of speed limit is a
+            Class D traffic violation. 811.109(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Speed from 11 to 20 mph in excess of speed limit is a
+            Class C traffic violation. 811.109(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Speed from 21 to 30 mph in excess of speed limit is a
+            Class B traffic violation. 811.109(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Speeding over 30 mph in excess of speed limit is a Class
+            A traffic violation. 811.109(1)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the speed limit is 65 mph or greater and the person
+            exceeds the speed limit by 10 mph or less, the offense is a
+            Class C traffic violation. 811.109(2)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the speed limit is 65 mph or greater and the person
+            exceeds the speed limit by 11 mph to 20 mph, the offense is
+            a Class B traffic violation. 811.109(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the speed limit is 65 mph or greater and the person
+            exceeds the speed limit by more than 20 mph, the offense is
+            a Class A traffic violation. 811.109(2)(c).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>4. 811.111 (Violating a Speed
+            Limit)/Elements</strong></p>
+            <p>a. Violation of posted speed, or if no speed posted,
+            driving faster than:</p>
+            <ul>
+            <li><blockquote>
+            <p>15 mph in an alley or narrow residential roadway.
+            811.111(d)(A).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>20 mph in a business district. 811.111(d)(B).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>25 mph in a public park. 811.111(d)(C).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>25 mph on a highway in a residence district if the
+            highway is not an arterial highway. 811.111(d)(D).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>65 mph on an interstate highway. 811.111(d)(E).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>55 mph in locations not otherwise described.
+            811.111(d)(F).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. Evidence on record as to what the speed limit is:</p>
+            <p>i. The police officer must state on the record what the
+            speed limit was, and how fast the client was traveling. It
+            is not enough for the officer to state that the client was
+            traveling faster than the posted speed limit, without
+            actually stating the speeds.</p>
+            <p>ii. Yes, it can and does happen that no evidence is
+            presented as to what the posted speed was.</p>
+            <p><strong>5. Defenses</strong></p>
+            <p>a. Emergency situation: the speed must be reasonable and
+            prudent under the circumstances.</p>
+            <p>Although a ticket can be issued, the fact of a pregnancy,
+            medical emergency, family emergency, or other type of
+            emergency may be grounds for a judge to dismiss the
+            ticket.</p>
+            <p>If the officer is unwilling to dismiss the ticket, given
+            the emergency, ask for a driver-safety class in exchange for
+            dismissal.</p>
+            <p>If the officer is unwilling to deal, then argue to the
+            judge that the speed was in fact reasonable and prudent
+            under all of the attendant circumstances.</p>
+            <p>b. If approaching a solid yellow light, argue that it
+            would have been unsafe for the person to slow down or stop,
+            as they could be hit by another driver who “jumps the
+            gun.”</p>
+            <p>In addition, other traffic violations can occur if the
+            person stops in the middle of an intersection, such as
+            failure to obey a traffic control device or impeding
+            traffic.</p>
+            <p>In order to avoid an accident and other traffic
+            violations, the person sped. Argue that under the
+            circumstances, speeding was reasonable and prudent.</p>
+            <p>c. LIDAR is not infallible, so challenge it.</p>
+            <p>Although it is admissible as scientific evidence. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Branch,+243+Or+App+309,+316,+324+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15362706364615377068&amp;scilh=0"><em>State
+            v. Branch</em>, 243 Or App 309, 316, 324 (2011)</a>.</p>
+            <p>Even though the LIDAR reading is admissible, if the speed
+            is just a few mph over the limit or Basic Rule speeds, argue
+            that LIDAR is uncertain enough to call the reading into
+            question.</p>
+            <p>Also, if there were multiple cars traveling at the same
+            or similar rate of speed, argue that the LIDAR reading could
+            have been for any number of vehicles, and there is no
+            evidence that the reading is specific to your client. It is
+            the officer or prosecutor’s burden to show that it was in
+            fact your client who sped at the speed listed by LIDAR.</p>
+            </section>
+            <section id="february_2022_update" class="level2">
+            <h2><strong>February 2022 Update</strong></h2>
+            <p>LIDAR and RADAR are not infallible methods, so challenge
+            them. </p>
+            <blockquote>
+            <p> </p>
+            <p>Although they are admissible as scientific evidence. <a
+            href="https://scholar.google.com/scholar_case?q=State+v.+Branch,+243+Or+App+309,+316,+324+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15362706364615377068&amp;scilh=0"><em>State
+            v. Branch</em>, 243 Or App 309, 316, 324 (2011)</a>.
+            However, they are still subject to basic foundation
+            requirements. <em>State v. O’Key</em>, 321 Or 285 (1995);
+            <em>see also State v. Hovies,</em> 320 Or 414, 418, (1994)
+            (“the Oregon rules of evidence apply in traffic infraction
+            proceedings.”).  </p>
+            <p> </p>
+            <p>Even though the RADAR and LIDAR readings are admissible,
+            if the speed is just a few mph over the limit or Basic Rule
+            speeds, argue that RADAR or LIDAR is uncertain enough to
+            call the reading into question. </p>
+            </blockquote>
+            <p> </p>
+            <p>Also, if there were multiple cars traveling at the same
+            or similar rate of speed, argue that the RADAR or LIDAR
+            reading could have been for any number of vehicles, and
+            there is no evidence that the reading is specific to your
+            client. It is the officer or prosecutor’s burden to show
+            that it was in fact your client who sped at the speed listed
+            by RADAR/LIDAR.</p>
+            <p><strong>[End 2022 Update]</strong></p>
+            <p><strong>6. Penalties</strong></p>
+            <p>Financial penalties and violation designation are the
+            same as for violation of the Basic Rule; <em>see</em>
+            811.109. 811.111(2).</p>
+            </section>
+            <section id="b._failure_to_drive_within_a_lane"
+            class="level2">
+            <h2><strong>B. Failure to Drive within a Lane</strong></h2>
+            <p><strong>1. ORS 811.370 (Violation and
+            Penalty)/Elements</strong></p>
+            <p>A person fails to drive within a lane if they operate a
+            motor vehicle on a roadway that is divided into two or more
+            clearly marked lanes for traffic and the driver does not
+            operate the vehicle as nearly as practicable entirely within
+            a single lane, and does not refrain from moving from that
+            lane until the driver has first made certain that the
+            movement can be made safely. 811.370(1)(a-b).</p>
+            <p>Failure to drive within a lane is a Class B traffic
+            violation which carries the following financial
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>2. Case Law</strong></p>
+            <p>The Court of Appeals recognizes that the requirement to
+            stay “entirely within a single lane” is not absolute, and
+            has hinted that if a car’s tires touch the center line only
+            briefly, that would not be enough to be a violation
+            (although they have not expressly stated that to be the
+            case, and the court has dodged that question on several
+            occasions). <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McBroom,+179+Or+App+120,+39+P3d+226,++%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=13383636024575614412&amp;scilh=0"><em>State
+            v. McBroom</em>, 179 Or App 120, 39 P3d 226, 328, 329 n.3
+            (2002)</a>.</p>
+            <p>Failure to drive within a lane is applicable when the
+            person drives on either side of the lane, whether it be the
+            center line or the fog line, as the fog line is in fact a
+            lane divider. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wentworth,+252+Or+App+129,++284+P3d+1250+%282012%29&amp;hl=en&amp;as_sdt=4,38&amp;case=10182236381244046006&amp;scilh=0"><em>State
+            v. Wentworth</em>, 252 Or App 129, 134, 284 P3d 1250
+            (2012)</a> (citing <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Roberts,+241+Or+App+589&amp;hl=en&amp;as_sdt=4,38&amp;case=4406100945938185089&amp;scilh=0"><em>State
+            v. Roberts</em>, 241 Or App 589, 591, 251 P3d 232
+            (2011)</a>.</p>
+            <section id="update" class="level3">
+            <h3><strong>2024 Update</strong></h3>
+            <p>ORS 811.370 – Failure to drive within lane</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>State v. Phillips, 325 Or App 598 (2023)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>A police officer’s observations of a vehicle weaving
+            within its own lane provides a sufficient basis to believe
+            that the person is DUII and justifies reasonable suspicion
+            for a stop.</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>[End Update]</strong></p>
+            <p><strong>3. Defenses</strong></p>
+            <p>a. The violation was <em>de minimus</em>, and constituted
+            a brief touching of the line. One touch for a second versus
+            four to five touches may get traction with some courts that
+            the violation was <em>de minimus</em>.</p>
+            <p>b. If applicable, the vehicle is too large to stay off
+            the lines of the lane. For example, a client with a dually
+            pickup truck that touches the center line with the outside
+            tires may be able to argue, given the width of the lane,
+            that the truck is too big to stay off the lines and totally
+            within the lane. Argue that it is not “practicable” to stay
+            completely within the lane, given the size of the
+            vehicle.</p>
+            <p>c. Argue a legitimate reason to go over the lines, such
+            as an impediment in the road, a pothole or some other reason
+            other than simply bad driving, which caused the vehicle to
+            go over the lines. This argument is valid so long as it was
+            safe to cross the lines.</p>
+            <p>d. In the rare case, if an officer is already following a
+            vehicle and the officer’s lights prevent the driver from
+            clearly seeing the lines on either side of the lane, there
+            may be an argument that the officer himself caused the
+            violation. Look into this particularly if the client has
+            lawful driving privileges, but difficulty with visibility at
+            night.</p>
+            <p><code>Practice Tip</code></p>
+            <p>This violation is very often what gives the officer cause
+            to pull the vehicle over, as it is one of the easiest
+            traffic rules to violate. It is difficult to imagine that
+            anyone, intoxicated or not, does not at some point in their
+            travels touch one line or the other, every time they get
+            into a car. The reality is that not everyone is getting
+            tickets for failure to drive within a lane. This traffic
+            violation is one of the best proxies for getting the vehicle
+            to stop, and then the DUII investigation can begin.</p>
+            <p>If your client has this violation as part of their DUII
+            case, ask for a diversion class or at the very least, the
+            minimum fine. Especially if the touching was brief and
+            momentary, and was not a full cross-over to another lane.
+            Many officers may be willing to go along with a negotiated
+            settlement or diversion program.</p>
+            </section>
+            </section>
+            <section id="c._failure_to_obey_a_traffic_control_device"
+            class="level2">
+            <h2><strong>C. Failure to Obey a Traffic Control
+            Device</strong></h2>
+            <p><strong>1. ORS 811.265 (Violation and
+            Penalty)/Elements</strong></p>
+            <p>a. 811.265(1)(a): The person must fail to obey a traffic
+            control device (commonly known as a stop sign or light),
+            or</p>
+            <p>b. 811.265(1)(b): fail to obey a specific traffic control
+            device.</p>
+            <p>i. A driver facing a steady yellow light or arrow shall
+            stop at a clearly marked stop line, but if none, shall stop
+            before entering the marked crosswalk on the near side of the
+            intersection, or if there is no marked crosswalk, then
+            before entering the intersection. 811.260(4)-(5).</p>
+            <p>If the light or arrow is yellow and it is not safe to
+            stop, the driver may proceed with caution through the light.
+            811.260(4)-(5).</p>
+            <p>ii. A driver facing a steady circular red signal light,
+            or red arrow alone shall stop at a clearly marked stop line,
+            but if none, before entering the marked crosswalk on the
+            near side of the intersection, or if there is no marked
+            crosswalk, then before entering the intersection. The driver
+            shall remain stopped until a green light is shown except
+            when the driver is permitted to make a turn under ORS
+            811.360 (turning right on a red light). 811.260(7)-(8).</p>
+            <blockquote>
+            <p>iii. A driver approaching a stop sign shall stop at a
+            clearly marked stop line, but if none, before entering the
+            marked crosswalk on the near side of the intersection or, if
+            there is no marked crosswalk, then at the point nearest the
+            intersecting roadway where the driver has a view of
+            approaching traffic on the intersecting roadway before
+            entering it. After stopping, the driver shall yield the
+            right of way to any vehicle in the intersection or
+            approaching so closely as to constitute an immediate hazard
+            during the time when the driver is moving across or within
+            the intersection. 811.260(15).</p>
+            <p>iv. A driver approaching a yield sign shall slow the
+            driver’s vehicle to a speed reasonable for the existing
+            conditions and if necessary for safety, shall stop at a line
+            as required for stop signs under this section, and shall
+            yield the right of way to any vehicles in the intersection
+            or approaching so closely as to constitute an immediate
+            hazard. 811.260(16).</p>
+            </blockquote>
+            <p><strong>2. Penalties</strong></p>
+            <p>Failure to obey a traffic control device is a Class B
+            traffic violation and carries the following financial
+            penalties.</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>3. Defenses</strong></p>
+            <p>a. A person does not fail to obey a traffic control
+            device if they are following the directions of a police
+            officer. 811.265(2)(a).</p>
+            <p>b. A person does not fail to obey a traffic control
+            device if they are driving an emergency vehicle or ambulance
+            in a manner consistent with their duties and privileges.
+            811.265(2)(b).</p>
+            <p>c. A person does not fail to obey a traffic control
+            device if they are properly executing a right turn on a red
+            light. 811.265(2)(c).</p>
+            <p>d. A person does not fail to obey a traffic control
+            device if they are driving in a funeral procession.
+            811.265(2)(d).</p>
+            <p>e. If the traffic control device is not in a proper
+            position and legible to a reasonably observant person at the
+            time and place of the alleged violation, then there can be
+            no violation. 810.250(1).</p>
+            <p>This is an affirmative defense for the defendant to
+            prove, rather than an element of the offense. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Boly,+210+Or+App+132,+149+P3d+1237,+1240+%282006&amp;hl=en&amp;as_sdt=4,38&amp;case=17472557705162407804&amp;scilh=0"><em>State
+            v. Boly</em>, 210 Or App 132, 149 P3d 1237, 1240
+            (2006)</a>.</p>
+            <p>f. If cited for running a red light but the light was
+            yellow prior to or at the time the vehicle enters the
+            intersection, argue that it would have been unsafe to stop
+            under the circumstances. This is applicable particularly if
+            traveling at medium to higher rates of speed, but should
+            also apply to low speeds when under the conditions it would
+            not be safe to stop.</p>
+            </section>
+            <section id="d._failure_to_signal_prior_to_turn"
+            class="level2">
+            <h2><strong>D. Failure to Signal Prior to Turn</strong></h2>
+            <ol>
+            <li><blockquote>
+            <p>ORS 811.335 (Violation and Penalty)/Elements</p>
+            </blockquote></li>
+            </ol>
+            <p>A person commits the offense of making an unlawful or
+            unsignaled turn if the person is operating a vehicle upon a
+            highway and the person turns the vehicle right or left when
+            the movement cannot be made with reasonable safety or the
+            person fails to give an appropriate signal continuously for
+            not less than 100 ft prior to making the turn.
+            811.335(1)(a)-(b).</p>
+            <p>This is expressly a distance requirement, and not a
+            duration requirement (signaling for the amount of time
+            required to travel the requisite distance, rather than
+            signaling for the requisite distance).</p>
+            <p>This violation applies to both stop signs and stop
+            lights. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Arthur,+158+Or+App+623,+976+P2d+1146+%281999&amp;hl=en&amp;as_sdt=4,38&amp;case=3519287417693814487&amp;scilh=0"><em>State
+            v. Arthur</em>, 158 Or App 623, 625-26, 976 P2d 1146
+            (1999</a>).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>Failure to signal prior to making a turn is a Class D
+            traffic violation and carries the following financial
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $250; 153.018(2)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $115; 153.019(1)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $65; 153.021(1)(d).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>3. Defenses</strong></p>
+            <p>Impossibility: If the client is cited for not having
+            signaled for 100 ft prior to making a turn, argue, if
+            applicable, that it was impossible to signal for 100 ft
+            prior to the turn. While this does not negate probable cause
+            to believe that the violation had been committed, it is a
+            defense in the proper circumstances (none of which have yet
+            to be brought to the appellate courts). <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Chilson,+219+Or+App+136,+182+P3d+241+%282008&amp;hl=en&amp;as_sdt=4,38&amp;case=16269745415467866317&amp;scilh=0"><em>State
+            v. Chilson</em>, 219 Or App 136, 141-43, 182 P3d 241
+            (2008)</a>.</p>
+            <p>The impossibility argument has been used before when
+            arguing that the 100 ft rule leads to absurd results.
+            However, the courts have made it clear that unless the
+            person has actually signaled for the entire distance that
+            they possibly can, even if that is less than 100 ft, then
+            the violation will stand.</p>
+            <p>Even former Oregon Supreme Court Chief Justice Balmer got
+            a ticket for not signaling for 100 feet when he pulled out
+            of the Supreme Court’s parking lot and then made a turn, the
+            turn being less than 100 feetfrom where he pulled out of the
+            parking lot.</p>
+            </section>
+            <section id="e._following_too_closely" class="level2">
+            <h2><strong>E. Following Too Closely</strong></h2>
+            <p><strong>1. ORS 811.485 (Violation and
+            Penalty)/Elements</strong></p>
+            <blockquote>
+            <p>Following too closely is committed if the person:</p>
+            </blockquote>
+            <p>a. Follows another vehicle more closely than is
+            reasonable and prudent, having due regard for the speed of
+            the vehicles and the traffic upon, and condition of, the
+            highway. ORS 811.485(1)(a).</p>
+            <p>b. Drives a truck, commercial bus or motor vehicle
+            drawing another vehicle when traveling upon a roadway
+            outside of a business or residence district or upon a
+            freeway within the corporate limits of a city and follows
+            another truck, commercial bus or motor vehicle drawing
+            another vehicle without, when conditions permit, leaving
+            sufficient space so that an overtaking vehicle may enter and
+            occupy the space without danger. ORS 811.485(1)(b).</p>
+            <p>c. Drives a motor vehicle when traveling upon a roadway
+            outside of a business or residence district or upon a
+            freeway within the corporate limits of a city in a caravan
+            or motorcade whether or not towing another vehicle without
+            operating the vehicle so as to leave sufficient space
+            between vehicles to enable a vehicle to enter and occupy the
+            space without danger. ORS 811.485(1)(c).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>Following too closely is a Class B traffic violation and
+            carries the following financial penalties</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>3. Defenses</strong></p>
+            <blockquote>
+            <p>a. A truck, commercial bus or motor vehicle drawing
+            another vehicle may overtake and pass a vehicle or
+            combination of vehicles. ORS 811.485(1)(b).</p>
+            <p>b. A funeral procession is exempt from this section, but
+            the vehicles following the lead vehicle in a funeral
+            procession shall follow as close as is reasonable and safe.
+            ORS 811.485(2).</p>
+            <p>c. This offense is based on speed and conditions, such as
+            weather and roadway. Argue that the distance between the
+            vehicles was reasonable and prudent, given all the
+            circumstances. The argument will necessarily be different
+            between freeway and residential/commercial travel.</p>
+            <p>d. If applicable, argue that the officer did not observe
+            the vehicle long enough to determine how close one vehicle
+            was from another, or that there was a “stop-short” situation
+            in which the client did not have enough time to brake and
+            create a safe distance.</p>
+            <p>e. Argue that the officer’s subjective opinion is not
+            objectively reasonable under the circumstances.</p>
+            </blockquote>
+            </section>
+            <section id="f._careless_driving" class="level2">
+            <h2><strong>F. Careless Driving</strong></h2>
+            <p><strong>1. ORS 811.135 (Violation and
+            Penalty)Elements</strong></p>
+            <p>Careless driving is committed if the person drives in a
+            manner that endangers or would be likely to endanger any
+            person or property. 811.135(1).</p>
+            <p>Careless driving is a Class B traffic violation unless
+            the offense contributes to an accident, in which case it is
+            a Class A traffic violation. 811.135(2).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. A Class B traffic violation carries the following
+            financial penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. A Class A traffic violation carries the following
+            financial penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $2,000; 153.018(2)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $440; 153.019(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $225; 153.021(1)(a).</p>
+            </blockquote></li>
+            </ul>
+            <p>c. If the offense contributed to serious physical injury
+            or death of a vulnerable user of a public way, then the
+            court shall require (811.135(3)(a)(A-B)):</p>
+            <p>A traffic safety class and 100 to 200 hours of community
+            service, which must include activities related to driver
+            improvement and providing public education on traffic
+            safety. These requirements must be completed within a year
+            after the judgment.</p>
+            <p>811.135(3)(c),(4).The court shall also order but suspend
+            (on the condition that the class and community service is
+            done) a fine of $12,500 and a one-year license suspension.
+            811.135(3)(b)(A-B).</p>
+            <p><strong>3. Some officers believe two infractions equals
+            careless driving.</strong></p>
+            <p>There is no basis in the law for this opinion, and every
+            time it has come up, a not guilty verdict has been rendered.
+            If you have an officer who believes this, try the case,
+            unless they are willing to dismiss the ticket in exchange
+            for a driver safety class.</p>
+            <p><strong>4. Defenses</strong></p>
+            <p>a. If the officer does not note on the ticket that the
+            offense contributed to serious physical injury or death of a
+            vulnerable user of a public way, then argue that the
+            enhanced penalties cannot be imposed. 811.135(6).</p>
+            <p>b. If the client has yet to complete the requirements set
+            out in 811.135(3)(a)(A-B), ask for an extension of time and
+            argue that good cause exists for failure to complete the
+            requirements within a year. 811.135(4)(b)(A).</p>
+            <p>c. Argue that there was no danger to anyone caused by the
+            client. Depending on the circumstances, a series of improper
+            moves may not have any likelihood of endangering any person
+            or property. If that is the case, argue that careless
+            driving is either the wrong infraction, and thus no penalty
+            can be imposed, or that the conduct does not constitute
+            careless driving.</p>
+            </section>
+            <section
+            id="g._operating_motor_vehicle_while_using_a_mobile_electronic_device"
+            class="level2">
+            <h2><strong>G. Operating Motor Vehicle while Using a Mobile
+            Electronic Device</strong></h2>
+            <p><strong>1. ORS 811.507 (Violation and
+            Penalty)/Elements</strong></p>
+            <p>A person commits the offense of driving a motor vehicle
+            while using a mobile electronic device if the person, while
+            driving a motor vehicle on a highway or premises open to the
+            public: holds a mobile electronic device in the person’s
+            hand; or uses a mobile electronic device for any purpose.
+            ORS 811.507(2)(a-b).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. For a first offense, except if the offense contributed
+            to a motor vehicle accident, Operating a Motor Vehicle while
+            Using a Mobile Electronic Device is a Class B traffic
+            violation. ORS 811.507(5)(a).</p>
+            <p>b. For a first offense, Ii the offense contributed to a
+            motor vehicle accident, Operating a Motor Vehicle while
+            Using a Mobile Electronic Device is a Class A traffic
+            violation. ORS 811.507(5)(b).</p>
+            <p>c. For a second offense within a 10-year period from the
+            first offense, Operating a Motor Vehicle while Using a
+            Mobile Electronic Device is a Class A traffic violation. ORS
+            811.507(5)(c).</p>
+            <p>d. For a third or subsequent offense within a 10-year
+            period from the first offense, Operating a Motor Vehicle
+            while Using a Mobile Electronic Device is a Class B
+            Misdemeanor. ORS 811.507(5)(d).</p>
+            <p>e. A Class B traffic violation carries the following
+            financial penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p>f. A Class A traffic violation carries the following
+            financial penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $2,000; 153.018(2)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $440; 153.019(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $225; 153.021(1)(a).</p>
+            </blockquote></li>
+            </ul>
+            <p>g. A Class B Misdemeanor carries the following maximum
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $2,500; 161.635(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Jail: 6 months; 161.615(2).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $2,000; 811.507(6).</p>
+            </blockquote></li>
+            </ul>
+            <p>h. Fine Suspension:</p>
+            <p>For a person’s first conviction, a court may suspend the
+            financial penalty if, within 120 days of sentencing, the
+            person completes at the person’s own expense a distracted
+            driving avoidance course approved by the Department of
+            Transportation under ORS 811.508 and provides proof to the
+            court. ORS 811.507(8)(a)(A-B).</p>
+            <p>A good cause extension is allowed to complete the course
+            and provide proof to the court. ORS 811.507(8)(d)(A).</p>
+            <p><em>3. Exemptions/Defenses</em></p>
+            <p>a. Exemptions:</p>
+            <p>i. A person who activates or deactivates a mobile
+            electronic device or a function of the device. ORS
+            811.507(3)(a).</p>
+            <p>ii. A person using a mobile electronic device within the
+            scope of employment as a commercial or school bus driver, so
+            long as the use is permitted by 49 U.S.C. 31136, or using a
+            two-way radio communication device in the course of
+            employment in the transport of forest products or for
+            logging. ORS 811.507(3)(b-c).</p>
+            <p>iii. A person using a two-way radio communication device
+            in the course of employment while operating a school bus or
+            school activity vehicle. ORS 811.507(3)(d).</p>
+            <p>iv. A person using a two-way radio communication device
+            in the course of employment for a utility while operating a
+            utility-owned vehicle for the purpose of installing,
+            repairing, maintaining, operating or upgrading utility
+            service, including but not limited to natural gas,
+            electricity, water or telecommunications. ORS
+            811.507(3)(e).</p>
+            <p>b. Affirmative and Other Defenses:</p>
+            <p>i. Using the mobile electronic device to communicate if
+            the person was summoning or providing medical or other
+            emergency help if no other person in the vehicle was capable
+            of summoning help. ORS 811.507(4)(a).</p>
+            <p>ii. The person is at least 18 years old and was using a
+            hands-free accessory. ORS 811.507(4)(b).</p>
+            <p>A hands-free accessory is a built-in feature or
+            attachment for a mobile electronic device that when used
+            allows for the driver to keep both hands on the steering
+            wheel. ORS 811.507(1)(b).</p>
+            <p>iii. Using a mobile electronic device in the course of
+            employment while driving an ambulance or emergency vehicle.
+            ORS 811.507(4)(c).</p>
+            <p>iv. Using a mobile electronic device in the course of
+            employment as a police officer, firefighter, or emergency
+            medical service provider. ORS 811.507(4)(d).</p>
+            <p>v. The person is at least 18 years of age and is
+            operating an amateur radio while holding an amateur radio
+            operator’s license. ORS 811.507(4)(e).</p>
+            <p>vi. Using a two-way radio communication device to summon
+            medical or emergency services. ORS 811.507(4)(f).</p>
+            <p>vii. Using a medical device. ORS 811.507(4)(g).</p>
+            <p>viii. A person who has pulled over, or is off to the side
+            of the road, or is in a designated parking space may use a
+            mobile electronic device. ORS 811.507(1)(a)(B)(i-ii).</p>
+            <p>ix. For cases where the officer does not see the client
+            using the device while driving, but rather sees the “glow”
+            from the phone and cites the client anyway, argue that the
+            functions being used were activated prior to driving. GPS,
+            music, and other mobile electronic device functions can be
+            activated prior to driving, and so long as not activated
+            during the course of driving, such use is not
+            prohibited.</p>
+            <p><strong>4. Some courts allow diversion for a first
+            offense.</strong></p>
+            </section>
+            <section id="h._using_marijuana_in_a_motor_vehicle"
+            class="level2">
+            <h2><strong>H. Using Marijuana in a Motor
+            Vehicle</strong></h2>
+            <p><strong>1. ORS 811.482 (Violation and
+            Penalty)/Elements</strong></p>
+            <p>A person commits the offense of use of marijuana in a
+            motor vehicle if the person consumes in any manner a
+            marijuana item while in a motor vehicle when the motor
+            vehicle is upon a highway. ORS 811.482(2).</p>
+            <p>Both flower and edible marijuana are prohibited from
+            consumption under this section.</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>A Class B traffic violation carries the following
+            financial penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>3. Defenses</strong></p>
+            <p>A passenger is not prohibited from consuming marijuana in
+            a motor vehicle driven by a common carrier. ORS
+            811.482(3).</p>
+            </section>
+            <section id="i._breath_test_refusal" class="level2">
+            <h2><strong>I. Breath Test Refusal</strong></h2>
+            <p><strong>1. ORS 813.095 (Violation and
+            Penalty)</strong></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">Link
+            to DUII statutes, Chapter 813</a>.</p>
+            <p>A person commits this offense if they refuse to take a
+            breath test as requested by police officers.
+            813.095(1)(a).</p>
+            <p>The person must first be arrested for DUII.
+            813.100(1).</p>
+            <p>The officer must have reasonable grounds to believe that
+            the arrested person was driving while under the influence of
+            intoxicants. 813.100(1).</p>
+            <p>Prior to the test, the client must be informed of their
+            rights and consequences under the Implied Consent laws.
+            813.100(1).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. A refusal to take a breath test is a specific fine
+            violation. The presumptive fine is $650. 813.095(2).</p>
+            <p>b. License suspension from DMV for a person with no prior
+            DUIIs.</p>
+            <p>Refusal to take a breath test results in a one-year
+            license suspension through DMV. 813.420(1)</p>
+            <p>There is no separate license suspension for the traffic
+            violation itself unless the client holds a commercial
+            driver’s license.</p>
+            <p><strong>3. Defenses</strong></p>
+            <p>a. For purposes of the Implied Consent laws, it is
+            <em>not</em> a defense that the client is not a native
+            English speaker or could not, due to language, understand
+            the rights and consequences as given to them. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cabanilla,+351+Or+622,+273+P3d+125+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=16044668107293690806&amp;scilh=0"><em>State
+            v. Cabanilla</em>, 351 Or 622, 624-25, 273 P3d 125
+            (2012)</a>.</p>
+            <p>b. Argue that the officer did not have reasonable grounds
+            to believe that the driver was under the influence of
+            intoxicants.</p>
+            <p>c. Argue that at the time of the request, the driver had
+            not yet been arrested for DUII.</p>
+            <p>d. Argue that the refusal was equivocal or ambiguous.
+            This argument may apply when the driver’s response to the
+            officer’s request is “I don’t know,” “I’m not sure,” “I
+            don’t really want to,” etc.</p>
+            <p>Be careful with this though, as a refusal need not be
+            explicit. <a
+            href="http://scholar.google.com/scholar_case?q=236+Or+App+113&amp;hl=en&amp;as_sdt=4,38&amp;case=10554334503432836135&amp;scilh=0"><em>In
+            re Fitzpatrick v. Oregon Dep’t of Transp</em>., 236 Or App
+            113, 235 P3d 701, 703 (2010)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Moore+v.+Motor+Vehicles+Division,+293+Or.+715,++652+P2d+794+%281982%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16712411138368981048&amp;scilh=0"><em>Moore
+            v. Motor Vehicles Division</em>, 293 Or 715, 722, 652 P2d
+            794 (1982)</a>.</p>
+            <p>If the client remains silent, and is not told that
+            continued silence will constitute a refusal, then an
+            argument of non-refusal may apply.</p>
+            <p>Argue that the officer should have given an ultimatum
+            regarding the request for a breath sample—i.e., either take
+            the test or face the consequences of a refusal. <em>See In
+            re Fitzpatrick v. Oregon Dep’t of Transp.</em>, 236 Or App
+            113, 235 P3d 701, 704 (2010) (giving ultimatums may be the
+            best practice).</p>
+            <p>e. Argue that the client was not given a reasonable time
+            to consult with counsel prior to making a decision. This
+            issue often comes up when a client has a particular attorney
+            in mind, can’t reach the attorney by phone, and says that
+            they don’t want to accept or refuse without speaking to that
+            particular attorney. The courts mostly treat this sequence
+            as a refusal, but that is generally because lots of time
+            goes by, such as 45 minutes. If only the required
+            observation period has elapsed, and the client can’t reach
+            their attorney, argue that this is a case where a reasonable
+            opportunity to consult with counsel has been denied.</p>
+            </section>
+            <section id="j._driving_without_insurance" class="level2">
+            <h2><strong>J. Driving Without Insurance</strong></h2>
+            <p><strong>1. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors806.html">ORS
+            806.010</a> (Violation and Penalties)/Elements</strong></p>
+            <p>A person commits the offense if they operate a motor
+            vehicle in Oregon on a highway or premises open to the
+            public without either being insured or providing ODOT with
+            other proof of compliance with the financial responsibility
+            laws. 806.010(1)(a-b).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. Driving without insurance is a Class B traffic
+            violation which carries the following financial
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. If an accident resulted during the violation, the
+            person’s license shall be suspended for one year, and
+            thereafter until the person complies with the financial
+            responsibility laws. 809.417(2).</p>
+            <p>c. If the person does not obtain insurance within 30 days
+            of the violation, that itself if a Class A traffic
+            violation, and in addition to the fine amount, the person is
+            subject to a license suspension which will continue until
+            proof of compliance is made. 806.010(3)(b); 806.230;
+            809.415(3)(a-b).</p>
+            <p><strong>3. Defenses</strong></p>
+            <p>a. Often times, if a person had valid insurance, but does
+            not have their insurance card on them, the officer will be
+            willing to dismiss the ticket so long as the client provides
+            proof of insurance at the time of their court date.</p>
+            <p>b. Insurance is not required for any of the following
+            vehicles: an antique issued permanent registration; a farm
+            trailer or tractor; an implement of husbandry; a motor
+            vehicle maintained as a collector’s item and used for
+            exhibitions, parades, club activities and similar uses, but
+            not primarily used for transportation; a snowmobile or
+            all-terrain vehicle; a motor vehicle not used on a highway
+            or premises open to the public; a motor assisted scooter; or
+            an electric personal assistive mobility device.</p>
+            <p>c. If the person’s license has already been suspended, a
+            hearing may be requested. At that hearing, ODOT may rescind
+            the suspension if the person had a reasonable and good faith
+            belief of compliance, or if the Department determines that
+            the person had a reasonable and good faith belief that they
+            were in compliance with the law, and the person is currently
+            in compliance. 809.450(1), (3)(d-e).</p>
+            </section>
+            <section id="k._no_diversion_for_cdl_holders"
+            class="level2">
+            <h2><strong>K. No Diversion for CDL-holders</strong></h2>
+            <p>A person who holds a valid Commercial Driver’s License is
+            <a
+            href="http://www.oregon.gov/ODOT/DMV/pages/driverid/federal_cdl_reqs.aspx">not
+            eligible</a> for any diversion program, period.</p>
+            <p>Special suspensions come to CDL holders if they commit
+            multiple serious or major traffic violations.</p>
+            <p><strong>1. Serious Traffic Violations: <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">ORS
+            809.525</a></strong></p>
+            <p>DMV will suspend a CDL for 60 days if the client commits
+            two serious violations in a three-year period. The
+            suspension is 120 days if three or more violations are
+            committed.</p>
+            <p>Serious violations, committed while operating any vehicle
+            include: reckless driving, driving 100 mph or more, and
+            exceeding the speed limit by 30 mph or more when the court
+            imposes a suspension. OAR 735-063-0360</p>
+            <p>Serious violations committed while operating a commercial
+            vehicle include: exceeding the speed limit by 15 mph or
+            more, operating the vehicle without driving privileges,
+            failure to carry a license or present a license to a police
+            officer, driving on the left side of a
+            curve/grade/intersection/ or rail crossing, failure to drive
+            within a lane, unsafe passing on the left or right,
+            following too closely, using a mobile electronic device, any
+            traffic violation when the violation is connected to a fatal
+            accident, violating the law of a different state that
+            corresponds to the above. <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=237007">OAR
+            735-063-0360</a>.</p>
+            <p><strong>2. Major Traffic Violations</strong></p>
+            <p>a. DMV will suspend a CDL for one year for conviction of
+            any of the following if the client was operating a
+            commercial vehicle or their personal vehicle while holding a
+            CDL:</p>
+            <p>Being under the influence of alcohol or controlled
+            substances, operating a commercial vehicle with a BAC of
+            .04% or greater, refusing a breath or blood test, hit and
+            run, using the vehicle to commit a felony, driving a
+            commercial vehicle while the CDL is
+            suspended/revoked/cancelled, causing a fatality through
+            negligent operation of the commercial vehicle.</p>
+            <p>b. The suspension is for life if convicted of multiple
+            major violations.</p>
+            <p>After 10 years, the client can petition for
+            reinstatement. OAR 735-063-0380. If reinstated and then
+            convicted of another major violation, the suspension is for
+            life without potential reinstatement. A lifetime suspension
+            is also imposed if the client used any vehicle to commit a
+            felony involving manufacturing, distributing, or dispensing
+            of controlled substances. There is no possibility of
+            reinstatement.</p>
+            </section>
+            <section id="l._financial_penalties" class="level2">
+            <h2><strong>L. Financial Penalties</strong></h2>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors153.html">Link
+            to Violations and Fines, Chapter 153</a>.</p>
+            <p><strong>1. Max Fines: ORS 153.018</strong></p>
+            <ul>
+            <li><blockquote>
+            <p>Class A traffic violation: $2,000; 153.018(2)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class B traffic violation: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class C traffic violation: $500; 153.018(2)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class D traffic violation: $250; 153.018(2)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the violation is a specific fine violation, then the
+            maximum is $2,000 or that which is prescribed by the
+            violation statute. 153.018(2)(e).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>2. Presumptive Fine: 153.019</strong></p>
+            <ul>
+            <li><blockquote>
+            <p>Class A traffic violation: $440; 153.019(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class B traffic violation: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class C traffic violation: $165; 153.019(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class D traffic violation: $115; 153.019(1)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the violation is a specific fine violation, then the
+            presumptive fine is that which is prescribed by the
+            violation statute or an amount equal to the greater of 20%
+            of the maximum fine, or the minimum fine.
+            153.018(2)(a-b).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>3. Minimum Fine: 153.021</strong></p>
+            <ul>
+            <li><blockquote>
+            <p>Class A traffic violation: $225; 153.021(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class B traffic violation: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class C traffic violation: $85; 153.021(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class D traffic violation: $65; 153.021(1)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>For a specific fine violation, the court may not reduce
+            the fine more than 20% of the presumptive fine.
+            153.021(2).</p>
+            </blockquote></li>
+            </ul>
+            <p>Seek minimum fine as courtesy due to DUII plea and
+            accepting of consequences for DUII.</p>
+            </section>
+            <section id="m._habitual_offender_revocation"
+            class="level2">
+            <h2><strong>M. Habitual Offender Revocation</strong></h2>
+            <p>ORS <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors809.html">809.600(1)</a>:
+            Three or more criminal convictions within a five-year period
+            results in a habitual offender designation—DUII
+            included.</p>
+            <p>Reckless endangerment, criminal mischief, criminal DWS,
+            reckless driving, failure to perform duties of a driver are
+            all common crimes that accompany a DUII which can lead to a
+            revocation under this section. Civil compromise and plea
+            bargains are essential to prevent designation as a habitual
+            offender.</p>
+            <p>Revocation is for at least five years; 809.600(5).
+            Hardship permit may be available. ORS <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors807.html">807.240</a>.</p>
+            <p>DMV will revoke driving privileges if a person is
+            convicted of 20 or more traffic violations within a
+            five-year period, and the revocation is for at least five
+            years. 809.600(2. Same provisions for a hardship permit and
+            restoration apply. Administrative review allowed.
+            809.640.</p>
+            </section>
+            <section id="n._driver_improvement_program" class="level2">
+            <h2><strong>N. Driver Improvement Program</strong></h2>
+            <p>If a person has three traffic violations in 18 months,
+            DMV will impose a 30-day midnight to 5 a.m. license
+            restriction, unless the person is driving to or from work or
+            for work-related purposes. <a
+            href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=186309">OAR
+            735-072-0027(2),(3)(b)</a>.</p>
+            <p>If a person has four infractions in 24 months, DMV will
+            impose a 30-day suspension/revocation. OAR
+            735-072-0027(4)(a),(6).</p>
+            </section>
+            <section id="february_2022_update_1" class="level2">
+            <h2><strong>February 2022 Update</strong></h2>
+            <p>Furthermore, a client convicted of any traffic violation
+            is subject to the catch-all provision under ORS 809.270. ORS
+            809.270 allows a judge to impose upon a defendant convicted
+            of any traffic offense a license suspension unless a
+            defendant successfully completes a “driver improvement
+            course.”</p>
+            <p><strong>[End 2022 Update]</strong></p>
+            </section>
+            <section id="o._highway_work_zones" class="level2">
+            <h2><strong>O. Highway Work Zones</strong></h2>
+            <p>The fines double for a highway work zone. The officer
+            must note on the ticket that the violation occurred in a
+            work zone. ORS 153.020(1). “Highway work zone” means an area
+            identified by advance warning where road construction,
+            repair or maintenance work is being done by highway workers
+            on or adjacent to a highway, regardless of whether or not
+            highway workers are actually present. ORS 811.230(1)(b).</p>
+            <p>No plea bargaining? Anecdotally, police officers say that
+            they are not allowed to negotiate for a reduction of offense
+            or fine, or for a diversion program, if the offense occurred
+            in a highway work zone. If the officer insists this to be
+            policy, argue for some leniency or diversion if there were
+            no actual highway workers present.</p>
+            <p>Financial penalties: presumptive fines 153.020:</p>
+            <ul>
+            <li><blockquote>
+            <p>Class A traffic violation: $875;153.019(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class B traffic violation: $525; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class C traffic violation: $325; 153.019(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Class D traffic violation: $225; 153.019(1)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>For specific fine violations, the presumptive fine is
+            double the amount prescribed by the violation.
+            153.020(2).</p>
+            </blockquote></li>
+            </ul>
+            </section>
+            <section
+            id="p._how_long_do_traffic_tickets_stay_on_a_dmv_record_for_purposes_of_insurance"
+            class="level2">
+            <h2><strong>P. How long do traffic tickets stay on a DMV
+            record for purposes of Insurance?</strong></h2>
+            <p>DMV will purge a traffic record after three years. Thus,
+            once the three years is complete, and assuming no new
+            violations within that time, a person’s insurance rates will
+            go down.</p>
+            </section>
+            </section>
+            <section id="iii._tracking" class="level1">
+            <h1><strong>III. Tracking</strong></h1>
+            <p>Tracking of Traffic Violations to DUII (Circuit Court and
+            Muni Courts)</p>
+            <section id="a._dual_jurisdiction" class="level2">
+            <h2><strong>A. Dual Jurisdiction</strong></h2>
+            <p>A circuit court, justice court, and municipal court all
+            have concurrent jurisdiction over traffic violations. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors221.html">ORS
+            221.339(1)</a>; 153.036(2)(a). The violation proceeding may
+            be brought in any of the three courts due to the fact that
+            almost every time a person commits a violation in a county,
+            they are also committing a violation in a city. Justice
+            courts only hear violations committed in counties, and
+            municipal courts only hear violations committed in cities,
+            generally.</p>
+            <p>An example is if a person commits a violation in
+            Clackamas, the case can be brought in the Clackamas County
+            Circuit Court or the Clackamas County Justice Court.</p>
+            <p>If a person commits a violation in Milwaukie, the case
+            can be brought in the Milwaukie Municipal Court, Clackamas
+            County Justice Court, or the Clackamas County Circuit
+            Court.</p>
+            <p>It often depends on what police agency is alleging the
+            violation that determines where the case goes. A Milwaukie
+            police officer will usually file the case in the municipal
+            court, whereas a Clackamas County Sheriff will usually file
+            the case in the justice court or circuit court.</p>
+            </section>
+            <section id="b._waiver_to_circuit_court" class="level2">
+            <h2><strong>B. Waiver to Circuit Court?</strong></h2>
+            <p>No, a defendant may not waive into a circuit court from a
+            municipal court. 153.036(3)(b). There is no procedure to get
+            the case into a circuit court, unless the defendant has lost
+            and files an appeal for a trial de novo in the circuit court
+            pursuant to 221.359, which applies only to municipal and
+            justice courts that are <em>not</em> courts of record.</p>
+            </section>
+            </section>
+            <section id="iv._related_misdemeanor_charges"
+            class="level1">
+            <h1><strong>IV. Related Misdemeanor Charges</strong></h1>
+            <p><span class="underline"><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors811.html">Link
+            to DUII Statutes, Chapter 811</a>.</span></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors161.html"><span class="underline">Link
+            to Violations and Fines, Chapter 161</span></a>.</p>
+            <section id="a._reckless_driving" class="level2">
+            <h2><strong>A. Reckless Driving</strong></h2>
+            <p>This is probably the most common misdemeanor to accompany
+            a DUII charge.</p>
+            <p><strong>1. ORS 811.140 (Violation and
+            Penalty)</strong></p>
+            <p>A person commits the offense of reckless driving if the
+            person recklessly drives a vehicle upon a highway or other
+            premises described in this section in a manner that
+            endangers the safety of persons or property. 811.140(1).</p>
+            <p>Proof of driving that is endangering need not be proved
+            by direct evidence of that person’s driving. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+218+Or+App+568,+180+P3d+148+%282008&amp;hl=en&amp;as_sdt=4,38&amp;case=12884956035703223329&amp;scilh=0"><em>State
+            v. Smith</em>, 218 Or App 568, 572-73, 180 P3d 148
+            (2008)</a>.</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. ORS 811.140(3): Reckless driving is a Class A
+            Misdemeanor which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $6,250. 161.635(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Jail: 1 year. 161.615(1).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. ORS 809.411(3); 809.423(1)(a-b): There is a 90-day
+            license suspension for a first offense, and a 1-year
+            suspension for a second offense, if the second offense
+            occurs within a five-year period from the first.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>A hardship permit may be available under ORS 807.240 so
+            long as the sentencing judge recommends to DMV that the
+            permit be issued. ORS 807.250(1)(a).</p>
+            <section id="update_1" class="level3">
+            <h3><strong>2024 Update</strong></h3>
+            <blockquote>
+            <p>ORS 807.240 Hardship Permit</p>
+            <p>The Department of Transportation shall provide for
+            issuance of hardship driver permits in a manner consistent
+            with this section. A hardship driver permit grants the
+            driving privileges provided in this section or under the
+            permit.</p>
+            <p>To qualify for a hardship permit, a person must do all of
+            the following:</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>The person must submit to the department an application
+            for the permit that demonstrates the person’s need for the
+            permit.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The person must present satisfactory evidence, as
+            determined by the department by rule:</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>That the person must operate a motor vehicle as a
+            requisite of the person’s occupation or employment;</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>That the person must operate a motor vehicle to seek
+            employment or to get to or from a place of employment;</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>That the person must operate a motor vehicle to get to or
+            from an alcohol or drug treatment or rehabilitation
+            program;</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>That the person or a member of the person’s immediate
+            family requires medical treatment on a regular basis and
+            that the person must operate a motor vehicle in order that
+            the treatment may be obtained;</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>That the person must operate a motor vehicle to get to or
+            from a gambling addiction treatment
+            program; <strong>or</strong></p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>That the person must operate a motor vehicle to provide
+            necessary services to the person or to a member of the
+            person’s family. The rule shall include as necessary
+            services, but need not be limited to, grocery shopping,
+            driving the person or the person’s children to school,
+            driving to medical appointments and caring for elderly
+            family members.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>If the person is applying for a permit because the person
+            or a member of the person’s immediate family requires
+            medical treatment on a regular basis, the person must
+            present a statement signed by a licensed physician or
+            licensed nurse practitioner that indicates that the person
+            or a member of the person’s immediate family requires
+            medical treatment on a regular basis.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The person must show that the person is not incompetent
+            to drive nor a habitual incompetent, reckless or criminally
+            negligent driver as established by the person’s driving
+            record in this or any other jurisdiction.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>The person must make a future responsibility filing.</p>
+            </blockquote></li>
+            </ul>
+            <blockquote>
+            <p>If the department finds that the person meets the
+            requirements of this section, the department may issue the
+            person a hardship permit, valid for the duration of the
+            suspension or revocation or for a shorter period of time
+            established by the department unless sooner suspended or
+            revoked under this section. The permit:</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>Shall limit the holder to operation of a motor vehicle
+            only during specified times.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>May bear other reasonable limitations relating to the
+            hardship permit or the operation of a motor vehicle that the
+            department deems proper or necessary. The limitations may
+            include any limitation, condition or requirement. Violation
+            of a limitation is punishable as provided by ORS 811.175
+            (Violation driving while suspended or revoked) or 811.182
+            (Criminal driving while suspended or revoked).</p>
+            </blockquote></li>
+            </ul>
+            <blockquote>
+            <p>ORS 813.520 Limitations on authority to issue hardship
+            permit or reinstate driving privileges.</p>
+            <p>The Department of Transportation may not reinstate any
+            driving privileges or issue any hardship permit under ORS
+            807.240 (Hardship permit) as provided under any of the
+            following:</p>
+            </blockquote>
+            <ul>
+            <li><blockquote>
+            <p>For a period of 90 days after the beginning of the
+            suspension if the suspension is for refusal of a test under
+            ORS 813.100 (Implied consent to breath or blood test)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>For a period of 30 days after the beginning of the
+            suspension if the suspension is because a breath or blood
+            test under ORS 813.100 (Implied consent to breath or blood
+            test) disclosed that the person had a level of alcohol in
+            the person’s blood that constituted being under the
+            influence of intoxicating liquor under ORS 813.300 (Use of
+            blood alcohol percentage as evidence).</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>[End Update]</strong></p>
+            <p><strong>4. Reckless driving merges with DUII at
+            sentencing. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cloutier,+286+Or.+579,+596+P2d+1278+%281979&amp;hl=en&amp;as_sdt=4,38&amp;case=462285863734240427&amp;scilh=0"><em>State
+            v. Cloutier</em>, 286 Or 579, 597-98, 596 P2d 1278
+            (1979</a>).</strong></p>
+            <p><strong>5. Reckless Setover Deals (Multnomah
+            County-specific)</strong></p>
+            <p>Plead to the reckless or other charge, but setover
+            sentencing for dismissal upon completion of certain
+            requirements.</p>
+            <p>a. If the client’s BAC is .18% or less, and there was no
+            property damage, then the defendant can plead to Careless
+            Driving, pay a $350 fine and other fees.</p>
+            <p>The plea must be done at the time of entry into
+            diversion. Instead of pleading to Careless Driving, the
+            client may opt for the Reckless Driving setover deal
+            described below.</p>
+            <p>b. If the client’s BAC is between .18% and .24%, then the
+            client can plead to reckless driving, but setover sentencing
+            for one year to coincide with diversion completion
+            dates.</p>
+            <p>The defendant must successfully complete diversion, have
+            no major traffic offenses, no driving without a valid
+            license and insurance, and must pay any applicable
+            restitution. If those requirements are met, then both the
+            DUII and reckless driving will be dismissed.</p>
+            <p>This policy applies to other related charges as well,
+            such as hit and run, criminal mischief in the second degree,
+            or reckless endangerment.</p>
+            <p>If the requirements are not met, then there would be open
+            sentencing on both charges.</p>
+            <p>c. If the client’s BAC is .24% or greater, then the
+            client must plead to reckless driving (or other related
+            charge), and there must be no physical injury to persons
+            outside the client’s vehicle (unless they are minors), there
+            must be no minors in any vehicle involved, and there must be
+            no bad driving, meaning intoxication plus three traffic
+            violations.</p>
+            <p><strong>6. Plead to the DUII and try the reckless to a
+            judge (since the state will introduce evidence of DUII and
+            any priors as evidence of recklessness.</strong></p>
+            <p><strong>7. Defenses</strong></p>
+            <p>a. A skateboard is not a “vehicle” for purposes of
+            Reckless Driving. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+218+Or+App+568,+180+P3d+148+%282008&amp;hl=en&amp;as_sdt=4,38&amp;case=12884956035703223329&amp;scilh=0"><em>State
+            v. Smith</em>, 184 Or App 118, 55 P3d 553 (2002)</a>.</p>
+            <p>b. A defendant’s mental disease or defect can be used to
+            negate the reckless mental state. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nebert,+244+Or+App+80,+260+P3d+559+%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=43505771125919679&amp;scilh=0"><em>State
+            v. Nebert</em>, 244 Or App 80, 86 260 P3d 559
+            (2011)</a>.</p>
+            </section>
+            </section>
+            <section id="b._reckless_endangering" class="level2">
+            <h2><strong>B. Reckless Endangering</strong></h2>
+            <p>This offense normally accompanies a DUII when the person
+            is involved in an accident, or when they have other people
+            in the vehicle with them.</p>
+            <p><strong>1. ORS 163.195 (Violation and
+            Penalty)</strong></p>
+            <p>A person commits the crime of recklessly endangering
+            another person if the person recklessly engages in conduct
+            which creates a substantial risk of serious physical injury
+            to another person. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors163.html">163.195(1)</a>.</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. Recklessly endangering another person is a Class A
+            misdemeanor, which carries the following maximum
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $6,250 161.635(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Jail: 1 year. 161.615(1).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.411(2): There is a 90-day license suspension for a
+            first offense.</p>
+            <p>c. Plea Deals (Multnomah County):</p>
+            <p>i. If the client has limited criminal history and no
+            prior reckless endangering convictions, then the client may
+            plead guilty and receive 30 to 90 days of jail and a $400
+            fine, or 80 hours of community service with 10–20 days
+            jail.</p>
+            <p>ii. If the client is a repeat offender, then the deal is
+            90 to 120 days in jail and a $500 fine, or 104 hours of
+            community service with 30 to 60 days jail.</p>
+            <p><strong>3. Defenses</strong></p>
+            <p>a. Evidence of DUII is not itself evidence that a person
+            has committed reckless endangering, and it violates ORCP 59E
+            for a court to instruct to that effect. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Maciel-Cortes,+231+Or+App+302,+218+P3d+900+%282009%29&amp;hl=en&amp;as_sdt=4,38&amp;case=13556932350157231474&amp;scilh=0"><em>State
+            v. Maciel-Cortes</em>, 231 Or App 302, 304, 218 P3d 900
+            (2009)</a>.</p>
+            <p>This is a very difficult situation though, as most trial
+            courts will find that if a person has been drinking, that
+            creates the <em>risk</em> required by the statute,
+            especially if other people are in the vehicle, particularly
+            children.</p>
+            <p>b. If the probable cause for the initial stop of the
+            vehicle was based on a low level traffic violation, such as
+            failure to maintain lane or not signaling for a full 100 ft
+            prior to a turn, argue that the driving in and of itself did
+            not constitute reckless endangering because the so-called
+            “bad driving” was minimal, and did not create a substantial
+            risk of serious physical injury.</p>
+            </section>
+            <section
+            id="c._failure_to_perform_the_duties_of_a_driver_hit_and_run"
+            class="level2">
+            <h2><strong>C. Failure to Perform the Duties of a Driver
+            (Hit and Run)</strong></h2>
+            <p><strong>1. ORS 811.700 (Violation and
+            Penalty)/Elements</strong></p>
+            <p>a. A hit and run is committed if a driver, who knows or
+            has reason to believe that the driver’s vehicle was involved
+            in a collision, does not:</p>
+            <ul>
+            <li><blockquote>
+            <p>Immediately stop at the scene, or as close as
+            possible</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Remain at the scene until fulfilling all required
+            activities</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Give the other driver or passenger their name and
+            address, the name and address of the owner of the driver’s
+            vehicle, any occupants’ name and address, and their vehicle
+            registration number, name of insurance carrier covering the
+            vehicle, insurance policy number, and insurance carrier
+            phone number and</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Upon request, and if available, provide evidence of
+            driving privileges.</p>
+            </blockquote></li>
+            </ul>
+            <p>b. If the collision is with an unattended vehicle, the
+            driver must:</p>
+            <ul>
+            <li><blockquote>
+            <p>Locate and notify the operator or owner of the unattended
+            vehicle and provide their name, address, registration
+            number, name of insurance carrier, insurance policy number,
+            and insurance carrier phone number or</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Leave a written notice of their name and address in a
+            conspicuous place on the struck vehicle, a statement of the
+            circumstances, registration number, name of insurance
+            carrier, insurance policy number, and insurance carrier
+            phone number.</p>
+            </blockquote></li>
+            </ul>
+            <p>c. If the accident is to fixtures or property legally
+            upon or adjacent to the highway, the driver must:</p>
+            <ul>
+            <li><blockquote>
+            <p>Take reasonable steps to notify the owner of the property
+            of the collision, and provide their name, address, and
+            vehicle registration number, name of insurance carrier,
+            insurance policy number, and insurance carrier phone
+            number</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Upon request and if available, the driver must present
+            evidence of their driving privileges.</p>
+            </blockquote></li>
+            </ul>
+            <p>d. “Reason to believe” means that the driver is aware of
+            a circumstance that would cause a reasonable person to be
+            aware of a substantial and unjustifiable risk that the
+            driver’s vehicle has been in a collision. The risk must be
+            of such nature or degree that failure to be aware of it
+            constitutes a gross deviation from the standard of care that
+            a reasonable person would observe in the situation.
+            811.700(2).</p>
+            <p>e. A “good faith” effort is required by the driver to
+            return to the scene and provide the required information if
+            the driver discovers, after the fact, that the vehicle may
+            have been in a collision. 811.700(1)(e).</p>
+            <p><strong>2. If there is no injury, and only property
+            damage, then the offense is a misdemeanor. If there is an
+            injury, then the offense is a Class C felony unless there is
+            serious physical injury or death, in which case the offense
+            is a Class B felony.</strong></p>
+            <p>a. Civil Compromise</p>
+            <p>i. ORS 135.703 (Crimes to be Compromised)</p>
+            <p>When the client is charged with a crime punishable as a
+            misdemeanor for which the person injured has a remedy by
+            civil action, then the crime may be compromised. 135.703(1).
+            Exceptions: no civil compromise is available when the crime
+            was committed (DUII context):</p>
+            <ul>
+            <li><blockquote>
+            <p>Against a police officer</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Riotously</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>With the intent to commit a felony, or</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>By one family or household member against another family
+            or household member, or against a disabled elderly person,
+            and the crime was Assault 4; or reckless endangerment.
+            135.703(1)(a)-(d)(A,D).</p>
+            </blockquote></li>
+            </ul>
+            <p>ii. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.705</a> (satisfaction and dismissal)</p>
+            <p>If the injured party signs an acknowledgement of
+            satisfaction at any time prior to trial, then the court may
+            grant a civil compromise, which results in dismissal of the
+            criminal charge. 135.705(1)(a).</p>
+            <p>b. Partial Expungement after 10 years. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors137.html">137.225</a>.</p>
+            <p>While the DUII cannot be expunged, after ten years, if no
+            other crimes have been committed, and no arrests have
+            occurred in the previous three years, then the hit and run
+            conviction can be expunged. 137.225(6)(b),(9)(a). Hit and
+            run is expungeable because the criminal act is not having
+            driven, but rather failing to exchange information or call
+            the police after an accident.</p>
+            <p><strong>3. The requirements are different for a driver
+            involved in a collision where another person or animal is
+            injured:</strong></p>
+            <p>a. An injury to a person or animal requires the driver
+            to:</p>
+            <ul>
+            <li><blockquote>
+            <p>Stop and remain at the scene, and reasonably investigate
+            what the vehicle struck</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Give the required information (name, address,
+            registration number, insurance policy and phone number) to
+            the person struck, or the animal’s owner</p>
+            </blockquote></li>
+            </ul>
+            <p>Upon request, the driver may also have to exhibit and
+            give their driver’s license to the other person to confirm
+            evidence of driving privileges</p>
+            <ul>
+            <li><blockquote>
+            <p>Render reasonable assistance to the injured person or
+            animal</p>
+            </blockquote></li>
+            </ul>
+            <p>For an animal, the person must also make reasonable
+            efforts to determine the nature of the injury, find the
+            owner, or report the injury to a police officer</p>
+            <ul>
+            <li><blockquote>
+            <p>Remain at the scene until a police officer arrives, if
+            the struck person has died, unconscious, or is otherwise
+            incapable of receiving the information.</p>
+            </blockquote></li>
+            </ul>
+            <p>This does not apply to a driver who needs immediate
+            medical assistance.</p>
+            <p><strong>4. Penalties</strong></p>
+            <p>a. Hit and run when property is damaged is a Class A
+            misdemeanor which carries the following maximum
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $6,250 161.635(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Jail: 1 year. 161.615(1).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. Hit and run when a person is injured is a Class B
+            felony which carries the following maximum penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>10 years in prison. 161.605(2).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Fine of $250,000. 161.625(1)(c).</p>
+            </blockquote></li>
+            </ul>
+            <p>c. Hit and run when an animal is injured is a Class B
+            traffic violation which carries the following financial
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $1,000; 153.018(2)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $265; 153.019(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $135; 153.021(1)(b).</p>
+            </blockquote></li>
+            </ul>
+            <p>d. 809.411(4): A license suspension of 90 days is
+            applicable for a first offense.</p>
+            <p>e. Restitution: ORS 811.706.</p>
+            <p>Restitution may be ordered as part of a judgment. If the
+            case has been civilly compromised, there will in all
+            likelihood be no restitution ordered, as the injured party
+            has already been satisfied. Restitution can be ordered if
+            the damage resulted out of the incident which caused the
+            duties to be imposed. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bassett,+243+Or+App+289,+259+P3d+953+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17613854181842540602&amp;scilh=0"><em>State
+            v. Bassett</em>, 243 Or App 289, 294, 259 P3d 953
+            (2011)</a>.</p>
+            <p><strong>5. Plea Deal Best Case Scenario (Multnomah
+            County)</strong></p>
+            <p>If the client has no major traffic offenses within the
+            last three years, and the accident caused minor damage due
+            to minimal bad driving, then the client may plead guilty in
+            exchange for violation treatment and a $250 fine. Client
+            must also have a valid license and insurance, and the victim
+            must have been compensated for any damage. A setover deal
+            may also be available.</p>
+            <p><strong>6. Some counties are now charging hit and run
+            twice for the same incident; one count for the failing to
+            provide the required information, and one count for failing
+            to stop and reasonably investigate what the person
+            struck.</strong></p>
+            <p><strong>7. Defenses</strong></p>
+            <p>a. Choice of evils: if a person is going to be beat up,
+            do they fight or flee?</p>
+            <p>In cases in which the other motorist is angry and
+            threatens the client with imminent harm, the client may
+            choose to leave the scene instead of getting harmed. This
+            creates a choice of evils defense under ORS 161.200.</p>
+            <p>b. Who is to be called? If the person calls the police
+            and gets nowhere, are they required to stay for hours?</p>
+            <p>If the client called the police, but no officer arrived
+            on the scene, argue that after a reasonable amount of time
+            has passed, the client has met their obligation by calling
+            the police. The client is not required to stay all day or
+            night for an officer to show up.</p>
+            <p>c. PPB says 50% of all hit and runs in Portland remain
+            unsolved.</p>
+            <p>This presents a potential ethical dilemma if the person
+            has yet to be charged. If the person wants to get their car
+            fixed, but the car is evidence, what do you advise? There
+            are potential additional charges of tampering with physical
+            evidence. Be careful to advance the legitimate interests of
+            the client while protecting yourself. If seeking a civil
+            compromise, there is no need to reveal the name of the
+            client, just offer the funds to the victim and have them
+            sign the acknowledgement of satisfaction.</p>
+            <p>d. If the person says they didn’t do it, have them take a
+            polygraph examination and provide any positive result to the
+            DA for dismissal.</p>
+            </section>
+            <section id="d._criminal_mischief_ii" class="level2">
+            <h2><strong>D. Criminal Mischief II</strong></h2>
+            <p><strong>1. ORS 164.354</strong></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors164.html"><span class="underline">Link
+            to Oregon Revised Statutes, Chapter 164.</span></a></p>
+            <p>A person commits the crime of criminal mischief in the
+            second degree if (in the DUII context) having no right to do
+            so nor reasonable ground to believe that the person has such
+            right, the person recklessly damages property of another in
+            an amount exceeding $500. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors164.html">ORS
+            164.354(1)(b)</a>.</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. Criminal Mischief in the Second Degree is a Class A
+            misdemeanor which carries the following maximum
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $6,250 161.635(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Jail: 1 year. 161.615(1).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.428(1)/809.411(2)</p>
+            <p>There is a mandatory license suspension for 90 days.
+            There is hardship-permit eligibility.</p>
+            <p><strong>3. Plea offers (Multnomah County)</strong></p>
+            <p>a. Best case scenario is that it will be charged as a
+            violation with the option to enter community court for a
+            dismissal.</p>
+            <p>b. Another offer is 10 days of jail and a $200 fine, or
+            18 months bench probation and 40 hours community service and
+            a $200 fine, along with restitution and no contact with the
+            victim, plus any counseling that may be required. To be
+            eligible for this deal, the client must have no priors, and
+            the damage must be over $250 or the client has rejected
+            community court.</p>
+            <p><strong>4. Civil Compromise</strong></p>
+            <p>Criminal mischief in the second degree is eligible for
+            civil compromise in accordance with 135.703-705.</p>
+            <p><strong>5. Partial Expungement After 10
+            Years</strong></p>
+            <p>Criminal mischief in the second degree is eligible for
+            expungement pursuant to 137.225(6)(b),(9)(a).</p>
+            <p><strong>6. Evidence of prior DUII convictions is
+            admissible to prove recklessness. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wyant,+217+Or+App+199,+175+P3d+988+%282007&amp;hl=en&amp;as_sdt=4,38&amp;case=4382190493526502432&amp;scilh=0"><em>State
+            v. Wyant</em>, 217 Or App 199, 203, 175 P3d 988
+            (2007)</a>.</strong></p>
+            <p><strong>7. Defenses</strong></p>
+            <p>a. Depending on the circumstances, there may be an
+            argument that, if an accident occurred, it was not your
+            client’s fault. If the bad driving of the other motorist
+            caused the accident, and then evidence of DUII is found
+            during the police encounter, argue that your client was not
+            the one who recklessly caused damage.</p>
+            <p>This may be particularly appropriate when there is
+            nothing written in the police reports about the client’s bad
+            driving or that the other motorist was more at fault, but
+            then the DA charges criminal mischief anyway.</p>
+            <p>b. Argue that the damage is less than $500, and bring in
+            a forensic expert to challenge the estimate given.</p>
+            <p>If the damage is estimated at just over the $500
+            threshold, you may be able to challenge that estimate with
+            an expert or mechanic of your own.</p>
+            </section>
+            <section id="e._assault_iv" class="level2">
+            <h2><strong>E. Assault IV</strong></h2>
+            <p><strong>1. ORS 163.160</strong></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors163.html"><span class="underline">Link
+            to Oregon Revised Statutes, Chapter 163.</span></a></p>
+            <p>A person commits the crime of assault in the fourth
+            degree if the person (in the DUII context): intentionally,
+            knowingly or recklessly causes physical injury to another.
+            <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors163.html">ORS
+            163.160(1)(a)</a>.</p>
+            <p><strong>2. Civil Compromise</strong></p>
+            <p>Assault IV is generally eligible for civil compromise in
+            accordance with 135.703-705.</p>
+            <p><strong>3. Expungement</strong></p>
+            <p>Assault IV is eligible for Expungement pursuant to
+            137.225(6)(b),(9)(a).</p>
+            <p><strong>4. Penalties</strong></p>
+            <p>a. Assault in the fourth degree is a Class A misdemeanor
+            which carries the following maximum penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $6,250 161.635(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Jail: 1 year. 161.615(1).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. There is a one-year license suspension with a
+            six-month hardship permit wait if the client is not
+            incarcerated for the assault IV conviction. 809.411(10)(d);
+            807.252(3)(e).</p>
+            <p>i. The 6-month waiting period begins from the date of
+            release if the person was incarcerated for the conviction.
+            807.252(3)(f).</p>
+            <p>ii. If the client has been convicted of certain other
+            convictions within the previous 10 years, then a hardship
+            permit cannot be issued at all. 807.252(1). Those
+            convictions include (but not limited to) criminal DWS/R;
+            reckless driving; DUII; and attempting to elude.</p>
+            <p><strong>5. Plea Offers (Multnomah County)</strong></p>
+            <p>Best case scenario is two years’ bench probation, a $300
+            fine, 64 hours community service, restitution and no contact
+            with the victim, any applicable counseling or classes, and
+            $500 in statutory fees.</p>
+            <p>The client is eligible for this offer if they have a
+            limited criminal history, no prior assault conviction, no
+            history of violent or threatening behavior, no felony
+            convictions, and there were only minor injuries.</p>
+            <p><strong>6. Defenses</strong></p>
+            <p>a. Minor scrapes and scratches that a victim does not
+            notice or that do not cause pain are not physical injuries
+            within the assault context.</p>
+            <p>b. If the other motorist was already injured in some way
+            prior to an accident, and that injury is slightly
+            exacerbated as a result of the accident, argue that the
+            client was not the cause of such pain, but rather it was the
+            pre-existing condition that caused the harm, especially if
+            no injury would have occurred but for the pre-existing
+            injury.</p>
+            <p>c. A stinging feeling or sensation is not a physical
+            injury. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Capwell,+52+Or+App+43&amp;hl=en&amp;as_sdt=4,38&amp;case=2398793712702213115&amp;scilh=0"><em>State
+            v. Capwell</em>, 52 Or App 43, 46-47, 627 P2D 905
+            (1981)</a>.</p>
+            </section>
+            <section id="f._driving_while_suspended_or_revoked"
+            class="level2">
+            <h2><strong>F. Driving While Suspended or
+            Revoked</strong></h2>
+            <p><strong>1. ORS 811.175 (Violation DWS/DWR)</strong></p>
+            <p>A person commits the offense of violation driving while
+            suspended or revoked if the person:</p>
+            <ul>
+            <li><blockquote>
+            <p>Drives a motor vehicle during a period of license
+            suspension or revocation;</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Drives a motor vehicle outside of the limitations of a
+            hardship permit; or</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Drives a commercial motor vehicle during a period of any
+            license suspension or revocation.</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>2. ORS 811.182 (Criminal DWS/DWR)</strong></p>
+            <p>A person commits the crime of driving while suspended or
+            revoked if they violate 811.175 (violation DWS), and the
+            suspension or revocation resulted from a criminal
+            conviction. 811.182(1).</p>
+            <p><strong>3. Penalties</strong></p>
+            <p>a. Violation driving while suspended or revoked is a
+            Class A traffic violation which carries the following
+            financial penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $2,000; 153.018(2)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Presumptive Fine: $440; 153.019(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Fine: $225; 153.021(1)(a).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. Criminal driving while suspended or revoked is a Class
+            B felony if the underlying offense causing the suspension or
+            revocation was any degree of homicide or assault resulting
+            from operation of a motor vehicle, felony DUII, aggravated
+            vehicular homicide or aggravated DWS/R. 811.182(3).</p>
+            <p>i. A Class B felony carries the following maximum
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>10 years in prison. 161.605(2).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Fine of $250,000. 161.625(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Felony DWS/R is a crime category 6 on the sentencing
+            guidelines.</p>
+            </blockquote></li>
+            </ul>
+            <p>ii. Criminal driving while suspended or revoked is a
+            Class A misdemeanor if the offense resulted from a
+            suspension or revocation for:</p>
+            <ul>
+            <li><blockquote>
+            <p>Recklessly endangering another person, menacing, or
+            criminal mischief resulting from operation of a motor
+            vehicle. 811.182(4)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>A breath or blood test refusal or failure.
+            811.182(4)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Hit and Run while driving a commercial motor vehicle or
+            refusing to submit to or failing a breath or blood test in
+            another jurisdiction while driving a commercial vehicle.
+            811.182(4)(c)-(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Suspension of a commercial license. 811.182(4)(e).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Revocation under the habitual offender laws.
+            811.182(4)(f).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>A crime punishable as a felony, except for homicide or
+            assault crimes. 811.182(4)(g).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Hit and Run, Reckless Driving, or attempting to elude.
+            811.182(4)(h-j).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>DUII. 811.182(4)(k).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Use of a commercial vehicle in the commission of a
+            felony. 811.182(4)(l).</p>
+            </blockquote></li>
+            </ul>
+            <p>iii. A Class A misdemeanor carries the following maximum
+            penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $6,250 161.635(1)(a).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Jail: 1 year. 161.615(1)</p>
+            </blockquote></li>
+            </ul>
+            <p><strong>4. Felony, Misdemeanor, or Violation: Which Is
+            It?</strong></p>
+            <p>The offense of driving while suspended or revoked tracks
+            the underlying offense for which the person is suspended or
+            revoked. As such, if the person is suspended or revoked
+            based on, for example, too many traffic violations or
+            non-payment of fines, the offense is a violation.</p>
+            <p>If the person is suspended due to a DUII or other
+            misdemeanor offense, the crime of DWS/DWR is likewise a
+            misdemeanor. If the underlying suspension/revocation is due
+            to a felony, such as manslaughter or assault in the first
+            degree, or felony DUII, the crime of DWS/DWR is a
+            felony.</p>
+            <p>If convicted of felony DWS/DWR, all penalties are
+            available, including prison, which some defendants do
+            receive. This is particularly the case if the person is a
+            “serial” or “habitual” driver while suspended or
+            revoked.</p>
+            <p><strong>5. Defenses</strong></p>
+            <p>a. 811.180 (affirmative defenses to both criminal and
+            violation DWS/R)</p>
+            <p>i. Driving due to an emergency, namely an injury or
+            immediate threat of injury to a human or animal, is a
+            defense. 811.180(1)(a).</p>
+            <p>ii. It is a defense if the defendant had not received
+            notice of the suspension/revocation, or had not been
+            informed of the suspension/revocation by a trial judge who
+            ordered the suspension/revocation. 811.180(1)(b).</p>
+            <p>b. The defense of guilty except for insanity applies. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Olmstead,+310+Or.+455,++800+P.2d+277+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17942915936615114115&amp;scilh=0"><em>State
+            v. Olmstead</em>, 310 Or. 455, 470, 800 P2d 277
+            (1990)</a>.</p>
+            </section>
+            </section>
+            <section id="v._related_felony_charges" class="level1">
+            <h1><strong>V. Related Felony Charges</strong></h1>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors163.html"><span class="underline">Link
+            to Oregon Revised Statutes, Chapter 163</span></a></p>
+            <p><a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors161.html"><span class="underline">Link
+            to Oregon Revised Statues, Chapter 161</span></a></p>
+            <section id="a._aggravated_vehicular_homicide"
+            class="level2">
+            <h2><strong>A. Aggravated Vehicular Homicide</strong></h2>
+            <p><strong>1. ORS 163.149 (Violation and
+            Penalty)</strong></p>
+            <p>Criminal homicide constitutes aggravated vehicular
+            homicide when it is committed with criminal negligence,
+            recklessly or recklessly under circumstances manifesting
+            extreme indifference to the value of human life by a person
+            operating a motor vehicle while under the influence of
+            intoxicants in violation of ORS 813.010 and the person has a
+            previous conviction for manslaughter in the first or second
+            degree, or criminally negligent homicide, and the victim’s
+            death in the previous conviction was caused by the person
+            driving a motor vehicle. ORS 163.149(1-2).</p>
+            <p>The previous conviction can be an Oregon conviction, or a
+            statutory counterpart from a different jurisdiction. ORS
+            163.149(1)(a).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. 163.149(4): Aggravated Vehicular Homicide is a Class A
+            Felony which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $375,000; 161.625(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Prison: 20 years; 161.605(1).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.235(1)(a): Permanent revocation of driving
+            privileges. A person may apply to reinstate their privileges
+            after at least 10 years from either the date of release from
+            custody or the date of placement on probation, or from the
+            date of sentencing if neither applies.
+            809.235(2)(a)(A-C).</p>
+            <p>c. 809.235(2)(b): If during the revocation period the
+            person is convicted of a criminal driving offense, the
+            person may petition for reinstatement 10 years from the date
+            of the most recent conviction.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>No hardship permit is available for a revocation based on
+            Aggravated Vehicular Homicide. OAR 735-064-0100(c).</p>
+            <p><strong>4. Defenses</strong></p>
+            <p>a. It is an affirmative defense that the person was not
+            under the influence of intoxicants at the time of the
+            conduct that resulted in the previous conviction.
+            163.149(3).</p>
+            <p>b. A defendant’s mental disease or defect can be used to
+            negate the reckless mental state. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nebert,+244+Or+App+80,+260+P3d+559+%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=43505771125919679&amp;scilh=0"><em>State
+            v. Nebert</em>, 244 Or App 80, 86 260 P3d 559
+            (2011)</a>.</p>
+            <p>c. Attack the cause of death in the previous case.</p>
+            </section>
+            <section id="b._criminally_negligent_homicide"
+            class="level2">
+            <h2><strong>B. Criminally Negligent Homicide</strong></h2>
+            <p><strong>1. ORS 163.145 (Violation and
+            Penalty)</strong></p>
+            <p>A person commits the crime of criminally negligent
+            homicide when, with criminal negligence, the person causes
+            the death of another person. ORS 163.145(1).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. 163.145(2): Criminally Negligent Homicide is a Class B
+            Felony which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $250,000; 161.625(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Prison: 10 years; 161.605(2).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.235(1)(a): Permanent revocation of driving
+            privileges. A person may apply to reinstate their privileges
+            after at least 10 years from either the date of release from
+            custody or the date of placement on probation, or from the
+            date of sentencing if neither applies.
+            809.235(2)(a)(A-C).</p>
+            <p>c. 809.235(2)(b): If during the revocation period the
+            person is convicted of a criminal driving offense, the
+            person may petition for reinstatement 10 years from the date
+            of the most recent conviction.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>No hardship permit is available for a revocation based on
+            Criminally Negligent Homicide. OAR 735-064-0100(c).</p>
+            <p><strong>4. Defenses</strong></p>
+            <p>a. Attack the cause of death.</p>
+            <p>b. Attack the client’s mental state. To prove criminal
+            negligence, the state must prove “the defendant’s failure to
+            be aware of the risk must constitute a gross deviation from
+            the degree of care that a reasonable driver would observe in
+            the situation…. the factfinder’s task is to assess whether
+            the defendant failed to be aware of the risk that the
+            defendant would kill the person and, if so, whether that
+            failure represented a gross deviation from the standard of
+            care that a reasonable driver would observe when driving
+            under the <em>actual conditions</em> defendant found himself
+            in on that day.” State v. Fruitts, 290 Or App 222, 228, 414
+            P3d 881, 885 (2018) (internal citations omitted) (emphasis
+            in original).</p>
+            <p>c. Depending on the case, argue that the road or weather
+            conditions would not have permitted anyone, under the
+            influence or not, to avoid the fatal collision. Some car
+            crashes are tragic accidents that cannot be avoided.</p>
+            </section>
+            <section id="c._manslaughter_in_the_first_degree"
+            class="level2">
+            <h2><strong>C. Manslaughter in the First
+            Degree</strong></h2>
+            <p><strong>1. ORS 163.118 (Violation and
+            Penalty)</strong></p>
+            <p>Criminal homicide constitutes manslaughter in the first
+            degree when it is committed recklessly or with criminal
+            negligence by a person operating a motor vehicle while under
+            the influence of intoxicants in violation of ORS 813.010 and
+            the person has at least three previous convictions for
+            driving while under the influence of intoxicants under ORS
+            813.010, or its statutory counterpart in any jurisdiction,
+            in the 10 years prior to the date of the current offense, or
+            the person has a previous conviction for assault in the
+            first, second, or third degree, or their statutory
+            counterparts in any jurisdiction and the victim’s serious
+            physical injury in the previous conviction was caused by the
+            person driving a motor vehicle. ORS 163.118(1)(d).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. 163.118(3): Manslaughter in the First Degree is a
+            Class A Felony which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $375,000; 161.625(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Prison: 20 years; 161.605(1).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Prison: 10 years; 137.700(2)(a)(D).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.235(1)(a): Permanent revocation of driving
+            privileges. A person may apply to reinstate their privileges
+            after at least 10 years from either the date of release from
+            custody or the date of placement on probation, or from the
+            date of sentencing if neither applies.
+            809.235(2)(a)(A-C).</p>
+            <p>c. 809.235(2)(b): If during the revocation period the
+            person is convicted of a criminal driving offense, the
+            person may petition for reinstatement 10 years from the date
+            of the most recent conviction.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>No hardship permit is available for a revocation based on
+            Manslaughter in the First Degree. OAR 735-064-0100(c).</p>
+            <p><strong>4. Plea Bargaining</strong></p>
+            <p>If the facts support a criminal negligence mental state,
+            try to plead down to Criminally Negligent Homicide, to avoid
+            the mandatory prison time.</p>
+            <p><strong>5. Defenses</strong></p>
+            <p>a. Attack the cause of death.</p>
+            <p>b. Attack the client’s mental state. To prove criminal
+            negligence, the state must prove “the defendant’s failure to
+            be aware of the risk must constitute a gross deviation from
+            the degree of care that a reasonable driver would observe in
+            the situation…. the factfinder’s task is to assess whether
+            the defendant failed to be aware of the risk that the
+            defendant would kill the person and, if so, whether that
+            failure represented a gross deviation from the standard of
+            care that a reasonable driver would observe when driving
+            under the <em>actual conditions</em> defendant found himself
+            in on that day.” <a
+            href="https://scholar.google.com/scholar_case?case=5269604967404491906&amp;q=State+v.+Fruitts,+290+Or+App+222,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Fruitts</em>, 290 Or App 222, 228, 414 P3d 881, 885
+            (2018)</a> (internal citations omitted) (emphasis in
+            original).</p>
+            <p>c. It is an affirmative defense that the person was not
+            under the influence of intoxicants at the time of the
+            conduct that resulted in the previous conviction.
+            163.118(4)(b).</p>
+            <p>d. A defendant’s mental disease or defect can be used to
+            negate the reckless mental state. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nebert,+244+Or+App+80,+260+P3d+559+%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=43505771125919679&amp;scilh=0"><em>State
+            v. Nebert</em>, 244 Or App 80, 86 260 P3d 559
+            (2011)</a>.</p>
+            <p>e. Attack the cause and severity of the injury in the
+            previous case.</p>
+            <p>f. If applicable attack a person’s prior uncounseled DUII
+            conviction.</p>
+            </section>
+            <section id="d._manslaughter_in_the_second_degree"
+            class="level2">
+            <h2><strong>D. Manslaughter in the Second
+            Degree</strong></h2>
+            <p><strong>1. ORS 163.125 (Violation and
+            Penalty)</strong></p>
+            <p>Criminal homicide constitutes manslaughter in the second
+            degree when it is committed recklessly. ORS
+            163.125(1)(a).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. 163.125(2): Manslaughter in the First Degree is a
+            Class B Felony which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $250,000; 161.625(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Prison: 10 years; 161.605(2).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Prison: 75 months; 137.700(2)(a)(E).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.235(1)(a): Permanent revocation of driving
+            privileges. A person may apply to reinstate their privileges
+            after at least 10 years from either the date of release from
+            custody or the date of placement on probation, or from the
+            date of sentencing if neither applies.
+            809.235(2)(a)(A-C).</p>
+            <p>c. 809.235(2)(b): If during the revocation period the
+            person is convicted of a criminal driving offense, the
+            person may petition for reinstatement 10 years from the date
+            of the most recent conviction.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>No hardship permit is available for a revocation based on
+            Manslaughter in the Second Degree. OAR 735-064-0100(c).</p>
+            <p><strong>4. Plea Bargaining</strong></p>
+            <p>If the facts support a criminal negligence mental state,
+            try to plead down to criminally negligent homicide, to avoid
+            the mandatory prison time.</p>
+            <p><strong>5. Defenses</strong></p>
+            <p>a. Attack the cause of death. If applicable, argue that
+            the motor vehicle collision was unavoidable or was a lesser
+            contributing factor to the death than other factors.</p>
+            <p>b. A defendant’s mental disease or defect can be used to
+            negate the reckless mental state. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nebert,+244+Or+App+80,+260+P3d+559+%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=43505771125919679&amp;scilh=0"><em>State
+            v. Nebert</em>, 244 Or App 80, 86 260 P3d 559
+            (2011)</a>.</p>
+            </section>
+            <section id="e._assault_in_the_first_degree" class="level2">
+            <h2><strong>E. Assault in the First Degree</strong></h2>
+            <p><strong>1. ORS 163.185 (Violation and
+            Penalty)</strong></p>
+            <p>A person commits the crime of assault in the first degree
+            if the person intentionally, knowingly or recklessly causes
+            serious physical injury to another while operating a motor
+            vehicle under the influence of intoxicants in violation of
+            ORS 813.010 the person has at least three previous
+            convictions for driving while under the influence of
+            intoxicants under ORS 813.010, or its statutory counterpart
+            in any jurisdiction, in the 10 years prior to the date of
+            the current offense, or The person has a previous conviction
+            for manslaughter in the first or second degree, criminally
+            negligent homicide, or assault in the first, second, or
+            third degree, or their statutory counterparts in any
+            jurisdiction, and The victim’s death or serious physical
+            injury in the previous conviction was caused by the person
+            driving a motor vehicle. ORS 163.118(1)(d).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. 163.185(3): Assault in the First Degree is a Class A
+            Felony which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $375,000. 161.625(1)(b).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Prison: 20 years. 161.605(1).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Prison: 90 months. 137.700(2)(a)(F).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.235(1)(a): Permanent revocation of driving
+            privileges. A person may apply to reinstate their privileges
+            after at least 10 years from either the date of release from
+            custody or the date of placement on probation, or from the
+            date of sentencing if neither applies.
+            809.235(2)(a)(A-C).</p>
+            <p>c. 809.235(2)(b): If during the revocation period the
+            person is convicted of a criminal driving offense, the
+            person may petition for reinstatement 10 years from the date
+            of the most recent conviction.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>No hardship permit is available for a revocation based on
+            Assault in the First Degree. OAR 735-064-0100(c).</p>
+            <p><strong>4. Defenses</strong></p>
+            <p>a. Attack the cause of injury. If the other motorist was
+            already injured in some way prior to an accident, and that
+            injury is slightly exacerbated as a result of the accident,
+            argue that the client was not the cause of such pain, but
+            rather it was the pre-existing condition that caused the
+            harm, especially if no injury would have occurred but for
+            the pre-existing injury.</p>
+            <p>b. It is an affirmative defense that the person was not
+            under the influence of intoxicants at the time of the
+            conduct that resulted in the previous conviction.
+            163.118(4)(b).</p>
+            <p>c. A defendant’s mental disease or defect can be used to
+            negate the reckless mental state. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nebert,+244+Or+App+80,+260+P3d+559+%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=43505771125919679&amp;scilh=0"><em>State
+            v. Nebert</em>, 244 Or App 80, 86 260 P3d 559
+            (2011)</a>.</p>
+            <p>d. Attack the cause and severity of the injury in the
+            previous case.</p>
+            <p>e. If applicable attack a person’s prior uncounseled DUII
+            conviction.</p>
+            </section>
+            <section id="f._assault_in_the_second_degree"
+            class="level2">
+            <h2><strong>F. Assault in the Second Degree</strong></h2>
+            <p><strong>1. ORS 163.175 (Violation and
+            Penalty)</strong></p>
+            <p>A person commits the crime of assault in the second
+            degree if the person intentionally or knowingly causes
+            serious physical injury to another, Intentionally or
+            knowingly causes physical injury to another by means of a
+            deadly or dangerous weapon, or recklessly causes serious
+            physical injury to another by means of a deadly or dangerous
+            weapon under circumstances manifesting extreme indifference
+            to the value of human life. ORS 163.175(1)(a-c).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. 163.175(2): Assault in the Second Degree is a Class B
+            Felony which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $250,000; 161.625(1)(c).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Prison: 10 years; 161.605(2).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Minimum Prison: 75 months; 137.700(2)(a)(G).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.411(10)(a-b): A person convicted of assault in the
+            second degree will be suspended for 8 years following
+            release from custody, or from the date DMV suspends the
+            person’s license.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>A hardship permit is available for a suspension based on
+            Assault in the Second Degree after a four-year waiting
+            period. The four years begins from the date of release from
+            custody or the date of suspension by DMV.
+            807.252(3)(a-b).</p>
+            <p>807.252(1)(a): No hardship permit is available if the
+            person, within the 10 years preceding the application, has
+            been convicted of any of the following:</p>
+            <ul>
+            <li><blockquote>
+            <p>Any degree of murder, manslaughter, criminally negligent
+            homicide or assault resulting from the operation of a motor
+            vehicle</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Reckless driving</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>DUII</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Failure to perform the duties of a driver (either for
+            injury or property damage)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Criminal driving while suspended or revoked</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Fleeing or attempting to elude a police officer</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Aggravated vehicular homicide</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Aggravated driving while suspended or revoked.</p>
+            </blockquote></li>
+            </ul>
+            <p>A conviction for any of the above during the same
+            criminal episode does not count for purposes of this
+            section. 807.252(2).</p>
+            <p><strong>4. Defenses</strong></p>
+            <p>a. Attack the cause of injury. If the other motorist was
+            already injured in some way prior to an accident, and that
+            injury is slightly exacerbated as a result of the accident,
+            argue that the client was not the cause of such pain, but
+            rather it was the pre-existing condition that caused the
+            harm, especially if no injury would have occurred but for
+            the pre-existing injury.</p>
+            <p>b. A defendant’s mental disease or defect can be used to
+            negate the reckless mental state. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nebert,+244+Or+App+80,+260+P3d+559+%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=43505771125919679&amp;scilh=0"><em>State
+            v. Nebert</em>, 244 Or App 80, 86 260 P3d 559
+            (2011)</a>.</p>
+            <p>c. Argue that the injury was not a serious physical
+            injury or the motor vehicle, under the circumstances, was
+            not a dangerous or deadly weapon. See <em>State v.
+            Lopez</em>, 56 Or App 179, 182, 641 P2d 596, 597 (1982)
+            (citing <em>State v. Gale</em>, 36 Or App 275, 593 P2d 1169
+            (1978)) (“The statutory definition of a dangerous weapon
+            depends on the circumstances in which the particular
+            instrument, article or substance is used. It focuses on
+            actual use and not necessarily on intended use. It is a
+            question of fact whether, under the circumstances, an
+            article is used in a manner capable of causing death or
+            serious physical injury.”).</p>
+            </section>
+            <section id="g._assault_in_the_third_degree" class="level2">
+            <h2><strong>G. Assault in the Third Degree</strong></h2>
+            <p><strong>1. ORS 163.165 (Violation and
+            Penalty)</strong></p>
+            <p>A person commits the crime of assault in the third degree
+            if the person recklessly causes serious physical injury to
+            another by means of a deadly or dangerous weapon, recklessly
+            causes serious physical injury to another under
+            circumstances manifesting extreme indifference to the value
+            of human life, or recklessly causes physical injury to
+            another by means of a deadly or dangerous weapon under
+            circumstances manifesting extreme indifference to the value
+            of human life, . ORS 163.165(1)(a-c).</p>
+            <p><strong>2. Penalties</strong></p>
+            <p>a. 163.165(2): Assault in the Third Degree is a Class C
+            Felony which carries the following penalties:</p>
+            <ul>
+            <li><blockquote>
+            <p>Maximum Fine: $125,000. 161.625(1)(d).</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Maximum Prison: 5 years. 161.605(3).</p>
+            </blockquote></li>
+            </ul>
+            <p>b. 809.411(10)(c): A person convicted of assault in the
+            third degree will be suspended for 5 years following release
+            from custody, or from the date DMV suspends the person’s
+            license.</p>
+            <p><strong>3. Hardship Permit</strong></p>
+            <p>A hardship permit is available for a suspension based on
+            Assault in the Third Degree after a two-year waiting period.
+            The two years begins from the date of release from custody
+            or the date of suspension by DMV. 807.252(3)(c).</p>
+            <p>807.252(1)(a): No Hardship permit is available if the
+            person, within the 10 years preceding the application, has
+            been convicted of any of the following:</p>
+            <ul>
+            <li><blockquote>
+            <p>Any degree of murder, manslaughter, criminally negligent
+            homicide or assault resulting from the operation of a motor
+            vehicle</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Reckless driving</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>DUII</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Failure to perform the duties of a driver (either for
+            injury or property damage)</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Criminal driving while suspended or revoked</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Fleeing or attempting to elude a police officer</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Aggravated vehicular homicide</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Aggravated driving while suspended or revoked.</p>
+            </blockquote></li>
+            </ul>
+            <p>A conviction for any of the above during the same
+            criminal episode does not count for purposes of this
+            section. 807.252(2).</p>
+            <p><strong>4. Defenses</strong></p>
+            <p>a. Attack the cause of injury. If the other motorist was
+            already injured in some way prior to an accident, and that
+            injury is slightly exacerbated as a result of the accident,
+            argue that the client was not the cause of such pain, but
+            rather it was the pre-existing condition that caused the
+            harm, especially if no injury would have occurred but for
+            the pre-existing injury.</p>
+            <p>Note that the motor vehicle itself is not required to
+            make contact for the vehicle to be considered the cause of
+            injury. See <em>State v. Blan</em>, 272 Or App 721, 723–24,
+            358 P3d 316, 317–18 (2015) (so long as the vehicle is used
+            in a reckless manner, capable of causing serious physical
+            injury, no physical contact is required).</p>
+            <p>b. A defendant’s mental disease or defect can be used to
+            negate the reckless mental state. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nebert,+244+Or+App+80,+260+P3d+559+%282011&amp;hl=en&amp;as_sdt=4,38&amp;case=43505771125919679&amp;scilh=0"><em>State
+            v. Nebert</em>, 244 Or App 80, 86 260 P3d 559
+            (2011)</a>.</p>
+            <p>c. Argue that the injury was not a serious physical
+            injury or the motor vehicle, under the circumstances, was
+            not a dangerous or deadly weapon. See <em>State v.
+            Lopez</em>, 56 Or App 179, 182, 641 P2d 596, 597 (1982)
+            (citing <em>State v. Gale</em>, 36 Or App 275, 593 P2d 1169
+            (1978)) (“The statutory definition of a dangerous weapon
+            depends on the circumstances in which the particular
+            instrument, article or substance is used. It focuses on
+            actual use and not necessarily on intended use. It is a
+            question of fact whether, under the circumstances, an
+            article is used in a manner capable of causing death or
+            serious physical injury.”).</p>
+            </section>
+            </section>
+    </body>
+</html>

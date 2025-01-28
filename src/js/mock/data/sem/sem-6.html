@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Scientific Evidence: A Manual for Oregon Defense Attorneys</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Scientific Evidence: A Manual for Oregon
+Defense Attorneys</h1>
+                                    </section>
+            <p>2012 edition</p>
+            <p><strong>Cross-Examining the State’s Expert</strong></p>
+            <p>Cross-examining an expert is widely considered to be one
+            of the most challenging tasks faced by a trial lawyer. The
+            following sections outline certain principles that may
+            assist you in the planning and execution of your
+            cross-examination. This is not intended to be a treatise on
+            cross-examination per se. Instead, it is intended to help
+            practitioners treat scientific evidence like all other types
+            of evidence, and make the best possible use of their own
+            individual cross-examination styles and skill sets.</p>
+            <section id="i._should_you_cross_examine_the_expert"
+            class="level1">
+            <h1><strong>I. Should you cross-examine the
+            expert?</strong></h1>
+            <p>This is a real question in many cases. Again,
+            cross-examining an expert is not easy, and an unsuccessful
+            cross can do much more harm than good. This is of course
+            true for any witness, but is especially so with an expert
+            witness. If she is able to fend off your attacks with ease
+            or condescension, her aura of reliability will be enhanced
+            and your credibility will suffer.</p>
+            <p>Accordingly, some lawyers recommend the exercise of
+            significant caution in deciding whether to engage in a
+            substantive battle with an adverse expert. There is indeed
+            an “if you aim for the king, don’t miss” element to these
+            crosses. So before going forward with a substantial
+            cross-examination, think carefully about whether the expert
+            truly needs to be weakened or defeated in order to win your
+            case.</p>
+            </section>
+            <section id="ii._choosing_your_strategy" class="level1">
+            <h1><strong>II. Choosing Your Strategy</strong></h1>
+            <p>If you have decided that you are going to enter the fray,
+            the next step is to think through your objectives for the
+            cross-examination. Again, this is true for all witnesses,
+            but especially so for experts in light of the complexity of
+            the task and the particular risks involved.</p>
+            <p>The fact that you have decided to fight this battle means
+            that the expert’s ultimate analysis, if accepted, will harm
+            your case. So how do you go about finding the weak points in
+            that analysis? Your strategy will of course be case
+            specific, but below are some potential points to consider
+            exploring. Oregon law provides that</p>
+            <p><code>“the cross-examiner is to be given great latitude in eliciting testimony to vitiate [an expert’s] opinion,”</code><a
+            href="#fn1" class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a><code>  so it is worthwhile to think about how to make the best use of this latitude.</code></p>
+            <section
+            id="a._underlying_facts_observations_or_data_points"
+            class="level2">
+            <h2><strong>A. Underlying Facts, Observations, or Data
+            Points</strong></h2>
+            <p>Scientific evidence generally appears in the form of
+            expert opinion testimony, but the expert’s opinion will
+            typically be based on certain underlying facts,
+            observations, or data points. For example, a psychiatric
+            evaluation may be based in part on the subject’s answers to
+            certain questions, or a reconstructionist’s conclusion may
+            rely on the locations at which certain items were found
+            after a collision.</p>
+            <p>If you can establish that any of these “building blocks”
+            are incorrect or at least subject to uncertainty, you may be
+            able to call into question the expert’s ultimate
+            conclusions. With respect to the examples above, you may be
+            able to raise questions regarding whether the subject
+            understood the questions asked by the examiner, or whether
+            all of the items mapped by the reconstructionist were in
+            fact found in the locations where they were immediately
+            after the collision. In other cases, a fact relied upon by
+            the expert in reaching her conclusion may be based on the
+            testimony of a fact witness who is susceptible to
+            cross-examination on the point in question.</p>
+            <p>If your strategy involves calling into question one or
+            more of these “building blocks,” it may be useful to set up
+            your cross-examination by establishing the significance of
+            those facts. You may be able to extract an admission that
+            the expert could not come to a trustworthy conclusion
+            without knowing a particular fact, or that if a fact were
+            different from what the expert understands it to be her
+            conclusion would be different. Again, consider the examples
+            above. If the psychiatrist’s evaluation is based on the
+            subject’s responses to certain questions, would the
+            psychiatrist’s ultimate conclusion be different (or
+            impossible to reach confidently) if the psychiatrist had
+            reason to believe that the subject had not understood the
+            questions? If the reconstructionist’s conclusion relied on
+            the positions of certain objects, would the conclusion (or
+            the reconstructionist’s level of confidence in her
+            conclusion) be different if in fact one of the objects had
+            been moved between the collision and the analysis?</p>
+            <p>If the expert agrees that her conclusion, or her level of
+            confidence in her conclusion, is dependent on certain facts,
+            you have set yourself up to undermine that conclusion if you
+            can call any of those facts into question. Conversely, if
+            the expert refuses to concede the significance of these
+            underlying facts, you may be able to use this to call the
+            expert’s credibility and objectivity into question. The more
+            the expert insists that her conclusion would have been
+            identical regardless of variations in the underlying facts,
+            the more she looks like a hired gun committed to a
+            predetermined conclusion, instead of an objective analyst
+            following the data wherever it leads.</p>
+            <p>This approach of focusing on underlying facts is easy to
+            overlook, but it can be a vital part of the cross-
+            examination of an expert. By shifting the battle from the
+            expert’s “home turf ” of interpretation to ordinary facts, a
+            lawyer can neutralize some of the expert’s advantage in
+            substantive expertise. The lawyer can also undermine the
+            ultimate conclusion without questioning the expertise or
+            credibility of a witness that may seem impressive to jurors.
+            A “building block” attack enables jurors to discount the
+            expert’s conclusion despite accepting most or all of her
+            specialized testimony: “She’s very intelligent and
+            well-qualified, but her conclusion is only as good as the
+            facts she’s been given, and we have reason to question those
+            facts.”</p>
+            <p>This type of attack is also available where certain
+            information was withheld from, or not available to, an
+            expert as she was performing her analysis and coming to her
+            opinion.<a href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            </section>
+            <section id="b._validity_of_interpretive_steps"
+            class="level2">
+            <h2><strong>B. Validity of Interpretive Steps</strong></h2>
+            <p>This is now the “science part”—the process of translating
+            the basic facts discussed above into conclusions relevant to
+            a particular case. The HGN evidence from <a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;scilh=0">O’Key</a>provides
+            a useful example. Assuming that the officer observed the
+            requisite number of “clues” (e.g., lack of smooth pursuit
+            when the subject’s eye movements were observed), how
+            trustworthy is the resulting expert opinion of
+            impairment?</p>
+            <p>The answer will implicate the factors discussed in
+            Chapter 4, which involved scientific validity as assessed
+            for purposes of admissibility. Of course, the fact that an
+            expert’s proffered testimony survives that analysis does not
+            mean her conclusions are <em>correct</em>—only that, in the
+            court’s opinion, the evidence is of sufficient quality to
+            present to a jury. In appropriate cases, attacks on such
+            factors as the quality of the underlying validation studies,
+            or the method’s error rate, may be useful at trial even if
+            not sufficient to have the evidence excluded.</p>
+            <p>One strategy that can be fruitful relates to the
+            reluctance of some experts to set forth defined, objective
+            criteria that determine their ultimate conclusions. Some
+            methods rely on such criteria—for example, when an officer
+            performs the HGN test, observing four or more “clues”
+            allegedly supports a conclusion of im- pairment. Other
+            methods lack such definitive guideposts; experts who testify
+            regarding these methods may testify more generally that (for
+            example) measured values were “high” or “low.” An expert
+            may, for example, testify that elevated levels of certain
+            substances in the water downstream of a factory prove that
+            the factory is polluting the water.</p>
+            <p>With the latter type of expert, it may be fruitful to
+            attempt to pin down just what constitutes a “high” or “low”
+            value. The state is attempting to use the “high” or “low”
+            value to prove some fact of consequence (e.g., pollution
+            from the factory). What is the normal range that would be
+            expected absent that fact? What is the cut-off point above
+            or below which the expert generally concludes that that fact
+            must exist? Above or below that cut-off point, is the expert
+            reasonably certain that that fact exists, or does the value
+            at that level provide some lesser level of certainty?<a
+            href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a></p>
+            <p>If the latter, is there another, more extreme cut-off
+            point that <em>does</em>lead to reasonable certainty? And
+            for all these questions, how did the expert come up with
+            these numbers? Has she used them consistently before? Are
+            they published or written anywhere? Are they standardized
+            throughout her field? <a href="#fn4" class="footnote-ref"
+            id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+            <p>You may find that the state’s expert is reluctant to
+            commit to any such criteria. Such reluctance may be based on
+            an understanding of the risks created by such line-drawing.
+            If you can establish that the correct value may have been on
+            the other side of the cut-off point, that obviously
+            undermines the state’s case. The expert may recognize this
+            and try to retain the flexibility to adjust her analysis if
+            necessary. In addition, if up to that point you have been
+            exacting with your cross-examination, the expert may realize
+            that any answer setting forth a specific number will be
+            scrutinized—“What is your basis for using 25 as your
+            cut-off? So you can say to a reasonable degree of certainty
+            that whenever the value is more than 25, Fact X is present?”
+            If she knows she cannot set forth a scientifically
+            respectable basis for such a number, she may not be willing
+            to subject herself to that line of inquiry.</p>
+            <p>The expert’s refusal to be pinned down can be
+            frustrating, but in appropriate cases it can also be used to
+            undermine her conclusions. Almost by definition, a method
+            that is not governed by predetermined criteria is in essence
+            an exercise in “I know it when I see it,” with the
+            corresponding subjectivity and susceptibility to
+            outcome-based analysis. Accordingly, you may be able to
+            portray such a method as inherently less reliable than one
+            in which conclusions are based on objective, preexisting
+            standards.</p>
+            </section>
+            <section id="c._interpretive_limitations" class="level2">
+            <h2><strong>C. Interpretive Limitations</strong></h2>
+            <p>Often, a method will stop short of proving everything the
+            state would like to prove. The method may be nonspecific,
+            meaning that a certain result may be consistent with
+            multiple explanations or conclusions. For example, as the
+            Oregon Supreme Court acknowledged in <em>O’Key</em>, factors
+            other than alcohol impairment can cause nystagmus.<a
+            href="#fn5" class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a> Alternatively, the
+            method may provide only part of a necessary logical chain.
+            DNA ex- perts, for example, will generally admit that,
+            although they can match a sample to a suspect, DNA analysis
+            does not itself reveal how the DNA got to the place in which
+            it was found.</p>
+            </section>
+            <section id="d._quality_of_application" class="level2">
+            <h2><strong>D. Quality of Application</strong></h2>
+            <p>As discussed in Chapter 4, many methods are conducted
+            according to detailed, generally recognized procedures.
+            Indeed, the proponent will often emphasize the existence of
+            such procedures during the admissibility phase as one way of
+            demonstrating the trustworthiness of the method.</p>
+            <p>If the application of the method in your case involved
+            any deviations from established procedures or other defects,
+            that can be a subject of cross-examination. If you are going
+            to pursue such an attack, it will frequently be helpful to
+            set it up by demonstrating the significance of the
+            procedures at issue, and the possible skewing or uncertainty
+            that can result if those procedures are not properly
+            followed. You may find helpful statements in the protocols
+            themselves or in other literature relating to the method. In
+            addition, as noted above, the expert herself may have
+            provided helpful statements in her admissibility-phase
+            testimony.</p>
+            <p>The expert may, of course, attempt to downplay the
+            importance of any particular step, especially if she knows
+            that that step was not properly carried out. If she does so,
+            it may be appropriate to inquire into her qualifications to
+            opine on the relative importance of various procedural
+            requirements. Many state experts are essentially technicians
+            who have been trained to perform a certain method but lack
+            the background and expertise necessary to testify
+            competently on such issues. Published protocols will often
+            have been prepared by, or with the guidance of, people with
+            significant expertise. If that is the case, and if neither
+            those protocols nor any other published materials discount
+            the importance of a particular step, you may be able to
+            portray the contrary testimony of the state’s expert as
+            carrying relatively little weight.</p>
+            </section>
+            <section id="e._qualifications" class="level2">
+            <h2><strong>E. Qualifications</strong></h2>
+            <p>Are the expert’s qualifications sufficient to justify the
+            weight that the state wants jurors to give to her testimony?
+            This is a frequently used avenue of cross-examination.</p>
+            <p>There are, of course, risks and limitations involved with
+            cross-examining an expert regarding her qualifications. For
+            example, the more objective the scientific evidence is, the
+            less significant a particular expert’s qualifications are.
+            As discussed in Chapter 1, many experts essentially perform
+            a “pass-through” function, testifying about widely known
+            information that is often published in technical literature.
+            If that is the form of the testimony, virtually any “expert”
+            would presumably say the same thing, and an attack on the
+            particular witness’s qualifications may not be very
+            effective. By contrast, where the expert’s supposed
+            specialized knowledge is largely dependent on her own
+            personal experience and background, an inquiry into her
+            qualifications may be more appropriate.</p>
+            <p>Even for experts testifying on supposedly objective
+            topics, an attack on qualifications may be helpful with
+            respect to any aspects of the testimony that rely on the
+            expert’s own judgment. For example, there may be competing
+            schools of thought within a field regarding the validity of
+            a particular test. Even if the expert has learned to perform
+            the test and can testify to its application and results, is
+            she qualified to explain why the test’s proponents within
+            the field have a better case than its opponents? As another
+            example, is she qualified to testify regarding the
+            significance of any deviation from established
+            procedures?</p>
+            <p>In general, be alert for any effort by the expert to
+            stray outside the boundaries of her legitimate expertise, or
+            the boundaries set by the court at the admissibility
+            hearing. Similarly, when an expert combines testimony about
+            objective, generally known facts with more subjective
+            testimony based on her own experience, it may be helpful to
+            highlight the difference between those portions of her
+            testimony. The enhanced credibility often associated with
+            the former will then be less likely to spill over into the
+            latter.</p>
+            </section>
+            <section id="f._traditional_cross_examination"
+            class="level2">
+            <h2><strong>F. “Traditional” Cross-examination</strong></h2>
+            <p>Like any other witnesses, experts are subject to
+            cross-examination on generally applicable topics such as
+            bias, interest, and motive. As with cross-examination
+            regarding the expert’s qualifications, here too the
+            usefulness of this approach will depend on the nature of the
+            testimony and, in particular, how subjective it is. To the
+            extent that the expert is relying on her own judgment or
+            experience, as opposed to passing along objectively
+            verifiable information or principles, this line of
+            cross-examination may be appropriate. It can be especially
+            useful in the case of an expert who is employed by, or
+            testifies regularly for, the state. As Upton Sinclair said,
+            “[i]t is difficult to get a man to understand something when
+            his salary depends upon his not understanding it.”<a
+            href="#fn6" class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a></p>
+            </section>
+            <section id="g._constructive_cross_examination"
+            class="level2">
+            <h2><strong>G. Constructive Cross-examination</strong></h2>
+            <p>Finally, do not overlook the possibility of a
+            constructive cross-examination in which you attempt to turn
+            the state’s expert, at least in part, into your own.
+            Obviously, the entire logical chain as presented by the
+            state’s expert probably does not favor the defense. However,
+            there may be critical “turning points” or “forks in the
+            road” at which the subsequent direction of the analysis
+            depends on something that the expert accepts, but that you
+            can call into question. This may be an underlying fact, as
+            discussed above. Alternatively, it could be the selection of
+            a particular method, formula, or analytical approach from
+            among multiple alternatives that have legitimate support
+            within the field.</p>
+            <p>The expert may admit—especially if you have objective
+            support from learned treatises or other materials— that
+            taking a different “turn” at one of these points would
+            ultimately have led either to a different, defense-favorable
+            conclusion or to an inability to arrive at any reliable
+            conclusion. If so, and if you can at least raise a question
+            as to which way the analysis should have “turned” at one of
+            those points, you can use the state expert’s testimony to
+            your advantage.</p>
+            </section>
+            </section>
+            <section id="iii._using_learned_treatises" class="level1">
+            <h1><strong>III. Using Learned Treatises</strong></h1>
+            <p><a href="http://www.oregonlaws.org/ors/40.430">OEC
+            706</a> (“Impeachment of expert witness by learned
+            treatise”) provides that:</p>
+            <p>Upon cross-examination, an expert witness may be
+            questioned concerning statements contained in a published
+            treatise, periodical or pamphlet on a subject of history,
+            medicine or other science or art if the treatise, periodical
+            or pamphlet is established as a reliable authority. A
+            treatise, periodical or pamphlet may be established as a
+            reliable authority by the testimony or admission of the
+            witness, by other expert testimony or by judicial notice.
+            Statements contained in a treatise, periodical or pamphlet
+            established as a reliable authority may be used for purposes
+            of impeachment but may not be introduced as substantive
+            evidence.</p>
+            <p>This can be a particularly effective cross-examination
+            tool. Unlike expert testimony, pre-existing printed
+            materials have fixed content that cannot be adjusted to fit
+            the state’s needs in a particular case. Often, these
+            materials will reference limitations, uncertainties, or
+            necessary procedural safeguards that may be relevant to your
+            case. Chapter 1 outlines some of the various types of
+            materials that can used for this purpose, including
+            laboratory protocols, “standard” methods, technical
+            articles, and textbooks.</p>
+            <p>A publication must be “established as a reliable
+            authority” before you can use it for cross-examination under
+            OEC 706. The rule provides three ways to lay this
+            foundation: through the expert you are cross-examining,
+            through the testimony of another expert witness, or by
+            judicial notice. Of course, the state expert’s own admission
+            of reliability is particularly valuable. She may, at the
+            admissibility phase, have acknowledged or even affirmatively
+            relied on certain materials that she treats as trustworthy
+            authorities with respect to the topic at issue; if so, she
+            may find it awkward to distance herself from
+            defense-favorable statements in those materials. Conversely,
+            if she repeatedly refuses to acknowledge any publication as
+            a reliable authority, this may open up an attack on her
+            credibility or objectivity—especially if her qualifications
+            are less impressive than those held by the publications’
+            authors—or the basis of her purported expertise.</p>
+            <p>If you are not confident that the state’s expert will
+            acknowledge the reliability of the material you want to use
+            for cross-examination, be prepared to use one of the other
+            two options listed in OEC 706. If you rely on the “judicial
+            notice” option, be prepared to make a convincing case for
+            the acceptance of the publication as a reliable authority.
+            One option is to present evidence that the publication is
+            frequently cited in other materials in the field.</p>
+            <hr />
+            <references/>
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup><a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BLyons&amp;hl=en&amp;as_sdt=4%2C38&amp;case=630919102008065827&amp;scilh=0"><code>State v. Lyons</code></a><code>, 324 Or 256, 278-79 (1996) (internal quotation marks omitted).</code></sup><a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup><em>See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2Bsmallwood&amp;hl=en&amp;as_sdt=4%2C38&amp;case=410328086718642525&amp;scilh=0">State
+            v. Smallwood</a>, 25 Or App 251, 258 (1976) (“The jury is as
+            entitled to know what relevant information was not available
+            to or considered by an expert in arriving at his opinion as
+            it is to know what the expert did consider. It is relevant
+            in determining his competency as an expert and also the
+            weight to be accorded his opinion.”),</em>aff ’d'', 277 Or
+            503 (1977).</sup><a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><sup><em>See <a
+            href="http://scholar.google.com/scholar_case?case=630919102008065827&amp;q=State%2Bv.%2BLyons&amp;hl=en&amp;as_sdt=4%2C38&amp;scilh=0">State
+            v. Lyons</a>, 324 Or 256, 275 (1996) (“Courts do not require
+            that scientific tests be infallible to be admissible. Only
+            reasonable certainty must follow from the tests.”);</em>see
+            also <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BSampson&amp;hl=en&amp;as_sdt=4%2C38&amp;case=7487768677061913031&amp;scilh=0">State
+            v. Sampson</a>, 167 Or App 489, 505 (“We focus on whether
+            proffered scientific evidence has a rate of error low enough
+            that its results can be trusted with ‘reasonable
+            certainty.’” (quoting <em>Lyons</em>)).</sup><a
+            href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><sup>Not all expert testimony, of course, rests
+            on allegedly “high” or “low” measured values. An expert may
+            testify more qualitatively (e.g., that a certain behavior or
+            occurrence was “unusual”), or testify to the absence of any
+            unusual event or condition. The specific cross-examination
+            questions may be different for such testimony, but the
+            principles are similar.</sup><a href="#fnref4"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn5"><sup>''See <a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;scilh=0">State
+            v. O’Key</a>, 321 Or 285, 312-13 (1995) (en banc).</sup><a
+            href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><sup>Upton Sinclair, <em>I, Candidate for
+            Governor: And How I Got Licked</em>109 (photo. Reprint 1994)
+            (1935).</sup><a href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

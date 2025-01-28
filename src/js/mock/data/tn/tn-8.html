@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p>Chapter 8. Jury Selection</p>
+            <p><strong><em>By Janet Lee Hoffman and Sara F.
+            Werboff</em></strong></p>
+            <section
+            id="i._foundation_of_the_right_to_a_jury_trial_in_state_court"
+            class="level1">
+            <h1><strong>I. Foundation of the Right to a Jury Trial in
+            State Court</strong></h1>
+            <section id="a._constitutional_sources" class="level2">
+            <h2><strong>A. Constitutional Sources</strong></h2>
+            <p>In all criminal cases, the accused has the right to a
+            trial by an impartial jury. <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Article
+            I, section 11, of the Oregon Constitution</a>; <a
+            href="http://www.law.cornell.edu/constitution/sixth_amendment">Sixth
+            Amendment</a> of the United States Constitution. The
+            guarantee of trial by an “impartial jury” means “trial by a
+            jury that is not biased in favor of or against either party,
+            but is influenced in making its decision only by evidence
+            produced at trial and legal standards provided by the trial
+            court.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Amini,+331+Or+384,+391,+15+P3d+541,+545+%282000%29&amp;hl=en&amp;as_sdt=2,38&amp;case=6942049147936432693&amp;scilh=0">State
+            v. Amini</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Amini,+331+Or+384,+391,+15+P3d+541,+545+%282000%29&amp;hl=en&amp;as_sdt=2,38&amp;case=6942049147936432693&amp;scilh=0">,
+            331 Or 384, 391, 15 P3d 541, 545 (2000)</a>.</p>
+            </section>
+            <section
+            id="b._state_constitutional_right_to_jury_trial_is_broader_than_federal_right"
+            class="level2">
+            <h2><strong>B. State Constitutional Right to Jury Trial Is
+            Broader than Federal Right</strong></h2>
+            <p>The Oregon appellate courts have held that the right to a
+            jury trial extends to some violations when that violation
+            retains substantial penal characteristics. <a
+            href="http://scholar.google.com/scholar_case?q=280+Or+95,+570+P2d+52+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9670535638878437571&amp;scilh=0">Brown
+            v. Multnomah County Dist. Ct.</a><a
+            href="http://scholar.google.com/scholar_case?q=280+Or+95,+570+P2d+52+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=9670535638878437571&amp;scilh=0">,
+            280 Or 95, 109-111, 570 P2d 52 (1977)</a> (jury trial for
+            DUII violation); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fuller,+252+Or+App+391,+287+P3d+1263+%282012%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17126074765087935012&amp;scilh=0">State
+            v. Fuller</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fuller,+252+Or+App+391,+287+P3d+1263+%282012%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17126074765087935012&amp;scilh=0">,
+            252 Or App 391, 287 P3d 1263 (2012)</a> (jury trial for
+            theft charged as a violation).</p>
+            <p>The court considers the following factors in deciding
+            whether the accused has a right to a jury trial:</p>
+            <p>the type of offense</p>
+            <p>the nature of the prescribed penalty</p>
+            <p>the collateral consequences associated with
+            conviction</p>
+            <p>the significance of the conviction to the community,
+            and</p>
+            <p>and the pretrial practices associated with an arrest and
+            detention for the offense.</p>
+            <p><em>State v. Fuller</em>, 252 Or App 391, 394, 287 P3d
+            1263, 1265 (2012).</p>
+            </section>
+            <section id="c._statutory_sources" class="level2">
+            <h2><strong>C. Statutory Sources</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.001</a> provides that “The defendant and the state in
+            all criminal prosecutions have the right to a public trial
+            by an impartial jury.”</p>
+            <p><strong>NB</strong>: In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Baker,+328+Or+355,+976+P2d+1132+%281999%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16865013857854825510&amp;scilh=0">State
+            v. Baker</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Baker,+328+Or+355,+976+P2d+1132+%281999%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16865013857854825510&amp;scilh=0">,
+            328 Or 355, 976 P2d 1132 (1999)</a>, the Oregon Supreme
+            Court held that the 1997 amendment to the statute, granting
+            the state the right to demand a jury trial, was
+            unconstitutional under Article I, section 11, of the Oregon
+            Constitution if the defendant waives jury trial and the
+            court accepts that waiver.</p>
+            </section>
+            <section id="d._waiver_of_right_to_jury_trial"
+            class="level2">
+            <h2><strong>D. Waiver of Right to Jury Trial</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.001(2)</a> expressly requires a written waiver of a jury
+            trial. Written waivers are also required by Article I,
+            section 11.</p>
+            <p>''See <a
+            href="http://scholar.google.com/scholar_case?q=Anderson+2006&amp;hl=en&amp;as_sdt=4,227&amp;case=4283596883486473322&amp;scilh=0">State
+            v. Anderson</a><a
+            href="http://scholar.google.com/scholar_case?q=Anderson+2006&amp;hl=en&amp;as_sdt=4,227&amp;case=4283596883486473322&amp;scilh=0">,
+            208 Or App 335, 144 P3d 1024 (2006)</a> (written waiver
+            required); <a
+            href="http://scholar.google.com/scholar_case?q=barber&amp;hl=en&amp;as_sdt=4,38&amp;case=4145411547261141276&amp;scilh=0">State
+            v. Barber</a><a
+            href="http://scholar.google.com/scholar_case?q=barber&amp;hl=en&amp;as_sdt=4,38&amp;case=4145411547261141276&amp;scilh=0">,</a>343
+            Or 525, 173 P3d 827 (2007) (lack of a written waiver of jury
+            trial is plain error on the face of the record requiring
+            reversal).</p>
+            <p>Waiver of jury for the guilt phase of a trial will act as
+            a waiver of jury for sentencing purposes even if not
+            specified in the waiver. <a
+            href="http://scholar.google.com/scholar_case?q=curry+2006&amp;hl=en&amp;as_sdt=4,227&amp;case=6323908921339799118&amp;scilh=0">State
+            v. Curry</a><a
+            href="http://scholar.google.com/scholar_case?q=curry+2006&amp;hl=en&amp;as_sdt=4,227&amp;case=6323908921339799118&amp;scilh=0">,
+            209 Or App 31, 146 P3d 348 (2006)</a>.</p>
+            <p>If defendant waives a jury trial and the court accepts
+            that waiver, the state cannot demand a jury trial. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Baker,+328+Or+355,+976+P2d+1132+%281999%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16865013857854825510&amp;scilh=0">State
+            v. Baker</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Baker,+328+Or+355,+976+P2d+1132+%281999%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16865013857854825510&amp;scilh=0">,
+            328 Or 355, 976 P2d 1132 (1999)</a>.</p>
+            </section>
+            </section>
+            <section id="ii._composition_of_jury" class="level1">
+            <h1><strong>II. Composition of Jury</strong></h1>
+            <section id="a._constitutional_minimum" class="level2">
+            <h2><strong>A. Constitutional Minimum</strong></h2>
+            <p>The United States Supreme Court held in <a
+            href="http://scholar.google.com/scholar_case?q=Ballew+v.+Georgia,+435+US+223,+98+S+Ct+1029+%281978%29&amp;hl=en&amp;as_sdt=3,227&amp;case=11814310914387640522&amp;scilh=0">Ballew
+            v. Georgia</a><a
+            href="http://scholar.google.com/scholar_case?q=Ballew+v.+Georgia,+435+US+223,+98+S+Ct+1029+%281978%29&amp;hl=en&amp;as_sdt=3,227&amp;case=11814310914387640522&amp;scilh=0">,
+            435 US 223, 98 S Ct 1029 (1978)</a>, that juries must be
+            comprised of at least six jurors. Juries consisting of fewer
+            jurors would substantially deprive an accused of the right
+            to a jury trial guaranteed by the Sixth and Fourteenth
+            Amendments to the United States Constitution.</p>
+            <p>Similarly, Article VII (amended), section 9, of the
+            Oregon Constitution precludes the enactment of any statutory
+            provision authorizing less than six jurors.</p>
+            </section>
+            <section id="b._oregon_circuit_court" class="level2">
+            <h2><strong>B. Oregon Circuit Court</strong></h2>
+            <p>For all <strong>felony</strong> cases, the jury shall be
+            comprised of 12 jurors, unless both parties consent to be
+            tried by fewer jurors. ORS 136.210(1).</p>
+            <p>The defendant’s waiver of 12 jurors cannot be implied
+            from a silent record or a failure to object to continuing
+            the trial. ORS 136.001. <a
+            href="http://scholar.google.com/scholar_case?q=Lutz&amp;hl=en&amp;as_sdt=4,38&amp;case=6419960224270148436&amp;scilh=0">State
+            v. Lutz,</a><a
+            href="http://scholar.google.com/scholar_case?q=Lutz&amp;hl=en&amp;as_sdt=4,38&amp;case=6419960224270148436&amp;scilh=0">306
+            Or 499, 760 P2d 249 (1988)</a> (defendant must consent to
+            trial by fewer than 12 jurors on the record).</p>
+            <p>If the defendant is accused solely of
+            <strong>misdemeanor</strong> charges, then the jury shall
+            consist of six persons. ORS 136.210(2).</p>
+            </section>
+            <section id="c._justice_courts" class="level2">
+            <h2><strong>C. Justice Courts</strong></h2>
+            <p>Jury procedure in Justice Court is governed by <a
+            href="http://www.leg.state.or.us/ors/054.html">ORS
+            54.010</a> <em>et seq.</em>The jury in Justice Court is
+            comprised of six jurors.</p>
+            </section>
+            </section>
+            <section id="iii._juror_qualifications" class="level1">
+            <h1><strong>III. Juror Qualifications</strong></h1>
+            <section id="a._eligibility_to_serve_as_a_juror"
+            class="level2">
+            <h2><strong>A. Eligibility to Serve as a Juror</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.030(3)(a)</a> provides that:</p>
+            <p>Any person is eligible to act as a grand juror, or as a
+            juror in a criminal trial, unless the person:</p>
+            <p>(A) Is not a citizen of the United States;</p>
+            <p>(B) Does not live in the county in which summoned</p>
+            <p>for jury service;</p>
+            <p>(C) Is less than 18 years of age;</p>
+            <p>(D) Has had rights and privileges withdrawn and not
+            restored under ORS 137.281;</p>
+            <p>(E) Has been convicted of a felony or served a felony
+            sentence within the 15 years immediately preceding the date
+            the person is required to report for jury service; or</p>
+            <p>(F) Has been convicted of a misdemeanor involving
+            violence or dishonesty, or has served a misdemeanor sentence
+            based on a misdemeanor involving violence or dishonesty,
+            within the five years immediately preceding the date the
+            person is required to report for jury service.</p>
+            <p>Recent prior service on a jury also excludes a person
+            from service. A person is ineligible to act as a juror in
+            any circuit court in Oregon within 24 months after being
+            discharged from jury service in a federal court in this
+            state or a circuit court of this state unless that person’s
+            service is required because of a need for additional jurors.
+              ORS 10.030(5).</p>
+            </section>
+            <section
+            id="b._juror_eligibility_cannot_be_limited_on_the_basis_of_discrimination_against_a_cognizable_group"
+            class="level2">
+            <h2><strong>B. Juror Eligibility Cannot Be Limited on the
+            Basis of Discrimination Against a Cognizable
+            Group</strong></h2>
+            <p>Except as otherwise provided by statute, “the opportunity
+            for jury service may not be denied or limited on the basis
+            of race, religion, sex, sexual orientation, national origin,
+            age, income, occupation or any other factor that
+            discriminates against a cognizable group in this state.” ORS
+            10.030(1).  </p>
+            <p>Further, a person cannot be excluded from service on a
+            jury on the basis of blindness, hearing or speech
+            impairment, or physical disability alone. ORS 10.030(4).
+             </p>
+            </section>
+            </section>
+            <section id="iv._excusal_of_jurors_by_the_court_or_clerk"
+            class="level1">
+            <h1><strong>IV. Excusal of Jurors by the Court or
+            Clerk</strong></h1>
+            <section
+            id="a._power_of_judge_or_clerk_to_excuse_a_juror_for_undue_hardship"
+            class="level2">
+            <h2><strong>A. Power of Judge or Clerk to Excuse a Juror for
+            Undue Hardship</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.050</a> permits the judge or clerk of court to excuse a
+            person from acting as a juror on a showing of “undue
+            hardship or extreme inconvenience to the person, the
+            person’s family, the person’s employer or the public served
+            by the person.”  </p>
+            <p>In making this determination, the court “shall carefully
+            consider and weigh both the public need for juries which are
+            representative of the full community and the individual
+            circumstances offered as a justification for excuse from
+            jury service.”</p>
+            </section>
+            <section
+            id="b._power_of_judge_or_clerk_to_grant_exemptions_from_jury_service"
+            class="level2">
+            <h2><strong>B. Power of Judge or Clerk to Grant Exemptions
+            from Jury Service</strong></h2>
+            <p>A person may request and be granted an exemption if that
+            person is 70 years of age or older, ORS 10.050(3), a women
+            who is breastfeeding a child, ORS 10.050(4), or if the
+            person is the sole caregiver for a child or other dependent
+            and is unable to afford or make arrangements from the care
+            of the dependent, <a
+            href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.050(5)</a>.  </p>
+            </section>
+            <section
+            id="c._power_of_judge_to_excuse_a_juror_on_the_courts_own_motion"
+            class="level2">
+            <h2><strong>C. Power of Judge to Excuse a Juror on the
+            Court’s Own Motion</strong></h2>
+            <p>The court may also, on its own motion, excuse a juror
+            “whose presence on the jury would substantially impair the
+            progress of the action of trial or prejudice the parties
+            thereto.”   ORS 10.050(2).   This provision specifically
+            applies to jurors who are blind, hearing or speech impaired,
+            or physically disabled, and are qualified under ORS
+            10.030(4).</p>
+            <p><strong>NB:</strong> The trial court may also exercise
+            its power under ORS 10.050(2) to exclude a
+            non-English-speaking juror. State v. Haugen, 349 Or 174,
+            183, 243 P3d 31 (2010) (trial court may “respond to the
+            potential difficulties of seating a non-English-speaking
+            juror by excusing that juror”).</p>
+            </section>
+            </section>
+            <section id="v._challenges_to_the_venire_panel"
+            class="level1">
+            <h1><strong>V. Challenges to the Venire Panel</strong></h1>
+            <section id="a._procedure_for_challenging_venire_panel"
+            class="level2">
+            <h2><strong>A. Procedure for Challenging Venire
+            Panel</strong></h2>
+            <p>A motion under <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.005</a> is the <strong>exclusive means</strong> by which
+            the District Attorney or defense counsel may challenge a
+            jury panel.</p>
+            <p>Challenges to the venire panel <strong>must<em></em>be
+            made before voir dire</strong>. ORS 136.005(2).</p>
+            </section>
+            <section id="b._grounds_for_motion_under_ors_136.005"
+            class="level2">
+            <h2><strong>B. Grounds for Motion under ORS
+            136.005</strong></h2>
+            <p>“The district attorney or the defendant in a criminal
+            action may challenge the jury panel on the ground that there
+            has been a material departure from the requirements of the
+            law governing selection of jurors by filing a motion with
+            the court supported by an affidavit alleging facts that, if
+            true, constitute a material departure from the requirements
+            of the law governing the selection of jurors. The party
+            making the motion shall serve the motion and supporting
+            affidavit on the other party, the trial court administrator
+            and the State Court Administrator.””</p>
+            <p>ORS 136.005(1).</p>
+            <p>A “<strong>material departure</strong>” is a “‘deviation’
+            of ‘great consequence’ from the constitutional or statutory
+            procedures that govern the selection of juries.”   <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">,
+            334 Or 633 (2002)</a>.   Counsel need only allege facts
+            that, <em>if true</em>, would amount to a <em>material
+            departure</em> from the requirements of law.  
+            <em>Id</em>.</p>
+            <p>If the court determines that there has been a material
+            departure, it may stay the proceedings pending the selection
+            of a jury panel in conformity with the law or “grant such
+            other relief as may be appropriate.   ORS 136.005(3).  </p>
+            <p><strong>Practice Tip:</strong> If the defendant
+            contemplates making a challenge to the venire panel, counsel
+            should subpoena the source lists, master lists, term lists,
+            and individual voir dire lists. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=331+Or+500&amp;hl=en&amp;as_sdt=4,38&amp;case=16100685025884179795&amp;scilh=0">State
+            ex rel. Click v. Brownhill</a><a
+            href="http://scholar.google.com/scholar_case?q=331+Or+500&amp;hl=en&amp;as_sdt=4,38&amp;case=16100685025884179795&amp;scilh=0">,
+            331 Or 500, 508 (2000)</a> (defendants allowed to subpoena
+            jury information necessary to support a challenge to the
+            venire panel). <a
+            href="http://www.leg.state.or.us/ors/010.html">ORS
+            10.205</a></em>et seq<em>. details the record preservation
+            requirements concerning the jury selection process. All of
+            these records are subject to a subpoena.</em>Brownhill'',
+            331 Or at 508.</p>
+            </section>
+            <section id="c._the_fair_cross_section_requirement"
+            class="level2">
+            <h2><strong>C. The Fair Cross Section
+            Requirement</strong></h2>
+            <p>A jury venire must represent a fair cross section of the
+            community. Drawing a jury from a non-representative cross
+            section of the community implicates both the <strong>right
+            to an impartial jury</strong>, <em>see <a
+            href="http://scholar.google.com/scholar_case?q=Taylor+v.+Louisiana,+419+US+522+%281975%29&amp;hl=en&amp;as_sdt=3,227&amp;case=2333796113537427653&amp;scilh=0">Taylor
+            v. Louisiana</a><a
+            href="http://scholar.google.com/scholar_case?q=Taylor+v.+Louisiana,+419+US+522+%281975%29&amp;hl=en&amp;as_sdt=3,227&amp;case=2333796113537427653&amp;scilh=0">,
+            419 US 522 (1975)</a> (claim grounded in Sixth Amendment)
+            and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">,
+            334 Or 633, 490 (2002)</a> (claim grounded in <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Article
+            I, section 11, of the Oregon Constitution</a>), and
+            <strong>equal protection</strong> concerns,</em>see <a
+            href="http://scholar.google.com/scholar_case?q=Castaneda+v.+Partida,+430+US+482,+494+%281977%29&amp;hl=en&amp;as_sdt=3,227&amp;case=8142268845700378439&amp;scilh=0">Castaneda
+            v. Partida</a><a
+            href="http://scholar.google.com/scholar_case?q=Castaneda+v.+Partida,+430+US+482,+494+%281977%29&amp;hl=en&amp;as_sdt=3,227&amp;case=8142268845700378439&amp;scilh=0">,
+            430 US 482, 494 (1977)</a> (claim grounded in Equal
+            Protection Clause of Fourteenth Amendment).</p>
+            <p>The “fair cross section” requirement is a component of
+            both the state and federal constitutional rights to an
+            impartial jury. <em>State v. Rogers</em>, 334 Or 633, 490
+            (2002); <em>Taylor v. Louisiana</em>, 419 US 522 (1975)
+            (“the presence of a fair cross section of the community on
+            venires…from which the petit juries are drawn is essential
+            to the fulfillment of the Sixth Amendment’s guarantee of an
+            impartial jury).</p>
+            <p><strong>NB:</strong> In <em>State v. Rogers</em>, the
+            Oregon Supreme Court said that the Article I, section 11,
+            analysis for a fair cross section claim is the same as that
+            applied under the Sixth Amendment. 334 Or 633, 490 n. 3
+            (2002).</p>
+            <p>The fair cross section requirement applies only to the
+            pool from which the petit jury is drawn; there is no
+            requirement that the final jury “reflect the composition of
+            the community at large.” <a
+            href="http://scholar.google.com/scholar_case?q=Lockhart+v.+McCree,+476+US+162,+173+%281986%29&amp;hl=en&amp;as_sdt=3,227&amp;case=5681124629544659207&amp;scilh=0">Lockhart
+            v. McCree</a><a
+            href="http://scholar.google.com/scholar_case?q=Lockhart+v.+McCree,+476+US+162,+173+%281986%29&amp;hl=en&amp;as_sdt=3,227&amp;case=5681124629544659207&amp;scilh=0">,
+            476 US 162, 173 (1986)</a>.</p>
+            <p>Fair Cross Section Challenge: Right to Impartial Jury To
+            make a prima facie case that the venire selection procedure
+            violates the fair cross section requirement under the
+            <strong>Sixth Amendment and Article I, section 11</strong>,
+            the defendant must demonstrate the following facts:</p>
+            <p>the alleged exclusion affects a “distinctive group”</p>
+            <p>the representation of the group in venire is unreasonable
+            in proportion to their number in the community, and</p>
+            <p>the underrepresentation results from “systematic
+            exclusion.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=Duren+v.+Missouri,+439+US+357,+364+%281979%29&amp;hl=en&amp;as_sdt=3,227&amp;case=14429608937163638779&amp;scilh=0">Duren
+            v. Missouri</a><a
+            href="http://scholar.google.com/scholar_case?q=Duren+v.+Missouri,+439+US+357,+364+%281979%29&amp;hl=en&amp;as_sdt=3,227&amp;case=14429608937163638779&amp;scilh=0">,
+            439 US 357, 364 (1979)</a>.</p>
+            <p>Once the defendant has made this prima facie showing, the
+            state can only save its selection system if it can
+            demonstrate that “a significant state interest [is]
+            manifestly and primarily advanced,” by the challenged aspect
+            of the selection system. <em>Duren v. Missouri</em>, 349 US
+            357, 367 (1979).</p>
+            <p><strong>NB:</strong> The defendant <em>does not</em> have
+            to show discriminatory intent, only that the exclusion is
+            “systematic.” A systematic exclusion can be shown by the
+            impact of the rule, instead of from the face of the
+            discriminatory rule.</p>
+            <p>The defendant does not need to be a member of the
+            excluded group in order to bring a fair cross section
+            claim.</p>
+            <p>There is some debate over what constitutes a “distinctive
+            group” – the Supreme Court has not precisely defined the
+            term and so far has stated only that it applies to “race,
+            gender, [and] ethnic background.” <em>Lockhart v.
+            McCree</em>, 476 US 162, 175 (1986).</p>
+            <p>Fair Cross Section Challenge: Equal Protection To make a
+            prima facie case that the jury venire violates the
+            <strong>Equal Protection Clause</strong>, the defendant
+            must:</p>
+            <p>Establish that the excluded group is one that is a
+            “‘recognizable, distinct class,’” singled out for different
+            treatment under the law, as written or applied.” State v.
+            Haugen, 349 Or 174, 184-85, 243 P3d 31 (2010)] (quoting <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">State
+            v Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">,
+            334 Or 633, 642 n 8, 55 P3d 488 (2002)</a>).</p>
+            <p>Show the degree of under representation by comparing the
+            proportion of the group in the total population to the
+            proportion called to serve as jurors, over a significant
+            period of time. <em>Id</em>.</p>
+            <p>Demonstrate that the state’s selection procedure is
+            susceptible of abuse or is not racially neutral in support
+            of the presumption of discrimination raised by the
+            statistical showing. <em>Id</em>.</p>
+            <p>Show that the exclusion of a cognizable group is
+            “purposeful.” This in turn requires the defendant to
+            “establish a clear pattern that emerges from the effect of
+            the state’s action, inexplicable on ground other than race,
+            even when the governing legislation appears neutral on its
+            face.” <em>Id</em>.</p>
+            <p>It is more difficult to establish a violation of the
+            Equal Protection Clause because the defendant must show
+            “purposeful” discrimination, whereas under the impartial
+            jury rationale, the defendant need only show that there is a
+            discriminatory impact resulting from the state’s system of
+            jury panel selection.</p>
+            </section>
+            <section id="d._anonymous_juries" class="level2">
+            <h2><strong>D. Anonymous Juries</strong></h2>
+            <p>Although empaneling an anonymous jury is an uncommon and
+            disfavored procedure, counsel should challenge this
+            procedure if it is used.</p>
+            <p>An anonymous jury panel occurs when identifying
+            information of the jurors is withheld from either the
+            defendant or defendant’s counsel or if jurors are instructed
+            to withhold information. <a
+            href="http://scholar.google.com/scholar_case?q=288+P3d+544+%282012%29&amp;hl=en&amp;as_sdt=4,38&amp;case=11030864789189139361&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=288+P3d+544+%282012%29&amp;hl=en&amp;as_sdt=4,38&amp;case=11030864789189139361&amp;scilh=0">,
+            352 Or 510, 540, 288 P3d 544 (2012)</a>. An anonymous jury
+            panel risks offending a defendant’s right to an impartial
+            jury in two ways: first, it hinders the defendant’s ability
+            to conduct voir dire and select impartial jurors, and
+            second, it is an external factor that compromises the jury’s
+            ability to remain impartial because it undermines the
+            defendant’s presumption of innocence by creating an
+            inference that the defendant is dangerous. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">State
+            v. Sundberg</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">,
+            349 Or 608, 620, 247 P3d 1213 (2011)</a>.</p>
+            <p>Oregon has adopted the federal standard for empanelling
+            an anonymous jury, but it appears that the procedure is far
+            more uncommon in state court. Under that standard, the trial
+            court has the authority to order an anonymous jury selection
+            <em>only if</em> the trial court concludes there is a strong
+            reason to believe the jury needs protection and the court
+            takes reasonable precautions to minimize any prejudicial
+            effects on the defendant and to ensure his fundamental
+            rights are protected. <em>Sundberg</em>, 349 Or at 621
+            (citing <a
+            href="http://scholar.google.com/scholar_case?q=U.S.+v.+Paccione,+949+F2d+1183,+%282d+Cir.1991%29&amp;hl=en&amp;as_sdt=3,227&amp;case=10322767503100529902&amp;scilh=0">U.S.
+            v. Paccione,</a><a
+            href="http://scholar.google.com/scholar_case?q=U.S.+v.+Paccione,+949+F2d+1183,+%282d+Cir.1991%29&amp;hl=en&amp;as_sdt=3,227&amp;case=10322767503100529902&amp;scilh=0">949
+            F2d 1183, 1192 (2d Cir.1991),</a> <em>cert. den.</em> 505
+            U.S. 1220, 112 S.Ct. 3029, 120 L.Ed.2d 900 (1992)).</p>
+            <p>1. A trial court has the authority to protect jurors from
+            the risk of physical harm, intimidation, or harassment,
+            whether by parties, the press, or the public, by withholding
+            juror names and other identifying information; but a
+            determination that such a risk exists must be made on the
+            facts of each case and not on the basis of a generalized
+            desire to protect the anonymity of all jurors in all cases
+            in the interests of juror privacy. <a
+            href="http://scholar.google.com/scholar_case?q=sundberg&amp;hl=en&amp;as_sdt=4,38&amp;case=12352264717850014576&amp;scilh=0">State
+            v. Sundberg</a><a
+            href="http://scholar.google.com/scholar_case?q=sundberg&amp;hl=en&amp;as_sdt=4,38&amp;case=12352264717850014576&amp;scilh=0">,
+            349 Or 608, 247 P3d 1213 (2011)</a>.</p>
+            <p>2. If the trial court does make sufficient findings that
+            an anonymous jury procedure is required, it must then take
+            steps to minimize the prejudice to the defendant. Such
+            measures may include “permitting extensive voir dire of each
+            juror regarding potentially relevant matters and providing a
+            ‘plausible and nonprejudicial’ explanation to jurors for not
+            disclosing their identities. Id. at 623.</p>
+            <p>The two Oregon Supreme Court cases that have addressed
+            the use of anonymous juries concluded that the use of the
+            procedure was reversible error. Particularly after
+            <em>Rogers</em>, it appears that in Oregon anonymous juries
+            are <em>highly disfavored</em>. It is possible that any
+            remedial measure will be inadequate in light of the very
+            great risk of prejudice faced by the defendant.</p>
+            <p><strong>Practice Tip:</strong>The use of an anonymous
+            jury most directly implicates the defendant’s right to
+            conduct voir dire, however, it really is a problem with the
+            venire and should be raised prior to the commencement of
+            voir dire. If the trial court improperly uses an anonymous
+            jury procedure, counsel should move to have the entire
+            venire panel dismissed and a new panel called.</p>
+            </section>
+            </section>
+            <section id="vi._voir_dire" class="level1">
+            <h1><strong>VI. Voir Dire</strong></h1>
+            <section id="a._purpose_and_approach_to_voir_dire"
+            class="level2">
+            <h2><strong>A. Purpose and Approach to Voir
+            Dire</strong></h2>
+            <p>Voir dire serves the right to trial by a fair and
+            impartial jury. <a
+            href="http://scholar.google.com/scholar_case?q=Lambert+v.+Sisters+of+St.+Joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">Lambert
+            v. Sisters of St. Joseph</a><a
+            href="http://scholar.google.com/scholar_case?q=Lambert+v.+Sisters+of+St.+Joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">,
+            277 Or 223, 230, 560 P2d 262 (1977)</a>. An impartial juror
+            is one which favors neither side and whose mind will allow a
+            decision based upon the evidence and the law.
+            <em>Lambert</em>, 277 Or at 230.</p>
+            <p>Voir dire is to be conducted so as to determine juror
+            impartiality. Thus, any inquiry into whether a juror would
+            be willing to have a person who is in the questioner’s frame
+            of mind sit on the jury has been held improper as being an
+            examination designed to identify partiality to one side or
+            another. <em>State v. Wakefield</em>, 111 Or 615, 619-620
+            (1924).</p>
+            <p>Defendant’s due process right to a fair trial requires an
+            adequate voir dire to identify unqualified jurors. <a
+            href="http://scholar.google.com/scholar_case?q=Morgan+illinois&amp;hl=en&amp;as_sdt=2,38&amp;case=11006108854293170103&amp;scilh=0">Morgan
+            v. Illinois</a><a
+            href="http://scholar.google.com/scholar_case?q=Morgan+illinois&amp;hl=en&amp;as_sdt=2,38&amp;case=11006108854293170103&amp;scilh=0">,
+            504 US 719, 112 S Ct 2222, 119 L Ed 2d 492 (1992)</a>.
+            <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=swain+alabama&amp;hl=en&amp;as_sdt=2,38&amp;case=6833450436558763058&amp;scilh=0">Swain
+            v. Alabama</a><a
+            href="http://scholar.google.com/scholar_case?q=swain+alabama&amp;hl=en&amp;as_sdt=2,38&amp;case=6833450436558763058&amp;scilh=0">,
+            380 US 202 (1965)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=rosales+lopez+1976&amp;hl=en&amp;as_sdt=2,38&amp;case=13120098518847889246&amp;scilh=0">Rosales-Lopez
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=rosales+lopez+1976&amp;hl=en&amp;as_sdt=2,38&amp;case=13120098518847889246&amp;scilh=0">,
+            451 US 182 (1981)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Baldwin&amp;hl=en&amp;as_sdt=2,38&amp;case=2890476069075818349&amp;scilh=0">United
+            States v. Baldwin</a><a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Baldwin&amp;hl=en&amp;as_sdt=2,38&amp;case=2890476069075818349&amp;scilh=0">,
+            607 F2d 1295 (9th Cir 1979)</a>.</p>
+            <p>The principal purpose of voir dire is to discover whether
+            a potential juror harbors opinions and biases that would
+            justify an excusal for cause. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            57D</a>; <a
+            href="http://scholar.google.com/scholar_case?q=barone&amp;hl=en&amp;as_sdt=4,38&amp;case=17874809457070670891&amp;scilh=0">State
+            v. Barone</a><a
+            href="http://scholar.google.com/scholar_case?q=barone&amp;hl=en&amp;as_sdt=4,38&amp;case=17874809457070670891&amp;scilh=0">,
+            328 Or 68, 969 P2d 1013 (1998)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">State
+            v. Nefstad</a><a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">,
+            309 Or 523, 526, 789 P2d 1326 (1990)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">State
+            v. Montez</a><a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">,
+            309 Or 564, 789 P2d 1352 (1990)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=barnett&amp;hl=en&amp;as_sdt=4,38&amp;case=10062399597194376366&amp;scilh=0">State
+            v. Barnett</a><a
+            href="http://scholar.google.com/scholar_case?q=barnett&amp;hl=en&amp;as_sdt=4,38&amp;case=10062399597194376366&amp;scilh=0">,
+            251 Or 234, 445 P2d 124 (1968)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=McElwain+v.+Kabatoff&amp;hl=en&amp;as_sdt=2,38&amp;case=15951722860454322213&amp;scilh=0">McElwain
+            v. Kabatoff</a><a
+            href="http://scholar.google.com/scholar_case?q=McElwain+v.+Kabatoff&amp;hl=en&amp;as_sdt=2,38&amp;case=15951722860454322213&amp;scilh=0">,
+            275 Or 393, 551 P2d 105 (1976)</a>.</p>
+            <p>A juror’s probability of bias, as determined by the
+            court, is the test of that juror’s disqualification.
+            <em>Lambert</em>, 277 Or at 230; and <a
+            href="http://scholar.google.com/scholar_case?q=Lane+County+v.+Walker,+30+Or+App+715,+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6614715555598292584&amp;scilh=0">Lane
+            County v. Walker</a><a
+            href="http://scholar.google.com/scholar_case?q=Lane+County+v.+Walker,+30+Or+App+715,+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6614715555598292584&amp;scilh=0">,
+            30 Or App 715, 721 (1977)</a>. The qualification of a juror
+            is a question for the trial court, whose decision will not
+            be disturbed on appeal absent an abuse of discretion.
+            <em>State v. Olberman</em>, 33 Or 556, 558 (1899); <em>State
+            v. Brumfield</em>, 104 Or 506, 526-529 (1922).</p>
+            <p>Another purpose of voir dire it to elicit sufficient
+            information to ascertain whether to challenge a juror
+            peremptorily. <a
+            href="http://scholar.google.com/scholar_case?q=miller+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=1056700984892349006&amp;scilh=0">State
+            v. Miller</a><a
+            href="http://scholar.google.com/scholar_case?q=miller+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=1056700984892349006&amp;scilh=0">,
+            10 Or App 636, 501 P2d 326 (1972)</a>;<em>Jones v. Imperial
+            Garages, Inc</em>., 174 Or 49, 57-58, 145 P2d 469
+            (1944);<em>State v. Lauth</em>, 46 Or 342, 80 P 660 (1905).
+            Under the United States Constitution, a defendant possesses
+            a Sixth Amendment right to intelligently exercise peremptory
+            challenges. <a
+            href="http://scholar.google.com/scholar_case?q=Nebraska+Stuart&amp;hl=en&amp;as_sdt=2,38&amp;case=2489199669673453004&amp;scilh=0">Nebraska
+            Press Association v. Stuart</a><a
+            href="http://scholar.google.com/scholar_case?q=Nebraska+Stuart&amp;hl=en&amp;as_sdt=2,38&amp;case=2489199669673453004&amp;scilh=0">,
+            427 US 539, 600-02, 96 S Ct 2791 (1976)</a>.</p>
+            <p><strong>Practice Tip:</strong>Counsel is entitled to
+            question jurors on all issues that are relevant to actual
+            issues in the case. If the court senses that you are using
+            voir dire for an impermissible purpose, the court may cut
+            you off, and the opportunity to explore areas that are
+            relevant and necessary to the intelligent exercise of
+            challenges maybe be lost.</p>
+            <p>However, defense counsel, through the use of questions
+            that directly relate to a juror’s actual bias under the
+            facts presented by the specific case, has as an opportunity
+            to introduce the jury to the claims and defenses of the
+            case. Jury selection must be considered an integral part of
+            establishing the defense theory of the case. In preparing
+            jury selection, defense counsel should consider the theory
+            of the case and how it requires particular questions to be
+            posed during voir dire.</p>
+            </section>
+            <section id="b._manner_of_conducting_voir_dire"
+            class="level2">
+            <h2><strong>B. Manner of Conducting Voir Dire</strong></h2>
+            <p>1. Trial Court’s Discretion to Conduct Voir Dire Before
+            voir dire, counsel should prepare a memo for the trial court
+            to alert the court to the issues that will be explored
+            during voir dire.</p>
+            <p><strong>Practice Tip:</strong>The pretrial memo should
+            include potential issues of bias. Because counsel is
+            entitled to question on relevant issues including bias,
+            ''see <a
+            href="http://scholar.google.com/scholar_case?q=barnett&amp;hl=en&amp;as_sdt=4,38&amp;case=10062399597194376366&amp;scilh=0">State
+            v. Barnett</a><a
+            href="http://scholar.google.com/scholar_case?q=barnett&amp;hl=en&amp;as_sdt=4,38&amp;case=10062399597194376366&amp;scilh=0">,
+            251 Or 234, 238, 445 P2d 124 (1968)</a>, this prepares the
+            court for the fact that you will prod jurors on certain
+            issues that are important to your case. Counsel does not
+            have to accept a yes or no answer from a juror and is
+            entitled to prod jurors to more fully disclose personal
+            information if it is relevant to the issues in the case. A
+            pre-voir dire memo helps to establish that relevancy.</p>
+            <p>The trial court has discretion to direct the method and
+            manner of voir dire. <a
+            href="http://scholar.google.com/scholar_case?q=williams+1993&amp;hl=en&amp;as_sdt=4,38&amp;case=3186253560461884422&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=williams+1993&amp;hl=en&amp;as_sdt=4,38&amp;case=3186253560461884422&amp;scilh=0">,
+            123 Or App 546, 860 P2d 860 (1993)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Loke+1994&amp;hl=en&amp;as_sdt=4,38&amp;case=10039093010395563004&amp;scilh=0">State
+            v. Loke</a><a
+            href="http://scholar.google.com/scholar_case?q=Loke+1994&amp;hl=en&amp;as_sdt=4,38&amp;case=10039093010395563004&amp;scilh=0">,
+            131 Or App 751 (1994)</a>. Although this discretionary power
+            of the court is broadly construed, the court cannot prohibit
+            a defendant from seeking relevant information. <em>State v.
+            Barnett</em>, 251 Or 234, 238, 445 P2d 124 (1968) (counsel
+            entitled to question on relevant issues); <em>State v.
+            Williams</em>, 123 Or App 546, 860 P2d 860 (1993) (40-minute
+            limitation on voir dire is not adequate to provide counsel
+            with an “opportunity to ascertain the existence of grounds
+            of challenges for cause or to obtain information to make
+            intelligent decisions on peremptory challenges”), <em>State
+            v. Loke</em>, 131 Or App 751, 886 P2d 507 (1994) (limiting
+            voir dire to 32 minutes and denying request for additional
+            time was reversible error).</p>
+            <p>The trial court also cannot constrain voir dire to the
+            extent that counsel is not permitted to examine the
+            prospective jurors who actually serve on the jury. <em>State
+            v. Williams</em>, 123 Or App 546, 551, 860 P2d 860
+            (1993).</p>
+            <p>2. Individual or Group Voir Dire The general practice in
+            Oregon is to voir dire the panel. But certain circumstances
+            might call for an individual voir dire. ''See <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+334+Or+633+%282002%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6264855268519223086&amp;scilh=0">,
+            313 Or 356, 836 P2d 1308 (1992)</a> (allowing individual
+            voir dire). For example, if you are trying a sex abuse case
+            it is important to know whether any of the venire persons
+            have experienced sexual abuse. Obviously, this is a very
+            sensitive topic that many potential jurors would rather not
+            disclose to a group of strangers. If the court allows
+            limited individual voir dire, and if you know that you will
+            be questioning a juror about a sensitive matter, ask that
+            juror whether he or she would be more comfortable answering
+            questions outside of the presence of others. In that way,
+            you can accommodate both the court’s need to expedite voir
+            dire and that juror’s needs for privacy.</p>
+            <p><strong>Practice Tip:</strong>Jury questionnaires are
+            generally a good idea, especially in cases that involve
+            sensitive issues such as race or history of abuse. The
+            potential jurors may be more willing to disclose that
+            information in a questionnaire than out loud in front of
+            other jurors. Equipped with answers on a jury questionnaire,
+            you will know which jurors may need to be questioned on
+            those topics; you can then alert the court to the need for
+            individual voir dire on selected issues in advance.</p>
+            <p>Make sure to alert the court of your intent to use juror
+            questionnaires well in advance—it takes time and
+            organization by court staff. Jurors have to come in early to
+            fill them out or the case is delayed for several hours while
+            the questionnaires are filled out and copied.</p>
+            <p>3. Types of Voir Dire Questions Use voir dire to disclose
+            the bad evidence in your case. Find out from the juror how
+            this evidence will affect him or her and if a single factor
+            will influence him or her in making his or her decision. An
+            example of a question involving a single factor would be,
+            “Would this single factor make you vote guilty regardless of
+            any other information?” This will assist in cause
+            challenges.</p>
+            <p><strong>Practice Tip:</strong>The type of questions that
+            you use in voir dire have different purposes. Use
+            hypothetical questions to avoid the prohibition against
+            asking jurors to commit to specific facts of your case.
+            ''See <a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">State
+            v. Montez</a><a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">,
+            309 Or 564, 584, 789 P2d 1352 (1990)</a> (question asking
+            juror to comment on how he would react to specific evidence
+            “patently improper”).</p>
+            <p>• Use open-ended questions in order to learn all of the
+            information you can about a juror.</p>
+            <p>• Use close-ended questions to obtain commitments from
+            jurors or to establish for cause challenges.</p>
+            <p>Open-ended questions designed to understand jurors’
+            history and bias will generally not be objected to.
+            Questions that also educate as to case theory will generally
+            not be objected to. Questions that educate as to the case
+            theory are proper if designed to elicit information that can
+            be used in for-cause challenges or obtain sufficient
+            education to intelligently exercise a peremptory challenge.
+            Be careful to always accurately restate a juror’s opinion
+            using their own words if you are going to enter the world of
+            cause challenges. Do not misinterpret or misstate what a
+            juror is saying or else the other jurors will consider you
+            unfair or tricky.</p>
+            </section>
+            <section id="c._scope_of_voir_dire" class="level2">
+            <h2><strong>C. Scope of Voir Dire</strong></h2>
+            <p>Trial court has discretion to determine the scope of voir
+            dire. This is consistent with the court’s broad powers in
+            regulating the presentation and interrogation of witnesses
+            at trial under <a
+            href="http://www.oregonlaws.org/ors/40.370">OEC 611(1)</a>.
+            The aim of an impartial jury, however, serves to guarantee
+            voir dire in areas relevant to a juror’s qualification,
+            including case-specific issues and individual
+            predispositions or biases. <a
+            href="http://scholar.google.com/scholar_case?q=barnett&amp;hl=en&amp;as_sdt=4,38&amp;case=10062399597194376366&amp;scilh=0">State
+            v. Barnett</a><a
+            href="http://scholar.google.com/scholar_case?q=barnett&amp;hl=en&amp;as_sdt=4,38&amp;case=10062399597194376366&amp;scilh=0">,
+            251 Or 234, 238, 445 P2d 124 (1968)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=williams+1993&amp;hl=en&amp;as_sdt=4,38&amp;case=3186253560461884422&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=williams+1993&amp;hl=en&amp;as_sdt=4,38&amp;case=3186253560461884422&amp;scilh=0">,
+            123 Or App 546, 551-52, 860 P2d 860 (1993)</a>. Federal due
+            process guarantees similarly serve to limit curtailment of
+            voir dire. <a
+            href="http://scholar.google.com/scholar_case?q=Ham+v.+South+Carolina,+409+US+524,+527,+93+S+Ct+848+%281973%29&amp;hl=en&amp;as_sdt=3,227&amp;case=12792373168322254671&amp;scilh=0">Ham
+            v. South Carolina</a><a
+            href="http://scholar.google.com/scholar_case?q=Ham+v.+South+Carolina,+409+US+524,+527,+93+S+Ct+848+%281973%29&amp;hl=en&amp;as_sdt=3,227&amp;case=12792373168322254671&amp;scilh=0">,
+            409 US 524, 527, 93 S Ct 848</a><a
+            href="http://scholar.google.com/scholar_case?q=Ham+v.+South+Carolina,+409+US+524,+527,+93+S+Ct+848+%281973%29&amp;hl=en&amp;as_sdt=3,227&amp;case=12792373168322254671&amp;scilh=0">(1973)</a>.</p>
+            <p>Counsel is entitled to inquire into prejudicial
+            matters:</p>
+            <p>A litigant is entitled to inquire into any interest or
+            matter that may affect a juror’s verdict because the right
+            to an impartial jury means an impartial jury with relation
+            to the actual issues being litigated. <a
+            href="http://scholar.google.com/scholar_case?q=Leishman+v.+Taylor,+199+Or+546,+263+P2d+605+%281953%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5951059900871684990&amp;scilh=0">Leishman
+            v. Taylor</a><a
+            href="http://scholar.google.com/scholar_case?q=Leishman+v.+Taylor,+199+Or+546,+263+P2d+605+%281953%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5951059900871684990&amp;scilh=0">,
+            199 Or 546, 556-557, 263 P2d 605 (1953)</a>.</p>
+            <p>Despite the right to inquire into potentially prejudicial
+            matters, the line between exploring jurors’ prejudices in
+            view of case specific issues and introducing prejudice into
+            the case is a fine one. <em>Leishman</em>, 199 Or at
+            556-557; and <a
+            href="http://scholar.google.com/scholar_case?q=Johnson+v.+Hansen,+237+Or+1,+389+P2d+330+(1964)&amp;hl=en&amp;as_sdt=4,38&amp;case=6043309941358320809&amp;s">Johnson
+            v. Hansen</a><a
+            href="http://scholar.google.com/scholar_case?q=Johnson+v.+Hansen,+237+Or+1,+389+P2d+330+(1964)&amp;hl=en&amp;as_sdt=4,38&amp;case=6043309941358320809&amp;s">,
+            237 Or 1, 4-5, 389 P2d 330 (1964)</a>.</p>
+            <p>Counsel must be prepared to show the need for making a
+            particular inquiry relevant in the context of the case at
+            hand. <em>Johnson</em>, 237 Or at 5. Time limits that
+            preclude relevant inquiry may be unconstitutional. <em>State
+            v. Williams</em>, 123 Or App 546, 551, 860 P2d 860
+            (1993).</p>
+            </section>
+            <section id="d._specific_areas_of_permissible_inquiry"
+            class="level2">
+            <h2><strong>D. Specific Areas of Permissible
+            Inquiry</strong></h2>
+            <p>1. Racial Bias – The particular facts of a case may
+            constitutionally require inquiry of jurors on racial
+            prejudices. In Ham v. South Carolina, 409 US 524 (1972),
+            such inquiry was critical to insuring the “essential demands
+            of fairness” where the defendant, a black man, was accused
+            of killing a white police officer. 409 US at 526-527. See
+            also State v. Williams, 123 Or App 546, 552 (1993). 2.
+            Organizational Affiliations – Voir dire on jurors’ attitudes
+            toward an organization is allowed where the defendant is a
+            member of and active in that organization. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dixon,+5+Or+App+113,+481+P2d+629+(1971)&amp;hl=en&amp;as_sdt=4,38&amp;case=16181340917948872217">State
+            v. Dixon</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dixon,+5+Or+App+113,+481+P2d+629+(1971)&amp;hl=en&amp;as_sdt=4,38&amp;case=16181340917948872217">,
+            5 Or App 113, 122-123, 481 P2d 629 (1971)</a>. 3. Religious
+            Beliefs – Inquiry into jurors’ religious beliefs is proper
+            if relevant to case-specific issues. State v. Barnett, 251
+            Or 234, 238, 445 P2d 124 (1968). In Barnett, the defendant,
+            in an abortion prosecution, was entitled to examine jurors
+            regarding their religious beliefs because of the “widely
+            accepted belief” that certain religious faiths have varying
+            feelings regarding abortion than do others. 251 Or at 236.
+            4. Child as Alleged Victim – A defendant may appropriately
+            question jurors on their ability to disregard the fact that
+            a child was the alleged victim. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Elam,+37+Or+App+365,+587+P2d+491+%281978%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14326533266005700622&amp;scilh=0">State
+            v. Elam</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Elam,+37+Or+App+365,+587+P2d+491+%281978%29&amp;hl=en&amp;as_sdt=4,38&amp;case=14326533266005700622&amp;scilh=0">,
+            37 Or App 365, 372, 587 P2d 491 (1978)</a>. 5. Jurors’
+            Occupations – Inquiry into some details concerning a juror’s
+            occupation is justified where that occupation or its duties
+            may supply a basis for questioning the juror’s impartiality.
+            a. A juror’s occupation as a police officer may, but will
+            not necessarily, indicate bias. <a
+            href="http://scholar.google.com/scholar_case?q=Parks+v.+Cupp,+5+Or+App+51,+481+P2d+372+%281971%29&amp;hl=en&amp;as_sdt=4,38&amp;case=18321811267924910561&amp;scilh=0">Parks
+            v. Cupp</a><a
+            href="http://scholar.google.com/scholar_case?q=Parks+v.+Cupp,+5+Or+App+51,+481+P2d+372+%281971%29&amp;hl=en&amp;as_sdt=4,38&amp;case=18321811267924910561&amp;scilh=0">,
+            5 Or App 51, 53, 481 P2d 372 (1971)</a>.</p>
+            <p>b. Government employee jurors were properly questioned
+            regarding a government policy, specifically the “Loyalty
+            Order,” where that policy could reasonably affect their
+            ability to judge a case of willful refusal to produce
+            documents to Congress. <a
+            href="http://scholar.google.com/scholar_case?q=Morford+v.+United+States&amp;hl=en&amp;as_sdt=3,227&amp;case=5375443678336127269&amp;scilh=0">Morford
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=Morford+v.+United+States&amp;hl=en&amp;as_sdt=3,227&amp;case=5375443678336127269&amp;scilh=0">,
+            339 US 258, 70 S Ct 586 (1950)</a>. The trial court’s
+            refusal to allow inquiry into this area was an abuse of
+            discretion, requiring reversal.</p>
+            <p>6. Attitude Towards Insanity Defense - Litigants have a
+            clear right to voir dire on jurors’ attitudes about insanity
+            defenses if insanity is in issue. State v. Wallace, 170 Or
+            60, 109, 131 P2d 222 (1942). 7. Attitude Towards the Death
+            Penalty – In capital proceedings, the parties are entitled
+            to inquire into prospective jurors’ attitudes towards the
+            death penalty. <a
+            href="http://scholar.google.com/scholar_case?q=barone&amp;hl=en&amp;as_sdt=4,38&amp;case=17874809457070670891&amp;scilh=0">State
+            v. Barone</a><a
+            href="http://scholar.google.com/scholar_case?q=barone&amp;hl=en&amp;as_sdt=4,38&amp;case=17874809457070670891&amp;scilh=0">,
+            328 Or 68, 969 P2d 1013 (1998)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">State
+            v. Nefstad</a><a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">,
+            309 Or 523, 526, 789 P2d 1326 (1990)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">State
+            v. Montez</a><a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">,
+            309 Or 564, 789 P2d 1352 (1990)</a>. 8. Concept of
+            Self-Defense – A juror’s attitude towards the concept of
+            self-defense is within the proper scope of voir dire where
+            that legal concept is relevant to the case in issue. Everly
+            v. State, 395 NE2d 254, 255 (Ind. 1979). Note that <a
+            href="http://www.oregonlaws.org/ors/40.110">OEC 306</a>,
+            concerning the court instructing the jury on burdens of
+            persuasion, does not preclude counsel’s discussion of
+            burdens during voir dire. See Legislative Commentary to OEC
+            306. 9. Mental Concepts of Deliberateness and Premeditation
+            – Counsel was allowed to question jurors closely, through
+            use of hypothetical questions, concerning deliberateness and
+            premeditation in a murder prosecution. State v. Humphrey, 63
+            Or 540, 547-548, 128 P 824 (1912). 10. Jurors’ Opinions on
+            State Policy – Inquiry into jurors’ opinions on state
+            policies is justified where the policies are an issue in the
+            case. <a
+            href="http://scholar.google.com/scholar_case?q=Highway+Commission+v.+Hewitt,+229+Or+582,+591,+368+P2d+346+%281962%29&amp;hl=en&amp;as_sdt=4,38&amp;case=257884623809223970&amp;scilh=0">Highway
+            Commission v. Hewitt</a><a
+            href="http://scholar.google.com/scholar_case?q=Highway+Commission+v.+Hewitt,+229+Or+582,+591,+368+P2d+346+%281962%29&amp;hl=en&amp;as_sdt=4,38&amp;case=257884623809223970&amp;scilh=0">,
+            229 Or 582, 591, 368 P2d 346 (1962)</a>. 11. Defendant’s
+            Prior Conviction – A defendant’s prior criminal conviction
+            is a proper matter for voir dire because of the possibility
+            of prejudice as a result of that conviction. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ziebert,+34+Or+App+497,+579+P2d+275+%281978%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16624573161735973256&amp;scilh=0">State
+            v. Ziebert</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ziebert,+34+Or+App+497,+579+P2d+275+%281978%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16624573161735973256&amp;scilh=0">,
+            34 Or App 497, 501-502, 579 P2d 275 (1978)</a>. 12. Previous
+            Litigation Experience – Inquiry into juror’s previous
+            experience as a party, witness or juror is proper to
+            determine juror’s state of mind. <a
+            href="http://scholar.google.com/scholar_case?q=miller+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=1056700984892349006&amp;scilh=0">State
+            v. Miller</a><a
+            href="http://scholar.google.com/scholar_case?q=miller+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=1056700984892349006&amp;scilh=0">,
+            10 Or App 636, 639, 501 P2d 326 (1972)</a>; State v. Nagel,
+            185 Or 486, 506, 202 P2d 640 (1949). 13. Jurors’ Exposure to
+            the Case – Inquiry into prior exposure to the case, either
+            through direct knowledge, relationships or publicity,
+            assists in determining jurors’ states of mind toward the
+            case and potential bias. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+313+Or+356,+836+P2d+1308+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rogers,+313+Or+356,+836+P2d+1308+%281992%29&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">,
+            313 Or 356, 836 P2d 1308 (1992)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McDonald,+231+Or+24,+361+P2d+1001+%281962%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15079387766853863376&amp;scilh=0">State
+            v. McDonald</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McDonald,+231+Or+24,+361+P2d+1001+%281962%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15079387766853863376&amp;scilh=0">,
+            231 Or 24, 37-38, 361 P2d 1001 (1961)</a>; State v.
+            Humphrey, 63 Or 540, 547-548, 128 P 824 (1912). This inquiry
+            relates to the question of inflammatory pretrial publicity,
+            but also focuses upon a juror having a fixed attitude versus
+            an attitude allowing the juror to disregard previously
+            formed opinions. Humphrey, 63 Or at 548. 14. Jurors’
+            Attitudes Towards Types of Witnesses – Voir dire on jurors’
+            attitudes towards types of witnesses, where those attitudes
+            indicate some bias or prejudice would appear necessary to
+            achieving an impartial jury. See, however, State v. Hoffman,
+            85 Or 276, 279-280, 166 P 765 (1917), in which the court
+            held improper voir dire on a juror’s opinion of the
+            credibility of informers as witnesses because the court saw
+            it as an effort to have the juror disclose what class of
+            witnesses would or would not be credible. The court
+            apparently failed to see the connection between the issue of
+            credibility of classes of witnesses and bias or prejudice
+            for or against a defendant.</p>
+            </section>
+            <section
+            id="e._remedies_if_jurors_are_exposed_to_prejudicial_comments_during_voir_dire"
+            class="level2">
+            <h2><strong>E. Remedies if Jurors Are Exposed to Prejudicial
+            Comments During Voir Dire</strong></h2>
+            <p>Injection of prejudice into the proceeding during voir
+            dire, as opposed to exploration of jurors’ attitudes of
+            potentially prejudicial or inflammatory matters, may provide
+            grounds for a mistrial. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Flores,+31+Or+App+187,+570+P2d+94+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3689660481377684602&amp;scilh=0">State
+            v. Flores</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Flores,+31+Or+App+187,+570+P2d+94+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3689660481377684602&amp;scilh=0">,
+            31 Or App 187, 190-191, 570 P2d 94 (1977)</a>. In evaluating
+            the propriety of granting a mistrial, the court looks to
+            whether strong likelihood of prejudice to the defendant
+            resulted. <em>Flores</em>, 31 Or App at 187.</p>
+            <p>In <em>Flores</em>, for example, the court found that the
+            prosecutor’s remarks that “probably over 90 percent” of
+            persons indicted by grand juries plead guilty and that of
+            the remaining 10 percent mostly are convicted, were clearly
+            improper. The court held that defendant’s motion for a
+            mistrial should have been granted notwithstanding the
+            state’s argument that the comments were in response to
+            misleading comments by defense counsel.</p>
+            <p>The context in which the improper comments were made will
+            be examined. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wampler,+30+Or+App+931&amp;hl=en&amp;as_sdt=4,38&amp;case=2670080781900899159&amp;scilh=0">State
+            v. Wampler</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wampler,+30+Or+App+931&amp;hl=en&amp;as_sdt=4,38&amp;case=2670080781900899159&amp;scilh=0">,
+            30 Or App 931, 935, 569 P2d 46 (1978)</a>. In
+            <em>Wampler</em>, the Court of Appeals upheld the trial
+            court’s denial of defendant’s motion for mistrial based upon
+            the prosecutor’s statements where the court found that those
+            comments, although inappropriate, were prompted by defense
+            counsel’s improper statements. 30 Or App at 935. <em>Compare
+            Flores</em>, 31 Or App 187, 190-191, 570 P2d 94 (1977).</p>
+            <p>A mere exception to a prosecutor’s improper comments
+            during voir dire is<em></em>insufficient to form the basis
+            of an appeal. <em>State v. Morris</em>, 83 Or 429,435-436,
+            163 P 567 (1917).</p>
+            <p>Consider, also, the prejudice to defendant resulting from
+            a juror’s false statement on voir dire. Discovery of such
+            prejudicial misconduct may serve as a basis for a motion for
+            mistrial or motion for new trial. <em>State v. Lauth</em>,
+            46 Or 342, 346-352, 80 P 660 (1905).</p>
+            <p><strong>Jurors’ Exposure to Extraneous Information After
+            Voir Dire</strong> – Although the general rule is to
+            preclude counsel’s inquiry of jurors once the jury has been
+            sworn, this rule may find exception where jurors are exposed
+            to extraneous and potentially prejudicial information or
+            experiences during the trial. <a
+            href="http://scholar.google.com/scholar_case?q=miller+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=1056700984892349006&amp;scilh=0">State
+            v. Miller</a><a
+            href="http://scholar.google.com/scholar_case?q=miller+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=1056700984892349006&amp;scilh=0">,
+            10 Or App 636, 639 (1972)</a>. In <em>Miller</em>, the Court
+            of Appeals held that defendant’s motion for mistrial should
+            have been granted where jurors served on another case during
+            a recess in the defendant’s case, citing the strong
+            possibility that service on the other case might create
+            bias.</p>
+            </section>
+            </section>
+            <section id="vii._challenges_for_cause" class="level1">
+            <h1><strong>VII. Challenges for Cause</strong></h1>
+            <section id="a._statutory_challenges_under_ors_136.210"
+            class="level2">
+            <h2><strong>A. Statutory Challenges under ORS
+            136.210</strong></h2>
+            <p><a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.210</a> cross-references Oregon Rule of Civil Procedure
+            57 D(1)(a), D(1)(b), and D(1)(g) as grounds for challenging
+            a juror for cause.</p>
+            <p>1. A juror can be challenged for cause if that juror does
+            not meet the requirements for juror eligibility described in
+            <a href="http://www.leg.state.or.us/ors/10.html">ORS
+            10.030</a>. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP 57
+            D(1)(a)</a>. 2. A juror can be challenged if there is a
+            physical or mental defect which satisfies the court that the
+            challenged person is incapable of performing the duties of a
+            juror without prejudice to the substantial rights of the
+            challenging party. ORCP 57 D(1)(b). 3. A juror can be
+            excluded for actual bias. ORCP 57 D(1)(g). a. Actual Bias
+            “is the existence of a state of mind on the part of a juror
+            that satisfies the court, in the exercise of sound
+            discretion, that the juror cannot try the issue impartially
+            and without prejudice to the substantial rights of the party
+            challenging the juror.”</p>
+            <p>b. Actual bias <em>may</em> be in reference to:</p>
+            <p>i. the action</p>
+            <p>ii. either party to the action</p>
+            <p>iii. the sex of the party, the party’s attorney, a victim
+            or a witness</p>
+            <p>iv. a racial or ethnic group that the party, the party’s
+            attorney, a victim or a witness is member of or perceived to
+            be a member of.</p>
+            <p>c. If it appears that the challenged juror has formed or
+            expressed an opinion upon the merits of the case based on
+            what that juror has heard or read, such an opinion is not
+            automatically sufficient to sustain a challenge to that
+            juror. The court must be satisfied, from all the
+            circumstances, that the juror cannot disregard such opinion
+            and try the case impartially.</p>
+            </section>
+            <section id="b._challenging_a_juror_for_actual_bias"
+            class="level2">
+            <h2><strong>B. Challenging a Juror for Actual
+            Bias</strong></h2>
+            <p>Actual bias exists when the prospective juror’s viewpoint
+            would prevent or substantially impair the performance of the
+            duties of a juror if the person is selected. <a
+            href="http://scholar.google.com/scholar_case?q=305+or+115&amp;hl=en&amp;as_sdt=4,228&amp;case=12588023347942359963&amp;scilh=0">State
+            v. Wagner,</a><a
+            href="http://scholar.google.com/scholar_case?q=305+or+115&amp;hl=en&amp;as_sdt=4,228&amp;case=12588023347942359963&amp;scilh=0">305
+            Or 115, 175, 752 P2d 1136 (1988)</a>, <em>vacated</em> 492
+            US (1989), <a
+            href="http://scholar.google.com/scholar_case?q=wagner+1990&amp;hl=en&amp;as_sdt=4,228&amp;case=16508019247295888476&amp;scilh=0">on
+            remand</a><a
+            href="http://scholar.google.com/scholar_case?q=wagner+1990&amp;hl=en&amp;as_sdt=4,228&amp;case=16508019247295888476&amp;scilh=0">309
+            Or 5, 786 P2d 93 (1990)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+dalessio&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2008&amp;case=8581012224626500569&amp;scilh=0">State
+            v. Dalessio</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+dalessio&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2008&amp;case=8581012224626500569&amp;scilh=0">,
+            228 Or App 531, 208 P3d 1021 (2009)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">State
+            v. Nefstad,</a><a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=nefstad&amp;hl=en&amp;as_sdt=4,38&amp;case=7306155306787329924&amp;scilh=0">309
+            Or 523, 526, 789 P2d 1326 (1990)</a>.</p>
+            <p>When an actual bias challenge is raised, the court must
+            determine whether the juror is capable of trying the case
+            fairly and impartially upon the evidence adduced in court.
+            <a
+            href="http://scholar.google.com/scholar_case?q=moen&amp;hl=en&amp;as_sdt=4,38&amp;case=11052839865061159908&amp;scilh=0">State
+            v. Moen</a><a
+            href="http://scholar.google.com/scholar_case?q=moen&amp;hl=en&amp;as_sdt=4,38&amp;case=11052839865061159908&amp;scilh=0">,
+            309 Or 45, 93, 786 P2d 111 (1990)</a>; <em>State v.
+            Brumfield</em>, 104 Or 506, 529, 209 P 120 (1922); “The
+            trial court in exercising discretion must find from all the
+            facts that the juror will be impartial and fair and not be
+            consciously or unconsciously biased. The test of a juror’s
+            disqualification is the probability of bias or prejudice as
+            determined by the court.” <a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">State
+            v. Montez</a><a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">,
+            309 Or 564, 575, 789 P2d 1352 (1990)</a><a
+            href="http://scholar.google.com/scholar_case?q=Montez&amp;hl=en&amp;as_sdt=2,38&amp;case=1008787569744245968&amp;scilh=0">;</a>
+            <a
+            href="http://scholar.google.com/scholar_case?q=lambert+sisters+of+st+joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">Lambert
+            v. Sisters of St. Joseph</a><a
+            href="http://scholar.google.com/scholar_case?q=lambert+sisters+of+st+joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">,
+            277 Or 223, 230, 560 P2d 262 (1977)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=fanus&amp;hl=en&amp;as_sdt=4,38&amp;case=7022868415443907239&amp;scilh=0">State
+            v. Fanus</a><a
+            href="http://scholar.google.com/scholar_case?q=fanus&amp;hl=en&amp;as_sdt=4,38&amp;case=7022868415443907239&amp;scilh=0">,
+            336 Or 63, 83, 79 P3d 847 (2003)</a><a
+            href="http://scholar.google.com/scholar_case?q=fanus&amp;hl=en&amp;as_sdt=4,38&amp;case=7022868415443907239&amp;scilh=0">.</a></p>
+            <p><strong>Practice Tip:</strong>In order to establish the
+            basis for a “cause challenge” during voir
+            dire<em></em>questioning, the attorney must delicately and
+            inoffensively lead the juror to say he or she cannot decide
+            the case fairly. Preliminary questioning that determines the
+            juror’s commitment and desire to be on the jury may be a
+            helpful avenue to pursue in establishing the foundation for
+            the jurors to downplay areas of bias. A juror who really
+            wants to be on the jury or who has a hidden bias will
+            usually be difficult to remove for cause.</p>
+            <p>1. Rehabilitation The trial court or opposing counsel may
+            try to rehabilitate the witness. Counsel must politely and
+            firmly get the juror to commit to his or her earlier
+            statements indicating his or her feelings of bias or lack of
+            ability to be fair.</p>
+            <p>The purpose of rehabilitative questioning is for
+            investigation and <em>not</em> for the purpose of
+            persuasion, nor to elicit pro forma answers to leading
+            questions. <a
+            href="http://scholar.google.com/scholar_case?q=lane+county+walker&amp;hl=en&amp;as_sdt=4,38&amp;case=6614715555598292584&amp;scilh=0">Lane
+            County v. Walker</a><a
+            href="http://scholar.google.com/scholar_case?q=lane+county+walker&amp;hl=en&amp;as_sdt=4,38&amp;case=6614715555598292584&amp;scilh=0">,
+            30 Or App 715, 568 P2d 676 (1977)</a>.</p>
+            <p>The initial answers of the juror should be given greater
+            weight than rehabilitative answers. <a
+            href="http://scholar.google.com/scholar_case?q=lambert+sisters+of+st+joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">Lambert
+            v. Sisters of St. Joseph</a><a
+            href="http://scholar.google.com/scholar_case?q=lambert+sisters+of+st+joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">,
+            277 Or 223, 231, 560 P2d 262 (1977)</a>.</p>
+            <p>2. Cause Challenges on Appeal On appeal, the standard of
+            review of trial court’s denial of a challenge for cause to a
+            juror is deferential, but not unbounded. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carter,+205+Or+App+460,+134+P3d+1078+%282006%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16618702878851528234&amp;scilh=0">State
+            v. Carter</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carter,+205+Or+App+460,+134+P3d+1078+%282006%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16618702878851528234&amp;scilh=0">,
+            205 Or App 460, 134 P3d 1078 (2006)</a>.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=carter&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2005&amp;case=16618702878851528234&amp;scilh=0">State
+            v. Carter</a><a
+            href="http://scholar.google.com/scholar_case?q=carter&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2005&amp;case=16618702878851528234&amp;scilh=0">,
+            205 Or App 460, 134 P3d 1078 (2006)</a>, the court held that
+            denial of rape defendant’s challenge for cause to juror was
+            an abuse of the trial court’s discretion where a prospective
+            juror stated he believed the defendant was guilty and that
+            he did not think it was fair to put himself on the jury, and
+            in response to questioning from prosecutor and court, he
+            merely said that he “probably” could follow the law and, “I
+            guess I could try” to follow the law.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+dalessio&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2008&amp;case=8581012224626500569&amp;scilh=0">State
+            v. Dalessio</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+dalessio&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2008&amp;case=8581012224626500569&amp;scilh=0">,
+            228 Or App 531, 208 P3d 1021 (2009)</a>,
+            the<em></em>defendant was granted a new trial after a seated
+            juror in a murder case came forward following the first day
+            of trial and explicitly stated that he had been making some
+            judgments that he thought he really should not be making and
+            implicitly disclaimed his earlier <em>voir dire</em>
+            statement that he could be fair and impartial. Not excusing
+            this juror was held to be an abuse of the trial court’s
+            discretion.</p>
+            </section>
+            <section
+            id="c._challenges_for_implied_bias_under_ors_136.220"
+            class="level2">
+            <h2><strong>C. Challenges for Implied Bias under ORS
+            136.220</strong></h2>
+            <p>The court will excuse a juror for cause if any of the
+            following causes are shown:</p>
+            <p>1. Consanguinity or affinity within the fourth degree to
+            the person alleged to be injured by the charged offense, the
+            defendant or the complainant. 2. The prospective juror
+            stands in the relation of guardian and ward, attorney and
+            client, physician and patient, master and servant, debtor
+            and creditor, principal and agent, or landlord and tenant
+            with the defendant, the person alleged to be injured by the
+            charged offense, or the complainant. 3. The prospective
+            juror is a member of the family, a partner in a business
+            with, or in the employment of the defendant, the person
+            alleged to be injured by the charged offense, or the
+            complainant, or is a surety in the action or otherwise for
+            the defendant. But state employment alone does not
+            disqualify a juror from service because the complainant must
+            be a person and the state is not a person. State v. Rogers,
+            313 Or 356, 369-72 (1992)].</p>
+            <p>4. The prospective juror served on the grand jury that
+            returned the indictment. 5. The prospective juror served on
+            a jury formerly sworn in the same action and whose verdict
+            was set aside or was discharged without a verdict after the
+            cause was submitted to it. 6. The prospective juror served
+            on a jury in a civil action, suit, or proceeding brought
+            against the defendant for substantially the same act charged
+            as an offense. 7. The prospective juror served on a jury in
+            a criminal action upon substantially the same facts,
+            transaction, or criminal episode.</p>
+            </section>
+            </section>
+            <section id="viii._peremptory_challenges" class="level1">
+            <h1><strong>VIII. Peremptory Challenges</strong></h1>
+            <p>A peremptory challenge is a challenge to a juror that is
+            <em>not</em> based on cause. Peremptory challenges can be
+            used when the trial court denies a challenge for cause.
+            Peremptory challenges may also be used against a juror that
+            counsel has a hunch will be unfavorable but not sufficient
+            evidence of bias to bring a cause challenge. For example, a
+            defense lawyer may have determined individuals fitting
+            within certain demographics would be negative jurors in his
+            or her client’s case. Peremptory challenges allow counsel to
+            act on stereotypes, with one significant caveat: counsel
+            cannot exercise peremptory challenges solely on the basis of
+            the juror’s membership in a cognizable group.</p>
+            <section id="a._number_of_challenges_in_circuit_court"
+            class="level2">
+            <h2><strong>A. Number of Challenges in Circuit
+            Court</strong></h2>
+            <p>1. If the accused faces the death penalty or life
+            imprisonment, both parties have 12 peremptory challenges.
+            ORS 136.230(1). 2. If the trial is otherwise before a jury
+            of more than 12 jurors, each side has six peremptory
+            challenges. ORS 136.230(1). 3. If the trial is before a jury
+            of six, each side has three peremptory challenges. ORS
+            136.230(1).</p>
+            </section>
+            <section id="b._manner_of_taking_peremptory_challenges"
+            class="level2">
+            <h2><strong>B. Manner of Taking Peremptory
+            Challenges</strong></h2>
+            <p>Under ORS 136.230(2), peremptory challenges are taken two
+            at a time, starting with the defendant, by secret
+            ballot.<strong></strong></p>
+            <p>The parties may stipulate to taking peremptory challenges
+            orally.</p>
+            <p>In a co-defendant case, each defendant is entitled to the
+            same number of challenges as he or she would have had if
+            tried separately. But the state is entitled to the total
+            number of challenges that the defendants could have
+            exercised.</p>
+            <p>After each challenge, a new juror is called and
+            questioned in order to pass or be excused for cause. In the
+            panel method of jury selection, some judges expect you to
+            question every potential juror on the panel (not just the 12
+            in the box). Then the next juror in line automatically
+            replaces the challenged juror.</p>
+            <p>Once a party indicates satisfaction with the panel by not
+            challenging, then that party is precluded from challenging
+            any of the jurors already seated.</p>
+            <p><strong>Practice Tip:</strong> The state can continue to
+            exercise challenges even if the defense states they are
+            satisfied. The defense can only challenge new jurors that
+            replace ones struck by the defense. In some circumstances,
+            it may be wise to indicate satisfaction with the panel if
+            counsel has only a single peremptory challenge remaining and
+            if counsel has not questioned the next possible juror.
+            Counsel then would have the right to use their remaining
+            challenge to any new juror that is called followed a
+            prosecution challenge and avoid potential surprises.
+            However, there is a major caveat to this strategy because
+            indicating satisfaction with the panel acts as a waiver of
+            prior cause challenges denied by the court.</p>
+            </section>
+            <section
+            id="c._challenging_the_discriminatory_use_of_peremptory_challenges"
+            class="level2">
+            <h2><strong>C. Challenging the Discriminatory Use of
+            Peremptory Challenges</strong></h2>
+            <p>In the seminal case of <em>Batson v. Kentucky</em>, and
+            its progeny, the United States Supreme Court held that the
+            exercise of peremptory challenges on the basis of race,
+            ethnicity, or sex violates the Equal Protection Clause of
+            the Fourteenth Amendment. <a
+            href="http://scholar.google.com/scholar_case?q=batson+v+kentucky&amp;hl=en&amp;as_sdt=2,38&amp;case=11558261102149383532&amp;scilh=0">Batson
+            v. Kentucky,</a><a
+            href="http://scholar.google.com/scholar_case?q=batson+v+kentucky&amp;hl=en&amp;as_sdt=2,38&amp;case=11558261102149383532&amp;scilh=0">476
+            US 79, 106 S Ct 1712, 90 L Ed2d 69 (1986)</a>, <a
+            href="http://scholar.google.com/scholar_case?q=georgia+mccollum&amp;hl=en&amp;as_sdt=2,38&amp;case=9950630663750851532&amp;scilh=0">Georgia
+            v. McCollum,</a><a
+            href="http://scholar.google.com/scholar_case?q=georgia+mccollum&amp;hl=en&amp;as_sdt=2,38&amp;case=9950630663750851532&amp;scilh=0">505
+            US 42, 112 S Ct 2348, 120 L Ed2d 33 (1992)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=miller+cockrel&amp;hl=en&amp;as_sdt=2,38&amp;case=7386227931667853715&amp;scilh=0">Miller-El
+            v. Cockrell</a><a
+            href="http://scholar.google.com/scholar_case?q=miller+cockrel&amp;hl=en&amp;as_sdt=2,38&amp;case=7386227931667853715&amp;scilh=0">,
+            537 US 322, 123 S Ct 1029 (2003)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=longo&amp;hl=en&amp;as_sdt=4,38&amp;case=2336089459333408531&amp;scilh=0">State
+            v. Longo</a><a
+            href="http://scholar.google.com/scholar_case?q=longo&amp;hl=en&amp;as_sdt=4,38&amp;case=2336089459333408531&amp;scilh=0">,
+            341 Or 580, 148 P3d 892 (2006)</a>. <em>Batson</em> involved
+            the prosecutor’s use of peremptory challenges against black
+            jurors in a case involving a black defendant.</p>
+            <p>Although <em>Batson</em>involved peremptory challenges
+            exercised by the prosecutor on the basis of race, its
+            holding<em></em>is not limited solely to race. The
+            <em>Batson</em> rule could apply to any cognizable group.
+            <em>See <a
+            href="http://scholar.google.com/scholar_case?q=J.E.B.+v.+Alabama,+511+US+127,+114+S+Ct+1419+%281994%29&amp;hl=en&amp;as_sdt=3,227&amp;case=7113990036820068030&amp;scilh=0">J.E.B.
+            v. Alabama</a><a
+            href="http://scholar.google.com/scholar_case?q=J.E.B.+v.+Alabama,+511+US+127,+114+S+Ct+1419+%281994%29&amp;hl=en&amp;as_sdt=3,227&amp;case=7113990036820068030&amp;scilh=0">,
+            511 US 127, 114 S Ct 1419 (1994)</a>
+            (extending</em>Batson<em>to gender-based exercise of
+            peremptories). Further, the</em>Batson<em>rule is not
+            limited to the prosecutor’s exercise of peremptory
+            challenges, it applies to defense counsel as well.</em>See
+            Georgia v. McCollum'', 505 US 42, 112 S Ct 2348 (1992)
+            (defense counsel cannot make race-based peremptory
+            challenges); <a
+            href="http://scholar.google.com/scholar_case?q=de+gross&amp;hl=en&amp;as_sdt=2,38&amp;case=6911913850504104432&amp;scilh=0">United
+            States v. De Gross</a><a
+            href="http://scholar.google.com/scholar_case?q=de+gross&amp;hl=en&amp;as_sdt=2,38&amp;case=6911913850504104432&amp;scilh=0">,
+            960 F2d 1433, (9th Cir. 1992)</a> (en banc) (defense counsel
+            prohibited from exercising peremptory challenges on the
+            basis of gender).</p>
+            <p>In another significant expansion of the
+            <em>Batson</em>rule, the United States Supreme Court held in
+            <a
+            href="http://scholar.google.com/scholar_case?q=Powers+v+ohio&amp;hl=en&amp;as_sdt=2,38&amp;case=10013574145468149425&amp;scilh=0">Powers
+            v. Ohio</a><a
+            href="http://scholar.google.com/scholar_case?q=Powers+v+ohio&amp;hl=en&amp;as_sdt=2,38&amp;case=10013574145468149425&amp;scilh=0">,
+            499 US 400, 111 S Ct 1364, 113 L Ed2d 411 (1991)</a>, that
+            the defendant does not necessarily need to be a member of
+            the cognizable group that is being excluded through
+            peremptory challenges because the Equal Protection Clause
+            also protects the public’s right to serve on a jury.</p>
+            <p>There is a three-step process for making a constitutional
+            challenge under the <em>Batson</em> framework. <em>See</em>
+            <a
+            href="http://scholar.google.com/scholar_case?q=HENDERSON&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=1992&amp;case=4133409856397408695&amp;scilh=0">State
+            v. Henderson</a><a
+            href="http://scholar.google.com/scholar_case?q=HENDERSON&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=1992&amp;case=4133409856397408695&amp;scilh=0">,
+            315 Or 1, 843 P2d 859 (1992)</a> (applying the
+            <em>Batson</em> framework in state court).</p>
+            <p>1. The challenger must establish a prima facie case of
+            purposeful discrimination of cognizable group. The
+            challenger <em>may</em> do so by showing that defendant is a
+            member of a cognizable group and that the prosecutor has
+            exercised a peremptory challenge to remove a member of
+            defendant’s cognizable group; however, a defendant may also
+            raise a <em>Batson</em>challenge even when he or she does
+            not belong to the particular cognizable group. <em>Powers v.
+            Ohio</em>, 499 US 400 (1991).</p>
+            <p>2. If a prima facie case of purposeful discrimination is
+            established, the burden shifts to the prosecutor to
+            articulate a “neutral explanation” for the peremptory
+            challenge. Explanation must be “related to the particular
+            case to be tried, and must be clear and reasonably
+            specific.” <em>Henderson</em>, 315 Or at 4. A prosecutor’s
+            explanation that a peremptory challenge is race-neutral is a
+            question of law. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ruiz-martinez&amp;hl=en&amp;as_sdt=4,38&amp;case=9316170014995145528&amp;scilh=0">State
+            v. Ruiz-Martinez</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ruiz-martinez&amp;hl=en&amp;as_sdt=4,38&amp;case=9316170014995145528&amp;scilh=0">,
+            173 Or App 202 (2001)</a>. The explanation does not have to
+            be persuasive, however, the explanation must be reasonably
+            specific and case-related. <em>Id</em>.</p>
+            <p>3. Court must determine as a matter of fact whether the
+            defendant has carried the burden of establishing purposeful
+            discrimination. <a
+            href="http://scholar.google.com/scholar_case?q=purkett+v+elem&amp;hl=en&amp;as_sdt=2,38&amp;case=6495609527795012009&amp;scilh=0">Purkett
+            v. Elem</a><a
+            href="http://scholar.google.com/scholar_case?q=purkett+v+elem&amp;hl=en&amp;as_sdt=2,38&amp;case=6495609527795012009&amp;scilh=0">,
+            514 US 765, 1155 S Ct 1769, 131 L Ed 2d 834,</a><a
+            href="http://scholar.google.com/scholar_case?q=purkett+v+elem&amp;hl=en&amp;as_sdt=2,38&amp;case=6495609527795012009&amp;scilh=0">rehearing
+            denied</a><a
+            href="http://scholar.google.com/scholar_case?q=purkett+v+elem&amp;hl=en&amp;as_sdt=2,38&amp;case=6495609527795012009&amp;scilh=0">,
+            515 US 1170 (1995)</a>. The court does not have to accept
+            the prosecutor’s “race-neutral” explanation if that
+            explanation is clearly pretextual or belied by the record.
+            <a
+            href="http://scholar.google.com/scholar_case?q=Kesser+v.+Cambra,+465+F3d+351+%289th+Cir+2006%29+%28en+banc%29&amp;hl=en&amp;as_sdt=3,227&amp;case=4026366466602920595&amp;scilh=0">Kesser
+            v. Cambra</a><a
+            href="http://scholar.google.com/scholar_case?q=Kesser+v.+Cambra,+465+F3d+351+%289th+Cir+2006%29+%28en+banc%29&amp;hl=en&amp;as_sdt=3,227&amp;case=4026366466602920595&amp;scilh=0">,
+            465 F3d 351 (9</a><a
+            href="http://scholar.google.com/scholar_case?q=Kesser+v.+Cambra,+465+F3d+351+%289th+Cir+2006%29+%28en+banc%29&amp;hl=en&amp;as_sdt=3,227&amp;case=4026366466602920595&amp;scilh=0">th</a><a
+            href="http://scholar.google.com/scholar_case?q=Kesser+v.+Cambra,+465+F3d+351+%289th+Cir+2006%29+%28en+banc%29&amp;hl=en&amp;as_sdt=3,227&amp;case=4026366466602920595&amp;scilh=0">Cir
+            2006) (en banc)</a>.<em></em>For example, when the
+            government had been exercising its peremptories against
+            members of a cognizable group that share the same “race
+            neutral” characteristics as other jurors, the court found
+            the prosecutor’s explanation pretextual. <em>See, e.g.</em>,
+            <a
+            href="http://scholar.google.com/scholar_case?q=Green+v.+LaMarque,+532+F3d+1028+%289th+Cir+2008%29+&amp;hl=en&amp;as_sdt=3,227&amp;case=7136979064391187288&amp;scilh=0">Green
+            v. LaMarque</a><a
+            href="http://scholar.google.com/scholar_case?q=Green+v.+LaMarque,+532+F3d+1028+%289th+Cir+2008%29+&amp;hl=en&amp;as_sdt=3,227&amp;case=7136979064391187288&amp;scilh=0">,
+            532 F3d 1028 (9</a><a
+            href="http://scholar.google.com/scholar_case?q=Green+v.+LaMarque,+532+F3d+1028+%289th+Cir+2008%29+&amp;hl=en&amp;as_sdt=3,227&amp;case=7136979064391187288&amp;scilh=0">th</a><a
+            href="http://scholar.google.com/scholar_case?q=Green+v.+LaMarque,+532+F3d+1028+%289th+Cir+2008%29+&amp;hl=en&amp;as_sdt=3,227&amp;case=7136979064391187288&amp;scilh=0">Cir
+            2008)</a> (prosecutor’s race-neutral explanation for
+            striking all six African-Americans on jury panel were
+            pretexts as they also applied to unchallenged white jurors);
+            <a
+            href="http://scholar.google.com/scholar_case?q=Reynoso+v+Hall&amp;hl=en&amp;as_sdt=3,227&amp;as_ylo=2009&amp;case=2936979419270091454&amp;scilh=0">Reynoso
+            v. Hall</a><a
+            href="http://scholar.google.com/scholar_case?q=Reynoso+v+Hall&amp;hl=en&amp;as_sdt=3,227&amp;as_ylo=2009&amp;case=2936979419270091454&amp;scilh=0">,
+            395 F. Appx 344 (9</a><a
+            href="http://scholar.google.com/scholar_case?q=Reynoso+v+Hall&amp;hl=en&amp;as_sdt=3,227&amp;as_ylo=2009&amp;case=2936979419270091454&amp;scilh=0">th</a><a
+            href="http://scholar.google.com/scholar_case?q=Reynoso+v+Hall&amp;hl=en&amp;as_sdt=3,227&amp;as_ylo=2009&amp;case=2936979419270091454&amp;scilh=0">Cir
+            2010)</a> (unpublished) (striking two Hispanic jurors with
+            similar characteristics to white jurors violated
+            <em>Batson</em>). Courts also have found the government’s
+            explanations to be pretextual when the cited reasons for
+            exclusion would actually have favored the state, <a
+            href="http://scholar.google.com/scholar_case?q=Ali+v.+Hickman,+584+F3d+1174+%289th+Cir+2009%29&amp;hl=en&amp;as_sdt=3,227&amp;case=10505866137880259953&amp;scilh=0">Ali
+            v. Hickman</a><a
+            href="http://scholar.google.com/scholar_case?q=Ali+v.+Hickman,+584+F3d+1174+%289th+Cir+2009%29&amp;hl=en&amp;as_sdt=3,227&amp;case=10505866137880259953&amp;scilh=0">,
+            584 F3d 1174 (9</a><a
+            href="http://scholar.google.com/scholar_case?q=Ali+v.+Hickman,+584+F3d+1174+%289th+Cir+2009%29&amp;hl=en&amp;as_sdt=3,227&amp;case=10505866137880259953&amp;scilh=0">th</a><a
+            href="http://scholar.google.com/scholar_case?q=Ali+v.+Hickman,+584+F3d+1174+%289th+Cir+2009%29&amp;hl=en&amp;as_sdt=3,227&amp;case=10505866137880259953&amp;scilh=0">Cir
+            2009)</a>.</p>
+            <p>This rule also is codified in <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP 57
+            D(4)</a>, made applicable in criminal proceedings through
+            ORS 136.230(4). That provision describes the proper manner
+            of raising a challenge to the discriminatory use of
+            peremptories.</p>
+            <p>4. Courts shall presume that a peremptory challenge is
+            not discriminatory, but the presumption may be rebutted in
+            the following way: a. If a party believes that the adverse
+            party is exercising a peremptory challenge on a basis
+            prohibited under paragraph (a) of this subsection, the party
+            may object to the exercise of the challenge. The objection
+            must be made before the court excuses the juror. The
+            objection must be made outside of the presence of potential
+            jurors. The party making the objection has the burden of
+            establishing a prima facie case that the adverse party
+            challenged the potential juror on the basis of race,
+            ethnicity or sex.</p>
+            <p>b. If the court finds that the party making the objection
+            has established a prima facie case that the adverse party
+            challenged a prospective juror on the basis of race,
+            ethnicity or sex, the burden shifts to the adverse party to
+            show that the peremptory challenge was not exercised on the
+            basis of race, ethnicity or sex. If the adverse party fails
+            to meet the burden of justification as to the questioned
+            challenge, the presumption that the challenge does not
+            violate paragraph (a) of this subsection is rebutted.</p>
+            <p>c. If the court finds that the adverse party challenged a
+            prospective juror on the basis of race, ethnicity or sex,
+            the court shall disallow the peremptory challenge.</p>
+            </section>
+            </section>
+            <section
+            id="ix._preserving_the_record_for_appeal_of_jury_selection_issues"
+            class="level1">
+            <h1><strong>IX. Preserving the Record for Appeal of Jury
+            Selection Issues</strong></h1>
+            <p>Jury selection issues must be carefully and thoroughly
+            preserved in order to be reviewable on appeal. Jury
+            selection issues often carry a particular risk of being
+            waived if the defendant does not continue to assert his or
+            her objections to a particular juror.</p>
+            <section id="a._preserving_challenges_for_cause"
+            class="level2">
+            <h2><strong>A. Preserving Challenges for Cause</strong></h2>
+            <p>A challenge for cause is not preserved if the accused
+            fails to exercise all of his or her peremptory challenges.
+            Failure to use peremptory challenges to remove an
+            objectionable juror after denial of a challenge for cause
+            provides no error for review''. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Griffin,+19+Or+App+822,+529+P2d+399+%281974%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5269748161267917421&amp;scilh=0">State
+            v. Griffin</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Griffin,+19+Or+App+822,+529+P2d+399+%281974%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5269748161267917421&amp;scilh=0">,
+            19 Or App 822, 825, 529 P2d 399 (1974)</a>; and [<a
+            href="http://scholar.google.com/scholar_case?q=Holmgren+v.+Westport+Towboat+Co">http://scholar.google.com/scholar_case?q=Holmgren+v.+Westport+Towboat+Co</a>.,+260+Or+445,+490+P2d+739+%281971%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16669167090704569930&amp;scilh=0
+            Holmgren v. Westport Towboat Co.][<a
+            href="http://scholar.google.com/scholar_case?q=Holmgren+v.+Westport+Towboat+Co">http://scholar.google.com/scholar_case?q=Holmgren+v.+Westport+Towboat+Co</a>.,+260+Or+445,+490+P2d+739+%281971%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16669167090704569930&amp;scilh=0
+            , 260 Or 445, 447, 490 P2d 739 (1971)]; <a
+            href="http://scholar.google.com/scholar_case?q=lambert+sisters+of+st+joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">Lambert
+            v. Sisters of St. Joseph</a><a
+            href="http://scholar.google.com/scholar_case?q=lambert+sisters+of+st+joseph&amp;hl=en&amp;as_sdt=4,38&amp;case=5321681249226893236&amp;scilh=0">,
+            277 Or 223, 231, 560 P2d 262 (1977)</a>.</p>
+            <p>When a good challenge for cause is denied, it is not
+            error when it appears that the challenger was not compelled
+            to accept that juror. <em>State v. Megorden</em>, 49 Or 259,
+            88 P 306 (1907).</p>
+            <p>To make the record, defendant must challenge any
+            objectionable juror for cause after exhausting the
+            peremptory challenges. <a
+            href="http://scholar.google.com/scholar_case?q=pettit&amp;hl=en&amp;as_sdt=4,38&amp;case=17159206794733924267&amp;scilh=0">State
+            v. Pettit</a><a
+            href="http://scholar.google.com/scholar_case?q=pettit&amp;hl=en&amp;as_sdt=4,38&amp;case=17159206794733924267&amp;scilh=0">,
+            66 Or App 575, 675 P2d 183,</a><a
+            href="http://scholar.google.com/scholar_case?q=pettit&amp;hl=en&amp;as_sdt=4,38&amp;case=17159206794733924267&amp;scilh=0">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?q=pettit&amp;hl=en&amp;as_sdt=4,38&amp;case=17159206794733924267&amp;scilh=0">297
+            Or 227 (1984)</a>.</p>
+            <p>A challenge for implied bias is waived unless submitted
+            before the jury is sworn. <a
+            href="http://scholar.google.com/scholar_case?q=holmgren&amp;hl=en&amp;as_sdt=4,228&amp;case=16669167090704569930&amp;scilh=0">Holmgren
+            v. Westport Tow Boat Company</a><a
+            href="http://scholar.google.com/scholar_case?q=holmgren&amp;hl=en&amp;as_sdt=4,228&amp;case=16669167090704569930&amp;scilh=0">,
+            260 Or 445, 490 P2d 739 (1971)</a>.</p>
+            <p>Objection to a juror on the ground of incompetency is
+            waived by failing to challenge at the proper time. <em>State
+            v. McDonald</em>, 8 Or 113 (1879). Objections to a juror
+            must be made during voir dire. <a
+            href="http://scholar.google.com/scholar_case?q=simonsen&amp;hl=en&amp;as_sdt=4,228&amp;case=17912797074608488045&amp;scilh=0">State
+            v. Simonsen</a><a
+            href="http://scholar.google.com/scholar_case?q=simonsen&amp;hl=en&amp;as_sdt=4,228&amp;case=17912797074608488045&amp;scilh=0">,
+            329 Or 288 (1999)</a>.</p>
+            <p>Voir dire must be reported to preserve the record. <a
+            href="http://scholar.google.com/scholar_case?q=valasco&amp;hl=en&amp;as_sdt=4,38&amp;case=9523229814238041471&amp;scilh=0">State
+            v. Valasco,</a><a
+            href="http://scholar.google.com/scholar_case?q=valasco&amp;hl=en&amp;as_sdt=4,38&amp;case=9523229814238041471&amp;scilh=0">23
+            Or App 532, 543 P2d 37 (1975)</a>.</p>
+            <p>To preserve a cause challenge for appeal, do the
+            following:</p>
+            <p>Make sure the court reporter is recording the voir dire,
+            including all bench conferences.</p>
+            <p>The juror should be asked a sufficient number of
+            questions to extract an unequivocal “cause challenge.”</p>
+            <p>Move to challenge the juror.</p>
+            <p>State clearly the reasons for the challenge into the
+            record, including the applicable case law or statutory
+            provisions.</p>
+            <p>Get a ruling from the court on the cause challenge.</p>
+            <p>Use a peremptory challenge on each of the “cause”
+            jurors.</p>
+            <p>Exhaust all peremptory challenges.</p>
+            <p>Preferably out of the presence of the jury, request an
+            additional peremptory strike for each “cause” juror.</p>
+            <p>State for the record that by overruling the challenge for
+            cause the court has required counsel to take an
+            objectionable juror.</p>
+            <p>State into the record that if granted an additional
+            peremptory strike it would have been used against juror #
+            ___, who is seated on the jury panel.</p>
+            <p>Make sure the appellate record includes:</p>
+            <p>– Master jury panel list. – Defense peremptory strikes. –
+            List of strikes by the prosecutor.</p>
+            </section>
+            <section
+            id="b._preserving_challenges_to_the_discriminatory_exercise_of_peremptories"
+            class="level2">
+            <h2><strong>B. Preserving Challenges to the Discriminatory
+            Exercise of Peremptories</strong></h2>
+            <p>Identify the “cognizable group” and state for the record,
+            outside of the presence of the jury and before the
+            commencement of voir dire:</p>
+            <p>The name of the cognizable group</p>
+            <p>The name and juror numbers of the juror or jurors who
+            belong to that group.</p>
+            <p>Upon conclusion of voir dire and before the exercise of
+            peremptory challenges, again state into the record the
+            aggregate number, names, and juror numbers of the members of
+            the cognizable group.</p>
+            <p>After jury is seated but before they are sworn, make a
+            record similar to the following:</p>
+            <p>That the state has exercised its peremptory strikes in
+            such a way as to exclude from the jury members of a
+            cognizable group.</p>
+            <p>That the state has exercised its peremptory challenges on
+            the specific (names and juror numbers) members of a
+            cognizable group.</p>
+            <p>That none of the named jurors were subject to a challenge
+            for cause.</p>
+            <p>That the responses to questions posed during voir dire as
+            well as their demeanors demonstrate that each juror is
+            qualified, would have been a fair and impartial juror, would
+            fairly weigh and evaluate the evidence, would render a
+            verdict based solely on the evidence, and would impose no
+            greater burden on the prosecution than that required by
+            law.</p>
+            <p>That counsel objects to the composition of the jury on
+            the ground that the prosecution has used peremptory strikes
+            to exclude panel members from the jury on account of their
+            inclusion in a cognizable group in violation of defendant’s
+            right to equal rights and privileges under the Oregon
+            Constitution, equal protection and due process under the
+            United States Constitution, and the public’s right to serve
+            under each constitution.</p>
+            <p>That counsel demands that the prosecution offer, on the
+            record, its justification for striking each individual juror
+            who was a member of the cognizable group.</p>
+            </section>
+            </section>
+            <section id="x._conclusion" class="level1">
+            <h1><strong>X. Conclusion</strong></h1>
+            <p>It is crucial that you are prepared for voir dire because
+            jury selection can make or break your case. In addition to
+            knowing the issues in your case, it is important not to be
+            afraid of asking questions that elicit harmful information
+            or attitudes from jurors. Trial counsel does not want to be
+            unaware of these beliefs and risk having those beliefs
+            shared behind the closed doors of the jury room.</p>
+            <p>Counsel also should not be persuaded to leave someone on
+            the jury because they like the juror or the juror really
+            wants to sit on the case. At times, jurors who share the
+            same values as trial counsel or would be a great person to
+            talk to at a party may not be favorable to the defendant’s
+            case. It is important to separate the idea of a good juror
+            from a person who counsel would enjoy spending time with. On
+            the other hand it is very important to be able to
+            communicate with a juror. If a juror does not understand or
+            seems hostile to counsel’s way of thinking or analyzing
+            issues that will potentially impact how persuasive counsel
+            will be with that one juror during trial.</p>
+            <p>Although jury selection has many potential pitfalls, the
+            right to a trial by a jury of one’s peers is among our most
+            cherished constitutional rights and worth the effort.</p>
+            </section>
+    </body>
+</html>

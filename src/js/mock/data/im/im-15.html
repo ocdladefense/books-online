@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </section>
+            <p>2010 edition</p>
+            <p><strong>Juvenile Delinquency Cases</strong></p>
+            <p><strong><em>Miriam Widman</em></strong></p>
+            <section id="juvenile_court_basics" class="level1">
+            <h1><strong>Juvenile Court Basics</strong></h1>
+            <p>In delinquency cases allegations are presented in the
+            form of a petition. This is similar to an indictment or
+            District Attorney Information in the adult system.</p>
+            <p>The number of agencies and players involved in the
+            juvenile system is more numerous and different than in the
+            adult arena. Juveniles are taken in to detention, not jail.
+            Juvenile detention centers are county facilities. Juveniles
+            can have a trial, but there is no jury.</p>
+            <p>If a youth is picked up in County X, but has allegedly
+            committed a crime in County Y, the charge may be handled in
+            either county, depending on the charge. For example, a youth
+            who lives in Portland commits a crime in Lincoln City while
+            on vacation and is arrested, released to parents and
+            returned to Portland. Lincoln City can decide to send the
+            police report to Portland and ask that they file the
+            petition, or Lincoln City can file it. However, if Lincoln
+            City officials decide to do that, they have to serve the
+            youth and parents back in Portland. If Lincoln City decides
+            to ask Portland to file the case, the defense could always
+            try to get it moved back to Lincoln City, but normally the
+            youth and parents prefer having a court closer to home.</p>
+            <p>Another key difference between the juvenile and adult
+            systems is the emphasis on treatment or rehabilitation.
+            Compromises and formal agreements that allow the client to
+            avoid detention time appear to be more prevalent in the
+            juvenile arena than elsewhere.</p>
+            <section id="key_players_in_juvenile_cases" class="level2">
+            <h2><strong><em>Key Players in Juvenile
+            Cases</em></strong></h2>
+            <p>•The juvenile defendant, often accompanied by
+            relatives.</p>
+            <p>•Parents – as parties during the dispositional
+            (sentencing) phase of the juvenile proceeding and can be</p>
+            <p>required to do services. They may also be represented by
+            counsel.</p>
+            <p>•The juvenile’s defense attorney or agent (legal
+            assistant, investigator).</p>
+            <p>•The Deputy District Attorney – the person prosecuting
+            the case.</p>
+            <p>•The juvenile court counselor or JCC. This person can
+            play multiple and often contradictory roles as a</p>
+            <p>pretrial release officer, pretrial disposition
+            investigator, social worker and probation officer.</p>
+            <p>•Oregon Youth Authority (OYA) – responsible for youth
+            corrections, including supervision of youth committed to OYA
+            on probation, juvenile corrections facilities and parole
+            supervision.</p>
+            <p>•Department of Human Services (DHS) – roughly 80 percent
+            of caseworkers will be from DHS, with the remainder coming
+            from OYA. Your client may already be in the custody of DHS
+            due to the family’s prior involvement with the system
+            because of abuse or neglect of the youth. A youth involved
+            in a delinquency case may also be placed in the temporary
+            legal custody of DHS for out-of-home placement in foster
+            care, in a group home or in residential treatment.</p>
+            <p>It is important to understand the various players’
+            positions in the case and to determine who supports your
+            client and what type of information is needed to bolster
+            your client’s case. For example, does the DHS caseworker
+            mention your client’s positive school record? Talk to
+            teachers and school staff to build that aspect of the
+            case.</p>
+            </section>
+            </section>
+            <section id="the_juvenile_court_process" class="level1">
+            <h1><strong>The Juvenile Court Process</strong></h1>
+            <p>•Detention Hearing: As in the adult arena, a judge or
+            referee (who is not an elected judge, but can rule in
+            juvenile cases) must find probable cause to believe a crime
+            has been committed in order for the youth to be detained and
+            for lawyers to argue for the youth’s pretrial release.</p>
+            <p>•Discovery: Most aspects are identical to discovery in
+            adult cases. A key difference is if other youth are being
+            charged and/or serving as witnesses. You cannot simply
+            access these records, as the Oregon Judicial Information
+            Network (OJIN) has rules that limit such access. Check first
+            about access to juvenile records.</p>
+            <p>•Trial: Juvenile trials do not have juries. Decisions are
+            made by judges or referees.</p>
+            <p>•Compromise Agreements: Many cases are resolved in ways
+            that are more favorable to the client than in the adult
+            system. Depending on the violation and your client’s prior
+            record, sometimes the DA will agree to a Formal
+            Accountability Agreement (FAA), which will spare your client
+            a more onerous punishment in exchange for an agreed upon set
+            of conditions, such as counseling and/or drug and alcohol
+            treatment. In the case of a theft charge, this is likely to
+            include paying back the victim the value of the stolen
+            goods, writing a letter of apology to the victim and/or
+            attending a class on how theft hurts the community. These
+            FAAs may also be available for assault and other
+            charges.</p>
+            </section>
+            <section id="investigating_juvenile_delinquency_cases"
+            class="level1">
+            <h1><strong>Investigating Juvenile Delinquency
+            Cases</strong></h1>
+            <p>Investigators should ask the attorney for a written
+            investigation request and a copy of the discovery. The
+            investigation request should include, at the minimum, the
+            following:</p>
+            <p>•Names of key parties in the case and notations as to who
+            is represented.</p>
+            <p>•List of questions or topics the attorney wants you to
+            explore.</p>
+            <p>•Deadline.</p>
+            <p>You should also meet with the attorney to discuss the
+            theory of the case. Knowing what the attorney thinks
+            happened and where the attorney is going with the legal
+            proceeding shapes the investigation.</p>
+            <p>As in all investigations, investigators are agents of the
+            attorneys for whom they are working and must not have
+            contact with represented parties about the subject of the
+            representation without permission from the other attorney.
+            So, before contacting any witness or victim, the
+            investigator must ascertain whether the victim or witness is
+            represented by counsel.</p>
+            </section>
+            <section id="locating_teen_witnesses" class="level1">
+            <h1><strong>Locating Teen Witnesses</strong></h1>
+            <p>Often, police reports will have location information for
+            witnesses, though this is not always the case. Sometimes
+            what they have is incorrect. In today’s Internet world,
+            social media websites like Facebook and MySpace can be very
+            useful. You might consider establishing work-related
+            Facebook and MySpace accounts just for your investigation
+            purposes.</p>
+            <p>Don’t misrepresent yourself on these sites. If you need
+            to “friend” someone and they send you a message asking what
+            this is all about, be upfront and honest. However, many teen
+            sources will confirm your friend request without any
+            follow-up questions.</p>
+            <p>Facebook and MySpace are also great for finding other
+            witnesses. Connections are key in the teen world and
+            someone’s friend list can become a wealth of information.
+            Review the person’s profile and check photos – there may be
+            some key information there.</p>
+            <p>Finally, don’t forget to check your client’s Facebook or
+            MySpace pages. There may very well be some incriminating or
+            unfavorable information there, including photos that would
+            not be favorable to your client if seen by the DA. Let your
+            attorney know the contents of the pages and, if needed,
+            familiarize them with the sites. Not all attorneys are
+            fluent in the language of social networking and some may be
+            intimidated by the multitude of places people can post their
+            personal views and pictures. After reviewing the client’s
+            profile, the attorney may decide to tell the client to
+            remove his or her profile from the sites.</p>
+            </section>
+            <section id="interviewing_juvenile_witnesses"
+            class="level1">
+            <h1><strong>Interviewing Juvenile Witnesses</strong></h1>
+            <p>One of the stickiest and more difficult issues in
+            investigating juvenile delinquency cases is when you have to
+            try to interview your client’s alleged victims or other
+            youth who may have witnessed the event. The victim issue is
+            addressed separately because there are specific legal
+            requirements that must be met for such interviews.</p>
+            </section>
+            <section id="interviewing_witnessesobtain_parental_consent"
+            class="level1">
+            <h1><strong><em>Interviewing Witnesses—Obtain Parental
+            Consent</em></strong></h1>
+            <p>Parental consent is a key factor when interviewing
+            juvenile witnesses and friends of your client. Best practice
+            is to ask parents for their permission first and then
+            approach the youth. Then, of course, ask the youth if she is
+            okay speaking with you.</p>
+            <p>In instances in which there are a large number of high
+            school–age witnesses who may be difficult to locate, it may
+            be impossible to ask the parents first. Often these teen
+            witnesses – when you can locate them – are not with their
+            parents. In such cases, ask the teen if he is willing to
+            talk now or would prefer that the investigator contact the
+            parent first. If the teen wants the parent’s okay first,
+            don’t do the interview until the parent has agreed to it. An
+            investigator talking to a known minor without parental
+            permission risks complaints and threats of legal action.</p>
+            <p>From an investigator’s point of view it’s also good to
+            get the witnesses’ parents on your side. They may know
+            something their child does not, have knowledge of your
+            client’s home background, can tell you something about your
+            client’s parents or friends, the school environment, or
+            other difficulties. When investigating an alleged sex
+            offense, parents may be able to tell you that your client
+            has always been appropriate with their younger children and
+            there have never been any complaints.</p>
+            <section id="interviewing_victims" class="level2">
+            <h2><strong><em>Interviewing Victims</em></strong></h2>
+            <p>There are very clear rules on what you must do and what
+            you cannot do when interviewing the victim of a crime (ORS.
+            135.970 (2) and (3) (see Appendix B for all statutes
+            referenced in this chapter). Victims – and if the victim is
+            a juvenile the youth’s legal guardian is also considered a
+            victim (ORS 419A.004(31) – must be given specific
+            information about victim’s rights before they can be
+            interviewed. In contrast to the adult world where this
+            information must be provided by an attorney, Oregon law (ORS
+            419C.276) allows both the attorney and an agent of the
+            attorney to provide this information in person or in
+            writing.</p>
+            <p>There are victims who are more than happy to speak with
+            you. Many of these victims are more interested in
+            rehabilitation than punishment and can provide background to
+            a variety of social and emotional problems your client may
+            be facing.</p>
+            <p>Best practice when approaching a victim for an interview
+            is to provide the victim with a victim’s rights letter
+            identifying who you are and who you represent. The letter
+            must inform the victim that they have a right not to speak
+            with the defense and that should they agree to speak, they
+            have a right to have a DA present during the interview. See
+            the Appendix for a sample letter.</p>
+            <p>In cases with longer deadlines, send this letter via
+            regular mail. It should be addressed to both the victim and
+            the victim’s parents. As stated above, the parents are
+            considered victims as well. In cases with a tight deadline,
+            call the victim’s parent, introduce yourself and read the
+            victim’s rights letter over the phone. Ask the parent if she
+            or he understands the information and is okay speaking to
+            you. Then ask if you can speak to the child. Depending on
+            the age of the child, the parent may agree. Oftentimes a
+            parent will speak with the defense but not make the child
+            available. Assuming you obtain an interview either by phone
+            or at a later date, send the victim and the parent a written
+            copy of the victim’s rights letter via the Postal Service.
+            Always make a copy of the victim’s rights letter for the
+            file, noting when it was sent or read over the phone.</p>
+            </section>
+            <section id="victims_of_sex_offenses" class="level2">
+            <h2><strong><em>Victims of Sex Offenses</em></strong></h2>
+            <p>These are some of the toughest victim interviews. Many
+            times you will be speaking with the victim’s parent or
+            guardian. Many parents of alleged sex abuse victims will not
+            allow you to speak with the actual victim but they will
+            speak with the defense. In the majority of cases the victim
+            is either related to your client, or is a close friend.
+            Often these parents can provide key family background about
+            your client and the circumstances of the event.</p>
+            <p>On occasion you may run into a situation in which you
+            make the initial contact in person with the victim and the
+            parent. After your introduction and reading of the victim’s
+            rights letter, it could be that the actual victim is willing
+            to speak with you but the parent is against it. This is an
+            unfortunate situation, but there is nothing you can do. In
+            such cases, if the victim has an adult sibling, that person
+            may be able to provide information. The victim’s friends may
+            be useful too, but once again, it is best practice to get
+            parental permission before interviewing any minors.</p>
+            </section>
+            <section id="tips_for_speaking_with_teens" class="level2">
+            <h2><strong><em>Tips for Speaking with
+            Teens</em></strong></h2>
+            <p>As with any interview, try to make sure you are on the
+            interviewee’s level. This is especially true when
+            interviewing teens, who will only turn off to a know-it-all
+            attitude. If you are a parent, let them know you have kids
+            and that you understand it’s not easy being a teen these
+            days. Make yourself human to the child. If you see they have
+            a bicycle and you like to ride, tell them about that. If
+            they have a pet and you do too, talk about that. If they
+            play a sport or have a hobby, ask them about that. What
+            position do you play? How often do you train?</p>
+            </section>
+            <section id="interviewing_prosecution_witnesses"
+            class="level2">
+            <h2><strong><em>Interviewing Prosecution
+            Witnesses</em></strong></h2>
+            <p>Since these are likely to be children or teens, the same
+            procedures should be followed as when you interview defense
+            witnesses. Best practice is to ask parents for permission
+            and then approach the child.</p>
+            </section>
+            </section>
+            <section id="observing_the_scenes_make_diagrams"
+            class="level1">
+            <h1><strong>Observing the Scenes – Make
+            Diagrams</strong></h1>
+            <p>This is no less important in juvenile cases than in adult
+            ones, but your client’s physical limitations may be a factor
+            for the defense. Does the DA maintain that your client stole
+            a cell phone and wallet from the house and then jumped the
+            fence to escape? How high is the fence? How big is your
+            client? Does your client have any physical limitations that
+            would prevent him or her from jumping the fence?</p>
+            </section>
+            <section id="gathering_school_records_and_exhibits"
+            class="level1">
+            <h1><strong>Gathering School Records and
+            Exhibits</strong></h1>
+            <p>School records can be very useful in your defense. You
+            may have a client accused of assaulting another student. Is
+            there anything in the school record of problems between
+            these two in the past? Does your client’s school counselor
+            know about the tensions? Did the alleged victim ever make a
+            racial or ethnic slur about your client?</p>
+            <p>ORS 419C.200(2) permits court-appointed attorneys to
+            inspect and copy any records the school has of your
+            delinquency client. The statute doesn’t address the
+            confidentiality of other students who may be named in
+            incident reports, however, schools will usually redact those
+            names. Even if some student names are redacted, there is
+            information about the school official who wrote the report.
+            Most of the time school personnel are willing to talk and
+            share information. School records are also useful for
+            information about disabilities the client might have. A
+            disability could impact a defense issue, such as the ability
+            to aid and assist.</p>
+            <p>Occasionally when you have a client accused of
+            shoplifting, you may be asked to get a copy of a store’s
+            security video. It is worth making the effort, but keep in
+            mind most retailers retain their videotapes for 30 days and
+            then record over them. Also, many “local” stores are
+            actually owned by nationwide chains and often have policies
+            that prohibit store personnel from speaking with the
+            defense.</p>
+            </section>
+            <section id="subpoenaing_witnesses_and_keeping_track"
+            class="level1">
+            <h1><strong>Subpoenaing Witnesses and Keeping
+            Track</strong></h1>
+            <p>The subpoena process is similar to the adult one (see ORS
+            419C.405–.408). Younger children are subpoenaed through
+            their parents. For older children, a courtesy copy of the
+            subpoena should be provided to the parent and the child
+            should be personally served. When in the custody of DHS, the
+            caseworker must be served the subpoena.</p>
+            <p>Keeping track of witnesses can be different than in the
+            adult arena, as making sure juvenile witnesses get to court
+            requires a bit of extra effort. Teen witnesses don’t often
+            have a driver’s license and even if they do, it is unlikely
+            they will have access to a vehicle. How is your teen witness
+            coming to court? Can parents help with transportation? Does
+            your witness have a bus pass? Do they know which bus to
+            take? Where to transfer? Of course it is incumbent upon you
+            to let the witness know if the trial has been set over and
+            she needs to be there on a different date.</p>
+            </section>
+            <section id="conclusion" class="level1">
+            <h1><strong>Conclusion</strong></h1>
+            <p>Someone who has investigated adult cases should be
+            perfectly capable of investigating juvenile ones, if they
+            follow the additional rules and pay attention to the
+            specific challenges of interviewing youth. Teenagers are not
+            mini adults, and younger children require a special
+            understanding of their situation. Be cognizant of your
+            approach and the language you use. Getting information out
+            of youth can sometimes be frustrating and difficult, but
+            juvenile delinquency investigations are some of the most
+            rewarding in the business.</p>
+            <p>The greater emphasis on rehabilitation instead of
+            punishment means you have the chance – through information
+            you’ve gathered – to help the attorney reach a compromise
+            agreement with the DA that will not only reduce the legal
+            consequences for your client, but provide him or her with
+            counseling and education to help turn their life around.</p>
+            <p>Good work can help save clients from consequences that
+            range from a short stay at a juvenile detention center to a
+            mandatory lifetime of sex offender registration. The impact
+            of saving a youth from such registration, which makes it
+            extremely difficult to get housing and employment, is hard
+            to quantify. It has a lasting and positive effect – both for
+            the client and the investigator.</p>
+            <p>='''</p>
+            <center>
+            <p>Appendix A</p>
+            </center>
+            <p>'''=</p>
+            <p>'''</p>
+            <center>
+            <p>Sample Victim’s Rights Letter</p>
+            </center>
+            <p>'''</p>
+            <p>DATE</p>
+            <p>Dear Mr/Ms Victim:</p>
+            <p>Juvenile Rights Project, Inc. has been appointed to
+            represent OUR CLIENT. I, ATTORNEY’S NAME, am the assigned
+            attorney in the matter.</p>
+            <p>The purpose of this letter is to introduce my
+            investigator, NAME OF INVESTIGATOR, who is investigating
+            this matter on behalf of OUR CLIENT’S NAME.</p>
+            <p>I would appreciate the opportunity to have my
+            investigator interview you about this case. I want to be
+            clear, however, that you have a right to not talk to my
+            investigator and to not provide other information or
+            materials if you do not wish to do so. Additionally, you
+            have a right to have a district attorney present during any
+            interview you give to NAME OF INVESTIGATOR.</p>
+            <p>It is important that all individuals involved in this
+            case be heard. Thank you in advance for your consideration
+            of this request. Please do not hesitate to contact me or MY
+            INVESTIGATOR with any questions or concerns.</p>
+            <p>Sincerely,</p>
+            <p>ATTORNEY NAME, staff attorney CONTACT INFO INVESTIGATOR
+            NAME CONTACT INFO</p>
+            <p>Juvenile Rights Project</p>
+            <p>='''</p>
+            <center>
+            <p>Appendix B</p>
+            </center>
+            <p>'''=</p>
+            <center>
+            <p><strong>Oregon Revised Statutes</strong></p>
+            </center>
+            <p><strong>135.970 When address and phone number of victim
+            or witness not to be given to defendant; deposition of
+            victim; when contact with victim prohibited; effect of
+            threats by defendant.</strong>(1) If the victim or a witness
+            requests, the court shall order that the victim’s or
+            witness’s address and phone number not be given to the
+            defendant unless good cause is shown to the court. </p>
+            <center>
+            <p>(2) If contacted by the defense, the victim must be
+            clearly informed by the defendant’s attorney,</p>
+            </center>
+            <p>either in person or in writing, of the identity and
+            capacity of the person contacting the victim, that the
+            victim does not have to talk to the defendant’s attorney, or
+            other agents of the defendant, or provide other discovery
+            unless the victim wishes, and that the victim may have a
+            district attorney present during any interview. </p>
+            <p>(3) A victim may not be required to be interviewed or
+            deposed by or give discovery to the defendant</p>
+            <p>or the defendant’s attorney unless the victim consents.
+            This subsection does not prohibit the defendant from: </p>
+            <p>(a) Subpoenaing or examining the victim at trial or in a
+            pretrial proceeding when the purpose is other</p>
+            <p>than for discovery; or </p>
+            <p>(b) Subpoenaing books, papers or documents as provided in
+            ORS 136.580. </p>
+            <p> </p>
+            <p><strong>419A.004 Definitions.</strong>As used in this
+            chapter and ORS chapters 419B and 419C, unless the context
+            requires otherwise: </p>
+            <p>(31) “Victim” means any person determined by the district
+            attorney, the juvenile department or the court to have
+            suffered direct financial, psychological or physical harm as
+            a result of the act that has brought the youth or youth
+            offender before the juvenile court. When the victim is a
+            minor, “victim” includes the legal guardian of the minor.
+            The youth or youth offender may not be considered the
+            victim. When the victim of the crime cannot be determined,
+            the people of Oregon, as represented by the district
+            attorney, are considered the victims. </p>
+            <p><strong>419C.200 Court-appointed counsel for
+            youth.</strong>(1) If the youth, the parent or guardian
+            requests counsel for the youth but is without sufficient
+            financial means to employ suitable counsel possessing skills
+            and experience commensurate with the nature of the petition
+            and the complexity of the case, the court may appoint
+            suitable counsel to represent the youth at state expense if
+            the youth is determined to be financially eligible under the
+            policies, procedures, standards and guidelines of the Public
+            Defense Services Commission. Whenever requested to do so,
+            the court shall appoint counsel to represent the youth in
+            every case filed pursuant to ORS 419C.005 in which the youth
+            would be entitled to appointed counsel if the youth were an
+            adult charged with the same offense. The court may not
+            substitute one appointed counsel for another except pursuant
+            to the policies, procedures, standards and guidelines of the
+            Public Defense Services Commission. </p>
+            <p>(2) Upon presentation of the order of appointment under
+            this section by the attorney for the youth, any agency,
+            hospital, school organization, division or department of the
+            state, doctor, nurse or other health care provider,
+            psychologist, psychiatrist, police department or mental
+            health clinic shall permit the attorney to inspect and copy
+            any records of the youth or youths involved in the case,
+            without the consent of the youth or youths or parents. This
+            subsection does not apply to records of a police agency
+            relating to an ongoing investigation prior to charging.
+            [1993 c.33 §182; 1993 c.234 §2; 1993 c.546 §68;</p>
+            <p>2001 c.962 §49; 2003 c.449 §§12,48]</p>
+            <p> </p>
+            <p><strong>419C.276 Disclosure of personal identifiers of
+            victim or witness; advice of rights prior to
+            interview</strong></p>
+            <p><strong>or deposition; prohibited contact with victim or
+            witness; effect of threats or
+            intimidation.</strong>(1)(a)</p>
+            <p>Unless authorized by the court to disclose the
+            information, the attorney of a youth or youth offender, or
+            an agent of the attorney, may not disclose to the youth or
+            youth offender personal identifiers of a victim or
+            witness. </p>
+            <p>(b) The court shall order the attorney, or agent of the
+            attorney, to disclose to the youth or youth</p>
+            <p>offender the personal identifiers of a victim or witness
+            if the court finds that: </p>
+            <p>(A) The attorney of the youth or youth offender has
+            requested the district attorney or the juvenile</p>
+            <p>department to disclose the information to the youth or
+            youth offender; </p>
+            <p>(B) The district attorney or the juvenile department has
+            refused to disclose the information to the</p>
+            <p>youth or youth offender; and </p>
+            <p>(C) The need for the information cannot reasonably be met
+            by other means. </p>
+            <p>(2) If contacted by the attorney of the youth or youth
+            offender, an agent of the youth or youth</p>
+            <p>offender, or an agent of the attorney of the youth or
+            youth offender, a victim must be clearly informed by the
+            attorney or agent, either in person or in writing: </p>
+            <p>(a) Of the identity and capacity of the person contacting
+            the victim; </p>
+            <p>(b) That the victim does not have to talk to the attorney
+            or agent, or provide other discovery unless</p>
+            <p>the victim wishes; and </p>
+            <p>(c) That the victim may have a representative of the
+            state present during any interview. </p>
+            <p>(3) Unless the victim consents after receiving a full
+            advice of rights as provided in subsection (2) of</p>
+            <p>this section, a victim may not be required to be
+            interviewed or deposed by or give discovery to the youth or
+            youth offender or the attorney for the youth or youth
+            offender, or an agent of the attorney or youth or youth
+            offender. This subsection does not prohibit the youth or
+            youth offender from: </p>
+            <p>(a) Subpoenaing or examining the victim in a proceeding
+            when the purpose is other than for</p>
+            <p>discovery; or </p>
+            <p>(b) Subpoenaing books, papers or documents as provided in
+            ORS 136.580. </p>
+            <p>(4) Any preadjudication release order must prohibit any
+            contact with the victim, either directly or</p>
+            <p>indirectly, unless specifically authorized by the court.
+            This subsection does not limit contact by the</p>
+            <p>attorney for the youth or youth offender, or an agent of
+            the attorney, other than the youth or youth offender, in the
+            manner set forth in subsection (2) of this section. </p>
+            <p>(5)(a) If a victim notifies the district attorney or
+            juvenile department that the youth or youth offender, by
+            direct or indirect contact, threatened or intimidated the
+            victim, the district attorney or</p>
+            <p>juvenile department shall notify the court and the
+            attorney for the youth or youth offender. If the youth or
+            youth offender is not in custody and the court finds there
+            is probable cause to believe the victim has</p>
+            <p>been threatened or intimidated by the youth or youth
+            offender, by direct or indirect contact, the court shall
+            immediately issue an order to show cause why the release
+            status should not be revoked. </p>
+            <p>(b) After conducting a hearing as the court deems
+            appropriate, if the court finds that the victim has been
+            threatened or intimidated by the youth or youth offender, by
+            direct or indirect contact, the release</p>
+            <p>status shall be revoked and the youth or youth offender
+            shall be held in detention until conditions of release
+            sufficient to ensure the safety of the victim and the
+            community can be implemented. </p>
+            <p>(c) In any hearing convened under this subsection, the
+            victim has the right to be notified in advance of the
+            hearing, to appear personally at the hearing and, if
+            present, to express any views relevant to the issues before
+            the court. </p>
+            <p>(6)(a) For purposes of subsections (4) and (5) of this
+            section, “contact” has the meaning given that</p>
+            <p>term in ORS 163.730. </p>
+            <p>(b) For the purposes of subsection (1) of this section,
+            “personal identifiers” means a person’s</p>
+            <p>address, telephone number, Social Security number and
+            date of birth and the identifying number of a person’s
+            depository account at a financial institution, as defined in
+            ORS 706.008, or credit card account. [2007 c.609 §3; 2009
+            c.113 §1] </p>
+            <p><strong>419C.405 Witnesses; subpoena.</strong>(1)
+            Witnesses or other persons necessary for the conduct of the
+            hearing may be subpoenaed. The youth, parents, guardian or
+            any person appearing in the youth’s behalf may</p>
+            <p>have compulsory attendance of witnesses in the youth’s or
+            their behalf in the same manner as provided</p>
+            <p>in ORS 136.567 to 136.603. The form of the subpoena shall
+            be substantially as provided in ORS</p>
+            <p>136.575 (4) or (6), but shall describe the action as a
+            “juvenile court proceeding” and the appearance as on behalf
+            of “the court,” “the youth,” and so on, as the case may
+            be. </p>
+            <center>
+            <p>(2) In addition to the subpoena available under
+            subsection (1) of this section, when the petition</p>
+            </center>
+            <p>alleges that the youth is within the jurisdiction of the
+            court by reason of a ground set forth in ORS</p>
+            <p>419C.005, the youth or any person appearing in behalf of
+            the youth or the state may secure the</p>
+            <p>attendance of out-of-state witnesses in the same manner
+            as provided in ORS 136.623 to 136.637. [1993 c.33 §224] </p>
+            <p> </p>
+            <p><strong>419C.408 Witness fees.</strong>Witnesses
+            subpoenaed to give testimony shall receive the same fees as
+            are paid in criminal cases. Except as provided by this
+            section, responsibility for the per diem and mileage fees of
+            any witness, and travel expenses if so ordered by the court,
+            shall be borne by the party who subpoenas the witness or
+            requests the court to subpoena the witness. If the witness
+            was subpoenaed to appear on behalf of the Oregon Youth
+            Authority, responsibility for per diem, mileage fees and
+            travel expenses shall be borne by the county. If the witness
+            was subpoenaed by more than one party, the witness shall be
+            paid by the party who first subpoenas the witness. The court
+            may then, thereafter, order that the costs be distributed
+            equally among all parties who subpoenaed the witness and
+            that the original payor of the costs be reimbursed
+            accordingly. When the witness has been subpoenaed on behalf
+            of a party who is represented by appointed counsel, the fees
+            and costs allowed for that witness shall be paid pursuant to
+            ORS 135.055. [1993 c.33 §225; 2001 c.962 §53] </p>
+            </section>
+    </body>
+</html>

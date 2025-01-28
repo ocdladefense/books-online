@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 5. Admissibility of Electronic
+            Evidence</strong></p>
+            <p><strong><em>By Adrienne Chin-Perez</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>Like any other form of evidence, electronic evidence must
+            meet certain requirements to be admissible at trial.
+            <em>Lorraine v. Markel Am. Ins. Co.</em>, 241 F.R.D. 534,
+            538 (D. Md. 2007). Electronic evidence presents a number of
+            issues for trial counsel, paramount among them are hearsay
+            and authentication. Given the evolving nature of electronic
+            evidence, however, different types of electronic evidence
+            have required different approaches. In particular, various
+            new types of evidence have resulted in a range of approaches
+            to authentication and hearsay questions. The following
+            sections address how various courts analyze admissibility
+            issues posed by electronic evidence.</p>
+            </section>
+            <section id="ii._e_mail" class="level1">
+            <h1><strong>II. E-mail</strong></h1>
+            <section id="a._authentication" class="level2">
+            <h2><strong>A. Authentication</strong></h2>
+            <p>Authentication is “the act of proving that something (as
+            a document) is true or genuine, esp. so that it may be
+            admitted as evidence[.]” <em>Black’s Law Dictionary</em>(9th
+            ed. 2009). Under Oregon Evidence Code (OEC) § 901(1), “[t]he
+            requirement of authentication or identification as a
+            condition precedent to admissibility is satisfied by
+            evidence sufficient to support a finding that the matter in
+            question is what its proponent claims.” Given the ease of
+            editing messages and fabricating e-mails, authentication of
+            e-mail evidence is an important concern. However, most
+            courts find that the bar for authentication is low. Some
+            courts have found that the testimony of a lay witness with
+            personal knowledge is sufficient to authenticate e-mails.
+            <em>See <a
+            href="http://scholar.google.com/scholar_case?q=Shea+v.+Texas&amp;hl=en&amp;as_sdt=2,38&amp;case=1053563486002467923&amp;scilh=0">Shea
+            v. Texas</a>, 167 S.W.3d 98, 105 (Tex. Crim. App.
+            2005);</em>United States v. Bansal<em>, No. 05-193-2, 11,
+            2006 WL 2246203, at *13 (E.D. Pa. Aug. 1, 2006). Other
+            courts have found that e-mail addresses containing a party’s
+            name in it and the context of the e-mail are strong evidence
+            of authentication.</em>See<em><a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Siddiqui&amp;hl=en&amp;as_sdt=2,38&amp;case=12883298010220688772&amp;scilh=0">United
+            States v. Siddiqui</a>, 235 F3d 1318, 1322 (11th Cit.
+            2000),</em>cert. denied<em>, 533 U.S. 940 (2001); <a
+            href="http://scholar.google.com/scholar_case?q=Safavian,+435+&amp;hl=en&amp;as_sdt=2,38&amp;case=7288306129467462766&amp;scilh=0">United
+            States v. Safavian</a>, 435 F. Supp 2d 36, 41 (2006); <a
+            href="http://scholar.google.com/scholar_case?q=Minnesota+v.+Bohlman&amp;hl=en&amp;as_sdt=2,38&amp;case=14724036288794898197&amp;scilh=0">Minnesota
+            v. Bohlman</a>, No. A05-207, 2006 WL 915765, at *7 (Minn.
+            Ct. App. Apr. 11, 2006). Still other courts have found that
+            if a party makes a plan via e-mail to meet and shows up,
+            that is enough to authenticate. For example, if X makes a
+            plan via e-mail to meet Y at the mall and X shows up at the
+            mall, that can be enough to
+            authenticate.</em>See<em></em>Massachusetts v. Amaral'', 941
+            N.E.2d 1143, 1147 (Mass. App. Ct. 2011).</p>
+            <p>E-mails may also be self-authenticating under <a
+            href="http://www.oregonlaws.org/ors/40.510">OEC § 902
+            (g)</a>. Often times, e-mails sent from businesses will
+            contain information that is specific to that business or the
+            businesses will have special access to e-mails. For example,
+            in<em>Superhighway Consulting, Inc. v. Techwave, Inc.</em>,
+            the court found that the e-mail was self-authenticating
+            because it was produced during discovery by the company that
+            sent the e-mail. The court said that because the e-mails
+            were produced by the purported sender, that was enough to
+            authenticate them. 98 CV 5502, 1999 WL 1044870, at *2 (N.D.
+            Ill. Nov. 16, 1999).</p>
+            <p>Indeed, the ease of fabricating e-mails is typically not
+            an obstacle to authentication and does not warrant special
+            consideration. Courts have come to this conclusion for two
+            main reasons. First, courts agree that false claims of
+            authorship are a realistic danger with e-mails, but the same
+            danger exists with traditional letters. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Commonwealth+v.+Purdy&amp;hl=en&amp;as_sdt=2,38&amp;case=7875582254792833813&amp;scilh=0">Commonwealth
+            v. Purdy</a>, 945 N.E.2d 372, 377-78. Second, courts also
+            agree that the reliability of the e-mails should be decided
+            by the jury. Parties who object to e-mails for authenticity
+            reasons can introduce evidence to call the authenticity of
+            the e-mails into question. Therefore, it is the judge’s role
+            to be the gatekeeper and the jury’s role to decide how much
+            weight to assign the evidence. <em>See</em> <em>United
+            States v. Safavian</em>, 435 F. Supp 2d 36, 41 (2006).</p>
+            </section>
+            <section id="b._hearsay" class="level2">
+            <h2><strong>B. Hearsay</strong></h2>
+            <p>The rule against hearsay can be a substantial obstacle to
+            the admission of e-mails because most e-mails have past
+            e-mail messages embedded within them, thereby creating a
+            hearsay within hearsay issue. Each message must therefore
+            satisfy a hearsay exception to be admissible. Some e-mails
+            may not be hearsay because they have been adopted as
+            statements of a party-opponent. As discussed below, under <a
+            href="http://www.oregonlaws.org/ors/40.450">OEC §
+            801(4)(b)(B)</a>, a statement is not hearsay if it is
+            offered against a party and “the party has manifested the
+            party’s adoption or belief in its truth.” Both hearsay
+            exemptions and exceptions can be useful to admit e-mail
+            evidence.</p>
+            <p>The most common hearsay exceptions used to admit are
+            those commonly referred to as excited utterance, <a
+            href="http://www.oregonlaws.org/ors/40.460">OEC §
+            803(2)</a>; then-existing mental, emotional, or physical
+            condition, OEC § 803(3); recorded recollection, OEC §
+            803(5); and business records, OEC § 803(6). However, there
+            is some debate as to whether all business-related e-mails
+            are business records excepted from the rule against hearsay.
+            Some courts find that business-related e-mails are not
+            necessarily business records under OEC 803(6) because the
+            proponent must show “some evidence of a business duty to
+            make and regularly maintain records of this type.” <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Ferber&amp;hl=en&amp;as_sdt=3,38&amp;case=17548410399080320901&amp;scilh=0">United
+            States v. Ferber</a>, 966 F. Supp. 90, 98 (D. Mass.
+            1997)<em>accord</em> <em>Rambus, Incl v. Infineon Techs.
+            AG</em>, 348 F. Supp 2d 698, 707 (E.D. Va. 2004). Some of
+            these courts admit the e-mails under the present sense
+            impression exception, but Oregon does not have a hearsay
+            exception for present sense impressions. On the other hand,
+            many courts have found that such e-mails are business
+            records. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Stein&amp;hl=en&amp;as_sdt=3,38&amp;as_ylo=2007&amp;case=6933471462080227084&amp;scilh=0">United
+            States v. Stein</a>, S1 05CRIM.0888 LAK, 2007 WL 3009650
+            (S.D.N.Y. Oct. 15, 2007); <em>State v. Sherrills</em>,
+            2008-Ohio-1950, 2008 WL 1822406, at *6 (Ohio Ct. App. Apr.
+            24, 2008);<em>LeBlanc v. Nortel Networks Corp.</em>, CIV.A.
+            3:03-CV-65, 2006 WL 839180, at *5 (M.D. Ga. Mar. 30,
+            2006).</p>
+            <p>A hearsay exception will not be necessary if the
+            out-of-court statement is statement by a party-opponent, OEC
+            § 801(4)(b). If the declarant is a party-opponent, the
+            statement is not considered hearsay. Another person’s
+            statement can be adopted by a party-opponent under OEC §
+            801(4)(b)(B). If “the party has manifested the party’s
+            adoption or belief in its truth,” then the statement has
+            been adopted and is not defined as hearsay. Adoption most
+            commonly occurs when the party-opponent answers a question.
+            Typically, not only the answer comes in, but also the
+            question. Therefore, an e-mail may be adopted even if the
+            e-mail was not sent by the party-opponent.</p>
+            <p>E-mails that are forwarded may also be adopted. In [<a
+            href="http://scholar.google.com/scholar_case?q=Sea-Land+Serv">http://scholar.google.com/scholar_case?q=Sea-Land+Serv</a>.,+Inc.+V.+Lozen+&amp;hl=en&amp;as_sdt=3,38&amp;case=3217101368264661730&amp;scilh=0
+            Sea-Land Serv., Inc. V. Lozen Int’l, LLC], the court held
+            that a cover note was sufficient to constitute adoption of a
+            forwarded e-mail and, therefore, the forwarded e-mail was
+            not considered hearsay and was admissible. 285 F3d 808, 821
+            (9th Cir. 2002). If a party-opponent manifests “adoption or
+            belief in [an e-mail’s] truth,” through an introductory
+            statement to a forwarded e-mail, the forwarded e-mail will
+            likely be deemed adopted and non-hearsay.</p>
+            <p>A party may adopt another’s statement not only through
+            affirmative acknowledgment, but also through silence. The
+            general standard is “whether the circumstances as a whole
+            show that the lack of a denial is so unnatural as to support
+            an inference that the undenied statement was true.” <em>See
+            <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Flecha&amp;hl=en&amp;as_sdt=3,38&amp;case=862175931995473304&amp;scilh=0">United
+            States v. Flecha</a>, 539 F2d 874 (2d Cir. 1976). For
+            example, in</em>State v. Carlson<em>, the defendant was
+            charged with the unlawful possession of methamphetamine.
+            When the officers asked about marks on the defendant’s arm,
+            the defendant said that he was injured at work. The
+            defendant’s wife then contradicted him and said they were
+            from drugs. The defendant just “hung his head and shook his
+            head back and forth.” The court held that the defendant’s
+            response was too ambiguous and could not be seen as adoption
+            of his wife’s statement. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carlson&amp;hl=en&amp;as_sdt=4,38&amp;case=8877466298312506640&amp;scilh=0">State
+            v. Carlson</a>, 311 Or 201, 214, 808 P2d 1002 (1991). Though
+            the defendant’s actions in</em>Carlson'' were too ambiguous
+            to constitute adoption, Oregon courts have found adoption by
+            silence. In <a
+            href="http://scholar.google.com/scholar_case?q=Walls+v.+Clark&amp;hl=en&amp;as_sdt=4,38&amp;case=2969297486932605649&amp;scilh=0">Walls
+            v. Clark</a>, the court found that statements made by the
+            plaintiff’s husband were adopted when the plaintiff said
+            nothing. 252 Or 414, 417, 449 P2d 141 (1969). Adoption by
+            silence may be more difficult to show with respect to
+            e-mails but a lack of e-mail reply could be “so unnatural as
+            to support an inference that the undenied statement was
+            true.”</p>
+            <p>Finally, the Fifth Amendment privilege against
+            self-incrimination may impact whether a statement may be
+            deemed adopted by silence. Statements by the defendant in a
+            criminal proceeding are inadmissible to prove guilt unless
+            the statements were made before arrest or after a valid
+            waiver of the defendant’s Fifth Amendment privilege. <em>See
+            generally</em> <a
+            href="http://scholar.google.com/scholar_case?q=Doyle+v.+Ohio&amp;hl=en&amp;as_sdt=3,38&amp;case=5257682512915945262&amp;scilh=0">Doyle
+            v. Ohio</a>, 426 U.S. 610 (1976); <a
+            href="http://scholar.google.com/scholar_case?q=Jenkins+v.+Anderson&amp;hl=en&amp;as_sdt=3,38&amp;case=429742037742868550&amp;scilh=0">Jenkins
+            v. Anderson</a>, 447 US 231 (1980). Therefore, adoption and
+            adoption by silence may not be possible, depending on when
+            the statement was made and when the defendant purportedly
+            adopted the statement.</p>
+            </section>
+            <section id="c._privilege" class="level2">
+            <h2><strong>C. Privilege</strong></h2>
+            <p>Evidentiary privilege rules apply to any type of evidence
+            and e-mails are no exception. E-mails pose special
+            considerations, however, with respect to the concepts of
+            both waiver and reasonable expectation of privacy. If
+            e-mails are transmitted over an insecure or monitored
+            network, the sender and/or recipient’s privilege may be
+            waived because the network user had no reasonable
+            expectation of privacy. That means that if X, who is an
+            employee of ABC company, sends an e-mail to his wife, Y, the
+            e-mail could fall outside of privilege due to a lowered
+            expectation of privacy. <em>United States v. Etkin</em>,
+            07-CR-913(KMK), 2008 WL 482281, at *4 (S.D.N.Y. Feb. 20,
+            2008). One court set forth a four-pronged waiver test that
+            looks to whether the “. . .corporation maintain[s] a policy
+            banning personal or other objectionable use, . . . [whether]
+            the company monitor[s] the use of the employee’s computer or
+            e-mail, . . . [whether] third parties have a right of access
+            to the computer or e-mails, and . . .[whether] the
+            corporation notif[ies] the employee, or was the employee
+            aware, of the use and monitoring policies?” <a
+            href="http://scholar.google.com/scholar_case?q=In+re+Asia+Global+Crossing&amp;hl=en&amp;as_sdt=2,38&amp;case=8829106639381935362&amp;scilh=0">In
+            re Asia Global Crossing, Ltd.</a>, 322 B.R. 247, 257 (Bankr.
+            S.D.N.Y. 2005).</p>
+            <p>The attorney-client privilege also extends to e-mails,
+            just as it extends to other forms of communication. The
+            content of an e-mail is what determines whether an e-mail is
+            a privileged attorney-client communication, not the fact
+            that a communication takes the form of an e-mail. <a
+            href="http://scholar.google.com/scholar_case?q=Barton+v.+Zimmer+Inc.&amp;hl=en&amp;as_sdt=2,38&amp;case=2002400947948227394&amp;scilh=0">Barton
+            v. Zimmer Inc.</a>, CIV.A. 1:06-CV-208, 2008 WL 80647, at *5
+            (N.D. Ind. Jan. 7, 2008).</p>
+            <p><em>Key Concepts for E-Mail</em></p>
+            <p>The ease of altering e-mails affects the weight of the
+            evidence, not its authentication.</p>
+            <p>Be careful of hearsay within hearsay when trying to admit
+            a string of e-mails (i.e., the e-mail response and previous
+            e-mail messages in the chain).</p>
+            <p>It is possible to adopt e-mails by forwarding them or
+            replying to them.</p>
+            </section>
+            </section>
+            <section id="iii._authentication_of_instant_messages"
+            class="level1">
+            <h1><strong>III. Authentication of Instant
+            Messages</strong></h1>
+            <p>Under <a href="http://www.oregonlaws.org/ors/40.505">OEC
+            § 901(1)</a>, “[t]he requirement of authentication or
+            identification as a condition precedent to admissibility is
+            satisfied by evidence sufficient to support a finding that
+            the matter in question is what its proponent claims.” Courts
+            vary on the threshold for authenticating instant messages
+            (IMs). One court found that an IM transcript was
+            authenticated when one party testified that the screen name
+            in the transcript was his, that he wrote it, and that he
+            printed the transcript from his computer. <a
+            href="http://scholar.google.com/scholar_case?q=2005+PA+Super+220&amp;hl=en&amp;as_sdt=2,38&amp;case=5493419839793832124&amp;scilh=0">In
+            re F.P.</a><a
+            href="http://scholar.google.com/scholar_case?q=2005+PA+Super+220&amp;hl=en&amp;as_sdt=2,38&amp;case=5493419839793832124&amp;scilh=0">,</a>
+            2005 PA Super 220, 878 A.2d 91, 94 (Pa. Super. Ct. 2005).
+            Another court found that IMs were authenticated when both
+            parties testified what the appellant’s screen name was, that
+            the IMs were used to plan a meeting, and that the appellant
+            showed up to the meeting. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Tank&amp;hl=en&amp;as_sdt=2,38&amp;case=4037516180432665695&amp;scilh=0">United
+            States v. Tank</a>, 200 F3d 627, 630-31 (9th Cir. 2000).
+            Some courts have even lower authentication requirements and
+            only require testimony by a witness with personal knowledge
+            of the creation of the chats. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Adams+v.+State&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2005&amp;case=6322773057957512161&amp;scilh=0">Adams
+            v. State</a>, 2005 WY 94, 117 P3d 1210 (Wyo. 2005).</p>
+            <p>Courts have declined to authenticate certain IM
+            transcripts. For example, in <a
+            href="http://scholar.google.com/scholar_case?q=488+F.Supp+2d+866&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2007&amp;case=1066275383655368554&amp;scilh=0">United
+            States v. Jackson</a>, the court found that chat transcripts
+            were not authentic where the defendant claimed that parts of
+            the conversation were missing after an FBI agent copied and
+            pasted the chat into a word processing document. 488 F.Supp
+            2d 866, 871, 73 Fed.R.Evid. Serv. 959 (D. Neb. 2007). In a
+            rare case, one court found that IMs were not authenticated
+            because the accuracy of the evidence was called into
+            question by a malfunction on the agent’s computer. Further,
+            because there was no evidence that the malfunction of the
+            agent’s computer was explained or corrected, the IMs could
+            not be authenticated. <a
+            href="http://scholar.google.com/scholar_case?q=376+Ill.+App.+3d+175&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2007&amp;case=5459297147399120007&amp;scilh=0">People
+            v. Johnson</a>, 376 Ill. App. 3d 175, 314 Ill. Dec. 969, 875
+            N.E.2d 1256 (1st Dist. 2007).</p>
+            <p>Note: The way in which IMs are documented may affect what
+            showing is required to authenticate them. For example, if
+            IMs are printed directly from the program in which they were
+            sent, less evidence of authentication might be required than
+            when IMs are copied and pasted into a word processing
+            document and then printed.</p>
+            <p><em>Key Concepts for Instant Messages</em></p>
+            <p>The specificity of the conversation can help authenticate
+            the chat.</p>
+            <p>Similar to e-mail, making plans via IM and then following
+            through with the plan can be enough to authenticate the
+            IMs.</p>
+            <p>The format in which the evidence is presented can affect
+            the showing needed to authenticate the IMs.</p>
+            </section>
+            <section id="iv._text_messages" class="level1">
+            <h1><strong>IV. Text Messages</strong></h1>
+            <section id="a._authentication_1" class="level2">
+            <h2><strong>A. Authentication</strong></h2>
+            <p>Under Oregon Evidence Code <a
+            href="http://www.oregonlaws.org/ors/40.505">(OEC) §
+            901(1)</a>, “[t]he requirement of authentication or
+            identification as a condition precedent to admissibility is
+            satisfied by evidence sufficient to support a finding that
+            the matter in question is what its proponent claims.”
+            Authentication of text messages becomes more complicated
+            when text messages are transcribed rather than printed out
+            from the phone or provider’s records. One court held that
+            the transcript of text messages was sufficiently
+            authenticated by testimony from the transcribing agent and
+            co-conspirators; even though the text messages had been
+            deleted from a phone and from the provider’s records.
+            <em>United States v. Culberson</em>, 05-80972, 2007 WL
+            1266131, at *2 (E.D. Mich. Apr. 27, 2007).</p>
+            <p>Aside from the complexities created by transcription,
+            evidentiary standards similar to those governing e-mail
+            typically govern text messages, as well. In <a
+            href="http://scholar.google.com/scholar_case?q=Manuel+v.+State&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2011&amp;case=15260757850115986059&amp;scilh=0">Manuel
+            v. State</a>, the court explicitly stated that text messages
+            could be authenticated by applying the same factors as
+            applied to e-mails. 357 S.W.3d 66, 75 (Tex. App. 2011). The
+            factors were:</p>
+            <p>(1) consistency with the e-mail address in another e-mail
+            sent by the alleged author; (2) the author’s awareness,
+            shown through the e-mail, of the details of the alleged
+            author’s conduct; (3) the e-mail’s inclusion of similar
+            requests that the alleged author had made by phone during
+            the time period; and (4) the e-mail’s reference to the
+            author by the alleged author’s nickname.</p>
+            <p><em>Manuel</em>, 357 S.W.3d at 75. Courts have also
+            treated cell phone numbers as similar to e-mail addresses
+            where the phone numbers serve as circumstantial evidence
+            tending to show who the sender of a message was. For
+            example, if “joe_smith@gmail.com” sends an e-mail, the fact
+            that the e-mail was sent by “joe_smith@gmail.com”can be used
+            as circumstantial evidence to authenticate the e-mail as an
+            e-mail from Joe Smith. Similarly, if Joe Smith’s phone
+            number is 555-555-5555, and a text is sent from
+            555-555-5555, the phone number can be used as circumstantial
+            evidence to authenticate the text message as a text message
+            from Joe Smith. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Eleck&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2011&amp;case=10819763019923743207&amp;scilh=0">State
+            v. Eleck</a>, 23 A.3d 818, 821 (Conn. App. Ct. 2011); <a
+            href="http://scholar.google.com/scholar_case?q=Commonwealth+v.+Koch&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2011&amp;case=13941825716580369173&amp;scilh=0">Commonwealth
+            v. Koch</a>, 2011 PA Super 201, 39 A.3d 996 (Pa. Super. Ct.
+            2011), <em>reargument denied</em> (Nov. 22, 2011),
+            <em>appeal granted</em>, 44 A.3d 1147 (Pa. 2012). Testimony
+            from a recipient of the text messages can aid in
+            authenticating the text messages but the proponent must
+            establish that the person testifying is actually the person
+            who received the text messages. <em>E.D.T. ex rel. Adamah v.
+            Tayson</em>, 09-CV-5477 (FB), 2010 WL 2265308 (E.D.N.Y. May
+            28, 2010); <a
+            href="http://scholar.google.com/scholar_case?q=Sanders+v.+Mohtheshum&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=12901119558326950692&amp;scilh=0">Sanders
+            v. Mohtheshum</a>, 10-CV-02897-KLM-DW, 2011 WL 6329866 (D.
+            Colo. Dec. 19, 2011).</p>
+            </section>
+            <section id="b._hearsay_1" class="level2">
+            <h2><strong>B. Hearsay</strong></h2>
+            <p>Text messages are out-of-court statements and, therefore,
+            if offered for the truth of the matter asserted, must
+            satisfy a hearsay exception. Each text message is treated as
+            a statement, similar to any other out-of-court statements,
+            so each text message must satisfy an exception. <a
+            href="http://scholar.google.com/scholar_case?q=827+F.+Supp.+2d+765&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=5836903782253896318&amp;scilh=0">Flagg
+            v. City of Detroit</a>, 827 F. Supp. 2d 765, 775 (E.D. Mich.
+            2011).</p>
+            <p>A hearsay exception may not be necessary if the statement
+            was made by a party-opponent, under <a
+            href="http://www.oregonlaws.org/ors/40.450">OEC §
+            801(4)(b)</a>. If the declarant is a party-opponent, the
+            statement is not considered hearsay. Some statements may be
+            adopted by a party-opponent and become admissible as a
+            party-opponent statement under OEC § 801(4)(b)(B). If “the
+            party has manifested the party’s adoption [of the text
+            message] or belief in its truth,” then adoption has
+            occurred. Adoption occurs most commonly by answering a
+            question. However, as with any other type of evidence,
+            silence may be enough to adopt third-party text messages. No
+            cases specifically address adoption of text messages (either
+            explicitly or through silence), but under the general rule,
+            a court must decide “whether the circumstances as a whole
+            show that the lack of a denial is so unnatural as to support
+            an inference that the undenied statement was true.” ''See <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Flecha&amp;hl=en&amp;as_sdt=2,38&amp;case=862175931995473304&amp;scilh=0">United
+            States v. Flecha</a>, 539 F2d 874 (2d Cir. 1976). Most
+            likely, courts that address the adoption of text messages
+            will analyze text messages using the same framework used to
+            determine whether an e-mail has been adopted by a
+            party-opponent.</p>
+            </section>
+            <section id="c._best_evidence" class="level2">
+            <h2><strong>C. Best Evidence</strong></h2>
+            <p>Typically text messages fall under <a
+            href="http://www.oregonlaws.org/ors/40.565">OEC §
+            1004(1)</a> and, therefore, the best evidence rule does not
+            preclude introduction evidence of a text message’s content
+            other than the “original” text message itself. As long as
+            the original text messages were not destroyed in bad faith,
+            testimony about the text messages is permissible. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Espiritu,+176+P3d+885&amp;hl=en&amp;as_sdt=2,38&amp;case=6919001893897687050&amp;scilh=0">State
+            v. Espiritu</a>, 176 P3d 885, 892-93 (Haw. Sup. Ct.
+            2008).</p>
+            <p><em>Key Concepts for Text Messages</em></p>
+            <p>A transcript of the chat may be admissible.</p>
+            <p>Authentication of a text message is similar to
+            authentication of an e-mail.</p>
+            <p>The rule against hearsay applies to text messages just as
+            it applies to more traditional forms of evidence.</p>
+            </section>
+            </section>
+            <section id="v._social_networking" class="level1">
+            <h1><strong>V. Social Networking</strong></h1>
+            <section id="a._authentication_2" class="level2">
+            <h2><strong>A. Authentication</strong></h2>
+            <p>Authentication of material on social networking websites
+            is governed by <a
+            href="http://www.oregonlaws.org/ors/40.505">OEC §
+            901(1)</a>. In determining the admissibility of material
+            from social networking websites, courts have typically
+            evaluated the admissibility of individual items rather than
+            making blanket determinations regarding the range of
+            material that might be created or found on a social
+            networking website. Put differently, social networking sites
+            like Facebook and Google+ often have expansive
+            functionalities. Users can not only share their interests,
+            but also instant message with friends. A user might make an
+            out-of-court statement by sharing a third party’s web
+            content, or by commenting on another user’s posts.
+            Accordingly, courts have applied different standards for
+            authentication to different types of evidence from social
+            networking sites.</p>
+            <p>1. Profiles The content of profiles varies depending on
+            the social networking site, and the amount of information
+            contained in a profile affects the requirements for
+            authentication. Profiles on the most popular social
+            networking websites, Facebook and MySpace, include pictures,
+            posts from the user, posts from other users, interests,
+            quotes, and other personal information. In contrast, in <a
+            href="http://scholar.google.com/scholar_case?q=Griffin+v.+State&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2011&amp;case=3835113619651885846&amp;scilh=0">Griffin
+            v. State</a>, 19 A.3d 415, 415 (Md. 2011), the court found
+            that the birth date of the alleged user and a photo of the
+            alleged user was not sufficient to authenticate a print out
+            of the alleged user’s MySpace profile.</p>
+            <p>Some courts focus on how distinctive and individualized
+            the profile is. In <a
+            href="http://scholar.google.com/scholar_case?q=People+v.+Goins&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=11385698492586165842&amp;scilh=0">People
+            v. Goins</a>, the defendant attempted to introduce the
+            victim’s MySpace profile at trial. No. 289039, 2010 WL
+            199302, at *2 (Mich. Ct. App. Jan. 21, 2010). Although the
+            court ultimately affirmed the exclusion of the MySpace
+            profile under a different rule, the court found that the
+            MySpace profile was authenticated. <em>Goins</em>, at *2.
+            The court found that because the MySpace profile contained
+            “details of the assault that fit within what a reasonable
+            person would consider to be ‘distinctive content’ not
+            generally known to anyone other than [the victim], [the]
+            defendant, or someone in whom one or the other confided,”
+            the page was authenticated. <em>Goins</em>, at *2.
+            Similarly, in <a
+            href="http://scholar.google.com/scholar_case?q=Tienda+v.+State&amp;hl=en&amp;as_sdt=2,38&amp;case=9666115538412192127&amp;scilh=0">Tienda
+            v. State</a>, the court found that because the profile
+            included the defendant’s name, nicknames, city, photographs,
+            references to the crime, and current circumstances, the
+            profile was authenticated. No. PD-0312-11, 2012 Tex. Crim.
+            App. LEXIS 244, at *10 (Tex. Crim. App. Feb. 8, 2012).</p>
+            <p>Other courts require corroborating evidence if a profile
+            is not sufficiently distinctive. Generally, courts require
+            either testimony from someone that created the profile or
+            observed the content being created, or from a computer
+            expert witness. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=Massachusetts+v.+Williams&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=10679179208116582177&amp;scilh=0">Commonwealth
+            v. Williams</a>, 926 N.E.2d 1162, 1165 (Mass. 2010).
+            Testimony that the witness merely viewed the profile page is
+            insufficient; instead, a corroborating witness must have
+            witnessed the profile being created. Experts can be useful
+            because they can provide information “regarding how secure
+            such a Web page is, who can access a My [S]pace web page,
+            whether codes are needed to access, etc.” <em>Williams</em>,
+            926 N.E.2d at 1172. Courts tend to apply a more stringent
+            standard for authenticating an entire profile from a social
+            networking website than for authenticating e-mails or other
+            individual pieces of content from a social networking
+            website.</p>
+            <p><strong>Be careful</strong>: Even if an entire profile is
+            authenticated, the profile may still be inadmissible under
+            OEC § 403 and OEC § 404. That is, the court may exclude
+            evidence because it is unduly prejudicial or it is offered
+            as character evidence. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Phaknikone&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=10305941827963820092&amp;scilh=0">United
+            States v. Phaknikone</a>,</em>605 F3d 1099, 1101 (11th Cir.
+            2010) <em>cert. denied</em>, 131 S. Ct. 643, 178 L. Ed. 2d
+            486 (U.S. 2010) (State attempted to admit defendant’s
+            MySpace page to prove modus operandi and identity, but court
+            held that although authentication did not preclude
+            admission, the page was inadmissible character evidence
+            under <a href="http://www.oregonlaws.org/ors/40.170">OEC §
+            404 (2)</a>).</p>
+            <p>2. Photographs Photographs from social network sites are
+            not self-authenticating. That is, more than the image itself
+            is needed to authenticate the evidence. <em>See <a
+            href="http://scholar.google.com/scholar_case?q=People+v.+Lenihan&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=16162291960860852318&amp;scilh=0">People
+            v. Lenihan</a>, 30 Misc. 3d 289, 911 N.Y.S.2d 588 (Sup. Ct.
+            2010). In</em>Lenihan<em>, the defendant offered MySpace
+            photographs as evidence that a witness was a known gang
+            member and may have had a motive to fabricate his testimony.
+            The court found that because the photograph could be easily
+            edited and the defendant did not offer any evidence to
+            authenticate the photograph besides the photograph itself,
+            the photograph was not authenticated.</em>Lenihan<em>, 30
+            Misc. 3d at 294. Similarly, in <a
+            href="http://scholar.google.com/scholar_case?q=People+v.+Beckley&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=12362829020564814120&amp;scilh=0">People
+            v. Beckley</a>, the prosecution offered a photograph of the
+            defendant from his MySpace page.</em>People v. Beckley<em>,
+            185 Cal. App. 4th 509, 514 (2010). The court found that a
+            photograph needs to be authenticated by the testimony of
+            someone who was present when the photograph was taken. If
+            such a witness is not available, an expert witness or other
+            authentication evidence must be offered.</em>Beckley'', 185
+            Cal. App. 4<sup>th</sup> at 515.</p>
+            <p>3. Chats/Messages Chats and messages from social
+            networking websites are also commonly offered at trial.
+            Messages are often authenticated in the same manner as
+            e-mails or traditional letters. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=People+v.+Fielding&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=3504738870746280311&amp;scilh=0">People
+            v. Fielding</a>, No. C062022, 2010 WL 2473344, at *4 (Cal.
+            Ct. App. June 18, 2010), <em>review denied</em> (Sept. 1,
+            2010). For example, one court found that messages were
+            properly authenticated when the victim testified that he
+            sent messages, received replies, and he believed he was
+            communicating with the defendant due to the content of the
+            messages. <em>Fielding</em>, 2010 WL 2473344, at *5. As with
+            e-mail authentication, the possibility that the messages
+            could have been tampered with goes to the weight of the
+            evidence and is a question for the jury. Just as with
+            e-mail, the bar for authentication of social networking
+            messages is comparatively low and authentication does not
+            require testimony from an employee of the social networking
+            website. <a
+            href="http://scholar.google.com/scholar_case?q=Dockery+v.+Dockery&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=12932224981583834227&amp;scilh=0">Dockery
+            v. Dockery</a>, No. E2009-01059-COA-R3-CV, 2009 Tenn. App.
+            LEXIS 717, at *16-17 (Tenn. Ct. App. Sept. 21, 2009).</p>
+            <p>Chats from social networking websites are often likened
+            to instant messages through instant messenger clients (e.g.,
+            AOL Instant Messenger, Google Chat, Yahoo! Messenger, etc.).
+            Some courts require that a chat contain distinctive content
+            to be authenticated, while other courts do not require such
+            distinctive content. Distinctive content can help
+            authenticate because it is unique to the user—for example,
+            nicknames, pictures, or code words. Typically, the content
+            and distinctiveness of a chat is key to authentication.
+            <em>Lorraine v. Markel Am. Ins. Co.</em>, 241 F.R.D. 534,
+            556 (D. Md. 2007). Because chats are linked to a profile,
+            the profile can be used to corroborate the distinctive
+            elements of the chats. For example, in <em>State v.
+            Bell</em>, the court found the following sufficient to
+            authenticate MySpace chats: “(1) he [the victim] has
+            knowledge of defendant’s e-mail address and MySpace user
+            name, (2) the printouts appear to be accurate records of his
+            electronic conversations with defendant, and (3) the
+            communications contain code words known only to defendant
+            and his alleged victims” 882 N.E.2d 502, 511 (Ohio Ct. Com.
+            Pl. 2009), aff’d, No. CA 2008-05-044, 2009 WL 1395857 (Ohio
+            Ct. App. May 18, 2009).</p>
+            <p>In contrast, some courts have not required distinctive
+            content to authenticate social networking chats. For
+            example, in <a
+            href="http://scholar.google.com/scholar_case?q=New+York+v.+Clevenstine&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=5087769401917668153&amp;scilh=0">New
+            York v. Clevenstine</a>, the prosecution sought to introduce
+            chats between the victim and the defendant. 891 N.Y.S.2d
+            511, 514 (N.Y. App. Div. 2009). To authenticate the MySpace
+            chats, the prosecutor offered testimony from the victim, the
+            defendant’s wife, and a MySpace compliance officer, and the
+            court found that this was sufficient. <em>Clevenstine</em>,
+            891 N.Y.S.2d at 514.</p>
+            <p><strong>Note</strong>: Because the reliability of the
+            evidence is decided by the jury, counsel seeking to counter
+            social networking evidence should present evidence of the
+            ease of creating forgeries of social networking websites.
+            For example, <a
+            href="http://www.fakebookstatus.com/">http://www.fakebookstatus.com/</a>
+            enables anyone to generate a webpage that looks almost
+            identical to an actual Facebook status posting simply by
+            entering a name, status, date, and time, and uploading a
+            profile picture. The “fakebook” website also allows users to
+            create comments on the fake statuses. Forging social
+            networking information is thus no longer limited to those
+            who obtain login information or are proficient in Photoshop.
+            Though this type of evidence has no bearing on
+            authentication, it is highly relevant to the question of the
+            reliability of proffered social networking evidence.</p>
+            </section>
+            <section id="b._hearsay_2" class="level2">
+            <h2><strong>B. Hearsay</strong></h2>
+            <p>Activity on a social networking site is generally
+            considered an out-of-court statement and, when offered for
+            truth of the matter asserted, must fall within a hearsay
+            exception to be admissible. However, any statement made by a
+            party-opponent is still nonhearsay under OEC § 801(4)(b)(A).
+            <a
+            href="http://scholar.google.com/scholar_case?q=Targonski+v.+City+of+Oak+Ridge&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=16886088699344097339&amp;scilh=0">Targonski
+            v. City of Oak Ridge</a>, 3:11-CV-269, 2012 WL 2930813,
+            at *10 (E.D. Tenn. July 18, 2012); <a
+            href="http://scholar.google.com/scholar_case?q=People+v.+Oyerinde&amp;hl=en&amp;as_sdt=2,38&amp;as_ylo=2008&amp;case=10177296735375660444&amp;scilh=0">People
+            v. Oyerinde</a>, 298199, 2011 WL 5964613, at *10 (Mich. Ct.
+            App. Nov. 29, 2011).</p>
+            <p>If a statement is hearsay, admission requires a hearsay
+            exception. Because the Oregon Evidence Code does not
+            recognize a hearsay exception for present sense impressions,
+            the recorded recollection exception, <a
+            href="http://www.oregonlaws.org/ors/40.460">OEC §
+            803(5)</a>, may pose the best hearsay exception to admit
+            third party statuses and profiles. Though the entire profile
+            may not be admissible under this exception, anything read
+            into the record may be considered for the truth of the
+            matter asserted. However, an adverse party can admit the
+            entire record. The exception for statements of existing
+            mental, emotional, or physical condition, OEC § 803(3), may
+            also support admission of social networking information
+            because statuses and wall posts often discuss current states
+            of mind or future plans. Oregon has not adopted the
+            <em>Hillmon</em> doctrine, however, so a declarant’s
+            statement of intent cannot be introduced to prove the acts
+            of a third party. <em>State v. Clegg</em>, 161 Or App 201,
+            210 (1999) <em>aff’d but criticized</em>, 332 Or 432, 31 P3d
+            408 (2001). For example, if Y posts a Facebook status
+            asserting: “I’m going to the market with X,” the portion of
+            the statement regarding X is not admissible, only the
+            statement “I’m going to the market” is admissible. Courts
+            have generally not addressed the application of specific
+            hearsay exceptions to social networking website content, so
+            social networking evidence may present many questions of
+            first impression.</p>
+            <p>Note: New social networking websites may provide
+            opportunities for party-opponents to adopt others’
+            statements pursuant to OEC § 801(4)(b)(B). For example, the
+            Pinterest website, <a
+            href="http://pinterest.com/">http://pinterest.com/</a>,
+            allows users to “pin” interests to their “pinboard” and
+            share their “pinboard” with others. The website includes a
+            comment feature. Many other websites are developing similar
+            setups. Courts may soon have to decide whether particular
+            items pinned to a person’s pinboard are out-of-court
+            statements and whether, when a party-opponent pins an item
+            to her pinboard, she is adopting the statement.</p>
+            <p>Relatedly, some forms of social networking allow users to
+            communicate in ways that may or may not constitute
+            “out-of-court statements.” For example, Foursquare, a
+            location-based social networking site, posts your
+            “check-ins” on your Foursquare profile and other social
+            networking profiles like Facebook when you “check in” at a
+            location. If a user checks in at a soccer game, a wall post
+            displaying that information will appear on that user’s
+            Facebook profile. Courts have not decided whether these
+            check ins and the resulting displays of information are
+            statements. The current standard provides that if
+            communication was intended, the item or display is a
+            statement. These check-ins may be communication and
+            therefore may constitute statements. The issue becomes even
+            more convoluted when a person checks in another user. The
+            check-in will appear on the profile of the person who
+            checked in and the profile of the person who was checked in.
+            For example, if X checks in at the market and checks in Y,
+            there will be a check-in entry on X’s and Y’s Facebook
+            profiles. Assuming courts decide such “check-ins” of other
+            users constitute statements, proponents will need to cite an
+            applicable hearsay exception for the evidence to be
+            admitted. The novel issues and developing state of the law
+            together provide excellent opportunities for zealous
+            advocacy by creative counsel.</p>
+            <p><em>Key Concepts for Social Networking</em></p>
+            <p>Focus precisely on what evidence you’re trying to present
+            to jurors. The court is much likelier to admit individual
+            photos or messages than an entire social networking
+            profile.</p>
+            <p>The law governing social networking evidence has ample
+            room for development because new social networking websites
+            are created frequently.</p>
+            </section>
+            </section>
+            <section id="vi._bibliography" class="level1">
+            <h1><strong>VI. Bibliography</strong></h1>
+            <p><strong><em>Articles Online:</em></strong></p>
+            <ul>
+            <li>Heather L. Griffith, “Understanding and Authenticating
+            Evidence from Social Networking Sites,” 7 Wash. J.L. Tech.
+            &amp; Arts 209 (2012).</li>
+            <li>Breanne M. Democko, “Social Media and the Rules on
+            Authentication,” 43 U. Tol. L. Rev. 367 (2012).</li>
+            <li>Gregory P. Joseph, “Internet, Email and Social Media
+            Evidence,” STo51 ALI-ABA 51 (2012).</li>
+            <li>Gregory P. Joseph, “Internet and Email Evidence”
+            <em>(Part 2)</em>, 58 No. 2 Prac. Law. 17 (April 2012).</li>
+            <li>John G. Browning,<em>“</em>Digging for the Digital Dirt:
+            Discovery and Use of Evidence from Social Media Sites,” 14
+            SMU Sci. &amp; Tech. L. Rev. 465 (2011).</li>
+            <li>Scott R. Grubman &amp; Robert H. Snyder, “Web 2.0
+            Crashes Through the Courthouse Door: Legal and Ethical
+            Issues Related to the Discoverability and Admissibility of
+            Social Networking Evidence,” 37 Rutgers Computer &amp; Tech.
+            L.J. 156 (2011).</li>
+            <li>Sandra Hornberger, “Social Networking Websites: Impact
+            on Litigation and the Legal Profession in Ethics, Discovery,
+            and Evidence,” 27 Touro L. Rev. 279 (2011).</li>
+            <li>John S. Wilson, “Myspace, Your Space, or Our Space? New
+            Frontiers in Electronic Evidence,” 86 Or L. Rev. 1201
+            (2007).</li>
+            <li>James P. Flynn &amp; Sheldon M. Finkelstein, “A Primer
+            on “E-VIDE-N.C.E.,” 28 Litigation 34, 35-36 (Winter 2002),
+            <em>reprinted in</em> Priscilla Ann Schwab, Litigation
+            Manual First Supplement 17 (3d ed. 2007).</li>
+            </ul>
+            <p><strong><em>Treatises:</em></strong></p>
+            <ul>
+            <li>5 Jack B. Weinstein, <em>Weinstein’s Federal
+            Evidence</em> § 900.</li>
+            <li>122 Am. Jur. 2d <em>Trials</em>421 (2011).</li>
+            <li>Laird C. Kirkpatrick, <em>Oregon Evidence</em> (Lexis
+            Nexis, 5th ed. 2011).</li>
+            <li>Jay M. Zitter, Annotation, <em>Authentication of
+            Electronically Stored Evidence, Including Text messages and
+            E-mail</em>, 34 A.L.R.6th 253 (2008).</li>
+            </ul>
+            <p><strong><em>Websites:</em></strong></p>
+            <ul>
+            <li>IT Forensics, Inc., <a
+            href="http://www.itforensics.com"><span>http://www.itforensics.com</span></a>.</li>
+            <li>Megan J. Erickson, Social Networking Law Blog, <a
+            href="http://www.socialnetworkinglawblog.com/"><span>http://www.socialnetworkinglawblog.com/</span></a>.</li>
+            <li>John Patzakis, next generation eDiscovery Law &amp; Tech
+            Blog, <a
+            href="http://blog.x1discovery.com/"><span>http://blog.x1discovery.com/</span></a>.</li>
+            <li>Bradley Shear, Shear on Social Media Law, <a
+            href="http://www.shearsocialmedia.com/"><span>http://www.shearsocialmedia.com/</span></a>.</li>
+            </ul>
+            </section>
+    </body>
+</html>

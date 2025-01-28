@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </section>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 16. Jury Instructions and
+            Stipulations</strong></p>
+            <p><strong>Jason E. Thompson and Zachary J.
+            Stern</strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>Listen, we get it. Sex cases are hard. Really hard. After
+            fighting prosecutors for discovery, figuring out what you
+            are actually defending against, wrapping your head around <a
+            href="https://www.oregonlaws.org/ors/40.170">OEC 404(4)</a>,
+            prepping <em>voir dire</em>, directs, crosses, opening and
+            closing, that Uniform Criminal Jury Instruction Handbook
+            starts to look pretty tempting. But, don’t give in. Jury
+            instructions are important for both practical and tactical
+            reasons.</p>
+            <p>Practically, they are important because it is your one
+            opportunity to get the judge to be your mouthpiece to tell
+            the jury what the law is. Crafting a persuasive closing
+            argument is one thing. However, your argument is that much
+            better when after you sit down the court recites the jury
+            instructions you drafted that—by no coincidence—align
+            perfectly with your theory of the case.</p>
+            <p>Tactically, jury instructions are important because
+            should your client get convicted and the court refuse to
+            give your requested instruction, on appeal the court (with
+            respect to the jury instruction issue) will review the
+            evidence in the light most favorable to the party requesting
+            the instruction, i.e., your client!</p>
+            </section>
+            <section id="ii._rules_for_jury_instructions"
+            class="level1">
+            <h1><strong>II. Rules for Jury Instructions</strong></h1>
+            <section id="a._ors_136.330" class="level2">
+            <h2><strong>A. ORS 136.330</strong></h2>
+            <p><a href="https://www.oregonlaws.org/ors/136.330">ORS
+            136.330</a> lists the applicable rules of civil procedure
+            applicable to criminal cases for jury instructions. The
+            following are certain rules of note:</p>
+            <p><strong>1. <a
+            href="https://oregoncivpro.com/orcp-59-instructions-to-jury-and-deliberation/">ORCP
+            59(B)</a>. Jury instructions can be reduced to writing or
+            recorded and given to the jury for deliberations.</strong>
+            a. Must be requested at the commencement of the trial.</p>
+            <p>b. If you are requesting taped instructions be provided
+            to the jury for deliberations, it is a good idea to bring
+            your own tape recorder or check with the clerk before
+            instruction to find the best way to make the recording.
+            <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=8832359813299407155&amp;q=State+v.+Looper,+77+Or+App+660&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Looper</em></a>, 77 Or App 660, 713 P2d 1099 (1986); <a
+            href="https://scholar.google.com/scholar_case?case=7403514353976851929&amp;q=Hansen+v.+Bennett,+162+Or+App+380&amp;hl=en&amp;as_sdt=4,38"><em>Hansen
+            v. Bennett</em></a>, 162 Or App 380, 986 P2d 633 (1999)
+            (failure of trial court to comply with ORCP 59(B) requires a
+            new trial, but trial court’s failure to comply must be on
+            the record in order for reviewing court to determine
+            compliance).</p>
+            <p>c. UTCR 6.070 provides that:</p>
+            <p>i. A party requesting written or recorded jury
+            instructions as provided by ORCP 59 (B) shall have the
+            responsibility for recording or reducing the court’s
+            instructions to writing in a timely manner; and</p>
+            <p>ii. No identifying information relating to the parties or
+            any other extraneous material, including authorities, must
+            appear on the typed or copied instructions.</p>
+            <p><strong>2. ORCP 59(C). Deliberation</strong>.</p>
+            <p>a. The jury may take four items with them into
+            deliberations:</p>
+            <p>i. An impartial written statement summarizing the issues
+            to be decided by the jury.</p>
+            <p>ii. Their notes.</p>
+            <p>iii. Exhibits received (jury cannot take any exhibit not
+            received into evidence into the jury room).</p>
+            <p>iv. Copies of documents that may be substituted for any
+            public records or private documents that ought not, in the
+            opinion of the court, be taken from the person in
+            possession.</p>
+            <p>b. The jury must remain together and separate from all
+            others, absent a valid order of the court; if allowed to
+            separate, must be instructed by the court on the reason for
+            separation.</p>
+            <p><strong>3. ORCP 59(D). Questions by jurors.</strong></p>
+            <p>a. Judge may require the jury to be brought back into
+            court and reinstructed.</p>
+            <p>b. Counsel must be present or notified prior to
+            reinstruction.</p>
+            <p>c. If jurors have questions, the question is presented to
+            the court through the bailiff. The question can be answered.
+            Sometimes, the nature of the question merely requires that
+            the jury be reinstructed.</p>
+            <p>d. For preservation purposes, make sure to object on the
+            record and state any and all reasons as to why the
+            instruction/response from the court was inaccurate,
+            insufficient, or unnecessary.</p>
+            <p><strong>4. ORCP 59(G). Polling the jury; the hunt for
+            inconsistencies and misconduct.</strong></p>
+            <blockquote>
+            <p>There is a strong preference for finality of jury
+            verdicts. <a
+            href="https://scholar.google.com/scholar_case?case=3709625113219575086&amp;q=DC+Thompson+and+Co.+v.+Hauge,+72+Or+App+116+&amp;hl=en&amp;as_sdt=4,38"><em>DC
+            Thompson and Co. v. Hauge</em></a>, 72 Or App 116 (1985)
+            (jurors’ post-verdict affidavits stating that they did not
+            understand jury verdict forms are not sufficient misconduct
+            to cause reversal); [<a
+            href="file:///Users/jennifer/Documents/Publications/Sex%20Crimes%20-%20Sherlag%20edit/chapters/">file:///Users/jennifer/Documents/Publications/Sex%20Crimes%20-%20Sherlag%20edit/chapters/</a>**%20ready%20for%20hyperlinks%2c%20indesign/thompson%20and%20stern/o
+            <em>State v. Gardner</em>], 230 Or 569, 371 P2d 558 (1962);
+            <a
+            href="https://scholar.google.com/scholar_case?case=7283320957668130064&amp;q=Leland+Properties+v.+Burton&amp;hl=en&amp;as_sdt=4,38"><em>Leland
+            Properties v. Burton Eng’g and Survey</em></a>, 152 Or App
+            557, 954 P2d 851 (1998) (lengthy discussion on long history
+            of refusing to consider jurors’ post-verdict affidavits to
+            impeach a verdict).</p>
+            </blockquote>
+            <p>a. Poll may be requested by either side.</p>
+            <blockquote>
+            <p>b. Always poll each individual juror. <em>See <a
+            href="https://scholar.google.com/scholar_case?case=74516631930565635&amp;q=State+v.+DeVault,+78+Or+App+307&amp;hl=en&amp;as_sdt=4,38">State
+            v. DeVault</a></em>, 78 Or App 307, 715 P2d 1353 (1986).
+            Even if a juror votes for conviction in the jury room, that
+            juror may change his or her vote when polled and defeat the
+            verdict. Defendant is entitled to have deliberations
+            continue until enough jurors are willing to assure
+            individual responsibility for verdict to permit verdict to
+            stand. <em>State v. DeVault</em>, 78 Or App at 309.</p>
+            <p>c. If jurors answering in the affirmative are less than
+            the number required to reach a verdict, the jury shall be
+            sent out for further deliberation. <a
+            href="https://scholar.google.com/scholar_case?case=2713383756532525854&amp;q=State+v.+Imlah,+204+Or+43&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Imlah</em>, 204 Or 43</a>, 281 P2d 973 (1955). However,
+            once the jurors’ verdict has been received by the court,
+            absent some egregious juror misconduct, the verdict will
+            stand, even if the jurors come back to the court later
+            claiming error. <em>DC Thompson and Co. v. Hauge,</em> 72 Or
+            App 116 (1985).</p>
+            </blockquote>
+            <p>d. Although there is a strong judicial preference for
+            finality, <a
+            href="https://oregoncivpro.com/orcp-64-new-trials/">ORCP
+            64</a>, applicable in criminal proceedings pursuant to <a
+            href="https://www.oregonlaws.org/ors/136.535">ORS
+            136.535</a>, provides grounds in which a defendant can move
+            the court for a new trial.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p><strong><em>Never</em></strong> poll a jury following a
+            not guilty verdict. In the event that the jury is
+            considering lesser-included offenses, discuss with your
+            client—before the jury returns its verdict—whether you will
+            ask to poll the jury in the event that it returns a not
+            guilty verdict to the charged offense but guilty verdict to
+            a lesser-included offense.</p>
+            <p><strong>5. ORCP 59(H). Exceptions.</strong></p>
+            <blockquote>
+            <p>a. Although it is certainly the preferred practice to
+            “except” to the court giving, or failing to give, a
+            particular jury instruction, an attorney’s failure to have
+            an “exception” noted by the trial court is not a
+            prerequisite to appellate review. <a
+            href="https://scholar.google.com/scholar_case?case=16711954624217072961&amp;q=State+v.+Vanornum,+354+Or+614&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Vanornum</em></a>, 354 Or 614, 629 (2013) (“ORCP 59 H
+            does not govern preservation of instructional error”).</p>
+            </blockquote>
+            <p>b. Exceptions must be made and recorded
+            <em>immediately</em> after the court instructs<br />
+            the jury.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>In order to ensure preservation of error, always object
+            to the instructions before they are given and then take an
+            exception to the instruction after it is read and provided
+            to the jury if there is a reason to do so. State sources of
+            law to support your position. Except to an instruction you
+            requested and which the judge refused to provide, and state
+            (1) why it should have been provided and (2) that it was not
+            covered in any other instruction. Requesting instructions
+            based on direct quotes from published Oregon appellate
+            opinions is typically the best source of law for
+            instructions, even if <em>dicta</em>. Also, except to
+            instructions provided that do not correctly state the law
+            that are prejudicial to your case. Explain why the
+            instruction is an inaccurate statement of law. Failure to
+            object and take exception to the trial court’s giving an
+            instruction or failing to give your instruction will not
+            preclude appellate review under <em>Vanornum</em>, but the
+            appellate court will only review for “plain error.”</p>
+            </section>
+            <section id="b._instructions_requested_in_writing"
+            class="level2">
+            <h2><strong>B. Instructions Requested in
+            Writing</strong></h2>
+            <blockquote>
+            <p>Check supplementary local court rules (SLRs) and UTCR
+            6.070. Most SLRs and the UTCR can be found online.</p>
+            <p>Instructions must be provided by the party requesting it,
+            but the proposed instruction cannot contain information that
+            identifies the party or points and authorities. It is the
+            responsibility of the requesting party to make the record
+            clear for appeal; the party cannot simply rely on the
+            “usual” practice of the trial court. <em>Leland Properties
+            v. Burton Eng’g and Survey</em>, 152 Or App 557, 954 P2d 851
+            (1998).</p>
+            </blockquote>
+            </section>
+            <section id="c._uniform_criminal_jury_instructions"
+            class="level2">
+            <h2><strong>C. Uniform Criminal Jury
+            Instructions</strong></h2>
+            <blockquote>
+            <p>UCrJI 1600-1662 sets forth all of the instructions
+            regarding specific sex offenses. The UCrJIs are a good
+            starting point for crafting your jury instructions. But, as
+            noted in the introduction, the UCrJIs are not your last line
+            of defense.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>Always review these jury instructions and make sure that
+            no stated defenses—such as UCrJI 1636, 1647, 1649-1651,
+            1654-1656, and 1660—apply to your case. Obviously, if any
+            do, request those instructions.</p>
+            <p>Why the UCrJI aren’t enough—Although the UCrJI’s are
+            convenient, Oregon appellate courts have, on occasion, found
+            them to be inaccurate statements of the law. <em>See, e.g.,
+            <a
+            href="https://scholar.google.com/scholar_case?case=7686916681686140395&amp;q=State+v.+Sandoval,+342+Or+506&amp;hl=en&amp;as_sdt=4,38">State
+            v. Sandoval</a></em>, 342 Or 506, 508 (2007) (UCrJI
+            instruction on defense of self is misstatement of law);
+            <em>see also <a
+            href="https://scholar.google.com/scholar_case?case=4134971553269762712&amp;q=State+v.+Lopez-Minjarez,+350+Or+576,+&amp;hl=en&amp;as_sdt=4,38">State
+            v. Lopez-Minjarez</a></em>, 350 Or 576, 588 (2011) (UCrJI
+            accomplice liability instruction is misstatement of
+            law).</p>
+            </section>
+            </section>
+            <section id="iii._limiting_instructions" class="level1">
+            <h1><strong>III. Limiting Instructions</strong></h1>
+            <blockquote>
+            <p>Limiting instructions are extremely important. In complex
+            sex cases—probably more so than any other area of criminal
+            law—evidence is often admissible for one purpose but no
+            other. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=5033888829277784561&amp;q=State+v.+Moore/Coen,+349+Or+371&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moore/Coen</em></a>, 349 Or 371, 391 (2010) (citing <a
+            href="https://scholar.google.com/scholar_case?case=16323839286983417155&amp;q=State+v.+Thompson,+328+Or+248&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Thompson</em></a>, 328 Or 248, 271 (1999)) (“trial courts
+            have the authority to give limiting instructions to juries
+            that require them to consider evidence only for a particular
+            purpose or in regard to a particular element”). It is
+            incumbent upon the trial attorney to request that the court
+            instruct the jury regarding the parameters with which jurors
+            may consider such evidence. Here are a few ground rules:</p>
+            </blockquote>
+            <p><strong>1. The court shall, upon request, give a limiting
+            instruction. <a
+            href="https://www.oregonlaws.org/ors/40.035">OEC
+            105</a>.</strong></p>
+            <p><strong>Practice Tip</strong></p>
+            <p>If you ask for a limiting instruction, the court is
+            required to instruct the jury on the permissible bases
+            jurors may consider the challenged evidence. If you do not
+            ask, and the court does not give a limiting instruction, the
+            jury can use that evidence for any purpose. Request the
+            instruction immediately after the evidence comes in, unless
+            you think it would draw undue attention to the prejudicial
+            testimony.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>There are some circumstances where it makes more
+            strategic sense not to draw attention to the disputed
+            evidence at the time of introduction. Under those
+            circumstances, you can request that the limiting instruction
+            be given at the close of evidence, just prior to
+            deliberations.</p>
+            <p><strong>2. Request the Instruction Again</strong></p>
+            <p>Even if a limiting instruction is given immediately after
+            the evidence comes in, be sure<br />
+            to request it again at the end of the case together with the
+            other instructions.</p>
+            <p><strong>3. Case Law</strong></p>
+            <blockquote>
+            <p>“Generally, once evidence has been admitted without
+            restriction, it can be used for <em>any</em> purpose.” <a
+            href="https://scholar.google.com/scholar_case?case=6401622801027017582&amp;q=State+v.+Clegg,+332+Or+432,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Clegg</em></a>, 332 Or 432, 442 (2001) (emphasis in
+            original). And, OEC 105 places the burden on trial counsel
+            to request a limiting instruction if evidence is admissible
+            for one purpose but not another.</p>
+            </blockquote>
+            <p>Oregon trial courts have the authority to give limiting
+            instructions to juries that require them to consider
+            evidence only for a particular purpose or in regard to a
+            particular element. <a
+            href="https://scholar.google.com/scholar_case?case=5033888829277784561&amp;q=State+v.+Moore/Coen,+349+Or+371&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moore/Coen</em></a>, 349 Or 371, 391 (2010).</p>
+            <p>When litigating a sex case involving multiple offenses or
+            multiple victims, an attorney should always consider
+            requesting a “<em>Kitzman</em>-like” instruction that
+            requires the jury to consider the evidence that pertains to
+            each charged offense separately. <a
+            href="https://scholar.google.com/scholar_case?case=10431314958067431490&amp;q=State+v.+Kitzman,+129+Or+App+520,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kitzman</em></a>,<br />
+            129 Or App 520, 530, (1994), <em>aff’d in part, rev’d in
+            part</em>, 323 Or 589 (1996).</p>
+            <p>In <em>Kitzman</em>, the trial court properly gave
+            defendant’s requested limiting instruction:</p>
+            <blockquote>
+            <p>[Defendant] has been charged with several unrelated
+            counts in a single indictment. A separate crime is charged
+            in each count of the Indictment. Each charge and the
+            evidence pertaining to it must be considered separately by
+            the jury…. In other words, it is your duty to consider the
+            evidence solely for the charge it pertains to and no other
+            charge.</p>
+            <p><em>Id.</em> at 528-29. That limiting instruction was
+            sufficient to ensure the jury considered only the evidence
+            that corresponded to each charged offense as opposed to
+            allowing the jury to “cross-reference” or “cross utilize”
+            evidence pertaining to one charge while deliberating on
+            another.</p>
+            <p>For example, in a case with two complaining witnesses, if
+            the evidence with respect to one victim convinces a juror
+            your client was guilty, a <em>Kitzman</em>-like instruction
+            would prohibit that juror from determining your client was
+            guilty with respect to the second victim because that juror
+            would not be allowed to use the evidence from the first
+            vic-<br />
+            tim when considering whether your client was guilty of the
+            conduct relating to the second victim.</p>
+            <p>Also, after <a
+            href="https://scholar.google.com/scholar_case?case=15212196728993713978&amp;q=State+v.+Chandler,+360+Or+323+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Chandler</em></a>, 360 Or 323 (2016), an out-of-court
+            statement that comments on the credibility of another
+            witness is no longer subject to the categorical prohibition
+            against vouching evidence so long as the statement is
+            offered for a “relevant, non-opinion purpose.” For that
+            reason, it is especially important in sex cases to consider
+            requesting a limiting instruction like the following:</p>
+            <p>“As part of the questioning, ladies and gentlemen, you
+            are about ready to hear an interview between Detective
+            Mindreader and the Defendant. As part of the questioning,
+            the detective may have made statements of disbelief in the
+            defendant’s<br />
+            story and expressed opinions concerning the defendant’s
+            guilt.</p>
+            <p>“You should view the questions and answers in the same
+            way you view the questions and answers in the courtroom. In
+            other words, the questions are only pertinent as they
+            explain what the answers are.</p>
+            <p>“You are not to assume as true anything Detective
+            Mindreader says in his question; the questions are only
+            pertinent as they give meaning to the answers.”</p>
+            </blockquote>
+            <p><strong>Practice Tip</strong></p>
+            <p>Remember to think about these issues in advance of trial.
+            There may be strategic reasons for requesting the
+            instruction before the comment is made, immediately after it
+            is made, or waiting until the end of trial and lumping in
+            that special instruction with the rest of the instructions.
+            Think through your theory of the case, the story you are
+            presenting to the jury and at what juncture a
+            <em>Chandler</em>-based limiting instruction fits in with
+            your theory.</p>
+            <p>Notably, if the judge is giving a “limiting instruction,”
+            this means evidence to which you have objected is likely
+            coming in (and a concomitant motion for mistrial has been
+            denied). In that case, when the limiting instruction is
+            given, a good tactic is to tell the jury a few times that
+            the judge is precluding them from considering the evidence
+            except for the single purpose the judge found the evidence
+            to be admissible and for <em>no other purpose</em>.</p>
+            <section id="a._oec_105" class="level2">
+            <h2><strong>A. OEC 105</strong></h2>
+            <p>“When evidence which is admissible as to one party for
+            one purpose but not admissible as to another party or for
+            another purpose is admitted, the court, upon request, shall
+            restrict the evidence to its proper scope and instruct the
+            jury accordingly.”</p>
+            </section>
+            <section id="b._importance" class="level2">
+            <h2><strong>B. Importance</strong></h2>
+            <p>Limiting instructions should be utilized to focus the
+            jury on what it may do with particular evidence. Remember,
+            the jury will also be instructed that it must follow the
+            court’s instructions.</p>
+            <p><strong>1. At Trial (for the Jury)</strong></p>
+            <p>Generally, once evidence has been admitted without
+            restriction, it can be used by the jury for <em>any</em>
+            purpose. <a
+            href="https://scholar.google.com/scholar_case?case=6401622801027017582&amp;q=State+v.+Clegg,+332+Or+432,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Clegg</em></a>, 332 Or 432, 442 (2001). Without a
+            limiting instruction, the jury can make improper inferences
+            about a defendant’s propensity to commit sex offenses
+            against one victim based on evidence that was admissible
+            only with respect to other charges involving different
+            victims. <a
+            href="https://scholar.google.com/scholar_case?case=5387620863997686829&amp;q=Green+v.+Franke,+357+Or+301&amp;hl=en&amp;as_sdt=4,38"><em>Green
+            v. Franke</em></a>, 357 Or 301, 311 (2015).</p>
+            <p>Remember, your goal in requesting a limiting instruction
+            is to prevent the jury from using evidence for an
+            impermissible purpose.</p>
+            <p><strong>2. On Appeal (the Record)</strong></p>
+            <p>If evidence is received without objection at trial, it
+            inherently becomes part of the record on appeal. On appeal,
+            the appellate court will only consider evidence in the
+            record. Thus, if evidence is admissible for one purpose but
+            not another, a limiting instruction in the trial court will
+            ensure that the appellate court considers the challenged
+            evidence <em>solely</em> for the purposes it was admitted at
+            trial. Failure to request a limiting instruction invites the
+            appellate courts to use the challenged evidence for any
+            purpose. <em>State v. Clegg</em>, 332 Or 432, 443 (2001)
+            (quoting McCormick on Evidence, § 54, 242, 5<sup>th</sup> ed
+            1990); <em>Dalk v. Lachmund</em>, 157 Or 152, (1937).</p>
+            </section>
+            <section
+            id="c._how_the_courts_failure_to_give_a_requested_instruction_helps_on_appeal"
+            class="level2">
+            <h2><strong>C. How the Court’s Failure to Give a Requested
+            Instruction Helps on Appeal</strong></h2>
+            <p>When a defendant requests an instruction the trial court
+            refuses to give, an appellate court will view the facts in
+            the light most favorable to the defendant. <em>State v.
+            Beck</em>, 269 Or App 304, 309 (2015).</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>This is one of the few circumstances in which a defendant
+            can lose at trial and on appeal have the facts construed in
+            the light most favorable to the defendant. That’s why jury
+            instructions are <em>really</em> important. If you propose a
+            jury instruction that is an accurate statement of law and
+            there is evidence in the record to support it, your client’s
+            chances of prevailing on appeal increase dramatically if the
+            trial court refuses to give it.</p>
+            </section>
+            <section
+            id="d._when_special_requested_instructions_must_be_given"
+            class="level2">
+            <h2><strong>D. When Special Requested Instructions Must Be
+            Given</strong></h2>
+            <blockquote>
+            <p>A party is entitled to have the jury instructed on the
+            law which supports that party’s theory of the case where (1)
+            there is evidence in the record to support that theory and
+            (2) the instruction correctly states the law. <em><a
+            href="https://scholar.google.com/scholar_case?case=15912360539123032482&amp;q=State+v.+Loew,+130+Or+App+370&amp;hl=en&amp;as_sdt=4,38">State
+            v. Loew</a>,</em> 130 Or App 370, 373 (1994).</p>
+            <p>A jury instruction is supported by the evidence if there
+            is any competent evidence in the record to support giving
+            the instruction. <a
+            href="https://scholar.google.com/scholar_case?case=5029341842677749360&amp;q=State+v.+Beck,+269+Or+App+304&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beck</em></a>, 269 Or App 304, 309 (2015).</p>
+            </blockquote>
+            </section>
+            <section id="e._special_instructions_with_multiple_victims"
+            class="level2">
+            <h2><strong>E. Special Instructions with Multiple
+            Victims</strong></h2>
+            <blockquote>
+            <p>In a case involving multiple victims, you may request the
+            court to instruct that the jury limit its consideration of
+            certain evidence to particular counts. This instruction
+            ensures that evidence is restricted to its proper scope,
+            preventing the jury from cross-referencing evidence to prove
+            any fact in dispute.</p>
+            <p><em>Kitzman</em> Multiple Victim Instruction — The
+            special instruction given in <a
+            href="https://scholar.google.com/scholar_case?case=10431314958067431490&amp;q=State+v.+Kitzman,+129+Or+App+520+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kitzman</em></a>, 129 Or App 520 (1994), ensured the jury
+            could convict only upon a determination that the particular
+            act had occurred on the particular occasion.</p>
+            </blockquote>
+            </section>
+            <section id="f._mental_state_as_a_material_element"
+            class="level2">
+            <h2><strong>F. Mental State as a Material
+            Element</strong></h2>
+            <blockquote>
+            <p>When a mental state is a material element of a crime, a
+            court should instruct a jury that it must find beyond a
+            reasonable doubt that defendant acted with the required
+            mental state. <a
+            href="https://scholar.google.com/scholar_case?case=13511468083098583092&amp;q=State+v.+Nelson,+241+Or+App+681&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nelson</em></a>, 241 Or App 681, 686 (2011).</p>
+            <p>Generally, there are three categories of material
+            elements in Oregon’s criminal statutes: conduct,
+            circumstance, and result. <a
+            href="https://scholar.google.com/scholar_case?case=10006178173306648171&amp;q=State+v.+Crosby,+342+Or+419&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Crosby</em></a>, 342 Or 419, 429 (2007). A material
+            element, generally, is one that “concerns the substance or
+            quality of the crime—the harm or evil sought to be
+            prevented[.]” <a
+            href="https://scholar.google.com/scholar_case?case=507781790185596925&amp;q=State+v.+Rainoldi,+236+Or+App+129&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rainoldi</em></a>, 236 Or App 129, 147 (2010).</p>
+            <p>For example, a person commits first-degree rape if that
+            person, <em>inter alia</em>, (1) has sexual intercourse with
+            another person, and (2) the victim is subjected to forcible
+            compulsion. <a
+            href="https://www.oregonlaws.org/ors/163.375">ORS
+            163.375(1)(a)</a>. Although the statute fails to identify a
+            particular mental state that would render somebody
+            criminally liable, the Oregon Court of Appeals has held that
+            “subjected to forcible compulsion” was a material element
+            that “necessarily requires a culpable mental state” because
+            it directly “concerns the substance or quality of the
+            crime—the harm or evil sought to be prevented.” In
+            <em>Nelson</em>, the Court of Appeals held that it was
+            sufficient to prove that the defendant acted “knowingly”
+            with respect to whether the victim was subjected to forcible
+            compulsion.</p>
+            </blockquote>
+            </section>
+            <section id="g._ineffective_assistance" class="level2">
+            <h2><strong>G. Ineffective Assistance</strong></h2>
+            <blockquote>
+            <p>Jury instructions are important, and failing to request
+            instructions that advance a defendant’s theory of his or her
+            case may constitute ineffective assistance of counsel.
+            <em>See, e.g., <a
+            href="https://scholar.google.com/scholar_case?case=12939122457097076585&amp;q=Mellerio+v.+Nooth,+279+Or+App+419+&amp;hl=en&amp;as_sdt=4,38">Mellerio
+            v. Nooth</a></em>, 279 Or App 419 (2016) (holding counsel
+            ineffective for failing to request concurrence instruction
+            when alternative factual occurrences were presented at trial
+            and any one of which could have supported the single
+            charge); <a
+            href="https://scholar.google.com/scholar_case?case=4561348164730696432&amp;q=Everett+v.+Premo,+279+Or+App+470+&amp;hl=en&amp;as_sdt=4,38"><em>Everett
+            v. Premo</em></a>, 279 Or App 470 (2016).</p>
+            </blockquote>
+            </section>
+            </section>
+            <section id="iv._williams_and_propensity" class="level1">
+            <h1><strong>IV. <em>Williams</em> and
+            Propensity</strong></h1>
+            <section id="a._child_sex_abuse_crimes" class="level2">
+            <h2><strong>A. Child Sex Abuse Crimes</strong></h2>
+            <blockquote>
+            <p>In a prosecution of child sexual abuse, propensity is
+            admissible under <a
+            href="https://www.oregonlaws.org/ors/40.170">OEC 404(4),</a>
+            so long as the evidence is (1) relevant under OEC 401 and
+            (2) more probative than prejudicial. A court must apply due
+            process balancing to determine whether the risk of unfair
+            prejudice posed by the other acts evidence outweighs its
+            probative value under <a
+            href="https://www.oregonlaws.org/ors/40.160">OEC 403</a>. <a
+            href="https://scholar.google.com/scholar_case?case=9903617515752744475&amp;q=.+State+v.+Williams,+357+Or+1,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em></a>, 357 Or 1, 24 (2015).</p>
+            <p>If a trial court admits such “other acts” evidence, you
+            should request a limiting instruction to lessen the risk of
+            misuse of that evidence by the jury. A sample limiting
+            instruction is provided at the end of this chapter.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>Once the limiting instruction is given, be on high alert
+            during closing arguments. If the prosecutor uses that other
+            act evidence for other than the purpose it was admitted, be
+            ready to object and move to strike so the jury is reminded,
+            by the court, that other acts evidence is to be considered
+            only for its admissible purpose. You should also move for a
+            mistrial.</p>
+            </section>
+            <section id="b._sex_crimes_other_than_child_sex_abuse"
+            class="level2">
+            <h2><strong>B. Sex Crimes Other than Child Sex
+            Abuse</strong></h2>
+            <blockquote>
+            <p>When a defendant has been charged with a crime other than
+            child sexual abuse, the Due Process Clause of the Fourteenth
+            Amendment precludes the admission of other acts evidence to
+            prove defendant’s character and propensity to act
+            accordingly. <em>See State v. Williams</em>, 357 Or 1, 17
+            (2015). Again, in order for other acts evidence to be
+            admissible in such cases, the evidence must be (1) relevant
+            under OEC 401 and (2) more probative than prejudicial under
+            due process balancing. <em>Id.</em> See Chapter 9, “They
+            Want to Introduce What?: Other Act Evidence.” <em>Also see
+            <a
+            href="https://scholar.google.com/scholar_case?case=8228843093929307299&amp;q=State+v.+Tena,+281+Or+App+57&amp;hl=en&amp;as_sdt=4,38">State
+            v. Tena</a></em>, 281 Or App 57, 71-73, 384 P3d 521 (2016)
+            (addressing when to give instruction pursuant to <a
+            href="https://scholar.google.com/scholar_case?case=10224620374428016638&amp;q=State+v.+Leistiko,+352+Or+172+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Leistiko</em></a>, 352 Or 172 (2012), where other act
+            evidence has been admitted). The Oregon Supreme Court
+            accepted review in <em>Tena</em> and reversed the Court of
+            Appeals; they held that the evidence was not admissible for
+            a nonpropensity purpose and the trial court should have
+            conducted an analysis under OEC 403. The <em>Tena</em> court
+            stated that when other act evidence is not relevant for a
+            nonpropensity purpose, “more significant due process
+            concerns are implicated, and, generally, the danger of
+            unfair prejudice will substantially outweigh the probative
+            value of the evidence.” <em>Id. </em>at 405, 393 P3d 1132.
+            <em>State v. Tena</em>, 362 Or 514, 525, 412 P3d 175, 182
+            (2018).</p>
+            </blockquote>
+            </section>
+            </section>
+            <section id="v._jury_concurrence" class="level1">
+            <h1><strong>V. Jury Concurrence</strong></h1>
+            <p>When a single crime has been charged but the evidence is
+            sufficient for the jury to find there were multiple separate
+            occurrences of the charged crime involving the same victim
+            and the same perpetrator during the period of time alleged
+            in the indictment, the state either must elect which
+            occurrence constituted the charged crime or, alternatively,
+            the defendant is entitled to an instruction that ten or more
+            jurors must concur on which occurrence constituted that
+            crime.<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=3762118001493139951&amp;q=State+v.+Ashkins,+357+Or+642&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ashkins</em></a>, 357 Or 642, 643 (2015).</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>There are some occasions when it makes more strategic
+            sense to move for an election instead of moving for a
+            factual concurrence instruction at the close of the evidence
+            and vice versa. Be sure to speak with your client before
+            trial to determine which tactic stands to benefit your
+            theory of the case and act accordingly. <a
+            href="https://scholar.google.com/scholar_case?case=1715038003024966943&amp;q=State+v.+Antoine,+269+Or+App+66+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Antoine</em></a>, 269 Or App 66 (2015).</p>
+            </section>
+            <section id="vi._sample_special_jury_instructions"
+            class="level1">
+            <h1><strong>VI. Sample Special Jury
+            Instructions</strong></h1>
+            <section
+            id="a._special_jury_instruction_no._1unanimous_verdictfelony_case"
+            class="level2">
+            <h2><strong>A. Special Jury Instruction No. 1—unanimous
+            verdict—felony case</strong></h2>
+            <blockquote>
+            <p>When you return to the jury room, select one of your
+            members to act as presiding juror. The presiding juror has
+            no greater voting weight but is to preside over your
+            deliberations and be the spokesperson for the jury. You
+            should then deliberate and find your verdict.</p>
+            <p>If it becomes necessary during your deliberations to
+            communicate with me, do so in writing. I will consult with
+            the parties before responding. Remember that you are not to
+            tell anyone, including me, how the jury stands numerically
+            until you have reached a lawful verdict or have been
+            discharged.</p>
+            <p>This being a criminal case, all 12 jurors must agree on
+            your verdict. When you have arrived at a verdict, the
+            presiding juror will sign the appropriate verdict form.</p>
+            <p>After you have reached your verdict, signal the bailiff.
+            The court will be reassembled to receive your verdict.</p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=16163203473167624369&amp;q=Blakely+v.+Washington,+542+US+296+(2004&amp;hl=en&amp;as_sdt=3,38"><em>Blakely
+            v. Washington</em></a>, 542 US 296 (2004)<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=7792517891204110362&amp;q=Crawford+v.+Washington,+541+US+36+(2004&amp;hl=en&amp;as_sdt=3,38"><em>Crawford
+            v. Washington</em></a>, 541 US 36 (2004)<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=5141154246897960488&amp;q=McDonald+v.+City+of+Chicago,+561+US+742+(2010)&amp;hl=en&amp;as_sdt=3,38"><em>McDonald
+            v. City of Chicago</em></a>, 561 US 742 (2010)<br />
+            <a
+            href="https://www.law.cornell.edu/constitution/sixth_amendment">Sixth
+            Amendment to the United States Constitution</a></p>
+            </section>
+            <section id="b._special_jury_instruction_no._2subjects"
+            class="level2">
+            <h2><strong>B. Special Jury Instruction No.
+            2—“subjects”</strong></h2>
+            <p>“Subjects” means to cause to undergo a particular action
+            or effect. “Subjects” describes some level of causation
+            through influence or participation in acts, rather than
+            actual control or dominion. “Subjects” does not mean the
+            same thing as forcible compulsion.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1703633368299795836&amp;q=State+v.+Bernhardt&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bernhardt</em></a>, 277 Or App 868, 874-75 (2016)</p>
+            </section>
+            <section
+            id="c._special_jury_instruction_no._3forcible_compulsion"
+            class="level2">
+            <h2><strong>C. Special Jury Instruction No. 3—forcible
+            compulsion</strong></h2>
+            <p>Forcible compulsion must be force that is not force
+            inherent in the sexual conduct at issue for the force to
+            constitute forcible compulsion.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=17247263599709072693&amp;q=State+v.+Magel,+246+Or+App+725+(2011&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Magel</em></a>, 246 Or App 725 (2011)<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=18393507169816444761&amp;q=State+v.+Marshall,+350+Or+208+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Marshall</em></a>, 350 Or 208 (2011)</p>
+            </section>
+            <section
+            id="d._special_jury_instruction_no._4use_of_evidence_state_v._leistiko"
+            class="level2">
+            <h2><strong>D. Special Jury Instruction No. 4—use of
+            evidence (<em>State v. Leistiko</em>)</strong></h2>
+            <p>You may not consider evidence concerning one complaining
+            witness while deliberating on evidence of guilt in regards
+            to another complaining witness unless and until you
+            conclude, without considering the other evidence, that the
+            physical acts discussed in each count you are deliberating
+            on actually transpired. In other words, you must first
+            conclude that the act alleged in each count occurred before
+            considering any other evidence regarding that count,
+            including the defendant’s mental state.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=10224620374428016638&amp;q=State+v.+Leistiko,+352+Or+172+(&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Leistiko</em></a>, 352 Or 172 (2012)<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=6900341849620202934&amp;q=State+v.+Pitt,+352+Or+566+(2012&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Pitt</em></a>, 352 Or 566 (2012)<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=14031890575686880375&amp;q=State+v.+Jones,+258+Or+App+1+(2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Jones</em></a>, 258 Or App 1 (2013)<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=10431314958067431490&amp;q=State+v.+Kitzman,+129+Or+App+520+(&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kitzman</em></a>, 129 Or App 520 (1994)<br />
+            <a
+            href="https://scholar.google.com/scholar_case?case=17250073570128853836&amp;q=State+v.+Buyes,+280+Or+App+564+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Buyes</em></a>, 280 Or App 564 (2016)</p>
+            </section>
+            <section
+            id="e._special_jury_instruction_no._5factual_concurrence_instruction"
+            class="level2">
+            <h2><strong>E. Special Jury Instruction No. 5—factual
+            concurrence instruction</strong></h2>
+            <p>• Concurrence Instruction (for Unanimous Jury)</p>
+            <p>In order to reach a lawful guilty verdict as to any
+            count, the jury must agree unanimously on what factual
+            occurrence constituted the crime. Thus, in this case, in
+            order to reach a guilty verdict on any count, the jury must
+            unanimously agree on which factual occurrence constituted
+            the offense.</p>
+            <p>• Concurrence Instruction (for Nonunanimous Jury)</p>
+            <p>In order to reach a lawful guilty verdict as to any
+            count, ten jurors must agree on what factual occurrence
+            constituted the crime. Thus, in this case, in order to reach
+            a guilty verdict on any count, ten jurors must agree on
+            which factual occurrence constituted the offense.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1999623020499346969&amp;q=State+v.+Boots,+308+Or+371+(&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Boots</em></a>, 308 Or 371 (1989) (jury concurrence
+            requirement requires that the requisite number of jurors
+            agree on the factual occurrence that constitutes a
+            crime)<br />
+            Article I, section 11, of the Oregon Constitution.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=13180728694816408148&amp;q=United+States+v.+Gipson,+553+F2d+453&amp;hl=en&amp;as_sdt=3,38"><em>United
+            States v. Gipson</em></a>, 553 F2d 453, 457-58
+            (5<sup>th</sup> Cir 1977) (6<sup>th</sup> Amendment to
+            United States Constitution requires that jurors agree to
+            factual predicate that constitutes a crime.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1788000315718139930&amp;q=+Wilson+v.+Premo,+280+Or+App+372+&amp;hl=en&amp;as_sdt=4,38"><em>Wilson
+            v. Premo</em></a>, 280 Or App 372 (2016)</p>
+            </section>
+            <section
+            id="f._special_jury_instruction_no._6separate_consideration_of_the_allegations_of_each_count"
+            class="level2">
+            <h2><strong>F. Special Jury Instruction No. 6—separate
+            consideration of the allegations of each count</strong></h2>
+            <p>Although defendant is being tried for counts against
+            three alleged victims, you must consider the allegations
+            made in each count separately. In doing so, you must decide
+            what the evidence proves as to each count, without
+            considering any evidence that may have been received solely
+            as to a separate count.</p>
+            <p>For example, you may not use evidence from one count to
+            infer or bolster the credibility on another count, infer
+            defendant has bad character, or prove the defendant is more
+            likely to have committed the crimes charged because of
+            evidence that relates to a separate count. The defendant is
+            entitled to have the case decided on the evidence and on the
+            law applicable to each count, as if the allegations made in
+            each count were offered in a separate trial.</p>
+            </section>
+            <section
+            id="g._special_jury_instruction_no._7_supplemental_instruction_regarding_detectives_and_defendants_statements_state_v._chandler"
+            class="level2">
+            <h2><strong>G. Special Jury Instruction No. 7— supplemental
+            instruction regarding detectives’ and defendant’s statements
+            (<em>State v. Chandler</em>)</strong></h2>
+            <p><strong>Example One</strong></p>
+            <p>As part of the questioning, ladies and gentlemen, you are
+            about to hear [just heard] or [have heard] an interview
+            between [witness] and defendant. As part of the questioning,
+            the [witness] may have made statements of disbelief in the
+            defendant’s story and expressed opinions concerning the
+            defendant’s guilt [or complainant’s credibility]. You should
+            view the questions and answers in the same way that you view
+            the questions and answers in the courtroom. In other words,
+            the questions are only pertinent as they explain what the
+            answers mean. You are not to assume as true anything
+            [witness] says in his question as the questions are only
+            pertinent as they give meaning to the answers.</p>
+            <p><strong>Example Two</strong></p>
+            <ul>
+            <li>Short Version: Given before interrogation is played for
+            jury</li>
+            </ul>
+            <p>Ladies and gentlemen, you are about to hear an
+            interrogation of [defendant] by Detective [name].</p>
+            <p>As part of the questioning, the detective may have made
+            statements of disbelief in [defendant’s] answers and may
+            have expressed opinions concerning [defendant’s] guilt or
+            other witness’s credibility. Such statements and opinions
+            are standard techniques employed by law enforcement officers
+            when investigating alleged criminal activity, and as such,
+            such statements do not constitute evidence in this matter.
+            Only [defendant’s] responses to the questions may be
+            regarded as evidence to be given consideration for what you
+            deem them to be worth. You are not to assume as true
+            anything Detective [name] says during his interrogation of
+            [defendant] in his questioning of [defendant] because
+            Detective[name]’s statements and questions are only
+            pertinent as they give meaning to [defendant’s] answers.</p>
+            <ul>
+            <li>Long Version: Given in final instructions</li>
+            </ul>
+            <p>During this trial, you heard an interrogation of
+            [defendant] by Detective [name].</p>
+            <p>As part of the questioning, the detective made statements
+            of disbelief in [defendant’s] answers and expressed opinions
+            concerning [defendant’s] guilt or other witness’s
+            credibility. Such statements and opinions are standard
+            techniques employed by law enforcement officers when
+            investigating alleged criminal activity, and as such, such
+            statements do not constitute evidence in this matter. Only
+            [defendant’s] responses to the questions may be regarded as
+            evidence by you to be given consideration for what you deem
+            them to be worth. You are not to assume as true anything
+            Detective [name] said during his interrogation of
+            [defendant] in his questioning of [defendant] because, as I
+            instructed you prior to playing the recorded interrogation,
+            Detective [name]’s statements and questions were only
+            pertinent as they gave meaning to [defendant’s] answers.</p>
+            <p>When deliberating, you must remember:</p>
+            <p>1. Questions, statements and opinions of law enforcement
+            officers during interviews or interrogations are not
+            evidence.</p>
+            <p>2. Questions, statements and opinions of law enforcement
+            officers during interviews or interrogations shall not be
+            understood as the law enforcement officer’s personal
+            opinion.</p>
+            <p>3. Only the witness’s responses to questions posed by law
+            enforcement officers are material to your consideration.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15212196728993713978&amp;q=State+v.+Chandler,+360+Or+323+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Chandler</em></a>, 360 Or 323 (2016)</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=2651594368985946522&amp;q=Dubria+v.+Smith,+224+F3d+995,+&amp;hl=en&amp;as_sdt=3,38"><em>Dubria
+            v. Smith</em></a>, 224 F3d 995, 1001-1002 (9<sup>th</sup>
+            Cir., 2007)</p>
+            </section>
+            <section
+            id="h._special_jury_instruction_no._8witness_referred_to_as_a_victim"
+            class="level2">
+            <h2><strong>H. Special Jury Instruction No. 8—witness
+            referred to as a victim</strong></h2>
+            <p>Throughout this case you may have heard [name of
+            complaining witness] referred to as a victim. Given the
+            issues presented in this case, however, it is for you alone
+            to decide whether or not [she/he] has been victimized by
+            defendant. You must determine from the evidence presented
+            here in court whether [name] was the object of the offenses
+            alleged to have been committed by [defendant’s name].
+            Whether [she/he] was the object of each of the crimes
+            alleged by the state are matters for you to evaluate and
+            decide.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=18099063018733451850&amp;q=State+v.+Nomura,+903+P+2d+718&amp;hl=en&amp;as_sdt=ffffffffffffe04"><em>State
+            v. Nomura</em></a>, 79 Haw 413, 903 P 2d 718, 721 (1995)</p>
+            </section>
+            <section
+            id="i._special_jury_instruction_no._9relating_to_suggestive_wording_and_leading_questions"
+            class="level2">
+            <h2><strong>I. Special Jury Instruction No. 9—relating to
+            suggestive wording and leading questions</strong></h2>
+            <p>The use of suggestive wording and leading questions tends
+            to result in answers that more closely fit the expectation
+            embedded in the question. Witness memory can become
+            contaminated by external information or assumptions embedded
+            in questions or otherwise communicated to the witness.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=13868935655718877167&amp;q=State+v.+Lawson/James,+352+Or+724&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Lawson/James</em></a>, 352 Or 724, 743 (2012)</p>
+            </section>
+            <section
+            id="j._special_jury_instruction_no._10witnesss_original_memoryevidentiary_value"
+            class="level2">
+            <h2><strong>J. Special Jury Instruction No. 10—witness’s
+            original memory—evidentiary value</strong></h2>
+            <p>Like many forms of evidence, once contaminated, a
+            witness’s original memory is very difficult to retrieve; it
+            is, however, only the original memory that has any forensic
+            or evidentiary value.</p>
+            <p><em>State v. Lawson/James</em>, 352 Or 724, 748
+            (2012)</p>
+            </section>
+            <section
+            id="k._special_jury_instruction_no._11state_of_mind_exception"
+            class="level2">
+            <h2><strong>K. Special Jury Instruction No. 11—state of mind
+            exception</strong></h2>
+            <p>You are about to hear evidence that is only admissible to
+            prove the effect that the statement had on the listener, not
+            for the truth of the matter asserted. You are not to
+            consider the truth or falsity of the statement, only its
+            effect, if any, on the listener, namely this witness.</p>
+            <p><a href="https://www.oregonlaws.org/ors/40.450">OEC
+            801(3)</a></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12144950755609146757&amp;q=State+v.+Hren,+237+Or+App+605&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hren</em></a>, 237 Or App 605, 607 (2010) (statement not
+            hearsay where offered not for truth, but for effect on
+            listener).</p>
+            </section>
+            <section
+            id="l._special_jury_instruction_no._12limiting_instructionconditional_relevancy"
+            class="level2">
+            <h2><strong>L. Special Jury Instruction No. 12—limiting
+            instruction—conditional relevancy</strong></h2>
+            <p>You have heard evidence that outside of this trial a
+            witness may or may not have made statements that differ from
+            [his/her] trial testimony. You are specifically instructed
+            that you are not to consider the statements the witness may
+            or may not have said out of court as substantive evidence of
+            the charged crimes. In other words, the statement that may
+            or may not have been made out of court cannot be considered
+            in determining whether or not the defendant is guilty of the
+            charged offense.</p>
+            <p>You may, however, consider those out-of-court statements
+            the witness may or may not have said when determining
+            whether that witness’ in-court testimony is, or is not,
+            credible.</p>
+            <p>That evidence is not to be used, and is not admissible,
+            for any other purpose. OEC 105.</p>
+            <blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=6575397591611006718&amp;q=State+v.+Reyes,+209+Or+595+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Reyes</em></a>, 209 Or 595 (1957) (where evidence of
+            other crimes is properly admitted against defendant for
+            particular purpose, an instruction limiting its
+            consideration to such purpose should be given when requested
+            to minimize use of the evidence by jury for an inadmissible
+            purpose).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=5387620863997686829&amp;q=Green+v.+Franke,+357+Or+301++&amp;hl=en&amp;as_sdt=4,38"><em>Green
+            v. Franke</em></a>, 357 Or 301 (2015) (when a trial court
+            declines to sever joined offenses, and evidence relating to
+            one offense is not admissible to prove another joined
+            offense, a trial court ordinarily will instruct the jury to
+            consider the evidence on each offense separately to prevent
+            the jury from using the evidence offered to prove one
+            offense to decide another joined offense).</p>
+            </blockquote>
+            </section>
+            </section>
+    </body>
+</html>

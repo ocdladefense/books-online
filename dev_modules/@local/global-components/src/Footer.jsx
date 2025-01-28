@@ -16,47 +16,41 @@ export default function Footer({
     return (
         <footer class='container mx-auto border border-b-0 p-4 pb-16 lg:p-8 lg:pb-32'>
             {/* Resources */}
-            <ul class='flex flex-col gap-4'>
+            <ul id="ul-depth-1" class='flex flex-col gap-4'>
                 <li>
                     {/* Organization */}
                     <ul class='flex flex-col gap-4 lg:flex-row lg:gap-8'>
                         <li>
-                            <ul class='flex flex-col gap-1'>
+                            <ul id="ul-depth-2" class='flex flex-col gap-1'>
                                 {/* Brand + Social */}
                                 <li>
-                                    <ul class='flex items-center gap-1'>
+                                    <ul id="ul-depth-3" class='flex items-center gap-1'>
                                         <Logo />
-                                        {showFacebook ? (
+                                        {showFacebook && (
                                             <Social
                                                 type='facebook'
                                                 handle='OregonCriminalDefenseLawyersAssociation'
                                             />
-                                        ) : (
-                                            <></>
                                         )}
-                                        {showTwitter ? (
+                                        {showTwitter && (
                                             <Social
                                                 type='twitter'
                                                 handle='oregondefense'
                                             />
-                                        ) : (
-                                            <></>
                                         )}
                                         {showYouTube ? (
                                             <Social
                                                 type='youtube'
                                                 handle='oregoncriminaldefenselawye4822'
                                             />
-                                        ) : (
-                                            <></>
-                                        )}
+                                        ): <li></li>}
                                     </ul>
                                 </li>
                                 {/* Copyright */}
                                 <li>
-                                    <ul class='text-[0.625rem] font-thin leading-[0.75rem] text-neutral-500'>
+                                    <ul id="ul-depth-3" class='text-[0.625rem] font-thin leading-[0.75rem] text-neutral-500'>
                                         <li>
-                                            © 2024 Oregon Criminal Defense
+                                            ©2024 Oregon Criminal Defense
                                             Lawyers Association
                                         </li>
                                         <li class='size-full text-wrap'>
@@ -77,23 +71,15 @@ export default function Footer({
                                     <ul class='text-neutral-300'>
                                         <Link href='https://ocdla.org'>
                                             ocdla.org
-                                        </Link>{' '}
-                                        {!useGoogleMapsIFrame ? (
-                                            <>
-                                                |{' '}
+                                        </Link>
+                                        {!useGoogleMapsIFrame ? 
                                                 <Link href='https://maps.app.goo.gl/7dCYKBEyJbmo8tzS7'>
-                                                    101 East 14th Ave, Eugene,
-                                                    OR 97401
-                                                </Link>{' '}
-                                            </>
-                                        ) : (
-                                            <></>
-                                        )}
-                                        |{' '}
+                                                    101 East 14th Ave, Eugene,  OR 97401
+                                                </Link>
+                                        : "<li></li>"}
                                         <Link href='mailto:info@ocdla.org'>
                                             info@ocdla.org
-                                        </Link>{' '}
-                                        |{' '}
+                                        </Link>
                                         <Link href='tel:+15416868716'>
                                             (+1) 541-686-8716
                                         </Link>
@@ -134,8 +120,7 @@ export default function Footer({
                                         </li>
                                         <li>
                                             <Link href='https://pubs.ocdla.org/car/list'>
-                                                Research Criminal Appellate
-                                                Review
+                                                Research Criminal Appellate Review
                                             </Link>
                                         </li>
                                         <li>
@@ -177,9 +162,7 @@ export default function Footer({
                 {/* Location */}
                 {useGoogleMapsIFrame ? (
                     <Google_Maps src='https://google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.8775315978623!2d-123.09091950000001!3d44.0445852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c11e41b2e3f7ad%3A0xa7600cd512aa10ed!2s101%20E%2014th%20Ave%2C%20Eugene%2C%20OR%2097401!5e0!3m2!1sen!2sus!4v1722628072318!5m2!1sen!2sus' />
-                ) : (
-                    <></>
-                )}
+                ) : <li></li>}
             </ul>
         </footer>
     );

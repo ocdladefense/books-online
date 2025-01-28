@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Search and Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Search and Seizure Manual</h1>
+                                    </section>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <div class="WordSection1">
+            <p><span id="i.-introduction"></span></p>
+            <section id="i._introduction" class="level2">
+            <h2>I. Introduction</h2>
+            <p>Three preliminary questions must be answered to determine
+            if an individual’s right to be free from unreasonable
+            searches and seizures was violated. The first is whether the
+            conduct at issue was performed by government agents or
+            private citizens, because Article 1, section 9, and the
+            Fourth Amendment limit only governmental action. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tanner,+304+Or+312,+%281987&amp;hl=en&amp;as_sdt=4,38&amp;case=18157446471750806083&amp;scilh=0"><em>State
+            v. Tanner</em>, 304 Or 312, 321, 745 P2d 757 (1987)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Walther,+652+F2d+&amp;hl=en&amp;as_sdt=3,38&amp;case=11132934323746986003&amp;scilh=0"><em>United
+            States v. Walther</em>, 652 F2d 788 (9th Cir 1981)</a>. That
+            is usually obvious in the case of federal, state, or local
+            law enforcement officers, but can require some analysis in
+            less common situations.</p>
+            <p>Once that is established, the second inquiry is “whether
+            the [governmental] conduct at issue was a search or a
+            seizure” because “if the police conduct at issue was not a
+            search or a seizure, the constitutional protection does not
+            apply.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nagel,+320+Or+24,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8563449355723280526&amp;scilh=0"><em>State
+            v. Nagel</em>, 320 Or 24, 28, 880 P2d 451, 454 (1994)</a>.
+            While the legal principles involved in answering the second
+            question are straightforward, this manual provides myriad
+            examples of common factual situations that courts have
+            deemed sufficient to constitute constitutionally cognizable
+            searches or seizures.</p>
+            <p>Third, if a search or seizure by a governmental agent did
+            occur, a court must determine whether that search or seizure
+            satisfies the constitutional requirement of reasonableness.
+            On that question, both the state and federal constitutions
+            have incorporated a presumption that a search or seizure
+            conducted without a warrant is <em>per se</em>
+            <em>unreasonable</em> in the constitutional sense. Only if
+            the government can prove that its conduct fell within one of
+            several recognized exceptions to the warrant requirement
+            will a warrantless search or seizure be considered
+            constitutionally “reasonable.” <em>Nagel</em>, 320 Or at 36;
+            <a
+            href="http://scholar.google.com/scholar_case?q=Katz+v.+United+States,+389+US+347,+&amp;hl=en&amp;as_sdt=3,38&amp;case=9210492700696416594&amp;scilh=0"><span class="hyperlinkital">Katz
+            v. United States</span>, 389 US 347, 357, 88 S Ct 507, 19 L
+            Ed 2d 576 (1967)</a><span class="hyperlinkital">; </span><a
+            href="https://scholar.google.com/scholar_case?case=5328578630687342951&amp;q=State+v.+Davis,+295+Or+227&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Davis</em>, 295 Or 227, 237, 666 P2d 802, 809
+            (1983)</a><span class="hyperlinkital">; </span><a
+            href="https://scholar.google.com/scholar_case?case=15401656723774819774&amp;q=United+States+v.+Hoffman,+607+F2d+280&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000003"><span class="hyperlinkital">United
+            States v. Hoffman</span>, 607 F2d 280, 283-84 (9th Cir
+            1979)</a><span class="hyperlinkital">. </span></p>
+            <p>Chapter 1 concerns the first two of those inquires: (1A)
+            was there government action? and (1B) was there a search or
+            a seizure.</p>
+            <p><span id="ii.-was-there-governmental-action"></span></p>
+            </section>
+            <section id="ii._was_there_governmental_action"
+            class="level2">
+            <h2>II. Was There Governmental Action?</h2>
+            <p>As noted, Article 1, section 9, and the Fourth Amendment
+            limit only government action. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Olsen,+212+Or+191,&amp;hl=en&amp;as_sdt=4,38&amp;case=238578748594027157&amp;scilh=0"><span class="hyperlinkital">State
+            v. Olsen</span>, 212 Or 191, 193, 317 P2d 938 (1957)</a>
+            (“It is a rule of universal application that the prohibition
+            of the Fourth and Fifth Amendments of the Constitution of
+            the United States and similar provisions contained in the
+            state constitutions which protect individuals against
+            illegal searches and seizures are limitations upon the
+            powers of the Federal Government and state governments and
+            their officers while acting in their official capacity or
+            under color of right or authority of the governing body.”);
+            <em>Walther</em>, 652 F2d 788 (a wrongful search or seizure
+            by a private party does not violate the Fourth Amendment;
+            however, where a private party acts as an “instrument or
+            agent” of the state in effecting a search or seizure, Fourth
+            Amendment interests are implicated).</p>
+            <p><span id="a.-what-constitutes-state-action-under-article-1-section-9"></span></p>
+            <section
+            id="a._what_constitutes_state_action_under_article_1_section_9"
+            class="level3">
+            <h3>A. What Constitutes State Action Under Article 1,
+            Section 9?</h3>
+            <p>A search or seizure by a private citizen becomes “state
+            action” within the meaning of the state constitutional
+            prohibition against unreasonable search and seizure if the
+            citizen was acting on the “state’s behalf and at the state’s
+            behest,” according to common-law principles of agency. <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+sines&amp;hl=en&amp;as_sdt=4,38&amp;case=7510102423530835716&amp;scilh=0"><span class="hyperlinkital">State
+            v. Sines</span></a><span class="MsoHyperlink">, 359 Or 41,
+            55, 59, 379 P3d 502 (2016).</span></p>
+            <p>Common-law agency exists where a principal “manifests
+            assent to another person”—the
+            agent<span class="GramE">—“</span>act[<span class="SpellE">ing</span>]
+            on the principal’s behalf and subject to the principal’s
+            control, and the agent manifests assent or otherwise
+            consents so to act.” <em>Id</em>. at 55.</p>
+            <p>The considerations relevant to the existence of an
+            agent’s actual authority to act on behalf of the principal
+            focus on the “principal’s manifestation to an agent that, as
+            reasonably understood by the agent, expresses the
+            principal’s assent that the agent take action on the
+            principal’s behalf.” <em>Id</em>.</p>
+            <p>In <em>Sines</em>, the defendant’s housekeeper called the
+            Oregon Department of Human Services (DHS) to report
+            suspected sexual abuse after finding, among other things,
+            stained children’s underwear in the defendant’s house. The
+            housekeeper told the DHS employee that she was considering
+            taking the underwear from the defendant’s house. The DHS
+            employee told her several times that he could not tell her
+            to take that kind of action, and that it was her decision.
+            She asked what they could determine from underwear, and the
+            DHS employee said there was a lab locally and they could
+            “probably tell a lot.” He then gave her his direct phone
+            number.</p>
+            <p>The Oregon Supreme Court held that the statements made by
+            the DHS worker were insufficient to cause a reasonable
+            person to believe that he or she was authorized to act as an
+            agent of the state. The DHS employee did not direct or
+            request the housekeeper to take the underwear. The idea of
+            taking evidence from the house, and of taking
+            <span class="GramE">underwear in particular, came</span>
+            from the housekeeper. There was little, if any, such
+            affirmative encouragement, initiation, or instigation.</p>
+            <p>However, “If a state officer requests a private person to
+            search a particular place or thing, and if that private
+            person acts because of and within the scope of the state
+            officer’s request, then Article I, section 9, will govern
+            the search.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tucker,+330+Or+85,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8755308378888846836&amp;scilh=0"><span class="hyperlinkital">State
+            v. Tucker</span>, 330 Or 85, 90, 997 P2d 182, 184 (2000)</a>
+            (when a private party, a tow truck driver, conducts
+            a search at the request of a law enforcement officer, the
+            search is subject to Article I, section 9). In addition,
+            Article I, section 9, prohibits government “officials from
+            participating or engaging indirectly in searches [or
+            seizures] which would be illegal if conducted by the
+            official.” <a
+            href="https://scholar.google.com/scholar_case?case=11531272604249438221&amp;q=State+v.+Becich,+13+Or+App+415&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><span class="hyperlinkital">State
+            v. <span class="SpellE">Becich</span></span>, 13 Or App 415,
+            419, 509 P2d 1232 (1973)</a> (where a private party
+            “volunteered” to conduct a search in response to an
+            officer’s demand for the return of stolen property and the
+            officer drove by the defendant’s home while
+            the private party conducted the search, the search was
+            subject to Article I, section 9).</p>
+            <div class="bon-update">
+            <p><span id="update"></span></p>
+            </section>
+            <section id="update" class="level3">
+            <h3>2024 Update</h3>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=10411711041661898583&amp;q=State+v.+Hall,+324+Or+App+802+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hall</em>, 324 Or App 802</a><span> (March 22, 2023), the
+            court treated <em>Sines</em> </span>and<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=1427228166667138422&amp;q=State+v.+Lien/Wilverding,+364+Or+750&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Lien/<span class="SpellE">Wilverding</span></span></em>,
+            364 Or 750 (2019)</a>, as bookends in assessing whether the
+            conduct of a private person constitutes state action. (See
+            discussion of <em>Sines</em> in body of Section 1A-2.)</p>
+            <p>In <em>Lien/ <span class="SpellE">Wilverding</span></em>,
+            the court found the kind of agency relationship that
+            <em><span>did</span></em> implicate Article I, section 9.
+            There, the police “asked” a garbage company to pick up the
+            defendant’s garbage and deliver it to the police.
+            <em><span>Id.</span></em> at 752-53. The garbage company’s
+            manager complied and delivered the defendant’s bin to the
+            police. <em><span>Id.</span></em> at 753. The trial court
+            found that the manager had acted “exclusively at the request
+            and direction of the police,” a finding that was binding on
+            the court. <em><span>Id.</span></em> at 768. On those facts,
+            the court had little problem concluding that under
+            <em><span>Sines</span></em>, the police, as principals, and
+            the garbage company’s manager, as the agent, had
+            <span class="GramE">entered into</span> an agency
+            relationship, transforming the manager into a state
+            actor.</p>
+            <p>In <em>Hall</em>, an officer arrested the defendant in
+            the lobby of his apartment building. The officer knocked on
+            the door of the defendant’s apartment and the defendant’s
+            friend, Smith, answered. The officer told Smith that the
+            defendant had been arrested and that he was looking for the
+            defendant’s phone and shoes. The officer asked if Smith had
+            seen those items, and Smith said that they were in the
+            apartment. The officer told Smith that he was not asking or
+            telling her to retrieve the items for him. Nonetheless,
+            Smith offered “on her own volition” to get the items for the
+            officer, and the officer said, “Okay.” <em>Hall</em>, ''''
+            324 Or App at 803-05.</p>
+            <p>The Court of Appeals held that, given the trial court’s
+            findings that the officer had not directed or encouraged
+            Smith in anyway and that Smith volunteered “on her own
+            volition” to get the items, the case was more similar to
+            <em>Sines</em>, and ultimately that “no principal/agent
+            relationship formed that transformed Smith’s actions into
+            state action for purposes of Article I, section 9.”
+            <em>Id</em>. at 808.<br />
+            <br />
+            </p>
+            <p>However, <em>Hall</em>’s heavy reliance on the existence
+            (or lack thereof) of a “principal/agent relationship” may be
+            slightly misplaced. The Oregon Supreme Court has since
+            discussed <em>Sines</em> at length in<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=6973840672758666428&amp;q=State+v.+Benton,+371+Or+311&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Benton</span></em>, 371 Or 311</a>, 313 (Aug 10, 2023),
+            where the question was whether the state’s dealings with a
+            jailhouse informant were sufficient to render the
+            informant’s questioning of the defendant state action in
+            violation Article I, section 11. The court explained that
+            although “the appropriate focus is on the objective
+            manifestations of the state and the informant, we disagree
+            that <em>Sines</em> requires that, in every instance, those
+            manifestations must be sufficient to satisfy common-law
+            agency requirements before Article I, section 11, will
+            apply.” <em>Id</em>. at 323. The court went on to
+            explain:</p>
+            <div class="blockquote">
+            <p>“There is no single metric for evaluating the sufficiency
+            of the state’s involvement. Accordingly, in conducting that
+            evaluation, this court has phrased the inquiry a few
+            different ways. For example, this court has queried whether
+            the police were ‘“directly or indirectly involved to a
+            sufficient extent in initiating, planning, controlling or
+            supporting”’ the informant’s activities,
+            <em><span>Smith</span></em>, 310 Or at 13 (quoting
+            <em><span>Lowry</span></em>, 37 Or App at 651-52); whether
+            the police had ‘sufficient involvement in controlling and
+            directing’ the informant’s activities,
+            <span class="SpellE"><em><span>Acremant</span></em></span>,
+            338 Or at 329; whether the state had ‘provided such
+            affirmative encouragement and authorization,’
+            <em><span>Sines</span></em>, 359 Or at 62; or whether there
+            was sufficient ‘state instigation or direction,’
+            <em><span>id.</span></em> at 61, such that the conduct of
+            the informant ‘should be attributed to the government,’
+            <em><span>id.</span></em> at 55. This court has also noted
+            that, in cases where agency principles are helpful, the
+            emphasis is on whether the state’s objective, observable
+            conduct would communicate to the informant that they were
+            acting on the state’s behalf. <em><span>Id.</span></em> at
+            55-56. In the end, although the precise nature of the
+            state’s involvement may vary from case to case, <em>the
+            ultimate inquiry is whether the state was involved enough in
+            guiding, encouraging, or supporting the informant’s
+            activities that the informant’s conduct is
+            <span class="GramE">fairly attributable</span> to the
+            state</em>.”</p>
+            </div>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=6973840672758666428&amp;q=State+v.+Benton,+371+Or+311&amp;hl=en&amp;as_sdt=4,38"><em><span>Benton</span></em></a>,
+            371 Or at 324-25 (emphasis added).</p>
+            <p>Thus, rather than focusing exclusively on agency, defense
+            lawyers should emphasize the state’s objective acts that may
+            have encouraged, guided, directed, or communicated tacit
+            approval to the person such that the person’s subsequent
+            search or seizure is “fairly attributable” to the state.</p>
+            </div>
+            <p><span id="b.-non-police-officers-determined-to-be-state-actors"></span></p>
+            </section>
+            <section
+            id="b._non_police_officers_determined_to_be_state_actors"
+            class="level3">
+            <h3>B. Non-Police Officers Determined to be State
+            Actors</h3>
+            <p>Article I, section 9, protects against unlawful seizures
+            by state actors—not simply law enforcement officers.
+            <em>See, e.g.,</em> <a
+            href="https://scholar.google.com/scholar_case?case=6900104710358857642&amp;q=State+v.+Killion,+229+Or+App+347&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><span class="hyperlinkital">State
+            v. Killion</span>, 229 Or App 347, 353, 211 P3d 367, 371
+            (2009)</a>, <u>(</u>Oregon Department of Fish and Wildlife
+            biologist); <em>Sines</em>, 359 Or 41 (a DHS employee); <a
+            href="https://scholar.google.com/scholar_case?case=12693831352553830009&amp;q=State+v.+Okeke,+304+Or.+367&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><span class="hyperlinkital">State
+            v. Okeke</span>, 304 Or 367, 745 P2d 418 (1987)</a> (an
+            employee of a state-funded detoxification center); <a
+            href="https://scholar.google.com/scholar_case?case=205621705380417767&amp;q=State+v.+Scatchard,+208+Or+App+315&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><span class="hyperlinkital">State
+            v. <span class="SpellE">Scatchard</span></span>, 208 Or App
+            315, 145 P3d 237,</a> <em>rev den,</em> 342 Or 254, 149 P3d
+            1213 (2006) (a volunteer firefighter). [<a
+            href="https://scholar.google.com/scholar_case?case=2237199795181581627&amp;q=State+ex+rel.+Juv.+Dept.+v.+M.+A.+D">https://scholar.google.com/scholar_case?case=2237199795181581627&amp;q=State+ex+rel.+Juv.+Dept.+v.+M.+A.+D</a>.,+348+Or.+381&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004
+            <span class="hyperlinkital">State ex rel. Juv. Dept. v. M.
+            A. D.,</span> 348 Or 381, 389-91, 395, 233 P3d 437
+            (2010)]<span class="MsoHyperlink"> </span>(assistant
+            principal at a public high school and a “staff learning
+            specialist”); <a
+            href="https://scholar.google.com/scholar_case?case=6158311587368571785&amp;q=State+v.+Walker,+19+Or+App+420&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Walker</em>, 19 Or App 420, 528 P2d 113 (1974)</a>
+            (assistant principal at a public school); <a
+            href="https://scholar.google.com/scholar_case?case=7549018737823365811&amp;q=Matter+of+Rohlffs,+147+Or+App+565&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><span class="hyperlinkital">State
+            ex <span class="SpellE">rel</span>
+            <span class="SpellE">Juv</span> Dept v.</span></a><a
+            href="https://scholar.google.com/scholar_case?case=7549018737823365811&amp;q=Matter+of+Rohlffs,+147+Or+App+565&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><span class="hyperlinkital">
+            <span class="SpellE">Rohlffs</span></span>, 147 Or App 565,
+            570, 938 P2d 768, 770 (1997)</a> (teacher at a public
+            school); <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=6609692942513330375&amp;q=State+v.+Codon,+282+Or+App+165&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><span class="hyperlinkital">State
+            v. Codon</span>, 282 Or App 165, 174, 386 P3d 45, 50
+            (2016)</a>, <em>rev den</em>, 361 Or 240 (2017) (assuming
+            but not deciding that a DHS caseworker was an agent of the
+            police in determining whether the case worker was required
+            to readvise the defendant of <em>Miranda</em> rights).
+            Moreover, an argument can be made that medical personnel who
+            disclose evidence of a defendant’s blood alcohol content to
+            police after an alcohol-involved vehicular crash are state
+            actors because <a
+            href="http://www.oregonlaws.org/ors/676.260">ORS 676.260</a>
+            requires them to make that disclosure to law enforcement.
+            That analysis could carry over into any other private
+            enterprise upon whom the state has instituted
+            crime-reporting requirements, <em>e.g.</em> banks, internet
+            service providers, and even mandatory child abuse
+            reporters.</p>
+            <p>Finally, although unsettled in Oregon, other states
+            generally hold that loss-prevention officers, like private
+            security guards, are not state actors unless a specific
+            agency relationship has been established. <a
+            href="https://scholar.google.com/scholar_case?case=12322748154644215176&amp;q=Paige+v.+State,+226+Md+App+93&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400020000004"><span class="hyperlinkital">Paige
+            v. State</span>, 226 Md App 93, 112, 126 A3d 793, 804
+            (2015)</a><span class="MsoHyperlink"> </span>(listing
+            cases); <a
+            href="https://scholar.google.com/scholar_case?case=17023648304229928679&amp;q=State+v.+Petersen,+469+SW3d+737&amp;hl=en&amp;as_sdt=6,48"><em>State
+            v. Petersen</em>, 469 SW3d 737, 740 (Tex App 2015)</a>
+            (applying general agency test to determine whether LPO was
+            not acting as an agent of police); <em>but see</em> <a
+            href="https://scholar.google.com/scholar_case?case=4627259008993287302&amp;q=Peoples+v.+State,+615+So.2d+1265+&amp;hl=en&amp;as_sdt=6,48"><span class="hyperlinkital">Peoples
+            v. State</span>, 615 So.2d 1265 (Ala.Crim.App.1992)</a>
+            (holding that when a police officer was present in the room,
+            the defendant should have been given <em>Miranda</em>
+            warnings before being questioned by LPOs).</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=10733002397152927336&amp;q=State+v.+Jensen,+83+Or+App+231&amp;hl=en&amp;as_sdt=6,48"><span class="hyperlinkital">State
+            v. Jensen</span>, 83 Or App 231, 730 P2d 1282,
+            (1986)</a><span class="MsoHyperlink">,</span> the defendant
+            was observed through the slats in a department store fitting
+            room, placing unpaid-for merchandise into a diaper bag.
+            Guards then followed the defendant out of the store, where
+            they briefly detained her and took back the merchandise. The
+            defendant argued that the guards had violated her privacy
+            rights under Article I, section 9, by peering into the
+            changing room.</p>
+            <p>She argued that, although there was no official police
+            involvement in the search, the search constituted state
+            action because the security agent was performing a delegated
+            police function in furtherance of a state interest and
+            pursuant to statutory authority (<a
+            href="http://www.oregonlaws.org/ors/131.655">ORS
+            131.655</a>, which provides that a merchant or a merchant’s
+            employee (or a peace officer) who has probable cause for
+            believing that a person has shoplifted may detain and
+            interrogate the person in a reasonable manner and for a
+            reasonable time without incurring criminal or civil
+            liability). <em>Id.</em> at 234.</p>
+            <p>The court reasoned that
+            “[a]<span class="SpellE">lthough</span> ORS 131.655
+            authorizes store security agents to detain and interrogate
+            suspects under certain circumstances, it stops short of
+            authorizing, in any form, a
+            <span class="SpellE">predetention</span> search, and
+            defendant cites no other statutory authority which
+            authorizes one.” That is, “in detecting the crime, as
+            distinct from detaining the offender, [the private security
+            guards were] not acting pursuant to any state statute.”
+            <em>Id.</em> at 235.</p>
+            <p>Consequently, under that reasoning, the question remains
+            open whether “seizures” conducted pursuant to statutes that
+            authorize private parties to lawfully detain individuals
+            (e.g. citizen’s arrest (<a
+            href="http://www.oregonlaws.org/ors/133.225">ORS
+            133.225</a>) or merchant’s privilege ORS (131.655)) might
+            constitute state action such that such “seizures” would be
+            governed by Article I, section 9, and possibly Article I,
+            section 12, (requiring <em>Miranda</em> warnings prior to
+            custodial interrogation).</p>
+            <p><span id="c.-what-constitutes-government-action-under-the-fourth-amendment"></span></p>
+            </section>
+            <section
+            id="c._what_constitutes_government_action_under_the_fourth_amendment"
+            class="level3">
+            <h3>C. What Constitutes Government Action Under the Fourth
+            Amendment</h3>
+            <p>The test under the Fourth Amendment is whether the
+            private party <span class="GramE">in light of</span> all the
+            circumstances of the case must be regarded as having acted
+            as an “instrument” or agent of the government. <a
+            href="http://scholar.google.com/scholar_case?q=Coolidge+v.+New+Hampshire,+403+US+443,+&amp;hl=en&amp;as_sdt=3,38&amp;case=13960360378186505490&amp;scilh=0"><em>Coolidge
+            v. New Hampshire</em>, 403 US 443, 487, 91 S Ct 2022, 2049,
+            29 L Ed 2d 564 (1971)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Smythe,+84+F3d+1240&amp;hl=en&amp;as_sdt=3,38&amp;case=14200507480939050109&amp;scilh=0"><em>United
+            States v. Smythe</em>, 84 F3d 1240 (10th Cir 1996)</a>. “The
+            government must be involved either directly as a participant
+            or indirectly as an encourager of the private citizen’s
+            actions before we deem the citizen to be an instrument of
+            the state [and] [t]he requisite degree of governmental
+            participation involves some degree of knowledge and
+            acquiescence in the search.” <em>Walther</em>, 652 F2d 788
+            (citations omitted) (“[T]wo of the critical factors in the
+            ‘instrument or agent’ analysis are: (1) the government’s
+            knowledge and acquiescence, and (2) the intent of the party
+            performing the search.”); <em>Compare</em> <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Cleaveland,+38+F3d+1092&amp;hl=en&amp;as_sdt=3,38&amp;case=4736867498425722456&amp;scilh=0"><em>United
+            States v. <span class="SpellE">Cleaveland</span></em>, 38
+            F3d 1092 (9th Cir 1994)</a> (electric company had
+            legitimate, independent motivation and therefore was not
+            agent of government during search where electric company,
+            not police, initiated plan to inspect meter, electric
+            company broke off search once it discovered defendant was
+            stealing power, and police officer’s only purpose for being
+            in area was to ensure safety of electric company’s
+            employee); <em>with</em> [<a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Reed,+15+F3d+928&amp;hl=en&amp;as_sdt=3,38&amp;case=17676171324106276044&amp;scilh=0">http://scholar.google.com/scholar_case?q=United+States+v.+Reed,+15+F3d+928&amp;hl=en&amp;as_sdt=3,38&amp;case=17676171324106276044&amp;scilh=0</a>
+            <em>United States v. Reed</em>, <strong>' 15 F3d 928 (9th
+            Cir 1994)]</strong>' (hotel employee’s warrantless search of
+            defendant’s room was government action, in light of presence
+            of police lookouts to protect employee during search, and in
+            light of employee’s intent to help police gather proof of
+            narcotics trafficking rather than independent motivation to
+            ensure hotel property was not damaged). Thus, the intent or
+            motive of the party conducting the search is an important
+            factor in cases involving private party searches.</p>
+            <p>Although the two-part test is generally used by the
+            federal courts, many courts also expressly include a
+            requirement that the government do something affirmatively
+            to encourage the search. For example, the First Circuit
+            considers three factors: (1) the extent of the government’s
+            role in instigating or participating in the search; (2) the
+            government intent and the degree of control it exercises
+            over the search and the private party; and (3) the extent to
+            which the private party aims primarily to help the
+            government or to serve its own interests. <a
+            href="https://scholar.google.com/scholar_case?case=1831791784270573909&amp;q=United+States+v.+Cameron,+699+F.3d+621&amp;hl=en&amp;as_sdt=6,48"><em>United
+            States v. Cameron,</em> 699 F3d 621, 637 (1st Cir 2012),</a>
+            <em>cert den,</em> ___ U.S.___, 133 S Ct 1845, 185 L Ed 2d
+            850 (2013). The Fourth Circuit considers whether the private
+            citizen was an instrument or agent of the government, given
+            the government’s participation or affirmative encouragement.
+            <a
+            href="https://scholar.google.com/scholar_case?case=18143749643429258989&amp;q=United+States+v.+Richardson,+607+F.3d+357&amp;hl=en&amp;as_sdt=6,48"><em>United
+            States v. Richardson,</em> 607 F3d 357, 364 (4th Cir
+            2010</a>). <em>See also Smythe,</em> 84 F3d 1240 '''' (for
+            private search to be state action, government must
+            “affirmatively encourage, initiate or instigate the private
+            action”).</p>
+            </div>
+            </section>
+            </section>
+    </body>
+</html>

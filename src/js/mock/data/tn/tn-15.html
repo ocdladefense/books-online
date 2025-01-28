@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 15. Expert Witnesses</strong></p>
+            <p><strong><em>By Brook Reinhard</em></strong></p>
+            <section id="i._testimony_by_experts_overview"
+            class="level1">
+            <h1><strong>I. Testimony by Experts – Overview</strong></h1>
+            <p>If scientific, technical or other specialized knowledge
+            will assist the trier of fact to understand the evidence or
+            to determine a fact in issue, a witness qualified as an
+            expert by knowledge, skill, experience, training or
+            education may testify thereto in the form of an opinion or
+            otherwise. <a
+            href="http://www.oregonlaws.org/ors/40.410">ORS 40.410; OEC
+            702.</a></p>
+            <p>OEC 702 says, “If scientific, technical or other
+            specialized knowledge will assist the trier of fact to
+            understand the evidence or to determine a fact in issue, a
+            witness qualified as an expert by knowledge, skill,
+            experience, training or education may testify thereto in the
+            form of an opinion or otherwise.”</p>
+            <p>Expert testimony is generally admissible when the
+            knowledge of an expert would help the jury better understand
+            matters about which they already have some knowledge.</p>
+            <p>If the expert’s opinion comes from scientific principles,
+            you must meet certain foundational requirements. Those
+            requirements were described in <a
+            href="http://scholar.google.com/scholar_case?q=brown&amp;hl=en&amp;as_sdt=4,38&amp;case=16347591282643565388&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=brown&amp;hl=en&amp;as_sdt=4,38&amp;case=16347591282643565388&amp;scilh=0">,
+            297 Or 404 (1984)</a>, as:</p>
+            <p>The technique’s general acceptance in the field.</p>
+            <p>The expert’s qualifications and stature.</p>
+            <p>The use which has been made of the technique.</p>
+            <p>The potential rate of error.</p>
+            <p>The existence of specialized literature.</p>
+            <p>The novelty of the invention.</p>
+            <p>The extent to which the technique relies on the
+            subjective interpretation of the expert.</p>
+            <p>And <a
+            href="http://scholar.google.com/scholar_case?q=o%27key&amp;hl=en&amp;as_sdt=4,38&amp;case=4487336251714325364&amp;scilh=0">State
+            v. O’Key</a><a
+            href="http://scholar.google.com/scholar_case?q=o%27key&amp;hl=en&amp;as_sdt=4,38&amp;case=4487336251714325364&amp;scilh=0">,
+            321 Or 285 (1995)</a>:</p>
+            <p>Whether the theory or technique in question can be (and
+            has been) tested.</p>
+            <p>Whether the theory or technique has been subject to peer
+            review and publication.</p>
+            <p>The known or potential rate of error and the existence of
+            operational standards controlling the techniques
+            operation.</p>
+            <p>The degree of acceptance in a relevant scientific
+            community.</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>Consider having the court rule pretrial on the
+            admissibility of your expert if it is something new or
+            unusual. See Chapter 7, “Motions in Limine.”</p>
+            <p>If the court excludes your expert witness or part of the
+            testimony, make an offer of proof. See Chapter 11, “Making a
+            Record and Offers of Proof.”</p>
+            </section>
+            <section id="ii._obtaining_expert_witnesses" class="level1">
+            <h1><strong>II. Obtaining Expert Witnesses</strong></h1>
+            <section id="a._determine_why_an_expert_is_needed"
+            class="level2">
+            <h2><strong>A. Determine Why an Expert Is
+            Needed</strong></h2>
+            <p>Experts add to case preparation and presentation:</p>
+            <p>Always consult an expert if prosecution is using one in
+            investigation, testing or trial.</p>
+            <p>Experts can provide a conduit for otherwise inadmissible
+            evidence. <a href="http://www.oregonlaws.org/ors/40.415">OEC
+            703</a>.</p>
+            <p>Tell the accused’s story through an expert. This can be
+            useful if the accused is inarticulate, presents poorly, or
+            has other communication problems.</p>
+            <p>Using an expert can avoid cross-examination of the
+            accused and his or her criminal record.</p>
+            <p>Experts can present mitigating testimony at
+            sentencing.</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>Danger: Do you open the door to prior convictions, prior
+            bad acts, or other negative impact information if such is
+            “of a type reasonably relied upon by experts in the
+            particular field in forming opinions or inferences upon the
+            subject”?</p>
+            </section>
+            <section id="b._areas_of_expertise_are_infinite"
+            class="level2">
+            <h2><strong>B. Areas of Expertise Are Infinite</strong></h2>
+            <p>“This rule is broadly phrased. The fields of knowledge
+            which may be drawn upon are not limited merely to the
+            ‘scientific’ and ‘technical’ but extend to all ‘specialized’
+            knowledge. Similarly, the expert is viewed, not in a narrow
+            sense, but as a person qualified by ‘knowledge, skill,
+            experience, training or education.’ Thus, within the scope
+            of the rule are not only experts in the strictest sense of
+            the word, e.g., physicians, physicists and architects, but
+            also the large group sometimes called ‘skilled’
+            witnesses....” 1981 Conference Committee Commentary citing
+            Wigmore, <em>Evidence §</em>1918 (3rd ed. 1940).</p>
+            </section>
+            <section id="c._potential_sources" class="level2">
+            <h2><strong>C. Potential Sources</strong></h2>
+            <p>1. Forensic Specialists Criminologists</p>
+            <p>Firearms &amp; ballistics</p>
+            <p>Fingerprint</p>
+            <p>Molecular biologists – DNA</p>
+            <p>Medical examiners/pathologists</p>
+            <p>2. Mental Health Professionals a. Psychiatrists</p>
+            <p>Generally preferable if the case involves organic,
+            neurological, or physiological causes for client’s aberrant
+            behavior. They are also generally qualified to discuss
+            medications used in their field.</p>
+            <p>b. Psychologists</p>
+            <p>In many cases, psychologists can be more valuable before
+            a jury due to the testing materials that they use. Although
+            there are some problems with such standardized tests, juries
+            are impressed with their “built-in” verification questions.
+            Many psychological tests have an inherent demonstrative
+            evidence value that buttresses the expert’s opinion as
+            something not guessed at or not rooted in the manipulation
+            of a crafty criminal defendant.</p>
+            <p>c. Neuropsychologists</p>
+            <p>Exceptionally valuable in cases where organic brain
+            dysfunction is suspected. Through the use of extremely
+            interesting testing procedures, these experts can narrow a
+            problem to a specific area of the brain and explain in
+            minute detail how the organic injury impacts a person’s
+            cognitive functions and abilities.</p>
+            <p>d. Masters in Social Work, Masters in Arts, Masters in
+            Science</p>
+            <p>Can administer some testing materials similar to
+            psychologists and actually do counseling with client prior
+            to trial.</p>
+            <p>3. Teaching Institutions Community colleges</p>
+            <p>Colleges</p>
+            <p>Universities</p>
+            <p>Medical schools</p>
+            <p>Technical schools</p>
+            <p>4. Trade Associations</p>
+            <p>5. Members of Specific Communities and Nonprofit
+            Organizations Mentally challenged and disabled</p>
+            <p>Physically disabled</p>
+            <p>Retired citizens</p>
+            <p>Prisoners, former prisoners or prison counselors</p>
+            <p>Minority, ethnic or non-English speaking groups</p>
+            <p>6. OCDLA Expert Witness Database OCDLA has a number of
+            experts identified who will work in indigent defense cases
+            and will be funded by OPDS. This database will soon be
+            online at OCDLA’s Library of Defense.<strong></strong>In the
+            meantime, contact OCDLA for referrals.<strong></strong></p>
+            <p>7. Other Attorneys The OCDLA Pond listserve is an
+            excellent source of information on potential experts in your
+            case and on the experts to be called by the state.</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>It is important to develop a “stable” of experts you can
+            rely on. After you use an expert, carefully evaluate that
+            expert’s performance. Don’t be afraid to change experts in a
+            particular field if you are not fully satisfied with the
+            expert. Your goal is to find an expert that is persuasive to
+            a trier of fact in the expert’s field and is “bulletproof”
+            on cross-examination. This “stable” can be developed through
+            years of practice</p>
+            </section>
+            <section id="d._interview_and_evaluate_the_expert"
+            class="level2">
+            <h2><strong>D. Interview and Evaluate the
+            Expert</strong></h2>
+            <p>What is specific area of need?</p>
+            <p>What help can expert provide – what <em>is</em>expert’s
+            experience in the field and in court?</p>
+            <p>What are the expert’s feelings about working with accused
+            in jail or other unusual setting?</p>
+            <p>How much is the expert going to cost?</p>
+            <p>What is the expert’s availability?</p>
+            <p>How interested in the case is the expert?</p>
+            <p>Is the expert able to work with the defense team?</p>
+            <p>Is another expert in the field better for this case?</p>
+            <p>Note: Obtain curriculum vitae or the educational,
+            academic or trade résumé.</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>Personally locating and evaluating potential experts for
+            your case is one of the most important things the criminal
+            defense lawyer can do. Do not assign this task to a legal
+            assistant or office help by saying, “Find me an expert.”
+            Read the curriculum vitaes and learn as much as you can
+            about these experts, and try to obtain the best and most
+            qualified expert your client can afford.</p>
+            </section>
+            <section id="e._appointment_of_experts" class="level2">
+            <h2><strong>E. Appointment of Experts</strong></h2>
+            <p>1. Retained Cases <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.055(3)</a> allow clients with retained lawyers to apply
+            for court-appointed expenses so long as the client is
+            eligible for appointed counsel. (“A person determined to be
+            eligible for appointed counsel is entitled to necessary and
+            reasonable fees and expenses for investigation, preparation
+            and presentation of the case for trial, negotiation and
+            sentencing.”)</p>
+            <p>2. Indigent Cases</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>Counsel should – as part of the motion, accompanying
+            affidavit and order—request that the contents of all ex
+            parte documents remain sealed until the conclusion of the
+            case, <a
+            href="http://scholar.google.com/scholar_case?q=cunningham&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=1999&amp;case=13623163674621340402&amp;scilh=0">See
+            State v. Cunningham</a><a
+            href="http://scholar.google.com/scholar_case?q=cunningham&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=1999&amp;case=13623163674621340402&amp;scilh=0">,
+            161 Or App 345, 333, 985 P2d 827 (1999)</a> (“We hold that
+            the trial court erred in denying defendant’s motion to seal
+            the indigent defense expense records until the conclusion of
+            the case”).</p>
+            <p>a. Approval and authorization of payment of expenses for
+            an expert requires making an application for
+            preauthorization of such expenses to the Office of Public
+            Defense Services (OPDS). The rules and procedures for making
+            application for non-routine expenses at OPDS are found in
+            Section 3.2.3 of Public Defense Payment Policies, which can
+            be found on the OPDS website at <a
+            href="http://courts.oregon.gov/OPDS/"><span>http://courts.oregon.gov/OPDS/</span></a>.
+            Application must be made on Request for Preauthorization of
+            Non-Routine Expense form, and must be completed, signed and
+            dated by the attorney requesting the expense. It must be
+            accompanied by a narrative stating 1) the date counsel was
+            appointed, 2) the most serious charge (if criminal), 3) the
+            type of service or expense requested, 4) the reason the
+            service or expense is necessary and reasonable for proper
+            representation, and 5) what results counsel expects to
+            obtain with the service or expense requested. “The OPDS will
+            authorize the use of an out-of-state expert only if a
+            qualified in-state expert is not available or is more
+            expensive than an out-of-state expert.” <a
+            href="http://courts.oregon.gov/OPDS/docs/CBS/PDPPP20120101.pdf">Public
+            Defense Payment Policies</a>, Section 3.2.3.1. The OPDS
+            guidelines amount for an expert is $110/hour.</p>
+            <p>When application for pre-authorization is presented to
+            OPDS, they will review the application and make a decision.
+            In the event the application is denied, a request for
+            reconsideration can be submitted. If this is denied,
+            “counsel may appeal the denial to the presiding judge in the
+            court in which the subject case is pending or the Chief
+            Judge or Chief Justice when the request involves and
+            appellate case. The decision of the judge is final.” Public
+            Defense Payment Policies, Section 3.2.3.1.</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>OPDS recommends that the following information be
+            included in the narrative accompanying a request for
+            pre-authorization of funds:</p>
+            <p>Is counsel court-appointed? If not, who retained counsel?
+            Has the client been found eligible for public defense
+            expenses by the court?</p>
+            <p>Has there been a change in the client’s financial
+            circumstances since the completion of the affidavit of
+            eligibility that would make the client ineligible for public
+            defense expenses?</p>
+            <p>What are the charges or allegations? What are some of the
+            details regarding the case?</p>
+            <p>Has counsel made a previous request in this case for
+            similar or related services?</p>
+            <p>What will the provider do? Be fairly specific.</p>
+            <p>Why is the service needed and how will this service
+            benefit the defense?</p>
+            <p>Are there co-defendants and might a co-defendant benefit
+            from this particular service? Can material or services be
+            shared?</p>
+            <p>Will the provider work for the guideline rate? If not,
+            why is counsel requesting this particular provider versus
+            one who will work at the guideline rate? What is special
+            about this particular provider or service that merits the
+            increased rate?</p>
+            <p>If an unusually large number of hours are being
+            requested, why are so many needed?</p>
+            <p>If counsel was not able to request pre-authorization,
+            what circumstances prevented counsel from doing so?</p>
+            <p>END PRACTICE TIP</p>
+            <p>b. In years past requests for extraordinary expenses,
+            like expert services, were made directly to the court by way
+            of motion. A body of case law developed that is still good
+            law. Counsel should bear in mind these cases and statutes
+            when appealing an OPDS denial to the court:</p>
+            <p>ORS 40.410 [<a
+            href="http://www.oregonlaws.org/ors/40.410">http://www.oregonlaws.org/ors/40.410</a>'
+            (OEC 702)].</p>
+            <p>ORS <a
+            href="http://www.leg.state.or.us/ors/135.html">135.055(3)</a>.</p>
+            <p><a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution</a>, Article 1, section 11.</p>
+            <p><a href="http://www.law.cornell.edu/constitution/">United
+            States Constitution</a>, [#amendmentv Amendments V],
+            [#amendmentv VI], <a
+            href="http://www.law.cornell.edu/constitution/amendmentxiv">XIV</a>,
+            and <a
+            href="http://scholar.google.com/scholar_case?q=gleason&amp;hl=en&amp;as_sdt=4,38&amp;case=12992380923448478093&amp;scilh=0">State
+            v. Gleason,</a><a
+            href="http://scholar.google.com/scholar_case?q=gleason&amp;hl=en&amp;as_sdt=4,38&amp;case=12992380923448478093&amp;scilh=0">100
+            Or App 236, 785 P2d 376 (1990).</a> Held that under the
+            facts of this manslaughter case, the trial court abused its
+            discretion in denying appointment of a medical expert. By
+            doing so, the court denied the lawyer for the accused an
+            opportunity to effectively prepare. A medical expert was
+            vital to adequate trial preparation and to effective cross
+            examination of the state’s witnesses.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=ake+v+oklahoma&amp;hl=en&amp;as_sdt=3,38&amp;case=1904002630366313299&amp;scilh=0">Ake
+            . Oklahoma,</a><a
+            href="http://scholar.google.com/scholar_case?q=ake+v+oklahoma&amp;hl=en&amp;as_sdt=3,38&amp;case=1904002630366313299&amp;scilh=0">470
+            US 68 (1985)</a>. Although a capital case, this case is the
+            seminal federal case on an accused’s federal constitutional
+            right to obtain a mental heath professional to aid in the
+            preparation and presentation of the defense case, including
+            the preparation of cross-examination of the state’s
+            expert.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=smith+v.+mccormick&amp;hl=en&amp;as_sdt=3,38&amp;case=11891135850417049925&amp;scilh=0">Smith
+            v. McCormick,</a><a
+            href="http://scholar.google.com/scholar_case?q=smith+v.+mccormick&amp;hl=en&amp;as_sdt=3,38&amp;case=11891135850417049925&amp;scilh=0">914
+            P2d 1153 (9th Circuit 1990)</a>.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stifel&amp;hl=en&amp;as_sdt=3,38&amp;case=11309244003509862380&amp;scilh=0">United
+            States v. Stifel,</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stifel&amp;hl=en&amp;as_sdt=3,38&amp;case=11309244003509862380&amp;scilh=0">433
+            F2d 431, 441 (6</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stifel&amp;hl=en&amp;as_sdt=3,38&amp;case=11309244003509862380&amp;scilh=0">th</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+stifel&amp;hl=en&amp;as_sdt=3,38&amp;case=11309244003509862380&amp;scilh=0">Circuit1970)</a>.
+            “[I]f the government sees fit to use this time-consuming
+            expensive means of fact-finding, it must both allow time for
+            a defendant to make similar tests, and in the instance of an
+            indigent defendant, a means to provide payment for the
+            same.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+pruett&amp;hl=en&amp;as_sdt=4,38&amp;case=2695473919478040794&amp;scilh=0">State
+            v. Pruett,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+pruett&amp;hl=en&amp;as_sdt=4,38&amp;case=2695473919478040794&amp;scilh=0">95
+            Or App 494, 770 P2d 70 (1989)</a>. The affidavit must show
+            that the expense requested is necessary and proper in the
+            investigation, preparation and presentation of the case.</p>
+            <p><em>State v. Gleason,</em>100 Or App 236, 785 P2d 376
+            (1990). There must be some showing from which the court can
+            infer existence of a reasonable probability that the
+            expenditure will produce benefit for the defense.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">,
+            313 Or 356, 836 P2d 1308 (1992)</a> Where a defendant
+            establishes the probable value of the assistance sought,
+            such that there is a significant risk of error in the
+            proceedings if that assistance is denied, the defendant is
+            entitled to that assistance at state expense. In this case,
+            however, the trial court did not abuse its discretion in
+            concluding that a pretrial public opinion poll was not
+            necessary and proper for the investigation, preparation and
+            presentation of the case.</p>
+            </section>
+            </section>
+            <section id="iii._preparing_expert_to_testify"
+            class="level1">
+            <h1><strong>III. Preparing Expert to Testify</strong></h1>
+            <section id="a._submission_of_materials_and_documents"
+            class="level2">
+            <h2><strong>A. Submission of Materials and
+            Documents</strong></h2>
+            <p>1. Indirect Indirect method of submitting evidence under
+            <a href="http://www.oregonlaws.org/ors/40.415">OEC 703</a>.
+            Under the provisions of this rule, experts can make use of
+            any and all information that such an expert would normally
+            make use of in their field, notwithstanding the limitations
+            of other rules of evidentiary exclusion. Thus, one of the
+            principal tactical reasons for engaging an expert,
+            particularly in the mental health field, is the ability to
+            get before the trier of fact information that would either
+            not be admissible or for tactical reasons is better put in
+            through the very articulate mouth of the expert rather than
+            the inarticulate mouth of the accused or another
+            witness.</p>
+            <p>2. Dangers of Submitting Materials Under <a
+            href="http://www.oregonlaws.org/ors/40.420">OEC 704</a>, all
+            information which an expert has made use of in coming to his
+            or her conclusions or opinions is subject to discovery by
+            the prosecution during cross- examination. Thus counsel must
+            weigh the potential advantages of getting positive evidence
+            before the jury against the potential cost of any
+            concomitant negative information coming out. Counsel must
+            always assume that all information turned over or made known
+            to the expert will probably be made known to the trier of
+            fact. Thus, counsel should carefully weigh what information
+            counsel will relay to the expert in writing, as opposed to
+            verbally, and the tactical advantages and disadvantages of
+            each means of communication on a case specific basis.</p>
+            <p>3. Danger of Withholding Material I accept the dangers
+            associated with withholding material and generally provide
+            my expert with all police reports and investigative
+            materials. If your expert is surprised on cross-examination
+            with an important fact that the expert knew nothing about
+            before coming to court, you might lose your case. Also, that
+            expert may never work for you again. Most experts are very
+            concerned with their reputation. They know other prosecutors
+            are getting transcripts of their testimony. The last thing
+            they want to do is get embarrassed and successfully
+            impeached by information you withheld.</p>
+            </section>
+            <section id="b._initial_letter_to_expert" class="level2">
+            <h2><strong>B. Initial Letter to Expert</strong></h2>
+            <p>1. Explain statutory and case law perimeters within which
+            the expert must operate. This letter must include the fact
+            that the expert is covered by the attorney-client privilege
+            and ensures the expert fully understands the absolute
+            necessity of client confidentiality. 2. Point out time and
+            cost limits. 3. Be careful in discussing case and client.
+            This letter will most certainly become available to the
+            prosecution.</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>There may be cases where counsel wishes to verbally brief
+            the expert on details rather than be overly inclusive in a
+            preliminary letter.</p>
+            </section>
+            <section id="c._interaction_with_client" class="level2">
+            <h2><strong>C. Interaction with Client</strong></h2>
+            <p>Introduce client and whatever quirks or problems the
+            expert may encounter in dealing with the client. In
+            addition, ensure that client is aware of who the expert is,
+            the purpose of the expert’s participation in the defense
+            team, when expert will see client, etc.</p>
+            </section>
+            <section
+            id="d._preliminary_discussion_prior_to_preparation_of_any_report"
+            class="level2">
+            <h2><strong>D. Preliminary Discussion Prior to Preparation
+            of Any Report</strong></h2>
+            <p>No expert of any kind should be retained for the defense
+            team without a commitment from the expert that the expert
+            will discuss in detail with counsel the expert’s findings
+            and opinions before they are included in any written report
+            or materials. This is not to tell the expert what the
+            conclusions and opinions should be but rather whether a
+            written report should be produced. It will also aid the
+            expert in wording any written report in a way that is both
+            entirely consistent with the expert’s findings and most
+            beneficial to the defense theory.</p>
+            </section>
+            <section id="e._detailed_discussion_of_trial_presentation"
+            class="level2">
+            <h2><strong>E. Detailed Discussion of Trial
+            Presentation</strong></h2>
+            <p>It is even more essential to review in detail with the
+            expert the information which counsel seeks to put before the
+            trier of fact. The expert should know exactly what questions
+            will be asked, the order of presentation, the points that
+            will be made. The expert must be aware of and able to
+            communicate specific statutory language used in many
+            affirmative defenses.</p>
+            </section>
+            <section id="f._cross_examination" class="level2">
+            <h2><strong>F. Cross-Examination</strong></h2>
+            <p>The well-informed and prepared expert does not need a
+            great deal of protection from cross-examination. If well
+            prepared, it is generally best to let them face the
+            prosecutor without interference. The expert should
+            anticipate that the prosecutor has read any material
+            published by the expert and may try to use that material in
+            cross-examination.</p>
+            <p>In many cases, counsel and experts working together can
+            formulate a game plan to lure the prosecution into questions
+            that will bring forth devastating answers that are elicited
+            by the prosecutor.</p>
+            <p>On the other hand, proceed with great caution when
+            cross-examining the state’s experts. Never do so without the
+            aid of an expert of your own. Remember that the witness
+            knows a great deal more than you do in their particular
+            field. However, you should learn as much as you can about
+            the particular field and also read this expert’s published
+            materials as a potential source of cross-examination.</p>
+            </section>
+            </section>
+            <section id="iv._testimony_by_experts" class="level1">
+            <h1><strong>IV. Testimony by Experts</strong></h1>
+            <section id="a._voir_dire" class="level2">
+            <h2><strong>A. Voir Dire</strong></h2>
+            <p>Prepare the jury for your experts.</p>
+            <p>Discover juror biases regarding experts in general and
+            the area of expertise for your specific expert. Some jurors
+            think some areas of expertise are not actual expertises,
+            i.e., psychology.</p>
+            <p>Discuss expert’s area of expertise. Make him or her
+            interesting.</p>
+            <p>In this world of future shock and information explosion
+            it is normal and necessary to call upon an expert. The
+            expert is not a hired gun. He or she is here to help the
+            jury understand an important issue.</p>
+            </section>
+            <section id="b._evidentiary_issues_with_expert_testimony"
+            class="level2">
+            <h2><strong>B. Evidentiary Issues with Expert
+            Testimony</strong></h2>
+            <p>1. Scientific Evidence/Foundational Requirements In <a
+            href="http://scholar.google.com/scholar_case?q=brown&amp;hl=en&amp;as_sdt=4,38&amp;case=16347591282643565388&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=brown&amp;hl=en&amp;as_sdt=4,38&amp;case=16347591282643565388&amp;scilh=0">,
+            297 Or 404 (1984)</a>, the Oregon Supreme Court stated that
+            the term “scientific” refers to “evidence that draws its
+            convincing force from some principle of science, mathematics
+            and the like.” In <a
+            href="http://scholar.google.com/scholar_case?q=o%27key&amp;hl=en&amp;as_sdt=4,38&amp;case=4487336251714325364&amp;scilh=0">State
+            v. O’Key</a><a
+            href="http://scholar.google.com/scholar_case?q=o%27key&amp;hl=en&amp;as_sdt=4,38&amp;case=4487336251714325364&amp;scilh=0">,
+            321 Or 285 (1995)</a>, the court extended this definition to
+            “proffered expert scientific testimony that a court finds
+            possesses significantly increased potential to influence the
+            trier of fact as ‘scientific’ assertions”. <em>Id</em>. at
+            293.</p>
+            <p>2. Standards for Admissibility for Expert Testimony a. If
+            evidence is deemed “scientific,” the burden is on the
+            proponent of the evidence to establish its admissibility.
+            Unless the particular type of scientific evidence has been
+            approved by statute or a prior appellate decision, the
+            proponent of the scientific evidence must establish that it
+            meets the standards for admissibility set forth in <em>State
+            v. Brown</em> and <em>State v. O’Key</em>.</p>
+            <p>b. <em>State v. Brown</em>. In discussing the method by
+            which the admission of novel or new scientific evidence
+            should be scrutinized in determining admissibility, the
+            following non-exclusive list of factors is set out:</p>
+            <p>Technique’s general acceptance in the field</p>
+            <p>Expert’s qualifications and stature</p>
+            <p>Use which has been made of the technique</p>
+            <p>Potential rate of error</p>
+            <p>Existence of specialized literature</p>
+            <p>The novelty of invention</p>
+            <p>Extent to which the technique relies on the subjective
+            interpretation of the expert.</p>
+            <p>c. <em>State v. O’Key</em>. In the <em>O’Key</em> case,
+            the Oregon Supreme Court incorporated the analysis of the
+            United States Supreme Court in <a
+            href="http://scholar.google.com/scholar_case?q=daubert&amp;hl=en&amp;as_sdt=3,38&amp;case=827109112258472814&amp;scilh=0">Daubert
+            v. Merrell Dow Pharmaceuticals</a><a
+            href="http://scholar.google.com/scholar_case?q=daubert&amp;hl=en&amp;as_sdt=3,38&amp;case=827109112258472814&amp;scilh=0">,
+            509 U.S. 579 (1993)</a>.</p>
+            <p>Whether the theory or technique in question can be (and
+            has been) tested.</p>
+            <p>Whether the theory or technique has been subject to peer
+            review and publication.</p>
+            <p>The known or potential rate of error and the existence of
+            operational standards controlling the technique’s
+            operation.</p>
+            <p>The degree of acceptance in the relevant scientific
+            community.</p>
+            <p>d. In <a
+            href="http://scholar.google.com/scholar_case?q=kumho&amp;hl=en&amp;as_sdt=3,38&amp;case=11404623739922196630&amp;scilh=0">Kumho
+            Tire Co., Ltd. v. Carmichael,</a><a
+            href="http://scholar.google.com/scholar_case?q=kumho&amp;hl=en&amp;as_sdt=3,38&amp;case=11404623739922196630&amp;scilh=0">526
+            U.S. 137 (1999)</a>, the U.S. Supreme Court eliminated the
+            distinction between scientific and non-scientific evidence
+            for the purpose of the trial court’s gate-keeping function
+            established in <em>Daubert</em>.</p>
+            <p>3. Types of Scientific Evidence For a full treatise on
+            scientific evidence, see the new OCDLA manual by Kevin Sali,
+            <em>Scientific Evidence: A Manual for Oregon Defense
+            Attorneys</em>, and check the <a
+            href="https://libraryofdefense.org/legalpages/Forensic_Evidence">Scientific
+            Evidence section</a> at the Oregon Library of Defense.</p>
+            <p>a. Approved Scientific Evidence</p>
+            <p>Drug recognition expert protocol (DRE) – <a
+            href="http://scholar.google.com/scholar_case?q=sampson&amp;hl=en&amp;as_sdt=4,38&amp;case=7487768677061913031&amp;scilh=0">State
+            v. Sampson</a><a
+            href="http://scholar.google.com/scholar_case?q=sampson&amp;hl=en&amp;as_sdt=4,38&amp;case=7487768677061913031&amp;scilh=0">,
+            167 Or App 489, 502–503 (2000)</a>. However, all 12 steps
+            must be completed or the DRE will be excluded. <a
+            href="http://scholar.google.com/scholar_case?q=aman&amp;hl=en&amp;as_sdt=4,38&amp;case=18357110716886964593&amp;scilh=0">State
+            v. Aman</a><a
+            href="http://scholar.google.com/scholar_case?q=aman&amp;hl=en&amp;as_sdt=4,38&amp;case=18357110716886964593&amp;scilh=0">,
+            194 Or App 463, 473 (2004)</a>.</p>
+            <p>Horizontal Gaze Nystagmus (HGN) – <em>State v.
+            O’Key</em>, 321 Or 285, 322–323 (1995).</p>
+            <p>DNA evidence using the RFLP method – <a
+            href="http://scholar.google.com/scholar_case?q=herzog&amp;hl=en&amp;as_sdt=4,38&amp;case=14328418303661339112&amp;scilh=0">State
+            v. Herzog</a><a
+            href="http://scholar.google.com/scholar_case?q=herzog&amp;hl=en&amp;as_sdt=4,38&amp;case=14328418303661339112&amp;scilh=0">,
+            125 Or App 10 (1993)</a><a
+            href="http://scholar.google.com/scholar_case?q=herzog&amp;hl=en&amp;as_sdt=4,38&amp;case=14328418303661339112&amp;scilh=0">.</a></p>
+            <p>DNA evidence using the POLYMERASE chain reaction (PCR)
+            method – <a
+            href="http://scholar.google.com/scholar_case?q=lyons&amp;hl=en&amp;as_sdt=4,38&amp;case=630919102008065827&amp;scilh=0">State
+            v. Lyons</a><a
+            href="http://scholar.google.com/scholar_case?q=lyons&amp;hl=en&amp;as_sdt=4,38&amp;case=630919102008065827&amp;scilh=0">,
+            324 Or 256 (1996)</a>.</p>
+            <p>Chemical analysis for alcohol of a person’s breath, urine
+            or saliva – ORS 813.300.</p>
+            <p>Ballistics – <em>State v. Henderson</em>, 182 Or 147, 187
+            (1947).</p>
+            <p>Radar – <a
+            href="http://scholar.google.com/scholar_case?q=ringle&amp;hl=en&amp;as_sdt=4,38&amp;case=7108267487295109462&amp;scilh=0">State
+            v. Ringle</a><a
+            href="http://scholar.google.com/scholar_case?q=ringle&amp;hl=en&amp;as_sdt=4,38&amp;case=7108267487295109462&amp;scilh=0">,
+            40 Or App 393 (1979)</a>.</p>
+            <p>Fingerprints – <em>State v. Smith</em>, 128 Or 515, 526
+            (1929).</p>
+            <p>Blood tests to determine paternity – <a
+            href="http://www.leg.state.or.us/ors/109.html">ORS.
+            109.250-.262.</a></p>
+            <p>Blood enzyme tests – <a
+            href="http://scholar.google.com/scholar_case?q=mower&amp;hl=en&amp;as_sdt=4,38&amp;case=7142928869976675132&amp;scilh=0">State
+            v. Mower</a><a
+            href="http://scholar.google.com/scholar_case?q=mower&amp;hl=en&amp;as_sdt=4,38&amp;case=7142928869976675132&amp;scilh=0">,
+            50 Or App 63 (1981)</a><a
+            href="http://scholar.google.com/scholar_case?q=mower&amp;hl=en&amp;as_sdt=4,38&amp;case=7142928869976675132&amp;scilh=0">.</a></p>
+            <p>Bloodhound tracking evidence – <a
+            href="http://scholar.google.com/scholar_case?q=state+v+harris&amp;hl=en&amp;as_sdt=4,38&amp;case=1605638274991794584&amp;scilh=0">State
+            v. Harris</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+harris&amp;hl=en&amp;as_sdt=4,38&amp;case=1605638274991794584&amp;scilh=0">,
+            25 Or App 71 (1976)</a>.</p>
+            <p>Blood splatter analysis – <a
+            href="http://scholar.google.com/scholar_case?q=proctor&amp;hl=en&amp;as_sdt=4,38&amp;case=10504604314521980603&amp;scilh=0">State
+            v. Proctor</a><a
+            href="http://scholar.google.com/scholar_case?q=proctor&amp;hl=en&amp;as_sdt=4,38&amp;case=10504604314521980603&amp;scilh=0">,
+            94 Or App 720 (1989)</a>.</p>
+            <p>Hair analysis – <a
+            href="http://scholar.google.com/scholar_case?q=kersting&amp;hl=en&amp;as_sdt=4,38&amp;case=6849073758010211791&amp;scilh=0">State
+            v. Kersting</a><a
+            href="http://scholar.google.com/scholar_case?q=kersting&amp;hl=en&amp;as_sdt=4,38&amp;case=6849073758010211791&amp;scilh=0">,
+            50 Or App 461 (1981).</a></p>
+            <p>b. “Clear Case” Exception</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+branch&amp;hl=en&amp;as_sdt=4,38&amp;case=15362706364615377068&amp;scilh=0">State
+            v. Branch</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+branch&amp;hl=en&amp;as_sdt=4,38&amp;case=15362706364615377068&amp;scilh=0">,
+            243 Or App 309, 259 P3d 103 (2011)</a>, the Oregon Court of
+            Appeals carved out a new rule for Lidar (Laser Distance
+            Measurement). <em>Brown</em>’s and <em>O’Key</em>’s
+            foundation requirements do not apply to Lidar, the Court
+            said, because it is a “clear case” where the science is
+            universally accepted and the technology is widely used. With
+            this type of evidence, it is the opposing party’s burden to
+            show that the science is not universally accepted, or not
+            widely used, or not sound for the purpose offered.</p>
+            <p>c. Eyewitness Identification</p>
+            <p>This topic should probably consume an entire chapter unto
+            itself, thanks to the landmark ruling in <em>State v.
+            Lawson</em> where the Oregon Supreme Court held that the
+            procedure on whether to admit eyewitness ID is based on
+            Oregon’s evidence code. <em>Lawson</em>, __ Or __, (November
+            29, 2012.) (Slip opinion can be found at <a
+            href="http://www.publications.ojd.state.or.us/docs/S059234.pdf"><span>http://www.publications.ojd.state.or.us/docs/S059234.pdf</span></a>).
+            Under the new procedure, once a defendant moves to exclude
+            an eyewitness identification, it is the state’s burden to
+            prove the identification is reliable. Reliability is based
+            upon traditional factors under the evidence code, such as
+            personal knowledge, and whether the information will assist
+            the jury in making a decision. If the state is able to
+            demonstrate reliability, the defendant must then establish
+            the probative value is substantially outweighed by the risk
+            of unfair prejudice. This balancing test is where an expert
+            witness can be critical for your case. For more information,
+            Bronson James has some helpful first impressions on
+            <em>Lawson</em> and what to do about it. (Link: <a
+            href="https://libraryofdefense.org/Thoughts_on_Lawson%2C_the_New_Eyewitness_ID_Case">Library
+            of Defense, “Thoughts on Lawson, The New Eyewitness ID
+            Case</a>.”)</p>
+            <p>d. Psychological Syndromes</p>
+            <p>To qualify an expert witness to testify about “syndromes”
+            such as battered woman syndrome and rape trauma syndrome,
+            the criteria for introducing scientific evidence in
+            <em>State v. Brown</em> and <em>State v. O’Key</em> must
+            first be satisfied.</p>
+            <p>e. Diagnosis of Sex Abuse/Victim’s Characteristics</p>
+            <p>Two recent cases have completely changed the analysis for
+            evidence pertaining to diagnosis of sex abuse: <a
+            href="http://scholar.google.com/scholar_case?q=southard&amp;hl=en&amp;as_sdt=4,38&amp;case=16531670170009390370&amp;scilh=0">State
+            v. Southard</a><a
+            href="http://scholar.google.com/scholar_case?q=southard&amp;hl=en&amp;as_sdt=4,38&amp;case=16531670170009390370&amp;scilh=0">,
+            347 Or 127, 142, (2009)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=lupoli&amp;hl=en&amp;as_sdt=4,38&amp;case=15447269637507288119&amp;scilh=0">State
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=lupoli&amp;hl=en&amp;as_sdt=4,38&amp;case=15447269637507288119&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=lupoli&amp;hl=en&amp;as_sdt=4,38&amp;case=15447269637507288119&amp;scilh=0">Lupoli</a><a
+            href="http://scholar.google.com/scholar_case?q=lupoli&amp;hl=en&amp;as_sdt=4,38&amp;case=15447269637507288119&amp;scilh=0">,
+            348 Or 346 (2010)</a>. In <em>Southard</em>, the Oregon
+            Supreme Court held that a statement from an expert that a
+            child had been sexually abused was inadmissible in the
+            absence of physical evidence of such abuse. Without the
+            physical evidence, the opinion was simply the expert telling
+            the jury that he or she believed the victim, which obviously
+            was improper vouching and failed the <a
+            href="http://www.oregonlaws.org/ors/40.160">OEC 403</a>
+            balancing test.</p>
+            <p>In <em>Lupoli,</em>decided after <em>Southward</em>, the
+            defendant did not challenge the diagnosis that the victim
+            had been sexually abused, but he challenged the testimony of
+            the nurse practitioner, Avila, regarding the basis for her
+            diagnosis. The court agreed that the testimony should have
+            been excluded. “Avila’s diagnosis, given the lack of
+            physical evidence of abuse, necessarily was based on her
+            assessment of the child’s believability. When Avila then was
+            asked the basis for her diagnosis, she was implicitly
+            declaring, with each statement and description, why she had
+            found SM to be credible. She did so explicitly as well, as
+            when she explained that ‘the manner in which [SM] told her
+            story was pretty compelling’ and that ‘it had an effect’ on
+            her forming her diagnosis.”</p>
+            <p><em>Lupoli</em>and <em>Southard</em>are applicable in
+            bench trials, and the state cannot circumvent the cases by
+            having their expert testify that the facts are “highly
+            concerning for sex abuse.” <a
+            href="http://scholar.google.com/scholar_case?q=davilia&amp;hl=en&amp;as_sdt=4,38&amp;case=17270861260451628222&amp;scilh=0">State
+            v. Davilia</a><a
+            href="http://scholar.google.com/scholar_case?q=davilia&amp;hl=en&amp;as_sdt=4,38&amp;case=17270861260451628222&amp;scilh=0">,
+            239 Or App 468 (2010)</a>. Even if there is physical
+            evidence, it must <em>confirm</em> the diagnosis of sex
+            abuse, or the testimony should be excluded. <a
+            href="http://scholar.google.com/scholar_case?q=lovern&amp;hl=en&amp;as_sdt=4,38&amp;case=15920877896761407148&amp;scilh=0">State
+            v. Lovern</a><a
+            href="http://scholar.google.com/scholar_case?q=lovern&amp;hl=en&amp;as_sdt=4,38&amp;case=15920877896761407148&amp;scilh=0">,
+            234 Or App 502 (2010)</a>.</p>
+            <p><strong>Note</strong>: In light of <em>Lupoli</em>and
+            <em>Southard</em>, many of the cases mentioned below are of
+            dubious reliability. Where none have been explicitly
+            overturned, if the state tries to use any of them to
+            bootstrap impermissible vouching evidence, make sure to be
+            ready with the proper objections.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">State
+            v. Middleton</a><a
+            href="http://scholar.google.com/scholar_case?q=middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">,
+            294 Or 427 (1983)</a>, the court held that it was proper to
+            allow expert testimony that a sex crime victim acted
+            similarly to other children who have been sexually abused by
+            other family members. This holding was qualified in <a
+            href="http://scholar.google.com/scholar_case?q=milbradt&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0">State
+            v. Milbrandt</a><a
+            href="http://scholar.google.com/scholar_case?q=milbradt&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0">,
+            305 Or 621 (1988)</a>, where the court held that a
+            foundation for such evidence must be established that meets
+            the requirements of <em>State v. Brown</em>. The holding was
+            further qualified by <em>Lupoli</em>, in striking down an
+            argument that <em>State v. Odoms</em> (<em>infra</em>) and
+            <em>Middleton</em> compelled a different result. (“It is
+            evident from the foregoing that neither <em>Odoms</em>nor
+            <em>Middleton</em>is apposite. Neither case even suggests,
+            much less compels, the conclusion that a trial witness
+            should be permitted to give an opinion that a nonwitness
+            complainant was telling the truth.”)</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=hilaire&amp;hl=en&amp;as_sdt=4,38&amp;case=16209404270806803005&amp;scilh=0">State
+            v. St. Hilaire</a><a
+            href="http://scholar.google.com/scholar_case?q=hilaire&amp;hl=en&amp;as_sdt=4,38&amp;case=16209404270806803005&amp;scilh=0">,
+            97 Or App 108 (1989)</a>, the defendant argued that expert
+            testimony regarding the delay in reporting of child sex
+            abuse victims was not relevant and not supported by the
+            scientific evidence criteria of <em>Brown</em>. The court
+            affirmed the trial court’s decision allowing the testimony,
+            although it noted that the expert, a police detective who
+            investigated sex abuse cases, may have strayed beyond his
+            expertise when he “offered explanations for why abused
+            children behave the way they do.”</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+dale&amp;hl=en&amp;as_sdt=4,38&amp;case=17887915953555308148&amp;scilh=0">State
+            v. Dale</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+dale&amp;hl=en&amp;as_sdt=4,38&amp;case=17887915953555308148&amp;scilh=0">,
+            75 Or App 453 (1985)</a>, the defendant objected to
+            testimony by a CSD child sex abuse worker that the victim
+            reacted the way that a typical five- to seven-year-old
+            victim would, arguing that <em>State v. Middleton’s</em>
+            prohibition on vouching extended to this testimony.
+            (<em>Middleton</em>, 294 Or 427 (1983)). The court affirmed,
+            holding that the CSD worker was only testifying on the
+            reaction of typical victims, and did not express an opinion
+            on whether this victim was being truthful.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+pettit&amp;hl=en&amp;as_sdt=4,38&amp;case=17159206794733924267&amp;scilh=0">State
+            v. Pettit</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+pettit&amp;hl=en&amp;as_sdt=4,38&amp;case=17159206794733924267&amp;scilh=0">,
+            66 Or App 575 (1984)</a>, the court affirmed the testimony
+            of a doctor to testify regarding victim’s general ability to
+            recall dates, relate details of sex abuse, tell consistent
+            stories and report such incidents promptly. (Note: The
+            explanation and holding are the last three sentences of the
+            case. There is no reasoning on <em>why</em> this testimony
+            was acceptable, other than that it fit within the confines
+            of <em>Middleton</em>. It is impossible to reconcile any of
+            these cases with <em>Lupoli</em>.)</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+padilla&amp;hl=en&amp;as_sdt=4,38&amp;case=13928758355956853681&amp;scilh=0">State
+            v. Padilla</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+padilla&amp;hl=en&amp;as_sdt=4,38&amp;case=13928758355956853681&amp;scilh=0">,
+            74 Or App 676 (1985)</a>, the court affirmed the testimony
+            of a sex abuse counselor regarding whether the victim could
+            accurately perceive a sexual contact and then relate it at a
+            later point in time. Again, the court held that the
+            <em>Middleton</em> rule on vouching would only come into
+            play if the witness was directly asked to offer an opinion
+            on the victim’s credibility.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+leach&amp;hl=en&amp;as_sdt=4,38&amp;case=17018025575930220801&amp;scilh=0">State
+            v. Leach</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leach&amp;hl=en&amp;as_sdt=4,38&amp;case=17018025575930220801&amp;scilh=0">,
+            169 Or App 530 (2000)</a>, the court declined to answer the
+            question of whether scientific foundation is needed to
+            establish evidence of “grooming behavior” in a <em>State v.
+            Johns</em> motion. For more information, see the concurring
+            opinion in the case by Justice De Muniz.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=gerard&amp;hl=en&amp;as_sdt=4,38&amp;case=16379059463475637264&amp;scilh=0">State
+            v. Gerard</a><a
+            href="http://scholar.google.com/scholar_case?q=gerard&amp;hl=en&amp;as_sdt=4,38&amp;case=16379059463475637264&amp;scilh=0">,
+            188 Or App 414, 420–21 (2003)</a>, the court reversed a
+            trial court ruling that had precluded the defendant from
+            cross-examining the victim about aspects of their
+            relationship that were normal (that they took family
+            vacations, that they went hunting and fishing together, and
+            that they spent time together). The trial court had ruled
+            the evidence was “syndrome” evidence requiring expert
+            testimony, but the Court of Appeals held that the
+            defendant’s questioning would have merely established that
+            the defendant had a normal, non-abusive relationship with
+            the victim. That sort of evidence was not syndrome evidence,
+            and therefore no expert testimony was needed in order to
+            cross-examine victim about it.</p>
+            <p><em>Compare <a
+            href="http://scholar.google.com/scholar_case?q=state+v+marrington&amp;hl=en&amp;as_sdt=4,38&amp;case=10154162156262782119&amp;scilh=0">State
+            v. Marrington</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+marrington&amp;hl=en&amp;as_sdt=4,38&amp;case=10154162156262782119&amp;scilh=0">,
+            335 Or 555, 560 (2003)</a>, in which the court ruled that
+            the state’s expert who testified that delayed reporting was
+            a predominant feature of child sex abuse needed to establish
+            that this was indeed a valid scientific theory
+            under</em>Brown<em>and</em>O’Key''.</p>
+            <p>f. Polygraph Evidence</p>
+            <p>“In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lyon&amp;hl=en&amp;as_sdt=4,38&amp;case=4179317336293613019&amp;scilh=0">State
+            v. Lyon</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lyon&amp;hl=en&amp;as_sdt=4,38&amp;case=4179317336293613019&amp;scilh=0">,
+            304 Or 221 (1987)</a>, the Oregon Supreme Court ruled that
+            polygraph evidence is not admissible for any purpose in a
+            legal proceeding. This is true even when the parties have
+            stipulated that the polygraph evidence would otherwise be
+            admissible.</p>
+            <p>The exception to the <em>Lyon</em> rule was set out in
+            1992 by <a
+            href="http://scholar.google.com/scholar_case?q=314+Or+496&amp;hl=en&amp;as_sdt=4,38&amp;case=1079902965559885233&amp;scilh=0">Fromdahl
+            v. Fromdahl</a><a
+            href="http://scholar.google.com/scholar_case?q=314+Or+496&amp;hl=en&amp;as_sdt=4,38&amp;case=1079902965559885233&amp;scilh=0">,
+            314 Or 496, 508 (1992)</a>, where the court held that
+            polygraph evidence should have been admitted where the
+            relevancy was that the wife believed that the husband failed
+            a polygraph test regarding whether he sexually abused the
+            children. The knowledge of the polygraph result was
+            therefore relevant to her state of mind to explain why she
+            left the state with her children – and not to prove the
+            truth of the matter of whether the sex abuse had actually
+            occurred.</p>
+            <p>g. Witness Credibility</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+harwood&amp;hl=en&amp;as_sdt=4,38&amp;case=10685584068776403293&amp;scilh=0">State
+            v. Harwood,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+harwood&amp;hl=en&amp;as_sdt=4,38&amp;case=10685584068776403293&amp;scilh=0">45
+            Or App 931 (1980)</a>. Expert testimony relating to witness
+            credibility is admissible if it goes to the ability of the
+            witness to perceive, remember or relate, but psychiatric
+            evidence calling into question complainant’s personality or
+            veracity is an invasion of the jury’s function.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">State
+            v. Middleton,</a><a
+            href="http://scholar.google.com/scholar_case?q=middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">294
+            Or 427 (1983)</a>. “We expressly hold that in Oregon, [a]
+            witness, expert or otherwise, may not give an opinion on
+            whether he believes a witness is telling the truth.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=milbradt&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0">State
+            v. Milbradt,</a><a
+            href="http://scholar.google.com/scholar_case?q=milbradt&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0">305
+            Or 621, 756 P2d 620 (1988)</a>. “We have said before, and we
+            will say it again, but this time with emphasis – we really
+            mean it – no psychotherapist may render an opinion on
+            whether a witness is credible in any trial conducted in this
+            state. The assessment of credibility is for the trier of
+            fact and not for psychotherapists.” <em>Milbradt</em> at 629
+            (emphasis in original).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+odoms&amp;hl=en&amp;as_sdt=4,38&amp;case=13626535282465657859&amp;scilh=0">State
+            v. Odoms,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+odoms&amp;hl=en&amp;as_sdt=4,38&amp;case=13626535282465657859&amp;scilh=0">313
+            Or 76, 83, 829 P2d 690 (1992)</a>. Expert testimony cannot
+            be excluded simply because it tends “to show that another
+            witness is or is not telling the truth.” (Distinguished by
+            <em>Lupoli</em>.)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charboneau&amp;hl=en&amp;as_sdt=4,38&amp;case=8838324916788203567&amp;scilh=0">State
+            v. Charboneau,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charboneau&amp;hl=en&amp;as_sdt=4,38&amp;case=8838324916788203567&amp;scilh=0">323
+            Or 38, 42&amp;1, 913 P2d 308 (1996)</a>. A prosecution
+            witness was impeached and DA attempted to offer written plea
+            agreement that contained state’s “belief” that the reduced
+            charge “accurately reflects” the role the witness played in
+            the crime. The court said: “A witness’s testimony or an
+            exhibit may not, explicitly and directly, contain an opinion
+            as to a trial witness’s credibility.” At 48.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v+gherasim&amp;hl=en&amp;as_sdt=4,38&amp;case=9796735737926504377&amp;scilh=0">State
+            v. Gherasim,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+gherasim&amp;hl=en&amp;as_sdt=4,38&amp;case=9796735737926504377&amp;scilh=0">329
+            Or 188, 19B, 985 P2d 1267 (1999)</a>. “In this case, we
+            conclude that the expert’s testimony about his diagnosis of
+            dissociative amnesia would have been helpful and that its
+            exclusion was not harmless. The determination of defendant’s
+            guilt primarily depended on whether the jury believed the
+            victim’s or defendant’s version of what had occurred.
+            Defendant’s expert would have testified that, in his
+            opinion, the victim suffered from dissociative amnesia and
+            that the condition affected her capacity to remember what
+            had occurred on the night that she was assaulted. The
+            testimony was evidence that defendant was entitled to
+            present to the jury.”</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v+romero&amp;hl=en&amp;as_sdt=4,38&amp;case=7053325289983664976&amp;scilh=0">State
+            v. Romero</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+romero&amp;hl=en&amp;as_sdt=4,38&amp;case=7053325289983664976&amp;scilh=0">,
+            191 Or App 164 (2003)</a>, the court reversed the exclusion
+            of expert testimony where the defendant sought to have the
+            expert testify regarding his suggestibility to police
+            interrogation techniques. The court ruled that the expert
+            witness should have been able to testify as to the
+            defendant’s psychological condition because he was not
+            commenting on the defendant’s credibility – he was instead
+            giving the jury information from which it could make
+            inferences “regarding defendant’s claims that her confession
+            was false.”</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v+leahy&amp;hl=en&amp;as_sdt=4,38&amp;case=5246288985279010869&amp;scilh=0">State
+            v. Leahy</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+leahy&amp;hl=en&amp;as_sdt=4,38&amp;case=5246288985279010869&amp;scilh=0">,
+            190 Or App 147 (2003)</a>, the court found that it was error
+            to admit expert testimony by police officer that “I believe
+            that it most definitely happened exactly the way the victim
+            described it to me”; impermissible to allow any witness,
+            expert or otherwise, to provide direct comment on the
+            credibility of another witness.</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>Be very careful when questioning an expert witness in
+            this area. Judges are very sensitive to lawyers who try to
+            get expert witnesses to testify that a particular state’s
+            witness is not credible. If you stray too close to this
+            question, you may get admonished in front of the jury by the
+            judge. Your expert will be very unhappy with you, also.</p>
+            <p>h. Opinion Based Upon Evidence Obtained in Violation of
+            Statute</p>
+            <p>i. For defense – admissible, <a
+            href="http://scholar.google.com/scholar_case?q=State+v+milstead&amp;hl=en&amp;as_sdt=4,38&amp;case=14646186199601492341&amp;scilh=0">State
+            v. Milstead</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+milstead&amp;hl=en&amp;as_sdt=4,38&amp;case=14646186199601492341&amp;scilh=0">,
+            57 Or App 658, 656 P2d 63,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+milstead&amp;hl=en&amp;as_sdt=4,38&amp;case=14646186199601492341&amp;scilh=0">rev.
+            den.</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+milstead&amp;hl=en&amp;as_sdt=4,38&amp;case=14646186199601492341&amp;scilh=0">293
+            Or 483 (1982)</a>.</p>
+            <p>ii. For prosecution – excluded for all purposes. <a
+            href="http://scholar.google.com/scholar_case?q=State+v+knepper&amp;hl=en&amp;as_sdt=4,38&amp;case=1590100499508909900&amp;scilh=0">State
+            v. Knepper,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+knepper&amp;hl=en&amp;as_sdt=4,38&amp;case=1590100499508909900&amp;scilh=0">62
+            Or App 623, 661 P2d 560 (1983)</a>. Such opinions must be
+            excluded and cannot be used as basis for state expert’s
+            opinion on intoxication. This can be circumvented by the
+            state if they produce a witness who can testify from
+            personal perception.</p>
+            <p>i. Ultimate Issue – ORS 40.420 (OEC 704)</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">State
+            v. Middleton, supra</a>. Testimony on the ultimate issue is
+            not inadmissible solely on that basis, since even if it is
+            uncontradicted expert testimony, the jury is not bound by
+            it, for the jury alone must make the ultimate decision.</p>
+            <p>See Kirkpatrick, <em>Oregon Evidence</em>, 5th ed. 2007,
+            for additional information regarding the types of scientific
+            evidence. And remember to check the Oregon Library of
+            Defense (search for “scientific evidence” or search by
+            topic).</p>
+            <center>
+            <p>This chapter originally prepared for the</p>
+            </center>
+            <center>
+            <p>1993 edition by Mark Austin Cross, Oregon City,
+            Oregon.</p>
+            </center>
+            <center>
+            <p>It was revised in June 2000 by James A. Arneson, P.C.,
+            Roseburg, Oregon.</p>
+            </center>
+            <center>
+            <p>Updating and editing for the 2007 edition by</p>
+            </center>
+            <center>
+            <p>Bob Moon and Christopher Zuercher, Baker City,
+            Oregon.</p>
+            </center>
+            </section>
+            </section>
+    </body>
+</html>

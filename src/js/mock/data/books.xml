@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <books>
     <!-- http://localhost:8080/?book=fsm&id=appendix-a -->
-    <book name="Felony Sentencing Manual" shortName="fsm">
-        <parts>
-            <part label="Foreword" id="fsm-foreword" name="Foreword"/>
-            <part label="Outline" id="fsm-outline" name="Sentencing Outline"/>
-        </parts>
+    <!-- The foreword and introduction of a book, when compared to the main chapters, are collectively referred to as the "front matter" of the book; they are the introductory sections that come before the main body of text containing the chapters. 
+Key points about front matter:
+Includes:
+This section usually includes the title page, copyright page, dedication, preface (if present), foreword (if present), introduction, and table of contents. 
+Purpose:
+The front matter serves to provide context and background information about the book, often explaining the author's motivations and the book's overall purpose. -->
+    <book name="Felony Sentencing Manual" shortName="fsm" default="1">
+        <meta name="title" content="Felony Sentencing in Oregon: Guidelines, Statutes, Cases" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
         <chapters>
-            <chapter label="Chapter 1" id="fsm-1" name="Introduction"/>
+            <chapter label="Foreword" id="fsm-foreword" name="Foreword">
+                <meta editor="Edited by Jesse Wm. Barton" />
+            </chapter>
+            <chapter label="Outline" id="fsm-outline" name="Sentencing Outline">
+                <meta name="authors" content="Edited by Jesse Wm. Barton" />
+            </chapter>
+            <chapter label="Chapter 1" id="fsm-1" name="Introduction">
+                <meta name="authors" content="Edited by Jesse Wm. Barton" />
+            </chapter>
             <chapter label="Chapter 2" id="fsm-2" name="Crime Seriousness Rankings"/>
             <chapter label="Chapter 3" id="fsm-3" name="Criminal History Scoring"/>
             <chapter label="Chapter 4" id="fsm-4" name="Prison Sentences and Post-Prison Supervision"/>
@@ -18,10 +31,322 @@
             <chapter label="Chapter 9" id="fsm-9" name="Appeals and Post-Sentencing/Resentencing Authority"/>
             <chapter label="Chapter 10" id="fsm-10" name="Sentencing Guidelines"/>
         </chapters>
+        <appendices></appendices>
+    </book>
+    <book name="Defending Sex Cases" shortName="dsc" default="1">
+        <meta name="title" content="Defending Sex Cases" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <parts>
+            <part label="Foreword" id="dsc-foreword" name="Foreword"/>
+            <part label="Introduction" id="dsc-introduction" name="Introduction"/>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="dsc-1" name="Precharge Representation"/>
+            <chapter label="Chapter 2" id="dsc-2" name="Getting Your Client Out: Bail and Release"/>
+            <chapter label="Chapter 3" id="dsc-3" name="Themes in Sex Crime Defense: Developing, Polishing and Preserving the Stories of Your Defense at Every Stage of Your Case"/>
+            <chapter label="Chapter 4" id="dsc-4" name="Preparing the Case: Discovery, Investigation and Obtaining Evidence"/>
+            <chapter label="Chapter 5" id="dsc-5" name="False Memories Happen or, A Funny Thing Confabulated on the Way to the Child Abuse Assessment Center"/>
+            <chapter label="Chapter 6" id="dsc-6" name="Experts and the Multidisciplinary Team in Child Sex Abuse Cases"/>
+            <chapter label="Chapter 7" id="dsc-7" name="Physical Findings"/>
+            <chapter label="Chapter 8" id="dsc-8" name="She Said What?: Hearsay Evidence"/>
+            <chapter label="Chapter 9" id="dsc-9" name="They Want to Introduce What?: Other Act Evidence"/>
+            <chapter label="Chapter 10" id="dsc-10" name="'Vouching:' Comments on Witness Credibility"/>
+            <chapter label="Chapter 11" id="dsc-11" name="Other Evidence Matters"/>
+            <chapter label="Chapter 12" id="dsc-12" name="Demurrers and Motions"/>
+            <chapter label="Chapter 13" id="dsc-13" name="The Art of Jury Selection"/>
+            <chapter label="Chapter 14" id="dsc-14" name="The Art of Cross-Examination"/>
+            <chapter label="Chapter 15" id="dsc-15" name="Preserving Your Record for Post Trial Litigation"/>
+            <chapter label="Chapter 16" id="dsc-16" name="Jury Instructions and Stipulations"/>
+            <chapter label="Chapter 17" id="dsc-17" name="Mitigation, Negotiation and Sentencing"/>
+            <chapter label="Chapter 18" id="dsc-18" name="Child Pornography"/>
+            <chapter label="Chapter 19" id="dsc-19" name="Sex Offender Registration and Relief from Registration"/>
+        </chapters>
         <appendices>
-            <appendix label="Appendix A" id="appendix-a" name="Appendix A"/>
-            <appendix label="Appendix B" id="appendix-b" name="Appendix B" />
-            <appendix label="Appendix C" id="appendix-c" name="Appendix C" />
+            <appendix label="Bibliography" id="dsc-bibliography" name="Bibliography"/>
+        </appendices>
+    </book>
+    <book name="DUII Notebook: A Comprehensive Guide to Your DUII Case" shortName="dnb" default="1">
+        <meta name="title" content="DUII Notebook: A Comprehensive Guide to Your DUII Case" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <parts>
+            <part label="Introduction" id="dnb-introduction" name="Introduction"/>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="dnb-1" name="The Offense, with 2024 Update"/>
+            <chapter label="Chapter 2" id="dnb-2" name="You and Your Client"/>
+            <chapter label="Chapter 3" id="dnb-3" name="The File, with 2024 Update"/>
+            <chapter label="Chapter 4" id="dnb-4" name="Implied Consent Hearings, with 2024 Update"/>
+            <chapter label="Chapter 5" id="dnb-5" name="Discovery"/>
+            <chapter label="Chapter 6" id="dnb-6" name="Diversion, with 2024 Update"/>
+            <chapter label="Chapter 7" id="dnb-7" name="Pretrial Motions, with 2024 Update"/>
+            <chapter label="Chapter 8" id="dnb-8" name="Investigators and Experts"/>
+            <chapter label="Chapter 9" id="dnb-9" name="Field Sobriety Tests, with 2024 Update"/>
+            <chapter label="Chapter 10" id="dnb-10" name="DREs and Cannabis, with 2024 Update"/>
+            <chapter label="Chapter 11" id="dnb-11" name="Breath, Blood and Urine, with 2024 Update"/>
+            <chapter label="Chapter 12" id="dnb-12" name="Violations and Related Charges, with 2024 Update"/>
+            <chapter label="Chapter 13" id="dnb-13" name="MJOA/Mistrials and Objections"/>
+            <chapter label="Chapter 14" id="dnb-14" name="The Defense Case/The State’s Case"/>
+            <chapter label="Chapter 15" id="dnb-15" name="Voir Dire, Opening and Closing"/>
+            <chapter label="Chapter 16" id="dnb-16" name="Jury Instructions"/>
+            <chapter label="Chapter 17" id="dnb-17" name="Sentencing, with 2024 Update"/>
+            <chapter label="Chapter 18" id="dnb-18" name="Appeals, with 2024 Update"/>
+        </chapters>
+        <appendices>
+        </appendices>
+    </book>
+    <book name="Investigators Manual" shortName="im" default="1">
+        <meta name="title" content="Investigators Manual" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <parts>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="im-1" name="Licensing"/>
+            <chapter label="Chapter 2" id="im-2" name="Ethics"/>
+            <chapter label="Chapter 3" id="im-3" name="Business"/>
+            <chapter label="Chapter 4" id="im-4" name="The Criminal Defense Attorney-Investigator Team"/>
+            <chapter label="Chapter 5" id="im-5" name="Public Records and FOIA"/>
+            <chapter label="Chapter 6" id="im-6" name="Computers and Computer Evidence"/>
+            <chapter label="Chapter 7" id="im-7" name="Computer Forensics"/>
+            <chapter label="Chapter 8" id="im-8" name="Forensic Photography"/>
+            <chapter label="Chapter 9" id="im-9" name="Surveillance"/>
+            <chapter label="Chapter 10" id="im-10" name="Locating Witnesses"/>
+            <chapter label="Chapter 11" id="im-11" name="Interviewing Witnesses"/>
+            <chapter label="Chapter 12" id="im-12" name="Investigating Informants"/>
+            <chapter label="Chapter 13" id="im-13" name="Obtaining Subpoenas"/>
+            <chapter label="Chapter 14" id="im-14" name="Investigating Dependency and Termination Cases"/>
+            <chapter label="Chapter 15" id="im-15" name="Juvenile Delinquency Cases"/>
+            <chapter label="Chapter 16" id="im-16" name="Measure 11 and Major Felonies"/>
+            <chapter label="Chapter 17" id="im-17" name="Infant Death Investigations"/>
+            <chapter label="Chapter 18" id="im-18" name="Mitigation"/>
+        </chapters>
+        <appendices>
+        </appendices>
+    </book>
+    <book name="Mental Health and Criminal Defense" shortName="mhcd" default="1">
+        <meta name="title" content="Mental Health and Criminal Defense" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <parts>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="mhcd-1" name="A Systematic Approach"/>
+            <chapter label="Chapter 2" id="mhcd-2" name="Fitness to Proceed"/>
+            <chapter label="Chapter 3" id="mhcd-3" name="Disordered Mental States"/>
+            <chapter label="Chapter 4" id="mhcd-4" name="Guilty Except for Insanity"/>
+            <chapter label="Chapter 5" id="mhcd-5" name="Civil Commitment"/>
+            <chapter label="Chapter 6" id="mhcd-6" name="Dangerousness"/>
+            <chapter label="Chapter 7" id="mhcd-7" name="Crossing Mental Health Experts"/>
+            <chapter label="Chapter 8" id="mhcd-8" name="Clinical Assessment and Testing"/>
+        </chapters>
+        <appendices>
+            <appendix label="Glossary" id="mhcd-glossary" name="Glossary of terms"/>
+        </appendices>
+    </book>
+    <book name="Search and Seizure Manual" shortName="ss" default="1a">
+        <meta name="title" content="Search and Seizure Manual" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <parts>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1A" id="ss-1a" name="Government Action"/>
+            <chapter label="Chapter 1B" id="ss-1b" name="Search"/>
+            <chapter label="Chapter 1C" id="ss-1c" name="Seizure"/>
+            <chapter label="Chapter 2A" id="ss-2a" name="Criminal Stops, Warrantless Seizures of People"/>
+            <chapter label="Chapter 2B" id="ss-2b" name="Traffic Stops"/>
+            <chapter label="Chapter 2C" id="ss-2c" name="Extending Traffic Stops"/>
+            <chapter label="Chapter 2D" id="ss-2d" name="Officer Safety/Material Witness and Other Noncriminal Stops"/>
+            <chapter label="Chapter 2E" id="ss-2e" name="Arrests"/>
+            <chapter label="Chapter 2F" id="ss-2f" name="Warrantless Seizure of Things and Places"/>
+            <chapter label="Chapter 3A" id="ss-3a" name="Exigent Circumstances"/>
+            <chapter label="Chapter 3B" id="ss-3b" name="Automobile Exception"/>
+            <chapter label="Chapter 3C" id="ss-3c" name="Search Incident to Arrest"/>
+            <chapter label="Chapter 3D" id="ss-3d" name="Consent"/>
+            <chapter label="Chapter 3E" id="ss-3e" name="Officer/School/Courthouse Safety"/>
+            <chapter label="Chapter 3F" id="ss-3f" name="Emergency Aid/Lost or Abandoned Property"/>
+            <chapter label="Chapter 3G" id="ss-3g" name="Lost or Abandoned Property"/>
+            <chapter label="Chapter 4" id="ss-4" name="Inventories"/>
+            <chapter label="Chapter 5A" id="ss-5a" name="Motions to Suppress"/>
+            <chapter label="Chapter 5B" id="ss-5b" name="Controverting the Affidavit"/>
+            <chapter label="Chapter 5C" id="ss-5c" name="Informants"/>
+            <chapter label="Chapter 6" id="ss-6" name="The Remedy: Is Defendant Entitled to Suppression?"/>
+            <chapter label="Chapter 7" id="ss-7" name="Administrative Searches"/>
+            <chapter label="Chapter 8" id="ss-8" name="Search/Seizure of Digital Data"/>
+            <chapter label="Chapter 9" id="ss-9" name="Before and After the Appeal"/>
+            <chapter label="Chapter 10" id="ss-10" name="Suppression of Evidence Derived from Miranda Violations"/>
+        </chapters>
+        <appendices>
+        </appendices>
+    </book>
+    <book name="Post Judgment and Extraordinary Remedies" shortName="pjm" default="1">
+        <meta name="title" content="Post Judgment and Extraordinary Remedies" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <parts>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="pjm-1" name="Introduction"/>
+            <chapter label="Chapter 2" id="pjm-2" name="Initiating Appeal"/>
+            <chapter label="Chapter 3" id="pjm-3" name="Motions"/>
+            <chapter label="Chapter 4" id="pjm-4" name="Appraising Appellate Issues"/>
+            <chapter label="Chapter 5" id="pjm-5" name="Briefing"/>
+            <chapter label="Chapter 6" id="pjm-6" name="Oral Advocacy"/>
+            <chapter label="Chapter 7" id="pjm-7" name="Oregon Supreme Court Review"/>
+            <chapter label="Chapter 8" id="pjm-8" name="Certiorari"/>
+            <chapter label="Chapter 9" id="pjm-9" name="Judicial Review and the Parole Board"/>
+            <chapter label="Chapter 10" id="pjm-10" name="Capital Cases"/>
+            <chapter label="Chapter 11" id="pjm-11" name="Setting the Stage for Successful Appeal"/>
+            <chapter label="Section II" id="pjm-sec2" name="Habeas Corpus"/>
+            <chapter label="Section III" id="pjm-sec3" name="Mandamus"/>
+            <chapter label="Section IV" id="pjm-sec4" name="Post-Conviction"/>
+        </chapters>
+        <appendices>
+        </appendices>
+    </book>
+    <book name="Still at War" shortName="vm" default="1">
+        <meta name="title" content="Still at War: A Guide for Defenders, Prosecutors and Judges Dealing with Oregon’s Veteran Defendant Crisis" />
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <meta name="copyright" content="Copyright ©2017 by the Oregon Criminal Defense Lawyers Association and Veterans Defense Resource Center." />
+        <parts>
+            <part label="Dedication" id="vm-dedication" name="Dedication"/>
+            <part label="Foreword" id="vm-foreword" name="Foreword"/>
+            <part label="Introduction" id="vm-introduction" name="Introduction"/>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="vm-1" name="Legal Considerations"/>
+            <chapter label="Chapter 2" id="vm-2" name="Veterans Defense Resource Center">
+                <meta name="authors" content="James Gardner" />
+            </chapter>
+            <chapter label="Chapter 3" id="vm-3" name="Investigation and Mitigation Services and Veterans Justice Outreach Program">
+                <meta name="authors" content="Cindy Borders" />
+            </chapter>
+            <chapter label="Chapter 4" id="vm-4" name="Military Records and Witnesses">
+                <meta name="authors" content="Bryan Boender" />
+            </chapter>
+            <chapter label="Chapter 5" id="vm-5" name="The Relevance and Influence of Military Culture">
+                <meta name="authors" content="William Brown, PhD" />
+            </chapter>
+            <chapter label="Chapter 6" id="vm-6" name="Veterans, Combat Injuries, Military Training and Criminal Justice">
+                <meta name="authors" content="Robert G. Stanulis, PhD" />
+            </chapter>
+            <chapter label="Chapter 7" id="vm-7" name="Impact of Warzone Deployment">
+                <meta name="authors" content="Suzanne Best, PhD" />
+            </chapter>
+            <chapter label="Chapter 8" id="vm-8" name="The Relevance and Influence of Moral Injury">
+                <meta name="authors" content="Jaimie Lusk, PsyD" />
+            </chapter>
+            <chapter label="Chapter 9" id="vm-9" name="Unique Considerations in the Representation of Female Veterans">
+                <meta name="authors" content="Lori Daniels, PhD, LCSW &amp; Emily De La Garza" />
+            </chapter>
+            <chapter label="Chapter 10" id="vm-10" name="The Good Soldier Defense">
+                <meta name="authors" content="Amy Lammers" />
+            </chapter>
+            <chapter label="Chapter 11" id="vm-11" name="The Effects of Arrest, Conviction and Incarceration on VA Benefits">
+                <meta name="authors" content="Katrina Eagle" />
+            </chapter>
+            <chapter label="Chapter 12" id="vm-12" name="Mastering the Challenges of Representing Veterans">
+                <meta name="authors" content="Terri Wood &amp; James Gardner" />
+            </chapter>
+            <chapter label="Chapter 13" id="vm-13" name="Representing Veterans in Federal Court">
+                <meta name="authors" content="Terri Wood* &amp; James Gardner" />
+            </chapter>
+            <chapter label="Chapter 14" id="vm-14" name="Prosecutors’ Considerations">
+                <meta name="authors" content="Michael Swanson" />
+            </chapter>
+            <chapter label="Chapter 15" id="vm-15" name="Best Practices in Veterans Courts: Lane County’s Approach">
+                <meta name="authors" content="The Honorable Ilisa Rooke-Ley, Lane County Circuit Court" />
+            </chapter>
+        </chapters>
+        <appendices>
+        </appendices>
+    </book>
+    <book name="The Trial Notebook" shortName="tn" default="1">
+        <meta name="title" content="The Trial Notebook" />
+        <meta name="editor" content="Rob Raschio" />
+        <meta name="edition" content="2013 edition" />
+        <meta name="copyright" content="Copyright ©2013, 2016 by the Oregon Criminal Defense Lawyers Association." />
+        <parts>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="tn-1" name="Uniform Trial Court Rules">
+                <meta name="authors" content="DeAnna Horne &amp; Amanda Alvarez" />
+            </chapter>
+            <chapter label="Chapter 2" id="tn-2" name="Discovery">
+                <meta name="authors" content="Terri Wood" />
+            </chapter>
+            <chapter label="Chapter 3" id="tn-3" name="Defenses">
+                <meta name="authors" content="Martha Spinhirne" />
+            </chapter>
+            <chapter label="Chapter 4" id="tn-4" name="Exhibits and Creative Technology">
+                <meta name="authors" content="Lisa Ludwig" />
+            </chapter>
+            <chapter label="Chapter 5" id="tn-5" name="Admissibility of Electronic Evidence">
+                <meta name="authors" content="Adrienne Chin-Perez" />
+            </chapter>
+            <chapter label="Chapter 6" id="tn-6" name="Demurrer">
+                <meta name="authors" content="Ryan Scott" />
+            </chapter>
+            <chapter label="Chapter 7" id="tn-7" name="Motions in Limine">
+                <meta name="authors" content="Christopher O’Connor &amp; Alexandra St. Pierre" />
+            </chapter>
+            <chapter label="Chapter 8" id="tn-8" name="Jury Selection">
+                <meta name="authors" content="Janet Lee Hoffman &amp; Sara F. Werboff" />
+            </chapter>
+            <chapter label="Chapter 9" id="tn-9" name="Effective Opening Statements">
+                <meta name="authors" content="Steve Sherlag" />
+            </chapter>
+            <chapter label="Chapter 10" id="tn-10" name="Cross-Examination">
+                <meta name="authors" content="Bob Thuemmel" />
+            </chapter>
+            <chapter label="Chapter 11" id="tn-11" name="Making a Record and Offers of Proof">
+                <meta name="authors" content="Office of Public Defense Services" />
+            </chapter>
+            <chapter label="Chapter 12" id="tn-12" name="Mistrial">
+                <meta name="authors" content="Pete Castleberry &amp; Emily Elison" />
+            </chapter>
+            <chapter label="Chapter 13" id="tn-13" name="Motion for Judgment of Acquittal">
+                <meta name="authors" content="Rankin Johnson, IV" />
+            </chapter>
+            <chapter label="Chapter 14" id="tn-14" name="Defense Witnesses">
+                <meta name="authors" content="Bob Moon &amp; Brook Reinhard" />
+            </chapter>
+            <chapter label="Chapter 15" id="tn-15" name="Expert Witnesses">
+                <meta name="authors" content="Brook Reinhard" />
+            </chapter>
+            <chapter label="Chapter 16" id="tn-16" name="Closing Argument">
+                <meta name="authors" content="Steven Sherlag" />
+            </chapter>
+            <chapter label="Chapter 17" id="tn-17" name="Jury Instructions">
+                <meta name="authors" content="Robert S. Raschio" />
+            </chapter>
+            <chapter label="Chapter 18" id="tn-18" name="Motions for a New Trial and Arrest of Judgment/Motion for a New Trial">
+                <meta name="authors" content="Rankin Johnson, IV" />
+            </chapter>
+        </chapters>
+        <appendices>
+        </appendices>
+    </book>
+    <book name="Scientific Evidence: A Manual for Oregon Defense Attorneys" shortName="sem" default="1">
+        <meta name="title" content="Scientific Evidence: A Manual for Oregon Defense Attorneys" >
+        <meta name="editor" content="Jesse Wm. Barton" />
+        <meta name="edition" content="2019 edition.  Includes January 2024 update by Jennelle Meeks Barton." />
+        <parts>
+            <part label="Introduction" id="sem-introduction" name="Introduction"/>
+        </parts>
+        <chapters>
+            <chapter label="Chapter 1" id="sem-1" name="Learning the Science"/>
+            <chapter label="Chapter 2" id="sem-2" name="What is scientific evidence?"/>
+            <chapter label="Chapter 3" id="sem-3" name="Procedural Issues"/>
+            <chapter label="Chapter 4" id="sem-4" name="The Scientific Evidence Admissibility Analysis"/>
+            <chapter label="Chapter 5" id="sem-5" name="Other Admissibility Issues"/>
+            <chapter label="Chapter 6" id="sem-6" name="Cross-Examining the State's Expert"/>
+            <chapter label="Chapter 7" id="sem-7" name="Scientific Evidence"/>
+        </chapters>
+        <appendices>
         </appendices>
     </book>
 </books>

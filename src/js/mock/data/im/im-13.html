@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2010 edition</p>
+            <p><strong>Subpoenas</strong></p>
+            <p><strong><em>Don Grant, updated by Nancy Ozborn &amp;
+            Lynette Lazenby</em></strong></p>
+            <section id="introduction" class="level1">
+            <h1><strong>Introduction</strong></h1>
+            <p>What is a subpoena? Subpoenas are court orders requiring
+            the attendance of witnesses or the production of documents
+            in court. The governing law in federal court is found in
+            Federal Rules of Criminal Procedure (FRCrP) 17. State law
+            regarding the use of subpoenas in civil cases is found in
+            Oregon Rules of Civil Procedure (ORCP) 55. Investigators
+            working in criminal cases should be aware of the Oregon
+            Rules of Civil Procedure because ORCP 39B and 55E and G,
+            dealing with the production of prisoners and disobedience of
+            subpoenas, apply in criminal proceedings (these are set out
+            in Appendix A to this chapter).</p>
+            <p>The investigator’s role in trial preparation often
+            includes the subpoenaing of witnesses. It’s true that a
+            person does not have to be an investigator to serve a
+            subpoena. However, it’s often more effective to have someone
+            already familiar with the witness serve the subpoena. If an
+            investigator has been involved in interviewing the witness,
+            a relationship will have developed; the witness is likely to
+            be more cooperative in receiving a subpoena—and in following
+            through by appearing in court to testify.</p>
+            </section>
+            <section id="service_in_general" class="level1">
+            <h1><strong>Service in General</strong></h1>
+            <p>A subpoena may be served by any competent adult, age 18
+            or older, who is not a party. It does not have to be served
+            by a police officer, sheriff, or licensed investigator. In
+            federal indigent cases, if a Marshal is to serve the
+            subpoena, a court order is required. ORS 136.595(1) requires
+            service by “delivering a copy to the witness personally.”
+            The best procedure is to actually hand a true copy of the
+            subpoena to the witness. Be as certain as possible of the
+            witness’s identity because the person serving the subpoena
+            may be called to testify under oath if the witness fails to
+            obey.</p>
+            <p>If the server is in view of and able to communicate with
+            the witness but the witness refuses to open the door to
+            physically receive the subpoena, you may leave the subpoena
+            on the porch. Do not mail or leave the subpoena if the
+            witness is not home and is not aware of who you are and what
+            you are doing. Always inform the attorney of problems with
+            personal service well in advance of the court
+            appearance.</p>
+            <p>Use common sense when approaching any witness, especially
+            potentially hostile witnesses. Common sense guidelines
+            include knowing your streets and exits; determining the
+            presence of dogs at the residence, and matching the vehicle
+            plates at the residence with your witness. Be prepared for
+            the unexpected.</p>
+            </section>
+            <section id="subpoenaing_witnesses" class="level1">
+            <h1><strong>Subpoenaing Witnesses</strong></h1>
+            <p>A criminal defendant has a constitutional right to compel
+            witnesses to appear on the defendant’s behalf. In Oregon
+            courts, that right allows a defendant to subpoena up to ten
+            witnesses at government expense. The expense of additional
+            witnesses must be paid by the defendant unless the court
+            orders otherwise. In Oregon state courts, subpoenas are
+            usually served by an investigator hired by a defense
+            attorney. In federal court, expenses related to the service
+            of subpoenas on fact witnesses are not compensable under the
+            Criminal Justice Act. If fact witnesses’ fees are required,
+            the attorney must obtain a court order for the U.S. Marshals
+            Service to pay those fees.</p>
+            <p>The U.S. Marshal can and will serve any subpoena provided
+            to them by a Federal Public Defender office or anyone
+            representing a defendant charged with a federal crime. They
+            require at least 10 days prior to the appearance date and
+            will charge a fee. See <a
+            href="http://www.usmarshals.gov/process/index.html">www.usmarshals.gov/process/index.html</a>for
+            further information.</p>
+            <p>All Oregon county sheriff departments will serve criminal
+            subpoenas for public defender offices or any attorney
+            representing a defendant on a criminal charge (ORS 136.585).
+            They require two copies of the subpoena, one for the witness
+            and one to be returned to the court to show proof of
+            service. Some sheriff departments may charge for this
+            service.</p>
+            <section id="out_of_state_witnesses" class="level2">
+            <h2><strong><em>Out-of-state Witnesses</em></strong></h2>
+            <p>State court subpoenas are only valid in the state in
+            which they are issued. For this reason, to get an out-of-
+            state witness to trial it is necessary to have a subpoena
+            issued in the witness’s home state. This procedure can take
+            two or more weeks and requires an attorney to make
+            appearances in court. All but a very few states have passed
+            a Uniform Act to Secure Appearance of Out-of-state
+            Witnesses. In Oregon, this statute can be found at ORS
+            136.627. (See the relevant Oregon Revised Statutes at the
+            end of the chapter as Appendix B.)</p>
+            <p>Briefly stated, the act requires a hearing in Oregon to
+            establish that the witness is material and the jurisdiction
+            in which they can be found. The court in Oregon then issues
+            a certificate requesting the “foreign” state’s court to
+            issue a subpoena from their state to the witness. A hearing
+            will then be held in the “foreign” court where the witness
+            can resist the subpoena on the grounds that they are not a
+            material witness, that there was not enough notice, or that
+            their appearance will create too great a hardship. The
+            witness can demand that the witness fee and mileage fee be
+            paid in advance.</p>
+            <p>Refer to the statutes listed above for details regarding
+            the witness’s immunity from arrest and service of process
+            while in the state pursuant to those provisions.</p>
+            <p>Tip: Witnesses from Washington will often cross the river
+            to Oregon in order to receive a valid Oregon subpoena.</p>
+            </section>
+            <section id="serving_law_enforcement_officers"
+            class="level2">
+            <h2><strong><em>Serving Law Enforcement
+            Officers</em></strong></h2>
+            <p>In Oregon, law enforcement officers no longer need to be
+            served in person if the statutory notice (10 days) is given.
+            As provided by ORS 136.595(2)(b), state police officers,
+            sheriff’s and municipal police officers may be legally
+            served by delivering the subpoena to their “designated
+            officer” or the officer in command of the agency at least 10
+            days prior to the court date if the officer is still
+            employed and is in the state at the time of service. See
+            also ORCP 55(D)(2).</p>
+            <p>Note that this section requires that the subpoena be
+            served 10 days prior to the court appearance. The 10 days
+            notice is a requirement for being able to serve the subpoena
+            on a designated officer instead of personally serving the
+            officer him- or herself. Personal service can be made at any
+            time that will allow the officer a reasonable amount of time
+            to get to the hearing.</p>
+            </section>
+            <section
+            id="serving_a_witness_who_is_concealed_to_avoid_service"
+            class="level2">
+            <h2><strong><em>Serving a Witness Who Is Concealed to Avoid
+            Service</em></strong></h2>
+            <p>Under ORS 44.150, the sheriff is authorized and
+            <em>required</em>to break into any building to serve a
+            witness who is concealed to avoid service. We have never
+            found a sheriff or deputy who was willing to break into a
+            building to serve a subpoena. When this statute is cited to
+            them, however, the sheriff’s office should attempt to effect
+            service on the witness who is hiding to avoid a subpoena.
+            This can be useful in situations where the investigator is
+            attempting to serve a witness and is continually prevented
+            entrance to the house by relatives who insist that the
+            witness is unavailable. The family may be more cooperative
+            when a uniformed officer is at the door. Use this section of
+            the code with discretion.</p>
+            </section>
+            <section id="subpoenaing_juvenile_witnesses" class="level2">
+            <h2><strong><em>Subpoenaing Juvenile
+            Witnesses</em></strong></h2>
+            <p>See Chapter 15, “Juvenile Delinquency.”</p>
+            </section>
+            </section>
+            <section id="subpoenas_duces_tecum" class="level1">
+            <h1><strong>Subpoenas <em>Duces Tecum</em></strong></h1>
+            <p>In addition to compelling witnesses to attend a trial or
+            hearing, it is possible to subpoena a person to bring an
+            object or document to court by the use of a subpoena
+            <em>duces tecum</em>. The Subpoena Duces Tecum box on the
+            top right of the subpoena must be checked. The subpoena must
+            intelligibly describe the object or document to be brought
+            to court.</p>
+            <p>If the records subpoenaed are to be entered into
+            evidence, the subpoena must include the name of the
+            custodian of records, that their appearance is demanded with
+            the specific records, and the date and time of the
+            hearing.</p>
+            <p>You may also ask to inspect the records prior to the
+            trial date and determine if they are to be offered into
+            evidence. ORS 136.580(2) states that either the state or the
+            defendant may submit a motion, and the court may direct that
+            the documents or objects be produced in order to review,
+            inspect or copy them prior to trial.</p>
+            </section>
+            <section id="hospital_records" class="level1">
+            <h1><strong>Hospital Records</strong></h1>
+            <p>Most hospitals have a specific release form and require
+            that it be completed in its entirety by the patient before
+            they will release records. Most hospitals charge for copies
+            and require payment prior to processing your request. Many
+            hospitals will accept a faxed copy of the request and
+            release-of-information form. Some hospitals will accept a
+            faxed subpoena. It is helpful to determine each hospital’s
+            requirements regarding release of information and process
+            for subpoena service before you proceed.</p>
+            <p>In some situations, hospital and medical records may be
+            introduced directly into evidence without the appearance of
+            the custodian of records, providing the records have been
+            prepared in compliance with Oregon statutes. For provisions
+            dealing with hospital records, see ORS 136.447 and ORCP 55H.
+            Rule 55 describes the manner in which the records are to be
+            delivered. In general, the records must be certified true by
+            the custodian of records and placed in a sealed envelope
+            that must remain sealed until the court appearance. If you
+            have a signed and witnessed authorization for release of
+            information from the patient, the hospital should also make
+            an unsealed copy of the records available for the attorney
+            to review prior to court.</p>
+            <p>Note: Under federal law, if the patient has ever been
+            treated for mental health, drug or alcohol abuse, HIV, or
+            sickle-cell anemia and there is any reference to the
+            treatment in the hospital’s files, they will not release any
+            portion of the records without a detailed, specific release
+            by the patient or a court order. You should be aware of this
+            law because many hospitals take the position that they
+            cannot even admit that they ever treated the patient and
+            will not explain why they are refusing to comply with a
+            subpoena. You will save many wasted trips to the hospital by
+            insisting that you have a release that meets the federal
+            requirements before the records are subpoenaed. In some
+            cases, hospital records can be obtained by mail if the
+            investigation team acts in a timely manner and allows
+            adequate time to process the request.</p>
+            </section>
+            <section id="preparing_the_subpoena" class="level1">
+            <h1><strong>Preparing the Subpoena</strong></h1>
+            <p>Although most local courts have blank forms available for
+            attorneys, ORS 136.575 no longer requires that a special
+            form be used so long as the caption, witness’s name and
+            address, the date and time to appear, and the name, address
+            and telephone number of the issuing attorney are included.
+            Some investigators use pre- printed forms because they are
+            easy to prepare and appear more professional to the witness.
+            Many attorneys have subpoena forms stored on their
+            computers. See Appendix C for a sample subpoena. Each
+            subpoena should be produced in at least four copies:</p>
+            <p>1. The first copy, or “service copy” must be certified to
+            be a true copy by writing or stamping “Certified True Copy”
+            and signing your name underneath. You do not need to be an
+            attorney to certify a copy. This copy is handed to your
+            witness.</p>
+            <center>
+            <p>2. The original is filed with the court after service is
+            made and return of service is completed.</p>
+            </center>
+            <p>3. The file copy is generally returned to the attorney
+            after service, with the return of service completed in
+            full.</p>
+            <p>4. The fourth copy is to keep for your file with the
+            return of service completed.</p>
+            </section>
+            <section id="completing_the_return_on_a_subpoena"
+            class="level1">
+            <h1><strong>Completing the Return on a
+            Subpoena</strong></h1>
+            <p>After serving the subpoena, you must complete the
+            information requested on the back of the copy that is
+            returned to the court (the original subpoena). This should
+            also be done on the copy that is returned to the attorney so
+            they can be fully advised of the details of the service. You
+            do not have to fill in the back of the witness’ certified
+            true copy. The witness retains this copy to remind them of
+            the date and time of the court appearance.</p>
+            <p>Complete the top section on the back of each copy of the
+            subpoena retained. It should be completed as follows:</p>
+            <p>Within the said State and County, on the (day of the
+            month) day of (month),</p>
+            <p>20 (year), on the within named (name of witness) by
+            delivering a copy thereof to _(name and address of witness)
+            by delivering a copy thereof to _ (him/her) at (time of day)
+            at</p>
+            <p>(location of service) by _ (your name, Investigator).</p>
+            </section>
+            <section id="when_subpoenas_are_carried" class="level1">
+            <h1><strong>When Subpoenas Are Carried</strong></h1>
+            <p>If a hearing is cancelled, don’t assume or automatically
+            advise the witness that their appearance is not required.
+            Some courts require a subpoenaed person to make a brief
+            appearance in order to continue a subpoena. Determine your
+            court’s condition for continuing legal process. See ORS
+            136.595. Briefly, a new subpoena does not need to be served
+            provided that the subpoena is continued orally in court in
+            the presence of the subpoenaed person or the party who
+            issued the original subpoena notifies the subpoenaed person
+            by first-class mail and by 1) certified or registered mail,
+            return receipt requested, or 2) express mail.</p>
+            </section>
+            <section id="conclusion" class="level1">
+            <h1><strong>Conclusion</strong></h1>
+            <p>As witnesses and documents can be critical components of
+            a defendant’s case at trial, it is vitally important to
+            understand the subpoena process. We encourage you to read
+            the appendices at the end of this chapter in order to ensure
+            that the subpoena is properly served.</p>
+            <p>Document production at court can be a timely process. It
+            is important to request documents and to subpoena the
+            custodian of records to trial as far in advance as possible.
+            Obtain and secure the correct signed release of information,
+            if possible.</p>
+            <p>Maintain contact with the attorney who issued the
+            subpoena. Notify your witnesses of any change in court
+            dates. Keep your contact information for witnesses current.
+            Know the proper procedure for informing a witness of new
+            court dates who has already been served. Lastly, keep your
+            attorney informed if any problems arise in serving the
+            subpoena.</p>
+            <p>And, finally, maintain a record of your attempts to serve
+            a subpoena and the actual subpoena service itself. You may
+            be called as a witness to either show due diligence in your
+            attempts or to testify regarding the actual service of the
+            subpoena.</p>
+            <p>='''</p>
+            <center>
+            <p>Appendix A&lt;/center'''&gt;=</p>
+            <p>'''</p>
+            <center>
+            <p>Oregon Rules of Civil Procedure</p>
+            </center>
+            <p>'''</p>
+            <p><strong>RULE 39</strong></p>
+            <p><strong>A When deposition may be taken.</strong>After the
+            service of summons or the appearance of the defendant in any
+            action, or in a special proceeding at any time after a
+            question of fact has arisen, any party may take the
+            testimony of any person, including a party, by deposition
+            upon oral examination. Leave of court, with or without
+            notice, must be obtained only if the plaintiff seeks to take
+            a deposition prior to the expiration of the period of time
+            specified in Rule 7 to appear and answer after service of
+            summons on any defendant, except that leave is not required
+            (1) if a defendant has served a notice of taking deposition
+            or otherwise sought discovery, or (2) a special notice is
+            given as provided in subsection C(2) of this Rule. The
+            attendance of a witness may be compelled by subpoena as
+            provided in Rule 55.</p>
+            <p><strong>B Order for deposition or production of
+            prisoner.</strong>The deposition of a person confined in a
+            prison or jail may only be taken by leave of court. The
+            deposition shall be taken on such terms as the court
+            prescribes, and the court may order that the deposition be
+            taken at the place of confinement or, when the prisoner is
+            confined in this state, may order temporary removal and
+            production of the prisoner for purposes of the
+            deposition.</p>
+            <p><strong>RULE 55</strong></p>
+            <p><strong>A Defined; form.</strong>A subpoena is a writ or
+            order directed to a person and may require the attendance of
+            such person at a particular time and place to testify as a
+            witness on behalf of a particular party therein mentioned or
+            may require such person to produce books, papers, documents,
+            or tangible things and permit inspection thereof at a
+            particular time and place. A subpoena requiring attendance
+            to testify as a witness requires that the witness remain
+            until the testimony is closed unless sooner discharged, but
+            at the end of each day’s attendance a witness may demand of
+            the party, or the party’s attorney, the payment of legal
+            witness fees for the next following day and if not then
+            paid, the witness is not obliged to remain longer in
+            attendance. Every subpoena shall state the name of the court
+            and the title of the action.</p>
+            <p><strong>B For production of books, papers, documents, or
+            tangible things and to permit inspection.</strong>A subpoena
+            may command the person to whom it is directed to produce and
+            permit inspection and copying of designated books, papers,
+            documents, or tangible things in the possession, custody or
+            control of that person at the time and place specified
+            therein. A command to produce books, papers, documents, or
+            tangible things and permit inspection thereof may be joined
+            with a command to appear at trial or hearing or at
+            deposition or, before trial, may be issued separately. A
+            person commanded to produce and permit inspection and
+            copying of designated books, papers, documents or tangible
+            things but not commanded to also appear for deposition,
+            hearing or trial may, within 14 days after service of the
+            subpoena or before the time specified for compliance if such
+            time is less than 14 days after service, serve upon the
+            party or attorney designated in the subpoena written
+            objection to inspection or copying of any or all of the
+            designated materials. If objection is made, the party
+            serving the subpoena shall not be entitled to inspect and
+            copy the materials except pursuant to an order of the court
+            in whose name the subpoena was issued. If objection has been
+            made, the party serving the subpoena may, upon notice to the
+            person commanded to produce, move for an order at any time
+            to compel production. In any case, where a subpoena commands
+            production of books, papers, documents or tangible things
+            the court, upon motion made promptly and in any event at or
+            before the time specified in the subpoena for compliance
+            therewith, may (1) quash or modify the subpoena if it is
+            unreasonable and oppressive or (2) condition denial of the
+            motion upon the advancement by the person in whose behalf
+            the subpoena is issued of the reasonable cost of producing
+            the books, papers, documents, or tangible things.</p>
+            <p><strong>C Issuance.</strong></p>
+            <p>C(1) <strong>By whom issued.</strong>A subpoena is issued
+            as follows: (a) to require attendance before a court, or at
+            the trial of an issue therein, or upon the taking of a
+            deposition in an action pending therein or, if separate from
+            a subpoena commanding the attendance of a person, to produce
+            books, papers, documents or tangible things and to permit
+            inspection thereof: (i) it may be issued in blank by the
+            clerk of the court in which the action</p>
+            <p>is pending, or if there is no clerk, then by a judge or
+            justice of such court; or (ii) it may be issued by an
+            attorney of record of the party to the action in whose
+            behalf the witness is required to appear, subscribed by the
+            signature of such attorney; (b) to require attendance before
+            any person authorized to take the testimony of a witness in
+            this state under Rule 38 C, or before any officer empowered
+            by the laws of the United States to take testimony, it may
+            be issued by the clerk of a circuit court in the county in
+            which the witness is to be examined; (c) to require
+            attendance out of court in cases not provided for in
+            paragraph (a) of this subsection, before a judge, justice,
+            or other officer authorized to administer oaths or take
+            testimony in any matter under the laws of this state, it may
+            be issued by the judge, justice, or other officer before
+            whom the attendance is required.</p>
+            <p>C(2) <strong>By clerk in blank.</strong>Upon request of a
+            party or attorney, any subpoena issued by a clerk of court
+            shall be issued in blank and delivered to the party or
+            attorney requesting it, who shall fill it in before
+            service.</p>
+            <p><strong>D Service; service on law enforcement agency;
+            service by mail; proof of service.</strong></p>
+            <p>D(1) <strong>Service.</strong>Except as provided in
+            subsection (2) of this section, a subpoena may be served by
+            the party or any other person 18 years of age or older. The
+            service shall be made by delivering a copy to the witness
+            personally and giving or offering to the witness at the same
+            time the fees to which the witness is entitled for travel to
+            and from the place designated and, whether or not personal
+            attendance is required, one day’s attendance fees. If the
+            witness is under 14 years of age, the subpoena may be served
+            by delivering a copy to the witness or to the witness’s
+            parent, guardian or guardian ad litem. The service must be
+            made so as to allow the witness a reasonable time for
+            preparation and travel to the place of attendance. A
+            subpoena for taking of a deposition, served upon an
+            organization as provided in Rule 39 C(6), shall be served in
+            the same manner as provided for service of summons in Rule 7
+            D(3)(b)(i), D(3)(c)(i), D(3)(d)(i), D(3)(e), D(3)(f), or
+            D(3)(h). Copies of each subpoena commanding production of
+            books, papers, documents or tangible things and inspection
+            thereof before trial, not accompanied by command to appear
+            at trial or hearing or at deposition, whether the subpoena
+            is served personally or by mail, shall be served on each
+            party at least seven days before the subpoena is served on
+            the person required to produce and permit inspection, unless
+            the court orders a shorter period. In addition, a subpoena
+            shall not require production less than 14 days from the date
+            of service upon the person required to produce and permit
+            inspection, unless the court orders a shorter period.</p>
+            <p>D(2) <strong>Service on law enforcement
+            agency.</strong></p>
+            <p>D(2)(a) Every law enforcement agency shall designate
+            individual or individuals upon whom service of subpoena may
+            be made. At least one of the designated individuals shall be
+            available during normal business hours. In the absence of
+            the designated individuals, service of subpoena pursuant to
+            paragraph (b) of this subsection may be made upon the
+            officer in charge of the law enforcement agency.</p>
+            <p>D(2)(b) If a peace officer’s attendance at trial is
+            required as a result of employment as a peace officer, a
+            subpoena may be served on such officer by delivering a copy
+            personally to the officer or to one of the individuals
+            designated by the agency that employs the officer. A
+            subpoena may be served by delivery to one of the individuals
+            designated by the agency that employs the officer only if
+            the subpoena is delivered at least 10 days before the date
+            the officer’s attendance is required, the officer is
+            currently employed as a peace officer by the agency, and the
+            officer is present within the state at the time of
+            service.</p>
+            <p>D(2)(c) When a subpoena has been served as provided in
+            paragraph (b) of this subsection, the law enforcement agency
+            shall make a good faith effort to give actual notice to the
+            officer whose attendance is sought of the date, time, and
+            location of the court appearance. If the officer cannot be
+            notified, the law enforcement agency shall promptly notify
+            the court and a postponement or continuance may be granted
+            to allow the officer to be personally served.</p>
+            <p>D(2)(d) As used in this subsection, “law enforcement
+            agency” means the Oregon State Police, a county sheriff’s
+            department, or a municipal police department.</p>
+            <p><strong>D(3) Service by mail.</strong></p>
+            <p>Under the following circumstances, service of a subpoena
+            to a witness by mail shall be of the same legal force and
+            effect as personal service otherwise authorized by this
+            section:</p>
+            <p>D(3)(a) The attorney certifies in connection with or upon
+            the return of service that the attorney, or the attorney’s
+            agent, has had personal or telephone contact with the
+            witness, and the witness indicated a willingness to appear
+            at trial if subpoenaed;</p>
+            <p>D(3)(b) The attorney, or the attorney’s agent, made
+            arrangements for payment to the witness of fees and mileage
+            satisfactory to the witness; and</p>
+            <p>D(3)(c) The subpoena was mailed to the witness more than
+            10 days before trial by certified mail or some other
+            designation of mail that provides a receipt for the mail
+            signed by the recipient, and the attorney received a return
+            receipt signed by the witness more than three days prior to
+            trial.</p>
+            <p>D(4) <strong>Service by mail; exception.</strong>Service
+            of subpoena by mail may be used for a subpoena commanding
+            production of books, papers, documents, or tangible things,
+            not accompanied by a command to appear at trial or hearing
+            or at deposition.</p>
+            <p>D(5) <strong>Proof of service.</strong>Proof of service
+            of a subpoena is made in the same manner as proof of service
+            of a summons except that the server need not certify that
+            the server is not a party in the action, an attorney for a
+            party in the action or an officer, director or employee of a
+            party in the action.</p>
+            <p><strong>E Subpoena for hearing or trial;
+            prisoners.</strong>If the witness is confined in a prison or
+            jail in this state, a subpoena may be served on such person
+            only upon leave of court, and attendance of the witness may
+            be compelled only upon such terms as the court prescribes.
+            The court may order temporary removal and production of the
+            prisoner for the purpose of giving testimony or may order
+            that testimony only be taken upon deposition at the place of
+            confinement. The subpoena and court order shall be served
+            upon the custodian of the prisoner.</p>
+            <p><strong>F Subpoena for taking depositions or requiring
+            production of books, papers, documents, or tangible things;
+            place of production and examination.</strong></p>
+            <p>F(1) <strong>Subpoena for taking
+            deposition.</strong>Proof of service of a notice to take a
+            deposition as provided in Rules</p>
+            <p>39 C and 40 A, or of notice of subpoena to command
+            production of books, papers, documents, or tangible things
+            before trial as provided in subsection D(1) of this rule or
+            a certificate that such notice will be served if the
+            subpoena can be served, constitutes a sufficient
+            authorization for the issuance by a clerk of court of
+            subpoenas for the persons named or described therein.</p>
+            <p>F(2) <strong>Place of examination.</strong>A resident of
+            this state who is not a party to the action may be required
+            by subpoena to attend an examination or to produce books,
+            papers, documents, or tangible things only in the county
+            wherein such person resides, is employed or transacts
+            business in person, or at such other convenient place as is
+            fixed by an order of court. A nonresident of this state who
+            is not a party to the action may be required by subpoena to
+            attend an examination or to produce books, papers,
+            documents, or tangible things only in the county wherein
+            such person is served with a subpoena, or at such other
+            convenient place as is fixed by an order of court.</p>
+            <p>F(3) <strong>Production without examination or
+            deposition.</strong>A party who issues a subpoena may
+            command the person to whom it is issued to produce books,
+            papers, documents, or tangible things, other than
+            individually identifiable health information as described in
+            section H, by mail or otherwise, at a time and place
+            specified in the subpoena, without commanding inspection of
+            the originals or a deposition. In such instances, the person
+            to whom the subpoena is directed complies if the person
+            produces copies of the specified items in the specified
+            manner and certifies that the copies are true copies of all
+            the items responsive to the subpoena or, if all items are
+            not included, why they are not.</p>
+            <p><strong>G Disobedience of subpoena; refusal to be sworn
+            or answer as a witness.</strong>Disobedience to a subpoena
+            or a refusal to be sworn or answer as a witness may be
+            punished as contempt by a court before whom the action is
+            pending or by the judge or justice issuing the subpoena.
+            Upon hearing or trial, if the witness is a party and
+            disobeys a subpoena or refuses to be sworn or answer as a
+            witness, such party’s complaint, answer, or reply may be
+            stricken.</p>
+            <p><strong>H Individually identifiable health
+            information.</strong></p>
+            <p>H(1) <strong>Definitions.</strong>As used in this rule,
+            the terms “individually identifiable health information” and
+            “qualified protective order” are defined as follows:</p>
+            <p>H(1)(a) “Individually identifiable health information”
+            means information which identifies an individual or which
+            could be used to identify an individual; which has been
+            collected from an individual and created or received by a
+            health care provider, health plan, employer, or health care
+            clearinghouse; and which relates to the past, present or
+            future physical or mental health or condition of an
+            individual; the provision of health care to an individual;
+            or the past, present, or future payment for the provision of
+            health care to an individual.</p>
+            <p>H(1)(b) “Qualified protective order” means an order of
+            the court, by stipulation of the parties to the litigation
+            or otherwise, that prohibits the parties from using or
+            disclosing individually identifiable health information for
+            any purpose other than the litigation for which such
+            information was requested and which requires the return to
+            the original custodian of such information or destruction of
+            the individually identifiable health information (including
+            all copies made) at the end of the litigation.</p>
+            <p>H(2) <strong>Mode of Compliance.</strong>Individually
+            identifiable health information may be obtained by subpoena
+            only as provided in this section. However, if disclosure of
+            any requested records is restricted or otherwise limited by
+            state or federal law, then the protected records shall not
+            be disclosed in response to the subpoena unless the
+            requesting party has complied with the applicable law.</p>
+            <p>H(2)(a) The attorney for the party issuing a subpoena
+            requesting production of individually identifiable health
+            information must serve the custodian or other keeper of such
+            information either with a qualified protective order or with
+            an affidavit or declaration together with attached
+            supporting documentation demonstrating that: (i) the party
+            has made a good faith attempt to provide written notice to
+            the individual or the individual’s attorney that the
+            individual or the attorney had 14 days from the date of the
+            notice to object; (ii) the notice included the proposed
+            subpoena and sufficient information about the litigation in
+            which the individually identifiable health information was
+            being requested to permit the individual or the individual’s
+            attorney to object; (iii) the individual did not object
+            within the 14 days or, if objections were made, they were
+            resolved and the information being sought is consistent with
+            such resolution. The party issuing a subpoena must also
+            certify that he or she will, promptly upon request, permit
+            the patient or the patient’s representative to inspect and
+            copy the records received.</p>
+            <p>H(2)(b) Except as provided in subsection (4) of this
+            section, when a subpoena is served upon a custodian of
+            individually identifiable health information in an action in
+            which the entity or person is not a party, and the subpoena
+            requires the production of all or part of the records of the
+            entity or person relating to the care or treatment of an
+            individual, it is sufficient compliance therewith if a
+            custodian delivers by mail or otherwise a true and correct
+            copy of all the records responsive to the subpoena within
+            five days after receipt thereof. Delivery shall be
+            accompanied by an affidavit or a declaration as described in
+            subsection (3) of this section. H(2)(c) The copy of the
+            records shall be separately enclosed in a sealed envelope or
+            wrapper on which the title and number of the action, name of
+            the witness, and date of the subpoena are clearly inscribed.
+            The sealed envelope or wrapper shall be enclosed in an outer
+            envelope or wrapper and sealed. The outer envelope or
+            wrapper shall be addressed as follows: (i) if the subpoena
+            directs attendance in court, to the clerk of the court, or
+            to the judge thereof if there is no clerk; (ii) if the
+            subpoena directs attendance at a deposition or other
+            hearing, to the officer administering the oath for the
+            deposition, at the place designated in the subpoena for the
+            taking of the deposition or at the officer’s place of
+            business; (iii) in other cases involving a hearing, to the
+            officer or body conducting the hearing at the official place
+            of business; (iv) if no hearing is scheduled, to the
+            attorney or party issuing the subpoena. If the subpoena
+            directs delivery of the records in accordance with
+            subparagraph H(2)(c)(iv), then a copy of the proposed
+            subpoena shall be served on the person whose records are
+            sought and on all other parties to the litigation, not less
+            than 14 days prior to service of the subpoena on the entity
+            or person. Any party to the proceeding may inspect the
+            records provided and/or request a complete copy of the
+            records. Upon request, the records must be promptly provided
+            by the party who issued the subpoena at the requesting
+            party’s expense.</p>
+            <p>H(2)(d) After filing and after giving reasonable notice
+            in writing to all parties who have appeared of the time and
+            place of inspection, the copy of the records may be
+            inspected by any party or the attorney of record of a party
+            in the presence of the custodian of the court files, but
+            otherwise shall remain sealed and shall be opened only at
+            the time of trial, deposition, or other hearing, at the
+            direction of the judge, officer, or body conducting the
+            proceeding. The records shall be opened in the presence of
+            all parties who have appeared in person or by counsel at the
+            trial, deposition, or hearing. Records which are not
+            introduced in evidence or required as part of the record
+            shall be returned to the custodian of hospital records who
+            submitted them.</p>
+            <p>H(2)(e) For purposes of this section, the subpoena duces
+            tecum to the custodian of the records may be served by first
+            class mail. Service of subpoena by mail under this section
+            shall not be subject to the requirements of subsection (3)
+            of section D.</p>
+            <p>H(3) <strong>Affidavit or declaration of custodian of
+            records.</strong>H(3)(a) The records described in subsection
+            (2) of this section shall be accompanied by the affidavit or
+            declaration of a custodian of the records, stating in
+            substance each of the following: (i) that the affiant or
+            declarant is a duly authorized custodian of the records and
+            has authority to certify records; (ii) that the copy is a
+            true copy of all the records responsive to the subpoena;
+            (iii) that the records were prepared by the personnel of the
+            entity or person acting under the control of either, in the
+            ordinary course of the entity’s or person’s business, at or
+            near the time of the act, condition, or event described or
+            referred to therein.</p>
+            <p>H(3)(b) If the entity or person has none of the records
+            described in the subpoena, or only a part thereof, the
+            affiant or declarant shall so state in the affidavit or
+            declaration and shall send only those records of which the
+            affiant or declarant has custody.</p>
+            <p>H(3)(c) When more than one person has knowledge of the
+            facts required to be stated in the affidavit or declaration,
+            more than one affidavit or declaration may be used.</p>
+            <p>H(4) <strong>Personal attendance of custodian of records
+            may be required.</strong></p>
+            <p>H(4)(a) The personal attendance of a custodian of records
+            and the production of original records is required if the
+            subpoena duces tecum contains the following statement:</p>
+            <p>The personal attendance of a custodian of records and the
+            production of original records is required by this subpoena.
+            The procedure authorized pursuant to Oregon Rule of Civil
+            Procedure 55 H(2) shall not be deemed sufficient compliance
+            with this subpoena.</p>
+            <p>H(4)(b) If more than one subpoena duces tecum is served
+            on a custodian of records and personal attendance is
+            required under each pursuant to paragraph (a) of this
+            subsection, the custodian shall be deemed to be the witness
+            of the party serving the first such subpoena.</p>
+            <p>H(5) <strong>Tender and payment of fees.</strong>Nothing
+            in this section requires the tender or payment of more than
+            one witness and mileage fee or other charge unless there has
+            been agreement to the contrary.</p>
+            <p>H(6) <strong>Scope of discovery.</strong>Notwithstanding
+            any other provision, this rule does not expand the scope of
+            discovery beyond that provided in Rule 36 or Rule 44. [CCP
+            12/2/78; §§A,C,H amended by 1979 c.284</p>
+            <p>§§33,34,35; §§D(1), F(2) amended by CCP 12/13/80; §D
+            amended by CCP 12/4/82; §D amended by 1983 c.751 §5; §H(2)
+            amended by CCP 12/13/86; §H(2) amended by CCP 12/10/88 and
+            1/6/89; §E amended by 1989 c.980 §3; §§A,B,C,D,F,H amended
+            by CCP 12/15/90; §H amended by 1993 c.18 §3;</p>
+            <p>§D amended by CCP 12/10/94 and 1995 c.79 §404; §§F,H
+            amended by CCP 12/10/94; §I added by 1995 c.694 §1; §I
+            amended by CCP 12/14/96; §D amended by 1997 c.249 §10; §C
+            amended by 1999 c.59 §5;</p>
+            <p>§I amended by CCP 12/12/98; §H amended by 2001 c.104 §3;
+            §H amended by CCP 12/14/02 and 2003 c.194 §11; §I deleted by
+            CCP 12/14/02; §F amended by CCP 12/9/06; §D amended by CCP
+            12/13/08 and 2009 c.364 §1]</p>
+            <p>='''</p>
+            <center>
+            <p>Appendix B Oregon Revised Statutes</p>
+            </center>
+            <p>'''=</p>
+            <p><strong>44.150 Service of subpoena if witness
+            concealed.</strong>A sheriff, deputy or some person
+            specially appointed by the sheriff, but none other, is
+            authorized and required to break into any building or vessel
+            in which a witness may be concealed to prevent the service
+            of a subpoena, and serve it on the witness.</p>
+            <p><strong>136.447 Medical records.</strong>Medical records
+            may be obtained by subpoena as provided in ORCP 55 H and
+            shall be sent only to the court or the clerk of the court
+            before which the matter is pending. In relation to grand
+            jury proceedings, notice need not be given as required in
+            ORCP 55 H and the medical records shall be sent only to the
+            grand jury. [1995 c.196 §2]</p>
+            <p><strong>136.555 Subpoena defined.</strong>The process by
+            which the attendance of a witness before a court or
+            magistrate is required is a subpoena. [Formerly 139.010]</p>
+            <p><strong>136.575 Forms of subpoenas.</strong>Subpoenas
+            authorized by ORS 136.557 to 136.567 shall be substantially
+            in the following form:</p>
+            <p><strong>(1) By a magistrate:</strong></p>
+            <p>'''</p>
+            <center>
+            <p>IN THE NAME OF THE STATE OF OREGON (or CITY OF )</p>
+            </center>
+            <p>'''</p>
+            <p>To A B :</p>
+            <p>You are hereby commanded to appear before C. D., (adding
+            the name of office and place of jurisdiction), at (naming
+            the place), on (stating the day and hour), as a witness on
+            the examination of a criminal charge against E. F. on behalf
+            of (the state, city or the defendant, as the case may
+            be).</p>
+            <p>Dated the day of , 2 .(Adding the name of office and
+            place of jurisdiction, as in the body of the subpoena.)</p>
+            <p>G. H.<strong>(2) By the district attorney:</strong></p>
+            <center>
+            <p>IN THE NAME OF THE STATE OF OREGON</p>
+            </center>
+            <p>To A B :</p>
+            <p>You are hereby commanded to appear before (the grand jury
+            of the County of or the Circuit Court for the County of , as
+            the case may be), at (naming the place), on (stating the day
+            and hour), as a witness (before the grand jury or in a
+            criminal action prosecuted by the State of Oregon against E.
+            F., as the case may be).</p>
+            <p>Dated the day of , 2 .</p>
+            <div align="right">
+            <p>G. H., District Attorney.</p>
+            </div>
+            <p><strong>(3) By the city attorney:</strong></p>
+            <center>
+            <p>IN THE NAME OF THE CITY OF</p>
+            </center>
+            <p>To A B :</p>
+            <p>You are hereby commanded to appear before the Municipal
+            Court for the City of , at (naming the place), on (stating
+            the day and hour), as a witness in a criminal action
+            prosecuted by the City of against E. F.</p>
+            <p>Dated the day of , 2 .</p>
+            <div align="right">
+            <p>G. H., City Attorney.</p>
+            </div>
+            <p><strong>(4) By the clerk:</strong></p>
+            <center>
+            <p>IN THE NAME OF THE STATE OF OREGON</p>
+            </center>
+            <p>To A B :</p>
+            <p>You are hereby commanded to appear before the Circuit
+            Court for the County of at (naming the place), on (stating
+            the day and hour), as a witness in a criminal action
+            prosecuted by the State of Oregon against E. F. on behalf of
+            the defendant.</p>
+            <p>Witness my name and the seal of said court, affixed at ,
+            the day of , 2 .</p>
+            <div align="right">
+            <p>G. H., Clerk.</p>
+            </div>
+            <p><strong>(5) By the clerk of a municipal
+            court:</strong></p>
+            <center>
+            <p>IN THE NAME OF THE CITY OF</p>
+            </center>
+            <p>To A B :</p>
+            <p>You are hereby commanded to appear before the Municipal
+            Court for the City of at (naming the place), on (stating the
+            day and hour), as a witness in a criminal action prosecuted
+            by the City of against E. F. on behalf of the defendant.</p>
+            <p>Witness my name and seal of said court, affixed at _ ,
+            the day of , 2 .</p>
+            <div align="right">
+            <p>G. H., Clerk.</p>
+            </div>
+            <p><strong>(6) By an attorney of record of a
+            defendant:</strong></p>
+            <center>
+            <p>IN THE NAME OF THE STATE OF OREGON (or CITY OF )</p>
+            </center>
+            <p>To A B :</p>
+            <p>You are hereby commanded to appear before (the Circuit
+            Court for the County of or the Municipal Court for the City
+            of , as the case may be) at (naming the place), on (stating
+            the day and hour), as a witness in a criminal action
+            prosecuted by the (State of Oregon or the City of , as the
+            case may be) against E. F. on behalf of the defendant.</p>
+            <p>Dated the day of , 2 .</p>
+            <p><strong>136.580 Subpoenas when books, papers or documents
+            are required.</strong>(1) If books, papers or documents are
+            required, a direction to the following effect shall be added
+            to the form provided in ORS 136.575: “And you are required,
+            also, to bring with you the following: (describing
+            intelligibly the books, papers or documents required).”</p>
+            <p>(2) Upon the motion of the state or the defendant, the
+            court may direct that the books, papers or documents
+            described in the subpoena be produced before the court prior
+            to the trial or prior to the time when the books, papers or
+            documents are to be offered in evidence and may, upon
+            production, permit the books, papers or documents to be
+            inspected and copied by the state or the defendant and the
+            state’s or the defendant’s attorneys. [Formerly 139.080;
+            1993 c.304 §1]</p>
+            <p>136.585¹ By whom subpoena is served</p>
+            <p>A subpoena may be served by the defendant or any other
+            person over 18 years of age and shall be served by any
+            sheriff or constable within the county or district of the
+            sheriff or constable, as the case may be, when delivered to
+            the sheriff or constable for service, either on the part of
+            the prosecution or of the defendant. [Formerly 139.090 [bad
+            link]; 1977 c.746 §7]</p>
+            <p><strong>136.595 How subpoena is served; proof of service;
+            service on law enforcement agency.</strong>(1) Except as
+            provided in ORS 136.447 and 136.583 and subsection (2) of
+            this section, a subpoena is served by delivering a copy to
+            the witness personally. If the witness is under 14 years of
+            age, the subpoena may be served by delivering a copy to the
+            witness or to the witness’s parent, guardian or guardian ad
+            litem. Proof of the service is made in the same manner as in
+            the service of a summons.</p>
+            <p>(2)(a) Every law enforcement agency shall designate an
+            individual or individuals upon whom service of subpoena may
+            be made. At least one of the designated individuals shall be
+            available during normal business hours. In the absence of
+            the designated individuals, service of subpoena pursuant to
+            paragraph (b) of this subsection may be made upon the
+            officer in charge of the law enforcement agency.</p>
+            <p>(b) If a peace officer’s attendance at trial is required
+            as a result of employment as a peace officer, a subpoena may
+            be served on such officer by delivering a copy personally to
+            the officer or to one of the individuals designated by the
+            agency that employs the officer. A subpoena may be served by
+            delivery to one of the individuals designated by the agency
+            that employs the officer only if the subpoena is delivered
+            at least 10 days before the date the officer’s attendance is
+            required, the officer is currently employed as a peace
+            officer by the agency, and the officer is present within the
+            state at the time of service.</p>
+            <p>(c) When a subpoena has been served as provided in
+            paragraph (b) of this subsection, the law enforcement agency
+            shall make a good faith effort to actually notify the
+            officer whose attendance is sought of the date, time and
+            location of the court appearance. If the officer cannot be
+            notified, the law enforcement agency shall contact the court
+            and a continuance may be granted to allow the officer to be
+            personally served.</p>
+            <p>(d) As used in this subsection, “law enforcement agency”
+            means the Oregon State Police, a county sheriff’s department
+            or a municipal police department.</p>
+            <p>(3) When a subpoena has been served as provided in ORS
+            136.583 or subsection (1) or (2) of this section and,
+            subsequent to service, the date on, or the time at, which
+            the person subpoenaed is to appear has changed, a new
+            subpoena is not required to be served if:</p>
+            <p>(a) The subpoena is continued orally in open court in the
+            presence of the person subpoenaed; or</p>
+            <p>(b) The party who issued the original subpoena notifies
+            the person subpoenaed of the change by first class mail and
+            by:</p>
+            <p>(A) Certified or registered mail, return receipt
+            requested; or</p>
+            <p>(B) Express mail. [Formerly 139.100; 1977 c.789 §1; 1995
+            c.196 §3; 2005 c.298 §1; 2007 c.158 §1; 2009 c.364 §2; 2009
+            c.617 §3]</p>
+            <p>(Uniform Act to Secure Attendance of Witnesses</p>
+            <p>From Without a State in Criminal Proceedings)</p>
+            <p><strong>136.623 Definitions.</strong>(1) “Witness,” as
+            used in ORS 136.623 to 136.637, shall include a person whose
+            testimony is desired in any proceeding or investigation by a
+            grand jury or in a criminal action, prosecution or
+            proceeding.</p>
+            <p>(2) The word “state” shall include any territory of the
+            United States and District of Columbia.</p>
+            <p>(3) The word “summons” shall include a subpoena, order or
+            other notice requiring the appearance of a witness.
+            [Formerly 139.210]</p>
+            <p><strong>136.625 Where witness material to proceeding in
+            another state is in this state.</strong>(1) If a judge of a
+            court of record in any state which by its laws has made
+            provision for commanding persons within that state to attend
+            and testify in this state certifies under the seal of such
+            court that there is a criminal prosecution pending in such
+            court, or that a grand jury investigation has commenced or
+            is about to commence, that a person being within this state
+            is a material witness in such prosecution, or grand jury
+            investigation, and that the presence of the person will be
+            required for a specified number of days, upon presentation
+            of such certificate to any judge of a court of record in the
+            county in which such person is, such judge shall fix a time
+            and place for a hearing, and shall make an order directing
+            the witness to appear at a time and place certain for the
+            hearing. (2) If at a hearing the judge determines that the
+            witness is material and necessary, that it will not cause
+            undue hardship to the witness to be compelled to attend and
+            testify in the prosecution or a grand jury investigation in
+            the other state, and that the laws of the state in which the
+            prosecution is pending, or grand jury investigation has
+            commenced or is about to commence, (and of any other state
+            through which the witness may be required to pass by
+            ordinary course of travel), will give to the witness
+            protection from arrest and the service of civil and criminal
+            process, the judge shall issue a summons, with a copy of the
+            certificate attached, directing the witness to attend and
+            testify in the court where the prosecution is pending, or
+            where a grand jury investigation has commenced or is about
+            to commence at a time and place specified in the summons. In
+            any such hearing the certificate shall be prima facie
+            evidence of all the facts stated therein. (3) If said
+            certificate recommends that the witness be taken into
+            immediate custody and delivered to an officer of the
+            requesting state to assure the attendance of the witness in
+            the requesting state, such judge may, in lieu of
+            notification of the hearing, direct that such witness be
+            forthwith brought before the judge for said hearing; and the
+            judge at the hearing being satisfied of the desirability of
+            such custody and delivery, for which determination the
+            certificate shall be prima facie proof of such desirability
+            may, in lieu of issuing subpoena or summons, order that said
+            witness be forthwith taken into custody and delivered to an
+            officer of the requesting state only after the tender of
+            payment of the mileage and per diem herein provided for.</p>
+            <p>(4) If the witness, who is summoned as above provided,
+            after being paid or tendered by some properly authorized
+            person the sum of 10 cents a mile for each mile by the
+            ordinary traveled route to and from the court where the
+            prosecution is pending and $5 for each day, that the witness
+            is required to travel and attend as a witness, fails without
+            good cause to attend and testify as directed in the summons,
+            the witness shall be punished in the manner provided for the
+            punishment of any witness who disobeys a summons issued from
+            a court of record in this state. [Formerly 139.220]</p>
+            <p><strong>136.627 Where witness material to proceeding in
+            this state is in another state.</strong>(1) If a person in
+            any state, which by its laws has made provision for
+            commanding persons within its borders to attend and testify
+            in criminal prosecutions, or grand jury investigations
+            commenced or about to commence, in this state, is a material
+            witness in a prosecution pending in a court of record in
+            this state, or in a grand jury investigation which has
+            commenced or is about to commence, a judge of such court may
+            issue a certificate under the seal of the county stating
+            these facts and specifying the number of days the witness
+            will be required. Said certificate may include a
+            recommendation that the witness be taken into immediate
+            custody and delivered to an officer of this state to assure
+            the attendance of the witness in this state. This
+            certificate shall be presented to a judge of a court of
+            record in the county in which the witness is found.</p>
+            <p>(2) If the witness is summoned to attend and testify in
+            this state the witness shall be tendered the sum of 10 cents
+            a mile for each mile by the ordinary traveled route to and
+            from the court where the prosecution is pending and $5 for
+            each day that the witness is required to travel and attend
+            as a witness. A witness who has appeared in accordance with
+            the provisions of the summons shall not be required to
+            remain within this state a longer period of time than the
+            period mentioned in the certificate, unless otherwise
+            ordered by the court.</p>
+            <p>If such witness, after coming into this state, fails
+            without good cause to attend and testify as directed in the
+            summons, the witness shall be punished in the manner
+            provided for the punishment of any witness who disobeys a
+            subpoena issued from a court of record in this state.
+            [Formerly 139.230]</p>
+            <p><strong>136.630</strong>[Repealed by 1973 c.836 §358]</p>
+            <p><strong>136.633 Immunity of witness from arrest or
+            service of process.</strong>(1) If a person comes into this
+            state in obedience to a summons directing the person to
+            attend and testify in this state the person shall not while
+            in this state pursuant to such summons be subject to arrest
+            or the service of process, civil or criminal, in connection
+            with matters which arose before the entrance of the person
+            into this state under the summons. (2) If a person passes
+            through this state while going to another state in obedience
+            to a summons to attend and testify in that state or while
+            returning therefrom, the person shall not while so passing
+            through this state be subject to arrest or the service of
+            process, civil or criminal, in connection with matters which
+            arose before the entrance of the person into this state
+            under the summons. [Formerly 139.240]</p>
+            <p><strong>136.635 Construction of ORS 136.623 to
+            136.637.</strong>ORS 136.623 to 136.637 shall be so
+            interpreted and construed as to effectuate their general
+            purpose to make uniform the law of the states which enact
+            the Uniform Act to Secure the Attendance of Witnesses from
+            Without a State in Criminal Proceedings. [Formerly
+            139.250]</p>
+            <p><strong>136.637 Short title.</strong>ORS 136.623 to
+            136.637 may be cited as Uniform Act to Secure the Attendance
+            of</p>
+            <p>Witnesses from Without a State in Criminal Proceedings.
+            [Formerly 139.260]</p>
+            <p>O· YOU ARE.ALSO C?MMANDED to bring with you the following
+            document(s)·or ob}ect(s):</p>
+            <p>tJ.S.OF COURT</p>
+            <p>MARY L. MORAN, ACTING .</p>
+            <p>.__.</p>
+            <p><code>----------------- -- -------</code></p>
+            <p><code>·,</code>.<code>--·</code>.<code>·-</code><a
+            href="Image:" title="wikilink">Image:</a></p>
+            <center>
+            <p>13-16</p>
+            </center>
+            </section>
+    </body>
+</html>

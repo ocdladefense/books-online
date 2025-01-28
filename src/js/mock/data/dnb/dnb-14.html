@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </section>
+            <p>2020 edition</p>
+            <section id="the_defense_casethe_states_case"
+            class="level1">
+            <h1><strong>The Defense Case/The State’s Case</strong></h1>
+            <p><strong><em>By Bob Thuemmel &amp; David
+            Eder</em></strong></p>
+            </section>
+            <section id="the_defense_case" class="level1">
+            <h1><strong>The Defense Case</strong></h1>
+            </section>
+            <section id="i._should_there_be_a_defense_case"
+            class="level1">
+            <h1><strong>I. Should There Be a Defense Case?</strong></h1>
+            <p>Once the state rests its case, it is the lawyer’s job to
+            try and determine whether or not a defense case should be
+            put on. Obviously, if the defense strategy has never
+            included the possibility of presenting evidence, this
+            decision has already been made and is easy.</p>
+            <p>However, if the “game plan” has always included calling
+            the defendant and a few of his or her friends to establish
+            innocence, it is <em>always</em> a good idea to revisit that
+            idea before beginning the case. Try and get a feel for these
+            things:</p>
+            <p>• How strong has the state’s case been? How well did the
+            state’s evidence come in?</p>
+            <p>• How effective was your cross-examination of the
+            arresting officer? Does the jury have trouble believing
+            whatever that person said now?</p>
+            <p>• How strong is your case <em>really</em>? How good are
+            your witnesses? Do they have any problems of their own? Are
+            they all present and ready to go?</p>
+            <p>• How much has the jury heard? Are they still
+            listening?</p>
+            <p>• Can you just as well deal with any issues in the
+            evidence in your argument, instead of calling<br />
+            witnesses?</p>
+            <p><em>Any experienced trial judge will tell you this
+            privately: over the years, judges see case after case
+            grabbed from the jaws of acquittal and turned into guilty
+            jury verdicts because of a poorly organized or thoughtlessly
+            presented defense.</em> In your career as a criminal defense
+            lawyer, you hope this never happens to you. For that reason,
+            don’t ever just go forward with your case—no matter how well
+            prepared, no matter how important the client thinks it is,
+            no matter how many exhibits you have ready to go—unless you
+            have re-decided at the close of the state’s case that this
+            is the best course of action available to you.</p>
+            </section>
+            <section id="ii._witnesses" class="level1">
+            <h1><strong>II. Witnesses</strong></h1>
+            <section
+            id="a._witnesses_in_contact_with_defendant_before_or_after_defendants_arrest"
+            class="level2">
+            <h2><strong>A. Witnesses in Contact with Defendant Before or
+            After Defendant’s Arrest</strong></h2>
+            <p>In every case, defense counsel should seek out witnesses
+            capable of testifying about the defendant’s actions either
+            before or after defendant’s encounter with the police.</p>
+            <p>• Wife or husband.</p>
+            <p>• Friends and companions.</p>
+            <p>• Bartender or cocktail waitress (maybe).</p>
+            <p>• Bystanders to stop.</p>
+            <p>• Person car released to.</p>
+            <p>• Jail booking personnel.</p>
+            <p>• Person who picked defendant up from jail.</p>
+            <blockquote>
+            <p>• Taxi driver who brought defendant home from jail.</p>
+            </blockquote>
+            <p>• Lawyer defendant called (as long as not trial counsel
+            or in same firm). <a
+            href="https://scholar.google.com/scholar_case?case=6083179280204144516&amp;q=In+re+Lathen,+294+Or+157,+654+P2d+1110+(1982)&amp;hl=en&amp;as_sdt=4,38"><em>In
+            re Lathen,</em> 294 Or 157, 654 P2d 1110 (1982)</a>.
+            However, ORS 40.340, Rule 606.1 (competency of attorney as
+            witness) has been repealed.</p>
+            <p>• Towtruck driver.</p>
+            <p>• Witnesses acquainted with defendant’s physical or
+            speech problem.</p>
+            <p>• Cellmates.</p>
+            <p>• In the case of an accident, check with the fire or
+            ambulance people who responded. Ambulance personnel always
+            have records of the patient’s condition, as do emergency
+            rooms if your client went to one of them. However, interview
+            these people carefully before they take the stand. Many of
+            them will tell you, “drivers in these kinds of accidents are
+            always drunk, in my opinion.”</p>
+            <p>• It may be helpful to the defense to call witnesses who
+            would have noticed impairment with the defendant and didn’t.
+            This can work even with a witness who does not remember the
+            defendant (i.e., 7-11 clerk who would have noticed a problem
+            and would not have sold him the beer he bought there).</p>
+            <p>• You should drive the area where your client was
+            arrested.</p>
+            <p>• Ask the client questions so you know where to look for
+            evidence/witnesses.</p>
+            </section>
+            <section id="b._preparing_testifying_witnesses"
+            class="level2">
+            <h2><strong>B. Preparing Testifying Witnesses</strong></h2>
+            <p>Don’t be afraid to ask the witnesses tough questions to
+            prepare for cross. You need to know if the witness will hurt
+            you on cross. It’s important to examine the demeanor and
+            tone and how the witness will answer questions to know if
+            she or he will be a good witness or not. This requires you
+            to think about and do a mock cross-examination of the
+            witness so you and the witness know what to expect.</p>
+            <p>The prosecution will want to pin witnesses down to show
+            they remember one thing (how many drinks defendant
+            consumed), but not how defendant was dressed, etc. Likewise,
+            the prosecution will seek to establish bias, intoxication of
+            the witness and finally trick the witness into using
+            descriptions of the defendant (such as relaxed, loose,
+            having a good time) which can then be used in closing
+            argument. Each witness should be briefed about the following
+            specific areas of inquiry and their answers reviewed.</p>
+            <p>Listed below are the general areas and types of questions
+            witnesses should be prepared to answer:</p>
+            <p>1. Period of time spent with defendant and a fairly good
+            idea of times involved—such as, “we left the restaurant at
+            about 10:15.” It always hurts the defense case when
+            witnesses are too inconsistent on the times involved.</p>
+            <p>2. Amount of alcohol consumed by defendant <em>or</em>
+            rate at which he was drinking (“I am not sure of the number
+            involved but everyone was drinking slowly or
+            moderately”).</p>
+            <p>3. Physical and mental condition of defendant when
+            contact ended.</p>
+            <p>4. Witness must understand the definition of “under the
+            influence.”</p>
+            <p>5. Amount of alcohol consumed by witness.</p>
+            <p>6. Opinion whether defendant was “under the
+            influence.”</p>
+            <p>7. The witness would not lie or distort the truth to help
+            a friend.</p>
+            <p>8. “Did you have any concerns about letting John get in
+            his car and drive it away that night? How did you react when
+            you first heard that he received this citation?”</p>
+            <p>9. The “reluctant friend witness” should be left at home.
+            From time to time, the lawyer may contact a friend and
+            potential witness who is (or seems) uncomfortable about
+            coming to court on the client’s behalf. Trust your instincts
+            and judgment on this person, and maybe just discuss your
+            feeling about him or her openly. If for any reason the
+            person is less than genuine in the desire to testify
+            truthfully and thereby help the defense, it is always the
+            best choice to remove the person from your case. Sometimes
+            that reluctance will also show on the stand and may lead to
+            cross-examination that will make you wish you’d kept the
+            witness out of the case.</p>
+            </section>
+            <section id="c._joint_meeting_with_witnesses"
+            class="level2">
+            <h2><strong>C. Joint Meeting with Witnesses</strong></h2>
+            <p>If more than one independent witness observed defendant,
+            it may be wise to have a group meeting so that all the facts
+            can be sorted out and memories refreshed if necessary. If
+            you conduct a group meeting with witnesses, or when meeting
+            with them individually, consider doing it without your
+            client present. Witnesses will tell you things this way that
+            they may not say if the defendant is in the room.</p>
+            <p>Time. So often, and for no very good reason, witnesses
+            will get confused about “times.” While one witness may say
+            the group stopped drinking and went home at about 9:30,
+            another will say it was 11:45. Neither is lying, but juries
+            pay attention to these kinds of discrepancies. It may be
+            worthwhile to have the witnesses put together a rough
+            timeline of events for you, and that way they are able to
+            independently refresh their own memories of the times
+            involved.</p>
+            </section>
+            <section id="d._expert_witnesses" class="level2">
+            <h2><strong>D. Expert Witnesses</strong></h2>
+            <p>In many cases the defense may want to consider the use of
+            various expert witnesses depending on the facts regarding
+            defendant’s handicap, physical or mental condition or
+            ability to perform the tests.</p>
+            <p>1. Physicians. A personal physician may be able to
+            corroborate defendant’s alleged handicap or physical
+            disability which caused defendant’s physical or mental
+            condition or prohibited defendant from adequately performing
+            the field sobriety tests. For those unable to afford the
+            testimony of a physician, consider introducing the
+            defendant’s medical records; <a
+            href="http://scholar.google.com/scholar_case?q=104+Or+App+613&amp;hl=en&amp;as_sdt=6,38&amp;case=7378161121088631894&amp;scilh=0"><em>State
+            v. Robinson,</em> 104 Or App 613 (1990)</a>, allows the use
+            of those records to establish or rebut a fact in issue.</p>
+            <p>Be careful in using physicians at trial. On cross, the
+            prosecution will ask if the symptoms observed by the police
+            (odor of alcohol, slurred speech, etc.) are symptoms of
+            defendant’s medical condition. Unless the doctor is “bullet
+            proof” on cross, use defendant’s medical records to
+            establish his condition.</p>
+            <p>2. Pharmacists or Pharmacologists. Often the defendant
+            will have taken prescription or nonprescription drugs, and
+            there is an issue concerning their effect when combined with
+            alcohol. Depending on the substance involved and the facts,
+            an expert in this area may be helpful. If it helps you, you
+            can ask the court to take judicial notice of the
+            <em>Physicians Desk Reference</em> (PDR) and the information
+            contained in it concerning the properties of any particular
+            substance. It is best to photocopy the page you are
+            directing the court’s attention to, so the judge has it in
+            front of them.</p>
+            <p>3. Chemists. A chemist or other expert trained in the
+            operation of the Intoxilyzer or the determination of blood
+            alcohol content may be utilized in attacking the Intoxilyzer
+            results.</p>
+            <p>4. Ophthalmologists or Optometrists. Pupil reaction,
+            bloodshot eyes and the effects of flashing lights or passing
+            cars on balance and coordination may also be considered.</p>
+            <p>5. Crime Lab. In some breath test cases, you may want to
+            consider calling a witness from the crime lab on the machine
+            itself, if you want to establish some point that even a
+            state expert will provide for you.</p>
+            </section>
+            <section id="e._character_witnesses" class="level2">
+            <h2><strong>E. Character Witnesses</strong></h2>
+            <p>Rarely used, but don’t overlook the possibility. Consider
+            the character traits of:</p>
+            <p>• Good driving.</p>
+            <p>• Moderation with alcohol.</p>
+            <p>• Honesty.</p>
+            </section>
+            <section id="f._the_defendant_as_a_witness" class="level2">
+            <h2><strong>F. The Defendant as a Witness</strong></h2>
+            <p>Whether or not your client should testify in his or her
+            own defense is a decision that changes in every case. It
+            depends on a number of different factors, including:</p>
+            <p>1. What does your client have to say?</p>
+            <p>2. Does your client have a truthful and helpful opinion
+            of his or her own sobriety that evening?</p>
+            <p>3. Does your client understand what “under the influence”
+            means?</p>
+            <p>4. Can your client do well under cross-examination? Have
+            another lawyer cross examine if possible to create a less
+            familiar environment.</p>
+            <p>5. What does your client really have to add, other than
+            the statement “I was not under the influence”? (Always ask
+            yourself: why am I putting my client on in this case?)</p>
+            <p>6. How is the case going without the testimony?</p>
+            <p>7. What does the jury expect as far as defense testimony
+            in this case?</p>
+            <p>8. The “exhibit sticker” client. From time to time you
+            will come across the client who has a physical trait or a
+            personality component that matches exactly what the
+            arresting officer cited as one of the reasons for his
+            opinion that the person was under the influence.
+            Characteristics such s an argumentative personality, a slur
+            to the speech, and general overall confusion are some
+            examples. You want to put these clients on the witness stand
+            if at all possible essentially only to “put an exhibit
+            sticker” on their forehead to let the jury <em>see
+            firsthand</em> that this is “just the way he is.” This can
+            always be a powerful part of any defense case where it
+            applies and it should not be overlooked.</p>
+            <p>9. Speak with your client about keeping composure,
+            answering the questions asked and how the jury will evaluate
+            his or her testimony.</p>
+            <p>Every lawyer has their own way of making this decision.
+            One suggested approach is to have the client in a few weeks
+            before the trial to go over trial mechanics and what to
+            expect in the courtroom. In this discussion, explain that
+            you are trying to determine whether or not the client will
+            be testifying in their own defense. Sometimes it is helpful
+            to get out a copy of the jury instruction defining “under
+            the influence of intoxicants” and read it to your client,
+            following up with some general questions about how they
+            would answer certain questions about themselves on the date
+            in question.</p>
+            <p>It is important to make your client understand that the
+            case can be prepared either way, and testifying is not a
+            critical part. Free your client up to be truthful with you,
+            instead of having to feel like they need to tailor their
+            testimony in any way.</p>
+            <p>Sometimes your client will quickly tell you, “I cannot
+            testify in this case because I will not be helpful and I
+            don’t want to lie,” or words to that effect. Assure them
+            that you don’t want them to lie, you would never ask them to
+            lie, and that you appreciate their honesty with you now.
+            Explain to them that you will handle the case without their
+            testimony, and that the judge will instruct the jury that no
+            negative inference can be drawn from the fact that they did
+            not take the stand.</p>
+            <p>On some occasions, you are best off to prepare your
+            client as if they will be taking the witness stand, then
+            leave the decision itself until mid-trial when you are able
+            to take the temperature of the proceedings and see whether
+            or not the testimony is needed or well advised.</p>
+            <p>Remember, the burden of taking a witness stand and being
+            subjected to direct and cross-examination is a very big one.
+            For those lawyers who have testified from time to time on
+            collateral matters, it is easy to understand that testifying
+            is an uncomfortable job. It is much more uncomfortable for a
+            person accused of a crime. The decision to have your client
+            undertake it should not be taken lightly.</p>
+            <p>In other cases, it is obvious from the first time the
+            client comes through your door that they will be taking the
+            witness stand. In those cases, thoroughly prepare the client
+            for what to expect from your direct examination and the
+            cross-examination of the prosecutor. Here are some questions
+            that prosecutors will often want to ask a defendant in a
+            DUII case:</p>
+            <p>1. If 1 is stone cold sober and 10 is falling down drunk,
+            how would you rate yourself on the night you were
+            arrested?</p>
+            <p>2. Are you telling the jury that this whole episode would
+            have happened just the same way if you had had
+            <em>nothing</em> to drink?</p>
+            <p>3. You drink alcohol for its effects, don’t you? And yet,
+            are we to understand that after your six beers on this
+            evening, you felt no effects?</p>
+            <p>4. How do you think you would have done on that test if
+            you had had nothing to drink that evening?</p>
+            <p>5. Why did you say you had only consumed one beer when
+            you were arrested and now you are telling us you had four?
+            Why did you lie to the police?</p>
+            <p>6. Why didn’t you take the breath test?</p>
+            <p>7. Why didn’t you ask for an independent blood test, if
+            you thought the breath test was wrong?</p>
+            <p>8. What does “under the influence of intoxicants”
+            mean?</p>
+            <p>9. Are you telling us you felt <em>no</em> effects from
+            the drinks you had?</p>
+            <p>The list can go on and on, but these questions come up
+            regularly. You may wish to make a copy of this list and go
+            over it with your clients in trial preparation.</p>
+            <p>Every testifying defendant should know these things:</p>
+            <p>1. The legal definition of under the influence. In
+            Oregon, the words “drunk” and “intoxicated” have no legal
+            meaning. The word to know is “affected.” Drill your client
+            on this definition so by the time they take the witness
+            stand they will have it committed to memory.</p>
+            <p>2. How much the defendant had to drink that evening.
+            Every client should have an idea of a number of drinks that
+            represents the <em>outside limits</em> of what they had that
+            evening.</p>
+            <p>On cross-examination, some prosecutors like to ask the
+            client, “Well, if you’re not sure if it was two or three, it
+            could have been four, couldn’t it? You’re not sure? Maybe
+            four, maybe five—you weren’t counting drinks, were you?”
+            After a little bit of this line of questioning, the client
+            may sound as if s/he had twelve drinks. So, it is best to
+            have the client be able to draw a line and say, “What I am
+            sure of is that I did not have more than x number of beers.”
+            Period. That will cut off this line of cross-examination.
+            (Note: Today’s jurors will lose interest in your defense if
+            that number is over four or five at the outside, so it may
+            be best to revisit the decision on whether or not to call
+            your client to the witness stand if this is what you hear in
+            trial preparation).</p>
+            <p>3. The legal definition of under the influence:
+            “adversely affected.” Your client may have felt “some
+            effect” of the alcohol consumed, but did not feel his mental
+            or physical faculties were “adversely affected.” The
+            legislature has defined the crime to require more than
+            defendant just being affected. The state must show beyond a
+            reasonable doubt that these affects are adverse. If affected
+            and adversely affected were the same standard, the
+            legislature would never have defined affected with
+            adversely.</p>
+            <p>4. For clients with a prior DUII arrest or conviction,
+            those people need to be educated and trained as witnesses to
+            make no reference to their prior arrest. If they don’t open
+            the door to this information, the prosecution cannot bring
+            it out. Some people unwittingly may make a mistake in this
+            area in their direct examination, so they need to be told
+            how to avoid “referring to the past.”</p>
+            <p>Once the decision is made to have your client to testify,
+            then, depending on your style, you may wish to prepare the
+            client in a variety of ways. Have a lawyer friend drop by to
+            cross-examine the client; take your client to the courthouse
+            and find a vacant courtroom the afternoon before your trial
+            so s/he can sit in the witness box and answer questions from
+            there; videotape the client in your office, using office
+            personnel or friends for mock jurors. The only limits to
+            methods of preparing your client for the rigors of
+            testifying are those in your imagination, depending on the
+            client and the case. In any case though, create your own
+            “witness school” or a method of preparing your client that
+            is unique to you. Your goal is to make your client feel as
+            comfortable or more comfortable with the entire courtroom
+            process than any of the other participants involved in it.
+            If you have done that, you’ve done your job of preparing the
+            defendant for his or her trip to the witness stand.</p>
+            <p>In terms of the substance of their testimony, some of
+            these issues routinely pop up in cross-examination styles of
+            prosecutors around the state:</p>
+            <p>1. Driving Pattern. The prosecution will generally
+            require the defendant to try and explain any driving
+            irregularities, if he admits to any of them. Since everyone
+            makes a driving mistake now and then, there shouldn’t be any
+            hesitation in doing this. Go over defendant’s driving
+            explanation. If defendant offers no excuse and insists the
+            officer is wrong, look for independent evidence to
+            corroborate defendant.</p>
+            <p>2. Activities Before Arrest. Defendant will be asked in
+            depth about everything he did and the people he saw prior to
+            his arrest. Defendant should be prepared to go through this
+            on direct and to answer why any people encountered were not
+            called as witnesses.</p>
+            <p>3. Other Testimony. The prosecutor can no longer ask
+            <em>any</em> witness whether he or she agrees or disagrees
+            with another witness’s testimony. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+isom&amp;hl=en&amp;as_sdt=6,38&amp;case=18069363392063733694&amp;scilh=0"><em>State
+            v. Isom,</em> 306 Or 587 (1988)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=state+v+milbradt&amp;hl=en&amp;as_sdt=6,38&amp;case=14235864362426214514&amp;scilh=0"><em>State
+            v. Milbradt,</em> 305 Or 621 (1988)</a>. Questions to your
+            client like, “Was Officer Smith lying when he told the jury
+            that your eyes were watery and bloodshot?” are
+            impermissible. You may also want to move for a mistrial when
+            and if they are asked. See <span class="underline">State v.
+            Watts</span>, 259 Or App 560 (2013).</p>
+            <p>4. Performance. Defendant should come to a conclusion
+            about his performance on field sobriety tests and be
+            prepared to offer any excuses for poor performance. For
+            example, defendant should be prepared to show how difficult
+            it is for him to get his license out of his wallet.
+            Likewise, defendant should be prepared to exploit any
+            physical handicaps, abnormalities or disabilities. Defendant
+            should never respond that he could not do something
+            sober.</p>
+            <p>5. Defendant’s Statements. If defendant admitted he was
+            affected by the alcohol, defendant will be questioned about
+            this statement. Defendant should be prepared for the
+            “Weren’t you just a little affected?” question. Maybe the
+            defendant was scared and nervous and didn’t know what he was
+            to say. Defendant certainly wasn’t telling the officer he
+            was guilty of the offense. Remind the jury that it is their
+            opinion, not the defendant’s, that controls.</p>
+            <p>6. Instruct the defendant not to talk to the police
+            officer prior to or during trial. Restrict defendant’s
+            movements in the presence of the officer. In other words,
+            get there early, seat the defendant and leave him there.</p>
+            </section>
+            </section>
+            <section
+            id="iii._introduction_of_defendants_statements_when_defendant_is_not_present_for_trial"
+            class="level1">
+            <h1><strong>III. Introduction of Defendant’s Statements When
+            Defendant Is Not Present for Trial</strong></h1>
+            <p>On some occasions the defendant will elect to be tried in
+            absentia (although this is legally permitted in Oregon, as a
+            practical matter courts today will reward the defendant’s
+            non-appearance only with a bench warrant). In other cases he
+            or she will elect not to take the witness stand. If the
+            defendant has made favorable statements to the officer, the
+            prosecution will argue that self-serving hearsay
+            declarations are not admissible. The easy way around this
+            objection is to argue that the statements are admissible not
+            for their truth but as evidence of defendant’s clear
+            intellect and coherence. In support of the argument for
+            admissibility, counsel should request a limiting instruction
+            pursuant to <a
+            href="http://www.oregonlaws.org/ors/40.035">OEC, Rule
+            105</a>. Clearly, such an instruction is advantageous to the
+            defense since the evidence (statements) appears to have the
+            judge’s imprimatur.</p>
+            </section>
+            <section id="iv._physical_and_demonstrative_aids"
+            class="level1">
+            <h1><strong>IV. Physical and Demonstrative
+            Aids</strong></h1>
+            <p>In addition to independent testimony, the defense case
+            very often should include physical or demonstrative aids.
+            Some examples are listed below.</p>
+            <p>• Photographs or videotape of the scene. Counsel should
+            always visit the scene with his or her client to get the
+            “lay of the land” and determine whether the area is as
+            described by the officer. Pictures of the scene in conflict
+            with the officer’s description are devastating.</p>
+            <p>• Was the defendant booked upon his arrest? Often the
+            booking procedures include a photograph of the defendant and
+            the preparation of a medical form. Both these items may
+            refute the officer’s description of defendant’s physical
+            description.</p>
+            <p>• A cup or glass illustrating the size of the “small”
+            drinks defendant consumed before being stopped.</p>
+            <p>• The windshield wiper which wasn’t working properly.</p>
+            <p>• Any items that will explain some problem the client was
+            having that night. For example, the boots that were being
+            worn by the client who is a lineman weigh about 10 pounds.
+            Mark them and offer them. Let the jury feel what he had on
+            his feet when he had slight balance problems.</p>
+            <p>• Google Maps! Don’t ever forget the value of a document
+            to show any of the geographic features of your case that you
+            want the jury to understand.</p>
+            <p>• Many areas in the state have enlargement services. In
+            Portland, you can have any document blown up to 2’ x 3’ size
+            in one day for about $30. This helps with jury instructions,
+            certain pages of police reports (if they happen to disclose
+            something that is favorable to your defense), or portions of
+            DMV transcripts that you may have used to impeach the
+            arresting officer.</p>
+            <p>• Do you have other police reports from the same cop
+            saying the same sorts of things about a different person? Is
+            it similar enough language that it gives the impression that
+            he says it in every case? If so, this may be worth bringing
+            to court for impeachment.</p>
+            </section>
+            <section id="the_prosecutions_case" class="level1">
+            <h1><strong>The Prosecution’s Case</strong></h1>
+            <p><em>By David Eder</em></p>
+            </section>
+            <section id="i._the_goal_of_the_prosecution" class="level1">
+            <h1><strong>I. The Goal of the Prosecution</strong></h1>
+            <p>Driving under the influence cases are fairly
+            straightforward to prepare and present. The state’s case
+            must be based on logic and reason. If the case theory is not
+            logical, it clearly will not rise to beyond a reasonable
+            doubt.</p>
+            <p>The goal for the prosecution is to build a trusting
+            relationship with the jury during jury selection and not
+            overpromise facts that cannot be delivered during opening
+            statement. The same is true for defense attorneys. However,
+            for prosecutors, during the trial the focus should be on the
+            witnesses. In my opinion, the best prosecutor directs the
+            case but is unnoticed by the jury during his or her
+            case-in-chief. The reasoning is simple: the jurors are going
+            to figure out the prosecutor wasn’t there when the defendant
+            was driving, pulled over, performing tests, back at the
+            police station or hospital or for any part of the
+            interviewing/investigating stage. Any attention placed on
+            the prosecutor is a lost opportunity for focus on the
+            witnesses. At the end of the case, the jury should be basing
+            the verdict on the evidence. And the witnesses and exhibits
+            provide the evidence.</p>
+            </section>
+            <section id="ii._the_five_sections_of_the_prosecutions_case"
+            class="level1">
+            <h1><strong>II. The Five Sections of the Prosecution’s
+            Case</strong></h1>
+            <p>A prepared prosecutor breaks down a DUII case into five
+            easy sections.</p>
+            <section id="a._initial_tactical_decisions" class="level2">
+            <h2><strong>A. Initial Tactical Decisions</strong></h2>
+            <p>1. Is there reckless driving that could bring in prior
+            DUIIs?</p>
+            <p>2. Is there a way to get in the <em>Miles</em>
+            instruction?</p>
+            </section>
+            <section id="b._themes_driving_and_impaired" class="level2">
+            <h2><strong>B. Themes – Driving and Impaired</strong></h2>
+            <p>1. The defendant was driving—no bad driving is
+            required.</p>
+            <p>2. Drunk driving is not the standard. Check out the
+            uniform jury instructions regarding the definition of
+            impairment.</p>
+            <p>3. Deciding to convict is hard for a jury. Therefore, the
+            more emphasis on examining the actions rather than the
+            person will make it easier for the jury to convict.</p>
+            </section>
+            <section
+            id="c._direct_organizing_the_evidence_to_prove_the_elements_of_duii"
+            class="level2">
+            <h2><strong>C. Direct – Organizing the Evidence to Prove the
+            Elements of DUII</strong></h2>
+            <p>1. The experience of the officer—build credibility that
+            is either corroborated by blood/breath test or put up
+            against defendant’s refusal and willingness to take all the
+            penalties with a refusal.</p>
+            <p>2. The driving observed, including how/where the
+            defendant pulled over.</p>
+            <p>3. The “informal field sobriety tests” or the personal
+            contact between officer and defendant through initial
+            screening before field sobriety tests.</p>
+            <p>4. The standardized field sobriety tests.</p>
+            <p>5. Inventory/transport/misc.</p>
+            <p>6. DUII interview.</p>
+            <p>7. Observation/breath/blood test.</p>
+            <p>8. Prior treatment/diversion/conviction.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=berliner&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2009&amp;case=11355060758993538880&amp;scilh=0"><em>State
+            v. Berliner,</em> 232 Or App 539 (2009)</a>. Admission of
+            specifics from defendant’s prior treatment allowed to prove
+            that defendant was aware that driving under the influence is
+            dangerous behavior for the purpose of any companion charge
+            that includes a reckless state of mind.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=coen&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2009&amp;case=5842704115383717024&amp;scilh=0"><em>State
+            v. Coen</em>, 231 Or App 280 (2009<em>)</em></a>.
+            Defendant’s prior DUII comes in to prove recklessness (if
+            defendant is charged with a crime that has a reckless
+            <em>mens rea</em>) without a balancing test under <a
+            href="http://www.oregonlaws.org/ors/40.160">OEC 403(4)</a>.
+            See Chapter 18, Appeals.</p>
+            </section>
+            <section id="d._redirect" class="level2">
+            <h2><strong>D. Redirect</strong></h2>
+            <p>After defense brings up the list of what is missing, get
+            the case back to how those indicators aren’t needed as not
+            everyone shows every sign.</p>
+            </section>
+            <section
+            id="e._cross_examination_dont_ruin_closing_argument_material"
+            class="level2">
+            <h2><strong>E. Cross-examination – Don’t Ruin Closing
+            Argument Material</strong></h2>
+            <p>1. Field tests—would they have been performed the same
+            without alcohol in system?</p>
+            <p>2. Breath test—never asked for a breath test. Never said
+            disagreed with the breath test. Never asked to take another
+            test.</p>
+            <p>3. Refusal—apparently license isn’t important. Took
+            longer suspension period. Hiding something?</p>
+            <p>4. <a
+            href="http://scholar.google.com/scholar_case?q=tyon&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2009&amp;case=4316884652894607883&amp;scilh=0"><em>State
+            v. Tyon,</em> 226 Or App 428 (2009)</a>. Bias is never
+            collateral. Defendant had been arrested for DUII before by
+            the same officer and had been acquitted. The officer
+            testified that he thought the client was guilty and had
+            gotten off. He might have a bias based on that and want to
+            be sure that defendant didn’t get off this time.</p>
+            </section>
+            </section>
+    </body>
+</html>

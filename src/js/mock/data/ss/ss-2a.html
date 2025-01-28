@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Search and Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Search and Seizure Manual</h1>
+                                    </section>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <div class="WordSection1">
+            <section id="warrantless_seizures" class="level2">
+            <h2>Warrantless Seizures</h2>
+            <section id="introduction" class="level3">
+            <h3>Introduction</h3>
+            <p><span class="GramE">The vast majority of</span> all
+            search and seizure motions to suppress turn on two legal
+            questions: Did the police “search” or “seize” the defendant?
+            If so, was the search or seizure justified?</p>
+            <p>Chapter 1 dealt with the first of those inquires while
+            Chapters 2 and 3 focus on the second, specifically on
+            situations where the police failed to obtain a warrant prior
+            to conducting the search or seizure.</p>
+            <p>A search or seizure conducted under a judicially
+            authorized warrant is presumptively
+            <span class="GramE">justified;</span> whereas, a
+            <em>warrantless</em> search or seizure is presumptively
+            unconstitutional. For that reason, if the police searched or
+            seized your client without a warrant, the state bears the
+            burden of establishing that a warrant was not necessary.
+            That is, upon the filing of a timely motion to suppress, the
+            state must prove by a preponderance of the evidence that the
+            police action was justified by “one of the few specifically
+            established and <a
+            href="http://web2.westlaw.com/result/result.aspx?ss=CNT&amp;cfid=1&amp;mt=Oregon&amp;method=TNC&amp;origin=Search&amp;sri=703&amp;sskey=CLID_SSSA44738281311114&amp;utid=1&amp;kmchk=1&amp;srch=TRUE&amp;cnt=DOC&amp;rlt=CLID_QRYRLT1750291311114&amp;rltdb=CLID_DB62738281311114&amp;service=Search&amp;eq=Welcome%2fOregon&amp;rp=%2fWelcome%2fOregon%2fdefault.wl&amp;referencepositiontype=T&amp;fn=_top&amp;query=%22CAREFULLY+DELINEATED%22&amp;scxt=WL&amp;referenceposition=SR%3b3733&amp;vr=2.0&amp;db=OR-CS&amp;rlti=1&amp;searchtranid=72833537TJK1397232807998&amp;sv=Split&amp;n=2&amp;fmqv=s&amp;rs=WLW14.01"><span>carefully</span></a>
+            <a
+            href="http://web2.westlaw.com/result/result.aspx?ss=CNT&amp;cfid=1&amp;mt=Oregon&amp;method=TNC&amp;origin=Search&amp;sri=703&amp;sskey=CLID_SSSA44738281311114&amp;utid=1&amp;kmchk=1&amp;srch=TRUE&amp;cnt=DOC&amp;rlt=CLID_QRYRLT1750291311114&amp;rltdb=CLID_DB62738281311114&amp;service=Search&amp;eq=Welcome%2fOregon&amp;rp=%2fWelcome%2fOregon%2fdefault.wl&amp;referencepositiontype=T&amp;fn=_top&amp;query=%22CAREFULLY+DELINEATED%22&amp;scxt=WL&amp;referenceposition=SR%3b3734&amp;vr=2.0&amp;db=OR-CS&amp;rlti=1&amp;searchtranid=72833537TJK1397232807998&amp;sv=Split&amp;n=2&amp;fmqv=s&amp;rs=WLW14.01"><span>delineated</span></a>
+            exceptions to the warrant requirement.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bridewell,+306+Or+231,+&amp;hl=en&amp;as_sdt=4,38&amp;case=9670416287966371438&amp;scilh=0"><span class="hyperlinkital">State
+            v. Bridewell</span>, 306 Or 231, 235, 759 P2d 1054
+            (1988)</a>.</p>
+            <p>As described in Chapter 1, there are generally three
+            types of police-citizen encounters, and they very in the
+            degree to which the police infringe upon a person’s freedom
+            of movement. The first is “mere conversation,” which does
+            not qualify as a seizure under Article I, section 9. The
+            second two are both categories of “seizures”—the first being
+            a “stop,” which occurs when a state actor temporarily
+            restrains a person’s liberty through either physical force
+            or some other “show of authority.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ashbaugh,+349+Or+297&amp;hl=en&amp;as_sdt=4,38&amp;case=5545000798507464990&amp;scilh=0"><em>State
+            v. Ashbaugh</em>, 349 Or 297, 308-09, 244 P3d 360
+            (2010</a>). Stops require reasonable suspicion that the
+            defendant has committed a crime. <a
+            href="https://scholar.google.com/scholar_case?case=4422703075274626699&amp;q=State+v.+Newton,+286+Or+App+274&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Newton</em>, 286 Or App 274, 279, 398 P3d 390
+            (2017).</a></p>
+            <p>The second type of seizure is an “arrest,” which involves
+            “protracted custodial restraint and require[s] probable
+            cause.” <a
+            href="https://scholar.google.com/scholar_case?case=1626962107991987550&amp;q=State+v.+Fair,+353+Or+588,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Fair</em>, 353 Or 588, 593, 302 P3d 417 (2013)</a>. The
+            exceptions to the warrant requirement that permit police to
+            make an arrest require the state to meet more demanding
+            standards. The following chapter focuses on different types
+            of seizures and the various ways to challenge their
+            legality.</p>
+            <p><strong>Chapter 2A</strong></p>
+            <p>Criminal Stops: Warrantless Seizures of People</p>
+            <p><span id="i.-stop-level-seizures-of-people-in-public"></span></p>
+            </section>
+            </section>
+            <section id="i._stop_level_seizures_of_people_in_public"
+            class="level2">
+            <h2>I. Stop-level Seizures of People in Public</h2>
+            <p><span id="a.-when-can-police-stop-a-person-on-the-street-without-a-warrant"></span></p>
+            <section
+            id="a._when_can_police_stop_a_person_on_the_street_without_a_warrant"
+            class="level3">
+            <h3>A. When can police “stop” a person on the street without
+            a warrant?</h3>
+            <p>The police must have “reasonable suspicion” that a
+            particular person “has committed or is about to commit a
+            crime” to justify a stop-level seizure for the purpose of
+            questioning the person about the suspected crime. <a
+            href="https://scholar.google.com/scholar_case?case=7201909115282208757&amp;q=State+v.+Belt,+325+Or+6,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Belt</em>, 325 Or 6, 12, 932 P2d 1177 (1997)</a>.</p>
+            <p>Article I, section 9, typically requires that the level
+            of justification for a seizure correlate with the extent to
+            which the seizure infringes on a citizen’s liberty. <a
+            href="https://scholar.google.com/scholar_case?case=1626962107991987550&amp;q=State+v.+Fair,+353+Or+588,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Fair</em>, 353 Or 588, 603, 302 P3d 417 (2013)</a>. Thus,
+            to arrest a citizen, an officer must have probable cause;
+            however, a temporary detention for investigation—a
+            “stop”—requires a lower standard: reasonable suspicion of
+            criminal activity. <em>Id</em>.</p>
+            <p>Often police will not intend to stop a person. Instead,
+            police will attempt to engage a person in mere conversation,
+            but by their words or conduct they convert the encounter
+            into a stop. See Section 1C (defining a stop and outlining
+            the myriad ways in which a police officer may
+            <span class="GramE">effect</span> a stop). Whether a
+            police-citizen interaction rises beyond “mere conversation”
+            to the level of a seizure under Article I, section 9,
+            depends on whether a reasonable person would believe that
+            the officer has intentionally and significantly restricted,
+            interfered with, or otherwise deprived a citizen of his or
+            her liberty or freedom of movement. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ashbaugh,+349+Or+297&amp;hl=en&amp;as_sdt=4,38&amp;case=5545000798507464990&amp;scilh=0"><em>State
+            v. Ashbaugh</em>,<em><span> </span></em>349 Or 297, 316, 244
+            P3d 360 (2010)</a>. “What distinguishes a seizure (either a
+            stop or an arrest) from a constitutionally insignificant
+            police-citizen encounter ‘is the imposition, either by
+            physical force or through some “show of authority,” of some
+            restraint on the individual’s liberty.’” <a
+            href="https://scholar.google.com/scholar_case?case=915527787294543186&amp;q=State+v.+Backstrand,+354+Or+392&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Backstrand</span></em>, 354 Or 392,
+            399, 313 P3d 1084 (2013)</a> <strong>' (citing
+            <em>Ashbaugh</em>, 239 Or at 309).</strong>' “A
+            constitutionally significant ‘show of authority’ can be
+            inferred from ‘the content of the questions [asked by a
+            police officer], the manner of asking them, or other actions
+            that police take (along with the circumstances in which they
+            take them).’” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Charles&amp;hl=en&amp;as_sdt=4,38&amp;case=18325993708748446291&amp;scilh=0"><em>State
+            v. Charles</em>, 263 Or App 578, 583, 331 P3d 1012
+            (2014)</a> (quoting
+            <span class="SpellE"><em>Backstrand</em></span>, 354 Or at
+            412).</p>
+            <p>To prove that an officer has reasonable suspicion of a
+            crime, the state must show that the objective facts known to
+            the officer would permit a reasonable person to conclude
+            that the defendant was engaged in criminal activity. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Belt,+325+Or+6,+&amp;hl=en&amp;as_sdt=4,38&amp;case=7201909115282208757&amp;scilh=0"><em>Belt</em>, 325
+            Or at 12</a>. Thus, to determine whether police lawfully
+            interfered with a person’s liberty or freedom of movement
+            such that it creates a stop, the trial court should
+            scrutinize the officer’s testimony at the suppression
+            hearing for specific and articulable facts sufficient to
+            give rise to an objectively reasonable inference that the
+            suspect has “committed or was about to commit a
+            <em>specific</em> crime or type of crime.” <a
+            href="https://scholar.google.com/scholar_case?q=State+v.+Maciel-Figueroa,+361+Or+163&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004&amp;as_ylo=2017&amp;case=8510759865209375076&amp;scilh=0"><em>State
+            v. <span class="SpellE">Maciel</span>-Figueroa</em>, 361 Or
+            163, 165, 182 (2017)</a> (emphasis added).</p>
+            <p>Said another way, “For a court to determine that an
+            investigative stop was lawful under Article I, section 9,
+            the court (1) must find that the officers actually suspected
+            that the stopped person had committed a specific crime or
+            type of crime, or was about to commit a specific crime or
+            type of crime, and (2) must conclude, based on the record,
+            that the officers’ subjective belief—their suspicion—was
+            objectively reasonable under the totality of the
+            circumstances existing at the time of the stop.”
+            <em>Id.</em> at 182.</p>
+            <p><span id="b.-to-what-extent-can-police-rely-on-training-and-experience"></span></p>
+            </section>
+            <section
+            id="b._to_what_extent_can_police_rely_on_training_and_experience"
+            class="level3">
+            <h3>B. To what extent can police rely on training and
+            experience?</h3>
+            <p>An officer’s experience is “relevant to what inferences
+            the officer may draw from the circumstances.
+            <span class="GramE">But,</span> an officer’s experience
+            cannot form the entire basis for reasonable suspicion.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Martin,+260+Or+App+461,&amp;hl=en&amp;as_sdt=4,38&amp;case=1811479880070065323&amp;scilh=0"><span class="hyperlinkital">State
+            v. Martin</span>, 260 Or App 461, 470, 317 P3d 408
+            (2014)</a>; <em>see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Alvarado,+257+Or+App+612,&amp;hl=en&amp;as_sdt=4,38&amp;case=11556398664954304739&amp;scilh=0"><span class="hyperlinkital">State
+            v. Alvarado</span>, 257 Or App 612, 631, 307 P3d 540
+            (2013)</a> (“[T]he phrase ‘training and experience’ is not a
+            magical incantation with the power to imbue speculation,
+            stereotype, or pseudoscience with an impenetrable armor of
+            veracity.”). Accordingly, an officer’s intuitive sixth
+            sense, instinct, and experience alone
+            <span class="GramE">are</span> insufficient. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Valdez,+277+Or+621,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11742118766930469436&amp;scilh=0"><span class="hyperlinkital">State
+            v. Valdez</span>, 277 Or 621, 628, 561 P2d 1006 (1977)</a>.
+            “The trial court must determine whether the standard of
+            reasonable suspicion has been met by the objective test of
+            observable facts, not by reliance on the special intuitions
+            of the officer.” <em>Id.</em> at 629.</p>
+            <p>“An officer’s training and experience may help an officer
+            interpret a specific and articulable fact
+            <span class="GramE">in a given</span> situation or event,
+            but training and experience is not, in and of itself, a
+            specific and articulable fact that can provide the
+            ‘something more’ to establish reasonable suspicion.” <a
+            href="https://scholar.google.com/scholar_case?case=7454073312753440803&amp;q=State+v.+Schmitz,+299+Or+App+170&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Schmitz</em>, 299 Or App 170, 178, 448 P3d 699 (2019)</a>
+            (quoting <a
+            href="https://scholar.google.com/scholar_case?case=13922860826491136064&amp;q=State+v.+Davis,+286+Or+App+528,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Davis</em>, 286 Or App 528, 534, 400 P3d 994 (2017)</a>
+            (holding that “something more” beyond impairment by a
+            controlled substance was necessary to establish reasonable
+            suspicion that the defendant possessed a controlled
+            substance)).</p>
+            <p><span id="c.-can-reasonable-suspicion-be-based-on-the-actions-of-the-defendants-companions"></span></p>
+            </section>
+            <section
+            id="c._can_reasonable_suspicion_be_based_on_the_actions_of_the_defendants_companions"
+            class="level3">
+            <h3>C. Can reasonable suspicion be based on the actions of
+            the defendant’s companions?</h3>
+            <p>The officer’s suspicion must be particularized to the
+            person based on that person’s conduct, demeanor, or
+            appearance—not that of the person’s companions. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kingsmith,+256+Or+App+762,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10838389396096549945&amp;scilh=0"><span class="hyperlinkital">State
+            v. <span class="SpellE">Kingsmith</span></span>, 256 Or App
+            762, 769, 302 P3d 471 (2013)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Miglavs,+337+Or+1,&amp;hl=en&amp;as_sdt=4,38&amp;case=9178157249896432482&amp;scilh=0"><span class="hyperlinkital">State
+            v. <span class="SpellE">Miglavs</span></span>, 337 Or 1, 12,
+            90 P3d 607 (2004)</a> (“A police officer’s suspicion must be
+            particularized to the individual based on the individual’s
+            own conduct.”).</p>
+            <p><span id="d.-must-the-officer-personally-observe-the-suspicious-conduct"></span></p>
+            </section>
+            <section
+            id="d._must_the_officer_personally_observe_the_suspicious_conduct"
+            class="level3">
+            <h3>D. Must the officer personally observe the suspicious
+            conduct?</h3>
+            <p>Reliable citizen reports may “furnish the required
+            ‘specific and articulable facts’ to support an inference
+            that criminal activity is afoot.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Goss,+219+Or+App+645,+&amp;hl=en&amp;as_sdt=4,38&amp;case=108875164461458342&amp;scilh=0"><span class="hyperlinkital">State
+            v. Goss</span>, 219 Or App 645, 650, 184 P3d 115,
+            <em><span>rev den</span></em>, 345 Or 94 (2008)</a>.</p>
+            <p><span id="reliability-of-informant"></span></p>
+            <section id="reliability_of_informant" class="level4">
+            <h4>1. Reliability of Informant</h4>
+            <p>Where the officer’s suspicion is based solely on a
+            citizen informant’s report, that report must contain some
+            indicia of reliability. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Shumway,+124+Or+App+131,+&amp;hl=en&amp;as_sdt=4,38&amp;case=742477619988677326&amp;scilh=0"><span class="hyperlinkital">State
+            v. Shumway</span><span>, 124 Or App 131, 133, 861 P2d 384
+            (1993)</span></a>. Three factors to consider in determining
+            the reliability of a citizen informant’s report are: (1)
+            whether the informant is exposed to possible criminal and
+            civil prosecution if the report is false. That factor is
+            satisfied if the informant gives his or her name to law
+            enforcement or if the informant delivers the information to
+            the officer in person. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bybee,+131+Or+App+492,&amp;hl=en&amp;as_sdt=4,38&amp;case=4821596325871821739&amp;scilh=0"><em>State
+            v. Bybee</em>, 131 Or App 492, 495, 884 P2d 906 (1994)</a>.
+            (2) Whether the report is based on the personal observations
+            of the informant. An officer may infer that the information
+            is based on the informant’s personal observations if the
+            information contains sufficient detail to infer that fact.
+            <em>Shumway</em>, 124 Or App at 136. (3) Whether the
+            officer’s own observations corroborated the informant’s
+            information. The officer may corroborate the report either
+            by observing the illegal activity or by finding the person,
+            the location, or the circumstances substantially as
+            described by the informant. <em>Bybee</em>, 131 Or App at
+            495.</p>
+            <p>The totality of the circumstances also includes what an
+            officer does not observe. If an officer observes activity
+            that contradicts an informant’s report, that contradiction
+            can weigh against a finding of reasonable suspicion. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hames,+223+Or+App+624,&amp;hl=en&amp;as_sdt=4,38&amp;case=3806709033203527970&amp;scilh=0"><em>State
+            v. Hames</em>,<em><span> </span></em>223 Or App 624, 635,
+            196 P3d 88 (2008)</a>. Thus, if the scene observed upon the
+            officer’s arrival is not “substantially as described by the
+            informant” that fact cuts against the reliability of the
+            report. <em>Id.</em></p>
+            <p><span id="content-of-informants-report"></span></p>
+            </section>
+            <section id="content_of_informants_report" class="level4">
+            <h4>2. Content of Informant’s Report</h4>
+            <p>The fact that a reliable report is made to police is not
+            alone sufficient to create reasonable suspicion; the court
+            must assess the report’s content to determine whether the
+            facts contained within it reasonably create a suspicion of
+            criminal activity. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lichty,+313+Or+579&amp;hl=en&amp;as_sdt=4,38&amp;case=17911499972723295231&amp;scilh=0"><span class="SpellE"><em>Lichty</em></span>,
+            313 Or at 585</a> (assessing separately whether informant
+            was reliable and whether her report established objective
+            reasonable suspicion).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Greer,+93+Or+App+409,+&amp;hl=en&amp;as_sdt=4,38&amp;case=17323417481288682364&amp;scilh=0"><em>State
+            v. Greer</em>, 93 Or App 409, 411-12, 763 P2d 158
+            (1988)</a><span class="MsoHyperlink">,</span> is
+            illustrative. In <em>Greer</em>, police received a citizen
+            report that two “suspicious people” were in a “suspicious
+            vehicle” at a fast-food restaurant’s drive-up window at 3:00
+            a.m. The business was closed, the restaurant and its
+            driveway were unlit, and no employees were present. The
+            responding officers knew that burglars sometimes gained
+            entry through drive-up windows. The <em>Greer</em> court
+            held that the informant’s tip, even if reliable, was
+            insufficient to establish reasonable suspicion because it
+            did not provide any specific and articulable facts that
+            would connect the defendant’s presence at the drive-up
+            window to criminal activity. “[T]he citizen informant’s
+            report that ‘two suspicious’ persons in a ‘suspicious’
+            vehicle were at that location did not supply a factual basis
+            for a stop; it merely alerted the police to the situation.”
+            93 Or App at 412; <em>see also</em> <a
+            href="https://scholar.google.com/scholar_case?case=8510759865209375076&amp;q=State+v.+Maciel-Figueroa,+361+Or+163&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Maciel</em></span><em>-Figueroa</em>,
+            361 Or at 184</a> (holding that an informant’s report did
+            not recite facts sufficient to give rise to reasonable
+            suspicion that the defendant had committed a crime).</p>
+            <p>Reasonable suspicion can also be based on an informant’s
+            conclusory report, but only if the conclusion is within the
+            common experience of the average citizen. <a
+            href="https://scholar.google.com/scholar_case?case=17911499972723295231&amp;q=State+v.+Lichty,+313+Or+579&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><span class="hyperlinkital">Lichty</span></span>,
+            313 Or</a> <span class="MsoHyperlink">at 581</span>. In
+            <span class="SpellE"><em>Lichty</em></span>, the defendant
+            argued that a witness’s statement to police, “I just found
+            [the defendant’s] wallet * * * a bag of coke fell out of
+            it,” could not establish reasonable suspicion because it was
+            conclusory. The court held that because “members of society
+            have a general knowledge regarding the appearance of
+            cocaine,” the informant’s statement was merely shorthand for
+            “[I] saw a transparent bag, small enough to be put in a
+            wallet, that contained a white powdery substance.”
+            <em>Id.</em> at 585. That statement combined with the
+            officer’s expertise concerning how illegal drugs are carried
+            amounted to reasonable suspicion. <em>Id.</em>; <em>see</em>
+            <a
+            href="https://scholar.google.com/scholar_case?case=4821596325871821739&amp;q=State+v.+Bybee,+131+Or+App+492&amp;hl=en&amp;as_sdt=6,38"><em>Bybee</em>,
+            131 Or App at 497</a> (“Because members of the general
+            public have a common knowledge about whether a person is
+            under the influence of alcohol, a statement from a named
+            informant, based on his own personal observations, that a
+            person is a ‘drunken driver’ is sufficient to establish
+            reasonable suspicion.’”); <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=108875164461458342&amp;q=State+v.+Goss,+219+Or+App+645&amp;hl=en&amp;as_sdt=6,38">Goss</a><a
+            href="https://scholar.google.com/scholar_case?case=108875164461458342&amp;q=State+v.+Goss,+219+Or+App+645&amp;hl=en&amp;as_sdt=6,38">,
+            219 Or App at 651 n 3</a> (same); <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Perrin,+143+Or+App+123,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15190969455175218919&amp;scilh=0"><em>State
+            v. Perrin</em>, 143 Or App 123, 128 n 3, 923 P2d 1249
+            (1996)</a> (same).</p>
+            <div class="bon-update">
+            <p><span id="update"></span></p>
+            </section>
+            </section>
+            <section id="update" class="level3">
+            <h3>2024 Update</h3>
+            <p>A 911 call reporting a dispute with a gun-possessing
+            suspect near a motel’s vending machines did not provide
+            reasonable suspicion to stop defendant and his visibly upset
+            companion, who were in a car in the motel parking lot near
+            the vending machines. <a
+            href="https://scholar.google.com/scholar_case?case=5425436045658145980&amp;q=State+v.+Cage,+324+Or+App+430&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cage</em>, 324 Or App 430</a> (March 8, 2023). The first
+            factor from <a
+            href="https://scholar.google.com/scholar_case?case=4821596325871821739&amp;q=State+v.+Bybee,+131+Or+App+492+(1994)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bybee</em>, 131 Or App 492 (1994)</a>—whether the
+            informant identified him or herself or was otherwise exposed
+            to liability for filing a false report—was “neutral.” The
+            informant did not provide his or her name to law enforcement
+            when making the report, did not greet the officers upon
+            arrival, and the officers did not identify the reporting
+            party before stopping defendant, even though police arrived
+            right away after receiving the call and reasonably believed
+            that the report had been made by a motel employee and that
+            the person would have been readily identifiable.</p>
+            <p>The second <em>Bybee</em> factor—whether report contained
+            sufficient detail to infer personal observations—was not
+            satisfied. A motel employee had made a report secondhand
+            from information that the employee had received from one
+            guest, the employee did not personally verify the report,
+            and the report did not contain any significant detail—simply
+            that <span>a dispute involving a firearm occurred near the
+            vending machines. Thus, t</span>he details provided to the
+            police were not “sufficient to show that neither the front
+            desk clerk nor the guests had likely fabricated the
+            report.</p>
+            <p>The third <em>Bybee</em> factor—whether the officer’s own
+            observations corroborated the informant’s information—was
+            not satisfied either. When the officer arrived shortly after
+            receiving the report, he observed two people sitting in a
+            car near the vending machines. But the report made no
+            mention of a vehicle, which could have arrived before,
+            during, or after the report. Neither the fact that one of
+            the occupants was evasive upon seeing the officer nor that
+            she had been crying, were sufficient to suggest that she had
+            been in a dispute with defendant <em>involving a
+            firearm</em>. Finally, the fact that defendant attempted to
+            conceal “something” under his shirt was not enough.</p>
+            <p>In summary, the officer “did not find ‘the person, the
+            vehicle, and the location <em><span>substantially as
+            described</span></em> by the informant’ when the informant
+            had made no mention of the parties involved in the dispute
+            or of a vehicle, the officers did not observe any parties in
+            a dispute, and the officers did not observe a firearm.”
+            <em>Id.</em> at 441 (emphasis in <a
+            href="https://scholar.google.com/scholar_case?case=5425436045658145980&amp;q=State+v.+Cage,+324+Or+App+430&amp;hl=en&amp;as_sdt=4,38"><em>Cage</em></a>).</p>
+            </div>
+            <p><span id="e.-if-an-officer-has-reasonable-suspicion-of-one-crime-can-the-officer-prolong-the-stop-to-investigate-another-crime-for-which-the-officer-lacks-reasonable-suspicion"></span></p>
+            </section>
+            <section
+            id="e._if_an_officer_has_reasonable_suspicion_of_one_crime_can_the_officer_prolong_the_stop_to_investigate_another_crime_for_which_the_officer_lacks_reasonable_suspicion"
+            class="level3">
+            <h3>E. If an officer has reasonable suspicion of one crime,
+            can the officer prolong the stop to investigate another
+            crime for which the officer lacks reasonable suspicion?</h3>
+            <p>Even when a stop is initially lawful, it may endure only
+            for the time it takes an officer to complete the parts of
+            the investigation that are reasonably related to the reasons
+            for the stop. <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+sherman&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2015&amp;case=14371026103231913242&amp;scilh=0"><em>State
+            v. Sherman</em> 74 Or App 764 (2015)</a>. “[A]n officer’s
+            reasonable suspicion about certain crimes <em>does not
+            justify</em> the officer’s extension of a stop to conduct an
+            investigation of another crime for which the officer does
+            not also have reasonable suspicion.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kentopp,+251+Or+App+527&amp;hl=en&amp;as_sdt=4,38&amp;case=14587709965932641963&amp;scilh=0"><em>State
+            v. <span class="SpellE">Kentopp</span></em>, 251 Or App 527,
+            534, 284 P3d 564 (2012)</a> (emphasis in original) (stating
+            that even if the court were to assume that the officer had
+            reasonable suspicion of unauthorized use of a motor vehicle,
+            that would not justify the extension of the traffic stop to
+            investigate a crime for which the officers did <em>not</em>
+            have reasonable suspicion—drug possession); <em>see
+            also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Pichardo,+263+Or+App+1,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15910566516243787452&amp;scilh=0"><em>State
+            v. Pichardo</em>, 263 Or App 1, 6, 326 P3d 624 (2014)</a>
+            (same).</p>
+            <p>Whether a reasonable relationship exists between the
+            officer’s questions and the nature of the stop is a lower
+            standard than reasonable suspicion. The state need only show
+            a “reasonable, circumstance-specific” relationship between
+            the question and the purpose of the stop. <a
+            href="https://scholar.google.com/scholar_case?q=State+v.+Pichardo,+360+Or+754&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004&amp;as_ylo=2017&amp;case=6680968529804607318&amp;scilh=0"><em>Pichardo</em></a>,
+            360 Or at 759-60.</p>
+            <p>That principal was also applied in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Klein,+234+Or+App+523,+&amp;hl=en&amp;as_sdt=4,38&amp;case=13377689248810584751&amp;scilh=0"><em>State
+            v. Klein</em>, 234 Or App 523, 228 P3d 714 (2010)</a>, where
+            the court held that although the officer developed
+            reasonable suspicion that the defendant possessed burglar’s
+            tools during the course of a valid traffic stop, the
+            officer’s inquiry about drugs “unconstitutionally extended
+            the duration of the stop as to either the traffic offense or
+            unlawful possession of burglary tools.” <em>Id.</em> at
+            532.</p>
+            <p><span id="f.-does-an-officer-need-to-rule-out-noncriminal-explanations-for-conduct-that-reasonably-appears-to-violate-the-law"></span></p>
+            </section>
+            <section
+            id="f._does_an_officer_need_to_rule_out_noncriminal_explanations_for_conduct_that_reasonably_appears_to_violate_the_law"
+            class="level3">
+            <h3>F. Does an officer need to rule out noncriminal
+            explanations for conduct that reasonably appears to violate
+            the law?</h3>
+            <p>The mere possibility that an activity may have a criminal
+            explanation is insufficient to give an officer justification
+            to seize a defendant or conduct a search if there are other,
+            more reasonable noncriminal explanations for the activity.
+            <em>See, e.g.</em>, [<a
+            href="https://scholar.google.com/scholar_case?case=12782449452189549402&amp;q=">https://scholar.google.com/scholar_case?case=12782449452189549402&amp;q=</a>.,+State+v.+Khoshnaw,+234+Or+App+24,&amp;hl=en&amp;as_sdt=6,38
+            <em>State v. <span class="SpellE">Khoshnaw</span></em>, 234
+            Or App 24, 33, 227 P3d 1188 (2010)] (finding that officer
+            had no reasonable suspicion to stop the defendant based on
+            possession of soda and chips by the defendant leaving a
+            convenience store despite testimony by the officer that
+            robbers “sometimes make purchases at convenience stores
+            before robbing them in order to see how much money is in the
+            till”). Thus, the more innocuous a particular fact, the less
+            likely that fact is to add weight to the reasonable
+            suspicion determination, and the more evidence the state
+            must put forth to show that the fact has criminal
+            significance. For example, even where an officer testified
+            that people engaged in criminal enterprises often use
+            prepaid cellular phones, the fact that defendant had two
+            prepaid cellular phones carried little weight because such
+            phones are readily available to both criminals and
+            <span class="SpellE">noncriminals</span>. <a
+            href="https://scholar.google.com/scholar_case?case=3291762891844745643&amp;q=State+v.+Maciel,+254+Or+App+530&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Maciel</span></em>, 254 Or App 530,
+            539, 295 P3d 145 (2013)</a>.</p>
+            <p>At the same time, an officer need not “eliminate all
+            possible lawful exceptions for conduct that reasonably
+            appears to violate the law.” <a
+            href="https://scholar.google.com/scholar_case?case=13092777611615082561&amp;q=State+v.+Bourget-Goddard,+164+Or+App+573,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Bourget-Goddard</em></a><span class="MsoHyperlink">, 164
+            Or App 573, 578, 993 P2d 814 (1999)</span> (internal
+            quotations and citations omitted) (so holding as to probable
+            cause). Nor must an officer “eliminate the possible
+            applicability of defenses or statutory exemptions that do
+            not describe a necessary element of the offense itself.”
+            <em>Id</em>.</p>
+            <p><span id="g.-reasonable-suspicion-summarized"></span></p>
+            </section>
+            <section id="g._reasonable_suspicion_summarized"
+            class="level3">
+            <h3>G. Reasonable Suspicion Summarized</h3>
+            <p>In summary, if a police officer is able to testify to
+            “specific and articulable facts” (based on his own
+            observations or the report of a reliable informant) and
+            those facts give rise to a reasonable inference that a
+            particular person has committed or is about to commit a
+            “<em>specific</em> crime or type of crime,” the officer has
+            “reasonable suspicion” and hence may stop the person to
+            investigate <em>that</em> crime. <a
+            href="https://scholar.google.com/scholar_case?q=State+v.+Maciel-Figueroa,+361+Or+163&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004&amp;as_ylo=2017&amp;case=8510759865209375076&amp;scilh=0"><span class="SpellE"><span class="InternetLink"><em><span>Maciel</span></em></span></span><span class="InternetLink"><em><span>-Figueroa</span></em></span></a><span class="MsoHyperlink">,
+            361 Or at 165, 182</span> (emphasis added); <a
+            href="https://scholar.google.com/scholar_case?case=1811479880070065323&amp;q=Martin,+260+Or+App&amp;hl=en&amp;as_sdt=6,38"><em>Martin</em></a><span class="MsoHyperlink">,
+            260 Or App at 469</span>.</p>
+            <p><span id="ii.-common-fact-patterns-that-do-not-justify-a-stop"></span></p>
+            </section>
+            </section>
+            <section
+            id="ii._common_fact_patterns_that_do_not_justify_a_stop"
+            class="level2">
+            <h2>II. Common Fact Patterns That Do Not Justify a Stop</h2>
+            <p><span id="a.-suspects-appearance-indicative-of-prolonged-drug-use"></span></p>
+            <section
+            id="a._suspects_appearance_indicative_of_prolonged_drug_use"
+            class="level3">
+            <h3>A. Suspect’s Appearance Indicative of Prolonged Drug
+            Use</h3>
+            <p><span class="MsoHyperlink"><em>State v. Heater</em>, 263
+            Or App 298, 328 P3d 714 (2014)</span> (holding that where
+            the defendant’s “overall demeanor” and “conversation style”
+            were consistent with prolonged drug use; the defendant’s
+            speech and movements were “erratic”; and the defendant was
+            not communicating in full sentences, the officer lacked
+            reasonable suspicion that the defendant possessed illegal
+            drugs at the time of the stop).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14587709965932641963&amp;q=State+v.+Kentopp,+251+Or+App+527,+&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Kentopp</em></span>,
+            251 Or App 527 (2012</a>) (reasoning that an officer’s
+            observation that the defendant’s gray, rotting teeth
+            <span class="GramE">were</span> indicative of past
+            methamphetamine use was not sufficient to support reasonable
+            suspicion of current drug possession).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Frias,+229+Or+App+60,+&amp;hl=en&amp;as_sdt=4,38&amp;case=16612416168808588450&amp;scilh=0"><em>State
+            v. Frias</em>, 229 Or App 60, 65, 210 P3d 914 (2009)</a>
+            (“Simply put, whatever the inference that could be
+            reasonably drawn about defendant’s past drug use, there was
+            no evidence of a current or imminent crime[.]”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Holcomb,+202+Or+App+73,&amp;hl=en&amp;as_sdt=4,38&amp;case=12805936430877587827&amp;scilh=0"><em>State
+            v. Holcomb</em>, 202 Or App 73, 121 P3d 13 (2005)</a>
+            (holding that an officer’s observation of a dirty, unkempt
+            woman dancing along the side of a highway with track marks
+            on her arms, but who was not presently intoxicated, was
+            insufficient to establish reasonable suspicion of present
+            drug possession and explaining that the state’s argument
+            “would effectively sanction
+            <span class="SpellE">nonparticularized</span>, status-based
+            stops of habitual drug users”).</p>
+            <p><span id="b.-associating-with-known-drug-users-or-dealers"></span></p>
+            </section>
+            <section
+            id="b._associating_with_known_drug_users_or_dealers"
+            class="level3">
+            <h3>B. Associating With Known Drug Users or Dealers</h3>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8944410010873019507&amp;q=State+v.+Heater,+263+Or+App+298&amp;hl=en&amp;as_sdt=6,38"><em>Heater</em>,
+            263 Or App at 306</a> (“We have squarely rejected the
+            proposition that a person’s association with an individual
+            involved with criminal drug activity is a basis for
+            reasonable suspicion of that person’s own involvement in
+            criminal drug activity.”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Wiggins,+262+Or+App+351&amp;hl=en&amp;as_sdt=4,38&amp;case=12094378132177145139&amp;scilh=0"><em>State
+            v. Wiggins</em>, 262 Or App 351, 362, 324 P3d 626 (2014)</a>
+            (stating that the circumstances established nothing more
+            than that the defendant, who had admitted to using drugs
+            months before the stop, was present in high drug-use areas
+            and was associating with others who had been or may have
+            been involved in drug-related activities. “If that were
+            sufficient to establish reasonable suspicion, we would be
+            effectively sanctioning
+            <span class="SpellE">nonparticularized</span> status-based
+            stops of individuals who have used drugs in the past”).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1104813128842634226&amp;q=State+v.+Bertsch,+251+Or+App+128,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Bertsch</em>, 251 Or App 128, 134, 284 P3d 502 (2012)</a>
+            (“It is not reasonable to conclude that a person is involved
+            in drug crimes because he or she is in the company of a
+            known drug user or dealer.”).</p>
+            <p><span id="c.-recent-drug-useintoxication-distinguishing-holdorf-from-kolb-and-farrar"></span></p>
+            </section>
+            <section
+            id="c._recent_drug_useintoxication_distinguishing_holdorf_from_kolb_and_farrar"
+            class="level3">
+            <h3>C. Recent Drug Use/Intoxication (Distinguishing Holdorf
+            from Kolb and Farrar)</h3>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kolb,+251+Or+App+303,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1608270981269958531&amp;scilh=0"><em>State
+            v. Kolb</em>, 251 Or App 303, 313-15, 283 P3d 423 (2012)</a>
+            (holding that an officer’s reasonable suspicion that a
+            defendant is presently under the influence of a controlled
+            substance does not permit a reasonable inference that the
+            defendant presently possesses a controlled substance).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Farrar,+252+Or+App+256,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11770994420078131195&amp;scilh=0"><em>State
+            v. Farrar</em>, 252 Or App 256, 260-61, 287 P3d 1124
+            (2012)</a>: The defendant was fumbling through documents,
+            fidgety, extremely nervous, and showed symptoms of bruxism,
+            all of which the officer had learned through “training and
+            experience” was indicative of methamphetamine use. The
+            officer also testified that “people that show symptoms of
+            the use of methamphetamine will usually have some sort of
+            way to use the drug, needles, snort tubes, etcetera * * * or
+            possibly have more methamphetamine in the vehicle.”<span> 
+            </span></p>
+            <p>The court found that present use was insufficient to
+            establish a reasonable inference of present possession:</p>
+            <div class="blockquote">
+            <p>“Even if the officer correctly concluded that defendant’s
+            behavior was consistent with methamphetamine use, his
+            subjective belief—that defendant’s methamphetamine use
+            provided a sufficient basis for concluding that she
+            presently possessed methamphetamine—was not objectively
+            reasonable.”</p>
+            </div>
+            <p><em>Id.</em> at 261. <a
+            href="file:///C:/Users/jennifer/Documents/Publications/S&amp;S%20Manual/%202014%20edition%20/august%202014%20chapters%20from%20Ryan%20/2.%20warrantless%20seizures/final%20versions%209.4-8.14/2-a%20stops-criminal/v"><em>State
+            v. <span class="SpellE">Holdorf</span></em>, 355 Or 812,
+            829, 333 P3d 982 (2014)</a>: Finding reasonable suspicion
+            that the “defendant committed the crime of possession of
+            methamphetamine where the defendant was actively “tweaking”
+            on methamphetamines and riding with a known felon who had an
+            outstanding warrant and who was under investigation as a
+            suspect in a local methamphetamine distribution ring.</p>
+            <p>The court in <span class="SpellE"><em>Holdorf</em></span>
+            framed the inquiry as follows:</p>
+            <div class="blockquote">
+            <p>“Was [the officer’s] observation that [the] defendant
+            appeared to be under the influence of methamphetamine, based
+            on his training and experience, together with other
+            information on which the officer properly relied, sufficient
+            to establish a reasonable suspicion that [the] defendant had
+            or was about to commit a crime?”</p>
+            </div>
+            <p><em>Id</em>. at 825. Consequently,
+            <span class="SpellE"><em>Holdorf</em></span> should not be
+            interpreted as destroying either of the two bedrock
+            principles of Court of Appeals case law: (1) mere
+            association with drug dealers and users alone is
+            insufficient to establish reasonable suspicion; (2) present
+            intoxication alone is insufficient to establish reasonable
+            suspicion of possession.</p>
+            <p>In <span class="SpellE"><em>Holdorf</em></span>, the
+            court wrote at length about the significance of the
+            information the police had gathered about the defendant’s
+            companion. And when that information was combined with the
+            defendant’s present intoxication, the court concluded that
+            the officer had reasonable suspicion that the defendant
+            “committed the crime of possession.”</p>
+            <p>It may be that enough law-abiding citizens interact with
+            drug users and dealers (possibly in efforts to help them
+            change their ways) that the appellate courts have refused to
+            find reasonable suspicion based on mere association alone.
+            But <span class="SpellE"><em>Holdorf</em></span> suggests
+            that when a person is riding in a car with a drug dealer and
+            the person is visibly under the influence of
+            methamphetamines, it is reasonable to conclude that the
+            person possesses methamphetamine or did so in the very
+            recent past.</p>
+            <p>Although the Court of Appeals found that inference unduly
+            speculative, <span class="SpellE"><em>Holdorf</em></span>
+            may be limited to the following proposition: when a person
+            is tweaking on methamphetamine and riding in a car with a
+            reputed methamphetamine dealer, it is reasonable to infer
+            that the intoxicated person has recently purchased or
+            possessed methamphetamine.</p>
+            <p><span id="d.-nervousness-or-evasive-action"></span></p>
+            </section>
+            <section id="d._nervousness_or_evasive_action"
+            class="level3">
+            <h3>D. Nervousness or Evasive Action</h3>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Meza-Garcia,+256+Or+App+798,+&amp;hl=en&amp;as_sdt=4,38&amp;case=8141344109053260175&amp;scilh=0"><em>State
+            v. Meza-Garcia</em><strong><span>,</span></strong> 256 Or
+            App 798, 804, 303 P3d 975 (2013)</a> (stating that a
+            defendant’s nervousness “adds little, if any, weight toward
+            reasonable suspicion”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Espinoza-Barragan,+253+Or+App+743,&amp;hl=en&amp;as_sdt=4,38&amp;case=5315514213784580140&amp;scilh=0"><em>State
+            v. Espinoza-Barragan</em>, 253 Or App 743, 750, 293 P3d 1072
+            (2012)</a>:</p>
+            <div class="blockquote">
+            <p>“[N]<span class="SpellE">ervousness</span> during a
+            traffic stop contributes little, if any, weight toward
+            reasonable suspicion that the driver is engaged in criminal
+            activity. As we held in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Berry,+232+Or+App+612,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6270811507878641253&amp;scilh=0"><em>State
+            v. Berry</em>, 232 Or App 612, 618, 222 P3d 758 (2009)</a> *
+            * * , ‘[T]here is nothing inherently suspicious about * * *
+            being nervous when pulled over by a police officer,
+            particularly at [a very early morning] hour.’
+            <span class="hyperlinkital">S</span><a
+            href="https://scholar.google.com/scholar_case?case=12694214796730047218&amp;q=Juarez%E2%80%93Godinez,+135+Or+App&amp;hl=en&amp;as_sdt=6,38">tate
+            v. Juarez–Godinez, 135 Or App 591, 607, 900 P2d 1044
+            (1995)</a>, <em>aff’d on other grounds,</em> <a
+            href="https://scholar.google.com/scholar_case?case=7895236840933680238&amp;q=State+v.+Espinoza-Barragan,+253+Or+App+743,&amp;hl=en&amp;as_sdt=4,38&amp;scilh=0">326
+            Or 1, 942 P2d 772 (1997)</a> (the defendant’s nervous
+            reaction to officer’s questioning did not, alone or in
+            combination with other factors, give rise to reasonable
+            suspicion of drug trafficking).”</p>
+            </div>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=16612416168808588450&amp;q=State+v.+Frias,+229+Or+App+60&amp;hl=en&amp;as_sdt=6,38"><em>Frias</em>,
+            229 Or App at 65-66</a> (holding no reasonable suspicion
+            where the defendant became “evasive” when questioned about
+            why he had been visiting his friend and “hemmed and hawed”
+            before finally answering; the court noted that the
+            “defendant’s evasive reaction to questioning that he [was]
+            constitutionally entitled to refuse to answer” did not,
+            combined with knowledge of the defendant’s previous drug
+            use, provide reasonable suspicion of current drug use”).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14587709965932641963&amp;q=State+v.+Kentopp,+251+Or+App+527,+&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Kentopp</em></span></a><span class="MsoHyperlink">,
+            251 Or App at 532</span> (stating that the defendant’s “(1)
+            furtive movements; (2) nervous demeanor; (3) gray, rotting
+            teeth; (4) conduct consistent with trying to flee the scene;
+            (5) failure to have registration and proof of insurance for
+            the car that he was driving; and (6) statement that he was
+            borrowing the car from another person” were insufficient to
+            give rise to a reasonable suspicion that the defendant
+            possessed drugs).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12694214796730047218&amp;q=Juarez%E2%80%93Godinez,+135+Or+App&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Juarez–Godinez</em></a><span class="MsoHyperlink">, 135
+            Or App 591, 607, 900 P2d 1044 (1995)</span> (holding that
+            officer lacked reasonable suspicion where the defendant,
+            among other things, was “visibly nervous, turning pale,
+            agitated, perspiring, and
+            exhibit[<span class="SpellE">ing</span>] furtive eye
+            movements”).</p>
+            <p><span id="e.-entering-premises-known-to-be-associated-with-drug-activity"></span></p>
+            </section>
+            <section
+            id="e._entering_premises_known_to_be_associated_with_drug_activity"
+            class="level3">
+            <h3>E. Entering Premises Known to be Associated With Drug
+            Activity</h3>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bertsch,+251+Or+App+128,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1104813128842634226&amp;scilh=0"><em>Bertsch</em>,
+            251 Or App at 134</a> (concluding that police did not have
+            reasonable suspicion that the defendant possessed drugs
+            merely because the defendant was visiting an apartment
+            building suspected of drug activity, the defendant left the
+            apartment shortly after arriving, and the defendant was
+            accompanied by a person known to associate with drug dealers
+            and drug users).</p>
+            <p><span class="hyperlinkital">State v.
+            Rutledge</span><span class="MsoHyperlink">, 243 Or App 603,
+            610, 260 P3d 532 (2011)</span> (holding that facts were
+            insufficient to justify reasonable suspicion where the
+            defendant “had just left a motel that the police believed
+            was involved in drug <span class="GramE">activity,
+            [and]</span> was in a car with a person suspected of drug
+            activity”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Zumbrum,+221+Or+App+362,+&amp;hl=en&amp;as_sdt=4,38&amp;case=17453827287478046968&amp;scilh=0"><em>State
+            v. <span class="SpellE">Zumbrum</span></em>, 221 Or App 362,
+            364-70, 189 P3d 1235 (2008)</a> (stating that although the
+            defendant was present in the same apartment as a person who
+            participated in “mid- to upper-level drug deals,” that the
+            apartment was located in a “high-crime area,” and that the
+            apartment was the subject of tips about illegal drug
+            activity, those facts did not “tell [the court] whether
+            [the] defendant * * * was involved in criminal
+            activity”).</p>
+            <p><span id="f.-presence-in-high-crime-area-of-the-city"></span></p>
+            </section>
+            <section id="f._presence_in_high_crime_area_of_the_city"
+            class="level3">
+            <h3>F. Presence in High-Crime Area of the City</h3>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Acuna,+264+Or+App+&amp;hl=en&amp;as_sdt=4,38&amp;case=18090917615073723553&amp;scilh=0"><em>State
+            v. Acuna</em>, 264 Or App 158 168, 331 P3d 1040 (2014)</a>
+            (“As an initial matter, that [the] defendant was present in
+            an area known for drug activity is of little relevance; a
+            person’s presence in a high-crime area does not alone
+            justify reasonable suspicion.”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Martin,+260+Or+App+461&amp;hl=en&amp;as_sdt=4,38&amp;case=1811479880070065323&amp;scilh=0"><em>Martin</em>,
+            260 Or App at 472-73</a> (“Evidence that a person is in a
+            high-crime area, is engaged in ambiguous conduct, and
+            appears to want to avoid police observation does not give
+            rise to reasonable suspicion to stop the person.”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Moya,+97+Or+App+375&amp;hl=en&amp;as_sdt=4,38&amp;case=13407711175755247101&amp;scilh=0"><em>State
+            v. Moya</em>, 97 Or App 375, 775-77 P2d 927 (1989)</a>:
+            Although the defendant was in an area of “intense” drug
+            activity and parked in front of a location nicknamed the
+            “Heroin Hotel”:</p>
+            <div class="blockquote">
+            <p>“[t]here is nothing inherently suspicious about parking
+            in or ‘frequenting’ such an area. The location of [the]
+            defendant’s car and her earlier presence in the area may
+            have assumed heightened significance had the officers
+            noticed any other indications of likely criminal activity.
+            However, the officers did not see any drugs or drug
+            paraphernalia before stopping her. There is nothing
+            remarkable about examining something in one’s hands,
+            appearing startled at a sudden confrontation with the police
+            or denying the suggestion that one is involved in
+            wrongdoing.”</p>
+            </div>
+            <p><em>Id</em>. at 378. Therefore, the officers lacked
+            objectively reasonable suspicion to stop the defendant. <a
+            href="https://web2.westlaw.com/find/default.wl?mt=StateGovernment&amp;rs=WLW14.04&amp;tc=-1&amp;rp=%2ffind%2fdefault.wl&amp;findtype=Y&amp;ordoc=2032457823&amp;serialnum=1989097594&amp;vr=2.0&amp;fn=_top&amp;sv=Split&amp;tf=-1&amp;pbc=EAD2754C&amp;utid=3"><em><span>Id</span></em><span>.</span></a></p>
+            <p><span id="g.-officer-subjectively-believes-that-the-defendant-engaged-in-a-drug-transaction"></span></p>
+            </section>
+            <section
+            id="g._officer_subjectively_believes_that_the_defendant_engaged_in_a_drug_transaction"
+            class="level3">
+            <h3>G. Officer Subjectively Believes that the Defendant
+            Engaged in a Drug Transaction</h3>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Loud,+149+Or+App+250,+&amp;hl=en&amp;as_sdt=4,38&amp;case=2853079054532876873&amp;scilh=0"><em>State
+            v. Loud</em>, 149 Or App 250, 942 P2d 814 (1997)</a>:
+            Officers observed an individual pacing on the street corner
+            in front of a known drug house for two hours attempting to
+            wave down passing cars, which led the officer to suspect
+            that the individual was selling drugs. <em>Id.</em> at 252.
+            At 1:45 a.m., the defendant parked his car, honked his horn,
+            and turned off his headlights. <em>Id.</em> The individual
+            who had been pacing on the street corner in front of the
+            drug house approached the car and leaned into the driver’s
+            side window for approximately one minute, such that the
+            officers could not tell whether the individual and the
+            defendant were conducting a hand-to-hand exchange.
+            <em>Id.</em> The suspected drug dealer stepped away from the
+            car and the defendant sped away. <em>Id.</em></p>
+            <p>The Court of Appeals held that the “defendant’s brief
+            visit with a suspicious but unidentified person in an area
+            known for drug sales” did not give rise to reasonable
+            suspicion that the defendant was engaged in criminal
+            activity. <em>Id.</em> at 254.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Aguilar,+139+Or+App+175&amp;hl=en&amp;as_sdt=4,38&amp;case=13515880557127620797&amp;scilh=0"><em>State
+            v. Aguilar</em>, 139 Or App 175, 912 P2d 379 (1996)</a>:
+            Five weeks prior to the stop at issue, an officer witnessed
+            Stephens, the suspected operator of a drug house, get into a
+            car that was parked in front of his drug house. Stephens got
+            out after one minute and then ran back into the house.
+            <em>Id.</em> at 177-78. The officer stopped the car after it
+            pulled away from the drug house, and the driver admitted
+            that he had just sold cocaine and heroin to Stephens.
+            <em>Id.</em> at 177.</p>
+            <p>Five weeks later, the same officer observed the defendant
+            get into a car parked in front of Stephens’s drug house.
+            <em>Id.</em> “As [the defendant’s] car pulled away from the
+            curb * * * a <span class="GramE">[ ]</span> man, whom [the
+            officer] believed to be Stephens, the reputed operator of
+            the drug house, jog[<span class="SpellE">ged</span>] from
+            the area where the car had been parked, up the stairs, and
+            into the suspected drug house.” <em>Id.</em> “[The officer]
+            did not see any contact between the two men.”
+            <em>Id.</em></p>
+            <p>The officer suspected that a drug transaction had just
+            occurred. He stopped the defendant’s vehicle for a traffic
+            infraction and extended the stop to investigate the
+            suspected drug transaction. <em>Id.</em> at 177-78, 181. The
+            Court of Appeals held that the objective facts recited by
+            the officer failed to establish reasonable suspicion needed
+            to extend the traffic stop:</p>
+            <div class="blockquote">
+            <p>“We * * * do not believe defendant’s proximity to the
+            [drug] house combined with [the officer’s] belief that the
+            man seen running from the curb into the house was Stephens,
+            the purported operator of the drug house, provided
+            reasonable suspicion to believe that defendant had committed
+            a drug-related offense.”</p>
+            </div>
+            <p><em>Id.</em> at 183. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+King,+67+Or+App+749&amp;hl=en&amp;as_sdt=4,38&amp;case=10051307607383301156&amp;scilh=0"><em>State
+            v. King</em>, 67 Or App 749, 680 P2d 10 (1984)</a>: Officers
+            observed two cars parked door to door in a secluded area of
+            a freeway rest stop. <em>Id.</em> at 752. The officers knew
+            that there had been instances of drug use in the rest area.
+            <em>Id.</em> Two men in their early twenties were sitting in
+            one of the cars. The other car was unoccupied. The officers
+            observed the defendant get out of the occupied car and walk
+            to the vacant car carrying a brown paper bag, which could
+            have contained drugs. <em>Id.</em> The officers subjectively
+            believed that they had just witnessed a “drug buy.”
+            <em>Id.</em> The police stopped the defendant and obtained
+            an admission that the bag contained drugs. <em>Id.</em> at
+            751. The Court of Appeals concluded that those facts failed
+            to establish an objectively reasonable suspicion of a drug
+            transaction. <em>Id.</em></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jacobs,+187+Or+App+330,&amp;hl=en&amp;as_sdt=4,38&amp;case=3566989643457543726&amp;scilh=0"><em>State
+            v. Jacobs</em>, 187 Or App 330, 67 P3d 408 (2003)</a>:
+            <strong>' Officers were driving through downtown Salem, a
+            “high drug traffic area,” when they saw three men “huddled
+            together” near an automated teller machine. They were
+            looking around “in a nervous manner” when the defendant
+            passed what looked like money to one of the others. The
+            officers suspected that a drug transaction was occurring, so
+            they approached the men and said, “[I]t looks like you guys
+            just did a drug deal.” The defendant denied the accusation.
+            One of the officers searched the defendant and found a
+            plastic bag containing marijuana.</strong>'</p>
+            <p>The court held that there was “no evidence that the
+            specific location was a site of continuous, hand-to-hand
+            drug traffic. There is only a vague reference to the
+            entirety of downtown Salem as a ‘high drug traffic area.’”
+            <em>Id.</em> at 335. The court continued, holding,
+            “furtiveness in the act of engaging in what may nevertheless
+            be entirely lawful conduct does not establish an objectively
+            reasonable basis for a belief that a crime has been
+            committed.” <em>Id.</em> at 336.</p>
+            <p><span id="h.-religious-symbols"></span></p>
+            </section>
+            <section id="h._religious_symbols" class="level3">
+            <h3>H. Religious Symbols</h3>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Maciel,+254+Or+App+530,+&amp;hl=en&amp;as_sdt=4,38&amp;case=3291762891844745643&amp;scilh=0"><span class="SpellE"><em>Maciel</em></span>,
+            254 Or App at 538</a> (declining to consider a “Christian
+            necklace * * <span class="GramE">*<span>  </span>[</span>and
+            the officer’s] experience [that] ‘people transporting
+            narcotics often have certain religious symbols hanging in
+            their vehicle[]’ because of the <em>serious constitutional
+            concerns</em> raised by reliance on such evidence.”)
+            (emphasis added).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+De+La+Rosa,+228+Or+App+666&amp;hl=en&amp;as_sdt=4,38&amp;case=2910996519929221448&amp;scilh=0"><em>State
+            v. De La Rosa<span>,</span></em> 228 Or App 666, 674 n 2,
+            208 P3d 1012 (2009)</a> (declining to consider observation
+            of a “Jesus <span class="SpellE">Malverde</span>” medallion,
+            despite “detailed testimony” regarding the significance of
+            that medallion to drug dealers).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Alvarado,+257+Or+App+612&amp;hl=en&amp;as_sdt=4,38&amp;case=11556398664954304739&amp;scilh=0"><em>State
+            v. Alvarado</em>, 257 Or App 612, 628, 307 P3d 540
+            (2013)</a> (declining to consider the defendant’s religious
+            symbol in the reasonable suspicion analysis).<span> 
+            </span></p>
+            <p><span id="i.-air-fresheners"></span></p>
+            </section>
+            <section id="i._air_fresheners" class="level3">
+            <h3>I. Air Fresheners</h3>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8141344109053260175&amp;q=State+v.+Meza-Garcia,+256+Or+App+798,&amp;hl=en&amp;as_sdt=6,38"><em>Meza-Garcia</em>,
+            256 Or App at 806</a>: Where an officer smelled a strong
+            odor of air freshener that had no visible source and
+            testified that “vehicles that transport illegal narcotics
+            attempt many means to mask any odors that could be
+            potentially detected by police canines” those facts neither
+            alone nor in combination with other circumstances establish
+            reasonable suspicion of drug activity.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12694214796730047218&amp;q=Juarez%E2%80%93Godinez,+135+Or+App&amp;hl=en&amp;as_sdt=6,38"><em>Juarez–Godinez</em>,
+            135 Or App at, 606-07</a> (explaining that facts, including
+            “heavy odor of air freshener in the vehicle,” did not give
+            rise to reasonable suspicion of drug-related criminal
+            activity (internal quotation marks omitted)).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=11556398664954304739&amp;q=State+v.+Alvarado,+257+Or+App+612,+&amp;hl=en&amp;as_sdt=6,38"><em>Alvarado</em>,
+            257 Or App at 628</a> (officer lacked reasonable suspicion
+            where defendant’s vehicle contained numerous air fresheners,
+            two bottles of cologne, and smelled strongly of both;
+            defendant had “religious symbols” in his vehicle; defendant
+            had an open energy drink; defendant was traveling with both
+            a cell phone and a pager; during his conversation with
+            Turner, defendant looked down at his cell phone; defendant
+            moved the pager to his glove box; defendant became nervous
+            when asked about the presence of drugs).</p>
+            <p><span id="j.-implausible-or-bizarre-story"></span></p>
+            </section>
+            <section id="j._implausible_or_bizarre_story"
+            class="level3">
+            <h3>J. Implausible or Bizarre Story</h3>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=3291762891844745643&amp;q=State+v.+Maciel,+254+Or+App+530,&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Maciel</em></span>,
+            254 Or App at 540:</a> The following did not create
+            reasonable suspicion of drug activity:</p>
+            <div class="blockquote">
+            <p>“Defendant left Woodburn in an unspecified car and drove
+            to Oakland to visit Junior. While in Oakland, defendant
+            decided that he wanted to buy the vehicle in which he was
+            stopped, and Junior introduced defendant to
+            <span class="SpellE">Monzo</span> on a street corner. There,
+            defendant ‘bought’ the vehicle and, leaving his original car
+            in Oakland, began driving back to Woodburn on a “test drive”
+            of approximately 600 miles. Defendant had no contact
+            information for <span class="SpellE">Monzo</span>, had no
+            idea how he would reclaim his other car, had no idea how he
+            would send <span class="SpellE">Monzo</span> payment, and
+            had not agreed to a purchase price for the vehicle.”</p>
+            </div>
+            <p>Although “certainly suspicious,” the state offered no
+            evidence to connect the defendant’s “bizarre story” with the
+            crime of drug trafficking.</p>
+            <p><em>Alvarado</em>, 257 Or App at 628-29: The defendant’s
+            story that he was “going to Pendleton to pay his cousin’s
+            taxes—may be unusual, but it does not suggest criminal
+            activity; Pendleton is a county seat, and people pay taxes
+            there. The state offers no explanation of the connection, if
+            any, between these facts and the crime of drug
+            trafficking”).<br />
+            <br />
+            </p>
+            <p><span id="k.-lack-of-luggage"></span></p>
+            </section>
+            <section id="k._lack_of_luggage" class="level3">
+            <h3>K. Lack of Luggage</h3>
+            <p><span class="SpellE"><em>Maciel</em></span>, 254 Or App
+            at 540 (“Regarding the lack of visible luggage, we have on
+            several occasions held that a lack of visible luggage adds
+            nothing to the reasonable suspicion inquiry if luggage may
+            have readily been stored out of the officer’s plain view.
+            Because the officer could not have seen into the trunk, ‘the
+            lack of visible luggage in no way affects our reasonable
+            suspicion analysis.’”).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8141344109053260175&amp;q=State+v.+Meza-Garcia,+256+Or+App+798,+&amp;hl=en&amp;as_sdt=6,38"><em>Meza-Garcia</em>,
+            256 Or App at 805</a><span class="MsoHyperlink">
+            </span>(“[T]he absence of luggage in a vehicle is of no
+            consequence where the luggage may have been stored out of
+            plain view.”).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=5315514213784580140&amp;q=State+v.+Espinoza-Barragan,+253+Or+App+743&amp;hl=en&amp;as_sdt=6,38"><em>Espinoza-Barragan</em>,
+            253 Or App at 752</a> (“An officer cannot conclude that a
+            driver is not carrying any luggage if the officer does not,
+            or cannot, look into places in the driver’s vehicle that are
+            likely to hold luggage.”).</p>
+            <p><em>Juarez–Godinez</em>, 135 Or App at 607, <em>aff’d on
+            other grounds</em>, 326 Or 1, 942 P2d 772 (1997) (“The lack
+            of visible luggage also adds nothing, because, with three
+            adults riding in the vehicle, any luggage would likely have
+            been placed in the trunk.”).</p>
+            <p><span id="l.-conduct-consistent-with-criminal-activity"></span></p>
+            </section>
+            <section id="l._conduct_consistent_with_criminal_activity"
+            class="level3">
+            <h3>L. Conduct “Consistent” With Criminal Activity</h3>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1811479880070065323&amp;q=State+v.+Martin,+260+Or+App+461&amp;hl=en&amp;as_sdt=6,38"><em>Martin</em>,
+            260 Or App at 469-70</a> (“An officer may not stop a person
+            simply because the person’s conduct is consistent with
+            criminal conduct; the nature of the conduct
+            matters.”).<br />
+            <br />
+            </p>
+            <p><em>Alvarado</em>, 257 Or App at 628-29: For three
+            reasons the state argued that the totality of the
+            circumstances <span class="GramE">were</span> consistent
+            with the transportation of narcotics: “(1) the car defendant
+            was driving was owned by somebody else; (2) defendant was
+            carrying a cell phone and a pager; and (3) the car contained
+            multiple air fresheners and two bottles of cologne.” The
+            Court of Appeals explained,</p>
+            <div class="blockquote">
+            <p>“[A] set of facts will not always create a reasonable
+            suspicion just because those facts are consistent with, but
+            do not necessarily suggest, a crime being committed. Wearing
+            clothing while driving, to use an extreme example, is also
+            consistent with the transportation of narcotics. Less
+            extremely, so too (for all we know) is wearing cologne. This
+            consistency, however, would not be enough to support
+            reasonable suspicion. <em>See State v.
+            <span class="SpellE">Maciel</span></em>, 254 Or App 530,
+            540, 295 P3d 145, (2013) (holding that notwithstanding
+            officer’s testimony that people engaged in criminal
+            enterprises often use prepaid cellular phones, the presence
+            of two prepaid cellular phones carried little weight because
+            such phones can be easily lawfully acquired by criminals and
+            <span class="SpellE">noncriminals</span> alike).”</p>
+            </div>
+            <p><em>Id.</em> at 629.</p>
+            <p><span id="m.-officer-lacks-sufficient-basis-to-draw-an-adverse-inference"></span></p>
+            </section>
+            <section
+            id="m._officer_lacks_sufficient_basis_to_draw_an_adverse_inference"
+            class="level3">
+            <h3>M. Officer Lacks Sufficient Basis to Draw an Adverse
+            Inference</h3>
+            <p><em>Espinoza-Barragan</em>, 253 Or App at 752 (“An
+            officer cannot conclude that a driver is not carrying any
+            luggage if the officer does not, or cannot, look into places
+            in the driver’s vehicle that are likely to hold luggage.”);
+            <em>see also</em> Chapter 2(a)(2)(j) (more lack of luggage
+            cases).</p>
+            <p><span id="n.-refusal-to-cooperate-or-assertion-of-constitutional-rights"></span></p>
+            </section>
+            <section
+            id="n._refusal_to_cooperate_or_assertion_of_constitutional_rights"
+            class="level3">
+            <h3>N. Refusal to Cooperate, or Assertion of Constitutional
+            Rights</h3>
+            <p>“A person’s assertion of a constitutional right cannot
+            support a reasonable suspicion of criminal activity.” <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+rutledge&amp;hl=en&amp;as_sdt=4,38&amp;case=3528575485951700698&amp;scilh=0"><span class="hyperlinkital">State
+            v. Rutledge</span>, 243 Or App 603, 610, 260 P3d 532
+            (2011)</a>.</p>
+            <p>A defendant tightly clutching her purse and refusing a
+            search manifested a desire to protect the privacy of the
+            item and, as such, was an assertion of her constitutional
+            rights. <a
+            href="http://www.publications.ojd.state.or.us/docs/A147777.pdf"><span class="hyperlinkital">State
+            v Barker</span></a><span class="MsoHyperlink">,</span>
+            <u><span class="MsoHyperlink">271 Or App 63
+            (2015)</span></u>.</p>
+            <p>“[T]he fact that defendant closed her purse and pulled it
+            away from the officers could not support probable cause to
+            believe that she had committed a crime. By that act,
+            defendant exhibited her intention to protect the privacy of
+            her purse. The assertion of a constitutionally protected
+            right against warrantless searches cannot be a basis for
+            such a search.” <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+lavender&amp;hl=en&amp;as_sdt=4,38&amp;case=10826712829694451157&amp;scilh=0"><span class="hyperlinkital">State
+            v. Lavender</span>, 93 Or App 361, 764 P2d 1027
+            (1988)</a>.</p>
+            <p>When an individual seeks to protect an item and openly
+            asserts his or her privacy rights, that behavior and
+            assertion is neither innately shifty nor sinister—rather, it
+            is constitutionally protected. <a
+            href="http://www.publications.ojd.state.or.us/docs/A147777.pdf"><span class="hyperlinkital">State
+            v Barker</span></a><span class="MsoHyperlink">, 271 Or App
+            63, 348 P3d 1138 (2015)</span>.
+            <span class="GramE">And,</span>
+            “[a]<span class="SpellE">llowing</span> the police to
+            conduct a search on the basis of the assertion of a privacy
+            right would render the so-called right nugatory.” <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+brown+110+Or+app+604&amp;hl=en&amp;as_sdt=4,38&amp;case=5269997015334060773&amp;scilh=0"><span class="hyperlinkital">State
+            v. Brown</span>, 110 Or App 604, 611, 825 P2d 282
+            (1992)</a><u>.</u></p>
+            <p>Although furtive behavior may contribute to probable
+            cause, asserting a constitutionally protected privacy right
+            cannot. <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+gressel&amp;hl=en&amp;as_sdt=4,38&amp;case=9700507053841398282&amp;scilh=0"><span class="hyperlinkital">State
+            v. <span class="SpellE">Gressel</span></span>, 276 Or 333,
+            339, 554 P2d 1014 (1976)</a> (“[A] suspicion, however well
+            founded, having been aroused merely on the basis of an
+            assertion of one’s constitutional rights [not to be
+            searched], can play no part in creating probable cause for a
+            search.”); <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+farrar&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2012&amp;case=11770994420078131195&amp;scilh=0"><em>State
+            v. Farrar</em>, 252 Or App 256, 262, 287 P3d 1124 (2012)</a>
+            (the defendant’s refusal to consent to a search of her purse
+            did not contribute to establishing reasonable suspicion); <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+medinger&amp;hl=en&amp;as_sdt=4,38&amp;case=11431238308393177306&amp;scilh=0"><em>State
+            v. <span class="SpellE">Medinger</span></em>, 235 Or App 88,
+            94, 230 P3d 76 (2010)</a> (the defendant’s refusal to answer
+            the officer’s questions was not “strange” or “furtive”;
+            rather, it was the exercise of a constitutionally protected
+            right, and therefore did not affect the probable cause
+            analysis); and <a
+            href="https://scholar.google.com/scholar_case?q=state+v.+wise&amp;hl=en&amp;as_sdt=4,38&amp;case=14372543263595642803&amp;scilh=0"><em>State
+            v. Wise</em>, 72 Or App 58, 62 n 3, 695 P2d 68 (1985)</a>
+            <u></u> (“A refusal to consent to a search cannot aid in
+            showing probable cause for a search.”).</p>
+            </section>
+            </section>
+    </body>
+</html>

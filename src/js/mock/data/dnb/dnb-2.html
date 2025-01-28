@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>2020 edition</p>
+            <section id="you_and_your_client" class="level1">
+            <h1><strong>You and Your Client</strong></h1>
+            <p><strong><em>By Anna Sammons and Max
+            Mizejewski</em></strong></p>
+            <p>This chapter is dedicated to the late John “JP” Powers,
+            who passed away from Acute Myeloid Leukemia in early 2017.
+            He joined the Oregon State Bar in September of 1974 as one
+            of the youngest individuals ever admitted to the practice of
+            law in Oregon, and owned his own law practice in Portland
+            specializing in DUII defense. According to his <a
+            href="http://www.never-gone.com/memorials/johnpowers">obituary</a>,
+            JP looked for ways to help his clients “find serenity in
+            their lives in a much broader sense, including through
+            introduction to AA. He often quietly extended his generosity
+            without any expectation of recognition, fanfare, or payment.
+            JP’s kindness extended in every direction to those fortunate
+            enough to meet him.”<a href="#fn1" class="footnote-ref"
+            id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+            <p><em>“The good physician treats the disease; the great
+            physician<br />
+            treats the patient who has the disease.”</em></p>
+            <p>—<em>William Osler</em></p>
+            </section>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>John Powers, who authored the original version of this
+            chapter some years ago, noted that more people are arrested
+            for DUII than any other crime. He speculated that everyone
+            who practices criminal law eventually represents someone
+            accused of it. A number of remarkable <a
+            href="https://www.bactrack.com/blogs/expert-center/35040645-DUII-statistics">statistics</a>
+            regarding the prevalence of drunk driving support his
+            conjecture.<a href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a></p>
+            <ul>
+            <li><blockquote>
+            <p>Approximately 1.5 million people are arrested every year
+            for driving under the influence of alcohol and/or drugs.
+            That means every year one out of every 121 licensed drivers
+            is arrested for DUII.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>On average, a person convicted of DUII has driven over
+            the legal limit 80 times before his or her first arrest. The
+            obvious implication of this statistic is that huge numbers
+            of people have driven under the influence of alcohol and/or
+            drugs at some point in their lives and made it home safely
+            and without being arrested.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>About one in three Americans will be involved in a
+            DUII-related crash during their lifetimes.</p>
+            </blockquote></li>
+            </ul>
+            <p>DUII cases cut across all social classes and, as anyone
+            who has conducted a voir dire in a DUII trial can attest,
+            drunk or otherwise impaired driving touches virtually
+            everyone’s life. The optimist will interpret these
+            statistics as a reason to expand their DUII practice—look at
+            all the potential clients! But what is the best way to
+            approach this population?</p>
+            <p>The Powers Principles go a long way toward answering this
+            question and reflect our own aspirations of how we want to
+            be treating our clients—like fellow human beings worthy of
+            compassion and kindness. In section II, we review the 10
+            Powers Principles. In section III, we share some additional
+            practical tips for developing a more person-centered
+            practice. In section IV, we reprint Jennifer Gerstenzang’s
+            useful article, recently published in <em>The Champion</em>,
+            about counseling addicted clients. A person’s arrest on DUII
+            charges could very well be their “rock bottom” in the
+            journey to overcoming addiction, and our interaction with
+            him or her a rare opportunity to guide them toward sobriety.
+            As attorneys, we have an ethical obligation to learn the
+            relevant skills in this regard.</p>
+            <p>Section V is about concentration, presence and awareness.
+            Whether we realize it or not, exposure to the constant
+            barrage of people’s problems and the highly adversarial
+            nature of litigation can really wear us down. It’s no secret
+            that criminal defense attorneys suffer disproportionately
+            from anxiety, depression and the same alcohol and substance
+            abuse issues that plague our DUII clients. Mindfulness and
+            meditation may not be the whole answer, but they have been
+            shown to be helpful to many attorneys and clients. As an
+            added bonus, increasing presence through mind-training
+            practices can help improve our performance in court, and can
+            help keep our clients calm during stressful proceedings.</p>
+            </section>
+            <section id="ii._the_10_gently_updated_powers_principles"
+            class="level1">
+            <h1><strong>II. The 10 (Gently Updated) Powers
+            Principles</strong></h1>
+            <section id="be_prepared" class="level2">
+            <h2><strong>1. Be Prepared</strong></h2>
+            <p>You know what to do, but does your staff? Since you
+            probably will not be involved in the initial call, your
+            staff must know what information is essential to gather.
+            Have a sample “cheat sheet” (see Chapter 3 for helpful
+            checklists) that will suffice until your staff is familiar
+            with the various issues and deadlines. However, the mere
+            gathering of information will be of no use unless your staff
+            knows how to apply the rules.</p>
+            <p>The most important area of concern is the correct arrest
+            date so that an In-Person DMV Hearing can be requested by
+            5:00 p.m. on the tenth day following the arrest. For
+            example, it’s 4:00 p.m. on Tuesday, February 18, the day
+            after President’s Day. A prospective client calls and
+            informs your receptionist that they were arrested on
+            Wednesday, February 5. “Sorry, you’re too late to request a
+            DMV hearing.” Wrong! Since the tenth day fell on a weekend
+            and Monday was a holiday, the tenth day would be the 18th.
+            This means your staff needs to get a request in by 5:00
+            p.m.</p>
+            <p>In many cases, you will be retained before your client’s
+            arraignment. If the case is a misdemeanor, a waiver of
+            appearance is allowed by <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors135.html">ORS
+            135.030</a>. If the case is a felony then your client must
+            appear in person. In many cases, clients will be arrested
+            but not booked at the jail. <a
+            href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+            813.017</a> requires the court to ensure the person is
+            booked after being charged with DUII—“When a person is
+            arraigned on a charge of driving while under the influence
+            of intoxicants in violation of ORS 813.010, a court shall
+            ensure that the defendant submits to booking, if the person
+            has not already been booked on that charge. [2015 c.145
+            §2].” If your client was not booked when they were arrested,
+            make sure they know they will have to have their
+            fingerprints taken in the jurisdiction of their arrest.
+            Depending on the jurisdiction a photograph (mugshot) may be
+            taken as well, which will likely be posted online. This is
+            one of the greatest collateral consequences of DUII for many
+            people. See Chapter 3 for more information on arraignments
+            and mugshot removal.</p>
+            <p>Likewise, you should prepare your clients for the
+            possibility that they will not be arraigned on the
+            originally scheduled date, and that this does not
+            necessarily mean their case is getting dismissed.<br />
+            This often happens on a DRE DUII if the prosecutor wants to
+            wait for toxicology before making a filing decision. If this
+            happens, remember to get their citation stamped to prove
+            they appeared in case the prosecutor attempts to file
+            charges past the statute of limitations date. We also
+            suggest that you send a letter to the prosecutor so that
+            your client can arrange a voluntary appearance if and when
+            charges are filed.</p>
+            </section>
+            <section id="quoting_prices_over_the_phone" class="level2">
+            <h2><strong>2. Quoting Prices Over the Phone</strong></h2>
+            <p>You are selling your services and your expertise and may
+            not want to quote a price over the phone. It takes time to
+            explain your fee. Without the proper background, it could
+            seem too expensive. Prospective clients may feel like you
+            are trying to take advantage of them.</p>
+            <p>On the other hand, it sometimes makes sense to provide at
+            least some price information. The prospective client may
+            well be going down a list of search results trying to
+            determine who to meet with, and failure to provide
+            information may discourage them from meeting with you.</p>
+            </section>
+            <section
+            id="schedule_the_initial_meeting_as_soon_as_possible"
+            class="level2">
+            <h2><strong>3. Schedule the Initial Meeting as Soon as
+            Possible</strong></h2>
+            <p>When people want an attorney they usually want to meet
+            with someone immediately to reduce their anxiety and get
+            some answers. Wherever you meet, avoid interruptions. If
+            you’re busy with other work and believe your client will be
+            impressed with your diligence—guess again. They made a
+            sacrifice to meet with you and you owe them your undivided
+            attention. The importance of presence and undivided
+            attention will be discussed further in secton V of this
+            chapter.</p>
+            <p>If a timely in-person meeting is not in the cards (for
+            example, because a client is calling from out of state) make
+            time for an uninterrupted, detailed phone consultation.</p>
+            </section>
+            <section
+            id="try_to_ascertain_the_clients_emotional_priorities_during_your_initial_meeting"
+            class="level2">
+            <h2><strong>4. Try to Ascertain the Client’s Emotional
+            Priorities During your Initial Meeting</strong></h2>
+            <p>What is most important to this person? Your concept of
+            the best method of handling the case might be totally
+            different than the client’s. Instead of talking about the
+            law (which the client trusts you know), ask about their
+            expectations. What would ultimately make them most
+            happy?</p>
+            </section>
+            <section
+            id="establish_your_clients_expectations_and_exceed_them"
+            class="level2">
+            <h2><strong>5. Establish your Client’s Expectations — and
+            Exceed Them</strong></h2>
+            <p>Thoroughly discuss how you propose to handle the matter
+            and what your client can expect in terms of results and
+            costs. If you discover that you are unable to meet your
+            commitments or that the results are not as anticipated,
+            discuss the details with the client as soon as possible.
+            Under-promise and over-deliver is a good mantra in the legal
+            profession.</p>
+            </section>
+            <section
+            id="memorialize_your_agreement_in_writing_and_send_a_letter_of_understanding_and_thanks"
+            class="level2">
+            <h2><strong>6. Memorialize Your Agreement in Writing and
+            Send a Letter of Understanding and Thanks</strong></h2>
+            <p>At the conclusion of the initial interview, Mr. Powers
+            provided his prospective clients with a packet of
+            information and always followed up with a letter expressing
+            his commitment, a copy of the fee agreement, etc. Politely
+            worded engagement letters immediately set a courteous,
+            professional tone.</p>
+            </section>
+            <section
+            id="promptly_return_phone_calls_emails_and_other_communications"
+            class="level2">
+            <h2><strong>7. Promptly Return Phone Calls, Emails and Other
+            Communications</strong></h2>
+            <p>The one guarantee we should all make to every client: “I
+            will return your call within 24 hours. Myself.”</p>
+            </section>
+            <section
+            id="communicate_with_your_client_in_the_manner_they_prefer"
+            class="level2">
+            <h2><strong>8. Communicate with Your Client in the Manner
+            They Prefer</strong></h2>
+            <p>Some clients prefer written letters and phone calls, many
+            prefer text and/or email. Find out what they prefer up
+            front. Be flexible if you can, but set some boundaries.</p>
+            </section>
+            <section
+            id="treat_your_clients_like_you_would_want_to_be_treated_yourself"
+            class="level2">
+            <h2><strong>9. Treat your Clients Like You Would Want to Be
+            Treated Yourself</strong></h2>
+            <p>DUII clients can be very challenging. The good old Golden
+            Rule goes a long way in establishing a good rapport. And, if
+            you had a “bad” day and were short with your client, don’t
+            be afraid to promptly apologize.</p>
+            </section>
+            <section id="be_objective_with_regard_to_your_clients_needs"
+            class="level2">
+            <h2><strong>10. Be Objective with Regard to your Client’s
+            Needs</strong></h2>
+            <p>A great number of DUII clients are alcoholics. Alcoholism
+            is a chronic, progressive disease with three stages.
+            Fortunately, we seldom see anyone in the third stage. If you
+            have seen someone in this last condition, you’ll never
+            forget it.</p>
+            <p>Unfortunately, most clients are in the first stage which
+            is not easy to identify.</p>
+            <p>We’re lawyers, not doctors, and we do not possess the
+            expertise to diagnose anyone. However, if you familiarize
+            yourself with some aspects of the disease and relate those
+            to your client in a caring, compassionate manner, you might
+            be instrumental in cutting through their “denial” and
+            helping them get treatment. For more on speaking with
+            clients about alcoholism and addiction, see<br />
+            section IV.</p>
+            </section>
+            </section>
+            <section
+            id="iii._the_importance_of_unconditional_positive_regard"
+            class="level1">
+            <h1><strong>III. The Importance of Unconditional Positive
+            Regard</strong></h1>
+            <p>Powers is of course correct in noting that we are lawyers
+            and not doctors. But judges do call us counselors.</p>
+            <p>“Thank you, counselor, I have your argument.”</p>
+            <p>Because of the casual way this word is used in our
+            profession, the deeper meaning can sometimes fail to
+            register. But according to our licenses, and consistent with
+            the reality of our collective experience, we are all
+            counselors at law—“counselors” first and “at law”
+            second.</p>
+            <p>What does it mean to be a counselor? It means our clients
+            hire us to reduce their suffering. They want us to be “real”
+            with them, to inject humanity into an inhuman process, to
+            put ourselves in their shoes, view the issues through their
+            eyes, and reduce their pain by focusing on their needs,
+            desires, and values. Even the most cursory look at online
+            client reviews teaches us that clients judge us based on how
+            we make them feel, not necessarily on the quality of our
+            legal representation. Relating to our clients in a way that
+            reduces their suffering is a prerequisite for doing a truly
+            excellent job.</p>
+            <p>The Powers Principles immediately ring true because each
+            one is aimed at reducing client suffering—by explaining what
+            is going on and what clients can expect in the future, by
+            making sure they do not feel taken advantage of financially,
+            and by showing interest in their concerns and perspectives.
+            In legal theory, this type of counseling-inspired,
+            client-centered approach was first advocated by Binder and
+            Price in the late 1970s and has become standard among
+            frontline legal defenders.<a href="#fn3"
+            class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a></p>
+            <p>Client-centered advocacy traces back to Carl Rogers
+            (1902–1987), the most influential proponent of
+            person-centered <em>psychological</em> counseling. He
+            explained the “central hypothesis” of his approach as
+            follows: “Individuals have within themselves vast resources
+            for self-understanding and for altering their self-concept,
+            attitudes, and self-directed behavior – [but] these
+            resources can be tapped only if a definable climate of
+            facilitative psychological attitudes can be provided.”<a
+            href="#fn4" class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a></p>
+            <p>Rogers identified three conditions for creating that
+            climate in therapy, and they apply with equal force to
+            person-centered legal representation.</p>
+            <p>First, Rogers extolled a counselor’s Realness or
+            “genuineness,” explaining that the more a counselor is him
+            or herself in the relationship, putting up no professional
+            front or façade, the better the working relationship is
+            likely to be.</p>
+            <p>Second, he encouraged Empathy—which he defined as
+            actively listening with true interest and, thereby,
+            accurately understanding a client’s feelings and personal
+            meaning. In the world of criminal defense, clients’ feelings
+            often revolve around the pain of lost control. Clients
+            frequently hire us to restore a sense of <em>perceived</em>
+            control, which has been shown to correlate with physical
+            health and subjective feelings of well-being. This is why
+            things like letters of engagement and other signs of
+            professionalism and respect, careful explanations of
+            criminal and administrative procedures, detailed discussions
+            of the evidence and the like can be so important and
+            valuable to clients, even though it may feel (to us) like
+            these activities do not contribute directly toward a
+            favorable resolution or victory at trial.</p>
+            <p>Perhaps most relevant to attorneys is Rogers’ third
+            condition for creating the right climate—an attitude of
+            Unconditional Positive Regard. He described it as
+            follows:</p>
+            <p>To the extent that the counselor finds himself or herself
+            experiencing warm acceptance of each aspect of the clients
+            experience as being part of that client, he or she is
+            experiencing unconditional positive regard.… This means
+            there are no conditions of acceptance, no feeling of “I only
+            like you if you are thus and so.” It means “prizing” of the
+            person.… It is at the opposite pole from a selective
+            evaluating attitude – “You are bad in these ways, good in
+            those.” It involves as much feeling of acceptance for the
+            client’s expression of negative, “bad”…defensive, abnormal
+            feelings as for his expression of “good” [ones]…</p>
+            <p>Rogers gave some examples of thoughts that are
+            characteristic of unconditional positive regard; his list
+            serves as a useful tool for assessing one’s own
+            attitude:</p>
+            <ul>
+            <li><blockquote>
+            <p>I feel no revulsion at anything the client says.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>I feel neither approval nor disapproval of the client and
+            his statements – simply acceptance.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>I feel warmly toward the client, toward his weaknesses
+            and problems as well as his potentialities.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>I am not inclined to pass judgment on what the client
+            tells me.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>I like my client.</p>
+            </blockquote></li>
+            </ul>
+            <p>Developing unconditional positive regard even toward
+            difficult clients is a matter of intentionality. Some
+            practitioners choose to reframe difficult situations, such
+            as that of somebody facing a fifth or sixth DUII, viewing
+            the broader context of where a person is coming from. Others
+            approach the issue from philosophical or religious
+            perspectives. There is no one right approach.</p>
+            <p>In our desire to genuinely connect with clients, some of
+            us fail to develop appropriate professional boundaries.
+            These signs of unhealthy boundaries may be helpful for
+            purposes of a self-check:</p>
+            <ul>
+            <li><blockquote>
+            <p>Excessive self-disclosure to client.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Feeling “overwhelmed” by client.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Allowing a client to dictate the direction of the
+            case.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Going against personal values to “help” client.</p>
+            </blockquote></li>
+            </ul>
+            <p><code>Practice Tip</code></p>
+            <p>Need to create better boundaries? Here are some tips:</p>
+            <ul>
+            <li><blockquote>
+            <p>Proper boundaries begin at home.</p>
+            </blockquote></li>
+            </ul>
+            <p>Consider physically putting away your devices and going
+            completely offline during regularly scheduled hours, such as
+            evenings, early mornings, or one weekend day a week.</p>
+            <ul>
+            <li><blockquote>
+            <p>Create structure.</p>
+            </blockquote></li>
+            </ul>
+            <p>For instance, let’s say your client has a habit of
+            calling at all hours to discuss their feelings about the
+            case. Clearly scheduled weekly check-ins can eliminate this
+            problem.</p>
+            <ul>
+            <li><blockquote>
+            <p>Lay out your limits very clearly.</p>
+            </blockquote></li>
+            </ul>
+            <p>For instance, tell your clients verbally (or, better yet,
+            in writing) the hours you will be available for work-related
+            conversations, what constitutes an emergency, and what they
+            should do in an emergency. Explain your boundaries in
+            concrete terms and relate them to your clients’ interests.
+            For example, you can say: “I may not be able to get back to
+            you this week because I am working on another case. But
+            please rest assured that when the time comes for me to focus
+            on <em>your</em> case, it, too, will have my undivided
+            attention.”</p>
+            <ul>
+            <li><blockquote>
+            <p>Plan in advance for things to go wrong.</p>
+            </blockquote></li>
+            </ul>
+            <p>It’s helpful to visualize your boundaries getting
+            crossed, and how you’re going to handle those situations
+            beforehand so you have a plan of action. This way, when a
+            difficult situation comes up, you won’t be hijacked by your
+            emotions.</p>
+            <ul>
+            <li><blockquote>
+            <p>Bring up problems right away.</p>
+            </blockquote></li>
+            </ul>
+            <p>When boundaries are violated, it’s not uncommon for
+            people to get upset and ruminate endlessly. Instead, plan to
+            speak up immediately.</p>
+            <p>To sum up, there is no magic formula for striking the
+            right balance of realness, empathy, unconditional positive
+            regard and appropriate professional boundaries. But having
+            an awareness of what an excellent attorney-client
+            relationship ought to look like and what aspects of the
+            relationship we ought to be paying attention to can help us
+            all advance toward that goal.</p>
+            </section>
+            <section
+            id="iv._counseling_the_addicted_client_a_responsible_and_restorative_practice"
+            class="level1">
+            <h1><strong>IV. Counseling the Addicted Client: A
+            Responsible and Restorative Practice</strong></h1>
+            <p>Jennifer Gerstenzang, <em>The Champion,</em> August 2018.
+            © 2018, Natonal Association of Criminal Defense Lawyers.
+            Reprinted with permission.</p>
+            <section
+            id="defense_attorneys_have_the_authority_and_ability_to_initiate_change"
+            class="level2">
+            <h2><strong>Defense Attorneys Have The Authority And Ability
+            To Initiate Change</strong></h2>
+            <p>Defense attorneys hold the knowledge and skill to help
+            clients navigate the criminal justice system. For many
+            clients, this is the first time they have ever been in
+            trouble with the law, and it is a haunting and traumatic
+            experience. They cling to counsel’s words and advice in the
+            belief that the lawyer holds the secret to their fate.
+            Because their freedom is at stake, they are highly motivated
+            to achieve sobriety with a commitment and focus not
+            previously possessed.</p>
+            <p>For this reason, a client is willing to heed counsel’s
+            advice and direction, even if the client has faithfully
+            ignored this same advice for years. As such, attorneys have
+            a duty to make sure the advice they offer is sound and is
+            tailored to the client’s specific needs. In order to do
+            that, attorneys must stay informed and up to date on the new
+            and changing research and treatments for addiction. In this
+            way, they can best serve their clients as they embark on
+            their journey toward sobriety.</p>
+            <p>Attorneys who limit their practice solely to representing
+            the client on the criminal charges are missing an
+            opportunity to develop a deeper lawyer-client relationship
+            and to help their client avoid future issues with the law
+            and in the client’s personal life. The ABA Model Rules are
+            not explicit when it comes to handling a client with an
+            addiction, but they provide guidance. Notable model rules
+            include Rule 1.1, discussing attorney competence<a
+            href="#fn5" class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a> when representing a
+            client; Rule 1.14, discussing representing a client with
+            diminished capacity;<a href="#fn6" class="footnote-ref"
+            id="fnref6" role="doc-noteref"><sup>6</sup></a> and Rule
+            1.6, discussing duties of confidentiality to the client.<a
+            href="#fn7" class="footnote-ref" id="fnref7"
+            role="doc-noteref"><sup>7</sup></a></p>
+            <p>Diminished capacity is defined as “an unbalanced mental
+            state that is considered to make a person less answerable
+            for a crime and is recognized as grounds to reduce the
+            charge.”<a href="#fn8" class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a> In cases with a client
+            who is struggling with an addiction, quite often this
+            information can be a source of mitigation when negotiating
+            the case and humanizing the client to the court and opposing
+            counsel. Rule 1.14 allows lawyers to consult with
+            individuals or entities that have the ability to take action
+            to protect clients when clients are unable to adequately act
+            in their own best interests. Understanding the different
+            treatments that are available and knowing who to consult is
+            an important aspect of representing the client to the best
+            of the lawyer’s ability.</p>
+            </section>
+            <section id="determining_the_right_treatment_for_the_client"
+            class="level2">
+            <h2><strong>Determining the Right Treatment for the
+            Client</strong></h2>
+            <p>Take the time to really speak to the client (and perhaps
+            family members as well). Find out more about his<a
+            href="#fn9" class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a> relationship with drugs
+            or alcohol. In many DUII cases, especially involving
+            first-time offenders, the client’s initial night in jail may
+            serve as treatment enough. Many clients, however, require a
+            more sophisticated approach. The clients with greater needs
+            are usually easy to identify. For example, their blood
+            alcohol concentrations may be quite high, they may have
+            prior arrests, or the specific facts surrounding their
+            arrest may alert counsel to a substance abuse disorder.</p>
+            <p>As mentioned above, it is important to talk to the
+            client’s family members in assessing the client’s needs.
+            Clients are not always the best historians and may be
+            unwilling or unable to share the truth with the attorney.
+            Family members can provide a wealth of important
+            information, including treatments that the client has tried
+            in the past — both successfully and unsuccessfully — and
+            which approaches helped the client find the most relief.
+            Additionally, they may provide the lawyer with a more
+            complete background about when and <em>why</em> the client
+            began using drugs or alcohol in the first place. Sometimes
+            clients are too close to their addiction to see things as
+            clearly as their loved ones. All this information can be
+            used to develop a promising strategy to address the client’s
+            needs while the attorney is fighting the client’s criminal
+            case. Of course, the lawyer must make sure she speaks with
+            the client before talking to the family to avoid breaching
+            confidentiality.</p>
+            </section>
+            <section
+            id="creating_a_more_intimate_attorney_client_relationship"
+            class="level2">
+            <h2><strong>Creating a More Intimate Attorney-Client
+            Relationship</strong></h2>
+            <p>An attorney’s genius in the courtroom will likely be
+            appreciated much more by opposing counsel and the bench
+            rather than the attorney’s client. Clients will not remember
+            the attorney’s strategy, cross-examination, or impassioned
+            argument nearly as much as they will remember the way she
+            made them <em>feel</em>. The conversations the lawyer has
+            with the client about the client’s struggle with alcohol or
+            drugs, what this struggle has cost him, and how he can try
+            to find relief will show the client that counsel cares about
+            who he is and the quality of his life after the case
+            resolves. Colleagues will refer clients to an attorney based
+            on counsel’s legal prowess. Clients will refer their friends
+            based on the excellence of counsel’s emotional first
+            aid.</p>
+            <p>These conversations should start as soon as possible in
+            the attorney-client relationship. They are powerful
+            trust-builders and will set the tone for the rest of the
+            relationship. The information gleaned from these
+            conversations will help the lawyer understand the client
+            better and make the lawyer a far better advocate on behalf
+            of the client during negotiations or, if necessary, at any
+            sentencing hearing. Finally, having this conversation early
+            can help counsel get her client into treatment at the
+            earliest possible date. Clients can be saved from custody
+            time or a bail increase based upon their placement in a
+            treatment facility. Early identification of a problem allows
+            attorney and client time to find the right treatment option
+            and gives the client the ability to make any lifestyle
+            adjustments needed to start treatment.</p>
+            </section>
+            <section id="available_treatment_options" class="level2">
+            <h2><strong>Available Treatment Options</strong></h2>
+            <p>New and exciting treatments exist that go beyond the
+            familiar AA/NA 12-step approach. Luckily, in recent years
+            there has been a general shift in the way people think and
+            talk about addiction. “The surgeon general’s report
+            reaffirms what the scientific establishment has been saying
+            for years: <em>addiction is a disease, not a moral
+            failing</em>. It is characterized not necessarily by
+            physical dependence or withdrawal but by compulsive
+            repetition of an activity despite life- damaging
+            consequences.”<a href="#fn10" class="footnote-ref"
+            id="fnref10" role="doc-noteref"><sup>10</sup></a> The same
+            report found that 21 million Americans have a drug or
+            alcohol addiction, which makes the disorder more common than
+            cancer.<a href="#fn11" class="footnote-ref" id="fnref11"
+            role="doc-noteref"><sup>11</sup></a> With this information,
+            motivated scientists and researchers are examining what is
+            actually happening in the addicted brain.</p>
+            <p>At this point in time, two schools of thought predominate
+            regarding the causes of and best treatment practices for
+            addiction:</p>
+            <p><strong>1. Addiction is caused by faulty chemistry or bad
+            wiring of the brain. Treatment should include certain
+            medications or brain stimulation while simultaneously
+            providing psycho-social support; or</strong></p>
+            <p><strong>2. Addiction treatment requires intensive
+            psychological work that can be assisted through the use of
+            medication to manage cravings and withdrawal
+            symptoms.</strong></p>
+            <p>As with every worthy goal in life, there is no silver
+            bullet or quick solution when it comes to recovery. The
+            options listed below can seldom be used on their own. More
+            likely the client will require a combination of treatments
+            or therapies. Some of these treatment options are listed
+            below. Keep in mind that these treatments must be matched to
+            the client based on his unique circumstances, and often they
+            must be used in combination with other treatments.</p>
+            </section>
+            <section id="naltrexonevivitrol" class="level2">
+            <h2><strong>Naltrexone/Vivitrol®</strong></h2>
+            <p>Opioid receptors in the brain’s reward center are
+            responsible for the euphoric effects individuals feel when
+            they use opioids such as heroin and oxycodone and when they
+            drink alcohol. “A receptor is like a button or a lock on the
+            surface of a cell — when ‘pushed’ or ‘unlocked’ by another
+            chemical, a reaction occurs, and a cascade of effects is set
+            into motion.”<a href="#fn12" class="footnote-ref"
+            id="fnref12" role="doc-noteref"><sup>12</sup></a> When these
+            opioid receptors are stimulated, the user feels a rush of
+            pleasurable and rewarding feelings.</p>
+            <p>Naltrexone is a mu-opioid receptor blocker, also known as
+            an opioid antagonist. Thus, an individual who takes
+            naltrexone will not get the pleasurable effects of opioids
+            or alcohol. Imagine placing a small yet strong cap on the
+            opioid receptors in the brain, thereby locking the door to
+            the receptor closed. Because the receptor is unable to be
+            stimulated, no chemical reaction can occur, and thus there
+            is no release of the euphoric effects of the drug or
+            alcohol.</p>
+            <p>This effectively eliminates the temptation to use. This
+            is because if an individual does take opioids or drink
+            alcohol while taking naltrexone, they will be unable to feel
+            the “high” from the drugs. People struggling with alcohol
+            addiction may not stop drinking entirely while on
+            naltrexone, but binge-drinking is dramatically reduced. When
+            they do not find the relief they are accustomed to in their
+            first or second drink, they stop drinking.</p>
+            <p>Individuals can be so afraid of the pain of withdrawal
+            that just one relapse can terminate their recovery efforts.
+            If the individual is taking naltrexone and relapses, not
+            only will he not get the pleasure from taking the drug, but
+            he also will avoid the pain of withdrawal. Since the
+            client’s brain has not processed the drug or alcohol and
+            experienced the euphoric effect, the brain is not missing
+            the drug or alcohol when it is once again absent from the
+            body.</p>
+            <p>“Of great importance, persons treated with naltrexone are
+            less likely to report alcohol and opioid cravings and the
+            repeated thoughts and obsessions with drug use when they are
+            not using.”<a href="#fn13" class="footnote-ref" id="fnref13"
+            role="doc-noteref"><sup>13</sup></a> Anecdotally, there have
+            also been reports that naltrexone has helped individuals
+            struggling with other disorders, such as gambling, smoking,
+            and obsessive-compulsive disorders. Additionally, “persons
+            maintained on naltrexone have a very low risk of continued
+            illegal opioid use and are less likely to drink alcohol
+            heavily compared to placebo.”<a href="#fn14"
+            class="footnote-ref" id="fnref14"
+            role="doc-noteref"><sup>14</sup></a></p>
+            <p>Naltrexone takes the edge off the addiction cravings
+            while individuals are trying to pick up the other pieces of
+            their lives. It can be very helpful for individuals who are
+            being released from jail or prison to assist them in
+            maintaining their sobriety while they adjust to freedom. In
+            many cases, it is an extraordinary and effective tool, and
+            is being adopted by many drug courts throughout the country,
+            with promising results. In drug courts, it is used in
+            conjunction with the other treatments and programs to help
+            the participants succeed in reaching their goals.</p>
+            <p>Naltrexone is an alternative to other medications, like
+            Suboxone and methadone, that are commonly used to treat
+            opioid addiction. Recall that naltrexone is an opioid
+            antagonist, while Suboxone and methadone are opioid
+            agonists, which means they are substances that initiate a
+            physiological response when combined with a receptor.
+            Methadone is a full opioid agonist while Suboxone is a
+            partial opioid agonist. This means that Suboxone and
+            methadone attach themselves to opioid receptors but, instead
+            of blocking the receptors, they stimulate the receptors.
+            This helps individuals working on their sobriety to manage
+            or avoid the pain from withdrawal by essentially weaning off
+            drugs or alcohol. It can also be helpful because these drugs
+            are supposed to be less addictive than the drug they are
+            trying to kick.</p>
+            <p>However, methadone and Suboxone are still opioids, and
+            thus can be addictive in themselves. For an individual who
+            has gone through withdrawal and is clean, naltrexone is a
+            beneficial option because it is not addictive.</p>
+            <p>Naltrexone, which must be prescribed by a doctor, can be
+            administered in two ways. It can either be taken in pill
+            form orally on a once-daily basis or it can be injected into
+            the buttocks once every four weeks. The first option is
+            economical and is more likely to be covered by insurance.
+            The latter is ideal because the client only has to choose
+            his sobriety once a month rather than make that choice every
+            day. The injection, however, can be very expensive and may
+            not be covered by insurance.</p>
+            <p>It is important that clients be prepared to receive the
+            treatment before having either the pill or injection
+            administered. Being prepared is important because the
+            medication will block the opioid receptors in the brain,
+            which can be a very good thing if they are trying to
+            maintain their sobriety, and can be a very painful decision
+            in some cases. Patients must stop taking any opioids for at
+            least 7 to 14 days before starting naltrexone. If they use
+            within that time frame, taking naltrexone can trigger sudden
+            opioid withdrawal, which is not only painful but also can be
+            dangerous. If the person who is on naltrexone gets injured,
+            they will not be able to manage their pain with typical
+            prescription pain relievers. As the receptors for these
+            drugs are blocked, they will not receive the intended
+            relief. In emergencies, doctors still have some options
+            available to treat pain that will not be blocked by the
+            receptors, but these should be reserved for serious
+            situations.</p>
+            <p>Additionally, when using naltrexone clients should be
+            cautioned about the dangers of overdose if and when they end
+            their treatment. When individuals who have a history of
+            long-term opioid use relapse, they may return to their
+            typical dosage without accounting for the impact their
+            sobriety had on their tolerance. This can lead to
+            devastating, and sometimes fatal, overdoses.</p>
+            <p>A final caution is to make sure the client is
+            simultaneously being treated for any emotional or
+            psychological concerns when taking this medication. If the
+            client is using substances as a form of self-medication,
+            taking away the relief without responsibly managing the
+            underlying pain or trauma may lead to the client simply
+            replacing one substance with another. Naltrexone does not
+            block the receptors for amphetamines, only opioids, and
+            unfortunately it does not block the chemical reaction in the
+            brain if the client uses fentanyl. This additional support
+            may help the client avoid a panicked and desperate need for
+            an escape, and the client will be building the tools to
+            maintain long-term sobriety.</p>
+            </section>
+            <section id="transcranial_magnetic_stimulation_tms"
+            class="level2">
+            <h2><strong>Transcranial Magnetic Stimulation
+            (TMS)</strong></h2>
+            <p>As understanding of the addicted brain expands, so do the
+            creativity of the treatments offered. Psychiatrists and
+            neuroscientists have observed that addiction weakens the
+            brain’s executive control center, the prefrontal cortex. For
+            example, in a study done by Ritz Z. Goldstein, highlighted
+            in <em>National Geographic</em>,<a href="#fn15"
+            class="footnote-ref" id="fnref15"
+            role="doc-noteref"><sup>15</sup></a> she revealed that
+            cocaine addicts have reduced gray matter volume in their
+            prefrontal cortex. This means that addicted individuals have
+            poorer executive function and generally perform worse in
+            psychological tests of memory, attention, and decision-
+            making. Unfortunately, her study does not determine whether
+            addiction causes these impairments in the brain or if the
+            impairments made the brain more vulnerable to addiction.</p>
+            <p>Dr. Luigi Gallimberti, a psychiatrist and toxicologist
+            who has treated addiction for 30 years, was inspired by
+            studies conducted by neurologist Antonello Bonci and the
+            National Institute on Drug Abuse. Bonci found that the
+            region in the brain responsible for inhibiting behavior in
+            cocaine- addicted rats was abnormally quiet. When he
+            activated these cells in the rats, their “interest in
+            cocaine basically vanished.”<a href="#fn16"
+            class="footnote-ref" id="fnref16"
+            role="doc-noteref"><sup>16</sup></a> Gallimberti used this
+            research to try Transcranial Magnetic Stimulation (TMS) on
+            people struggling with cocaine addiction.</p>
+            <p>TMS involves the application of electromagnetic pulses to
+            the prefrontal cortex to activate those neurons. This form
+            of brain stimulation has been used to treat depression and
+            migraines. Scientists run electrical current through a
+            coiled wire inside a wand, and the wand creates a magnetic
+            pulse that alters electrical activity in the brain.
+            Gallimberti hypothesized that repeated pulses may activate
+            drug-damaged neural pathways much like a reboot on a frozen
+            computer.</p>
+            <p>Working together alongside Gallimberti’s partner,
+            neurocognitive psychologist Alberto Terraneo, the
+            researchers tested their theory on 29 people addicted to
+            cocaine. Sixteen people received TMS, while 13 received
+            standard care, but not TMS. By the end of the trial, 11
+            people were drug-free in the TMS group, while only three
+            were drug-free in the standard care group.</p>
+            <p>The research continues in this area but the initial
+            results are promising. There are other ways that individuals
+            can strengthen their prefrontal cortex without sending
+            electrical currents into the brain, including mindfulness
+            training and meditation, but these practices require
+            discipline and dedication, which may be difficult during the
+            time someone is struggling with addiction. Other research,
+            listed below, looks at restoring the damaged or weakened
+            brain more generally.</p>
+            </section>
+            <section id="nicotinamide_adenine_dinucleotide_nad_therapy"
+            class="level2">
+            <h2><strong>Nicotinamide Adenine Dinucleotide (NAD)
+            Therapy</strong></h2>
+            <p>Nicotinamide Adenine Dinucleotide (NAD) therapy is
+            another addiction treatment that focuses on strengthening
+            the brain. NAD is a coenzyme of niacin and is a building
+            block in the body that the brain, internal organs, and
+            neurological systems rely on to function well. As people
+            age, their NAD levels decline. Addiction, depression,
+            stress, and illness accelerate the depletion of NAD levels
+            as well.</p>
+            <p>NAD therapy works to restore these depleted enzymes and
+            thus boost the function of the brain. When used for
+            addiction therapy, though it is often also used to treat
+            depression, anxiety and other ailments as well, the
+            treatment lasts about 10 days. Each day the patient receives
+            an intravenous infusion of the enzyme for about 6 to 8
+            hours.</p>
+            <p>NAD therapy is often combined with other tools and
+            medications mentioned in this article to increase the
+            effectiveness of the treatment. When NAD therapy is used to
+            help people during their initial detoxification,
+            practitioners often use the BRIDGE to manage the patients
+            discomfort during withdrawal.</p>
+            </section>
+            <section id="the_bridge" class="level2">
+            <h2><strong>The BRIDGE</strong></h2>
+            <p>As mentioned previously, the pain of detoxification, or
+            even merely the fear of that pain, can keep an individual
+            from seeking treatment and sobriety. The BRIDGE is a
+            fascinating device that helps individuals manage their pain
+            — either pain from withdrawal or other acute pain — through
+            neuro-stimulation. The BRIDGE sits on a patient’s ear, is
+            minimally invasive, and is an auricular peripheral nerve
+            field stimulator that connects topically to the patient’s
+            ear, blocking pain signals from getting to the brain.</p>
+            <p>The benefit to this treatment, as opposed to medication
+            assisted treatment such as Naltrexone, Methadone or
+            Suboxone, is that the client does not need to complete his
+            detox before using the BRIDGE. Additionally, this treatment
+            works very quickly, with patients reporting pain reduction
+            in as little as 20 to 30 minutes.</p>
+            <p>In practice, an individual using this device for pain
+            reduction associated with withdrawal would wear the BRIDGE
+            for the initial four to five days of detoxification, when
+            the pain is the most acute and the most unbearable. Then the
+            device would be safely removed. These types of treatments
+            are effective at convincing individuals they will be able to
+            handle the process of withdrawal.</p>
+            </section>
+            <section id="intervention" class="level2">
+            <h2><strong>Intervention</strong></h2>
+            <p>Popularized by misleading and objectively bad television,
+            interventionists are on the rise. When conducted by trained,
+            educated and licensed professionals, interventions can be
+            incredibly effective. A good interventionist will work with
+            the family first, before talking to the loved one with the
+            addiction. The interventionist can identify any dysfunction
+            in the family dynamics and can prepare the family for what
+            to expect and what their roles will be in their loved one’s
+            recovery.</p>
+            <p>Often, an individual struggling with an addiction may be
+            in a relationship with someone who, in some ways, triggers
+            or supports the addicted behavior. In some relationships, a
+            spouse or significant other subconsciously relies on their
+            loved one’s addiction, and may feel as if they are losing
+            control if their loved one seeks treatment. A great
+            intervention program will also work closely with the
+            enabling spouse to convince him or her to participate in the
+            intervention and play a supportive role to get the loved one
+            into treatment.</p>
+            <p>If the client’s family is considering an intervention, it
+            is worth it to vet the program to see how involved people at
+            the program are and how much time they spend with the family
+            in advance of the actual intervention. The client will
+            appreciate the fact that the attorney helped him and his
+            family spend their money wisely.</p>
+            </section>
+            <section id="treatment_centers" class="level2">
+            <h2><strong>Treatment Centers</strong></h2>
+            <p>Remember, any recommendation an attorney makes to a
+            client will reflect upon the attorney. Counsel would not
+            refer a prior client to another attorney she did not know or
+            trust, and thus she should be sure she does her research
+            when suggesting a treatment center. She has already invested
+            a lot of time in the client’s sobriety, and therefore she
+            should make sure she is recommending a quality
+            placement.</p>
+            <p>In recent years and in reaction to the explosion of the
+            opioid epidemic, the United States has seen a huge growth in
+            addiction treatment centers. New inpatient, outpatient,
+            partial hospitalization, intensive outpatient, and sober
+            living facilities are rapidly popping up throughout the
+            country. With insurance footing the bill for many of these
+            centers, there is a great deal of money to be made in these
+            facilities, and regulation is surprisingly relaxed. In
+            Malibu, California, for example, where the population is
+            only 13,000, there are 47 licensed rehabilitation centers.
+            In Southern California, there are 1,117 licensed
+            rehabilitation centers, and this does not include unlicensed
+            sober living homes.<a href="#fn17" class="footnote-ref"
+            id="fnref17" role="doc-noteref"><sup>17</sup></a></p>
+            <p>As with all professions, there may be some “bad apples.”
+            With so much variety, and with the potential for centers to
+            make a lot of money very quickly, some programs undoubtedly
+            are cutting corners. Additionally, many people who start
+            programs are in recovery themselves. This can be both a
+            blessing and a curse. Some programs have had to shut down
+            because of their founders relapsing in their recovery, while
+            other programs thrive by being run by someone with an
+            intimate understanding of recovery.</p>
+            <p>Reach out to the treatment and rehabilitation community
+            to make a few connections. Sit down with people who are
+            familiar with the local programs and their reputations.
+            Counsel should find people whose opinions she trusts and
+            learn what programs they endorse. Then contact those
+            programs. Take a tour of their facilities. Keep a list and
+            try to match the client’s insurance with the right program.
+            Additionally, make sure that licensed practitioners are
+            working with the clients on a daily basis, as some programs
+            will hire student practitioners to do the day-to-day
+            work.</p>
+            </section>
+            <section id="conclusion" class="level2">
+            <h2><strong>Conclusion</strong></h2>
+            <p>One person’s success in recovery does not mean that he or
+            she has uncovered a secret formula for sobriety that can
+            translate to another person’s success. In the same way that
+            there are many unique paths to addiction, there are many
+            twisting trails in the journey to sobriety. No two paths are
+            exactly alike. Take the lessons from the success stories of
+            clients as anecdotal evidence to pass on to future clients.
+            These stories can be motivating and inspiring, and can give
+            clients a realistic picture of recovery. Be careful,
+            however, not to overly rely on one treatment model.</p>
+            <p>Finally, it is important that counsel take an active role
+            in the client’s recovery. Check in with the client as
+            regularly as possible to see how the treatment is going.
+            Remember, an attorney has a unique position of authority
+            that can motivate the client to keep pushing himself and
+            will remind him what is at stake. If the client is not happy
+            or successful with whatever treatment he is pursuing, it may
+            be because it is not a good fit for him. Let the client know
+            that he has an option of leaving or changing treatment, but
+            that to do so, it is best, and in some cases mandatory, that
+            he finds a new treatment option before abandoning the
+            current treatment model.</p>
+            <p>Talk to the staff at the program the client is attending
+            to track his progress. The client’s account of his
+            improvement may be quite different from the program’s update
+            — for better or for worse. Keep the client accountable and
+            make sure he is taking an active role in his recovery.</p>
+            <p>Most DUII attorneys, and criminal defense attorneys in
+            general, work hard because they care about their clients.
+            Clients look to counsel to guide them through the darkest
+            period of their lives. Ultimately, clients are responsible
+            for their own success in rehabilitation, but their lawyers
+            play an important role steering them in the right direction
+            and on the right path. The coming years bring extraordinary
+            strides in science and neurology that will only continue to
+            help clients achieve sobriety and success. Learning about
+            new treatments is as important as reading new case law.
+            Doing so provides an invaluable service and assists in
+            obtaining the best possible result for clients.</p>
+            <section id="about_the_author" class="level3">
+            <h3><em>About the Author</em></h3>
+            <p><strong>Jennifer Gerstenzang</strong> founded her own
+            criminal defense firm in San Diego, California. She is a
+            member of the NACDL DUI Committee. Gerstenzang lectures
+            nationally on the prevalence of and addressing substance
+            abuse in the legal profession. Jennifer M. Gerstenzang,
+            Encinitas, California, 619-356-1445, <a
+            href="mailto:Jennifer@gerstenzanglaw.com">Jennifer@gerstenzanglaw.com</a>,
+            @GerstenzangLaw.</p>
+            </section>
+            </section>
+            <section id="addendum" class="level2">
+            <h2><strong>Addendum</strong></h2>
+            <p>It is worth noting that some clients are going to be very
+            resistant to formal substance abuse treatment but may be
+            interested in and/or open to other approaches toward
+            achieving sobriety.</p>
+            <p>Alcoholics Anonymous and related 12-step programs are
+            informal, hugely popular higher power–based support groups
+            that have helped countless people. In the Eugene area alone,
+            there are multiple 12-step meetings every day—morning, noon
+            and night—which can be found at <a
+            href="http://www.eviaa.org">www.eviaa.org</a>. Clients
+            should be able to get a home group, a sponsor, and service
+            position without too much trouble. In terms of mitigation,
+            this is an anonymous program so it may be difficult to get a
+            letter of attendance; but if your client does have a
+            sponsor, that person may be willing to write a letter or
+            appear at a sentencing hearing. You don’t want to offend
+            people by suggesting AA, but if they seem like they would
+            benefit, it may be worth a mention.</p>
+            <p>Other clients may be open to private medical treatment
+            with a psychiatrist and/or therapist. You will want to have
+            your client sign a release of information and have a letter
+            sent to your office. Each doctor is different and may have
+            an approach that resonates.</p>
+            <p>Finally, there is bibliotherapy. Clients who may not be
+            ready for more aggressive types of treatment are often
+            willing to pick up a book. There are titles to appeal to
+            every possible angle: from <em>Quit Like a Woman</em> by
+            Holly Whitaker and <em>The Craving Mind</em> by Judson
+            Brewer to books about new programs being developed that use
+            psychedelic drugs to treat drug and alcohol addiction, for
+            example at the Johns Hopkins Center for Psychedelic and
+            Consciousness Research <a
+            href="https://hopkinspsychedelic.org/">https://hopkinspsychedelic.org/</a>
+            (see, e.g., <em>Psychedelic Medicine: The Healing Powers of
+            LSD, MDMA, Psilocybin and Ayahuasca</em> by Dr. Richard
+            Louis Miller and <em>How to Change Your Mind</em> by Michael
+            Pollan).</p>
+            </section>
+            </section>
+            <section id="v._concentration_and_awareness" class="level1">
+            <h1><strong>V. Concentration and Awareness</strong></h1>
+            <p>As Thich Nhat Hanh said: <em>“The most precious gift we
+            can offer others is our presence. When mindfulness embraces
+            those we love, they will bloom like flowers.”</em><a
+            href="#fn18" class="footnote-ref" id="fnref18"
+            role="doc-noteref"><sup>18</sup></a> Henry David Thoreau
+            also acknowledges the important of presence: “<em>You must
+            live in the present, launch yourself on every wave, find
+            your eternity in each moment. Fools stand on their island of
+            opportunities and look toward another land. There is no
+            other land; there is no other life but this.”</em><a
+            href="#fn19" class="footnote-ref" id="fnref19"
+            role="doc-noteref"><sup>19</sup></a> By being more present,
+            more open, and less reactive, we can reduce our own
+            suffering as well as the suffering of those around us, such
+            as our clients, coworkers and families.</p>
+            <p>Meditation and mindfulness practices aimed at achieving
+            this sort of presence are used by many religions, but there
+            is nothing fundamentally religious about these practices and
+            they cross boundaries between religious and secular life.
+            They are popular because they are simple and accessible to
+            everyone. By paying very close attention to the present
+            moment we can develop clarity and penetrative insight. But
+            how do we get there?</p>
+            <p>In his useful 2018 book, <em>Aware: The Science and
+            Practice of Presence</em>, Dr. Dan Siegel describes a method
+            of cultivating presence by developing three pillars of mind
+            training: focused attention, open awareness and kind
+            intention.<a href="#fn20" class="footnote-ref" id="fnref20"
+            role="doc-noteref"><sup>20</sup></a> Dr. Siegel has also
+            developed the “Wheel of Awareness” meditation practice,
+            included in Appendix A.</p>
+            <p>Focused attention is something that attorneys spend a
+            great deal of time doing. As stated in the December 2019
+            issue of the Oregon State Bar <em>Bulletin,</em> “[Legal
+            work] requires sustained focus, marathon-caliber mental
+            endurance. It requires <em>attention</em>, the very currency
+            of the billable hour.”<a href="#fn21" class="footnote-ref"
+            id="fnref21" role="doc-noteref"><sup>21</sup></a> Focused
+            attention is what drives energy and information into
+            awareness. How can we improve and hone our attention?</p>
+            <p>Focused attention meditation, or concentration
+            meditation, is a meditation practice in which we focus on
+            something such as the breath and when our mind is inevitably
+            distracted we bring it back again and again. This is akin to
+            a mental workout: the loss of attention is like the relaxing
+            of our attention, and bringing attention back to our object
+            of meditation is like flexing the muscle of attention. Over
+            time you may find that your ability to concentrate and have
+            longer periods of undistracted attention will improve.</p>
+            <p>The object of focus could be internal or external, for
+            example:</p>
+            <ul>
+            <li><blockquote>
+            <p>Mantra – repeating a word, phrase, or sound over and
+            over.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Visualization – picturing a place or focusing on a
+            goal.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>A body part – focusing on a particular area or sensation
+            in the body.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Candle – looking at a flame to focus the mind.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Mala beads – counting beads on a mala.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Sound – listening to a gong or chime.</p>
+            </blockquote></li>
+            </ul>
+            <p>In this type of meditation, the goal is to keep the
+            attention focused and nothing else. So if you were to stare
+            at a candle, or repeat a mantra, you would just engage the
+            mind in that practice. The more you practice, the better you
+            will become at zoning in and the fewer distractions and
+            lapses in concentration you will experience.</p>
+            <p>Open awareness is the ability to perceive the multitude
+            of internal and external sensory input that we experience at
+            any given time without being distracted by any particular
+            input and becoming lost in thought. Also called open
+            monitoring or non-directive meditation, this style of formal
+            meditation is the opposite of focused attention. Instead of
+            concentrating on something, your attention is open and
+            remains aware of everything that is happening. All
+            experiences are perceived as they happen, with a goal of
+            remaining non-judgmental toward oneself. Some of the things
+            that are watched in this meditation are:</p>
+            <ul>
+            <li><blockquote>
+            <p>Thoughts</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Feelings</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Memories</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Sounds</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Smells</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Bodily sensations</p>
+            </blockquote></li>
+            </ul>
+            <p>Instead of getting caught up in a thought or feeling, the
+            practitioner is instead encouraged to simply witness
+            everything and be present to whatever is happening.<a
+            href="#fn22" class="footnote-ref" id="fnref22"
+            role="doc-noteref"><sup>22</sup></a> This is related to the
+            practice of Mindfulness which has gained recent popularity
+            in the West for its ability to help people have more clarity
+            and equanimity in day-to-day life. For example, Mindfulness
+            Based Stress Reduction (MBSR) has popularized mindfulness
+            practice and helped millions of Americans with a practical
+            application of mindfulness.<a href="#fn23"
+            class="footnote-ref" id="fnref23"
+            role="doc-noteref"><sup>23</sup></a> Jon Kabat-Zinn
+            succinctly defines mindfulness as paying attention on
+            purpose, in the present moment and nonjudgmentally.<a
+            href="#fn24" class="footnote-ref" id="fnref24"
+            role="doc-noteref"><sup>24</sup></a></p>
+            <p>Dr. Siegel’s third pillar of mind training, kind
+            intention, dovetails with Rogers’ concept of unconditional
+            positive regard (see section III, above). This is about our
+            relational sense in the world and is an acknowledgment of
+            the interconnection of all things. Knowing that you are
+            connected to all beings allows compassion to naturally flow.
+            Thich Nhat Hanh coined the term “interbeing” to describe
+            this concept.<a href="#fn25" class="footnote-ref"
+            id="fnref25" role="doc-noteref"><sup>25</sup></a></p>
+            <p><code>Practice Tip</code></p>
+            <p>The next time you know you will be dealing with a
+            difficult client, take a few minutes to breathe and drop in
+            to the present moment prior to the meeting. There are many
+            great meditation apps out there that can help with this,
+            including <em>Insight Timer</em> and <em>Waking Up</em>. I
+            once had a client come into my office shaking uncontrollably
+            due to her fearful internal mental simulations about going
+            to jail. I ran a brief three-minute meditation on my phone
+            and it brought her back into the room, into her body, and
+            able to communicate without shaking.</p>
+            <p>Another form of meditation, which is considered the
+            highest teaching by some ancient wisdom traditions in places
+            such as Tibet,<a href="#fn26" class="footnote-ref"
+            id="fnref26" role="doc-noteref"><sup>26</sup></a> is a
+            direct experience of pure consciousness unencumbered by
+            conceptual thought. In this practice there is no meditator,
+            there is just being. Seeing without a seer, and hearing
+            without a hearer, this is the ineffable self-transcendent
+            experience of non-dual awareness (NDA). By turning awareness
+            back on to itself, one can experience the mathematical space
+            that is the formless source of all form. This may be what
+            physicists call the “quantum vacuum.” This level of
+            awareness has recently been introduced in the West with
+            names such as Effortless Mindfulness<a href="#fn27"
+            class="footnote-ref" id="fnref27"
+            role="doc-noteref"><sup>27</sup></a> and Natural
+            Awareness.<a href="#fn28" class="footnote-ref" id="fnref28"
+            role="doc-noteref"><sup>28</sup></a> Non-duality is a
+            recognition that the dualistic view of the world—inside
+            versus outside, subject versus object, and other versus
+            self—may not be accurate.<a href="#fn29"
+            class="footnote-ref" id="fnref29"
+            role="doc-noteref"><sup>29</sup></a> People often experience
+            NDA when immersed in nature, listening to music or playing
+            sports. The panoramic flow state that is experienced by an
+            athlete when they are “in the zone” is an expression of NDA.
+            The DUII trial lawyer who can freely access this realm has a
+            distinct advantage in the courtroom. Not only does operating
+            from this level of awareness dissolve the narrow concerns of
+            the ego-identified self, it opens the door to infinite
+            possibility.</p>
+            <p>The Wheel of Awareness, provided in Appendix A, is a
+            simple meditation practice that incorporates all four of
+            these concepts. Guided audio versions of the meditation are
+            also available at <a
+            href="https://www.drdansiegel.com">drdansiegel.com</a>. The
+            Wheel of Awareness is a visual metaphor with a center hub
+            that represents awareness or consciousness itself (the
+            context of consciousness), a wheel that represents all of
+            the things awareness can know (the contents of
+            consciousness), and a spoke of attention that goes from the
+            hub to the wheel.</p>
+            <ul>
+            <li><blockquote>
+            <p>Steps 3 and 4 use focused attention to methodically
+            review the five senses and internal bodily sensations.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Steps 5 and 6 use open awareness to pay attention to
+            mental life and how thoughts and emotions present
+            themselves, stay in awareness, and disappear.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Step 7 provides an opportunity to experience non-dual
+            awareness by bending the spoke of attention back into
+            awareness itself.</p>
+            </blockquote></li>
+            <li><blockquote>
+            <p>Step 8 helps develop kind intention by sensing our
+            relational experience with others near us and gradually
+            moving that sense out to include all life.</p>
+            </blockquote></li>
+            </ul>
+            </section>
+            <section id="vi._conclusion" class="level1">
+            <h1><strong>VI. Conclusion</strong></h1>
+            <p>Practicing DUII defense can be challenging and your
+            relationship with your clients can be one of the main
+            sources of both stress and joy. We hope that the information
+            provided in this chapter will assist you both in working
+            with your client and maintaining your own well-being during
+            the lifecycle of your DUII case. The Powers Principles go a
+            long way to establishing trust and rapport with your client.
+            The practice of unconditional positive regard is a way to
+            interact with your clients in a healthy and positive way.
+            The article about counseling the addicted client should
+            provide you with some tools and information to better
+            understand the plight of a client with alcohol and addiction
+            issues. Finally, we hope that the section on concentration
+            and awareness will improve your ability to be flexible and
+            open-minded when tackling a DUII case, and provide one
+            method of self-care when things seem overwhelming.
+            Meditation is a way to experience what your mind is like
+            before it becomes cluttered by concepts, judgments,
+            reactions and other contractions of consciousness. A regular
+            meditation practice is a tool that may benefit both you and
+            your client as you work through the triumphs and defeats of
+            a case. Working with DUII clients can be extremely rewarding
+            and beneficial to both the attorney and the client. This is
+            truly a practice area where the attorney has an opportunity
+            to change people’s lives for the better.</p>
+            <references />
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1">never-gone.com/memorials/johnpowers.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2">Reported by the National Highway Traffic Safety
+            Administration (NHTSA) and Centers for Disease Control. See
+            bactrack.com/blogs/expert-center/35040645-DUII-statistics.<a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3">See David Binder &amp; Susan Price, <em>Legal
+            Interviewing and Counseling: A Client-Centered Approach</em>
+            (West Publishing, 1977); Douglas Rosenthal, <em>Lawyer and
+            Client: Who’s in Charge?</em> (Russel Sage Foundation,
+            1974); Stephen Ellmann, “Lawyers and Clients,” UCLA L. Rev.
+            34 717 (1987); Robert D. Dinerstein, “Client-Centered
+            Counseling: Reappraisal and Refinement,” Ariz. L. Rev. 32
+            501 (1990), and more recently (with Paul Bergman),
+            <em>Lawyers as Counselors: A Client Centered Approach</em>
+            (Thomson/West, 2nd rev. ed. 2004); Jonah A. Siegel et al.,
+            “Client-Centered Lawyering and the Redefining of
+            Professional Roles Among Appellate Public Defenders,” Ohio
+            State Journal of Criminal Law 14 579 (2017).<a
+            href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4">See <em>The Carl Rogers Reader</em>, edited by
+            Howard Kirschenbaum and Valerie Land Henderson, 1989, pp
+            135-136 and, generally, Chapter 10.<a href="#fnref4"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn5">Model Rule 1.1: Competence: A lawyer shall
+            provide competent representation to a client. Competent
+            representation requires the legal knowledge, skill,
+            thoroughness and preparation reasonably necessary for the
+            representation.<a href="#fnref5" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn6">Model Rule 1.14: Client with Diminished
+            Capacity: (a) When a client’s capacity to make adequately
+            considered decisions in connection with a representation is
+            diminished, whether because of minority, mental impairment
+            or for some other reason, the lawyer shall, as far as
+            reasonably possible, maintain a normal client-lawyer
+            relationship with the client. (b) When the lawyer reasonably
+            believes that the client ahs diminished capacity, is a t
+            risk of substantial physical, financial or other harm unless
+            action is taken and cannot adequately act in the client’s
+            own interest, the lawyer may take reasonably necessary
+            protective action, including consulting with individuals or
+            entities that have the ability to take action to protect the
+            client and, in appropriate cases, seeking the appointment of
+            a guardian ad litem, conservator or guardian.(c) Information
+            relating to the representation of a client with diminished
+            capacity is protected by Rule 1.6. When taking protective
+            action pursuant to paragraph (b), the lawyer is impliedly
+            authorized under Rule 1.6(a) to reveal information about the
+            client, but only to the extent necessary to protect the
+            client’s interests.<a href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7">Model Rule 1.6: Confidentiality: (b) A lawyer
+            may reveal information relating to the representation of a
+            client to the extent the lawyer reasonably believes
+            necessary: (1) to prevent reasonably certain death or
+            substantial bodily harm […].<a href="#fnref7"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn8">Dictionary.com definition.<a href="#fnref8"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn9">The male pronoun is used for simplicity.<a
+            href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn10">Fran Smith, <em>The Addicted Brain</em>,
+            National Geographic, September 2017, 30-53, at 37 (emphasis
+            added).<a href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn11"><em>Id</em>. at 36.<a href="#fnref11"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn12">National Drug Court Institute, <em>Drug Court
+            Practitioner Fact Sheet</em>, Vo. VIII, No. 2 (Sept.
+            2013).<a href="#fnref12" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn13">Joshua D. Lee, Extended-Release Naltrexone,
+            National Drug Court Institute, <em>Drug Court Practitioner
+            Fact Sheet</em>, Vo VIII, No.2 (Sept. 2013) at 2.<a
+            href="#fnref13" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn14">R.F. Anton et al., <em>Combined
+            Pharmacotherapies and Behavioral Interventions for Alcohol
+            Dependence</em>, 295 (17) JAMA 2003-2017 (2006), cited in
+            National Drug Court Institute, <em>Drug Court Practitioner
+            Fact Sheet</em>, Vo VIII, No.2 (Sept. 2013).<a
+            href="#fnref14" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn15">Fran Smith, <em>The Addicted Brain</em>,
+            National Geographic, September 2017, 30-53.<a
+            href="#fnref15" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn16"><em>Id</em>. at 36, quoting Antonello Bonci.<a
+            href="#fnref16" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn17">T. Sforza, <em>How Some Southern California
+            Drug Rehab Centers Exploit Addiction</em>, Orange County
+            Register, May 21, 2017, <a
+            href="https://www.ocregister.com/2017/05/21/how-some-southern-california-drug-rehab-centers-exploit-addiction">https://www.ocregister.com/2017/05/21/how-some-southern-california-drug-rehab-centers-exploit-addiction</a>.<a
+            href="#fnref17" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn18">Thich Nhat Hanh, <em>Living Buddha, Living
+            Christ</em> (New York: Riverhead Books, 2007), 20.<a
+            href="#fnref18" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn19">Henry David Thoreau, <em>Walden</em> (New
+            York: Bantom, 1854), 57.<a href="#fnref19"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn20">Daniel J. Siegel, <em>Aware: The Science and
+            Practice of Presence</em> (New York: Penguin Random House
+            LLC, 2018).<a href="#fnref20" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn21">Jennie Bricker, “Paying Attention: Are We Too
+            Distracted to Practice Law?” December 2019 issue OSB
+            <em>Bulletin</em>.<a href="#fnref21" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn22"><a
+            href="https://www.pocketmindfulness.com/focused-open-meditation/">pocketmindfulness.com/focused-open-meditation.</a><a
+            href="#fnref22" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li
+            id="fn23">umassmed.edu/cfm/mindfulness-based-programs/mbsr-courses/mbsr-online.<a
+            href="#fnref23" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn24">Jon Kabat-Zinn, <em>Wherever You Go, There You
+            Are: Mindfulness Meditation in Everyday Life</em> (New York:
+            Hyperion, 1994), 4.<a href="#fnref24" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn25">Thich Nhat Hanh, <em>Interbeing</em>
+            (Berkeley: Parallax Press, 1987), 4.<a href="#fnref25"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn26">See Tulku Urgyen Rinpoche, <em>Rainbow
+            Painting: A Collection of Miscellaneous Aspects of
+            Development and Completion</em>, trans. Erik Pema Kunsang
+            (Hong Kong: Ranjung Yeshe Publications, 1995) and Sogyal
+            Rinpoche, The Tibetan Book of Living and Dying: Revised and
+            Updated (New York: Harper Collins, 2002).<a href="#fnref26"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn27">Loch Kelly, <em>The Way of Effortless
+            Mindfulness: A Revolutionary Guide for Living and Awakened
+            Life</em> (Boulder: Sounds True, 2019).<a href="#fnref27"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn28">Diana Winston, <em>The Little Book of Being:
+            Practices and Guidance for Uncovering Your Natural
+            Awareness</em> (Boulder: Sounds True, 2019).<a
+            href="#fnref28" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn29">Loch Kelly, <em>The Way of Effortless
+            Mindfulness</em>, 39.<a href="#fnref29"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

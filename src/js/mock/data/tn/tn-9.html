@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 9. Effective Opening
+            Statements</strong></p>
+            <p><strong><em>By Steve Sherlag</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>While in Oregon state courts voir dire is the first
+            chance defense counsel has to educate the jury about the
+            main defense themes and theories in an <em>interactive</em>
+            format, the defendant’s opening statement is the defense’s
+            opportunity to set forth case themes in a <em>persuasive
+            narrative format</em>, i.e., through a good story.</p>
+            <p>However, a persuasive narrative format has limitations.
+            Although there is an expectation that the statement be
+            persuasive, pervasive <em>arguments</em> are likely to be
+            met with sustained objections and an impatient judge.
+            Therefore, well-prepared counsel must carefully craft the
+            opening statement’s three parts (introduction, body and
+            conclusion) to carefully and persuasively set forth the
+            defense theories and the facts that support those
+            theories.</p>
+            <p>Approach an opening statement with the following concepts
+            in mind:</p>
+            <p>1. Primacy. The first thing you say in opening is very
+            important, maybe the most important thing you’ll say the
+            whole trial. Primacy means that jurors tend to remember what
+            was said first, thus what <em>is</em> said first is
+            <em>very</em>important. Spend half of your prep time
+            dedicated to your opening statement on the very first thing
+            you say. Make it simple and punchy, and bring it to the
+            heart—not necessarily the intellectual core—of your case.
+            One sentence—that’s all—giving the theme, the thrust of your
+            defense.</p>
+            <p>2. Recency. Your conclusion is almost as important as the
+            first thing you say, but your introduction will write your
+            conclusion. Recency means that jurors tend to remember what
+            was said last, so make it good and memorable.</p>
+            <p>3. Rhetoric in opening. A <em>little</em> more rhetoric,
+            or argument, is tolerated at the very beginning and very end
+            of your opening statement, especially if you are summarizing
+            your theory, or the main defense thrust. But for the most
+            part plain rhetoric is objectionable so it should be
+            avoided. But that does not mean that the <em>story</em>,
+            told in opening, cannot be effective and persuasive. In
+            fact, it better be.</p>
+            <p>4. Don’t make promises you cannot keep. Be wary of
+            overcommitting to specific facts, evidence, or witnesses,
+            and whether or not your client will testify.</p>
+            <p>5. Storytelling. Tell a good story in narrative,
+            chronological form. A damn good story is persuasive, maybe
+            more persuasive than anything else you can do.</p>
+            <p>6. Passion. <em>You are the voice of your client!</em>
+            Let the jury know it, let them <em>feel</em> it.</p>
+            </section>
+            <section id="ii._the_law_of_opening_statements"
+            class="level1">
+            <h1><strong>II. The Law of Opening Statements</strong></h1>
+            <p>The statute describing the purpose of an opening
+            statement could hardly be more bland. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            58B(3)</a> provides in pertinent part:</p>
+            <p>The plaintiff shall concisely state plaintiff’s case and
+            the issues to be tried; the defendant then, in like manner,
+            shall state defendant’s case based upon any defense or
+            counterclaim or both.</p>
+            <p>Similarly, the Oregon Supreme Court opined in <em>State
+            v. Reynolds</em><strong>,</strong>164 Or 446, 453, 100 P2d
+            593 (1940), “[t]he purpose served by an opening statement is
+            to acquaint the jurors with the issues, the contemplated
+            testimony and the relationship of the latter to the issues.
+            The making of one is subject to the discretion of the trial
+            judge.” <a
+            href="http://scholar.google.com/scholar_case?q=US+v+dinitz&amp;hl=en&amp;as_sdt=2,38&amp;case=7064780490932195299&amp;scilh=0">See
+            also United States v. Dinitz</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+dinitz&amp;hl=en&amp;as_sdt=2,38&amp;case=7064780490932195299&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+dinitz&amp;hl=en&amp;as_sdt=2,38&amp;case=7064780490932195299&amp;scilh=0">424
+            U.S. 600, 612 (1976)</a> (Burger, C.J., concurring) (“An
+            opening statement has a narrow purpose and scope. It is to
+            state what evidence will be presented, to make it easier for
+            the jurors to understand what is to follow, and to relate
+            parts of the evidence and testimony to the whole; it is not
+            an occasion for argument”). Opening statement should not
+            refer to matters that are not to be presented as evidence.
+            <a
+            href="http://scholar.google.com/scholar_case?q=US+v+taren-palma&amp;hl=en&amp;as_sdt=2,38&amp;case=3715686815906457184&amp;scilh=0">United
+            States v. Taren-Palma</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+taren-palma&amp;hl=en&amp;as_sdt=2,38&amp;case=3715686815906457184&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+taren-palma&amp;hl=en&amp;as_sdt=2,38&amp;case=3715686815906457184&amp;scilh=0">997
+            F2d 525, 532 (9th Cir. 1993)</a>, <em>cert. denied,</em> 511
+            U.S. 1071 (1994). The scope and extent of an opening
+            statement is within the trial court’s control. <a
+            href="http://scholar.google.com/scholar_case?q=US+v+Hershenow&amp;hl=en&amp;as_sdt=2,38&amp;case=3501999677979201334&amp;scilh=0">United
+            States v. Hershenow</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+Hershenow&amp;hl=en&amp;as_sdt=2,38&amp;case=3501999677979201334&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+Hershenow&amp;hl=en&amp;as_sdt=2,38&amp;case=3501999677979201334&amp;scilh=0">680
+            F2d 847, 857 (1st Cir. 1982)</a>. The trial judge can
+            exclude irrelevant facts and stop argument if it occurs. <a
+            href="http://scholar.google.com/scholar_case?q=US+v+Zielie&amp;hl=en&amp;as_sdt=2,38&amp;case=2725914031833672914&amp;scilh=0">United
+            States v. Zielie</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+Zielie&amp;hl=en&amp;as_sdt=2,38&amp;case=2725914031833672914&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+Zielie&amp;hl=en&amp;as_sdt=2,38&amp;case=2725914031833672914&amp;scilh=0">734
+            F2d 1447, 1455 (11th Cir. 1984)</a>, <em>cert. denied,</em>
+            469 U.S. 1189 (1985), <em>and cert. denied,</em> 469 U.S.
+            1216 (1985). The trial judge must “actively supervise the
+            trial and, if necessary, reiterate instructions in the wake
+            of prejudicial events.” <a
+            href="http://scholar.google.com/scholar_case?q=US+v+Tootick&amp;hl=en&amp;as_sdt=2,38&amp;case=14119411316771904140&amp;scilh=0">United
+            States v. Tootick</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+Tootick&amp;hl=en&amp;as_sdt=2,38&amp;case=14119411316771904140&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=US+v+Tootick&amp;hl=en&amp;as_sdt=2,38&amp;case=14119411316771904140&amp;scilh=0">952
+            F2d 1078, 1085 (9th Cir. 1991)</a>.</p>
+            </section>
+            <section id="iii._objectionable_opening_statements"
+            class="level1">
+            <h1><strong>III. Objectionable Opening
+            Statements</strong></h1>
+            <section id="a._argument" class="level2">
+            <h2><strong>A. “Argument”</strong></h2>
+            <p>The most common objection in opening is that counsel is
+            “arguing” the case. The objection derives from the bland
+            statutory and historical understanding of what an opening
+            statement is.</p>
+            <p>Nonetheless, don’t have any doubt that you <em>are</em>
+            arguing your case, absolutely so. YOU ARE ARGUING YOUR CASE
+            IN OPENING. Repeat after me: YOU ARE ARGUING YOUR CASE IN
+            OPENING. In fact, the whole trial long YOU ARE ARGUING YOUR
+            CASE. Every minute, everything you’re doing. It’s just that
+            at each stage you have different constraints, different
+            formats. In opening, you argue it by setting forth the good
+            facts, telling them like you were actually there. Tell a
+            damn good story—it’s a lot more credible than anything else
+            you can more transparently “argue.” In fact, when it comes
+            down to it, you should be thankful for this format. It lets
+            you build credibility with the jury so you don’t just look
+            like another biased lawyer. Tell a damn good story—it won’t
+            “technically” be argument and you’ll be credible. What could
+            help your client more than being a credible advocate?</p>
+            <p>The line between an opening <em>statement</em> and an
+            opening <em>argument</em> may seem determined by little more
+            than how willing you are to risk a sustained objection or
+            two. Some lawyers are loathe to object to opposing counsel’s
+            opening in light of the fact that the most common judicial
+            response is a rote explanation to the jury, “The statements
+            of counsel are not evidence. Continue.”</p>
+            <p>Some lawyers are unwilling to do things that are
+            objectionable because they think it will hurt their
+            credibility with the jury, or may risk disposing the judge
+            against them. It’s up to you in your own personal litigation
+            style, considered on a case-by-case basis, to make the
+            judgment call.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Preempting the “Argument” Objection: “The evidence will
+            show…”</p>
+            <p>Be aware that even very experienced judges sometimes have
+            a hard time with really great unobjectionable opening
+            statements, largely because a really great story can be so
+            persuasive the judge may start thinking they are
+            argumentative even when they are not. That’s why opening
+            statements can be the toughest part of a defense case. Be
+            proactive and occasionally sprinkle your opening with, “The
+            evidence will show….” Merely saying “occasionally” may
+            preempt the “argument” objection and give you enough to
+            convince the judge: “I’m just telling the jury what the
+            evidence will show, that’s the purpose of opening
+            statements.” Surprisingly simple and effective.</p>
+            <p><em>Objections in opening can backfire</em>, punctuating
+            opposing counsel’s opening statement. However, the judge is
+            more likely to sustain the objection when counsel argues
+            incessantly, bores the judge or jury, or uses particularly
+            descriptive or flowery verbiage (“Officer SoAndSo is a
+            <em>big fat liar</em>” is objectionable versus “The evidence
+            will demonstrate that you cannot trust Officer SoAndSo
+            because…” and supply applicable facts).</p>
+            <p>Objections are also <em>more likely to be sustained</em>
+            the more aggressive or passionate counsel is. With a more
+            even tone, they are more tolerable.</p>
+            <p><em>Know your judge</em> since different judges will have
+            varying levels of tolerance for argument pursuant in the
+            court’s exercise of discretion administering opening
+            statements. <em>See State v. Ragan</em>, 123 Or 521, 262 P
+            954 (1928); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+seeger&amp;hl=en&amp;as_sdt=4,38&amp;case=3111552181632184682&amp;scilh=0">State
+            v. Seeger</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+seeger&amp;hl=en&amp;as_sdt=4,38&amp;case=3111552181632184682&amp;scilh=0">,
+            4 Or App 336, 337, 479 P2d 240 (1971)</a>. Therefore,
+            research your particular judge’s outlook with other counsel
+            if you are not familiar with that judge. Keep in mind that
+            it is possible to argue a little more in your introduction
+            and conclusion. It also never hurts to say, “The evidence
+            will show…” every now and then, irrespective of what you say
+            next. Telling the jury what “the evidence will show” can
+            <em>never</em> be found to be objectionable, <em>even if you
+            are arguing</em>.</p>
+            <p>Judges will also vary greatly in their permissiveness in
+            regard to discussions of the law in opening statements. If
+            you have not previously tried a case before a particular
+            judge, you must talk to those who have to discover how far
+            you can go without objection. Anything other than a passing
+            discussion of the law should be avoided in opening
+            irrespective of the judge’s outlook.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>The Officious Intermeddling Judge</p>
+            <p>There will be times where you’ve drafted a great opening,
+            gotten rid of all the flowery rhetoric and boiled it down to
+            a short intro, a great story sprinkled with “the evidence
+            will show,” and a short closing, yet the judge cannot sit on
+            his or her hands. Sometimes this happens because the thrust
+            of your case is one the judge doesn’t like, often because
+            you are alleging corruption, inappropriate or even,
+            <em>gasp</em>, criminal behavior on behalf of the cops. What
+            to do?</p>
+            <p>You have a fundamental due process right to explain your
+            defense theory in opening and the facts that support it.
+            You’ve got a couple of options:</p>
+            <p>1) Just move on – sometimes you’ve got to accept the
+            lumps and do your best.</p>
+            <p>2) You could try a slightly more risky response, a brief
+            speaking objection: “Judge, I’m just tying up a couple
+            aspects of the defense, if you can give me some leeway
+            here….” Risky, but if you really are just tying a few things
+            together and the judge knows you well, this sometimes
+            works.</p>
+            <p>3) You can get assertive. Sometimes you have no choice
+            but to look the judge in the eye coolly, calmly, and
+            completely earnestly and ask for a bench conference or a
+            conference outside the presence of the jury. If the judge
+            denies the conference, look the judge coolly, calmly, and
+            <em>respectfully</em>in the eye and say, “Thank you, your
+            Honor, I’ll take Mr. Defendant’s exception, and reserve
+            further argument for the next break.” To have any chance at
+            preserving the error, explain the problem at the n break,
+            but because the standard on appeal is against you here,
+            really what you’re doing is letting the judge and jury know
+            that you take your job seriously. Sometimes this is enough
+            to get the judge off your back for the rest of opening and,
+            maybe, off your back in trial. Judges don’t like to look
+            bad, and sometimes having a judge shut you down when you are
+            <em>respectfully</em> and earnestly doing your job sends a
+            couple of good messages to the jury: They will see that you
+            care about your client—so much so that you are willing to
+            take flak from the judge. Second, they sometimes get it that
+            the judge isn’t always right and can get in the way of us
+            doing our job. But you’ve got to do it with outward respect,
+            even if in your heart you don’t have it.</p>
+            </section>
+            <section id="b._personal_opinions_or_vouching"
+            class="level2">
+            <h2><strong>B. Personal Opinions or “Vouching”</strong></h2>
+            <p>What the lawyer thinks is irrelevant, at least legally.
+            Neither your personal opinions nor the prosecutor’s have any
+            place in the case. You should never, at any point of the
+            trial, say, “I think” or “I believe”—that’s inappropriate
+            vouching. Still, your faith in your client’s innocence will
+            be obvious and should not explicitly state that it is your
+            personal belief. (“I believe Mr. Client is innocent” is
+            objectionable; stating “Mr. Client is innocent” is not).</p>
+            <p><em>Prosecutorial Vouching</em>. Prosecutors may resort
+            to “vouching,” or attempt to use their personal appraisal of
+            the value of a case or the credibility of a witness to sway
+            the jury’s judgment. While vouching occurs in closing
+            argument far more than opening statements, stay alert and
+            object immediately. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+parker+1963&amp;hl=en&amp;as_sdt=4,38&amp;case=637840036507900897&amp;scilh=0">See</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+parker+1963&amp;hl=en&amp;as_sdt=4,38&amp;case=637840036507900897&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+parker+1963&amp;hl=en&amp;as_sdt=4,38&amp;case=637840036507900897&amp;scilh=0">State
+            v. Parker</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+parker+1963&amp;hl=en&amp;as_sdt=4,38&amp;case=637840036507900897&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+parker+1963&amp;hl=en&amp;as_sdt=4,38&amp;case=637840036507900897&amp;scilh=0">235
+            Or 366, 376–78, 384 P2d 986 (1963)</a> (discussion of
+            vouching). There is a vast collection of examples of
+            vouching behavior found in both state and federal case law.
+            An excellent compendium is found in Chapter 15 under the
+            section, “The Ethical and Legal Problems of Prosecutorial
+            Vouching.”</p>
+            </section>
+            <section id="c._comment_on_defendants_silence"
+            class="level2">
+            <h2><strong>C. Comment on Defendant’s Silence</strong></h2>
+            <p>It is improper to comment on the defendant’s silence in
+            opening statement. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+alvord&amp;hl=en&amp;as_sdt=4,38&amp;case=2720935580051226116&amp;scilh=0">See
+            State v. Alvord</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+alvord&amp;hl=en&amp;as_sdt=4,38&amp;case=2720935580051226116&amp;scilh=0">,
+            118 Or App 111, 115, 846 P2d 432 (1993)</a> (comment on
+            silence is presumptively prejudicial); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+white+&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">State
+            v. White</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+white+&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+white+&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">303
+            Or 333, 343, 736 P2d 552 (1987)</a> (after improper comment
+            on silence, trial court has a duty to allow a timely motion
+            for a mistrial or to cure the effect of the improper comment
+            by giving a proper instruction); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">State
+            v. Grenawalt</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">86
+            Or App 96, 738 P2d 232,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">rev</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">den</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">304
+            Or 405 (1987)</a>; State v. Alvord<em>, supra</em>.</p>
+            <p><em>Proactively protect the Fifth Amendment</em>. If your
+            client has wisely invoked the right to silence, move <em>in
+            limine</em> to prevent the prosecutor from referring to your
+            client’s invocation, be it an explicit oral invocation or
+            implicit by your client’s failure to respond to a direct
+            question. It never hurts to put the prosecutor on notice and
+            make them more cautious. It also will further your later
+            motion for mistrial and dismissal if the prosecutor cannot
+            contain him- or herself.</p>
+            </section>
+            <section id="d._references_to_inadmissible_evidence"
+            class="level2">
+            <h2><strong>D. References to Inadmissible
+            Evidence</strong></h2>
+            <p>Counsel is restricted in opening to describing evidence
+            that in good faith they have a reasonable expectation will
+            be offered and admitted. <em>See State v. MacLaren</em>, 115
+            Or 505, 507, 237 P 969 (1925) (“opening statement should
+            always be confined to reference to competent evidence”).
+            Where information conveyed to the jury is clearly
+            inadmissible and prejudicial, even inadvertent statements
+            can justify a mistrial. Closer calls regarding admissibility
+            make a mistrial less likely, especially if opposing counsel
+            could have anticipated issues relative to the evidence and
+            failed to act <em>in limine</em>. Move <em>in limine</em> to
+            disabuse the prosecutor of any good faith or reasonable
+            expectations about the availability or admissibility of any
+            potentially objectionable evidence.</p>
+            <p>Courts frequently forgive references to inadmissible
+            evidence and will try to cure them through instructions. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+frazier+&amp;hl=en&amp;as_sdt=4,38&amp;case=12959361991494634148&amp;scilh=0">See
+            State v. Frazier</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+frazier+&amp;hl=en&amp;as_sdt=4,38&amp;case=12959361991494634148&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+frazier+&amp;hl=en&amp;as_sdt=4,38&amp;case=12959361991494634148&amp;scilh=0">245
+            Or 4, 418 P2d 841 (1966)</a> (comment on expected testimony
+            of co-defendant); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+williams&amp;hl=en&amp;as_sdt=4,38&amp;case=922282463921201676&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+williams&amp;hl=en&amp;as_sdt=4,38&amp;case=922282463921201676&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+williams&amp;hl=en&amp;as_sdt=4,38&amp;case=922282463921201676&amp;scilh=0">49
+            Or App 893, 621 P2d 621 (1980)</a> (reference to defendant’s
+            exercise of his constitutional right to counsel did not
+            entitle defendant to mistrial); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+barker&amp;hl=en&amp;as_sdt=4,38&amp;case=1254257489228474668&amp;scilh=0">State
+            v. Barker</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+barker&amp;hl=en&amp;as_sdt=4,38&amp;case=1254257489228474668&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+barker&amp;hl=en&amp;as_sdt=4,38&amp;case=1254257489228474668&amp;scilh=0">26
+            Or App 297, 552 P2d 565 (1976)</a> (violation of court’s
+            pretrial order prohibiting introduction of evidence
+            concerning other bad acts by defendant); <a
+            href="http://scholar.google.com/scholar_case?q=119+Or+App+424&amp;hl=en&amp;as_sdt=4,227&amp;case=9309836956971935405&amp;scilh=0">State
+            v. White, 119 Or App 424, 850 P2d 1158 (1993)</a> (statement
+            that defendant was a heavy drinker does not require
+            mistrial); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+herrera&amp;hl=en&amp;as_sdt=4,38&amp;case=2081029630631691202&amp;scilh=0">but
+            see State v. Herrera</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+herrera&amp;hl=en&amp;as_sdt=4,38&amp;case=2081029630631691202&amp;scilh=0">,
+            236 Or 1, 5, 386 P2d 448 (1963)</a> (“inflammatory nature of
+            the prosecutor’s remarks in the case at bar outweighed any
+            reasonable excuse for including them in the opening
+            statement”; defendant’s character was not on trial). The
+            “good faith” of the prosecutor or lack of prejudice to the
+            defendant are the usual reasons for denying the motion for
+            mistrial. Be prepared to object later if the issue reoccurs.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+wolfs&amp;hl=en&amp;as_sdt=4,38&amp;case=10896580991922974799&amp;scilh=0">See
+            State v. Wolfs</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+wolfs&amp;hl=en&amp;as_sdt=4,38&amp;case=10896580991922974799&amp;scilh=0">,
+            119 Or App 262, 267–68, 850 P2d 1139 (1993)</a> (subsequent
+            failure to object to admission of evidence of prior
+            convictions waives appeal of failure to grant mistrial
+            regarding prosecutor’s opening statement referencing prior
+            convictions).</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis+2008&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis+2008&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">,
+            345 Or 551, 201 P3d 185 (2008)</a>, the court considered the
+            prejudicial impact of a prosecutor’s opening statement which
+            included a summary of testimony of a witness that the
+            prosecutor had more than just an inkling would not appear at
+            trial. The opening statement summary included the reading of
+            a note penned by Davis, accused of aggravated murder, which
+            implicated him in the offense. Just <em>after</em> opening
+            statement, the prosecutor let the court know of problems
+            related to procuring the witness, in spite of having served
+            him with a lawful subpoena; the defense made no motion at
+            that time, but moved for a mistrial at the conclusion of the
+            evidence when the witness failed to appear. The prosecutor
+            detailed his efforts and affirmed under oath his recitation.
+            Trial counsel did not challenge the good faith of the
+            prosecutor’s statements, yet when appellate counsel did, the
+            state supreme court did not consider the issue as it was not
+            preserved. <em>Id.</em> at 587 n 20. The trial court offered
+            a curative instruction, which defense counsel declined so as
+            to not “ring the bell.” The trial court denied the motion
+            for mistrial and the Oregon Supreme Court affirmed
+            since:</p>
+            <p>It may be that some remarks included in an opening or
+            closing statement could be so prejudicial that a finding of
+            error, or even constitutional error, would be unavoidable.
+            But here we have no more than an objective summary of
+            evidence which the prosecutor reasonably expected to
+            produce. . . . Certainly not every variance between the
+            advance description and the actual presentation constitutes
+            reversible error, when a proper limiting instruction has
+            been given.</p>
+            <p><em>Id</em>. at 587, <a
+            href="http://scholar.google.com/scholar_case?q=frazier+v+cupp&amp;hl=en&amp;as_sdt=2,38&amp;case=8766034093838378014&amp;scilh=0">citing
+            Frazier v. Cupp</a><a
+            href="http://scholar.google.com/scholar_case?q=frazier+v+cupp&amp;hl=en&amp;as_sdt=2,38&amp;case=8766034093838378014&amp;scilh=0">,
+            394 U.S. 731, 736, 89 S Ct 1420, 22 L Ed 2d 684
+            (1969)</a>.</p>
+            </section>
+            <section id="e._how_to_make_your_objections" class="level2">
+            <h2><strong>E. How to Make Your Objections</strong></h2>
+            <p>1. Timely An objection must be made at the time of the
+            offending statement. <a
+            href="http://scholar.google.com/scholar_case?q=carlson+v+lyman&amp;hl=en&amp;as_sdt=4,38&amp;case=6841773529077418586&amp;scilh=0">See
+            Carlson v. Lyman Slack Motors</a><a
+            href="http://scholar.google.com/scholar_case?q=carlson+v+lyman&amp;hl=en&amp;as_sdt=4,38&amp;case=6841773529077418586&amp;scilh=0">,
+            49 Or App 63, 618 P2d 1314 (1980)</a> (objection and motion
+            for mistrial at end of opening statement was untimely); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+cooper&amp;hl=en&amp;as_sdt=4,38&amp;case=9306890451970369834&amp;scilh=0">State
+            v. Cooper</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+cooper&amp;hl=en&amp;as_sdt=4,38&amp;case=9306890451970369834&amp;scilh=0">,
+            130 Or App 209, 880 P2d 514, 515 (1994)</a> (counsel’s
+            failure to timely object to comment on silence waives issue
+            on appeal; to preserve error, a motion for a mistrial must
+            be timely).</p>
+            <p>2. Timely Move for Curative Instruction and Mistrial When
+            doing so, argue outside the presence of the jury. If
+            appropriate, argue as to the language of the curative
+            instruction and, in the alternative, for a mistrial. There
+            is a high standard on appeal for the trial court’s denial of
+            a motion for mistrial. <a
+            href="file:///Users/jennifer/Documents/publication%20committee/Placing%20Publications%20Online%20/LOD%20-%20pubs%20online/trial%20notebook%20chapters/State%20v.%20Cooper,%20130%20Or%20App%20209,%20880%20P2d%20514,%20515%20(1994)">See
+            State v. McCartney</a><a
+            href="file:///Users/jennifer/Documents/publication%20committee/Placing%20Publications%20Online%20/LOD%20-%20pubs%20online/trial%20notebook%20chapters/State%20v.%20Cooper,%20130%20Or%20App%20209,%20880%20P2d%20514,%20515%20(1994)">,</a><a
+            href="file:///Users/jennifer/Documents/publication%20committee/Placing%20Publications%20Online%20/LOD%20-%20pubs%20online/trial%20notebook%20chapters/State%20v.%20Cooper,%20130%20Or%20App%20209,%20880%20P2d%20514,%20515%20(1994)">65
+            Or App 766, 768, 672 P2d 1210 (1983)</a> (reviewed for an
+            abuse of discretion), <em>rev den</em>296 Or 638, 678 P2d
+            739 (1984); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">State
+            v. Grenawalt</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">,
+            86 Or App 96, 98, 738 P2d 232, rev den</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">.</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">304
+            Or 405, 745 P2d 1225 (1987)</a> (looking to the particular
+            facts of this case, the decisive issue is whether
+            defendant’s ability to receive a fair trial was impaired).
+            Since the standard is so high, don’t expect the motion to be
+            granted except in extraordinary and unusual situations:</p>
+            <p>Even if we find the prosecutor’s remarks to be improper,
+            tasteless, or inappropriate, we will not find an abuse of
+            discretion in the trial court’s denial of the motion for a
+            mistrial unless the effect of the prosecutor’s remarks is to
+            deny a defendant a fair trial.” </p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+smith+1990&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0">State
+            v. Smith</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+smith+1990&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+smith+1990&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0">310
+            Or 1, 24, 791 P2d 836 (1990)</a>. </p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Moving for a mistrial</p>
+            <p>Bottom line, even if you don’t expect the motion to be
+            granted, object, move for a mistrial. If you don’t, the
+            issue won’t be preserved on appeal. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis+2008&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">See</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis+2008&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis+2008&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis+2008&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+davis+2008&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">supra</a>.</p>
+            <p>Moreover, objecting to the prosecutor’s improper actions
+            can be helpful in other ways, such as creating an argument
+            for cumulative prosecutor misconduct, putting the prosecutor
+            on notice that you’re not going to put up with any
+            shenanigans, and, hopefully, dissuading the prosecutor from
+            future misconduct. Finally, you may be able to get the trial
+            judge on your side, to lean on the prosecutor and scrutinize
+            them such that, in the event of future misconduct, you just
+            may get your mistrial and be able to move for dismissal
+            under <a
+            href="http://scholar.google.com/scholar_case?q=state+v+kennedy+1983&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">State
+            v. Kennedy</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+kennedy+1983&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">,
+            295 Or 260, 666 P2d 1316 (1983)</a>. When you’ve caught the
+            prosecutor doing something improper once, judges tend to get
+            less patient the second or third time. Even if you don’t get
+            your mistrial, it seldom hurts to have the judge jump down
+            the prosecutor’s throat once or twice, either in front of or
+            outside the presence of the jury. Prosecutors tend to get
+            less flack from judges, so when they do it tends to affect
+            them more. If you do get a mistrial, argue <em>after the
+            jury is discharged</em> that jeopardy attached and your
+            client cannot be retried under Kennedy (reckless
+            indifference to resulting mistrial prohibits retrial).</p>
+            <p>3. Object If the Issue Returns A failure to later object
+            on a related evidentiary issue may deem to waive earlier
+            objectionable statements in opening. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+wolfs&amp;hl=en&amp;as_sdt=4,38&amp;case=10896580991922974799&amp;scilh=0">See
+            State v. Wolfs</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+wolfs&amp;hl=en&amp;as_sdt=4,38&amp;case=10896580991922974799&amp;scilh=0">,
+            119 Or App 262, 267-68, 850 P2d 1139 (1993)</a> (subsequent
+            failure to object to admission of evidence of prior
+            convictions waives appeal of failure to grant mistrial
+            regarding prosecutor’s opening statement referencing prior
+            convictions). </p>
+            </section>
+            </section>
+            <section id="iv._crafting_a_persuasive_opening_statement"
+            class="level1">
+            <h1><strong>IV. Crafting a Persuasive Opening
+            Statement</strong></h1>
+            <section
+            id="a._developing_your_defense_theory_and_case_theme_or_case_story"
+            class="level2">
+            <h2><strong>A. Developing Your Defense Theory and Case Theme
+            or “Case Story”</strong></h2>
+            <p>The well-crafted opening statement makes a good first
+            impression. First impressions count everywhere else in life,
+            including before a jury. Once a juror’s mind is made up, it
+            can be difficult to bring them around. So take the opening
+            as an opportunity to set the stage in the case and pull the
+            jury over to your side. For example, there is a significant
+            difference in the following opening statement topic
+            introductions:</p>
+            <p><em>“This case is about self-defense.”</em></p>
+            <p><em>“Bang! As the shot whizzed past his ear, John Client
+            knew immediately that he had but one choice – to fight back
+            or die.”</em></p>
+            <p>The former, while a classic, simple, and easily
+            understood beginning, tells the jury nothing about the
+            emotion of the case. The latter needs only a few facts to
+            fill in some of the details in the body of the opening
+            statement. But its strength is that it immediately informs
+            the jury of both the emotion and crux of the case. It also
+            places the jury at the specific moment in time when your
+            client, conflicted, was forced to make the choice that the
+            government contends is criminal and you contend was not. It
+            immediately appeals to the jury’s sense of right and wrong
+            and crystallizes what is important. It makes the jury want
+            to hear more. Most of all, it avoids specific reference to
+            the law and goes to the heart of the case.</p>
+            </section>
+            <section
+            id="b._make_your_introduction_and_conclusion_clear_concise_and_simple"
+            class="level2">
+            <h2><strong>B. Make Your Introduction and Conclusion Clear,
+            Concise, and Simple</strong></h2>
+            <p>Draft your introduction as if you were going to give it
+            to a middle school class. Consider how marketers or
+            Hollywood <em>“</em>sells<em>”</em>a story<em>:</em></p>
+            <p><em>Primacy and Recency.</em>Lawyer-speak for “a jury
+            remembers what it hears first and last, and not too much in
+            between.” There is a tremendous amount of lore and trial
+            consultant literature regarding trial strategy and what
+            “works” with jurors. Some lore and literature place
+            tremendous responsibility on the opening statement,
+            suggesting that sixty percent or more of jurors make up
+            their minds by the end of opening. Irrespective of these
+            “studies,” it is clear that an opening will shape the way
+            the jury hears, ignores, distorts, or rationalizes the
+            evidence they hear and remember. It tells them what to
+            listen for and what the issues are in the case.</p>
+            <p><em>Use simple language</em>. You are not in law school.
+            You are not talking to college professors, lawyers, or
+            judges. Your audience is a group of people of varying
+            backgrounds and varying degrees. Drive yourself to use short
+            sentences, short words, and simple themes. Remember
+            K-I-S-S.</p>
+            <p><em>Look the jurors in the eye.</em>No notes, at least
+            not for your introduction and conclusion. Use that
+            opportunity to connect with jurors as people. Pick out
+            friendly faces, then move to others who might be less open
+            or friendly.</p>
+            <p><em>Smile</em>, where appropriate. Appropriate levity
+            opens minds and can be used at many stages of trial. Opening
+            is one.</p>
+            <p><em>Consider a pithy quote,</em>especially from a
+            well-known author or commentator if it cuts to the point.
+            Samuel Clemens and Benjamin Franklin are fountains of witty
+            commentary.</p>
+            </section>
+            <section
+            id="c._keep_to_the_same_rules_in_the_body_of_the_opening_statement"
+            class="level2">
+            <h2><strong>C. Keep to the Same Rules in the Body of the
+            Opening Statement</strong></h2>
+            <p>The body of your opening should use the classic narrative
+            form—tell a good story in chronological order. The jury will
+            give you their rapt attention for the introduction and two
+            or three minutes. After that, you have to earn their
+            attention by being the voice of your client, the voice of
+            reason, and by telling damn good story. It need not be a
+            <em>great</em> story. A good, earnest story is fine. You
+            will not need to argue your case because the facts, the
+            events that led to your client’s involvement, will argue
+            your case for you. In addition to the tips above:</p>
+            <p><em>Drop legalese,</em> except to the extent absolutely
+            necessary to explain your defense. If you must use legalese,
+            keep it to an absolute minimum.</p>
+            <p><em>Use and reuse key words and phrases</em> to remind
+            the jury of your theme. Think of the way that Fox News
+            covers an event. Fox News isn’t successful because it has
+            the most educated, most well-read, or most impressively
+            credentialed reporters. Fox News is successful because its
+            employees understand how to effectively communicate, and
+            they do it over, and over, and over, and…</p>
+            <p><em>Enlist jurors to your side</em>with the emotion of
+            your case. Absolutely do not talk down to jurors. You want
+            them thinking about your client and being on your side.</p>
+            <p><em>Direct the story to the head and heart.</em> Jurors
+            tend to find facts and resolve inconsistencies the way their
+            heart wants them to, not their head.</p>
+            <p><em>Personalize your client</em>. you will do this
+            through telling your client’s story, using pictures, and by
+            looking at and smiling at your client. Don’t forget that the
+            person sitting next to you is a live body, with desires,
+            goals, and a place in our community. Use the defendant as a
+            demonstrative prop—the jury is going to look at your client
+            anyway. I like to look at my client in opening at least
+            once, and, where appropriate, more frequently. When you do,
+            and you’re connected with your client, the jury will see the
+            relationship. If there isn’t a good relationship, fake it.
+            This is very important. They’ll see it in your eyes, your
+            posture, the way you tilt your head towards your client.</p>
+            <p><em>Like your client</em>. If it looks like you don’t
+            like your client, whom you’ve spent a ton of time with, why
+            should they do something so incredible as render a not
+            guilty verdict in the face of a stressed-out complaining
+            witness, an earnest and seemingly likeable DDA, and all
+            those damn facts that point to the notion that your client
+            is as guilty as hell?</p>
+            <p><em>Use good storytelling skills</em>. What are good
+            storytelling skills? We all know people who can light up the
+            room, turn a good phrase, crack the room up, brin smiles to
+            even a Scrooge or Crime Victims United charter member. You
+            don’t need those types of skills to be a great storyteller.
+            Great storytellers:</p>
+            <p>• Humanize their story (and hear our client and his/her
+            story)</p>
+            <p>• Speak at a moderate pace</p>
+            <p>• Aren’t afraid of rhetorical pauses and silence (subtle
+            but highly effective rhetorical punctuation marks)</p>
+            <p>• Speak in phrases with very brief pauses (giving the
+            audience time to digest what was said and imagine or
+            visualize what happened)</p>
+            <p>• Take the listeners to the place and time of the story
+            itself</p>
+            <p>• Have comprehensive knowledge of the facts, or
+            acknowledge the unknown (increasing credibility)</p>
+            <p>• Hit key facts</p>
+            <p>• Tap into the story’s emotional core</p>
+            <p>• Use and appropriately repeat key phrases (the pitch,
+            the tag line)</p>
+            <p>• Work hard to be and remain credible</p>
+            <p><em>Avoid bad storytelling Habits.</em>Bad
+            storytellers:</p>
+            <ul>
+            <li>Talk down to their audience, or fail to understand their
+            audience</li>
+            </ul>
+            <ul>
+            <li>Talk too fast for their audience to process what is
+            being said</li>
+            </ul>
+            <ul>
+            <li>Use jingoistic phrases (“Where’s the beef?”)</li>
+            </ul>
+            <ul>
+            <li>Assume their audience knows as much about the story as
+            they do</li>
+            </ul>
+            <ul>
+            <li>Don’t know the key facts, or misstate the facts</li>
+            </ul>
+            <ul>
+            <li>Talk too long</li>
+            </ul>
+            <ul>
+            <li>Bore their audience</li>
+            </ul>
+            <ul>
+            <li>Act like they know it all</li>
+            </ul>
+            <ul>
+            <li>Don’t reveal their vulnerabilities</li>
+            </ul>
+            </section>
+            <section
+            id="d._advantage_for_the_defense_addressing_the_jury_second"
+            class="level2">
+            <h2><strong>D. Advantage for the Defense: Addressing the
+            Jury Second</strong></h2>
+            <p>Although many defense lawyers bemoan that they have to
+            wait for the prosecutor to present the state’s opening,
+            there are several decided benefits of going second. First,
+            if the prosecutor is boring, the jury will appreciate
+            hearing an entertaining story from you. Second, if the
+            prosecutor doesn’t know the state’s case and makes material
+            mistakes, your credibility goes up in the eyes of the jury
+            before the evidence even begins. Third, you get the final
+            word framing the evidence before the government starts its
+            case. More than taking the wind of the state’s case, you can
+            thoroughly confuse a prosecutor with a persuasive story –
+            especially when the state starts off with boring direct
+            testimony. Jurors will sometimes get antsy if the state
+            doesn’t get on with the evidence that matters – hopefully,
+            what the defense lawyer talked about in opening.</p>
+            <p>There are many theories as to whether or not you should
+            respond, or even acknowledge, the government’s opening
+            statement. This depends on the circumstances of your given
+            case, because a well-crafted opening statement should
+            anticipate the state’s case. Moreover, there are dangers in
+            straying from your prepared remarks. First, by merely
+            acknowledging the government’s statement you might convey
+            that you are worried about your presentation and the
+            strength of your case. By responding, you may give the
+            government’s remarks more credibility in the eyes of the
+            jury. Second, when rebutting, you are more likely to fall
+            into objectionable argument which may draw the ire of the
+            court. Third, when rebutting you may unintentionally
+            overstate your case or set forth evidence which is still at
+            issue, damaging your credibility. Think twice about
+            responding. There’s time for that later -- in communicating
+            with the jury in cross-examination, direct testimony, and in
+            closing argument. In closing you can always remind the jury
+            what the prosecutor said in opening and how the evidence did
+            not bear it out.</p>
+            </section>
+            <section id="e._building_expectations" class="level2">
+            <h2><strong>E. Building Expectations</strong></h2>
+            <p>An opening statement, well-crafted or not, will continue
+            what you began in voir dire – you will build expectations
+            with the jury. These expectations go well beyond the
+            description of the expected evidence. Your opening statement
+            will affect your rapport and credibility with the jury
+            throughout the trial.</p>
+            </section>
+            <section id="f._the_danger_of_overstating_your_case"
+            class="level2">
+            <h2><strong>F. The Danger of Overstating Your
+            Case</strong></h2>
+            <p>Generally, you are better off remaining vague, general,
+            and quick about details unless you’ve got some really great
+            facts that the jury has to hear immediately. Trial testimony
+            will often surprise you, even with a good police and defense
+            investigation. If you make promises, you may pay a price if
+            they are unfulfilled. If there are things which are unknown,
+            tell the jury that—it brings them into the discovery process
+            and can be exciting for them to see it unfold before them.
+            Most jurors have no idea that we don’t have the right to a
+            deposition or mandate a witness speak with us before
+            trial.</p>
+            <p>If the jury expects your client to testify, you may have
+            to explain your change in tactics later. However, if you
+            tell the jury the client will testify and client does not,
+            the prosecutor cannot argue the inference of silence in
+            closing. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+halford&amp;hl=en&amp;as_sdt=4,38&amp;case=15908817467550355393&amp;scilh=0">See
+            State v. Halford</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+halford&amp;hl=en&amp;as_sdt=4,38&amp;case=15908817467550355393&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+halford&amp;hl=en&amp;as_sdt=4,38&amp;case=15908817467550355393&amp;scilh=0">101
+            Or App 660, 792 P2d 467 (1990)</a> (presumptively
+            prejudicial, denial of timely instruction, requires
+            reversal, and perhaps dismissal with prejudice under <a
+            href="http://scholar.google.com/scholar_case?q=state+v+kennedy+1983&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">State
+            v. Kennedy</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+kennedy+1983&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+kennedy+1983&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">295
+            Or 260, 666 P2d 1316 (1983))</a>.</p>
+            </section>
+            <section id="g._reserving_opening_statement" class="level2">
+            <h2><strong>G. Reserving Opening Statement</strong></h2>
+            <p>The common understanding is that reserving an opening
+            statement is considered risky. Because of the common view,
+            it is not often done. Yet it can be quite effective in the
+            right situations, such as when you do not wish to warn the
+            prosecution about certain evidence (or tactics), or in which
+            you have serious uncertainties about the evidence.</p>
+            <p>Don’t be caught unawares, however, because the court is
+            not required to allow a defendant to reserve closing.
+            <em>See State v. Ragan</em>, 123 Or 521, 262 P 954 (1928)
+            (administration regarding opening statement is subject to
+            the discretion of the court); <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+seeger&amp;hl=en&amp;as_sdt=4,38&amp;case=3111552181632184682&amp;scilh=0">see
+            also State v. Seeger</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+seeger&amp;hl=en&amp;as_sdt=4,38&amp;case=3111552181632184682&amp;scilh=0">,
+            4 Or App 336, 337, 479 P2d 240 (1971)</a>. While the court
+            will usually grant the motion to reserve, if denied, be
+            prepared to open your case. Consider apprising the court of
+            your reservation outside the presence of the jury so as not
+            to catch the court by surprise, or being caught by surprise
+            if the court denies your motion to reserve. Moving outside
+            the presence of the jury also avoids the possibility that
+            the DA will inappropriately object to the reservation in the
+            presence of the jury. <em>See, e.g., State v. Seeger</em>
+            (abuse of discretion not to grant mistrial re prosecutor’s
+            speaking objection to defendant reserving opening: “I object
+            to that kind of a tactic, allowing the defendant to make up
+            a story while the case is going on. And I think the rules
+            should be played in this game”). If you’ve reserved opening,
+            make sure at the appropriate time the court allows you to
+            make your opening, and does not treat the reservation as a
+            waiver. It never hurts to kindly remind the court, before
+            the jury returns from a break, that you’ve reserved opening
+            and will be giving it when the jury returns. Judges
+            appreciate it when counsel gives them a heads-up.</p>
+            </section>
+            <section id="h._use_of_exhibits_in_opening" class="level2">
+            <h2><strong>H. Use of Exhibits in Opening</strong></h2>
+            <p>There is little reason not to use your anticipated
+            exhibits in opening as long as you are sure that you have
+            the witnesses prepared to lay the foundation for admission
+            and relevance. And there are lots of good reasons to use
+            good exhibits because it helps the jury have a road map to
+            your case and be familiar with what they are going to see.
+            Remember the concepts of Primacy and Recency. The exhibits
+            should be carefully chosen, however, <em>not</em>
+            argumentative, and they don’t have to include every picture
+            you have from every angle.</p>
+            <p>Consider showing your opening exhibits to the prosecutor
+            before opening. However, it is prudent and frequently
+            required to show them to the prosecutor and sometimes even
+            the court prior to giving your opening. Don’t expect
+            opposing counsel to do much with them or argue much over
+            your use, especially if you advise the court during
+            motions<em>in limine</em>that opposing counsel has had the
+            opportunity to review them. Opposing counsel’s silence will
+            likely be viewed as acquiescence to their use.</p>
+            </section>
+            <section id="i._to_powerpoint_or_not" class="level2">
+            <h2><strong>I. To PowerPoint or Not?</strong></h2>
+            <p>There are certainly times when going to trial with a
+            skinny single file, a yellow legal pad, and couple of pens
+            sends the right message of purity of message and “underdog”
+            to a jury.</p>
+            <p>There are lots of reasons not to PowerPoint, such as fear
+            of tech failure and not wanting to appear as a slick defense
+            lawyer, i.e., risking compromising credibility.</p>
+            <p>But there are lots of reasons to PowerPoint. Jurors
+            nowadays set their expectations by slickly produced TV shows
+            (not necessarily CSI but the evening news), so anywhere but
+            the simplest cases there is no reason not to PowerPoint (or
+            Prezio or any other presentation software) and many good
+            reasons to do so. First, it will keep your presentation
+            organized and will drive your opening—so much so that you
+            might be able to skip the yellow pad. Second, once you learn
+            a few basic maneuvers, PowerPoint becomes instinctive and
+            easy to use. Third, and most importantly, PowerPoint is an
+            effective tool, helping convey your message cleanly and
+            persuasively. Once you get past the anxiety caused by fears
+            of technology failure, you’ll start relying on PowerPoint to
+            keep your presentations snappy and will find jurors even
+            more engaged. Invest in a wireless mouse and things will get
+            surprisingly simple.</p>
+            </section>
+            <section
+            id="j._jump_in_the_ring_and_ad_lib_rough_outline_or_write_out_the_whole_enchilada"
+            class="level2">
+            <h2><strong>J. Jump in the Ring and Ad Lib, Rough Outline,
+            or Write Out the Whole Enchilada?</strong></h2>
+            <p>Every case is different, and every case calls for its own
+            techniques and process. Every lawyer is different in terms
+            of their skill set and rhetorical experiences. Certainly
+            there is no harm in outlines and writing out the whole
+            opening, even if you’re going to jump into the ring with no
+            notes, no outline and no PowerPoint. What writing out the
+            whole opening does for you is force you to create a
+            narrative structure, and sometimes discard other less
+            effective structures, in pursuit of your best work. Longer
+            trials with lots of complicated facts might call for longer
+            opening statements, thus writing it out helps pare out the
+            necessary from that which is not.</p>
+            <p>So, you’ve gone through all of the work to write out your
+            opening, pare it down to what is necessary, add plenty of
+            great facts which tell the story of the case and appeal to
+            the heart, and now you want to <em>read</em>it to the jury.
+            Really? <em>Read it</em>? Is that effective?</p>
+            <p>The answer is yes, it can be, as long as you remember
+            that it’s a script. You can deviate, you can stop and tell
+            little stories. You can ad lib. You can cut in the middle.
+            <em>Just don’t be boring</em>. Use techniques that actors
+            and TV news people use when they <em>read</em>their scripts.
+            Make it lively. Look up from the page. Use eye contact. Read
+            a phrase, then look at the jury and deliver it.</p>
+            <p>Just remember that if you spend all of your client’s
+            opening statement looking at the page, the jury will be
+            looking at the inside of their eyelids before long. If you
+            write it out, be organized and type it, and consider putting
+            it in its own three-ring binder in large type so it’s easy
+            to read. I find it very effective in complicated cases to
+            write the opening out in dedicated phrases – even
+            considering the meter, placing a return after every phrase
+            thus scripting short pauses, longer pauses, and even
+            PowerPoint slide changes.</p>
+            </section>
+            </section>
+            <section id="v._dangers_in_opening_statements"
+            class="level1">
+            <h1><strong>V. Dangers in Opening Statements</strong></h1>
+            <section id="a._judicial_admission_in_opening"
+            class="level2">
+            <h2><strong>A. Judicial Admission in Opening</strong></h2>
+            <p>While there is considerable lore of the rare case where a
+            judgment of acquittal was granted after opening, this is
+            mostly lore. However, the court does have the ability to
+            consider what is said as a judicial admission. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+adams&amp;hl=en&amp;as_sdt=4,38&amp;case=3148164800414900105&amp;scilh=0">See
+            State v. Adams</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+adams&amp;hl=en&amp;as_sdt=4,38&amp;case=3148164800414900105&amp;scilh=0">,
+            29 Or App 827, 565 P2d 394 (1977)</a> (defense counsel’s
+            admission in opening cured lack of evidence in government’s
+            case); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">but
+            see State v. Keaton</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">,
+            15 Or App 477, 482, 516 P2d 490 (1973)</a> (prosecutor’s
+            failure to describe evidence supporting charge is not
+            fatal); <em>quoting Lane v. Portland Ry., L. &amp; P.
+            Co.</em>, 58 Or 364, 114 P 940 (1911) (“The opening
+            statement is . . . not intended to take the place of a
+            complaint or other pleading, and how full it shall be . . .
+            is left to the attorney’s discretion”). </p>
+            </section>
+            <section id="b._opening_the_door_to_uncharged_misconduct"
+            class="level2">
+            <h2><strong>B. Opening the Door to Uncharged
+            Misconduct</strong></h2>
+            <p>Much more common than an admission is the considerable
+            risk to a defendant when counsel creates new issues in
+            opening and brings into issue formerly inadmissible and
+            highly prejudicial rebuttal evidence. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+louis&amp;hl=en&amp;as_sdt=4,38&amp;case=6679699550452051910&amp;scilh=0">See
+            State v. Louis</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+louis&amp;hl=en&amp;as_sdt=4,38&amp;case=6679699550452051910&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+louis&amp;hl=en&amp;as_sdt=4,38&amp;case=6679699550452051910&amp;scilh=0">296
+            Or 57, 62, 672 P2d 708 (1983)</a> (in trial for indecent
+            exposure, defendant claimed in opening statement that he did
+            not know that his neighbors could see him exposed through
+            his home’s window; defendant’s statement opened the door to
+            evidence of prior contacts where police told the defendant
+            of neighbors’ complaints of his state of undress to prove
+            defendant’s knowledge).</p>
+            </section>
+            <section id="c._being_boring_and_speaking_too_long"
+            class="level2">
+            <h2><strong>C. Being Boring and Speaking Too
+            Long</strong></h2>
+            <p>Neither is excusable to the jury. They are prepared to
+            hear evidence and long, droning opening statements will not
+            endear you or your client. Better “short, sweet, and on to
+            the evidence.” Watch a few crime dramas. Learn from how much
+            an actor can convey in a one- or two-minute opening
+            statement. Just as Samuel Clemens apologized that he would
+            have written a shorter letter if he had had more time, spend
+            more time crafting a shorter, tighter, opening
+            statement.</p>
+            <p>For more on opening statements, see the Library of
+            Defense page at <a
+            href="https://libraryofdefense.org/legal/opening"><span>https://libraryofdefense.org/legal/opening</span></a>.</p>
+            </section>
+            </section>
+    </body>
+</html>

@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong>Investigator Licensing</strong></p>
+            <p><strong><em>Philip E. Agrue</em></strong></p>
+            <p>2010 edition</p>
+            <section id="history" class="level1">
+            <h1><strong>History</strong></h1>
+            <p>The story of private investigator (PI) licensing in
+            Oregon began in 1983 when the Oregon State Police (OSP) made
+            a proposal to require licensing by private investigators.
+            OSP wanted to administer the new licensing law. A group of
+            private investigators from around the state banded together
+            and formed the Oregon Association of Legal Investigators
+            (OALI), now known as the Oregon Association of Licensed
+            Investigators. The mandate of OALI was to stop this
+            licensing bill, promote a new licensing law which better
+            served the profession, and raise the professional standard
+            of private investigators in Oregon by providing educational
+            seminars. OALI was successful in their lobby effort which
+            prevented the OSP sponsored bill from advancing.</p>
+            <p>In 1986 an OALI-sponsored bill was introduced in the
+            Oregon State Senate that would have required private
+            investigators be licensed and would have established an
+            “Investigators Board” under the Oregon Bureau of Labor and
+            Industries. The lack of support for this bill led to a quick
+            death in committee. In 1988 a second OALI-sponsored bill was
+            introduced, which garnered wide support in the investigator
+            community but was opposed by several “Investigator Schools,”
+            specifically John Rose’s Academy of Legal Investigators
+            because there was no provision for education in lieu of
+            experience. The bill was defeated in committee.</p>
+            </section>
+            <section id="hb_2383_the_players" class="level1">
+            <h1><strong>HB 2383 – The Players</strong></h1>
+            <p>In 1997 OALI began from scratch, attempting to write a
+            licensing bill that would meet broad approval. A licensing
+            committee was formed, chaired by longtime OALI member
+            William Bird and OALI President Steven Copple. Also at work
+            was a faction of security professionals lead by a new
+            investigator, Tony Marino. Tony’s background as a store
+            security professional put him in with the Oregon Board of
+            Public Safety and Standards (BPSST), the agency that
+            administers police certification and training. BPSST is now
+            the Department of Public Safety Standards and Training
+            (DPSST). Tony wanted to add the private investigators in
+            with the BPSST-sponsored private security bill. Because of
+            lack of support by the investigator profession the private
+            investigators were able to convince BPSST not to add them to
+            the bill.</p>
+            <p>Representative Tony Corcoran was sponsoring House Bill
+            2383, an exact copy of the 1988 OALI bill that Rep.
+            Corcoran’s staff had pulled from legislative archives. After
+            negotiations between OALI and Rep. Corcoran’s office, the
+            newly written OALI bill was submitted in place of HB 2383.
+            Representative Corcoran agreed to support the reworded
+            bill.</p>
+            <p>With a Republican led House and Senate it was decided a
+            Republican cosponsor would be important. OALI Board member
+            and OCDLA member Paige VanLaningham contacted Representative
+            Lane Shetterly who agreed to cosponsor the bill.</p>
+            <p>At the same time, HB 936 was making its way through
+            committee, Oregon’s answer to the Federal Driver Privacy and
+            Protection Act. A key provision in the federal law
+            restricted DMV access to “licensed” private investigators.
+            The Oregon bill did not yet have this clause, and it
+            appeared Oregon investigators would be excluded from DMV
+            access. This was a major selling point to the small group of
+            investigators still holding out against licensing.</p>
+            <p>It was a hard-fought battle but after testimony by
+            several OALI members, DMV access for “licensed”
+            investigators was added to HB 936, making it even more
+            critical that a licensing bill be passed during the session.
+            Hours upon hours of testimony were given by members of the
+            OALI licensing committee, the investigator community, and
+            even the law enforcement community in support of this bill,
+            and in the end they got it passed.</p>
+            <p>HB 2383 was signed into law in 1997 and licensing became
+            effective April 1, 1998, requiring all private investigators
+            operating in the State of Oregon to be licensed, and
+            established the self-funding Oregon Board of Investigators
+            (OBI). (The OBI ran into financial difficulties and in
+            January 2006 the responsibility for investigator licensing
+            transferred to DPSST.)</p>
+            </section>
+            <section
+            id="the_oregon_department_of_public_safety_standards_and_training_dpsst"
+            class="level1">
+            <h1><strong>The Oregon Department of Public Safety Standards
+            and Training (DPSST)</strong></h1>
+            <p>Investigators are now licensed through DPSST, directly
+            supervised by the Private Security/Investigator Policy
+            Committee. DPSST has administered the PI program to
+            approximately 1125 PI’s since it took over the program in
+            2006<strong></strong>(this includes all those who have
+            applied and/or were licensed from 2006 to 2009).</p>
+            <p>DPSST has completed over one hundred investigations on
+            investigators since 2006. (This includes formal complaints
+            and department inquiries (without complaint) for licensed
+            investigators and unlicensed activity. This <em>does
+            not</em>include background investigations for licensure,
+            education, assistance or other program regulatory
+            functions.)</p>
+            <p>Of these, approximately 55 were founded, resulting in
+            some type of sanction. As of this writing there have been 11
+            PI revocations/denials/suspensions for unlawful or unethical
+            activity. The rest typically result in either warnings or
+            civil penalties.</p>
+            <p>The amount of incoming complaints and PI-related
+            investigations has continually dropped each year. There has
+            been an even more dramatic decrease since the beginning of
+            2009.</p>
+            </section>
+            <section
+            id="the_private_securityinvestigator_policy_committee"
+            class="level1">
+            <h1><strong>The Private Security/Investigator Policy
+            Committee</strong></h1>
+            <p>The Private Security/Investigator Policy Committee
+            (PSIPC) is made up of ten private security professionals,
+            two private investigators and a member of the public. The
+            ten private security professionals represent several
+            different segments of private security including: unarmed,
+            armed, hospitality, healthcare, private business,
+            manufacturing, retail and alarm monitoring. One of the two
+            private investigators is appointed by the Oregon State Bar
+            Association (OSB). This addition to the licensing bill was
+            to guarantee investigators have some say as to who is
+            appointed to represent them. The OSB appointment committee
+            works closely with OALI and then makes a recommendation to
+            DPSST.</p>
+            <p>The PSIPC hold four regular meetings each year. These
+            meetings are public and are held in accordance with all
+            applicable public meeting laws. The meetings are held in
+            various locations around the state, usually Portland, Bend,
+            Salem and Medford. PSPIPC meeting minutes are posted on the
+            DPPST website at
+            www.oregon.gov/DPSST/BD/PSPIPolicyCommitteeMeetingMinutes.shtml.</p>
+            <p>Each of the different security industry segments as well
+            as the private investigator segment has a subcommittee to
+            work directly on issues related to their specific industry.
+            The private investigator subcommittee is made up of the two
+            members of the PSPIPC and PI volunteers from around the
+            state. The PI subcommittee can be broken down into
+            additional subcommittees to deal with specific or complex
+            issues. As of this writing the PSIPC Private Investigator
+            Subcommittee is working on reciprocity, the PI licensing
+            test, and a PI orientation class, and is redesigning the PI
+            identification card. Your policy committee representatives
+            are always looking for volunteers to work on the
+            subcommittee.</p>
+            </section>
+            <section id="licensing_and_renewal_requirements_summary"
+            class="level1">
+            <h1><strong>Licensing and Renewal Requirements –
+            Summary</strong></h1>
+            <p>Complete Requirements at OAR 259-061-0240, given in
+            Appendix B.</p>
+            </section>
+            <section id="private_investigator_license_requirements"
+            class="level1">
+            <h1><strong>Private Investigator License
+            Requirements</strong></h1>
+            <p>An applicant must:</p>
+            <ul>
+            <li>be 18 years of age or older to be licensed</li>
+            </ul>
+            <ul>
+            <li>have 1500 hours of verifiable investigator experience or
+            educational substitute for up to 500 hours (if lacking in
+            hours a provisional license will be granted; see OAR
+            259-061-0140 for exact wording)<br />
+            </li>
+            </ul>
+            <ul>
+            <li>complete a related course of study at an educational
+            institution licensed or approved by the Department of
+            Education or other state approving agency and approved by
+            the department may be substituted for up to 500 hours of the
+            required work experience; correspondence courses, online
+            courses, or similar coursework will be evaluated on a
+            case-by-case basis<br />
+            </li>
+            </ul>
+            <ul>
+            <li>be legal to work in the United States</li>
+            </ul>
+            <ul>
+            <li>pass a stringent background check (see 259-061-0040,
+            section 4 (a) through (f) for all disqualifiers); no felony
+            convictions or moral turpitude misdemeanors are
+            allowed<br />
+            </li>
+            </ul>
+            <ul>
+            <li>provide a $5000 surety bond, letter of credit or errors
+            and omissions insurance<br />
+            </li>
+            </ul>
+            <ul>
+            <li>complete the DPSST four-hour PI orientation class and
+            pass the PI competency test. The PI test is an open-book
+            test based on the OARs and Oregon statutes related to
+            private investigator licensing. One is allowed three
+            attempts to pass.</li>
+            </ul>
+            <p>Note: As of May, 2010, the photographs for identification
+            cards (251-061-0060) will be required to be digital for a
+            newly designed PI ID card. Visit the DPSST website for more
+            information.</p>
+            <p>Sample exam questions include:</p>
+            <p>A licensed investigator shall maintain client files for
+            only 2 years. True or False</p>
+            <p>A person commits the crime of Trespass 1 if they:</p>
+            <ol>
+            <li>Enters or remains unlawfully in a dwelling</li>
+            <li>Reenters a building after having been denied future
+            entry to the building pursuant to a merchant’s notice of
+            trespass</li>
+            <li>Enters or remains unlawfully upon railroad yards,
+            tracks, bridges, or rights of way</li>
+            <li>None of the above</li>
+            <li>All of the above</li>
+            </ol>
+            </section>
+            <section
+            id="renewal_continuing_legal_education_requirements"
+            class="level1">
+            <h1><strong>Renewal – Continuing Legal Education
+            Requirements</strong></h1>
+            <p>Private investigators are required to complete 32 hours
+            of continuing education (CE) credits every two-year
+            licensing period. At least two of these hours must cover
+            ethics.</p>
+            <p>Provisional investigators are required to complete 40
+            hours of continuing education (CE) credits every two-year
+            licensing period. At least two of these hours must cover
+            ethics.</p>
+            <p>See OAR 259-061-0260 in Appendix B for a complete list of
+            what is acceptable continuing education.</p>
+            <center>
+            <p>Appendix A</p>
+            </center>
+            <p><strong>DPSST Contacts</strong></p>
+            <p>All licensing questions should be submitted to:</p>
+            <p>DPSST Private Security &amp; Private Investigator
+            Section4190 Aumsville Hwy SESalem, Oregon 97317Phone: (503)
+            378-8531 Fax: (503) 378-4600<a
+            href="mailto:security.investigators@state.or.us">security.investigators@state.or.us</a></p>
+            <p>PSPI Program Supervisor: Teresa Naugle (503) 378-2148</p>
+            <p>teresa.naugle.dudek@state.or.us</p>
+            <p>Private Investigator Compliance Investigator: Chris
+            Brodniak (503) 378-2283</p>
+            <p>chris.brodniak@state.or.us</p>
+            <p>Private Investigator Specialist: Ela Piekarz
+            503-378-8530</p>
+            <p><a
+            href="mailto:ela.piekarz@state.or.us">ela.piekarz@state.or.us</a></p>
+            <p>Your private investigator policy committee members are
+            here to advocate for you and the profession.</p>
+            <p><strong>DPSST Private Investigator
+            Representatives:</strong></p>
+            <p>Philip Agrue (OSB Appointee)</p>
+            <p>PO Box 751 * Canby, OR 97013</p>
+            <p>Phone: (503) 310-8695 Fax: 1-866-849-3021</p>
+            <p>phil@agrue.com</p>
+            <p>Term Expires 01-22-11</p>
+            <p>Arthur Smith</p>
+            <p>PO Box 8089 * Bend, OR 97708</p>
+            <p>Phone: (541) 848-8999 Fax: (541) 389-0379</p>
+            <p>arsmith@bendbroadband.com</p>
+            <p>Term Expires: 01-24-10 (<em>Being reappointed</em>)</p>
+            <p><strong>General Information</strong></p>
+            <p>DPSST maintains a website for Private Security/Private
+            Investigator Program:</p>
+            <p>DPSST’s Private Security/Investigators Program provides
+            training and licensing services to its constituents in an
+            industry initiated effort to enhance professionalism among
+            member-businesses and employees who provide services in the
+            state of Oregon. The program works together with its policy
+            committee members and the Board on Public Safety Standards
+            and Training to establish professional standards and provide
+            training to assist constituents in meeting these standards.
+            The program also enforces licensure and certification
+            requirements for private security professionals and private
+            investigators. There are downloadable forms for CEU record
+            keeping, investigator license renewal, complaints, surety
+            bond and other DPSST forms.</p>
+            <p><a
+            href="http://www.oregon.gov/DPSST/PS/index.shtml"><span>http://www.oregon.gov/DPSST/PS/index.shtml</span></a></p>
+            <p>DPSST provides online verification of private
+            investigator licenses at:</p>
+            <p><a
+            href="http://www.oregon.gov/DPSST/PS/docs/PIContactInfo.pdf"><span>http://www.oregon.gov/DPSST/PS/docs/PIContactInfo.pdf</span></a></p>
+            <p>Although DPSST is strictly a compliance and regulatory
+            agency, I have found their staff responsive to emails and
+            telephone calls. The compliance investigator has taken an
+            active role in educating PI constituents to reduce
+            compliance issues.</p>
+            <center>
+            <p>Appendix B</p>
+            </center>
+            <p>The Oregon Administrative Rules contain OARs filed
+            through December 15, 2009 </p>
+            <center>
+            <p>DEPARTMENT OF PUBLIC SAFETY STANDARDS AND TRAINING</p>
+            </center>
+            <center>
+            <p><strong>DIVISION 61</strong></p>
+            </center>
+            <center>
+            <p><strong>INVESTIGATOR LICENSING STANDARDS AND
+            REGULATIONS</strong></p>
+            </center>
+            <p>259-061-0005</p>
+            <p>Definitions</p>
+            <p>(1) "Administrative Termination" means the Department has
+            stopped the processing of an application due to non-response
+            from applicant or noncompliance with the application
+            requirements or the requirements of these rules."</p>
+            <p>(2) "Board" means Board on Public Safety Standards and
+            Training.</p>
+            <p>(3) "Complainant" means any person or group of persons
+            who file(s) a complaint. The Department may, on its own
+            action, initiate a complaint.</p>
+            <p>(4) "Complaint" means a specific charge filed with the
+            Department that a licensed investigator or candidate
+            thereto, or any person apparently operating as an
+            investigator without a license, has committed an act in
+            violation of ORS Chapter 703 or OAR chapter 259.</p>
+            <p>(5) "Committee" means the Private Security Policy
+            Committee.</p>
+            <p>(6) "Continuing Education Guidelines" or "CE Guidelines"
+            refers to the provisions of Oregon Administrative Rule
+            259-061-0260.</p>
+            <p>(7) "Department" means the Department of Public Safety
+            Standards and Training.</p>
+            <p>(8) Disciplinary Procedure" means all action up to the
+            final resolution of a complaint after the issuance of a
+            "Notice of Intent."</p>
+            <p>(9) "Educational endeavor that reasonably could be
+            beneficial to the work of the investigator" as used in ORS
+            703.447(4) means those educational endeavors that are in
+            compliance with the Department's Continuing Education
+            Guidelines, or are approved by the Private Security Policy
+            Committee.</p>
+            <p>(10) "Employee," as used in ORS 703.401 to 703.490, means
+            a person who is employed lawfully by an employer. The
+            employer controls the performance of that person; pays the
+            salary, unemployment insurance, and worker's compensation
+            insurance; and has sole authority to fire and control work
+            hours and the conditions of work. "Employee" in this context
+            does not include a person engaged as an independent
+            contractor.</p>
+            <p>(11) "Expired license": A license is considered expired
+            on the date of expiration. A person may not practice as an
+            investigator with an expired license.</p>
+            <p>(12) "Hours of experience" means documented clock
+            hours.</p>
+            <p>(13) "Investigatory work" means any work performed in
+            accordance with ORS 703.401(2).</p>
+            <p>(14) "Licensee" or "Licensed Investigator", as used in
+            OAR 259-061-0005 through 259-061-0260 means a person
+            licensed as an investigator under ORS 703.430.</p>
+            <p>(15) "Private investigator" is a licensed investigator
+            who has completed a minimum of 1500 documented clock hours
+            of investigatory work experience or an approved course of
+            study or a combination of work and study as approved by the
+            Department.</p>
+            <p>(16) "Provisional investigator" is a licensed
+            investigator who has completed fewer than 1500 documented
+            clock hours of investigatory work experience, or an approved
+            course of study, or a combination of work and study as
+            approved by the Department; and who may not employ or
+            supervise other investigators. Under 1997 and 1999 editions
+            of governing statute, this type of investigator was referred
+            to as a "Registered Operative."</p>
+            <p>(17) "Respondent" means an investigator who is a licensee
+            or candidate for licensure, or any person apparently
+            operating as an investigator without a license, against whom
+            a complaint has been filed.</p>
+            <p>(18) "Stipulated Agreement" means a written agreement
+            entered into between the Department and a respondent.</p>
+            <p>(19) "Violation" means a violation of Oregon Revised
+            Statutes or Oregon Administrative Rules as they pertain to
+            the licensing requirements of investigators in the state of
+            Oregon.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0010</p>
+            <p>Fees</p>
+            <p>For the purpose of administering the licensing program
+            under ORS Chapter 703.401 through 703.995, appropriate fees
+            shall be submitted to the Department, by applicants for
+            licensure for each of the following categories:</p>
+            <p>(1) Application:</p>
+            <p>(a) Private Investigator;</p>
+            <p>(b) Provisional Investigator.</p>
+            <p>(2) Licensing:</p>
+            <p>(a) Private Investigator;</p>
+            <p>(b) Provisional Investigator;</p>
+            <p>(c) Inactive License;</p>
+            <p>(d) Temporary License;</p>
+            <p>(e) Interim License.</p>
+            <p>(3) Renewal of Licenses:</p>
+            <p>(a) Private Investigator;</p>
+            <p>(b) Provisional Investigator;</p>
+            <p>(4) Issuance of Identification cards.</p>
+            <p>(5) Replacement of Card/License.</p>
+            <p>(6) Late Renewal of License.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0015</p>
+            <p>Payment of Fees</p>
+            <p>Fees are due at the time of application. Payments to the
+            department are non-refundable, and must be paid by business
+            check, money order, cashier's check or credit card. A
+            current fee schedule for the private investigator licensing
+            program may be obtained from the department.</p>
+            <p><strong>NOTE:</strong> Make all checks payable to
+            DPSST.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06; DPSST 6-2008, f. &amp; cert. ef.
+            4-15-08</p>
+            <center>
+            <p>Applications</p>
+            </center>
+            <p>259-061-0020</p>
+            <p>Initial and Renewal Applications</p>
+            <p>(1) Applications must be submitted on Department approved
+            forms pursuant to ORS 703.425. All applicants must disclose
+            on the initial application information required by ORS
+            703.425, including:</p>
+            <p>(a) Social Security Number;</p>
+            <p>(b) Home Address and Telephone Number;</p>
+            <p>(c) Business Address and Telephone Number;</p>
+            <p>(d) Place of Birth;</p>
+            <p>(e) Any license, certification or registration.
+            Including:</p>
+            <p>(A) The title or type of such license, certification or
+            registration;</p>
+            <p>(B) The location of the agency issuing such license,
+            certification, or registration;</p>
+            <p>(C) The license, certification or registration number
+            issued;</p>
+            <p>(D) The dates such license, certification or registration
+            was held; and</p>
+            <p>(E) All information regarding any revoked license,
+            certification or registration.</p>
+            <p>(2) All applicants must disclose on the initial and
+            renewal application any information requested,
+            including:</p>
+            <p>(a) A statement listing all offenses of which the
+            applicant has been convicted;</p>
+            <p>(b) A statement that the applicant is not required to
+            register or be registered as a sex offender under ORS
+            181.595, 181.596 or 181.597.</p>
+            <p>(c) A statement affirming the truth of all information
+            contained in the application;</p>
+            <p>(d) A statement listing all complaints, lawsuits,
+            arbitration, mediation, or disciplinary actions regarding
+            investigative activities; and</p>
+            <p>(e) A statement listing all claims filed against the
+            investigator's surety bond, credit, or insurance.</p>
+            <p>(3) Submission of any false information in connection
+            with an application, supporting documentation or attachments
+            for a license or registration may be grounds for discipline,
+            criminal penalty, or civil penalty.</p>
+            <p>(4) Renewal applications, renewal fees, and support
+            documentation should be received, at a minimum, two weeks
+            prior to, but not more than ninety days prior to, a
+            licensee's expiration date to allow for processing time.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0030</p>
+            <p>Application Requirements for Licensees with Expired
+            Licenses</p>
+            <p>Applicants for licensure who were previously licensed in
+            Oregon must provide either:</p>
+            <p>(1) Proof of completion of continuing education
+            requirements during or since the last active status period;
+            or</p>
+            <p>(2) A written explanation detailing why continuing
+            education requirements were not met during his/her most
+            recent active status period, and a written plan detailing
+            how they will be made up, including a time line. The
+            Department at its discretion may accept the plan in place of
+            completed CE. Not meeting continuing education requirements
+            could be grounds for denial of a license.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0040</p>
+            <p>Minimum Standards for Licensure</p>
+            <p>(1) An applicant for licensure as a private investigator
+            must satisfy all license qualifications pursuant to ORS
+            703.415 and ORS 703.425.</p>
+            <p>(2) Moral Fitness (Professional Fitness). All private
+            investigators must be of good moral fitness.</p>
+            <p>(a) For purposes of this standard, lack of good moral
+            fitness means conduct not restricted to those acts that
+            reflect moral turpitude but rather extending to acts and
+            conduct which would cause a reasonable person to have
+            substantial doubts about the individual’s honesty, fairness,
+            respect for the rights of others, or for the laws of the
+            state or the nation.</p>
+            <p>(b) The following are indicators of a lack of good moral
+            fitness:</p>
+            <p>(A) Illegal conduct involving moral turpitude;</p>
+            <p>(B) Conduct involving dishonesty, fraud, deceit, or
+            misrepresentation;</p>
+            <p>(C) Intentional deception or fraud or attempted deception
+            or fraud in any application, examination, interview,
+            statement or other documentation for securing licensure,
+            eligibility for licensure, or in the course of conducting
+            business under one’s license.</p>
+            <p>(D) Conduct that is prejudicial to the administration of
+            justice;</p>
+            <p>(E) Conduct that adversely reflects on his or her fitness
+            to perform as a private investigator. Examples include, but
+            are not limited to: Intoxication while on duty,
+            untruthfulness, failure to fulfill contractual commitments
+            to clients, failure to provide supporting proof of
+            investigative activities and/or services conducted for their
+            clients, fraudulent billing practices, or a history of
+            personal habits off the job which makes the private
+            investigator both inefficient and otherwise unfit to render
+            effective service because of a loss of confidence in the
+            private investigator’s ability to perform competently.</p>
+            <p>(c) If reliable evidence is received by the Board or
+            Department that a private investigator lacks good moral
+            fitness, a rebuttable presumption will be raised that the
+            private investigator does not possess the requisite moral
+            fitness to be a private investigator. The burden will be
+            upon the private investigator to prove good moral
+            fitness.</p>
+            <p>(3) The Department will conduct a review of any
+            application on which disclosures have been made to determine
+            if a license should be issued pursuant to ORS 703.415(3),
+            703.450, 703.465.</p>
+            <p>(4) Criminal History. An applicant for licensure must
+            not:</p>
+            <p>(a) Have been convicted of a person felony, as defined in
+            the rules of the Oregon Criminal Justice Commission: ORS
+            162.165 Escape I; ORS 162.185 Supplying Contraband as
+            defined in Crime Categories 6 and 7 (OAR 213-018-0070(1) and
+            (2)); ORS 163.095 Aggravated Murder; ORS 163.115 Murder; ORS
+            163.115 Felony Murder; Ors 163.118 Manslaughter I; ORS
+            163.125 Manslaughter II; ORS 163.145 Negligent Homicide; ORS
+            163.160(3) Felony Domestic Assault; ORS 163.165 Assault III;
+            ORS 163.175 Assault II; ORS 163.185 Assault I; ORS 163.205
+            Criminal Mistreatment I; ORS 163.207 Female Genital
+            Mutilation; Ors 163.208 Assaulting a Public Safety Officer;
+            ORS 163.213 Use of Stun Gun, Tear Gas, Mace I; ORS 163.225
+            Kidnapping II; ORS 163.235 Kidnapping I; ORS 153.275
+            Coercion as defined in Crime Category 7 (OAR
+            213-018-0035(1)); ORS 163.355 Rape III; ORS 163.365 Rape II;
+            ORS 163.375 Rape I; ORS 163.385 Sodomy III; ORS 163.395
+            Sodom II; ORS 163.405 Sodomy I; ORS 163.408 Sexual
+            Penetration II; ORS 163.411 Sexual Penetration I; ORS
+            163.425 Sexual Abuse I; ORS 163.465 Felony Public Indecency;
+            ORS 163.479 Unlawful Contact with a Child; ORS 163.452
+            Custodial Sexual Misconduct in the First Degree; ORS 163.525
+            Incest; ORS 163.535 Abandon Child; ORS 163.537
+            Buying/Selling Custody of a Minor; ORS 163.547 Child Neglect
+            I; Ors 163.670 Using Child in Display of Sexual Conduct; ORS
+            163.684 Encouraging Child Sex Abuse I; ORS 163.686
+            Encouraging Child Sex Abuse II; ORS 163.688, Possession of
+            Material Depicting Sexually Explicit Conduct of Child I; ORS
+            163.689, Possession of Material Depicting Sexually Explicit
+            Conduct of Child II; ORS 163.732 Stalking; ORS 163.750
+            Violation of Court Stalking Order; ORS 164.075 Theft by
+            Extortion as defined in Crime Category 7 (OAR
+            213-018-0075(1)); ORS 164.225 Burglary I as defined in Crime
+            Categories 8 and 9 (OAR 213-018-0025(1) and (2)); ORS
+            164.325 Arson I; Ors 164.395 Robbery III; ORS 164.405
+            Robbery II; ORS 164.415 Robbery I; ORS 164.877(3) Tree
+            Spiking (Injury); ORS 166.087 Abuse of Corpse I; ORS 166.165
+            Intimidation I; ORS 166.220 Unlawful Use of a Weapon; ORS
+            166.275 Inmate in Possession of Weapon; ORS 1266.385(3),
+            Felony Possession of a Hoax Destructive Device; ORS 166.643
+            Unlawful Possession of Soft Body Armor as defined in Crime
+            Category 6 (OAR 213-018-0090(1)); ORS 167.012 Promoting
+            Prostitution; Ors 167.017 Compelling Prostitution; ORS
+            468.951 Environmental Endangerment; ORS 475.984 Causing
+            Another to Ingest a Controlled Substance as defined in Crime
+            Categories 8 and 9 (OAR 213-019-0007 and 0008); ORS 475.986
+            Unlawful Administration of a Controlled Substance as defined
+            in Crime Categories 5, 8 and 9 (OAR 213-019-0007,
+            213-019-0008 and 213-019-00011); ORS 609.990(3)(b)
+            Maintaining Dangerous Dog; ORS 811.705 Hit and Run Vehicle
+            (Injury); ORS 813.010, Felony Driving Under the Influence of
+            Intoxicants (as provided in OAR 213-004-0009); ORS
+            830.475(2) Hit and Run Boat; attempts or solicitations to
+            commit any Class A or Class B person felonies, or an
+            equivalent crime with similar elements in another
+            jurisdiction.</p>
+            <p>(b) Within the 10-year period prior to applying for, or
+            during, licensure, must not:</p>
+            <p>(A) Have been incarcerated, placed on probation or
+            paroled as the result of conviction of any felony, other
+            than those described in subsection (a) of this section in
+            this, or any other, jurisdiction.</p>
+            <p>(B) Have been convicted of violating ORS 163.435
+            (Contributing to the Sexual Delinquency of a Minor), 163.672
+            (1993 Edition) (Possession of Depiction of Sexual Conduct of
+            a Child), 163.673 (1993 Edition) (Dealing in the Depiction
+            of Sexual Conduct of a Child), 167.007 (Prostitution),
+            167.062 (Sadomasochistic Abuse or Sexual Conduct in a Live
+            Show), 167.065 (Furnishing Obscene Material), 167.070
+            (Sending Obscene Material to Minors), 167.075 (Exhibiting An
+            Obscene Performance to a Minor), 167.080 (Displaying Obscene
+            Material to Minors), 167.087 (Disseminating Obscene
+            Material) or an equivalent crime with similar elements in
+            another jurisdiction.</p>
+            <p>(C) Have been convicted of a person misdemeanor, as
+            defined in the rules of the Oregon Criminal Justice
+            Commission: ORS 162.315 Resisting Arrest; ORS 163.160
+            Assault IV; ORS 163.187 Strangulation; ORS 163.190 Menacing;
+            ORS 163.195 Recklessly Endanger Another; ORS 163.200
+            Criminal Mistreatment II; ORS 163.212 Use of Stun Gun, Tear
+            Gas, Mace II; ORS 163.415 Sexual Abuse III; ORS 163.454
+            Custodial Sexual Misconduct in the Second Degree; ORS
+            163.465, Public Indecency; ORS 163.467 Private Indecency;
+            ORS 163.476 Unlawfully Being in a Location Where Children
+            Regularly Congregate; ORS 163.545 Child Neglect II; ORS
+            163.575 Endanger Welfare of a Minor; ORS 163.687 Encouraging
+            Child Sex Abuse III; ORS 163.700 Invasion of Personal
+            Privacy; ORS 163.709 Unlawfully Directing a Laser Pointer;
+            ORS 163.732(1) Stalking; ORS 163.750(1) Violating Court’s
+            Stalking Order; ORS 165.572 Interfering with Making a Police
+            Report; ORS 166.065(4) Harassment/Offensive Sexual Contact;
+            Ors 166.155 Intimidation II; ORS 166.385(2) Misdemeanor
+            Possession of a Hoax Destructive Device; ORS 475.986(1)(d)
+            Unlawful Administration of a Controlled Substance; ORS
+            609.990(3)(a) Maintaining Dangerous Dog; ORS 813.010,
+            Driving Under the Influence of Intoxicants (as provided in
+            OAR 213-004-0009); attempts or solicitations to commit any
+            Class C person felonies, or an equivalent crime with similar
+            elements in another jurisdiction.</p>
+            <p>(D) Have been convicted of the following misdemeanors:
+            ORS 162.075 (False Swearing), 162.085 (Unsworn
+            Falsification), 162.145 (Escape III), 162.247 (Interfering
+            with a Peace Officer), 162.295 (Tampering with Physical
+            Evidence), 162.335 (Compounding a Felony), 162.365 (Criminal
+            Impersonation), 162.369 (Possession of False Law Enforcement
+            Identification Card), 162.385 (Giving False Information to
+            Police Officer), 164.045 (Theft II), 164.125(5)(b) (Theft of
+            Services), 164.140 (Criminal Possession of Rented or Leased
+            Personal Property), 164.235 (Possession of Burglar's Tools),
+            164.255 (Criminal Trespass I), 164.265 (Criminal Trespass
+            while in Possession of a Firearm), 164.335 (Reckless
+            Burning), 164.354 (Criminal Mischief II), 164.369
+            (Interfering With Police Animal), 164.377(4) (Computer
+            Crime), 165.007 (Forgery II), 165.055(4)(a) (Fraudulent Use
+            of a Credit Card), 165.065 (Negotiating a Bad Check),
+            166.115 (Interfering With Public Transportation), 166.250
+            (Unlawful Possession of Firearms), 166.350 (Unlawful
+            Possession of Armor Piercing Ammunition), 166.425 (Unlawful
+            Purchase of Firearm), 167.262 (Adult Using Minor in
+            Commission of Controlled Substance Offense), 471.410
+            (Providing Liquor to Person under 21 or Intoxicated Person),
+            or an equivalent crime with similar elements in another
+            jurisdiction.</p>
+            <p>(c) Have been convicted, within the 10-year period prior
+            to applying for, or during, certification or licensure, of a
+            "misdemeanor crime of domestic violence," in this or any
+            jurisdiction. A "misdemeanor crime of domestic violence"
+            means a misdemeanor under the law of any jurisdiction
+            involving the use or attempted use of physical force, or
+            threatened use of a deadly weapon, committed by a current or
+            former spouse, parent, or guardian of the victim, by a
+            person with whom the victim shares a child in common, by a
+            person who is co-habiting with or has co-habited with the
+            victim as a spouse, parent, or guardian, or by a person
+            similarly situated to a spouse, parent, or a guardian of the
+            victim.</p>
+            <p>(d) Have been convicted of a misdemeanor or felony
+            involving the unlawful use, possession, delivery or
+            manufacturing of a controlled substance, or a misdemeanor or
+            felony of similar elements, in this or any jurisdiction:
+            475.525 (Sale of Drug Paraphernalia), 475.991 (Unlawful
+            Delivery of Imitation Controlled Substance), 475.992
+            (Prohibited Acts, Manufacturing and Delivering), 475.995
+            (Distribution to Minors), 475.999 (Manufacturing or
+            Delivering of a Controlled Substance within 1,000 feet of
+            School), or an equivalent crime with similar elements in
+            another jurisdiction.</p>
+            <p>(e) Have been required to register or be registered as a
+            sex offender under ORS 181.595, 181.596 or 181.597.</p>
+            <p>(f) Have been convicted, within the seven-year period
+            prior to applying for, or during, certification or
+            licensure, of the following misdemeanors, or a misdemeanor
+            of similar elements, in this or any jurisdiction; 164.043
+            (Theft III), 164.125(5)(a) (Theft of Services), 162.375
+            (Initiating a False Report), 166.240 (Carrying of Concealed
+            Weapons), or an equivalent crime with similar elements in
+            another jurisdiction.</p>
+            <p>(5) Failure to disclose a criminal conviction, on an
+            application for licensure, of any Misdemeanor or Felony
+            crime is grounds for denial, suspension or revocation of a
+            license, and may include criminal or civil penalties.</p>
+            <p>(a) Department Staff Review: The Department or its
+            designated staff shall review the disclosure and shall
+            request further information or conduct its own investigation
+            of the matter. If there is grounds for a suspension,
+            revocation or denial based on the statutory and
+            administrative rule requirements, the department shall
+            notify the applicant or license holder in writing.</p>
+            <p>(b) Initiation of Proceedings: The Department's
+            designated staff shall determine if the reason for
+            suspension, revocation or denial and supporting factual data
+            meet the statutory and administrative rule requirements and
+            so advise the applicant or license holder.</p>
+            <p>(c) Contested Case Notice: The Department or its
+            designated staff shall prepare a "Contested Case Notice" in
+            accordance with OAR 137-003-0001 of the Attorney General's
+            Model Rules of Procedure. The Department or its designated
+            staff must serve a copy of the "Notice" on the person whose
+            application or licensure is being affected.</p>
+            <p>(d) Emergency Suspension Order: Notwithstanding
+            subsection (e), the Department may immediately suspend a
+            person upon a report that a person has been arrested for, or
+            charged with, any crime listed in OAR 259-061-0040(4). The
+            report may be received in any form and from any source.</p>
+            <p>(e) An Emergency Suspension Order must be in writing. The
+            order may be issued without prior notice to the individual
+            and without a prior opportunity for a contested case
+            hearing. An Emergency Suspension Order must:</p>
+            <p>(A) Generally describe the acts of the person and any
+            circumstances that would be grounds for an Emergency
+            Suspension Order under this rule; and</p>
+            <p>(B) Identify the person at the Department whom the
+            individual may contact and who is authorized to make
+            recommendations regarding issuance of the order.</p>
+            <p>(f) When the Department issues an Emergency Suspension
+            Order, it shall be served on the individual either
+            personally or by registered or certified mail and must
+            contain the following information:</p>
+            <p>(A) The effective date of the Emergency Suspension
+            Order;</p>
+            <p>(B) A statement of findings detailing the specific acts
+            or omissions of the person that violate applicable laws or
+            rules and which serve as the grounds for revocation or
+            suspension;</p>
+            <p>(C) A reference to the sections of the statutes and rules
+            involved;</p>
+            <p>(D) A statement indicating the individual has the right
+            to request a hearing to contest the Emergency Suspension
+            Order;</p>
+            <p>(E) A statement indicating the individual will have
+            waived their right to a hearing regarding the Emergency
+            Suspension Order if the request for a hearing is not
+            received by the Department within 20 calendar days of the
+            date of notice of the Emergency Suspension Order; and</p>
+            <p>(F) A statement indicating a hearing will be held as soon
+            as is prudent and practicable if a timely request for a
+            hearing is received.</p>
+            <p>(g) If the individual submits a timely request for a
+            hearing, the Department will hold a hearing on the Emergency
+            Suspension Order as soon as is prudent and practicable.</p>
+            <p>(A) The Department may combine the hearing on the
+            Emergency Suspension Order with any underlying proceeding
+            affecting the license or certificate.</p>
+            <p>(B) The sole purpose of the hearing will be to determine
+            whether the individual was charged with or arrested for a
+            crime listed in OAR 259-061-0040(4). Upon a showing that an
+            individual was not charged with or arrested for a crime in
+            OAR 259-061-0040(4), the suspension of the individual's
+            certificate or license will be immediately lifted;
+            otherwise, the suspension will remain in effect until final
+            disposition of the charges or arrest.</p>
+            <p>(h) Response Time:</p>
+            <p>(A) Revocation or Denial: If the Department is seeking
+            revocation or denial of a license or certificate, a party
+            who has been served with the "Contested Case Notice" must
+            submit a written request for a hearing to the Department
+            within 60 calendar days from the date of mailing or personal
+            service of the notice.</p>
+            <p>(B) Suspension: If the Department is seeking suspension
+            of a license or certificate, a party who has been served
+            with an Emergency Suspension Order must submit a written
+            request for a hearing to the Department within 20 calendar
+            days from the date of mailing or personal service of the
+            notice. The Department may extend the time allowed for
+            submission of the written request for a hearing for up to 30
+            calendar days upon request.</p>
+            <p>(i) Default Order: If a timely request for a hearing is
+            not received by the Department, the Contested Case Notice or
+            Emergency Suspension Order will become a final order
+            revoking, suspending or denying certification pursuant to
+            OAR 137-003-0075(5).</p>
+            <p>(j) When the Department revokes a certification or denies
+            an applicant's license, an individual is ineligible to
+            reapply for future certification or licensure for a period
+            of three (3) years from the date of final Department action
+            or order. Any applicant reapplying for licensure must
+            reapply in accordance with the provisions of ORS
+            703.401-703.490</p>
+            <p>(k) Hearing Request: When a request for a hearing is
+            received in a timely manner, the Department will refer the
+            matter to the Hearings Officer Panel in accordance with OAR
+            137-003-0075(5).</p>
+            <p>(6) A denial or revocation of a license pursuant to ORS
+            703.450(4) will cause the denial, suspension, or revocation
+            of all licenses administered by the Department.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06; DPSST 7-2008(Temp), f. &amp; cert.
+            ef. 5-15-08 thru 10-16-08; DPSST 12-2008, f. &amp; cert. ef.
+            7-15-08</p>
+            <p>259-061-0050</p>
+            <p>Bonds and Letters of Credit</p>
+            <p>(1) Applications for licensure must be accompanied by
+            proof of a minimum $5000:</p>
+            <p>(a) Corporate surety bond completed on a Department
+            approved form; or</p>
+            <p>(b) An irrevocable letter of credit issued by a
+            commercial bank as defined in ORS 706.005.</p>
+            <p>(2) Bonds and Letters of Credit must have the applicant's
+            name listed as principal;</p>
+            <p>(3) A bond will not be valid until filed with the
+            Department and the investigator is licensed with the
+            Department in accordance with ORS Chapter 703;</p>
+            <p>(4) A bond will not be valid for purposes of licensure in
+            accordance with ORS Chapter 703 unless filed with the
+            Department within sixty (60) days of the signature date on
+            the bond;</p>
+            <p>(5) An irrevocable letter of credit submitted pursuant to
+            ORS Chapter 703, must be approved by the Department prior to
+            issuance of a license.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0055</p>
+            <p>Errors and Omissions Insurance</p>
+            <p>(1) Any licensed investigator who does not have a current
+            surety bond or irrevocable letter of credit on file with the
+            Department:</p>
+            <p>(a) Is required to notify the Department if his or her
+            errors and omissions insurance policy is cancelled or lapses
+            for any reason;</p>
+            <p>(b) Notification must be given to the Department within
+            seven days of such cancellation or lapse;</p>
+            <p>(2) If a licensed investigator plans to cancel an errors
+            and omissions insurance policy and does not have a current
+            surety bond or irrevocable letter of credit on file with the
+            Department, he or she must give 30 days notice for any such
+            intended cancellation.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0060</p>
+            <p>Photographs for Identification</p>
+            <p>(1) Applications for an investigator's initial or renewal
+            license must be accompanied by two (2) identical color
+            photographs taken of the applicant within the previous six
+            months of filing the application;</p>
+            <p>(2) The size requirements of the photographs must be in
+            compliance as outlined on the application form. The
+            applicant's head in the photo must not be larger than 1"
+            wide and 1.25" high;</p>
+            <p>(3) The applicant's face must be clearly visible and free
+            from shadows or other viewing obstacles;</p>
+            <p>(4) If a replacement identification card is needed, 2
+            new, identical photographs will be required. Photographs
+            that do not meet the above requirements may be returned to
+            the applicant and delay the application process. Photocopies
+            will not be accepted.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0070</p>
+            <p>Fingerprint ID Cards</p>
+            <p>(1) Applications for licensure must be accompanied by two
+            complete sets of fingerprints.</p>
+            <p>(2) Fingerprints must be submitted on an FBI standard
+            applicant fingerprint card, Form FD258.</p>
+            <p>(3) Fingerprints must be clear as outlined in the
+            instructions on the back of the fingerprint card;</p>
+            <p>(4) Affidavit and bag.</p>
+            <p>(5) Cards rejected by the state police or FBI may be
+            returned or resubmitted. An additional fee will be charged
+            for the third submittal occurring after the second
+            rejection.</p>
+            <p>[ED. NOTE: Forms referenced are available from the
+            agency.]</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0080</p>
+            <p>References</p>
+            <p>(1) Applications for licensure must be accompanied by
+            three (3) professional letters of reference, none of which
+            may be from a person who is related to the applicant by
+            blood or marriage.</p>
+            <p>(2) Professional letters of reference may be utilized to
+            help show that the applicant fulfills the experience
+            requirement pursuant to ORS 703.425(2)(d).</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0090</p>
+            <p>Review of Application Materials</p>
+            <p>The Department will review all application materials for
+            completeness and may:</p>
+            <p>(1) Upon written notice from the Department to the
+            applicant, administratively terminate the application for
+            any of the following reasons:</p>
+            <p>(a) The Department has reason to believe that a person
+            with the applicant's name and birth date has committed an
+            act that constitutes grounds for denial of a license under
+            ORS 703.465. The termination of an application due to a
+            criminal conviction disqualification is subject to the
+            contested case hearing procedures set forth in ORS
+            703.470</p>
+            <p>(b) The application or any required documentation is
+            incomplete or the Department has been unable to verify
+            application information to its satisfaction due to
+            non-response or non-compliance of the applicant.</p>
+            <p>(c) Applicant has violated any administrative rule or
+            condition imposed by ORS or OAR concerning the licensure and
+            conduct of a Private Investigator or applicant as such.</p>
+            <p>(d) The fingerprint cards of applicant have been rejected
+            and returned by the Oregon State Police or Federal Bureau of
+            Investigations.</p>
+            <p>(2) Applicants who provide false information to the
+            Department, or who omit information pertaining to OAR
+            259-061-0040 on an application or required departmental
+            form, shall be disqualified from reapplying for a period of
+            three (3) years.</p>
+            <p>(3) The Department or its designated staff may
+            administratively terminate the application process if the
+            Department is unable to complete the certification process
+            due to non-response or non-compliance of the applicant after
+            exhausting the following efforts:</p>
+            <p>(a) A letter shall be mailed by the Department to the
+            applicant, and the last known mailing address of the
+            applicant, identifying the deficiencies in the application
+            process.</p>
+            <p>(b) The applicant shall have 21 calendar days from the
+            date of mailing to notify the Department that the
+            deficiencies are corrected. The Department may, in its
+            discretion, elect to extend the time for compliance upon
+            good cause shown by the applicant or its manager.</p>
+            <p>(c) If the Department is unable to determine a current
+            address for the applicant, or if the applicant does not
+            respond and correct the deficiencies within 21 calendar
+            days, or such additional time authorized by the Department,
+            the Department shall list the applicant's status as
+            "administratively terminated." The Department shall notify
+            the applicant at his or her last known address, that the
+            Department has administratively terminated the application
+            process.</p>
+            <p>(4) Once the application process has been
+            administratively terminated, the applicant can reapply at
+            any time by submitting a new completed application and
+            appropriate fees.</p>
+            <p><strong>Note:</strong>Applicants who have been denied,
+            revoked or suspended for any reason may not reapply for
+            licensure for a period of 3 years from the date of final
+            action.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06; DPSST 8-2008(Temp), f. &amp; cert.
+            ef. 5-15-08 thru 10-16-08; DPSST 12-2008, f. &amp; cert. ef.
+            7-15-08</p>
+            <center>
+            <p>Exam</p>
+            </center>
+            <p>259-061-0095</p>
+            <p>Administration of the Exam</p>
+            <p>(1) The Department will adopt a test of professional
+            investigator competency.</p>
+            <p>(2) Department staff or department approved designee will
+            proctor the exam at a time and place established by staff or
+            the designee.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0100</p>
+            <p>Exam Results</p>
+            <p>(1) The minimum passing score for the exam is 86%.</p>
+            <p>(2) The exam may be administered to an applicant no more
+            then three consecutive times. If the applicant does not pass
+            the exam on the third attempt, the applicant must wait one
+            year from the date the last exam was taken to re-take the
+            exam.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0110</p>
+            <p>Temporary License</p>
+            <p>(1) A person licensed as an Investigator in another
+            jurisdiction may be licensed as a temporary investigator in
+            the state of Oregon if:</p>
+            <p>(a) The person is licensed or certified to practice as an
+            investigator in another state or jurisdiction,</p>
+            <p>(b) The certification or licensing standards of the other
+            state or jurisdiction meet or exceed the standards for
+            achieving a Provisional License in the state of Oregon,
+            including a criminal background check.</p>
+            <p>(c) The person pays a non-refundable temporary license
+            fee.</p>
+            <p>(d) The Department has received the application packet
+            for Temporary Licensure.</p>
+            <p>(2) The person shall provide to the Department a copy of
+            the authorizing states statutory requirements for private
+            investigators, demonstrating that the person has undergone a
+            criminal history background check. Additionally, the person
+            shall provide a copy of the held certification or license
+            issued by the authorizing jurisdiction and submit a
+            Department approved application requesting a Temporary
+            License. The Application form is a triplicate form; the
+            original and one copy shall be mailed to the Department, one
+            copy shall be retained by the investigator. The
+            investigator's copy shall be carried on the person at all
+            times while performing investigative services in this state.
+            It shall be presented to any law enforcement officer upon
+            demand and shall be displayed to any other person upon
+            reasonable request.</p>
+            <p>(3) The Temporary License application packet must be
+            mailed to the Department on or before the first day the
+            person performs investigatory services in Oregon.</p>
+            <p>(4) The Temporary License shall be in effect for 90 days
+            from the date the complete application and fees are
+            received.</p>
+            <p>(5) The intent of this provision is to allow out-of-state
+            investigators to temporarily conduct lawful business in this
+            state.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0120</p>
+            <p>Interim Investigators License</p>
+            <p>(1) An employer, an attorney, or a private investigator
+            licensed under ORS 703.430 may request an Interim
+            Investigator's License for an applicant whose application
+            for licensure as a Private or Provisional investigator is
+            being processed by the Department. The Interim License
+            allows the applicant to perform investigatory services
+            within this state for a period of time not to exceed 120
+            days under the following conditions:</p>
+            <p>(a) The applicant has never been convicted of, pled
+            guilty or no contest to or forfeited security for a
+            crime;</p>
+            <p>(b) The applicant has submitted all required application
+            materials, paid required fees, and passed the required
+            exam;</p>
+            <p>(c) The employer has completed and signed the applicable
+            portions of the Interim License request, affirming the above
+            requirements have been met; and</p>
+            <p>(d) The Interim License request must bear a postmark on
+            or before the first day the applicant performs investigative
+            services.</p>
+            <p>(2) If an applicant has not completed each step of the
+            application process, the applicant shall not perform
+            investigatory services.</p>
+            <p>(3) The intent of this provision is to allow an employer
+            or attorney or private investigator to legally deploy a
+            private or provisional investigator, while the application
+            for licensure is being processed.</p>
+            <p>(4) The Interim License will be valid no longer than 120
+            days or, in any event, shall end upon written notice from
+            the Department to the applicant that the License has been
+            administratively terminated under OAR 259-061-0090.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480</p>
+            <p>Stats. Implemented: ORS 703.401 - 703.995</p>
+            <p>Hist.: DPSST 7-2006, f. &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0130</p>
+            <p>Copying and Distribution of the Exam</p>
+            <p>(1) No person, school, association or any other entity is
+            authorized to copy or distribute any exam administered by
+            the Department without prior written authorization;</p>
+            <p>(2) Applicants who take the exam must not disclose to
+            anyone or any entity the contents of the exam including the
+            exam questions and answers.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <center>
+            <p>Qualifications</p>
+            </center>
+            <p>259-061-0140</p>
+            <p>Educational Substitutes for Experience</p>
+            <p>(1) Completion of a related course of study at an
+            educational institution licensed or approved by a State
+            Department of Education or other State approving agency, and
+            approved by the Department may be substituted for up to 500
+            hours of the required work experience. Correspondence
+            courses, online courses, or similar coursework will be
+            evaluated on a case-by-case basis.</p>
+            <p>(2) Educational substitutions applied toward the required
+            work experience will be granted on a three to one (3 to 1)
+            basis and will be calculated using clock hours spent in
+            class. For example, three hours in class would equate to one
+            hour of allowable experience;</p>
+            <p>(3) Applicants must provide the Department or its
+            authorized representative verifiable documentation in the
+            form of sealed certified transcripts or an official
+            certificate from the administering institution(s) showing
+            successful completion of study in the related subject
+            matter;</p>
+            <p>(4) The Department or its authorized representative will
+            review the subject matter of the applicant's education on an
+            individual basis;</p>
+            <p>(5) Certified transcripts or official copies of
+            certificates presented to the Department in an envelope
+            sealed by the program or institution or instructor and
+            verified as sealed may be accepted directly from the
+            applicant;</p>
+            <p>(6) If a program or institution granting credit is no
+            longer in business, the Department will accept for review a
+            copy of a certificate of completion or transcript or diploma
+            in the required subject matter and hours. The Department may
+            require additional information to verify the authenticity of
+            such documents.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0150</p>
+            <p>Provisional Investigator Upgrade to Private
+            Investigator</p>
+            <p>(1) The license of a Provisional Investigator will be
+            upgraded to a Private Investigator license when the
+            applicant provides verifiable documentation that he or she
+            has performed 1500 hours of investigatory work, or completed
+            a course of study approved by the Department.</p>
+            <p>(2) The expiration date for a provisional investigator's
+            current license will not change when upgraded to a private
+            investigator unless the upgrade is granted at the time of
+            renewal or a new application and fee is received.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <center>
+            <p>Inactive Status</p>
+            </center>
+            <p>259-061-0160</p>
+            <p>Applying for Inactive Status</p>
+            <p>(1) A licensed investigator may apply, using a
+            Department-approved form, for inactive status.</p>
+            <p>(2) A licensee may be granted inactive status upon:</p>
+            <p>(a) Payment of the inactive license fee; and</p>
+            <p>(b) Submission of the inactive status request form to the
+            Department.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0170</p>
+            <p>Applying for Reinstatement to Active Status</p>
+            <p>(1) A licensee in inactive status may apply to the
+            Department to be reinstated to active status by paying the
+            appropriate license renewal fee and completing the
+            appropriate renewal application form;</p>
+            <p>(2) A licensee applying for reinstatement to active
+            status must comply with appropriate continuing education
+            requirements as outlined in OAR 259-061-0240.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0180</p>
+            <p>Maintaining Current Information</p>
+            <p>Within 10 days of a change, a licensed investigator or
+            applicant for licensure must notify the Department in
+            writing of any changes to name, home address, home phone
+            number, mailing address, business name, business address, or
+            business phone number.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <center>
+            <p>Code of Professional Ethics</p>
+            </center>
+            <p>259-061-0190</p>
+            <p>Code of Ethical Conduct</p>
+            <p>All licensed investigators must, at all times, observe
+            the rules and requirements of conduct as follows:</p>
+            <p>(1) Obey all laws in the pursuit of their
+            investigations;</p>
+            <p>(2) Abide by all provisions of ORS chapter 703 and OAR
+            chapter 259 as they relate to licensed investigators;</p>
+            <p>(3) Never act officiously or permit personal feelings,
+            prejudices, political beliefs, aspirations, animosities or
+            friendships to influence their professional decisions;</p>
+            <p>(4) Never compromise and shall relentlessly perform their
+            duties in accordance with the law, courteously and
+            appropriately, without fear or favor, malice or
+            ill-will;</p>
+            <p>(5) Never employ unnecessary or unlawful force or
+            violence;</p>
+            <p>(6) Maintain each client's confidentiality within the
+            limits of the law;</p>
+            <p>(7) Be accountable and responsible for their actions;</p>
+            <p>(8) Accept sole responsibility for their individual
+            standard of professional performance and take every
+            reasonable opportunity to enhance and improve their level of
+            knowledge, competence, and professional integrity;</p>
+            <p>(9) Actively seek and report the truth in the performance
+            of their professional duties;</p>
+            <p>(10) Be above reproach in the financial aspects of their
+            relationships with clients;</p>
+            <p>(11) Keep promises, fulfill commitments and abide by the
+            spirit of agreements made with their clients as well as the
+            letter of agreements with their clients;</p>
+            <p>(12) Recognize that the credential of a licensed
+            investigator is a symbol of public faith and will accept it
+            as a public trust, to be held only so long as they are true
+            to the ethics of the investigative profession.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <center>
+            <p>Enforcement and Compliance Procedures</p>
+            </center>
+            <p>259-061-0200</p>
+            <p>Compliance</p>
+            <p>(1) The Department or its designated staff may cause
+            inspections of records and procedures of private
+            investigators or of applicants for licensure, relating to
+            the minimum licensing standards and requirements that are
+            mandated by ORS 703.010-703.995, as well as those records
+            and procedures which are under the purview of OAR Chapter
+            259 in order to verify adherence to and compliance with any
+            applicable rule or statute.</p>
+            <p>(2) The Department or its designated staff may cause any
+            administrative proceeding or court action to be initiated to
+            enforce compliance with the provisions of ORS 703.010 -
+            703.995, and the administrative rules promulgated
+            thereunder.</p>
+            <p>259-061-0210</p>
+            <p>Filing a Complaint</p>
+            <p>(1) All complaints must be submitted on a Department
+            approved complaint form, unless the Department grants an
+            exception.</p>
+            <p>(2) A complainant other than the Department should file
+            the complaint with the Department within one year of
+            knowledge of the incident's occurrence.</p>
+            <p>259-061-0220</p>
+            <p>Form of Complaints</p>
+            <p>(1) When a complaint is first made, the staff will
+            provide the complainant with the Department's complaint
+            form. Unless there is an approved exception, this form must
+            be completed by the complainant and submitted to the
+            Department staff before a complaint is investigated.</p>
+            <p>(2) Unless otherwise prohibited by law, if the
+            complainant is a client or former client of the respondent,
+            the complainant must sign the waiver of confidentiality
+            allowing the Department access to records and other
+            materials. Refusal by a complainant to comply with these
+            requirements may result in no investigation of the
+            complaint.</p>
+            <p>259-061-0230</p>
+            <p>Compliance</p>
+            <p>(1) A preliminary administrative review of the complaint
+            will be made by Department staff to assure there is
+            sufficient information to proceed. Staff will conduct a fact
+            finding preliminary investigation (e.g. data searches and
+            other inquiries).</p>
+            <p>(2) If sufficient information is determined to support
+            the allegation(s) of the complaint, staff will:</p>
+            <p>(a) Open and conduct an investigation. Gather relevant
+            information and, in doing so, may submit questions to the
+            respondent and require written answers and copies of related
+            documents. The respondent shall comply within twenty (20)
+            days after the request is mailed, unless the Department
+            authorizes an extension.</p>
+            <p>(b) Notify Respondent of intended action as authorized by
+            ORS 703.465 and 703.995.</p>
+            <p>(c) Seek Resolution by Stipulation. Department staff is
+            authorized to seek resolution by stipulation, subject to
+            acceptance and approval by the Director, if:</p>
+            <p>(A) The matter is resolved before entry of any final
+            order;</p>
+            <p>(B) The agreement has been entered into freely and
+            voluntarily by respondent;</p>
+            <p>(C) The respondent corrects or proceeds to correct all
+            deficiencies itemized by Department under the terms of the
+            agreement; and</p>
+            <p>(D) Any penalty amount agreed to is paid and received
+            with the stipulation.</p>
+            <p>(E) A stipulation shall not be accepted if the violation
+            is for failure to obtain a required license, and such is not
+            obtained as part of the resolution.</p>
+            <p>(3) If the Department finds that an allegation is false,
+            all information about the alleged violation and the
+            investigation will be considered confidential and not
+            subject to disclosure pursuant to ORS 192.410 to
+            192.505.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06; DPSST 7-2008(Temp), f. &amp; cert.
+            ef. 5-15-08 thru 10-16-08; DPSST 12-2008, f. &amp; cert. ef.
+            7-15-08</p>
+            <center>
+            <p>Continuing Education</p>
+            </center>
+            <p>259-061-0240</p>
+            <p>Continuing Education Requirements for Investigator
+            License Renewal</p>
+            <p>(1) No Private Investigator license or renewal will be
+            issued by the Department unless the licensee has
+            satisfactorily completed and reported thirty-two (32)
+            continuing education program hours in compliance with the
+            Department's Continuing Education Guidelines. Two (2) of the
+            hours must be in ethics.</p>
+            <p>(2) No Provisional Investigator license or renewal will
+            be issued by the Department unless the licensee has
+            satisfactorily completed and reported forty (40) continuing
+            education program hours in compliance with the Department's
+            Continuing Education Guidelines. Two (2) of the hours must
+            be in ethics.</p>
+            <p>(3) A licensed investigator may carry over up to fifteen
+            (15) hours of unused continuing education credit hours to
+            his/her next licensing period.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0250</p>
+            <p>Inactive License Continuing Education Requirements</p>
+            <p>(1) The Department will review a licensee's application
+            for re-activation and determine, on a case-by-case basis,
+            the number of continuing education credit hours required of
+            the licensee prior to approving the active status;</p>
+            <p>(2) The licensee should be prepared to provide the
+            Department with documentation of the number of hours of
+            continuing education completed during the licensee's most
+            recent active status period.</p>
+            <p>Stat. Auth.: ORS 703.415, 703.425, 703.430, 703.435,
+            703.445, 703.450, 703.460, 703.465 &amp; 703.480Stats.
+            Implemented: ORS 703.401 - 703.995Hist.: DPSST 7-2006, f.
+            &amp; cert. ef. 5-15-06</p>
+            <p>259-061-0260</p>
+            <p>Continuing Education (CE) Guidelines</p>
+            <p>(1) Conferences and Seminars. All Department, county,
+            state, national, international bar, investigator,
+            fire-related, law enforcement, forensic science, medical and
+            mental health associations are approved for continuing
+            education units. The Department will also maintain a list of
+            organizations whose conferences, seminars, and educational
+            meetings have standing approval. Continuing Education from
+            any other organizations will be approved on a case-by-case
+            basis.</p>
+            <p>(a) Attendance: 1 CE Unit for each hour of speaker
+            presentation.</p>
+            <p>(b) Lecturing: 4 CE Units for each hour presented. (Limit
+            of 8 units per licensing period.)</p>
+            <p>(c) Video and Audio Media: 1 CE Unit for each hour of
+            presentation. (Limit 16 units per licensing period.)</p>
+            <p>(2) Computer Seminars: One (1) CE unit of credit for each
+            hour of attended seminar sessions hosted by computer
+            information sources such as public record vendors; and any
+            other similar approved seminar regarding computer
+            information sources. Seminars on how to operate computers
+            will not be approved for credits. (Limit 12 units per
+            licensing period.)</p>
+            <p>(3) Educational Institutions: Programming presented in
+            state, nationally or internationally, by licensed or
+            accredited educational institutions including, but not
+            limited to colleges, universities, trade and professional
+            schools, will be granted standing approval when that
+            institution is licensed or approved by the respective
+            State's Department of Education or other State approving
+            agency. Others may be approved on a case-by-case basis.</p>
+            <p>(a) All accredited or licensed Colleges and
+            Universities:</p>
+            <p>(A) Attendance: 1 CE Unit per college-level credit hour.
+            (Limit 24 units per licensing period.)</p>
+            <p>(B) Lecturing: 4 CE Units per hour of presentation.
+            (Limit 8 units per licensing period.)</p>
+            <p>(b) Online Studies:</p>
+            <p>(A) Two (2) CE Units per college-level credit hour.
+            (Limit 20 units per licensing period.)</p>
+            <p>(B) All accredited or licensed trade and professional
+            schools (other than colleges and universities). Course work
+            directly related to investigations, including but not
+            limited to, crash technology; criminal justice; fire
+            science; law; judicial; legal and governmental systems equal
+            one (1) CE Unit per hour of presentation. (Limit 20 units
+            per licensing period.)</p>
+            <p>(C) All accredited or licensed trade and professional
+            schools (other than colleges and universities). Course work
+            indirectly related to the practice of investigation or
+            business operation instruction. (Limit 12 units per
+            licensing period.)</p>
+            <p>(4) Publications: The Department reserves the right to
+            approve or disapprove any credit for articles, papers,
+            books, or other publications the individual has authored, or
+            co-authored, relating to the private investigative industry.
+            A maximum of 10 CE Units may be granted per licensing
+            period, with no carry over.</p>
+            <p>(5) Self-Study:</p>
+            <p>(a) Correspondence Courses and Online Courses: Two (2) CE
+            units per college-equivalent credit hour; otherwise, Four
+            (4) CE units per course that is related to investigation,
+            completed and passed. (Limit of 4 units per licensing
+            period.)</p>
+            <p>(b) Books and Manuals: Two (2) CE units for each
+            non-fiction book or professional/technical manual that is
+            related to investigation. All books published by Lawyers and
+            Judges Publishing have standing approval. Other books will
+            be approved on a case-by-case basis. (Limit of 6 units per
+            licensing period.)</p>
+            <p>(c) Internet study and research: One (1) CE unit for each
+            hour of Independent study and research directly related to
+            the individual investigator's practice not to exceed 4 CE
+            Units per study topic. (Limit 4 units per licensing
+            period.)</p>
+            <p>(6) Television and Radio Appearances: Four (4) CE units
+            for each half hour appearance on a television or radio
+            program which provides education about investigative topics.
+            Merely appearing or participating in a show does not
+            qualify. The program must qualify as an educational program.
+            (Limit of 8 units per licensing period.)</p>
+            <p>(7) Department/Board/Committee Meetings: One (1) CE unit
+            will be granted for attending a Board or Committee Meeting
+            hour. No CE units will be granted for attending investigator
+            association board or committee meetings. (Limit of 8 units
+            per licensing period.)</p>
+            <p>(8) Network Meetings: Two (2) CE units will be granted
+            for approved network meetings. Meetings must be noticed and
+            structured, and proof of attendance that includes topics
+            covered must be supplied to attendees by the person
+            organizing the meeting. A minimum of four investigators must
+            be in attendance. (Limit of 8 units per licensing
+            period.)</p>
+            <p>(9) Mentoring: A licensed private investigator who
+            provides investigation-related training to another licensed
+            private investigator, or to a licensed provisional
+            investigator, may claim one (1) CE Unit per eight hours of
+            training. (Limit 8 units per licensing period.)</p>
+            <center>
+            <p>Appendix C</p>
+            </center>
+            <p>Private investigator licensing is covered in the
+            following Oregon Revised Statutes. ORS 703.401 through
+            703.995</p>
+            <center>
+            <p>ORS 703.401 to 703.995</p>
+            </center>
+            <p><strong>703.401 Definitions.</strong> As used in ORS
+            703.401 to 703.490, 703.993 and 703.995, unless the context
+            otherwise requires:</p>
+            <p>(1) “Client” means a person who engages an investigator,
+            firm, partnership, corporation or other entity for the
+            purpose of conducting lawful activity on the person’s
+            behalf.</p>
+            <p>(2) “Investigator” means a person who is a licensed
+            investigator under ORS 703.430 and who engages in the
+            business of obtaining or furnishing, or who solicits or
+            accepts employment to obtain or furnish, information
+            about:</p>
+            <p>(a) Crimes or wrongs done or threatened against the
+            United States or any state or territory of the United
+            States;</p>
+            <p>(b) The identity, habits, conduct, business, occupation,
+            honesty, integrity, credibility, knowledge, trustworthiness,
+            efficiency, loyalty, activities, movements, whereabouts,
+            affiliations, associations, transactions, acts, reputation
+            or character of any person;</p>
+            <p>(c) The location, disposition or recovery of lost or
+            stolen property;</p>
+            <p>(d) The cause of or responsibility for fires, libels,
+            losses, accidents, damages or injuries to persons or
+            property; or</p>
+            <p>(e) Evidence to be used before any court, board, officer,
+            referee, arbitrator or investigation committee. [1997 c.870
+            §1; 2001 c.838 §1; 2005 c.613 §9]</p>
+            <p><strong>703.405 License requirement.</strong> A person
+            may not act as an investigator or represent that the person
+            is an investigator unless that person is licensed under ORS
+            703.430. [1997 c.870 §2; 2001 c.838 §2]</p>
+            <p><strong>703.407 Expert witness exception.</strong> The
+            licensing requirement of ORS 703.405 does not apply to a
+            person while the person is:</p>
+            <p>(1) Providing testimony in a court as an expert under ORS
+            40.410; or</p>
+            <p>(2) Conducting investigations or reviews or engaging in
+            other activities in preparation for providing testimony in a
+            court as an expert under ORS 40.410. [2003 c.687 §14; 2005
+            c.613 §10]</p>
+            <p><strong>Note:</strong> 703.407 was enacted into law by
+            the Legislative Assembly but was not added to or made a part
+            of ORS chapter 703 or any series therein by legislative
+            action. See Preface to Oregon Revised Statutes for further
+            explanation.</p>
+            <p><strong>703.411 Exceptions.</strong> ORS 703.401 to
+            703.490, 703.993 and 703.995 do not apply to:</p>
+            <p>(1) A person employed exclusively by one employer in
+            connection with the affairs of that employer only;</p>
+            <p>(2) An officer or employee of the United States, or of
+            this state, or a political subdivision of either, while the
+            officer or employee is engaged in the performance of
+            official duties;</p>
+            <p>(3) A person acting as a private security professional as
+            defined in ORS 181.870;</p>
+            <p>(4) A person who is employed full-time as a peace
+            officer, as defined in ORS 161.015, who receives
+            compensation for private employment as an investigator,
+            provided that services are performed for no more than one
+            person or one client;</p>
+            <p>(5) A person that provides secured transportation and
+            protection, from one place or point to another place or
+            point, of money, currency, coins, bullion, securities,
+            bonds, jewelry or other valuables;</p>
+            <p>(6) A person that places, leases, rents or sells an
+            animal for the purpose of protecting property, or any person
+            that is contracted to train an animal for the purpose of
+            protecting property;</p>
+            <p>(7) A person engaged in the business of obtaining and
+            furnishing information regarding the financial rating of
+            persons;</p>
+            <p>(8) An attorney admitted to practice law in this state
+            performing the attorney’s duties as an attorney;</p>
+            <p>(9) A legal assistant or paralegal engaged in activity
+            for which the person is employed by an attorney admitted to
+            practice law in this state;</p>
+            <p>(10) Insurers, insurance adjusters and insurance
+            producers licensed in this state and performing duties in
+            connection with insurance transacted by them;</p>
+            <p>(11) Any secured creditor engaged in the repossession of
+            the creditor’s collateral and any lessor engaged in the
+            repossession of leased property in which it claims an
+            interest;</p>
+            <p>(12) An employee of a cattle association who is engaged
+            in inspection of brands of livestock under the authority
+            granted to that cattle association by the Packers and
+            Stockyards Division of the United States Department of
+            Agriculture;</p>
+            <p>(13) Common carriers by rail engaged in interstate
+            commerce and regulated by state and federal authorities and
+            transporting commodities essential to the national defense
+            or to the general welfare and safety of the community;</p>
+            <p>(14) Any news media and the employees thereof when
+            engaged in obtaining information for the purpose of
+            disseminating news to the public;</p>
+            <p>(15) A legal process service company attempting to serve
+            legal process;</p>
+            <p>(16) A landlord or an agent of a landlord performing
+            duties in connection with rental property transactions;
+            or</p>
+            <p>(17) An engineer or employee of an engineer while the
+            engineer or employee is performing duties as an engineer or
+            on behalf of an engineer. As used in this subsection,
+            “engineer” has the meaning given that term in ORS 672.002.
+            [1997 c.870 §3; 2003 c.364 §57; 2003 c.764 §1; 2005 c.22
+            §482; 2005 c.447 §14]</p>
+            <p><strong>703.415 Investigator’s license
+            qualifications.</strong> In order to obtain a private
+            investigator’s license, a person:</p>
+            <p>(1) Must be at least 18 years of age;</p>
+            <p>(2) Must be eligible to work in the United States;</p>
+            <p>(3) Must not have committed any act that constitutes
+            grounds for denial of a private investigator’s license;</p>
+            <p>(4) Must have obtained a passing score on the test of
+            investigator competency adopted by the Board on Public
+            Safety Standards and Training and administered by the
+            Department of Public Safety Standards and Training;</p>
+            <p>(5) Must submit to fingerprinting and criminal records
+            checks as prescribed by the board by rule;</p>
+            <p>(6) Must have a corporate surety bond, an irrevocable
+            letter of credit issued by an insured institution as defined
+            in ORS 706.008 or such other security as the department may
+            prescribe by rule in the sum of at least $5,000, or errors
+            and omissions insurance in the sum of at least $5,000;
+            and</p>
+            <p>(7) Must have at least 1,500 hours of experience in
+            investigatory work, have completed a related course of study
+            approved by the department or have a combination of work
+            experience and education approved by the department. [1997
+            c.870 §4; 2001 c.838 §3; 2005 c.613 §11; 2007 c.320 §2]</p>
+            <p><strong>703.425 Application requirements; fee; rules;
+            investigation of applicant.</strong> (1) An application for
+            a private investigator’s license or a provisional
+            investigator’s license must be in writing on a form
+            prescribed by the Department of Public Safety Standards and
+            Training, stating the applicant’s:</p>
+            <p>(a) Legal name;</p>
+            <p>(b) Birthdate;</p>
+            <p>(c) Citizenship;</p>
+            <p>(d) Physical description;</p>
+            <p>(e) Current residence;</p>
+            <p>(f) Residence for the preceding 10 years;</p>
+            <p>(g) Current employment;</p>
+            <p>(h) Employment for the preceding 10 years;</p>
+            <p>(i) Experience qualifications;</p>
+            <p>(j) Education;</p>
+            <p>(k) Business address, which may be a post office box;
+            and</p>
+            <p>(L) Any other information required by the department.</p>
+            <p>(2) The application must be accompanied by:</p>
+            <p>(a) The application fee as prescribed by the Board on
+            Public Safety Standards and Training by rule;</p>
+            <p>(b) Recent photographs of the applicant as prescribed by
+            the board by rule to be used for an identification card and
+            for the files of the department;</p>
+            <p>(c) Complete sets of the applicant’s fingerprints as
+            prescribed by the board by rule;</p>
+            <p>(d) Three professional references, none of which may be
+            from a person who is related to the applicant by blood or
+            marriage;</p>
+            <p>(e) Proof of a corporate surety bond, an irrevocable
+            letter of credit issued by an insured institution as defined
+            in ORS 706.008 or such other security as the department may
+            prescribe by rule in the sum of at least $5,000, or errors
+            and omissions insurance in the sum of at least $5,000;
+            and</p>
+            <p>(f) Proof of a passing score on the test of investigator
+            competency adopted by the board and administered by the
+            department.</p>
+            <p>(3) All applicants must disclose any acts constituting
+            grounds for denial of an investigator’s license and must
+            notify the department if the applicant is charged with a
+            criminal offense. The department shall conduct a special
+            review of any applicant making a disclosure under this
+            subsection.</p>
+            <p>(4) The Department of Public Safety Standards and
+            Training shall forward a complete set of an applicant’s
+            fingerprints to the Department of State Police and shall
+            request that the Department of State Police conduct criminal
+            records checks as provided in ORS 181.534. Notwithstanding
+            ORS 181.534 (5) and (6), the Department of State Police
+            shall maintain in its files the fingerprint cards used to
+            conduct the state criminal records check.</p>
+            <p>(5) Employees of or partners in a firm who are covered by
+            the firm’s errors and omissions insurance meet the
+            requirements of subsection (2)(e) of this section as long as
+            the coverage is at least $5,000 per investigator. [1997
+            c.870 §6; 1999 c.59 §212; 1999 c.125 §1; 1999 c.312 §1; 1999
+            c.363 §1; 2001 c.838 §4; 2005 c.21 §11; 2005 c.730 §§43,89;
+            2007 c.320 §3]</p>
+            <p><strong>703.430 Issuance of license; expiration; rules;
+            fees.</strong> (1) The Department of Public Safety Standards
+            and Training shall issue:</p>
+            <p>(a) A private investigator’s license if the applicant has
+            satisfied the requirements of ORS 703.415 and 703.425 and is
+            in compliance with the rules of the Board on Public Safety
+            Standards and Training and the department.</p>
+            <p>(b) A provisional investigator’s license if the applicant
+            has satisfied the requirements of ORS 703.415 (1) to (6) and
+            703.425 and is in compliance with the rules of the board and
+            department. A person who has a provisional investigator’s
+            license may not employ or supervise other investigators.</p>
+            <p>(2) The department may issue:</p>
+            <p>(a) A temporary investigator’s license to a person
+            licensed as an investigator by another jurisdiction. The
+            board shall adopt rules to carry out this paragraph
+            including, but not limited to, rules establishing
+            requirements, procedures and fees for issuing a temporary
+            investigator’s license and the scope and duration of the
+            license.</p>
+            <p>(b) An interim investigator’s license to a person
+            who:</p>
+            <p>(A) Has applied for a private investigator’s license or a
+            provisional investigator’s license and whose application has
+            not been granted or denied;</p>
+            <p>(B) Works only for a private investigator licensed under
+            this section, an attorney or another employer who has
+            requested that the person be issued an interim
+            investigator’s license;</p>
+            <p>(C) Has never been convicted of, pleaded guilty or no
+            contest to or forfeited security for a crime; and</p>
+            <p>(D) Meets all requirements established by the board by
+            rule including, but not limited to, rules establishing
+            requirements, procedures and fees for issuing an interim
+            investigator’s license and the scope and duration of the
+            license.</p>
+            <p>(3) A license issued under subsection (1) of this section
+            expires two years following the date of issuance or on the
+            assigned renewal date. [1997 c.870 §7; 2001 c.838 §6; 2005
+            c.613 §14; 2007 c.320 §4]</p>
+            <p><strong>703.435 Identification card; rules; obligation to
+            carry; replacement; fees.</strong> (1) When issuing a
+            license under ORS 703.430, the Department of Public Safety
+            Standards and Training shall also issue an identification
+            card of a size, design and content as may be determined by
+            the department by rule.</p>
+            <p>(2) An investigator shall carry at all times, while
+            engaged in the practice of investigating, the identification
+            card issued under this section.</p>
+            <p>(3) In the event of loss or destruction of a license
+            issued under ORS 703.430 or an identification card issued
+            under this section, the investigator may apply to the
+            department for a replacement. The application must state the
+            circumstances of the loss or destruction. The investigator
+            shall provide recent photographs of the investigator and a
+            replacement application fee as prescribed by the Board on
+            Public Safety Standards and Training by rule. [1997 c.870
+            §8; 1999 c.125 §3; 1999 c.363 §2; 2001 c.838 §7; 2005 c.613
+            §15; 2007 c.320 §5]</p>
+            <p><strong>703.440 Licensing reciprocity.</strong> The
+            Department of Public Safety Standards and Training may enter
+            into a reciprocal agreement with the appropriate official of
+            any other state to allow an investigator licensed in the
+            other state to operate in Oregon if the department
+            determines that the requirements for licensure in that state
+            are substantially similar to the requirements under Oregon
+            law. [1997 c.870 §17; 2005 c.613 §16]</p>
+            <p><strong>703.445 Renewal procedure; fee; penalty; inactive
+            status.</strong> (1) An investigator who desires to continue
+            to practice in this state must apply for renewal and pay the
+            renewal fee as prescribed by rule of the Board on Public
+            Safety Standards and Training to the Department of Public
+            Safety Standards and Training on or before the renewal date
+            of the license. Any person who fails to pay the renewal fee
+            by the renewal date may, within the following 30 days, pay
+            the renewal fee plus a penalty in an amount to be prescribed
+            by board rule, not to exceed twice the amount of the renewal
+            fee. Any person who fails to pay the renewal fee, with
+            accrued penalties, for a period of 30 days after the renewal
+            date forfeits the right to work as an investigator in this
+            state and may be reinstated only upon compliance with the
+            initial application procedures.</p>
+            <p>(2) Prior to renewing a license, the Department of Public
+            Safety Standards and Training may request that the
+            Department of State Police conduct criminal records checks
+            as provided in ORS 181.534. Any act that is grounds for
+            denying an initial application for a license is grounds for
+            refusing to renew a license.</p>
+            <p>(3) An investigator may request the Department of Public
+            Safety Standards and Training to place the investigator on
+            inactive status at any time during the licensing period.
+            Upon payment of the inactive license fee as prescribed by
+            rule of the board, the department shall place the
+            investigator on inactive status. An investigator on inactive
+            status may not work as an investigator. [1997 c.870 §9; 1999
+            c.125 §4; 2001 c.838 §8; 2005 c.613 §17; 2005 c.730 §44;
+            2007 c.320 §6]</p>
+            <p><strong>703.447 Continuing education.</strong> (1)(a) An
+            investigator issued a private investigator’s license must
+            complete at least 32 hours of continuing education every two
+            years.</p>
+            <p>(b) An investigator issued a provisional investigator’s
+            license must complete at least 40 hours of continuing
+            education every two years.</p>
+            <p>(2) An investigator may carry no more than 15 hours of
+            continuing education from one licensing period to the
+            next.</p>
+            <p>(3) When an investigator applies for renewal of a license
+            under ORS 703.445, the investigator must provide proof of
+            having completed the required continuing education.</p>
+            <p>(4) As used in this section, “continuing education” means
+            any educational endeavor that reasonably could be considered
+            beneficial to the work of the investigator. Continuing
+            education may be obtained:</p>
+            <p>(a) Through participation in conferences or educational
+            courses offered by trade schools or colleges, whether as an
+            attendee or a presenter;</p>
+            <p>(b) Through independent studies;</p>
+            <p>(c) By publishing articles related to the field of
+            investigation; and</p>
+            <p>(d) As otherwise provided by the Board on Public Safety
+            Standards and Training by rule. [2001 c.838 §20; 2005 c.613
+            §18; 2007 c.320 §7]</p>
+            <p><strong>703.450 Requirements of conduct.</strong> A
+            licensed investigator:</p>
+            <p>(1) May not knowingly make any false report to an
+            employer or client.</p>
+            <p>(2) May not commit fraud or deceit toward a client or
+            employer.</p>
+            <p>(3) May not knowingly violate a court order or injunction
+            in the course of business as an investigator.</p>
+            <p>(4) May not commit an act that reflects adversely on the
+            investigator’s honesty, integrity, trustworthiness or
+            fitness to engage in business as an investigator.</p>
+            <p>(5) May not act unprofessionally while acting as an
+            investigator.</p>
+            <p>(6) May not use unlicensed persons to conduct
+            investigative activities.</p>
+            <p>(7) Is responsible for the professional, ethical and
+            legal conduct of the investigator’s employees or other
+            persons working under the investigator’s supervision.</p>
+            <p>(8) Shall inform each client that the client has a right
+            to receive a written contract. The contract shall clearly
+            state the task to be performed and the rate of payment.</p>
+            <p>(9) Shall inform each client that the client is entitled
+            to receive both of the following reports concerning services
+            rendered:</p>
+            <p>(a) An oral report that is timely and adequate; and</p>
+            <p>(b) A written report furnished by the investigator within
+            seven days after written request is received from the
+            client.</p>
+            <p>(10) Shall keep separate and distinct case files for each
+            client and case. Case files must include all written
+            agreements with the client, the date investigative
+            activities began, copies of all correspondence and written
+            reports generated and an accurate accounting of all time
+            spent, activities conducted and expenses incurred by the
+            investigator during the course of the case.</p>
+            <p>(11) Shall maintain a record of the term of employment of
+            each employee or contractor.</p>
+            <p>(12) Shall maintain all records and files referred to in
+            this section for not less than seven years.</p>
+            <p>(13) Shall maintain required security or insurance.</p>
+            <p>(14) Shall post the license of the investigator in a
+            conspicuous place in the investigator’s principal place of
+            business.</p>
+            <p>(15) Unless performing services for a law enforcement or
+            other governmental agency, may not attempt to give an
+            impression that the investigator is connected in any way
+            with a law enforcement or other governmental agency by any
+            statement or activity, including using a title, wearing a
+            uniform, using a badge or insignia or using an
+            identification card or by any failure to make a statement or
+            act.</p>
+            <p>(16) Shall maintain the confidentiality of each client as
+            required by rules of professional conduct established by the
+            Board on Public Safety Standards and Training.</p>
+            <p>(17) May not submit false information to the Department
+            of Public Safety Standards and Training.</p>
+            <p>(18) May not impede a compliance investigation.</p>
+            <p>(19) Shall return to the department the license and
+            identification card issued by the department to the
+            investigator no later than 15 days after the expiration or
+            revocation of the license. [1997 c.870 §10; 1999
+            <strong>703.455</strong> [1997 c.870 §11; 2001 c.838 §24;
+            repealed by 2005 c.613 §29]</p>
+            <p><strong>703.460 Information required; designation of
+            agent for service of process.</strong> (1) A licensed
+            investigator shall provide the Department of Public Safety
+            Standards and Training with:</p>
+            <p>(a) The investigator’s legal name, home address and home
+            telephone number; and</p>
+            <p>(b) The name, physical and mailing addresses and
+            telephone number of the investigator’s business.</p>
+            <p>(2) In addition to the information required by subsection
+            (1) of this section, a licensed investigator who is not a
+            resident of this state shall designate a person to act as
+            the investigator’s agent for service of process. The
+            investigator shall make the designation on a form approved
+            by the department and shall include the physical address of
+            the agent’s business. When an investigator changes the
+            designated agent, the investigator shall submit a new
+            designation form. To act as an agent under this subsection,
+            the person must be:</p>
+            <p>(a) An individual who resides in this state and who
+            maintains a business office in this state; or</p>
+            <p>(b) A corporation that maintains a business office in
+            this state.</p>
+            <p>(3) An investigator shall notify the department within 10
+            business days of any change in the information required by
+            this section. [1997 c.870 §12; 2001 c.838 §25; 2005 c.613
+            §20]</p>
+            <p><strong>703.465 Discipline or issuance refusal.</strong>
+            (1) The Department of Public Safety Standards and Training
+            may refuse to grant or renew a license, may suspend or
+            revoke a license or may reprimand an investigator for any
+            violation of ORS 703.405, 703.450 or 703.460 or of any rule
+            adopted by the Board on Public Safety Standards and Training
+            or the department.</p>
+            <p>(2) In determining whether to issue a denial, suspension,
+            revocation or reprimand, the department shall consider the
+            facts of the case as they relate to the person’s fitness to
+            practice as an investigator.</p>
+            <p>(3) As part of the disciplinary process, the department
+            may provide an investigator with an opportunity to correct
+            the deficiencies by allowing the investigator to complete a
+            course of rehabilitation approved by the department.</p>
+            <p>(4) When the department denies or revokes a license, the
+            applicant or licensee may not reapply for a license until
+            three years have elapsed from the issuance of the final
+            order of denial or revocation. A person who reapplies after
+            a denial or revocation must prove by a preponderance of the
+            evidence that the grounds for the denial or revocation no
+            longer exist. [1997 c.870 §18; 2001 c.838 §10; 2005 c.613
+            §21; 2007 c.320 §9]</p>
+            <p><strong>703.470 Opportunity for hearing; judicial
+            review.</strong> (1) If the Department of Public Safety
+            Standards and Training proposes to refuse to issue or renew
+            a license or proposes to suspend or revoke a license or
+            proposes to reprimand an investigator, opportunity for
+            hearing shall be accorded as provided in ORS chapter
+            183.</p>
+            <p>(2) Judicial review of orders under subsection (1) of
+            this section shall be as provided in ORS chapter 183. [1997
+            c.870 §19; 2001 c.838 §11; 2005 c.613 §22]</p>
+            <p><strong>703.473 Confidentiality of investigator’s
+            personal identifying information and client files.</strong>
+            (1) An investigator’s home address, home telephone number,
+            personal electronic mail address, Social Security number,
+            photograph and other personal identifying information are
+            confidential and not subject to disclosure under ORS 192.410
+            to 192.505 unless written consent to disclose is given by
+            the investigator.</p>
+            <p>(2) Except as provided by rules established by the Board
+            on Public Safety Standards and Training, investigator client
+            files obtained by the Department of Public Safety Standards
+            and Training are confidential and not subject to disclosure
+            under ORS 192.410 to 192.505.</p>
+            <p>(3) Information obtained by the department as part of an
+            investigation of a licensee or applicant, including
+            complaints concerning the licensee or applicant, is
+            confidential and not subject to disclosure under ORS 192.410
+            to 192.505 until the department dismisses the case or issues
+            a proposed order. [2001 c.838 §21; 2005 c.613 §23; 2007
+            c.320 §10]</p>
+            <p><strong>703.475</strong> [1997 c.870 §13; 2001 c.838 §12;
+            repealed by 2005 c.613 §29]</p>
+            <p><strong>703.480 Board and department duties; rules;
+            fees.</strong> (1) The Board on Public Safety Standards and
+            Training shall, in collaboration with the Private Security
+            Policy Committee:</p>
+            <p>(a) Establish reasonable minimum standards of physical,
+            emotional, intellectual and moral fitness for
+            investigators.</p>
+            <p>(b) Prescribe fees relating to the application for and
+            the issuance, renewal and inactivation of investigators’
+            licenses, and for the issuance of identification cards. Each
+            fee may not exceed the cost of administering the program of
+            the Department of Public Safety Standards and Training for
+            which the fee was established. The board shall prescribe
+            penalties for late renewal of licenses.</p>
+            <p>(c) Adopt a test of investigator competency.</p>
+            <p>(d) Establish rules of professional conduct to be
+            followed by investigators.</p>
+            <p>(e) Adopt rules specifying those crimes and violations
+            for which a conviction requires the denial, suspension or
+            revocation of licensure as an investigator.</p>
+            <p>(2) The department shall:</p>
+            <p>(a) Investigate alleged violations of ORS 703.401 to
+            703.490 and of any rules adopted by the board or department.
+            Notwithstanding ORS 703.473 (3), when the department
+            conducts an investigation under this paragraph, all
+            information about the alleged violation and the
+            investigation is confidential and is not subject to
+            disclosure under ORS 192.410 to 192.505 if the department
+            determines that the allegation is false.</p>
+            <p>(b) Collect fees as prescribed by the board.</p>
+            <p>(c) Establish a website on the Internet that lists each
+            investigator with the investigator’s license number,
+            business address and business telephone number.</p>
+            <p>(d) Provide professional development opportunity
+            information to investigators.</p>
+            <p>(3) The board shall adopt rules necessary to carry out
+            the board’s duties and powers under ORS 703.401 to
+            703.490.</p>
+            <p>(4) The department shall adopt rules necessary to carry
+            out the department’s duties and powers under ORS 703.401 to
+            703.490.</p>
+            <p>(5) For efficiency, board and department rules adopted
+            under this section may be adopted jointly with the approval
+            of the board and the department. [1997 c.870 §14; 2001 c.838
+            §14; 2003 c.14 §442; 2005 c.613 §24; 2007 c.320 §1]</p>
+            <p><strong>703.485</strong> [1997 c.870 §15; 2001 c.838 §15;
+            repealed by 2005 c.613 §29]</p>
+            <p><strong>703.490 Moneys credited to Police Standards and
+            Training Account.</strong> All moneys received by the
+            Department of Public Safety Standards and Training under ORS
+            703.401 to 703.490, 703.993 and 703.995 shall be paid into
+            the General Fund in the State Treasury and credited to the
+            Police Standards and Training Account established in ORS
+            181.690. [1997 c.870 §16; 2001 c.838 §18; 2005 c.613 §25;
+            2007 c.362 §3]</p>
+            <center>
+            <p>Penalties</p>
+            </center>
+            <p> </p>
+            <p><strong>703.850</strong> [1989 c.1055 §12; 1991 c.734
+            §92; repealed by 1995 c.386 §1]</p>
+            <p><strong>703.990 Criminal penalties for polygraph
+            examiners.</strong> Violation of any provision of ORS
+            703.010 to 703.310 or of any rule adopted thereunder is a
+            Class A misdemeanor. [1975 c.608 §28]</p>
+            <p><strong>703.993 Criminal penalties for
+            investigators.</strong> (1) A person commits a Class A
+            misdemeanor if the person knowingly falsifies the
+            fingerprints, photographs or other data pertinent to an
+            application for a license or identification card under the
+            provisions of ORS 703.425, 703.430 or 703.435.</p>
+            <p>(2) A person commits a Class B misdemeanor if the person
+            knowingly practices as an investigator without a license as
+            required by ORS 703.405.</p>
+            <p>(3) An investigator who fails to carry the identification
+            card as required by ORS 703.435 commits a Class A violation.
+            [1997 c.870 §21; 2001 c.838 §16]</p>
+            <p><strong>703.995 Civil penalties for
+            investigators.</strong> (1) In addition to any other penalty
+            provided by law, a person who violates any provision of ORS
+            703.401 to 703.490 or any rule adopted thereunder:</p>
+            <p>(a) Is subject to payment of a civil penalty in an amount
+            of not more than $500 for each offense; and</p>
+            <p>(b) May be assessed the costs of the disciplinary
+            proceedings as a civil penalty.</p>
+            <p>(2) Notwithstanding subsection (1)(a) of this section, if
+            a person violates ORS 703.405, the person is subject to
+            payment of a civil penalty in an amount of not more than
+            $5,000 for each violation with maximum penalties not to
+            exceed $10,000 per year. The amount of a penalty under this
+            subsection shall be determined by taking into consideration
+            the gravity of the violation, the previous record of the
+            violator in complying or failing to comply with requirements
+            imposed on the violator and any other considerations the
+            Department of Public Safety Standards and Training deems
+            appropriate.</p>
+            <p>(3) Civil penalties under this section shall be imposed
+            as provided in ORS 183.745.</p>
+            <p>(4) Judicial review of civil penalties imposed under this
+            section shall be as provided under ORS 183.480, except that
+            the court may reduce the amount of the penalty. [1997 c.870
+            §20; 1999 c.1051 §220; 2001 c.838 §17; 2005 c.613 §26]</p>
+            </section>
+    </body>
+</html>

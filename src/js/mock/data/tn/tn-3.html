@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 3. Defenses</strong></p>
+            <p><strong><em>By Martha Spinhirne</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <section id="a.theory_and_theme_of_defense" class="level2">
+            <h2><strong>A.Theory and Theme of Defense</strong></h2>
+            <p>''' A defense attorney’s goal is to create a compelling
+            story for the jury negating the prosecution’s theory and
+            promoting the defense’s theory of the case as the most
+            viable.</p>
+            <p>In the context of trial, persuasive storytelling contains
+            the following characteristics:</p>
+            <p>It is told about people who have reasons for the way they
+            act.</p>
+            <p>It accounts for or explains all of the known or
+            undeniable facts.</p>
+            <p>It is told by credible witnesses.</p>
+            <p>It is supported by details.</p>
+            <p>It is understood through common sense and contains no
+            implausible elements.</p>
+            <p>It is organized in a way that makes each succeeding fact
+            increasingly likely.</p>
+            <p>Lubet, Steve, <em>Modern Trial Advocacy</em>, (NITA
+            2004).</p>
+            <p>A defense is organized around the “theory of the case.” A
+            theory of the case should be expressed in no more than a
+            paragraph and should combine the facts and legal issues in a
+            way that compels the trier of fact to vote “not guilty.” A
+            theory of the case should contain these elements:</p>
+            <p>The theory should be logical.</p>
+            <p>The theory should speak to the legal elements of your
+            case.</p>
+            <p>The theory should be simple making maximum use of
+            undisputed facts.</p>
+            <p>The theory should be easy to believe.</p>
+            <p><em>Id</em>. Before preparing the defense of a case the
+            defense attorney must have a theory of the defense/case. The
+            theory will guide the defense preparation.</p>
+            <p>After developing the theory of the case the defense
+            attorney must develop a theme that justifies the morality of
+            the theory and appeals to the justice of the defense case. A
+            theme best presented in a single sentence which can be
+            repeated throughout the trial gives persuasive force to the
+            legal arguments. For example, in a self-defense case in
+            which the defendant shot the victim, a cohesive and
+            persuasive theme could be, “The same bullet that killed Mr.
+            Jones saved Mr. Smith’s life.”</p>
+            <p>It is desirable in the beginning of each case to consider
+            as many theories of defense as possible. In the early stages
+            of any case a lawyer will not know what the investigation
+            will reveal. If the lawyer narrows the focus of the defense
+            too soon the lawyer may miss an important defense theory. If
+            several defenses apply to the facts of a single case, then
+            all may be raised, although raising more than one defense
+            can be confusing to the trier of fact. A lawyer must analyze
+            the advisability of raising all available defenses before
+            actually raising any defense and putting the state on
+            notice. Inconsistent defenses are generally a bad idea.</p>
+            <p>Before formulating a defense strategy, the lawyer must be
+            familiar with the law defining the offenses as well as with
+            general provisions of the criminal code defining criminal
+            liability and parties to a crime. A lawyer preparing a
+            defense in any case should always cite-check the statute of
+            the offense the accused is charged with violating. With
+            today’s computer options cite checking can be done in a
+            relatively short period of time. The lawyer should read and
+            be familiar with all the cases that discuss the statute
+            defendant is charged with violating. In reading those cases,
+            the lawyer will be alerted to both statutory and factual
+            defenses that might apply in any given case.</p>
+            <p>Additionally, a lawyer preparing a case should review the
+            Uniform Criminal Jury Instruction of the offense. The jury
+            instruction will enumerate the elements the state must prove
+            beyond a reasonable doubt. The jury instruction will also
+            reference other legal concepts the lawyer must be familiar
+            with in defending a particular crime. Finally, the jury
+            instruction will cite some relevant case law.</p>
+            <p>After the above is completed the lawyer, before
+            formulating a plan for the defense, needs to review all the
+            discovery provided by the state and confer with the client.
+            Listen to your client. Until the investigation is completed
+            the client will have the best information about the offense
+            and the circumstances surrounding the offense. Try not to be
+            judgmental. Treat the client with respect. The rest of the
+            criminal justice system views your client as a liar; you are
+            the client’s only advocate in almost all cases. Your client
+            does not need to be called a liar by their sole advocate.
+            Your client needs to know the reality of the evidence
+            against them and what the likely outcome will be if a case
+            is pursued to trial under any particular defense. Most
+            importantly, your client needs to make important decisions
+            concerning their case and can only make an informed decision
+            if their lawyer adequately and completely advises them of
+            their options and the wisdom of their choices.</p>
+            <p>A good, thorough investigation is the soul of any
+            successful defense or any successfully negotiated plea.
+            Failure to investigate a case is considered to be
+            incompetent representation. <a
+            href="http://scholar.google.com/scholar_case?q=208+Or+App+659&amp;hl=en&amp;as_sdt=4,38&amp;case=7794248164999650822&amp;scilh=0">Rodriguez-Moreno
+            v. State</a><a
+            href="http://scholar.google.com/scholar_case?q=208+Or+App+659&amp;hl=en&amp;as_sdt=4,38&amp;case=7794248164999650822&amp;scilh=0">,
+            208 Or App 659, 145 P3d 256 (2006)</a>, ''quoting <a
+            href="http://scholar.google.com/scholar_case?q=hill+v+lockhart&amp;hl=en&amp;as_sdt=3,38&amp;case=5335144973159323646&amp;scilh=0">Hill
+            v. Lockhart</a><a
+            href="http://scholar.google.com/scholar_case?q=hill+v+lockhart&amp;hl=en&amp;as_sdt=3,38&amp;case=5335144973159323646&amp;scilh=0">,
+            474 U.S. 52, 59, 106 S Ct 366, 88 L Ed 2d 203 (1985)</a>.
+            With the information gleaned from discovery, the client, and
+            the investigation, a lawyer can then advise a client of the
+            best possibilities for a defense.</p>
+            <p>The Library of Defense also has an entire section
+            dedicated to defenses at <a
+            href="https://libraryofdefense.org/legal/defenses"><span>https://libraryofdefense.org/legal/defenses</span></a>.</p>
+            </section>
+            <section
+            id="b._generally_denying_the_charge_with_a_plea_of_not_guilty"
+            class="level2">
+            <h2><strong>B. Generally Denying the Charge with a Plea of
+            Not Guilty</strong></h2>
+            <p>A defense is anything that prevents the conviction of our
+            clients. A plea of not guilty is a general denial of all
+            material allegations in the charging instrument. A criminal
+            case may be defended based on the lack of proof beyond a
+            reasonable doubt of any element. Many criminal cases are
+            defended in exactly this way.</p>
+            <p>For example, in a prosecution for misdemeanor assault in
+            the fourth degree, a defendant may successfully assert that
+            there is no proof beyond a reasonable doubt that the act was
+            committed in the county charged (venue); that the state has
+            not proved that it was the defendant committed the assault
+            (identity); that the state has not proved that the defendant
+            committed the assault with the required mental state; or
+            that the complainant did not suffer a physical injury as a
+            result of defendant’s actions.</p>
+            </section>
+            <section id="c._mental_state" class="level2">
+            <h2><strong>C. Mental State</strong></h2>
+            <p>Typically the state must prove the voluntary commission
+            of an act with a culpable mental state to obtain a
+            conviction for an offense. Often, the first question a case
+            presents is whether there is sufficient proof of intent,
+            knowledge, receklessness or criminal negligence to prove the
+            crime charged.</p>
+            <p>Oregon recognizes four culpable mental states:
+            Intentionally, Knowingly, Recklessly and Criminally
+            Negligent. <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.085</a>. Proof of a higher mental state constitutes
+            proof of every lower mental state. A person who acted
+            intentionally also acted knowingly, recklessly, and with
+            criminal negligence. ORS 161.115(3). The mental states
+            relate to the elements contained within the definition of
+            the crime. <a
+            href="http://scholar.google.com/scholar_case?q=rutley&amp;hl=en&amp;as_sdt=4,38&amp;case=1377271923934987622&amp;scilh=0">State
+            v. Rutley</a><a
+            href="http://scholar.google.com/scholar_case?q=rutley&amp;hl=en&amp;as_sdt=4,38&amp;case=1377271923934987622&amp;scilh=0">,
+            343 Or 368 (2007)</a>. If a statute prescribes a mental
+            state but does not specify the element to which it applies,
+            “ the prescribed culpable mental state applies to each
+            material element of the offense that necessarily require a
+            culpable mental state.” ORS 161.115(1).</p>
+            <p>For crimes that are not part of the Oregon Criminal Code
+            (Revision of 1971), determining whether a culpable mental
+            state applies and to which elements of the crime a culpable
+            mental state applies can be a difficult and confusing
+            inquiry. Unless there is a clear legislative intent to
+            dispense with a culpable mental state, the state is required
+            to prove a culpable mental state. <em>State v. Rutley</em>,
+            <em>Id.</em>; <a
+            href="http://scholar.google.com/scholar_case?q=rainoldi&amp;hl=en&amp;as_sdt=4,38&amp;case=6956831334159637163&amp;scilh=0">State
+            v. Rainoldi,</a><a
+            href="http://scholar.google.com/scholar_case?q=rainoldi&amp;hl=en&amp;as_sdt=4,38&amp;case=6956831334159637163&amp;scilh=0">351
+            Or 486, 268 P3d 568 (2011)</a>. For crimes defined outside
+            the Oregon Criminal Code, determining which mental state
+            applies and to which element generates much litigation.</p>
+            </section>
+            <section
+            id="d._specific_defenses_affirmative_and_non_affirmative"
+            class="level2">
+            <h2><strong>D. Specific Defenses (Affirmative and
+            Non-Affirmative)</strong></h2>
+            <p>Oregon statutes and case law provide for specific
+            defenses. These defenses are different than a general denial
+            of the accusation as outlined in the preceding section.
+            Specific defenses relate to a particular offense, or set of
+            offenses, and usually excuse criminal liability if certain
+            conditions exist.</p>
+            <p>Defenses are divided into two categories, affirmative and
+            non-affirmative defenses. When a defense—either affirmative
+            or non-affirmative—has been raised, the state has the burden
+            of disproving the defense beyond a reasonable doubt. ORS
+            161.055(1). It is reversible error for the court to fail to
+            instruct the jury that the state has the burden of
+            disproving a defense beyond a reasonable doubt. <a
+            href="http://scholar.google.com/scholar_case?q=mcmullen&amp;hl=en&amp;as_sdt=4,38&amp;case=12754435299856984373&amp;scilh=0">State
+            v. McMullen,</a><a
+            href="http://scholar.google.com/scholar_case?q=mcmullen&amp;hl=en&amp;as_sdt=4,38&amp;case=12754435299856984373&amp;scilh=0">34
+            Or App 749, 579 P2d 879 (1978)</a>.</p>
+            <p>This chapter will focus on these defenses and generally
+            categorize them as affirmative and non-affirmative
+            defenses.</p>
+            </section>
+            </section>
+            <section id="ii._raising_a_defense" class="level1">
+            <h1><strong>II. Raising a Defense</strong></h1>
+            <section id="a._either_written_notice_or_case_in_chief"
+            class="level2">
+            <h2><strong>A. Either Written Notice or
+            Case-in-Chief</strong></h2>
+            <p>A defense may be raised by written pretrial notice or by
+            affirmative evidence by a defense witness in the defendant’s
+            case-in-chief. ORS 161.055(3); <a
+            href="http://scholar.google.com/scholar_case?q=177+Or+App+35&amp;hl=en&amp;as_sdt=4,38&amp;case=10475688387195705608&amp;scilh=0">State
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=177+Or+App+35&amp;hl=en&amp;as_sdt=4,38&amp;case=10475688387195705608&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=177+Or+App+35&amp;hl=en&amp;as_sdt=4,38&amp;case=10475688387195705608&amp;scilh=0">Honzel</a><a
+            href="http://scholar.google.com/scholar_case?q=177+Or+App+35&amp;hl=en&amp;as_sdt=4,38&amp;case=10475688387195705608&amp;scilh=0">,
+            177 Or App 35, 33 P3d 346 (2001)</a> (conviction affirmed
+            where defendant did not file pretrial notice of defense and
+            no evidence of defense introduced in state’s case to support
+            defense so therefore state was not required to disprove the
+            defense. Evidence raised in defense’s case-in-chief did not
+            support that defendant fell within statutory exception and
+            therefore jury instruction not warranted). <a
+            href="http://scholar.google.com/scholar_case?q=dudley&amp;hl=en&amp;as_sdt=4,38&amp;case=15834713291840565904&amp;scilh=0">But</a><a
+            href="http://scholar.google.com/scholar_case?q=dudley&amp;hl=en&amp;as_sdt=4,38&amp;case=15834713291840565904&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=dudley&amp;hl=en&amp;as_sdt=4,38&amp;case=15834713291840565904&amp;scilh=0">see</a><a
+            href="http://scholar.google.com/scholar_case?q=dudley&amp;hl=en&amp;as_sdt=4,38&amp;case=15834713291840565904&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=dudley&amp;hl=en&amp;as_sdt=4,38&amp;case=15834713291840565904&amp;scilh=0">State
+            v. Dudley</a><a
+            href="http://scholar.google.com/scholar_case?q=dudley&amp;hl=en&amp;as_sdt=4,38&amp;case=15834713291840565904&amp;scilh=0">,
+            29 Or App 471, 475, 564 P2d 711 (1977)</a> (defense of alibi
+            can be raised through testimony of prosecution witness).
+            Although the court in <a
+            href="http://scholar.google.com/scholar_case?q=state+v+williams+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=17542095453755532924&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+williams+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=17542095453755532924&amp;scilh=0">,
+            12 Or App 21, 503 P2d 1254 (1972)</a>, held that regardless
+            of pretrial notice some evidence must be introduced to
+            entitle a defendant to a jury instruction, later cases have
+            indicated that written pretrial notice is sufficient to
+            raise a defense. <a
+            href="http://scholar.google.com/scholar_case?q=keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">State
+            v. Keaton</a><a
+            href="http://scholar.google.com/scholar_case?q=keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">,
+            15 Or App 477, 516 P2d 490 (1973)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=siens&amp;hl=en&amp;as_sdt=4,38&amp;case=15652159302444826135&amp;scilh=0">State
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=siens&amp;hl=en&amp;as_sdt=4,38&amp;case=15652159302444826135&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=siens&amp;hl=en&amp;as_sdt=4,38&amp;case=15652159302444826135&amp;scilh=0">Siens</a><a
+            href="http://scholar.google.com/scholar_case?q=siens&amp;hl=en&amp;as_sdt=4,38&amp;case=15652159302444826135&amp;scilh=0">,
+            12 Or App 97, 504 P2d 1056 (1973)</a>.</p>
+            <p>When written notice is used to raise a defense or
+            affirmative defense, the defense may be withdrawn from the
+            jury’s consideration only at the defendant’s request or if
+            no evidence in the record supports the elements of the
+            defense''. <a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">,
+            306 Or 599, 761 P2d 1300 (1988)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=boldt&amp;hl=en&amp;as_sdt=4,38&amp;case=410012524267500272&amp;scilh=0">State
+            v. Boldt</a><a
+            href="http://scholar.google.com/scholar_case?q=boldt&amp;hl=en&amp;as_sdt=4,38&amp;case=410012524267500272&amp;scilh=0">,
+            116 Or App 480 (1992)</a> (conviction reversed when trial
+            court refused to give choice-of-evils instruction when some
+            evidence supported defense).</p>
+            <p>When a defendant relies upon a defense or an affirmative
+            defense, counsel generally should prepare the jury for the
+            defense during the voir dire examination and opening
+            statement. Counsel should also make certain that any
+            requests for jury instructions cover that defense
+            thoroughly. See Uniform Criminal Jury Instructions (UCrJI)
+            Nos. 1101 to 1123.</p>
+            </section>
+            <section
+            id="b._the_constitutional_right_to_present_a_defense"
+            class="level2">
+            <h2><strong>B. The Constitutional Right to Present a
+            Defense</strong></h2>
+            <p>The constitutional right to present a defense is grounded
+            in due process and fundamental fairness guaranteed to any
+            individual under the Oregon and federal constitutions. The
+            various provisions of the federal Constitution and the
+            Oregon Constitution, particularly the right to compulsory
+            process for obtaining witnesses, the right to counsel, the
+            right to be heard, and the right to confront and
+            cross-examine witnesses provide the basis for a defendant’s
+            right to present a defense.</p>
+            <p>The United States Supreme Court in <a
+            href="http://scholar.google.com/scholar_case?q=chambers+v+mississippi&amp;hl=en&amp;as_sdt=3,38&amp;case=10804189023260429532&amp;scilh=0">Chambers
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=chambers+v+mississippi&amp;hl=en&amp;as_sdt=3,38&amp;case=10804189023260429532&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=chambers+v+mississippi&amp;hl=en&amp;as_sdt=3,38&amp;case=10804189023260429532&amp;scilh=0">Mississippi,</a><a
+            href="http://scholar.google.com/scholar_case?q=chambers+v+mississippi&amp;hl=en&amp;as_sdt=3,38&amp;case=10804189023260429532&amp;scilh=0">410
+            U.S. 284, 93 S Ct 1038, 35 L Ed 2d 297 (1973)</a>,
+            explaining the essence of a defendant’s constitutional right
+            to present a defense, stated:</p>
+            <p>The right of an accused in a criminal trial to due
+            process is, in essence, the right to a fair opportunity to
+            defend against the State’s accusations. The rights to
+            confront and cross-examine witnesses and to call witnesses
+            on one’s own behalf have long been recognized as essential
+            to due process.</p>
+            <p>The constitutional analysis for Oregon is similar if not
+            the same as the federal analysis. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=HUFFMAN&amp;hl=en&amp;as_sdt=4,38&amp;case=1678814515002881449&amp;scilh=0">State
+            v. Huffman</a><a
+            href="http://scholar.google.com/scholar_case?q=HUFFMAN&amp;hl=en&amp;as_sdt=4,38&amp;case=1678814515002881449&amp;scilh=0">,
+            65 Or App 594 (1983)</a>.</p>
+            <p>But many of the “rights” to present a defense rely on
+            other grounds. For example, it is often noted that a
+            defendant is<em></em>entitled to have his or her theory of
+            the case presented to the jury if there is evidence to
+            support it. <a
+            href="http://scholar.google.com/scholar_case?q=lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">State
+            v. Lockwood</a><a
+            href="http://scholar.google.com/scholar_case?q=lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">,
+            43 Or App 639 (1979)</a>. Furthermore it is an abuse of
+            discretion for the court to refuse to instruct the jury
+            where there is evidence supporting the defense theory. <a
+            href="http://scholar.google.com/scholar_case?q=65+Or+App+83+&amp;hl=en&amp;as_sdt=4,38&amp;case=4492228937653256201&amp;scilh=0">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=65+Or+App+83+&amp;hl=en&amp;as_sdt=4,38&amp;case=4492228937653256201&amp;scilh=0">,
+            65 Or App 83 (1983)</a>. This right to instruct the jury
+            includes the statutory right to have an appropriate
+            <em>written</em> jury instruction submitted to a jury where
+            notice has been given to the court in a timely fashion. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            59B</a>.</p>
+            <p>The statutory and constitutional right to present a
+            defense will often conflict with other statutory provisions
+            and “legitimate interests in the criminal trial process.”
+            <em>See <a
+            href="http://scholar.google.com/scholar_case?q=beeler&amp;hl=en&amp;as_sdt=4,38&amp;case=7193732990036801133&amp;scilh=0">State
+            v. Beeler</a><a
+            href="http://scholar.google.com/scholar_case?q=beeler&amp;hl=en&amp;as_sdt=4,38&amp;case=7193732990036801133&amp;scilh=0">,
+            166 Or App 275 (2000)</a>. In those cases where the state
+            has a legitimate interest in excluding certain evidence, the
+            court is required to balance the state’s interest in
+            excluding the evidence against the infringement upon
+            defendant’s constitutional right to present exculpatory
+            evidence if the evidence is to be excluded</em>. <a
+            href="http://scholar.google.com/scholar_case?q=muyingo&amp;hl=en&amp;as_sdt=4,38&amp;case=1063058742669592485&amp;scilh=0">State
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=muyingo&amp;hl=en&amp;as_sdt=4,38&amp;case=1063058742669592485&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=muyingo&amp;hl=en&amp;as_sdt=4,38&amp;case=1063058742669592485&amp;scilh=0">Muyingo,</a><a
+            href="http://scholar.google.com/scholar_case?q=muyingo&amp;hl=en&amp;as_sdt=4,38&amp;case=1063058742669592485&amp;scilh=0">171
+            Or App 218, 15 P3d 83 (2000)</a>.</p>
+            <p>Where the presentation of a defense is at issue, counsel
+            should make a thorough record that the defense is
+            constitutionally required under both Oregon and federal
+            constitutional provisions and in related cases. The
+            following list of provisions and cases is not exhaustive but
+            illustrates the scope and detail of the right to present a
+            defense in a criminal case.</p>
+            <p>Below is a non-exhaustive list of cases discussing
+            defendants’ rights:</p>
+            <p><strong>•Right to Adequate Assistance of
+            Counsel</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=strickland+v+washington&amp;hl=en&amp;as_sdt=3,38&amp;case=16585781351150334057&amp;scilh=0">Strickland
+            v. Washington</a><a
+            href="http://scholar.google.com/scholar_case?q=strickland+v+washington&amp;hl=en&amp;as_sdt=3,38&amp;case=16585781351150334057&amp;scilh=0">,
+            466 U.S. 668, 688, 694, 104 S Ct 2052, 80 L Ed 2d 674
+            (1984)</a> (post-conviction relief is available for
+            substantial denial of rights under the state or federal
+            constitution).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=gonzalez-lopez&amp;hl=en&amp;as_sdt=3,38&amp;case=6681309057367915134&amp;scilh=0">United
+            States v. Gonzalez-Lopez,</a><a
+            href="http://scholar.google.com/scholar_case?q=gonzalez-lopez&amp;hl=en&amp;as_sdt=3,38&amp;case=6681309057367915134&amp;scilh=0">548
+            U.S. ___(2006)</a> (trial court’s erroneous deprivation of a
+            criminal defendant’s choice of counsel entitles him to
+            reversal of his conviction). This ruling applies to retained
+            counsel and not appointed counsel.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=aquino+v+baldwin&amp;hl=en&amp;as_sdt=4,38&amp;case=14990309717466842893&amp;scilh=0">Aquino
+            v. Baldwin</a><a
+            href="http://scholar.google.com/scholar_case?q=aquino+v+baldwin&amp;hl=en&amp;as_sdt=4,38&amp;case=14990309717466842893&amp;scilh=0">,
+            163 Or App 452 (1999)</a> (ineffective assistance of counsel
+            when attorney does not seek a continuance to gather evidence
+            of an alibi that will be readily available).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=ake+v+oklahoma&amp;hl=en&amp;as_sdt=3,38&amp;case=1904002630366313299&amp;scilh=0">Ake
+            v. Oklahoma</a><a
+            href="http://scholar.google.com/scholar_case?q=ake+v+oklahoma&amp;hl=en&amp;as_sdt=3,38&amp;case=1904002630366313299&amp;scilh=0">,
+            470 U.S. 68 (1985)</a> (defendant entitled to
+            court-appointed psychiatrist to assist counsel in insanity
+            defense).</p>
+            <p><strong>•Right to Be Heard</strong></p>
+            <p><a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution, Article I, section 11</a> (“right...to be
+            heard by himself and counsel”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">State
+            v. Douglas</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">,
+            292 Or 516 (1982)</a> (defendant can testify to alibi at
+            trial without providing prior notice to the state).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=1002151546933871559&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=1002151546933871559&amp;scilh=0">,
+            330 Or 282 (2000)</a> (court editing a defendant’s unsworn
+            allocution violates defendant’s right to be heard).</p>
+            <center>
+            <p><strong>Practice Tip</strong></p>
+            </center>
+            <p>Read <em>State v. Douglas</em>, 292 Or 516 (1982) (Lent,
+            specially concurring), for an excellent discussion of the
+            history and development of the right to be heard and to
+            testify. The Lent opinion is reviewed favorably by the court
+            in <em>State v. Rogers</em>, 330 Or 282 (2000).</p>
+            <p><strong>• Right to Call Witnesses</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=washington+v+texas&amp;hl=en&amp;as_sdt=3,38&amp;case=5676629902054312770&amp;scilh=0">Washington
+            v. Texas</a><a
+            href="http://scholar.google.com/scholar_case?q=washington+v+texas&amp;hl=en&amp;as_sdt=3,38&amp;case=5676629902054312770&amp;scilh=0">,
+            388 U.S. 14 (1967)</a> (Sixth Amendment right to have
+            compulsory process for obtaining witnesses in defendant’s
+            favor).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gann&amp;hl=en&amp;as_sdt=4,38&amp;case=34598730429534161&amp;scilh=0">State
+            v. Gann</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gann&amp;hl=en&amp;as_sdt=4,38&amp;case=34598730429534161&amp;scilh=0">,
+            254 Or 568 (1969)</a> (“The right to compulsory process for
+            necessary and material witnesses on his behalf is a valuable
+            right guaranteed to an accused”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+burdge&amp;hl=en&amp;as_sdt=4,38&amp;case=15045771437968205507&amp;scilh=0">State
+            v. Burdge</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+burdge&amp;hl=en&amp;as_sdt=4,38&amp;case=15045771437968205507&amp;scilh=0">,
+            295 Or 1 (1983)</a> (disqualification of testimony is too
+            grave a sanction for unintentional violation of exclusion
+            order [and] presents “a practical and sensitive
+            accommodation between a criminal defendant’s right to
+            present witnesses in his behalf and the court’s need to
+            control the trial proceedings”). ''But see <a
+            href="http://scholar.google.com/scholar_case?case=1002151546933871559&amp;q=state+v+rogers&amp;hl=en&amp;as_sdt=4,38">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?case=1002151546933871559&amp;q=state+v+rogers&amp;hl=en&amp;as_sdt=4,38">,
+            330 Or 282 (2000)</a> (requiring defendant to read from a
+            prepared statement and to submit it in advance for review is
+            not an abuse of discretion).</p>
+            <p><strong>• Right to Present Evidence</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=holmes+v+south+carolina&amp;hl=en&amp;as_sdt=3,38&amp;case=11162601498725937144&amp;scilh=0">Holmes
+            v. South Carolina,</a><a
+            href="http://scholar.google.com/scholar_case?q=holmes+v+south+carolina&amp;hl=en&amp;as_sdt=3,38&amp;case=11162601498725937144&amp;scilh=0">547
+            U.S. 319 (2006)</a> (violation of U.S. Constitution to
+            restrict defendant’s introduction of third party guilt if
+            prosecution has forensic evidence to support guilty
+            verdict).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=olden+v+kentucky&amp;hl=en&amp;as_sdt=3,38&amp;case=15928010167740215357&amp;scilh=0">Olden
+            v. Kentucky</a><a
+            href="http://scholar.google.com/scholar_case?q=olden+v+kentucky&amp;hl=en&amp;as_sdt=3,38&amp;case=15928010167740215357&amp;scilh=0">,
+            488 U.S. 227 (1988)</a> (evidence of witness’ motive to lie
+            should be allowed under confrontation clause).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=crane+v+kentucky&amp;hl=en&amp;as_sdt=3,38&amp;case=10432948650431199473&amp;scilh=0">Crane
+            v. Kentucky</a><a
+            href="http://scholar.google.com/scholar_case?q=crane+v+kentucky&amp;hl=en&amp;as_sdt=3,38&amp;case=10432948650431199473&amp;scilh=0">,
+            476 U.S. 683 (1986)</a> (evidence of how a confession was
+            obtained bears on the weight it should be given).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=chambers+v+mississippi&amp;hl=en&amp;as_sdt=3,38&amp;case=10804189023260429532&amp;scilh=0">Chambers
+            v. Mississippi</a><a
+            href="http://scholar.google.com/scholar_case?q=chambers+v+mississippi&amp;hl=en&amp;as_sdt=3,38&amp;case=10804189023260429532&amp;scilh=0">,
+            410 U.S. 284 (1973)</a> (right to present evidence that a
+            third party committed the crime through their statements
+            should be admitted over hearsay objection).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=ulbricht&amp;hl=en&amp;as_sdt=4,38&amp;case=17835242491613192097&amp;scilh=0">State
+            ex rel SOSCF v. Ulbricht</a><a
+            href="http://scholar.google.com/scholar_case?q=ulbricht&amp;hl=en&amp;as_sdt=4,38&amp;case=17835242491613192097&amp;scilh=0">,
+            159 Or App 119 (1999)</a> (denying parent’s request to
+            reopen evidence in termination case is abuse of discretion
+            when the evidence would assist the trier of fact in its
+            decision).</p>
+            <p><strong>• Right to Present Defense Despite Untimely
+            Notice</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=edgmand&amp;hl=en&amp;as_sdt=4,38&amp;case=14974279959313301432&amp;scilh=0">State
+            v. Edgmand</a><a
+            href="http://scholar.google.com/scholar_case?q=edgmand&amp;hl=en&amp;as_sdt=4,38&amp;case=14974279959313301432&amp;scilh=0">,
+            306 Or 535 (1988)</a> (alibi notice does not apply to
+            defendant’s testimony).</p>
+            <p><strong>•Right to Testify</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=rock+v+arkansas&amp;hl=en&amp;as_sdt=3,38&amp;case=4171699802405503521&amp;scilh=0">Rock
+            v. Arkansas</a><a
+            href="http://scholar.google.com/scholar_case?q=rock+v+arkansas&amp;hl=en&amp;as_sdt=3,38&amp;case=4171699802405503521&amp;scilh=0">,
+            483 U.S. 44 (1987)</a> (defendant has right to testify even
+            after memory is refreshed by hypnotism).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">State
+            v. Douglas</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">,
+            292 Or 516 (1982)</a> (precluding defendant’s testimony on
+            alibi is reversible error),</p>
+            <p><strong>• Right to Subordinate Rape Shield
+            Statute</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+jalo&amp;hl=en&amp;as_sdt=4,38&amp;case=4046815098655195507&amp;scilh=0">State
+            v. Jalo</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+jalo&amp;hl=en&amp;as_sdt=4,38&amp;case=4046815098655195507&amp;scilh=0">,
+            27 Or App 845 (1976)</a> (excluding prior sexual conduct of
+            victim violates defendant’s right to confrontation).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leclaire&amp;hl=en&amp;as_sdt=4,38&amp;case=1440952504434046625&amp;scilh=0">State
+            v. LeClair</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+leclaire&amp;hl=en&amp;as_sdt=4,38&amp;case=1440952504434046625&amp;scilh=0">,
+            83 Or App 121 (1986)</a> (excluding prior allegations of
+            victim against others proper if meets three-part test,
+            however, Confrontation Clause requires that defendant be
+            allowed to cross-examine on other allegations made).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=beeler&amp;hl=en&amp;as_sdt=4,38&amp;case=7193732990036801133&amp;scilh=0">State
+            v. Beeler</a><a
+            href="http://scholar.google.com/scholar_case?q=beeler&amp;hl=en&amp;as_sdt=4,38&amp;case=7193732990036801133&amp;scilh=0">,
+            166 Or App 275 (2000)</a> (court erred in excluding victim’s
+            testimony).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+driver&amp;hl=en&amp;as_sdt=4,38&amp;case=4091161015946476649&amp;scilh=0">State
+            v. Driver</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+driver&amp;hl=en&amp;as_sdt=4,38&amp;case=4091161015946476649&amp;scilh=0">,
+            192 Or App 395 (2004)</a> (exclusion of prior false
+            allegations by victim does not violate right to
+            confrontation).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=lajoie+v+thompson&amp;hl=en&amp;as_sdt=3,38&amp;case=2728910137488260657&amp;scilh=0">Lajoie
+            v. Thompson,</a><a
+            href="http://scholar.google.com/scholar_case?q=lajoie+v+thompson&amp;hl=en&amp;as_sdt=3,38&amp;case=2728910137488260657&amp;scilh=0">217
+            F3d 663 (9th Cir. 2000)</a> (Sixth Amendment violation in
+            excluding evidence of victim’s sexual history because of
+            failure to give 15-day notice).</p>
+            <p><strong>• Right to Have the Jury Instructed of the
+            Defense Theory</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">State
+            v. Lockwood</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">,
+            43 Or App 639 (1979)</a> (right to have jury instruction on
+            defense of premise and property and self-defense when
+            evidence is on record).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=65+Or+App+83&amp;hl=en&amp;as_sdt=4,227&amp;case=4492228937653256201&amp;scilh=0">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=65+Or+App+83&amp;hl=en&amp;as_sdt=4,227&amp;case=4492228937653256201&amp;scilh=0">,
+            65 Or App 83 (1983)</a> (defendant is entitled to present
+            his theory of the case to the jury).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+averitt&amp;hl=en&amp;as_sdt=4,227&amp;case=13778343961687680034&amp;scilh=0">State
+            v. Averitt</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+averitt&amp;hl=en&amp;as_sdt=4,227&amp;case=13778343961687680034&amp;scilh=0">,
+            187 Or App 486 (2003),</a> <a
+            href="http://scholar.google.com/scholar_case?case=7564982879243383075&amp;q=state+v+averitt&amp;hl=en&amp;as_sdt=4,227&amp;scilh=0">quoting
+            State v. Shelly</a><a
+            href="http://scholar.google.com/scholar_case?case=7564982879243383075&amp;q=state+v+averitt&amp;hl=en&amp;as_sdt=4,227&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?case=7564982879243383075&amp;q=state+v+averitt&amp;hl=en&amp;as_sdt=4,227&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?case=7564982879243383075&amp;q=state+v+averitt&amp;hl=en&amp;as_sdt=4,227&amp;scilh=0">110
+            Or App 225 (1991)</a> (“When a defendant asserts a defense
+            to a charge, he is entitled to have his theory of the case
+            presented to the jury, if there is any evidence from which
+            the jurors could infer that the required elements of the
+            defense are present. The trial court has no discretion to
+            refuse to give a proper instruction”).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rutley&amp;hl=en&amp;as_sdt=4,227&amp;case=6556827207845167655&amp;scilh=0">State
+            v. Rutley</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rutley&amp;hl=en&amp;as_sdt=4,227&amp;case=6556827207845167655&amp;scilh=0">202
+            Or App 639 (2005)</a> (right to have jury instructed that
+            state must prove defendant knew he was within 1000 feet of a
+            school).</p>
+            <p><strong>• Right to Present Lesser-Included
+            Offenses</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=U.S.+v+pino&amp;hl=en&amp;as_sdt=3,38&amp;case=10337168027974524445&amp;scilh=0">United
+            States v. Pino</a><a
+            href="http://scholar.google.com/scholar_case?q=U.S.+v+pino&amp;hl=en&amp;as_sdt=3,38&amp;case=10337168027974524445&amp;scilh=0">,
+            606 F2d 908 (10th Cir. 1979)</a> (rational basis for a
+            lesser included to be considered by jury, then it must be
+            allowed).</p>
+            <p><strong>• Right to Continuance to Investigate New
+            Evidence</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=aquino+v+baldwin&amp;hl=en&amp;as_sdt=4,38&amp;case=14990309717466842893&amp;scilh=0">Aquino
+            v. Baldwin</a><a
+            href="http://scholar.google.com/scholar_case?q=aquino+v+baldwin&amp;hl=en&amp;as_sdt=4,38&amp;case=14990309717466842893&amp;scilh=0">,
+            163 Or App 452 (1999)</a> (failing to ask for a continuance
+            during trial when evidence counsel knew was coming could
+            show that there was a different rapist is ineffective
+            counsel).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+SOSCF+RODGERS&amp;hl=en&amp;as_sdt=4,227&amp;case=8335843455153858219&amp;scilh=0">State
+            ex rel SOSCF v. Rodgers</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+SOSCF+RODGERS&amp;hl=en&amp;as_sdt=4,227&amp;case=8335843455153858219&amp;scilh=0">,
+            162 Or App 437 (1999)</a> (counsel’s failure to prepare for
+            termination trial, review the record, and request available
+            discovery material amounts to inadequate assistance of
+            counsel).</p>
+            </section>
+            </section>
+            <section id="iii._affirmative_defenses" class="level1">
+            <h1><strong>III. Affirmative Defenses</strong></h1>
+            <p>An affirmative defense is a defense established by
+            statute that requires the defendant to prove the existence
+            of a condition or issue by a preponderance of the evidence
+            once the defense has been raised. The state must prove every
+            element of an offense. If the state does not, then the jury
+            need not consider any affirmative defense raised by the
+            defendant. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lyon&amp;hl=en&amp;as_sdt=4,227&amp;case=17111026423289682307&amp;scilh=0">State
+            v. Lyon</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lyon&amp;hl=en&amp;as_sdt=4,227&amp;case=17111026423289682307&amp;scilh=0">,
+            65 Or App 790, 672 P2d 1358 (1983)</a>. An affirmative
+            defense does not serve to negate any of the facts the state
+            must prove in regard to each element of the offense to
+            convict a defendant. In fact, any affirmative defense that
+            has the effect of shifting the burden of disproving an
+            element of the offense charged from the state to the
+            defendant is unconstitutional. <a
+            href="http://scholar.google.com/scholar_case?q=patterson+v+new+york&amp;hl=en&amp;as_sdt=3,38&amp;case=11324761366859005935&amp;scilh=0">Patterson
+            v. New York</a><a
+            href="http://scholar.google.com/scholar_case?q=patterson+v+new+york&amp;hl=en&amp;as_sdt=3,38&amp;case=11324761366859005935&amp;scilh=0">,
+            432 U.S. 197, 97 S Ct 2319, 53 L Ed 2d 281 (1977)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+burrow&amp;hl=en&amp;as_sdt=4,38&amp;case=2831234969060352266&amp;scilh=0">State
+            v. Burrow</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+burrow&amp;hl=en&amp;as_sdt=4,38&amp;case=2831234969060352266&amp;scilh=0">,
+            293 Or 691, 653 P2d 226 (1982)</a>. An affirmative defense
+            is a separate circumstance, often a mitigating circumstance
+            for which the defendant initially bears the burden of
+            proving by a preponderance of the evidence.</p>
+            <section id="a._defenses_requiring_written_pretrial_notice"
+            class="level2">
+            <h2><strong>A. Defenses Requiring Written Pretrial
+            Notice</strong></h2>
+            <p>1. Alibi</p>
+            <p>Absent good cause, a defendant must provide detailed
+            alibi notice not less than five days before trial. <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.455</a>, <em>but see <a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">State
+            v. Douglas</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">,
+            292 Or 516 (1982)</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">.</a></em></p>
+            <p>2. Insanity, Including Diminished Responsibility</p>
+            <p>Absent just cause, mental defenses must be raised by
+            notice at the time of entering a not guilty plea. <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.309</a>.</p>
+            <p>3. Extreme Emotional Disturbance</p>
+            <p>Notice is required at time of entry of not guilty plea or
+            later for just cause. <a
+            href="http://www.leg.state.or.us/ors/163.html">ORS
+            163.135</a>.</p>
+            </section>
+            <section id="b._what_to_argue_if_notice_not_given"
+            class="level2">
+            <h2><strong>B. What to Argue if Notice Not
+            Given</strong></h2>
+            <p>A failure of discovery reciprocity will deny defendant’s
+            right to due process if his defense is stricken. <a
+            href="http://scholar.google.com/scholar_case?q=wardius+v+oregon&amp;hl=en&amp;as_sdt=3,38&amp;case=4161923522219213499&amp;scilh=0">Wardius
+            v. Oregon,</a><a
+            href="http://scholar.google.com/scholar_case?q=wardius+v+oregon&amp;hl=en&amp;as_sdt=3,38&amp;case=4161923522219213499&amp;scilh=0">412
+            U.S. 470 (1973)</a>. Furthermore, excluding defense
+            testimony because of a statutory notice or discovery
+            violation may violate a defendant’s right to be heard and to
+            compel witnesses in his favor under Article I, section 11,
+            of the Oregon Constitution. <em>See State v.
+            Douglas,</em>292 Or 516, 520–538, 641 P2d 561 (1972) (Lent,
+            J., concurring); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mai&amp;hl=en&amp;as_sdt=4,38&amp;case=10806636245678756085&amp;scilh=0">State
+            v. Mai,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mai&amp;hl=en&amp;as_sdt=4,38&amp;case=10806636245678756085&amp;scilh=0">294
+            Or 269, 656 P2d 315 (1982)</a>. Before a court can exclude
+            defense evidence because of a discovery violation, the court
+            must find actual prejudice to the state and it must
+            determine that no other sanction short of exclusion would
+            remedy the prejudice to the state. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johansen&amp;hl=en&amp;as_sdt=4,38&amp;case=13275727996290479975&amp;scilh=0">State
+            v. Johanesen,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johansen&amp;hl=en&amp;as_sdt=4,38&amp;case=13275727996290479975&amp;scilh=0">110
+            Or App 348, 822 P2d 154 (1991)</a>.</p>
+            </section>
+            <section id="c._burden_of_proof" class="level2">
+            <h2><strong>C. Burden of Proof</strong></h2>
+            <p>A defendant bears the burden of proving an “affirmative
+            defense” by a preponderance of evidence. ORS 161.055(2). An
+            affirmative defense must be given to the jury as long as
+            there is some evidence to support it. <a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">State
+            v Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">,
+            306 Or 599, 605, 761 P2d 1300</a><a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">(1988)</a>.
+            The court should not weigh the evidence presented of the
+            defense, it can only decline to give the requested
+            instruction if there is no evidence of the defense. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ramsey&amp;hl=en&amp;as_sdt=4,38&amp;case=12309809860015043005&amp;scilh=0">State
+            v. Ramsey</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ramsey&amp;hl=en&amp;as_sdt=4,38&amp;case=12309809860015043005&amp;scilh=0">,
+            184 Or App 468 (2002)</a>.</p>
+            </section>
+            <section id="d._specific_affirmative_defenses"
+            class="level2">
+            <h2><strong>D. Specific Affirmative Defenses</strong></h2>
+            <p><strong>1. Guilty Except for Insanity</strong></p>
+            <p>A person is guilty except for insanity if, as a result of
+            mental disease or defect at the time of engaging in criminal
+            conduct, the person lacks substantial capacity either to
+            appreciate the criminality of the conduct or to conform the
+            conduct to the requirements of law. <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.295</a>.</p>
+            <p>Some mental conditions specifically do not qualify. Under
+            ORS 161.295, the term mental disease or defect does not
+            include an abnormality manifested only by repeated criminal
+            or otherwise antisocial conduct. Alcohol and drug dependence
+            alone does not qualify as a mental disease or defect. <a
+            href="http://scholar.google.com/scholar_case?q=ashcroft+v+psrb&amp;hl=en&amp;as_sdt=4,38&amp;case=14850828389012903275&amp;scilh=0">Ashcroft
+            v. PSRB</a><a
+            href="http://scholar.google.com/scholar_case?q=ashcroft+v+psrb&amp;hl=en&amp;as_sdt=4,38&amp;case=14850828389012903275&amp;scilh=0">,
+            338 Or 448, 111 P3d 1117 (2005)</a>. However, the long-term
+            effects of extended use may produce a mental condition that
+            could qualify for an insanity defense. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+smith&amp;hl=en&amp;as_sdt=4,228&amp;case=5142809817643224259&amp;scilh=0">State
+            v. Smith</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+smith&amp;hl=en&amp;as_sdt=4,228&amp;case=5142809817643224259&amp;scilh=0">,
+            260 Or 349, 490 P2d 1262 (1971)</a>.</p>
+            <p>Consultation with a qualified expert is necessary to
+            determine whether a defendant’s particular mental condition
+            is appropriately termed a mental disease or defect.</p>
+            <p>Defense counsel must give written notice of intent to
+            rely upon this defense. Written notice must be filed at the
+            time the defendant pleads not guilty unless just cause
+            appears for failure to file the notice at that time, in
+            which case notice may be filed prior to trial. ORS
+            161.309(1) and (3).</p>
+            <p>If defendant files notice of intent to raise the mental
+            disease or defect defense, the state has the right to
+            conduct its own examination. ORS 161.315. The state’s
+            examination of the defendant may include commitment of the
+            defendant for up to 30 days. ORS 161.315.</p>
+            <p>Raising this defense requires careful consideration
+            because if successful the result will put your client under
+            the supervision of the Psychiatric Review Board for the
+            statutory maximum period allowed for incarceration for the
+            crime. This could also mean your client can be placed at the
+            Oregon State Hospital for a substantial period of time. Your
+            client needs to understand these consequences prior to
+            raising this defense.</p>
+            <p>For motion forms, please refer to the <em>OCDLA Criminal
+            Law Formbook</em>, OCDLA, 2012, chapters 4 and 6.</p>
+            <p>For more information, please refer to <em>Major Crimes
+            and Defenses</em>, OCDLA, 2010, Chapter 30.</p>
+            <p>Also consult Bassos, <em>Mental Health and Criminal
+            Defense</em> (OCDLA 2010).</p>
+            <p><strong>2. Drug Cases</strong></p>
+            <p>In any prosecution for tampering with drug records or
+            frequenting places where drugs are used, any exception
+            contained in <a
+            href="http://www.leg.state.or.us/ors/475.html">ORS
+            475.005–475.285</a> and 475.940–475.995 shall be an
+            affirmative defense.</p>
+            <p>It is an affirmative defense to a criminal charge of
+            possession or manufacturing of marijuana or any other
+            criminal offense in which possession or manufacturing of
+            marijuana is an element that the person meets the criteria
+            for the medical use of marijuana. ORS 475.319. The criteria
+            are:</p>
+            <p>(a) The person has been diagnosed with a debilitating
+            medical condition within 12 months prior to arrest and the
+            person has been told by the primary attending physician that
+            use of marijuana would mitigate the symptoms of the medical
+            condition;</p>
+            <p>(b) The person is engaged in the medical us of marijuana;
+            and,</p>
+            <p>(c) Possess or manufactures marijuana in accordance to
+            the statutory guidelines for the medical use of marijuana.
+            ORS 475.319(1)</p>
+            <p>It is not necessary for a person asserting an affirmative
+            defense to have received a registry identification card in
+            order to assert the defense. ORS 475.319(2).</p>
+            <p>For an analysis of who constitutes an “attending
+            physician” under the Oregon Medical Marijuana Act (OMMA)
+            ''see <a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">State
+            v. Miles</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">197
+            Or App 86, 104 P3d 604</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">338
+            Or 488 (2005)</a> (a physician who merely reviews written
+            records and documents is not an attending physician as
+            defined by OMMA).</p>
+            <p>For more information, please refer to <em>Major Crimes
+            and Defenses</em>, Chapter 26.</p>
+            <p><strong>3. Ownership of Forest Products</strong> <a
+            href="http://www.leg.state.or.us/ors/164.html">ORS
+            164.828</a> puts the burden on defendant to prove he was the
+            owner of timber cut or transported without a permit, or of
+            hay transported without a transportation certificate.</p>
+            <p><strong>4. Murder</strong> Extreme emotional disturbance
+            is an affirmative defense to intentional murder only.</p>
+            <p><a href="http://www.leg.state.or.us/ors/163.html">ORS
+            163.115(1)(a)</a> provides that extreme emotional
+            disturbance (reducing murder to manslaughter I) is an
+            affirmative defense.</p>
+            <p>The defense is meant to refer to a loss of self-control
+            due to intense feelings. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ott&amp;hl=en&amp;as_sdt=4,38&amp;case=11174311009376016702&amp;scilh=0">State
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ott&amp;hl=en&amp;as_sdt=4,38&amp;case=11174311009376016702&amp;scilh=0">Ott,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ott&amp;hl=en&amp;as_sdt=4,38&amp;case=11174311009376016702&amp;scilh=0">297
+            Or 375, 686 P2d 1001 (1984)</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ott&amp;hl=en&amp;as_sdt=4,38&amp;case=11174311009376016702&amp;scilh=0">.</a>
+            The affirmative defense of extreme emotional disturbance
+            does not apply to aggravated murder. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+running&amp;hl=en&amp;as_sdt=4,38&amp;case=3599432092492508352&amp;scilh=0">State
+            v. Running,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+running&amp;hl=en&amp;as_sdt=4,38&amp;case=3599432092492508352&amp;scilh=0">336
+            Or 545, 87 P3d 661 (2004)</a>.</p>
+            <p>Both subjective and objective criteria are part of the
+            standard. A three-part test is set out in <a
+            href="http://scholar.google.com/scholar_case?q=state+v+counts&amp;hl=en&amp;as_sdt=4,38&amp;case=6684193309169826604&amp;scilh=0">State
+            v. Counts,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+counts&amp;hl=en&amp;as_sdt=4,38&amp;case=6684193309169826604&amp;scilh=0">311
+            Or 616, 816 P2d 1157 (1991)</a>:</p>
+            <p>a. Did the defendant commit the homicide under the
+            influence of an extreme emotional disturbance? (Subjective
+            test.)</p>
+            <p>b. Was the disturbance the result of the defendant’s
+            intentional, knowing, reckless, or criminally negligent
+            act?</p>
+            <p>c. Was there a reasonable explanation for the
+            disturbance? (Objective test.) In other words, would a
+            reasonable person have been provoked under the same
+            circumstances?</p>
+            <p>See UCrJI 1307 for guidance on jury instructions.</p>
+            <p>For more information, please refer to <em>Major Crimes
+            and Defenses</em>, Chapter 2.</p>
+            <p><strong>5. Felony Murder</strong></p>
+            <p>ORS 163.115(3) puts the burden on a defendant charged
+            with felony murder to prove that:</p>
+            <p>he was not the only participant in the underlying
+            crime</p>
+            <p>he neither killed nor contributed to the killing</p>
+            <p>he wasn’t armed</p>
+            <p>he had no reason to believe any other participant was
+            armed, and</p>
+            <p>had no reason to believe any other participant intended
+            to engage in conduct likely to result in death.</p>
+            <p><em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+burrow&amp;hl=en&amp;as_sdt=4,38&amp;case=2831234969060352266&amp;scilh=0">State
+            v. Burrow,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+burrow&amp;hl=en&amp;as_sdt=4,38&amp;case=2831234969060352266&amp;scilh=0">293
+            Or 691, 693, 653 P2d (1982)</a> (Linde and Lent, JJ,
+            dissenting, asserts that the burden placed on the defendant
+            by ORS 163.115(2) violates due process and fundamental
+            rights protected by <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Article
+            I, section 33, of the Oregon Constitution</a>).</p>
+            <p>For more information, please refer to <em>Major Crimes
+            and Defenses</em>, Chapter 2.</p>
+            <p><strong>6. Obscenity</strong></p>
+            <p><a href="http://www.leg.state.or.us/ors/167.html">ORS
+            167.085</a> provides for various affirmative defenses for
+            obscenity offenses involving minors. <strong>Note</strong>:
+            Portions of the statutes defining these offenses have been
+            stricken for over breadth. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+frink&amp;hl=en&amp;as_sdt=4,38&amp;case=13019522914897095043&amp;scilh=0">State
+            v. Frink,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+frink&amp;hl=en&amp;as_sdt=4,38&amp;case=13019522914897095043&amp;scilh=0">60
+            Or App 209, 653 P2d 553 (1982)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+woodcock&amp;hl=en&amp;as_sdt=4,38&amp;case=9438585976674771514&amp;scilh=0">State
+            v. Woodcock</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+woodcock&amp;hl=en&amp;as_sdt=4,38&amp;case=9438585976674771514&amp;scilh=0">,
+            75 Or App 659, 706 P2d 1012 (1985)</a>.</p>
+            <p><strong>7. Renunciation</strong></p>
+            <p>Renunciation is an affirmative defense to charges of
+            attempt, <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.430</a>, solicitation, ORS 161.440, and conspiracy, ORS
+            161.460. The defense should be raised whenever the defendant
+            has completely and voluntarily renounced criminal intent and
+            has done everything possible to thwart completion of the
+            criminal scheme.</p>
+            <p><strong>8. Sex Offenses</strong></p>
+            <p>Reasonable belief that a child is above a specified age
+            at the time of the offense is an affirmative defense to sex
+            offenses where the apparently consenting minor is between 16
+            and 18 years old. <a
+            href="http://www.leg.state.or.us/ors/163.html">ORS
+            163.325(2)</a>.</p>
+            <p>It is also an affirmative defense if the accused did not
+            know that the victim was mentally defective, mentally
+            incapacitated or physically helpless. ORS 163.325.</p>
+            <p>Finally, it is an affirmative defense if the accused is
+            less than three years older than the victim for certain sex
+            offenses where the incapacity to consent was due solely to
+            the victim’s age. ORS 163.345.</p>
+            <p>For more information, please refer to <em>Major Crimes
+            and Defenses</em>, chapters 21–25.</p>
+            <p><strong>9. Driving While Suspended</strong></p>
+            <p><a href="http://www.leg.state.or.us/ors/811.html">ORS
+            811.180</a> provides affirmative defenses to DWS:</p>
+            <p>(a) An injury or immediate threat of injury to human life
+            or animal life under urgent circumstances making it
+            necessary to drive. Although the injury must be to human or
+            animal life (rather than inanimate property), the injury
+            threatened need not be life-threatening. <a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">,
+            306 Or 599, 761 P2d 1300 (1988)</a>.</p>
+            <p>(b) No notice of suspension received as required by <a
+            href="http://www.leg.state.or.us/ors/809.html">ORS
+            809.430</a>.</p>
+            <p>Not available if:</p>
+            <p>(a) Defendant refused to sign a receipt for certified
+            mail containing the notice</p>
+            <p>(b) The notice was not delivered because defendant failed
+            to notify DMV of change of address as required by <a
+            href="http://www.leg.state.or.us/ors/807.html">ORS
+            807.560</a></p>
+            <p>(c) Defendant was told of suspension by a court, or</p>
+            <p>(d) Defendant had actual knowledge of suspension (often
+            established through notice of suspension as sanction for
+            failure to appear on a traffic violation, printed on back of
+            the violation summons).</p>
+            </section>
+            </section>
+            <section id="iv._non_affirmative_defenses" class="level1">
+            <h1><strong>IV. Non-Affirmative Defenses</strong></h1>
+            <p>For a “defense” other than an “affirmative defense,” the
+            state bears the burden of disproving the defense beyond a
+            reasonable doubt. ORS 161.055(1); <a
+            href="http://scholar.google.com/scholar_case?q=hood+river+county+v+mazzara&amp;hl=en&amp;as_sdt=4,38&amp;case=13509590217348686888&amp;scilh=0">Hood
+            River County v. Mazzara</a><a
+            href="http://scholar.google.com/scholar_case?q=hood+river+county+v+mazzara&amp;hl=en&amp;as_sdt=4,38&amp;case=13509590217348686888&amp;scilh=0">,
+            193 Or App 272, 89 P3d 1195 (2004)</a> (defense adequately
+            raised defense of appropriate farm use to justify herding
+            dog barking for six hours and the county offered no evidence
+            to the contrary resulting in reversal of conviction for
+            county’s failure to disprove defendant’s defense). The state
+            gains this burden when noticed in writing prior to trial, or
+            raised by a defense witness in the defense case-in-chief.
+            ORS 161.055(3). However, where no evidence is given at trial
+            in support of a defense raised in pretrial notice, the
+            defense need not be submitted to jury. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+williams+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=17542095453755532924&amp;scilh=0">State
+            v Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+williams+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=17542095453755532924&amp;scilh=0">,
+            12 Or App 21, 23, 503 P2d 1254 (1972),</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+williams+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=17542095453755532924&amp;scilh=0">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+williams+1972&amp;hl=en&amp;as_sdt=4,38&amp;case=17542095453755532924&amp;scilh=0">(1973)</a>;
+            <a
+            href="http://scholar.google.com/scholar_case?q=14+or+app+422&amp;hl=en&amp;as_sdt=4,38&amp;case=15658437076380539361&amp;scilh=0">State
+            v Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=14+or+app+422&amp;hl=en&amp;as_sdt=4,38&amp;case=15658437076380539361&amp;scilh=0">,
+            14 Or App 422, 429, 512 P2d 1366,</a><a
+            href="http://scholar.google.com/scholar_case?q=14+or+app+422&amp;hl=en&amp;as_sdt=4,38&amp;case=15658437076380539361&amp;scilh=0">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?q=14+or+app+422&amp;hl=en&amp;as_sdt=4,38&amp;case=15658437076380539361&amp;scilh=0">(1973)</a>.
+            A defendant is entitled to have the jury instructed as to
+            the defense as long as there is some evidence to support it.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcmullen&amp;hl=en&amp;as_sdt=4,38&amp;case=12754435299856984373&amp;scilh=0">State
+            v McMullen</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcmullen&amp;hl=en&amp;as_sdt=4,38&amp;case=12754435299856984373&amp;scilh=0">,
+            34 Or App 749, 751, 579 P2d 879 (1978)</a>.</p>
+            <section
+            id="a._diminished_responsibilitydisordered_mental_state"
+            class="level2">
+            <h2><strong>A. Diminished Responsibility/Disordered Mental
+            State</strong></h2>
+            <p>The Diminished Responsibility—or, as more accurately
+            titled, Disordered Mental State— defense allows testimony
+            concerning a defendant’s mental disease or defect whenever
+            it is relevant to the issue of whether he did or did not
+            have the intent which is an element of the crime. ORS
+            161.300. The defense is available for crimes where
+            “knowledge” is the mental state alleged. <a
+            href="http://scholar.google.com/scholar_case?q=154+or+app+37&amp;hl=en&amp;as_sdt=4,38&amp;case=15613577407551203422&amp;scilh=0">State
+            v. Smith,</a><a
+            href="http://scholar.google.com/scholar_case?q=154+or+app+37&amp;hl=en&amp;as_sdt=4,38&amp;case=15613577407551203422&amp;scilh=0">154
+            Or App 37, 960 P2d 877 (1998)</a>.</p>
+            <p>In order to introduce expert testimony regarding partial
+            responsibility, the defendant must give written notice at
+            the time the defendant pleads not guilty. The defendant may
+            give notice at a later time if just cause is shown. ORS
+            161.309(2) and (3). If the defendant is not calling an
+            expert witness to testify regarding partial responsibility a
+            pretrial notice is not required. This defense can be
+            established through the use of lay witnesses and other
+            evidence of defendant’s mental state at the time of
+            commission of the offense. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+gallegos&amp;hl=en&amp;as_sdt=4,38&amp;case=11482694153575324221&amp;scilh=0">State
+            v. Gallegos</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gallegos&amp;hl=en&amp;as_sdt=4,38&amp;case=11482694153575324221&amp;scilh=0">174
+            Or App 549, 28 P3d 1178 (2001)</a> (reversible error for
+            trial court to exclude a letter evidencing defendant’s
+            mental state and written by defendant at the time of
+            commission of the offense).</p>
+            <p>The defense should request a jury instruction on
+            diminished capacity whenever such an instruction would be
+            helpful to the jury. However, courts have found that it is
+            not error to refuse such an instruction. <em>State v.
+            Gallegos,</em>174 Or App 549, 28 P3d 1178 (2001); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+stockett&amp;hl=en&amp;as_sdt=4,38&amp;case=2826693844288292223&amp;scilh=0">State
+            v. Stockett,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stockett&amp;hl=en&amp;as_sdt=4,38&amp;case=2826693844288292223&amp;scilh=0">278
+            Or 637, 565 P2d 739 (1977</a>) (failure to give a partial
+            responsibility instruction was harmless error); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+booth&amp;hl=en&amp;as_sdt=4,38&amp;case=11263291093412674577&amp;scilh=0">State
+            v. Booth,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+booth&amp;hl=en&amp;as_sdt=4,38&amp;case=11263291093412674577&amp;scilh=0">284
+            Or 615, 588 P2d 614 (1978)</a> (instruction on the state’s
+            burden to prove intent was adequate. A separate instruction
+            on diminished responsibility was not essential).</p>
+            </section>
+            <section id="b._intoxication" class="level2">
+            <h2><strong>B. Intoxication</strong></h2>
+            <p>Voluntary intoxication is not a defense, but may be
+            offered whenever it is relevant to negate an element of the
+            crime charged. Evidence regarding intoxication is usually
+            concerned with whether the defendant’s intoxication rendered
+            him or her incapable of forming a particular mental element
+            of the alleged crime. Intoxication is not sufficient to
+            negate the element of recklessness if the defendant, because
+            of voluntary intoxication, is unaware of a risk he or she
+            would have been aware of if sober. ORS 161.125(2); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+rabago&amp;hl=en&amp;as_sdt=4,38&amp;case=4350511525037564487&amp;scilh=0">State
+            v. Rabago,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rabago&amp;hl=en&amp;as_sdt=4,38&amp;case=4350511525037564487&amp;scilh=0">24
+            Or App 95, 544 P2d 1061 (1976)</a>.</p>
+            <p>Intoxication is not a defense to strict liability
+            offenses such as DUII since the defendant’s mental state is
+            not an issue. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+miller&amp;hl=en&amp;as_sdt=4,38&amp;case=5474135389068699348&amp;scilh=0">State
+            v. Miller,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miller&amp;hl=en&amp;as_sdt=4,38&amp;case=5474135389068699348&amp;scilh=0">309
+            Or 362, 788 P2d 974 (1990)</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>Defense counsel needs to be aware of any potentially
+            prior bad acts evidence the state may try to introduce if a
+            particular defense is raised. The defense counsel also needs
+            to be careful about opening the door to prior bad acts
+            evidence when putting on evidence of any defense. In <a
+            href="http://scholar.google.com/scholar_case?q=state+v+orr&amp;hl=en&amp;as_sdt=4,38&amp;case=9167194526265552419&amp;scilh=0">State
+            v. Orr,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+orr&amp;hl=en&amp;as_sdt=4,38&amp;case=9167194526265552419&amp;scilh=0">197
+            Or App 327, 105 P3d 904 (2005)</a>, the defendant filed a
+            pretrial notice of intent to rely on an intoxication
+            defense. The state sought to introduce evidence that
+            defendant had previously attempted to blame having sex with
+            a 15-year-old girl on his intoxication and then subsequently
+            confessed in great detail to the act. The trial court
+            allowed the evidence without making a <em>Johns</em>
+            analysis based on <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johns&amp;hl=en&amp;as_sdt=4,38&amp;case=488257333952677274&amp;scilh=0">State
+            v. Johns</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johns&amp;hl=en&amp;as_sdt=4,38&amp;case=488257333952677274&amp;scilh=0">,
+            301 Or 535 (1986)</a>. The Court of Appeals said it was not
+            necessary to determine if the trial court erred in failing
+            to perform a <em>Johns</em> analysis on the proffered
+            evidence because any error was harmless as the evidence was
+            merely cumulative in light of the defendant’s testimony
+            about the incident during the defendant’s case-in-chief.
+            <em>Orr, Id.</em></p>
+            </section>
+            <section id="c._choice_of_evils" class="level2">
+            <h2><strong>C. Choice of Evils</strong></h2>
+            <p>Conduct otherwise criminal is justifiable when it is
+            necessary to avoid a greater, imminent harm under ORS
+            161.200. Examples include breaking into an unoccupied house
+            in a remote and isolated area to make an emergency telephone
+            call for the purpose of securing rescue assistance.</p>
+            <p>See the Library of Defense section on Choice of Evils and
+            Necessity: <a
+            href="https://libraryofdefense.org/legal/choice-evilsnecessityduress"><span>https://libraryofdefense.org/legal/choice-evilsnecessityduress</span></a>.</p>
+            <p>Jury instructions on this defense should be submitted
+            whenever there is any evidence in the record to support it.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+matthews&amp;hl=en&amp;as_sdt=4,38&amp;case=11751471033803632038&amp;scilh=0">State
+            v. Matthews</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+matthews&amp;hl=en&amp;as_sdt=4,38&amp;case=11751471033803632038&amp;scilh=0">,
+            30 Or App 1133, 569 P2d 662 (1977)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">,
+            306 Or 559, 761 P2d 1300 (1988)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=94+or+app+516&amp;hl=en&amp;as_sdt=4,38&amp;case=3721013949366526258&amp;scilh=0">State
+            v. Costanzo</a><a
+            href="http://scholar.google.com/scholar_case?q=94+or+app+516&amp;hl=en&amp;as_sdt=4,38&amp;case=3721013949366526258&amp;scilh=0">,
+            94 Or App 516, 766 P2d 415 (1988)</a>.</p>
+            <p>The trial court granted a pretrial motion preventing
+            defendant, charged with escape in the third degree, from
+            presenting evidence for choice of evils defense in case
+            where defendant escaped in order to avoid being returned to
+            county jail where he had been beaten by other prisoners and
+            forced to commit oral sodomy. The rationale of case law that
+            duress, under ORS 161.270, requires danger to be present,
+            imminent and impending, is equally applicable to choice of
+            evils under this section. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+whisman&amp;hl=en&amp;as_sdt=4,38&amp;case=12417116099810386005&amp;scilh=0">State
+            v. Whisman,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+whisman&amp;hl=en&amp;as_sdt=4,38&amp;case=12417116099810386005&amp;scilh=0">33
+            Or App 147, 575 P2d 1005 (1978)</a>.</p>
+            <p>Choice of evils defense is available to defendant charged
+            with being ex-convict in possession of firearm. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+burney&amp;hl=en&amp;as_sdt=4,38&amp;case=4260276024840772799&amp;scilh=0">State
+            v. Burney</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+burney&amp;hl=en&amp;as_sdt=4,38&amp;case=4260276024840772799&amp;scilh=0">,
+            49 Or App 529, 619 P2d 1336 (1980)</a>.</p>
+            <p>Choice of evils defense may be available to a defendant
+            in possession of or manufacturing marijuana under the Oregon
+            Medical Marijuana Act if the defendant lacks a medical
+            marijuana card. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">State
+            v. Miles,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">197
+            Or App 86, 104 P3d 604,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">338</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+miles&amp;hl=en&amp;as_sdt=4,38&amp;case=17490940828234089344&amp;scilh=0">Or
+            488 (2005)</a> (defendant not entitled to jury instruction
+            on choice of evils where defendant failed to present
+            evidence that his conduct was necessary to avoid a
+            threatened injury).</p>
+            <p>Defendant was entitled to a jury instruction on choice of
+            evils defense when evidence demonstrated that the defendant
+            put her companion’s gun in her purse because of his
+            disturbed state of mind and her fear that he might use the
+            gun. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lawson&amp;hl=en&amp;as_sdt=4,38&amp;case=2221555852351695013&amp;scilh=0">State
+            v. Lawson,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lawson&amp;hl=en&amp;as_sdt=4,38&amp;case=2221555852351695013&amp;scilh=0">37
+            Or App 739, 588 P2d 110 (1978)</a>.</p>
+            <p>Where defendant, charged with eluding police officer, was
+            allegedly seeking to avoid assault by police officer and
+            further delay in returning to care for his mother, trial
+            court’s refusal to instruct on necessity was error. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+matthews&amp;hl=en&amp;as_sdt=4,38&amp;case=11751471033803632038&amp;scilh=0">State
+            v. Matthews,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+matthews&amp;hl=en&amp;as_sdt=4,38&amp;case=11751471033803632038&amp;scilh=0">30
+            Or App 1133, 569 P2d 662 (1977)</a>.</p>
+            <p>Choice of evils defense is not available in prosecutions
+            for driving while revoked in violation of <a
+            href="http://www.leg.state.or.us/ors/484.html">ORS
+            484.740</a>. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+neubauer&amp;hl=en&amp;as_sdt=4,38&amp;case=9678493550404205917&amp;scilh=0">State
+            v. Neubauer</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+neubauer&amp;hl=en&amp;as_sdt=4,38&amp;case=9678493550404205917&amp;scilh=0">,
+            68 Or App 885, 683 P2d 136 (1984)</a>.</p>
+            <p>Defendant may justify otherwise criminal act by showing
+            it was “necessary as an emergency measure to avoid an
+            imminent public or private injury.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v+olson&amp;hl=en&amp;as_sdt=4,38&amp;case=11919857804010675142&amp;scilh=0">State
+            v. Olson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+olson&amp;hl=en&amp;as_sdt=4,38&amp;case=11919857804010675142&amp;scilh=0">,
+            79 Or App 302, 719 P2d 55 (1986)</a> (threatened injury may
+            be to property, animals or people).</p>
+            <p>Choice of evils defense is not limited to actions taken
+            to protect life, but also may be invoked by defendant who
+            has acted unlawfully in order to protect property. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+webber&amp;hl=en&amp;as_sdt=4,38&amp;case=11338649087596485331&amp;scilh=0">State
+            v. Webber</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+webber&amp;hl=en&amp;as_sdt=4,38&amp;case=11338649087596485331&amp;scilh=0">,
+            85 Or App 347, 736 P2d 220 (1987)</a>.</p>
+            <p>Defendant charged with FTA at trial was entitled to jury
+            instructions on defense of choice of evils and duress; jury
+            could infer that defendant was under continuing threat that
+            if he appeared in court his legs would be broken or he would
+            be murdered, and thus that threat was imminent. <a
+            href="http://scholar.google.com/scholar_case?q=boldt&amp;hl=en&amp;as_sdt=4,38&amp;case=410012524267500272&amp;scilh=0">State
+            v. Boldt</a><a
+            href="http://scholar.google.com/scholar_case?q=boldt&amp;hl=en&amp;as_sdt=4,38&amp;case=410012524267500272&amp;scilh=0">,
+            116 Or App 480, 841 P2d 1196 (1992)</a>.</p>
+            <p>Defense under this section to charge of criminal trespass
+            was unavailable to abortion protesters because defense is
+            inconsistent with other provision of law. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+clowes&amp;hl=en&amp;as_sdt=4,38&amp;case=12998582492798061543&amp;scilh=0">State
+            v. Clowes</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+clowes&amp;hl=en&amp;as_sdt=4,38&amp;case=12998582492798061543&amp;scilh=0">,
+            310 Or 686, 801 P2d 789 (1990)</a>.</p>
+            <p>Choice of evils defense could not exonerate defendants
+            charged with contempt for violating injunction arising from
+            demonstration to prevent abortions because defense is
+            available only if defendants’ necessary conduct is not
+            inconsistent with other provisions of law. <a
+            href="http://scholar.google.com/scholar_case?q=downtown+women%27s+center+v+advocates&amp;hl=en&amp;as_sdt=4,38&amp;case=8743737671021561225&amp;scilh=0">Downtown
+            Women’s Center v. Advocates for Life</a><a
+            href="http://scholar.google.com/scholar_case?q=downtown+women%27s+center+v+advocates&amp;hl=en&amp;as_sdt=4,38&amp;case=8743737671021561225&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=downtown+women%27s+center+v+advocates&amp;hl=en&amp;as_sdt=4,38&amp;case=8743737671021561225&amp;scilh=0">Inc.,</a><a
+            href="http://scholar.google.com/scholar_case?q=downtown+women%27s+center+v+advocates&amp;hl=en&amp;as_sdt=4,38&amp;case=8743737671021561225&amp;scilh=0">111
+            Or App 317, 826 P2d 637 (1992)</a>.</p>
+            </section>
+            <section id="d._duress" class="level2">
+            <h2><strong>D. Duress</strong></h2>
+            <p>Except for murder, an act is not criminal if the actor
+            was coerced by the use or threatened use of unlawful
+            physical force on him or a third person, if the force or
+            threat was of such nature or degree as to overcome earnest
+            resistance. <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.270</a>.</p>
+            <p>The defense is not available if the accused intentionally
+            or recklessly placed himself in a situation where it was
+            probable that he would be subjected to duress. ORS
+            161.270(2).</p>
+            <p>Evidence relevant to this defense may also serve to
+            negate a <em>mens rea</em> requirement.</p>
+            <p>Duress requires that danger must be “present, imminent,
+            and impending.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v+fitzgerald&amp;hl=en&amp;as_sdt=4,38&amp;case=5007456521114050220&amp;scilh=0">State
+            v. Fitzgerald</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+fitzgerald&amp;hl=en&amp;as_sdt=4,38&amp;case=5007456521114050220&amp;scilh=0">,
+            14 Or App 361, 513 P2d 817 (1973)</a>.</p>
+            <p>Under evidence that defendant, convicted of armed
+            robbery, had several opportunities to escape, he could not
+            object to jury instruction stating that duress is not
+            available as defense if person intentionally or recklessly
+            placed himself in duress situation. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+fowler&amp;hl=en&amp;as_sdt=4,38&amp;case=17566599531265506709&amp;scilh=0">State
+            v. Fowler</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+fowler&amp;hl=en&amp;as_sdt=4,38&amp;case=17566599531265506709&amp;scilh=0">,
+            37 Or App 299, 587 P2d 104 (1978)</a>.</p>
+            <p>Where threat of injury, if there was one, existed on the
+            day defendant was scheduled to appear in court and was
+            conditioned on what he might do on that date, threat was
+            “imminent.” <a
+            href="http://scholar.google.com/scholar_case?q=boldt&amp;hl=en&amp;as_sdt=4,38&amp;case=410012524267500272&amp;scilh=0">State
+            v. Boldt</a><a
+            href="http://scholar.google.com/scholar_case?q=boldt&amp;hl=en&amp;as_sdt=4,38&amp;case=410012524267500272&amp;scilh=0">,
+            116 Or App 480, 841 P2d 1196 (1992)</a>.</p>
+            <p>“Earnest resistance” is generalized standard not measured
+            by defendant’s submissiveness or other individual
+            personality traits. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+vannatta&amp;hl=en&amp;as_sdt=4,38&amp;case=11208980333171684067&amp;scilh=0">State
+            v. VanNatta</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+vannatta&amp;hl=en&amp;as_sdt=4,38&amp;case=11208980333171684067&amp;scilh=0">,
+            149 Or App 587, 945 P2d 1062 (1997)</a>.</p>
+            <p>There is a discussion on Duress on the Library of Defense
+            page: <a
+            href="https://libraryofdefense.org/legal/duress"><span>https://libraryofdefense.org/legal/duress</span></a>.</p>
+            </section>
+            <section id="e._entrapment" class="level2">
+            <h2><strong>E. Entrapment</strong></h2>
+            <p>A person who is not predisposed to commit a crime, and
+            who is induced to do so by a law enforcement official or by
+            a person acting in cooperation with an official, has the
+            defense of entrapment. ORS 161.275. The defendant need not
+            admit the crime to assert the defense. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcbride&amp;hl=en&amp;as_sdt=4,38&amp;case=2418153602390643395&amp;scilh=0">State
+            v. McBride</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+mcbride&amp;hl=en&amp;as_sdt=4,38&amp;case=2418153602390643395&amp;scilh=0">,
+            287 Or 315, 599 P2d 449 (1979)</a>. Additionally, the
+            defendant is entitled to have the jury instructed on this
+            defense if there is any evidence supporting it. ''McBride;
+            <a
+            href="http://scholar.google.com/scholar_case?q=107+or+app+647&amp;hl=en&amp;as_sdt=4,38&amp;case=6158437807357357267&amp;scilh=0">State
+            v. Smith,</a><a
+            href="http://scholar.google.com/scholar_case?q=107+or+app+647&amp;hl=en&amp;as_sdt=4,38&amp;case=6158437807357357267&amp;scilh=0">107
+            Or App 647, 813 P2d 1086 (1991)</a><a
+            href="http://scholar.google.com/scholar_case?q=107+or+app+647&amp;hl=en&amp;as_sdt=4,38&amp;case=6158437807357357267&amp;scilh=0">.</a></p>
+            <p>Merely providing defendant an opportunity to commit an
+            offense that defendant was predisposed to commit does not
+            constitute entrapment. ORS 161.275(2).</p>
+            <p>Because entrapment is not an affirmative defense, it must
+            be disproved by the state beyond a reasonable doubt once it
+            is raised. <a
+            href="http://scholar.google.com/scholar_case?q=503+us+540&amp;hl=en&amp;as_sdt=3,38&amp;case=5596030047797232921&amp;scilh=0">Jacobson
+            v United States</a><a
+            href="http://scholar.google.com/scholar_case?q=503+us+540&amp;hl=en&amp;as_sdt=3,38&amp;case=5596030047797232921&amp;scilh=0">,
+            503 U.S. 540 (1992)</a> (“...the prosecution must prove
+            beyond a reasonable doubt that the defendant was disposed to
+            commit the criminal act prior to first being approached by
+            the Government agents”).</p>
+            <p>In Theft I and UUV case, trial court erred in refusing to
+            give entrapment instruction. Remanded for new trial. <a
+            href="http://scholar.google.com/scholar_case?q=59+Or+app+151&amp;hl=en&amp;as_sdt=4,227&amp;case=12175684127313182442&amp;scilh=0">State
+            v. Mitchell</a><a
+            href="http://scholar.google.com/scholar_case?q=59+Or+app+151&amp;hl=en&amp;as_sdt=4,227&amp;case=12175684127313182442&amp;scilh=0">,
+            59 Or App 151, 650 P2d 992 (1982)</a>.</p>
+            <p>Prior dissimilar offense may not be used to show
+            propensity. ''See <a
+            href="http://scholar.google.com/scholar_case?q=state+v+barr&amp;hl=en&amp;as_sdt=4,227&amp;case=6276299820778018658&amp;scilh=0">State
+            v. Barr</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+barr&amp;hl=en&amp;as_sdt=4,227&amp;case=6276299820778018658&amp;scilh=0">,
+            62 Or App 46, 660 P2d 169 (1983)</a> (error to instruct jury
+            they could consider prior burglary as to predisposition to
+            commit theft).</p>
+            </section>
+            <section id="f._immaturity" class="level2">
+            <h2><strong>F. Immaturity</strong></h2>
+            <p>A person under 12 lacks the capacity, in adult court, for
+            criminal responsibility. ORS 161.290. Defense of incapacity
+            due to immaturity set forth in this section is not
+            applicable in juvenile proceedings under <a
+            href="http://www.leg.state.or.us/ors/419.html">ORS
+            419.476</a>, <a
+            href="http://scholar.google.com/scholar_case?q=wicks&amp;hl=en&amp;as_sdt=4,227&amp;case=12400162039975939710&amp;scilh=0">State
+            ex rel Juv. Dept. v. Wicks</a><a
+            href="http://scholar.google.com/scholar_case?q=wicks&amp;hl=en&amp;as_sdt=4,227&amp;case=12400162039975939710&amp;scilh=0">,
+            97 Or App 390, 776 P2d 582 (1989)</a>.</p>
+            </section>
+            <section id="g._impossibility" class="level2">
+            <h2><strong>G. Impossibility</strong></h2>
+            <p>Impossibility generally is not a defense in a case
+            charging an attempt to commit a crime. ORS 161.425.</p>
+            <p>In solicitation or conspiracy cases, there is a defense
+            of legal impossibility. ORS 161.475(2) provides that
+            impossibility is a defense to a charge of solicitation or
+            conspiracy to commit a crime when if the criminal object
+            were achieved, the actor would not be guilty of a crime
+            under the law defining that offense.</p>
+            <p>Defendant can be properly convicted of attempted
+            theft-by-receiving even though the subject property was not
+            stolen. <a
+            href="http://scholar.google.com/scholar_case?q=21+or+app+33&amp;hl=en&amp;as_sdt=4,227&amp;case=18010241771638277362&amp;scilh=0">State
+            v. Niehuser,</a><a
+            href="http://scholar.google.com/scholar_case?q=21+or+app+33&amp;hl=en&amp;as_sdt=4,227&amp;case=18010241771638277362&amp;scilh=0">21
+            Or App 33, 533 P2d 834 (1975)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=mack&amp;hl=en&amp;as_sdt=4,227&amp;case=1104181816393790543&amp;scilh=0">State
+            v. Mack,</a><a
+            href="http://scholar.google.com/scholar_case?q=mack&amp;hl=en&amp;as_sdt=4,227&amp;case=1104181816393790543&amp;scilh=0">31
+            Or App 59 (1977)</a>.</p>
+            </section>
+            <section id="h._alibi" class="level2">
+            <h2><strong>H. Alibi</strong></h2>
+            <p>Evidence that defendant was elsewhere at the time of the
+            offense can be admitted, if notice is given not less than
+            five days before trial. <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.455</a>. For content of notice and effect of failure to
+            supply notice, see ORS 135.455.</p>
+            <p>Requirement that a defendant disclose his alibi defense,
+            without the reciprocal requirement that the prosecutor
+            disclose the evidence to be used to refute the alibi, is an
+            unconstitutional violation of due process. <a
+            href="http://scholar.google.com/scholar_case?q=wardius+v+oregon&amp;hl=en&amp;as_sdt=3,38&amp;case=4161923522219213499&amp;scilh=0">Wardius
+            v. Oregon,</a><a
+            href="http://scholar.google.com/scholar_case?q=wardius+v+oregon&amp;hl=en&amp;as_sdt=3,38&amp;case=4161923522219213499&amp;scilh=0">412
+            U.S. 470, 93 SCt 2208, 37 L Ed 2d 82 (1973)</a>.</p>
+            <p>This section requires that criminal defendants
+            specifically identify which witnesses will be used to
+            establish alibi defense and, given that reciprocal discovery
+            is constitutionally essential, state must specifically
+            identify which witnesses will be used to rebut alibi. <a
+            href="http://scholar.google.com/scholar_case?q=frye&amp;hl=en&amp;as_sdt=4,227&amp;case=6106529136311608678&amp;scilh=0">State
+            v. Frye</a><a
+            href="http://scholar.google.com/scholar_case?q=frye&amp;hl=en&amp;as_sdt=4,227&amp;case=6106529136311608678&amp;scilh=0">,
+            34 Or App 871, 581 P2d 528 (1978)</a>.</p>
+            <p>Where defendant complied with this section by providing
+            notice of her intent to present an alibi defense but failed
+            to give proper notice of the witnesses she intended to call
+            in support of her alibi, it was error for trial court to
+            preclude her from giving testimony regarding her alibi. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">State
+            v. Douglas</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+douglas&amp;hl=en&amp;as_sdt=4,38&amp;case=17531568244879629449&amp;scilh=0">,
+            292 Or 516, 641 P2d 561 (1982)</a>.</p>
+            <p>Preclusion sanction of this section excludes only
+            evidence that defendant was at particular place other than
+            location of crime. <a
+            href="http://scholar.google.com/scholar_case?q=redwine&amp;hl=en&amp;as_sdt=4,227&amp;case=8638467707357072923&amp;scilh=0">State
+            v. Redwine</a><a
+            href="http://scholar.google.com/scholar_case?q=redwine&amp;hl=en&amp;as_sdt=4,227&amp;case=8638467707357072923&amp;scilh=0">,
+            79 Or App 25, 717 P2d 1239 (1986)</a>.</p>
+            <p>This section does not prohibit defendant’s own testimony
+            about location and activities at time in question,
+            notwithstanding failure to give prior notice of intention to
+            present alibi evidence. <a
+            href="http://scholar.google.com/scholar_case?q=edgmand&amp;hl=en&amp;as_sdt=4,38&amp;case=14974279959313301432&amp;scilh=0">State
+            v. Edgmand</a><a
+            href="http://scholar.google.com/scholar_case?q=edgmand&amp;hl=en&amp;as_sdt=4,38&amp;case=14974279959313301432&amp;scilh=0">,
+            306 Or 535, 761 P2d 505 (1988)</a>.</p>
+            <p>The defense probably does not apply where defendant is
+            charged as an accessory, not necessarily present at the time
+            and place of the crime. <a
+            href="http://scholar.google.com/scholar_case?q=meek&amp;hl=en&amp;as_sdt=4,227&amp;case=3332359202759887943&amp;scilh=0">State
+            v. Meek</a><a
+            href="http://scholar.google.com/scholar_case?q=meek&amp;hl=en&amp;as_sdt=4,227&amp;case=3332359202759887943&amp;scilh=0">,
+            35 Or App 649, 653–654, 582 P2d 464 (1978)</a>.</p>
+            <p>Statements made by defendant in pre-sentence
+            investigation interview were statements made during
+            “proceeding relating to guilty plea” and as such were
+            correctly suppressed. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+hubbard&amp;hl=en&amp;as_sdt=4,227&amp;case=6145043428063016744&amp;scilh=0">State
+            v. Hubbard</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+hubbard&amp;hl=en&amp;as_sdt=4,227&amp;case=6145043428063016744&amp;scilh=0">,
+            113 Or App 587, 833 P2d 1313 (1992)</a></p>
+            </section>
+            <section id="i._syndrome_evidence" class="level2">
+            <h2><strong>I. Syndrome Evidence</strong></h2>
+            <p>Syndrome evidence, such as evidence of Battered Women’s
+            Syndrome, can be used to build the defense of self-defense,
+            duress, necessity or entrapment. Use expert testimony to
+            explain typical reactions of similarly situated individuals.
+            Reactions must be demonstrated to be typical and reliable
+            before syndrome testimony will be admitted. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+milbradt&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0">State
+            v. Milbradt,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+milbradt&amp;hl=en&amp;as_sdt=4,38&amp;case=14235864362426214514&amp;scilh=0">305
+            Or 621, 631, 756 P2d 620 (1988)</a>. ''See also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+brown&amp;hl=en&amp;as_sdt=4,38&amp;case=16347591282643565388&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+brown&amp;hl=en&amp;as_sdt=4,38&amp;case=16347591282643565388&amp;scilh=0">,
+            297 Or 404, 687 P2d 751 (1984)</a>; 64 Oregon Law Review 393
+            (1988).</p>
+            <p>The 1997 legislature amended the Oregon Evidence Code to
+            allow evidence establishing a pattern, practice, or history
+            of abuse of a person if the evidence is relevant and not
+            otherwise inadmissible. <a
+            href="http://www.oregonlaws.org/ors/40.170">OEC
+            404(1)</a>.</p>
+            <p>For more information, see Chapter 15, Expert Witnesses,
+            in this manual and please refer to <em>Major Crimes and
+            Defenses</em>, chapters 27–29.</p>
+            </section>
+            <section id="j._discipline" class="level2">
+            <h2><strong>J. Discipline</strong></h2>
+            <p>Parents and guardians may use non-deadly, reasonable
+            physical force if they reasonably believe it necessary to
+            maintain discipline and to promote the welfare of a minor or
+            incompetent person. Similarly, teachers may use reasonable
+            physical force to maintain order; jailers to maintain order
+            and discipline; and anyone to prevent suicide. <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.205</a>; <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+waller&amp;hl=en&amp;as_sdt=4,38&amp;case=13537771989559258984&amp;scilh=0">State
+            v. Waller</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+waller&amp;hl=en&amp;as_sdt=4,38&amp;case=13537771989559258984&amp;scilh=0">,
+            22 Or App 299, 538 P2d 1274 (1975)</a>.</p>
+            </section>
+            <section id="k._self_defense" class="level2">
+            <h2><strong>K. Self-Defense</strong></h2>
+            <p><strong>1.Defense of Self and Defense of Others</strong>
+            A person is permitted to use physical force upon another
+            person for self-defense or to defend a third person from
+            what the person reasonably believes to be the use or
+            imminent use of unlawful physical force. The degree of force
+            permissible is the amount which the person reasonably
+            believes to be necessary for the purpose. ORS
+            161.205–161.209.</p>
+            <p>a.Defense of Others. This defense is based on the
+            reasonable belief of the accused concerning the necessity of
+            force and the amount of force needed. However, a person
+            cannot use more force in defense of a third party than the
+            third party could have used in defense of himself. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=11081934112554716095&amp;scilh=0">State
+            v. Gibson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+gibson&amp;hl=en&amp;as_sdt=4,38&amp;case=11081934112554716095&amp;scilh=0">,
+            36 Or App 111, 583 P2d 584 (1978)</a>.</p>
+            <p>b.Threat to Use Force. When a defendant is privileged to
+            use physical force under the self-defense statutes, threats
+            to use force are also protected. <a
+            href="http://scholar.google.com/scholar_case?q=lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">State
+            v. Lockwood</a><a
+            href="http://scholar.google.com/scholar_case?q=lockwood&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">,
+            43 Or App 639, 603 P2d 1231 (1979)</a> (defendant charged
+            with menacing was entitled to a self-defense jury
+            instruction).</p>
+            <p>c.Other Non-Assault Cases. Self-defense can be a defense
+            to cases other than assault cases. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+delaura&amp;hl=en&amp;as_sdt=4,38&amp;case=11522421601699732151&amp;scilh=0">State
+            v. DeLaura</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+delaura&amp;hl=en&amp;as_sdt=4,38&amp;case=11522421601699732151&amp;scilh=0">,
+            75 Or App 655, 706 P2d 1011 (1985)</a> (defendant was
+            charged with disorderly conduct based on fighting. He was
+            justified under self-defense statutes in fighting. The court
+            said self-defense is a defense to disorderly conduct under
+            these circumstances)</p>
+            <p>d.Limitations. A person is not justified in using
+            physical force if he first provoked the force resisted; if
+            he was the initial aggressor, and had not withdrawn and
+            effectively communicated his intent to withdraw; or if he
+            was engaged in combat by agreement. ORS 161.215. One who
+            provokes or initiates an assault cannot escape criminal
+            liability by invoking self-defense. However, if, after
+            beginning the assault, the aggressor withdraws from the
+            conflict and lets his opponent know this in some way, his
+            right to claim self-defense is restored if his opponent
+            attacks him later. 55 ALR 3d, at 1000; <em>see</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+ware&amp;hl=en&amp;as_sdt=4,38&amp;case=2033678100557343056&amp;scilh=0">State
+            v. Ware</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+ware&amp;hl=en&amp;as_sdt=4,38&amp;case=2033678100557343056&amp;scilh=0">,
+            26 Or App 675, 554 P2d 609 (1976)</a>.</p>
+            <p>e.Mutual Combat. The rule is similar for mutual combat.
+            The defendant is justified in using self-defense in a mutual
+            combat situation only if he withdrew, communicated the
+            withdrawal and his opponent then attacked. <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS
+            161.215(3)</a>.</p>
+            <p>f.Deadly Physical Force. The limitations on the use of
+            deadly physical force in self-defense are stricter: A person
+            is not justified in using deadly physical force unless the
+            person reasonably believes that the other person is:</p>
+            <p>i.committing or attempting to commit a felony involving
+            the use of physical force against a person,</p>
+            <p>ii.committing or attempting to commit a burglary in a
+            dwelling, or</p>
+            <p>iii.using or about to use unlawful deadly physical force
+            against a person and there must be no reasonable way to
+            escape and avoid the conflict. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">State
+            v.</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">Charles</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">,
+            293 Or 273, 647 P2d 897 (1982)</a>.</p>
+            <p>iv.A threat to use deadly physical force is not use of
+            deadly physical force and it is reversible error to instruct
+            the jury on the use of deadly physical force when such force
+            was only threatened. ''See <a
+            href="http://scholar.google.com/scholar_case?q=182+or+app+243&amp;hl=en&amp;as_sdt=4,38&amp;case=5993877929020876797&amp;scilh=0">State
+            v. Taylor,</a><a
+            href="http://scholar.google.com/scholar_case?q=182+or+app+243&amp;hl=en&amp;as_sdt=4,38&amp;case=5993877929020876797&amp;scilh=0">182
+            Or App 243, 48 P3d 182 (2002)</a>.</p>
+            <p><strong>2. Defense of Property</strong></p>
+            <p>A person may use non-deadly physical force upon another
+            to defend property or premises. The person using force must
+            reasonably believe it is necessary to prevent either the
+            commission of a theft, criminal mischief of property or to
+            prevent the commission of a trespass on premises. ORS
+            161.225–161.229. Deadly physical force in defense of
+            property or premises can only be used when the person
+            reasonably believes it is necessary to prevent arson or a
+            felony by force and violence. A person defending premises
+            has a duty to retreat before using deadly force if the
+            person can do so without endangering himself. A person is
+            not required to retreat if he is in his own dwelling or
+            place of business. <em>State v. Charles</em>,
+            <em>supra</em>.</p>
+            <p>In determining whether a person using physical force in
+            defense of property has a reasonable belief that the
+            property will be stolen, the court must look at the
+            reasonable belief of the person at the time he acted.
+            <em>State v. Lockwood</em>, <em>supra</em>.</p>
+            <p><strong>3. Raising the Defense</strong></p>
+            <p>The defendant may raise self-defense by either giving
+            written notice to the state before trial or by presenting
+            affirmative evidence through a defense witness in the
+            defendant’s case-in-chief. ORS 161.055(3). Once raised, the
+            state has the burden of disproving the defense beyond a
+            reasonable doubt. ORS 161.055(1). If the defense is not
+            raised, the state has no burden to disprove it and it will
+            not be considered by the jury. <a
+            href="http://scholar.google.com/scholar_case?q=keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">State
+            v. Keaton</a><a
+            href="http://scholar.google.com/scholar_case?q=keaton&amp;hl=en&amp;as_sdt=4,38&amp;case=13407315658875788659&amp;scilh=0">,
+            15 Or App 477 (1973)</a>. When raised by written notice, the
+            defense may be withdrawn from the jury’s consideration only
+            if there is not evidence in the record to support the
+            defense. <a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">State
+            v. Brown</a><a
+            href="http://scholar.google.com/scholar_case?q=brown+1988&amp;hl=en&amp;as_sdt=4,38&amp;case=12283835918214599169&amp;scilh=0">,
+            306 Or App 599 (1988)</a>.</p>
+            <p><strong>4. Evidentiary Issues</strong></p>
+            <p>Evidence of the victim’s character for violence may be
+            introduced by the defendant to support a claim of
+            self-defense. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+griffin&amp;hl=en&amp;as_sdt=4,38&amp;case=5269748161267917421&amp;scilh=0">State
+            v. Griffin</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+griffin&amp;hl=en&amp;as_sdt=4,38&amp;case=5269748161267917421&amp;scilh=0">,
+            19 Or App 822, 522 P2d 399 (1974)</a>.<em>See also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+bishop&amp;hl=en&amp;as_sdt=4,38&amp;case=13859641741001151338&amp;scilh=0">State
+            v. Bishop</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+bishop&amp;hl=en&amp;as_sdt=4,38&amp;case=13859641741001151338&amp;scilh=0">,
+            49 Or App 1023, 1032 P2d 1196 (1980)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lunow&amp;hl=en&amp;as_sdt=4,38&amp;case=16255597426951770134&amp;scilh=0">State
+            v. Lunow</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lunow&amp;hl=en&amp;as_sdt=4,38&amp;case=16255597426951770134&amp;scilh=0">,
+            131 Or App 429, 885 P2d 731 (1994)</a>. The prosecution may
+            rebut this evidence with proof of the victim’s character for
+            peacefulness.</em>See <em><a
+            href="http://www.oregonlaws.org/ors/40.170">OEC 404</a> and
+            <a href="http://www.oregonlaws.org/ors/40.175">405</a>.
+            Evidence of one’s character for violence can be testimony
+            about reputation or opinion testimony. When a witness has
+            testified about one’s reputation for peacefulness, that
+            witness can be impeached by the defendant through the
+            witness’ knowledge of specific instances of conduct of the
+            victim, including prior convictions. <a
+            href="http://scholar.google.com/scholar_case?q=44+or+app+387&amp;hl=en&amp;as_sdt=4,38&amp;case=6842994755267737971&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=44+or+app+387&amp;hl=en&amp;as_sdt=4,38&amp;case=6842994755267737971&amp;scilh=0">,
+            44 Or App 387, 605 P2d 1361 (1980)</a>. Reputation evidence
+            is admissible even when the victim’s reputation for violence
+            was unknown to the defendant.</em>State v.
+            Williams<em>,</em>supra.''</p>
+            <p>Under OEC 405(1), specific bad acts are not admissible
+            until cross-examination unless the character or trait is an
+            essential element of the defense, or is used for proof of
+            motive, opportunity, intent, preparation, plan, knowledge,
+            identity, or absence of mistake or accident. OEC 404(1); OEC
+            404(3). The state may introduce evidence of the victim’s
+            reputation for peacefulness. OEC 404(2) (b). However, it may
+            not show specific instances of conduct until
+            cross-examination unless such conduct is an essential
+            element of a charge or claim. OEC 405(1).</p>
+            <p><strong>5. Duty to Retreat</strong></p>
+            <p>Oregon does not have a “rule” regarding retreat. The duty
+            to retreat depends upon the threat posed and the facts of
+            each case. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">State
+            v. Charles</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=15242111827569021975&amp;scilh=0">,
+            293 Or App 273, 647 P2d 897 (1982)</a>. The rule is that
+            self-defense is founded upon necessity, and there is no duty
+            to retreat when the defendant is where he or she has a right
+            to be. For instance, one place where a defendant definitely
+            has a right to be is in his home.</p>
+            <p>While there is no duty to retreat, the danger justifying
+            self-defense must be imminent and there must be no other
+            means of avoiding combat.</p>
+            <p>Before using deadly physical force, a defendant must
+            retreat unless retreat would sacrifice the person’s
+            safety.</p>
+            <p><strong>6. Self-Defense Against Police
+            Officers</strong></p>
+            <p>When an officer uses unreasonable force to arrest a
+            person who is offering no resistance, that person is
+            entitled to defend himself. He is, also, entitled to a
+            self-defense jury instruction. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+castle&amp;hl=en&amp;as_sdt=4,38&amp;case=12031755872787686738&amp;scilh=0">State
+            v. Castle</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+castle&amp;hl=en&amp;as_sdt=4,38&amp;case=12031755872787686738&amp;scilh=0">,
+            48 Or App 15, 19, 616 P2d 510 (1980)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+burger&amp;hl=en&amp;as_sdt=4,38&amp;case=3613223737771039207&amp;scilh=0">State
+            v. Burger</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+burger&amp;hl=en&amp;as_sdt=4,38&amp;case=3613223737771039207&amp;scilh=0">,
+            55 Or App 712, 717–18, 639 P2d 706 (1982)</a>. <em>See</em>
+            <em>also</em> UCrJI 1227.</p>
+            <p>A person is not entitled to a jury instruction stating
+            that any person has a right to resist an arrest made with
+            excessive force, according to <a
+            href="http://scholar.google.com/scholar_case?q=state+v+wright&amp;hl=en&amp;as_sdt=4,38&amp;case=1260654571045814231&amp;scilh=0">State
+            v. Wright</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+wright&amp;hl=en&amp;as_sdt=4,38&amp;case=1260654571045814231&amp;scilh=0">,
+            310 Or 430, 799 P2d 642 (1990),</a> <em>overturning in part
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+crane&amp;hl=en&amp;as_sdt=4,38&amp;case=4042999469508718147&amp;scilh=0">State
+            v. Crane</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+crane&amp;hl=en&amp;as_sdt=4,38&amp;case=4042999469508718147&amp;scilh=0">,
+            46 Or App 547, 612 P2d 735 (1980)</a>. If a peace officer
+            uses excessive force against a citizen, the citizen has a
+            right to use physical force in self-defense, but he or she
+            does not have a right to use physical force in resisting the
+            arrest. The degree of force permissible, as in other
+            self-defense cases, is limited to the degree of force
+            reasonably necessary under the circumstances.</em>State v.
+            Wright<em>,</em>supra''.</p>
+            <p>Neither passive resistance nor flight is prohibited by
+            ORS 162.315. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+allison&amp;hl=en&amp;as_sdt=4,38&amp;case=868314369290975385&amp;scilh=0">State
+            v. Allison</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+allison&amp;hl=en&amp;as_sdt=4,38&amp;case=868314369290975385&amp;scilh=0">,
+            104 Or App 149, 799 P2d 676 (1990)</a>; <em>State v.
+            Crane</em>, <em>supra</em>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+hutchinson&amp;hl=en&amp;as_sdt=4,38&amp;case=10652782751437250190&amp;scilh=0">State
+            v. Hutchinson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+hutchinson&amp;hl=en&amp;as_sdt=4,38&amp;case=10652782751437250190&amp;scilh=0">,
+            94 Or App 441, 765 P2d 248 (1988)</a>.</p>
+            <p>A person can be found guilty of resisting arrest by
+            aiding and abetting another’s crime of resisting arrest. <a
+            href="http://scholar.google.com/scholar_case?q=93+or+app+142&amp;hl=en&amp;as_sdt=4,38&amp;case=17287004354878671978&amp;scilh=0">State
+            v. Hasan</a><a
+            href="http://scholar.google.com/scholar_case?q=93+or+app+142&amp;hl=en&amp;as_sdt=4,38&amp;case=17287004354878671978&amp;scilh=0">,
+            93 Or App 142, 760 P2d 1377 (1988)</a>.</p>
+            <p>The prohibition against resisting arrest is applicable to
+            the entire course of events during which an officer
+            effectuates and maintains custody over an arrestee for
+            purposes of charging the person with resisting arrest. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+bolden&amp;hl=en&amp;as_sdt=4,38&amp;case=10408329804507745695&amp;scilh=0">State
+            v. Bolden</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+bolden&amp;hl=en&amp;as_sdt=4,38&amp;case=10408329804507745695&amp;scilh=0">,
+            104 Or App 356, 801 P2d 863 (1990)</a>.</p>
+            <p><strong>7. Jury Instructions</strong></p>
+            <p>A defendant is entitled to have a self-defense
+            instruction presented to the jury if there is any evidence
+            to support it. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+dahrens&amp;hl=en&amp;as_sdt=4,38&amp;case=6908870880832052169&amp;scilh=0">State
+            v. Dahrens</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+dahrens&amp;hl=en&amp;as_sdt=4,38&amp;case=6908870880832052169&amp;scilh=0">192
+            Or App 283, 84 P3d 1122 (2004)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=65+Or+App+83+&amp;hl=en&amp;as_sdt=4,38&amp;case=4492228937653256201&amp;scilh=0">State
+            v. Davis,</a><a
+            href="http://scholar.google.com/scholar_case?q=65+Or+App+83+&amp;hl=en&amp;as_sdt=4,38&amp;case=4492228937653256201&amp;scilh=0">65
+            Or App 83, 670 P2d 192 (1983)</a>. <em>See also <a
+            href="http://scholar.google.com/scholar_case?q=state+v+burns&amp;hl=en&amp;as_sdt=4,38&amp;case=1874275370663395572&amp;scilh=0">State
+            v. Burns</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+burns&amp;hl=en&amp;as_sdt=4,38&amp;case=1874275370663395572&amp;scilh=0">,
+            15 Or App 552, 516 P2d 748 (1973)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=16144305656520724246&amp;scilh=0">State
+            v. Freeman</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+freeman&amp;hl=en&amp;as_sdt=4,38&amp;case=16144305656520724246&amp;scilh=0">,
+            109 Or App 472, 820 P2d 764 (1991)</a>. Additionally, a
+            defendant is entitled to an instruction on the state’s
+            burden to disprove the defense of self-defense beyond a
+            reasonable doubt. <a
+            href="http://scholar.google.com/scholar_case?q=mcmullen&amp;hl=en&amp;as_sdt=4,38&amp;case=12754435299856984373&amp;scilh=0">State
+            v. McMullen</a><a
+            href="http://scholar.google.com/scholar_case?q=mcmullen&amp;hl=en&amp;as_sdt=4,38&amp;case=12754435299856984373&amp;scilh=0">,
+            34 Or App 749, 579 P2d 879 (1978)</a>.</em> ''See UCrJI
+            1107–1114.</p>
+            <center>
+            <p><strong>Practice Aid</strong></p>
+            </center>
+            <center>
+            <p>Scott Sharp’s Self-Defense Quick Chart</p>
+            </center>
+            <p><strong>Statutes involving self-defense – </strong> <a
+            href="http://www.leg.state.or.us/ors/161.html">ORS 161.015-
+            161.219</a></p>
+            <p><strong>Notice must be given before trial or evidence
+            during defendant’s case-in-chief</strong> – ORS 161.055</p>
+            <p><strong>Limitations on self-defense –</strong> ORS
+            161.215 – Provocation, Initial Aggressor, Mutual Combat</p>
+            <p><strong>Self-Defense <em>Must</em>Be
+            <em>Intentional</em></strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=shumway+291&amp;hl=en&amp;as_sdt=4,38&amp;case=12498319768823710840&amp;scilh=0">State
+            v. Shumway</a>, <a
+            href="http://scholar.google.com/scholar_case?q=shumway+291&amp;hl=en&amp;as_sdt=4,38&amp;case=12498319768823710840&amp;scilh=0">291
+            Or 153, 156 (1981)</a> (Second shot was accidental)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=stalder+117&amp;hl=en&amp;as_sdt=4,38&amp;case=4272643674072606635&amp;scilh=0">State
+            v. Stalder</a><a
+            href="http://scholar.google.com/scholar_case?q=stalder+117&amp;hl=en&amp;as_sdt=4,38&amp;case=4272643674072606635&amp;scilh=0">,
+            117 Or App 289 (1992</a>) (Discharge of weapon by
+            accident)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=boyce+120&amp;hl=en&amp;as_sdt=4,38&amp;case=11428040662327452885&amp;scilh=0">State
+            v. Boyce</a><a
+            href="http://scholar.google.com/scholar_case?q=boyce+120&amp;hl=en&amp;as_sdt=4,38&amp;case=11428040662327452885&amp;scilh=0">,
+            120 Or App 299 (1993)</a> (Broken beer glass recklessly)</p>
+            <p><strong>Victim’s Prior Violence <em>Must</em>Be Known to
+            Defendant</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=wheeler+43&amp;hl=en&amp;as_sdt=4,38&amp;case=2418410376301422447&amp;scilh=0">State
+            v. Wheeler</a><a
+            href="http://scholar.google.com/scholar_case?q=wheeler+43&amp;hl=en&amp;as_sdt=4,38&amp;case=2418410376301422447&amp;scilh=0">,
+            43 Or App 875 (1979)</a></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=lunow+131&amp;hl=en&amp;as_sdt=4,38&amp;case=16255597426951770134&amp;scilh=0">State
+            v. Lunow</a><a
+            href="http://scholar.google.com/scholar_case?q=lunow+131&amp;hl=en&amp;as_sdt=4,38&amp;case=16255597426951770134&amp;scilh=0">,
+            131 Or App 429 (1994)</a></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=147+509&amp;hl=en&amp;as_sdt=4,38&amp;case=13379625241109611692&amp;scilh=0">State
+            v. Whitney-Biggs</a><a
+            href="http://scholar.google.com/scholar_case?q=147+509&amp;hl=en&amp;as_sdt=4,38&amp;case=13379625241109611692&amp;scilh=0">,
+            147 Or App 509 (1997)</a> (In Re Battered Woman
+            Syndrome)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=ryel&amp;hl=en&amp;as_sdt=4,38&amp;case=15698826203087507560&amp;scilh=0">State
+            v. Ryel</a><a
+            href="http://scholar.google.com/scholar_case?q=ryel&amp;hl=en&amp;as_sdt=4,38&amp;case=15698826203087507560&amp;scilh=0">,
+            182 Or App 423 (2002)</a></p>
+            <p><strong>Was There an Overt Act by the
+            Victim?</strong></p>
+            <p><strong>It’s not necessary to wait until the assault to
+            use self-defense</strong></p>
+            <p><em>Goodall v. State</em>, 1 Or 333 (1861)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=taylor+123&amp;hl=en&amp;as_sdt=4,38&amp;case=1539441759711884447&amp;scilh=0">State
+            v. Taylor</a><a
+            href="http://scholar.google.com/scholar_case?q=taylor+123&amp;hl=en&amp;as_sdt=4,38&amp;case=1539441759711884447&amp;scilh=0">,
+            123 Or App 343 (1993)</a> (Jury instruction should have been
+            given even where defendant struck first)</p>
+            <p><strong>Did Defendant Reasonably Fear Imminent Injury or
+            Death?</strong></p>
+            <p><a
+            href="https://apps.fastcase.com/Research/Pages/Document.aspx?LTID=aQON1zjbYgZdckaUueXSow8uoN2S8r5zThrTkCyE%2feSIVsyaEs1Sikix86j7j4LSDIQ79sk7FOesKzyUjkSI%2b4%2fwcZDE0AOwSwRdH5u98PnJgPK7KLo73USW8yAZa7QB&amp;ECF=State+v.+Gray%2c+43+Or.+446%2c+74+P.+927+%281904%29">State
+            v. Gray</a><a
+            href="https://apps.fastcase.com/Research/Pages/Document.aspx?LTID=aQON1zjbYgZdckaUueXSow8uoN2S8r5zThrTkCyE%2feSIVsyaEs1Sikix86j7j4LSDIQ79sk7FOesKzyUjkSI%2b4%2fwcZDE0AOwSwRdH5u98PnJgPK7KLo73USW8yAZa7QB&amp;ECF=State+v.+Gray%2c+43+Or.+446%2c+74+P.+927+%281904%29">,
+            43 Or 446 (1904)</a></p>
+            <p><a
+            href="https://apps.fastcase.com/Research/Pages/Document.aspx?LTID=aQON1zjbYgZdckaUueXSow8uoN2S8r5zThrTkCyE%2feSIVsyaEs1Sikix86j7j4LSDIQ79sk7FOesKzyUjkSI%2b4%2fwcZDE0AOwSwRdH5u98PnJgPK7KLo73USW8yAZa7QB&amp;ECF=State+v.+Rader%2c+94+Or.+432%2c+186+P.+79+%281919%29">State
+            v. Rader</a><a
+            href="https://apps.fastcase.com/Research/Pages/Document.aspx?LTID=aQON1zjbYgZdckaUueXSow8uoN2S8r5zThrTkCyE%2feSIVsyaEs1Sikix86j7j4LSDIQ79sk7FOesKzyUjkSI%2b4%2fwcZDE0AOwSwRdH5u98PnJgPK7KLo73USW8yAZa7QB&amp;ECF=State+v.+Rader%2c+94+Or.+432%2c+186+P.+79+%281919%29">,
+            94 Or 432 (1919)</a></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=burns+15&amp;hl=en&amp;as_sdt=4,38&amp;case=1874275370663395572&amp;scilh=0">State
+            v. Burns</a><a
+            href="http://scholar.google.com/scholar_case?q=burns+15&amp;hl=en&amp;as_sdt=4,38&amp;case=1874275370663395572&amp;scilh=0">,
+            15 Or App 552 (1973)</a> (The statutory phrases requiring
+            that there be a “felony involving the use or threatened
+            imminent use of physical force against a person,” “unlawful
+            deadly physical force,” or a “felony by force and violence”
+            are the functional equivalents of the case law’s requirement
+            of great bodily harm.)</p>
+            <p><strong>Was it Necessary to Use or Threaten to Use Force?
+            ORS 161.209</strong></p>
+            <p><strong>Was Level of Force Reasonable?</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=sandoval&amp;hl=en&amp;as_sdt=4,38&amp;case=7686916681686140395&amp;scilh=0">State
+            v. Sandoval</a><a
+            href="http://scholar.google.com/scholar_case?q=sandoval&amp;hl=en&amp;as_sdt=4,38&amp;case=7686916681686140395&amp;scilh=0">,
+            342 Or 506 (2007)</a> (There is no duty to retreat)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=lockwood+43&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">State
+            v. Lockwood</a><a
+            href="http://scholar.google.com/scholar_case?q=lockwood+43&amp;hl=en&amp;as_sdt=4,38&amp;case=18187312746589334858&amp;scilh=0">,
+            43 Or.App 639 (1979)</a> (Menacing is acceptable use of
+            physical force and therefore self-defense)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=davis+65&amp;hl=en&amp;as_sdt=4,38&amp;case=4492228937653256201&amp;scilh=0">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=davis+65&amp;hl=en&amp;as_sdt=4,38&amp;case=4492228937653256201&amp;scilh=0">,
+            65 Or App 83 (1983)</a> (Menacing can be self-defense)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=75+655&amp;hl=en&amp;as_sdt=4,38&amp;case=11522421601699732151&amp;scilh=0">State
+            v. DeLaura</a><a
+            href="http://scholar.google.com/scholar_case?q=75+655&amp;hl=en&amp;as_sdt=4,38&amp;case=11522421601699732151&amp;scilh=0">,
+            75 Or App 655 (1985)</a> (Disorderly conduct can be in
+            self-defense)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=haro&amp;hl=en&amp;as_sdt=4,38&amp;case=6872101957411898302&amp;scilh=0">State
+            v. Haro</a><a
+            href="http://scholar.google.com/scholar_case?q=haro&amp;hl=en&amp;as_sdt=4,38&amp;case=6872101957411898302&amp;scilh=0">,
+            117 Or App 147 (1993)</a> (The legislature has not created
+            an unlimited right to use deadly force against a
+            burglar)</p>
+            <p><strong>Self-Defense and Resisting Arrest</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=hall+36&amp;hl=en&amp;as_sdt=4,38&amp;case=10645684222205327350&amp;scilh=0">State
+            v. Hall</a><a
+            href="http://scholar.google.com/scholar_case?q=hall+36&amp;hl=en&amp;as_sdt=4,38&amp;case=10645684222205327350&amp;scilh=0">,
+            36 Or App 133 (1978)</a></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=castle+48&amp;hl=en&amp;as_sdt=4,38&amp;case=12031755872787686738&amp;scilh=0">State
+            v. Castle</a><a
+            href="http://scholar.google.com/scholar_case?q=castle+48&amp;hl=en&amp;as_sdt=4,38&amp;case=12031755872787686738&amp;scilh=0">,
+            48 Or App 15 (1980)</a></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=wright+310&amp;hl=en&amp;as_sdt=4,38&amp;case=1260654571045814231&amp;scilh=0">State
+            v. Wright</a><a
+            href="http://scholar.google.com/scholar_case?q=wright+310&amp;hl=en&amp;as_sdt=4,38&amp;case=1260654571045814231&amp;scilh=0">,
+            310 Or 430 (1990)</a> (If a peace officer uses excessive
+            force in making an arrest, the arrestee may use only such
+            physical force as is reasonably necessary under the
+            circumstances to defend himself or herself against the
+            excessive force being used against him or her)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=oliphant&amp;hl=en&amp;as_sdt=4,38&amp;case=8373420449361353646&amp;scilh=0">State
+            v. Oliphant</a><a
+            href="http://scholar.google.com/scholar_case?q=oliphant&amp;hl=en&amp;as_sdt=4,38&amp;case=8373420449361353646&amp;scilh=0">,
+            347 Or 175 (2009)</a> (Whether arresting officer used
+            unreasonable force on the person being arrested)</p>
+            <p><strong>Standard for the Jury Instruction – Subjective,
+            Reasonable Belief</strong></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=burns+15&amp;hl=en&amp;as_sdt=4,38&amp;case=1874275370663395572&amp;scilh=0">State
+            v. Burns</a><a
+            href="http://scholar.google.com/scholar_case?q=burns+15&amp;hl=en&amp;as_sdt=4,38&amp;case=1874275370663395572&amp;scilh=0">,
+            15 Or App 552 (1973)</a></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=bishop+49&amp;hl=en&amp;as_sdt=4,38&amp;case=13859641741001151338&amp;scilh=0">State
+            v. Bishop</a><a
+            href="http://scholar.google.com/scholar_case?q=bishop+49&amp;hl=en&amp;as_sdt=4,38&amp;case=13859641741001151338&amp;scilh=0">,
+            49 Or App 1023 (1980)</a> (Facts looked at in light most
+            favorable to Def)</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=freeman+109&amp;hl=en&amp;as_sdt=4,38&amp;case=16144305656520724246&amp;scilh=0">S</a><a
+            href="http://scholar.google.com/scholar_case?q=freeman+109&amp;hl=en&amp;as_sdt=4,38&amp;case=16144305656520724246&amp;scilh=0">tate
+            v. Freeman</a><a
+            href="http://scholar.google.com/scholar_case?q=freeman+109&amp;hl=en&amp;as_sdt=4,38&amp;case=16144305656520724246&amp;scilh=0">,
+            109 Or App 472 (1991)</a></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=taylor+123&amp;hl=en&amp;as_sdt=4,38&amp;case=1539441759711884447&amp;scilh=0">State
+            v. Taylor</a><a
+            href="http://scholar.google.com/scholar_case?q=taylor+123&amp;hl=en&amp;as_sdt=4,38&amp;case=1539441759711884447&amp;scilh=0">,
+            123 Or App 343 (1993)</a></p>
+            <p>For a more detailed analysis of self defense see <a
+            href="http://mpdtrainer.wordpress.com/defenses/self-defense/">Scott
+            Sharp’s article</a> on OCDLA’s Library of Defense under
+            “[#White_Belt:_Statutory_Authority Defenses].”</p>
+            </section>
+            </section>
+            <section id="v._constitutional_defenses" class="level1">
+            <h1><strong>V. Constitutional Defenses</strong></h1>
+            <section
+            id="a._free_speecharticle_i_section_8_of_the_oregon_constitution"
+            class="level2">
+            <h2><strong>A. Free Speech—Article I, Section 8, of the
+            Oregon Constitution</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stoneman&amp;hl=en&amp;as_sdt=4,38&amp;case=8853344363233470228&amp;scilh=0">State
+            v. Stoneman,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+stoneman&amp;hl=en&amp;as_sdt=4,38&amp;case=8853344363233470228&amp;scilh=0">323
+            Or 536, 920 P2d 535 (1996)</a> (child pornography statute
+            was constitutional).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=318+or+480&amp;hl=en&amp;as_sdt=4,38&amp;case=4155893842871801426&amp;scilh=0">City
+            of Eugene v. Miller,</a><a
+            href="http://scholar.google.com/scholar_case?q=318+or+480&amp;hl=en&amp;as_sdt=4,38&amp;case=4155893842871801426&amp;scilh=0">318
+            Or 480, 871 P2d 454 (1994)</a> (selling a joke book on
+            Eugene sidewalk was protected).</p>
+            <p>Collateral Constitutional Challenge to Exclusion Order
+            for criminal charge based on the Exclusion Order. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+riddell&amp;hl=en&amp;as_sdt=4,38&amp;case=15013987912129658184&amp;scilh=0">State
+            v. Riddell</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+riddell&amp;hl=en&amp;as_sdt=4,38&amp;case=15013987912129658184&amp;scilh=0">,
+            172 Or App 675, 21 P3d 128,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+riddell&amp;hl=en&amp;as_sdt=4,38&amp;case=15013987912129658184&amp;scilh=0">rev
+            den,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+riddell&amp;hl=en&amp;as_sdt=4,38&amp;case=15013987912129658184&amp;scilh=0">335
+            Or 269 (2001)</a> (reversible error for trial court to
+            refuse to allow defendant to raise constitutional challenge
+            to the validity of an exclusion order for public premises in
+            criminal trespass prosecution. This case involved the
+            infamous “statue man” in downtown Portland).</p>
+            </section>
+            <section
+            id="b._right_to_bear_armsarticle_i_section_27_of_the_oregon_constitution"
+            class="level2">
+            <h2><strong>B. Right to Bear Arms—Article I, Section 27, of
+            the Oregon Constitution</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+blocker&amp;hl=en&amp;as_sdt=4,38&amp;case=1879546269930443986&amp;scilh=0">State
+            v. Blocker,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+blocker&amp;hl=en&amp;as_sdt=4,38&amp;case=1879546269930443986&amp;scilh=0">291
+            Or 255, 630 P2d 824 (1981)</a> (billy clubs).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+kessler&amp;hl=en&amp;as_sdt=4,38&amp;case=16910265786683508012&amp;scilh=0">State
+            v. Kessler</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+kessler&amp;hl=en&amp;as_sdt=4,38&amp;case=16910265786683508012&amp;scilh=0">,
+            289 Or 255, 614 P2d 94 (1980)</a> (a discussion about the
+            right to bear arms under the Oregon Constitution).</p>
+            </section>
+            <section id="c._religion" class="level2">
+            <h2><strong>C. Religion</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+venet&amp;hl=en&amp;as_sdt=4,38&amp;case=1530675593479447738&amp;scilh=0">State
+            v. Venet,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+venet&amp;hl=en&amp;as_sdt=4,38&amp;case=1530675593479447738&amp;scilh=0">103
+            Or App 363, 797 P2d 1055 (1990)</a> (growing marijuana not
+            protected).</p>
+            </section>
+            <section
+            id="d._former_jeopardy_and_issue_preclusionarticle_i_section_12_of_the_oregon_constitution"
+            class="level2">
+            <h2><strong>D. Former Jeopardy and Issue Preclusion—Article
+            I, Section 12, of the Oregon Constitution</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+george&amp;hl=en&amp;as_sdt=4,38&amp;case=15517642629481270381&amp;scilh=0">State
+            v. George,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+george&amp;hl=en&amp;as_sdt=4,38&amp;case=15517642629481270381&amp;scilh=0">253
+            Or 458, 455 P2d 609 (1969)</a>.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">State
+            v. Rogers,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">313
+            Or 356, 836 P2d 1308 (1992)</a>.</p>
+            </section>
+            <section
+            id="e._vaguenessarticle_i_sections_20_and_21_of_the_oregon_constitution"
+            class="level2">
+            <h2><strong>E. Vagueness—Article I, Sections 20 and 21, of
+            the Oregon Constitution</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=134+or+app+204&amp;hl=en&amp;as_sdt=4,38&amp;case=15342874222386245551&amp;scilh=0">State
+            v. Norris-Romine/Finley,</a><a
+            href="http://scholar.google.com/scholar_case?q=134+or+app+204&amp;hl=en&amp;as_sdt=4,38&amp;case=15342874222386245551&amp;scilh=0">134
+            Or App 204, 894 P2d 1211 (1995)</a> (portion of
+            anti-stalking statute was unconstitutionally vague).</p>
+            </section>
+            <section id="f._preemption" class="level2">
+            <h2><strong>F. Preemption</strong></h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=portland+v+lodi&amp;hl=en&amp;as_sdt=4,38&amp;case=5186059172192744408&amp;scilh=0">City
+            of Portland v. Lodi,</a><a
+            href="http://scholar.google.com/scholar_case?q=portland+v+lodi&amp;hl=en&amp;as_sdt=4,38&amp;case=5186059172192744408&amp;scilh=0">94
+            Or App 735, 767 P2d 108 (1989)</a> (city ordinances cannot
+            conflict with or be incompatible with state statutes).</p>
+            </section>
+            </section>
+            <section id="vi._miscellaneous" class="level1">
+            <h1><strong>VI. Miscellaneous</strong></h1>
+            <p>Numerous defenses are codified in relation to specific
+            crimes. The following is not an exhaustive list.</p>
+            <p><code>1. Murder. Assisting suicide defense (not a defense to manslaughter). </code><a
+            href="http://www.leg.state.or.us/ors/163.html"><code>ORS 163.117</code></a><code>. </code><br />
+            <code>2.Coercion. Threatening reasonable criminal prosecution in order to coerce the victim to make good the wrong. ORS 163.285 (see </code><a
+            href="http://scholar.google.com/scholar_case?q=state+v+robertson&amp;hl=en&amp;as_sdt=4,38&amp;case=1751759006743190280&amp;scilh=0"><code>State v. Robertson</code></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+robertson&amp;hl=en&amp;as_sdt=4,38&amp;case=1751759006743190280&amp;scilh=0"><code>, 293 Or 402, 649 P2d 569 (1982)</code></a><code> (overbreadth problems with coercion statute). </code></p>
+            <p>3.Sex offenses. Statutory rape, sodomy defense where
+            defendant is less than three years older than victim. ORS
+            163.345 (only applicable when child is between 16 and 18).
+            4.Theft. Honest claim of right. <a
+            href="http://www.leg.state.or.us/ors/164.html">ORS
+            164.035(1)</a>.</p>
+            <p><code>5.Extortion. Threatening thief with criminal prosecution unless property returned. ORS 164.035(2). </code><br />
+            <code>6.Theft by receiving. Intent to restore to owner. ORS 164.035(3). </code></p>
+            <p>7.Theft of spouse’s property. If living together. ORS
+            164.035(4).</p>
+            <p><code>8.Bribery. Public servant coerced or extorted the bribe. </code><a
+            href="http://www.leg.state.or.us/ors/162.html"><code>ORS 162.035(1)</code></a><code>. </code></p>
+            <p>9.Perjury, false swearing. Retraction. ORS 162.105.
+            10.Escape. Illegal arrest. ORS 162.145(2).</p>
+            <p><code>11.Gambling records possession. No intent. </code><a
+            href="http://www.leg.state.or.us/ors/167.html"><code>ORS 167.142</code></a><code>. </code></p>
+            <p>12.Kidnapping. Relative taking victim under 16 to assume
+            control. ORS 163.225(2). VII.Resources/Bibliography</p>
+            <p><strong><em>Books:</em></strong></p>
+            <p>Alex Bassos, <em>Mental Health and Criminal Defense</em>
+            (OCDLA 2010).</p>
+            <p>Linda Freidman, ed., <em>Cultural Issues in Criminal
+            Defense</em> (Juris Publishing, Inc., 2007).</p>
+            <p>Gershman, Bennett, Trial Error and Misconduct, 1997.</p>
+            <p>Imwinklereid, Edward, Exculpatory Evidence, 1990.</p>
+            <p><strong><em>Annotation</em></strong>: “Accused’s Right,
+            Under Federal Constitutional Sixth Amendment, to Compulsory
+            Process for Obtaining Witnesses in Accused’s Favor—Supreme
+            Court Cases,” 98 L Ed2d 1074 (1990).</p>
+            <p><strong><em>Articles:</em></strong></p>
+            <p>Louis Akin, “Proving Self-Defense: Gunshot Wound Analysis
+            in Crime Scene Reconstruction,” <a
+            href="http://www.voiceforthedefenseonline.com/story/proving-self-defense-gunshot-wound-analysis-crime-scene-reconstruction">Voice
+            for the Defense Online, July, 2011</a>.</p>
+            <p><a href="http://www.nacdl.org/Champion.aspx?id=4710">Lisa
+            J. Steele, “Defending the Self-Defense Case,”</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=4710">The
+            Champion</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=4710">, March
+            2007</a>.</p>
+            <p><a
+            href="http://www.nacdl.org/Champion.aspx?id=1660&amp;terms=thomas+lundy%2c+instructing">Thomas
+            Lundy, “Instructing on the Objective Reasonable Person
+            Standard,”</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=1660&amp;terms=thomas+lundy%2c+instructing">The
+            Champion</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=1660&amp;terms=thomas+lundy%2c+instructing">,
+            April, 2009</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=1660&amp;terms=thomas+lundy%2c+instructing">.</a></p>
+            <p><a
+            href="http://www.nacdl.org/Champion.aspx?id=1092&amp;terms=vishny+defending">Deja
+            Vishny, “Defending Unrecorded False Confession Cases,</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=1092&amp;terms=vishny+defending">The
+            Champion,</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=1092&amp;terms=vishny+defending">December,
+            2007</a><a
+            href="http://www.nacdl.org/Champion.aspx?id=1092&amp;terms=vishny+defending">.</a></p>
+            <center>
+            <p>This chapter originally prepared for the 1993 edition
+            by</p>
+            </center>
+            <center>
+            <p>Leslie Nelson, Metropolitan Public Defenders, Inc.,
+            Portland.</p>
+            </center>
+            <center>
+            <p>Updating and editing for the 2000 edition by Janet
+            Connolly, Paul Newton, Steve Sherlag, and Patricia Sweeney,
+            Metropolitan Public Defenders, Inc., Portland.</p>
+            </center>
+            <center>
+            <p>Updating and editing for the 2007 edition by Martha
+            Spinhirne,</p>
+            </center>
+            <center>
+            <p>Metropolitan Public Defenders, Inc., Portland</p>
+            </center>
+            </section>
+    </body>
+</html>

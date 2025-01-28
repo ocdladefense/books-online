@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 12. Mistrial</strong></p>
+            <p><strong><em>By Pete Castleberry and Emily
+            Elison</em></strong></p>
+            <p>A mistrial is a judicial termination of a trial before a
+            verdict is reached, granted on the motion of either party or
+            on the judge’s own motion. Except under certain limited
+            circumstances discussed below, jeopardy is annulled when a
+            mistrial is granted, and the case may be retried. A mistrial
+            is a significant event for a defendant who may ultimately be
+            convicted. For many clients, it may be the next best thing
+            to an acquittal.</p>
+            <p>Because the most common result of a successful motion for
+            a mistrial is reprosecution, there are tactical
+            considerations in determining whether to make the motion.
+            Even if an event gives rise to a meritorious motion for a
+            mistrial, a client who is in custody may wish to have the
+            case resolved, or the case may be going well for the defense
+            due to a lack of preparation by the state or some other
+            problem. Moreover, the delay may benefit the state by
+            providing an opportunity to strengthen its case in light of
+            your opening statements, cross examinations, and other
+            evidence. Counsel should include the client in the
+            discussion of whether to make the motion or not. Because of
+            the need to make a timely objection and motion, the better
+            practice is to make the objection and motion, then ask the
+            court for an opportunity to discuss the options with the
+            client before the court rules on the motion. The motion can
+            be withdrawn if the client decides not to seek a
+            mistrial.</p>
+            <p>Often, your real hope is that the court will deny the
+            motion and inject error into the record. If the motion for a
+            mistrial is denied, the denial provides the basis for
+            appellate review and potential reversal of a client’s
+            conviction.</p>
+            <section
+            id="i._the_motion_itself_procedure_and_preservation"
+            class="level1">
+            <h1><strong>I. The Motion Itself: Procedure and
+            Preservation</strong></h1>
+            <p>Whether to grant a mistrial is a determination committed
+            to the sound discretion of the trial court because the trial
+            judge is in the best position “to assess and to rectify the
+            potential prejudice to the defendant.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+garner&amp;hl=en&amp;as_sdt=4,38&amp;case=9863626702759821818&amp;scilh=0">State
+            v. Garner</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+garner&amp;hl=en&amp;as_sdt=4,38&amp;case=9863626702759821818&amp;scilh=0">,
+            234 Or App 486, 228 P3d 710 (2010)</a> (citations omitted).
+            “In ruling on a motion for a mistrial, a trial court must
+            decide whether to grant the motion, to cure the effect of
+            inappropriate conduct or testimony by giving a proper
+            instruction instead, or to do nothing at all.” <a
+            href="http://scholar.google.com/scholar_case?q=evans+211+Or+App+162&amp;hl=en&amp;as_sdt=4,38&amp;case=5938872497072716453&amp;scilh=0">State
+            v. Evans</a><a
+            href="http://scholar.google.com/scholar_case?q=evans+211+Or+App+162&amp;hl=en&amp;as_sdt=4,38&amp;case=5938872497072716453&amp;scilh=0">,
+            211 Or App 162, 166, 154 P3d 166 (2007)</a>, <em>aff’d</em>,
+            344 Or 358, 182 P3d 175 (2008).</p>
+            <section id="a._objection_and_motion_timing" class="level2">
+            <h2><strong>A. Objection and Motion; Timing</strong></h2>
+            <p>If an event occurs in the trial that you believe is
+            unduly prejudicial to your client’s cause, you should first
+            object, stating the specific grounds for the objection, and
+            then move for a mistrial. The objection raises the issue and
+            preserves the error for appeal. The motion addresses the
+            remedy that you are proposing to the court. A failure to
+            object may waive the issue. <a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">State
+            v. Bowen</a><a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">,
+            340 Or 487, 135 P3d 272 (2006</a>). The contemporaneous
+            objection rule applies, so the objection and motion should
+            follow the event as closely as possible. <a
+            href="http://scholar.google.com/scholar_case?q=walton&amp;hl=en&amp;as_sdt=4,38&amp;case=12525491191298274071&amp;scilh=0">State
+            v. Walton</a><a
+            href="http://scholar.google.com/scholar_case?q=walton&amp;hl=en&amp;as_sdt=4,38&amp;case=12525491191298274071&amp;scilh=0">,
+            311 Or 223, 248, 809 P2d 81 (1991)</a> (“To preserve error,
+            a motion for a mistrial must be timely. It is timely if it
+            is made when the allegedly objectionable statements were
+            made”).</p>
+            <p>Defense counsel generally must move for a mistrial
+            immediately after the jury is exposed to the prejudicial
+            evidence or commentary. Requiring an immediate mistrial
+            motion allows the court to take prompt curative action if
+            the court believes it is warranted. <a
+            href="http://scholar.google.com/scholar_case?q=veatch&amp;hl=en&amp;as_sdt=4,38&amp;case=12689862859835569472&amp;scilh=0">State
+            v. Veatch</a><a
+            href="http://scholar.google.com/scholar_case?q=veatch&amp;hl=en&amp;as_sdt=4,38&amp;case=12689862859835569472&amp;scilh=0">,
+            223 Or App 444, 196 P3d 45 (2008)</a>. Thus, the best
+            practice requires defense counsel to object to the
+            prejudicial evidence or commentary and then immediately move
+            for a mistrial outside the presence of the jury. However,
+            the rule requiring an immediate mistrial motion is not
+            absolute.</p>
+            <p>In <em>Veatch</em>, the defendant moved for a mistrial
+            after a police officer testified about a phone call the
+            defendant made to his attorney regarding taking a breath
+            test. Pretrial rulings excluded evidence of the defendant’s
+            phone calls to his attorney. After the police officer
+            mentioned the phone call, defense counsel stated,
+            “Objection. I have a matter for the court.” The judge
+            sustained the objection but, instead of excusing the jury
+            and hearing defense counsel’s motion, immediately attempted
+            to give a curative instruction. After the police officer
+            finished testifying, the state rested, and the jury was
+            excused, defense counsel moved for a mistrial. The trial
+            court denied defendant’s motions for mistrial.</p>
+            <p>The Court of Appeals reversed, holding that when defense
+            counsel stated, “I have a matter for the court,” the court
+            understood that he intended to move for a mistrial. “Where
+            it is clear that the trial court understands that the
+            defendant intends to seek a mistrial, and it responds by
+            giving a curative instruction, the need for an immediate
+            mistrial motion is obviated.” <em>Veatch</em>, 223 Or App at
+            453–54. Although it is always best to make an immediate
+            objection and motion for mistrial, under <em>Veatch</em>,
+            counsel can take extra measures to preserve arguments for
+            appeal by explicitly informing the court that she intends to
+            move for a mistrial if certain pretrial evidentiary rulings
+            are violated.</p>
+            <p>Other cases reviewing the timeliness of mistrial motions
+            include:</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=cunningham&amp;hl=en&amp;as_sdt=4,38&amp;case=8755222855041760979&amp;scilh=0">State
+            v. Cunningham</a><a
+            href="http://scholar.google.com/scholar_case?q=cunningham&amp;hl=en&amp;as_sdt=4,38&amp;case=8755222855041760979&amp;scilh=0">,
+            197 Or App 264, 275 n 7, 105 P3d 929 (2005)</a>, “We assume,
+            for the sake of argument, that the mistrial motion was
+            timely despite the passage of a day, given that the court
+            adjourned immediately after excluding [the witness’s]
+            testimony and denying defendant’s oral mistrial motion and
+            that the written motion was filed the following
+            morning.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=dream&amp;hl=en&amp;as_sdt=4,38&amp;case=4870311915227606558&amp;scilh=0">State
+            v. Dream</a><a
+            href="http://scholar.google.com/scholar_case?q=dream&amp;hl=en&amp;as_sdt=4,38&amp;case=4870311915227606558&amp;scilh=0">,
+            202 Or App 245, 248, 121 P3d 699 (2005)</a>, <em>vacated for
+            reconsideration on other grounds</em>, 345 Or 315, 195 P3d
+            62 (2008), where the defendant did not argue until after
+            voir dire that the trial court needed to make findings of a
+            security risk to justify the use of restraints during voir
+            dire, his motion for mistrial was too late.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=hilton&amp;hl=en&amp;as_sdt=4,38&amp;case=16300765783472432739&amp;scilh=0">State
+            v. Hilton</a><a
+            href="http://scholar.google.com/scholar_case?q=hilton&amp;hl=en&amp;as_sdt=4,38&amp;case=16300765783472432739&amp;scilh=0">,
+            187 Or App 666, 69 P3d 779 (2003)</a>, finding a motion
+            untimely when, by the time defendant moved for mistrial
+            based on witness testimony, the direct examination and
+            cross-examination had finished, the court and counsel had
+            discussed two unrelated matters, and the court had called a
+            recess.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=cheney&amp;hl=en&amp;as_sdt=4,38&amp;case=16072689240089111947&amp;scilh=0">State
+            v. Cheney</a><a
+            href="http://scholar.google.com/scholar_case?q=cheney&amp;hl=en&amp;as_sdt=4,38&amp;case=16072689240089111947&amp;scilh=0">,
+            171 Or App 401, 16 P3d 1164 (2000)</a>, defendant did not
+            timely object to the prosecutor’s “vouching” when counsel
+            did not object immediately, but waited until after the end
+            of the rebuttal closing—ten transcript pages later—to move
+            for a mistrial.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=larson&amp;hl=en&amp;as_sdt=4,38&amp;case=833838673175699493&amp;scilh=0">State
+            v. Larson</a><a
+            href="http://scholar.google.com/scholar_case?q=larson&amp;hl=en&amp;as_sdt=4,38&amp;case=833838673175699493&amp;scilh=0">,
+            325 Or 15, 933 P2d 958 (1997)</a>, finding a motion timely
+            when the gap between the disputed comment and the
+            defendant’s motion encompassed less than two pages of the
+            trial transcript, there was no significant lapse of time, no
+            additional testimony, no recess, and no discussion of
+            another issue.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+williams&amp;hl=en&amp;as_sdt=4,38&amp;case=16393547798079908451&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+williams&amp;hl=en&amp;as_sdt=4,38&amp;case=16393547798079908451&amp;scilh=0">,
+            322 Or 620, 912 P2d 364 (1996)</a><em>,</em> finding a
+            motion untimely when defense counsel timely objected the
+            prosecutor’s rebuttal argument but did not move for a
+            mistrial until after the jury had been instructed.</p>
+            </section>
+            <section id="b._curative_instructions" class="level2">
+            <h2><strong>B. Curative Instructions</strong></h2>
+            <p>From the court’s perspective, the favored and less
+            drastic remedy after a prejudicial event is to strike it
+            from the record and instruct the jury in a way that “cures”
+            the harm. Therefore, to be successful in seeking a mistrial,
+            you must be prepared to demonstrate why a curative
+            instruction will not work. The better practice is to object
+            to any curative instruction that the court may wish to give
+            on the basis that the instruction will merely highlight the
+            issue to the jury and further impress it upon their memory.
+            <a
+            href="http://scholar.google.com/scholar_case?q=fiswick&amp;hl=en&amp;as_sdt=3,38&amp;case=18086768368779132840&amp;scilh=0">Fiswick
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=fiswick&amp;hl=en&amp;as_sdt=3,38&amp;case=18086768368779132840&amp;scilh=0">,
+            329 U.S. 211 (1946)</a>. Failure to object to the curative
+            instruction is not necessarily a waiver of the motion for
+            mistrial. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">State
+            v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">55
+            Or App 98, 101 n.1, 637 P2d 211 (1981)</a>; ''but cf. <a
+            href="http://scholar.google.com/scholar_case?q=evans+211+Or+App+162&amp;hl=en&amp;as_sdt=4,38&amp;case=5938872497072716453&amp;scilh=0">State
+            v. Evans</a><a
+            href="http://scholar.google.com/scholar_case?q=evans+211+Or+App+162&amp;hl=en&amp;as_sdt=4,38&amp;case=5938872497072716453&amp;scilh=0">,
+            211 Or App 162, 154 P3d 166 (2007)</a> (“[I]n evaluating
+            whether the trial court abused its discretion in denying
+            defendant’s mistrial motion, we take into account that, to
+            the extent that the trial court did not deliver a curative
+            instruction, it was because defendant elected not to request
+            one”).</p>
+            <p>A violation of a constitutional right may create a
+            “presumably harmful effect” that a curative instruction
+            cannot ameliorate. In contrast, reviewing courts have often
+            held that a violation of an admissibility principle can be
+            cured by instruction in lieu of granting a mistrial.
+            <em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">State
+            v. Bowen</a><a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">,
+            340 Or 487, 135 P3d 272 (2006</a>) (comparing the effect of
+            a prosecutor’s comment on defendant’s silence with the
+            effect of a prosecutor’s question regarding inadmissible
+            prior convictions).</p>
+            <p>After you have made a record including these steps, you
+            can participate in fashioning a curative instruction without
+            waiving the issue. You can augment the record by noting that
+            you do not waiver from your position that a curative
+            instruction will not work, but if the court insists on
+            denying the motion and giving a curative instruction, you
+            believe it should be in the form you feel best addresses the
+            problem.</p>
+            <p>If the trial court gives your suggested curative
+            instruction, you do run the risk that an appellate court
+            will believe that your instruction adequately cured the
+            problem. If the court gives a different instruction, then it
+            is possible that an appellate court will find the trial
+            court should have given your instruction. Accordingly, if
+            the reviewing court believes the trial court’s instruction
+            was inadequate, it can reverse the conviction because the
+            court refused yours, <em>or</em>it can agree that no
+            curative instruction could have cured the problem and
+            reverse the conviction on that basis.</p>
+            <p>In some cases, the prejudice to the defendant created by
+            an incident is so severe that a curative instruction is
+            insufficient, and a mistrial is the only legally acceptable
+            alternative. <em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=jones&amp;hl=en&amp;as_sdt=4,38&amp;case=13794983284695372728&amp;scilh=0">State
+            v. Jones</a><a
+            href="http://scholar.google.com/scholar_case?q=jones&amp;hl=en&amp;as_sdt=4,38&amp;case=13794983284695372728&amp;scilh=0">,
+            279 Or 55, 566 P2d 867 (1977)</a> (prosecutor in defendant’s
+            trial for rape repeatedly suggested to the jury that the
+            defendant had committed multiple rapes before, although the
+            prosecutor knew that there was no proof of any prior rape
+            convictions); <a
+            href="http://scholar.google.com/scholar_case?q=white&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">State
+            v. White</a><a
+            href="http://scholar.google.com/scholar_case?q=white&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">,
+            303 Or 333, 736 P2d 552 (1987)</a> (prosecutor remarked
+            during opening statements that the defendant refused to
+            testify at a co-defendant’s trial); <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson&amp;hl=en&amp;as_sdt=4,227&amp;case=12016112786431522430&amp;scilh=0">State
+            v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson&amp;hl=en&amp;as_sdt=4,227&amp;case=12016112786431522430&amp;scilh=0">,
+            199 Or App 305, 111 P3d 784 (2005)</a> (admission of
+            non-testifying co-defendant’s redacted confession required a
+            mistrial despite a limiting instruction, because the
+            redacted confession plainly implicated the defendant).</p>
+            </section>
+            <section id="c._complete_and_protect_the_record"
+            class="level2">
+            <h2><strong>C. Complete and Protect the Record</strong></h2>
+            <p>State the grounds for the motion clearly, citing
+            applicable statutes, state and federal constitutional
+            provisions, and relevant case law. If there are physical
+            reactions or events that have occurred that may not show in
+            a recording or be part of the court reporter’s notes, it is
+            important to take the time to describe those features of the
+            problem into the record while making your motion. As the
+            trial court listens to you describe the event into the
+            record, she is also aware that an appellate court may
+            someday read your same words. This increases your chance of
+            being successful in gaining the mistrial if you do it well.
+            Finally, the better practice is to renew the motion at the
+            close of the state’s case and the close of all evidence. No
+            Oregon cases require this, but other jurisdictions do.</p>
+            </section>
+            </section>
+            <section id="ii._possible_grounds_for_the_motion"
+            class="level1">
+            <h1><strong>II. Possible Grounds for the
+            Motion</strong></h1>
+            <p>Keep in mind that the state has no appeal from an order
+            granting a mistrial, and so the cases that reach the
+            appellate court are a review of a denial of the motion. Thus
+            there is no easy way to catalogue successful trial-level
+            motions. However, even cases where the reviewing court
+            affirmed the trial court’s denial of the motion help
+            illustrate when the motion is appropriate. <a
+            href="http://www.oregonlaws.org/ors/131.525">ORS 131.525</a>
+            provides a partial list of potential grounds for mistrial.
+            This statute outlines the circumstances when a subsequent
+            prosecution is not barred after “the previous prosecution
+            was properly terminated. . . .” Under <a
+            href="http://www.oregonlaws.org/ors/131.525">ORS
+            131.525(1)(b),</a> a trial court properly terminates a
+            prosecution under all of the following circumstances:</p>
+            <p>(A) It is physically impossible to proceed with the trial
+            in conformity with law; or</p>
+            <p>(B) There is a legal defect in the proceeding that would
+            make any judgment entered upon a verdict reversible as a
+            matter of law; or</p>
+            <p>(C) Prejudicial conduct, in or outside the courtroom,
+            makes it impossible to proceed with the trial without
+            injustice to either the defendant or the state; or</p>
+            <p>(D) The jury is unable to agree upon a verdict; or</p>
+            <p>(E) False statements of a juror on voir dire prevent a
+            fair trial.</p>
+            <p>Under each of these circumstances, the statute operates
+            to “annul” the jeopardy that attached when the court
+            empanelled the jury. ''See <a
+            href="http://scholar.google.com/scholar_case?q=o%27donnell&amp;hl=en&amp;as_sdt=4,38&amp;case=15240654071253038910&amp;scilh=0">State
+            v. O’Donnel</a><a
+            href="http://scholar.google.com/scholar_case?q=o%27donnell&amp;hl=en&amp;as_sdt=4,38&amp;case=15240654071253038910&amp;scilh=0">,
+            192 Or App 234, 85 P3d 323 (2004)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=bannister&amp;hl=en&amp;as_sdt=4,38&amp;case=5513766743412441975&amp;scilh=0">State
+            v. Bannister</a><a
+            href="http://scholar.google.com/scholar_case?q=bannister&amp;hl=en&amp;as_sdt=4,38&amp;case=5513766743412441975&amp;scilh=0">,
+            118 Or App 252, 846 P2d 1189 (1993)</a>.</p>
+            <p>Therefore, a mistrial proper under ORS 131.525(1)(b) does
+            not bar subsequent prosecution. Events that trigger
+            subsections (C) and (E) may also constitute violations of
+            the state and federal constitutions, such as the Article I,
+            section 11, protection against self-incrimination or the
+            Confrontation Clause of the Sixth Amendment. Thus when
+            moving for a mistrial, counsel should refer directly to ORS
+            131.525(1)(b), in addition to other applicable statutes and
+            constitutional provisions.</p>
+            <section id="a._prosecutorial_misconduct" class="level2">
+            <h2><strong>A. Prosecutorial Misconduct</strong></h2>
+            <p>One consideration in a mistrial motion based on
+            prosecutorial misconduct is whether the misconduct was
+            deliberate or inadvertent. For example, both<em><a
+            href="http://scholar.google.com/scholar_case?q=jones&amp;hl=en&amp;as_sdt=4,38&amp;case=13794983284695372728&amp;scilh=0">State
+            v. Jones</a><a
+            href="http://scholar.google.com/scholar_case?q=jones&amp;hl=en&amp;as_sdt=4,38&amp;case=13794983284695372728&amp;scilh=0">,
+            279 Or 55, 566 P2d 867 (1977)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=white&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">State
+            v. White</a><a
+            href="http://scholar.google.com/scholar_case?q=white&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">,
+            303 Or 333, 736 P2d 552 (1987)</a>, involved deliberate
+            prosecutorial misconduct, which produced “presumably harmful
+            effect[s]” that required more than a simple instruction to
+            ignore the evidence. In</em>Jones<em>, the prosecutor in
+            defendant’s trial for rape repeatedly suggested to the jury
+            that the defendant had committed multiple rapes before,
+            although the prosecutor knew that there was no proof of any
+            prior rape convictions. In</em>White'', the prosecutor
+            “deliberately chose to offend the rules” by specifically
+            drawing to the jury’s attention that the defendant had been
+            called to testify in an earlier trial but had refused. In
+            those circumstances, the court held that a curative
+            instruction was insufficient and a mistrial was
+            required.</p>
+            <p>In contrast, a prosecutor’s non-deliberate conduct may
+            not produce the sort of prejudice that cannot be cured by an
+            appropriate instruction. <em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">State
+            v. Bowen</a><a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">,
+            340 Or 487, 135 P3d 272 (2006</a>); <a
+            href="http://scholar.google.com/scholar_case?q=voits&amp;hl=en&amp;as_sdt=4,38&amp;case=5759616871630775864&amp;scilh=0">State
+            v. Voits</a><a
+            href="http://scholar.google.com/scholar_case?q=voits&amp;hl=en&amp;as_sdt=4,38&amp;case=5759616871630775864&amp;scilh=0">,
+            186 Or App 643, 64 P3d 1156 (2003)</a>.<em></em>Nonetheless,
+            timely objection is particularly important, as “it is not
+            clear whether an Oregon judge is ever required to grant a
+            mistrial <em>sua sponte</em>based on improper argument.” <a
+            href="http://scholar.google.com/scholar_case?q=cheney&amp;hl=en&amp;as_sdt=4,38&amp;case=16072689240089111947&amp;scilh=0">State
+            v. Cheney</a><a
+            href="http://scholar.google.com/scholar_case?q=cheney&amp;hl=en&amp;as_sdt=4,38&amp;case=16072689240089111947&amp;scilh=0">,
+            171 Or App 401, 16 P3d 1164 (2000)</a>. See <em>Cheney</em>
+            for a detailed discussion of <em>sua sponte</em> mistrials
+            after prosecutorial misconduct.</p>
+            <p>The timing of prosecutorial misconduct is also relevant.
+            “[O]pening statements pose less danger to a defendant’s
+            right to a fair trial than when inadmissible evidence is
+            placed before the jury during trial because ‘the jury will
+            ordinarily be able to limit its consideration to the
+            evidence introduced during the trial.’” <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+davis&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">State
+            v. Davis</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+davis&amp;hl=en&amp;as_sdt=4,38&amp;case=6766227726476099310&amp;scilh=0">,
+            345 Or 551, 201 P3d 185 (2008)</a> (quoting<em>Frazier v.
+            Cupp</em>, 394 U.S. 731 (1969)). Similarly, while
+            prosecutorial misconduct in closing is serious, misconduct
+            during rebuttal is particularly disfavored because the
+            defendant has no opportunity to respond.<em>See</em>
+            <em>Mathis v. United States</em>, 513 A.2d 1344, 1349 (D.C.
+            Cir. 1986).</p>
+            <p>Note that even if a prosecutor’s conduct was “improper,
+            tasteless, or inappropriate,” a trial court does not abuse
+            its discretion in denying a motion for mistrial unless the
+            conduct denied defendant a fair trial. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+smith&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0">State
+            v. Smith</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+smith&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+smith&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+smith&amp;hl=en&amp;as_sdt=4,38&amp;case=15100823496143044953&amp;scilh=0">310
+            Or 1, 24, 791 P2d 836 (1990)</a>; ''cf. <a
+            href="http://scholar.google.com/scholar_case?q=atkinson&amp;hl=en&amp;as_sdt=4,38&amp;case=3001237267809362951&amp;scilh=0">State
+            v. Atkinson,</a><a
+            href="http://scholar.google.com/scholar_case?q=atkinson&amp;hl=en&amp;as_sdt=4,38&amp;case=3001237267809362951&amp;scilh=0">28
+            Or App 909, 562 P2d 978 (1977)</a> (the purpose of a
+            mistrial is not to punish counsel).</p>
+            <p>[For more on prosecutorial misconduct, see the section in
+            Chapter 16 titled, “The Ethical and Legal Problems of
+            Prosecutorial Vouching.”]</p>
+            <p>1. Commenting on Defendant’s Silence Because a
+            prosecutor’s comment on defendant’s failure to testify is
+            always improper, “[i]t follows that, had the trial court
+            chosen to grant defendant’s motion for mistrial, that choice
+            would have been a permissible one.” <a
+            href="http://scholar.google.com/scholar_case?q=larson&amp;hl=en&amp;as_sdt=4,38&amp;case=833838673175699493&amp;scilh=0">State
+            v. Larson</a><a
+            href="http://scholar.google.com/scholar_case?q=larson&amp;hl=en&amp;as_sdt=4,38&amp;case=833838673175699493&amp;scilh=0">,
+            325 Or 15, 933 P2d 958 (1997)</a>. When a prosecutor makes
+            an improper reference to a defendant’s exercise of the right
+            to remain silent, “the trial court has a duty to allow a
+            timely motion for a mistrial or to cure the effect of the
+            improper comment by giving a proper instruction.” <a
+            href="http://scholar.google.com/scholar_case?q=alvord&amp;hl=en&amp;as_sdt=4,38&amp;case=2720935580051226116&amp;scilh=0">State
+            v. Alvord</a><a
+            href="http://scholar.google.com/scholar_case?q=alvord&amp;hl=en&amp;as_sdt=4,38&amp;case=2720935580051226116&amp;scilh=0">,
+            118 Or App 111, 846 P2d 432 (1993)</a>.</p>
+            <p>a. Mistrial properly denied</p>
+            <p>Trial court did not abuse its discretion in denying
+            motion for mistrial after prosecutor stated, “[Defendant]
+            can always get up and testify himself if he wants to
+            establish alibi.” The jury was not likely to have drawn
+            prejudicial inferences because the prosecutor made only one
+            reference to defendant’s ability to testify, the comment was
+            directed to the judge (although the jury was present), and
+            the prosecutor made the comment in frustration, in the
+            context of objecting to defendant’s repeated attempts to
+            introduce hearsay. <a
+            href="http://scholar.google.com/scholar_case?q=larson&amp;hl=en&amp;as_sdt=4,38&amp;case=833838673175699493&amp;scilh=0">State
+            v. Larson</a><a
+            href="http://scholar.google.com/scholar_case?q=larson&amp;hl=en&amp;as_sdt=4,38&amp;case=833838673175699493&amp;scilh=0">,
+            325 Or 15,</a><a
+            href="http://scholar.google.com/scholar_case?q=larson&amp;hl=en&amp;as_sdt=4,38&amp;case=833838673175699493&amp;scilh=0">933
+            P2d 958 (1997)</a>. <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=galloway&amp;hl=en&amp;as_sdt=4,38&amp;case=11928988296732678955&amp;scilh=0">State
+            v. Galloway</a><a
+            href="http://scholar.google.com/scholar_case?q=galloway&amp;hl=en&amp;as_sdt=4,38&amp;case=11928988296732678955&amp;scilh=0">,
+            202 Or App 613, 123 P3d 352 (2005)</a>, <em>vacated on other
+            grounds</em>, 345 Or 315 (2008) (Mistrial was properly
+            denied after prosecutor’s closing argument emphasized that
+            “in this trial you folks haven’t heard a single thing about
+            alibi.” The argument was not a comment on defendant’s
+            silence, but instead alerted the jury that the defense had
+            not presented any evidence regarding an alibi).</p>
+            <p>Trial court did not abuse its discretion in denying
+            motion for mistrial after the prosecutor commented on the
+            defendant’s silence despite opportunities to explain to the
+            police what had occurred. This comment appeared to have been
+            made inadvertently, and the focus of the prosecutor’s
+            argument, both immediately before and after the
+            objectionable comments, was to attack a defense alibi
+            witness’ credibility, and thus the comment was not likely to
+            have prejudiced the defendant. <a
+            href="http://scholar.google.com/scholar_case?q=farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">State
+            v. Farrar</a><a
+            href="http://scholar.google.com/scholar_case?q=farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">,
+            309 Or 132, 786 P2d 161 (1990)</a>.</p>
+            <p>Trial court properly denied mistrial after prosecutor
+            argued in closing that “it is clear that [defendant]
+            murdered [the victim] . . . even without [defendant] telling
+            us so.” Court found the prosecutor’s comment to have been
+            inadvertent and the risk of a prejudicial inference slight.
+            The defendant never requested a curative instruction, and
+            the trial judge’s decision not to give a curative
+            instruction was proper because it would highlight that
+            defendant did not testify. <a
+            href="http://scholar.google.com/scholar_case?q=madison&amp;hl=en&amp;as_sdt=4,38&amp;case=15879325539851104449&amp;scilh=0">State
+            v. Madison</a><a
+            href="http://scholar.google.com/scholar_case?q=madison&amp;hl=en&amp;as_sdt=4,38&amp;case=15879325539851104449&amp;scilh=0">,
+            93 Or App 182, 760 P2d 1384 (1988)</a>.</p>
+            <p>b. Mistrial improperly denied</p>
+            <p>Mistrial was required after the prosecutor explicitly
+            questioned defendant about why she had not told officer
+            certain information after her arrest and suggested to the
+            jury that a reasonable person would have spoken to the
+            officer. This conduct impermissibly and prejudicially
+            commented on defendant’s invocation of her rights. <a
+            href="http://scholar.google.com/scholar_case?q=ragland&amp;hl=en&amp;as_sdt=4,38&amp;case=2332323896620716891&amp;scilh=0">State
+            v. Ragland</a><a
+            href="http://scholar.google.com/scholar_case?q=ragland&amp;hl=en&amp;as_sdt=4,38&amp;case=2332323896620716891&amp;scilh=0">,
+            210 Or App 182, 149 P3d 1254 (2006)</a>; <em>see</em> ''also
+            <a
+            href="http://scholar.google.com/scholar_case?q=mullenburg&amp;hl=en&amp;as_sdt=4,38&amp;case=16474267560107978157&amp;scilh=0">State
+            v. Mullenburg</a><a
+            href="http://scholar.google.com/scholar_case?q=mullenburg&amp;hl=en&amp;as_sdt=4,38&amp;case=16474267560107978157&amp;scilh=0">,
+            112 Or App 518, 829 P2d 98 (1992)</a> (trial court
+            improperly denied mistrial motion after the prosecutor
+            commented on defendant’s silence when the arresting officer
+            interviewed the defendant).</p>
+            <p>Mistrial improperly denied after prosecutor,
+            inadvertently or not, sent a clear message to the jury that
+            defendant intended to retain an attorney and refused to
+            talk. Although defendant failed to request a curative
+            instruction, the presumption of harm was not overcome. <a
+            href="http://scholar.google.com/scholar_case?q=alvord&amp;hl=en&amp;as_sdt=4,38&amp;case=2720935580051226116&amp;scilh=0">State
+            v. Alvord</a><a
+            href="http://scholar.google.com/scholar_case?q=alvord&amp;hl=en&amp;as_sdt=4,38&amp;case=2720935580051226116&amp;scilh=0">,
+            118 Or App 111, 846 P2d 432 (1993)</a>.</p>
+            <p>Trial court improperly denied mistrial after prosecutor,
+            in opening statements, deliberately referenced defendant’s
+            refusal to testify at a co-defendant’s trial. The curative
+            instruction could not remedy the “presumably harmful effect”
+            of such prosecutorial misconduct. <a
+            href="http://scholar.google.com/scholar_case?q=white&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">State
+            v. White</a><a
+            href="http://scholar.google.com/scholar_case?q=white&amp;hl=en&amp;as_sdt=4,38&amp;case=12825072099794170389&amp;scilh=0">,
+            303 Or 333, 736 P2d 552 (1987)</a>.</p>
+            <p>Trial court abused its discretion in failing to give a
+            curative instruction after the prosecutor argued directly to
+            the jury that the defendant’s failure to contradict or deny
+            evidence of forgery was significant. Although the reference
+            was inadvertent, it “could not have gone unnoticed by a jury
+            which had waited in vain through two days of trial for the
+            defendant to take the stand so they could hear what he had
+            to say about the case.”'' <a
+            href="http://scholar.google.com/scholar_case?q=wederski&amp;hl=en&amp;as_sdt=4,38&amp;case=108768261463423050&amp;scilh=0">State
+            v. Wederski</a><a
+            href="http://scholar.google.com/scholar_case?q=wederski&amp;hl=en&amp;as_sdt=4,38&amp;case=108768261463423050&amp;scilh=0">,
+            230 Or 57, 368 P2d 393 (1967)</a>.</p>
+            <p>2. Commenting on Presumption of Innocence Trial court
+            erroneously denied a motion for mistrial based on
+            prosecutor’s comments, during closing arguments, on the
+            presumption of innocence. Prior to the motion for mistrial,
+            the court overruled multiple defense objections to the
+            prosecutor’s statements to the jury that the presumption of
+            innocence disappeared at various stages of the proceedings.
+            Although decisions on motions for mistrial are reviewed for
+            abuse of discretion, the underlying error here was one of
+            law in failing to recognize that the prosecutor’s argument
+            was improper. “Because the effect of those errors was to
+            deny defendant a fair trial, the court’s decision to deny
+            defendant’s motion for a mistrial did not fall within the
+            range of legally correct choices and did not produce a
+            permissible, legally correct outcome.” <a
+            href="http://scholar.google.com/scholar_case?q=worth&amp;hl=en&amp;as_sdt=4,38&amp;case=11560164652714323129&amp;scilh=0">State
+            v. Worth</a><a
+            href="http://scholar.google.com/scholar_case?q=worth&amp;hl=en&amp;as_sdt=4,38&amp;case=11560164652714323129&amp;scilh=0">,
+            231 Or App 69, 218 P3d 166 (2009)</a>.</p>
+            <p>3. Commenting on Character of Defendant, Witness or
+            Counsel When prosecutor implied to jury that defense counsel
+            had knowledge of facts outside of the evidence presented—the
+            validity of Intoxilyzer results—the curative instruction was
+            sufficient and denial of motion for mistrial proper. <a
+            href="http://scholar.google.com/scholar_case?q=schneider&amp;hl=en&amp;as_sdt=4,38&amp;case=12415967825139062594&amp;scilh=0">State
+            v. Schneider</a><a
+            href="http://scholar.google.com/scholar_case?q=schneider&amp;hl=en&amp;as_sdt=4,38&amp;case=12415967825139062594&amp;scilh=0">,
+            201 Or App 546, 120 P3d 16 (2005)</a>.</p>
+            <p>If the prosecutor had been making gestures indicating
+            disbelief, such as head-shaking, scoffing and laughing,
+            toward one of the jurors during defense witness’s testimony,
+            that conduct was not so prejudicial that the trial court’s
+            decision not to grant a mistrial denied defendant a fair
+            trial. <a
+            href="http://scholar.google.com/scholar_case?q=lotches&amp;hl=en&amp;as_sdt=4,38&amp;case=4515700401942467466&amp;scilh=0">State
+            v. Lotches</a><a
+            href="http://scholar.google.com/scholar_case?q=lotches&amp;hl=en&amp;as_sdt=4,38&amp;case=4515700401942467466&amp;scilh=0">,
+            331 Or 455, 17 P3d 1045 (2000)</a>.</p>
+            <p>Trial court did not abuse its discretion in denying
+            motion for a mistrial after it ordered the prosecutor to
+            refrain from referring to the defendant as an “animal” and
+            gave a curative instruction. <a
+            href="http://scholar.google.com/scholar_case?q=wilson&amp;hl=en&amp;as_sdt=4,38&amp;case=14763716155467979975&amp;scilh=0">State
+            v. Wilson</a><a
+            href="http://scholar.google.com/scholar_case?q=wilson&amp;hl=en&amp;as_sdt=4,38&amp;case=14763716155467979975&amp;scilh=0">,
+            69 Or App 569, 687 P2d 800 (1984)</a>.</p>
+            <p>Mistrial improperly denied due to the extensiveness and
+            highly prejudicial potential of the cross-examination, and
+            because the curative instruction was not given until the
+            witness’s answers “had almost a full day in which to settle
+            in the jurors’ minds.” <a
+            href="http://scholar.google.com/scholar_case?q=swensen&amp;hl=en&amp;as_sdt=4,38&amp;case=14122830656524840358&amp;scilh=0">State
+            v. Swensen,</a><a
+            href="http://scholar.google.com/scholar_case?q=swensen&amp;hl=en&amp;as_sdt=4,38&amp;case=14122830656524840358&amp;scilh=0">40
+            Or App 465, 595 P2d 518 (1979)</a> (involving
+            cross-examination on defendant’s character for
+            belligerence).</p>
+            <p>The trial court did not abuse its discretion in denying
+            motion for mistrial after prosecutor referred to defendant
+            as a “one-man patrolling army” during opening statements in
+            an assault trial. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+barker&amp;hl=en&amp;as_sdt=4,38&amp;case=1254257489228474668&amp;scilh=0">State
+            v. Barker,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+barker&amp;hl=en&amp;as_sdt=4,38&amp;case=1254257489228474668&amp;scilh=0">26
+            Or App 297, 552 P2d 565 (1976)</a>.</p>
+            <p>4. Other Bad Acts/Defendant’s Prior Record All “bad acts”
+            evidence should be viewed through the framework set out in
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johns&amp;hl=en&amp;as_sdt=4,38&amp;case=488257333952677274&amp;scilh=0">State
+            v. Johns</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johns&amp;hl=en&amp;as_sdt=4,38&amp;case=488257333952677274&amp;scilh=0">,
+            301 Or 535, 725 P2d 312 (1986)</a>. Counsel should be
+            familiar with the case and its progeny. <em>See, e.g.</em>,
+            <a
+            href="http://scholar.google.com/scholar_case?q=deloretto&amp;hl=en&amp;as_sdt=4,38&amp;case=13423194003555094102&amp;scilh=0">State
+            v. Deloretto</a><a
+            href="http://scholar.google.com/scholar_case?q=deloretto&amp;hl=en&amp;as_sdt=4,38&amp;case=13423194003555094102&amp;scilh=0">,
+            221 Or App 309, 189 P3d 1243 (2008)</a> (appending cases
+            where evidence of uncharged, allegedly sexual acts was
+            deemed admissible). Additionally, counsel should review
+            Kirkpatrick, <em>Oregon Evidence</em>(2002), Article IV, p.
+            33–46, and Article VI, p. 54–77, for a more comprehensive
+            discussion.</p>
+            <p>Trial court did not abuse its discretion in denying a
+            mistrial motion after the prosecutor elicited testimony that
+            the defendant, on trial for murder, had a prior conviction
+            for manslaughter. The trial court immediately gave a
+            curative instruction to the jury to disregard any
+            convictions that were not within the permissible
+            fifteen-year period. <a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">State
+            v. Bowen</a><a
+            href="http://scholar.google.com/scholar_case?q=bowen&amp;hl=en&amp;as_sdt=4,38&amp;case=10509492048339607258&amp;scilh=0">,
+            340 Or 487, 135 P3d 272 (2006</a>).</p>
+            <p>A curative instruction was sufficient to remedy prejudice
+            resulting from prosecutor’s passing reference, during
+            opening statements, to the defendant’s pretrial
+            incarceration. <a
+            href="http://scholar.google.com/scholar_case?q=voits&amp;hl=en&amp;as_sdt=4,38&amp;case=5759616871630775864&amp;scilh=0">State
+            v. Voits</a><a
+            href="http://scholar.google.com/scholar_case?q=voits&amp;hl=en&amp;as_sdt=4,38&amp;case=5759616871630775864&amp;scilh=0">,
+            186 Or App 643, 64 P3d 1156 (2003)</a>.</p>
+            <p>Mistrial properly denied after a detailed
+            cross-examination of defense character witness on
+            circumstances in defendant’s prior rape conviction. The
+            state presented overwhelming evidence of guilt, and the
+            court gave a curative instruction. <a
+            href="http://scholar.google.com/scholar_case?q=kendrick&amp;hl=en&amp;as_sdt=4,38&amp;case=12459798767477909911&amp;scilh=0">State
+            v. Kendrick</a><a
+            href="http://scholar.google.com/scholar_case?q=kendrick&amp;hl=en&amp;as_sdt=4,38&amp;case=12459798767477909911&amp;scilh=0">,
+            31 Or App 1195, 572 P2d 354 (1977)</a>.</p>
+            <p>Trial court improperly denied mistrial after<em></em>the
+            prosecutor’s impeachment of a state witness with her prior
+            statement that she “had heard he had done it so many times
+            before that he would go to the pen” in rape trial. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+jones&amp;hl=en&amp;as_sdt=4,38&amp;case=13794983284695372728&amp;scilh=0">State
+            v. Jones,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+jones&amp;hl=en&amp;as_sdt=4,38&amp;case=13794983284695372728&amp;scilh=0">279
+            Or 55, 566 P2d 867 (1977)</a>.</p>
+            <p>Trial court improperly denied mistrial motion after the
+            prosecutor mentioned past convictions beyond the scope of
+            defendant’s admission and not based on evidence in the
+            record. A curative instruction was insufficient to limit
+            prejudice, as the case against the defendant was
+            circumstantial, and the impact of the prosecutor’s remarks
+            was not likely to be minimal. <a
+            href="http://scholar.google.com/scholar_case?q=treit&amp;hl=en&amp;as_sdt=4,38&amp;case=2062495432467471143&amp;scilh=0">State
+            v. Treit,</a><a
+            href="http://scholar.google.com/scholar_case?q=treit&amp;hl=en&amp;as_sdt=4,38&amp;case=2062495432467471143&amp;scilh=0">29
+            Or App 461, 564 P2d 708 (1977)</a>.</p>
+            <p>5. Retaliation to Defense Tactics Trial court did not
+            abuse its discretion in denying mistrial motion after the
+            prosecutor asked a state witness about the defendant’s
+            ability to procure specific evidence, which the defense had
+            faulted the police for not gathering. Defendant argued that
+            the prosecutor’s question impermissibly shifted to defendant
+            the burden of presenting evidence of his own innocence. The
+            court reasoned that the prosecutor was entitled to rebut
+            defendant’s implication that the state had failed to gather
+            potentially exculpatory evidence, and the prosecutor’s
+            question directly rebutted that implication. <a
+            href="http://scholar.google.com/scholar_case?q=henderson+lincoln&amp;hl=en&amp;as_sdt=4,38&amp;case=15581970300528171099&amp;scilh=0">State
+            v. Henderson</a><a
+            href="http://scholar.google.com/scholar_case?q=henderson+lincoln&amp;hl=en&amp;as_sdt=4,38&amp;case=15581970300528171099&amp;scilh=0">,
+            242 Or App 357 (2011)</a> (''relying on <a
+            href="http://scholar.google.com/scholar_case?q=state+v+lincoln&amp;hl=en&amp;as_sdt=4,38&amp;case=11237031869181216528&amp;scilh=0">State
+            v. Lincoln</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+lincoln&amp;hl=en&amp;as_sdt=4,38&amp;case=11237031869181216528&amp;scilh=0">,
+            250 Or 426, 443 P2d 178 (1968)</a>).</p>
+            <p>Trial court properly denied mistrial motion when defense
+            counsel sought to create the impression that defendant would
+            have given the police exculpatory information if given the
+            opportunity. Thus, defense counsel put the state in the
+            position of having to challenge the implication, and the
+            prosecutor was permitted to challenge that impression by
+            pointing out that she did have an opportunity and did not
+            take it. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+clark&amp;hl=en&amp;as_sdt=4,38&amp;case=8931674040442741944&amp;scilh=0">State
+            v. Clark</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+clark&amp;hl=en&amp;as_sdt=4,38&amp;case=8931674040442741944&amp;scilh=0">,
+            233 Or App 553, 226 P3d 120 (2010)</a>.</p>
+            <p>Mistrial motion based on the prosecutor’s commenting on
+            the defendant’s invocation of the right to remain silent was
+            properly denied. Although comment by a prosecutor on a
+            defendant’s silence ordinarily is improper, the prosecutor
+            has the right “to reply to argument made by opposing
+            counsel, and, in doing so, statements may be made which
+            otherwise would be improper.” <a
+            href="http://scholar.google.com/scholar_case?q=guritz&amp;hl=en&amp;as_sdt=4,38&amp;case=1606577141443254943&amp;scilh=0">State
+            v. Guritz</a><a
+            href="http://scholar.google.com/scholar_case?q=guritz&amp;hl=en&amp;as_sdt=4,38&amp;case=1606577141443254943&amp;scilh=0">,
+            134 Or App 262, 894 P2d 1235 (1995)</a>.</p>
+            <p>Mistrial improperly denied after prosecutor responded to
+            defense counsel’s reference to one-sided grand-jury process
+            by stating, “90 percent plead guilty. . .70, 80 or 90
+            percent are convicted.” <a
+            href="http://scholar.google.com/scholar_case?q=flores&amp;hl=en&amp;as_sdt=4,38&amp;case=7476658415812100344&amp;scilh=0">State
+            v. Flores</a><a
+            href="http://scholar.google.com/scholar_case?q=flores&amp;hl=en&amp;as_sdt=4,38&amp;case=7476658415812100344&amp;scilh=0">,
+            31 Or App 187, 570 P2d 94 (1977)</a>.</p>
+            <p>6. Polygraph/Opinion on Credibility See Part II(B)(2),
+            <em>infra</em>.</p>
+            <p>7. Misstatement of Law Although a decision to grant or
+            deny a mistrial is reviewed for abuse of discretion, “the
+            court does not have discretion to deny a mistrial when a
+            prosecutor’s comment is a misstatement of the law, and that
+            misstatement has the effect of denying the defendant a fair
+            trial unless the court gives a sufficiently clear curative
+            instruction.” <a
+            href="http://scholar.google.com/scholar_case?q=bilsborrow&amp;hl=en&amp;as_sdt=4,38&amp;case=15253499888490603167&amp;scilh=0">State
+            v. Bilsborrow</a><a
+            href="http://scholar.google.com/scholar_case?q=bilsborrow&amp;hl=en&amp;as_sdt=4,38&amp;case=15253499888490603167&amp;scilh=0">,
+            230 Or App 413, 215 P3d 914 (2009)</a> (internal citations
+            omitted).</p>
+            <p>Trial court should have either given a curative
+            instruction or granted the mistrial motion after prosecutor
+            misstated the law and confused the jury. <em>State v.
+            Dyer</em>, 16 Or App 247, 418 P2d 184 (1974).</p>
+            <p>8. General Misconduct When prosecutor referred in closing
+            argument to domestic violence statistics and several local
+            crimes of domestic violence that were not committed by the
+            defendant, a new trial was required because the comments
+            were likely to incite or inflame the jury to decide the case
+            on an improper basis. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+bolt&amp;hl=en&amp;as_sdt=4,38&amp;case=3340291332660031747&amp;scilh=0">State
+            v. Bolt</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+bolt&amp;hl=en&amp;as_sdt=4,38&amp;case=3340291332660031747&amp;scilh=0">,
+            108 Or App 746, 817 P2d 1322 (1991)</a>.</p>
+            <p>Trial court did not abuse its discretion in denying
+            mistrial motion after the prosecutor called the victim’s
+            sister as a witness, who refused to answer all the state’s
+            questions and testified that she was scared of the
+            defendant. The witness only decided to refuse once she was
+            on the stand, and the defendant did not object to the
+            question or the response. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+carr&amp;hl=en&amp;as_sdt=4,38&amp;case=15810413661945302935&amp;scilh=0">State
+            v. Carr</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+carr&amp;hl=en&amp;as_sdt=4,38&amp;case=15810413661945302935&amp;scilh=0">,
+            91 Or App 673, 756 P2d 1263 (1988)</a>.</p>
+            <p>Motion for mistrial improperly denied after prosecutor’s
+            opening statement suggested to the jury that because a
+            co-defendant had been found guilty in a separate trial,
+            defendant should also be found guilty. Even though no
+            curative instruction was requested and the statement was
+            inadvertent, “[a]dvocating an improper basis for a
+            conviction cannot be anything but prejudicial.” <a
+            href="http://scholar.google.com/scholar_case?q=grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">State
+            v. Grenawalt</a><a
+            href="http://scholar.google.com/scholar_case?q=grenawalt&amp;hl=en&amp;as_sdt=4,38&amp;case=16674737745319104301&amp;scilh=0">,
+            86 Or App 96, 738 P2d 232 (1987)</a>.</p>
+            <p>At trial for first-degree burglary, the defendant
+            testified that he never entered the relevant building. In
+            closing, the prosecutor referred to the defendant’s request
+            for jury instructions on the included offenses of
+            second-degree burglary and criminal trespass and then
+            commented: “The defendant took the stand and under oath he
+            swore that he was not in this building. You will notice that
+            this element of entering and remaining is common to all
+            three crimes and I’d like to hear [defense counsel]
+            explain.” Despite a curative instruction, the prosecutor’s
+            comment was improper and prejudicial, and the trial court
+            improperly denied the motion for a mistrial. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">State
+            v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson+1981&amp;hl=en&amp;as_sdt=4,38&amp;case=6516851022079359010&amp;scilh=0">55
+            Or App 98, 637 P2d 211 (1981)</a><em>.</em></p>
+            </section>
+            <section id="b._witness_misconduct" class="level2">
+            <h2><strong>B. Witness Misconduct</strong></h2>
+            <p>Generally, the same conduct discussed above will provide
+            the basis for a motion for mistrial when engaged in by a
+            witness.</p>
+            <p>1. Other Bad Acts Mistrial motion properly denied after
+            an officer-witness inadvertently made a non-specific mention
+            of another case against defendant, and the defendant refused
+            a curative instruction. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+jordan&amp;hl=en&amp;as_sdt=4,38&amp;case=8167556205448924023&amp;scilh=0">State
+            v. Jordan</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+jordan&amp;hl=en&amp;as_sdt=4,38&amp;case=8167556205448924023&amp;scilh=0">,
+            79 Or App 682, 719 P2d 1327 (1986)</a>.</p>
+            <p>Mistrial motion properly denied after witness in a murder
+            trial referenced defendant’s unrelated threat to kill a
+            police officer. The trial court struck the testimony and
+            gave a curative instruction. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=12085696115342405655&amp;scilh=0">State
+            v. Charles</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+charles&amp;hl=en&amp;as_sdt=4,38&amp;case=12085696115342405655&amp;scilh=0">,
+            54 Or App 272, 634 P2d 814 (1981)</a>.</p>
+            <p>Trial court did not abuse its discretion in denying
+            mistrial motion after a rape/sodomy victim suffered an
+            epileptic seizure while testifying. The court had the jury
+            removed and gave a curative instruction. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hill&amp;hl=en&amp;as_sdt=4,38&amp;case=18024822656288670522&amp;scilh=0">State
+            v. Hill</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hill&amp;hl=en&amp;as_sdt=4,38&amp;case=18024822656288670522&amp;scilh=0">,
+            49 Or App 297, 619 P2d 671 (1980)</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+hill&amp;hl=en&amp;as_sdt=4,38&amp;case=18024822656288670522&amp;scilh=0">.</a></p>
+            <p>2. Commenting on Polygraph Trial court properly denied
+            motion for a mistrial when a witness’s reference to a
+            polygraph was inadvertent and ambiguous about whether the
+            results were favorable or disfavorable to the defendant, and
+            the court gave a curative instruction. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+terry&amp;hl=en&amp;as_sdt=4,38&amp;case=2845130564185435321&amp;scilh=0">State
+            v. Terry</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+terry&amp;hl=en&amp;as_sdt=4,38&amp;case=2845130564185435321&amp;scilh=0">,
+            333 Or 163, 37 P3d 157 (2001)</a>.</p>
+            <p>Mistrial motion properly denied when a witness’s
+            reference to a polygraph was isolated, made in passing, did
+            not disclose the results, and the state never argued that
+            the test impacted the witness’s credibility or any other
+            issue in the case. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">State
+            v. Farrar</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+farrar&amp;hl=en&amp;as_sdt=4,38&amp;case=1830243144643391299&amp;scilh=0">,
+            309 Or 132, 786 P2d 161 (1990)</a>.</p>
+            <p>Trial court properly denied motion for a mistrial after a
+            witness’s brief reference to a polygraph, because “reference
+            to the word ‘polygraph,’ without more, was so indefinite as
+            to render any prejudicial effect speculative at best.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+eby&amp;hl=en&amp;as_sdt=4,38&amp;case=1744773698988871942&amp;scilh=0">State
+            v. Eby</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+eby&amp;hl=en&amp;as_sdt=4,38&amp;case=1744773698988871942&amp;scilh=0">,
+            296 Or 63, 673 P2d 522 (1983)</a>.</p>
+            <p>3. Opinion on Credibility <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">State
+            v. Middleton</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=6931044034072923715&amp;scilh=0">294
+            Or 427, 657 P2d 1215 (1983)</a>; <em>State v.
+            Milbrandt</em>,<em></em>305 Or 621, 756 P2d 620 (1988); <a
+            href="http://scholar.google.com/scholar_case?q=isom&amp;hl=en&amp;as_sdt=4,38&amp;case=18069363392063733694&amp;scilh=0">State
+            v. Isom</a><a
+            href="http://scholar.google.com/scholar_case?q=isom&amp;hl=en&amp;as_sdt=4,38&amp;case=18069363392063733694&amp;scilh=0">,
+            306 Or 587, 761 P2d 524 (1988)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=mcquisten&amp;hl=en&amp;as_sdt=4,38&amp;case=7113031323240231675&amp;scilh=0">State
+            v. McQuisten</a><a
+            href="http://scholar.google.com/scholar_case?q=mcquisten&amp;hl=en&amp;as_sdt=4,38&amp;case=7113031323240231675&amp;scilh=0">,
+            97 Or App 517, 776 P2d 1304 (1989)</a> (no witness may
+            testify to an opinion on whether he believes a witness is
+            telling the truth).</p>
+            <p>If you get this issue in your trial, lead the trial court
+            through the progression of language in these cases.
+            <em>Middleton</em>expressly holds that<em></em>no witness
+            may give an opinion on whether he believes a witness is
+            telling the truth. <em>Isom</em> informed trial counsel that
+            this form of prosecution question will not be tolerated.
+            <em>McQuisten</em>instructed that the trial court has a
+            <em>sue sponte</em>duty to not allow such testimony. In
+            other words, the Oregon appellate courts are pissed off and
+            tired of seeing this recurring form of misconduct!</p>
+            </section>
+            <section id="c._judgecourthouse_staff_conduct"
+            class="level2">
+            <h2><strong>C. Judge/Courthouse Staff Conduct</strong></h2>
+            <p>A trial court’s untimely administration of the jury oath
+            does not necessarily require a mistrial where there is no
+            showing of prejudice to the defendant. However, if the
+            failure to swear the jury in a timely manner “results in
+            unfair prejudice or affects a substantial right of a party,
+            the trial court is without discretion to deny a motion for
+            mistrial.” <a
+            href="http://scholar.google.com/scholar_case?q=barone&amp;hl=en&amp;as_sdt=4,38&amp;case=817504197673326694&amp;scilh=0">State
+            v. Barone</a><a
+            href="http://scholar.google.com/scholar_case?q=barone&amp;hl=en&amp;as_sdt=4,38&amp;case=817504197673326694&amp;scilh=0">,
+            329 Or 210, 986 P2d 5 (1999)</a>.</p>
+            <p>When defendant remained restrained with handcuffs and a
+            stomach chain during trial, without substantial
+            justification, the trial judge had no discretion to deny the
+            motion for a mistrial. <a
+            href="http://scholar.google.com/scholar_case?q=glick&amp;hl=en&amp;as_sdt=4,38&amp;case=685710406254972356&amp;scilh=0">State
+            v. Glick</a><a
+            href="http://scholar.google.com/scholar_case?q=glick&amp;hl=en&amp;as_sdt=4,38&amp;case=685710406254972356&amp;scilh=0">,
+            73 Or App 79, 697 P2d 1002 (1985)</a>; <em>but cf.</em> <a
+            href="http://scholar.google.com/scholar_case?q=merrell&amp;hl=en&amp;as_sdt=4,38&amp;case=17043552943036504234&amp;scilh=0">State
+            v. Merrell</a><a
+            href="http://scholar.google.com/scholar_case?q=merrell&amp;hl=en&amp;as_sdt=4,38&amp;case=17043552943036504234&amp;scilh=0">,
+            170 Or App 400, 12 P3d 556 (2000)</a> (finding trial court
+            properly denied motion for a mistrial after concluding that
+            the defendant posed an immediate, serious risk of dangerous
+            or disruptive behavior and a serious risk of escaping the
+            courtroom).</p>
+            <p>After the trial judge repeatedly questioned defense
+            witnesses, defendant objected to “the type of questioning
+            but also to the suggestions and insinuations as we interpret
+            them that the Court has made. . . .” After the court refused
+            to give a curative instruction immediately, defendant moved
+            for a mistrial. Although it was plain error for the court to
+            ask the questions at issue, the court deemed it harmless,
+            and the denial of the mistrial motion was proper.'' <a
+            href="http://scholar.google.com/scholar_case?q=mains&amp;hl=en&amp;as_sdt=4,38&amp;case=591568204280161830&amp;scilh=0">State
+            v. Mains</a><a
+            href="http://scholar.google.com/scholar_case?q=mains&amp;hl=en&amp;as_sdt=4,38&amp;case=591568204280161830&amp;scilh=0">,
+            295 Or 640, 669 P2d 1112 (1983)</a>.</p>
+            <p>Trial court properly denied motion for a mistrial after
+            finding the defendant in contempt in the presence of the
+            jury. Defense counsel did not ask to excuse the jury even
+            though the defendant’s repeated refusal to answer and the
+            trial court’s warning foreshadowed defendant’s being held in
+            contempt. The trial judge allowed the defendant to explain
+            his reluctance to answer, did not berate the defendant, and
+            gave a curative instruction regarding the contempt.'' <a
+            href="http://scholar.google.com/scholar_case?q=middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=11464581298186593448&amp;scilh=0">State
+            v. Middleton</a><a
+            href="http://scholar.google.com/scholar_case?q=middleton&amp;hl=en&amp;as_sdt=4,38&amp;case=11464581298186593448&amp;scilh=0">,
+            46 Or App 381, 611 P2d 698 (1980)</a>.</p>
+            <p>Motion for a mistrial improperly denied after the trial
+            judge stated in the jury’s presence that if the defendant
+            “[knew] the English language, answer the questions in order
+            to avoid a lot of rigmarole here. You have been nine years
+            in this country and you are working elsewhere and if [sic]
+            you know the language.” There was a reasonable probability
+            that the jury interpreted this as personal disapproval of
+            the defendant by the judge, and “small misstatements become
+            big errors when uttered by the court.”'' <a
+            href="http://scholar.google.com/scholar_case?q=medina&amp;hl=en&amp;as_sdt=4,38&amp;case=1329142684484695899&amp;scilh=0">State
+            v. Medina</a><a
+            href="http://scholar.google.com/scholar_case?q=medina&amp;hl=en&amp;as_sdt=4,38&amp;case=1329142684484695899&amp;scilh=0">,
+            39 Or App 467, 592 P2d 1042 (1979)</a>.</p>
+            </section>
+            <section id="d._jury_conduct" class="level2">
+            <h2><strong>D. Jury Conduct</strong></h2>
+            <p>Appellate courts will defer to trial court determinations
+            of the extent of misconduct or prejudice to a defendant and
+            assessments of juror credibility. <em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=moore&amp;hl=en&amp;as_sdt=4,38&amp;case=18321998645822295872&amp;scilh=0">State
+            v. Moore</a><a
+            href="http://scholar.google.com/scholar_case?q=moore&amp;hl=en&amp;as_sdt=4,38&amp;case=18321998645822295872&amp;scilh=0">,
+            324 Or 396, 927 P2d 1073 (1996)</a> (deferring to the trial
+            court when, after communications between a juror and her
+            son, the court immediately questioned the juror and
+            satisfied itself that no misconduct had occurred. When the
+            issue arose again, the court emphasized that it had found
+            the juror credible and saw no need to question the juror
+            further).</p>
+            <p>No abuse of discretion to deny motion for mistrial after
+            a prospective juror explained that she had an outstanding
+            stalking order against the defendant. The court excused her
+            for cause but declined to grant a mistrial, although the
+            court offered to give a curative instruction, which defense
+            counsel ultimately did not request. The prospective juror’s
+            comment was not so inherently prejudicial that the trial
+            court had no choice but to grant a mistrial. <a
+            href="http://scholar.google.com/scholar_case?q=evans&amp;hl=en&amp;as_sdt=4,38&amp;case=17084873499251244263&amp;scilh=0">State
+            v. Evans</a><a
+            href="http://scholar.google.com/scholar_case?q=evans&amp;hl=en&amp;as_sdt=4,38&amp;case=17084873499251244263&amp;scilh=0">,
+            344 Or 358, 182 P3d 175 (2008)</a>.</p>
+            <p>Mistrial properly denied after one juror, during the
+            trial, repeatedly and regularly discussed defendant’s case
+            with her son, an inmate housed in a cell near defendant.
+            Immediately after learning of the communications, the trial
+            judge questioned the juror and satisfied itself that no
+            misconduct had occurred. <a
+            href="http://scholar.google.com/scholar_case?q=moore&amp;hl=en&amp;as_sdt=4,38&amp;case=18321998645822295872&amp;scilh=0">State
+            v. Moore</a><a
+            href="http://scholar.google.com/scholar_case?q=moore&amp;hl=en&amp;as_sdt=4,38&amp;case=18321998645822295872&amp;scilh=0">,
+            324 Or 396, 927 P2d 1073 (1996)</a>.</p>
+            <p>No abuse of discretion to deny motion for mistrial after
+            an alternate juror commented about evidence in the case to
+            other jurors and to court staff. Additionally, after viewing
+            the autopsy photographs of the victim, the alternate
+            commented to the court bailiff, out of the hearing of the
+            rest of the jury, that “nobody deserves that kind of
+            treatment.” The trial court assessed whether the comments
+            could have caused any possible prejudice to defendant and
+            concluded that no harm had been done. <a
+            href="http://scholar.google.com/scholar_case?q=pratt&amp;hl=en&amp;as_sdt=4,38&amp;case=10959810033604562275&amp;scilh=0">State
+            v. Pratt</a><a
+            href="http://scholar.google.com/scholar_case?q=pratt&amp;hl=en&amp;as_sdt=4,38&amp;case=10959810033604562275&amp;scilh=0">,
+            316 Or 561, 853 P2d 827 (1993)</a>.</p>
+            <p>No abuse of discretion to deny motion for mistrial when
+            the record supported the trial court’s finding, after the
+            questioning of a juror who had been contacted by the mother
+            of a victim, “that [the] juror . . . was not contaminated by
+            the contact and could still serve as an impartial juror.”
+            Victim’s mother had “thanked” juror when they encountered
+            each other in the bathroom. <a
+            href="http://scholar.google.com/scholar_case?q=rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">State
+            v. Rogers</a><a
+            href="http://scholar.google.com/scholar_case?q=rogers&amp;hl=en&amp;as_sdt=4,38&amp;case=6603793611212903656&amp;scilh=0">,
+            313 Or 356, 836 P2d 1308 (1992)</a>.</p>
+            <p>Mistrial improperly denied after three jurors attended a
+            drug-education seminar where the prosecutor and one of the
+            state’s witnesses, a deputy sheriff, spoke. “This was
+            tantamount to an impermissible ex parte contact between the
+            prosecution and the jury.” Additionally, one of the jurors
+            brought to the jury room a booklet and a book she had been
+            given at the seminar. “The cumulative effect was
+            impermissibly prejudicial by any reasonable standard.” <a
+            href="http://scholar.google.com/scholar_case?q=mapel&amp;hl=en&amp;as_sdt=4,38&amp;case=3036256839526787256&amp;scilh=0">State
+            v. Mapel</a><a
+            href="http://scholar.google.com/scholar_case?q=mapel&amp;hl=en&amp;as_sdt=4,38&amp;case=3036256839526787256&amp;scilh=0">,
+            54 Or App 795, 636 P2d 445 (1981)</a>.</p>
+            </section>
+            <section id="e._cumulative_error" class="level2">
+            <h2><strong>E. Cumulative Error</strong></h2>
+            <p>If more than one event occurs, include them all in the
+            next motion.</p>
+            </section>
+            <section id="f._other_possible_grounds" class="level2">
+            <h2><strong>F. Other Possible Grounds</strong></h2>
+            <p>The precipitating event can occur at any time from the
+            jury’s trip from the assembly room to the courtroom, voir
+            dire, opening statements, evidence, closing arguments, jury
+            deliberation, and taking the verdict.</p>
+            <p>Examples include events such as the death or illness of
+            the prosecutor, defense counsel, the judge, or a juror when
+            there is no alternate but a mistrial. <em>See,
+            e.g.</em>,<em><a
+            href="http://scholar.google.com/scholar_case?q=vega&amp;hl=en&amp;as_sdt=4,38&amp;case=16862274222748629632&amp;scilh=0">State
+            v. Vega</a><a
+            href="http://scholar.google.com/scholar_case?q=vega&amp;hl=en&amp;as_sdt=4,38&amp;case=16862274222748629632&amp;scilh=0">,
+            206 Or App 668, 139 P3d 260 (2006)</a>,</em>vacated on other
+            grounds'', 345 Or 316, 195 P3d 64 (2008) (actual prejudice
+            must be shown).</p>
+            <p>Other triggering events include court staff taking
+            exhibits that were not admitted into evidence to the jury
+            room during deliberations; jurors who know of the case or
+            know the defendant and make improper remarks during jury
+            selection; on-lookers in the courtroom or hall making
+            comments the jury hears; and jurors undertaking their own
+            investigation of the scene or the law. The list is
+            endless.</p>
+            <p>Denying defendant’s motion for a mistrial was beyond the
+            court’s discretion after a non-testifying co-defendant’s
+            redacted confession was admitted, in violation of
+            <em>Bruton</em>. The redacted confession plainly implicated
+            the defendant and emphasized the defendant’s existence. The
+            redactions, even after a precautionary instruction, were
+            insufficient to avoid a Confrontation Clause violation. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson&amp;hl=en&amp;as_sdt=4,227&amp;case=12016112786431522430&amp;scilh=0">State
+            v. Johnson</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+johnson&amp;hl=en&amp;as_sdt=4,227&amp;case=12016112786431522430&amp;scilh=0">,
+            199 Or App 305, 111 P3d 784 (2005)</a>.</p>
+            </section>
+            </section>
+            <section id="iii._reprosecution_after_a_mistrial"
+            class="level1">
+            <h1><strong>III. Reprosecution After A
+            Mistrial</strong></h1>
+            <p>A mistrial implicates a defendant’s weighty interest in
+            having criminal charges resolved at the first proceeding, an
+            animating principle of double jeopardy jurisprudence. The
+            double jeopardy protection in Article I, Section 12, of the
+            Oregon Constitution, “is, in principle, the same as that
+            embodied in the Fifth Amendment to the United States
+            Constitution.” <a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">State
+            v. Kimsey</a><a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">,
+            182 Or App 193, 47 P3d 916, 922 (2002)</a> (citing <a
+            href="http://scholar.google.com/scholar_case?q=kennedy&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">State
+            v. Kennedy</a><a
+            href="http://scholar.google.com/scholar_case?q=kennedy&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">,
+            295 Or 260, 272–76, 666 P2d 1316 (1983)</a>). In <a
+            href="http://scholar.google.com/scholar_case?q=arizona+v.+washington&amp;hl=en&amp;as_sdt=3,38&amp;case=9727821272116406942&amp;scilh=0">Arizona
+            v. Washington</a><a
+            href="http://scholar.google.com/scholar_case?q=arizona+v.+washington&amp;hl=en&amp;as_sdt=3,38&amp;case=9727821272116406942&amp;scilh=0">,
+            434 U.S. 497, 503–05 (1978)</a>, the Supreme Court explained
+            that:</p>
+            <p>[e]ven if the first trial is not completed, a second
+            prosecution may be grossly unfair. It increases the
+            financial and emotional burden on the accused, prolongs the
+            period in which he is stigmatized by an unresolved
+            accusation of wrongdoing, and may even enhance the risk that
+            an innocent defendant may be convicted.</p>
+            <p>Therefore, as a general rule, “the prosecutor is entitled
+            to one, and only one, opportunity to require an accused to
+            stand trial.” <em>Id.</em></p>
+            <p>The general double jeopardy rule is codified at <a
+            href="http://www.oregonlaws.org/ors/131.525">ORS
+            131.525</a>(1). Two broadly interpreted exceptions to the
+            general rule—consent of the defendant and “manifest
+            necessity”—are invoked far more often than the general rule
+            itself. Under the current state of the law, and despite the
+            general rule, reprosecution after a mistrial is only barred
+            in a narrowly construed category of cases.</p>
+            <p><strong>The basic rules can be summarized as
+            follows:</strong>If the court declares a mistrial over the
+            defendant’s objection, either <em>sua sponte</em>or on the
+            prosecutor’s motion, a subsequent prosecution is barred
+            unless (1) the “manifest necessity” standard was satisfied,
+            and (2) the trial was properly terminated under <a
+            href="http://www.leg.state.or.us/ors/153.html">ORS
+            153.534</a>.<em><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">State
+            v. Cole</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">,
+            286 Or 411, 595 P2d 466 (1979)</a>;</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+embry&amp;hl=en&amp;as_sdt=4,38&amp;case=14561952336612381062&amp;scilh=0">State
+            v. Embry</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+embry&amp;hl=en&amp;as_sdt=4,38&amp;case=14561952336612381062&amp;scilh=0">,
+            19 Or App 934, 530 P2d 99 (1974)</a>.</p>
+            <p>If the defendant moves for a mistrial or fails to object
+            to one, subject to one exception, the defendant is deemed to
+            have consented to the mistrial and is subject to retrial. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+garner&amp;hl=en&amp;as_sdt=4,38&amp;case=9863626702759821818&amp;scilh=0">State
+            v. Garner</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+garner&amp;hl=en&amp;as_sdt=4,38&amp;case=9863626702759821818&amp;scilh=0">,
+            234 Or App 486, 228 P3d 710 (2010)</a>. The one exception
+            arises where official misconduct prompts the defendant’s
+            successful mistrial motion. The misconduct must be so
+            prejudicial to the defendant that it cannot be cured by
+            means short of a mistrial, and the official knows that the
+            conduct is improper and prejudicial and either intends or is
+            indifferent to the resulting mistrial. <em>Id.</em></p>
+            <section id="a._pleading_former_jeopardy" class="level2">
+            <h2><strong>A. Pleading Former Jeopardy</strong></h2>
+            <p>The procedural mechanism for raising double jeopardy
+            issues is a motion to dismiss the accusatory instrument
+            pursuant to <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.470(1)</a>, which provides that “[t]he court shall
+            dismiss the accusatory instrument if, upon motion of the
+            defendant, it appears, as a matter of law, that a former
+            prosecution bars the prosecution for the offense charged.”
+            See'' <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcclendon&amp;hl=en&amp;as_sdt=4,38&amp;case=9005020220569128790&amp;scilh=0">State
+            v. McClendon</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcclendon&amp;hl=en&amp;as_sdt=4,38&amp;case=9005020220569128790&amp;scilh=0">,
+            204 Or App 459, 131 P3d 765 (2006)</a> (motion to dismiss on
+            former jeopardy grounds untimely when made for the first
+            time at trial) and <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+toste&amp;hl=en&amp;as_sdt=4,38&amp;case=3749625467951651162&amp;scilh=0">State
+            v. Toste</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+toste&amp;hl=en&amp;as_sdt=4,38&amp;case=3749625467951651162&amp;scilh=0">,
+            196 Or App 11, 100 P3d 738 (2004)</a> (mere citation to
+            state constitutional double jeopardy provision in motion to
+            dismiss on former jeopardy grounds insufficient to preserve
+            the issue for appeal) for discussions of timeliness and
+            preservation in pleading former jeopardy.</p>
+            <p>There is no interlocutory appeal from a trial court’s
+            denial of a defendant’s motion to dismiss on former jeopardy
+            grounds. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+salzmann&amp;hl=en&amp;as_sdt=4,38&amp;case=16430499380696535450&amp;scilh=0">State
+            v. Salzmann</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+salzmann&amp;hl=en&amp;as_sdt=4,38&amp;case=16430499380696535450&amp;scilh=0">,
+            119 Or App 217, 850 P2d 1122 (1992)</a>. However, a
+            petitioner’s claim that double jeopardy will arise as a
+            result of trial court’s denial of his motion to dismiss
+            constitutes sufficient injury to justify a request for
+            mandamus relief. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+wark&amp;hl=en&amp;as_sdt=4,38&amp;case=14391353497390887004&amp;scilh=0">State
+            ex rel. Wark v. Freerksen</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+wark&amp;hl=en&amp;as_sdt=4,38&amp;case=14391353497390887004&amp;scilh=0">,
+            84 Or App 90, 733 P2d 100 (1987)</a>.</p>
+            </section>
+            <section id="b._mistrials_over_defendants_objection"
+            class="level2">
+            <h2><strong>B. Mistrials Over Defendant’s
+            Objection</strong></h2>
+            <p>“Although both the Oregon and the United States
+            Constitutions purport to prohibit placing a criminal
+            defendant in jeopardy twice for the same offense, it is well
+            settled that neither bars a retrial if the state shows that
+            there was a ‘manifest necessity’ for terminating the
+            defendant’s first trial before the verdict.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+wark&amp;hl=en&amp;as_sdt=4,38&amp;case=14391353497390887004&amp;scilh=0">Freerksen</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+wark&amp;hl=en&amp;as_sdt=4,38&amp;case=14391353497390887004&amp;scilh=0">,
+            84 Or App 90, 733 P2d 100 (1987)</a>. Similarly, ORS
+            131.525(1)(b) provides that a previous prosecution does not
+            bar subsequent prosecution if the trial court finds that
+            terminating the prosecution is necessary under certain
+            compelling circumstances.</p>
+            <p>Therefore, a mistrial over the defendant’s objection will
+            not bar subsequent prosecution if two standards are met: the
+            constitutionally based standard of “manifest necessity” and
+            the statutory requirements for “necessity” under ORS
+            135.525(1)(b). Generally, “both the statutory and
+            constitutional standards are satisfied if the trial judge
+            properly concludes within the bounds of sound judicial
+            discretion that the ends of justice would not be served by
+            continuing the prosecution.” <em>Id.</em> However, the
+            statute provides a slightly more specific test for necessity
+            than does the case law articulating the constitutional
+            standard of “manifest necessity.”'' <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">State
+            v. Cole</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">,
+            286 Or 411, 595 P2d 466 (1979)</a>.</p>
+            <p>1. “Manifest Necessity” After a mistrial is declared
+            without the defendant’s consent, retrial will not be barred
+            if the state can show that there was a “manifest necessity”
+            for the termination of the trial before verdict. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcferron&amp;hl=en&amp;as_sdt=4,38&amp;case=7695190245248671120&amp;scilh=0">State
+            v. McFerron</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcferron&amp;hl=en&amp;as_sdt=4,38&amp;case=7695190245248671120&amp;scilh=0">,
+            52 Or App 325, 330, 628 P2d 440 (1981)</a> (citing
+            <em>Arizona v. Washington</em>,<em></em>434 U.S. 497 (1978);
+            <em>Illinois v. Summerville</em>, 410 U.S. 458, 93
+            (1975)).</p>
+            <p>Manifest necessity is one of those nebulous
+            constitutional concepts that “abjures the application of any
+            mechanical formula by which to judge the property of
+            declaring a mistrial in the varying and often unique
+            situations arising during the course of a criminal trial.”
+            <a
+            href="http://scholar.google.com/scholar_case?q=illinois+v+somerville&amp;hl=en&amp;as_sdt=3,38&amp;case=16836940899167701683&amp;scilh=0">Illinois
+            v. Somerville</a><a
+            href="http://scholar.google.com/scholar_case?q=illinois+v+somerville&amp;hl=en&amp;as_sdt=3,38&amp;case=16836940899167701683&amp;scilh=0">,
+            410 U.S. 58 (1973)</a>. However, the case law provides some
+            minimal guidance.</p>
+            <p>Manifest necessity exists when continuing the trial would
+            defeat “the ends of public justice.” <a
+            href="http://scholar.google.com/scholar_case?q=us+v+perez&amp;hl=en&amp;as_sdt=3,38&amp;case=7042846409698783954&amp;scilh=0">United
+            States v. Perez</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+perez&amp;hl=en&amp;as_sdt=3,38&amp;case=7042846409698783954&amp;scilh=0">,
+            22 U.S. (9 Wheat) 579 (1824)</a>. The classic example of
+            manifest necessity is the hopelessly deadlocked jury. “The
+            words ‘manifest necessity’ appropriately characterize the
+            magnitude of the prosecutor’s burden.” <a
+            href="http://scholar.google.com/scholar_case?q=arizona+v.+washington&amp;hl=en&amp;as_sdt=3,38&amp;case=9727821272116406942&amp;scilh=0">Arizona
+            v. Washington</a><a
+            href="http://scholar.google.com/scholar_case?q=arizona+v.+washington&amp;hl=en&amp;as_sdt=3,38&amp;case=9727821272116406942&amp;scilh=0">,
+            434 U.S. 497 (1978)</a>.</p>
+            <p>When determining whether manifest necessity for a
+            mistrial existed at the time it was declared, courts give
+            considerable weight to whether the trial judge gave
+            sufficient consideration to alternatives to a mistrial, such
+            as curative instructions. In <a
+            href="http://scholar.google.com/scholar_case?q=us+v+jorn&amp;hl=en&amp;as_sdt=3,38&amp;case=5593874123025499437&amp;scilh=0">United
+            States v. Jorn,</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+jorn&amp;hl=en&amp;as_sdt=3,38&amp;case=5593874123025499437&amp;scilh=0">400
+            U.S. 470 (1971)</a>, the Supreme Court declined to find
+            manifest necessity when the trial court granted a mistrial
+            to allow government witnesses to consult with lawyers about
+            the possibility of self-incrimination before testifying. The
+            Court emphasized that the trial judge failed to consider
+            viable alternatives.</p>
+            <p>In <em>Arizona</em>, the Court stopped short of requiring
+            trial judges to make explicit findings with respect to the
+            viability of potential alternatives to a mistrial but
+            stressed that the record must reflect consideration of those
+            alternatives. Thus, <em>Jorn</em>and
+            <em>Washington</em>fairly stand for the proposition that
+            where the record does not reflect any judicial consideration
+            of alternatives to a mistrial, the manifest necessity
+            standard is not satisfied and a subsequent prosecution is
+            barred under the Double Jeopardy Clause of the Fifth
+            Amendment.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=illinois+v+somerville&amp;hl=en&amp;as_sdt=3,38&amp;case=16836940899167701683&amp;scilh=0">Illinois
+            v. Somerville</a><a
+            href="http://scholar.google.com/scholar_case?q=illinois+v+somerville&amp;hl=en&amp;as_sdt=3,38&amp;case=16836940899167701683&amp;scilh=0">,
+            410 U.S. 58 (1973)</a>, the Supreme Court held that manifest
+            necessity is satisfied if the record shows that an impartial
+            verdict cannot be reached, or where an obvious procedural
+            error makes reversal on appeal a virtual certainty. In
+            <em>Somerville</em>, the trial court had granted a mistrial
+            on the prosecutor’s motion after the prosecutor discovered
+            the indictment was fatally defective. Contrast
+            <em>Somerville</em> with <a
+            href="http://scholar.google.com/scholar_case?q=downum&amp;hl=en&amp;as_sdt=3,38&amp;case=17362941891660837589&amp;scilh=0">Downum
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=downum&amp;hl=en&amp;as_sdt=3,38&amp;case=17362941891660837589&amp;scilh=0">,
+            372 U.S. 734 (1963)</a> (declining to find manifest
+            necessity where key prosecution witness failed to appear and
+            prosecutor knew in advance of trial that the witness had not
+            been found and subpoenaed). Consistent with <em>Downum</em>,
+            the <em>Arizona</em> Court held that when determining the
+            existence of manifest necessity, “the strictest scrutiny is
+            appropriate when the basis for the mistrial is the
+            unavailability of critical prosecution evidence.” 434 U.S.
+            497 (1978).</p>
+            <p>2. ORS 135.525(1)(b): Statutory Necessity ORS 135.525 was
+            originally drafted in an effort to make somewhat more
+            specific the test of “manifest necessity,” as set forth in
+            <em>United States v. Perez</em>, 22 U.S. (9 Wheat) 579
+            (1824), by stating five general reasons that justify
+            termination, including (1) physical necessity, (2) legal
+            necessity, (3) prejudicial conduct, (4) a hung jury, and (5)
+            false statements of a juror on voir dire. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">State
+            v. Cole</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">,
+            286 Or 411, 595 P2d 466 (1979)</a>. The constitutional
+            standard of “manifest necessity” and the statutory standard
+            concerning impossibility to proceed without justice require,
+            at least, that a trial not be terminated if any reasonable
+            alternative action is possible under the facts of each case.
+            <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+embry&amp;hl=en&amp;as_sdt=4,38&amp;case=14561952336612381062&amp;scilh=0">State
+            v. Embry</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+embry&amp;hl=en&amp;as_sdt=4,38&amp;case=14561952336612381062&amp;scilh=0">,
+            19 Or App 934, 530 P2d 99 (1974)</a> (finding a lack of
+            necessity where the prejudicial effect of certain witness
+            testimony could have been eliminated by a curative
+            instruction and thus barring reprosecution on double
+            jeopardy grounds). “A trial judge, then, is not to foreclose
+            the defendant’s option to go to the jury unless he
+            reasonably concludes that the ends of public justice cannot
+            be served by a continuation of the proceedings.”
+            <em>Id.</em></p>
+            <p>If a mistrial is justified under ORS 135.525(1)(b), the
+            court must still determine whether the federal
+            constitutional standard of manifest necessity is satisfied.
+            <em>Id</em>. Cases prior to <em>Cole</em>—specifically<em><a
+            href="http://scholar.google.com/scholar_case?q=misten&amp;hl=en&amp;as_sdt=4,38&amp;case=9761481892910924525&amp;scilh=0">State
+            v. Misten</a><a
+            href="http://scholar.google.com/scholar_case?q=misten&amp;hl=en&amp;as_sdt=4,38&amp;case=9761481892910924525&amp;scilh=0">,
+            26 Or App 681, 554 P2d 584 (1976)</a>,</em>
+            <em>and</em>Embry<em>—held that the statutory standards
+            under ORS 135.525 and manifest necessity were equivalent
+            standards, but</em>Cole<em>,</em> <em>if not expressly
+            overruling that proposition, calls into doubt that portion
+            of their holdings. This</em>potentially'' leaves the door
+            open for counsel to argue that although the statutory
+            necessity is satisfied, manifest necessity has not been
+            satisfied, and thus double jeopardy bars further
+            prosecution.</p>
+            <p>3. Retrial Permitted Courts have found the requisite
+            necessity and permitted retrial in the following
+            situations:</p>
+            <p>Defense counsel (our own Mr. John Henry Hingson, III)
+            declared in open court that “[T]he prosecution is hiding all
+            the facts from the jury . . . and I’m trying to bring out
+            the truth and nothing but the truth.”'' <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+wark&amp;hl=en&amp;as_sdt=4,38&amp;case=14391353497390887004&amp;scilh=0">State
+            ex rel. Wark v. Freerksen</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+wark&amp;hl=en&amp;as_sdt=4,38&amp;case=14391353497390887004&amp;scilh=0">,
+            84 Or App 90, 733 P2d 100 (1987)</a>.</p>
+            <p>A juror failed on voir dire to respond to a question
+            about his ability to be impartial, yet later stated to court
+            and counsel that he could not impartially consider the case,
+            and the juror was dismissed because of “false statement”
+            within the meaning of ORS 135.525. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcferron&amp;hl=en&amp;as_sdt=4,38&amp;case=7695190245248671120&amp;scilh=0">State
+            v. McFerron</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcferron&amp;hl=en&amp;as_sdt=4,38&amp;case=7695190245248671120&amp;scilh=0">,
+            52 Or App 325, 628 P2d 440 (1981)</a>.</p>
+            <p>The trial judge became severely ill on the first day of
+            trial and checked into a hospital. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">State
+            v. Cole</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+cole&amp;hl=en&amp;as_sdt=4,38&amp;case=4104518065281525074&amp;scilh=0">,
+            286 Or 411, 595 P2d 466 (1979)</a>.</p>
+            <p>Unavailability of state witnesses due to extraordinary
+            circumstance justified mistrial on basis of physical
+            impossibility of proceeding. <a
+            href="http://scholar.google.com/scholar_case?q=misten&amp;hl=en&amp;as_sdt=4,38&amp;case=9761481892910924525&amp;scilh=0">State
+            v. Misten</a><a
+            href="http://scholar.google.com/scholar_case?q=misten&amp;hl=en&amp;as_sdt=4,38&amp;case=9761481892910924525&amp;scilh=0">,
+            26 Or App 681, 554 P2d 584 (1976)</a>.</p>
+            <p>After the jury was sworn, the judge discovered that the
+            defendant had not entered a plea to the indictment. <a
+            href="http://scholar.google.com/scholar_case?q=lovato+v+new+mexico&amp;hl=en&amp;as_sdt=3,38&amp;case=14573558007460558214&amp;scilh=0">Lovato
+            v. New Mexico</a><a
+            href="http://scholar.google.com/scholar_case?q=lovato+v+new+mexico&amp;hl=en&amp;as_sdt=3,38&amp;case=14573558007460558214&amp;scilh=0">,
+            242 US 199 (1916)</a>.</p>
+            <p>The court discovered that a juror had served on the grand
+            jury that issued the indictment. <a
+            href="http://scholar.google.com/scholar_case?q=thompson+v+united+states&amp;hl=en&amp;as_sdt=3,38&amp;case=15898456546496829290&amp;scilh=0">Thompson
+            v. United States</a><a
+            href="http://scholar.google.com/scholar_case?q=thompson+v+united+states&amp;hl=en&amp;as_sdt=3,38&amp;case=15898456546496829290&amp;scilh=0">,
+            155 US 271 (1894)</a>.</p>
+            </section>
+            <section id="c._mistrials_on_defendants_motion"
+            class="level2">
+            <h2><strong>C. Mistrials on Defendant’s Motion</strong></h2>
+            <p>A defendant can waive his protection against double
+            jeopardy. <a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">State
+            v. Kimsey</a><a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">,
+            182 Or App 193, 47 P3d 916, (2002)</a>. Thus, when a
+            defendant moves for a mistrial or otherwise consents to have
+            the trial terminated, a subsequent trial on the same charges
+            ordinarily is not barred. <em>Id.</em> (citing <a
+            href="http://scholar.google.com/scholar_case?q=oregon+v.+kennedy&amp;hl=en&amp;as_sdt=3,38&amp;case=3596771654307423625&amp;scilh=0">Oregon
+            v. Kennedy</a><a
+            href="http://scholar.google.com/scholar_case?q=oregon+v.+kennedy&amp;hl=en&amp;as_sdt=3,38&amp;case=3596771654307423625&amp;scilh=0">,
+            456 U.S. 667, 672–73 (1982)</a>). When a defendant consents
+            to a mistrial, “the ‘manifest necessity’ standard has no
+            place in the application of the Double Jeopardy Clause.”
+            <em>Id.</em>at 672.</p>
+            <p>An exception to the rule allowing re-prosecution after a
+            defendant’s consent to a mistrial arises from certain
+            egregious forms of prosecutorial or judicial misconduct.
+            <em>Compare, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=rathbun&amp;hl=en&amp;as_sdt=4,38&amp;case=10546578978034226673&amp;scilh=0">State
+            v. Rathbun,</a><a
+            href="http://scholar.google.com/scholar_case?q=rathbun&amp;hl=en&amp;as_sdt=4,38&amp;case=10546578978034226673&amp;scilh=0">287
+            Or 421, 600 P2d 392 (1979)</a> (re-prosecution barred on
+            double jeopardy grounds following mistrial resulting from a
+            hung jury, where misconduct by a bailiff was assumed to be a
+            factor in hanging the jury) <em>with</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v+Williams+48+Or+App+319&amp;hl=en&amp;as_sdt=4,38&amp;case=481694075271495701&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+Williams+48+Or+App+319&amp;hl=en&amp;as_sdt=4,38&amp;case=481694075271495701&amp;scilh=0">,
+            48 Or App 319, 617 P2d 629 (1980)</a> (bailiff’s inadvertent
+            action in leaving jury room door open so that jurors saw
+            defendant in handcuffs did not bar retrial).</p>
+            <p>The state and federal analyses differ when determining
+            whether such misconduct bars re-prosecution.'' <a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">Kimsey</a><a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">,
+            supra</a> (citing <a
+            href="http://scholar.google.com/scholar_case?q=State+v+Kennedy&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">State
+            v. Kennedy</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+Kennedy&amp;hl=en&amp;as_sdt=4,38&amp;case=18139781197665756960&amp;scilh=0">,
+            295 Or 260, 666 P2d 1316 (1983)</a>) (concluding that the
+            objective to be served by the two clauses is the same, even
+            if the analyses adopted by Oregon and federal courts
+            differ).</p>
+            <p>1. State Analysis under Article I, Section 12, of the
+            Oregon Constitution In <em>Kennedy</em>, the Oregon Supreme
+            Court set forth the test for determining when prosecutorial
+            misconduct is sufficiently egregious to bar retrying a
+            criminal defendant under Article I, section 12. As
+            articulated by the Court, retrial is barred when (1) the
+            misconduct is so prejudicial that it cannot be cured by
+            means short of mistrial; (2) the prosecutor knew that the
+            conduct was improper and prejudicial; and (3) the prosecutor
+            either intended or was indifferent to the resulting mistrial
+            or reversal. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+garner&amp;hl=en&amp;as_sdt=4,38&amp;case=9863626702759821818&amp;scilh=0">State
+            v. Garner</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+garner&amp;hl=en&amp;as_sdt=4,38&amp;case=9863626702759821818&amp;scilh=0">,
+            234 Or App 486, 228 P3d 710, 723 (2010)</a> (construing
+            <em>Kennedy</em>).</p>
+            <p>“Negligent error, ‘gross’ or otherwise, is not enough,”
+            rather, “the standard requires some conscious choice of
+            prejudicial action before the [double jeopardy] guarantee
+            bars correction of the error by a new trial.” <a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">Kimsey</a><a
+            href="http://scholar.google.com/scholar_case?q=kimsey&amp;hl=en&amp;as_sdt=4,38&amp;case=8207678924875965314&amp;scilh=0">,
+            supra</a> (internal citations and quotations omitted). Thus,
+            prejudice sufficient to warrant a mistrial is not enough, in
+            and of itself, to trigger former jeopardy.<em>Id.</em></p>
+            <p>2. Federal Analysis under the Fifth Amendment The Fifth
+            Amendment test for determining whether official misconduct
+            will bar a subsequent trial is more demanding than the test
+            under Article I, section 12. <em>Kimsey</em> at 923. Like
+            the test under Article I, section 12, the Fifth Amendment
+            test “focuses on the official’s mental state in engaging in
+            the misconduct.” <em>Id.</em> However, “neither the
+            official’s knowledge that the conduct is improper and
+            prejudicial nor indifference to the resulting mistrial will
+            suffice.” <em>Id.</em> “Rather, the official must actually
+            intend the mistrial in the sense that the conduct in
+            question is “intended to ‘goad’ the defendant into moving
+            for a mistrial.” <em>Id.</em>(citing <a
+            href="http://scholar.google.com/scholar_case?q=oregon+v.+kennedy&amp;hl=en&amp;as_sdt=3,38&amp;case=3596771654307423625&amp;scilh=0">Oregon
+            v. Kennedy</a><a
+            href="http://scholar.google.com/scholar_case?q=oregon+v.+kennedy&amp;hl=en&amp;as_sdt=3,38&amp;case=3596771654307423625&amp;scilh=0">,
+            456 US at 676)</a>.</p>
+            </section>
+            <section
+            id="d._guidelines_for_litigating_a_motion_to_dismiss_based_on_official_misconduct"
+            class="level2">
+            <h2><strong>D. Guidelines for Litigating a Motion to Dismiss
+            Based on Official Misconduct</strong></h2>
+            <p>In opposing a defendant’s plea of former jeopardy based
+            on official misconduct leading to a mistrial, the prosecutor
+            may attempt to testify as to his intent or indifference with
+            respect to the mistrial. The OCDLA amicus curiae brief in
+            <em>Kennedy</em> cited <a
+            href="http://scholar.google.com/scholar_case?q=collins+v+State+1982&amp;hl=en&amp;as_sdt=2,38&amp;case=238737139259314973&amp;scilh=0">Collins
+            v. State</a><a
+            href="http://scholar.google.com/scholar_case?q=collins+v+State+1982&amp;hl=en&amp;as_sdt=2,38&amp;case=238737139259314973&amp;scilh=0">,
+            640 SW 2d 288, 291 (Tex. Crim. App. 1982)</a>, and
+            questioned whether the prosecutor, the trial judge, or
+            others may be called as a witness on the issue and
+            questioned while also testifying as to intent. Oppose
+            permitting the prosecutor to testify in the immediacy of the
+            situation and consider these guidelines:</p>
+            <p>1. Request a continuance. 2. Move for and subpoena the
+            entire file of the prosecutor, including work product. It is
+            necessary to determine if the prosecutor was aware in
+            advance of the possible prejudice caused by the conduct.
+            Such evidence may be in the file. See <a
+            href="http://scholar.google.com/scholar_case?q=gallup&amp;hl=en&amp;as_sdt=4,38&amp;case=12940006992778896376&amp;scilh=0">State
+            v. Gallup</a><a
+            href="http://scholar.google.com/scholar_case?q=gallup&amp;hl=en&amp;as_sdt=4,38&amp;case=12940006992778896376&amp;scilh=0">,
+            108 Or App 508, 816 P2d 669 (1991)</a> (district attorney’s
+            file was not work product and was discoverable where file
+            contained notes of interviews with witnesses and file
+            contained no opinions, theories, or conclusions). 3. Move
+            for disclosure of other mistrials occasioned by the
+            offending prosecutor under the <a
+            href="http://scholar.google.com/scholar_case?q=brady+v+maryland&amp;hl=en&amp;as_sdt=3,38&amp;case=9550433126269674519&amp;scilh=0">Brady
+            v. Maryland</a><a
+            href="http://scholar.google.com/scholar_case?q=brady+v+maryland&amp;hl=en&amp;as_sdt=3,38&amp;case=9550433126269674519&amp;scilh=0">,
+            373 U.S. 83 (1963)</a>, doctrine. 4. Move for and/or
+            subpoena any information in the District Attorney’s office
+            regarding any other case in which this prosecutor had a
+            mistrial declared. 5. Urge a pattern of apparently negligent
+            acts of the prosecutor to compel a conclusion of intent to
+            cause a mistrial. <a
+            href="http://scholar.google.com/scholar_case?q=us+v+banks&amp;hl=en&amp;as_sdt=3,38&amp;case=7267839244924476023&amp;scilh=0">United
+            States v. Banks</a><a
+            href="http://scholar.google.com/scholar_case?q=us+v+banks&amp;hl=en&amp;as_sdt=3,38&amp;case=7267839244924476023&amp;scilh=0">,
+            383 F.Supp. 389, 393 (BSD 1974)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=seydell&amp;hl=en&amp;as_sdt=4,38&amp;case=5100313852442573999&amp;scilh=0">State
+            v. Seydell</a><a
+            href="http://scholar.google.com/scholar_case?q=seydell&amp;hl=en&amp;as_sdt=4,38&amp;case=5100313852442573999&amp;scilh=0">,
+            252 Or 160, 446 P2d 678 (1968)</a>. 6. At the hearing,
+            introduce evidence of prior mistrials to prove intent.
+            Include findings of intent to cause a mistrial in other
+            cases, if available. <a
+            href="http://scholar.google.com/scholar_case?q=mcculler+v+gaudry&amp;hl=en&amp;as_sdt=4,38&amp;case=3672105742136648787&amp;scilh=0">McCuller
+            v. Gaudry</a><a
+            href="http://scholar.google.com/scholar_case?q=mcculler+v+gaudry&amp;hl=en&amp;as_sdt=4,38&amp;case=3672105742136648787&amp;scilh=0">,
+            59 Or App 13, 650 P2d 148 (1982)</a>. 7. Call other
+            attorneys who appeared in any of the prior mistrial cases
+            and attempt to qualify them as experts to testify that the
+            prosecutor’s conduct was “consistent with” what a prosecutor
+            intending to cause a mistrial “acts like.” <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+lebrun&amp;hl=en&amp;as_sdt=4,38&amp;case=4466178832304849092&amp;scilh=0">State
+            v. LeBrun</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+lebrun&amp;hl=en&amp;as_sdt=4,38&amp;case=4466178832304849092&amp;scilh=0">,
+            37 Or App 411, 587 P2d 1044 (1978</a>). 8. Call the
+            prosecutor as a witness to determine knowledge of the facts
+            prior to the error. Further, move to disqualify the
+            prosecutor from arguing any aspect of the motion. <a
+            href="http://scholar.google.com/scholar_case?q=Doneen+v.+Craven&amp;hl=en&amp;as_sdt=4,38&amp;case=5296785951069168560&amp;scilh=0">Doneen
+            v. Craven</a><a
+            href="http://scholar.google.com/scholar_case?q=Doneen+v.+Craven&amp;hl=en&amp;as_sdt=4,38&amp;case=5296785951069168560&amp;scilh=0">,
+            204 Or 512, 284 P2d 758 (1955)</a> (probate case stating
+            that an attorney-witness shall leave the trial to another
+            attorney).</p>
+            </section>
+            <section id="e._mistrial_resulting_from_a_hung_jury"
+            class="level2">
+            <h2><strong>E. Mistrial Resulting from a Hung
+            Jury</strong></h2>
+            <p>A mistrial is appropriate and does not bar retrial when
+            the jury is unable to reach a verdict and the jury’s
+            inability is not the result of prosecutorial or judicial
+            misconduct. <a
+            href="http://scholar.google.com/scholar_case?q=state+v+Bannister&amp;hl=en&amp;as_sdt=4,38&amp;case=5513766743412441975&amp;scilh=0">State
+            v. Bannister</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v+Bannister&amp;hl=en&amp;as_sdt=4,38&amp;case=5513766743412441975&amp;scilh=0">,
+            118 Or App 252, 846 P2d 1189 (1993)</a>; <a
+            href="http://www.leg.state.or.us/ors/131.html">ORS
+            131.525(1)(b)(D)</a><a
+            href="http://www.leg.state.or.us/ors/131.html">.</a></p>
+            <p>ORS 131.525(1)(b)(D) applies, even in the absence of an
+            explicit finding, where (1) the record demonstrates that the
+            jury was unable to reach a verdict and further deliberations
+            would have been unavailing, (2) the trial court discharged
+            the jury after confirming that inability to reach a verdict,
+            and (3) the record does not disclose any other plausible
+            reason for the court to have discharged the jury at that
+            time.”'' <a
+            href="http://scholar.google.com/scholar_case?q=o%27donnell&amp;hl=en&amp;as_sdt=4,38&amp;case=15240654071253038910&amp;scilh=0">State
+            v. O’Donnell</a><a
+            href="http://scholar.google.com/scholar_case?q=o%27donnell&amp;hl=en&amp;as_sdt=4,38&amp;case=15240654071253038910&amp;scilh=0">,
+            192 Or App 234, 85 P3d 323 (2004)</a>.</p>
+            <p>If a motion for a mistrial with prejudice is not made at
+            the time of the hung jury, then double jeopardy claims are
+            waived. <a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcclendon&amp;hl=en&amp;as_sdt=4,38&amp;case=9005020220569128790&amp;scilh=0">State
+            v. McClendon</a><a
+            href="http://scholar.google.com/scholar_case?q=state+v.+mcclendon&amp;hl=en&amp;as_sdt=4,38&amp;case=9005020220569128790&amp;scilh=0">,
+            204 Or App 459, 131 P3d 765 (2006)</a>.</p>
+            </section>
+            </section>
+            <section id="iv._tactical_decisions_and_strategy"
+            class="level1">
+            <h1><strong>IV. Tactical Decisions and
+            Strategy</strong></h1>
+            <p>Whether to move for a mistrial is a tactical decision.
+            Counsel must consider whether the client faces a new trial
+            with a less favorable jury should the court grant the
+            motion. Thus, included in the decision-making calculus is
+            the likelihood that re-prosecution will be barred under the
+            rules of former jeopardy. See Part III, <em>supra</em>. If
+            the court grants the motion, the client may face
+            re-prosecution and a new trial unless the <em>Kennedy</em>
+            factors are satisfied.</p>
+            <p>Moreover, should the state reprosecute, it will have time
+            to strengthen its case in light of the original trial. If
+            trial is going well and the jury seems favorable, a motion
+            for a mistrial may not be in the client’s best interests. If
+            you are considering waiving a potentially meritorious motion
+            for a mistrial, the best practice is to make an objection to
+            the offending evidence or commentary and confer with the
+            client about the consequences of a successful motion—in most
+            cases, a new trial.</p>
+            <p><em>Leyva-Grave-De-Peralta v. Blackletter</em>, 232 Or
+            App 441, 223 P3d 411 (2009), a post-conviction ineffective
+            assistance case, illustrates an example of tactical
+            decision-making by trial counsel. There, a jury could not
+            reach a verdict on the charged offense. Under ORS 136.460,
+            when a jury hangs on the charged offense, the state and the
+            defendant may stipulate that the jury may consider any
+            lesser-included offense. However, when the jury failed to
+            reach a verdict on the original charge, the judge simply
+            instructed the jury to deliberate on a lesser-included
+            offense and the jury convicted. In his petition for
+            post-conviction relief, the petitioner alleged that trial
+            counsel performed deficiently when he failed to object to
+            the improper order of deliberation and move for a mistrial.
+            The state obtained an affidavit from trial counsel in which
+            he explained that his acquiescence in the improper procedure
+            was a tactical choice:</p>
+            <p>We had a favorable jury. When the jurors were unable to
+            reach a verdict on the Assault in the First Degree, the best
+            option for petitioner was to let them deliberate on the
+            [lesser-included offense]. If I had requested a mistrial, it
+            would have opened the door to a less favorable jury
+            convicting petitioner of Assault I at the second trial.</p>
+            <p>The post-conviction court found ineffective assistance,
+            but the Court of Appeals reversed on procedural grounds
+            without reviewing the merits of the claim. ''See also <a
+            href="http://scholar.google.com/scholar_case?q=Monahan+v.+Belleque&amp;hl=en&amp;as_sdt=4,227&amp;case=17232067758206472989&amp;scilh=0">Monahan
+            v. Belleque</a><a
+            href="http://scholar.google.com/scholar_case?q=Monahan+v.+Belleque&amp;hl=en&amp;as_sdt=4,227&amp;case=17232067758206472989&amp;scilh=0">,
+            234 Or App 93, 227 P3d 777 (2010)</a> (A post-conviction
+            petitioner alleged that trial counsel was inadequate for
+            failing to move for a mistrial when a juror knew a man who
+            was with the petitioner during the shooting for which he was
+            convicted. The articulated test for prejudice for failing to
+            move for a mistrial requires petitioner to show that “had
+            trial counsel moved for a mistrial, that motion would have
+            had a tendency to cause the court to either grant the motion
+            or to give a curative instruction that would have had a
+            tendency to affect the prosecution in the underlying
+            criminal case”)</p>
+            </section>
+            <section id="v._mistrial_checklist" class="level1">
+            <h1><strong>V. Mistrial Checklist</strong></h1>
+            <p>1. Object.</p>
+            <p>2. Decide if a mistrial is the best tactical decision for
+            this case.</p>
+            <p>3. Make the motion.</p>
+            <p>4. Argue that prejudice cannot be cured by an instruction
+            to the jury or any other remedy.</p>
+            <p>5. If the motion is denied, take an active role in
+            fashioning the curative instruction.</p>
+            <p>6. Look for cumulative prejudice.</p>
+            <p>7. Renew the motion at the close of the state’s case and
+            the evidence.</p>
+            <p>Trial counsel’s objections to the trial judge’s <em>sua
+            sponte</em> declaration of a mistrial, or the prosecutor’s
+            request for a mistrial should be grounded in an explanation
+            of why the standards are not met. Strategically, it may be
+            in the client’s best interest simply to preserve the
+            objection without any lengthy persuasive argument why the
+            standards are not met. If a mistrial is declared over the
+            defendant’s objection, and a reviewing court determines that
+            manifest necessity did not exist or that the trial was not
+            properly terminated under ORS 135.525(1)(b), then a
+            subsequent prosecution is barred.</p>
+            </section>
+    </body>
+</html>

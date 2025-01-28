@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 18. Motions for a New Trial and Arrest of
+            Judgment</strong></p>
+            <p>//</p>
+            <section id="motion_for_a_new_trial" class="level1">
+            <h1><strong>Motion for a New Trial</strong></h1>
+            <p><strong><em>Rankin Johnson, IV</em></strong></p>
+            </section>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>A motion for a new trial is the reexamination of an issue
+            of fact in the same court after a judgment. <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            64A</a> (Note: Rule 64 of the Oregon Rules of Civil
+            Procedure is set out as an appendix at the end of the
+            chapter). In a criminal case, only the defendant may move
+            for a new trial. <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.535</a>. A new trial motion is only appropriate
+            following a jury trial, ORCP 64B, but after a bench trial
+            the court can take new evidence and return a different
+            verdict, ORCP 64C, which, in the author’s humble opinion,
+            looks a lot like a new trial.</p>
+            </section>
+            <section id="ii._procedure_and_time_limits" class="level1">
+            <h1><strong>II. Procedure and Time Limits</strong></h1>
+            <p>ORCP 64 provides the timing and procedure for moving for
+            a new trial. A motion for new trial must be filed no later
+            than ten days after <em>filing</em> of the judgment, unless
+            the trial court allows additional time. ORCP 64F. The motion
+            may be filed before the judgment is filed. <a
+            href="http://scholar.google.com/scholar_case?q=State+v+Howard+205+Or+App+408+134+P3d+1042+2006&amp;hl=en&amp;as_sdt=4,38&amp;case=8463707778786259893&amp;sc">State
+            v. Howard,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+Howard+205+Or+App+408+134+P3d+1042+2006&amp;hl=en&amp;as_sdt=4,38&amp;case=8463707778786259893&amp;sc">205
+            Or App 408, 134 P3d 1042 (2006)</a>. The court cannot allow
+            additional time beyond the 55-day limit within which the
+            motion must be decided, as discussed below.</p>
+            <p>The motion must be accompanied by any necessary
+            affidavits. Affidavits are required when the basis of the
+            motion is found in ORCP 64B(1)–(4), namely: irregularity in
+            the proceedings or abuse of discretion, jury or government
+            misconduct, accident or surprise, or newly discovered
+            evidence. ORCP 64D.</p>
+            <p>The state has ten days after the filing of the motion in
+            which to submit any counter-affidavits, unless the trial
+            court allows additional time. ORCP 64D.</p>
+            <p>The motion must be heard and decided by the court within
+            55 days after <em>entry</em> of the judgment. ORCP 64F. If
+            the motion is not heard and decided within that time period,
+            it is conclusively considered denied. ''Id. See also <a
+            href="http://scholar.google.com/scholar_case?q=McCollum+v.+Kmart+Corp,+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">McCollum
+            v. Kmart Corp,</a><a
+            href="http://scholar.google.com/scholar_case?q=McCollum+v.+Kmart+Corp,+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">347
+            Or 707, 226 P3d 703 (2010)</a> (letter opinion explaining
+            grant of new trial entered within 55 days ineffective when
+            order granting new trial entered after 55 days).</p>
+            <center>
+            <p>Practice Tips</p>
+            </center>
+            <p>Be aware of the 55-day time period for the trial court to
+            reach a decision on the motion. It doesn’t matter if the
+            judge is on vacation or something else prevents the motion
+            from being heard within that time: if it is not heard by the
+            55<sup>th</sup> day after the judgment is entered, the judge
+            loses the power to grant the motion.</p>
+            <p>For purposes of appeal, a timely filed motion for new
+            trial delays the deadline for filing the Notice of Appeal. A
+            late new trial motion has no effect on the Notice of Appeal
+            timeline unless, probably, the trial court accepts the
+            filing and rules on the merits within 55 days of the entry
+            of judgment. Relying on that sounds risky. If the motion is
+            not timely, it has no effect. If a motion for new trial has
+            been timely filed, the Notice of Appeal must be filed within
+            30 days after the earlier of either 1) the date of entry of
+            the order denying the motion, or 2) that 55th day on which
+            the motion is deemed denied. In that case, the notice of
+            appeal is due 30 days after the ruling denying the new trial
+            motion. If the Notice of Appeal is filed before the trial
+            court rules on the motion, the trial court loses
+            jurisdiction to grant the motion. <em>Johnstone and
+            Johnstone</em>, 152 Or App 801, 804, 955 P2d 762 (1998).</p>
+            <p>Note the time for the filing of the motion is triggered
+            by the filing of the judgment, while the 55-day period for a
+            decision on the motion commences when the judgment is
+            entered. Filing and the entry of the judgment are two
+            distinct events which may occur on different days.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v+alvarez+vega&amp;hl=en&amp;as_sdt=4,38&amp;case=2612012721479739830&amp;scilh=0">State
+            v. Alvarez-Vega</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+alvarez+vega&amp;hl=en&amp;as_sdt=4,38&amp;case=2612012721479739830&amp;scilh=0">,
+            240 Or App 616, 251 P3d 199 (2011)</a>, the court suggested
+            in dicta that if a case is remanded for resentencing, the
+            time within which to seek a new trial is not reset, even
+            though a new judgment will be entered after
+            resentencing.</p>
+            </section>
+            <section id="iii._grounds_for_a_new_trial" class="level1">
+            <h1><strong>III. Grounds for a New Trial</strong></h1>
+            <p>The grounds for a motion for new trial under <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            64B</a> are identical in both civil and criminal cases, and
+            the case law suggests similar rules for each. Since the
+            motion for a new trial is a statutory procedure, only those
+            grounds set forth in the statute are properly raised in a
+            motion for new trial.</p>
+            <p>The grounds under which a court may grant a new trial are
+            broad. <a
+            href="http://scholar.google.com/scholar_case?q=See+McCollum+v.+Kmart+Corp,+228+Or+App+101,+207+P3d+1200+%282009%29+reversed+on+other+grounds+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">See</a><a
+            href="http://scholar.google.com/scholar_case?q=See+McCollum+v.+Kmart+Corp,+228+Or+App+101,+207+P3d+1200+%282009%29+reversed+on+other+grounds+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">McCollum
+            v. Kmart Corp</a><a
+            href="http://scholar.google.com/scholar_case?q=See+McCollum+v.+Kmart+Corp,+228+Or+App+101,+207+P3d+1200+%282009%29+reversed+on+other+grounds+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">,</a><a
+            href="http://scholar.google.com/scholar_case?q=See+McCollum+v.+Kmart+Corp,+228+Or+App+101,+207+P3d+1200+%282009%29+reversed+on+other+grounds+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">228
+            Or App 101, 207 P3d 1200 (2009) (discussing permissible
+            grounds for motion)</a><a
+            href="http://scholar.google.com/scholar_case?q=See+McCollum+v.+Kmart+Corp,+228+Or+App+101,+207+P3d+1200+%282009%29+reversed+on+other+grounds+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">reversed
+            on other grounds</a><a
+            href="http://scholar.google.com/scholar_case?q=See+McCollum+v.+Kmart+Corp,+228+Or+App+101,+207+P3d+1200+%282009%29+reversed+on+other+grounds+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0"></a><a
+            href="http://scholar.google.com/scholar_case?q=See+McCollum+v.+Kmart+Corp,+228+Or+App+101,+207+P3d+1200+%282009%29+reversed+on+other+grounds+347+Or+707,+226+P3d+703+%282010%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5623951772321045788&amp;scilh=0">347
+            Or 707, 226 P3d 703 (2010)</a>.</p>
+            <p>A new trial motion does not preserve an earlier error
+            without a contemporaneous objection, but developing the
+            argument in the written new-trial motion may help to
+            preserve the error. ''See, e.g., <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">State
+            v. Sundberg</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">,
+            349 Or 608, 247 P3d 1213 (2011)</a> (discussing rule).
+            Accordingly, appellate decisions usually focus on the
+            earlier ruling and underlying substantive law rather than
+            the ruling on the new-trial motion; there is little
+            authority relating directly to the substantive scope of new
+            trial motions.</p>
+            <section
+            id="a._irregularities_in_proceedings_or_abuse_of_discretionorcp_64b1"
+            class="level2">
+            <h2><strong>A. Irregularities in Proceedings or Abuse of
+            Discretion—ORCP 64B(1)</strong></h2>
+            <p>A new trial may be granted when there has been an
+            “[i]rregularity in the proceedings of the court, jury or
+            adverse party, or any order of the court, or abuse of
+            discretion, by which such party was prevented from having
+            fair trial.”</p>
+            <p><strong>Examples:</strong> Improperly empanelling an
+            anonymous jury led to a new trial in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">State
+            v. Sundberg</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">,
+            349 Or 608, 247 P3d 1213 (2011)</a>. The court decided that,
+            under the circumstances, the written new-trial motion helped
+            to preserve the error for review, but the court did not
+            otherwise discuss the right to a new trial as distinct from
+            the right to a non-anonymous jury.</p>
+            <p>Communication between judge and jury off the record is a
+            basis for a new trial if the communication relates to the
+            issues at trial rather than “housekeeping.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Vettrus,+142+Or+App+359,+922+P2d+673+%281996%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7815107280789728221&amp;scilh=0">State
+            v. Vettrus</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Vettrus,+142+Or+App+359,+922+P2d+673+%281996%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7815107280789728221&amp;scilh=0">,
+            142 Or App 359, 922 P2d 673 (1996)</a> (remanding for
+            hearing on the substance of the communication).</p>
+            <p>Incompetency of counsel is not an issue that may properly
+            be raised in a motion for new trial. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McGhee,+31+Or+1089,+572+P2d+333+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7346285642503380191&amp;scilh=0">State
+            v. McGhee</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McGhee,+31+Or+1089,+572+P2d+333+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7346285642503380191&amp;scilh=0">,
+            31 Or 1089, 572 P2d 333 (1977)</a>. <em>McGhee</em>refers to
+            an earlier case that apparently stands for the proposition
+            that tactical decisions by counsel are not a basis for
+            appeal; in other words, it is about the merits rather than
+            the procedure. In the right case, (such as counsel’s
+            admission of negligence), a new-trial motion based on
+            counsel’s errors might succeed. Federal law discourages but
+            does not bar raising ineffective assistance claims in
+            new-trial motions. ''E.g. <a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Birges,+723+F2d+666,+670+%289th+Cir.+1984%29&amp;hl=en&amp;as_sdt=3,38&amp;case=6561707577647533791&amp;scilh=0">United
+            States v. Birges</a><a
+            href="http://scholar.google.com/scholar_case?q=United+States+v.+Birges,+723+F2d+666,+670+%289th+Cir.+1984%29&amp;hl=en&amp;as_sdt=3,38&amp;case=6561707577647533791&amp;scilh=0">,
+            723 F2d 666, 670 (9th Cir. 1984)</a>.</p>
+            </section>
+            <section
+            id="b._misconduct_of_the_jury_or_prevailing_partyorcp_64b2"
+            class="level2">
+            <h2><strong>B. Misconduct of the Jury or Prevailing
+            Party—ORCP 64B(2)</strong></h2>
+            <p><strong>1. Jury Misconduct</strong></p>
+            <p>Juror misconduct sufficient to obtain a new trial is
+            rare. The evidentiary requirements are strict, and the
+            misconduct must be severe.</p>
+            <p>To support a new trial, juror misconduct must rise to the
+            level of contempt of court. <a
+            href="http://scholar.google.com/scholar_case?q=Carson+v.+Brauer,+234+Or+333,+382+P2d+79+%281963%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17582472444769795309&amp;scilh=0">Carson
+            v. Brauer</a><a
+            href="http://scholar.google.com/scholar_case?q=Carson+v.+Brauer,+234+Or+333,+382+P2d+79+%281963%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17582472444769795309&amp;scilh=0">,
+            234 Or 333, 382 P2d 79 (1963)</a>. <em>Carson</em> suggests
+            that jurors are held to a higher standard in criminal cases.
+            If there is legally sufficient evidence to prove facts
+            supporting a new trial, the grant of a new trial is
+            discretionary for the trial court.'' <a
+            href="http://scholar.google.com/scholar_case?q=Ertsgaard+v.+Beard,+310+Or+486,+800+P2d+759+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3215357516750534205&amp;scilh=0">Ertsgaard
+            v. Beard,</a><a
+            href="http://scholar.google.com/scholar_case?q=Ertsgaard+v.+Beard,+310+Or+486,+800+P2d+759+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3215357516750534205&amp;scilh=0">310
+            Or 486, 800 P2d 759 (1990)</a>.</p>
+            <p>Misconduct of a single juror could not materially affect
+            defendant’s rights where verdict was 11–1. <a
+            href="http://scholar.google.com/scholar_case?q=Barker,+26+Or+App+297&amp;hl=en&amp;as_sdt=4,38&amp;case=1254257489228474668&amp;scilh=0">State
+            v. Barker,</a><a
+            href="http://scholar.google.com/scholar_case?q=Barker,+26+Or+App+297&amp;hl=en&amp;as_sdt=4,38&amp;case=1254257489228474668&amp;scilh=0">26
+            Or App 297, 552 P2d 565 (1976)</a>. That doesn’t make sense,
+            because a biased juror, if there was one, might be able to
+            influence the votes of other jurors, but that’s still what
+            the case says. If this comes up in your case, try to put on
+            evidence about how the biased juror affected the other
+            jurors.</p>
+            <p>Affidavits and testimony from jurors are not admissible
+            to prove the juror’s own conduct during deliberations. <a
+            href="http://scholar.google.com/scholar_case?q=Carson+v.+Brauer,+234+Or+333,+382+P2d+79+%281963%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17582472444769795309&amp;scilh=0">Carson,</a><a
+            href="http://scholar.google.com/scholar_case?q=Carson+v.+Brauer,+234+Or+333,+382+P2d+79+%281963%29&amp;hl=en&amp;as_sdt=4,38&amp;case=17582472444769795309&amp;scilh=0">234
+            Or 333</a>''; <a
+            href="http://scholar.google.com/scholar_case?q=Ertsgaard+v.+Beard,+310+Or+486,+800+P2d+759+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3215357516750534205&amp;scilh=0">Ertsgaard,</a><a
+            href="http://scholar.google.com/scholar_case?q=Ertsgaard+v.+Beard,+310+Or+486,+800+P2d+759+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3215357516750534205&amp;scilh=0">310
+            Or 486</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Woodman,+341+Or+105,+%282006%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5015199972375925750&amp;scilh=0">State
+            v. Woodman,</a><a
+            href="http://scholar.google.com/scholar_case?q=Woodman,+341+Or+105,+%282006%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5015199972375925750&amp;scilh=0">341
+            Or 105, 138 P3d 1 (2006)</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>The rule excluding juror affidavits is nonsensical. <a
+            href="http://scholar.google.com/scholar_case?q=Ertsgaard+v.+Beard,+310+Or+486,+800+P2d+759+%281990%29&amp;hl=en&amp;as_sdt=4,38&amp;case=3215357516750534205&amp;scilh=0">Ertsgaard</a>
+            discusses the source of the rule, but it cites old
+            common-law, legislative commentary, and secondary sources,
+            but no actual current law besides case law. Case law cites
+            some hoary old cases, but it seems to be an application of a
+            common-law rule intended to prevent juror harassment. That’s
+            a worthwhile goal, but so is avoiding illegal verdicts, and
+            any potential witness is subject to a certain amount of
+            harassment.</p>
+            <p>If a juror averred that he had voted to convict because
+            people of the defendant’s ethnicity tend to be criminals, or
+            that he had been bribed by the state, that would not be
+            admissible. It seems likely that the defendant would be
+            entitled to some procedure to attack the verdict, but with
+            recent state supreme court decisions in
+            <em>Ertsgaard</em>and <em>Woodman</em>, the general ban on
+            juror affidavits is probably secure.</p>
+            <p><em>Ertsgaard</em>suggests that the ban is limited to
+            prohibiting proof of a juror’s own conduct during
+            deliberations; the court notes that some kinds of juror
+            misconduct that might entitle a party to a new trial could
+            only be proved by evidence from other jurors. That would
+            permit a juror’s affidavit that the juror was bribed, but
+            not that the juror voted to convict based on ethnicity.
+            Also, if juror affidavits are useful for any purpose, than
+            the stated purpose of the ban (avoiding juror harassment) is
+            not advanced by the ban.</p>
+            <p><strong>Examples:</strong> A comment by a deputy sheriff
+            that the defendant had “done something like this before”
+            made within earshot of two jurors warranted a reversal of
+            the defendant’s conviction and a new trial. <a
+            href="http://scholar.google.com/scholar_case?q=Dickson+v.+Sullivan,+849+F2d+403,+408+%289th+Cir+1988%29&amp;hl=en&amp;as_sdt=3,38&amp;case=13632112102370623349&amp;scilh=0">Dickson
+            v. Sullivan</a><a
+            href="http://scholar.google.com/scholar_case?q=Dickson+v.+Sullivan,+849+F2d+403,+408+%289th+Cir+1988%29&amp;hl=en&amp;as_sdt=3,38&amp;case=13632112102370623349&amp;scilh=0">,
+            849 F2d 403, 408 (9th Cir 1988)</a>. <em>Dickson</em>
+            establishes a low bar for prejudice in this context.</p>
+            <p>In a burglary trial, a juror who had denied prior
+            criminal charges but who had actually stabbed a burglar and
+            had been convicted of assault in the first degree warranted
+            the granting of a new trial. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Holcomb,+131+Or+App+453,+886+P2d+14+%281994%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12260089906593899676&amp;scilh=0">State
+            v. Holcomb</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Holcomb,+131+Or+App+453,+886+P2d+14+%281994%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12260089906593899676&amp;scilh=0">,
+            131 Or App 453, 886 P2d 14 (1994)</a>.</p>
+            <p>Prosecutorial misconduct in arguing, during closing
+            argument, that defense counsel was a pimp and the expert
+            witness a liar warranted grant of a new trial. <a
+            href="http://scholar.google.com/scholar_case?q=.+Lundbom,+96+Or+App+458&amp;hl=en&amp;as_sdt=4,38&amp;case=15878925504596100461&amp;scilh=0">State
+            v. Lundbom</a><a
+            href="http://scholar.google.com/scholar_case?q=.+Lundbom,+96+Or+App+458&amp;hl=en&amp;as_sdt=4,38&amp;case=15878925504596100461&amp;scilh=0">,
+            96 Or App 458, 773 P2d 11 (1989)</a>. <em>Lundbom</em> was a
+            new-trial motion, rather than a more appropriate mistrial
+            motion; as in <em>Sundberg</em> the new-trial motion
+            developed an argument made earlier.</p>
+            <p>Withholding of significant <em>Brady</em> evidence by the
+            prosecution is a basis for a new trial; <a
+            href="http://scholar.google.com/scholar_case?q=Williams+11+Or+App+255,+500+P2d+722+%281972%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5062275107485921805&amp;scilh=0">State
+            v. Williams</a><a
+            href="http://scholar.google.com/scholar_case?q=Williams+11+Or+App+255,+500+P2d+722+%281972%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5062275107485921805&amp;scilh=0">11
+            Or App 255, 500 P2d 722 (1972)</a>.</p>
+            </section>
+            <section id="c._accident_or_surpriseorcp_64b3"
+            class="level2">
+            <h2><strong>C. Accident or Surprise—ORCP
+            64B(3)</strong></h2>
+            <p>Accident or surprise that ordinary prudence could not
+            have guarded against is grounds for a new trial. This basis
+            comprises two conditions. First, the surprise can not be due
+            to the lack of diligence of the moving party. Second, the
+            party must immediately move for a continuance when the
+            surprise occurs or the right to a new trial is waived.
+            <em>State v. Gardner</em>, 33 Or 149, 153, 54 P 809 (1898);
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Scott,+12+Or+App+79,+504+P2d+1053+%281973%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12899787126693404722&amp;scilh=0">State
+            v. Scott,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Scott,+12+Or+App+79,+504+P2d+1053+%281973%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12899787126693404722&amp;scilh=0">12
+            Or App 79, 504 P2d 1053 (1973).</a></p>
+            </section>
+            <section id="d._newly_discovered_evidenceorcp_64b4"
+            class="level2">
+            <h2><strong>D. Newly Discovered Evidence—ORCP
+            64B(4)</strong></h2>
+            <p>In order to warrant the granting of a new trial, newly
+            discovered evidence must meet the following requirements: 1)
+            the evidence will probably change the result if a new trial
+            is granted, 2) reasonable diligence would not have led to
+            discovery of the evidence before or during trial, 3) the
+            evidence cannot, with reasonable diligence, be used during
+            trial, 4) it must be material, 5) it must not be merely
+            cumulative, and 6) it must not be merely impeaching or
+            contradicting of former evidence. <a
+            href="http://scholar.google.com/scholar_case?q=Arnold,+320+Or+111&amp;hl=en&amp;as_sdt=4,38&amp;case=13627018570846048528&amp;scilh=0">State
+            v. Arnold</a><a
+            href="http://scholar.google.com/scholar_case?q=Arnold,+320+Or+111&amp;hl=en&amp;as_sdt=4,38&amp;case=13627018570846048528&amp;scilh=0">,
+            320 Or 111, 120–1, 879 P2d 1272 (1994)</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>You must be diligent in trying to correct the problems
+            resulting from accident, surprise, or newly discovered
+            evidence. Ask for a continuance or whatever else you need to
+            remedy the issue as soon as possible. Be specific about what
+            you have learned, why you didn’t know it already, what you
+            want to do in response, and why it’s important. Better that
+            you ask and the judge turns you down than you don’t ask.</p>
+            <p>The test from <a
+            href="http://scholar.google.com/scholar_case?q=Arnold,+320+Or+111&amp;hl=en&amp;as_sdt=4,38&amp;case=13627018570846048528&amp;scilh=0">Arnold</a>
+            does not appear in the text of ORCP 64B. In the right case,
+            it might be worth attacking. For example, if the state’s
+            case was based on a single witness and strong impeachment
+            evidence came to light after trial, it would be worth
+            seeking a new trial regardless of the prohibition on using
+            impeachment evidence to seek a new trial.</p>
+            </section>
+            <section id="e._insufficiency_of_the_evidenceorcp_64b5"
+            class="level2">
+            <h2><strong>E. Insufficiency of the Evidence—ORCP
+            64B(5)</strong></h2>
+            <p>A party may move for a new trial on the ground of
+            “insufficiency of the evidence to justify the verdict or
+            other decision, or that it is against law.” A motion on this
+            ground is addressed to the sound discretion of the court.
+            <em>State v. Gardner</em>, 33 Or 149, 153, 54 P 809 (1898).
+            This ground is subject to the controls of Article VII,
+            section 3, of the <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution</a>, which provides that no fact tried by a
+            jury shall be otherwise reexamined in any court of the
+            state, unless the court can affirmatively say there is no
+            evidence to support the verdict. <a
+            href="http://scholar.google.com/scholar_case?q=Moore,+194+Or+232&amp;hl=en&amp;as_sdt=4,38&amp;case=9523119741793630885&amp;scilh=0">State
+            v. Moore</a><a
+            href="http://scholar.google.com/scholar_case?q=Moore,+194+Or+232&amp;hl=en&amp;as_sdt=4,38&amp;case=9523119741793630885&amp;scilh=0">,
+            194 Or 232, 241 P2d 454 (1952)</a>.</p>
+            <center>
+            <p>Practice Tip</p>
+            </center>
+            <p>If the evidence is insufficient, you should have moved
+            for judgment of acquittal. After a guilty verdict, the court
+            cannot grant a judgment of acquittal, only a new trial. <a
+            href="http://scholar.google.com/scholar_case?q=Metcalfe,+328+Or+309+974+P2d+1189+%281999&amp;hl=en&amp;as_sdt=4,38&amp;case=6827331566670650216&amp;scilh=0">State
+            v. Metcalfe</a><a
+            href="http://scholar.google.com/scholar_case?q=Metcalfe,+328+Or+309+974+P2d+1189+%281999&amp;hl=en&amp;as_sdt=4,38&amp;case=6827331566670650216&amp;scilh=0">,
+            328 Or 309 974 P2d 1189 (1999)</a>. It is hard to imagine
+            the court granting a new trial after denying judgment of
+            acquittal. If the trial court erroneously denied a motion
+            for judgment of acquittal, the defendant is entitled to
+            acquittal. A new trial, even if the state finds more
+            evidence, should not affect that entitlement, but no
+            reported case to the author’s knowledge discusses that
+            issue. The defendant in <em>Metcalfe</em>thus might have
+            been better off appealing the failure to grant a <em>sua
+            sponte</em>judgment of acquittal, which grants more complete
+            relief than a new trial motion. Both sound like long
+            shots.</p>
+            </section>
+            <section id="f._error_in_laworcp_64b6" class="level2">
+            <h2><strong>F. Error in Law—ORCP 64B(6)</strong></h2>
+            <p>A new trial may be granted on the ground that there was
+            an error in law occurring at the trial and objected to or
+            excepted to by the party making the application. To obtain a
+            new trial on this ground, the error must have been excepted
+            to at the time it occurred. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ellis,+232+Or+70,+92–93,+374+P2d+461+%281962%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16340453520047299032&amp;scilh=0">State
+            v. Ellis</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ellis,+232+Or+70,+92–93,+374+P2d+461+%281962%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16340453520047299032&amp;scilh=0">,
+            232 Or 70, 92–93, 374 P2d 461 (1962)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=Walter+Kidd+%26+Co+73+Or+App+22&amp;hl=en&amp;as_sdt=4,38&amp;case=185695046050235460&amp;scilh=0">Wegener
+            v. Walter Kidde &amp; Co.</a><a
+            href="http://scholar.google.com/scholar_case?q=Walter+Kidd+%26+Co+73+Or+App+22&amp;hl=en&amp;as_sdt=4,38&amp;case=185695046050235460&amp;scilh=0">,
+            73 Or App 22, 25, 697 P2d 981 (1985).</a></p>
+            <center>
+            <p>Practice Tips</p>
+            </center>
+            <p>A motion for a new trial will not substitute for making a
+            timely objection, especially for grounds that are not based
+            on unexpected evidence or events. Raise new-trial issues as
+            soon as you are aware of them.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">State
+            v. Sundberg</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sundberg,+349+Or+608,+247+P3d+1213+%282011%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7018505042472602994&amp;scilh=0">,
+            349 Or 608, 247 P3d 1213 (2011)</a>, the court considered
+            authority cited in the new-trial motion, although the issue
+            initially came up with a less-thorough argument at the
+            beginning of trial. A post-judgment motion for a new trial
+            is too late to raise a wholly new issue for the first time.
+            If the objection is timely made, it need not be raised again
+            in a motion for a new trial in order to preserve the error
+            for appellate review. Similarly, if you did not make a
+            motion for judgment of acquittal, insufficiency of the
+            evidence probably cannot be raised for the first time in a
+            motion for a new trial.</p>
+            <p>The denial of a motion for a new trial made after entry
+            of judgment is not reviewable on appeal, unless it is based
+            on newly discovered evidence or juror misconduct. <a
+            href="http://scholar.google.com/scholar_case?q=State+v+alvarez+vega&amp;hl=en&amp;as_sdt=4,38&amp;case=2612012721479739830&amp;scilh=0">State
+            v. Alvarez-Vega</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v+alvarez+vega&amp;hl=en&amp;as_sdt=4,38&amp;case=2612012721479739830&amp;scilh=0">,
+            240 Or App 616, 251 P3d 199 (2011)</a>. Accordingly, the
+            argument on appeal should be about the error that occurred
+            at trial if there was one. However, ''see, e.g., Sundberg,
+            id.; <a
+            href="http://scholar.google.com/scholar_case?q=.+Lundbom,+96+Or+App+458&amp;hl=en&amp;as_sdt=4,38&amp;case=15878925504596100461&amp;scilh=0">Lundbom,</a><a
+            href="http://scholar.google.com/scholar_case?q=.+Lundbom,+96+Or+App+458&amp;hl=en&amp;as_sdt=4,38&amp;case=15878925504596100461&amp;scilh=0">96
+            Or App 458</a>, reviewing new-trial motions that were
+            related to issues raised before the verdict was
+            returned.</p>
+            </section>
+            </section>
+            <section id="motion_in_arrest_of_judgment" class="level1">
+            <h1><strong>Motion in Arrest of Judgment</strong></h1>
+            </section>
+            <section id="i._introduction_1" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>A motion in arrest of judgment is a post-trial attack on
+            a legally insufficient accusatory instrument. <em>See</em>
+            <a href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.500</a> defining a Motion in Arrest of Judgment as “an
+            application on the part of the defendant that no judgment be
+            rendered on a plea or verdict of guilty.”</p>
+            <p>The timing is identical to new-trial motions—within ten
+            days of the judgment filing. ORS 136.535, ORS 136.400, <a
+            href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            64F</a>. The timing within which the court must rule is
+            different, discussed below.</p>
+            </section>
+            <section id="ii._statute" class="level1">
+            <h1><strong>II. Statute</strong></h1>
+            <p>ORS 136.500 provides that the motion may be founded on
+            either or both of the grounds specified in <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            135.630(l) and (4)</a>, the statute specifying the grounds
+            for demurrer, “and not otherwise.” Specifically, the motion
+            may be founded when it appears upon the face of the
+            accusatory instrument that 1) the grand jury which found the
+            indictment had no legal authority to inquire into the crime
+            charged because the same is not triable within the county,
+            and 2) the facts stated do not constitute an offense. The
+            issue need not be raised in a demurrer, but the wording of
+            the indictment is construed strictly against the state as a
+            demurrer but liberally when attacked as a motion in arrest
+            of judgment. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Burns,+213+Or+App+38,+159+P3d+1208+%282007%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16763891844970707132&amp;scilh=0">State
+            v. Burns,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Burns,+213+Or+App+38,+159+P3d+1208+%282007%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16763891844970707132&amp;scilh=0">213
+            Or App 38, 159 P3d 1208 (2007)</a>.</p>
+            <p>An argument that a statute under which the defendant is
+            charged is unconstitutionally vague can be made for the
+            first time in a motion for arrest of judgment.'' <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554,+771+P2d+264+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0">State
+            v. McKenzie</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554,+771+P2d+264+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0">,
+            307 Or 554, 771 P2d 264 (1989</a>). By raising the issue as
+            a motion in arrest of judgment, the defendant retains the
+            possibility of an acquittal (which cannot be appealed), and
+            then can litigate the motion in arrest (which the state can
+            appeal).</p>
+            <p>A claim that the statute is unconstitutionally overbroad
+            is not subject to a motion in arrest of judgment but must be
+            raised by way of demurrer or motion for judgment of
+            acquittal. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Solomon,+133+Or+App+184,+890+P2d+433+%281995%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7253472524685429046&amp;scilh=0">State
+            v. Solomon</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Solomon,+133+Or+App+184,+890+P2d+433+%281995%29&amp;hl=en&amp;as_sdt=4,38&amp;case=7253472524685429046&amp;scilh=0">,
+            133 Or App 184, 890 P2d 433 (1995)</a>. In the right case,
+            <em>Solomon</em> is worth attacking; the court does not
+            explain why a vague statute can be challenged post-trial but
+            an overbroad one must be challenged pretrial.
+            <em>Solomon</em>is hard to reconcile with
+            <em>McKenzie.</em></p>
+            <p>A motion in arrest of judgment may not be based upon the
+            other four grounds for demurrer listed in ORS 135.630. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carpenter,+29+Or+App+879,+565+P2d+768+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15473478745177067988&amp;scilh=0">State
+            v. Carpenter</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Carpenter,+29+Or+App+879,+565+P2d+768+%281977%29&amp;hl=en&amp;as_sdt=4,38&amp;case=15473478745177067988&amp;scilh=0">,
+            29 Or App 879, 884, 565 P2d 768 (1977)</a>, nor on the
+            statute of limitations. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Parker,+119+Or+App+105,+849+P2d+1157+%281993%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5531672035578477095&amp;scilh=0">State
+            v. Parker,</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Parker,+119+Or+App+105,+849+P2d+1157+%281993%29&amp;hl=en&amp;as_sdt=4,38&amp;case=5531672035578477095&amp;scilh=0">119
+            Or App 105, 849 P2d 1157 (1993).</a></p>
+            </section>
+            <section id="iii._procedure_and_time_limits" class="level1">
+            <h1><strong>III. Procedure and Time Limits</strong></h1>
+            <p>A motion in arrest of judgment must be made within the
+            same period of time allowed to file a motion for a new
+            trial. If a motion in arrest of judgment is filed together
+            with a motion for new trial, the motions may be made and
+            heard as the court directs. <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS
+            136.500</a>.</p>
+            <p><a href="http://www.leg.state.or.us/ors/orcpors.htm">ORCP
+            64</a> controls the timing for new-trial motions. The motion
+            must be filed within ten days after <em>filing</em> of
+            judgment, or within such further time as the court may
+            allow. ORCP 64F. However, the 55-day “deemed denied” period
+            in ORCP 64F does not apply to motions in arrest of judgment.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Starr,+210+Or+App+409,+150+P3d+1072+%282007%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12369546482271141370&amp;scilh=0">State
+            v. Starr</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Starr,+210+Or+App+409,+150+P3d+1072+%282007%29&amp;hl=en&amp;as_sdt=4,38&amp;case=12369546482271141370&amp;scilh=0">,
+            210 Or App 409, 150 P3d 1072 (2007)</a>. Accordingly, while
+            the motion is pending, there is no final judgment and appeal
+            is not possible. <em>Id.</em> See Appendix C.</p>
+            </section>
+            <section id="iv._effect_of_allowance_of_motion"
+            class="level1">
+            <h1><strong>IV. Effect of Allowance of Motion</strong></h1>
+            <p>A motion in arrest of judgment has the same effect as a
+            dismissal. If the motion is allowed, the defendant is placed
+            in the same situation in which he or she was before
+            indictment. ORS 136.505. ''But see <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Eberhardt,+225+Or+App+275,+201+P3d+915+%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=1025506187161833161&amp;scilh=0">State
+            v. Eberhardt</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Eberhardt,+225+Or+App+275,+201+P3d+915+%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=1025506187161833161&amp;scilh=0">,
+            225 Or App 275, 201 P3d 915 (2009)</a> (rejecting argument
+            that the trial court should have granted demurrer, holding
+            that any error was harmless). The court can order the
+            defendant held if trial evidence makes it likely that the
+            state can come up with a proper accusatory instrument and
+            convict the defendant of something. ORS 136.515.</p>
+            <p>If the motion is granted, the prior verdict is not a bar
+            to a subsequent prosecution if it appears that the defendant
+            can be convicted of something. ORS 136.515. If, however, the
+            evidence “appears insufficient to charge the defendant with
+            any offense, the arrest of judgment operates as an
+            acquittal.” ORS 136.525. There are no reported cases
+            construing this statute.</p>
+            <p>The state may appeal from an order arresting judgment. <a
+            href="http://www.leg.state.or.us/ors/138.html">ORS
+            138.060(2)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554,+771+P2d+264+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0">State
+            v. McKenzie</a><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McKenzie,+307+Or+554,+771+P2d+264+%281989%29&amp;hl=en&amp;as_sdt=4,38&amp;case=16710719702767476896&amp;scilh=0">,
+            307 Or 554, 771 P2d 264 (1989)</a>.</p>
+            <p>Prior versions of this chapter written and revised by
+            Diane Alessi, Tempe, AZ, and Michael Rose, Portland.</p>
+            </section>
+    </body>
+</html>

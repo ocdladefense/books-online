@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Defending Sex Cases</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Defending Sex Cases</h1>
+                                    </section>
+            <p><strong><code>Defending Sex Cases: Strategies from Allegation to Resolution</code></strong><code>, 2018 edition</code></p>
+            <p><strong>Chapter 9. They Want to Introduce What?: Other
+            Act Evidence</strong></p>
+            <p><strong><em>By David T. McDonald</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>Until 1997, OEC 404(3) and 403 (balancing test) generally
+            controlled the admissibility of “other act evidence.” OEC
+            404(3) categorically excluded “other act evidence” proffered
+            solely to show an accused’s disposition (“propensity”) to
+            commit the crime(s) of which they were charged. However,
+            just as OEC 404(3) barred evidence to show that the person
+            acted in conformity therewith,<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> OEC 404(3)<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> also recognized that
+            “character” evidence might be admissible for other
+            nonpropensity purposes. The importance of each of these two
+            separate sentences will be discussed <em>infra</em>. The
+            burden remained on the proponent of the evidence to show
+            that the evidence was relevant under OEC 401 and was being
+            offered for a nonpropensity purpose under 404(3). Once the
+            proponent met those criteria, the trial court still had to
+            undergo a “balancing test” under OEC 403<a href="#fn3"
+            class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> weighing the probative
+            value against any prejudicial impact. The trial court
+            utilized the test from <a
+            href="https://scholar.google.com/scholar_case?case=14158085507055309521&amp;q=State+v.+Mayfield,+302+Or+631,+733+P2d+438+(1987)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mayfield</em>, 302 Or 631, 645, 733 P2d 438 (1987)</a>.
+            If the trial court found that the probative value of the
+            evidence was not substantially outweighed by its prejudicial
+            impact, then the evidence was deemed admissible.</p>
+            <p>In 1997, the Oregon Legislature enacted 404(4) and it
+            changed the methodology the courts used to determine the
+            admissibility of other act evidence.<a href="#fn4"
+            class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a> The change was so
+            profound that Oregon evidence guru Laird Kirkpatrick spent
+            several pages in his treatise describing the “sharp
+            departure from long-established doctrine governing character
+            evidence.”<a href="#fn5" class="footnote-ref" id="fnref5"
+            role="doc-noteref"><sup>5</sup></a> Initially, Oregon courts
+            weren’t certain how to handle the new provision but
+            eventually began to hold that 404(4) eliminated the OEC 403
+            balancing test as a last step in evaluating the
+            admissibility of other act evidence<a href="#fn6"
+            class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a> except “upon an
+            individual and particularized due process claim.”
+            <em>Id.</em></p>
+            <p>Then in 2015, the Oregon Supreme Court issued its opinion
+            in <em><a
+            href="https://scholar.google.com/scholar_case?case=9903617515752744475&amp;q=state+v.+williams+&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014">State
+            v. Williams</a>,</em><a href="#fn7" class="footnote-ref"
+            id="fnref7" role="doc-noteref"><sup>7</sup></a> which held
+            that propensity evidence was admissible in criminal
+            proceedings involving child sexual abuse under 404(4),
+            <em>but only</em> if the trial court complied with due
+            process by conducting a balancing test under OEC 403 (the
+            <em>Mayfield</em> test).</p>
+            <p>Specifically, the <em>Williams</em> court held:</p>
+            <p>OEC 404(4) supersedes OEC 404(3) in a criminal case
+            except to the extent required by the state or federal
+            constitution. In a prosecution of child sexual abuse, the
+            federal constitution requires that a trial court determine
+            whether the risk of unfair prejudice posed by the evidence
+            outweighs its probative value under OEC 403.”<a href="#fn8"
+            class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a></p>
+            <p>The Court of Appeals later issued a cascade of opinions
+            attempting to interpret the new <em>Williams</em> rule. In a
+            subsequent case, the Oregon Supreme Court stated that
+            <em>Williams</em> left two unanswered questions:</p>
+            <blockquote>
+            <p>(1) the extent to which prior bad acts evidence can be
+            admitted solely for propensity purposes in criminal cases
+            other than ones involving child sexual abuse; and</p>
+            <p>(2) whether, in criminal cases in which evidence is
+            admitted for propensity purposes, due process requires
+            traditional OEC 403 balancing or requires a greater showing
+            of unfair prejudice than traditional OEC 403 balancing would
+            require to exclude otherwise probative evidence.</p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=13378673158226231561&amp;q=State+v.+Turnidge,+359+Or+364,+374+P3d+853,++(2016&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014"><em>State
+            v. Turnidge</em>, 359 Or 364, 432, 374 P3d 853, 897
+            (2016)</a>, <em>cert. denied,</em> (U.S. Jan. 9, 2017)
+            (acknowledging but not addressing two questions reserved by
+            <em>Williams</em>).</p>
+            <p>The <em>Turnidge</em> court recognized that prior to
+            admitting nonpropensity evidence, <em>and “upon proper
+            motion,”</em> a trial court must still conduct a
+            403/<em>Mayfield</em> balancing test when determining
+            whether nonpropensity evidence that met one of the
+            inclusionary purposes of 404(3) could be admitted.<a
+            href="#fn9" class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a> The <em>Turnidge</em>
+            court noted that <em>Williams</em>, a case involving the
+            admissibility of propensity evidence involving child sex
+            abuse, was confined to its facts regarding that
+            admissibility. After <em>Turnidge,</em> the Court of Appeals
+            issued a series of opinions, some of which affirmed the use
+            of the OEC 403 balancing test using the <em>Mayfield</em>
+            factors.<a href="#fn10" class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a></p>
+            <p>On April 27, 2017, the Oregon Supreme Court addressed
+            some of the issues left undecided<br />
+            by <em>Williams</em> in a trilogy of cases—</p>
+            <blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=4459101288610132265&amp;q=State+v.+Baughman,+361+Or+386,+393+P3d+1132+(2017)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Baughman</em>, 361 Or 386, 393 P3d 1132 (2017)</a>.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=1588785644296731037&amp;q=State+v.+Mazziotti,+361+Or+370,+393+P3d+235+(2017).&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mazziotti</em>, 361 Or 370, 393 P3d 235 (2017).</a></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15190351295068377972&amp;q=State+v+Zavala,+361+Or+377,+393+P3d+230+(2017).&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v Zavala</em>, 361 Or 377, 393 P3d 230 (2017).</a></p>
+            <p>The court treated <em>Baughman</em> as the lead case. The
+            Court of Appeals has since issued four opinions that rely on
+            some, or all, of those decisions. A discussion of the
+            trilogy, and the Court of Appeals’ new cases is below in
+            Sections V and VI.</p>
+            </blockquote>
+            </section>
+            <section id="ii._the_foundational_premise" class="level1">
+            <h1><strong>II. The Foundational Premise</strong></h1>
+            <blockquote>
+            <p>Understanding the foundational premise of our rules and
+            articulating that principle in our legal pleadings can be
+            paramount to the trial court’s interpretation. Justice
+            Walters, writing for the majority in <em>Williams</em>, went
+            back in time and highlighted why the courts should exercise
+            caution in determining the admissibility of other act
+            evidence, especially as to when it is offered solely as
+            propensity evidence:</p>
+            <p>The general rule is unquestioned that evidence of a
+            distinct crime unconnected with that laid in the indictment
+            cannot be given in evidence against the prisoner. Such
+            evidence tends to mislead the jury, creates a prejudice
+            against the prisoner, and requires him to answer a charge
+            for the defense of which he is not supposed to have made
+            preparation. And while, as Lord Campbell says, “it would be
+            evidence to prove that the prisoner is a very bad man, and
+            likely to commit such an offense” (<em>Reg. v. Oddy,</em> 5
+            Cox C.C. 210), <em>under no enlightened system of
+            jurisp[r]udence can a person be convicted of one crime on
+            proof that he has committed another.”</em></p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=9903617515752744475&amp;q=State+v.+Williams,+357+Or+1,+346+P3d+455,+459+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em>, 357 Or 1, 9, 346 P3d 455, 459 (2015)</a>,
+            <em>quoting</em> <em>State v. Baker</em>, 23 Or 441,<br />
+            442-43, 32 P. 161 (1893) (emphasis supplied).</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Never forget that it is not just unfair prejudice that
+            can be used to overcome admissibility. Relevant evidence may
+            also be excluded if its probative value is
+            <strong><em>substantially outweighed by confusion of the
+            issues, or misleading the jury, or by considerations of
+            undue delay or needless presentation of cumulative
+            evidence<strong>''. So, work on developing specific examples
+            of how the state’s proposed evidence will mislead the jury
+            into convicting simply because it thinks that the defendant
+            is a very bad person rather than on whether there is proof
+            beyond a reasonable doubt of the charged crime(s). The state
+            always argues “all evidence we introduce hurts the
+            defendant.” The counter argument is that, while that may be
+            true, the admissibility of most evidence
+            is</strong></em>not</strong>'' subject to a balancing test
+            before admission as is other act evidence. The reason the
+            balancing test exists as to character evidence is because
+            other act evidence can taint the jury, more than any other
+            type of evidence, such that the jury is willing to convict
+            based upon the accused’s past acts rather than the evidence
+            regarding the current and specific charge(s).</p>
+            </section>
+            <section id="iii._the_williams_basics" class="level1">
+            <h1><strong>III. The <em>Williams</em> Basics</strong></h1>
+            <blockquote>
+            <p>1. OEC 404(4) is in conflict with OEC 404(3) because the
+            legislature specifically provided that “all” relevant
+            character evidence specific to the accused be admitted with
+            some exceptions delineated. OEC 404(4) <em>does not apply to
+            any other person, just the defendant</em>. So the new
+            paradigm <em>only</em> applies to the accused on trial.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>It can be argued that the plain language of the rule
+            allows <strong><em>all<strong>'' propensity evidence be
+            admitted as to a defendant, so offer as much propensity
+            evidence as you can that is</strong></em>good</strong>''
+            (“other good act evidence) for the accused.</p>
+            <blockquote>
+            <p>OEC 404(4) was a part of SB 936 in response to the
+            Armatta decision, which overturned measure 40. Williams
+            makes it clear that the legislative history of OEC 404(4)
+            shows a clear intent to make all relevant evidence
+            admissible. The Williams court recognized that “The
+            legislature enacted OEC 404(4) in 1997 in response to this
+            court’s anticipated invalidation of Ballot Measure 40
+            (1996), which, among other provisions, provided crime
+            victims with “the right to have all relevant evidence
+            admitted against criminal defendants.”</p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=9903617515752744475&amp;q=State+v.+Williams,+357+Or+1,+346+P3d+455,+459+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em>, 357 Or 1, 14, 346 P3d 455, 462
+            (2015)</a>.</p>
+            <p>2. OEC 404(4) supersedes 404(3) and allows for the
+            introduction of relevant propensity<br />
+            evidence solely to establish that the defendant acted in
+            conformity therewith.</p>
+            <blockquote>
+            <p>3. OEC 404(3) still prohibits the introduction of
+            relevant propensity evidence in criminal cases solely for
+            the purpose of showing that any person, other than the
+            defendant, acted in conformity therewith. OEC 404(4) only
+            trumps 404(3) as to the defendant.</p>
+            </blockquote>
+            <p>4. OEC 403 Application: Prevents Luring the
+            Factfinders</p>
+            <blockquote>
+            <p>a. The original rationale behind the use of the balancing
+            test was to prevent the factfinder from being lured into
+            declaring guilt on a ground different from proof specific to
+            the offense charged. After its passage, our courts
+            interpreted OEC 404(4) as barring the use of the OEC 403
+            balancing test in evaluating whether evidence was admissible
+            under OEC 404(3). The <em>Williams</em> court rejected that
+            conclusion and reinstated the use of the balancing test
+            where character evidence (404(3) evidence) is being
+            introduced under OEC 404(4) because <em>due process</em>
+            required the use of the balancing test before allowing the
+            admission of evidence under OEC 404(4).</p>
+            </blockquote>
+            <p>b. The <em>Williams</em> court recognized that new
+            Federal Rules of Evidence, FRE 413 and FRE 414, allow for
+            broad admissibility of other acts of sexual assault
+            committed in sexual assault cases (FRE 413<a href="#fn11"
+            class="footnote-ref" id="fnref11"
+            role="doc-noteref"><sup>11</sup></a>) and other acts of
+            child molestation in child molestation cases (FRE 414<a
+            href="#fn12" class="footnote-ref" id="fnref12"
+            role="doc-noteref"><sup>12</sup></a>) <em>and</em> the
+            <em>Williams</em> court found that the legislature, in
+            passing OEC 404(4), deferred to the courts whether the
+            federal Due Process Clause required the application of OEC
+            403 as a prerequisite to admitting evidence under OEC
+            404(4).</p>
+            <p>c. The <em>Williams</em> court found that the United
+            States Supreme Court agreed that the use of a balancing
+            test, such as under OEC 403, is <em>sufficient</em> to
+            safeguard a person’s due process rights, but in the absence
+            of a clear holding by the SCOTUS, the court needed to
+            determine whether the federal Due Process Clause
+            <em>required</em> its application. Ultimately, the
+            <em>Williams</em> court found that the federal due process
+            clause did require the application of OEC 403 in order to
+            satisfy federal due process.<a href="#fn13"
+            class="footnote-ref" id="fnref13"
+            role="doc-noteref"><sup>13</sup></a></p>
+            <p>d. The <em>Williams</em> court made clear that the
+            balancing test should be used to determine admissibility of
+            <em>any</em> character evidence, <em>whether offered for a
+            propensity or nonpropensity purpose</em>. Yet the court
+            attempted to offer some guidance in evaluating the spectrum
+            of potential admissibility by stating:</p>
+            <p>At one end of the spectrum, “other acts” evidence that is
+            offered for nonpropensity purposes—i.e., to prove motive,<a
+            href="#fn14" class="footnote-ref" id="fnref14"
+            role="doc-noteref"><sup>14</sup></a> intent, identity, or
+            lack of mistake or accident—generally will be admissible as
+            long as the particular facts of the case do not demonstrate
+            a risk of unfair prejudice that outweighs the probative
+            value of the evidence. <a
+            href="https://scholar.google.com/scholar_case?case=5470568609881129065&amp;q=Shaw,+113+P3d+898&amp;hl=en&amp;as_sdt=4,38"><em>Shaw</em>,
+            338 Or at 614–15, 113 P3d 898</a>. At the other end of the
+            spectrum, as the state recognizes, when “other acts”
+            evidence “goes only to character and there are no
+            permissible inferences the jury may draw from it,” it is
+            more likely that the evidence will be excluded. Such
+            evidence generally will have little or no cognizable
+            probative value, and the risk that the jury may conclude
+            improperly that the defendant had acted in accordance with
+            past acts on the occasion of the charged crime will be
+            substantial.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=9903617515752744475&amp;q=State+v.+Williams,+357+Or+1,+346+P3d+455,+459+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em></a>, 357 Or 1, 19-20, 346 P3d 455, 465
+            (2015) (emphasis supplied).</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>The emphasized language in the quote above from
+            <em>Williams</em> should be part of every argument. The
+            quote highlights that it is not a bright line test but
+            rather a continuum from not admissible to admissible
+            depending upon the purpose for the offer of the “other act
+            evidence.”</p>
+            </section>
+            <section id="iv._post_williams" class="level1">
+            <h1><strong>IV. Post <em>Williams</em></strong></h1>
+            <blockquote>
+            <p>Before the court issued opinions in the <em>Baughman</em>
+            trilogy, the fallout from <em>Williams</em> broke down into
+            pre-<em>Turnidge</em> and post-<em>Turnidge</em> cases.
+            After <em>Williams</em>, courts began processing cases into
+            two categories: 1) those cases where evidence was being
+            offered for a nonpropensity purpose under traditional 404(3)
+            analysis and 2) where evidence was being offered for a
+            solely propensity purpose under 404(4).</p>
+            <p>Up until <em>Williams,</em> there was a presumption that
+            404(4) superseded 404(3) in all respects; after
+            <em>Williams,</em> the courts began differentiating between
+            whether evidence should be admitted under 404(3) for
+            nonpropensity purposes or under 404(4) for propensity
+            purposes. The appellate courts also seemed to scrutinize
+            evidence being offered under 404(3) more closely.</p>
+            <p>In the pre-<em>Turnidge</em> category, a number of cases
+            from the Court of Appeals struggle with preservation of
+            error, the appropriate balancing test, and the admissibility
+            of propensity evidence in cases not involving child sexual
+            abuse.<a href="#fn15" class="footnote-ref" id="fnref15"
+            role="doc-noteref"><sup>15</sup></a> Then came <em>Turnidge
+            in</em> which the court evaluated the proffered evidence
+            under the traditional prongs of OEC 404(3) and 403 and
+            reinstated the 403 balancing test for nonpropensity
+            evidence.</p>
+            <p>The <em>Turnidge</em> court initially clarified that the
+            test in <em>Johns</em> only applied to cases involving the
+            “doctrine of chances”<a href="#fn16" class="footnote-ref"
+            id="fnref16" role="doc-noteref"><sup>16</sup></a> (where
+            defendant admits to conduct but asserts mistake or
+            inadvertence) and then evaluated the admissibility of the
+            other act conduct as nonpropensity evidence. The doctrine of
+            chances theory, developed fully in <em>Leistiko</em>,</p>
+            </blockquote>
+            <p>rests on the proposition that the defendant either
+            concedes the act that requires proof of a mental state
+            <em>or the trial court instructs the jury</em> not to
+            consider uncharged misconduct evidence offered to prove
+            intent unless and until the jury finds the act that requires
+            proof of intent to have been done and is proceeding to
+            determine intent.”</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=13378673158226231561&amp;q=State+v.+Turnidge,+359+Or+364,+374+P3d+853,+903+(2016)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Turnidge</em>, 359 Or 364, 444, 374 P3d 853, 903
+            (2016)</a>, <em>cert. denied,</em> No. 16-6738, 2017 WL
+            69511 (U.S. Jan. 9, 2017); <em>see</em> <a
+            href="https://scholar.google.com/scholar_case?case=8228843093929307299&amp;q=State+v.+Tena,+281+Or+App+57,+384+P3d+521+(2016)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Tena</em>, 281 Or App 57, 384 P3d 521 (2016)</a>.</p>
+            <p>Subsequently, in the <em>Tena</em> decision reversing the
+            Court of Appeals<em>,</em> Justice Landau set forth the
+            tenets of the doctrine as follows:</p>
+            <p>The basic idea behind the doctrine of chances is the
+            “proposition that multiple instances of similar conduct are
+            unlikely to occur accidentally.” <a
+            href="https://scholar.google.com/scholar_case?case=4459101288610132265&amp;q=Baughman,+361+Or+393+P3d+1132&amp;hl=en&amp;as_sdt=4,38"><em>Baughman</em>,
+            361 Or at 407, 393 P3d 1132</a>. The more often a defendant
+            intentionally performs an act, the less likely it is that,
+            when the defendant performs the act again, he or she did so
+            accidentally or innocently. As the court explained
+            in <em>Johns</em>, “[t]he recurrence or repetition of the
+            act increases the likelihood of a <em>mens rea</em> or mind
+            at fault.” 301 Or at 552, 725 P2d 312.</p>
+            <p><em>State v. Tena</em>, 362 Or at 524 (2018).</p>
+            <p>Justice Landau went on to emphasize that this doctrine
+            does not only apply where an accused denies the
+            allegation:</p>
+            <p>It is important to emphasize that the doctrine of chances
+            applies only to explain whether or not an act that a
+            defendant performed was performed intentionally. It does not
+            apply when there is a dispute about whether the defendant
+            performed the act at all. As this court explained
+            in <em>Turnidge</em>, the doctrine concerns the
+            admissibility of evidence “offered to prove a defendant’s
+            intent or absence of mistake[;] . . . that is, evidence
+            countering a defendant’s claim that he or she performed the
+            act alleged but did so  by mistake.” 359 Or at 435, 374 P3d
+            853. It applies to evidence of other acts offered to show
+            that “the defendant acted intentionally, rather than
+            inadvertently.” <em>Id.</em> at 436, 374 P3d 853.<a
+            href="#fn17" class="footnote-ref" id="fnref17"
+            role="doc-noteref"><sup>17</sup></a></p>
+            <p>Therefore, the <em>Turnidge</em> court refused to revisit
+            questions left open by <em>Williams</em>, in part because
+            the justices found the evidence was admissible for a
+            nonpropensity purpose and admitted after proper balancing
+            under 403.</p>
+            <p>After <em>Turnidge,</em> the Court of Appeals
+            acknowledged that the <em>Johns</em> test applied only to
+            cases involving the “doctrine of chances”<a href="#fn18"
+            class="footnote-ref" id="fnref18"
+            role="doc-noteref"><sup>18</sup></a> and, unlike
+            <em>Turnidge</em>, rejected the trial court’s admission of
+            the evidence for the nonpropensity purpose and remanded for
+            a new trial.<a href="#fn19" class="footnote-ref"
+            id="fnref19" role="doc-noteref"><sup>19</sup></a> The
+            <em>Wright</em> court noted that the state <em>did not</em>
+            raise the issue of whether or not the evidence in a case
+            that did not involve child sexual abuse could be admitted as
+            propensity evidence.<a href="#fn20" class="footnote-ref"
+            id="fnref20" role="doc-noteref"><sup>20</sup></a></p>
+            <p>Thus, the Oregon Court of Appeals and Oregon Supreme
+            Court had still not directly addressed questions left open
+            by <em>Williams</em> while beginning to develop a trend of
+            distinguishing between propensity and nonpropensity evidence
+            and giving greater scrutiny to the admissibility of
+            nonpropensity evidence.</p>
+            </section>
+            <section id="v._the_trilogy_baughman_mazziotti_zavala"
+            class="level1">
+            <h1><strong>V. The Trilogy (<em>Baughman, Mazziotti,
+            Zavala</em>)</strong></h1>
+            <p>Although the questions presented in the briefing for the
+            trilogy seemed to get to the heart of all the questions left
+            unanswered by <em>Williams</em>, not all were addressed.
+            Nevertheless, it is important to analyze the trilogy of
+            cases and recognize what is still undecided.</p>
+            <p>The <em><a
+            href="https://scholar.google.com/scholar_case?case=4459101288610132265&amp;q=Baughman,+361+Or+393+P3d+1132&amp;hl=en&amp;as_sdt=4,38">Baughman</a></em>
+            court addressed three important questions:</p>
+            <p>1) What kind of OEC 403 balancing applies to evidence
+            offered under OEC 404(4)? In other words, what, exactly,
+            does the phrase “to the extent required by” the state or
+            federal constitution mean?</p>
+            <p>2) What standard of review applies to a trial court’s
+            decision under OEC 403 to admit or exclude other acts
+            evidence offered to prove propensity under OEC 404(4)?</p>
+            <p>3) When the Court of Appeals reverses and remands a case
+            based on a trial court’s failure to conduct proper OEC 403
+            balancing before admitting other acts evidence, must it
+            reverse and remand the case for a new trial, or may it
+            impose a “conditional remand” that requires the trial court
+            to only hold a hearing and conduct the proper balancing?</p>
+            <p>Based on those questions, the <em>Baughman</em> court
+            held:</p>
+            <p>1) In cases involving child sexual abuse where evidence
+            of an individual’s character is offered to show that person
+            acted in conformity therewith (propensity evidence), the
+            trial court must utilize the “traditional” 403 balancing
+            test to determine admissibility.</p>
+            <p>2) 404(4) supersedes the first sentence<a href="#fn21"
+            class="footnote-ref" id="fnref21"
+            role="doc-noteref"><sup>21</sup></a> but not the second
+            sentence<a href="#fn22" class="footnote-ref" id="fnref22"
+            role="doc-noteref"><sup>22</sup></a> of 404(3).</p>
+            <p>3) If evidence is not offered to prove that the defendant
+            acted in conformity with a particular character trait
+            (propensity) but rather is offered for a nonpropensity
+            purpose (traditional 404(3) evidence), then the trial court
+            need not reach the propensity issue.</p>
+            <p>4) The remedy on remand may be a new trial, but the court
+            left that to the discretion of the trial court after the
+            trial court conducted the appropriate analysis set forth in
+            <em>Baughman</em>.</p>
+            <blockquote>
+            <p>Note: The court deferred to another day one of the
+            questions presented, which was the question of whether
+            propensity evidence would <em>ever</em> be admissible in
+            cases not involving child sexual abuse.<a href="#fn23"
+            class="footnote-ref" id="fnref23"
+            role="doc-noteref"><sup>23</sup></a></p>
+            <p>In addressing the following question: “[W]hether the
+            balancing under OEC 403 is “traditional” or
+            “subconstitutional” balancing, or, as the state posits, “due
+            process” balancing that precludes the admission of
+            propensity evidence under OEC 404(4) only if its admission
+            would render the trial fundamentally unfair as a matter of
+            law.”<a href="#fn24" class="footnote-ref" id="fnref24"
+            role="doc-noteref"><sup>24</sup></a></p>
+            </blockquote>
+            <p>The <em>Baughman</em> court held:</p>
+            <p>Considering the text, context, and legislative history of
+            OEC 404(4), we are persuaded that, in enacting that rule of
+            evidence, the legislature intended trial courts to conduct
+            the balancing required by OEC 403 according to its terms.
+            Under OEC 404(4) (a) and OEC 403, trial courts may exclude
+            evidence, in the exercise of their discretion, when they
+            determine that its probative value is substantially
+            outweighed by the danger of unfair prejudice. <em>See</em>
+            <a
+            href="https://scholar.google.com/scholar_case?case=11832030587051312771&amp;q=State+v.+Knight,+343+Or+469,+173+P3d+1210+(2007)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Knight</em>, 343 Or 469, 483, 173 P3d 1210 (2007)</a>
+            (explaining that court’s exclusion of evidence under OEC 403
+            requires exercise of discretion). Under OEC 404(4) (d),
+            trial courts also must exclude evidence, as a matter of law,
+            that would render a trial fundamentally unfair and violate
+            the Due Process Clause. <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=1002151546933871559&amp;q=State+v.+Rogers,+330+Or+282,+4+P3d+1261+(2000)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rogers</em>, 330 Or 282, 312, 4 P3d 1261 (2000)</a>
+            (explaining that, when only one legally correct outcome
+            exists, decision is legal in nature and not exercise of
+            discretion). OEC 404(4) (a) and OEC 404(4) (d) thus provide
+            two independent bases for excluding other acts evidence.<a
+            href="#fn25" class="footnote-ref" id="fnref25"
+            role="doc-noteref"><sup>25</sup></a></p>
+            <p><strong>Practice Tip</strong></p>
+            <p>The <em>Baughman</em> Court set up a two-part analysis
+            for determining admissibility of other act (character)
+            evidence once it is sought to be introduced:</p>
+            <p>1) Determine if there is any nonpropensity purpose that
+            justifies admissibility and, if yes, conduct the 403
+            balancing test to determine admissibility. If the court
+            determines that there is a nonpropensity purpose
+            <strong><em>and</em></strong> the prejudicial impact does
+            not outweigh the probative value under the 403 balancing
+            test, then there is no need to conduct a 404(4) analysis;
+            then, if the case involves child sexual abuse,</p>
+            <p>2) if the court finds that there are no nonpropensity
+            purposes under which the evidence is admissible, the court
+            can then evaluate the admissibility of the evidence under
+            404(4).</p>
+            <p>The <em>Baughman</em> court emphasized the 403 balancing
+            test will have a due process consideration when determining
+            admissibility and also emphasized that the prejudice prong
+            of the balancing test would tilt more toward admissibility
+            for a nonpropensity purpose under 404(3) than it would for a
+            pure propensity purpose offered under 404(4):</p>
+            <blockquote>
+            <p>This does not mean that [t]he balancing that a trial
+            court conducts under OEC 403 will be devoid of due process
+            considerations. As this court explained in
+            <em>Williams</em>, it is the Due Process Clause that
+            requires the application of OEC 403. 357 Or at 18, 346 P3d
+            455. The common-law underpinnings of that rule, the Supreme
+            Court’s explanation of the meaning of the term “unfair
+            prejudice” in <em>Old Chief</em>, and its description of the
+            role that balancing plays in <em>Dowling</em> all remind us
+            that OEC 403 balancing must be conducted to preclude the
+            admission of “concededly relevant evidence” that has the
+            capacity “to lure the factfinder into declaring guilt on a
+            ground different from proof specific to the offense
+            charged.” <a
+            href="https://scholar.google.com/scholar_case?case=2711105174348004240&amp;q=old+chief&amp;hl=en&amp;as_sdt=3,38"><em>Old
+            Chief</em></a>, 519 U.S. at 180, 117 S.Ct. 644.
+            <strong><em>That is why we said, in Williams, that, “when
+            ‘other acts’ evidence ‘goes only to character and there are
+            no permissible inferences the jury may draw from it,’ it is
+            more likely that the evidence will be excluded. Such
+            evidence generally will have little or no cognizable
+            probative value, and the risk that the jury may conclude
+            improperly that the defendant had acted in accordance with
+            past acts on the occasion of the charged crime will be
+            substantial.”</em></strong>357 Or at 20(emphasis in
+            original).</p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=4459101288610132265&amp;q=Baughman,+361+Or+393+P3d+1132&amp;hl=en&amp;as_sdt=4,38"><em>Baughman</em></a>,
+            361 Or at 402–03.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>At bottom, the <em>Baughman</em> court recognized that
+            when evidence is being offered solely for
+            <em>propensity</em> purposes in child sex abuse cases, it is
+            more likely the evidence will be excluded. This is an
+            extremely important quote and one that should be in every
+            brief. If you can convince a court that the evidence does
+            not meet any purpose under 404(3) and those arguments are
+            just a ruse to get in under 404(4), then the trial court
+            should conduct the 403 balancing test with their thumb on
+            the scale of inadmissibility.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>The <em>Baughman</em> court, emphasizing language from
+            <em>Williams,</em> has so far limited the potential of
+            propensity evidence solely to cases involving child sexual
+            abuse. Footnote 8<a href="#fn26" class="footnote-ref"
+            id="fnref26" role="doc-noteref"><sup>26</sup></a> of
+            <em>Baughman</em> gives a clear signal to everyone that the
+            Oregon Supreme Court has <strong><em>not</em></strong>
+            decided whether evidence solely being offered to show that
+            an accused person acted in conformity therewith is
+            <strong><em>ever</em></strong> admissible in cases
+            <strong><em>other than</em></strong> those involving child
+            sexual abuse. Further, it seems not to be inclined to extend
+            inclusion of propensity evidence for cases other than those
+            involving child sexual abuse. <em>See</em> cases cited under
+            fn 17, <em>supra</em>.</p>
+            <blockquote>
+            <p>In <em><a
+            href="https://scholar.google.com/scholar_case?case=1588785644296731037&amp;q=State+v.+Mazziotti,+361+Or+370,+393+P3d+235+(2017).&amp;hl=en&amp;as_sdt=4,38">Mazziotti</a>,
+            supra</em>, the court reaffirmed the rule that even in cases
+            where the state seeks to admit character evidence for a
+            nonpropensity purpose, the trial court must conduct the 403
+            balancing test to determine ultimate admissibility
+            (affirming the Court of Appeals’ reversal of the trial court
+            in a case involving the charge of failure to perform the
+            duties of a driver).</p>
+            </blockquote>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=15190351295068377972&amp;q=State+v+Zavala,+361+Or+377,+393+P3d+230+(2017).&amp;hl=en&amp;as_sdt=4,38"><em>Zavala</em></a>,
+            <em>supra,</em> the court, again through Justice Walters,
+            found that the trial court admitted evidence for a
+            nonpropensity purpose (sexual predisposition for the alleged
+            victim) but failed to conduct the proper balancing test
+            under 403. However, the court found the error to balance was
+            harmless because the defendant did not make the argument to
+            the trial court (or on appeal) that his case was different
+            from <em>McKay</em>:</p>
+            <p>Rather, this is a case, like <a
+            href="https://scholar.google.com/scholar_case?case=2918364823398984239&amp;q=McKay,+309+Or+at+308,+787+P2d+479&amp;hl=en&amp;as_sdt=4,38"><em>McKay</em>,
+            309 Or at 308, 787 P2d 479</a>, in which the evidence
+            appeared to be relevant for a nonpropensity purpose—to prove
+            defendant’s sexual disposition for the victim. Such
+            nonpropensity evidence is generally admissible, unless, of
+            course, the particular facts demonstrate a risk of prejudice
+            that substantially outweighs its probative value.
+            <em>Williams</em>, 357 Or at 19-20, 346 P3d 455;
+            <em>Shaw</em>, 338 Or at 612, 113 P3d 898. . . .</p>
+            <p>At trial in this case, the court cited <em>McKay</em> and
+            gave defendant an opportunity to argue that his case was
+            different. Defendant did not contend that it was or that the
+            particular facts of his case demonstrated a risk of unfair
+            prejudice that substantially outweighed the probative value
+            of the evidence. <em>See Williams</em>, 357 Or at 19, 346
+            P3d 455 (permitting that demonstration). And defendant again
+            fails to make either argument before this court.<sup>3</sup>
+            In the absence of a meritorious argument that could persuade
+            a trial court to exclude the challenged evidence, we
+            conclude that the trial court’s failure to conduct balancing
+            under OEC 403 did not significantly affect its decision to
+            admit that evidence. Consequently, we also conclude that
+            there was little likelihood that the trial court’s error
+            affected its judgment of conviction. <em>See State v.
+            Davis</em>, 336 Or 19, 32, 77 P3d 1111 (2003) (error
+            requires reversal unless reviewing court can conclude that
+            there was little likelihood that trial court’s error
+            affected conviction).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15190351295068377972&amp;q=State+v+Zavala,+361+Or+377,+393+P3d+230+(2017).&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Zavala</em></a>, 361 Or 377, 385, 393 P3d 230, 235
+            (2017).</p>
+            </section>
+            <section id="vi._post_trilogy" class="level1">
+            <h1><strong>VI. Post Trilogy</strong></h1>
+            <p>Recently, the Oregon Supreme Court reversed the
+            conviction of a person convicted of domestic violence
+            assault. <em><a
+            href="https://scholar.google.com/scholar_case?case=642667261173167302&amp;q=State+v.+Tena&amp;hl=en&amp;as_sdt=4,38">State
+            v. Tena</a>,</em> 362 Or 514, 412 P3d 175 (2018). In
+            <em>Tena,</em> Justice Landau highlighted the holdings of
+            <em>[<a
+            href="file://localhost/.https/">file://localhost/.https/</a>::scholar.google.com:scholar_case%3Fcase=9903617515752744475&amp;q=State+v.+williams&amp;hl=en&amp;as_sdt=4,38
+            Williams],</em> and the trilogy, and succinctly sets forth
+            the analysis for how a litigant should evaluate and argue
+            for, or against, the admissibility of other act evidence.
+            <em>Tena,</em> 362 Or at 519-521. <em>This is now a must
+            read for all counsel.</em></p>
+            <p>Since the trilogy, there have also been four significant
+            cases out of the Court of Appeals that cite to
+            <em>Baughman.</em></p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=15088502188806183186&amp;q=Jones,+285+Or+App&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Jones</em></a>, now Supreme Court Justice Becky Duncan,
+            writing for the court, rejected the state’s contention that
+            404(4) superseded 404(3) in <em>Williams,</em><a
+            href="#fn27" class="footnote-ref" id="fnref27"
+            role="doc-noteref"><sup>27</sup></a> and noted that the
+            <em>Baughman</em> court made clear that 404(4) only
+            superseded the first sentence of 404(3) <em>but did not
+            supersede</em> the second sentence. <em>Id.</em> <em>See
+            Tena</em>, 362 Or at 520 (affirming the principle). The
+            <em>Jones</em> court then evaluated the nonpropensity
+            purposes the state asserted supported admission of the other
+            act evidence it proffered. <em>Id.</em> The court rejected
+            the claim that the state had satisfied its burden for
+            admitting the character evidence for any of the
+            nonpropensity purposes asserted.<a href="#fn28"
+            class="footnote-ref" id="fnref28"
+            role="doc-noteref"><sup>28</sup></a> Finally, the court
+            rejected the state’s request to address the unpreserved
+            argument that the evidence (it was a robbery case) could be
+            admitted to show propensity under OEC 404(4). In rejecting
+            the state’s request to address the unpreserved claim, the
+            <em>Jones</em> court noted that in <em>Baughman</em> the
+            Oregon Supreme Court had not yet decided whether character
+            evidence offered solely for a propensity purpose would ever
+            be admissible in cases other than child sexual abuse.</p>
+            <p>Note: This case is a good read on what the trial courts
+            should be doing in scrutinizing the state’s evidence by our
+            newest Oregon Supreme Court justice. Here, the
+            <em>Jones</em> court found that the stated failed to
+            establish 1) that the prior conduct was relevant to show,
+            using the doctrine of chances, that defendant acted
+            intentionally and not by accident or mistake, because the
+            state failed to establish that the prior conduct and the
+            charged conduct were similar, as required by <em>Johns;</em>
+            2) that the prior conduct was relevant to show that
+            defendant acted pursuant to a plan, because the state failed
+            to show that there was a high degree of similarity between
+            defendant’s prior conduct and the charged conduct; and 3)
+            that the prior conduct was relevant to show defendant’s
+            motive to commit the charged act, because the state failed
+            to show a “substantial connecting link between the two
+            acts,” which, in the case, required more than simply showing
+            that defendant had been convicted of robbery in the past.<a
+            href="#fn29" class="footnote-ref" id="fnref29"
+            role="doc-noteref"><sup>29</sup></a></p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=14212886339006646749&amp;q=State+v.+Parker,+285+Or+App+777&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Parker,</em> 285 Or App 777, 398 P3d 437 (2017)</a>, the
+            Court of Appeals again reversed the trial court. Although
+            the <em>Parker</em> court found the evidence would be
+            admissible for a nonpropensity purpose, it rejected the
+            state’s assertion that the trial court merely needed to go
+            through the “narrow due process balancing” rather than the
+            traditional balancing test under 403. Relying on
+            <em>Baughman,</em> the <em>Parker</em> court held that the
+            trial court must go through the traditional 403
+            balancing<br />
+            test before determining whether or not to admit the
+            evidence, <em>at least when requested as was in<br />
+            this case</em>.<a href="#fn30" class="footnote-ref"
+            id="fnref30" role="doc-noteref"><sup>30</sup></a></p>
+            <p>Note: Therefore, the courts are now strongly making two
+            points: 1) the trial courts <em>must</em> use the
+            traditional 403 balancing test whether the evidence is being
+            offered for a nonpropensity purpose under 404(3) and for a
+            propensity purpose under 404(4), and 2) there is a strong
+            trend that will have to be addressed, but so far there is no
+            definitive ruling on whether or not it will be reviewed on
+            appeal if not requested at the trial court. See Section
+            VIII, <em>infra</em>, on requesting that the court conduct
+            the traditional 403 balancing test.</p>
+            <p>The <em>Parker</em> court then applied the
+            <em>Mayfield</em> test and found that the probative value of
+            admitting the evidence was substantially outweighed by
+            prejudicial impact:</p>
+            <p>In this case, the only purpose that would be served by
+            permitting the state to introduce the name of defendant’s
+            crime of conviction would be to show that defendant is “a
+            bad man and therefore probably committed the crime for which
+            he was charged.” <em>Zimmerlee</em>, 261 Or at 54, 492 P2d
+            795; <em>see Baughman</em>, 361 Or at 405, 393 P3d 1132
+            (“[W]hen evidence is relevant only to prove a defendant’s
+            character, more significant due process concerns are
+            implicated, and, generally, the danger of unfair prejudice
+            will substantially outweigh the probative value of the
+            evidence”).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=14212886339006646749&amp;q=State+v.+Parker,+285+Or+App+777&amp;hl=en&amp;as_sdt=4,38"><em>Parker</em></a>,
+            285 Or App at 786.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>This case states that if there is a less prejudical way
+            to get the evidence admitted then it should be accepted.<a
+            href="#fn31" class="footnote-ref" id="fnref31"
+            role="doc-noteref"><sup>31</sup></a> In this case, the
+            defendant was charged with weapons and DV assault. The state
+            introduced a prior felony conviction for delivery of a
+            controlled substance–methamphetamine. The defense conceded
+            that the fact of the felony conviction was relevant but the
+            specific type of conviction (i.e., the actual name of the
+            crime) was not and wanted the judgment to be redacted. The
+            trial court refused, the defendant was convicted and the
+            Court of Appeals reversed.</p>
+            <blockquote>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=6525641551788094587&amp;q=State+v.+Garcia-Rocio,+286+Or+App+136&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Garcia-Rocio, </em>286 Or App 136, 399 P3d 1009
+            (2017)</a>, the Court of Appeals again reversed the trial
+            court and held that the failure to conduct the appropriate
+            403 balancing test in a child sexual abuse case required
+            reversal. This court stated that the trial court need not
+            necessarily strictly adhere to
+            the <em>Mayfield</em> factors, but must generally cover
+            them.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=17284433779629860085&amp;q=State+v.+Brown,+284+Or+App+671&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown</em>, 284 Or App 671, 393 P3d 274 (2017)</a>, after
+            a series of decisions and remands, the <em>Brown</em> court
+            (Linder) recognized that there should have been a balance
+            test conducted by the trial court judge. It then quoted from
+            <em>Baughman</em> the holding that, when a trial court fails
+            to follow the required analysis for determining
+            admissibility of evidence under OEC 403, the proper remedy
+            is a limited remand for the trial court to correct its
+            error.” <em>Baughman</em> at 411. On remand, the trial court
+            then determines whether a new trial is necessary in light of
+            its corrected ruling.”<a href="#fn32" class="footnote-ref"
+            id="fnref32" role="doc-noteref"><sup>32</sup></a> The court
+            then permitted a limited remand.</p>
+            </blockquote>
+            </section>
+            <section
+            id="vii._evidence_admitted_for_propensity_or_nonpropensity_purpose"
+            class="level1">
+            <h1><strong>VII. Evidence Admitted for Propensity or
+            Nonpropensity Purpose</strong></h1>
+            <p>Propensity evidence is evidence of other acts that are
+            proffered to prove defendant’s character and that he acted
+            in conformity with that character at the time he committed
+            the current alleged offense(s). OEC 404(4).</p>
+            <blockquote>
+            <p>Nonpropensity evidence is evidence of a person’s prior
+            action that is not offered to show that the person acted in
+            conformity with his character but for another purpose such
+            as motive, opportunity, intent, preparation, plan,
+            knowledge, identity, absence of mistake of fact, etc. OEC
+            404(3).</p>
+            <p>Each piece of evidence must be evaluated under the two
+            step analysis: 1) whether or not it meets the requirements
+            for admissibility as nonpropensity evidence and, if it does,
+            is its probative value outweighed by its prejudicial impact
+            and 2) if not admissible for a nonpropensity purpose, is it
+            admissible as propensity evidence and is its probative value
+            outweighed by prejudicial impact if admitted.</p>
+            <p>Also, there is a <em>Baughman</em> presumption that the
+            evidence is more likely going to satisfy the 403 balancing
+            test if it is offered for a nonpropensity purpose than
+            solely as propensity evidence.</p>
+            </blockquote>
+            <p>Practice Tip</p>
+            <p>Each piece of proffered evidence must be examined through
+            the prism of “logical reasoning.” Make the state articulate
+            the reason why a particular piece of proffered evidence goes
+            to the “motive, intent, preparation.” One cannot simply say,
+            “Defendant has an interest in child pornography. Therefore
+            the defendant has an interest in sexually abusing children.
+            Therefore, defendant has a motive to sexually abuse the
+            child in this case.”</p>
+            <p>In evaluating the relevancy and admissibility of
+            nonpropensity evidence following <em>Williams</em> and
+            <em>Turnidge</em>, the Court of Appeals has held that:</p>
+            <blockquote>
+            <p>After <em>Williams</em>, we observed that “the types of
+            relevant evidence set out in OEC 404(3) (‘motive,
+            opportunity, intent, preparation, plan, knowledge, identity,
+            or absence of mistake or accident’) remain viable theories
+            for the admission of prior acts evidence.” <em>State v.
+            Clarke</em>, 279 Or App 373, 382, 379 P3d 674, 680 (2016)
+            (citing <em>State v. Turnidge</em>, 359 Or 364, 434, 374 P3d
+            853 (2016)). “Thus, in evaluating whether evidence of ‘other
+            crimes, wrongs or acts’ is admissible for nonpropensity
+            purposes, we may draw on the ‘settled principles’ of
+            relevance embodied in OEC 404(3) and case law construing
+            that provision.” <em>Clarke</em>, 279 Or App at 382, 379 P3d
+            at 680 (quoting <em>Turnidge</em>, 359 Or at 434, 374 P3d
+            853).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8228843093929307299&amp;q=State+v.+Tena,+281+Or+App+57&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Tena</em>, 281 Or App 57</a>, 63, 384 P3d 521, 525–26
+            (2016), <em>reversed on other grounds,</em> <a
+            href="https://scholar.google.com/scholar_case?case=642667261173167302&amp;q=State+v.+Tena,+362+Or+514,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Tena,</em> 362 Or 514,</a> 412 P3d 172 (2018).</p>
+            </blockquote>
+            </section>
+            <section
+            id="viii._oec_403_balancing_test_you_must_ask_for_it"
+            class="level1">
+            <h1><strong>VIII. OEC 403 Balancing Test: You Must Ask For
+            It</strong></h1>
+            <blockquote>
+            <p><em>Baughman</em> says “We do not decide, in this case,
+            whether, in addition to objecting to the admission of such
+            evidence, a party also must explicitly seek balancing under
+            OEC 403.”<a href="#fn33" class="footnote-ref" id="fnref33"
+            role="doc-noteref"><sup>33</sup></a> <em>However,</em> the
+            Court of Appeals decisions have almost uniformly found that
+            the failure to ask for the test waives the requirement that
+            the court engage in the 403 balancing test. <em>So always
+            ask for the court to engage in the 403 balancing test.</em>
+            Most recently, and just before the state supreme court
+            issued <em>Baughman</em>, the Court of Appeals stated:</p>
+            </blockquote>
+            <p>However, defendant did not ask the trial court to engage
+            in OEC 403 balancing with regard to that evidence, and we
+            have consistently held that our review of <em>that claimed
+            error depends on defendant . . .“mak[ing] such a
+            challenge</em>.” <a
+            href="https://scholar.google.com/scholar_case?case=551183894114963548&amp;q=State+v.+Altabef,+279+Or+App+268&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Altabef</em>,</a> , 279 Or App 268, 379 P3d 755 (2016),
+            <em>review denied</em>, 360 Or 752 <em>but, review
+            allowed</em> (state’s petition), <em>decision vacated</em>,
+            361 Or 885 (2017); <em>see</em> <a
+            href="https://scholar.google.com/scholar_case?case=13378673158226231561&amp;q=Turnidge,+359+Or+at+430,+374+P3d+853&amp;hl=en&amp;as_sdt=4,38"><em>Turnidge</em>,
+            359 Or at 430, 374 P3d 853</a> (admissibility of sexual
+            predisposition evidence “depends on a trial court
+            determination, in response to a proper motion, that the
+            probative value of the evidence outweighs the danger of
+            unfair prejudice under OEC 403”); <a
+            href="https://scholar.google.com/scholar_case?case=9903617515752744475&amp;q=State+v.+Williams,+357+Or+1,+19,+346+P3d+455+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Williams</em>, 357 Or 1, 19, 346 P3d 455 (2015)</a> (a
+            trial court must engage in the balancing anticipated by OEC
+            403 “[w]hen a party objects, under OEC 403, to ‘other acts’
+            evidence”); <a
+            href="https://scholar.google.com/scholar_case?case=6035685365081595614&amp;q=State+v.+McMullin,+269+Or+App+859,+346+P3d+611,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McMullin</em>, 269 Or App 859, 860 n. 2, 346 P3d 611,</a>
+            <em>rev. den.</em>, 357 Or 640, 360 P3d 523 (2015) (OEC 403
+            balancing was not preserved where the defendant neither
+            sought a ruling nor objected to the admission of the
+            evidence at issue on those grounds at trial).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=3576835241626332455&amp;q=State+v.+Woods,+284+Or+App+559,+393+P3d+1188,+1190%E2%80%9391+(2017)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Woods</em>, 284 Or App 559, 563–64, 393 P3d 1188, 1190–91
+            (2017)</a> (emphasis supplied).</p>
+            <p>So, file a motion and ask for the court to conduct the
+            403 balancing test and argue it must be<br />
+            done using <a
+            href="https://scholar.google.com/scholar_case?case=14158085507055309521&amp;q=Mayfield,+302+Or+733+P2d+438.&amp;hl=en&amp;as_sdt=4,38"><em>Mayfield</em></a>.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Remember, <em>Williams</em> and <em>Baughman</em> appear
+            to equate the traditional OEC 403 balancing test with the
+            constitutionally required due process test.<a href="#fn34"
+            class="footnote-ref" id="fnref34"
+            role="doc-noteref"><sup>34</sup></a> Therefore, it is
+            arguable whether the test is constitutionally mandated. If
+            constitutionally mandated, there should be no requirement
+            that the defense ask the court to undergo the analysis,
+            <strong><em>although it is highly recommended</em></strong>.
+            However, the more interesting question is whether or not the
+            burden remains on the state to prove that the probative
+            value outweighs all the other factors.</p>
+            <blockquote>
+            <p><strong>OEC 403 Mayfield Test</strong></p>
+            </blockquote>
+            <p>The <em><a
+            href="https://scholar.google.com/scholar_case?case=14158085507055309521&amp;q=Mayfield,+302+Or+733+P2d+438.&amp;hl=en&amp;as_sdt=4,38">Mayfield</a></em>
+            test retains some flexibility for trial courts. The Court of
+            Appeals has outlined<br />
+            the <em>Mayfield</em> 403 balancing test analysis as
+            follows:</p>
+            <p>[the] method includes four basic steps: (1) “analyze the
+            quantum of probative value of the evidence and consider the
+            weight or strength of the evidence,” (2) “determine how
+            prejudicial the evidence is, to what extent the evidence may
+            distract the jury from the central question whether the
+            defendant committed the charged crime,” (3) balance those
+            two factors, and (4) make a ruling to admit some, all, or
+            none of the proponent’s evidence. <a
+            href="https://scholar.google.com/scholar_case?case=14158085507055309521&amp;q=Mayfield,+302+Or+733+P2d+438.&amp;hl=en&amp;as_sdt=4,38"><em>Mayfield</em></a>,
+            302 Or at 645, 733 P2d 438. A trial court need not
+            “expressly follow the <em>Mayfield</em> analysis,” but,
+            rather, “meets the requirements of <em>Mayfield</em> if ‘the
+            record establishes that, in deciding to admit [the
+            evidence], the trial court considered the matters prescribed
+            in <em>Mayfield</em>.’ ” <a
+            href="https://scholar.google.com/scholar_case?case=3605106894507695687&amp;q=State+v.+Corbin,+275+Or+App+609,+365+P3d+647+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Corbin</em>, 275 Or App 609, 616, 365 P3d 647 (2015)</a>
+            (quoting <a
+            href="https://scholar.google.com/scholar_case?case=10927231746789844169&amp;q=Borck,+230+Or+App++216+P3d+915+&amp;hl=en&amp;as_sdt=4,38"><em>Borck,</em>
+            230 Or App at 637, 216 P3d 915</a> (citation and internal
+            quotation marks omitted)). Appellate courts “examine whether
+            . . . the trial court properly applied the balancing test
+            that OEC 403 prescribes for errors of law[.]” <a
+            href="https://scholar.google.com/scholar_case?case=5470568609881129065&amp;q=State+v.+Shaw,+338+Or+586,+113+P3d+898+(2005).&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Shaw</em>, 338 Or 586, 614–15, 113 P3d 898
+            (2005).</a></p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=17332158635854790746&amp;q=State+v.+Anderson,+282+Or+App+24,+386+P3d+154,+(2016&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Anderson</em>, 282 Or App 24, 27, 386 P3d 154, 156–57
+            (2016)</a>.</p>
+            <p>In fact, in the main case prior to <em>Anderson</em>, the
+            Court of Appeals reiterated a fairly “flexible” standard to
+            interpret the record in a manner that assumes the trial
+            court did the <em>Mayfield</em> analysis even if not stated
+            on the record.<a href="#fn35" class="footnote-ref"
+            id="fnref35" role="doc-noteref"><sup>35</sup></a></p>
+            <p>In conducting balancing under OEC 403, the court must
+            “make a record which reflects an exercise of discretion.”
+            <em>Id.</em> That is so because we review a trial court’s
+            decision to admit evidence over an OEC 403 objection for an
+            abuse of discretion, <a
+            href="https://scholar.google.com/scholar_case?case=10129242234595062412&amp;q=State+v.+Brumwell,+350+Or+93,++249+P3d+965+(2011)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brumwell</em>, 350 Or 93, 107, 249 P3d 965 (2011)</a>,
+            <em>cert. den.</em>, 565 U.S. ––––, 132 S.Ct. 1028, 181
+            L.Ed.2d 757 (2012), and we need a sufficient record to
+            conduct meaningful appellate review of that exercise of
+            discretion. <em>See, e.g.</em>, <a
+            href="https://scholar.google.com/scholar_case?case=2575731074815758545&amp;q=State+v.+Meyers,+132+Or+App+585,++889+P2d+374+(1995)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Meyers</em>, 132 Or App 585, 589, 889 P2d 374 (1995)</a>
+            (trial court established sufficient record for our review).
+            In that vein, we have explained that <em>Mayfield</em> “is a
+            matter of substance, not form or litany.” <a
+            href="https://scholar.google.com/scholar_case?case=9778589598017215501&amp;q=State+v.+Brown,+272+Or+App+424,+355+P3d+216&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown</em>, 272 Or App 424, 433, 355 P3d 216,</a>
+            <em>rev. den.</em>, 358 Or 145, 363 P3d 1288 (2015).
+            Accordingly, <em>a court’s OEC 403 decision meets the
+            requirements of Mayfield even if a trial court does not
+            expressly follow the Mayfield analysis, as long as the
+            “record establishes that, in deciding to admit [the
+            evidence], the trial court considered the matters prescribed
+            in Mayfield.</em>” <a
+            href="https://scholar.google.com/scholar_case?case=10927231746789844169&amp;q=Borck,+230+Or+App++216+P3d+915+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Borck</em></a>, 230 Or App 619, 637, 216 P3d 915, *331
+            <em>adh’d to as modified on recons</em>, 232 Or App 266, 221
+            P3d 749 (2009), <em>rev. den.</em>, 348 Or 291, 231 P3d 795
+            (2010). That is, we review whether the “totality of the
+            attendant circumstances indicate that the court . . .
+            engage[d] in the conscious process of balancing the costs of
+            the evidence against its benefits that <em>Mayfield</em>
+            requires.” <em>Id.</em> at 638, 216 P3d 915 (internal
+            quotation marks omitted).</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=7546769445794524377&amp;q=State+v.+Conrad,+280+Or+App+325,+381+P3d+880,+884+(2016)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Conrad</em>, 280 Or App 325, 330–31, 381 P3d 880, 884
+            (2016)</a> (emphasis supplied).</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>Over the years, prosecutors and judges have struggled
+            with this test but <strong><em>rarely</em></strong> go step
+            by step through this process. <strong><em>Make them do
+            it,</em></strong> because if you do not do it yourself or
+            make them, you end up with decisions such as <em>Conrad</em>
+            (<em>compare Anderson</em>) where the Court of Appeals
+            affirmed Judge Kohl in Washington County where the entirety
+            of the judge’s ruling was simply “So that motion is . . .
+            denied.”<a href="#fn36" class="footnote-ref" id="fnref36"
+            role="doc-noteref"><sup>36</sup></a></p>
+            <p>To make them do it, you must file a motion requesting the
+            court conduct a 403 analysis, cite the four factors, have
+            your argument ready on each of the four factors and insist
+            that the court make a finding on each of the factors.
+            Otherwise, you may end up with an opinion like
+            <em>Conrad</em>.</p>
+            <p>Also, some of the appellate decisions referenced in this
+            chapter suggest that they can review the trial court’s
+            decision to determine if there is some way to construe the
+            trial court’s compliance with <em>Mayfield</em>. Do not let
+            the state tell the trial court they can do a minimalist
+            job:</p>
+            <blockquote>
+            <p>The mere fact that defendant asked the trial court to
+            conduct balancing is not enough to demonstrate that the
+            trial court engaged in a conscious process of OEC 403
+            balancing. <strong><em>If we were to conclude that the trial
+            court had conducted a conscious balancing process based on
+            the circumstances we are presented with on the record here,
+            the Mayfield requirement would be made
+            meaningless.</em></strong></p>
+            </blockquote>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=6525641551788094587&amp;q=Garcia-Rocio,+286+Or+App+&amp;hl=en&amp;as_sdt=4,38"><em>Garcia-Rocio</em></a>,
+            286 Or App at 145 (emphasis supplied).</p>
+            </section>
+            <section id="ix._conditional_relevancy" class="level1">
+            <h1><strong>IX. Conditional Relevancy</strong></h1>
+            <blockquote>
+            <p>Although some think the idea of conditional relevancy
+            started with <em>Leistiko,</em> the concept has been around
+            for decades.</p>
+            <p>OEC 104(2) states, “When the relevancy of evidence
+            depends upon the fulfillment of a condition of fact, the
+            court shall admit it upon, or subject to, the introduction
+            of evidence sufficient to support a finding of the
+            fulfillment of the condition.”</p>
+            <p>When dealing with a matter of conditional relevancy under
+            OEC 104(2), the judge determines whether the foundation
+            evidence is sufficient for the jury to reasonably find that
+            the condition on which relevance depends has been
+            fulfilled.<a href="#fn37" class="footnote-ref" id="fnref37"
+            role="doc-noteref"><sup>37</sup></a> If so, the evidence is
+            admitted; if not, the evidence is not admitted. <em>Id.</em>
+            After the judge decides the foundation evidence is
+            sufficient for the jury to reasonably find the contested
+            fact under OEC 104(2), either party may introduce evidence
+            before the jury relevant to the weight and credibility of
+            the evidence. <em>Id.</em> at 210, 808 P2d 1002.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=8777241102096440704&amp;q=State+v.+McNeely,+330+Or+457,+8+P3d+212,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McNeely</em>, 330 Or 457, 462–63, 8 P3d 212, 215</a>
+            <em>cert denied</em>, 531 U.S. 1055 (2000).</p>
+            <p>The leading case on conditional relevancy in child sexual
+            abuse cases is <a
+            href="https://scholar.google.com/scholar_case?case=6900341849620202934&amp;q=State+v.+Pitt,+352+Or+566,+293+P3d+1002+(2012)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Pitt,</em> 352 Or 566, 293 P3d 1002 (2012)</a>. In
+            <em>Pitt</em>, the defense moved to exclude the
+            admissibility of other uncharged acts involving the sexual
+            touching of the child by the defendant in another county.
+            The court held that the relevancy of the other act evidence
+            was conditioned upon the state proving that the other
+            touching actually occurred.</p>
+            </blockquote>
+            </section>
+            <section id="x._conclusion" class="level1">
+            <h1><strong>X. Conclusion</strong></h1>
+            <blockquote>
+            <p>Balancing the complexities of 404(3), 404(4) and 403
+            takes some work and sometimes I am reminded of diagramming
+            sentences in my 5th grade English class. One must focus like
+            a laser on exactly what the act is that the state (or you)
+            want to introduce, determine what rationale would—or would
+            not—support its admissibility, make your record, provide an
+            offer of proof, force the court to make specific findings
+            (to paraphrase Tom Petty—Don’t back down), ride the 403
+            prejudice train and fight like hell. It matters. Due process
+            demands it.</p>
+            </blockquote>
+            <references />
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1">“Evidence of other crimes, wrongs or acts is
+            not admissible to prove the character of a person in order
+            to show that the person acted in conformity therewith”.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2">“It may, however, be admissible for other
+            purposes, such as proof of motive, opportunity, intent,
+            preparation, plan, knowledge, identity, or absence of
+            mistake or accident.”<a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3">OEC 403 provides “The court may exclude
+            relevant evidence if its probative value is substantially
+            outweighed by a danger of one or more of the following:
+            unfair prejudice, confusing the issues, misleading the jury,
+            undue delay, wasting time, or needlessly presenting
+            cumulative evidence.”<a href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><p>OEC 404(4) provides: “In criminal actions,
+            evidence of other crimes, wrongs or acts by the defendant is
+            admissible if relevant except as otherwise provided by:</p>
+            <p>“(a) [OEC 406 through 412] and, to the extent required by
+            the United States Constitution or the Oregon Constitution,
+            [OEC 403];</p>
+            <p>“(b) The rules of evidence relating to privilege and
+            hearsay;</p>
+            <p>“(c) The Oregon Constitution; and</p>
+            <p>“(d) The United States Constitution.”</p>
+            <p>OEC 403 provides: “Although relevant, evidence may be
+            excluded if its probative value is substantially outweighed
+            by the danger of unfair prejudice, confusion of the issues,
+            or misleading the jury, or by considerations of undue delay
+            or needless presentation of cumulative evidence.”<a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn5">Kirkpatrick, <em>Oregon Evidence</em> 256-260
+            (6<sup>th</sup> ed. 2013).<a href="#fnref5"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><a
+            href="https://scholar.google.com/scholar_case?case=8386133424840168281&amp;q=State+v.+Jones,+246+Or+App+412,+266+P3d+151+(2011)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Jones</em>, 246 Or App 412, 418-420, 266 P3d 151
+            (2011)</a>.<a href="#fnref6" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn7">357 Or 1, 19-21, 346 P3d 455 (2015) <em>On
+            remand,</em> 276 Or App 688, <em>review denied</em>.<a
+            href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8">357 Or at 24, 346 P3d 455.<a href="#fnref8"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn9">The <em>Turnidge</em> court held that the trial
+            court, although not artfully articulating his analysis,
+            sufficiently considered 403 in admitting the evidence.<a
+            href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn10"><a
+            href="https://scholar.google.com/scholar_case?case=17954251080749717296&amp;q=State+v.+Baughman,+276+Or+App+754&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Baughman</em></a>, 276 Or App 754, <em>review
+            allowed,</em> 383 P3d 846 (2016), <em>affirmed,</em> 361 Or.
+            386 (2017) (state’s petition); <a
+            href="https://scholar.google.com/scholar_case?case=4895702915248723041&amp;q=State+v.+Mazziotti,+276+Or+App+773&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mazziotti</em></a>, 276 Or App 773, 369 P3d 831,
+            <em>review allowed</em>, 383 P3d 847 (2016),
+            <em>affirmed</em>, 361 Or 370(2017) (state’s petition); <a
+            href="https://scholar.google.com/scholar_case?case=13048249549504256343&amp;q=State+v.+Zavala,+270+Or+App+351&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Zavala</em></a>, 270 Or App 351, 350 P3d 234 (AWOP)
+            (2015), <em>opinion withdrawn and superseded on
+            reconsideration</em>, 276 Or App 612, 368 P3d 831,
+            <em>review allowed,</em> 383 P3d 847 (2016),
+            <em>reversed,</em> 361 Or 377, 393 P3d 230 (2017); <a
+            href="https://scholar.google.com/scholar_case?case=15662144446056775688&amp;q=State+v.+Holt,+279+Or+App+663&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Holt</em></a>, 279 Or App 663, 381 P3d 897 (2016),
+            <em>review allowed and decision vacated by</em> 361 Or 800
+            (2017); <a
+            href="https://scholar.google.com/scholar_case?case=551183894114963548&amp;q=State+.v+Altabef,+279+Or+App+268&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Altabef</em></a>, 279 Or App 268, 379 P3d 755 (2016),
+            <em>review denied</em>, 360 Or 752 <em>but, review
+            allowed</em> (state’s petition), <em>decision vacated</em>,
+            361 Or 885 (2017); <a
+            href="https://scholar.google.com/scholar_case?case=7887149693635015666&amp;q=State+v.+Edwards,+282+Or+App+328&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Edwards</span></em></a>, 282 Or App 328, 385 P3d 1088
+            (2016); <a
+            href="https://scholar.google.com/scholar_case?case=17332158635854790746&amp;q=State+v.+Anderson,+282+Or+App+24,&amp;hl=en&amp;as_sdt=4,38"><em><span class="underline">State
+            v. Anderson</span></em></a>, 282 Or App 24, 386 P3d 154
+            (2016).<a href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn11">In a criminal case in which a defendant is
+            accused of a sexual assault, the court may admit evidence
+            that the defendant committed any other sexual assault. The
+            evidence may be considered on any matter to which it is
+            relevant. Fed. R. Evid. 413.<a href="#fnref11"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn12">In a criminal case in which a defendant is
+            accused of child molestation, the court may admit evidence
+            that the defendant committed any other child molestation.
+            The evidence may be considered on any matter to which it is
+            relevant. Fed. R. Evid. 414.<a href="#fnref12"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn13">The <em>Williams</em> court relied on some
+            great language from <em>Old Chief</em> in coming to that
+            conclusion: “[t]he term ‘unfair prejudice,’ as to a criminal
+            defendant, <em>speaks to the capacity of some concededly
+            relevant evidence to lure the factfinder into declaring
+            guilt on a ground different from proof specific to the
+            offense charged</em>.” <a
+            href="https://scholar.google.com/scholar_case?case=2711105174348004240&amp;q=Old+Chief+v.+United+States,+519+U.S.+172,+180,+117+S.Ct.+644,+136+L.Ed.2d+574+(1997)&amp;hl=en&amp;as_sdt=3,38"><em>Old
+            Chief v. United States</em>, 519 U.S. 172, 180, 117 S.Ct.
+            644, 136 L.Ed.2d 574 (1997)</a>. In <em>Old Chief,</em> the
+            Court recognized that such improper grounds include
+            “generalizing a defendant’s earlier bad act into bad
+            character and taking that as raising the odds that he did
+            the later bad act now charged.” <em>Id.</em> [<a
+            href="file://localhost/.https/">file://localhost/.https/</a>::scholar.google.com:scholar_case%3Fcase=9903617515752744475&amp;q=State+v.+williams&amp;hl=en&amp;as_sdt=4,38
+            <em>State v. Williams</em>], 357 Or 1, 18, 346 P3d 455, 464
+            (2015).<a href="#fnref13" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn14">The term “motive” in this context refers to “
+            ‘a cause or reason that moves the will and induces action,
+            an inducement which leads to or tempts the mind to commit an
+            act.’ ” <a
+            href="https://scholar.google.com/scholar_case?case=3016536474398456112&amp;q=State+v.+Hampton,+317+Or++251,+855+P2d+621+(1993&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hampton</em>, 317 Or 251, 257 n.12, 855 P2d 621
+            (1993)</a> (<em>quoting</em> <a
+            href="https://scholar.google.com/scholar_case?case=9564010959221876051&amp;q=State+v.+Walker,+244+Or++404,+412,+417+P2d+1004+(1966&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Walker</em>, 244 Or 404, 412, 417 P2d 1004 (1966)</a>).
+            It “refers to why a defendant did what he
+            did.” <em>Hampton</em>, 317 Or at 257 n.12, 855 P2d 621
+            (<em>citing</em> <a
+            href="https://scholar.google.com/scholar_case?case=11143870322250246843&amp;q=State+v.+Rose,+311+Or++274,+810+P2d+839+(1991&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rose</em>, 311 Or 274, 283, 810 P2d 839 (1991</a>)). <a
+            href="https://scholar.google.com/scholar_case?case=642667261173167302&amp;q=State+v.+Tena,+362+Or++514,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Tena</em>, 362 Or 514, 521, 412 P3d 175, 180 (2018)</a>
+            (“the admissibility of other-acts evidence under a ‘hostile
+            motive’ theory that does not involve the same victim
+            <em>requires proof that the motive for committing the other
+            acts was that the other persons were members of the class to
+            which the victim belongs</em>).<a href="#fnref14"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn15"><a
+            href="https://scholar.google.com/scholar_case?case=9459669206358752582&amp;q=State+v.+Ardizzone,+270+Or+App+666,+349+P3d+597,+599+(2015)+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Ardizzone</em>, 270 Or App 666, 670, 349 P3d 597, 599
+            (2015)</a> (prior treatment of how the enactment of OEC
+            404(4) affected the analysis under <em>Johns</em> was wrong.
+            Further, <em>Williams</em> represents a fundamental change
+            in the analytical paradigm of the admissibility of “other
+            acts” evidence. Nevertheless, given the issues in this case,
+            and the manner in which we resolve those issues, we need not
+            address how <em>Williams</em> has shifted that paradigm); <a
+            href="https://scholar.google.com/scholar_case?case=9778589598017215501&amp;q=State+v.+Brown,+272+Or+App+424,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown</em>, 272 Or App 424, 428, 355 P3d 216 (2015)</a>
+            (<em>quoting Williams</em> that if offered for nonpropensity
+            purpose then more likely to withstand balancing test than if
+            offered solely for propensity and also requiring
+            <em>Mayfield</em> balancing test factors be used by trial
+            court in conducting OEC 403 analysis); <a
+            href="https://scholar.google.com/scholar_case?case=7338024143542428827&amp;q=State+v.+Logan,+273+Or+App+323,+359+P3d+403+(2015)+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Logan</em>, 273 Or App 323, 359 P3d 403 (2015)</a>
+            <em>review denied</em> 358 Or 550 (2016); <a
+            href="https://scholar.google.com/scholar_case?case=18223219619643138090&amp;q=State+v.+Horner,+272+Or+App+355,+356+P3d+111+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Horner</em>, 272 Or App 355, 356 P3d 111 (2015)</a>,
+            <em>review denied</em> 358 Or 794 (2016); <a
+            href="https://scholar.google.com/scholar_case?case=10205713257350937763&amp;q=State+v.+Brumbach,+273+Or+App+552,+359+P3d+490+(2015)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brumbach</em>, 273 Or App 552, 359 P3d 490 (2015)</a>,
+            <em>review denied by</em> <a
+            href="https://scholar.google.com/scholar_case?case=5115092886353740246&amp;q=State+v.+Wayne,+359+Or+525+(2016)&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wayne,</em> 359 Or 525 (2016)</a> (child sex abuse case
+            where failure to balance required reversal and remand).<a
+            href="#fnref15" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn16"><p>“[I]n evaluating prior crime evidence on
+            the issue <em>of intent or absence of mistake,</em> the
+            trial judge should make these determinations:</p>
+            <p>“(1) Does the present charged act require proof of
+            intent?</p>
+            <p>“(2) Did the prior act require intent?</p>
+            <p>“(3) Was the victim in the prior act the same victim or
+            in the same class as the victim in the present case?</p>
+            <p>“(4) Was the type of prior act the same or similar to the
+            acts involved in the charged crime?</p>
+            <p>“(5) Were the physical elements of the prior act and the
+            present act similar?” <em>Id.</em> at 555–56, 725 P2d 312
+            (emphasis added).</p>
+            <p>Thus, the particular analytical framework outlined in the
+            quote above was specifically fashioned to determine the
+            relevancy and admissibility of evidence offered to prove a
+            defendant’s “intent or absence of mistake” under the
+            doctrine of chances theory—that is, evidence countering a
+            defendant’s claim that he or she performed the act alleged
+            but did so by mistake. <em>See id.</em> at 550, 725 P2d 312
+            (describing the issue in <em>Johns</em> as “whether the
+            defendant acted with intent and not by mistake or accident”;
+            observing that case did not involve “any theory of motive,
+            opportunity, preparation, plan, knowledge or identity or any
+            other unlisted theory” from OEC 404(3)); <em>accord</em> <a
+            href="https://scholar.google.com/scholar_case?case=10224620374428016638&amp;q=Leistiko,+282+P3d+857+&amp;hl=en&amp;as_sdt=4,38"><em>Leistiko</em>,
+            352 Or at 182–83, 282 P3d 857</a> (multifactor analysis in
+            <em>Johns</em> pertained specifically to doctrine of chances
+            theory of admissibility), 184 n. 9, 282 P3d 857 (under
+            doctrine of chances, the term “intent” generally signifies
+            “the absence of accident, inadvertence, or [causality],”
+            which differs from mental state of “intentionally” defined
+            in ORS 161.085(7) (internal quotation marks omitted)).<a
+            href="#fnref16" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn17"><em>State v. Tena</em>, 362 Or at 524–25.<a
+            href="#fnref17" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn18">The doctrine of chances is premised on the
+            idea that multiple instances of similar conduct are not
+            likely to be the result of an innocent intent; evidence is
+            logically relevant under the doctrine only when the other
+            acts involve innocent intents. In other words, because the
+            doctrine is based on the idea that recurring similar
+            mistakes or accidents are increasingly unlikely, the
+            doctrine supports the admission of other acts evidence only
+            when the other acts were, or are claimed to have been, the
+            product of a mistake or accident.” <em>Wright</em>, 283 Or
+            App at 165 n. 2, <em>quoting Tena</em>, 281 Or App at 64 n.
+            4.<a href="#fnref18" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn19"><a
+            href="https://scholar.google.com/scholar_case?case=12520779549039083201&amp;q=Wright,+283+Or+App&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wright</em>, 283 Or App 160, 387 P3d 405 (2016)</a>.<a
+            href="#fnref19" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn20"><em>Id.</em> at n. 1.<a href="#fnref20"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn21">“Evidence of other crimes, wrongs or acts is
+            <em>inadmissible</em> to prove the character of a person in
+            order to show that the person acted in conformity
+            therewith.”<a href="#fnref21" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn22">Other acts evidence “may be admissible for
+            other purposes, such as proof of motive, opportunity,
+            intent, preparation, plan, knowledge, identity, or absence
+            of mistake or accident.”<a href="#fnref22"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn23">“We caution that this court has suggested, but
+            not yet decided, that the federal constitution may, as a
+            matter of law, prohibit the admission of other acts evidence
+            to prove propensity in a criminal case in which the
+            defendant is charged with crimes other than child sexual
+            abuse. <em>See Williams</em>, 357 Or at 17, 346 P3d 455
+            (noting that, if defendant had been charged with crimes
+            other than child sexual abuse, court might be persuaded that
+            due process precludes the admission of other acts
+            evidence).” <em>Baughman</em>, 361 Or at 403, n. 8.<a
+            href="#fnref23" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn24"><em>Baughman</em>, 361 Or at 397.<a
+            href="#fnref24" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn25"><em>Id.</em> at 402.<a href="#fnref25"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn26">See footnote 23.<a href="#fnref26"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn27"><a
+            href="https://scholar.google.com/scholar_case?case=15088502188806183186&amp;q=Jones,+285+Or+App&amp;hl=en&amp;as_sdt=4,38"><em>Jones,</em>
+            285 Or App at 687, 398 P3d 376 (2017)</a>.<a href="#fnref27"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn28"><em>Id</em> at 688-690.<a href="#fnref28"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn29"><em>Id.</em> at 689-90.<a href="#fnref29"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn30"><a
+            href="https://scholar.google.com/scholar_case?case=14212886339006646749&amp;q=State+v.+Parker,+285+Or+App+777&amp;hl=en&amp;as_sdt=4,38"><em>Parker</em>,
+            285 Or App at 783</a>.<a href="#fnref30"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn31">Where a defendant has objected to the
+            admission of a prejudicial piece of evidence and offered a
+            nonprejudicial evidentiary equivalent, the Oregon Supreme
+            Court has stated that in such circumstances “the prejudicial
+            effect of the evidence would outweigh its probative value
+            and it is not admissible.” <a
+            href="https://scholar.google.com/scholar_case?case=13283228121291592521&amp;q=Zimmerlee,+261+Or+at+54,+492+P2d+795&amp;hl=en&amp;as_sdt=4,38"><em>Zimmerlee</em>,
+            261 Or at 54, 492 P2d 795</a>; <em>see <a
+            href="https://scholar.google.com/scholar_case?case=4459101288610132265&amp;q=Baughman,+361+Or+393+P3d+1132&amp;hl=en&amp;as_sdt=4,38">Baughman</a></em>,
+            361 Or at 407, 393 P3d 1132 (“[E]vidence admitted for a
+            nonpropensity purpose generally is admissible under OEC 403,
+            while evidence admitted solely to prove a defendant’s
+            character is not”); <em>Williams</em>, 357 Or at 20, 346 P3d
+            455 (when no permissible inferences can be drawn from other
+            acts evidence, it generally lacks probative value and will
+            be excluded because the risk that the jury will use the
+            evidence improperly is “substantial”); <em>see also Old
+            Chief</em>, 519 U.S. at 191, 117 S.Ct. 644 (when “the
+            functions of the competing evidence are distinguishable only
+            by the risk inherent in the one and wholly absent from the
+            other,” the “only reasonable conclusion was that the risk of
+            unfair prejudice did substantially outweigh the discounted
+            value of the record of conviction”). The state has failed to
+            show that the unredacted judgment’s “probative value is
+            substantial enough to outweigh any attendant danger of
+            unfair prejudice.” <a
+            href="https://scholar.google.com/scholar_case?case=14158085507055309521&amp;q=Mayfield,+302+Or&amp;hl=en&amp;as_sdt=4,38"><em>Mayfield</em>,
+            302 Or at 645, 733 P2d 438 (1987)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=14212886339006646749&amp;q=State+v.+Parker,+285+Or+App+777&amp;hl=en&amp;as_sdt=4,38"><em>Parker</em></a>,
+            285 Or App at 786-787.<a href="#fnref31"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn32"><em>Brown</em>, 284 Or App at 671.<a
+            href="#fnref32" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn33"><em>Baughman</em>, 361 Or at 405 n 9.<a
+            href="#fnref33" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn34">“As this court explained in <em>Williams</em>,
+            it is the Due Process Clause that requires the application
+            of OEC 403.” 357 Or at 18, 346 P3d 455. <em>Baughman</em>,
+            361 Or 386 at 402.<a href="#fnref34" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn35">Ostensibly this was done because it is just
+            too tough on our trial courts to know the law and make the
+            required record.<a href="#fnref35" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn36"><a
+            href="https://scholar.google.com/scholar_case?case=7546769445794524377&amp;q=State+v.+Conrad,+280+Or+App+325,+381+P3d+880,+884+(2016)&amp;hl=en&amp;as_sdt=4,38"><em>Conrad</em></a>,
+            280 Or App at 331.<a href="#fnref36" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn37"><a
+            href="https://scholar.google.com/scholar_case?case=8877466298312506640&amp;q=Carlson,+311+Or+201,+808+P2d+1002+(1991)&amp;hl=en&amp;as_sdt=4,38"><em>Carlson,</em>
+            311 Or 201, 209, 808 P2d 1002 (1991)</a>.<a href="#fnref37"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

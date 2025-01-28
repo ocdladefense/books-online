@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>DUII Notebook</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+
+    @media print {
+      html {
+        background-color: white;
+      }
+
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+
+      p,
+      h2,
+      h3 {
+        orphans: 3;
+        widows: 3;
+      }
+
+      h2,
+      h3,
+      h4 {
+        page-break-after: avoid;
+      }
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    a {
+      color: #1a1a1a;
+    }
+
+    a:visited {
+      color: #1a1a1a;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 1.4em;
+    }
+
+    h5,
+    h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+
+    h6 {
+      font-weight: normal;
+    }
+
+    ol,
+    ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+
+    li>ol,
+    li>ul {
+      margin-top: 0;
+    }
+
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+
+    .sourceCode {
+      background-color: transparent;
+      overflow: visible;
+    }
+
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+
+    table caption {
+      margin-bottom: 0.75em;
+    }
+
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+
+    #TOC li {
+      list-style: none;
+    }
+
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+
+    #TOC>ul {
+      padding-left: 0;
+    }
+
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+
+    code {
+      white-space: pre-wrap;
+    }
+
+    span.smallcaps {
+      font-variant: small-caps;
+    }
+
+    div.columns {
+      display: flex;
+      gap: min(4vw, 1.5em);
+    }
+
+    div.column {
+      flex: auto;
+      overflow-x: auto;
+    }
+
+    div.hanging-indent {
+      margin-left: 1.5em;
+      text-indent: -1.5em;
+    }
+
+    /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+    ul.task-list[class] {
+      list-style: none;
+    }
+
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+
+    .display.math {
+      display: block;
+      text-align: center;
+      margin: 0.5rem auto;
+    }
+  </style>
+  <script>
+
+    class WebcOrs extends HTMLDivElement {
+      constructor() {
+        super();
+      }
+      // Element functionality written in here
+    }
+
+    class WebcOar extends HTMLDivElement {
+      constructor() {
+        super();
+      }
+      // Element functionality written in here
+    }
+
+
+    customElements.define("webc-ors", WebcOrs, { extends: "div" });
+    customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+  </script>
+</head>
+
+<body>
+  <section id="title-block-header">
+    <h1 class="title">DUII Notebook</h1>
+  </section>
+  <table>
+    <tbody>
+      <tr>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>2020 edition, with 2024 Update</p>
+  <section id="breath_blood_and_urine" class="level1">
+    <h1><strong>Breath, Blood and Urine</strong></h1>
+    <p><strong><em>By Donald Molnar and Kenn
+          Meneely</em></strong></p>
+    <section id="update" class="level3">
+      <h3><strong>2024 Update</strong></h3>
+      <p><strong>Update to requesting technical documents from OSP
+          Forensic Division:</strong></p>
+      <blockquote>
+        <p>As of 2024, all manuals are put in the OSP Web portal</p>
+        <p>“The Forensic Services Division (FSD) will be
+          implementing a new web portal that will allow for expedited
+          discovery and public records requests. The Forensic Document
+          Portal (FDP) is accessed via this link (no username or
+          pasword is requered to enter the portal).</p>
+        <p><a href="https://oregonstatepolice.policytech.com/?public=true&amp;siteid=2072"><u><span>https://oregonstatepolice.policytech.com/?public=true&amp;siteid=2072</span></u></a></p>
+        <p>“The FDP contains those forensic manuals and other
+          controlled documents in effect starting in 2018 to present.
+          Public users of the portal can search all available
+          documents to determine those relevant to a particular
+          forensic analysis. Documents may be downloaded and printed.
+          ...</p>
+        <p>“An FDP FAQ document can be found here:</p>
+        <p><a href="http://https/oregonstatepolice.policytech.com/dotNet/documents/?docid=11428&amp;public=true"><u>https//oregonstatepolice.policytech.com/dotNet/documents/?docid=11428&amp;public=true</u></a></p>
+        <p>“A self-guided training module for the FDP is available
+          here:</p>
+        <p><a href="https://oregonstatepolice.policytech.com/dotNet/documents/?docid=11429&amp;public=true"><u><span>https://oregonstatepolice.policytech.com/dotNet/documents/?docid=11429&amp;public=true</span></u></a></p>
+        <p>“Feedback and questions should be directed to
+          FDP.Admin@osp.oregon.gov.</p>
+        <p>“Brian Medlock, Director, Oregon State Police Forensic
+          Services Division.”</p>
+        <p>This will provide the testing documents but will not
+          provide the technical charts and notes for specific cases.
+          The following should be sent to the DDA when requesting
+          these items:</p>
+        <p><strong>Forensic Laboratory—Urine Toxicology</strong></p>
+        <p>All documents pertaining to case#________to include:</p>
+      </blockquote>
+      <ul>
+        <li>
+          <blockquote>
+            <p>Analyst’s internal communication log and administrator’s
+              communication log</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Internal chain of custody</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Laboratory worksheet displaying evidence of labeling and
+              type of extractions performed</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>All documentation/charts reflected in the analyst’s notes
+              that pertain to the analyst’s verification of the sample’s
+              position (i.e., batch sequence log) and the analyst’s
+              verification that no contamination existed during analysis
+              (i.e., blank controls prior to the defendant’s sample)</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>EMIT calibration and control verification to include
+              expiration dates and date of calibration</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>EMIT charts regarding the defendant’s results</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Any other charts / tests regarding screening tests (i.e.,
+              LC-QTOF)</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>All standards validated by LC-QTOF instruments</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>All notes and charts pertaining to types of extractions
+              and controls used in the analysis</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>GC/MS charts to include –</p>
+          </blockquote>
+        </li>
+      </ul>
+      <blockquote>
+        <p>– GC/MS Batch summary or Sequence Log worksheet
+          displaying the samples and position on auto-sampler unit
+          that were analyzed in conjunction with the defendant’s
+          sample</p>
+        <p>– GC/MS auto tune calibration prior to defendant’s
+          sample</p>
+        <p>– GC/MS charts of standards, positive and negative
+          controls used for comparison and identification</p>
+        <p>– GC/MS charts of “blank” samples analyzed prior to
+          defendant’s sample referenced in the analyst’s worksheet
+          that “blanks” were run prior to the defendant’s sample</p>
+        <p>– GC/MS charts regarding the defendant’s sample</p>
+      </blockquote>
+      <ul>
+        <li>
+          <blockquote>
+            <p>Results of the forensic scientist’s proficiency testing
+              results for the past five years</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Documents regarding any corrective action concerning an
+              unsuccessful proficiency test sample</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Analyst’s CV</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Notes or memos related to this case to include the
+              officer’s report that was provided with the case</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Peer-reviewed articles, or other peer-reviewed materials
+              that you will rely on in forming your opinion that may be
+              used at trial.</p>
+          </blockquote>
+        </li>
+      </ul>
+      <blockquote>
+        <p><strong>Forensic Laboratory—Blood Alcohol</strong></p>
+        <p>All notes and charts pertaining to case #__________to
+          include:</p>
+      </blockquote>
+      <ul>
+        <li>
+          <blockquote>
+            <p>Analyst’s internal communication log and administrator’s
+              communication log</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Internal chain of custody</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Laboratory worksheet displaying evidence of labeling,
+              expiration dates of vials and type of preservative contained
+              in vials</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Batch Summary Worksheet displaying position of
+              defendant’s sample in relationship to samples analyzed,
+              standards, and controls used in batch and results of
+              samples, standards, and controls</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Gas chromatograph– headspace (GC/HS) analysis charts of
+              duplicate results of defendant’s sample</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>GC-HS charts of standards and controls</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>% error rate and date of last error rate verification</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Maintenance/repairs and subsequent validation records 6
+              months prior to the analysis of this case</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Results of the forensic scientist’s proficiency testing
+              results for the past 5 years</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Notes or memos related to this case to include the
+              officer’s report that was provided with the case</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Articles, or other materials that you will rely on in
+              forming your opinion that may be used at trial</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Analyst’s CV.</p>
+          </blockquote>
+        </li>
+      </ul>
+      <p><strong>[Look for additional 2024 updates further down in
+          the chapter]</strong></p>
+      <p>This chapter is divided into segments regarding breath
+        and blood alcohol analysis and urine toxicology. Each
+        segment will discuss the general concepts, forensic issues,
+        and trial preparation, along with discussions regarding
+        cross-examination issues. Manuals, bench guides, and other
+        documents are contained in the Resource Guide.</p>
+    </section>
+  </section>
+  <section id="i._introduction_breath_and_blood_alcohol" class="level1">
+    <h1><strong>I. Introduction: Breath and Blood
+        Alcohol</strong></h1>
+    <p>Path of alcohol (ethanol) in the body: Alcohol is taken
+      into the body through the mouth and travels to the stomach
+      via the esophagus. A small portion of alcohol is absorbed
+      through the gastrointestinal walls while the majority of
+      alcohol is absorbed and metabolized in the small intestine.
+      The rate of absorption of alcohol through the stomach lining
+      and passage to the remainder of the gastrointestinal tract
+      can vary due to several factors. These factors can include
+      the type of alcoholic beverage consumed, the concentration
+      of ethanol in the beverage, the functioning of the pyloric
+      sphincter, quantity of food in the stomach, and drinking
+      pattern. Once in the bloodstream, the alcohol travels to all
+      parts of the body. In the liver, alcohol undergoes oxidation
+      where it is eventually changed to carbon dioxide and water.
+      The kidneys filter out the end products of the oxidation
+      process which are then excreted from the body. Approximately
+      95–98 percent of the alcohol undergoes this oxidative
+      process; however, the remaining two to five percent escapes
+      unchanged via sweat, breath, and urine. Alcohol (ethyl
+      alcohol) metabolizes to acetaldehyde and acetic acid. Ethyl
+      glucuronide (EtG) and ethyl sulfate (EtS) are also excreted
+      as minor metabolites (less than one-tenth of a percent)
+      which are found in blood and urine. Alcohol and its minor
+      metabolites can be measured in the urine by gas
+      chromatography-headspace analysis or gas chromatography-mass
+      spectrometry under specific conditions. (See the section
+      regarding urine toxicology, below.)</p>
+    <p>The exchange of alcohol from the blood to the breath
+      occurs in the small air sacs of the lungs called alveoli.
+      Based on Henry’s Law of gases, the concentration of a
+      volatile substance in the air (lungs) above a fluid (blood)
+      is proportional to the concentration of the volatile
+      substance in the fluid. As the concentration of alcohol in
+      the blood does not equal the concentration of alcohol in the
+      breath, a mathematical model must be incorporated to convert
+      a breath alcohol value to a blood alcohol value. The breath
+      testing device assumes that the majority of the population
+      represents a 2100:1 partition ratio (2.1 L of expired
+      alveolar air containing approximately the same quantity of
+      alcohol as 1 mL of blood).</p>
+  </section>
+  <section id="ii._breath_alcohol_analysis" class="level1">
+    <h1><strong>II. Breath Alcohol Analysis</strong></h1>
+    <p>The majority of drunk driving prosecutions include breath
+      test results from the suspect. From the perspective of law
+      enforcement, breath tests are the preferred method of
+      analyzing blood alcohol content in drunk driving cases.
+      Although breath testing is an indirect method of measuring
+      blood alcohol levels, it is less expensive, provides
+      immediate results, and requires minimal police training.</p>
+    <p>A thorough understanding of the scientific foundations of
+      breath testing is important so a zealous defense can be
+      mounted against the breath testing device. Otherwise, a jury
+      will be predisposed to accept the breath test results as
+      valid. Many legitimate defenses are available and must be
+      used to challenge a breath testing case. The attorney should
+      carefully review the breath testing machine certification
+      and calibration records, as well as the client’s medical
+      history, to determine which defense is properly tailored to
+      his or her case. Consulting with an expert witness is highly
+      recommended in all breath testing cases.</p>
+    <section id="a._introduction_to_intoxilyzer_8000" class="level2">
+      <h2><strong>A. Introduction to Intoxilyzer
+          8000</strong></h2>
+      <p>The Intoxilyzer 8000, the evidential breath testing
+        device currently in use in Oregon, attempts to measure a
+        breath alcohol concentration using infrared spectroscopy
+        technology. The underlying principle behind infrared
+        spectroscopy is that different molecules, including ethyl
+        alcohol, absorb light energy at different frequencies. The
+        absorption of light by ethyl alcohol is detected by the
+        Intoxilyzer 8000 at both 3.4 and 9.3 micron frequencies. The
+        Intoxilyzer inserts a beam of infrared light through the
+        suspect’s breath sample and measures the amount of light
+        absorbed at those frequencies. The more light that has been
+        absorbed, the higher the breath alcohol concentration. For
+        an excellent resource on the science of infrared
+        spectroscopy, see <em>A Primer for Infrared Spectroscopy:
+          What the Trial Attorney Must Know</em>, Thomas E. Workman
+        Jr. (2010) contained in the Appendix to this section.</p>
+      <p>As a result of the many scientific studies related to
+        infrared spectroscopy and breath testing, states authorizing
+        the use of the Intoxilyzer 8000 require the operator of the
+        machine to strictly adhere to certain administrative
+        safeguards when testing a suspect arrested for drunk
+        driving. The <em>Oregon State Police Intoxilyzer 8000
+          Operator’s Guide</em> is contained in the Resource Guide
+        included with the DUII notebook. While failure to adhere to
+        the administrative safeguards may not always render the
+        breath test inadmissible, the reliability of the breath test
+        result can be attacked during trial.</p>
+      <p>For an illuminating perspective on the accuracy failures
+        of the Intoxilyzer 8000 and other breath test machines, see
+        Stacey Cowley and Jessica Silver-Greensburg, “<a href="https://www.nytimes.com/2019/11/03/business/drunk-driving-breathalyzer.html">These
+          Machines Can Put You in Jail. Don’t Trust Them</a>,” <em>The
+          New York Times</em>, Nov. 3, 2019. According to Cowley and
+        Silver-Greensburg, Massachusetts and New Jersey have thrown
+        out 30,000 breath tests in the past year. The article cites
+        a court ruling in Orange County, Florida, related to the
+        Intoxilyzer 8000: <span class="underline"> </span></p>
+      <p>The Intoxilyzer 8000 is a magic black box assisting the
+        prosecution in convicting citizens of DUI. A defendant is
+        required to blow into the box. The defense has shown
+        significant and continued anomalies in the operation of the
+        Intoxilyzer 8000’s operation. The prosecution argues most of
+        the tests do not show anomalies. In fact, a high percentage
+        of the tests may show no anomalous operation. That the
+        Intoxilyzer 8000 mostly works is an insufficient response
+        when a citizen’s liberty is at risk.</p>
+      <p><a href="https://scholar.google.com/scholar_case?case=3455031344007753060&amp;q=State+v.+Conley&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000000000002004&amp;as_ylo=2013&amp;as_yhi=2014"><em>See</em>
+          <em>State v. Conley</em>, Case no. 48-2012-CT000017-A/A,
+          Orange County Court, <em>Order on Defendant’s Request to
+            Produce</em>, Sept. 22, 2014</a>.</p>
+      <p><strong>1. Administrative Regulations/Safeguards of the
+          Intoxilyzer 8000</strong></p>
+      <p>a. Observation Period</p>
+      <p>The operator of the machine must observe the client for a
+        minimum of 15 minutes before administering the breath test.
+        The observation requirement is required in all jurisdictions
+        to ensure accuracy of the breath result. The observation
+        period ensures the client has not burped, vomited, or
+        regurgitated, or taken anything by mouth that may
+        contaminate the breath result. The observation period and
+        other breath testing procedural safeguards were recommended
+        by top experts in alcohol forensic research. Dubowski, K.M.,
+        “Quality Assurance in Breath Alcohol Analysis<em>,” J Anal
+          Toxicology</em>, 1994, Oct; 18(6) 306-311, p. 306.</p>
+      <p>The observation period is codified in <a href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=33772">OAR
+          257-030-0130(2)(a-b)</a>:</p>
+      <p>The operator is certain that the subject has not taken
+        anything by mouth (drinking, smoking, eating, taking
+        medication, etc.), vomited, or regurgitated liquid from the
+        stomach into mouth, for at least fifteen minutes before
+        taking the test;</p>
+      <p>There is no requirement that the operator be the person
+        who makes observation of the subject. The person performing
+        the Pre-Test Requirement (observation period) need not
+        possess a permit to test the alcoholic content of blood.</p>
+      <p>In some cases, the client will claim he or she burped or
+        regurgitated shortly before the breath test. The machine
+        operator (typically the arresting officer) will testify that
+        is not possible because he or she strictly adhered to the
+        required 15-minute observation period. It is common police
+        practice, however, to read the implied consent advice of
+        rights while simultaneously observing the client. The
+        reality is that the officer almost never constantly observes
+        the client for the complete duration of the observation
+        period. An officer’s failure to adhere to the required
+        observation period is a defense frequently raised in both
+        implied consent hearings and trials. Counsel should
+        cross-examine the officer on exactly what he was doing
+        during his surveillance of the defendant. The officer is
+        typically performing a multitude of tasks during the
+        observation period, including reading the implied consent
+        form with his head down, taking notes, filling out the
+        operator checklist, or preparing the breath machine to
+        administer the breath results. How, then, can the officer be
+        absolutely sure the client did not burp or regurgitate?
+        Jurors expect police to follow proper procedures. A jury’s
+        lack of confidence in the police to follow proper protocol
+        may result in an acquittal. In the following case, the
+        police failed to comply with the requirements of OAR
+        257-030-0070(2):</p>
+      <p><em>State v. Barletta</em>, 188 Or App 113 (2003).
+        Conviction reversed because officer allowed defendant to use
+        the bathroom during the observation period, and could not
+        see or hear whether she regurgitated or vomited. Although
+        the officer subjectively believed the defendant did not
+        regurgitate or vomit, the belief was not objectively
+        reasonable.</p>
+      <section id="update_1" class="level3">
+        <h3><strong>2024 Update</strong></h3>
+        <p>Deputy complied with 15-minute observation period by not
+          requiring defendant to rinse out his mouth even when he saw
+          “strands” of chewing tobacco in his mouth.</p>
+        <p><a href="https://scholar.google.com/scholar_case?case=11416278659026501823&amp;q=State+v.+True,+324+Or+App+621+(2023)&amp;hl=en&amp;as_sdt=4,38"><u><em>State
+                v. True</em>, 324 Or App 621 (2023)</u></a>.
+          In <em>True</em>, defendant was arrested for DUII. In
+          preparing defendant for the breath test, the arresting
+          deputy visually inspected the inside of defendant’s mouth to
+          ensure that it was empty. The deputy observed residue from
+          chewing tobacco in the defendant’s mouth. <em>Id. </em>at
+          629. The deputy then began the 15-minute observation period
+          as required by OAR 257-030-0130(2)(a). Defendant requested
+          to rinse his mouth out during the observation period, but
+          the request was denied. <em>Id.</em> A breath test revealed
+          a 0.13 blood alcohol concentration. The trial court denied
+          defendant’s motion to suppress the breath test, and he was
+          subsequently entered a conditional plea of guilty to
+          DUII.</p>
+        <p>On appeal, the court affirmed the trial court’s decision
+          denying the motion to suppress. The court held that the
+          officer subjectively believed that the defendant had not
+          engaged in any of the acts prohibited by OAR
+          257-030-0130-1030(2)(c) and that belief was objectively
+          reasonable: “Context and legal precedent support that view.
+          OAR 257-030-0130(2(c) provides that ‘[t]he Pre-Test
+          Requirement (observation period) does not require that the
+          subject rinse the mouth or remove dentures prior to
+          providing a breath sample[.]’ Because the primary purpose
+          behind rinsing one’s mouth is to remove a substance from the
+          mouth, OAR 257-030-0130(2)(a) and OAR 257-030-0130(2)(c),
+          read together, suggest the agency did not intend that every
+          particle of foreign substance must be removed from the
+          subject’s mouth for the test results to be
+          valid.” <em>Id.</em> at 631.</p>
+        </blockquote>
+        <p><strong>[End Update]</strong></p>
+      </section>
+    </section>
+    <section id="february_2022_update" class="level2">
+      <h2><strong>February 2022 Update</strong></h2>
+      <p>In <a href="https://scholar.google.com/scholar_case?case=9275925498035721025&amp;q=State+v.+Leinweber&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Leinweber</em>, 313 Or App 404, 406 (2021)</a>, the
+        defendant belched shortly before the end of the first
+        15-minute observation period. The officer started a second
+        testing sequence. During this second sequence, the defendant
+        coughed and made dry heaving noises while blowing into the
+        machine. The officer started a third sequence and
+        observation period. Defendant coughed while providing the
+        first sample. The officer asked if the defendant vomited,
+        but there was no discernable response. The defendant belched
+        while providing the second sample. The officer did not
+        restart the testing sequence and the resulting breath test
+        was a .15 percent BAC.  <em>Id.</em> at 406-407. Defendant
+        moved to suppress the breath test, arguing that the officer
+        failed comply with OAR 257-030-0130. The Court of Appeals
+        agreed with defendant and reversed the decision of the trial
+        court.  <em>Id.</em> at 412. </p>
+      <p> </p>
+      <p>The <em>Leinweber</em> case stands for the proposition
+        that an officer must strictly adhere to the 15-minute
+        observation as required by administrative rule. </p>
+      <p><strong>[End 2022 Update]</strong></p>
+      <p>b. Operator Checklist</p>
+      <p>The operator must use and complete a checklist of
+        approved procedures when conducting a breath test. The
+        checklist requirement is governed by <a href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=33772">OAR
+          257-030-0130(1)</a>:</p>
+      <p>(1) Test Identification: A checklist containing an
+        outline of the approved procedures shall be used and
+        completed by all operators of this instrument. Failure to
+        record information specified in this section does not
+        invalidate the test result obtained if the testing
+        procedures were otherwise followed.</p>
+      <p>Challenges regarding the operator checklist are
+        difficult. Although the operator checklist is frequently
+        incomplete with boxes left unchecked, the officer will
+        invariably testify his failure to complete the checklist was
+        mere inadvertence. <em>See</em> <a href="http://scholar.google.com/scholar_case?q=State+v.+Olson,+88+Or+App+271+%281987&amp;hl=en&amp;as_sdt=4,38&amp;case=7663429892996458318&amp;scilh=0"><em>State
+            v. Olson</em>, 88 Or App 271 (1987)</a> (concluding that
+        scrivener’s error on the operator checklist went to weight,
+        not admissibility of the breath test). Counsel should at a
+        minimum, however, carefully review the starting and ending
+        times of the observation period to ensure a full fifteen
+        minutes has elapsed from the starting time to the first
+        breath sample.</p>
+      <p>c. Training of Operator</p>
+      <p>The police officer operating the Intoxilyzer 8000 must
+        have required training to administer breath testing on a
+        suspect. Training of the operator is governed by OAR
+        257-030-0090 (Training and Operators of Breath Test
+        Equipment)</p>
+      <p>(1) The Oregon State Police, or instructors approved by
+        the Oregon State Police will provide a course of instruction
+        as provided in <a href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+          813.160</a>.</p>
+      <p>(2) Upon completion of the course of instruction, a
+        written examination will be given and a passing grade of 80
+        percent or above will be required. Each officer or
+        technician obtaining a passing grade will be issued a permit
+        by the Oregon State Police stating the method and equipment
+        the officer or technician is qualified to operate.</p>
+      <p>Counsel should always ensure that the officer that
+        conducted the breath test was properly trained and qualified
+        to administer the breath test.</p>
+      <p>d. Agreement Between Samples</p>
+      <p>Two breath samples must be obtained from the suspect
+        using the Intoxilyzer 8000. Agreement between two valid
+        breath samples within a testing sequence is established when
+        the subject sample measurements agree within plus or minus
+        ten percent of their mean, inclusive of the upper and lower
+        bounds of the range. If the instrument establishes
+        agreement, the lower breath sample measurement shall be
+        truncated to two decimal places and reported as the chemical
+        test result. If the subject sample measurements do not
+        agree, the instrument will abort the testing sequence and
+        display “Sample Correlation Failure”. <a href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=33774">OAR
+          257-030-0140</a> [Determining Agreement of Breath Sample
+        Within a Testing Sequence]. For example, if the subject’s
+        first sample results in .124% but the second sample results
+        in .103%, the mean breath test result is .113%. Since .103%
+        is within ten percent of the mean (i.e., + 10% = .123%, -10%
+        = .101%) of the mean (i.e., .113%) of the results, the
+        machine would accept the results and display a result of
+        .10%.</p>
+      <p>In the above example, the machine would render an
+        acceptable breath test result despite the .02 percent
+        difference in breath samples in a two-minute period. State
+        experts typically assume an individual has an average
+        alcohol elimination rate of .020 percent per hour. Thus if a
+        suspect is .12 on the first breath test, then it would be
+        expected that suspect would be .10 one hour later. However,
+        the test shows a decline of .02 percent in merely two
+        minutes, which equals an elimination rate of .6 percent per
+        hour! Use this example to expose the flaws in the
+        machine.</p>
+      <p><strong>2. Distinguishing Between Calibration and
+          Certification of the Intoxilyzer 8000</strong></p>
+      <p>The Intoxilyzer 8000 must be accurately calibrated to
+        properly measure alcohol on a suspect’s breath. Calibration
+        of a breath testing device is the process of inserting a
+        known sample to the machine and instructing the machine to
+        reset itself so that if the identical sample is observed in
+        the future, the machine will report the measurement that is
+        communicated as part of the calibration. Certification, or a
+        calibration check, on the other hand, is merely a check to
+        see if the device is properly measuring samples. A
+        certification, unlike a calibration, does not involve any
+        adjustments to the machine.</p>
+      <p>Calibration of the Intoxilyzer 8000 is only done at the
+        factory upon introduction of the machine into the field or
+        upon repair. Certifications, or calibration checks, are done
+        at periodic intervals as prescribed by administrative rule.
+        The certification process of the Intoxilyzer 8000 in Oregon
+        is codified in Oregon Administrative Rule <a href="https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=33780">257-030-0170</a>:</p>
+      <p>Pursuant to ORS 813.160(b)(C), a trained technician of
+        the Oregon State Police shall conduct an accuracy test of
+        approved breath testing equipment and certify the accuracy
+        of the equipment if accuracy test performance is within a
+        range of 0.010 high to 0.020 low of the expected value. The
+        testing can be performed by either an onsite test, or by
+        remote testing via telephone, modem, or Internet connection
+        utilizing a computer. The computerized testing will utilize
+        a security system to ensure the integrity of the scientific
+        testing of the breath test equipment.</p>
+      <p>The certifications must occur at intervals of not more
+        than 90 days. <a href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+          813.160(b)(c).</a> The defense attorney should carefully
+        review relevant records regarding the Intoxilyzer 8000 in
+        each case. Intoxilyzer 8000 calibration and certification
+        records can be obtained through the Oregon State Police
+        Forensic Services Division. The records can be obtained
+        online through the <a href="https://xn.osp.state.or.us/LOIS/Login.aspx">Laboratory
+          Online Information System of the Oregon State Police
+          Forensic Services Division</a>. Click on Access IAP
+        Certification and enter the appropriate serial number,
+        location, or other identifying information for the
+        Intoxilyzer 8000 in the particular case. Example Intoxilyzer
+        8000 certification and calibration records are contained in
+        the Appendix.</p>
+      <p><code>Practice Tip: Calibration Check Cross-Examination</code></p>
+      <p>The cases are rare the machine certifications are
+        untimely, thus rendering the breath test inadmissible. In
+        most cases, the records reviewed will suggest the breath
+        device was working correctly at the time of the client’s
+        test. The certification records simply reveal that the
+        breath machine was functioning properly at the time of the
+        certification, not at the time of the client’s breath test.
+        The accuracy of the breath machine must be accomplished
+        every 90 days. In many cases, a significant period has
+        elapsed from the time of the certification to the time of
+        the client’s breath tests. This can be exploited in
+        cross-examination of the arresting officer or state’s
+        expert.</p>
+      <p><strong>3. Specific Challenges to Breath
+          Testing</strong></p>
+      <p>a. Margin of Error</p>
+      <p>The Intoxilyzer 8000, as with any measuring device, has a
+        margin of error. Even if the machine is properly calibrated
+        and otherwise in perfect working condition, there is still a
+        built-in inherent error that must be considered in
+        evaluating a breath test result. The acceptable margin of
+        error varies among jurisdictions. Although the acceptable
+        margin of error of the machine is not contained in Oregon’s
+        Intoxilyzer 8000 Operator’s Manual, the state’s expert will
+        testify the machine has a normal +/- 0.01% variance. This
+        admission is critical, especially in cases where the
+        client’s BAC hovers right around the per se legal limit of
+        .08%. How can the jury conclude your client is guilty beyond
+        a reasonable doubt when it is entirely plausible the client
+        was .07% rather than .08% at the time of the chemical
+        test?</p>
+      <p>The Intoxilyzer 8000 is also calibrated to calculate a
+        person’s breath alcohol based on a “calibration curve” that
+        has been done at the factory, before the machine is placed
+        into service, and/or when there is a repair to the machine.
+        The calibration involves running a series of standard
+        ethanol solutions through a device that mimics the breath
+        test. This device is a sealed bottle containing an alcohol
+        solution maintained at a specified temperature. This alcohol
+        solution is calculated to give a breath alcohol value. The
+        lab technician runs several standard solutions to obtain a
+        calibration curve that should be a straight line.</p>
+      <p>The <a href="http://www.ascld-lab.org/">American Society
+          of Crime Lab Directors/Laboratory Accreditation Board</a>
+        (ASCLD/LAB) has established rules regarding quantitative
+        testing. These rules specifically require a <em>researched
+          and reported error rate</em>. However, the OSP breath
+        testing is not ASCLD/LAB certified. This means that when the
+        breath instruments are calibrated, it is assumed that they
+        are one hundred percent accurate. (no machine is ever one
+        hundred percent accurate). Also, since the breath machines
+        are not ASCLD certified there is no external oversight or
+        annual reviews regarding calibration or maintenance of the
+        machines.</p>
+      <p>b. Partition Ratio Error</p>
+      <p>Since breath testing devices do not measure blood, the
+        breath test result must be converted to a blood alcohol
+        level. Breath measurements are converted to blood alcohol
+        results using principles of Henry’s Law. Henry’s Law
+        maintains that at a constant temperature, the amount of a
+        given gas that dissolves in a given type and volume of
+        liquid is directly proportional to the partial pressure of
+        that gas in equilibrium with that liquid. In relation to
+        breath testing, this means there is an assumed constant
+        ratio between the concentration of alcohol in the blood and
+        the concentration of alcohol in the alveolar in the lungs.
+        Breath machines use a ratio that assumes the concentration
+        of alcohol in the blood is 2100 times greater than the
+        concentration of alcohol in the breath. This assumed 2100:1
+        ratio is called the partition ratio.</p>
+      <p>It should be strongly emphasized that the partition ratio
+        used by evidential breath testing machines is only an
+        average. Ranges have been reported from ratios of about
+        1:900 to 1:3400, yet the breath test device assumes the
+        concentration of alcohol in a person’s breath is 2100 times
+        greater than it is in the blood. A defendant’s actual
+        partition ratio may deviate substantially from the norm,
+        resulting in inaccurate breath test results. Partition
+        ratios can also vary significantly during drinking episodes.
+        S<em>ee</em> Alobaidi, T.A.A., &amp; Payne, J.P.,
+        “Significance of Variations in Blood-Breath Partition
+        Coefficient of Alcohol,” <em>British Medical Journal</em>,
+        1976) (documenting partition ratio as low as 834:1)
+        (contained in Appendix). Documentation of partition ratio
+        variance from the Oregon State Police is also contained in
+        the Appendix.</p>
+      <p>Oregon, unlike some jurisdictions, has generally allowed
+        broad latitude in challenges based on partition ratio.
+        <em>See</em> <a href="http://scholar.google.com/scholar_case?q=State+v.+Allen,+104+Or+App+622&amp;hl=en&amp;as_sdt=4,38&amp;case=6180543799873515845&amp;scilh=0"><em>State
+            v. Allen</em>, 104 Or App 622, 628, 802 2pd 690 (1990)</a>
+        (“If a defendant wishes to offer evidence that his partition
+        coefficient is other than 2100:1, he is free to do so.”).
+        The breath machine assumes an “average” person, but your
+        client may indeed not be average. To illustrate the
+        variability of partition ratios on the breath test result,
+        some sample calculations are instructive:
+      </p>
+      <p><code>Practice Tip: Partition Ratio Calculation</code></p>
+      <p>Assume your client’s BAC result is .10%. Further assume
+        your client has a partition ratio of 1500:1, not 2100:1 as
+        used by the breath testing device. To determine the
+        subject’s BAC with the partition ratio of 1500:1, first
+        divide the breath test result by the partition ratio used by
+        the machine: .10 / 2100 = .000047619. Then multiply the
+        result by the new partition ratio value: .000047619 x 1500 =
+        .071%. Thus, if a subject registers a .10% on an Intoxilyzer
+        8000 but the person’s actual partition ratio is 1500:1, the
+        person’s true BAC is. 07%, which is not guilty.</p>
+      <p>c. Breath and Body Temperature Error</p>
+      <p>Differences in body and breath temperature can have
+        profound effects on the breath test result. The variation of
+        a person’s breath temperature on the breath result can be
+        explained by Henry’s Law. As previously stated, Henry’s Law
+        says there is a proportional relationship of a compound in
+        the liquid to the concentration of the same compound in the
+        gaseous phase. When the temperature of the liquid phase
+        increases (core body temperature), the concentration of the
+        ethanol in the gaseous phase (breath) will also increase.
+        Studies have shown the average breath temperature hovers
+        around 34 degrees Celsius. Thus, the Intoxilyzer 8000
+        incorporates a standard breath temperature of 34 degrees
+        Celsius in all breath test calculations.</p>
+      <p>Normal breath temperature, however, begins at 31 degrees
+        Celsius and rises to 35 degrees Celsius. <em>See</em>
+        <em>International Association for Chemical Testing,</em>
+        volume 9, no. 2 (July 1998) (attached in the Appendix). A
+        higher breath temperature will increase the breath alcohol
+        content, a lower breath temperature will lower the breath
+        alcohol content. Since the breath device does not correct
+        for potential differences in breath temperature of the
+        defendant, the resulting breath test result may grossly
+        overestimate or underestimate true breath alcohol content.
+        For every one-degree difference in breath temperature,
+        studies have indicated a six percent increase in breath
+        alcohol results. Studies have also revealed that breath
+        alcohol content will overestimate blood alcohol
+        concentration by 8.6% for each degree Celsius in deep-core
+        body temperature. Thus, if your client has a fever at the
+        time of the breath test, the breath test will overestimate
+        the client’s actual blood alcohol concentration.
+      </p>
+      <p><code>Practice Tip: Failure To Correct For Breath Temperature Variations</code></p>
+      <p>The Drager evidential breath machine used in Alabama has
+        the capability of measuring the breath temperature of a
+        suspect and correcting the breath alcohol concentration to
+        the reference of 34 degrees Celsius. The Intoxilyzer 8000
+        has no such capability. Although the state’s expert may deny
+        knowledge of Alabama’s device and its breath temperature
+        correction capabilities, the defense expert can be
+        questioned regarding the technology and the fact that Oregon
+        has refused to adopt this technology in its breath testing
+        process.</p>
+      <p>d. Hematocrit</p>
+      <p>Differences in blood composition provide another source
+        of error in breath-alcohol analysis. Whole blood consists of
+        a mixture of solid particles (red and white blood cells)
+        suspended in a liquid. The liquid portion is called plasma.
+        Hematocrit is the ratio of the solid components of blood to
+        the liquid components of blood. A hematocrit of 55 percent
+        means that a person’s blood contains 55 percent solid
+        particles and 45 percent plasma. The average hematocrit for
+        males is 46.2 percent with a range of 43–49 percent. The
+        average hematocrit for females if 40.6 percent with a range
+        of 35–45.4 percent. See Taylor and Oberman, <em>Drunk
+          Driving Defense</em> 6<sup>th</sup> ed., 439-440 (2006).</p>
+      <p>How does hematocrit affect breath alcohol content? An
+        individual with a higher hematocrit has blood consisting of
+        more solids (red blood cells) and less plasma (water). Since
+        alcohol is soluble in water, plasma will contain a higher
+        concentration of alcohol than will solid particles of the
+        blood. And the less plasma in blood (i.e., the higher
+        hematocrit), the more concentrated the alcohol will be in
+        the existing plasma. Thus an individual with a higher
+        hematocrit will have a higher concentration of alcohol in
+        plasma than an individual with a lower hematocrit. The
+        breath test administered to an individual with higher
+        hematocrit will reflect a higher breath alcohol content than
+        the same test administered to an individual with a lower
+        hematocrit. This is because the person with the higher
+        hematocrit has a higher concentration of alcohol in the air
+        above the alveolar sacs. Studies have shown that with breath
+        tests, normal variation in the hematocrits of subjects can
+        produce errors in the 10–14 percent range. Labianca,
+        Dominick, “The Chemical Basis of the Breathalyzer,”
+        <em>Journal of Chemistry Education</em>, vol. 76, no. 3, p.
+        261, (March 1990).
+      </p>
+      <p><code>Practice Tip: Sample Hematocrit Calculation</code></p>
+      <p>The effect of hematocrit on a breath alcohol result can
+        be computed with relative simplicity. That is because the
+        partition ratio of 2100:1 used in breath testing presumes an
+        average hematocrit of 45 percent. If the client’s hematocrit
+        is 53 percent, the breath test result is computed by
+        multiplying it by 45/53. Assuming a breath test result of
+        .09, the true BAC is determined as follows: .09 x 45/53 =
+        .07 percent. Not Guilty.</p>
+      <p><code>Practice Tip: Client’s Actual Hematocrit</code></p>
+      <p>If resources allow, the client should consider getting a
+        routine blood test, which will contain the<br />
+        client’ hematocrit value.</p>
+      <p>e. Breathing Pattern Defenses</p>
+      <p>A suspect’s breathing technique prior to taking a breath
+        test can cause fluctuations in breath testing results.
+        Studies have shown that hyperventilation “lowers the breath
+        alcohol concentration by as much as 20 percent compared with
+        a single moderate inhalation and forced exhalation used as
+        control tests.” A.W. Jones, “Physiological Aspects of
+        Breath-Alcohol Measurement,” <em>Alcohol, Drugs, and
+          Driving</em>, vol. 6, no. 2 (1982). Similarly, holding
+        breath for a short period of time (20 seconds) before
+        exhalation increases the alcohol concentration in exhaled
+        air by 15 percent. If counsel has a client with diminished
+        lung capacity, chronic obstructive pulmonary disease,
+        asthma, or other breathing related problems, an expert
+        should be retained for consultation.</p>
+      <p>f. Gastroesophageal Reflux Disease (GERD)</p>
+      <p>Medical conditions may affect the reliability of reported
+        breath results. It is commonly understood that breath test
+        results are converted to blood alcohol levels based on
+        assumptions of an average person. Your client may suffer
+        from various medical conditions that disrupt the average
+        assumptions of the breath test. One such disease is
+        gastroesophageal reflux disorder (GERD). GERD is a condition
+        in which the stomach contents (food or liquid) leak
+        backwards from the stomach into the esophagus (the tube from
+        the mouth to the stomach). This action can irritate the
+        esophagus, causing heartburn, acid reflux, chest pain,
+        difficulty swallowing and other symptoms. GERD is typically
+        a chronic condition that can be partially treated through
+        medication. As part of a thorough review of the client’s
+        medical condition, counsel should review whether his client
+        has been diagnosed with GERD or suffers from symptoms
+        consistent with GERD. A client suffering from GERD may
+        result in an elevated breath test result, as the mouth may
+        be contaminated with stomach contents or gases that are
+        introduced into the breath machine. If alcohol is in the
+        stomach at the time of the breath test and your client had
+        acid reflux shortly before the test, the test may be falsely
+        elevated. This results from the breath machine detecting
+        alcohol from your client’s stomach rather than lungs.
+        Consider calling your client’s physician regarding your
+        client’s condition.</p>
+      <p><code>Practice Tip</code></p>
+      <p>The prosecution will argue that either the breath testing
+        unit’s slope sensor detector will recognize a sharp
+        increase/rise between the first breath test and the second
+        breath test, as well as the difference between the two
+        breath tests being outside of the +/-10% range to justify
+        that this medical issue would have been detected. The slope
+        sensor unit is not infallible and may not recognize this
+        rise in the breath test. No experimental tests have been
+        performed by the Oregon State Police Forensic Division to
+        address this issue.</p>
+      <p>g. Diabetes</p>
+      <p>Diabetes is a metabolic disease that reduces or
+        eliminates the body’s natural production of insulin in the
+        pancreas. The resulting high blood sugar produces symptoms
+        of polyuria (frequent urination), polydipsia (increased
+        thirst), and polyphagia (increased hunger). The effect of a
+        diabetic client on breath testing can result from the client
+        being in a state of ketoacidosis, which may affect the
+        outcome of the breath test.</p>
+      <p>h. Dentures</p>
+      <p>Dentures, denture adhesives, and bridgework may trap
+        alcohol in the mouth that could interfere with breath
+        testing. This defense may be difficult to mount, however,
+        since studies have shown a 20-minute observation period does
+        not significantly interfere with a breath test. Harding, P.,
+        McMurray, M., Laessig, R., Simley, D., Correll, P.,
+        Tsunehiro, J., “The Effect of Dentures and Denture Adhesives
+        on Mouth Alcohol Retention.” It should be noted that Oregon
+        requires only a 15-minute observation, so the results of the
+        study have may limited applicability to a denture defense.
+        The removal of dentures is not required before
+        administration of the breath test.</p>
+      <p>i. Radio Frequency Interference</p>
+      <p>Breath machines can be affected by the presence of
+        foreign radio waves. Examples of radio frequency
+        interference include police radios, cellular phones, and
+        police radar units. The Intoxilyzer 8000 is equipped with an
+        “RFI” detector. The Operator’s Guide states, “This exception
+        occurs when a radio or cellular phone transmission is
+        detected near the instrument. The instruments will display
+        “RFI Detected” and print “*Invalid Test – RFI Detected. The
+        test is not complete and can be restarted.” In most
+        circumstances, the machine operator will take corrective
+        action, restart the test, and ultimately obtain a valid test
+        from the suspect. If “RFI” is an issue in your case,
+        however, a breath testing expert can provide testimony
+        regarding the lack of reliability of the “RFI” detector,
+        including problems detecting certain types of RFI as well as
+        problems with calibration of the detector.</p>
+      <p>j. Mouth Alcohol</p>
+      <p>The presence of mouth alcohol is a major cause of errors
+        in breath testing results. The potential presence of mouth
+        alcohol is precisely why the breath test operator must
+        strictly adhere to the pre-test observation period required
+        under OAR 257-030-0070 (2)(a-b). The Intoxilyzer machine
+        presumes the breath sample is derived from deep alveolar
+        from the lungs, not mouth alcohol. The presence of mouth
+        alcohol may be present on a suspect as a result of recent
+        alcohol consumption, vomiting, regurgitation, or belching.
+        While the police officer will always testify the breath
+        machine will detect the presence of mouth alcohol, the slope
+        detector in the breath device is inherently unreliable in
+        detecting the presence of mouth alcohol.</p>
+      <p>k. Mouthwash and Breath Spray</p>
+      <p>Mouthwashes such as Listerine and Scope contain a high
+        percentage of alcohol. Consumption of mouthwash or breath
+        sprays immediately before the breath test may cause an
+        elevated reading on the breath machine. The mouth alcohol
+        dissipates quickly, however, and waiting at least fifteen
+        minutes after use before the breath test will generally
+        eliminate the effect of mouth alcohol or breath spray on the
+        breath test result.</p>
+    </section>
+    <section id="b._alcohol_absorption_and_elimination" class="level2">
+      <h2><strong>B. Alcohol Absorption and
+          Elimination</strong></h2>
+      <p>Once ingested, alcohol is absorbed, distributed, and
+        eliminated simultaneously throughout the body. Blood alcohol
+        concentration will initially increase after consumption,
+        peak at a certain level, and gradually decrease once the
+        peak level is reached.</p>
+      <p>Alcohol is absorbed throughout the body via the skin,
+        lungs, or the gastrointestinal tract. Most absorption occurs
+        in the small intestine. The rate of absorption of alcohol
+        depends on many variables, some of which include food
+        consumption, environmental factors such as gender and
+        ethnicity, the type of alcohol consumed, the pattern of
+        drinking, and the physiological state of the drinker.
+        Experiments have shown the elapsed time from the end of
+        alcohol intake to peak blood alcohol concentration can range
+        from 14 to 138 minutes. Dubowski, “Absorption, Distribution
+        and Elimination of Alcohol,” <em>Journal of Studies on
+          Alcohol, Supplement</em>, No. 10, p. 99 (July 1985).</p>
+      <p>Alcohol is eliminated from the body primarily through
+        metabolism. Alcohol dehydrogenase in the liver is the enzyme
+        that is primarily responsible for 90 percent of alcohol
+        metabolism. The remaining alcohol is excreted from the
+        lungs, urine and sweat. Just as with absorption rates,
+        elimination rates of alcohol can vary highly among
+        individuals, and depend on variables such as food
+        consumption, environmental factors, pattern of drinking, and
+        the alcohol tolerance of the drinker.</p>
+      <p>State experts typically assume the subject has an average
+        rate of elimination (usually between .015 to .020
+        g/dL/hr)(0.01 to 0.025 g/dL or %). Elimination rates of
+        alcohol, however, can vary widely among individuals.
+        Widmark’s studies reported a mean elimination rate of .016
+        g/dL/hr. Studies have, however, documented elimination rates
+        outside this range. For an alcoholic drinker, the
+        elimination rate of alcohol can be upwards of .030g/dL/hr.
+        A.W. Jones, “Disappearance Rate of Ethanol from the Blood of
+        Human Subjects: Implications in Forensic Toxicology,”
+        <em>Journal of Forensic Sciences,</em> Vol. 38, No. 1, p.
+        104-118 (January 1993).
+      </p>
+    </section>
+    <section id="c._widmark_calculations_and_retrograde_extrapolation" class="level2">
+      <h2><strong>C. Widmark Calculations and Retrograde
+          Extrapolation</strong></h2>
+      <p>Prosecutors and defense attorneys frequently employ
+        forensic toxicologists to testify regarding a suspect’s
+        blood alcohol level at a particular time. Erik M.P. Widmark
+        (1889-1945), a Swedish physician and expert in alcohol
+        kinetics, developed a mathematical formula for predicting
+        alcohol levels after alcohol consumption. This section is
+        designed to provide the defense attorney with an arsenal of
+        tools to challenge the state breath alcohol expert’s
+        conclusions regarding a defendant’s drinking history.
+        Knowledge of the Widmark formula and its variables will also
+        assist the defense attorney in preparation and examination
+        of his or her own expert witness.</p>
+      <p>The state toxicologist will often declare that the amount
+        of alcohol the defendant claims he consumed cannot be true
+        based on the breath test result. The state’s expert, using a
+        simplified version of the Widmark formula, will attempt to
+        calculate the number of drinks the defendant must have
+        consumed based on the evidential breath test result. It
+        should be no surprise that the opinion of the state’s expert
+        is generally drastically different than the reported alcohol
+        consumption by the defendant.</p>
+      <p>In addition to calculating the number of drinks the
+        defendant has consumed, the Widmark formula is useful in
+        conducting retrograde extrapolation calculations. Retrograde
+        extrapolation is the mathematical process by which someone’s
+        blood alcohol concentration at the time of driving is
+        estimated by projecting backwards from a later chemical
+        test. In Oregon, it is unlawful to drive a motor vehicle if
+        BAC is .08 percent or greater at the time of driving, not
+        the time of the chemical test. In cases where the driver is
+        below .08 percent at the time of the chemical test, the
+        state toxicologist will rely on retrograde extrapolation to
+        put the driver at .08 percent or higher at the time of
+        driving.</p>
+      <p>The use of retrograde extrapolation to determine BAC is
+        fraught with reliance on assumptions and statistical
+        averages and is scientifically unsound. However, the defense
+        attorney must be prepared to defend against the state’s
+        expert by strenuously challenging the assumptions underlying
+        retrograde extrapolation and Widmark calculations.</p>
+      <p><strong>1. Understanding the Widmark Formula and Its
+          Variables <span class="underline"> </span></strong></p>
+      <p>Estimating blood alcohol concentrations at a previous
+        point of time based on a later chemical test (retrograde
+        extrapolation) is a crude exercise in science. Prosecutorial
+        attempts to conduct retrograde extrapolation calculations
+        require analysis of many factors, assumptions and variables,
+        many of which are simply not available in a given case. At a
+        minimum, the following facts are necessary to conduct
+        retrograde extrapolation with even a remote degree of
+        accuracy and precision:</p>
+      <ul>
+        <li>
+          <blockquote>
+            <p>Time drinking began</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Time drinking ended</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Pattern of drinking</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Time of driving</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Time of chemical test</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Weight</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Gender</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Elimination rate of alcohol (burnoff rate)</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Widmark factor (“r” factor)</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote>
+            <p>Assumption that one hundred percent of the alcohol
+              consumed has been absorbed.</p>
+          </blockquote>
+        </li>
+      </ul>
+      <p>A person’s blood alcohol concentration is proportional to
+        the total body water content of the person. The Widmark “r”
+        factor is the ratio of total body water and blood water
+        content. Although water content differs between individuals,
+        Widmark calculations use an average for men and women. The
+        Widmark average “r” factor in men is .68 and for women is
+        .55.</p>
+      <p>For purposes of the Widmark equation, the number of fluid
+        ounces is 100-proof liquor or a drink equivalent. Scientists
+        must determine the approximate ethanol content of alcoholic
+        beverages. A 12-ounce beer, 4-ounce glass of wine, and one
+        ounce of 100-proof liquor each contain .05 ounces of
+        ethanol. A shot is approximately 1.25 ounces, a pint is 16
+        ounces; a fifth is 25.6 shots, a quart, 32 shots. See
+        Bartell and Imobersteg, <em>Attacking and Defending Drunk
+          Driving Tests</em> (2008).</p>
+      <p>Alcohol and body weight must be converted to grams to
+        utilize the Widmark equation. The number of ounces consumed
+        is converted to milliliters (mL) by multiplying ounces by
+        29.6. The proof of alcohol is expressed as a percentage, and
+        the entire amount is then multiplied by the specific gravity
+        of alcohol:</p>
+      <p>[(ounces)(29.6mL/ounce)] % Alcohol x .079 g/mL = dose in
+        grams</p>
+      <p>The Widmark formula can be stated as follows:</p>
+      <p>BAC = <span class="underline">(# of fluid ounces)(%
+          alcohol)(29.5 m/L/fluid ounce)(.79 gm/mL)</span> X 100</p>
+      <p>(Weight in lb.)(“r” factor)(16 oz/lb)(28.3 gm/oz)</p>
+      <p><strong>2. Practice Tips, Sample
+          Calculations</strong></p>
+      <p><code>Practice Tip: Determining Maximum BAC Based on Drinking Pattern</code></p>
+      <p>Query: A 180-pound man consumes three ounces of 100-proof
+        vodka. What is the man’s maximum blood alcohol
+        concentration?</p>
+      <p>BAC = <span class="underline">(# of fluid ounces)(%
+          alcohol)(29.5 m/L/fluid ounce)(.79 gm/mL)</span> X 100</p>
+      <p>(Weight in lb.)(“r” factor)(16 oz/lb)(28.3 gm/oz)</p>
+      <p>BAC = <span class="underline">(3)(.5)(29.5)(.79</span> X
+        100 = .063</p>
+      <blockquote>
+        <p>(180)(.68)(16)(28.3)</p>
+      </blockquote>
+      <p>Modified / Simplified Calculation That Avoids Conversion
+        Factors</p>
+      <p>A simplified version of the Widmark formula without
+        requiring significant conversion work follows, using the
+        constant of 13.1 for men and 10.6 for females:</p>
+      <p>BAC = <span class="underline">(# of fluid ounces of
+          alcohol)(% of alcohol)</span></p>
+      <p>(Weight in pounds)(13.1)</p>
+      <p>BAC = <span class="underline">(3)(50)</span> = .063</p>
+      <p>(180)(13.1)</p>
+      <p><code>Practice Tip: Calculating BAC at Future Time</code></p>
+      <p>Query: A 130-pound woman consumes five (5) 12-ounce beers
+        (6%) from 9:00 p.m. to 11:00 p.m. What is the woman’s blood
+        alcohol concentration at 1:00 a.m.?</p>
+      <p>BAC = <span class="underline">(# of fluid ounces)(%
+          alcohol)(29.5 m/L/fluid ounce)(.79 gm/mL)</span> X 100 -
+        βt</p>
+      <p>(Weight in lb.)(“r” factor)(16 oz/lb)(28.3 gm/oz)</p>
+      <p>BAC = <span class="underline">(5)(.5) x (6.0/4.2) x
+          (29.5) x (.79)</span> X 100 – (.015)(4) = .19</p>
+      <p>(130) x (.55) x (16) x (28.3)</p>
+      <p>(Note that the number of fluid ounces assumes a 12-ounce
+        beer at 4.2%. Since the beer consumed by this woman is 6%,
+        the number of fluid ounces must be multiplied by
+        6.0/4.2)</p>
+      <p>or using the simplified method, calculated as
+        follows:</p>
+      <p>BAC = <span class="underline">(# of fluid ounces of
+          alcohol)(% of alcohol)</span> - βt</p>
+      <p>(Weight in pounds)(10.6)</p>
+      <p>BAC = <span class="underline">(5)(50) x (6.0/4.2)</span>
+        - (.015)(4) = .19</p>
+      <p>(130) x (10.6)</p>
+      <p><code>Practice Tip: Estimating BAC at Time of Driving (Retrograde Extrapolation)</code></p>
+      <p>Query: A 220-pound man is arrested for DUII at 2:00 a.m.
+        A breath test at 3:00 a.m. revealed a BAC<br />
+        of .09%. The man consumed two ounces of 100-proof liquor at
+        1:50 a.m. What is the man’s BAC at 2:00 a.m.</p>
+      <p>In this example, because the suspect was seen driving ten
+        minutes after his last drink, the defense should argue the
+        last drink is completely unabsorbed in the suspect’s system.
+        The unabsorbed amount of alcohol must be calculated using
+        the Widmark formula and subtracted from the chemical test.
+        The amount of alcohol eliminated from the suspect from 2:00
+        a.m. to 3:00 a.m. must also be calculated to determine the
+        BAC at time of driving:</p>
+      <p>Unabsorbed alcohol = <span class="underline">2 x .5 x
+          29.5 x. .79__</span> X 100 = .034</p>
+      <p>220 x .68 x 16 x 28.3</p>
+      <p>Alcohol eliminated from 2:00 a.m. to 3:00 a.m.: (.015)(1)
+        = .015</p>
+      <p>BAC (driving) = .09 + .015 - .034 = .07%</p>
+      <p><code>Practice Tip: Calculating Number of Drinks Consumed</code></p>
+      <p>Query: A 120-pound woman takes a breath test resulting in
+        .12. How many drinks did the woman consume to achieve this
+        BAC?</p>
+      <p>A simplified version of the Widmark formula can be used
+        to calculate the number of drinks consumed if the breath
+        test result is known:<br />
+        <br />
+        BAC per drink = 2.57 / (W x p), where W is the weight in
+        pounds of the drinker and p is the Widmark Factor
+      </p>
+      <p>BAC per drink = 2.57 / (120)(.55) = .039 per drink</p>
+      <p>Number of drinks at .10 BAC = .12/.039 = 3 drinks</p>
+      <p><code>Practice Tip: Using the American Prosecutor’s Research Institute’s</code></p>
+      <p>“Alcohol Toxicology for Prosecutors” documents</p>
+      <p>“An expert’s estimation and testimony at trial will only
+        be as good as theinformation provided.”</p>
+      <p>“The most important parts of the drinking history for
+        purposes of retrograde extrapolation are alcohol consumption
+        in the hour prior to the offense and any consumption after
+        the offense but before the test.”</p>
+      <p>“The amount of time it takes is highly variable,
+        difficult to predict and impossible to determine after the
+        fact”</p>
+      <p>“The amount of alcohol consumed within 30 – 60 minutes
+        prior to the offense has the most forensic relevance”</p>
+      <p>“subtracting the effect of all alcohol consumed 30–60
+        minutes prior to the offense.”</p>
+    </section>
+    <section id="d._challenging_widmark_calculations_and_retrograde_extrapolation_in_trial" class="level2">
+      <h2><strong>D. Challenging Widmark Calculations and
+          Retrograde Extrapolation in Trial</strong></h2>
+      <p>In a divided opinion, the Oregon Supreme Court upheld the
+        admissibility of retrograde extrapolation testimony in <a href="http://arcweb.sos.state.or.us/pages/rules/oars_200/oar_257/257_030.html"><em>State
+            v. Eumana–Moranchel</em>, 352 Or 1, 277 P3d 549 (2012)</a>.
+        However, when the state offers an expert on blood alcohol
+        dissipation and retrograde extrapolation, it must first make
+        a foundational showing that the expert’s methods were
+        scientifically valid pursuant to the standards set forth in
+        <em>Brown/O’Key</em>. <em>State v. Whitmore</em>
+        (2013)<em>.</em>
+      </p>
+      <p>The <em>Whitmore</em> ruling opened the door for counsel
+        to challenge the scientific validity of retrograde
+        extrapolation in pretrial evidentiary hearings. In <a href="https://scholar.google.com/scholar_case?q=state+v.+ohotto&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=4950640858793471677&amp;scilh=0"><em>State
+            v. Ohotto</em>, 261 Or App 70 (2014)</a>, the court
+        elucidated that testimony regarding the likely amount of
+        drinks a person consumed to get a certain blood alcohol
+        content is scientific evidence. It requires “a formulaic
+        calculation derived from scientific understandings of
+        physiological processes that cannot be achieved through
+        reading a training manual, conducting routine DUII
+        investigations in the course of law enforcement, and
+        attending an NHTSA course.” Here, the arresting officer in a
+        DUII case testified that defendant would have had to have
+        imbibed way more than the amount of drinks to which he
+        testified at trial in order to get to a .17. Such testimony
+        was scientific evidence on which the officer was not
+        qualified to opine. The error was prejudicial because the
+        case essentially amounted to a credibility contest. The
+        officer arrested defendant at a campsite, to which defendant
+        had driven an hour earlier. Defendant testified that he had
+        a few drinks since arriving at the campsite. The officer was
+        essentially testifying that the defendant had to be lying
+        about how many drinks he’d had since he drove.</p>
+      <p>In <a href="https://scholar.google.com/scholar_case?q=state+v.+trujillo&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=12392782791758566740&amp;scilh=0"><em>State
+            v. Trujillo</em>, 271 Or App 785 (2015)</a>, the court
+        affirmed that “Retrograde extrapolation” using the Widmark
+        formula is scientifically valid evidence
+        under Brown/O’Key for the purposes of OEC 702:</p>
+      <p>• It is generally accepted in the field</p>
+      <p>• It is admitted through an officer that has been trained
+        to administer and record the test</p>
+      <p>• It’s used in other alcohol-related litigation and other
+        disciplines, like pharmacology</p>
+      <p>• It’s methodology has been widely tested outside of the
+        courtroom</p>
+      <p>• Using a range for elimination rates serves as a check
+        against a high rate of error</p>
+      <p>• There are many studies on elimination, absorption and
+        the Widmark formula</p>
+      <p>• It’s not novel—the first studies were published in
+        1932</p>
+      <p>• There’s a relatively low degree of subjectivity and a
+        high degree of transparency in the formula</p>
+      <p><a href="https://scholar.google.com/scholar_case?q=state+v.+lusareta&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2013&amp;case=5489822160912399408&amp;scilh=0"><em>State
+            v. Lusareta</em>, 270 Or App 102 (2015)</a>, held that where
+        a qualified forensic scientist from the state police
+        testified to the following in a DUII case, it was admissible
+        as scientific evidence for him to testify that a breath test
+        within two hours of driving is very unlikely to overestimate
+        BAC:</p>
+      <p>1. Based on a study out of Washington, a breath test
+        within two hours of a stop, generally speaking, will
+        not <em>overestimate</em> the BAC at the time of the
+        stop.</p>
+      <p>2. While there can be variation, alcohol is absorbed
+        quickly and, based on another study, people reach 80% of
+        their peak within the first 15 minutes after drinking.</p>
+      <p>3. Thus, estimating conservatively and ascribing all
+        unknown factors to the defendant’s benefit, a BAC of .15 two
+        hours after the stop would mean that defendant had at least
+        a BAC of .12 at the time of driving.</p>
+      <p>The court found that while the testimony clearly was
+        scientific evidence (given by a forensic expert based on
+        studies), it was not an application of a scientific
+        technique like retrograde extrapolation. It was really
+        nothing more than the straightforward application of the two
+        simple conclusions from the studies. Since the methodology
+        of the studies was undisputed and the articles were
+        peer-reviewed in a well-studied field, they were
+        scientifically valid and the testimony was properly
+        admitted.</p>
+      <p><a href="https://scholar.google.com/scholar_case?case=14905004578979439478&amp;q=365+Or+724&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2016"><em>State
+            v. Hedgpeth</em>, 365 Or 724 (2019)</a>, held that
+        <em>common knowledge</em> that blood alcohol concentrations
+        fall over time is insufficient to make any reasonable
+        inference about a defendant’s blood alcohol at the time of
+        driving. <em>Id. at 739.</em>
+      </p>
+      <p>In <em>Hedgpeth</em>, the only evidence in the record was
+        that the defendant registered .09 BAC two hours after he
+        drove and consumed no alcohol in the interim. The state did
+        not put on any evidence when or how much the defendant drank
+        before the stop; no evidence as to why the officer arrested
+        defendant for DUII after stopping him for not wearing a
+        motorcycle helmet; no evidence that defendant had any signs
+        of intoxication before or after the stop; and no evidence of
+        blood alcohol dissipation rates.</p>
+      <p>The court affirmed the Court of Appeals’ decision
+        reversing defendant’s conviction. Although the court did not
+        specify the exact evidence necessary to withstand a motion
+        for judgment of acquittal, the court concluded that
+        something more than common knowledge is necessary to connect
+        BAC results to the BAC at the time of driving:</p>
+      <p>“Here, the only evidence was that defendant’s blood
+        alcohol level was over the legal limit when measured almost
+        two hours after he drove, and that he had consumed no
+        alcohol in the interim. In the absence of any other
+        evidence, the jury’s common knowledge of the generic (and
+        incomplete) proposition that alcohol dissipates from the
+        blood over time is not sufficient to constitute the
+        ‘[s]omething more’ that—as we said in
+        <em>Eumana-Moranchel</em>—is necessary for a non-speculative
+        connection between the BAC test results and defendant’s
+        blood alcohol concentration when he was driving
+        approximately two hours earlier. See 352 Or at 9.” <em>Id.
+          at 744.</em>
+      </p>
+      <p>The facts of <em>Hedgpeth</em> are unusual in that the
+        state did not present any evidence of defendant’s
+        impairment. Although the court did not suggest that evidence
+        of alcohol and dissipation rates is necessary,
+        <em>Hedgpeth</em> provides good ammunition to challenge
+        cases where the state fails to connect the dots between the
+        BAC result to the BAC at time of driving.
+      </p>
+      <p>If results of the Widmark formula and retrograde
+        extrapolation calculations are damaging to the defense case
+        and deemed admissible by the trial court, the defense
+        attorney must vigorously challenge the foundations for the
+        calculations. Just as the breath testing device relies on a
+        number of variables and assumptions in calculating blood
+        alcohol content, so do Widmark and retrograde extrapolation
+        calculations. Dispelling the aura of science attached to
+        these calculations by prosecutors and state toxicologists is
+        critical in convincing the jury the defendant is not guilty.
+        Unless the jury is educated by the defense attorney and
+        defense expert, a conviction is inevitable.</p>
+      <p>Challenges to the Widmark calculations and retrograde
+        extrapolation routinely focus on (1) the lack of
+        qualifications and knowledge of the state toxicologist
+        regarding Widmark and use of retrograde extrapolation, (2)
+        cross-examination regarding the variables inherent in the
+        Widmark formula, (3) cross-examination using learned
+        treatises written by leading experts in the study of
+        alcohol, and (4) previous court rulings on the state’s
+        expert against retrograde extrapolation.</p>
+      <p><strong>1. Challenge the Qualifications of the State
+          Expert</strong></p>
+      <p>The experts employed by the state to testify in court
+        regarding blood alcohol analysis typically hold no advanced
+        degrees and have limited knowledge of the Widmark formula.
+        The version of the formula utilized by state’s experts is a
+        simplification of the actual formula. Additionally, the
+        state’s expert frequently does not have the necessary
+        information about your client’s situation to conduct
+        retrograde extrapolation with any precision.</p>
+      <p><strong>2. Cross-Examination on the Variables Underlying
+          the Widmark Formula</strong></p>
+      <p>The state’s expert conducting retrograde extrapolation
+        should be vigorously cross-examined regarding many variables
+        and assumptions utilized in Widmark and retrograde
+        extrapolation questions. Often the facts necessary to
+        conduct calculations are not available or inaccurate,
+        including body weight, food consumption, drinking history
+        and alcohol concentration, etc. In addition, the state’s
+        expert assumes the driver has an “average” rate of
+        elimination (usually .015 g/dL/hr) and absorption is
+        complete at the time of driving. The state’s expert will use
+        a range of 0.01 to 0.025%/hr in their calculation. The
+        client may still be absorbing alcohol at the time of the
+        chemical test, which means the blood alcohol may have been
+        lower at the time of driving than at the time of the
+        chemical test (Rising Blood Alcohol Defense). In addition,
+        absorption and elimination rates can vary widely among
+        individuals and rely on factors such as food consumption and
+        tolerance to alcohol.</p>
+      <p><strong>3. Cross-Examine the State Expert with Learned
+          Treatises</strong></p>
+      <p>Leading scientists in the field of alcohol have strongly
+        criticized the forensic reliability of retrograde
+        extrapolation. Several peer-reviewed journal articles
+        written by these leading authorities can provide excellent
+        material for cross-examination of the state’s expert. These
+        materials demonstrate that retrograde extrapolation is not
+        generally accepted in the scientific community as a means of
+        determining blood alcohol content.</p>
+      <p>Oregon rules of evidence authorize the impeachment of an
+        expert witness with learned treatises. <a href="http://www.oregonlaws.org/ors/40.430">OEC Rule 706</a>
+        provides:</p>
+      <p>Upon cross-examination, an expert witness may be
+        questioned concerning statements contained in a published
+        treatise, periodical or pamphlet on a subject of history,
+        medicine or other science or art if the treatise, periodical
+        or pamphlet is established as a reliable authority. A
+        treatise, periodical or pamphlet may be established as a
+        reliable authority by the testimony or admission of the
+        witness, by other expert testimony or by judicial notice.
+        Statements contained in a treatise, periodical or pamphlet
+        established as a reliable authority may be used for purposes
+        of impeachment but may not be introduced as substantive
+        evidence. [1999 c.85 §2]</p>
+      <p>The forensic scientists called by the state to testify
+        regarding retrograde extrapolation are merely technicians.
+        They rarely conduct research or draft peer-reviewed
+        articles. They will testify that based on their training and
+        experience, retrograde extrapolation is a reliable and
+        acceptable method of estimating blood alcohol
+        concentrations. While the state expert may deny knowledge of
+        the various studies and peer-reviewed articles regarding
+        breath testing and retrograde extrapolation, most will be
+        familiar with Kurt Dubowski and A.W. Jones and consider them
+        reliable sources in the field of forensic alcohol analysis.
+        If the results of retrograde extrapolation are unfavorable
+        to the facts of your case, consider impeaching the state’s
+        expert with statements from these pioneers in forensic
+        alcohol analysis. However, it is always preferable to have
+        your own expert witness discuss the scientific unreliability
+        of retrograde extrapolation (but, of course, an expert may
+        not always be available for your case).</p>
+      <p><code>Practice Tip: Dubowski on Retrograde Extrapolation</code></p>
+      <p>“Speculative retrograde extrapolation to any point prior
+        to an experimentally determined value must be avoided in
+        forensic practice, or so qualified by stated assumptions
+        that the exercise become pointless.” Kurt M. Dubowski,
+        “Human Pharmacokinetics of Ethanol I Peak Concentrations and
+        Elimination in Male and Female Subjects,” <em>Alcohol
+          Technical Reports</em> (1976) vol. 5, no. 4, pp 55-63.</p>
+      <p><code>Practice Tip</code></p>
+      <p>Gullberg: “Comparing Roadside and Subsequent Evidential
+        Breath Test Results and their Forensic Significance.” This
+        chart shows that individuals can be lower at the time of
+        driving.</p>
+      <blockquote>
+        <!-- <figure>
+            <img src="media/image1.jpeg" title="media/image1.jpeg"
+            width="576" height="363" />
+            <figcaption>media/image1.jpeg</figcaption>
+            </figure> -->
+      </blockquote>
+      <p><code>Practice Tip: A.W. Jones on Retrograde Extrapolation</code></p>
+      <p>“The status of ethanol absorption in drunk drivers is an
+        important consideration when attempts are made to estimate
+        the BEC at the time of the offense from the BEC determined
+        at the time of sampling, which is often a few hours later.
+        This technique is called backing BEC, or retrograde
+        extrapolation, and is a dubious practice.” Jones, AW;
+        Jonsson, KA; and Neri, A: “Peak Blood-Ethanol Concentration
+        and the Time of its Occurrence After Rapid Drinking on an
+        Empty Stomach,” <em>Journal of Forensic Science</em>, vol.
+        36, no. 2, March 1991, pp 376-385.</p>
+      <p><code>Practice Tip: E. Martin on Retrograde Extrapolation</code></p>
+      <p>“Back extrapolation of venous blood alcohol levels, based
+        on a single known concentration can lead to estimates
+        bordering on wild guesses.”</p>
+      <section id="update_2" class="level3">
+        <h3><strong>2024 Update</strong></h3>
+        <blockquote>
+          <p>Practice Tip: Objecting to Retrograde Extrapolation
+            Evidence</p>
+          <p>Counsel should strongly consider objecting to retrograde
+            extrapolation offered by the government, either in a
+            pre-trial motion in limine, or at trial. This author was
+            recently successful in excluding evidence of retrograde
+            extrapolation (speculation of BAC at time of driving) during
+            trial, based on <a href="https://scholar.google.com/scholar_case?case=12392782791758566740&amp;q=State+v.+Trujillo,+271+Or+App+785&amp;hl=en&amp;as_sdt=4,38"><u><em>State
+                  v. Trujillo</em>, 271 Or App 785 (2015)</u></a>. The
+            defendant in Trujillo raised only a general objection to the
+            admissibility of retrograde extrapolation as scientific
+            evidence, not whether a Court must consider particular,
+            individualized variables in determining peak absorption and
+            elimination in calculating BAC through the technique. Below
+            is an excerpt of defense motion filed after the court
+            recessed and directed the parties to brief the issue
+            mid-trial:</p>
+        </blockquote>
+        <p>II. ADMISSABILITY OF RETROGRADE EXTRAPOLATION</p>
+        <blockquote>
+          <p>“Retrograde Extrapolation is the mathematical process by
+            which a person’s blood alcohol is projected backwards from a
+            later chemical test. The use of retrograde extrapolation to
+            determine BAC at the time of driving, as Dr. Jackson
+            testified to, is fraught with reliance on assumptions and
+            statistical averages. Facts necessary for any attempt at
+            retrograde extrapolation Include, but are not limited to,
+            the time drinking began, the time drinking ended, the
+            pattern of drinking, the time of driving, the time of the
+            chemical test, the elimination rate of alcohol (burn off
+            rate), food consumed, and the assumption that one hundred
+            percent of the alcohol consumed has been absorbed.</p>
+          <p>Retrograde extrapolation is scientific
+            evidence. <em>State v. Whitmore</em>, 257 Or App 664, 672
+            (2013). In <em>State v. Trujillo</em>, 271 Or App 785, 790,
+            792 (2015) the Court addressed whether retrograde
+            extrapolation was scientifically valid under the standards
+            set forth in <em>State v. Brown</em>, 297 Or 404 (1984)
+            and <em>State v. O’Key</em>, 321 Or 285 (1995). The Court
+            ultimately upheld the admissibility of retrograde
+            extrapolation, holding as follows:</p>
+          <p>Our consideration of the <em>Brown/O’Key</em> factors
+            leads us to conclude generally that retrograde extrapolation
+            using the Widmark formula is scientifically valid. The
+            foundation provided <strong><u>in this case</u></strong> was
+            sufficient to meet the admissibility requirements of OEC
+            702. The trial court did not err in concluding that
+            Bessett’s testimony was admissible. <em>Trujillo</em>, 271
+            Or App at 799.</p>
+          <p>Of paramount importance is the limited applicability
+            of <em>Trujillo</em>. In <em>Trujillo</em>, the Court
+            determined that back extrapolation was dependent on the
+            body’s peak absorption of alcohol and the body’s elimination
+            rate of alcohol from the blood. <em>Id. </em>at 784. The
+            defendant did not make challenges specific to either factor.
+            Instead, defendant objected more generally to the
+            admissibility of retrograde extrapolation as scientific
+            evidence. Thus, the court did not address whether experts
+            must consider particular individualized variables in
+            determining peak absorption and elimination in calculating
+            BAC through retrograde extrapolation. The court noted in
+            Footnote 9 of the opinion:</p>
+          <p>We note that jurisdictions have come to different
+            conclusions regarding admissibility requirements for peak
+            absorption and elimination determinations involved in
+            retrograde extrapolation. For instance, some jurisdictions
+            require an expert to demonstrate knowledge of whether the
+            defendant’s body was absorbing or eliminating alcohol at the
+            time of a blood-alcohol test, <strong><u>sufficiently
+                consider the eating and drinking history</u></strong> of a
+            defendant in establishing peak absorption, or demonstrate
+            where on a BAC curve, a defendant’s BAC falls, in order for
+            retrograde extrapolation evidence to be deemed
+            reliable. <em>Compare State v. Armstrong</em>, –––Nev. ––––,
+            267 P.3d 777, 782–83 (2011); <em>Mata v. State</em>, 46
+            S.W.3d 902, 916 (Tex.Crim.App.2001) with <em>State ex rel.
+              Montgomery v. Miller</em>, 234 Ariz. 289, 304, 321 P.3d 454
+            (Ariz.Ct.App.2014).</p>
+          <p>In the present case, given the finding
+            in <em>Trujillo</em>, defendant does not object to the basis
+            of retrograde extrapolation as scientific evidence
+            generally. Unlike the defendant in <em>Trujillo</em>, we
+            argue that experts must consider particular, individualized
+            variables in determining peak absorption and elimination.
+            This issue was not ripe in <em>Trujillo</em>. Here, there is
+            simply insufficient information regarding variables for the
+            State to meet the foundational requirements for
+            admissibility.</p>
+          <p>In discussing specific variables, as heretofore stated,
+            the <em>Trujillo</em> court cited <em>Mata v. Stat</em>e, 46
+            SW 3d 902 (2001). The <em>Mata</em> rejected the
+            admissibility of retrograde extrapolation and concluded the
+            following:</p>
+          <p>Regarding the other factors, there was only one test of
+            Mata’s BAC, and it occurred over two hours after the alleged
+            offense. This is a significant length of time and seriously
+            affects the reliability of any extrapolation. Add to that
+            the fact that McDougall did not know one single personal
+            characteristic of Mata — he did not know whether Mata had
+            eaten anything that night and if so, how much; how much Mata
+            had had to drink; what Mata had been drinking; when Mata’s
+            last drink was; the length of Mata’s drinking spree; or even
+            Mata’s weight. We find that the factors in this case weigh
+            against a finding of reliability. Even the scientists who
+            find retrograde extrapolations reliable would require more
+            known quantities than what McDougall had in this case. Given
+            McDougall’s inconsistent testimony, along with the single
+            breath test conducted over two hours after the driving, we
+            conclude that, in this case, the State failed to prove by
+            clear and convincing evidence that McDougall’s retrograde
+            extrapolation was reliable.</p>
+          <p><em>Id.,</em> at 917.</p>
+          <p>Just as in <em>Mata</em>, which was cited by Oregon
+            in <em>Trujillo</em>, the facts available to Dr. Jackson are
+            woefully insufficient and would render any retrograde
+            extrapolation a clear crude exercise in science. Dr. Jackson
+            has no idea whether the defendant ate anything that night,
+            the length of Mr. ____________ drinking spree, or
+            even__________ weight.</p>
+          <p>The State has simply failed to establish the reliability
+            of retrograde extrapolation in this case. Trujillo
+            explicitly left open the ability of the defense to challenge
+            retrograde extrapolation based on lack of individual
+            variables, and cited a case that did just that, Meta.
+            Therefore, defendant respectfully requests that Court
+            disallow Dr. Jackson’s testimony regarding retrograde
+            extrapolation calculations.</p>
+          <p>NOTE: A tactical decision must be made whether to request
+            exclusion of the evidence in a pre-trial motion in limine or
+            raise the objection at trial. The better practice is a
+            pre-trial motion in limine (to avoid a very cranky judge),
+            but this also tips of the prosecutor and will allow the
+            State to thoroughly prepare and make a more complete
+            record.</p>
+        </blockquote>
+        <p><strong>[End Update]</strong></p>
+      </section>
+    </section>
+    <section id="e._martin_w._moll_p._schmid_l._dettli._the_pharmacokinetics_of_alcohol_in_human_breath_venous_and_arterial_blood_after_oral_ingestion_european_journal_of_clinical_pharmacology_1984_vol._26_no._5_619_626." class="level2">
+      <h2><strong>E. Martin, W. Moll, P. Schmid, &amp; L. Dettli.
+          “The Pharmacokinetics of Alcohol in Human Breath, Venous and
+          Arterial Blood After Oral Ingestion,” <em>European Journal
+            of Clinical Pharmacology</em> (1984) Vol. 26, No. 5,
+          619-626.</strong></h2>
+      <p><code>Practice Tip: R.G. Gullberg on Retrograde Extrapolation</code></p>
+      <p>“We do not intend to encourage back-estimation but
+        instead we want to highlight the uncertainty associated with
+        such calculations. Estimating the amount of alcohol consumed
+        is difficult to defend since drinking histories are often
+        unreliable and values for ß are Þ unknown for individual
+        drunk driving suspects.”</p>
+      <p>R.G. Gullberg and A.W. Jones, “Guidelines for Estimating
+        the Amount of Alcohol Consumed from a Single Measurement of
+        Blood Alcohol Concentration: Re-evaluation of Widmark’s
+        Equation,” <em>Forensic Science International</em> (1994)
+        Vol. 69, 119-130.</p>
+    </section>
+  </section>
+  <section id="iii._blood_alcohol_analysis" class="level1">
+    <h1><strong>III. Blood Alcohol Analysis</strong></h1>
+    <section id="a._suppression_of_warrantless_blood_draw" class="level2">
+      <h2><strong>A. Suppression of Warrantless Blood
+          Draw</strong></h2>
+      <p>Can you suppress the results of a blood test taken in
+        violation of the implied consent laws? If your client’s
+        blood was drawn without consent, without a warrant, and
+        outside of a hospital, the answer is yes—though it’s still
+        an uphill battle. ORS 813.140 establishes that police may
+        administer a chemical test in two circumstances: (1) if the
+        individual expressly consents, or (2) without the person’s
+        consent if the officer has probable cause for DUII and the
+        person is unconscious or otherwise incapable of consenting.
+        If a blood draw is taken in violation of that statutory
+        provision, under <a href="https://www.oregonlegislature.gov/bills_laws/ors/ors813.html">ORS
+          813.320</a>(2) it is inadmissible unless it was drawn while
+        the person was hospitalized and receiving medical treatment,
+        or pursuant to a warrant. But what if the blood draw was
+        performed without a warrant and outside of a hospital?</p>
+      <p>In the past, the Oregon courts have treated ORS
+        813.320(1) as a suppression statute—that is, it renders the
+        blood draw evidence inadmissible. <em>E.g.,</em> <a href="https://scholar.google.com/scholar_case?case=14878249156350301970&amp;q=State+v.+Moylett,+313+Or+540,+836+P2d+1329+(1992&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moylett</em>, 313 Or 540, 836 P2d 1329 (1992)</a>. There
+        is substantial legislative history from the enactment of ORS
+        813.320 that supports that interpretation. The question is
+        whether ORS 813.320’s statutory suppression survived the
+        enactment of <a href="https://www.oregonlegislature.gov/bills_laws/ors/ors136.html">ORS
+          136.432</a>, which states that evidence obtained in
+        violation of a statute will not be excluded unless (1) the
+        evidence is irrelevant or otherwise inadmissible, or (2)
+        exclusion is required by the state or federal constitution
+        or the evidence code.</p>
+      <p>In <a href="file:///Users/jennifer/Documents/Publications/DUII%20Trial%20Notebook/2020%20edition%20/2020%20chapters%20/11%20breath%20blood%20%26%20urine%20/978%20P2d%20732"><em>State
+            v. Thompson-Seed</em>, 162 Or App 483, 489-491, 986 P2d 732
+          (1999)</a>, the Court of Appeals held that that the
+        legislature did not intend ORS 136.432 to implicitly repeal
+        other statutes that require suppression of evidence; rather,
+        it intended to prevent courts from creating new exclusionary
+        rules. <em>After</em> that decision, the Oregon legislature
+        added subsection (2) of ORS 813.320. Essentially, the bill
+        was framed as allowing a small subset of test results to be
+        admitted in DUII cases, while all other results would
+        continue to be excluded. The legislative history and later
+        interpretations of the bill support reading ORS 813.320(2)
+        as a valid suppression statute. <em>See</em> <a href="https://scholar.google.com/scholar_case?case=15563354503723467871&amp;q=State+v.+Snyder,+337+Or+410&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Snyder</em>, 337 Or 410, 425-26, 97 P3d 1181 (2004)</a>;
+        <a href="https://scholar.google.com/scholar_case?case=16044668107293690806&amp;q=State+v.+Cabanilla,+351+Or+622,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cabanilla</em>, 351 Or 622, 638, 273 P3d 125
+          (2012)</a>.
+      </p>
+      <p>So, although the Oregon courts have not yet suppressed
+        blood draw evidence that violated only ORS 813.320(2) but
+        <em>did not violate the Constitution</em>, the statute
+        itself, the legislative history, and later case law support
+        suppression of blood draw evidence taken in violation of the
+        implied consent laws. It is an issue worth preserving in the
+        trial court.
+      </p>
+      <p>—The editors wish to thank Nora Coon, Office of Public
+        Defense Services, Salem, for providing this section.</p>
+      <section id="update_3" class="level3">
+        <h3><strong>2024 Update</strong></h3>
+        <p><a href="https://scholar.google.com/scholar_case?case=12652248814463016709&amp;q=portulano&amp;hl=en&amp;as_sdt=4,38"><em>State
+              v. Portulano,</em> 320 Or App 335, 514 P3d 93 (2022)</a></p>
+        <p>Holding: Warrantless blood draws are unconstitutional in
+          violation of the Fourth and Fourteenth Amendments and
+          Article 1, section 9, of the Oregon Constitution. Exigent
+          circumstances due to dissipation of blood alcohol levels is
+          insufficient to justify a warrantless blood draw in a DUII
+          case because of the alternative available option of
+          obtaining a telephonic blood draw warrant.</p>
+        <p>Editor's Note: The <em>Portulano</em> opinion provides a
+          solid current review of the application of <em>Machuca</em>,
+          <em>McCarthy</em> and <em>McNeely</em> to DUII cases.  
+        </p>
+        <blockquote>
+          <p><a href="https://scholar.google.com/scholar_case?case=2442865424225816821&amp;q=State+v.+McIntire+2023&amp;hl=en&amp;as_sdt=4,38"><u><em>State
+                  v. McIntire</em>, 328 Or App 328 (2023)</u></a>. The Court
+            of Appeals affirmed the trial court’s decision denying
+            defendant’s motion to suppress a warrantless blood draw
+            taken at a hospital. In McIntire, the defendant was arrested
+            and taken to a hospital. When defendant would not consent to
+            a blood test, the deputy obtained a blood sample based on
+            exigent circumstances. A hospital phlebotomist obtained both
+            a medical blood draw and forensic draw at the same time. The
+            Court held that the trial court properly found that the
+            hospital’s drawing of a blood sample did not dissipate the
+            exigency:</p>
+          <p>“The trial court made factual findings regarding the
+            officer’s reasons for believing that the exigent draw was
+            required as opposed to relying on the hospital draw,
+            including concerns about chain of custody, protocols for
+            preservation, and security of the samples; assurances that
+            the proper testing would be done on the forensic samples and
+            lack of knowledge about what testing would be performed on
+            the medical samples; knowledge that the forensic draw would
+            be performed following a swab of defendant’s arm with iodine
+            rather than alcohol; knowledge about what preservatives or
+            other additives would be included in the forensic samples;
+            and the importance of preservation of forensic samples for
+            the possibility of replication of testing if needed.”</p>
+        </blockquote>
+        <p><strong>NMS LABS AND THE SIXTH AMENDMENT RIGHT OF
+            CONFRONTATION</strong></p>
+        <blockquote>
+          <p>Oregon law enforcement officers frequently send blood
+            samples in driving under the influence cases to NMS labs, in
+            Horsham, Pennsylvania, for quantitative testing. NMS
+            methodology is substantially different than the Oregon State
+            crime lab, in that there are as many as 10-15 individuals at
+            NMS Labs involved in all stages of the testing process. The
+            analyst that signs off on the computer-generated forensic
+            report, and subpoenaed by the State to testify, does not
+            supervise the individuals in performing the testing, does
+            not physically handle the samples, and does not observe the
+            testing process. Several attorneys have successfully argued
+            that testimony of a substitute analyst is a violation of the
+            Sixth Amendment right to confrontation.</p>
+          <p>The United States Supreme Court heard oral arguments on
+            this issue in <em>Smith v. Arizona</em>, Docket No. 22-899,
+            on January 20, 2024. The issue in <em>Smith v.
+              Arizona</em> is whether the confrontation clause of the
+            Sixth Amendment permits the prosecution in a criminal trial
+            to present testimony by a substitute expert conveying the
+            testimonial statements of a nontestifying forensic analyst,
+            on the grounds that (a) the testifying expert offers some
+            independent opinion and the analyst’s statements are offered
+            not for their truth but to explain the expert’s opinion, and
+            (b) the defendant did not independently seek to subpoena the
+            analyst.</p>
+          <p><a href="https://www.scotusblog.com/case-files/cases/smith-v-arizona/"><u><span>https://www.scotusblog.com/case-files/cases/smith-v-arizona/</span></u></a></p>
+        </blockquote>
+        <p><strong>[End Update]</strong></p>
+      </section>
+    </section>
+    <section id="b._hospital_analysis_indirect_method" class="level2">
+      <h2><strong>B. Hospital Analysis (Indirect
+          Method)</strong></h2>
+      <p>Due to time constraints and cost issues, the most common
+        method for the analysis of ethanol in clinical laboratories
+        is the enzymatic method. Blood (serum) is placed onto an
+        auto analyzer and systematically tested for a variety of
+        clinically-related compounds including alcohol. The results
+        are typically reported as milligrams per deciliter (mg/dl)
+        or grams per deciliter (g/dl).</p>
+      <p>Note: Forensic results are reported as % or g/100 ml.
+        Example: 0.10% is the same as 100 mg/dl or 0.10 g/dl.</p>
+      <p>In the reaction, alcohol is oxidized to acetaldehyde by
+        ADH (alcohol dehydrogenase) in the presence of a
+        coenzyme—nicotinamide adenine dinucleotide (NAD). The
+        alcohol reduces the NAD to NADH. The NADH is measured
+        spectrophotometrically at 340 nm. The concentration of
+        alcohol is directly proportional to the rate of change of
+        NADH.</p>
+      <p>ADH catalyst</p>
+      <!-- <figure>
+            <embed src="media/image2.img" title="media/image2.img"
+            width="99" height="13" />
+            <figcaption>media/image2.img</figcaption>
+            </figure> -->
+      <p><em>Advantages of this indirect technique:</em></p>
+      <p>• short analytical time</p>
+      <p>• cost effective</p>
+      <p>• multiple clinical analytes tested at the same time</p>
+      <p>• standards and controls utilized during the testing are
+        certified blood-alcohol mixtures.</p>
+      <p>Disadvantages of this indirect technique:</p>
+      <p>• Blood (serum or plasma) is 10–20 percent higher in
+        alcohol concentration as compared to whole blood.</p>
+      <p>• Sample is tested only one time (no duplicate
+        analysis).</p>
+      <p>• In the absence of alcohol, common medications will
+        cause the chemical reaction to produce NADH, which can
+        create erroneous results (e.g., aspirin, ibuprofen).</p>
+      <p>• In the absence of alcohol, trauma will cause the
+        chemical reaction to produce NADH</p>
+      <p>• Introduction of IV solutions containing lactate (i.e.,
+        Ringer’s Lactate) will cause the chemical reaction to
+        produce NADH.</p>
+      <p>• No internal standard utilized during the analysis.</p>
+      <p>• False positives have been reported in the
+        literature.</p>
+      <p>• Blood comparison to forensic analysis reveals an 84%
+        disagreement.</p>
+      <p>• Blood samples are generally destroyed after several
+        days.</p>
+      <p>• Unable to discriminate between other volatiles and
+        alcohol metabolites (e.g., acetaldehyde).</p>
+      <p><em>Trial issues:</em></p>
+      <p>• Most hospitals will attempt to have either the
+        physician or the laboratory manager testify to the
+        laboratory results. Many physicians are not aware of the
+        analytical process for alcohol testing. For this type of
+        testing, many hospitals require only a high school diploma
+        and additional hospital training for the specific analyzer.
+        The laboratory technician that performed the testing should
+        be subpoenaed for testimony.</p>
+      <p>• Chain of custody in a clinical setting should be
+        addressed.</p>
+      <p>• Many hospitals will add a disclaimer stating that the
+        blood alcohol analysis should not be used for medico-legal
+        purposes.</p>
+    </section>
+    <section id="c._forensic_analysis_direct_method" class="level2">
+      <h2><strong>C. Forensic Analysis (Direct
+          Method)</strong></h2>
+      <p>The forensic analysis for alcohol involves the use of a
+        gas chromatograph-headspace (GC-HS) analyzer. A blood sample
+        (typically whole blood) is placed into a vial along with an
+        internal standard and sealed. The sample is then heated
+        until the components of interest (ethanol and internal
+        standard) establish an equilibrium within the vial. At this
+        point, the concentration determined in the headspace (area
+        above the liquid portion) is proportional to the
+        concentration of the ethanol in the blood (Henry’s Law). An
+        aliquot of the gaseous phase above the blood sample is
+        withdrawn and injected into the gas chromatograph. After
+        injection of the sample into the gas chromatograph, the
+        instrument separates the volatile compounds potentially
+        present in the sample (ethanol, acetone, methanol, and
+        acetaldehyde). At the gas chromatograph’s detector, each
+        volatile compound produces an electrical current that is
+        measured and displayed as a peak on a chart. The area under
+        the peak is measured and calculated for alcohol
+        concentration.</p>
+      <p>Example of GC-HS Charts</p>
+      <p><em>Advantages of this direct technique:</em></p>
+      <p>• No interferences with common medications.</p>
+      <p>• Samples are run in duplicate to ensure accuracy.</p>
+      <p>• Internal standard utilized with each blood sample to
+        minimize any variations in sampling.</p>
+      <p>• Samples are generally whole blood samples, which
+        minimizes any variations commonly seen with serum
+        blood-alcohol issues.</p>
+      <p>• Samples are considered as evidence and not
+        destroyed.</p>
+      <p><em>Disadvantages of this direct technique:</em></p>
+      <p>• Samples are manually placed on an automated analyzer,
+        samples can be mixed up during this manual application (see
+        trial issues).</p>
+      <p>• Biological contamination of other samples being
+        analyzed can adversely affect results.</p>
+      <p><em>Trial issues:</em></p>
+      <p>The forensic notes generated by the laboratory should be
+        examined prior to trial. Specific language for the
+        laboratory notes is noted in the following list:</p>
+      <p>• Analyst’s internal communication log</p>
+      <p>• Internal chain of custody</p>
+      <p>• Laboratory worksheet displaying evidence of labeling,
+        expiration dates of vials and type of preservative contained
+        in vials</p>
+      <p>• Batch Summary Worksheet displaying position of
+        defendant’s sample in relationship to samples analyzed,
+        standards, and controls used in batch and results of
+        samples, standards, and controls</p>
+      <p>• Gas chromatograph–headspace (GC/HS) analysis charts of
+        duplicate results of defendant’s sample</p>
+      <p>• GC/HS charts of standards and controls</p>
+      <p>• Percent error rate and date of last error rate
+        verification</p>
+      <p>• Maintenance/repairs and subsequent validation records
+        six months prior to the analysis of this case</p>
+      <p>• Current laboratory procedure manual pertaining to blood
+        alcohol analysis.</p>
+      <p>• Results of the forensic scientist’s proficiency testing
+        results for the past five years</p>
+      <p>• Analyst’s CV.</p>
+      <p><em>Other trial issues include:</em></p>
+      <p>• The Oregon State Police Forensic Division reports the
+        name, time of the blood draw, type of blood sample (whole,
+        serum, plasma) and results of the analysis. In most cases,
+        the report indicates that the blood was labeled as having
+        been drawn from…. However, in some cases the report
+        indicates that the blood was “reportedly drawn from….” The
+        term “reportedly drawn from” is an indication that there was
+        an omission in the labeling process.</p>
+      <p>• The review of the forensic notes will determine if the
+        calibrators and controls are run correctly as well as the
+        placement of samples. (See examples below.)</p>
+      <p>Example of Batch Summary or Log Sheet</p>
+      <p>Example of GC-HS Blood Alcohol Chart</p>
+    </section>
+  </section>
+  <section id="iv._introduction_urine_and_blood_toxicology" class="level1">
+    <h1><strong>IV. Introduction: Urine and Blood
+        Toxicology</strong></h1>
+    <p>Many biological specimens may be tested for drugs of
+      abuse. Blood, saliva, semen, fingernails, hair, meconium,
+      sweat, breast milk, as well as fly larvae all have potential
+      as drug-testing matrices. Blood is the useful matrix if the
+      intent of the testing is to relate drug concentrations to
+      pharmacological effects or potential recent use. Fingernails
+      and hair yield the detection of long-term or chronic drug
+      use.</p>
+    <p>Oregon has chosen to use urine as the specimen of choice
+      for impaired driving situations. The advantages of a urine
+      specimen include the collection of evidence vs. the time of
+      collection, noninvasive collection process, automated
+      testing, the high concentrations of the parent drug or its
+      metabolite for detection purposes, and the relatively low
+      cost of testing. The limitation of using urine as a testing
+      matrix is that drug concentrations cannot be related to
+      impairment. Also, drugs and metabolites may be present in
+      urine for many days after use, consequently not imparting
+      any adverse effects. Unlike blood collection, urine can be
+      subjected to adulteration or tampering. Such adulteration
+      may include substitution of specimen, dilution with water,
+      or addition of substances to alter the testing. Compounds or
+      products that have been used to adulterate samples include
+      alcohol, ammonia, vitamin C, Visine, lemon juice, peroxide,
+      detergents, goldenseal root, Stealth, the “Wizzinator,” and
+      bleach. These products are designed to adversely affect the
+      chemical analysis of the urine sample. In the forensic
+      setting, precautions have been taken in the collection and
+      analytical process to avoid these issues.</p>
+    <p>The analytical process consists of a presumptive
+      screening test and a nonquantitated confirmation test. If
+      the identification of the drug and/or its metabolites meets
+      the forensic division’s criteria, the drug is reported in
+      the formal report.</p>
+    <section id="a._collection" class="level2">
+      <h2><strong>A. Collection</strong></h2>
+      <p>Officers are provided with a standardized urine
+        collection kit. This kit includes a sterilized urine cup,
+        thermal strip, evidence seals, and an outer box for
+        transport. In that a direct observation is not required, the
+        defendant hands the filled specimen cup to the officer. The
+        officer should make a notation of the thermal strip
+        temperature (normal range is considered to be 90<sup>0</sup>
+        – 100<sup>0</sup>F) to do an initial evaluation of potential
+        adulteration. The officer then labels the urine cup and
+        outer packaging prior to transport of the evidence to the
+        forensic laboratory.</p>
+      <p>Trial issue: In most cases, the report indicates the
+        urine was labeled as having been drawn from…. However, in
+        some cases the report indicates that the urine was
+        “reportedly drawn from….” The term “reportedly drawn from”
+        is an indication that there was an omission in the labeling
+        process. For example:</p>
+      <p>• The urine sample vial was unlabeled/unmarked.</p>
+      <p>• The container with the urine sample was only marked
+        with the agency’s case number.</p>
+      <p>• No markings were noted on either the urine samples or
+        the outer packaging. The associated name and agency case
+        number was only on the Oregon State Police Form 49 Evidence
+        Transfer Form.</p>
+    </section>
+    <section id="b._analytical_process" class="level2">
+      <h2><strong>B. Analytical Process</strong></h2>
+      <p>Preliminary screening of the urine sample is performed by
+        a two step process. The first step is the enzyme immunoassay
+        analysis (EMIT). EMIT assays use an enzyme-linked antigen
+        that relies on the drug or its metabolite converting
+        nicotinamide adenine dinucleotide (NAD) to NADH. NADH is
+        measured spectrophotometrically at 340 nm. The chemical
+        analysis involves the presumptive identification of various
+        drug categories. In that this testing is considered
+        presumptive, the forensic laboratory must utilize a more
+        specific analysis for confirmation. Each EMIT drug category
+        has an assigned cutoff value. If the chemical reaction rate
+        exceeds the cutoff calibrator reaction rate, the test is
+        reported as positive. An example of the analysis is provided
+        below:</p>
+      <p>EMIT Analysis Chart</p>
+      <p>Adulteration/tampering is also examined at the same time.
+        The instrument measures specific components of the urine
+        that would indicate either dilution or some type of
+        tampering. Refer to example</p>
+      <p>Adulterant Analysis Chart</p>
+      <p>Creatinine: Creatinine is a normal body excretion. When
+        urine becomes dilute, creatinine levels (as well as drug
+        levels) are reduced.</p>
+      <p>Specific gravity: Specific gravity of a substance is the
+        ratio of the density of a substance compared to the density
+        of water. Dilute urine has a lower specific gravity.</p>
+      <p>pH: Ingestion or addition of materials to alter the
+        normal body pH depresses the enzymatic reaction rate.
+        Significant alterations may also affect the stability of
+        certain drugs.</p>
+      <p>Oxidant: Oxidizing agents such as hydrogen peroxide,
+        chromates, bleach, nitrites and commercially available
+        adulterants are not found in normal urine.</p>
+      <p>The limitations of this process are as follows:</p>
+      <p>The analysis is only for drug categories at levels that
+        exceed the calibrator’s cutoff value.</p>
+      <p>• Many drugs and/or medications and their metabolites
+        cannot be detected by this method.</p>
+      <p>• Use of contaminated or expired calibration reagents can
+        produce false positive tests.</p>
+      <p>• False positive tests can be the result of common
+        medications.</p>
+      <p>• A negative response means that the drug or metabolite
+        is either absent or its presence fell below the calibrator
+        value.</p>
+      <p>The second screening test is called liquid chromatography
+        time-of-flight mass spectrometry, or LC/Q-ToF/MS. The
+        LC/Q-ToF/MS was implemented to expedite the screening
+        process and to eventually eliminate the EMIT test. However,
+        at this time, both types of screening tests are being
+        performed. The advantage of the LC/Q-ToF/MS is that it has
+        the ability to detect more compounds than the EMIT
+        analysis.</p>
+      <p>The confirmation process is by a technique called gas
+        chromatography-mass spectrometry (GC/MS). The gas
+        chromatograph portion of the instrument is utilized to
+        separate organic compounds. The mass spectrometer is used
+        for molecular identification. The fragmentation pattern
+        produced by the mass spectrometer section allows for the
+        isolation of a single mass to charge ratio (m/z).</p>
+      <p>In that a urine sample cannot be directly injected into
+        this instrument, a specific extraction methodology must be
+        utilized. In most cases, extractions that incorporate both
+        acidic and basic drugs will suffice. Complicating the
+        analytical process is the fact that many drugs or their
+        metabolites must be subjected to additional chemical
+        treatment so that the instrument can “visualize” the drugs
+        or their metabolites. For example:</p>
+      <p>• The “inactive” metabolite of marijuana (carboxy-THC)
+        must be hydrolyzed and derivatized before the instrument is
+        able to “visualize” the material. In addition, the
+        instrument must be set in a different analytical mode,
+        called SIM (Selected Ion Monitoring), to identify the
+        extremely low level of this inactive metabolite in the
+        urine.</p>
+      <p>• The date rape drug called GHB (gamma-hydroxybutyrate)
+        must undergo a specific extraction and derivatization along
+        with the SIM mode for identification. Additionally, GHB is
+        an endogenous compound in human urine that occurs at levels
+        approaching 10 mcg/mL.</p>
+      <p>• Vicks inhalers contain methamphetamine. A specific
+        derivatization/treatment of the urine extract must be
+        performed to separate out a Vicks inhaler product versus a
+        street product of methamphetamine.</p>
+      <p>• Opiates and their analogues may be present in urine as
+        either the free compound, and/or their corresponding
+        conjugated metabolites. In order to visualize these
+        “conjugated metabolites”, the analyst must hydrolyze the
+        extracted sample prior to injection into the instrument.</p>
+      <p>After extractions and any chemical treatment to the urine
+        extracts, the samples are manually loaded onto an auto
+        sampling device on the instrument. Since the samples are not
+        quantitated for drug levels, the forensic division
+        implements a protocol to prevent samples from contaminating
+        each other (due to the instrument’s syringe transferring
+        materials from each sample vial, called carry over). The
+        protocol suggests that the analyst place a blank sample
+        between each specimen to ensure sample integrity</p>
+      <p>Reporting: a minimum of two independent tests for
+        controlled substances and/or medications is required before
+        a specimen can be reported as positive/confirmed. If the
+        initial immunoassay test or LC/Q-ToF/MS is negative, the
+        analyst can use two separate extractions on the gas
+        chromatograph mass spectrometer to facilitate a positive
+        report. The report may also indicate; “<em>Unable to detect
+          a controlled substance or common pharmaceuticals. The urine
+          toxicology procedures of this laboratory are designed to
+          identify and confirm most controlled substances and many
+          common pharmaceuticals. The urine sample(s) described above
+          may contain drugs that were not detected or confirmed</em>
+        (see trial issues).</p>
+      <p>The chart below is an example of the GC/MS charts
+        typically produced.</p>
+      <p>In the above case, the analyst reported the medication
+        venlafaxine. However, each one of the “peaks” in the charts
+        represents a compound that was not reported. It should also
+        be noted that the analyst indicated that venlafaxine was
+        eluted from the instrument twice, which is chemically not
+        possible.</p>
+      <p>Trial issues:</p>
+      <p>• Urine samples generally reflect that the individual
+        consumed a drug/medication at some point in time. The drugs
+        or medications detected may or may not apply to any clinical
+        effects.</p>
+      <p>• Should the laboratory report indicate “unable to
+        detect,” the laboratory notes should be requested as there
+        may be drugs or medications that were detected but not
+        reported in the final report.</p>
+      <p>Based upon the case analysis, a detailed set of notes
+        should be requested. Use the following as an example:</p>
+      <p>All documents pertaining to case #________to include:</p>
+      <ul>
+        <li>Analyst’s internal communication log and administrator’s
+          communication log.</li>
+        <li>Internal chain of custody.</li>
+        <li>Laboratory worksheet displaying evidence of labeling and
+          type of extractions performed.</li>
+        <li>All documentation/charts reflected in the analyst’s
+          notes that pertain to the analyst’s verification of the
+          sample’s position (i.e., batch sequence log) and the
+          analyst’s verification that no contamination existed during
+          analysis (i.e., blank controls prior to the defendant’s
+          sample).</li>
+        <li>EMIT calibration and control verification to include
+          expiration dates and date of calibration.</li>
+        <li>EMIT charts regarding the defendant’s results.</li>
+        <li>Any other charts/tests regarding screening tests (i.e.,
+          LC-QTOF).</li>
+        <li>All standards validated by LC-QTOF instruments.</li>
+        <li>All notes and charts pertaining to types of extractions
+          and controls used in the analysis.</li>
+        <li>GC/MS charts to include:</li>
+      </ul>
+      <ul>
+        <li>
+          <blockquote>
+            <p>GC/MS Batch summary or Sequence Log worksheet displaying
+              the samples and position on auto-sampler unit that were
+              analyzed in conjunction with the defendant’s sample.</p>
+          </blockquote>
+        </li>
+        <li>GC/MS auto tune calibration prior to defendant’s
+          sample.</li>
+        <li>GC/MS charts of standards, positive and negative
+          controls used for comparison and identification.</li>
+        <li>GC/MS charts of “blank” samples analyzed prior to
+          defendant’s sample referenced in the analyst’s worksheet
+          that “blanks” were run prior to the defendant’s sample.</li>
+        <li>GC/MS charts regarding the defendant’s sample.</li>
+      </ul>
+      <ul>
+        <li>Current laboratory procedure manual pertaining to urine
+          toxicology analysis.</li>
+        <li>Results of the forensic scientist’s proficiency testing
+          results for the past five years.</li>
+        <li>Documents regarding any corrective action concerning an
+          unsuccessful proficiency test sample.</li>
+        <li>Analyst’s CV.</li>
+        <li>Memos or written policies regarding a refusal to provide
+          the above documents.</li>
+        <li>Notes or memos related to this case to include the
+          officer’s report that was provided with the case.</li>
+        <li>Articles or other material the expert relied upon in
+          forming his/her opinion.</li>
+      </ul>
+      <p>Examples of issues that should be addressed in the
+        forensic notes:</p>
+      <p>Trial Issues Continued:</p>
+      <p>The question of blood vs. urine analysis and the
+        significance of each specimen is commonly addressed at
+        trial. The forensic division’s comment is that urine is the
+        only biological specimen currently authorized. It should be
+        noted that previous OSP protocols allowed the testing of
+        blood. Even though the medical examiner’s OSP testing allows
+        for the testing of blood, OSP has deleted the term “blood”
+        in recent protocols.</p>
+      <p>The determination of alcohol in urine is possible with
+        the use of the gas chromatograph-head space instrument as
+        described above. However, special precautions must be
+        recognized in the interpretation of the results.</p>
+      <p>Urine concentrations of alcohol are often used to
+        estimate blood alcohol concentrations. It has been
+        determined that the urine/blood ratio of 1.3 applies and
+        provides a valid estimate in most cases. However, when a
+        urine sample is taken, the alcohol results can range from
+        the same as the blood alcohol concentration to as high as
+        two times the blood alcohol concentration. To properly apply
+        the urine/blood ratio concept, the individual must void a
+        specimen, wait approximately 15–20 minutes, then void a
+        second sample. The second sample’s result is mathematically
+        adjusted for the urine/blood ratio.</p>
+      <p>After several hours, the metabolism of alcohol in the
+        blood or urine will sufficiently deplete the detectable
+        alcohol levels so that analysis for ethyl alcohol is not
+        useful. Analysis of alcohol’s metabolites (EtG and EtS) can
+        determine if alcohol was consumed in the last twelve hours.
+        Since this analysis is performed by gas chromatography-mass
+        spectrometry, the sensitivity of the instrument will also
+        detect consumption of common products such as mouthwash. In
+        addition, under certain circumstances, the analysis can also
+        produce positive results due to dermal exposure to other
+        alcohol-related chemicals.</p>
+      <p>Blood Toxicology</p>
+      <p>Blood toxicology specimens are currently being taken by
+        law enforcement, depending on the circumstances. Given that
+        OSP is currently not testing anti-mortem blood for drugs and
+        medications, agencies are forced to send samples to either a
+        private lab or the <a href="http://www.wsp.wa.gov/forensics/toxicology.htm">Washington
+          State Toxicology Lab</a>.</p>
+      <p>Private Labs</p>
+      <p>The most common facility that blood is sent to is <a href="https://www.nmslabs.com/">NMS Labs</a> in
+        Pennsylvania. The officer will select a “menu” of drugs to
+        be tested prior to submission of the sample. The testing
+        process is similar to the urine process (i.e., screening and
+        confirmation). However, it is critical to obtain the
+        “litigation” packet (i.e., chain-of-custody, technical
+        charts, communication logs, etc.) in order to prepare your
+        case. Unlike testing at OSP, once the litigation packet has
+        been reviewed, it should be noted that the person who signed
+        the report did not perform any of the testing. You will
+        discover that 10–20 lab technicians were involved in the
+        actual testing process. This factor should be addressed
+        prior to trial and testimony from this lab. Currently, NMS
+        Labs charges prosecutors $400/hr plus expenses. The
+        prosecutor will attempt to request some type of phone or
+        video testimony to avoid the cost at trial time. Many times,
+        the prosecutor is unaware that the person who signed the
+        report was not part of the testing process.</p>
+      <p>NMS Labs’ testimony may attempt to associate “levels” of
+        the detected drugs to impairment</p>
+      <p>State labs:</p>
+      <p>Blood has also been sent to the Washington State
+        Toxiciology Lab. Either one or two individuals will be
+        involved in the testing process, but the lab report will
+        clearly state the individuals involved in the testing.
+        Currently, unlike NMS Labs, the testimony regarding blood
+        toxicology avoids associating “levels” to impairment.</p>
+      <p>Current forensic protocols are included in the Resource
+        Guide.</p>
+    </section>
+  </section>
+  <section id="v._summary" class="level1">
+    <h1><strong>V. Summary</strong></h1>
+    <p>From the information in this chapter, one can readily see
+      that the issues can be complicated. The breath test, blood
+      alcohol analysis, and urine toxicology involve a
+      comprehensive knowledge of:</p>
+    <p>• chemistry</p>
+    <p>• physiology</p>
+    <p>• technical literature</p>
+    <p>• an understanding of forensic issues</p>
+    <p>• an understanding of forensic protocol</p>
+    <p>• a familiarity with the state’s “experts”</p>
+    <p>• unexpected issues that may arise during trial.</p>
+    <p>There are many well qualified attorneys and forensic
+      scientists involved with OCDLA to assist your case. It is
+      recommended that, during your trial preparation, involving
+      these individuals would provide useful information to your
+      defense.</p>
+  </section>
+</body>
+
+</html>

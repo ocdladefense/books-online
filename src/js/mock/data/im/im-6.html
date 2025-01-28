@@ -1,0 +1,3209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Investigators Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Investigators Manual</h1>
+                                    </section>
+            <table>
+            <tbody>
+            <tr>
+            <td></td>
+            </tr>
+            </tbody>
+            </table>
+            <p><strong>Computers and Computer Evidence</strong></p>
+            <p><strong><em>Jim Strupp</em></strong></p>
+            <p>2018 edition</p>
+            <section id="introduction" class="level1">
+            <h1>Introduction</h1>
+            <p>Not too long ago, an investigator’s interaction with a
+            computer used to be to write reports and check email.
+            Computers have now permeated every aspect of our
+            professional lives, and the investigator’s is no different.
+            We know how to use them, and depend on them perhaps more
+            than any other device we use to investigate law cases.
+            Although robust Internet access has been available for many
+            years, recently it seems like a new age. Data is everywhere.
+            It is ridiculously public at times, and often frustratingly
+            private and opaque. Formats change with the color of the
+            leaves. Practices which worked two years ago no longer do,
+            but practices developed ten years ago still stand the test
+            of time. The Internet has been transformed from a collection
+            of static web pages to a world of dynamic, highly
+            individualized and fluid areas of opinion, raw data, arcane
+            information and, of course, entertainment.</p>
+            <p>Using computers to assist in investigation, as well as
+            conducting investigations involving computers, means
+            grappling with the unbelievable proliferation of data,
+            devices, and methods for managing both. The enhancement—some
+            would say intrusion—of computers on the investigator’s
+            practice touches on so many areas as to make the topic
+            “computers” less than useful. Computers and digital
+            information affect the crimes of which our clients are
+            accused, how we find witnesses, how our witnesses find us,
+            what sorts of evidence we examine, how we present that
+            evidence in court, how we communicate with the attorneys we
+            work with, the potential perils of representation, our
+            ethics, and the list goes on.</p>
+            <p>This chapter is intended to give the legal investigator
+            an introduction to some of these areas. It does not cover
+            all computer-related topics pertinent to the legal
+            investigator. Nor does it cover any of them deeply. It is
+            hoped that the reader will at least form a conceptual
+            framework, which may develop into certain investigative
+            practices and techniques.</p>
+            <p>I have tried to strike a balance, and offer the
+            investigator a window on some topics of computers and
+            investigations I see as unavoidable. I offer advice where I
+            have a settled view. Experienced readers, please forgive the
+            basic tone. Novices, please pardon me when I slip into
+            jargon.</p>
+            <p>This chapter offers thoughts first about the
+            investigator’s computer setup, both for hardware and
+            software. Internet based, or “cloud” services are also
+            considered. The acquisition of electronic evidence is drawn
+            out, with some usage scenarios offered to model common
+            issues. Conducting Internet searches in investigation is
+            addressed, followed by some thoughts about digital resources
+            for courtroom presentation. And concluding this chapter are
+            some thoughts about computer forensics and mounting
+            challenges to state’s evidence using an expert. Several
+            appendixes appear at the end to support four of these
+            topics.</p>
+            <p>What is left out, sadly, is a serious discussion about
+            electronic discovery, electronic documents, and databases.
+            Mainly, electronic discovery and document databasing have
+            really become an industry unto itself, drawing primarily
+            from the world of civil litigation. Many legal investigators
+            will not be called upon to manage large electronic discovery
+            sets. When they are, the endeavor becomes more project
+            management than traditional legal investigation, and
+            qualified paid professionals are there to assist. Were I to
+            set forth a detailed discussion about electronic discovery
+            and documents, this chapter would be twice as long as it
+            is.</p>
+            <p>Some of the tools and issues in this chapter bear on
+            ideas and evidence encountered in defending computer crimes.
+            (Editors’ Note: Chapter 7, “Computer Forensics,” discusses
+            the ins and outs of investigating crimes involving
+            computers, with an emphasis on child pornography.)</p>
+            <p>It is hoped that the topics below will appeal to broad
+            range of investigators, with a broad range of backgrounds.
+            Of course, I am happy to be contacted about what I might
+            know something about, and answer any additional questions I
+            can.</p>
+            </section>
+            <section
+            id="i._the_investigators_setup_hardware_software_and_services"
+            class="level1">
+            <h1>I. The Investigator’s Setup: Hardware, Software and
+            Services</h1>
+            <p>An investigator’s main tools used to be a notepad, a car,
+            a telephone, and a camera. Now, critically, the personal
+            computer with Internet service is added. Much less needs to
+            be said now about the strength of the computer you choose to
+            buy; almost any standard desktop computer or midrange laptop
+            will have sufficient processing power and memory, as well as
+            hard drive space, to accomplish the basic tasks of drafting
+            reports, reviewing scanned documents, researching the
+            Internet and communicating by email.</p>
+            <p>I recommend that you consider your computing setup as a
+            critical tool in your practice, which will affect not only
+            the outcome of your work but the quality of your
+            performance. Accordingly, you should invest in the best
+            components possible and the right ones to get the job done,
+            with affordability as your secondary consideration.</p>
+            <p><strong><em>Hardware and Operating
+            Systems</em></strong></p>
+            <p>A rough distinction can be made between a regular user
+            and the user who may be “application heavy.” If your primary
+            work involves a word processor, a browser and email, even
+            the most affordable machines will have more computing power
+            than you need. If you anticipate using a browser, a word
+            processor, media viewing software, dictation software,
+            desktop search software and a database all at the same time,
+            you will need a setup that has ample memory (4 GB of RAM)
+            and an enhanced processor. Investments in these upgrades
+            will make your operating system more stable and save you
+            hours of frustration. Hard drive storage space is now
+            relatively cheap, and even low and mid-level machines have
+            more storage space than regular users or most heavy users
+            need.</p>
+            <p>Far more important than strength, however, are the
+            options presented to the solo practitioner in overall setup,
+            including type of machine, type of Internet server,
+            peripherals and security.</p>
+            <p>I presume most users use Windows and I generally
+            recommend Windows—if only to accommodate the wide number of
+            applications built for it, which you may encounter from time
+            to time for specialized tasks. Macintosh users can always
+            use VM Ware fusion or other dual-boot technologies to run
+            Windows inside a Mac environment very successfully (see:
+            www.vmware.com/products/fusion). There are ever-growing
+            varieties of Linux-based operating systems, however, unless
+            you are interested in managing your operating system, I
+            would stay with Windows. As of this writing, most Windows
+            users are XP, but your ability to choose flavors has been
+            eliminated, with the release of Windows 7. Although I’ve not
+            used it, very experienced technical associates have given
+            very positive reviews to Windows 7.</p>
+            <p><strong><em>Notebook versus Desktop</em></strong></p>
+            <p>Whether you choose to work primarily on a desktop machine
+            or a notebook is a personal choice. Of course many
+            practitioners use both. Notebooks obviously offer the great
+            convenience of portability and ever-growing Internet access
+            in remote locations. Achievements in processing power and
+            battery life also make many notebooks attractive. However,
+            notebooks can be easily stolen or left behind. Be assured
+            that if you do primary computing on a notebook and travel
+            often for your investigation, you will have a heart-stopping
+            scenario involving at least temporary loss of your machine.
+            You need to know, at a minimum, how to secure the data
+            through password protection, and possibly local encryption.
+            Given that a notebook is not as robust as the typical
+            desktop and endures much more strain, the chance of hard
+            drive failure is greater. Explore back-up options for your
+            files. Backup can be copied to an external hard drive or
+            another machine or server. The clearest impediment to
+            successful back up is laziness.</p>
+            <p>Preventable data failures result from failure to set up
+            or routinely employ a back-up procedure. Do not be one of
+            the sorry many. Your client’s interests and your practice
+            are simply too valuable. The simplest backup is to export
+            your important work files to an external hard drive, which
+            itself is then secured in your office. Automated back-up
+            tools such as Sync Toy or Karen’s Replicator, make this an
+            easy low-cost solution. More sophisticated home or business
+            servers can create image-based backup of the entire machine
+            on a regularly scheduled basis, ensuring restorable files.
+            Windows’ home servers are relatively inexpensive and have
+            this functionality built in with plenty of storage
+            space.</p>
+            <p>Finally, web-based back-up sites such as Mozy, Carbonite,
+            and Jungledisk all back up your information to third-party
+            servers, accessible from almost anywhere. Some back up in
+            real time. They all work differently, and have different
+            security measures. If you choose to back up in this manner,
+            first investigate exactly how they work and what their
+            security provisions are. (See “Cloud Computing” section
+            below.)</p>
+            <p>If you choose a notebook as your primary machine, be sure
+            it will have enough power to do the jobs you routinely
+            cover. At a minimum, a notebook should have sufficient
+            assets in power and memory, as many USB ports as you can
+            find, and a robust network card. It should also have a
+            DVD/CD-ROM drive with a burner. Notebooks are often
+            segregated into personal versus business-based machines. The
+            business machines tend to have some very useful features,
+            such as physical security devices, multiple batteries and
+            longer battery life, with various business software
+            installed.</p>
+            <p>If your practice involves acquiring and reviewing lots of
+            data such as scanned documents, spreadsheets, databases and
+            collections of files recovered from other computers, you
+            will be well served considering a desktop as your primary
+            machine, perhaps with a laptop as a portable machine. Data
+            heavy files and applications not only require robust memory
+            and processing power, they are often optimally used with
+            dual screens, allowing you to review documents and perform
+            data entry or reporting on the second screen.</p>
+            <p><strong><em>Computer Peripherals</em></strong></p>
+            <p>Peripheral devices to be plugged into your machine
+            include microphones, video cameras, media players, printers,
+            scanners, and Wi-Fi receivers. Which peripherals will be
+            most useful to you is a judgment you have to make. However,
+            a few quick recommendations:</p>
+            <p>1. <em>USB Ports</em>. Buy a machine that has as many
+            high-speed USB ports as possible. The more you have
+            available, the less you will have to plug and unplug devices
+            as you go. New machines should have the most recent speed
+            and bandwidth specifications available.</p>
+            <p>2. <em>Printers</em>. While computing has become
+            relatively cheap, printing for some reason has not. It is
+            now possible to send jobs to FedEx Office remotely, and pick
+            up high-quality print jobs there. For many reasons,
+            confidentiality among them, this may not always be a good
+            option. Buy a laser printer. They are more expensive up
+            front than a dot matrix, but over the life of them, your
+            printing costs will be lower and your work product will
+            always have a professional look that the attorneys you work
+            for will admire and appreciate.</p>
+            <p>3. <em>Scanners</em>. Scanners, like printers, are not
+            always cheap. You will often see combination machines that
+            will include a printer, copier, scanner and fax. My
+            experience has been to avoid them or seek the combination
+            that is the most well designed and makes the most sense for
+            you. I consider a scanner a necessity these days, given the
+            expectation and need to transmit, view and store documents
+            electronically. Scanners range from the incredibly simple to
+            the highly technical and professional. If your practice
+            deals with a few hundred pages at a time, there are several
+            scanners which do a nice job converting paper to PDF format
+            in one step (e.g., the Fujitsu Scan Snap). Research scanning
+            options and buy one. You will be repaid in convenience and
+            efficiency many times over.</p>
+            <p>4. <em>Removable Media</em>. This includes forms of
+            static computer memory such as flash drives, SD cards, and
+            external hard drives. Computer storage is now so cheap that
+            it is quite possible, if not commonplace, to be able to
+            store an entire case, including one hundred thousand pages
+            of documents, all legal pleadings, all investigation reports
+            and memoranda, as well as a database to manage them on a
+            piece of removable media no larger than a postage stamp.
+            This is not an exaggeration. While portable storage, and
+            even portable applications, represent a great advance in
+            convenience and efficiency, they also present a very real
+            security hazard. The primary hazard is loss of data, as
+            flash drives and SD cards are particularly susceptible to
+            loss. They can fit in a pocket as easily as they can fall
+            out of one. Because they are not used as often as computers,
+            it is easy to lose track of them. Further, it is all too
+            easy to multiply copies of case-related files across
+            multiple pieces of media.</p>
+            <p>Here are two simple recommendations: First, password
+            protect and encrypt the contents of your hard drive. It is
+            not hard to do. Several flash drive password protection
+            programs are available for cheap or free (e.g., USB
+            Safeguard). Two free programs—TrueCrypt and Cryptainer
+            LE—can create a fixed-size “container” on a flash drive,
+            which then needs to be decrypted and its letter drive
+            specified for each use. Both are free, easy to use,
+            completely portable, and hackable only through extraordinary
+            means. True Crypt can be found at <a
+            href="http://www.truecrypt.org">http://www.truecrypt.org</a>.
+            Cryptainer is at <a
+            href="http://www.cypherix.com/cryptainerle/">http://www.cypherix.com/cryptainerle/</a>).</p>
+            <p>Second, when using removable media for transport only,
+            delete the files after they have been removed to the
+            separate system. Try to keep the number of flash drives to a
+            minimum, so as not to lose track. Try to keep the contents
+            of flash drives segregated between personal files and work
+            files on separate media.</p>
+            <p>Failing to protect removable media is asking for one of
+            those data loss nightmares everyone has a story about, and
+            which can dramatically alter the course of a particular case
+            and your professional reputation in a moment.</p>
+            <p>5. <em>Smart Phones</em>. While, strictly speaking, your
+            cell phone is not a computer peripheral (it is a computer in
+            its own right), you have a decision now whether to do any of
+            your computing on your phone. Smart phones such as the
+            iPhone, Windows Mobile or Android all allow us to compute in
+            ways and places we never thought possible before. The
+            options for computing by your smart phone are too numerous
+            to mention, and change at an incredible pace. However, I
+            cannot impress strongly enough that to the extent you are
+            doing investigative work through your phone, you need to
+            protect it. Phones can be password protected, as well as
+            lost forever. Data on phones can be recovered by other
+            users, either through direct access or through viruses. Many
+            people now review their email, both work and personal, on
+            their phones. Depending on the email system used from the
+            phone, confidential client data could be sitting in your
+            pocket at all times. You must be aware of this, and take
+            professional measures to protect data on your phone, and
+            avoid breaching client confidentiality or loss.</p>
+            <p><strong><em>Netbooks</em></strong></p>
+            <p>These machines offer a lot to the portable user,
+            particularly because they are lightweight and not very
+            expensive. Think carefully before employing one as your
+            primary machine. Netbooks do not have CD/DVD drives, and
+            often have greatly reduced processing power and memory.
+            Their smaller keyboards make it difficult to type (think
+            lengthy reports or memoranda), and the screen size is
+            difficult to use for even standard websites in a
+            browser.</p>
+            <p>Additionally, most media (audio/video) files encounter
+            difficulty because of the reduced power. You may be very
+            well served using a netbook as an adjunct machine that you
+            take with you to review and record limited data, to review
+            documents or data with clients or witnesses on a limited
+            basis. However, my assessment is that a netbook would be
+            most useful as a secondary machine, with a desktop or even
+            robust notebook as your primary setup.</p>
+            <p><strong><em>Software</em></strong></p>
+            <p>Perhaps far more important, and potentially more costly,
+            than your hardware will be your software. The last decade
+            has seen a revolution in the production of less expensive
+            software for more precise tasks, as well as the refinement
+            of commercial software. You need to be familiar with both to
+            choose your software wisely but because of this revolution I
+            must caution about installing too much software. It is easy
+            to locate and test free software quite rapidly. It is also
+            easy to find specialized tools to address a particular need
+            in one case. Manage the number of applications on your
+            machine and reduce them to the essential few to prevent
+            headaches down the road. The Windows operating system is
+            particularly susceptible to bloat with the more applications
+            that are fully installed, many of which have services
+            running in the background. Further, if your hard drive is
+            approaching full, you court disaster due to fragmentation
+            and use of temporary disk space, which most applications in
+            Windows require. If you install it, ask in a month whether
+            you still need it. Again, considering that the computer is
+            one of your primary investigative tools, your work and your
+            professional practice will be enhanced by investing the
+            appropriate amount of money in software that ;you use on a
+            regular basis.</p>
+            <p>1. <em>Office Software</em>. Home and business computers
+            used to routinely come shipped with Microsoft Office, which
+            includes Microsoft Word, Excel, PowerPoint, and others. For
+            better or worse, it remains the standard office software for
+            most users. If you do not have it, you should consider
+            purchasing it, if only because many of the standard files
+            you’ll get from other people are created using Office
+            applications. The good news is that these are solid
+            programs, which are feature-rich and able to handle almost
+            any form of communicable data.</p>
+            <p>If you cannot afford the Microsoft license, Sun
+            Microsystems publishes a free open-office software suite
+            which attempts to mimic all the features of the Microsoft
+            products. While there are some features to quibble with, and
+            some annoying incompatibilities with other programs,
+            generally does a very good job at the most basic office
+            functions. See www.openoffice.org.</p>
+            <p>Simple Officelike applications are also available now
+            online, without any installation necessary. An Internet
+            connection is usually needed to work with these
+            applications, although some off-line capabilities are
+            available. Google Docs and spreadsheets are the most common.
+            These applications contain built-in collaborative functions
+            that may be very useful to the investigator, but they are
+            typically stripped-down versions of their more robust
+            brethren. Further, residing on someone else’s server poses
+            security and ethical considerations that you must weigh (see
+            the “Cloud Computing” section below).</p>
+            <p>2. <em>PDF Software</em>. Portable document format (PDF)
+            files are ubiquitous. There are many free and low-cost
+            programs which create and read PDF files, for example,
+            CutePDF, Foxit Reader and Nuance PDF Converter. Some of
+            these work very well and are easy on the budget. However,
+            the PDF format was created by Adobe Systems, which most
+            people are familiar with through Adobe Reader. I recommend
+            purchasing the paid version of Adobe Acrobat, either
+            standard or professional version. Managing a moderate number
+            of PDF documents, as well as merging, bookmarking,
+            annotating, extracting needed pages and assembling documents
+            for delivery to an attorney or to court is made much easier
+            through the fullly functioning PDF software. Given the
+            central nature of documents to most investigations, I
+            personally do not recommend cutting costs or corners
+            here.</p>
+            <p>3. <em>Browsers</em>. The heart of searching and
+            researching on the Internet is the browser, the software
+            which allows you to access webpages. Internet Explorer used
+            to be the default option, the one available to most people.
+            In its current version, it is a good browser. However,
+            Firefox, Opera, and Google’s Chrome (not to mention
+            Macintosh’s Safari) are all available now. Most browsers now
+            have the ability to install add-ons, which help with
+            individual browsing tasks, such as saving web addresses or
+            managing the clipboard. Which browser you use is less
+            important than knowing how it operates and a little bit
+            about what is under the hood. For example, knowing how to
+            save the contents of one’s research session, to return to it
+            at a later time is well worth knowing. (Firefox’s Session
+            Manager add-on is useful here). Note: The reader is advised
+            to review the subject of web browser history and caches in
+            Chapter 7.</p>
+            <p>4. <em>Dictation Software</em>. Off-the-shelf dictation
+            software was introduced several years ago, with a great
+            promise: to eliminate the need for lengthy and difficult
+            typing by speaking into a microphone to your machine.
+            Writing seems to be about half of what investigators do.
+            Dragon’s NaturallySpeaking, though not cheap, is very
+            effective. It comes in a standard and professional edition,
+            costing several hundred dollars for a license. Like any
+            other software, it requires learning and practice to become
+            effective. Should you opt for dictation software, you will
+            need a machine that can handle it, preferably one with as
+            much RAM and processing speed as you can afford. It is not
+            worth installing dictation software on a machine with
+            insufficient system requirements, and you should expect to
+            install it on a machine that exceeds the minimum
+            requirements specified by the software. Once working, it can
+            save you a lot of time.</p>
+            <p>In addition to having the basic software necessary to
+            perform and report your investigation, equally important is
+            the ability to <em>find</em> the software you need when you
+            need it. There are dozens of situations in which a
+            particular piece of software may be required to accomplish
+            the task at hand. Usually, there are free versions available
+            for these utilities and devices. For example, Windows XP
+            does not let you print the contents of a directory file list
+            very easily. There are free programs that do so quite
+            nicely. It is a skill in and of itself to find narrowly
+            tailored software for limited purposes. Usually searching
+            one of the main search engines will quickly present options,
+            and further clues as to how to proceed.</p>
+            <p>5. <em>Data Security</em>. All users need antivirus and
+            firewall software without exception. The rampant
+            proliferation of viruses and intrusions make it a certainty
+            that your computer’s door will be knocked upon, so to speak.
+            McAfee, Symantec and Norton all publish antivirus software
+            for a price. Microsoft Security Suite is free and has the
+            advantage of rapid updates to threats to Windows systems. It
+            generally gets good reviews. Windows XP, of course, now has
+            a firewall built in, which is also free. ZoneAlarm Basic has
+            long been a useful firewall utility.</p>
+            <p>If you get an infection or a piece of persistent malware
+            or ad ware, use CCleaner or Malwarebytes. SpyBot Search and
+            Destroy is also a long-standing reputable free program to
+            deal with the effects of ad aware and unaware.</p>
+            <p>No system is completely secure. This is a fact,
+            particularly in the network age; any system is vulnerable to
+            intrusion if enough resources are thrown at it. However,
+            there are a number of things that you can do to minimize
+            data insecurity:</p>
+            <ul>
+            <li>Follow the flash drive advice above.</li>
+            <li>Keep your passwords safe and keep them complex.</li>
+            <li>Install antivirus and firewall software.</li>
+            <li>Do not let other users on the computer you use for
+            investigation.</li>
+            <li>Follow such good practices as keeping a spam filter,
+            never clicking on banner ads, and avoiding suspicious
+            websites. It is amazing how few people actually follow such
+            common-sense practice.</li>
+            <li>Secure wireless networks with the highest level of
+            security you can. Low-level encryption can be broken by a
+            12-year-old. Higher levels are available without too much
+            fuss. Many people recommend limiting the use of wireless
+            networks at all when involving confidential legal files.
+            Avoid using open wireless networks, such as airports or free
+            Wi-Fi spots as much as possible, particularly when doing
+            investigative work. At large, free Wi-Fi areas such as
+            airports, it is commonplace for hackers to spend hours
+            targeting users of the network.</li>
+            <li>Be conscious of your emailing habits. Remember, whatever
+            you email can be forwarded anywhere by the recipient and
+            will reside on <em>their</em> system. That means that the
+            security of your email is only as strong as the recipient’s
+            system, which you have no way of knowing. When you are
+            transmitting sensitive files for work containing
+            confidential client data, recognize that email presents
+            vulnerabilities. Often, professionals working with legal
+            professionals have more secure means of transmitting files
+            such as secure file transfer protocol sites for file upload,
+            which can be deleted after use. Of course, transmitting
+            files in person is much more secure. Keep separate email
+            accounts, and if possible separate machines, for work and
+            personal email.</li>
+            <li>Choose complicated passwords and do not replicate them
+            across all your services. Poor password choice is one of the
+            most widespread security weaknesses. Use numbers, special
+            characters, and upper/lower case combinations of more than
+            six characters long. According to a recent study, the most
+            common password is “123456.” The second is “12345,” the
+            third is “123456789,” and the fourth is “password.” Don’t do
+            this.</li>
+            </ul>
+            <p><strong><em>Cloud Computing and Third-Party
+            Services</em></strong></p>
+            <p>Perhaps the greatest change in the last ten years for
+            networked computing has been the development of online
+            applications and resources which both operate and store data
+            on the server end of the system. This is commonly referred
+            to as “cloud” computing, referring to the Internet as a
+            whole as the cloud. The services—personal- and
+            business-level applications such as word processing,
+            spreadsheet creation, collaboration and data networking
+            achieved through applications—do not reside on the user’s
+            computer. Rather, they are served via centralized or
+            distributed systems by a third-party provider, who also
+            stores and secures the data contained on them. Web-based
+            email was perhaps the very first generation of cloud
+            computing.</p>
+            <p>While the term Web 2.0 has been around for several years
+            and refers to a multitude of platform-shifting developments
+            on the Internet, it certainly refers to the development of
+            online applications run on a provider’s server through the
+            use of high-speed Internet connections.</p>
+            <p>To name just a few, some of the more visible applications
+            in this class of services are the following:</p>
+            <ul>
+            <li>Email: Google, Yahoo, MSN Hotmail.</li>
+            <li>Wiki’s: Socialtext, CC Text, PBwiki, Atlassian
+            Confluence.</li>
+            <li>Collaboration and Project Management: Basecamp, Jive
+            Software, MindTouch, Central Desktop, PBworks.</li>
+            <li>Office Applications: Zoho Suite, Google Docs,
+            WebOffice.</li>
+            <li>File Syncing and Transfer: Dropbox, Drop.Io, SugarSync,
+            Live Mesh.</li>
+            <li>File Access, Backup and Storage: Mozy, IDrive,
+            Carbonite, Jungle Disk.</li>
+            <li>Calendaring: 30 Boxes, Google Calendar.</li>
+            </ul>
+            <p>These services provide numerous benefits and advantages,
+            especially to a small business person or solo private
+            investigator. First, the cost of these services, compared
+            with license fees for desktop applications, is relatively
+            minimal and often free. Second, there is very little
+            overhead expertise needed to install and maintain these
+            applications beyond basic computer and Internet connection.
+            Third, online applications are more easily able to roll out
+            changes and updates to their service, because it does not
+            require releasing new software in the traditional way. Only
+            changes on the back-end server need to be made. Fourth, in
+            many cases the server performance and security exceeds that
+            provided by the typical small business or solo practitioner.
+            But for the occasional untimely downtime, server performance
+            rates are exceptionally high.</p>
+            <p>For the legal investigator, using these services can
+            offer immediate benefits. Often, criminal defense teams are
+            loosely assembled ad hoc teams of independent lawyers,
+            investigators and paralegals. Many of these services excel
+            at just this kind of collaboration. Documents can be shared,
+            updated and stored in a manner much more conducive to
+            collaboration and simply emailing. Media files, scanned
+            images, scheduling, work product collaboration and so forth
+            can all take place online in a shared space, with
+            fine-grained permissions. Often, these documents and
+            collaboration materials are available anywhere there is an
+            Internet connection. Finally, these applications tend to be
+            relatively easy to use and “click centered,” allowing for a
+            shallow learning curve for the least experienced users.</p>
+            <p>One drawback of these services is that the applications
+            are not as robust and feature-rich as desktop or local
+            network services. However, the cautionary note here is one
+            of privacy and security. The confidences of your client and
+            the attorney-client privilege are of the highest duties to
+            the legal investigator. Use of online services necessarily
+            allows your data to be shared with at least the host of the
+            services, if only for technical reasons. Further,
+            maintaining these materials online means that their physical
+            security is out of your control. Finally, the service
+            provider does not share the same duty that you do to your
+            client, nor do they serve a duty beyond a commercial
+            transaction to you or the attorney working with you.</p>
+            <p>It is an individual judgment on the part of the
+            investigator whether to utilize third-party cloud-hosted
+            services. It is certainly incumbent upon the investigator
+            using computer resources to look into the particulars of
+            these services to see if they could be useful. Further, if
+            one is to make an informed decision, at a minimum the
+            following should take place:</p>
+            <p>1. Read the privacy policy and legal policy of the online
+            service. If it is not posted online, request it directly
+            before subscribing. Specifically, understand the policy for
+            responding to subpoenas, search warrants, and other legal
+            processes. Often, privacy policies are not written with
+            considerable detail, or what they leave out is significant.
+            Almost all reserve the right to inspect your data for
+            “network security or abuse.” Understand how they define
+            those terms. Further, developing case law about online data
+            storage is just that, and often provides less than clear
+            guidance about what the obligations of third-party storage
+            services are.</p>
+            <p>2. Understand how the data is stored and how to secure
+            it. Again, the worthy cloud computing providers will provide
+            some description of their storage security. Ones worth
+            giving money to will provide it upon request. For example,
+            many providers back up their own data to yet another service
+            in a remote location. Is this overseas? Is it in turn
+            secured? Still other services can provide encryption “on the
+            back end” so that only a restricted number of employees have
+            access to encrypted data, and only under special
+            circumstances.</p>
+            <p>3. Your attorney and client should understand that these
+            services are being used and what the potential security
+            risks, if any, are concerning the client’s legal data.</p>
+            <p>4. What happens when services are discontinued or data is
+            deleted? Are versions of data continually stored on the
+            machine despite its removal? Very importantly, if you would
+            like to remove all your data and retain it in a form that
+            can be viewed off-line, does the service provide for that?
+            Reputable cloud services providers will tell you, often in
+            the FAQs section of their website.</p>
+            <p>5. Test and demo the service before you sign up. Almost
+            all cloud services provide a demo or a reduced-functionality
+            free service. Do not just sign up for an online service or
+            collaborative platform without testing it first, knowing how
+            it functions, and understanding what it is designed to do
+            and whether that fits your needs.</p>
+            <p>I have known highly respected death penalty practitioners
+            who have managed their trial cases online through a
+            collaborative platform. I’ve also known well-respected
+            attorneys who shy away from third-party online services,
+            only to violate every reasonable local security precaution
+            when it comes to storing and transmitting their own
+            case-related data. As important as the quality of the
+            service is the quality of your practice in using it. I
+            believe it is an individual judgment for each legal
+            investigator whether to use such services, but do so only in
+            conjunction with the attorney and with all the necessary
+            information to make a sound decision.</p>
+            </section>
+            <section id="ii._internet_searching" class="level1">
+            <h1>II. Internet Searching</h1>
+            <p>Ten years ago, the search capabilities of the Internet
+            and the World Wide Web were considered relatively novel, a
+            little thrilling, and incredibly useful. They are in many
+            ways much more useful now, though hardly novel. Every
+            investigator now incorporates some form of Internet-based
+            searching into his or her practice. It cannot be the aim of
+            this section to explain or replace all of the methods that
+            investigators have come to rely on to conduct Internet
+            searches for case-related information, however, some areas
+            are explained. In addition, an Appendix A and B to this
+            chapter lists some useful sites to the investigator, as I
+            have come to know them.</p>
+            <p>The near ubiquity and ease of Internet search has brought
+            both a blessing and a curse to the practice, probably more
+            blessing than curse. The increase in the sheer amounts of
+            available data makes it more likely that some information
+            about the person or entity you are investigating can be
+            found through Internet means. The drawback is that in many
+            ways this information is harder to find, as search hits
+            multiply and large areas of the publicly available Internet
+            go unindexed by the major search engines. Further, Internet
+            search has added to—as much as it has replaced—the steps
+            needed to perform most defense investigation. It is almost
+            unreliable to perform Internet searches regarding witnesses
+            and entities before conducting traditional field-level
+            investigation. While successful Internet searches have
+            eliminated many of the time-consuming (not to say brain
+            numbing) hours spent making phone calls and waiting on phone
+            trees, it is also easy to get “lost” in Internet search
+            without some focused strategies.</p>
+            <p>Here, a brief word of advice: while Internet search has
+            brought us to corners of information we sometimes did not
+            know existed, relying solely on Internet search can never be
+            an effective replacement for traditional investigation. As a
+            colleague once said about OJIN, “It is no substitute for
+            pulling the file.” The truism behind this is that often the
+            most important case information resides in the handwritten
+            notes on the margins of pages or the direct recollection of
+            a witness rather than in a digital record. However, Internet
+            search cannot only help us locate those witnesses, but might
+            make us sharper about which pieces of paper exist for us to
+            look at the margins. Again, data alone is never evidence.
+            Witnesses are needed to tell the story behind evidence and
+            attest to its veracity.</p>
+            <p><strong><em>Search Strategy</em></strong></p>
+            <p>Each investigator has their own style of conducting
+            Internet searches. Generally, the most effective strategy
+            follows a “feedback” model, wherein the results of one
+            search such as a name or address are then fed back into the
+            search engine to generate additional information. That
+            information might then be fed back again to develop more
+            leads.</p>
+            <p>Often the information you are looking for is not
+            available online. Very useful information about how to find
+            that evidence is available online, however, whether in the
+            form of a records custodian, a contact and phone number, a
+            business address, an ownership record, etc.</p>
+            <p>Generally, Internet searches are either for locating
+            people, looking for information about people, or researching
+            subjects of interest or institutions. Further, Internet
+            searches can roughly be divided into paid searches and free
+            searches. What follows below are some search tools I find
+            useful when beginning an investigation using the
+            Internet.</p>
+            <section id="paid_searches" class="level2">
+            <h2>Paid Searches</h2>
+            <p>Public records resellers and data aggregators sell
+            subscription-based or individual record access online.
+            Public access resellers compile vast databases of
+            information collected from public and semipublic sources and
+            provide search tools based on identifiers such as name,
+            address, Social Security Number or zip code. They then
+            aggregate the results and provide hopefully up-to-date
+            search returns. Several headline-making episodes of stolen
+            or lost data from the public records resellers caused them
+            to increase their security and re-examine instruction lists
+            to make sure that their users were properly authorized. The
+            last decade has seen an industry consolidation and
+            restructuring for the most well-regarded paid subscription
+            services. Others remain relatively untouched. The net result
+            has been generally <em>less</em> access for the private
+            legal investigator, although quality paid subscription
+            services still exist.</p>
+            <p>ChoicePoint and AutoTrackXP have been eliminated, as the
+            Choicepoint company was initially bought by LexisNexis. As
+            they had also purchased the Accurint public records service,
+            they divested the service to the West publishing group,
+            which modified and eliminated. The AutoTrackXP product was
+            folded into a product called Clear, which is available only
+            for government and law enforcement users.</p>
+            <p>Accurint remains available, but is more restricted to
+            government and other authorized users. Whether they will
+            give a subscription to a licensed private investigator in
+            Oregon is an open question. They can be contacted at
+            www.Accurint.com. Accurint has long maintained a companion
+            service called IRBsearch.com, which offers a similar
+            subscription-based search with relatively modest fees that
+            is specifically designed for private investigators.</p>
+            <p>OPENonline (www.openonline.com) is a long-established,
+            Oregon-based public records reseller. They will maintain an
+            account for you for $25 a month. In some instances they will
+            waive the fee permanently. They have excellent Oregon-based
+            search tools, but their searches are not cheap. Much of what
+            they used to offer has been replaced by free open records
+            searches by State of Oregon public agencies. However, you
+            may find it useful to keep an account for special needs
+            searches. They remain the best collection of Oregon-based
+            public records online, for a fee. For example, one can
+            search OJIN records by address in OPENonline.</p>
+            <p>A second tier of paid search exists nationally under
+            several different resellers such as Intelius, SearchAmerica,
+            Melissa Data, DOBsearch.com, and LocatePLUS. I cannot vouch
+            for the quality of the searches as I have not personally
+            tried them. Several have been around for many years. Their
+            price structure seems prohibitive to the professional who
+            does a lot of paid searching. Often, these companies are
+            catering to the non-professional who is interested in
+            searching for lost family members, former classmates, and
+            debtors. It may be worth your time to know their
+            capabilities for special needs searches.</p>
+            <p>A third tier of paid search exists and needs to be
+            strictly avoided. For example, search “cell phone records”
+            in Google and you will find companies that purport to
+            legally provide you with records such as bank records,
+            credit histories, and cell phone records for a fee. Several
+            noteworthy cases have occurred prosecuting these companies,
+            as often the records are acquired by deception or
+            unscrupulous employees of the data providers. All three
+            categories of the records listed above are protected by law,
+            and no public record reseller or data aggregator should have
+            access to them. Your access should be nothing less than
+            lawful.</p>
+            <p><strong><em>Court Records</em></strong></p>
+            <p>Online court records are an area that has seen a
+            revolution in the last ten years. Availability and pricing
+            varies widely from state to state and by judicial district.
+            Some states and counties offer images of court record
+            filings online for a fee. Others offer lookups for free, and
+            still others require a subscription to do record index
+            searches. Outside of Oregon, locating online court records
+            is relatively easy through a simple search engine
+            search.</p>
+            <p><strong><em>Oregon</em></strong></p>
+            <p>Within Oregon, two main court records searches are
+            available, for state and federal courts:</p>
+            <p>1. The Oregon Judicial Information Network (OJIN)
+            provides county-by-county and statewide court record index
+            searches on a subscription basis. Most investigators are
+            acquainted with OJIN and have an account. If you are a new
+            investigator or are not acquainted with it, being able to
+            access OJIN and using it well are simply ground-level
+            requirements. In addition to criminal cases, civil case
+            records such as divorces, foreclosures and evictions are all
+            referenced within OJIN. The located records should then be
+            used as a basis to request paper records from the county
+            court clerk.</p>
+            <p>OJIN maintains excellent tutorial documents, and also
+            provides excellent telephone support. For further
+            information, see their website at <a
+            href="http://courts.oregon.gov/OJD/OnlineServices/OJIN/index.page">http://courts.oregon.gov/OJD/OnlineServices/OJIN/index.page</a>.</p>
+            <p>2. Federal Court – PACER Service Center</p>
+            <blockquote>
+            <p>The United States District Court for the District of
+            Oregon maintains docket searches from the late ’80s, and
+            electronic filings in criminal cases from November 2004.
+            Electronic filing in civil cases goes back slightly further.
+            Oregon Bankruptcy Court also provides docket and record
+            access through the same system of authentication. Pacer
+            searches cost a small fee per search, and resulting
+            documents can be downloaded for $.25 per page. User
+            credentials are available to the general public, with an
+            application. For more information see <a
+            href="http://pacer.psc.uscourts.gov">http://pacer.psc.uscourts.gov</a></p>
+            <p>PACER searches can also be conducted nationally at <a
+            href="http://pacer.uspci.uscourts.gov">http://pacer.uspci.uscourts.gov</a>.</p>
+            <p>Even if you practice solely in state court, having a
+            login and knowing how to use PACER for federal case
+            information, I believe, is also a necessary skill for an
+            investigator doing criminal defense work.</p>
+            </blockquote>
+            <p><strong><em>Washington</em></strong></p>
+            <p>The State of Washington has a dual-level online search
+            capability for its court records, offering free (though
+            limited) case-related information online at <a
+            href="http://www.courts.wa.gov">www.courts.wa.gov</a>. Click
+            on “search case records.” There you can conduct a statewide
+            name-based search, as well as county-by-county searches for
+            individual case records in superior, district, and municipal
+            courts. What is returned is often detailed though less
+            complete than the case record available to the county clerk
+            electronically.</p>
+            <p>Washington also has an electronic system similar to OJIN
+            called JIS-link. This service is available for a very small
+            fee. It is also based online, however, it is a publicly
+            available version of the court’s own records system, in the
+            style of OJIN. It is far less user-friendly than OJIN, and
+            takes some practice and directed effort to learn. However,
+            more detailed case-related information is available through
+            the system. Northern Oregon-based investigators may find it
+            useful, as both witnesses and sometimes cases cross over the
+            river into southern Washington. For access and support
+            materials see <a
+            href="http://www.courts.wa.gov/jislink/">http://www.courts.wa.gov/jislink/</a>.</p>
+            </section>
+            <section id="free_searches" class="level2">
+            <h2>Free Searches</h2>
+            <p><strong><em>Search Engines</em></strong></p>
+            <p>Almost all Internet search begins with a query to one of
+            the big three search engines: Google, Bing, or Yahoo! Yet
+            most users do not look past the first page of search
+            results, follow the first three links, and know little about
+            the rest of the search capabilities.</p>
+            <p>We take for granted that almost any question we wish to
+            answer will begin with some form of Internet search. Most
+            users, and all investigators, should know that answering
+            your question fully almost never concludes with just an
+            Internet search. You will be well served to spend at least a
+            couple of hours at a search engine site, looking at advanced
+            search capabilities. For example, Google offers not just a
+            bibliographic search through its “scholar” section, it
+            allows the user to restrict the results to legal decisions
+            in a particular jurisdiction, for example. Images can be
+            searched within Google, but one can specify that only black
+            and white images are returned. One can search Google to
+            return hits that contain only specific file types such as
+            .pdf or .doc. The list goes on and the options are too
+            numerous to mention here. If you know how your search engine
+            works, how the search syntax works, and some of its advanced
+            features, your searches will be exponentially more effective
+            than simply typing a few words into the main search box.</p>
+            <p><strong><em>Inmate Searches</em></strong></p>
+            <p>Many counties in Oregon, including Marion, Multnomah,
+            Tillamook, Clackamas and Washington, have their jail rosters
+            online and updated daily. The type of collateral information
+            varies, and can include charge information, physical
+            description, as well as a mug shot. Typically, historical
+            jail records are not online but can be accessed through the
+            county jail records office. Oregon Department of Corrections
+            has their current inmate roster, along with inmate photos,
+            online at <a
+            href="http://docpub.state.or.us/OOS/intro.jsf">http://docpub.state.or.us/OOS/intro.jsf</a>.</p>
+            <p>Additionally, Oregon state and county inmates can be
+            located through the Vine link service. This is most useful
+            for identifying an inmate ID number, which is needed to
+            visit inmates or request information about them. See
+            www.vinelink.com.</p>
+            <p>The last ten years has seen Oregon sex offender records
+            go online, but only for the smaller subset of sex offenders
+            designated as “predatory.” They can be searched here: <a
+            href="http://sexoffenders.oregon.gov">http://sexoffenders.oregon.gov</a>.
+            Some counties have published the county-based sex offender
+            registry through their county systems, either through the
+            sheriffs or other law enforcement agencies. For example, the
+            Portland Geo mapping site www.portlandmaps.com contains a
+            map overlay showing sex offender information by map
+            reference. However, in Oregon sex offender records online
+            are for predatory sex offenders only. Other states’ laws
+            regarding online registries vary quite a bit. Some have
+            highly detailed records and photos of all sex offenders in
+            their system.</p>
+            <p><strong><em>State and Local Government
+            Sources</em></strong></p>
+            <p>For the investigator whose work often consists of
+            unearthing public records with relevant information,
+            government websites are often a great beginning point. If a
+            state or local government website does not have the
+            information, it almost certainly has a listing of the person
+            who does, with their contact information. County websites
+            tend to be particularly useful sources of public records and
+            information about what records exist.</p>
+            <p>The State of Oregon website (www.Oregon.gov ) has
+            information about business registry, state licensed
+            professionals, inmates, state statutes, law enforcement
+            agencies, and much more. Familiarize yourself with it and it
+            will pay off. The State of Oregon also publishes an
+            incredibly useful state agency and employee phonebook online
+            in PDF format every couple of years. It lists state
+            employees, their job titles, contact addresses, and direct
+            phone numbers (often with email addresses) in one book. The
+            book is available, oddly, from the Capitol gift shop, as it
+            has always been. It’s also available for download online at
+            <a
+            href="http://dasapp.oregon.gov/statephonebook/statephonebook.asp">http://dasapp.oregon.gov/statephonebook/statephonebook.asp</a>.
+            Keep a copy on your hard drive and it will repay you.</p>
+            <p><strong><em>Social Networking Sites</em></strong></p>
+            <p>Perhaps the most explosive area of Internet communication
+            currently are the social networking websites. These sites
+            emphasize collaboration, sharing, and the creation of
+            individualized webpages or collections of web posts, which
+            can be viewed publicly, semi-publicly, or privately.
+            MySpace, Facebook, Twitter, Linked-In, and Flickr are among
+            the most popular. There are many, many more. Currently,
+            Facebook is the fastest growing website in the world, with
+            an announced user base of 400 million and growing. That is
+            almost one-half <em>billion</em> users.</p>
+            <p>Unlike email, which is almost completely walled off,
+            social networking sites have presented the investigator with
+            the tantalizing opportunity to find out information about
+            third parties and witnesses remotely, through a web
+            interface. Like any other page, once displayed, these sites
+            can be captured and information preserved as evidence, if
+            relevant. (See acquiring web-based evidence below.) However,
+            often one is not able to view the full contact details and
+            content on a social networking site belonging to a person of
+            interest unless one logs into the service oneself, then
+            sends a request to the page’s owner.</p>
+            <p>It has been tempting to some to create dummy logins or
+            credentials with fake information in order to gain access to
+            a subject of interest’s webpage. The ethical question has
+            asserted itself whether this is permissible for a legal
+            investigator. (For more on this topic, see Chapter 2
+            regarding ethics, and Chapter 15, on the section on
+            interviewing teens.) Without exploring the many arguments in
+            this debate, it is recommended that one enter or capture a
+            social networking site only when properly identified through
+            one’s login. Generally, it is never permissible for the
+            legal investigator to fail to identify themselves or
+            misidentify themselves in the course of their duties. Online
+            should be no different. The negative outcomes of doing this
+            are all too clear: when the witness who owns the account
+            testifies to a contact or inquiry made by an investigator
+            using a fake name, the investigator is then exposed on the
+            stand about the use of mis-representation. Without question,
+            this harms the interests of both your client and the
+            attorney who has hired you.</p>
+            <p>That said, when encountering a social networking site for
+            information about a witness, explore all publicly available
+            avenues to information without logging in, for often they
+            are many. On occasion, social networking sites have been
+            subpoenaed for copies of web-based information. One may
+            assume that the owner of the account would be contacted upon
+            receipt of a subpoena unless the site owner is not legally
+            obligated to keep the subpoena secret.</p>
+            <p>Whether logged in or not, often the information from a
+            social networking site can be leveraged or compared with
+            other information from different avenues of investigation to
+            guide your search and your questions to a witness.</p>
+            <p>Conversely, if you use a social networking site for
+            personal use, it should go without saying that no
+            case-related information should be posted there. As with
+            anything you post on the Internet, whether semi-private or
+            not, personal or not, you should do so with the idea that
+            you might be asked about it on the stand at some point. This
+            is especially true for personal blogging, as blogs tend to
+            be completely public. The rule of thumb is once it is posted
+            on the Internet, it is there forever. If something is posted
+            by you, whether personal or not, it becomes part of your
+            professional reputation.</p>
+            </section>
+            <section
+            id="domain_registration_historical_domain_registration_and_old_websites"
+            class="level2">
+            <h2>Domain Registration, Historical Domain Registration and
+            Old Websites</h2>
+            <p>Internet website domain registration information has long
+            been publicly available through domain registrars. For
+            example, the person who owns a particular website address
+            can be looked up using a lookup service. Two good lookup
+            services are checkdomain.com and domaintools.com. “Whois”
+            lookups have become less useful over the years as proxy
+            registrars have been in place, allowing registrants to
+            shield their personal identities and contact
+            information.</p>
+            <p>Older historical domain registration information can be
+            obtained through domaintools.com, for a fee. This can be
+            useful when a website is no longer in service, and the
+            ownership of the domain has since expired. Domain
+            registration information goes back to practically 1999 or
+            2000.</p>
+            <p>In many cases the investigator wants to know what a
+            website looked like that is no longer in service, or what it
+            looked like over a previous period in time. The Wayback
+            Machine (www.archive.org/web/hardware.php) from the Internet
+            Archive Project (www.archive.org) has done a Herculean task
+            of making a large collection of historical websites
+            searchable. It is by no means a perfect or complete tool.
+            The Internet archive project was granted reams of website
+            crawling data from Alexa (www.alexa.com), a web ranking
+            company and web crawling index owned by Amazon. For research
+            and educational purposes, the Wayback Machine allows the
+            user to type in the domain name and retrieve the cached page
+            from the prior indexing of that website.</p>
+            <p>Often what is returned is incomplete, and with links that
+            do not go anywhere anymore. Of course, all indexing services
+            such as Google or MSN index only a fraction of the publicly
+            available web, and the same is true of the Wayback Machine.
+            The service does try to preserve links from old websites to
+            other archived sites, and does so fairly well. Furthermore,
+            the content is often highly useful if you no longer have any
+            access to an important webpage in your case. Like any other
+            webpage, it can be saved and captured locally for
+            presentation elsewhere. The Internet Archive Project is
+            highly resistant to subpoenas, but does state their legal
+            demand policy here: (http://www.archive.org/legal). As an
+            aside, the Internet Archive Project is a fascinating site in
+            and of itself, and not just for Internet geeks.</p>
+            <p><strong><em>Other Useful Sites for the
+            Investigator</em></strong></p>
+            <p>As mentioned, there is no comprehensive list of useful
+            sites for the investigator. However, I have compiled a short
+            list as an appendix to this chapter, to serve as a guide and
+            a springboard for additional searches.</p>
+            </section>
+            </section>
+            <section id="iii._computer_forensics" class="level1">
+            <h1>III. Computer Forensics</h1>
+            <p>The field of computer forensic investigation is no longer
+            a nascent area. Further, a greater variety of cases now
+            involve original computer evidence, and this will continue
+            to grow. Recovering, analyzing, and understanding
+            computer-based evidence in a manner sound for court
+            presentation requires that you hire an expert. When computer
+            forensics was relatively new to law enforcement, many
+            computer examiners in police agencies were susceptible to an
+            attack on their qualifications, having completed several
+            specialized courses lasting only a few hours about how to
+            recover particular kinds of data. Back then, these officers
+            were often vulnerable to challenges in their qualifications.
+            With the passage of time, many of these same officers have
+            gained the requisite expertise needed to testify competently
+            in this area, and are less susceptible to challenges to
+            their expertise.</p>
+            <p>A computer forensics expert is trained, preferably
+            certified, in using computer forensic software, techniques
+            of recovery, technical information about operating systems
+            and how they manage their data. A forensic expert worth
+            hiring is also sensitive to the types of questions and
+            issues that defense teams have.</p>
+            <p>Most importantly, a computer examiner can access computer
+            data in a way that does not alter the data or the operating
+            system in which it is stored, can search for and recover
+            data from hidden or inaccessible parts of the hard drive,
+            and can competently testify to the methods generally
+            accepted to do these things.</p>
+            <p>I will not treat computer forensics in great detail here.
+            Indeed, the field of computer forensics is highly detailed
+            and ever changing. I refer you to the next chapter in this
+            manual concerning computer forensics.</p>
+            <p>[Editors’ Note: Chapter 7, written by an expert forensic
+            examiner, is dedicated to computer forensics. Whereas there
+            may be some overlapping topics here, the next chapter delves
+            into the tools (forensic software) used to recover data and
+            some insight about what data to consider as being
+            relevant.]</p>
+            <section id="the_role_of_the_investigator" class="level2">
+            <h2>The Role of the Investigator</h2>
+            <p>Lack of formal expertise notwithstanding, as an
+            investigator you play a vital role in the recovery of
+            evidence from digital sources. There is a difference between
+            data and evidence. Until data is recovered and analyzed from
+            a computer system with a particular set of issues and
+            questions surrounding a legal theory, it remains data. It
+            becomes evidence through the proper communication of those
+            questions to the forensic examiner, the sound recovery and
+            analysis of the data, and the defensible introduction of the
+            data into evidence in court. Chiefly, the investigator can
+            do the following crucial tasks:</p>
+            <p>1. <em>Hire the computer expert and interface with
+            them.</em> As with any expert, you will want to interview a
+            potential expert witness for their background and
+            qualifications. Obtain a curriculum vitae. You’ll be looking
+            for someone with sufficient experience in disputed legal
+            matters, preferably with criminal case background. You want
+            to know what computer forensics software packages they are
+            qualified to use, and what certifications they may or may
+            not have. Many computer forensics specialists come to the
+            tree through the civil world of “data recovery,” which
+            places an emphasis on several discovery production, rather
+            than the standard of proof in a criminal case. Other
+            specialists are former law enforcement and may lack
+            particular sensitivity to issues raised by the defense team.
+            Further, if your case has particular kinds of evidence or
+            issues, such as computer networking, you’ll want to find an
+            expert with particular knowledge in that area.</p>
+            <p>You will be responsible for acquiring and delivering the
+            computer evidence to them, along with a detailed explanation
+            of the evidence you’re trying to uncover, and questions your
+            investigation is presenting.</p>
+            <p>2. <em>Be a translator.</em> As you develop the questions
+            for the computer expert and communicate with him about his
+            results, you will need to learn and comprehend the
+            specialized terminology the expert deals with. In essence,
+            you need to familiarize yourself with the concepts
+            surrounding the examination and a particular language
+            commonly used to express those concepts, if only to ensure
+            that the attorney understands what the results are. Often, a
+            computer forensics examiner will rely on the investigator to
+            review preliminary output data for possible results and
+            refinement. You will need to be able to understand his
+            results, and if you do not, interview the expert so that the
+            layperson can comprehend them. Further, you’ll need to
+            refine the examination according to your understanding of
+            the case and the attorney’s needs. This process of
+            translation between expert and attorney begins before the
+            actual engagement of the expert and continues all the way
+            through trial preparation and the conclusion. It is an
+            essential defense function and one best handled by a
+            traditional defense investigator, whose nonexpertise is
+            actually an asset to the defense team in this area.</p>
+            <p>3. <em>Gather preliminary and supporting evidence</em>.
+            Computer evidence rarely stands on its own. Indeed, computer
+            evidence is often used to prove the state of mind or
+            behavior of individual actors. Those people, whether your
+            client or other witnesses, often need to be interviewed
+            either prior to the examination or after the results of some
+            computer questions have been made known. Interviewing your
+            client about his or her computer environment and behavior is
+            particularly important, often to decide whether a computer
+            examination would be helpful and to support the attorney in
+            understanding what the examiner’s results might signify for
+            the defense theory. Appended to this chapter (as Appendix C)
+            is a brief, suggested questionnaire to use when interviewing
+            a client about their computer and usage.</p>
+            <p>4. <em>Evidence presentation.</em> In addition to guiding
+            the computer examination and interfacing with the expert,
+            the investigator also has a role in how the output is
+            presented in court. The individual computer evidence, its
+            significance to the case, its complexity and volume, as well
+            as its technical nature are all highly variable from case to
+            case. What does not vary is that it must be understood by a
+            judge or jury who are not computer experts. The traditional
+            investigator can prepare courtroom trial exhibits, whether
+            they be graphics, spreadsheets, imaged documents, or
+            recovered media files. Depending on the type of computer
+            evidence recovered, there are myriad ways to convert file
+            formats and present evidence electronically in court, which
+            the investigator will need to grapple with.</p>
+            <p><strong><em>Scenario One</em></strong></p>
+            <p>Your client is charged with possessing child pornography.
+            The state has made available several thousand images of
+            contraband and has threatened to charge the client with
+            distribution if he does not accept the current plea offer.
+            Your attorney wants you to hire a computer forensics expert
+            and find out “how the files got there” and whether there is
+            any evidence of distribution of contraband. You select and
+            hire a computer expert, and explain that you would like to
+            know where in the directory structure the files were
+            recovered, whether there are other similar files in other
+            parts of the operating system, and what sorts of software
+            are installed on the machine which might explain their
+            appearance. The expert explains to you how Internet search
+            history can be recovered, the probable contents of the
+            recycle bin for file deletions, and what settings in the
+            peer-to-peer software might be examined for evidence of
+            distribution. You suggest the expert examine fragments of
+            web-based email for possible distribution of evidence, as
+            well as the last access date of the contraband files
+            compared to their creation dates. Together, you and the
+            expert isolate relevant date ranges which can be examined
+            for other user activity, and agree on several other steps to
+            isolate data which might prove or disprove distribution.
+            After two or three rounds of examination, you summarize the
+            expert’s reported findings in a memorandum to the attorney.
+            (See Chapter 7 for more on this type of investigation.)</p>
+            <p><strong><em>Scenario Two</em></strong></p>
+            <p>Your client has been charged with drug distribution. He
+            has told the attorney that his communications with others in
+            the drug trade are in his email on a laptop computer at his
+            girlfriend’s house, which the police have not searched. The
+            attorney wants you to get the laptop, boot it up and print
+            out all the emails with the co-conspirators. You suggest to
+            the attorney that a computer forensics expert be hired to
+            secure the laptop and recover the emails. You retrieve the
+            laptop, deliver it to the expert, along with the information
+            you have from the client about the type of email he was
+            using and what you are seeking to recover. The expert images
+            the hard drive, isolates an archived Microsoft Outlook PST
+            file, converts the contents to individual PDF files and
+            makes your copy of the original PST file in its native
+            format. You deliver the attorney forensically defensible
+            emails in a format he can read. If needed, you and the
+            expert can testify to the validity of the email and how it
+            was recovered.</p>
+            </section>
+            <section id="challenging_the_states_computer_evidence"
+            class="level2">
+            <h2>Challenging the State’s Computer Evidence</h2>
+            <p>Perhaps the primary use of the computer expert is to
+            challenge the admissibility or interpretation of the state’s
+            computer evidence in their case-in-chief. Such challenges
+            may take the form of suppressing computer evidence in a
+            motion. Whether to suppress or cast doubt, challenging the
+            government’s expert requires hiring your own expert—and is a
+            multilayered process.</p>
+            <p>The investigator’s role is to assist the attorney in
+            coordinating the challenge and developing the evidence
+            alongside the computer expert. An expert can assist the
+            investigator in identifying those types of materials that
+            the state’s computer examiner may have used during their
+            examination. Often, police forensic examiners write fairly
+            brief reports about what they did. An expert can assist you
+            in preparing questions about what actually may have taken
+            place during the examination that are not contained in the
+            report. Additionally, police computer examiners will gather
+            and store data during the course of their examination, which
+            is not routinely turned over to the defense. An expert can
+            help identify the types of data which the attorney should
+            ask for in discovery. The expert can also help explain how
+            the police examiner used the forensic software to recover
+            the data being offered by the state. Often, police examiners
+            use shortcuts to obtain certain types of information, which
+            leave out collateral information that may set the evidence
+            and context or explain it in a different way.</p>
+            <p>The point is, in preparing for a challenge the
+            investigator needs to assist the attorney in identifying and
+            obtaining all the computer evidence seized, examined,
+            generated and reported on in a case before the areas of
+            challenge can be identified.</p>
+            <p>Once the attorney has developed the legal theories, the
+            investigator needs to explain and translate the legal
+            theories to the computer examiner to elicit possible modes
+            of examination to further test the theory. Often a computer
+            examiner is in a position to suggest data to recover which
+            may or may not bear on the issue.</p>
+            <p>Additionally, a fruitful area of questioning with your
+            expert is what computer investigation the state might have
+            undertaken to more fully explore the evidentiary issue in a
+            less biased fashion. For example, the state may be relying
+            on a document recovered from a computer without having
+            examined the same hard drive for other versions of the
+            document in different states of development. Some computer
+            files contain metadata—data within the file which conveys
+            certain properties about the file itself—which could show
+            meaningful information about the development of the state’s
+            document. If the police examiner never looked for this
+            evidence, he can be questioned about why not. If your
+            examiner did recover the evidence and it affects the trial
+            issues, then you have advanced the defense theory.</p>
+            <p>In almost all cases, challenging the state’s computer
+            evidence requires other traditional investigation, through
+            witnesses and traditional documents and objects. Who else
+            uses the computer? They need to be interviewed. Where was
+            the computer located at the time the search was executed?
+            Others at the scene can tell you. Was a computer networked
+            and if so how? The computer systems administrator at the
+            client’s place employment may need interviewing. The
+            universal fact about computer-based evidence is that it
+            never stands alone. Computers do not tell their stories by
+            themselves, and witnesses to their admissibility and the
+            meaning of the data are always needed. Equally universal is
+            that at the “end” of every computer examination, the
+            attorney will have numerous questions which only the
+            investigator can answer through traditional evidence
+            gathering and interviews.</p>
+            <p>Appended to this chapter is also a brief outline
+            (Appendix D) of principles and ideas to be considered when
+            challenging the states computer evidence and expertise.</p>
+            <p><strong><em>Scenario Three</em></strong></p>
+            <p>Your client is charged with stealing business secrets
+            from his previous employer. The state executed a search
+            warrant at his home and discovered numerous computers in
+            various states of operation in various places in his
+            residence. All were unplugged and seized. The client has
+            said that his employment contract allowed him to access his
+            employer’s computers remotely and required routine and
+            permissible storage of employer-owned data on his own
+            system. That system was networked in a particular way.</p>
+            <p>You are seeking to challenge the government’s
+            introduction of employer-owned data on the client’s laptop,
+            allegedly without the permission of the employer. Your
+            computer expert and client both inform you of ways in which
+            the computers in the home were networked. You request
+            reports from the search that the state failed to provide
+            which show that law enforcement did nothing during their
+            seizure of the computers to diagram or otherwise document
+            the state of the network when it was taken down. Further,
+            your client supplies you with password information and
+            details about the remote access software that he used to
+            access the employer’s computers legitimately. Your expert
+            takes this information and examines the software to confirm
+            the client’s story and recover other files that are
+            legitimately possessed by the client.</p>
+            <p>Your expert assists you in preparing questions for the
+            computer seizure team about their failure to properly
+            document the computing environment in the home. He also
+            helps prepare questions for you to ask other employees who
+            work remotely with the same employer. Finally, the attorney
+            and the computer expert confer about computer examination
+            techniques and terminology that the attorney can use in
+            cross-examining the state’s computer examiner. The computer
+            forensic investigation and the traditional investigation are
+            combined to prepare a challenge to the admissibility of all
+            the computer evidence, based on the failure of the state to
+            follow generally accepted digital evidence collection
+            practices. Failing that, you are prepared to question the
+            examiner at trial about the meaning of the recovered
+            evidence, given the other investigation they failed to
+            perform.</p>
+            </section>
+            <section id="cell_phone_forensics" class="level2">
+            <h2>Cell Phone Forensics</h2>
+            <p>As mentioned above, cell phones are computers. Even the
+            simplest cell phones with basic dialing, address book, and
+            text messaging function with the use of an operating system,
+            processor, data chip, and storage card. As such, cell phones
+            and the data contained on them should be treated
+            forensically. Unlike the plain vanilla examination of a
+            standalone hard drive, the field of cell phone forensics is
+            relatively new and evolving. A computer forensics expert
+            will need to be hired to properly receive, process and
+            extract information from a cell phone in a manner that is
+            presentable for court.</p>
+            <p>Cell phone forensics, while simpler in some ways, are far
+            more variable and complex in so far as operating systems are
+            particular to particular phones. Symbian, iPhone, Windows
+            Mobile, Android and Blackberry are all examples of cell
+            phone operating systems. They vary not only by type of phone
+            but also make and model. Cell phone operating systems are
+            highly customizable, and communities of users exist around
+            each to “hack” the system to customize the phone. Most cell
+            phone systems are closed, as manufacturers have an interest
+            in controlling how the systems work on their phones. The
+            relatively new Android system is intentionally open source,
+            hoping to spur community development of the system.</p>
+            <p>In any event, the variability in hardware and software
+            for cell phones, makes cell phone forensics less
+            standardized, and always in a continual state of
+            development. For the investigator this means primarily two
+            things. First, when collecting evidence for cell phones, it
+            is best to power off the phone unit without touching any
+            keys, and transmit it to a forensics examiner. This is not
+            always possible. The user may offer to give you the storage
+            card from the phone, or offer to forward information, or
+            save information from the phone to external media. To
+            properly examine the phone as a whole, it is necessary to
+            possess the entire unit, at least temporarily, in order to
+            create data images from it.</p>
+            <p>Second, many forensics examiners are offering cell phone
+            examination services, but not all are equal. In hiring an
+            expert, have them explain to you the hardware they use to
+            gather data from the phone, the examination software they
+            use to look at that data, and most importantly what
+            experience they have in doing cell phone forensics. The
+            types of data available on a cell phone and the methods for
+            getting it are variable and evolving, so look for an expert
+            with as much experience as you can find, who has the ability
+            to adapt their methods to your particular evidence. For an
+            example of a company that sells cell phone recovery hardware
+            and software please see Paraben Forensics: <a
+            href="http://www.paraben-forensics.com/"><span>http://www.paraben-forensics.com</span></a>.</p>
+            </section>
+            <section id="email_recovery_and_review" class="level2">
+            <h2>Email Recovery and Review</h2>
+            <p>Although recovering email files, and to some extent
+            reviewing them, uses similar techniques as other file
+            formats, recovering email should be considered a special
+            endeavor. Email remains our favorite application by far and
+            is a rich repository of evidence in certain cases. Almost 50
+            billion non-spam emails are transmitted <em>every day</em>
+            worldwide (Radicati Group, September, 2009). Although in
+            many cases computer evidence is not focused on email, when
+            it is relevant it is often very relevant. Email is content
+            rich. It is user specific. Very importantly, it is
+            time-based and automatically time-stamped. Finally, email
+            often contains file attachments which are the most
+            contemporaneous record of certain documents, as they may
+            have evolved over time.</p>
+            <p>Email files come in different formats depending on the
+            system used by the email server and the users connected to
+            it. Distinct email formats include .pst, .nsf, .msg, .dbx,
+            .eml, .mbx and .mbox and to some extent can be converted
+            from one to another after recovery. Email recovery review
+            can be a relatively simple endeavor, if the amount of email
+            is limited, identified, and structured. It may be as simple
+            as copying a single file from a computer and reloading it in
+            off-the-shelf software to see what it contains. More often,
+            email recovery review is more complex and often very
+            voluminous. This requires the services of a computer
+            forensic examiner and some basic understanding about how
+            stored email is recovered and reviewed.</p>
+            <p>Generally, email recovery and review can be thought of as
+            having four steps: 1) recovery, 2) de- duplication, 3)
+            standardization, and 4) review. Various recovery processes
+            are employed depending on the type of email sought, often
+            due to cancer found in several places on a system or across
+            multiple machines. To reduce volume, de-duplication
+            strategies have to be employed. If email is sought and
+            discovered in multiple formats, these will be converted to a
+            single format so that they can be uploaded to a review
+            platform. Finally, several common review platforms exist to
+            systematically examine email and preserve it for use as
+            evidence.</p>
+            <p>Often, email comes to the defense investigator in the
+            form of discovery. Generally, email can only be obtained
+            from an Internet service provider through a search warrant.
+            When providing emails under a search warrant, email
+            providers often convert their own native files to a common
+            email format that can be read by native software or standard
+            email review platforms. For example, Yahoo! may return
+            searched email as an .mbox file. This is not the format in
+            which the email resides on its servers, but can easily be
+            loaded into an email client such as Thunderbird.</p>
+            <p>Other times, email is recovered from an enterprise or
+            business email server. In that event, it is typically
+            structured in an organized way and has been produced as the
+            result of a specified set of filter and query parameters,
+            such as all email from date one to date two of a named user.
+            In this instance, the recovery of the email is less
+            difficult and is typically provided in a review ready
+            format.</p>
+            <p>Recovery of email from an individual user’s machine is
+            often a more complex endeavor and can become very complex
+            indeed if multiple hard drives are involved. Recovery of
+            email from a hard drive involves the forensic examiner
+            looking for known types of email files, visible (allocated)
+            hard drive space, as well as recovering files and folders
+            that might contain email from deleted or unallocated space.
+            Typically a four-part approach is used:</p>
+            <p>1. From the visible file structure, a search is performed
+            for all known email file types such as .pst, .msg, .eml,
+            .dbx, etc. Typically, with default programs these files
+            usually reside in default parts of the directory.</p>
+            <p>2. A “folder restore” process is running as the hard
+            drive, which attempts to recreate entire folders that have
+            been deleted or otherwise removed from the directory
+            structure. Often these folders can be identified along with
+            part of their original directory structure. The examiner
+            looks for known folders which typically contain email
+            files.</p>
+            <p>3. An “undelete files” process is run, scours the hard
+            drive for all files that have been previously marked as
+            deleted files, and attempts to restore them to the extent
+            possible. These are then examined to see which are email
+            types.</p>
+            <p>4. A “file carving” process is employed, which seeks to
+            identify the beginning and ending of certain types of files
+            from unallocated space. Computer files often have a
+            signature “header” telling the system that the following
+            strings are a certain type of file. Sometimes they have a
+            footer as well, signaling the end of the file. However, some
+            email types, notably .pst files, have a header but no
+            footer. In that event, the examiner locates the beginning of
+            the file and tells the recovery software to “carve” a
+            certain amount of data following that beginning and call it
+            a complete file. A series of validation steps are run on the
+            recovered file to attempt to restore it to its original
+            working order. File carving is partly a manual process and
+            is very time-consuming.</p>
+            <p>It should be noted that web-based mail can also be
+            recovered using forensic processes, but is almost never
+            complete and usually very fragmentary. It is not uncommon
+            for a user to have both locally based email and web-based
+            email in some combination.</p>
+            <p>Recovered email may have little or no content. Often it
+            is highly duplicative and fragmentary. Once the uniform
+            collection of email has been established, it is often
+            converted to a standard format, one being the Microsoft
+            Outlook .pst format.</p>
+            <p>So, after all this email has been recovered, how can you
+            look at it? The answer depends on what has been recovered
+            and in what format, as well as what the purpose of the
+            review is. As noted, a collection of .eml files provided on
+            a CD from the state can simply be backed up and loaded into
+            Microsoft Outlook Express. By contrast, multiple mailboxes
+            residing on multiple machines in different formats may very
+            well create a huge volume of email to review.</p>
+            <p>I know of four basic tools that can serve as review
+            platforms for recovered email. The first and easiest is the
+            native application for that type of email, such as Outlook
+            or Lotus Notes. The application is pointed to the collection
+            of email files and read as if you are the original user.
+            Emails of interest are marked or exported for print.</p>
+            <p>Certain file type viewers such as Quick View Plus can
+            handle a limited number of email file types, and allow
+            viewing of mailboxes, as well as searching and exporting for
+            print. These allow review of the underlying file without
+            changing it. Paraben Forensics has created a program called
+            Email Examiner, which both converts and loads email files
+            onto an investigative review platform and can handle
+            multiple mailboxes and individual mail files at one time. It
+            has robust search and bookmarking capabilities for noting
+            emails of interest. Again, this review platform leaves the
+            original file untouched. At $200 it is relatively
+            inexpensive, and is designed with the investigator in
+            mind.</p>
+            <p>CaseMap legal review software, for an additional price,
+            has an email converting and review plug-in which works with
+            the paid version of Adobe Acrobat. Essentially it cans a PST
+            file, unpacks the messages and converts them to PDF files
+            with metadata, populates the fields of a spreadsheet with
+            the email contents (to, from, date, subject, contents,
+            attachments), and allows for sorting and filtering according
+            to any of the contents of those fields. This is a hybrid
+            solution invented by the makers of CaseMap to handle a
+            moderate amount of recovered email in a fairly standard way.
+            It is neither a native review application nor a fully
+            capable document platform. Still, it is a fairly
+            user-friendly way to process emails, especially if you are
+            already a user of CaseMap.</p>
+            <p>Finally, and most soundly, electronic discovery review
+            platforms such as Concordance and Summation are designed to
+            be able to load certain types of email files, all of their
+            metadata and relevant fields and their attachments and
+            incorporate them into a larger review database that can be
+            accessed by multiple users. This access is typically at a
+            local area network. These programs are complicated to use
+            and have expensive licensing costs. Most civil litigation
+            teams use these platforms to review huge amounts of email
+            involved in electronic discovery.</p>
+            <p>Similar platforms are now available from a legal services
+            vendor through a web interface. The vendor loads email files
+            onto their servers and the user logs in and reviews the
+            email collection in a secure environment online. One
+            standard system is called iCONECT. A multitude of other
+            web-based solutions have proliferated as well (e.g.,
+            CaseVault, Relativity, Catalyst, Case Central, and many
+            others). These tools are designed for litigation review
+            teams, and can also be quite expensive.</p>
+            <p>Whatever your particular case, and the type and amount of
+            email, it is incumbent on the investigator to know through
+            witnesses and experts what relevance the email might have.
+            It is recommended that once the broad outlines of the email
+            universe are established and a judgment by the attorney is
+            made as to the email’s importance, a review plan be drawn
+            up. You will find relevant emails, and conduct further
+            investigation from them, much faster and more efficiently if
+            some foresight and planning is employed.</p>
+            </section>
+            </section>
+            <section id="iv._acquiring_electronic_evidence"
+            class="level1">
+            <h1>IV. Acquiring Electronic Evidence</h1>
+            <p>Undoubtedly there will be many occasions when you will
+            have to acquire and preserve electronic evidence from an
+            original source computer. The sheer variety of types of
+            electronic evidence means that no one uniform method can be
+            prescribed to guide the investigator in collecting this type
+            of data. Electronic evidence can be as large as an entire
+            network or a server, or as small as an individual text
+            message from a cell phone. Some principles and methods can
+            guide you along the way.</p>
+            <p>Before discussing the capture of electronic evidence
+            further, a few terms are helpful:</p>
+            <p><em><strong>Native files</strong>:</em> Native files are
+            files in their original format, as they are used by the
+            operating system and program which created them. For example
+            a .doc file is the format commonly used by Microsoft Word.
+            An .msg file is a native file that is a product of Outlook
+            email. These examples and more are file types which can be
+            converted to another file format, which makes transmission
+            or presentation easier. We speak of “native files” when
+            referring to the original file formats.</p>
+            <p><strong><em>Hash value:</em></strong> A hash value is
+            simply a unique numerical value produced by an algorithm
+            which is processed against the digital values making up an
+            original file (the 1s and 0s). Hash algorithms are
+            standardized, although there are more than one kind. The
+            result of processing a file or collection of files using a
+            hash algorithm is a unique value. Hash values are used to
+            uniquely identify electronic evidence, when being compared
+            with a file that is purported to be the same.</p>
+            <p><strong><em>Metadata:</em></strong> Literally, data about
+            data. Metadata are values and information about particular
+            files, either from the operating system in which they reside
+            or within the file itself. Metadata provides the examiner
+            with information concerning the file itself. Date created,
+            last accessed, and date modified are all commonly understood
+            Windows metadata values for files contained in that system.
+            Image files often have metadata embedded within them,
+            capturing not only the date of creation, but the type of
+            equipment and settings of the camera which created the
+            image. Metadata can be relatively simple, such as the last
+            date printed found within a Microsoft Word document, or
+            tremendously complex, such as metadata values within
+            databasing programs. Native files are often of value because
+            metadata has been preserved along with the content.</p>
+            <p>Ideally, all electronic evidence would be preserved by
+            making a mirror image of the electronic media using forensic
+            software. Any data evidentiary value would then be extracted
+            from the forensic image and preserved to an additional media
+            for analysis and presentation. However, ideal situations
+            rarely present themselves. Often the original medium cannot
+            lawfully be seized or possessed by the investigator
+            permanently. In other instances, the electronic data is
+            “second generation,” provided in a format different from its
+            original. Often, electronic evidence is available to the
+            investigator in an unplanned context, necessitating some
+            method of capture that is far from ideal.</p>
+            <p>In these cases, the investigator should employ every
+            means to document what has been received, how it was
+            acquired and what manner in which it was stored, in what
+            manner it was reviewed, and what the ultimate disposition of
+            it was. When collecting electronic data, bear in mind
+            several ideal principles. Your preferred method of acquiring
+            electronic evidence:</p>
+            <ul>
+            <li>should not disturb the original evidence.</li>
+            <li>should reproduce the original evidence faithfully in as
+            many aspects as possible.</li>
+            <li>should be reproduced by generally accepted methods that
+            can be explained.</li>
+            <li>should be directly sourceable to the original material
+            through a method of acquisition and chain of custody,
+            preferably with the original in your possession.</li>
+            <li>should be preserved in a manner that is presentable in
+            court. Any conversion methods for presentation should also
+            be understandable and explained.</li>
+            </ul>
+            <p>Choose methods that most closely hue to the principles
+            above when gathering data.</p>
+            <p>A few examples may help you:</p>
+            <p>1. Your client ran a web server from home and posted
+            pages to his Internet site which the government will seek to
+            introduce against him. With his permission, you go to his
+            home, pull the plug on the server and transport the entire
+            box undisturbed to your computer forensics examiner, who
+            images the hard drive on the server and preserves the
+            networking equipment for further examination. Here, very
+            little if anything has been lost in acquisition.</p>
+            <p>2. Your client is alleged to have committed a crime at
+            work. You subpoena the client’s email, both incoming and
+            outgoing, from the employer. They return a CD-ROM to you
+            containing several thousand individual PDF files,
+            representing email. You demand a CD-ROM containing the
+            original file format and all the original email. You make a
+            working copy of the CD of native files and keep the original
+            untouched. From the working copy, you load the native files
+            into the original email application and review them. Here,
+            you demanded that the employer provide you native files,
+            which included all the email metadata, so that you could
+            review it. What they provided you was saved in the original
+            for later use as evidence, without being disturbed.</p>
+            <p>3. You are interviewing a witness in the field, and she
+            claims to have received recent text messages which might
+            benefit your client. She offers to show them to you on her
+            phone. She, of course, will not release her phone to you as
+            evidence or allow you to copy it. You ask her to show you
+            the first text message. As she does, you photograph the
+            phone’s screen, and note the date and time. You then ask her
+            to forward that and all subsequent text messages to your
+            office email. Once received, you copy the original emails to
+            separate media and review them from the backup. You save the
+            original photograph, and append it to an investigation
+            report, explaining the details of how the text messages were
+            originally encountered and provided to you.</p>
+            <p>4. Your client’s mother has been saving his computer data
+            since his arrest, thinking that someone might be interested
+            in it. Now she wants to sell it to help pay for his mounting
+            commissary bills. It is, in fact, her computer and she does
+            not want to give it to you. You get her to agree to loan you
+            the hard drive, which you deliver to your forensics
+            examiner. He “clones” the hard drive to a new hard drive,
+            which he then installs in the operating system of her
+            machine, and keeps the original. From the forensic image, he
+            recovers whatever files are of interest to you. You have
+            preserved the original evidence, and provided her with a new
+            hard drive with the identical contents, which will work in
+            the original machine.</p>
+            <p>As the examples above demonstrate, the acquisition of
+            electronic evidence and the means necessary to acquire and
+            preserve it are complex and highly variable. In some cases,
+            the sheer amount of electronic evidence and the need to
+            review it is staggering, and will require careful planning
+            and specialized review methods. What is most important to
+            you as an investigator is to seek and keep the original
+            electronic evidence whenever possible, and acquire copies or
+            next generation versions of electronic evidence when the
+            original is not available to you, in a manner that is
+            defensible in court.</p>
+            <p><strong><em>Subpoenaing Data</em></strong></p>
+            <p>One special case of electronic evidence acquisition that
+            should be mentioned is getting it through a subpoena. For
+            many years the Federal Rules of Criminal Procedure have
+            recognized the need for the defense to subpoena data. State
+            court subpoenas are recognized to be available for the same
+            purpose.</p>
+            <p>When issuing a subpoena for data, it is critical to bear
+            in mind:</p>
+            <p>1. You need to understand as much as you can about the
+            original format of the data you are subpoenaing, and craft
+            your subpoena to describe that format in detail (you are
+            seeking the original or a faithful copy).</p>
+            <p>2. You need to specify in your subpoena in as much detail
+            as possible the format in which the data will be returned to
+            you.</p>
+            <p>3. When necessary, the party should also provide a
+            document describing how the data was originally kept in
+            their system of records, what was done to locate and isolate
+            it, and what if anything was done to format it for delivery.
+            The document should also attest to its accuracy.</p>
+            <p>For example, if you served a subpoena to a hospital for
+            radiological images for a particular patient, and the
+            medical records department sent high-resolution color
+            printouts of all the radiological images, this would be an
+            inadequate response to the subpoena. If you fail to specify
+            the original electronic format, common now to all medical
+            imaging, the expert you hire to review the images would be
+            missing much. Medical images are now commonly made and
+            stored in DICOM format, which not only has the pixels
+            containing the image, but also reports numerous pieces of
+            data about the patient and the medical exam itself. They can
+            also be commonly reviewed and adjusted for review (zoom,
+            contrast, etc.) by a medical expert with standard imaging
+            software.</p>
+            <p>If you subpoenaed data from a database and it was
+            returned to you in an Excel table, this may very well
+            capture the data in the database but not fully explain what
+            it is for. You would also need to specify in your subpoena
+            what each column or field in the table represents, and how
+            these particular values were isolated from the larger
+            collection of data. Otherwise, an expert reviewing the data
+            may be missing something critical.</p>
+            <p>Both attorneys and investigators, as well as responding
+            parties, are still grappling with how to specify evidence
+            and to fill the duty to provide it in the electronic realm.
+            The more you can educate yourself about the evidence you’re
+            seeking to subpoena, the better.</p>
+            <p><strong><em>Acquiring Web-based
+            Evidence</em></strong></p>
+            <p>With the proliferation of information on the web, the
+            investigator needs to preserve what has been found online in
+            some format for review by the attorney in court. This could
+            range from the webpage of a witness to an article, or part
+            of a company’s website, or simply a portion of an individual
+            webpage. Depending on what is needed, several methods exist,
+            varying in complexity or relative ease:</p>
+            <p>1. The simplest is to simply print out a webpage to your
+            printer and put it in your file. Sometimes, this is the
+            quickest and still very effective way to capture what you
+            viewed on the web, often because it contains a date stamped
+            letter.</p>
+            <p>2. Another simple way is a screenshot, which can be
+            pasted anywhere. Far more useful are screen capture tools
+            such as FastStone Capture, or Snagit. These small
+            applications have useful features such as annotation,
+            capturing more than what is visible in the window, or
+            outputting the contents of the capture to different formats
+            other than graphic.</p>
+            <p>3. The webpage could be printed to a PDF file, in the
+            same manner as being sent to a printer. The paid versions of
+            Acrobat all install a printer driver that converts any print
+            job to a PDF automatically. This can be very useful, again
+            because it preserves the timestamp but also allows you to
+            use the PDS to be emailed, shown in court, etc. Cute PDF
+            Writer is a free tool that simply has the printer driver,
+            and works just fine for this purpose.</p>
+            <p>4. Adobe’s Acrobat Professional has a built-in module
+            which allows the user to capture several interconnected
+            webpages, such as a small website, to a single PDF,
+            containing bookmarks for each page interlinked. In essence,
+            it follows the links on the webpage you specify, digs at the
+            contents of those links, and prints pages to PDF. The result
+            is a PDF representation of several levels of the website.
+            Although this is a useful capture tool, and good for smaller
+            amounts of data, it can become a little tricky viewing the
+            resulting PDF anywhere other than on screen.</p>
+            <p>5. Finally, “off-line browsers” or website capture tools
+            exist. One good free tool that accomplishes this is HTTrack.
+            (http://www.httrack.com/). This tool recreates the website’s
+            pages on your local hard drive and preserves the internal
+            links between pages. It can confine its capture to just one
+            Internet domain, or follow links out as many levels as you
+            choose.</p>
+            <p>It should be noted that the now very popular media format
+            of flash .flv video (YouTube, etc.) is not commonly saved
+            through these methods. There are multiple flash video
+            “rippers” and saving tools which you would need to employ
+            separately to preserve the video media found on the
+            site.</p>
+            <p>Capturing information from a webpage is often a simple
+            and inexpensive things to do. In many legal cases it becomes
+            the “picture that is worth thousand words.”</p>
+            </section>
+            <section id="v._digital_courtroom_presentation"
+            class="level1">
+            <h1>V. Digital Courtroom Presentation</h1>
+            <p>In some ways, but perhaps not in the most basic ways,
+            computers have transformed presentation in the courtroom.
+            Foam core is almost a thing of the past, but not quite. Most
+            modern courtrooms these days are equipped with some in-house
+            system that allows the attorneys to present information
+            through the use of a computer, either that of the legal
+            teams, or a preconfigured computer provided by the
+            court.</p>
+            <p>Digital presentation of evidence has obvious
+            advantages:</p>
+            <ul>
+            <li>It can be made large enough for the jury and witness to
+            see at the same time.</li>
+            <li>It can handle multiple media types in addition to
+            documents.</li>
+            <li>It works out much of the logistics of shuffling paper in
+            advance, so that courtroom presentations are more
+            efficient.</li>
+            <li>It provides for relatively low-cost tools that allow
+            advocates to emphasize the evidence through compelling
+            visual means.</li>
+            <li>It provides a visual way to capture the judge’s and
+            jury’s attention in a way that traditional document-based
+            question and answer somehow fails to do.</li>
+            <li>Digital presentations can be structured and restructured
+            relatively quickly, and are easily reproducible for multiple
+            parties.</li>
+            </ul>
+            <p>Of course, all of these advantages come at a high
+            price—namely, the price of preparation. I will not treat the
+            topic of digital presentation with any rigor here, as it is
+            a field unto itself. Moreover, often the investigator is not
+            called upon to assist the attorney with in-court
+            presentation. However, to the extent that an investigator’s
+            own testimony may be the subject of a digital courtroom
+            presentation, a few things are worth noting.</p>
+            <p>Several tools, from the cheapest to the more expensive,
+            are available for courtroom presentation. The standard
+            software programs are TrialDirector and Sanction. They are
+            essentially souped-up versions of PowerPoint, which are made
+            for legal professionals. They provide for robust
+            presentation tools, such as transcript callouts, audio and
+            transcript matching, on-the-fly exhibit creation, real-time
+            highlighting by witnesses and attorneys, and so on. The
+            license fees are relatively high, though not ridiculous for
+            well-developed software. An investment in these tools should
+            only be made by an investigator or paralegal who is
+            committed to learning how to use them effectively.</p>
+            <p>Much more common is the ever present Microsoft
+            PowerPoint. Despite recent lapses in favor from many
+            regarding PowerPoint, it is still a very useful tool for law
+            presentations. A collection of slides based on document
+            images can be put together relatively quickly. Accompanying
+            text is added in the same manner as familiar word processing
+            tools. Formatting can be kept relatively simple, or made
+            more sophisticated. Audio and video can be added in.
+            Finally, it is a tool that any owner of Microsoft Office
+            already has, and is probably the most teachable to an
+            attorney. With enough attention and learning, PowerPoint can
+            be an incredibly effective tool in the courtroom.</p>
+            <p>If organized in correct sequence with bookmarks, Acrobat
+            can be a very easy-to-use presentation tool. Any PDF file
+            can be presented in full screen mode. I have seen defense
+            teams manage all their exhibits in court solely with
+            Acrobat. However, it lacks some of the more useful
+            presentation features of presentation software. Still, the
+            paid version of Acrobat has a presentation format built-in,
+            and it appears to be part of the software that Adobe is
+            paying more attention to. Enlarging parts of image files,
+            inserting highlights, annotations, screen splits, etc. are
+            all built-in presentation functions within Adobe
+            Acrobat.</p>
+            <p>Finally, and not to be overlooked—showing a piece of
+            evidence in its native application (or simply preserving it
+            as an image to PDF) can be a very useful way to show
+            evidence. No special software is needed, and relatively
+            little planning is needed for a small collection of
+            exhibits. If your case or examination boils down to a few
+            pages and your theory is less is more, a lot can be done
+            with the simplest of tools.</p>
+            <p>Perhaps the most important aspect of courtroom
+            presentation is this: It does not work without serious
+            preparation. One should never attempt any level of
+            electronic presentation in the courtroom without knowing
+            exactly how the courtroom software and system works.
+            Schedule time in advance to review it with the courtroom
+            personnel. Test your system on it first. Then, be there
+            early. Also, have some back-up capability should the system
+            fail. It is an axiom of courtroom presentation that some
+            technology will be buggy just when you need it. Know this in
+            advance.</p>
+            <p>As important as knowing your equipment is having your
+            presentation completely prepared ahead of time, rehearsed
+            and reviewed multiple times, and having the attorney commit
+            it to memory. I have seen both successful and unsuccessful
+            courtroom presentations, and by far the biggest difference
+            is the level of preparedness of the lawyer and the defense
+            team. Even the most compelling or interesting evidence will
+            fall flat if sufficient preparation has not been done to
+            work out the kinks. Jurors will pay attention more to the
+            mistakes and the glitches rather than the evidence itself,
+            and you will be fighting an uphill battle in the best of
+            cases.</p>
+            </section>
+            <section id="conclusion" class="level1">
+            <h1>Conclusion</h1>
+            <p>If I am lucky, I have given the reader a flavor of some
+            of the issues surrounding the use of computers and computer
+            evidence in criminal defense investigation. I hope to have
+            left you with the impression that this is a highly fluid and
+            ever-changing field, but one anchored by a few core
+            principles that should help guide the way regardless of
+            changes in technology.</p>
+            <p>One of the greatest challenges facing the defense
+            investigator is not only the technical operation of
+            computers and computer-based equipment, but the unyielding
+            proliferation of data on the Internet and in our cases.</p>
+            <p>The legal investigator’s role with computer evidence
+            ranges from generating leads about witnesses to formulating
+            strategy about challenging the state’s computer evidence.
+            Additionally, you should be prepared to testify in a
+            responsible manner about computer-based evidence. Ideally,
+            this chapter has reassured you that when your expertise is
+            limited, resources are available with the answers you
+            seek.</p>
+            <p>Finally, recognize that there are no “computer cases” and
+            no “computer investigations.” There are criminal defense
+            cases with computer evidence, and there are witnesses who
+            need to testify about it.</p>
+            <p>Understanding where computer evidence and computer
+            investigative techniques fit in will allow you to leverage
+            the unique character of computer and digitally based
+            information, and understand its relation to your client’s
+            case as substantive evidence – either of guilt or of
+            reasonable doubt.</p>
+            <p>Appendix A</p>
+            <p>Internet Resources for Investigation</p>
+            <p>What follows is but a drop in the bucket of internet
+            sites relevant to investigation. Included are some basic
+            sites everyone uses, as well as a few I like or rely on a
+            lot. Of course, each case and investigation will generate
+            its own blend of useful internet resources. (Updated March,
+            2010.)</p>
+            <p>Search Engines</p>
+            <p>Google – <a
+            href="http://www.google.com/"><span>http://www.google.com</span></a></p>
+            <p>Take the time to learn about all the developing Google
+            services. See: <a
+            href="http://www.google.com/options/index.html">www.google.com/options/index.html</a>
+            and <a
+            href="http://www.google.com/help/index.html">http://www.google.com/help/index.html</a></p>
+            <p>Google everything. Period.</p>
+            <p>Bing</p>
+            <p><a href="http://www.bing.com">http://www.bing.com</a></p>
+            <p>Microsoft’s latest entry into search, replacing their
+            general MSN search engine. Previews and categorizes search
+            results, and suggests further search terms and refinement.
+            Localizes search and related to mapping.</p>
+            <p>Yahoo!</p>
+            <p><a
+            href="http://www.yahoo.com/">http://www.yahoo.com/</a></p>
+            <p>Clusty / Vivisimo</p>
+            <p><a
+            href="http://www.clusty.com">http://www.clusty.com</a></p>
+            <p>Search result methodology creates “on-the-fly” table of
+            contents for search results. Beware, includes some paid
+            search placement.</p>
+            <p>Wikipedia</p>
+            <p><a
+            href="http://en.wikipedia.org">http://en.wikipedia.org</a></p>
+            <p>While criticized for being open sourced and subject to
+            error, Wikipedia is a great first start for much Internet
+            research about arcane events or people. Articles often have
+            useful footnotes, leading to substantive research leads.</p>
+            <p>Social Networking</p>
+            <p>Facebook – <a
+            href="http://www.facebook.com/">http://www.facebook.com/</a></p>
+            <p>MySpace – <a
+            href="http://www.myspace.com/">http://www.myspace.com/</a></p>
+            <p>Twitter – <a
+            href="http://twitter.com/">http://twitter.com/</a></p>
+            <p>LinkedIn – <a
+            href="http://www.linkedin.com/">http://www.linkedin.com/</a></p>
+            <p>A compendium of Social Networking sites is found on
+            Wikipedia: <a
+            href="http://en.wikipedia.org/wiki/List_of_social_networking_websites">http://en.wikipedia.org/wiki/List_of_social_networking_websites</a></p>
+            <p>Internet Archives</p>
+            <p>The Wayback Machine – <a
+            href="http://www.archive.org/web/web.php">http://www.archive.org/web/web.php</a>
+            from the Internet Archive Project <a
+            href="http://www.archive.org/">http://www.archive.org/</a>.
+            Selected screen scrapes of old websites. Can search by
+            domain name. Results often partial, but well organized.</p>
+            <p>Domain Tools: <a
+            href="http://www.domaintools.com">www.domaintools.com</a></p>
+            <p>A series of for-fee services to uncover the historical
+            registration information of old domains. Useful if trying to
+            find out who administered a now defunct website or email
+            domain.</p>
+            <p>Paid Services</p>
+            <p>Public Record / Court Databases</p>
+            <p>Accurint</p>
+            <p><a
+            href="http://www.accurint.com/"><span>http://www.accurint.com</span></a></p>
+            <p>Comprehensive cross-referenced national public records
+            database. Now owned by Lexis. Most cost-effective records
+            reseller search tool. Run by the original founders of
+            Accurint. Aggressively adding new sources and timely record
+            updates. Includes phones, assets, and property records.
+            Oregon records include property, some arrests, corrections
+            and courts. Frequent updating. May not always be available
+            for an account with a private investigator. Subscription
+            pricing.</p>
+            <p>IRBSearch (Formerly International Records Bureau)</p>
+            <p><a href="http://www.IRBSearch.com"
+            title="wikilink"><span>http://www.IRBSearch.com</span> </a></p>
+            <p>A cousin of Accurint, though apparently an independent
+            data reseller. Created to parallel Accurint for the private
+            investigator market. Still a reliable public records
+            reseller. Subscription pricing.</p>
+            <p>AutoTrackXP &amp; ChoicePoint Online have now been bought
+            by others and discontinued. ChoicePoint was bought by Lexis
+            and discontinued all products under its name. In the sale,
+            AutoTrackXP was spun off to West (Thomson Reuters) and
+            extinguished. Thomson Reuters introduced the C.L.E.A.R.
+            product for to replace Autotrack, but makes it available
+            only to government and law enforcement investigators.</p>
+            <p>  </p>
+            <p>OPENonline</p>
+            <p><a
+            href="http://www.openonline.com/"><span>http://www.openonline.com</span></a></p>
+            <p>Oregon and Ohio regional public records searching (as a
+            result of a merger of two regional companies). Finer graded
+            records searches in some regional areas. Contains robust
+            Oregon and Washington searches, with extensions into Idaho
+            and National Gateways. Searches are fee. Viewing most hits
+            costs $4.00, which is relatively expensive. Oregon criminal,
+            corrections, and courts reports are expensive compared with
+            other sources. $25 minimum monthly fee. Some searches “real
+            time.” Valuable search capabilities if hits are followed up
+            with primary agency, rather than viewed. Can search OJIN
+            records by criteria not found in OJIN, such as address. More
+            geared to employment screening, but still available to the
+            licensed investigator.</p>
+            <p> </p>
+            <p>Oregon Judicial Information Network. (OJIN)</p>
+            <p><a
+            href="http://www.ojd.state.or.us/ojin">http://www.ojd.state.or.us/ojin</a></p>
+            <p>Oregon state courts docket and case management system.
+            Real-time docket access to state district, circuit and
+            appellate courts. A little awkward to learn at first, is a
+            “must have” “must know” resource for any Oregon
+            investigator. OJIN everyone.</p>
+            <p> </p>
+            <p>Federal Courts: PACER / ECF</p>
+            <p><a
+            href="http://ecf.ord.uscourts.gov/"><span>http://ecf.ord.uscourts.gov</span></a></p>
+            <p>Pacer Registration Information:</p>
+            <p><a
+            href="http://pacer.psc.uscourts.gov/"><span>http://pacer.psc.uscourts.gov</span></a></p>
+            <p>PACER National Index:</p>
+            <p><a
+            href="http://pacer.uspci.uscourts.gov/"><span>http://pacer.uspci.uscourts.gov</span></a></p>
+            <p>Federal courts electronic docketing access system.
+            Includes District, Bankruptcy, and Circuit Courts of
+            Appeals. The old PACER system exists in tandem with ECF
+            filing system. PACER logins allow for docket and document
+            viewing only. ECF is for registered lawyers for court
+            filing. Account required, and fees are relatively cheap at
+            $.07 per page of docket retrieved. Almost all district
+            courts, and circuit courts of appeals, are Internet
+            accessible. Electronic documents in criminal cases, starting
+            from 2004. National searching is robust and simple. A must
+            for federal practitioners.</p>
+            <p> </p>
+            <p>Washington Courts JIS-Link</p>
+            <p><a
+            href="http://www.courts.wa.gov/jislink">http://www.courts.wa.gov/jislink</a></p>
+            <p>Washington state courts public electronic records access.
+            The best and most thorough access to Washington court
+            records. Includes statewide search capability for criminal
+            cases. A very complicated and user-unfriendly system to use.
+            Unwieldy to learn: a maze of commands and abbreviations.
+            Print capabilities are primitive. Yet, <em>very
+            inexpensive</em>. Be the coolest investigator on the block
+            teasing information out of this one.</p>
+            <p>Washington Courts Online</p>
+            <p><a
+            href="http://www.courts.wa.gov/">http://www.courts.wa.gov/</a></p>
+            <p>Washington also has a preliminary, restricted depth, case
+            and person search tool available for their courts online,
+            for free. Not a full replacement for JIS-Link, but very
+            handy for case number and name searches.</p>
+            <p> </p>
+            <p>Washington Courts – Reseller</p>
+            <p><a
+            href="http://www.wacourtsonline.com/"><span>http://www.wacourtsonline.com</span></a></p>
+            <p>Paid search service for Washington state electronic court
+            records. $8.95 per searched entity for Superior Court
+            searches, $24.95 per entity for district court searches.
+            Payable by credit card. Basically, they search JIS-Link for
+            you, through an online order. Perhaps useful in a pinch or
+            on a limited-need basis.</p>
+            <p> </p>
+            <p>Washington State Vehicle Vessel Inquiry. IVIPS</p>
+            <p><a
+            href="https://fortress.wa.gov/dol/ivipsprod/">https://fortress.wa.gov/dol/ivipsprod/</a></p>
+            <p>Lookups for State of Washington vehicles only. No
+            driver’s license information. Account with permissible
+            purpose needed. Tight restrictions on reuse of information
+            in cases and investigations. For registration information,
+            contact Eileen Boman; Washington State Dept. Licensing, PO
+            Box 2957, Olympia, WA 98507, (360) 902-3760</p>
+            <p> </p>
+            <p>Oregon State Police Open Records Unit</p>
+            <p>Public Criminal Records Inquiry</p>
+            <p><a
+            href="http://www.oregon.gov/OSP/ID/public_records.shtml">http://www.oregon.gov/OSP/ID/public_records.shtml</a></p>
+            <p>Account needs to be established with OSP. Subject of
+            search notified of inquiry at last known address. Includes
+            all convictions, and arrests within one calendar year.
+            Request form online, results mailed to requestor. Can
+            request individually through a form. Subjects are notified
+            at their last known address of the request before results
+            are given.</p>
+            <p>Other Courts</p>
+            <p>Oregon Judicial Department</p>
+            <p><a
+            href="http://courts.oregon.gov/OJD/courts/index.page">http://courts.oregon.gov/OJD/courts/index.page</a></p>
+            <p>Homepage contains links to every available Oregon Court
+            website, and provides contact/address information.</p>
+            <p> </p>
+            <p>National Center for State Courts</p>
+            <p><a
+            href="http://www.ncsconline.org/D_KIS/info_court_web_sites.html#State">http://www.ncsconline.org/D_KIS/info_court_web_sites.html#State</a></p>
+            <p>A non-comprehensive set of links to other state court
+            websites.</p>
+            <p> </p>
+            <p>National Association of Counties. County Lookup</p>
+            <p><a
+            href="http://www.naco.org/"><span>http://www.naco.org</span></a></p>
+            <p>Click “About Counties” “Find a County” or</p>
+            <p><a
+            href="http://www.naco.org/Template.cfm?Section=Find_a_County&amp;Template=/cffiles/counties/usamap.cfm">http://www.naco.org/Template.cfm?Section=Find_a_County&amp;Template=/cffiles/counties/usamap.cfm</a></p>
+            <p>County name lookup by state, city, or town.</p>
+            <p>Search Tip: Quickest way to find almost any state or
+            county jurisdiction website or contact information is to
+            Google the Name of County and/or State and “Courts.” Note
+            that individual states and counties have been adding online
+            case information at differing rates and degrees. Many
+            flavors are available. Check with the individual
+            jurisdiction website before ordering paper records.</p>
+            <p> </p>
+            <p>Immigration Courts</p>
+            <p><a
+            href="http://www.usdoj.gov/eoir/sibpages/ICadr.htm">http://www.usdoj.gov/eoir/sibpages/ICadr.htm</a></p>
+            <p>An updated list of every immigration court in the nation,
+            with contact information. Deportation and removal proceeding
+            tapes and documents can be ordered through the Executive
+            Office of Immigration Review.</p>
+            <p> </p>
+            <p>U.S. Supreme Court</p>
+            <p><a
+            href="http://www.supremecourt.gov">http://www.supremecourt.gov</a></p>
+            <p>Supreme Court dockets, case information. Transcripts of
+            oral arguments about one month after argument.</p>
+            <p> </p>
+            <p>Oyez</p>
+            <p><a
+            href="http://www.oyez.org/">http://www.oyez.org/</a></p>
+            <p>Everything Supreme Court–related. Audio recordings of
+            many oral arguments.</p>
+            <p><strong> </strong></p>
+            <p>Jails, Corrections, Inmate Locators</p>
+            <p>VINELink – Oregon Corrections and County Jails Inmate
+            Searches</p>
+            <p>Selected searches other states also.</p>
+            <p><a
+            href="http://www.vinelink.com/index.jsp">http://www.vinelink.com/index.jsp</a></p>
+            <p>Victim Information Notification Everyday (VINE) service.
+            Oregon’s first comprehensive inmate locator service covering
+            county jails and Department of Corrections. Important
+            resource for inmate location and jail identification
+            numbers.</p>
+            <p> </p>
+            <p>Oregon Department of Corrections – Inmate Lookup</p>
+            <p>Provides basic offender number, offense, and release date
+            information, with photo.</p>
+            <p>Oregon Offender Search:
+            -http://docpub.state.or.us/OOS/intro.jsf</p>
+            <p>Oregon Inmate Information in writing:</p>
+            <p>Mary Jenkins</p>
+            <p><a
+            href="mailto:Mary.A.Jenkins@doc.state.or.us">Mary.A.Jenkins@doc.state.or.us</a></p>
+            <p>(503) 570-6900</p>
+            <p>Oregon Offender Information and Sentence Computation
+            Branch. Provide a fax or email with the inmate’s name SID
+            number, and request the Public Record screens. Be sure to
+            include your identifying and contact information. Will
+            provide detailed inmate charge and sentence information
+            history usually within 24 hours. $.50 per page, plus
+            research fee.</p>
+            <p>Oregon DOC website: <a
+            href="http://www.oregon.gov/DOC/">http://www.oregon.gov/DOC/</a></p>
+            <p> </p>
+            <p>U.S. Bureau of Prisons (BOP) Webpage &amp; Inmate
+            Locator</p>
+            <p><a
+            href="http://www.bop.gov/"><span>http://www.bop.gov</span></a></p>
+            <p><a
+            href="http://www.bop.gov/iloc2/LocateInmate.jsp">http://www.bop.gov/iloc2/LocateInmate.jsp</a></p>
+            <p>Locates federal inmates, both in custody and released,
+            back to 1982.</p>
+            <p> </p>
+            <p>Multnomah County Sheriff Current Inmates and Recent
+            Releases:</p>
+            <p><a
+            href="http://www.mcso.us/PAID/Default.aspx">http://www.mcso.us/PAID/Default.aspx</a></p>
+            <p>Includes mug shot and charging information for low level
+            offenders released due to bed space shortage.</p>
+            <p> </p>
+            <p>Oregon County Inmate Rosters</p>
+            <p><a
+            href="http://lto.locktrack.com/public/reports">http://lto.locktrack.com/public/reports</a></p>
+            <p>Harney and Lincoln, daily jail rosters on-line. Also see
+            <a
+            href="http://www.tillamooksheriff.org/"><span>http://www.tillamooksheriff.org</span></a></p>
+            <p><a
+            href="http://www.tillamooksheriff.org/DailyInmateList.htm">http://www.tillamooksheriff.org/DailyInmateList.htm</a>
+            – Tillamook County Inmates.</p>
+            <p><strong> </strong></p>
+            <p>Lane County Jail Inmate lookup</p>
+            <p><a
+            href="http://e-airs.org/eAirsInternet/InmateInformationList.aspx">http://e-airs.org/eAirsInternet/InmateInformationList.aspx</a></p>
+            <p>Lane County current inmates lookup and jail roster.</p>
+            <p>California Department of Corrections:</p>
+            <p><a
+            href="http://www.cdcr.ca.gov/Reports_Research/Inmate_Locator.html">http://www.cdcr.ca.gov/Reports_Research/Inmate_Locator.html</a></p>
+            <p>California still does not post inmate information online.
+            Page for the phone and fax numbers to make inmate lookup
+            requests. </p>
+            <p>Other State Inmate Lookups Links.</p>
+            <p>See VineLink, above.</p>
+            <p> </p>
+            <p>Nationwide State Departments of Corrections List.</p>
+            <p><a
+            href="http://www.corrections.com/links/viewlinks.asp?Cat=30">http://www.corrections.com/links/viewlinks.asp?Cat=30</a></p>
+            <p>Search Tip: Search county and state name, plus “inmate
+            locator” or “Inmate Roster” in Google to find additional out
+            of state jail inmate sites.</p>
+            <p>Example: Los Angeles County Jails:
+            app1.lasd.org/iic/ajis_search.cfm</p>
+            <p><strong> </strong></p>
+            <p>Phone Resources Online</p>
+            <p>White &amp; Yellow Pages:</p>
+            <p><a
+            href="http://www.whitepages.com/">http://www.whitepages.com/</a></p>
+            <p><a
+            href="http://www.superpages.com">http://www.superpages.com</a></p>
+            <p>Includes person, business, and reverse phone and address
+            lookups. Surprisingly useful for free.</p>
+            <p>Zaba Search</p>
+            <p><a
+            href="http://www.zabasearch.com/">http://www.zabasearch.com/</a> </p>
+            <p>Person search and phone number. Links to paid searches by
+            Intelius, but free results are sometimes useful.</p>
+            <p>123 People</p>
+            <p><a
+            href="http://www.123people.com">www.123people.com</a></p>
+            <p>Aggregate person search engine combines name searches
+            from many social sites and people finder websites. Links to
+            lots of paid searches, but free results are often
+            useful.</p>
+            <p>Yahoo Yellow Pages</p>
+            <p><a
+            href="http://yp.yahoo.com/"><span>http://yp.yahoo.com</span></a></p>
+            <p>Yellow pages information by location / zip code.
+            Especially useful if traveling.</p>
+            <p>NOTE: On March 31, 2010, Yahoo! Yellow Pages replaced by
+            <a href="http://local.yahoo.com">Yahoo! Local</a>. Use <a
+            href="http://local.yahoo.com">Yahoo! Local</a> for reviews,
+            maps, driving directions and improved search.</p>
+            <p><a
+            href="http://local.yahoo.com/">http://local.yahoo.com/</a></p>
+            <p> </p>
+            <p>Fone Finder</p>
+            <p><a
+            href="http://www.fonefinder.net/"><span>http://www.fonefinder.net</span></a></p>
+            <p>Find out which company controls a particular phone
+            number.</p>
+            <p> </p>
+            <p>AnyWho Reverse Directory</p>
+            <p><a
+            href="http://www.anywho.com/rl.html">http://www.anywho.com/rl.html</a></p>
+            <p> </p>
+            <p>FCC Telecommunications Company Locator</p>
+            <p><a
+            href="http://gullfoss2.fcc.gov/cib/form499/499a.cfm">http://gullfoss2.fcc.gov/cib/form499/499a.cfm</a></p>
+            <p>Find all telecommunications carriers providing service
+            within a particular state. Click on the name of the state
+            only, enter nothing else, and click search, for a complete
+            list within a state. May be useful when trying to find the
+            legal contact to subpoena telecommunications records.</p>
+            <p> </p>
+            <p>Free Search Sites</p>
+            <p>NOTE: Generally limited in scope and application, these
+            lookups are linked to for fee searches that are overpriced,
+            and not designed for the professional. Still these sites are
+            worth knowing, if only because they have resources that can
+            sometimes verify known or partial information. This is only
+            a few of the dozens of these sites. Many of these kind point
+            to paid search.</p>
+            <p><a
+            href="http://birthdatabase.com/query.php">http://birthdatabase.com/query.php</a></p>
+            <p>Find almost anyone's birthday by name. Links to Intelius
+            paid search.</p>
+            <p> </p>
+            <p>Melissa</p>
+            <p><a
+            href="http://www.melissadata.com/Lookups/index.htm">http://www.melissadata.com/Lookups/index.htm</a></p>
+            <p>A marketing-list company offering some free searches
+            about geographic areas and demographics.</p>
+            <p> </p>
+            <p>Infospace</p>
+            <p><a
+            href="http://www.infospace.com/"><span>http://www.infospace.com</span></a></p>
+            <p>The original web-based information finder. Still going,
+            but updated.</p>
+            <p>Oregon Emergency Communication / 9-1-1.</p>
+            <p><a
+            href="http://www.osp.state.or.us/oem/organization/Technology%20and%20Response/psap_list.htm">http://www.osp.state.or.us/oem/organization/Technology%20and%20Response/psap_list.htm</a></p>
+            <p>Complete list of 9-1-1, Emergency Communications entities
+            in Oregon.</p>
+            <p>Washington State 9-1-1 Dispatches:</p>
+            <p><a
+            href="http://www.mrsc.org/Subjects/PubSafe/emergency/em-emercom.aspx#Emergency">http://www.mrsc.org/Subjects/PubSafe/emergency/em-emercom.aspx#Emergency</a></p>
+            <p>Complete list of Washington State 9-1-1, dispatch
+            centers.</p>
+            <p> </p>
+            <p>Law Enforcement</p>
+            <p>Portland Police Bureau</p>
+            <p><a
+            href="http://www.portlandonline.com/police/">http://www.portlandonline.com/police/</a></p>
+            <p>PPB’s webpage contains police records ordering
+            procedures, all police General Orders, Crime Mapper
+            geographic incident reporting system, public records and
+            report request information, precinct/division information,
+            press releases, etc..</p>
+            <p>Search Tip: Most local police agencies have a web
+            presence of some sort. Google for city or agency name plus
+            “police.”</p>
+            <p> </p>
+            <p>National Public Safety Information Bureau</p>
+            <p><a
+            href="http://www.safetysource.com/"><span>http://www.safetysource.com</span></a></p>
+            <p>Publishers of the National Directory of Law Enforcement
+            Administrators. Online version available for subscription
+            for an annual fee. The most comprehensive single source of
+            law enforcement agencies. Hard copy of directory is very
+            useful, but relatively expensive.</p>
+            <p> </p>
+            <p>Public Records / Freedom of Information</p>
+            <p>Tapping Officials’ Secrets</p>
+            <p>Public Records Law Help Site</p>
+            <p><a
+            href="http://www.rcfp.org/tapping/index.cgi?function=browse">http://www.rcfp.org/tapping/index.cgi?function=browse</a></p>
+            <p>State-by-state compendium of public records request
+            rules, procedures, and issues. Very comprehensive Oregon
+            section. By the Reporters’ Committee for Freedom of the
+            Press.</p>
+            <p>Open Oregon</p>
+            <p><a
+            href="http://www.open-oregon.com/">http://www.open-oregon.com/</a></p>
+            <p>Public records news, links, and information about
+            requests under Oregon Public Records law. </p>
+            <p>Federal Agencies: Freedom of Information (FOIA) Pages</p>
+            <p>All U.S. Government agencies are required by law to make
+            their FOIA request information available on-line. Almost all
+            agencies’ websites have a FOIA section. Additionally, they
+            must publish a list and descriptions of their “Major
+            Information Systems” to assist the requester. Most MIS’s are
+            listed online, some are not.</p>
+            <p>Search Tip: The best route is to Major Information
+            Systems lists is to Google the federal Agency Name plus
+            “FOIA” plus “Major Information Systems.”</p>
+            <p>Example: DEA Major Information Systems returns: <a
+            href="http://www.usdoj.gov/dea/foia/foiatoc.html">www.usdoj.gov/dea/foia/foiatoc.html</a></p>
+            <p> </p>
+            <p>State of Oregon</p>
+            <p>State of Oregon Webpage</p>
+            <p><a
+            href="http://www.oregon.gov/"><span>http://www.oregon.gov</span></a></p>
+            <p> </p>
+            <p>Oregon State Employee Search</p>
+            <p><a
+            href="http://www.state.or.us/cgi-bin/employee.html">http://www.state.or.us/cgi-bin/employee.html</a></p>
+            <p>State telephone directory search by name or state agency.
+            Useful if you know who you are looking for. ** Or, buy the
+            2004 Oregon State Directory (hard copy). Very cheap and
+            useful. Capitol Gift Shop: (503) 986-1391.</p>
+            <p> </p>
+            <p>Oregon Administrative Rules</p>
+            <p><a
+            href="http://arcweb.sos.state.or.us/banners/rules.htm">http://arcweb.sos.state.or.us/banners/rules.htm</a></p>
+            <p><strong> </strong></p>
+            <p>Oregon State Legislature / Oregon Regulations</p>
+            <p><a
+            href="http://www.leg.state.or.us/"><span>http://www.leg.state.or.us</span></a></p>
+            <p>Bills, Laws, complete current Oregon Revised Statutes</p>
+            <p> </p>
+            <p>Oregon State Bar Member Directory</p>
+            <p><a
+            href="http://www.osbar.org/members/start.asp">http://www.osbar.org/members/start.asp</a></p>
+            <p>Active members of the Oregon State Bar. Contains opt-out
+            provision for members’ contact information.</p>
+            <p> </p>
+            <p>Oregon Board of Medical Examiners – Physician License
+            Search</p>
+            <p><a
+            href="https://techmedweb.omb.state.or.us/Clients/ORMB/Public/VerificationRequest.aspx">https://techmedweb.omb.state.or.us/Clients/ORMB/Public/VerificationRequest.aspx</a></p>
+            <p>Find any licensed doctor in Oregon, and a record of
+            whether any disciplinary action has been sustained.</p>
+            <p> </p>
+            <p>National Physician’s Search: American Medical
+            Association</p>
+            <p><a
+            href="http://dbapps.ama-assn.org/aps/amahg.htm">http://dbapps.ama-assn.org/aps/amahg.htm</a></p>
+            <p>National physician lookup. AMA member physicians
+            only.</p>
+            <p> </p>
+            <p>Oregon Secretary of State Business Names / Corporations
+            Search</p>
+            <p><a
+            href="http://egov.sos.state.or.us/br/pkg_web_name_srch_inq.login">http://egov.sos.state.or.us/br/pkg_web_name_srch_inq.login</a></p>
+            <p>Search any registered business entity, corporation,
+            registered agent in Oregon. Now can search business registry
+            records by name.</p>
+            <p> </p>
+            <p>Oregon Professional Licenses</p>
+            <p><a
+            href="http://licenseinfo.oregon.gov/">http://licenseinfo.oregon.gov/</a></p>
+            <p>Portal to online licensee information for numerous state
+            license categories.</p>
+            <p>A very long list of all online license categories.
+            Availability expanding.</p>
+            <p>Electronic Discovery Vendors and Information</p>
+            <p>The Sedona Conference</p>
+            <p>Conference about electronic discovery management issues,
+            lists approved vendors.</p>
+            <p><a
+            href="http://www.thesedonaconference.org/ediscovery_html">http://www.thesedonaconference.org/ediscovery_html</a></p>
+            <p>The Electronic Discovery Reference Model</p>
+            <p>Develops methods and standards for processing litigation
+            oriented electronic discovery.</p>
+            <p>Portland area electronic discovery vendors – from paper
+            scanning to hosted online electronic review platforms.</p>
+            <p>Pacific-Legal / discover-e: <a
+            href="http://www.pacificlegal.com/index.html">http://www.pacificlegal.com/index.html</a>
+            <a
+            href="http://discover-e-legal.com/">http://discover-e-legal.com/</a></p>
+            <p>Bridge City Legal - <a
+            href="http://www.bridgecitylegal.com/">http://www.bridgecitylegal.com/</a></p>
+            <p>In2itive Technologies - <a
+            href="http://www.in2itivetechnologies.com/">http://www.in2itivetechnologies.com/</a></p>
+            <p>Maps / Geographic Information Systems</p>
+            <p>Basic Internet Mapping</p>
+            <p><a
+            href="http://maps.google.com/">http://maps.google.com/</a></p>
+            <p><a
+            href="http://maps.yahoo.com/"><span>http://maps.yahoo.com</span></a></p>
+            <p><a
+            href="http://www.bing.com/maps/">http://www.bing.com/maps/</a></p>
+            <p><strong> </strong></p>
+            <p>Metro Regional Government Portland area maps.</p>
+            <p><a
+            href="http://metromap.metro-region.org/metromap.cfm">http://metromap.metro-region.org/metromap.cfm</a></p>
+            <p>Links to Metro Regional GIS server.</p>
+            <p> </p>
+            <p>Portland GIS Server.</p>
+            <p><a
+            href="http://www.portlandmaps.com/"><span>http://www.portlandmaps.com</span></a></p>
+            <p>Maps, assessor information, aerial photos, crime report
+            server.</p>
+            <p> </p>
+            <p>Washington County Maps – GIS</p>
+            <p><a
+            href="http://washims.co.washington.or.us/gis">http://washims.co.washington.or.us/gis</a></p>
+            <p> </p>
+            <p>Clackamas County Maps - GIS</p>
+            <p><a
+            href="http://www.co.clackamas.or.us/gis/new.htm">http://www.co.clackamas.or.us/gis/new.htm</a></p>
+            <p> </p>
+            <p>Jackson County Smart Map - GIS</p>
+            <p><a
+            href="http://www.smartmap.org/"><span>http://www.smartmap.org</span></a></p>
+            <p> </p>
+            <p>Deschutes County GIS</p>
+            <p><a
+            href="http://www.co.deschutes.or.us/go/eservices/interactive-maps">http://www.co.deschutes.or.us/go/eservices/interactive-maps</a></p>
+            <p><em>Search Tip: Many GIS systems are coming online
+            publicly. Google County Name plus State plus “GIS” or
+            “Mapping.”</em></p>
+            <p> </p>
+            <p>Topozone</p>
+            <p><a
+            href="http://www.topozone.com/"><span>http://www.topozone.com</span></a></p>
+            <p><a
+            href="http://www.trails.com/">http://www.trails.com/</a></p>
+            <p>The google maps of topological mapping.</p>
+            <p> </p>
+            <p>Microsoft Research Maps</p>
+            <p><a
+            href="http://msrmaps.com/default.aspx">http://msrmaps.com/default.aspx</a></p>
+            <p>Microsoft's collection of US aerial photography. Formerly
+            TerraServer-USA. Detailed and fun, but probably not for
+            court ready presentations.</p>
+            <p>See also <a
+            href="http://www.terraserver.com/"><span>http://www.terraserver.com</span></a>
+            a portal for ordering high resolution aerial photos of
+            selected U.S. cities.</p>
+            <p> </p>
+            <p>U.S. Geological Survey</p>
+            <p><a
+            href="http://www.usgs.gov/"><span>http://www.usgs.gov</span></a></p>
+            <p>All things involving natural resources maps from the
+            federal government. Detailed resource for purchasing maps
+            from USGS.</p>
+            <p><strong> </strong></p>
+            <p>Libraries / Newspapers</p>
+            <p>Oregon Statewide University Library Catalog</p>
+            <p><a
+            href="http://summit.worldcat.org/">http://summit.worldcat.org/</a></p>
+            <p>Combined library catalog of 30 Northwest university
+            libraries. A vast resource.</p>
+            <p> </p>
+            <p>Multnomah County Library</p>
+            <p><a
+            href="http://www.multcolib.org/"><span>http://www.multcolib.org</span></a></p>
+            <p>Click on “Electronic Resources”. Newspapers and magazines
+            on-line. Full Text Oregonian back to 1992. Full text New
+            York Times. Many databases available only to Multnomah
+            County library card holders.</p>
+            <p> </p>
+            <p>U.S. Newspaper List</p>
+            <p><a
+            href="http://www.usnpl.com/"><span>http://www.usnpl.com</span></a></p>
+            <p>Find any newspaper in the United States.</p>
+            <p> </p>
+            <p>The Paperboy</p>
+            <p><a
+            href="http://www.thepaperboy.com/"><span>http://www.thepaperboy.com</span></a></p>
+            <p>Australian site providing links to international papers
+            around the world.</p>
+            <p> </p>
+            <p>MEDLINE Plus - National Library of Medicine</p>
+            <p><a
+            href="http://www.nlm.nih.gov/hinfo.html">http://www.nlm.nih.gov/hinfo.html</a></p>
+            <p>Search for abstracts of thousands of medical journals.
+            Drug lookup gives PDR type drug information for any
+            pharmaceutical. Accounts free.</p>
+            <p>Links to Links</p>
+            <p>Jeff Flax’s Website</p>
+            <p><a
+            href="http://www.jflax.com/"><span>http://www.jflax.com</span></a></p>
+            <p>Links to criminal defense legal and investigative
+            resources from the Computer Administrator for the Defender
+            Services Division of the Administrative Office of the U.S.
+            Courts.</p>
+            <p> </p>
+            <p>Search Systems</p>
+            <p><a
+            href="http://www.searchsystems.net/"><span>http://www.searchsystems.net</span></a></p>
+            <p><a
+            href="http://www.searchsystems.net/freepub.php">http://www.searchsystems.net/freepub.php</a></p>
+            <p>A very good compendium of links to national and state
+            government on-line resources.</p>
+            <p> </p>
+            <p>Law Office of Kim Kruglik</p>
+            <p><a
+            href="http://www.kruglaw.com/"><span>http://www.kruglaw.com</span></a></p>
+            <p>Another set of links for criminal legal and investigative
+            resources from an interested attorney in San Francisco.</p>
+            <p> </p>
+            <p>Virtual Gumshoe</p>
+            <p><a
+            href="http://www.virtualgumshoe.com/"><span>http://www.virtualgumshoe.com</span></a></p>
+            <p>A mixed bag of links for investigators. Some very useful
+            gems.</p>
+            <p> </p>
+            <p>Crimelynx</p>
+            <p><a
+            href="http://www.crimelynx.com/"><span>http://www.crimelynx.com</span></a></p>
+            <p>A compendium of criminal defense resources for the
+            investigator and attorney. Stronger on attorney resources
+            and criminal justice policy, although the investigator sites
+            are tried and true.</p>
+            <p>Virtual Chase</p>
+            <p><a
+            href="http://www.virtualchase.com/"><span>http://www.virtualchase.com</span></a></p>
+            <p>I really like this site. Legal professionals Internet
+            research and investigation portal. Articles and policy
+            discussion regarding the changing world of online research
+            for legal professionals. Greatest virtue is that it is kept
+            up to date. Recently acquired by Justia, its probable demise
+            is looming.</p>
+            <p><strong> </strong></p>
+            <p>Miscellaneous</p>
+            <p>Resident Agent Listings</p>
+            <p><a
+            href="http://www.residentagentinfo.com/"><span>http://www.residentagentinfo.com</span></a></p>
+            <p>Links to state Resident Agent lookups for 47 of 50
+            states, with some gaps or restrictions. Essential to serving
+            subpoenas on business entities.</p>
+            <p> </p>
+            <p>United States Code: Cornell Law School LLI</p>
+            <p><a
+            href="http://www4.law.cornell.edu/"><span>http://www4.law.cornell.edu</span></a></p>
+            <p><a
+            href="http://www.law.cornell.edu/uscode/">http://www.law.cornell.edu/uscode/</a></p>
+            <p>Complete and searchable current U.S. Code.</p>
+            <p> </p>
+            <p>Public School Locator</p>
+            <p><a
+            href="http://nces.ed.gov/ccd/schoolsearch">http://nces.ed.gov/ccd/schoolsearch</a></p>
+            <p>Find any public school in the nation, based on city
+            name.</p>
+            <p> </p>
+            <p>T.R.A.C. – Transactional Records Access Clearinghouse</p>
+            <p><a
+            href="http://trac.syr.edu/"><span>http://trac.syr.edu</span></a></p>
+            <p>Federal government law enforcement and prosecution
+            statistics and research, nationwide and by federal district.
+            Very interesting.</p>
+            <p> </p>
+            <p>Military Records: National Personnel Records Center</p>
+            <p><a
+            href="http://www.archives.gov/facilities/mo/st_louis.html">http://www.archives.gov/facilities/mo/st_louis.html</a></p>
+            <p>Information, forms, procedures for ordering separated
+            military personnel files.</p>
+            <p> </p>
+            <p>Network Solutions: WHOIS:</p>
+            <p><a
+            href="http://www.networksolutions.com/en_US/whois/index.jhtml">http://www.networksolutions.com/en_US/whois/index.jhtml</a></p>
+            <p>Lookup for operator registration information for
+            websites, by web address / domain name.</p>
+            <p> </p>
+            <p>DNA Services Sites -</p>
+            <p>Forensic Analytical</p>
+            <p><a
+            href="http://www.forensica.com/">http://www.forensica.com/</a></p>
+            <p>Serological Research Institute (SERI):</p>
+            <p><a
+            href="http://www.serological.com/"><span>http://www.serological.com</span></a></p>
+            <p> </p>
+            <p>Zeno’s Forensic Page</p>
+            <p><a
+            href="http://forensic.to/forensic.html">http://forensic.to/forensic.html</a></p>
+            <p>Exhaustive set of links to forensics experts and
+            resources in criminal law. Improbably from Dr. Zeno Geradts,
+            a PhD in the Netherlands.</p>
+            <p> </p>
+            <p>Firearms Identification</p>
+            <p><a
+            href="http://www.firearmsid.com/"><span>http://www.firearmsid.com</span></a></p>
+            <p>A souped-up tour of the forensic science of firearms
+            identification, marking, and bullet ID. For gun geeks and
+            experts.</p>
+            <p> </p>
+            <p>SecurityArms – Firearms Pictures</p>
+            <p><a
+            href="http://www.securityarms.com/"><span>http://www.securityarms.com</span></a></p>
+            <p>A huge collection of decent firearms photos. Searchable
+            by model. For the full list of photos see:
+            securityarms.com/20010315/all.htm.</p>
+            <p> </p>
+            <p>FAA Civil Aircraft Registration</p>
+            <p><a
+            href="http://162.58.35.241/acdatabase/defimg.asp">http://162.58.35.241/acdatabase/defimg.asp</a></p>
+            <p><a
+            href="http://registry.faa.gov/aircraftinquiry/">http://registry.faa.gov/aircraftinquiry/</a></p>
+            <p>All registered non-military aircraft in the United
+            States. I have yet to need this for any case, but I am still
+            awed that you can get information about every public
+            aircraft registered to Southwest Airlines on your
+            desktop.</p>
+            <p> </p>
+            <p>Appendix B</p>
+            <p>Useful Programs for Electronic File Review</p>
+            <p>Free Software Utilities</p>
+            <ul>
+            <li>Read Office documents: OpenOffice (openoffice.org)</li>
+            <li>Read image files: XnView (xnview.com) IrfanView
+            (irfanview.com)</li>
+            <li>Play or edit media files: VLC Media Player
+            (videolan.org/vlc) Audacity (audacity.sourceforge.net)</li>
+            <li>Compress and uncompress files: 7-zip (7-zip.org)</li>
+            <li>Create a file inventory: inVentory (indatacorp.com) iPro
+            iConvert+ (www.iprotech.com) ProNalysis Lite
+            (pronalysis.com)</li>
+            </ul>
+            <p>Other Programs</p>
+            <ul>
+            <li>WinMerge (winmerge.org) – compare files for changes</li>
+            <li>HTTrack (httrack.com) – create a copy of a website</li>
+            <li>Acrobat Reader (Acrobat.com), Foxit Reader
+            (http://www.foxitsoftware.com/pdf/reader/) – read PDF
+            files</li>
+            <li>PDF Split and Merge (pdfsam.org) – Split or merge PDF
+            files</li>
+            <li>Bulk ReName (bulkrenameutility.co.uk) – custom batch
+            rename files</li>
+            </ul>
+            <p>Low-cost Software Utilities</p>
+            <ul>
+            <li>Universal file viewer: QuickView Plus (avantstar.com) –
+            reads most file formats including email</li>
+            <li>Standard file indexing and search: Google Desktop,
+            Coperic, X1 Professional (pro.x1.com)</li>
+            <li>Advanced file indexing and search programs: ISYS
+            (isys-search.com), dtSearch (dtsearch.com)</li>
+            <li>Locate associated programs by file extension: Webopedia
+            (webopedia.com), Filext (filext.com) My File Formats
+            (myfileformats.com), Wotsit's Format (www.wotsit.org)</li>
+            </ul>
+            <p>(Courtesy of Alex Roberts, Defender Services
+            Division)</p>
+            <p>Appendix C</p>
+            <p>Interviewing the Client About Computers</p>
+            <p>One goal of interviewing your client is to assess his or
+            her relative sophistication as a computer user. What follows
+            is an outline of some areas to ask about. It does not
+            represent all possible computer scenarios or areas of
+            inquiry. Rather, it is to be thought of as a starting point
+            for an in-depth discussion with your client about the
+            possible computer evidence in your case.</p>
+            <p>If possible, have your expert with you and your attorney
+            in the client conference about the computer.</p>
+            <p>1) How was computer seized? Police have warrant? Consent
+            to search computer? Restrictions on the scope of
+            consent?</p>
+            <p>2) Where was the computer? Home, work, educational
+            setting? Who owns the computer? Length of ownership. Manner
+            of purchase.</p>
+            <p>3) What is the computer setup?</p>
+            <p>A) Brand of computer, type (laptop, desktop). Size of
+            hard drive. Multiple drives? Operating system &amp; version.
+            Modifications to system: Additional drives, additional
+            memory, partitioning drives, wiping or reformatting drives,
+            installing additional operating system, any
+            customization.</p>
+            <p>B) Is computer “stand alone” or networked? If networked,
+            what network system software, what network configuration?
+            What system networked to? Wireless networking in the home?
+            Manner of access to network. Who has network access rights,
+            and administrator rights?</p>
+            <p>C) Peripherals: types, brands and models of hardware
+            associated with the machine: External hard drives, modems,
+            printers, wireless routers, CD/DVD burners, cameras, phones,
+            PDA’s, monitors, stereos, or televisions. Almost all require
+            drivers.</p>
+            <p>D) Internet Service Provider (ISP), type of Internet
+            service (Dial-up, Cable, or DSL)? How long service
+            established? Prior ISP’s? Name of the person who has the
+            Internet account?</p>
+            <p>E) Applications Installed:</p>
+            <p>With what applications did the computer come installed?
+            What software did the client or others install? How was it
+            obtained? Freeware, shareware, or licensed? Word processors,
+            browsers: Internet Explorer, Firefox, Safari, Opera,
+            Netscape, MSN, AOL Browser and software? Email clients.
+            Instant messaging / chat software (ICQ, mIRC, AIM, Yahoo IM,
+            Trillium). Newsgroup viewing / management software. Webpage
+            builders, Webpage rippers. Smartphone (iPhone, Windows
+            Mobile, Android?) PDA software (Palm, HP). Address book,
+            calendaring, scheduling. Security / firewall software,
+            antivirus, disk utilities. Password insertion software. Disk
+            cleaners / “wipers”. Scripting software: PERL, SQL, UNIX.
+            Spreadsheet, database software. Specialized software: taxes,
+            compression/zip utilities, pop-up blockers / adware,
+            anti-spam, filtering, banking. Media software: CD/DVD
+            burners, MP3 / music management, peer-to-peer (P2P) clients
+            (Kazzaa, Morpheus, or Blubster). Media Players: RealPlayer,
+            Windows Media Player, Flash. Photo printing software,
+            graphics, Photoshop. Games.</p>
+            <p>4) Access and Accounts:</p>
+            <p>A) All email addresses associated to client. All email
+            addresses associated with any user of the seized
+            computer.</p>
+            <p>B) All Internet accounts, past and present.</p>
+            <p>C) All logins to machine, network logins.</p>
+            <p>D) All passwords.</p>
+            <p>E) Screen names/monikers, chat identifiers.</p>
+            <p>F) Membership to groups, bulletin boards, message
+            services, regular postings on sites.</p>
+            <p>5) Typical Uses / Patterns of Use:</p>
+            <p>A) Geographic location of computer. Always in the same
+            place? Computer always on?</p>
+            <p>B) What is the computer used for? How often? Kinds of
+            activities? Recreation only? Any employment use?</p>
+            <p>C) Any experiences being hacked, receiving viruses,
+            Trojan horses, strange replies to emails client never sent,
+            or unwanted software installations?</p>
+            <p>D) Names, email addresses, monikers, information of
+            people client communicates with by computer.</p>
+            <p>E) Dial-in or remote access services? Other servers:
+            Monetary transactions, online banking, bill pay, employment
+            computers, server based mail/photos, e.g., Hotmail.</p>
+            <p>F) Free emails, chats, photo, newsgroups, downloads. File
+            sharing – music, video?</p>
+            <p>G) Favorite web sites – Bookmark or Favorites lists?</p>
+            <p>H) Web searches, commonly used web pages and
+            services.</p>
+            <p>I) Client or any user of machine rent server space, or
+            have a domain or web page hosted by an ISP? A blog, or
+            online social networking page?</p>
+            <p>J) People finding or address look-ups associated with
+            charges?</p>
+            <p>K) Any computer activity automated? (Email check,
+            newsgroup downloads, system updates.)</p>
+            <p>L) Any remote access pathways to client’s machine? Any
+            remote pathways to other computers?</p>
+            <p>M) History of computer use - how started? Who taught? How
+            sophisticated does the client see him or herself as a
+            computer user? Any formal computer training? Work related
+            computer training or use?</p>
+            <p>N) Who are the other users on the network and how do they
+            access it? If so, how? Were separate logins required?</p>
+            <p>6) Recall of specific events underlying charge. Client’s
+            explanation of events or of computer evidence. Does client
+            claim unknowing possession of computer files, or automated
+            processes governing computer? If so, when did client notice
+            the activity and how? Are there others associated with the
+            client’s computer use, and do they have details to contact
+            them, such as email addresses or online screen names?</p>
+            <p>7) Recall of search: What, when, and where of computer
+            when the police first entered. What did they see happen? How
+            did law enforcement handle the machine? What did they ask
+            client about computer contents and computer search? What did
+            they inform client they were looking for? Did they inform
+            the client what they would do with seized computer? Any
+            assistance by client to law enforcement in searching for
+            files? Did they grant rights to law enforcement for access
+            on-line accounts?</p>
+            <p>Appendix D</p>
+            <p>Investigating the Computer Investigation</p>
+            <p>Below are some general areas of inquiry when trying to
+            uncover reasonable doubt and error in law enforcement’s
+            computer investigation. The questions are meant to suggest
+            thought and examination about particular areas. The list is,
+            of course, not exhaustive.</p>
+            <p>A. THE SEARCH WARRANT AFFIDAVIT</p>
+            <p>1) Read it closely. Read it twice.</p>
+            <p>2) Highlight any computer term you do not understand.
+            Highlight any term you think you understand but may only
+            have a cursory knowledge of. Research the terms and the
+            underlying process they describe. Does the affidavit explain
+            the process accurately, and completely?</p>
+            <p>3) Examine all of the “boilerplate” language. Often
+            contains a computer “definitions” section. Are the
+            definitions correct? Are they outdated? If asked, could the
+            affiant explain what they mean? Are they characterizing the
+            computer process correctly to the court, are they
+            oversimplifying it? The boilerplate language could be wrong,
+            or wildly inapplicable if the agent has not reviewed it in a
+            while.</p>
+            <p>4) Examine the explanation of what will be done with the
+            computer once seized. Research whether these are reasonable.
+            Was it necessary in this case to seize the entire machine?
+            Was it necessary to seize more than one machine?</p>
+            <p>5) Often contains assumptions about computer behavior
+            which could be subject to challenge: e.g. Your client is a
+            pedophile, and pedophiles never delete pornography from
+            computers. What is the empirical basis for such
+            assertions?</p>
+            <p>6) Establish the timeline. Are there reasonable
+            explanations for lapses in time between investigation and
+            applications for the warrant? <em>A computer’s makeup
+            changes every day.</em> Are there aspects of the timing of
+            events which do not make sense, or reveal something the
+            agent is leaving out of the affidavit?</p>
+            <p>7) Pay particular attention to reliance on computer
+            investigation and expertise of others. This may give you a
+            map to additional discovery the government won’t produce
+            initially.</p>
+            <p>8) What investigation did the affiant not do,
+            particularly in the area of corroboration. Were more
+            traditional forms of investigation employed, other than
+            verifying names and addresses? Was any investigation done on
+            the source of the initial information? Was the initial
+            information wrongly presumed to be reliable?</p>
+            <p>B. TRAINING</p>
+            <p>Law enforcement computer examiners are cops first and
+            computer professionals second. They are not usually true
+            experts, although they may have been qualified as such in
+            previous cases. The manner and level of training varies
+            widely among members of state and federal law
+            enforcement.</p>
+            <p>1) How many “computer investigations” have they
+            participated in? Even a hundred computer investigations may
+            have amounted to routine deployment of Encase, without much
+            in-depth technical examination. The number one observation
+            from Encase Customer Support is that the majority of the
+            questions sent to them are by officers who have had no
+            formal training in the use of the software.</p>
+            <p>2) How long has the affiant been doing computer related
+            investigations? When, in relation to your case, did they
+            receive computer forensic training?</p>
+            <p>3) What is their formal training? It is typically listed
+            in the affidavit. The agent or officer may be very
+            forthcoming about it when questioned by your
+            investigator.</p>
+            <p>4) Sources of Training Information:</p>
+            <p>Request training history with Oregon Department of Public
+            Safety Standards &amp; Training. (DPSST). It is a public
+            record. Request a curriculum vitae, either in discovery, or
+            informally. There is cross-training and cross-staffing
+            between members of the corporate computer security community
+            and law enforcement. Informal seminars / workshops. e,g.,
+            Computer Related Investigations</p>
+            <p>Management &amp; Education (C.R.I.M.E.); or Computer
+            Technology Investigators</p>
+            <p>Northwest (CTIN). Interagency training. Former Hillsboro
+            Police Department High Tech Team. Encase or SafeBack
+            in-house training programs: one or two day seminars.</p>
+            <p>Forensic software certification? Typically signals more
+            comprehensive training.</p>
+            <p>IACIS: International Association of Computer
+            Investigative Specialists. Open to law enforcement only.
+            Certified Electronic Evidence Collection Specialist &amp;
+            Certified Forensic Computer Examiner.</p>
+            <p>Federal Agency training: Federal Law Enforcement Training
+            Center (FLETC) in Glynco, Georgia. Offers several training
+            courses to state and federal law enforcement. The FBI trains
+            their own agents. They have also developed their own
+            forensic software.</p>
+            <p>New Portland FBI Regional Computer Forensics Laboratory
+            (RCFCL) and training center. One of 10 in the nation.</p>
+            <p>All of the training sources above can be subject to
+            public records requests or subpoena for course materials and
+            individual officer’s test performance. Seek out other cases
+            the officer or agent may have investigated or testified in.
+            The community of forensics examiners in Portland is small.
+            Take advantage of email lists, public defender experience,
+            and word-of-mouth. Your hired computer forensics examiner
+            likely knows about the officer or agent. If an agent has
+            extensive training, your point is stronger when they fail to
+            do certain things. When they have less training, they can
+            more easily be depicted as novices.</p>
+            <p>C. SEIZURE AND POST-SEIZURE INVESTIGATION</p>
+            <p>1) Did they process the evidence correctly? Did they boot
+            the computer? This is a beginner’s failure. Booting the
+            computer alters the hard drive. If the computer was on, how
+            did they shut it off?</p>
+            <p>Did they do any on-site viewing of the computer? If so,
+            how? Did they ask the suspect to assist in “looking around”
+            the computer? Procedures exist to preview a computer on site
+            safely.</p>
+            <p>2) Did they seize everything they need? Sometimes
+            peripherals, external drives, contain relevant evidence.
+            Particularly in a network setting, did they seize the
+            networking equipment? Did they diagram any of the network
+            connections? They did inquire of the suspects what the
+            network configurations were, or how the network was set up?
+            What was left behind?</p>
+            <p>3) Did they properly document the conditions under which
+            the hard drive was found, and removed? The make, model,
+            serial number, and operating system of the machine from
+            which the drive was removed? Location of the computer in the
+            building, and the condition of the machine? If more than one
+            hard drive seized, did they adequately document the identity
+            of the drive copies correlating to the originals? Is the
+            chain of evidence clean and preserved? Did they document the
+            seizure with photographs?</p>
+            <p>4) Did they enquire of anyone at the place of search
+            about computer usage by the suspect, or of any other people
+            who had access to the machine?</p>
+            <p>5) Did they seize original computer material, and return
+            any of it back to the suspect, or to other people, after
+            having mirrored the hard drives?</p>
+            <p>6) Did they use clean media to store the copy of the
+            drive, or did they recycle disks from an old case?</p>
+            <p>7) What software did they use to examine the drive? Have
+            they been formally trained in its operation?</p>
+            <p>8) Were their any technical glitches or mistakes in
+            acquiring the drive copy that necessitated them doing it
+            again? If so, is the error documented?</p>
+            <p>9) Did they use more than one type of software to obtain
+            the imaged copy of the drive: cross-validation. If not, can
+            they articulate the process by which error free acquisition
+            was verified?</p>
+            <p>10) In what form are the results of examination reported:
+            The original Encase reports? Summaries of found files?
+            Printouts of file lists? Printouts of images? Screen
+            captures? CD-Rom? Narrative police reporting? Copy and
+            pasting “search strings” into a present browser, or visiting
+            current versions of websites identified on the computer. In
+            most cases, only the partial products of the examination are
+            provided to the defense, and in many instances, the
+            prosecutor.</p>
+            <p>11) Hard drives are large. In almost every case a
+            complete computer examination is not performed or
+            documented, or “extraneous” findings are not reported. In
+            many cases, the examination was done only until sufficient
+            proof of the offense was believed to have be found.
+            Additional searching by your forensics examiner could
+            unearth mitigating or inculpatory evidence.</p>
+            <p>12) Have your computer forensics examiner review the
+            search warrant affidavit, search warrant execution reports,
+            and any forensic reports or other evidence regarding the
+            computer.</p>
+            <p><em>Your best questions will come from an intelligent
+            dialogue between the two of you, matching legal issues with
+            forensic concerns.</em></p>
+            </section>
+    </body>
+</html>

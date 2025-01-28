@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Search and Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Search and Seizure Manual</h1>
+                                    </section>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <div class="WordSection1">
+            <p><span id="i.-the-test-and-general-principles-mobility-plus-probable-cause"></span></p>
+            <section
+            id="i._the_test_and_general_principles_mobility_plus_probable_cause"
+            class="level2">
+            <h2>I. The Test and General Principles: Mobility Plus
+            Probable Cause</h2>
+            <p>The “automobile exception” is “a subset of the exigent
+            circumstances exception” under which the
+            “[m]<span class="SpellE">obility</span> of the vehicle, by
+            itself, creates the exigency.” <a
+            href="https://scholar.google.com/scholar_case?case=9989093814618779548&amp;q=State+v.+Brown,+301+Or+268,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Brown</em>, 301 Or 268, 276, 721 P2d 1357 (1986)</a>.
+            <em>Brown</em> was the first case to establish Oregon’s
+            automobile exception, and the Supreme Court has since upheld
+            it, further defined it, and sometimes stressed that it will
+            one day be obsolete.</p>
+            <p>The automobile exception allows law enforcement to search
+            a vehicle if (1) the officer has probable cause to believe
+            that the vehicle contains “contraband or evidence of a
+            <span class="GramE">crime[</span>,]” and (2) the vehicle is
+            mobile when officers lawfully stop it or when they first
+            encounter it in connection with a criminal investigation. <a
+            href="https://scholar.google.com/scholar_case?case=2272406714115033478&amp;q=State+v.+Bliss,+363+Or+426,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Bliss</em>, 363 Or 426, 438, 423 P3d 53 (2018)</a>, <a
+            href="https://scholar.google.com/scholar_case?case=9663463467477800162&amp;q=State+v.+Kurokawa-Lasciak,+351+Or+179&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v.</em>
+            <span class="SpellE"><em>Kurokawa-Lasciak</em></span>, 351
+            Or 179, 263 P3d 336 (2011)<span>.</span></a></p>
+            <div class="bon-update">
+            <p><span id="update"></span></p>
+            <section id="update" class="level3">
+            <h3>2024 Update</h3>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=12384738223176108105&amp;q=State+v.+McCarthy,+369+Or+129&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McCarthy</em>, 369 Or 129, 177, 501 P3d 478 (2021)</a>,
+            the court eliminated the automobile exception. Prior to
+            <em>McCarthy</em>, the automobile exception was a <em>per
+            se</em> exigency, in which police could search a car without
+            a warrant if they had probable cause that the car contained
+            evidence of a crime and if the car was mobile when the
+            police encountered it in connection with a crime. <a
+            href="https://scholar.google.com/scholar_case?case=9989093814618779548&amp;q=State+v.+Brown,+301+Or+268&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown</em>, 301 Or 268, 278, 721 P2d 1357 (1986)</a>,
+            <em>overruled by McCarthy</em>, 369 Or 129.</p>
+            <p>In disavowing the automobile exception, the court
+            criticized its reasoning in <em>Brown</em><span> </span>as
+            overly reliant on Fourth Amendment jurisprudence.
+            <em>McCarthy</em>, 369 Or at 153-56. The court also reasoned
+            that the <em>per se</em> rule was meant to provide clarity
+            to police and lower courts but that the subsequent case law
+            demonstrated that it had failed to do either. <em>Id.</em>
+            at 157, 168. Further, the <em>Brown</em> court expressly
+            intended the automobile exception to be a temporary rule
+            that would expire when technology developed enough to allow
+            warrants to be issued more quickly and easily, and the
+            <em>McCarthy</em> court was satisfied by the
+            post-<em>Brown</em> technological developments and
+            legislative changes to warrant application procedures.
+            <em>Id.</em> at 147, 173-76. Finally, the court reasoned
+            that the scope of the exception impermissibly exceeded its
+            underlying justification and thus permitted warrantless
+            searches under an exigency rationale despite the absence of
+            any actual exigency. <em>Id</em>. at 168.</p>
+            <p>For those reasons, the court overruled <em>Brown</em>,
+            disavowed the automobile exception, and held that, “in order
+            to justify a warrantless seizure or search of a vehicle
+            based on exigent circumstances, the state must prove that
+            exigent circumstances actually existed at the time of the
+            seizure or the search[.]” <em>Id.</em> at 177. To prove that
+            exigency, “the state must prove that it could not obtain a
+            warrant through reasonable steps, which include utilizing
+            available processes for electronic warrants” without
+            allowing the loss or destruction of the evidence sought.
+            <em>Id.</em></p>
+            <p>Further, the court held that a seizure and a search of a
+            car must be “separately analyzed”: while an exigency “may
+            justify the seizure of a vehicle,” “the seizure itself may
+            eliminate any exigency that would justify proceeding further
+            without a warrant. Once officers have seized a vehicle,
+            their control over it may eliminate the need to search it
+            before a warrant application can be processed.” <em>Id.</em>
+            at 178.</p>
+            </div>
+            <p><span id="a.-the-mobility-requirement"></span></p>
+            </section>
+            <section id="a._the_mobility_requirement" class="level3">
+            <h3>A. The Mobility Requirement</h3>
+            <p><span id="mobile-means-moving-not-operable"></span></p>
+            <section id="mobile_means_moving_not_operable"
+            class="level4">
+            <h4>1. “Mobile” Means “Moving,” Not “Operable”</h4>
+            <p><em>Brown</em> held that police may search a “lawfully
+            stopped car” provided there exists probable cause. 301 Or at
+            275. The Supreme Court subsequently held that a car that is
+            parked, immobile and unoccupied when police first
+            “encounter” it may not be searched under the automobile
+            exception—even if it is operable.</p>
+            <p>The Supreme Court later clarified that “bright line rule”
+            in <span class="SpellE"><em>Kurokawa-Lasciak</em></span>:
+            “mobile” does not mean “operable,” and a defendant need not
+            show that a car was inoperable <span class="GramE">in order
+            to</span> overcome the automobile exception. 351 Or at 193.
+            The court reasoned that even if it were just as possible an
+            operable but parked vehicle could be driven away, the
+            automobile exception is a bright-line rule and must stay
+            that way <span class="GramE">in order to</span> “benefit
+            both the police and the citizens of this state.”
+            <em>Id</em>.</p>
+            <p><span id="the-timing-of-mobility-when-first-encountered-in-connection-with-a-crime"></span></p>
+            </section>
+            <section
+            id="the_timing_of_mobility_when_first_encountered_in_connection_with_a_crime"
+            class="level4">
+            <h4>2. The Timing of Mobility: When “First Encountered in
+            Connection With a Crime”</h4>
+            <p>Provided a vehicle is not actually stopped lawfully by
+            police (further explained below), then
+            <span class="GramE">in order for</span> the automobile
+            exception to apply, the vehicle “must be mobile at the time
+            that the police encounter it in connection with a crime.”
+            <span class="SpellE"><em>Kurakawa-Lasciak</em></span><em>,</em>
+            351 Or at 192.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=9986710027561146258&amp;q=State+v.+Meharry,+342+Or+173,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Meharry</em>, 342 Or 173, 149 P3d 1155
+            (2006)<span>,</span></a> the Supreme Court concluded that
+            the officer had “encountered” a vehicle in connection with a
+            crime when the officer—who already had reasonable suspicion
+            that the defendant was driving under the influence of
+            intoxicants—saw the defendant driving the vehicle. Even
+            though the officer did not stop the defendant—he caught up
+            with her after she had parked at a store—the automobile
+            exception justified the search, because the officer had
+            encountered her moving vehicle <span class="GramE">in the
+            course of</span> the criminal investigation of DUII.</p>
+            <p>The Court of Appeals has emphasized the distinction
+            between merely “encountering” a vehicle and “encountering it
+            in connection with a crime.” <a
+            href="https://scholar.google.com/scholar_case?case=16530616089358579908&amp;q=State+v.+Pirtle,+255+Or+App+195,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Pirtle</em>, 255 Or App 195, 296 P3d 625 (2013</a>). In
+            that case, a police officer happened to observe the
+            defendant’s truck in motion, but did not realize it was
+            connected to any crime until later, when it was parked and
+            unoccupied. <em>Id.</em> at 201. The court held that the
+            automobile exception did not apply—there was no concurrence
+            of mobility <em>and</em> connection with a crime.
+            <em>Id</em>. Similarly, in <a
+            href="https://scholar.google.com/scholar_case?case=12309284753518173307&amp;q=State+v.+Groom,+249+Or+App+118&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Groom</em>, 249 Or App 118, 274 P3d 876 (2012</a>),
+            police did not realize that the defendant’s moving vehicle
+            was connected to any crime when they randomly checked its
+            license. By the time the officers had discovered the vehicle
+            owner had an outstanding warrant, the car had turned down a
+            side street and parked. Then, by the time the officer
+            relocated the car, the driver and one of the passengers were
+            standing on the sidewalk. The officer developed probable
+            cause that a purse inside the car contained drugs, searched
+            it, and found drugs. But the Court of Appeals held that,
+            <span class="GramE">in light of</span>
+            <span class="SpellE"><em>Kurokawa</em></span>, the
+            automobile exception did not authorize the search of the
+            car. It held that the vehicle was only “mobile” while the
+            officer was “randomly” running license plates and so the
+            encounter was not “in connection with a crime.” Instead, the
+            nexus with a crime occurred later, after the car had been
+            parked, the defendant was standing outside of it, and the
+            officer uncovered additional information that led him to
+            suspect that the car contained drugs. In other words, the
+            officer first encountered the vehicle while it was mobile;
+            but he first encountered the vehicle <em>in connection with
+            a crime</em> while it was parked.</p>
+            <p>The police do not have to observe the automobile
+            <span class="GramE">actually being</span> driven to
+            establish “mobility” where it is obvious that the car just
+            came to rest after having been driven. <a
+            href="https://scholar.google.com/scholar_case?case=4905480202733943608&amp;q=State+v.+Andersen,+361+Or+187,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Andersen</em>, 361 Or 187, 390 P3d 992 (2017)</a>. In
+            <em>Andersen</em>, two officers were waiting for the
+            defendant’s car to arrive at a parking lot to complete a
+            drug sale with an informant. One officer was listening in on
+            the defendant’s passenger’s cell phone
+            <span class="GramE">conversation, and</span> learned that
+            the car was just arriving at the parking lot. But the other
+            officer left to check on whether the defendant was pulling
+            into a different part of the lot. By the time the officer
+            returned a minute later, the defendant’s car was parked. The
+            engine was <span class="GramE">running</span> and the
+            defendant was in the driver’s seat, but the officer had
+            never actually seen the car moving. Under those
+            circumstances, the court held that the car was “mobile.” The
+            officers had encountered it moving (via the cell phone
+            conversation and other circumstances) during their criminal
+            investigation, even if not with their sight.</p>
+            <p><span id="mobile-when-lawfully-stopped"></span></p>
+            </section>
+            <section id="mobile_when_lawfully_stopped" class="level4">
+            <h4>3. Mobile When Lawfully Stopped</h4>
+            <p>In <em>Bliss</em>, the Supreme Court made one exception
+            to the rule that a car must be moving when encountered in
+            connection with a crime: The automobile exception justifies
+            searching a car that is parked and immobile when police
+            connect it to a criminal investigation, so long as the
+            automobile was lawfully stopped—<em>e.g</em>., for a traffic
+            violation. The court took its reasoning from the language in
+            <em>Brown</em>, Oregon’s case establishing the automobile
+            exception, allowing the search of “lawfully stopped”
+            vehicle. <a
+            href="https://scholar.google.com/scholar_case?case=2272406714115033478&amp;q=State+v.+Bliss,+363+Or+426,&amp;hl=en&amp;as_sdt=6,38"><em>Bliss</em>,
+            363 Or at 438</a> (quoting <em>Brown</em>, 301 Or at 278).
+            In other words, to meet the mobility prong of the automobile
+            exception, the automobile need only be mobile at the time it
+            is lawfully stopped by police—for whatever lawful reason. If
+            police stop the car for a traffic violation, and then
+            develop probable cause (while the car is parked) of a crime
+            or contraband, they may search under the automobile
+            exception. In that circumstance, the car does have to be
+            mobile when first encountered in connection with a
+            crime.</p>
+            <p>Note: Though it was not a central issue, the Supreme
+            Court repeatedly states that the automobile must be
+            “lawfully stopped” <span class="GramE">in order to</span>
+            meet the mobility prong of the automobile exception.</p>
+            <p><span><br />
+            </span></p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>If an officer lawfully stops a car for a traffic
+            violation, then unlawfully extends the stop to develop
+            probable cause of a crime or contraband, defendants should
+            argue that the automobile exception cannot justify a search:
+            Because the vehicle must be “lawfully stopped” under
+            <em>Brown</em> and <em>Bliss</em> for the automobile
+            exception to apply (if it was not mobile when first
+            encountered in connection with a crime), then the unlawful
+            extension of the stop takes the search out of the automobile
+            exception’s bright-line rule.</p>
+            </div>
+            <p><span id="b.-the-probable-cause-requirement"></span></p>
+            </section>
+            </section>
+            <section id="b._the_probable_cause_requirement"
+            class="level3">
+            <h3>B. The Probable Cause Requirement</h3>
+            <p>Probable cause must still exist at the time of the
+            search. <em>Bliss</em>, 363 Or at 438. This is true even
+            though officers may stop the car for a traffic violation and
+            then search pursuant to the automobile exception: they may
+            only do so if they develop probable cause of a crime or
+            contraband. Strictly speaking, probable cause is not really
+            a prong of the automobile <span class="GramE">exception,
+            but</span> is an overall prerequisite for all searches. The
+            automobile exception is an exception to the warrant
+            requirement; all searches must be justified by probable
+            cause <em>and</em> either a warrant or an exception to the
+            warrant requirement.</p>
+            <p><span id="ii.-challenging-the-per-se-nature-of-the-rule-and-requiring-actual-exigency"></span></p>
+            </section>
+            </section>
+            <section
+            id="ii._challenging_the_per_se_nature_of_the_rule_and_requiring_actual_exigency"
+            class="level2">
+            <h2>II. Challenging the Per Se Nature of the Rule and
+            Requiring Actual Exigency</h2>
+            <p><span id="a.-has-the-supreme-court-cast-doubt-on-per-se-exigency"></span></p>
+            <section
+            id="a._has_the_supreme_court_cast_doubt_on_per_se_exigency"
+            class="level3">
+            <h3>A. Has the Supreme Court cast doubt on per se
+            exigency?</h3>
+            <p><em>Andersen</em> would appear to open the door to
+            arguments that the state must show actual exigency, and that
+            the automobile exception may not provide a <em>per
+            se</em> rule of exigency for much longer. But the Court of
+            Appeals has interpreted <em>Bliss </em>as having “retreated
+            from” any doubt that <em>Andersen</em> may have cast on
+            the <em>per se </em>nature of the automobile exception. <a
+            href="https://scholar.google.com/scholar_case?case=1538017974849048246&amp;q=State+v.+McCarthy,+302+Or+App+82,+&amp;hl=en&amp;as_sdt=6,38"><span class="hyperlinkital">State
+            v. McCarthy</span>, 302 Or App 82, 90, 459 P3d 890</a>,
+            <em>rev all’d</em>, 366 Or 691, 466 P3d 958 (July 2, 2020).
+            The Supreme Court has granted review of <br />
+            <em>McCarthy</em>. </p>
+            <p>The issue in <em>McCarthy</em> is whether current
+            technological realities <em>coupled </em>with legislative
+            changes that expedite the warrant application process are
+            sufficient to trigger <em>Brown</em>’s sunset provision,
+            such that the state would bear the burden to establish that
+            an actual exigency existed at the time of the search.</p>
+            <p>When the Supreme Court created<em> </em>Oregon’s
+            automobile exception, it included a sunset provision on the
+            rule. “[T]he court did not anticipate that the police would
+            rely on the automobile exception when advances in technology
+            permitted quick and efficient electronic issuance of
+            warrants.” <a
+            href="https://scholar.google.com/scholar_case?case=9663463467477800162&amp;q=State+v.+Kurokawa-Lasciak,+351+Or+179&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Kurokawa</em></span><em>-<br />
+            <span class="SpellE">Lasciak</span></em></a><a
+            href="https://scholar.google.com/scholar_case?case=9663463467477800162&amp;q=State+v.+Kurokawa-Lasciak,+351+Or+179&amp;hl=en&amp;as_sdt=6,38">,
+            351 Or</a> <a
+            href="https://scholar.google.com/scholar_case?case=9663463467477800162&amp;q=State+v.+Kurokawa-Lasciak,+351+Or+179&amp;hl=en&amp;as_sdt=6,38">at
+            188</a>. In fact, the <em>Brown </em>court
+            “<span class="SpellE">fores</span>[aw] a time in the near
+            future when the warrant requirement of the state and federal
+            constitution [could] be fulfilled virtually without
+            exception.” 301 Or at 278 n 6<em>. Brown </em>envisioned a
+            future where technological realities made it practicable for
+            police to call a magistrate on a recorded line to state “the
+            facts, given under oath, constituting the purported probable
+            cause” and, if sufficient, “the magistrate would immediately
+            issue an electronic warrant authorizing the officer on the
+            scene to proceed.” <em>Id. </em></p>
+            <p>There should be little doubt that the advances in
+            technology now available to law enforcement should bring an
+            end to the <em>per se</em> nature of the automobile
+            exception.</p>
+            <p><span id="b.-must-the-defendant-prove-that-there-was-no-actual-exigency"></span></p>
+            </section>
+            <section
+            id="b._must_the_defendant_prove_that_there_was_no_actual_exigency"
+            class="level3">
+            <h3>B. Must the defendant prove that there was no actual
+            exigency?</h3>
+            <p>So far, the Court of Appeals acknowledges that a search
+            may be unlawful if there was no actual exigency—even if the
+            automobile exception would otherwise apply.
+            <em>McCarthy</em> squared Supreme Court precedent with that
+            acknowledgement by stating that it is the defendant’s burden
+            to show that there was no exigency—for instance, by
+            establishing that the state could have quickly obtained a
+            telephonic warrant. <em>McCarthy</em>, 302 Or App at 89
+            (“<em>Andersen</em> appears to cast the theoretical exigency
+            that underlies the automobile exception as a rebuttable
+            presumption.”). This conflicts with the general rule that
+            the state ordinarily must prove that an exception to the
+            warrant requirement exists. Again, the Supreme Court has
+            granted review of <em>McCarthy</em>.</p>
+            <p><span id="c.-keeping-the-bright-line-rule-narrow"></span></p>
+            </section>
+            <section id="c._keeping_the_bright_line_rule_narrow"
+            class="level3">
+            <h3>C. Keeping the Bright Line Rule Narrow</h3>
+            <p>It is important to note that the Supreme Court’s
+            decisions on the automobile exception are, in the opinion of
+            some of the justices, somewhat in conflict, making the
+            automobile exception ripe for further challenge. When
+            Justice Walters (joined by Justice Nakamoto) dissented in
+            <em>Bliss</em>, she opined that <em>Bliss</em> strays from
+            the hard line drawn earlier by
+            <span class="SpellE"><em>Kurokawa-Lasciak</em></span>—and
+            also by <em>Meharry</em>, <a
+            href="https://scholar.google.com/scholar_case?case=3377219396477771906&amp;q=State+v.+Kock,+302+Or+29,+725+P2d+1285+(1986&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Kock</em>, 302 Or 29, 725 P2d 1285 (1986</a>), and
+            <em>Brown</em>. <em>Bliss</em>, 363 Or at 439 (Walters, J.,
+            dissenting). Of course, the majority opinion in
+            <em>Bliss</em> does not purport to conflict with that
+            earlier jurisprudence; instead, the majority opinion states
+            that <em>Brown</em> in the first place justified searching a
+            “lawfully stopped” car and that no Supreme Court case had
+            squarely confronted whether that lawful stop could be for a
+            traffic violation rather than for a crime.</p>
+            <p>But the dissent would hold that <em>Bliss</em> was an
+            expansion of the rule, because the former cases could not be
+            interpreted to apply to stops for traffic violations. The
+            reason that the dissent finds a necessary distinction
+            between traffic stops and criminal investigations is this:
+            “[T]he fact that exigent circumstances may be established
+            does not provide a reason to expand the circumstances in
+            which an exigency must be assumed.” <em>Bliss</em>, 363 Or
+            at 439 (Walters, J., dissenting). In other words, it is one
+            thing to allow a <em>per se</em> exigency for vehicles that
+            are the subject of a criminal investigation. But to
+            establish a <em>per se</em> exigency to traffic stops, which
+            are far more common, would be an expansion of the rule, in
+            the eyes of the dissent.</p>
+            <p>This means that at least some justices view the
+            automobile exception as a narrow, bright-line rule that does
+            not justify expansion. All justices seem to agree on that
+            principle. But it is important to see where some justices
+            would perceive an “expansion” that other justices see as
+            application. Attorneys should argue that new applications of
+            the automobile exception are expansions of the bright-line
+            rule, where possible.</p>
+            <p><span><br />
+            </span>
+            <span id="iii.-common-issues-within-the-automobile-exception"></span></p>
+            </section>
+            </section>
+            <section
+            id="iii._common_issues_within_the_automobile_exception"
+            class="level2">
+            <h2>III. Common Issues Within the Automobile Exception</h2>
+            <p><span id="a.-must-police-actually-stop-the-car"></span></p>
+            <section id="a._must_police_actually_stop_the_car"
+            class="level3">
+            <h3>A. Must Police Actually Stop the Car?</h3>
+            <p>Not if officers observe the vehicle in motion while there
+            is a contemporaneous connection between it and a crime. <a
+            href="https://scholar.google.com/scholar_case?case=1619347317119281940&amp;q=State+v.+Finlay,+257+Or+App+581,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Finlay</em>, 257 Or App 581, 591, 307 P3d 518 (2013)</a>.
+            In other words, “lawfully stopping” a mobile car and “first
+            encountering a vehicle in connection with a crime” while the
+            vehicle is moving are two alternative ways to establish
+            mobility under the automobile exception.</p>
+            <p><span id="b.-limitations-on-scope-of-the-search"></span></p>
+            </section>
+            <section id="b._limitations_on_scope_of_the_search"
+            class="level3">
+            <h3>B. Limitations on Scope of the Search</h3>
+            <p>Police may search “any area of the vehicle or any
+            container within the vehicle in which they have probable
+            cause to believe that the contraband or crime evidence may
+            be found.” <a
+            href="https://scholar.google.com/scholar_case?case=6582415683801406775&amp;q=State+v.+Smalley,+233+Or+App+263,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Smalley</em>, 233 Or App 263, 267, 225 P3d 844
+            (2010)</a>.</p>
+            <p>Nothing in <em>Brown</em>, or the cases that have
+            followed, extends the automobile exception to a search of a
+            defendant’s person while the defendant is standing outside
+            the car. <a
+            href="https://scholar.google.com/scholar_case?case=5385010934050193141&amp;q=State+v.+Jones,+253+Or+App+246,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Jones</em>, 253 Or App 246, 247, 289 P3d 360
+            (2012)</a>.</p>
+            <p>The police cannot wait until after the car has been
+            impounded to conduct a search pursuant to the automobile
+            exception. <a
+            href="https://scholar.google.com/scholar_case?case=11264397036353792082&amp;q=State+v.+Quinn,+290+Or+383,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Quinn</em>, 290 Or 383, 392, 623 P2d 630 (1981)</a>
+            (<em>overruled in part on other grounds</em>, <a
+            href="https://scholar.google.com/scholar_case?case=3400934262176087409&amp;q=State+v.+Hall,+339+Or+7,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Hall</em>, 339 Or 7, 28,115 P3d 908 (2005))</a>:</p>
+            <div class="blockquote">
+            <p>“Here, however, the delay was not occasioned by the
+            impracticability of searching the car immediately. Rather it
+            was for the convenience of the police and the owner of the
+            stolen property [suspected to be inside the vehicle]. If the
+            requirement that decisions to search must be judicial is to
+            have any effect and if the exigent circumstances doctrine is
+            to have any temporal limitation, then a deferred warrantless
+            search must be commenced as promptly after the seizure as is
+            reasonable in the circumstances. This one was not. The
+            expeditious sequence was broken, <em>cf. Mincey v.
+            Arizona</em>, 437 US 385, 98 S Ct 2408, 57 L Ed 2d 290
+            (1978). There was time and opportunity to seek judicial
+            authorization indeed the officer was ready to do so, but he
+            understood the deputy district attorney to have advised him
+            otherwise. The failure to have obtained a warrant
+            invalidates the delayed search.”</p>
+            </div>
+            <p><em>Quinn</em>, 290 Or at 392.</p>
+            <p><span id="c.-contraband-and-violation-level-controlled-substances"></span></p>
+            </section>
+            <section
+            id="c._contraband_and_violation_level_controlled_substances"
+            class="level3">
+            <h3>C. “Contraband” and Violation-level Controlled
+            Substances</h3>
+            <p>When possession of less than an ounce of marijuana was
+            reduced from a crime to a violation, the Court of Appeals
+            held that “contraband” included marijuana. <a
+            href="https://scholar.google.com/scholar_case?case=6582415683801406775&amp;q=State+v.+Smalley,+233+Or+App+263,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Smalley</em>,</a> 233 Or App 263, 265, 225 P3d 844,
+            <em>rev den</em>, 348 Or 415 (2010). There, the driver
+            consented to a search of the pickup, and in that search an
+            officer located a backpack from which a strong odor of
+            marijuana emanated. <em>Id</em>. Based on the strength of
+            the smell emitting from the backpack, the officer believed
+            that the backpack contained a large amount of marijuana.
+            <em>Id</em>. The Court of Appeals concluded that based on 1)
+            the smell of actual marijuana, 2) coming from a particular
+            location, 3) that was consistent with a large quantity of
+            marijuana based on the officer’s training and experience,
+            the officer had probable cause to believe that some quantity
+            of marijuana was in the backpack. <em>Id</em>. at 268.</p>
+            <p>Where the officer only testifies to an odor of burned
+            marijuana coming from the car, <em>Smalley</em> does not
+            control. To conclude that the smell of burned marijuana
+            signifies the presence of unburned marijuana is comparable
+            to concluding that the smell of alcohol on a driver’s breath
+            signifies the presence of unconsumed alcohol in the driver’s
+            car. Because such smells can linger long after the substance
+            is initially consumed, it is too speculative to conclude
+            that the car contains additional drugs or alcohol.</p>
+            <p>Additionally, where the officer merely observes drug
+            paraphernalia, such as a pipe—the pipe itself is not
+            contraband—thus, that alone cannot support a search under
+            the automobile exception. <a
+            href="https://scholar.google.com/scholar_case?case=9744974499205292263&amp;q=State+v.+Sunderman,+304+Or+App+329&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. <span class="SpellE">Sunderman</span></em>, 304 Or App
+            329, 344-46, 467 P3d 52 (2020)</a>.</p>
+            <p>This means that where an officer has probable cause to
+            believe the car contains a violation-level amount of
+            controlled substance, <em>Smalley</em> probably
+            <span class="GramE">applies</span> and the search could be
+            justified under the automobile exception. But the state
+            cannot get there by merely showing evidence of recent drug
+            consumption, or of drug paraphernalia.</p>
+            <p>This also means that, post-legalization of marijuana,
+            attorneys should argue that <em>Smalley</em> no longer
+            applies to searches for marijuana possession, because
+            marijuana no longer qualifies as “contraband.”</p>
+            <p><span id="d.-suppressing-statements"></span></p>
+            </section>
+            <section id="d._suppressing_statements" class="level3">
+            <h3>D. Suppressing Statements</h3>
+            <p>The automobile exception alone does not authorize
+            detaining a car’s occupants outside the car to await the
+            results of a search, unless police have reasonable suspicion
+            to stop the <span class="GramE">particular
+            individual</span>. That means that even if the prongs of the
+            automobile exception are met, any incriminating responses
+            made under police questioning during such a detention are
+            subject to suppression. <a
+            href="https://scholar.google.com/scholar_case?case=11881270397736429926&amp;q=State+v.+Tovar,+256+Or+App+1&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Tovar</em>, 256 Or App 1, 299 P3d 580 (2013)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=2631946045758538044&amp;q=State+v.+Martinez,+275+Or+App+645&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Martinez</em>, 275 Or App 645, 365 P3d 659
+            (2015)</a>.</p>
+            <p><span id="iv.-dog-sniffs-and-the-automobile-exception"></span></p>
+            </section>
+            </section>
+            <section id="iv._dog_sniffs_and_the_automobile_exception"
+            class="level2">
+            <h2>IV. Dog Sniffs and the Automobile Exception</h2>
+            <p><span id="a.-a-questionable-premise"></span></p>
+            <section id="a._a_questionable_premise" class="level3">
+            <h3>A. A Questionable Premise</h3>
+            <p>When conducted from a public place, “dog sniffs are
+            <em>not</em> searches.” <a
+            href="https://scholar.google.com/scholar_case?case=2861159817088774092&amp;q=State+v.+Smith,+327+Or+366,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Smith</em>, 327 Or 366, 374, 963 P2d 642 (1998)</a>
+            (emphasis in original).<span> </span>That conclusion
+            followed from the following reasoning:</p>
+            <div class="blockquote">
+            <p>“[S]<span class="SpellE">ome</span> police techniques
+            clearly do involve technological or figurative invasions of
+            privacy interests. High-powered telescopes, parabolic sound
+            gathering devices, and infrared cameras all
+            <span class="GramE">are able to</span> gather ordinarily
+            imperceptible information (in the form of light rays, sound
+            waves, or heat waves) from the interior of an enclosed space
+            as it emanates from that space. Although such devices can
+            operate from an external and public place, their use is
+            invasive nevertheless, because they provide information from
+            an enclosed space about the enclosure’s contents that a
+            police officer, standing at a lawful vantage point, cannot
+            detect with ordinary human powers of perception. That is,
+            they constructively move the observing police officer into
+            the private space.</p>
+            <p>“Superficially, one might argue that dog sniffs fall into
+            that category—that trained police dogs perceive odor
+            molecules as they emanate from an enclosed space and then
+            indicate the contents of the enclosure by their reactions.
+            But dog sniffs do not provide the kind of direct access to
+            the interiors of enclosed spaces that the
+            <span class="GramE">aforementioned device</span> provide.
+            Dog sniffs operate on a sample of air whose origins are
+            unknown. One may infer from the fact that a dog detects the
+            presence of a substance in the public airspace surrounding
+            an enclosure that the enclosure contains that substance.
+            However, that would only be an inference. For the purposes
+            of both the dog and its human interpreter, the substance
+            that is detected remains an ambient substance in the public
+            airspace. As such, dog sniffs do not extract information
+            from the interior of a private space, either literally or
+            figuratively. They are not invasive in any sense of the
+            word.</p>
+            <p>“The clear import of the foregoing is that, at least when
+            they are conducted in a public place, dog sniffs are not
+            searches. And, because they are not, the protections of
+            Article I, section 9—including the warrant requirement—do
+            not apply.”</p>
+            </div>
+            <p><em>Smith</em>, 327 Or at 374.</p>
+            <p>The government’s use of a trained police dog to
+            investigate is a “search” within the meaning of the Fourth
+            Amendment. <a
+            href="https://scholar.google.com/scholar_case?case=2570635442757547915&amp;q=Florida+v.+Jardines,+569+US+1,+&amp;hl=en&amp;as_sdt=6,38"><em>Florida
+            v. <span class="SpellE">Jardines</span>,</em> 569 US 1, 133
+            S Ct 1409, 185 L Ed 2d 495 (2013)</a> (holding that the
+            officer’s entry onto the defendant’s curtilage (the front
+            porch) was not explicitly or implicitly invited, and that
+            the use of a dog sniff there was an unreasonable
+            search).</p>
+            <p>A person who is not the target of the investigation is
+            not necessarily seized just because a drug dog walks around
+            the perimeter of a car. <a
+            href="https://scholar.google.com/scholar_case?case=16283336045762478862&amp;q=State+v.+Sexton,+278+Or+App+1,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Sexton</em>, 278 Or App 1, 378 P3d 83 (2016)</a>. But a
+            dog sniff might impermissibly extend the scope of a stop
+            under Article I, section 9,
+            <span class="SpellE">andthe</span> Fourth Amendment, even
+            though dog sniffs are not <em>per se</em> seizures.
+            <em>See</em> <a
+            href="https://scholar.google.com/scholar_case?case=15021741305239128728&amp;q=State+v.+Soto-Navarro,+309+Or+App&amp;hl=en&amp;as_sdt=1ffffffffffffffffffffffffffffffffe000000000000001f000001ffffffecfff87fe3fffffff00108000400000000004"><em>State
+            v. Soto-Navarro</em>, 309 Or App 218, 229-30, 482 P3d 150
+            (2021)</a> (dog sniff extended scope of stop of seized
+            passenger); <em>see also</em> <a
+            href="https://scholar.google.com/scholar_case?case=5414265914449116671&amp;q=State+v.+Kamph,+297+OR+App+687,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Kamph</span></em>, 297 OR App 687,
+            442 P3d 1129 (2019)</a> (passenger is seized under the
+            Fourth Amendment when a car is stopped, but not under
+            Article I, Section 9). (<em>See, e.g.,</em> <a
+            href="https://scholar.google.com/scholar_case?case=10929318046010341425&amp;q=Arizona+v.+Johnson,+555+US+323,+&amp;hl=en&amp;as_sdt=6,38"><em>Arizona
+            v. Johnson</em>, 555 US 323, 327, 129 S Ct 781, 172 L Ed 2d
+            694
+            (2009)</a><span class="MsoHyperlink">)</span><em>.</em></p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>Because dog sniffs are searches under the Fourth
+            Amendment and <span class="SpellE"><em>Jardines</em></span>,
+            and extensions under Article I, section 9 (unless supported
+            by reasonable suspicion), attorneys should argue that a dog
+            sniff impermissibly extends the traffic stop when there is
+            no constitutionally sufficient justification. In the
+            automobile exception context, attorneys should argue that a
+            “lawfully stopped” car cannot be searched under the
+            automobile exception if that lawful stop is unlawfully
+            extended.</p>
+            </div>
+            <p><span id="b.-a-drug-dogs-alert-does-not-establish-probable-cause"></span></p>
+            </section>
+            <section
+            id="b._a_drug_dogs_alert_does_not_establish_probable_cause"
+            class="level3">
+            <h3>B. A Drug Dog’s Alert Does Not Establish Probable
+            Cause</h3>
+            <p>A drug dog’s alert, standing alone, does not provide
+            probable cause to search. <a
+            href="https://scholar.google.com/scholar_case?case=9067572705967075612&amp;q=State+v.+Foster,+350+Or+161,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Foster</em>, 350 Or 161, 177, 252 P3d 292 (2011)</a>.
+            Determining whether an alert provided probable cause
+            <span class="GramE">in a given</span> situation requires “an
+            individualized inquiry into the reliability of the
+            particular dog involved.” <em>Id</em>. at 171. In
+            determining the reliability of a particular alert, courts
+            must consider the dog and handler team’s training, testing,
+            and certification. <em>See, e.g</em>[<a
+            href="https://scholar.google.com/scholar_case?case=17990926071008329344&amp;q=">https://scholar.google.com/scholar_case?case=17990926071008329344&amp;q=</a>.,+State+v.+Snyder,+281+Or+App+308,+&amp;hl=en&amp;as_sdt=6,38
+            <em><span>., </span>State v. Snyder</em>, 281 Or App 308,
+            383 P3d 357 (2016)] (evidence was insufficient to
+            demonstrate the dog’s training and certification).</p>
+            <p><span id="c.-state-must-prove-reliability-based-on-dogs-training-testing-and-certifications"></span></p>
+            </section>
+            <section
+            id="c._state_must_prove_reliability_based_on_dogs_training_testing_and_certifications"
+            class="level3">
+            <h3>C. State Must Prove Reliability Based on Dog’s Training,
+            Testing, and Certifications</h3>
+            <p>The <em>types</em> of training, testing, and
+            certification used by the dog-handler team are important to
+            the court’s consideration. <em>Id</em>. The training
+            procedures used by the handler-dog team must
+            “<span class="GramE">ensure[</span>] that the dog alerts in
+            response to drug odors, as opposed to, for example, a desire
+            for a reward, non-drug odors, or handler cues of physical or
+            scent trails left by the person who hid the drugs.”
+            <em>Id</em>. Likewise, a reliable team must undergo testing
+            “in a controlled environment, where precautions against
+            human cuing have been taken and the dog’s accuracy can be
+            assessed because the persons conducting the test know where
+            the dog should alert and where it should not.”
+            <em>Id</em>.</p>
+            <p>For example, the Oregon Supreme Court held that a
+            drug-detecting dog alert was reliable where the K-9 officer
+            testified at some length and with great specificity
+            regarding the dog’s training and certification procedures as
+            well as its strong performance in training exercises.
+            <em>Foster</em>, 350 Or at 164- 66. Conversely, an alert by
+            a different drug-detecting dog did not give rise to probable
+            cause where a K-9 officer testified about the training of
+            the dog in a generalized way without providing specific
+            information about the training methods used or the
+            performance of the dog during training. <a
+            href="https://scholar.google.com/scholar_case?case=4296114326968621521&amp;q=State+v.+Helzer,+350+Or+153,&amp;hl=en&amp;as_sdt=6,38"><em>State</em><span>
+            </span><em>v. <span class="SpellE">Helzer</span></em>, 350
+            Or 153, 157-59, 252 P3d 288 (2011)<span>;</span></a> <em>see
+            also State v. Farmer</em>, 258 Or App 693, 714, 311 P3d 888
+            (2013) (holding that an alert from a drug-detecting dog was
+            not sufficiently reliable to give officers probable cause
+            where the handler did not provide specific details regarding
+            the training procedures used to ensure the dog’s
+            accuracy).</p>
+            <p>That the state failed to present sufficient evidence of
+            the dog’s reliability for its alert to establish probable
+            cause by itself does not necessarily mean that the alert is
+            wholly irrelevant.
+            <span class="SpellE"><em>Helzer</em></span>, 350 Or at 156 n
+            2. If the state falls short in establishing the reliability
+            of a drug dog alert, evidence that the alert had
+            <em>some</em> reliability may allow officers to use it as a
+            factor in establishing probable cause to conduct a search.
+            <em>Id.</em></p>
+            <p><span id="v.-the-federal-automobile-exception"></span></p>
+            </section>
+            </section>
+            <section id="v._the_federal_automobile_exception"
+            class="level2">
+            <h2>V. The Federal Automobile Exception</h2>
+            <p>The federal automobile exception does not justify the
+            search of an automobile that is parked on the curtilage,
+            even if it would otherwise justify the search of that same
+            automobile at that same time were it parked in a place open
+            to the public. The federal automobile exception only
+            justifies searches inside the automobile; it does not extend
+            to houses or curtilage on which automobiles are parked. A
+            search of an automobile on curtilage is a search of the
+            curtilage and, therefore, the home. In general, the federal
+            automobile exception is far less restrictive on searches
+            than is Oregon’s, but it is important to note that it cannot
+            apply to vitiate the protections from search of other areas
+            that are more private under the Fourth Amendment.</p>
+            </div>
+            </section>
+    </body>
+</html>

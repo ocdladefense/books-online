@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Search and Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Search and Seizure Manual</h1>
+                                    </section>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <div class="WordSection1">
+            <section id="i._officer_safety_stops" class="level2">
+            <h2>I. Officer Safety Stops</h2>
+            <p>Officer-safety stops usually arise when an officer orders
+            an individual to do something, not because they suspect the
+            person has committed a crime, but because they are concerned
+            that the individual may cause the officer harm. They usually
+            take the form of a verbal directive such as “put your hands
+            on the steering wheel”; “take your hands out of your
+            pockets”; or “sit down over here.” But they can also take
+            the form of questions about weapons or
+            <span class="GramE">pat-downs</span> for weapons.</p>
+            <p><span id="a.-the-bates-standard"></span></p>
+            <section id="a._the_bates_standard" class="level3">
+            <h3>A. The Bates Standard</h3>
+            <p>What level of justification must police have to “stop” a
+            person, <em>i.e.</em> restrict a person’s liberty for
+            officer-safety reasons?</p>
+            <p>When an officer develops a reasonable suspicion that a
+            person may pose an “immediate threat of serious physical
+            injury” to the officer or to others present, the officer may
+            take reasonable protective measures, including a limited
+            search or seizure, without a warrant and without violating
+            Article I, section 9. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bates,+304+Or+519&amp;hl=en&amp;as_sdt=4,38&amp;case=8074758806620751031&amp;scilh=0"><em>State
+            v. Bates</em>, 304 Or 519, 524, 747 P2d 991 (1987)</a>. The
+            inquiry into “reasonableness” requires consideration of the
+            nature and magnitude of the perceived danger and the degree
+            of intrusion resulting from the officer’s conduct. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rickard,+150+Or+App+517&amp;hl=en&amp;as_sdt=4,38&amp;case=6943578111114308803&amp;scilh=0"><em>State
+            v. Rickard</em>, 150 Or App 517, 526, 947 P2d 215</a>,
+            <em>rev den</em>, 326 Or 234 (1997). Intuition and
+            generalized fear do not give rise to reasonable suspicion of
+            an immediate threat. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hendricks,+213+Or+App+360&amp;hl=en&amp;as_sdt=4,38&amp;case=5058816911343442828&amp;scilh=0"><em>State
+            v. Hendricks</em>, 213 Or App 360, 365, 160 P3d 1014
+            (2007)</a>. Rather, there must be specific and articulable
+            facts to justify the officer’s conclusion that a particular
+            person presents an immediate threat of harm.
+            <em>Id.</em></p>
+            <div class="bon-update">
+            <p><span id="update"></span></p>
+            </section>
+            <section id="update" class="level3">
+            <h3>2024 Update</h3>
+            <p>The standard has both an objective and a subjective
+            component, and the state bears the burden of proof and
+            persuasion for both components. An officer’s subjective
+            concerns must be from an immediate threat. <em><span>State
+            v. Harmon</span></em><span>, 329 Or App 639 (2023)
+            (c</span>iting <em><span>State v. Ramirez</span></em>, 305
+            Or App 195, 205, 468 P3d 1006 (2020)).</p>
+            </div>
+            <p><span id="b.-interference-with-a-suspects-constitutional-privacy-and-possessory-interests"></span></p>
+            </section>
+            <section
+            id="b._interference_with_a_suspects_constitutional_privacy_and_possessory_interests"
+            class="level3">
+            <h3>B. Interference with a Suspect’s Constitutional Privacy
+            and Possessory Interests</h3>
+            <p>What types of interference with a suspect’s
+            constitutional privacy and possessory interests are allowed
+            for officer-safety purposes?</p>
+            <p>Oregon courts have recognized two degrees of interference
+            with a suspect’s constitutional privacy and possessory
+            interests for officer-safety purposes. First, officers can
+            take “reasonable precautions” for safety during a traffic
+            stop, such as inquiring about weapons, when “the officer has
+            reasonable, circumstance-specific concerns for the officer’s
+            safety or the safety of other persons who are present.” <a
+            href="https://scholar.google.com/scholar_case?case=7571891029575223445&amp;q=State+v.+Jimenez,+357+Or+417&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Jimenez</em>, 357 Or 417, 429, 353 P3d 1227
+            (2015)<span>.</span></a> Notably, that standard prohibits
+            officers from making “routine weapons inquiries in all
+            traffic investigations.” <em>Id</em>. at 430.</p>
+            <p>Second, under <a
+            href="https://scholar.google.com/scholar_case?case=8074758806620751031&amp;q=Bates,+304+Or+&amp;hl=en&amp;as_sdt=6,38"><em>Bates</em></a>,
+            officers can conduct a pat-down of a defendant if “the
+            officer subjectively believe[s] that the <em>defendant</em>
+            pose[s] a threat” and “that the officer’s belief [is]
+            objectively reasonable.” <a
+            href="https://scholar.google.com/scholar_case?case=9829294346599375193&amp;q=State+v.+Rodriguez-Perez,+262+Or+App+206,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Rodriguez-Perez</em>, 262 Or App 206, 213, 325 P3d 39
+            (2014)</a> (emphasis added) (concluding that the fact
+            defendant became “very agitated” during jaywalking stop did
+            not support reasonable belief that the defendant might pose
+            an immediate danger, where the defendant did not make
+            aggressive or threatening movements or statements); <em>see
+            also Jimenez,</em> 357 Or at 429 (noting that the
+            <em>Bates</em> rule applies specifically to warrantless
+            searches for weapons).</p>
+            <p>In<span> </span><a
+            href="https://scholar.google.com/scholar_case?case=13519122223484073469&amp;q=State+v.+Miler,+363+Or+374,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Miler</em>, 363 Or 374, 383, 422 P3d
+            240</a>,<span> </span><span class="SpellE"><em>adh’d</em></span>
+            <em>to as modified on recons</em>, 363 Or 742, 428 P3d 899
+            (2018), this court refined the rule
+            from <em>Jimenez</em> and held that an officer’s
+            circumstance-specific concerns need not be particular to the
+            individual but may arise from other factors or
+            conditions.</p>
+            <p>In other words, officers can typically ask
+            <em>questions</em> about weapons based on
+            circumstance-specific officer-safety concerns, and officers
+            can perform pat-down <em>searches</em> for weapons based on
+            defendant-specific officer-safety concerns. But the officer
+            safety doctrine typically does not justify further intrusive
+            searches for weapons. <a
+            href="https://scholar.google.com/scholar_case?case=10925347929731884770&amp;q=State+v.+Moreno+Or+App+306&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Moreno,</em> 150 Or App 306, 946 P2d 317
+            (1997)</a>.<span> </span></p>
+            <p>Furthermore, the officer-safety exception does not
+            typically excuse searches or seizures that occur during
+            unlawful stops. <a
+            href="https://scholar.google.com/scholar_case?case=8930588461706863203&amp;q=State+v.+Kreis,+365+Or+659,+451+P3d+954+(2019&amp;hl=en&amp;as_sdt=6,48"><em>State
+            v. Kreis</em>, 365 Or 659, 451 P3d 954
+            (2019</a><span class="MsoHyperlink">)</span><em>.</em>
+            <em><strong>' <em>Kreis</em> held that</strong>' “an order
+            that is not consistent with Article I, section 9, or that is
+            issued in violation of that provision, is not a “lawful
+            order” for purposes of <a
+            href="http://www.oregonlaws.org/ors/162.247">ORS 162.247</a>
+            (1)(b) [interfering with a peace officer].”</em>Kreis'', 365
+            Or at 669.</p>
+            <p>There, the defendant was stopped without reasonable
+            suspicion, and <span class="GramE">during the course
+            of</span> that stop bladed his stance, balled his hands into
+            fists, and declared, “I will not be arrested.” For
+            officer-safety reasons, the officer ordered the defendant to
+            turn around and place his hands behind his back. The
+            defendant refused and was subsequently charged and convicted
+            of interfering with a police officer for refusing to obey a
+            “lawful order.” ORS 162.247 (1)(b).</p>
+            <p>The defendant argued that the officer-safety doctrine
+            contains an express prerequisite—it “applies only ‘during
+            the course of a lawful encounter.’” <em>Kreis</em>, 365 Or
+            at 673 (quoting <a
+            href="https://scholar.google.com/scholar_case?case=8074758806620751031&amp;q=Bates,+304+Or+&amp;hl=en&amp;as_sdt=6,38"><em>Bates</em>,
+            304 Or at 524</a>). Thus, it could not provide the
+            foundation for a “lawful” order if that order came
+            <span class="GramE">during the course of</span> an unlawful
+            stop. The Supreme Court agreed, noting that “[t]he
+            officer-safety doctrine is not a general exception to the
+            warrant requirement; it is a rule of necessity that enables
+            officers to take reasonable measures to carry out lawful
+            police activity.” <em>Id.</em> at 676. Accordingly, the
+            court explained, that when an officer’s initial seizure is
+            unlawful, “the officer-safety doctrine does not permit the
+            officer to impose continued, and even more stringent,
+            restraint to effectuate that unlawful seizure.” <em>Id.</em>
+            at 677.</p>
+            <p>Because the officer had seized the defendant without
+            reasonable suspicion, his subsequent order that the
+            defendant turn and be handcuffed could not have been
+            justified by the officer-safety exception and therefore the
+            order that the defendant disobeyed was not a lawful one.
+            <em>Id</em>. at 677-78.</p>
+            <div class="bon-update">
+            <p><span id="update-1"></span></p>
+            </section>
+            <section id="update_1" class="level3">
+            <h3>2024 Update</h3>
+            <p><span>The rule from </span><a
+            href="https://scholar.google.com/scholar_case?case=7571891029575223445&amp;q=State+v.+Jimenez,+357+Or+417&amp;hl=en&amp;as_sdt=4,38">State<em><span>
+            v. Jimenez</span></em><span>, 357 Or 417, 353 P3d 1227
+            (2015)</span></a>,<span> extends beyond weapons inquires to
+            all questions posed during the course of a lawful stop.
+            </span><a
+            href="https://scholar.google.com/scholar_case?case=16778062190868290739&amp;q=State+v.+Gilkey,+317+Or+App+752&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Gilkey</span></em>, 317 Or App 752, 759, 505 P3d 1029,
+            1035 (2022)</a>. <span>In <em><span>Jimenez</span></em>, the
+            Supreme Court explained that “when an officer has seized an
+            individual and has a constitutional basis to continue to
+            temporarily detain and question him or her,” the officer may
+            ask questions that are “reasonably related to and reasonably
+            necessary to effectuate” the officer’s investigation.
+            <em>Jimenez</em>, 357 Or at 428-29.</span><span></span></p>
+            <p><span>For the </span>state<span> to establish that a
+            question survives the <em><span>Jimenez</span></em> test,
+            the state must present evidence that (1) the officer
+            perceived a circumstance-specific danger, and that
+            perception was objectively reasonable, and (2) the officer
+            decided that the questions asked were necessary to address
+            that danger, and it is objectively reasonable that those
+            questions would ameliorate or clarify the safety concern.
+            <em>Gilkey</em>, 317 Or App at 559.</span><span></span></p>
+            <p><em><span>Gilkey</span></em><span> </span>focused<span>
+            on that final element: the objective reasonableness of an
+            officer's response to a perceived safety concern,
+            specifically, questioning a defendant about his tattoos and
+            prison history.</span><span></span></p>
+            <p>There, the officer testified that it would be unsafe to
+            check the defendant’s VIN number if the defendant was armed;
+            however, the officer’s questions about the defendant’s
+            tattoos and incarceration history were not reasonably
+            calculated to address that concern. Thus, they were
+            unlawful. <em>Id</em>. at 761.</p>
+            </div>
+            <p><span id="c.-conduct-or-circumstances"></span></p>
+            </section>
+            <section id="c._conduct_or_circumstances" class="level3">
+            <h3>C. Conduct or Circumstances</h3>
+            <p>What types of circumstances or conduct can give rise to
+            reasonable officer-safety concerns?</p>
+            <p>Generally, the defendant must have either engaged in some
+            sort of hostile or threatening conduct toward the officers
+            or suddenly reached into a concealed area that could contain
+            a weapon.</p>
+            <p>For the most part, where defendant has not suddenly
+            reached into a pocket or other location capable of
+            containing a weapon, this court requires some indication of
+            threatening or hostile conduct on the part of the
+            defendant:</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v+Peterson,+143+Or+App+505&amp;hl=en&amp;as_sdt=4,38&amp;case=11949325378201411159&amp;scilh=0"><em>State
+            v. Peterson</em>, 143 Or App 505, 923 P2d 1340
+            (1996)</a><span class="CommentReference1"><span>
+            </span></span>(“Even if [the officer] correctly suspected
+            that defendant was under the influence of controlled
+            substances, there was nothing in defendant’s behavior to
+            suggest imminent aggressiveness or hostility toward [the
+            officer,] and [n]o weapons were visible and defendant did
+            not make any movements towards the jacket in [the officer’s]
+            presence, as if to retrieve a weapon for immediate
+            use.”);</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dyer,+157+Or+App+326&amp;hl=en&amp;as_sdt=4,38&amp;case=14186421480828901989&amp;scilh=0"><em>State
+            v. Dyer</em>, 157 Or App 326, 970 P2d 249 (1998)</a>
+            (holding that although defendant had previously been
+            convicted of a weapons-related crime, possessed “a large
+            folding knife in a sheath on his belt,” and wore “outlaw
+            biker style dress,” defendant had been cooperative and had
+            not said or done anything that could be interpreted as
+            creating an immediate threat of serious physical
+            harm<span class="GramE">);</span></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Knox,+134+Or+App+154,+&amp;hl=en&amp;as_sdt=4,38&amp;case=16527315291234930497&amp;scilh=0"><em>State
+            v. Knox</em>, 134 Or App 154, 894 P2d 1185 (1995)</a>,
+            <span class="SpellE"><em>vac’d</em></span> <em>on other
+            grounds</em>, 327 Or 97, 957 P2d 1209 (1998), <em>adhering
+            to holding on remand</em>, 160 Or App 668, 671, 984 P2d 294
+            (1999) (rejecting officer-safety justification where
+            defendant had a reputation for carrying weapons but “never
+            before exhibited any violence towards the police or made
+            threats to them[,]” and the defendant “was not acting in any
+            unusually angry or strange manner that would give the
+            officer any immediate concern”);</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jimenez,+263+Or+App+150,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15763897582348492006&amp;scilh=0"><em>Jimenez,</em>
+            263 Or App at 161</a> (noting, “Defendant was neither
+            uncooperative nor evidently hostile” in concluding that the
+            officer lacked an objectively reasonable fear for his
+            safety<span class="GramE">);</span></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rodriguez-Perez&amp;hl=en&amp;as_sdt=4,38&amp;case=17576905015721160082&amp;scilh=0"><em>State
+            v. Rodriguez-Perez</em>, 262 Or App 206, 215, 325 P3d 39
+            (2014)</a> (holding that police officers lacked objectively
+            reasonable suspicion that defendant posed an immediate
+            threat of serious physical injury where the “defendant did
+            not make any aggressive, hostile, or threatening movements,
+            nor did he make any threatening
+            remarks”<span class="GramE">);</span></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v+Morgan,+348+Or+283&amp;hl=en&amp;as_sdt=4,38&amp;case=14612765263711676748&amp;scilh=0"><em>State
+            v Morgan</em>, 348 Or 283, 230 P3d 928 (2010)</a> (upholding
+            officer-safety search where the defendant suddenly and
+            unexpectedly got out of the car, her demeanor quickly
+            changed from calm to visibly nervous, and “What tipped the
+            scales, however, was [the] defendant’s act of reaching into
+            the purse,” after the officer had already expressed his
+            concern about weapons<span class="GramE">);</span></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lee&amp;hl=en&amp;as_sdt=4,38&amp;as_ylo=2014&amp;case=3113173194532127640&amp;scilh=0"><em>State
+            v. Lee</em>, 264 Or App 350, 332 P3d 894 (2014)</a>
+            (affirming officer-safety seizure where vehicle’s occupants
+            began moving around as the officer approached the stopped
+            car; a backseat passenger was “reaching to his side,”
+            indicating the possible presence of a weapon; the defendant
+            was a known felon, wearing a shirt associated with an area
+            biker gang whose members were known to carry weapons and
+            drugs; the defendant and his passengers outnumbered the
+            police and they disobeyed an instruction to keep their hands
+            in sight while the officer went back to his vehicle, and the
+            defendant, specifically, “reached down to the floorboard of
+            the vehicle”);</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ruiz,+196+Or+App+324&amp;hl=en&amp;as_sdt=4,38&amp;case=4553052139396766927&amp;scilh=0"><em>State
+            v. Ruiz</em>, 196 Or App 324, 326, 101 P3d 824 (2004)</a>
+            (concluding that the officer’s fear was reasonable where the
+            defendant (1) reached into his pocket in the middle of a
+            drug-related police investigation; (2) the investigation
+            occurred in a high-crime area; and (3) defendant was right
+            next to the subject of the investigation, increasing the
+            level of threat they presented).</p>
+            <p>A person who removes their hands from their pockets
+            during an interaction with the police does not give rise to
+            an officer-safety justification for the police to search the
+            pockets once the hands are removed from the pocket. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Moreno,+150+Or+App+306,+&amp;hl=en&amp;as_sdt=4,38&amp;case=10925347929731884770&amp;scilh=0"><em>Moreno</em>,
+            150 Or App at 310</a>. And that fact alone has never been
+            held sufficient to authorize the police to order a defendant
+            to remove their hands from their pockets. <em>Cf</em>
+            <em>Ruiz</em>, 196 Or App at 326 (concluding that such an
+            order was justified where the defendant reached into his
+            pocket in the middle of a drug-related police investigation;
+            the investigation occurred in an area with a “bad problem
+            with controlled substances”; defendant was right next to the
+            subject of the investigation, increasing the risk of a
+            coordinated attack; and his companion had just been caught
+            with a bindle of cocaine in his mouth, causing the officer
+            to call for backup).</p>
+            <p>Objectively, <em>Ruiz</em> appears to involve the least
+            threatening circumstances that this court has found
+            sufficient to invoke the officer-safety exception. Moreover,
+            four judges dissented, making it particularly ill-suited for
+            the state to fact match.</p>
+            <p>In <em>Moreno</em>, 150 Or App 306, (1997), the defendant
+            had his hands in the pockets of his jacket when officers
+            approached him, asked for his name, and then said,
+            “<span class="SpellE"><em>Cuchillos</em></span> or
+            <span class="SpellE"><em>pistolas</em></span>?” which means
+            knives or guns in Spanish. Defendant did not respond.
+            Defendant then put his hands deeper into the pockets and
+            continued to stare at one of the officers, who repeated,
+            “<span class="SpellE"><em>Cuchillos</em></span> or
+            <span class="SpellE"><em>pistolas</em></span>?” Defendant
+            responded, “No.”</p>
+            <p>One officer testified that because defendant was so tense
+            and acting wary, he thought that “it was possibly dangerous
+            to us right then, the way he was acting.” The other
+            testified that defendant’s response was not consistent with
+            his body language because defendant maintained his physical
+            stance and eye contact. He said that he was concerned
+            because defendant’s motion could have indicated that
+            defendant was seeking to obtain a better grip on a weapon
+            that might be in his pocket. <em>Id.</em></p>
+            <p>The officer used his hands to ask defendant to “take your
+            hands out of your pockets.” Defendant appeared to freeze
+            even more and stared intently at him. The officer motioned
+            again for defendant to remove his hands from his pockets,
+            and defendant slowly took his hands out of his pockets.
+            <em>Id.</em></p>
+            <p>That officer “was convinced that [defendant] actually had
+            something in his pocket and that he had left it in the
+            pocket and was showing me his bare hands.” He patted down
+            defendant’s left pocket for weapons. He felt objects that he
+            thought were drugs. He then reached into defendant’s pocket
+            and removed the bindles of cocaine from his pocket.
+            <em>Id.</em> at 309.</p>
+            <p>The Court of Appeals concluded that
+            “[o]<span class="SpellE">nce</span> defendant complied with
+            [the officer’s] request and showed his hands, the officers
+            were not justified in conducting the pat-down of defendant.”
+            <em>Id.</em> at 310. The court reasoned that the officers’
+            testimony did not support the conclusion that the defendant
+            posed an immediate threat to the officers’ safety.
+            <em>Id.</em> The officers only expressed a generalized
+            concern for their safety that “would be present in any
+            encounter” and there were no articulable facts such as
+            “gestures or threats” that demonstrated objectively that the
+            officers were in danger. <em>Id.</em></p>
+            <p><span id="d.-can-reasonable-officer-safety-concerns-dissipate"></span></p>
+            </section>
+            <section
+            id="d._can_reasonable_officer_safety_concerns_dissipate"
+            class="level3">
+            <h3>D. Can reasonable officer safety concerns
+            dissipate?</h3>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=16974402368452542479&amp;q=State+v.+Madden,+363+Or+703+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Madden</em>, 363 Or 703, 427 P3d 157 (2018)</a> held that
+            officer-safety concerns initially justified the seizure of
+            the defendant, principally to maintain the element of
+            surprise, as police sought to execute a search warrant at a
+            high-occupancy drug house. Police encountered the defendant
+            sitting in a car in the driveway of the target residence,
+            the defendant furtively attempted to hide something, and he
+            was accompanied by a known drug dealer who regularly carried
+            weapons.</p>
+            <p>Despite the lawfulness of the initial seizure, the court
+            held that the officers’ articulated safety concerns
+            dissipated once the residence had been secured and that the
+            continued detention and questioning of the defendant could
+            not be justified under the officer-safety exception.</p>
+            <p><span id="e.-common-fact-patterns-insufficient-to-meet-the-bates-standard"></span></p>
+            </section>
+            <section
+            id="e._common_fact_patterns_insufficient_to_meet_the_bates_standard"
+            class="level3">
+            <h3>E. Common Fact Patterns Insufficient to Meet the Bates
+            Standard</h3>
+            <p><span id="present-possession-of-a-weapon"></span></p>
+            <section id="present_possession_of_a_weapon" class="level4">
+            <h4>1. Present Possession of a Weapon</h4>
+            <p>Present possession of a weapon does not establish
+            reasonable suspicion of an immediate threat to officer
+            safety where the suspect has not said or done anything
+            threatening. <a
+            href="https://scholar.google.com/scholar_case?case=14186421480828901989&amp;q=State+v.+Dyer,+157+Or+App+326&amp;hl=en&amp;as_sdt=6,48"><em>State
+            v. Dyer</em>, 157 Or App 326, 332, 970 P2d 249 (1998)</a>.
+            In <em>Dyer</em>, the defendant was stopped outside of his
+            car for a traffic violation. As the defendant was leaning
+            into his car to retrieve his driving documents, the officer
+            noticed that the defendant had “a large folding knife in a
+            sheath on his belt.” <em>Dyer,</em> 157 Or App at 328. The
+            defendant’s “outlaw biker style dress,” heightened the
+            officer’s safety concerns. <em>Id.</em> Dispatch informed
+            the officer that the defendant had previously been convicted
+            for unlawful possession of a weapon in a public building.
+            <em>Id.</em> at 329.</p>
+            <p>This court held that those facts were insufficient to
+            meet the <em>Bates</em> standard, explaining that the
+            defendant had been cooperative and had not said or done
+            anything that could be interpreted as creating an immediate
+            threat of serious physical harm. <em>Id.</em> at 332. Thus,
+            the officer had an insufficient basis on which to invoke the
+            officer-safety exception. <em>Id.</em></p>
+            <p>Notably, the presence of a <em>secured</em> weapon is
+            also normally insufficient, by itself, to give rise to
+            officer-safety concerns. <a
+            href="file:///C:/Users/gierinf/Downloads/State%20v.%20Smith,%20277%20Or%20App%20298"><em>State
+            v. Smith</em>, 277 Or App 298, 373 P3d 1089, <em>rev
+            den</em>, 360 Or 401 (2016)<span>.</span></a> Furthermore,
+            the presence of a single firearm, without more, does not
+            permit an inference that <em>additional</em> firearms are
+            present. <em>Id</em>. In <em>Smith</em>, a forest service
+            officer’s warrantless pat-down of the defendant was unlawful
+            <span class="GramE">despite the fact that</span> (1) the
+            officer found the defendant in a group of people
+            target-shooting guns at trees, (2) the officer was alone,
+            and (3) potential backup was hours away. The defendant and
+            his companions complied with the officer’s request to secure
+            their weapons prior to the pat-down and were not difficult
+            or threatening. <em>Id</em>. at 301. Because the defendant
+            and his companions had secured their weapons, “there was no
+            evidence that [the] defendant had access to a weapon or was
+            armed at the time of the search.” <em>Id</em>. at 310. The
+            fact that the defendant might have committed a violation by
+            illegally damaging forest property, and that the defendant’s
+            clothing <span class="GramE">was capable of
+            concealing</span> <em>another</em> weapon, were not
+            sufficient to create a reasonable believe that the defendant
+            posed an immediate threat. <em>Id</em>. at 308-09.</p>
+            <p><em>Smith</em> noted previous cases in which this court
+            held that the presence of one weapon “supported the
+            conclusion that additional weapons might be present.”
+            <em>Id</em>. at 307 (citing <a
+            href="https://scholar.google.com/scholar_case?case=6391231726517639653&amp;q=State+v.+Redmond,+114+Or+App+197,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Redmond</em>, 114 Or App 197, 834 P2d 516
+            (1992)<span>,</span></a> and <a
+            href="https://scholar.google.com/scholar_case?case=4583040016738817075&amp;q=State+v.+Pope,+150+Or+App+457,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Pope</em>, 150 Or App 457, 946 P2d 1157 (1997), <em>rev
+            den</em>, 327 Or 521 (1998)</a>. The <em>Smith</em> court
+            distinguished those cases by noting that they involved
+            suspects who were members of violent motorcycle gangs.
+            <em>Id</em>. The court held that a suspect’s possession of a
+            <em>single</em> weapon does not support reasonable suspicion
+            that the suspect may possess additional weapons unless “the
+            totality of the circumstances
+            <span class="GramE">permit</span> the inference that [the]
+            suspect is a member of a specific violent group and is,
+            therefore, likely to be carrying multiple weapons[.]”
+            <em>Smith</em>, 277 Or App at 308.</p>
+            <div class="bon-update">
+            <p><span id="update-2"></span></p>
+            </section>
+            </section>
+            <section id="update_2" class="level3">
+            <h3>2024 Update</h3>
+            <p><em>State v. Harmon</em>, 329 Or App 639 (2023)</p>
+            <p>Discovery of a gun wedged between the front seats of a
+            stopped vehicle did not justify officer-safety search of the
+            passenger’s backpack, which had been left in the car after
+            the vehicle’s occupants had exited the vehicle, because (1)
+            the police did not identify any threat associated with the
+            backpack and (2) “A warrantless search to protect an
+            officer’s safety ‘will be justified only when the area
+            searched is still within the defendant’s control, so that
+            the defendant would be able to obtain a weapon stashed in
+            the area[.]’” <em>Id.</em> at 643 (quoting <em>State v.
+            Krause</em>, 281 Or App 143, 146 (2016)).</p>
+            </div>
+            <p><span id="reputation-for-carrying-weapons"></span></p>
+            <section id="reputation_for_carrying_weapons"
+            class="level4">
+            <h4>2. Reputation for Carrying Weapons</h4>
+            <p>“That [the] defendant ha[s] a reputation for carrying
+            weapons by itself, is insufficient to create a reasonable
+            suspicion that defendant might use them during the otherwise
+            routine traffic stop.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Knox,+134+Or+App+154&amp;hl=en&amp;as_sdt=4,38&amp;case=16527315291234930497&amp;scilh=0"><em>Knox</em>,
+            134 Or App 154</a>,
+            <span class="SpellE"><em>vac’d</em></span> <em>on other
+            grounds</em>, 327 Or 97, 957 P2d 1209 (1998), <em>adhering
+            to holding on remand</em>, 160 Or App 668, 671, 984 P2d 294
+            (1999).</p>
+            <p><span id="furtive-movements"></span></p>
+            </section>
+            <section id="furtive_movements" class="level4">
+            <h4>3. Furtive Movements</h4>
+            <p>“Furtive movement” alone does not permit a reasonable
+            inference that the defendant was about to inflict serious
+            physical injury upon an officer <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Amell,+230+Or+App+336&amp;hl=en&amp;as_sdt=4,38&amp;case=17488543350388019623&amp;scilh=0"><em>State
+            v. <span class="SpellE">Amell</span></em>, 230 Or App 336,
+            345, 215 P3d 910 (2009)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Senn,+145+Or+App+538&amp;hl=en&amp;as_sdt=4,38&amp;case=9273490729206193918&amp;scilh=0"><em>State
+            v. <span class="SpellE">Senn</span></em>, 145 Or App 538,
+            545, 930 P2d 874 (1996)</a>.</p>
+            <p>Furtive movements, without any indication of aggression
+            or hostility toward the police, do not justify questions
+            about the defendant’s criminal history. <a
+            href="https://scholar.google.com/scholar_case?case=11949325378201411159&amp;q=State+v.+Peterson,+143+Or+App+505&amp;hl=en&amp;as_sdt=6,38"><em>Peterson</em>,
+            143 Or App 505</a>, <em>rev den</em> 327 Or 521, 971 P2d 408
+            (1998).</p>
+            <p>In <em>Peterson</em>, the defendant made a furtive
+            movement and appeared to be under the influence of a
+            controlled substance. The Court of Appeals found that
+            officer safety concerns did not permit the officer to ask
+            the defendant a question about his criminal history. There,
+            the defendant swerved into the officer’s lane, requiring the
+            officer to stop <span class="GramE">in order to</span> avoid
+            a collision. 143 Or App at 507. The officer pulled the
+            defendant over. As the officer approached the defendant’s
+            car, he saw the defendant moving toward the passenger seat
+            area. <em>Id.</em> A jacket was lying on the passenger seat.
+            <em>Id.</em> The defendant appeared nervous, he was
+            stuttering, and his eyes were darting around. <em>Id.</em>
+            The officer suspected that the defendant was under the
+            influence of a controlled substance. <em>Id.</em> at 509 n
+            3.</p>
+            <p>After the officer had completed his investigation related
+            to the traffic infraction, he inquired about defendant’s
+            criminal history. <em>Id.</em> at 507. The court held that
+            officer safety concerns did not justify the officer’s
+            extension of the stop to question defendant about his prior
+            arrest history. <em>Id.</em> at 510. Specifically, the court
+            explained, “Even if [the officer] correctly suspected that
+            defendant was under the influence of controlled substances,
+            there was nothing in defendant’s behavior to suggest
+            imminent aggressiveness or hostility toward [the officer].
+            <em>Id.</em> at 511. “No weapons were
+            <span class="GramE">visible</span> and defendant did not
+            make any movements towards the jacket in [the officer’s]
+            presence, as if to retrieve a weapon for immediate use.”
+            <em>Id.</em> Therefore, the court held that the officer’s
+            subjective concerns were not reasonable and reversed the
+            defendant’s conviction.</p>
+            <p><span id="present-intoxication"></span></p>
+            </section>
+            <section id="present_intoxication" class="level4">
+            <h4>4. Present Intoxication</h4>
+            <p>“Even if [the officer] correctly suspected that defendant
+            was under the influence of controlled substances, there was
+            nothing in defendant’s behavior to suggest imminent
+            aggressiveness or hostility toward [the officer].
+            <em>Peterson</em>, 143 Or App at 511, <em>rev den</em> 327
+            Or 521, 971 P2d 408 (1998).</p>
+            <p><span id="high-crime-area"></span></p>
+            </section>
+            <section id="high_crime_area" class="level4">
+            <h4>5. High Crime Area</h4>
+            <p>Although confronting a suspect in a high-crime area can
+            contribute to officer-safety concerns, the officer
+            confronted the defendant at midday and at a busy commercial
+            intersection, not at a late hour, in a darkened area, where
+            the officer had recently encountered armed gang members as
+            had occurred in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Miglavs,+337+Or+1,+&amp;hl=en&amp;as_sdt=4,38&amp;case=9178157249896432482&amp;scilh=0"><em>State
+            v. <span class="SpellE">Miglavs</span></em>, 337 Or 1, 13,
+            90 P3d 607 (2004)</a>. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jimenez,+263+Or+App+150&amp;hl=en&amp;as_sdt=4,38&amp;case=15763897582348492006&amp;scilh=0"><em>Jimenez</em>,
+            263 Or App at 159-60</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Zumbrum,+221+Or+App+362,+&amp;hl=en&amp;as_sdt=4,38&amp;case=17453827287478046968&amp;scilh=0"><em>State
+            v. <span class="SpellE">Zumbrum</span></em>, 221 Or App 362,
+            364-65, 189 P3d 1235
+            (2008)</a><span class="MsoHyperlink"><span>.</span></span></p>
+            <p><span id="making-or-not-making-eye-contact"></span></p>
+            </section>
+            <section id="making_or_not_making_eye_contact"
+            class="level4">
+            <h4>6. Making (or Not Making) Eye Contact</h4>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=9829294346599375193&amp;q=State+v.+Rodriguez-Perez,+262+Or+App+206&amp;hl=en&amp;as_sdt=6,38"><em>Rodriguez-Perez</em>,
+            262 Or App 206</a>, the defendant just stared at the officer
+            when he was asked whether the defendant was armed, and later
+            in the encounter the defendant “would not make eye contact
+            with him”; however, the Court of Appeals held that those
+            facts, among others, were insufficient to establish an
+            officer safety threat.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=10925347929731884770&amp;q=State+v.+Moreno,+150+Or+App+306&amp;hl=en&amp;as_sdt=6,38"><em>Moreno</em>,
+            150 Or App at 310</a>, the defendant did not respond to the
+            officer’s question about weapons and was tense and staring
+            at the officer. After being asked for the second time to
+            take his hands out of his pockets, the defendant “appeared
+            to freeze even more and stared intently at [the officer].”
+            The court held that once defendant took his hands out of his
+            pocket, there was no officer safety justification to pat
+            down the defendant’s pockets.</p>
+            <p><span id="nervous-demeanor"></span></p>
+            </section>
+            <section id="nervous_demeanor" class="level4">
+            <h4>7. Nervous Demeanor</h4>
+            <p><span class="SpellE"><em>Zumbrum</em></span>, 221 Or App
+            at 364-65 (holding that officer-safety exception not
+            satisfied where defendant was (1) on post-prison
+            supervision, (2) staying in an apartment complex associated
+            with illegal drug activity, including methamphetamine labs,
+            (3) his girlfriend was on probation and known to be involved
+            with mid- to upper-level drug dealers, (4) defendant had an
+            “abnormally nervous demeanor,” and (5) defendant and the
+            officer were confined in a narrow hallway).</p>
+            <p><span id="multiple-factors-found-insufficient"></span></p>
+            </section>
+            <section id="multiple_factors_found_insufficient"
+            class="level4">
+            <h4>8. Multiple Factors Found Insufficient</h4>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=9421562628191644105&amp;q=State+v.+Nyes,+295+Or+App+559+(2019&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Nyes</em>, 295 Or App 559, 435 P3d 805 (2019</a>), the
+            court held that the following facts were “legally
+            insufficient to support an objectively reasonable fear that
+            defendant posed an immediate threat of serious physical
+            injury”:</p>
+            <div class="blockquote">
+            <p><span class="QuoteChar"><span>“1) defendant was agitated,
+            restless,
+            </span></span><span class="QuoteChar"><span>fidgeting</span></span><span class="QuoteChar"><span>,
+            and made furtive movements; 2) defendant appeared to be
+            under the influence of a stimulant or amphetamine; 3) [the
+            officer] had been trained as a Drug Recognition Expert for
+            four years, and knew that people who use controlled
+            substances often carry weapons and may be more likely to
+            fight; 4) defendant was guarding his left side as if to hide
+            something; and 5) defendant had bulges in his
+            pockets[.]”</span></span></p>
+            </div>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=4725184438800194900&amp;q=State+v.+O%27Dell,+291+Or+App+359&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. O’Dell</em>, 291 Or App 359, 421 P3d 417 (2018)</a>, an
+            officer stopped defendant for a traffic infraction, and
+            during the encounter noted that defendant was “abnormally
+            nervous” but cooperative. A backup officer arrived and
+            noticed a standard folding knife in defendant’s front
+            pocket. The officer asked defendant to step out of the car
+            because he was concerned about defendant’s ability to use
+            the knife “very quickly.” The officers conducted a pat-down
+            search and, after removing the knife, continued to pat down
+            defendant, finding pills. The officers then secured
+            defendant’s consent to search his car and his phone and
+            found incriminating evidence. Defendant later confessed to
+            selling the pills illegally.</p>
+            <p>The Court of Appeals concluded that the officer’s
+            subjective belief that defendant posed an immediate threat
+            was not objectively reasonable.</p>
+            <div class="blockquote">
+            <p>“Here, the evidence establishes the presence of a folding
+            knife in defendant’s pocket, when he was inside a car and
+            not in any position to harm officers outside the car.
+            Although the state points to defendant’s ‘abnormal’
+            nervousness, evasion of questions, and failure to
+            proactively inform officers of the folding knife, defendant
+            was otherwise cooperative and made no movements toward the
+            knife, and the officers had not asked him about weapons. The
+            evidence on which the state relies supports no more than
+            general concerns for the officers’ safety, rather than
+            specific facts demonstrating that defendant posed a threat.
+            As a result, any subjective belief that defendant posed an
+            immediate threat was not objectively reasonable, and the
+            order to exit the car was not justified by the
+            officer-safety exception.”</p>
+            </div>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=13325029982208626273&amp;q=State+v.+Gaylor,+287+Or+App+495,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. <span class="SpellE">Gaylor</span></em>, 287 Or App 495,
+            404 P3d 1140 (2017)</a>, a police officer observed defendant
+            and a companion parked in a car outside of an abandoned
+            house. There had been a burglary in the area recently. The
+            officer decided to investigate, pulled into the next
+            driveway and parked. He saw that defendant and his companion
+            had gotten out of the car and defendant was walking along
+            the road toward him. The officer turned around and stopped
+            by the men in the road. The officer asked for
+            identification. The companion began searching for his ID in
+            the car, and the officer was unable to see his hands or
+            upper body. Defendant replied to the officer’s request in a
+            “sharp” tone and asked why he was required to provide ID.
+            The officer decided to cite defendant for walking in the
+            roadway. Meanwhile, defendant’s companion climbed over a
+            fence and started jogging away. The officer shouted “Hey,”
+            and the man responded “I’ll be right back” but kept jogging.
+            The officer did not think he would come back but because he
+            was not sure of the man’s intentions, he feared that he
+            would pose a safety risk. <span class="GramE">The officer
+            detained defendant,</span> conducted a pat-down search, and
+            found a pipe with methamphetamine residue.</p>
+            <p>The Court of Appeals concluded that the officer’s search
+            of defendant was not supported by the officer safety
+            exception because even if the officer had a subjective
+            belief that defendant posed an immediate threat, that belief
+            was not objectively reasonable. Even though defendant used a
+            “sharp” voice, he was otherwise cooperative. And defendant’s
+            companion did not increase the risk that defendant posed a
+            threat because the companion left the
+            <span class="GramE">scene</span> and the officer did not
+            think he would return.</p>
+            <div class="blockquote">
+            <p>“[A] warrantless search or seizure of a person based on
+            officer safety concerns requires an objectively reasonable
+            belief that <em>that person</em> poses an immediate threat
+            of harm at the time of the pertinent warrantless search or
+            seizure. Uncertainty about the location of the person’s
+            associate, without more, does not make it objectively
+            reasonable for an officer to believe that the person poses a
+            threat of immediate physical harm to the officer.”</p>
+            </div>
+            <p><em>Id</em>. at 502.</p>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=2229440604195693242&amp;q=Easton,+264+Or+App+339,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Easton</em>, 264 Or App 339, 340, 332 P3d 315 (2014),</a>
+            at about 4:30 a.m., two officers responded to a 9-1-1 call
+            and found a woman, under the influence of methamphetamine,
+            lying on the ground in front of her apartment with a 9mm gun
+            a few feet in front of her. The officers seized the gun and
+            arrested the woman. The woman said that her houseguest had
+            given her the gun, that he was inside, and that they could
+            search her apartment. In the experience of one of the
+            officers, “where there’s one weapon, there’s often more than
+            one.” <em>Id.</em> at 340.</p>
+            <p>The apartment door was <span class="GramE">open</span>
+            and the lights were on inside; the officers were concerned
+            that someone could shoot them from the apartment; and the
+            officers did not know whether other people or weapons were
+            inside the apartment. <em>Id.</em> at 343.</p>
+            <p>Before entering, the officers announced their presence
+            several <span class="GramE">times, but</span> received no
+            answer. The officers went inside and discovered defendant
+            lying on his stomach on a bed in a bedroom with the door
+            open and the light on. Standing outside the bedroom door,
+            the officers announced their presence again, but defendant
+            did not respond. <em>Id.</em> at 341.</p>
+            <p>The officers were concerned that defendant was faking
+            sleep and that he was hiding weapons underneath his body.
+            <em>Id.</em> As the officers handcuffed defendant and rolled
+            him <span class="GramE">over</span> they found
+            methamphetamine in the bed. <em>Id.</em></p>
+            <p>The Court of Appeals held that the trial court should
+            have suppressed the methamphetamine because the officers did
+            not have an objectively reasonable basis for believing that
+            defendant posed an immediate risk of serious physical
+            injury. <em>Id.</em> at 343. The officers did not have any
+            information about defendant that would cause them to believe
+            that he might commit violence against police officers.
+            <em>Id.</em></p>
+            <p>There was no evidence in the record that defendant made
+            any movements or that his hands<br />
+            were concealed. <em>Id.</em> Although defendant did not
+            respond to the officers and the officers were concerned that
+            defendant was pretending to be asleep, defendant was not
+            required to respond to the officers. <em>Id.</em></p>
+            <p>Although it might be prudent for an officer to assume
+            that “where there’s one weapon, there’s often more than
+            one,” “where no articulable facts support the assumption, it
+            is not a sufficient basis for a warrantless search.”
+            <em>Id.</em> at 344.</p>
+            <p>In <a
+            href="https://casetext.com/case/state-v-rodriguez-perez"><em>Rodriguez-Perez</em>,
+            262 Or App 206</a>, Officer Gryphon testified that the
+            following facts led him to be concerned that the defendant
+            might be armed: (1) the defendant was staring at [Officer]
+            <span class="SpellE">Ockunzzi’s</span> interaction with [the
+            defendant’s] brother; (2) the defendant did not answer
+            Gryphon’s questions and would not make eye contact with him;
+            (3) the defendant was glancing around and looked over his
+            shoulder; (4) the defendant took steps away from Gryphon;
+            (5) the defendant asked Gryphon why the officers had to
+            search them; and (6) the defendant just stared at Gryphon
+            when Gryphon asked whether the defendant was armed.
+            <span class="SpellE">Ockunzzi</span> testified that the
+            brother’s prior concealed-firearm arrest made him think that
+            either man might be armed.”</p>
+            <p>The court held, “[A]t the point that
+            <span class="SpellE">Ockunzzi</span> discovered the
+            brother’s prior arrest, both defendant and his brother had
+            been compliant and nothing about their behavior indicated
+            that either of them posed an immediate threat of serious
+            physical injury.”</p>
+            <p><span>      </span>II.<span>  </span>Material Witness
+            Stops</p>
+            <p>Until recently, traffic/non-criminal stops, investigatory
+            criminal stops, and officer-safety stops, were the only
+            permissible justifications for a non-arrest-level seizure.
+            However, the Oregon Supreme Court created an additional
+            exception in 2013:</p>
+            <div class="blockquote">
+            <p><span lang="EN-GB">“[T]he stop and temporary on-the-scene
+            detention of a likely material witness will be
+            constitutional if: (1) the officer reasonably believes that
+            an offense involving danger of forcible injury to a person
+            recently has been committed nearby; (2) the officer
+            reasonably believes that the person has knowledge that may
+            aid the investigation of the suspected crime; and (3) the
+            detention is reasonably necessary to obtain or verify the
+            identity of the person, or to obtain an account of the
+            crime.”</span></p>
+            </div>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Fair,+353+Or+588,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1626962107991987550&amp;scilh=0"><em>State
+            v. Fair</em>, 353 Or 588, 609, 302 P3d 417 (2013)</a>. The
+            Oregon Supreme Court in <em>Fair</em> for the first time in
+            this state’s history suggested that the warrant requirement
+            applies to searches of persons, places, and things and to
+            seizures of places and things—but not to seizures of
+            persons:</p>
+            <div class="blockquote">
+            <p><span lang="EN-GB">“Contrary to the premise of
+            defendant’s position, however, the warrant requirement
+            traditionally has not extended to the same extent and in the
+            same way to seizures of persons, as it
+            <span class="GramE">has to</span> searches and seizures of
+            premises and property. At common law, a police officer could
+            arrest a citizen if that citizen committed a crime in the
+            officer’s presence; the officer was not required to first
+            obtain a warrant.</span></p>
+            <p><span lang="EN-GB">“* * * * * </span></p>
+            <p><span lang="EN-GB">“Indeed, were a warrant, or an
+            exception to a warrant, required for a seizure of a person
+            outside the home, no
+            <span class="SpellE"><em>Cloman</em></span>- or
+            <em>Terry</em>-like stop of a criminal suspect based on
+            reasonable suspicion would be constitutionally permissible.
+            The only warrant known to the law for a seizure of a
+            criminal suspect is an arrest warrant. There is not, nor
+            could there be, a warrant to detain on reasonable suspicion;
+            a constitutionally sufficient warrant must be supported by
+            probable cause. See Article I, section 9 (‘no warrant shall
+            issue but upon probable cause’); Fourth Amendment (same).
+            Exceptions to the warrant requirement excuse the necessity
+            of obtaining a warrant from a neutral magistrate in advance
+            of a search or seizure; they do not change the requirement
+            that police have probable cause to support their action. In
+            other words, the very premise of defendant’s position runs
+            counter to the developed law regarding temporary detentions
+            of citizens for investigatory purposes.”</span></p>
+            </div>
+            <p><em>Id.</em> at 604-05. The Supreme Court’s “reasoning”
+            appears to have ignored the (1) officer-safety doctrine, (2)
+            emergency-aid doctrine, (3) stop-and-frisk doctrine; (4)
+            consent doctrine, (5) administrative search doctrine, and
+            (6) school-safety doctrine, each of which the Oregon Supreme
+            Court has referred to as an “exception to the warrant
+            requirement” and each of which employs the reasonable
+            suspicion standard or something other than probable cause to
+            support the seizure of a person. The majority’s approach in
+            <em>Fair</em> is not faithful to the Supreme Court’s own
+            precedent and should be consistently challenged in the trial
+            and appellate courts until it is abrogated.</p>
+            <div class="bon-update">
+            <p><span id="update-3"></span></p>
+            </section>
+            </section>
+            <section id="update_3" class="level3">
+            <h3>2024 Update</h3>
+            <p>In <a
+            href="https://scholar.google.com/scholar_case?case=5425436045658145980&amp;q=State+v.+Cage,+324+Or+App+430+&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Cage</span></em>, 324 Or App 430</a> (March 8, 2023), the
+            court held that the stop of the defendant was not lawful
+            under the material-witness exception, because the officers
+            did not have an “objectively reasonable basis to believe
+            that <em><span>defendant</span></em> was a material witness
+            to a crime.” In <em>Cage</em>, the police received a 9-1-1
+            call from a motel employee, reporting a dispute with a
+            gun-possessing suspect near the motel’s vending machines.
+            When the police arrived, they observed the defendant and H
+            in a car parked in the lot near the vending machines. H was
+            evasive and appeared to have been crying. In determining
+            that the material-witness exception could not justify the
+            stop of the defendant, the court contrasted the situation to
+            the facts presented in <a
+            href="https://scholar.google.com/scholar_case?case=1626962107991987550&amp;q=State+v.+Fair,+353+Or+588+(2013&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Fair</em>, 353 Or 588 (2013)</a>, where the court had
+            upheld a seizure under the material-witness exception.</p>
+            <p>In <em><span>Fair</span></em>, the defendant called 9-1-1
+            herself, which gave the officers reason to believe that the
+            defendant had witnessed a crime. But in <em>Cage</em>,
+            police had no reason to believe that the defendant was
+            involved in reporting the crime to law enforcement.
+            Additionally, in <em>Fair</em>, the combination of the
+            defendant’s 9-1-1 call, her swollen eye, and her husband's
+            apparent anger and evasiveness, created “an objectively
+            reasonable basis to believe that [the] defendant was a
+            victim of a domestic assault that had just occurred at the
+            home and likely possessed information material to that
+            crime.”</p>
+            <p>By contrast, in <em>Cage</em>, the court held that the
+            defendant’s proximity to the reported crime was “not
+            sufficiently specific or individualized to trigger the
+            material-witness exception,” especially when the state
+            presented no evidence regarding how long the car may have
+            been parked in that location.
+            <em><span><span> </span></span></em>Unlike the officers’
+            observations of an ongoing assault in
+            <em><span>Fair</span></em>, the officers did not arrive in
+            the middle of an exigency or observe any specific crime. H
+            showed no signs of injury, she provided an alternative
+            explanation for her apparent crying, and “uncooperative and
+            evasive behaviors alone do not indicate that a recent or
+            ongoing assault had taken place.”
+            <em><span>Cage</span></em>, 324 Or App at 443 (citing <a
+            href="https://scholar.google.com/scholar_case?case=7249456125679940776&amp;q=State+v.+Garcia,+276+Or+App+838&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Garcia</span></em>, 276 Or App 838, 852-53, 370 P3d 512
+            (2016)</a> (holding that the <em><span>Fair</span></em>
+            doctrine did not apply when the witness seemed “kind of
+            frazzled,” had been crying, denied that any argument with
+            the defendant had occurred, showed no signs of injury, and
+            did not request assistance)).</p>
+            </div>
+            <p>III.<span>       </span>Non-Traffic Violations</p>
+            <p><span id="a.-reasonable-grounds-to-believe"></span></p>
+            </section>
+            <section id="a._reasonable_grounds_to_believe"
+            class="level3">
+            <h3>A. Reasonable Grounds to Believe</h3>
+            <p>Reasonable grounds to believe that a person has committed
+            a violation other than a traffic violation can justify a
+            limited stop to investigate the violation.</p>
+            <p><a href="http://www.oregonlaws.org/ors/153.039">ORS
+            153.039</a> governs a police officer’s authority to stop a
+            person for the commission of a violation. “An enforcement
+            officer may stop and detain any person if the officer has
+            reasonable grounds to believe that the person has committed
+            a violation.” ORS 153.039(2). “[T]he period of detention may
+            be only as long as is necessary to:</p>
+            <div class="blockquote">
+            <p>“(a) Establish the identity of the person, firm,
+            corporation or organization believed to have committed the
+            <span class="GramE">violation;</span></p>
+            <p>“(b) Conduct any investigation reasonably related to the
+            violation; and</p>
+            <p>“(c) Issue a citation for the violation.”</p>
+            </div>
+            <p>ORS 153.039(3).</p>
+            <p><span id="b.-what-does-reasonable-grounds-to-believe-mean"></span></p>
+            </section>
+            <section
+            id="b._what_does_reasonable_grounds_to_believe_mean"
+            class="level3">
+            <h3>B. What does “reasonable grounds to believe” mean?</h3>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Regnier,+229+Or+App+525,+&amp;hl=en&amp;as_sdt=4,38&amp;case=11555091186505102329&amp;scilh=0"><em>State
+            v. <span class="SpellE">Regnier</span></em>, 229 Or App 525,
+            527, 212 P3d 1269 (2009)</a>, police responded to a report
+            of minors drinking on the beach, a class B violation, <a
+            href="http://www.oregonlaws.org/ors/471.430">ORS 471.430</a>
+            (MIP). The trial court ruled that the words “reasonable
+            grounds” in ORS <a
+            href="http://www.oregonlaws.org/ors/153.039">153.039</a>(2)
+            impose a higher standard than the “reasonable suspicion” of
+            criminal activity standard in <a
+            href="http://www.oregonlaws.org/ors/131.615">ORS
+            131.615(1)</a>, relying on the reasoning in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gulley,+324+Or+57,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15960860652802364272&amp;scilh=0"><em>State
+            v. Gulley</em>, 324 Or 57, 921 P2d 396 (1996)</a>.</p>
+            <p>In <em>Gulley</em>, the defendant moved to suppress
+            evidence seized during the search of his residence pursuant
+            to a condition of his probation that required him to “submit
+            person, residence, vehicle and property to search by a
+            probation officer having reasonable grounds to believe such
+            search will disclose evidence of a probation violation.” For
+            purposes of that statute, the Supreme Court held that
+            “reasonable grounds” refers to a “quantum of information
+            greater than that required to justify the stop of a person
+            under ORS 131.615.” <em>Gulley</em>, 324 Or at 65.</p>
+            <p>In <span class="SpellE"><em>Regnier</em></span>, the
+            state asked the court to import the definition of
+            “reasonably suspects” in <a
+            href="http://www.oregonlaws.org/ors/131.605">ORS
+            131.605(5)</a> into <a
+            href="http://www.oregonlaws.org/ors/153.039">ORS
+            153.039(1)</a>. The court declined to resolve the issue,
+            stating,</p>
+            <div class="blockquote">
+            <p>“[E]<span class="SpellE">ven</span> if we give the state
+            the benefit of its proposed statutory interpretation, we
+            need not reach the issue of whether the trial court
+            correctly interpreted ORS 153.039(1) if [the officer] did
+            not have a reasonable suspicion (a standard requiring a
+            quantum of information less than required for ‘reasonable
+            ground,’ under <em>Gulley</em> ) that defendants were in
+            possession of alcoholic beverages at the time that she
+            restrained their liberty of movement.”</p>
+            </div>
+            <p><span class="SpellE"><em>Regnier</em></span>, 229 Or App
+            at 531. Consequently, the
+            <span class="SpellE"><em>Regnier</em></span> court concluded
+            that regardless of the standard, MIP requires personal
+            possession of an alcoholic beverage and that the officer
+            lacked individualized reasonable suspicion that the
+            defendants ever physically or constructively possessed any
+            alcohol. <em>Id.</em> at 536.</p>
+            </div>
+            </section>
+            </section>
+    </body>
+</html>

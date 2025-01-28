@@ -1,22 +1,19 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import BreadcrumbItem from './BreadcrumbItem';
 /* eslint-enable */
 
-export default function Breadcrumbs({ crumbs = [] }) {
+export default function Breadcrumbs({ items = [] }) {
     return (
         <section class='flex items-center border border-t-0 p-4 capitalize text-black lg:h-16'>
             <ul class='flex flex-wrap items-center whitespace-pre'>
-                {crumbs.map((crumb, i) => {
-                    const seperatorString =
-                        i !== crumbs.length - 1 ? ' / ' : ' ';
-
+                {items.map((item, i) => {
+                    const seperatorString = i !== items.length - 1 ? ' / ' : ' ';
                     return (
-                        <>
-                            <BreadcrumbItem {...crumb} />
-                            {seperatorString}
-                        </>
+                        <li>
+                            <a href={item.href}>{item.label}</a>
+                            <span>{seperatorString}</span>
+                        </li>
                     );
                 })}
             </ul>

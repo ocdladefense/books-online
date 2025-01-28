@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Scientific Evidence: A Manual for Oregon Defense Attorneys</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Scientific Evidence: A Manual for Oregon
+Defense Attorneys</h1>
+                                    </section>
+            <p>2012 edition</p>
+            <p><strong>The Defense's Scientific Evidence</strong></p>
+            <section id="i._do_you_want_to_offer_expert_testimony"
+            class="level1">
+            <h1><strong>I. Do you want to offer expert
+            testimony?</strong></h1>
+            <p>Think carefully before deciding to offer your own expert
+            testimony, as that decision carries real risks. If, for
+            example, your theory is that a method or scientific
+            discipline relied upon by the state is generally not worthy
+            of credence, presenting your own witness with a background
+            in that area might be seen as a concession of validity. It
+            may be awkward, after all, for an expert to testify that he
+            has spent a significant portion of his career in a field
+            that does not produce trustworthy conclusions.<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a></p>
+            <p>In addition, just as you will often be able to extract
+            valuable admissions from the state’s expert,<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> the state may be able to
+            do the same with your expert. For example, in a relatively
+            objective field with extensive published literature, the
+            state will be able to use the “learned treatise” rule (<a
+            href="http://www.oregonlaws.org/ors/40.430">OEC 706</a>) to
+            cross-examine your expert, who may find it difficult to
+            disagree credibly with the statements in that literature.
+            When dealing with such evidence, consider whether the
+            literature you can use for cross-examination might be a
+            sufficient proxy for whatever live expert testimony you
+            might otherwise offer.</p>
+            </section>
+            <section id="ii._laying_the_groundwork" class="level1">
+            <h1><strong>II. Laying the Groundwork</strong></h1>
+            <p>From the time you first begin selecting an expert, think
+            not only about the helpful testimony the expert can provide,
+            but also about any negatives that could be used to impeach
+            his testimony or otherwise be used against you at trial.
+            Your assessment should include not only the expert’s
+            qualifications, curriculum vitae, and testimonial style, but
+            also factors such as whether the expert has a record that
+            could be used to demonstrate bias (for example, a history of
+            testifying predominantly for one side or the other); the
+            degree to which the expert has been found qualified, or not
+            qualified, in other cases; and whether his published works
+            or prior testimony include statements that could harm your
+            case.</p>
+            <p>Additionally, from the beginning of the relationship
+            proceed on the assumption that all written communications
+            between you and the expert, and all reports, drafts, and
+            notes made by the expert, will be subject to dis- closure
+            pursuant to your discovery obligations or a state subpoena.
+            You do not necessarily want to discourage the expert from
+            taking notes or otherwise generating written work product.
+            Especially in complex matters, it can be difficult for an
+            expert to conduct a high-quality analysis without leaving a
+            paper trail, and the absence of any written record may be
+            exploited by the prosecutor in challenging the quality of
+            your expert’s work. Still, the expert should be made aware
+            that his materials will likely end up being perused by the
+            state, and perhaps given some guidance regarding the types
+            of notations that could end up making things uncomfortable
+            for him or for you.</p>
+            <p>Similarly, keep in mind that experts are commonly asked
+            what materials they reviewed, or what materials were given
+            to them to review, in connection with their analysis or in
+            preparation for their testimony. When deciding, for example,
+            which discovery materials to give to your expert for review,
+            you may want to err on the side of inclusion, even as to
+            materials that you do not believe are relevant or useful to
+            the expert’s task. This will make it more difficult for the
+            state to portray you as having attempted to shape the
+            expert’s conclusions by presenting only materials favorable
+            to the defense.<a href="#fn3" class="footnote-ref"
+            id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+            <p>At the same time, be careful about providing the expert
+            with any of your work product or other confidential
+            materials. Although contrary arguments can be made, you
+            should assume that any such materials will lose any
+            otherwise applicable privilege status if shared with an
+            expert who ends up testifying.<a href="#fn4"
+            class="footnote-ref" id="fnref4"
+            role="doc-noteref"><sup>4</sup></a></p>
+            </section>
+            <section id="iii._defense_analysis_of_physical_evidence"
+            class="level1">
+            <h1><strong>III. Defense Analysis of Physical
+            Evidence</strong></h1>
+            <p>If your case involves physical evidence that has been or
+            could be the subject of expert analysis, you may want to
+            have your own expert independently analyze that evidence.
+            Neither Oregon nor federal law unequivocally provides a
+            right to do so, but trial courts may be receptive to
+            requests for such access, and the prosecutor in your case
+            may provide it voluntarily.</p>
+            <p>As discussed in Chapter 1, Oregon law at present is not
+            hospitable to work product claims in this context.
+            Accordingly, be careful not to turn your expert into a
+            potential prosecution witness. Under <a
+            href="http://scholar.google.com/scholar_case?q=riddle&amp;hl=en&amp;as_sdt=4%2C38&amp;case=18033232614424190910&amp;scilh=0">State
+            v. Riddle</a>,<a href="#fn5" class="footnote-ref"
+            id="fnref5" role="doc-noteref"><sup>5</sup></a> the state
+            may be able to require an expert to testify about work done
+            while engaged by the defense. There are certain precautions
+            you can take to minimize the risk of this happening. First,
+            you can try to obtain the evidence and have it analyzed in a
+            way that will not reveal to the state the identity of your
+            expert. If the prosecutor attempts to force you to reveal
+            that information as a condition of obtaining the evidence,
+            you can emphasize the constitutional significance of a
+            defense attorney’s ability to secure expert assistance <a
+            href="#fn6" class="footnote-ref" id="fnref6"
+            role="doc-noteref"><sup>6</sup></a> and the confidentiality
+            safeguarded by the attorney-client privilege and work
+            product doctrine.<a href="#fn7" class="footnote-ref"
+            id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+            <p>Second, you can manage communications with your expert in
+            such a way that you will be able to prove, if the need
+            arises, that any testimony the expert could give would be
+            inextricably linked to your confidential communications with
+            the expert.<a href="#fn8" class="footnote-ref" id="fnref8"
+            role="doc-noteref"><sup>8</sup></a></p>
+            <p>Although the foregoing discussion focuses on written
+            materials, oral communications are also a potential concern
+            in multiple respects. Any oral communications between you
+            and your testifying expert, with the possible exception of
+            those irrelevant to the topics on which the expert will
+            testify, will likely be fair topics of inquiry for the
+            state. In addition, no legal or ethical prohibition
+            currently prevents the prosecutor or any other state agent
+            from contacting your expert once you have identified him as
+            a testifying witness; in fact, a Formal Ethics Opinion
+            expressly blesses this practice.<a href="#fn9"
+            class="footnote-ref" id="fnref9"
+            role="doc-noteref"><sup>9</sup></a></p>
+            <p>Although you cannot direct your expert not to talk to the
+            government, it is permissible to remind him that he is under
+            no obligation to do so, and that he should not in any case
+            divulge communications or information that maintain
+            privileged status notwithstanding the anticipated
+            testimony.<a href="#fn10" class="footnote-ref" id="fnref10"
+            role="doc-noteref"><sup>10</sup></a></p>
+            </section>
+            <section id="iv._the_admissibility_hearing" class="level1">
+            <h1><strong>IV. The Admissibility Hearing</strong></h1>
+            <p>If you have an expert who could make a real difference
+            for you at trial, the last thing you want is to have that
+            expert’s testimony deemed inadmissible. Accordingly, do your
+            homework and show up prepared to make a strong case for
+            admissibility. This is essentially the flip side of the
+            analysis in Chapters 3 and 4, which focus on how to exclude
+            testimony proffered by the state.</p>
+            <p>At the outset, consider whether you can argue that your
+            evidence is not in fact “scientific” evidence subject to the
+            demanding <a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;scilh=0">O’Key</a>standard.
+            As discussed in Chapter 2, the answer to this question is
+            often less than clear, and it can be a real advantage to the
+            proponent to have evidence deemed nonscientific. Where
+            appropriate, consider arguing, for example, that your
+            expert’s testimony will not be perceived by jurors as
+            scientific in nature,<a href="#fn11" class="footnote-ref"
+            id="fnref11" role="doc-noteref"><sup>11</sup></a>or that
+            your expert will not be using “the vocabulary of scientific
+            research.”<a href="#fn12" class="footnote-ref" id="fnref12"
+            role="doc-noteref"><sup>12</sup></a></p>
+            <p>As you prepare, work through all of the
+            <em>O’Key</em>factors and consider what evidence you want to
+            present in favor of each one. Your expert’s testimony will
+            be part of this foundational showing, but there may be other
+            elements as well. Remember that the rules of evidence do not
+            apply at the admissibility hearing, so technical literature
+            and other written materials may be part of your proof.</p>
+            <p>Arm yourself with as much judicial precedent as possible.
+            If there is Oregon appellate precedent affirming the type of
+            evidence at issue, that will significantly reduce your
+            foundational burden.<a href="#fn13" class="footnote-ref"
+            id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
+            <p>If there is some difference between the specific method
+            used in your case and that which was previously approved,
+            consider citing <a
+            href="http://scholar.google.com/scholar_case?q=state%2Bv.%2Bherzog&amp;hl=en&amp;as_sdt=4%2C38&amp;case=17640085657792230032&amp;scilh=0">State
+            v. Herzog</a>,<a href="#fn14" class="footnote-ref"
+            id="fnref14" role="doc-noteref"><sup>14</sup></a> in which
+            the Oregon Supreme Court summarily affirmed the
+            admissibility of one type of DNA evidence based on its
+            simultaneous acceptance of a distinct type. Even if the
+            evidence blessed by prior Oregon case law is sufficiently
+            dissimilar that a full foundational showing is required in
+            your case, that precedent may still be useful with respect
+            to one of the “additional” admissibility factors, e.g.,
+            “[a]nalogy to other scientific techniques whose results are
+            admissible.”<a href="#fn15" class="footnote-ref"
+            id="fnref15" role="doc-noteref"><sup>15</sup></a></p>
+            <p>Cases from other jurisdictions may also be helpful, as
+            “[t]he extent to which other courts admit” the type of
+            evidence at issue is explicitly part of the
+            <em>O’Key</em>analysis.<a href="#fn16" class="footnote-ref"
+            id="fnref16" role="doc-noteref"><sup>16</sup></a> Finally,
+            even a record of previous admissibility determinations at
+            the trial court level may be persuasive to the court in your
+            case (especially if the expert can testify that no court has
+            ever excluded his testimony).</p>
+            <p>Remember that the “flexibility” of the
+            <em>O’Key</em>analysis can be exploited by the proponent of
+            evidence as well as by the opponent.<a href="#fn17"
+            class="footnote-ref" id="fnref17"
+            role="doc-noteref"><sup>17</sup></a></p>
+            <p>If there is something about your expert’s evidence that
+            supports a conclusion of validity and admissibility but does
+            not fit neatly into any of the primary admissibility
+            factors, try to fit it into one of the “additional” factors
+            referenced in <em>O’Key</em>. If there is no good fit at
+            that level, remind the court that the factors are simply
+            means to the end of assessing validity, and that anything
+            bearing on that ultimate determination should be
+            considered.<a href="#fn18" class="footnote-ref" id="fnref18"
+            role="doc-noteref"><sup>18</sup></a></p>
+            <p>Where appropriate, remind the court that the focus of the
+            admissibility inquiry “must be solely on principles and
+            methodology, not on the conclusions that they generate.”<a
+            href="#fn19" class="footnote-ref" id="fnref19"
+            role="doc-noteref"><sup>19</sup></a></p>
+            <p>Accordingly, if your expert’s method is valid and was
+            properly applied in your case, the fact that others in the
+            field might disagree with his conclusions should not affect
+            admissibility.<a href="#fn20" class="footnote-ref"
+            id="fnref20" role="doc-noteref"><sup>20</sup></a></p>
+            <p>Consider citing some of the following cases, with
+            language and analysis tending towards leniency in the
+            admissibility determination:</p>
+            <p>• <a
+            href="http://scholar.google.com/scholar_case?q=Jennings%2Bv.%2BBaxter%2BHealthcare%2BCorp.&amp;hl=en&amp;as_sdt=2%2C38&amp;case=14000311888179168716&amp;scilh=0">Jennings
+            v. Baxter Healthcare Corp.</a><a href="#fn21"
+            class="footnote-ref" id="fnref21"
+            role="doc-noteref"><sup>21</sup></a>: Doctor’s testimony
+            regarding medical causation should have been admitted even
+            though it was novel and lacked some of the usual hallmarks
+            of validity such as publication, peer review, and a
+            statistically determined rate of error, and doctor could not
+            explain the mechanism underlying the alleged causation.<a
+            href="#fn22" class="footnote-ref" id="fnref22"
+            role="doc-noteref"><sup>22</sup></a></p>
+            <p>• <a
+            href="http://scholar.google.com/scholar_case?q=Kennedy%2Bv.%2BEden%2BAdvanced%2BPest%2BTechnologies&amp;hl=en&amp;as_sdt=2%2C38&amp;case=3299181445516334127&amp;scilh=0">Kennedy
+            v. Eden Advanced Pest Technologies</a><a href="#fn23"
+            class="footnote-ref" id="fnref23"
+            role="doc-noteref"><sup>23</sup></a>: Testimony of expert
+            diagnosing plaintiff ’s condition should have been admitted
+            notwithstanding significant dispute within the field
+            concerning the methodology at issue; “[w]hen qualified
+            experts disagree about the validity of medical diagnoses or
+            other scientific evidence, judges are in no better position
+            to resolve that dispute than are juries.”<a href="#fn24"
+            class="footnote-ref" id="fnref24"
+            role="doc-noteref"><sup>24</sup></a></p>
+            <p>•<em>Marcum v. Adventist Health System/West</em><a
+            href="#fn25" class="footnote-ref" id="fnref25"
+            role="doc-noteref"><sup>25</sup></a> Suggesting a more
+            lenient analysis may be appropriate in a context in which,
+            “because of ethical or other considerations, studies and
+            comparisons may not be possible.”<a href="#fn26"
+            class="footnote-ref" id="fnref26"
+            role="doc-noteref"><sup>26</sup></a></p>
+            <p>•<a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BLyons&amp;hl=en&amp;as_sdt=4%2C38&amp;case=630919102008065827&amp;scilh=0">State
+            v. Lyons</a><a href="#fn27" class="footnote-ref"
+            id="fnref27" role="doc-noteref"><sup>27</sup></a>:
+            Explaining that the United States Supreme Court’s decision
+            in <em>Daubert v. Merrell Dow Pharmaceuticals</em>,<a
+            href="#fn28" class="footnote-ref" id="fnref28"
+            role="doc-noteref"><sup>28</sup></a>which the Oregon Supreme
+            Court found “instructive” in <em>O’Key</em>, “cautions lower
+            courts not to confuse the role of judge and jury by
+            forgetting that [v]igorous cross-examination, presentation
+            of contrary evidence, and careful instruction on the burden
+            of proof,’ rather than exclusion ‘are the traditional and
+            appropriate means of attacking shaky but admissible
+            evidence.’”<a href="#fn29" class="footnote-ref" id="fnref29"
+            role="doc-noteref"><sup>29</sup></a></p>
+            </section>
+            <section id="v._presenting_your_witness" class="level1">
+            <h1><strong>V. Presenting Your Witness</strong></h1>
+            <p>All of the foregoing is, of course, preparatory to the
+            ultimate objective of presenting persuasive expert testimony
+            at trial. One critical point to keep in mind is that it
+            needs to be you, not the expert, who crafts and shapes your
+            presentation. That does not necessarily mean that you will
+            be the dominant figure in the direct examination itself. The
+            best approach may consist of counsel playing a minor role
+            with the expert taking center stage. But the
+            planning—including decisions such as the nature and extent
+            of background or explanatory testimony, which points to
+            highlight, and whether and how to address preemptively any
+            foreseeable attacks by the state—needs to be driven by
+            you.</p>
+            <p>If your expert is an experienced testifier, he may expect
+            to essentially direct his own presentation. As the lawyer,
+            however, you are the expert in crafting your story and in
+            fitting every bit of evidence effectively and persuasively
+            into your overall presentation. You will know, in a way that
+            your expert may not, the ways in which your case differs
+            from other cases in which the expert has testified. And if
+            you have taken the time to master the principles underlying
+            the proposed testimony, you will be in a position to direct
+            a presentation that effectively accomplishes your
+            objectives. So, while you will always want to listen
+            carefully to all of your expert’s thoughts and suggestions,
+            you are ultimately responsible for deciding how to present
+            the evidence.</p>
+            <p>If your objective is to help the listeners understand the
+            evidence as clearly as possible, there are certain tactics
+            that may help in that regard. I spent several years as a
+            high school science teacher, and during that time I came to
+            believe that the most effective teaching strategy was often
+            to focus on a logical progression of principles, instead of
+            emphasizing specific facts.<a href="#fn30"
+            class="footnote-ref" id="fnref30"
+            role="doc-noteref"><sup>30</sup></a></p>
+            <p>Just as you should not underestimate your own ability to
+            understand the scientific principles relevant to your case,
+            you should not underestimate a judge’s or a juror’s ability
+            to understand those same principles. Remember, you will not
+            need to replicate in your audience the full breadth of
+            knowledge possessed by a career expert in the field. Most
+            forensic applications will include a relatively small number
+            of principles constituting only a fraction of what an expert
+            will have learned or studied. You may be surprised at how
+            frequently you will be able to learn, and teach, those
+            principles to the extent necessary for your case.</p>
+            <p>In your role as “science teacher,” make use of the
+            various tools and techniques educators use to make
+            scientific principles understandable. Visual aids and other
+            demonstrative evidence can be invaluable in this process.
+            Teachers, and particularly science teachers, regularly quote
+            the proverb: “What I hear, I forget; what I see, I remember;
+            what I do, I understand.”<a href="#fn31"
+            class="footnote-ref" id="fnref31"
+            role="doc-noteref"><sup>31</sup></a> Although you will often
+            be limited to the first two of those options, certain cases
+            may present opportunities for the third.<a href="#fn32"
+            class="footnote-ref" id="fnref32"
+            role="doc-noteref"><sup>32</sup></a> Even where it is not
+            feasible to have jurors experience the evidence by “doing,”
+            alternative approaches may serve as acceptable substitutes.
+            For example, you and the expert may be able to build a
+            demonstrative exhibit gradually as the testimony progresses,
+            giving jurors the sense of participating in the progression
+            towards the expert’s ultimate conclusion.</p>
+            <hr />
+            <references/>
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><sup>Of course, calling your own witness could
+            be made consistent with your attack. The witness could
+            testify, for example, that the method is appropriate for
+            certain applications in his field but not precise or
+            accurate enough for forensic applications. Alternatively, a
+            witness with a background in a broader discipline could
+            opine that the method used by the state’s expert is not
+            considered reliable within that discipline.</sup><a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn2"><sup><em>See</em>Chapter 6, Part II.G
+            (discussing constructive cross-examination).</sup><a
+            href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn3"><sup><em>See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BSmallwood&amp;hl=en&amp;as_sdt=4%2C38&amp;case=410328086718642525&amp;scilh=0">State
+            v. Smallwood</a>, 25 Or App 251, 258 (1976) (“The jury is as
+            entitled to know what relevant information was not available
+            to or considered by an expert in arriving at his opinion as
+            it is to know what the expert did consider. It is relevant
+            in determining his competency as an expert and also the
+            weight to be accorded his opinion.”),</em>aff ’d'', 277 Or
+            503 (1977).</sup><a href="#fnref3" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn4"><sup><em>See, e.g.</em>, <em>Dyson Tech. Ltd.
+            v. Maytag Corp.</em>, 241 FRD 247 (D Del 2007) (addressing
+            this issue in the context of a federal civil case).</sup><a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn5"><sup>330 Or 471 (2000).</sup><a href="#fnref5"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn6"><sup><em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=Ake%2Bv.%2BOklahoma&amp;hl=en&amp;as_sdt=2%2C38&amp;case=1904002630366313299&amp;scilh=0">Ake
+            v. Oklahoma</a>, 470 US 68 (1985).</sup><a href="#fnref6"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn7"><sup><em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=Weatherford%2Bv.%2BBursey&amp;hl=en&amp;as_sdt=2%2C38&amp;case=1091036188660785537&amp;scilh=0">Weatherford
+            v. Bursey</a>, 429 US 545, 554 n 4 (1977) (“One threat to
+            the effective assistance of counsel posed by government
+            interception of attorney-client communications lies in the
+            inhibition of free exchanges between defendant and counsel
+            because of the fear of being overheard.”); <a
+            href="http://scholar.google.com/scholar_case?q=us%2Bv.%2BDanielson&amp;hl=en&amp;as_sdt=3%2C38&amp;case=2244042345703609845&amp;scilh=0">United
+            States v. Danielson</a>, 325 F3d 1054, 1069 (9th Cir 2003)
+            (describing circumstances in which “improper interference by
+            the government with the confidential relationship between a
+            criminal defen- dant and his counsel violates the Sixth
+            Amendment”); <a
+            href="http://scholar.google.com/scholar_case?q=Smith%2Bv.%2BMcCormick&amp;hl=en&amp;as_sdt=3%2C38&amp;case=11891135850417049925&amp;scilh=0">Smith
+            v. McCormick</a>, 914 F2d 1153, 1157-60 (9th Cir 1990)
+            (discussing the constitutional significance of confidential
+            communication between a defense attorney and a psychiatric
+            expert); <a
+            href="http://scholar.google.com/scholar_case?q=us%2Bv.%2BRegan&amp;hl=en&amp;as_sdt=3%2C38&amp;as_ylo=2000&amp;as_yhi=2002&amp;case=10051647474952076635&amp;scilh=0">United
+            States</a><a
+            href="http://scholar.google.com/scholar_case?q=us%2Bv.%2BRegan&amp;hl=en&amp;as_sdt=3%2C38&amp;as_ylo=2000&amp;as_yhi=2002&amp;case=10051647474952076635&amp;scilh=0">v.</a><a
+            href="http://scholar.google.com/scholar_case?q=us%2Bv.%2BRegan&amp;hl=en&amp;as_sdt=3%2C38&amp;as_ylo=2000&amp;as_yhi=2002&amp;case=10051647474952076635&amp;scilh=0">Regan</a>,
+            281 F Supp 2d 795, 801 (ED Va 2002) (noting that “the
+            attorney-client and the attorney-work-product privileges are
+            important and vital to ensuring effective assistance of
+            counsel”). The Oregon Supreme Court does not appear to have
+            considered any constitutional arguments in <em>Riddle</em>,
+            so the argument that the work product protection has
+            constitutional significance in criminal cases should not be
+            foreclosed. ''See also <a
+            href="http://scholar.google.com/scholar_case?case=16420939534266249613&amp;hl=en&amp;as_sdt=2%2C38">State
+            v. Lobo</a>, Oregon Supreme Court Case No. S058221, Order
+            Allowing Petition for Alternative Writ of Mandamus (Feb. 16,
+            2010) (allowing petition where trial court had ordered
+            defense counsel to disclose confidential information as a
+            condition of obtaining physical evidence for defense
+            testing).</sup><a href="#fnref7" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn8"><p><sup> ''See <a
+            href="http://scholar.google.com/scholar_case?q=riddle&amp;hl=en&amp;as_sdt=4%2C38&amp;case=18033232614424190910&amp;scilh=0">Riddle</a>,
+            330 Or at 487:</p>
+            <p>[The] expert is disqualified from testifying . . . if his
+            or her opinion discloses, either directly or indirectly, or
+            is based on, any confidential communication between the
+            lawyer, the client, and/or the expert. If an expert’s
+            opinion is so bound up with any such communication that the
+            expert cannot, in the view of the trial court, segregate his
+            or her opinion from some part of the confidential
+            communication, then the expert should not be permitted to
+            testify.</sup><a href="#fnref8" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn9"><sup><em>See</em>Oregon State Bar Board of
+            Governors, <a
+            href="https://www.osbar.org/_docs/ethics/2005-131.pdf">Formal
+            Ethics Opinion No. 2005-131</a>(“Contacting Adverse Expert
+            Witness in a Criminal Case”). Of course, if the contact
+            involved factors such as deception or an effort to pressure
+            the expert into not testify- ing, different issues would
+            arise.</sup><a href="#fnref9" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn10"><sup><em>See, e.g.</em>, <em>id.</em>at 356
+            (“The required disclosure of, and the opposing lawyer’s
+            right to contact, a testifying witness does not, however,
+            constitute a waiver of applicable privileges. Privileges
+            pertaining to subject matters outside the scope of the
+            anticipated testimony, for example, would still
+            apply.”).</sup><a href="#fnref10" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn11"><sup><em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=state%2Bv.%2Bmarrington&amp;hl=en&amp;as_sdt=4%2C38&amp;case=10154162156262782119&amp;scilh=0">State
+            v. Marrington</a>, 335 Or 555, 561 (2003).</sup><a
+            href="#fnref11" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn12"><sup><a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BClemens&amp;hl=en&amp;as_sdt=4%2C38&amp;case=12939900957219587024&amp;scilh=0">State
+            v. Clemens</a>, 208 Or App 632, 639 (2006).</sup><a
+            href="#fnref12" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn13"><sup><em>See</em>Chapter 4, Part
+            III.A.</sup><a href="#fnref13" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn14"><sup>324 Or 294 (1996).</sup><a
+            href="#fnref14" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn15"><sup><a
+            href="http://scholar.google.com/scholar_case?case=4487336251714325364&amp;q=State%2Bv.%2BO’Key&amp;hl=en&amp;as_sdt=4%2C38&amp;scilh=0">State
+            v. O’Key</a>, 321 Or 285, 300 n 15 (1995) (en banc); <em>see
+            also supra</em>Chapter 4, Part IV.A.1.g.12.</sup><a
+            href="#fnref15" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn16"><sup><em>O’Key</em>, 321 Or at 317-18
+            (emphasis removed).</sup><a href="#fnref16"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn17"><sup><em>See, e.g.</em>, <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BSouthard&amp;hl=en&amp;as_sdt=4%2C38&amp;case=16531670170009390370&amp;scilh=0">State
+            v. Southard</a>, 347 Or 127, 135 (2009) (“Not all of the
+            factors that the court identified in <em>Brown</em>and
+            <em>O’Key</em>will necessarily apply in a given case, nor
+            has the court required that all or even a majority of the
+            applicable factors be satisfied for evidence to be
+            admissible.”).</sup><a href="#fnref17" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn18"><sup><em>See supra</em>Chapter 4, Part
+            IV.A.1.g.12.</sup><a href="#fnref18" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn19"><sup><em>O’Key</em>, 321 Or at 305 (quoting <a
+            href="http://scholar.google.com/scholar_case?q=Daubert%2Bv.%2BMerrell%2BDow%2BPharms.%2C%2BInc.&amp;hl=en&amp;as_sdt=3%2C38&amp;case=827109112258472814&amp;scilh=0">Daubert
+            v. Merrell Dow Pharms., Inc.</a>, 509 US 579, 595
+            (1993)).</sup><a href="#fnref19" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn20"><sup><em>See, e.g.</em>, <em>Kennedy v. Eden
+            Advanced Pest Techs.</em>, 222 Or App 431, 452 n 15 (2008)
+            (“[T]o the extent that the trial court focused on the
+            ‘legitimacy’ of [the expert’s] diagnosis and not on his
+            methodology, that focus was incorrect.”); <a
+            href="http://scholar.google.com/scholar_case?q=Mitchell%2Bv.%2BMt.%2BHood%2BMeadows%2BOr.&amp;hl=en&amp;as_sdt=4%2C38&amp;case=9333943561012894842&amp;scilh=0">Mitchell
+            v. Mt. Hood</a><a
+            href="http://scholar.google.com/scholar_case?q=Mitchell%2Bv.%2BMt.%2BHood%2BMeadows%2BOr.&amp;hl=en&amp;as_sdt=4%2C38&amp;case=9333943561012894842&amp;scilh=0">Meadows
+            Or.</a>, 195 Or App 431, 444 (2004) (“[S]cientific evidence
+            will be admissible if the evidence is based on a methodology
+            that has scientific validity, even if other scientists or
+            experts might be unwilling to draw the same conclusion.”);
+            <em>State v. Lyons</em>, 324 Or 256, 273 (1996) (“Defendant
+            submitted contradicting expert testimony attacking the
+            results of [the state expert’s] PCR-based DNA testing. That
+            attack goes to the weight of the evidence, not to its
+            admissibility.”).</sup><a href="#fnref20"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn21"><sup>331 Or 285 (2000) (en banc).</sup><a
+            href="#fnref21" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn22"><sup><em>Id.</em>at 305-10. With respect to
+            the “novelty” issue in particular, see <em>id.</em>at 307
+            (“Although Grimm’s hypothesis has not been tested by others,
+            that is, in part, because his work is new. OEC 702 does not
+            preclude the admission of novel scientific evidence. If it
+            is otherwise scientifically valid, a novel conclusion is
+            admissible.”).</sup><a href="#fnref22" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn23"><sup>222 Or App 431 (2008).</sup><a
+            href="#fnref23" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn24"><sup><em>Id.</em>at 446-52; <em>see also
+            id.</em>at 446 (“[S]cientific evidence should be excluded
+            only when it is so unhelpful or so potentially confusing or
+            prejudicial that any probative value is substantially
+            outweighed.”); <em>Mitchell</em>, 195 Or App at 446
+            (“[D]iffering opinions based on scientific methodology do
+            not necessarily result, under the applicable law, in the
+            exclusion of one of the opinions. Rather, generally, a
+            conflict in scientific opinion presents a question of weight
+            to be resolved by the trier of fact.”); <em>Lyons</em>, 324
+            Or at 278-79 (“[C]ontroversy within the scientific community
+            is not necessarily a ground for exclusion of scientific
+            evidence. In deciding whether to admit scientific evidence,
+            a court need not resolve disputes between reputable experts;
+            the evidence may be admissible even though a dispute
+            exists.”).</sup><a href="#fnref24" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn25"><sup>345 Or 237 (2008) (en banc).</sup><a
+            href="#fnref25" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn26"><sup><em>Id.</em>at 252; <em>see also <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BPerry&amp;hl=en&amp;as_sdt=4%2C38&amp;case=11157625546996503150&amp;scilh=0">State
+            v. Perry</a>, 347 Or 110, 124 (2009)
+            (similar);</em>Southard'', 347 Or at 138 (“Where science
+            cannot ethically provide such an indicator, we are required
+            to look more closely at other factors that offset the
+            unavailability of that indicator.”).</sup><a href="#fnref26"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn27"><sup>324 Or 256 (1996).</sup><a
+            href="#fnref27" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn28"><sup>509 US 579 (1993).</sup><a
+            href="#fnref28" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn29"><sup>324 Or at 260 n 1 (quoting
+            <em>Daubert</em>, 509 US at 596).</sup><a href="#fnref29"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn30"><sup>For example, in some of my classes I had
+            to teach students about the Periodic Table of the Elements
+            (a grid showing all known chemical elements arranged in
+            columns and rows) and how elements from different regions on
+            the table react with each other. Some textbooks start this
+            discussion by stating which elements react with which other
+            elements, and the ratios in which they react. I found the
+            most effective approach to be starting with the structure of
+            the atom, including the arrangement of electrons (an
+            arrangement which determines each element’s position in the
+            table). When students understood this structure, and the
+            reasons why certain atoms had to gain, lose, or share
+            electrons to be stable, they had an easier time
+            understanding how and why the various elements would react
+            with each other.</sup><a href="#fnref30"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            <li id="fn31"><sup>This proverb is often attributed to
+            Confucius, but there is some dispute as to its
+            authorship.</sup><a href="#fnref31" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            <li id="fn32"><sup>Samuel Leibowitz, perhaps best known for
+            defending the Scottsboro Boys, was known to set up
+            “hands-on” opportunities for jurors to participate in
+            scientific evidence demonstrations. <em>See</em>Robert
+            Leibowitz, <em>The Defender: The Life and Career of Samuel
+            S. Leibowitz, 1893-1933</em>, at 32-33 (1981) (discussing a
+            case in which Leibowitz had jurors perform their own “sniff
+            tests” to help understand the degree to which various
+            substances can be identified by smell); <em>id.</em>at 70-71
+            (describing a similar tactic involving evidence viewed
+            through a microscope).</sup><a href="#fnref32"
+            class="footnote-back" role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

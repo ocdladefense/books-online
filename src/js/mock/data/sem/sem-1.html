@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Scientific Evidence: A Manual for Oregon Defense Attorneys</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Scientific Evidence: A Manual for Oregon
+Defense Attorneys</h1>
+                                    </section>
+            <p>2012 edition</p>
+            <section id="learning_the_science" class="level1">
+            <h1><strong>Learning the Science</strong></h1>
+            <p><em>“A lawyer who comes into court without knowing the
+            full extent of the science surrounding his case is a
+            well-coiffed charlatan.”1</em></p>
+            <p>{Note: Gerry Spence, <em>Win Your Case</em> (2005).</p>
+            <p>Your first task in any case involving scientific evidence
+            is to master the relevant principles underlying that
+            evidence. This chapter addresses such questions as:</p>
+            <p>• Is it really necessary to learn the science underlying
+            the evidence?</p>
+            <p><em>• Can</em>you realistically hope to do so—especially
+            if you do not have a scientific background?</p>
+            <p>• How do you go about doing this?</p>
+            </section>
+            <section id="i._do_you_need_to_learn_the_science"
+            class="level1">
+            <h1><strong>I. Do you need to learn the
+            science?</strong></h1>
+            <p>In a word, yes. To represent your client effectively, you
+            need to be the authoritative, credible author of the story
+            you will be telling in the courtroom. This requires a
+            mastery of all facts relevant to your case. If a piece of
+            scientific evidence is part of that factual universe, you
+            need to understand it.</p>
+            <p>This is true whether the scientific evidence is offered
+            by the prosecution or the defense. In confronting the
+            state’s evidence, you have a vital role in policing that
+            evidence and preventing it from carrying any more weight
+            than it deserves. You need to understand the evidence well
+            enough to perform that policing function—to know, for
+            example, when the expert is testifying to something beyond
+            what the state of knowledge in the field supports.
+            Otherwise, you will be at the mercy of the state’s expert,
+            especially if she perceives, and is emboldened by, the
+            absence of any meaningful check on her testimony.</p>
+            <p>Understanding the science is just as important when you
+            want to offer your own expert. Again, you are the author of
+            your story, and you will be most effective if you craft each
+            chapter yourself to fit smoothly into the finished work.
+            This does not mean, of course, that you shape your expert’s
+            actual opinions. As with any other witness, you only want
+            your expert to testify to what he truly believes. But only
+            you ultimately know the particular aspects of the expert’s
+            knowledge that need to be woven into your story and how that
+            can be done most persuasively. If you end up essentially
+            delegating that task to your expert—if, for example, you
+            carefully compose all other parts of your story but rely
+            primarily on your expert to fill in “his part”—your case
+            will suffer.</p>
+            <p>Of course, you may not end up extensively cross-examining
+            the state’s expert on intricate scientific details, or
+            calling your own expert. As discussed in later chapters,
+            both of these tactics carry risks. But you cannot make
+            informed decisions regarding such tactics without
+            understanding the type of evidence at issue. What- ever
+            decisions you end up making, you owe it to your client to
+            make them intelligently—and that includes learning the
+            science.</p>
+            </section>
+            <section id="ii._can_you_learn_the_science" class="level1">
+            <h1><strong>II. Can you learn the science?</strong></h1>
+            <p>Again, the answer is almost certainly yes. It is highly
+            likely that you, as a competent, intelligent attorney, can
+            master a scientific topic to the degree necessary for a
+            particular case. This may be the hardest thing for many
+            attorneys—especially those without any formal scientific
+            background or education—to believe. But it is true. The key
+            is to figure out what it is about the purported experts in
+            the relevant field that enables them to claim to have
+            specialized knowledge, and then attempt to recreate that for
+            yourself.</p>
+            <p>Some expert testimony is based on knowledge that has been
+            accumulated in a particular field, usually by a number of
+            researchers. For example, an expert might testify that the
+            probability of two unrelated people having the same DNA
+            profile is one in some large number, or that horizontal gaze
+            nystagmus (“HGN”) is associated with alcohol impairment.2
+            {Note: Such testimony may accompany testimony about
+            case-specific activities conducted by the expert or by
+            someone under her supervision. For example, an expert may
+            testify regarding how DNA testing was performed and what the
+            computer-generated results were, or about the fact that an
+            allegedly impaired driver’s eyes moved jerkily instead of
+            smoothly. This is essentially fact testimony. The key
+            contribution of the expert is in explaining the significance
+            of such observations—for example, that the DNA at issue
+            probably belongs to the defendant, or that the driver was
+            impaired. This latter type of testimony is the focus of this
+            discussion.}</p>
+            <p>Such an expert’s role is often simply to transmit to the
+            jury some portion of objective knowledge from what is
+            usually publicly available literature.3 {Note: Under federal
+            law, such evidence is directly admissible under certain
+            circumstances. <em>See</em><a
+            href="http://www.law.cornell.edu/rules/fre/rule_803">Fed R
+            Evid 803(18</a>) (allowing a “statement contained in a
+            treatise, periodical, or pamphlet” to be “read into
+            evidence” where certain foundational requirements are met).
+            Oregon has specifically rejected this rule. <em>See</em><a
+            href="http://www.oregonlaws.org/ors/40.460">OEC 803(18a)</a>
+            cmt. Oregon law does, however, allow the use of such
+            materials for impeachment if certain foundational
+            requirements are met. <em>See</em><a
+            href="http://www.oregonlaws.org/ors/40.430">OEC 706</a>;
+            <em>see also infra</em>Chapter 6, Part III.}</p>
+            <p>This means that you can develop a level of comfort with
+            the relevant topic by familiarizing yourself with that
+            literature (perhaps with the aid of your own consulting
+            expert, as discussed below).</p>
+            <p>That may seem unrealistic. How can you possibly bridge
+            the gap between your knowledge and an expert’s just by
+            reading a few articles? If this is your response, part of
+            your lack of confidence may come from over- estimating the
+            expert’s qualifications and your particular task. Even if
+            the expert is highly educated and credentialed—not, by the
+            way, a given—you should not assume that she spent all those
+            years of training and experience building up knowledge
+            specific to the testimony she will be giving in your case.
+            On the contrary, you will often find that the particular
+            scientific evidence issues in your case center on a
+            relatively small number of identifiable principles that can
+            be grasped with a manageable degree of time and effort.</p>
+            <p>So take heart, and make an effort to learn the science
+            underlying the evidence at issue in your case. Remember, you
+            do not need to know it as well as a true expert in the field
+            does. You only need to understand it well enough to track
+            what the opposing expert is saying, to know when she is
+            straying beyond the boundaries of what the field allows, and
+            to be able to work the evidence into your own case if you
+            choose. You can do that.</p>
+            <p>Of course, not all expert testimony is based on published
+            research or other widely acknowledged, publicly available
+            sources. Some testimony is based more on personally derived
+            observations and experiences. For example, a veteran
+            detective may testify that in her experience child abuse
+            victims often delay reporting. It may be more difficult to
+            prepare for this type of expert as her purportedly
+            specialized knowledge is largely in her own mind and thus
+            inaccessible to you. Still, you are not without recourse.
+            Start by educating yourself in the relevant field. Do
+            published authors in the field believe that their discipline
+            supports the types of assessments, predictions or inferences
+            that the expert claims to be able to offer? If not, you may
+            be able to set up an attack on the validity of the witness’s
+            purported expertise. When someone in a scientific field
+            claims to have discovered something, or to be able to draw
+            conclusions from certain observations, the normal process is
+            to submit these findings for publication so that the broader
+            field can evaluate those findings and, if they are valid,
+            ultimately benefit from them. Particularly for predictive or
+            analytical tools that would seem to have high societal
+            value—for example, in assessing the likelihood that child
+            abuse has taken place—it is fair to assume that if this were
+            legitimate, there would be literature on the topic. If the
+            expert claims to be able to draw conclusions through a
+            process that is not found in any technical literature, one
+            may question how valid this supposed expertise really
+            is.</p>
+            <p>Many experts will mix elements of both of the types of
+            expertise discussed above. The DNA expert may include
+            remarks based on her own experience, or the detective may
+            attempt to refer to published results. Your mastery of the
+            relevant field is particularly important in such cases. If a
+            witness is allowed to move seamlessly between the common
+            knowledge of her field and her own personal impressions, the
+            former’s aura of objectivity and general applicability may
+            improperly bolster the latter. If you know what the common
+            body of knowledge in the field supports, you will know (and
+            can point out to the judge or jury) when the witness is
+            merely passing along knowledge widely accepted in the field,
+            and when she is offering her own—more subjective and often
+            less reliable—thoughts.</p>
+            </section>
+            <section id="iii._how_to_learn_the_science" class="level1">
+            <h1><strong>III. How to Learn the Science</strong></h1>
+            <p>The following sections discuss how to go about learning
+            what you need to learn (again, with a focus on preparing to
+            meet an adverse expert). One common theme is that this
+            process takes time, not only to do the actual research, but
+            to gather all of the materials and (perhaps) people you need
+            to get started. So start early.</p>
+            <section id="a._gathering_documents" class="level2">
+            <h2><strong>A. Gathering Documents</strong></h2>
+            <p>Much of what you will learn will be from documents, which
+            you can obtain through the various processes discussed later
+            in this chapter. The types of documents you will be
+            interested in include:</p>
+            <p><em>Standard discovery materials</em>. These will often
+            include discussion of the science at issue and will help you
+            understand background issues, certain procedural steps (for
+            example, how an item of physical evidence was collected,
+            handled, and stored), and what significance the state
+            attaches to the scientific evidence in your case.</p>
+            <p><em>Lab reports</em>. The results of scientific analyses
+            are often expressed in final reports, which may include
+            statements regarding the alleged significance of these
+            results. These will be a useful starting point, although as
+            discussed below you should not rely solely on them.</p>
+            <p><em>Bench notes and other notes or writings from anyone
+            involved at any stage of the process</em>. These can be
+            critical. Even if the method at issue is generally valid,
+            there may have been irregularities in the way it was applied
+            in your case. Do not rely solely on the final lab report.
+            Get these underlying materials, which will help you to spot
+            such irregularities and also to understand the process as
+            you recreate it in your mind.</p>
+            <p><em>Procedural materials</em>. These go by a variety of
+            names—for example, manuals, protocols, or standard operating
+            procedures (“SOPs”). Whatever they are called, you want
+            them. These will establish the standard for how the method
+            should have been applied (at least according to the agency
+            or entity at issue). They may also include explanations of
+            why particular procedures are followed and of the skewed
+            results or other con- sequences that can flow if they are
+            not.</p>
+            <p><em>Cited materials</em>. Procedural manuals and related
+            materials often cite underlying research materials or other
+            documents. These too can be very helpful. They provide
+            additional education regarding the underlying scientific
+            principles and may also discuss the limitations of the
+            method or the associated field.</p>
+            <p><em>“Standard” methods</em>. If the method at issue is an
+            established one, there may be a standard method or protocol
+            promulgated by a government agency or other entity. The
+            method may have been derived from such a standard method. If
+            so, the standard method may be cited in some of the
+            procedural materials or other documents discussed above. In
+            any event, you should compare the standard method to the
+            specific protocol used in your case.</p>
+            <p><em>Other materials</em>. There may be other materials
+            that will be relevant to your case. This may include
+            technical articles or textbooks relating to the method or
+            its underlying principles. In addition, if there are
+            letters, reports, emails, or other communications relating
+            either to the development or evaluation of the method in
+            general or to the specific analysis performed in your case,
+            you may want to get these. If qualifications or error rates
+            specific to a particular analyst or laboratory may be
+            relevant to your case, consider getting documents relating
+            to these issues as well.</p>
+            <p>How do you go about getting all of these materials? There
+            are several procedural options.</p>
+            <p><em>Statutory and constitutional discovery</em>. Some of
+            these materials may be covered by the prosecutor’s statutory
+            discovery obligations. For example, some would constitute
+            witness statements,4... {Note: <em>See</em><a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.815(a)</a>.}</p>
+            <p>...or “reports or statements of experts.”5 {Note: <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.815(c)</a>.}</p>
+            <p>Others may constitute <em>Brady</em>/<em>Giglio</em>
+            material—i.e., defense-favorable material that the state
+            must turn over pursuant to its constitutional obligations.6
+            {Note: ''See <a
+            href="http://scholar.google.com/scholar_case?q=Brady%2Bv.%2BMaryland&amp;hl=en&amp;as_sdt=2%2C38&amp;case=9550433126269674519&amp;scilh=0">Brady
+            v. Maryland</a>, 373 US 83 (1963); <a
+            href="http://scholar.google.com/scholar_case?q=Giglio%2Bv.%2BUnited%2BStates&amp;hl=en&amp;as_sdt=2%2C38&amp;case=12450678889272734206&amp;scilh=0">Giglio
+            v. United States</a>, 405 US 150 (1972).</p>
+            <p>This would include materials evidencing, for example, a
+            degree of uncertainty in the results or analyses at issue,
+            any deviation from established protocols, or any possible
+            alternative explanation for any observations or results. Any
+            manuals or other procedural materials may also constitute
+            <em>Brady</em>/<em>Giglio</em>materials on the basis that
+            cross-examining against a governing manual is a
+            well-established trial tactic.</p>
+            <p>The state is required to produce all of these materials
+            regardless of whether you request them. Still, it is often
+            worthwhile to make specific requests. The prosecutor’s
+            response will let you know what, if any, portions of your
+            requests you may need to litigate. Also, if the prosecutor
+            is later determined to have withheld discovery materials, a
+            prior written request will make it more difficult for the
+            state to claim ignorance or good faith inadvertence.</p>
+            <p>Find out early on whether the prosecutor agrees to give
+            you everything you are seeking. If not, consider litigating
+            this issue at an early stage. Remember, it takes time to
+            litigate discovery issues, to gather the materials once the
+            court has ruled, and then to review and digest those
+            materials. Think ahead and start soon.</p>
+            <p>To the extent some of these materials may arguably be
+            outside the state’s discovery obligations, consider asking
+            the prosecutor to treat them as being within those
+            obligations anyway. If you make it clear that you will be
+            getting these materials from the state and its witnesses (or
+            associated government agencies) one way or another—for
+            example, through the alternative routes discussed below—the
+            prosecutor may prefer to treat this as a discovery matter
+            and thus retain control over the process. The benefit to you
+            is the efficiency of dealing with one source instead of
+            several.</p>
+            <p><em>Public records requests</em>. Oregon’s public records
+            law, at <a
+            href="http://www.leg.state.or.us/ors/192.html">ORS 192.410
+            to .510</a>, is a formidable and underutilized tool for
+            gathering documents. If the documents are in the control of
+            any “public body”—a term defined broadly by statute, at ORS
+            192.410(3)—you have a right to their prompt production
+            unless some exception applies.7 {Note: <em>See</em><a
+            href="http://www.leg.state.or.us/ors/192.html">ORS
+            192.420</a>.}</p>
+            <p>Case-specific materials may be withheld under the
+            exemption in ORS 192.501(3) (“[i]nvestigatory information
+            compiled for criminal law purposes”). More generally
+            applicable materials, however—for example, procedural
+            manuals, or documents relating to the development or
+            evaluation of a method—should be available through this
+            route.</p>
+            <p>Find out whether the public body at issue has a standard
+            form for records requests; if not, you can simply write a
+            letter citing the public records law. If the public body
+            does not respond promptly, you can invoke the appeal
+            process, which may involve a separate court action.8 {Note:
+            <em>See</em><a
+            href="http://www.leg.state.or.us/ors/192.html">ORS
+            192.450-.490</a>.}</p>
+            <p>Again, get an early start so that if you need to
+            demonstrate diligence, you can do so.</p>
+            <p><em>Subpoenas</em>. You can also serve a subpoena on any
+            person, agency, or entity that you believe has relevant
+            records. Because you will generally need these materials
+            well in advance of the trial or pretrial hearing in order to
+            make effective use of them, you may want to use the early
+            production procedure set forth in <a
+            href="http://www.leg.state.or.us/ors/136.html">ORS</a></p>
+            <p><a
+            href="http://www.leg.state.or.us/ors/136.html">136.580(2)</a>and
+            discussed in <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BCartwright&amp;hl=en&amp;as_sdt=4%2C38&amp;case=7394397540061486567&amp;scilh=0">State
+            v. Cartwright</a>.9 {Note: 336 Or 408 (2004).}</p>
+            <p><em>Other options</em>. Finally, some relevant materials
+            will be publicly available at university libraries or online
+            bookstores, for example. If you retain a consulting expert,
+            that expert may also have useful reference materials. If you
+            find these materials on your own, you will not only avoid
+            tipping your hand to the prosecutor, but also potentially
+            end up with information that the state and its expert do not
+            have.</p>
+            <p>In many cases you will want to pursue some or all of
+            these strategies in combination, instead of relying on just
+            one. Once you have determined what you want and put your
+            request in writing, it is usually not much of an additional
+            burden to repeat it in other forms. In addition, some
+            procedural hurdles applicable to one route may not apply to
+            another. Finally, if you seek relief for a discovery
+            violation based on the prosecutor’s failure to turn over
+            required materials, you may be denied such relief if the
+            court finds that you could have obtained the materials
+            through some other means.10 {Note: ''See <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BSpada&amp;hl=en&amp;as_sdt=4%2C38&amp;case=742835309681492290&amp;scilh=0">State
+            v. Spada</a>, 286 Or 305 (1979).}</p>
+            <p><em>The downside to the comprehensive approach</em>. The
+            previous sections proceeded on the assumption that you want
+            to seek all of the potentially relevant materials you can
+            get your hands on. Often, that will be the case. The more
+            mastery you have of the topic, the better, and reviewing
+            these materials will often be the best way to develop that
+            mastery.</p>
+            <p>It is worth noting, however, that there are some risks
+            associated with the comprehensive approach. One that may not
+            be immediately apparent relates to the admissibility
+            determination for any scientific evidence that the state
+            wants to introduce. As discussed in Chapters 3 and 4, the
+            proponent of scientific evidence—at least evidence of a type
+            not previously approved by an Oregon appellate court—needs
+            to lay a substantial foundation in order for such evidence
+            to be admitted. Not all prosecutors will anticipate the need
+            to lay such a foundation and, absent advance warning, the
+            prosecutor may show up without materials that could be
+            helpful or even necessary for that task. You should consider
+            the possibility that by making advance demands for the types
+            of materials discussed above, you will inadvertently prompt
+            the prosecutor to gather the necessary materials and
+            otherwise prepare for the admissibility hearing.</p>
+            </section>
+            <section id="b._retaining_a_consulting_expert"
+            class="level2">
+            <h2><strong>B. Retaining a Consulting Expert</strong></h2>
+            <p>Whether or not you ultimately decide to offer the
+            testimony of a defense expert witness, you may want to
+            engage an expert as a consultant to help you understand the
+            relevant principles, identify any significant issues, and
+            prepare for trial or a pretrial hearing. Along with
+            personally educating you, a consulting expert can also point
+            you to the most relevant and useful reference materials.</p>
+            <p>If you decide to retain a consulting expert, there are
+            certain considerations you will want to keep in mind.</p>
+            <p><em>1. Attorney-client privilege, work product,
+            and</em><a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BRiddle&amp;hl=en&amp;as_sdt=4%2C38&amp;case=18033232614424190910&amp;scilh=0">State
+            v. Riddle</a><em>.</em></p>
+            <p>When you retain an expert in a non-testifying (i.e.,
+            consulting) capacity, that expert is a “representative of
+            the lawyer” for purposes of Oregon’s attorney-client
+            privilege rule.11 {Note: <em>See</em><a
+            href="http://www.oregonlaws.org/ors/40.225">OEC 503(1)-(2),
+            503(1)(e)</a>cmt.; <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BRiddle&amp;hl=en&amp;as_sdt=4%2C38&amp;case=18033232614424190910&amp;scilh=0">State
+            v. Riddle</a>, 330 Or 471, 476-77 (2000).}</p>
+            <p>Accordingly, your communications with that expert are
+            privileged as long as the standard elements of the privilege
+            (confidentiality, made for the purpose of facilitating legal
+            services, etc.) are present.12 {Note: In the criminal
+            context, attorney-client privilege claims, including those
+            involving communications with consulting experts, implicate
+            constitutional concerns along with the generally applicable
+            statutory and common-law issues. <em>See, e.g.,</em><a
+            href="http://scholar.google.com/scholar_case?q=Smith%2Bv.%2BMcCormick&amp;hl=en&amp;as_sdt=3%2C38&amp;case=11891135850417049925&amp;scilh=0">Smith</a><a
+            href="http://scholar.google.com/scholar_case?q=Smith%2Bv.%2BMcCormick&amp;hl=en&amp;as_sdt=3%2C38&amp;case=11891135850417049925&amp;scilh=0">v.
+            McCormick</a>, 914 F2d 1153, 1159-60 (9th Cir 1990). Be sure
+            to note and preserve this point if you find yourself
+            litigating privilege issues in this context.}</p>
+            <p>A version of the work product doctrine may also apply to
+            your consulting expert’s work, but this is a relatively weak
+            protection in Oregon. The statutory basis for work product
+            protection in a criminal case is <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.855(1)(a)</a>, which exempts from pretrial discovery
+            obligations “[w]ork product, legal research, records,
+            correspondence, reports or memoranda to the extent that they
+            contain the opinions, theories or conclusions of the
+            attorneys, peace officers or their agents in connection with
+            the investigation, prosecution or defense of a criminal
+            action.” The Oregon Supreme Court has held that this is only
+            a limitation on discovery obligations, and does not provide
+            an independent basis for exclusion if, for example, a
+            consulting expert is subpoenaed to testify.13 {Note:
+            <em>Riddle</em>, 330 Or at 483-84.}</p>
+            <p>Nor was the court hospitable to the invocation of
+            common-law work product principles to exclude such
+            evidence.14 {Note: <em>Id.</em>at 484-86.}</p>
+            <p>In short, you should not rely on the work product
+            protection as a significant independent barrier to the
+            ultimate disclosure of your communications with your
+            consulting expert or that expert’s own work or opinions.</p>
+            <p>This determination led to the primary <em>Riddle</em>
+            holding, which is that under certain circumstances a
+            consulting expert retained by the defense can later be
+            forced to testify on the state’s behalf regarding the
+            expert’s opinions or conclusions. This is a serious matter
+            and could undermine many of the traditional benefits of
+            hiring a consulting expert—particularly, the ability to
+            communicate frankly and seek an objective, unvarnished
+            opinion. Fortunately, the court’s holding was a limited one,
+            expressly relying on the unusual fact that the expert’s
+            opinion was completely independent of and segregable from
+            any confidences learned in the course of the consulting
+            relationship. The court explained:</p>
+            <p>[U]nder <a
+            href="http://www.oregonlaws.org/ors/40.225">OEC
+            503(2)(a)</a>, the lawyer/expert relationship does not
+            automatically disqualify an expert who was retained by one
+            party from testifying for some other party. That expert is
+            disqualified from testifying, however, if his or her opinion
+            discloses, either directly or indirectly, or is based on,
+            any confidential communication between the lawyer, the
+            client, and/or the expert. If an expert’s opinion is so
+            bound up with any such communication that the expert cannot,
+            in the view of the trial court, segregate his or her opinion
+            from some part of the confidential communication, then the
+            expert should not be permitted to testify.15 {Note:
+            <em>Id.</em> at 487. The consulting expert in Riddle was an
+            accident reconstructionist whose trial testimony was found
+            to have been based on his own observations, measurements,
+            and conclusions reached independently of any confidences
+            learned from the defense attorney. Id. at 473-75.}</p>
+            <p>Accordingly, if you manage your relationship with your
+            consulting expert in a manner that will prevent a <a
+            href="http://scholar.google.com/scholar_case?q=State%2Bv.%2BRiddle&amp;hl=en&amp;as_sdt=4%2C38&amp;case=18033232614424190910&amp;scilh=0">Riddle</a>-type
+            factual showing from being made, you should be able to avoid
+            <em>Riddle</em>’s result.16 {Note: 16 Even the end result in
+            Riddle itself was not as damaging as it could have been. The
+            trial court had ruled that the expert “could not mention any
+            prior connection with the defense, . . . could not refer to
+            any statements made by defendant or to information that came
+            from defendant, and . . . could not refer to any statements
+            that he had made to [defense counsel].” Id. at 475. In other
+            words, the court shielded the defense from the special harm
+            that could have been caused by the jury hearing that “the
+            defendant’s own expert” supported the state’s theory.}</p>
+            <p><em>2. Thinking ahead to trial</em></p>
+            <p>You may end up deciding to offer defense expert testimony
+            at trial. The role of the testifying expert is quite
+            different from that of the consulting expert. Aside from the
+            difference in skill sets and at- tributes—for example, you
+            do not need to worry about how a consulting expert will come
+            across to a jury—the confidentiality of your communications
+            depends on the expert’s role. In particular, you should
+            assume that all of your communications with a testifying
+            expert will be treated as nonprivileged and subject to
+            disclosure if, for example, the state serves a subpoena
+            <em>duces tecum</em>on your expert.17 {Note: <em>See</em>
+            OEC 503(1)(e) cmt. (“The definition [of ‘representative of
+            the lawyer’ [for purposes of the attorney-client privilege]
+            includes an expert who is hired to assist in rendering legal
+            advice or to help in the planning and conduct of litigation,
+            but not one employed to testify as a witness.”).</p>
+            <p>In an ideal situation, you might retain two experts—one
+            consulting expert and one expert to testify at trial. Where
+            resources allow, this is worth considering. It allows you to
+            communicate freely with your consulting expert, thus
+            maximizing the educational and preparatory benefits of your
+            consultation, with- out generating material that can be used
+            to impeach your testifying expert.</p>
+            <p>Realistically, however, resource constraints will often
+            prevent the hiring of multiple experts within a single field
+            of expertise, and a single expert will often end up serving
+            in both roles. There is nothing wrong with this, but it
+            means you need to plan ahead. If there is a possibility that
+            you will end up calling the expert as a witness, then from
+            the outset you need to conduct all communications with the
+            assumption that they will be disclosed to the state. You
+            should explain this in your first conversation with the
+            expert, especially if he is unfamiliar with the legal
+            system. The same is true for any notes or other writings
+            your expert creates while working on your case. These can be
+            subpoenaed by the state, and although you may have arguments
+            that some or all of them should be withheld, you should
+            proceed on the assumption that your expert will have to
+            produce them. Again, the expert should know that, and
+            understand the implications, before beginning work on the
+            case.18 {Note: 18 Of course, you have the same right of
+            access to any such materials relating to the state’s expert
+            and should consider obtaining them through a discovery
+            request or subpoena duces tecum.}</p>
+            </section>
+            </section>
+    </body>
+</html>

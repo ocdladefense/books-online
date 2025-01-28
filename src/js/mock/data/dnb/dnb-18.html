@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>DUII Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">DUII Notebook</h1>
+                                    </section>
+            <p>2020 edition, with 2024 Update</p>
+            <section id="appeals" class="level1">
+            <h1><strong>Appeals</strong></h1>
+            <p><strong><em>By Bear Wilner-Nugent</em></strong></p>
+            </section>
+            <section id="i._basis_for_appellate_jurisdiction"
+            class="level1">
+            <h1><strong>I. Basis for Appellate
+            Jurisdiction</strong></h1>
+            <p>Appellate jurisdiction is statutory and therefore
+            limited. A criminal defendant has no constitutional right to
+            appeal. “An appeal is not a matter of absolute right, but a
+            statutory privilege.” <a
+            href="http://scholar.google.com/scholar_case?case=7447420199479451022&amp;q=Carmickle&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Carmickle</em>, 307 Or 1, 6, 762 P2d 290 (1988)</a>, <a
+            href="http://scholar.google.com/scholar_case?case=11677564631972905073&amp;q=endsley+1958&amp;hl=en&amp;as_sdt=4,38">citing
+            <em>State v. Endsley</em>, 214 Or 537, 539, 331 P2d 338
+            (1958)</a>. In criminal cases, appellate jurisdiction and
+            procedure are controlled by ORS 138.010 to 138.310. These
+            statutes were comprehensively revised by the 2017
+            Legislative Assembly. It is important for all appellate
+            practitioners to be familiar with both the new provisions of
+            chapter 138 and with the <a
+            href="https://www.courts.oregon.gov/rules/ORAP/2024-ORAP-FullPermanentAndTempAmendments.pdf"><u>ORAP
+            2024</u></a> Oregon Rules of Appellate Procedure] (ORAPs),
+            which were most recently revised at the beginning of
+            2024.</p>
+            </section>
+            <section id="ii._appeals_are_taken_from_final_judgments"
+            class="level1">
+            <h1><strong>II. Appeals Are Taken from Final
+            Judgments</strong></h1>
+            <p>A defendant’s appeal in a criminal case is taken from a
+            written judgment of conviction, <a
+            href="https://scholar.google.com/scholar_case?case=164074213376169733&amp;q=Bonner+1988&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Bonner</em>, 307 Or 598, 600, 771 P2d 272 (1989) (per
+            curiam)</a>, which “represents the combined factual and
+            legal determinations that the defendant committed acts
+            constituting a crime and that there is no legal impediment
+            to so declaring; it is the string that ties up the package.”
+            <a
+            href="http://scholar.google.com/scholar_case?case=3809212214461664914&amp;q=Mcdonnell+1988&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. McDonnell</em>, 306 Or 579, 582, 761 P2d 921 (1988) (per
+            curiam)</a>.</p>
+            <p>A judgment is a writing clearly stating the court’s
+            disposition of each charge, including all legal consequences
+            the court establishes or imposes. <a
+            href="https://www.oregonlaws.org/ors/137.071">ORS
+            137.071(2)(g)</a>. A judgment may be appealed if the
+            disposition: (1) imposes a sentence on conviction, (2)
+            awards restitution, or (3) extends or modifies probation or
+            sentence suspension or imposes or executes a sentence after
+            revoking probation or sentence suspension. <a
+            href="https://www.oregonlaws.org/ors/138.035">ORS
+            138.035</a>.</p>
+            </section>
+            <section id="iii._appeals_by_the_duii_defendant"
+            class="level1">
+            <h1><strong>III. Appeals by the DUII Defendant</strong></h1>
+            <p>On a defendant’s appeal from a trial loss, the appellate
+            court may review any decision of the circuit court in an
+            intermediate order or proceeding, the denial of a motion for
+            new trial based on juror misconduct or newly discovered
+            evidence, the denial of a motion in arrest of judgment, and
+            most sentencing issues. <a
+            href="https://www.oregonlaws.org/ors/138.015">ORS
+            138.105(3), (4), (7)</a>. The appellate court may not,
+            however, review the correctness of a felony sentence within
+            the applicable presumptive range, nor a court’s decision
+            whether or not to impose probation in an optional probation
+            gridblock, nor a sentence resulting from a sentencing
+            agreement to which the parties stipulated. <a
+            href="https://www.oregonlaws.org/ors/138.105">ORS
+            138.105(8), (9)</a>.</p>
+            <p>Appeals from guilty or no contest pleas are generally
+            limited to sentencing issues. <a
+            href="https://www.oregonlaws.org/ors/138.105">ORS
+            138.105(5), (7)</a>. A defendant may also enter a
+            conditional plea of guilty or no contest pursuant to <a
+            href="https://www.oregonlaws.org/ors/135.335">ORS
+            135.335(3)</a>, taking care to reserve clearly in writing
+            the right to appeal an adverse decision on a specified
+            pretrial motion. <a
+            href="https://www.oregonlaws.org/ors/138.105">ORS
+            138.105(5)(a)</a>. But the appellate court lacks authority
+            to review the validity of a guilty or no contest plea
+            itself. Therefore, clients should be advised that the denial
+            of a motion to withdraw a plea of guilty or no contest is
+            not appealable. <a
+            href="https://www.oregonlaws.org/ors/138.105">ORS
+            138.105(5)</a>.</p>
+            </section>
+            <section id="iv._appeals_by_the_state" class="level1">
+            <h1><strong>IV. Appeals by the State</strong></h1>
+            <p>The state may appeal from only the following types of
+            trial court decisions: (1) an order made prior to trial
+            dismissing or setting aside the accusatory instrument, in
+            whole or in part, (2) an order allowing a demurrer, (3) an
+            order arresting the judgment, (4) an order made prior to
+            trial suppressing evidence, (5) an order made prior to trial
+            for the return or restoration of things seized, (6) a
+            sentence, (7) a decision not to award restitution or to
+            award less restitution than the state requested (8) an order
+            in a probation revocation hearing finding that a defendant
+            who was sentenced to probation as a departure from Ballot
+            Measure 11 under <a
+            href="https://www.oregonlaws.org/ors/137.712">ORS
+            137.712</a> has not violated a condition of probation by
+            committing a new crime, (9) an order made after a guilty
+            finding dismissing or setting aside all or part of the
+            accusatory instrument, or (10) an order granting a new
+            trial. When the state appeals an order made prior to trial
+            suppressing evidence under <a
+            href="https://www.oregonlaws.org/ors/138.045">ORS
+            138.045(1)(d)</a>, the defendant may then cross-appeal by
+            filing a notice of cross-appeal within 10 days of the
+            expiration of the 30-day period allowed for the filing of
+            the notice of appeal. <a
+            href="https://www.oregonlaws.org/ors/138.035">ORS
+            138.035(5)</a>; <a
+            href="https://www.oregonlaws.org/ors/138.071">ORS
+            138.071(3)</a>.</p>
+            <p>The state cannot invite suppression or dismissal in order
+            to obtain the right to appeal an underlying non-appealable
+            order. <a
+            href="https://scholar.google.com/scholar_case?case=14922697279641597089&amp;q=Langlois+1979&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Langlois</em>, 287 Or 503, 505, 600 P2d 872 (1979) (per
+            curiam)</a>. An appeal by the state may take so long as to
+            violate the state’s obligation under Article I, section 10,
+            of the <a
+            href="https://www.oregonlegislature.gov/bills_laws/Pages/OrConst.aspx">Oregon
+            Constitution</a> to bring a defendant to trial “without
+            delay.” <a
+            href="http://scholar.google.com/scholar_case?case=10787468046572289395&amp;q=Harberts+2000&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Harberts</em>, 331 Or 72, 11 P3d 641 (2000)</a>.</p>
+            </section>
+            <section
+            id="v._notice_of_appeal_record_on_appeal_effect_of_appeal"
+            class="level1">
+            <h1><strong>V. Notice of Appeal; Record on Appeal; Effect of
+            Appeal</strong></h1>
+            <p>A notice of appeal must generally be served and filed no
+            later than 30 days after the judgment or order from which
+            the appeal is taken was entered in the register. <a
+            href="https://www.oregonlaws.org/ors/138.071">ORS
+            138.071(1)</a>. Unlike the practice in federal court and
+            some other states, in Oregon an original notice of appeal
+            must be filed in the Court of Appeals, not in the trial
+            court. <a href="https://www.oregonlaws.org/ors/138.081">ORS
+            138.081(3)</a>.</p>
+            <p>Certain kinds of post-trial motion practice can extend
+            this timeline, based on what sort of further proceedings
+            they require in the trial court. ORCP 64 F, made applicable
+            to criminal cases by <a
+            href="https://www.oregonlaws.org/ors/136.535">ORS
+            136.535(2)</a>, requires motions for new trials to be heard
+            and determined by the court within 55 days from the entry of
+            the judgment, and they are deemed conclusively denied if not
+            heard and determined within that time. A motion in arrest of
+            judgment must also be made within the time allowed to file a
+            motion for a new trial. <a
+            href="https://www.oregonlaws.org/ors/136.500">ORS
+            136.500</a>. There is no similar period after which a motion
+            in arrest of judgment is deemed denied, however. Moreover,
+            it is important to note that a notice of appeal filed before
+            the circuit court rules on the motion in arrest of judgment
+            deprives the circuit court of jurisdiction to rule on the
+            motion. <a
+            href="http://scholar.google.com/scholar_case?case=12369546482271141370&amp;q=Starr+2007&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Starr</em>, 210 Or App 409, 150 P3d 1072 (2007)</a>.</p>
+            <p>When such post-trial motions are filed, the 30 days for
+            serving and filing the notice of appeal begins to run from
+            the earlier of (1) the date of entry of the order disposing
+            of the motion or (2) the date on which the motion is deemed
+            denied. <a href="https://www.oregonlaws.org/ors/138.071">ORS
+            138.071(2)</a>. <em>But see</em> <a
+            href="http://scholar.google.com/scholar_case?case=16628722540735464447&amp;q=Sullens+1992&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Sullens</em>, 314 Or 436, 839 P2d 708 (1992)</a>, for a
+            discussion on the reviewability of motions for new trials
+            and <a
+            href="http://scholar.google.com/scholar_case?case=2040925372560619295&amp;q=318+Or+312&amp;hl=en&amp;as_sdt=4,38"><em>State
+            ex rel Schrunk v. Bonebrake</em>, 318 Or 312, 865 P2d 1289
+            (1994)</a>, for a discussion on post-trial motions to set
+            aside accusatory instruments.</p>
+            <p>The Court of Appeals must allow the defendant leave to
+            file a late notice of appeal if the defendant: (1) files a
+            motion for leave to do so <em>and</em> a notice of appeal no
+            more than 90 days after entry of the order or judgment being
+            appealed, (2) shows by clear and convincing evidence that
+            the failure to file a timely notice is not attributable to
+            the defendant personally, and (3) shows a colorable claim of
+            error in the proceeding from which the appeal was taken. The
+            state must have notice and an opportunity to respond to the
+            defendant’s motion, although in practice it rarely does.
+            Importantly, the denial of a motion for leave to file a late
+            notice of appeal is a bar to post-conviction relief on the
+            defendant’s proffered colorable claim of error unless the
+            court otherwise specifies. <a
+            href="https://www.oregonlaws.org/ors/138.071">ORS
+            138.071(5)</a>.</p>
+            <p>The required contents of a notice of appeal are found at
+            <a href="https://www.oregonlaws.org/ors/19.250">ORS
+            19.250</a> and ORAP 2.05. <em>See also</em> <a
+            href="https://www.oregonlaws.org/ors/138.081">ORS
+            138.081(1)</a>. The appendix to the Oregon Rules of
+            Appellate Procedure contains a form notice of appeal. The
+            original notice of appeal and proof of service should be
+            filed electronically. <em>See generally</em> ORAP chapter 16
+            and the <a
+            href="http://courts.oregon.gov/OJD/OnlineServices/eFile/Pages/index.aspx">Oregon
+            Judicial Department’s eFiling page</a>.<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> It is imperative when
+            filing a notice of appeal to designate the record, including
+            any recordings that were played during trial or hearings,
+            correctly in order to obtain a transcript of all necessary
+            hearings. ORAP 2.05(6).</p>
+            <p>A defendant filing a notice of appeal must serve hard
+            copies on (1) the Attorney General via the office of the
+            Solicitor General, 400 Justice Building, 1162 Court Street
+            NE, Salem, Oregon 97301; (2) the district attorney of the
+            county in which the judgment was entered; (3) the trial
+            court administrator; and (4) the trial court transcript
+            coordinator. <a
+            href="https://oregonlaws.org/ors/138.081">ORS
+            138.081(1)</a>; ORAP 2.05(10). Service of a notice of appeal
+            on a party, trial court administrator, or transcript
+            coordinator may be accomplished by first class, registered
+            or certified mail, with the date of mailing being the date
+            of service. Proof of the mailing must be certified by the
+            party filing the notice and filed with the court to which
+            the appeal is taken. <a
+            href="https://oregonlaws.org/ors/19.260">ORS 19.260(2)</a>
+            (for a complete list of the provisions of ORS chapter
+            19—which governs civil appeals—that also apply to criminal
+            cases, <em>see</em> <a
+            href="https://oregonlaws.org/ors/138.015">ORS 138.015</a>).
+            It is customary to incorporate the proof of service into the
+            body of the notice of appeal, rather than appending it as a
+            separate document. If the appellate attorney is not the
+            trial attorney, it is a good practice to serve a copy of the
+            notice of appeal on the trial attorney as well.</p>
+            <p>When a criminal defendant appeals from a judgment
+            following a guilty plea, no contest plea, resentencing
+            pursuant to a remand from an appellate court, resentencing
+            from a judgment from a court granting post-conviction
+            relief, or from an order or judgment revoking probation or a
+            sentence suspension, the caption of the notice shall
+            identify the notice as a “Notice of Appeal Pursuant to ORS
+            138.085,” and the body of the notice shall identify the type
+            of proceeding from which the appeal arises and identify at
+            least one colorable claim of error from the proceeding. <a
+            href="https://oregonlaws.org/ors/138.085">ORS 138.085</a>;
+            ORAP 2.40(1). The defendant need not comply with this rule
+            when filing a motion for leave to file a late notice of
+            appeal under <a
+            href="https://oregonlaws.org/ors/138.071">ORS
+            138.071(5)</a>, because the late notice procedure already
+            requires that the defendant not only show that the failure
+            to file was not attributable to the defendant personally but
+            also that there is a colorable claim of error in the
+            proceeding from which the appeal is being taken. ORAP
+            2.40(2).</p>
+            <p>In any appeal from a trial court, the record on appeal
+            consists of the trial court file, the exhibits, and as much
+            of the record of oral proceedings as has been designated in
+            the notice of appeal. <a
+            href="https://oregonlaws.org/ors/19.365">ORS 19.365(2)</a>;
+            ORAP 3.05(1). The record of oral proceedings must be a
+            transcript unless the oral proceedings were recorded by
+            audio or video recording equipment and the appellate court
+            has waived preparation of a transcript and ordered that the
+            appeal proceed on the audio or video record alone, which is
+            unheard of in practice. <a
+            href="https://oregonlaws.org/ors/19.365">ORS 19.365(2)</a>;
+            <a href="https://oregonlaws.org/ors/19.385">ORS 19.385</a>;
+            ORAP 3.05(2). The parties may also file an agreed narrative
+            statement in lieu of or in addition to the transcript, but
+            such an agreed narrative statement must be signed by the
+            parties or their attorneys and filed with the trial court
+            administrator within 30 days after the filing of the notice
+            of appeal. <a href="https://oregonlaws.org/ors/19.380">ORS
+            19.380</a>; ORAP 3.05(2). If an appeal cannot be pursued
+            because the record is lost or destroyed through no fault of
+            the appellant, the judgment appealed from may be reversed
+            and a new trial ordered “as justice may require,” <a
+            href="https://oregonlaws.org/ors/19.420">ORS 19.420(3)</a>,
+            but the appellant must make a prima facie showing of error
+            or unfairness in the proceedings as well as demonstrate that
+            every reasonable effort has been made to secure a substitute
+            for the missing record. <em>State v. Dam</em>, 116 Or App
+            210, 840 P2d 1317 (1992).</p>
+            <p>The trial court retains authority even after the notice
+            of appeal is filed to modify its judgment and sentence to
+            correct any arithmetic or clerical errors or to delete or
+            modify any erroneous term in the judgment. A sentencing
+            court entering an amended judgment must immediately forward
+            a copy of the amended judgment to the appellate court. <a
+            href="https://oregonlaws.org/ors/137.172">ORS
+            137.172(1)</a>. A judgment that orders payment of
+            restitution but does not specify the amount of restitution
+            imposed is final for the purposes of appealing from the
+            judgment. <a href="https://oregonlaws.org/ors/138.035">ORS
+            138.035(2)(a)</a>. The sentencing court retains the
+            authority to file a supplemental judgment specifying the
+            amount of restitution notwithstanding the filing of a notice
+            of appeal. <a href="https://oregonlaws.org/ors/137.105">ORS
+            137.105(1)</a>. <a
+            href="https://oregonlaws.org/ors/137.105">ORS 137.105(2)</a>
+            and ORAP 3.10(3) require the trial court administrator to
+            immediately send a copy of any judgment entered after the
+            notice of appeal is filed to the defendant (or defendant’s
+            attorney), the state court administrator, the district
+            attorney, and the solicitor general. The defendant must file
+            and serve an amended notice of appeal from any corrected or
+            supplemental judgment if the defendant wishes to assign
+            error to any amendment made by the corrected or supplemental
+            judgment. <a href="https://oregonlaws.org/ors/138.071">ORS
+            138.071(4)</a>; ORAP 8.28.</p>
+            <p>An appeal by the state stays the effect of the judgment
+            or order in favor of the defendant, holding the release
+            agreement and any security for the appearance of the
+            defendant upon final determination of the appeal and
+            subsequent proceedings. Release may be ordered by the trial
+            court pending appeal. <a
+            href="https://oregonlaws.org/ors/138.295">ORS 138.295</a>;
+            <em>see also</em> <a
+            href="https://oregonlaws.org/ors/135.285">ORS
+            135.285</a>.</p>
+            <p>All or part of a sentence may be stayed pending appeal on
+            a defendant’s motion. <a
+            href="https://oregonlaws.org/ors/138.285">ORS 138.285</a>.
+            There is no statutory or Oregon constitutional right to bail
+            on appeal, however. <a
+            href="http://scholar.google.com/scholar_case?case=10387749321892911760&amp;q=Priest+v.+Pierce,+314+Or+411,+840+P2d+65+%281992%29&amp;hl=en&amp;as_sdt=4,38"><em>Priest
+            v. Pierce</em>, 314 Or 411, 840 P2d 65 (1992)</a>.</p>
+            <p>Suspensions and revocations of non-commercial driver’s
+            licenses based on convictions, including DUII convictions,
+            can be rescinded during the pendency of an appeal based on a
+            defendant’s motion and a trial court’s order. <a
+            href="https://oregonlaws.org/ors/809.460">ORS 809.460(1),
+            (2)</a>. Affirmance, dismissal, or failure to perfect the
+            appeal results in reinstatement of the suspension when DMV
+            receives notice of such action from the court. <a
+            href="https://oregonlaws.org/ors/809.460">ORS
+            809.460(3)</a>. Suspensions of commercial driver’s
+            privileges may not be rescinded until the conviction is
+            reversed on appeal, though. <a
+            href="https://oregonlaws.org/ors/809.460">ORS
+            809.460(4)</a>.</p>
+            </section>
+            <section id="vi._scope_of_review_and_harmless_error"
+            class="level1">
+            <h1><strong>VI. Scope of Review and Harmless
+            Error</strong></h1>
+            <p><a href="https://oregonlaws.org/ors/138.105">ORS
+            138.105(2)</a> provides that on appeal the judgment or order
+            appealed from can be reviewed only as to questions of law
+            appearing on the record. Article VII (Amended), section 3,
+            of the Oregon Constitution requires the appellate courts to
+            affirm the judgments of lower courts regardless of error if,
+            in the opinion of the appellate court, the judgment achieved
+            the correct result. Affirmance is required “if there is
+            little likelihood that any error affected the outcome.” <a
+            href="https://oregonlaws.org/ors/138.257">ORS 138.257(2)</a>
+            (codifying the rule in <a
+            href="http://scholar.google.com/scholar_case?case=11300443264671623389&amp;q=State+v.+Davis,+336+Or+19,+77+P3d+1111+%282003%29&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Davis</em>, 336 Or 19, 77 P3d 1111 (2003)</a>). A federal
+            constitutional violation must be shown to be harmless beyond
+            a reasonable doubt in order for the conviction to be
+            affirmed. <a
+            href="https://scholar.google.com/scholar_case?case=12525491191298274071&amp;q=.+State+v.+Walton,+311+Or+223,+231,+809+P2d+81+%281991%29&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Walton</em>, 311 Or 223, 231, 809 P2d 81 (1991)</a>.</p>
+            </section>
+            <section id="vii._standard_of_review" class="level1">
+            <h1><strong>VII. Standard of Review</strong></h1>
+            <p>The appellate courts review trial courts’ legal
+            conclusions regarding suppression issues for legal error,
+            but they are bound by the trial courts’ factual findings so
+            long as they are supported by constitutionally sufficient
+            evidence. <a
+            href="https://scholar.google.com/scholar_case?case=18075957758514733205&amp;q=%22281+Or+App+725%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Delfino</em>, 281 Or App 725, 727-728, 386 P3d 133
+            (2016), <em>rev den</em>, 361 Or 525 (2017)</a> (citing <a
+            href="https://scholar.google.com/scholar_case?case=14383361974802797516&amp;q=%22281+Or+App+143%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Krause</em>, 281 Or App 143, 145, 383 P3d 307
+            (2016)</a>). If findings are not made on all pertinent
+            historical facts and there is evidence from which those
+            facts could be decided more than one way, an appellate court
+            will presume that the trial court found the facts
+            consistently with its ultimate conclusion. <a
+            href="https://scholar.google.com/scholar_case?case=5017369683279103061&amp;q=%22250+Or+485%22&amp;hl=en&amp;as_sdt=4,38"><em>Ball
+            v. Gladden</em>, 250 Or 485, 487-88, 443 P2d 621
+            (1968)</a>.</p>
+            <blockquote>
+            <p>A similar standard applies to other dispositive motions,
+            such as speedy trial motions. <a
+            href="https://scholar.google.com/scholar_case?case=6154636668974316909&amp;q=State+v.+Stinnett&amp;hl=en&amp;scisbd=2&amp;as_sdt=4,38"><em>State
+            v. Stinnett</em>, 291 Or App 638, 639, 422 P3d 372
+            (2018)</a> (citing <a
+            href="https://scholar.google.com/scholar_case?case=4906495402277529928&amp;q=%22342+Or+596%22+Johnson&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Johnson</em>, 342 Or 596, 608, 157 P3d 198 (2007),
+            <em>cert den</em>, 552 US 1113, 128 S Ct 906, 169 L Ed 2d
+            753 (2008)</a>).</p>
+            </blockquote>
+            <p>The appellate courts review the exclusion of evidence
+            under the Evidence Code for legal error. <a
+            href="https://scholar.google.com/scholar_case?case=16671245490317879003&amp;q=%22265+Or+App+542%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Scott</em>, 265 Or App 542, 543, 335 P3d 1283 (2014)</a>
+            (citing <a
+            href="https://scholar.google.com/scholar_case?case=746152385417805512&amp;q=%22258+Or+App+326%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beisser</em>, 258 Or App 326, 334, 308 P3d 1121
+            (2013)</a>). They review relevancy determinations under <a
+            href="https://www.oregonlaws.org/ors/40.150">OEC 401</a> for
+            legal error, but review the application of <a
+            href="https://www.oregonlaws.org/ors/40.160">OEC 403</a> for
+            abuse of discretion. <a
+            href="https://scholar.google.com/scholar_case?case=5339588504632015778&amp;q=Naudain&amp;hl=en&amp;scisbd=2&amp;as_sdt=4,38"><em>State
+            v. Naudain</em>, 300 Or App 222, 227, __ P3d __ (2019)</a>
+            (citing <a
+            href="https://scholar.google.com/scholar_case?case=1361524093561498765&amp;q=Naudain&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Titus</em>, 328 Or 475, 481, 982 P2d 1133 (1999)</a> and
+            <a
+            href="https://scholar.google.com/scholar_case?case=12413220221133834936&amp;q=Naudain&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Minchue</em>, 173 Or App 520, 523, 24 P3d 386
+            (2001)</a>). Whether testimony constitutes scientific
+            evidence is reviewed for legal error. <a
+            href="https://scholar.google.com/scholar_case?case=16260876675816212834&amp;q=%22286+Or+App+590%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Beltran-Chavez</em>, 286 Or App 590, 610, 400 P3d 927
+            (2017)</a> (citing <a
+            href="https://scholar.google.com/scholar_case?case=10154162156262782119&amp;q=%22286+Or+App+590%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Marrington</em>, 335 Or 555, 561-63, 73 P3d 911
+            (2003)</a>).</p>
+            <p>The standard for review of a trial court’s denial of a
+            motion for judgment of acquittal is whether, viewing the
+            evidence and the reasonable inferences therefrom in the
+            light most favorable to the state, any rational trier of
+            fact could have found the elements of the crime beyond a
+            reasonable doubt. <a
+            href="https://scholar.google.com/scholar_case?case=10844909938631067064&amp;q=%22296+or+app+1%22&amp;hl=en&amp;scisbd=2&amp;as_sdt=4,38"><em>State
+            v. Walker</em>, 296 Or App 1, 2, 437 P3d 275 (2019)</a>
+            (citing <a
+            href="https://scholar.google.com/scholar_case?case=9739911683284982648&amp;q=%22296+or+app+1%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rader</em>, 348 Or 81, 91, 228 P3d 552 (2010)</a>)<em>;
+            see also</em> <a
+            href="https://scholar.google.com/scholar_case?case=304542350697975194&amp;q=%22443+US+307%22&amp;hl=en&amp;as_sdt=3,38"><em>Jackson
+            v. Virginia</em>, 443 US 307, 99 S Ct 2781, 61 L Ed 2d 560
+            (1979)</a> (putting the standard of review in a Fourteenth
+            Amendment due process context).</p>
+            <p>Review of questions of statutory construction is for
+            legal error. <a
+            href="https://scholar.google.com/scholar_case?case=17285822372114671510&amp;q=%22251+Or+App+25%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Spainhower</em>, 251 Or App 25, 27, 283 P3d 361
+            (2012)</a>.</p>
+            <p>The denial of a motion for a mistrial is reviewed for an
+            abuse of discretion. The Court of Appeals will reverse only
+            upon a showing that the defendant was denied a fair trial.
+            <a
+            href="https://scholar.google.com/scholar_case?case=10372050838053780745&amp;q=297+or+app+597&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hunt</em>, 297 Or App 597, 600, 442 P3d 232 (2019)</a>
+            (<em>citing</em> <a
+            href="https://scholar.google.com/scholar_case?case=12689862859835569472&amp;q=&quot;297+Or+App+597&quot;&amp;hl=en&amp;as_sdt=4,38"
+            title="wikilink"><em>State v. Veatch</em>, 223 Or App 444,
+            454-55, 196 P3d 45 (2008)</a>)..</p>
+            <p>The appellate courts “review a trial court’s refusal to
+            give a requested jury instruction for legal error and
+            view[s] the record in the light most favorable to the
+            requesting party.” <a
+            href="https://scholar.google.com/scholar_case?case=6381075320769000162&amp;q=%22289+or+app+408:&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Paul</em>, 289 Or App 408, 409, 410 P3d 378 (2017)</a>
+            (citing <a
+            href="https://scholar.google.com/scholar_case?case=16889961898497658063&amp;q=%22289+or+app+408:&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Oneill</em>, 256 Or App 537, 538, 303 P3d 944, <em>rev
+            den</em>, 354 Or 342, 313 P3d 1126 (2013)</a>). The courts,
+            however, “review a trial court’s choice among legally
+            correct requested jury instructions that provide the
+            necessary information for abuse of discretion.” <a
+            href="https://scholar.google.com/scholar_case?case=18321998645822295872&amp;q=%22324+or+396%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moore</em>, 324 Or 396, 427, 927 P2d 1073 (1996)</a>.</p>
+            <p>Appellate courts review trial court decisions regarding
+            whether to merge convictions for errors of law. The
+            appellate court is bound by the trial court’s findings of
+            fact if there is constitutionally sufficient evidence in the
+            record to support them. <a
+            href="https://oregonlaws.org/ors/138.105">ORS
+            138.105(2)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=11680379839801530401&amp;q=%22236+or+app+339%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Watkins</em>, 236 Or App 339, 345, 236 P3d 770
+            (2010)</a>.</p>
+            <p>The appellate courts review sentences for errors of law.
+            <a href="https://oregonlaws.org/ors/138.105">ORS
+            138.105(7)</a>; <a
+            href="https://scholar.google.com/scholar_case?case=16387837394685570281&amp;q=%22249+or+app+597%22&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Young</em>, 249 Or App 597, 598, 277 P3d 645
+            (2012)</a>.</p>
+            </section>
+            <section id="viii._preservation" class="level1">
+            <h1><strong>VIII. Preservation</strong></h1>
+            <p>The Oregon Supreme Court has stated that a matter is
+            sufficiently preserved for appeal if a party provides the
+            trial court with an explanation of the objection that is
+            specific enough to ensure that the court can identify its
+            alleged error and take immediate action to correct it. <a
+            href="https://scholar.google.com/scholar_case?case=3736674885283036567&amp;q=Wyatt+2000&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wyatt</em>, 331 Or 335, 15 P3d 22 (2000)</a>. In
+            determining whether an issue has been presented to the trial
+            court with sufficient specificity, the Court of Appeals
+            asks, “If the trial judge were sitting here today, would he
+            or she be surprised by your argument?” and, “If we were to
+            reverse based on your argument, would the trial judge feel
+            ‘blind-sided’ by our ruling?” <a
+            href="http://scholar.google.com/scholar_case?case=14165741437720607266&amp;q=Rumler+2005&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rumler</em>, 199 Or App 32, 41, 110 P3d 115 (2005)</a>.
+            In <a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=Hitz+1988&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hitz</em>, 307 Or 183, 766 P2d 373 (1988)</a>, the Oregon
+            Supreme Court distinguished between raising an issue at
+            trial, identifying a source for the position, and making a
+            particular argument, saying that the first was essential,
+            the second less so, and the third the least. In <a
+            href="http://scholar.google.com/scholar_case?case=13328440626781299324&amp;q=Marroquin&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Marroquin</em>, 215 Or App 330, 168 P3d 1246 (2007)</a>,
+            however, the Court of Appeals reversed a conviction based on
+            a lab report that would have been improperly admitted under
+            the confrontation clause of the Oregon Constitution although
+            the defendant objected only under the federal confrontation
+            clause.</p>
+            <p>An issue not preserved in the trial court will usually
+            not be considered on appeal, but the appellate court
+            possesses the discretion to consider errors of law apparent
+            on the face of the record. <a
+            href="http://scholar.google.com/scholar_case?case=16509930690892995423&amp;q=Ailes&amp;hl=en&amp;as_sdt=4,38"><em>Ailes
+            v. Portland Meadows, Inc.</em>, 312 Or 376, 823 P2d 956
+            (1991)</a>; ORAP 5.45(1) &amp; n 1. The error must be one of
+            law that is “obvious, not reasonably in dispute,” and the
+            court must not have to “go outside the record or choose
+            between competing inferences.” <a
+            href="http://scholar.google.com/scholar_case?case=15135726944817960012&amp;q=Brown+1990&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Brown</em>, 310 Or 347, 355, 800 P2d 259 (1990)</a>. The
+            court must expressly state the basis on which it decided to
+            exercise its discretion to review the unpreserved claim. If
+            the Court of Appeals fails to expressly apply this
+            methodology, the decision to review may itself be reversed
+            by the Supreme Court. <a
+            href="http://scholar.google.com/scholar_case?case=16214258506025523918&amp;q=Castrejon&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Castrejon</em>, 317 Or 202, 856 P2d 616 (1993)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=14387293947670175305&amp;q=Kelsey+1993&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kelsey</em>, 124 Or App 446, 863 P2d 475 (1993)</a>
+            (Court of Appeals declined to exercise its discretion to
+            consider defendant’s unpreserved claims despite a state
+            concession of error); <em>but see</em> <a
+            href="http://scholar.google.com/scholar_case?case=13419225396417289592&amp;q=State+v.+Barber,+343+Or+525,+173+P3d+827+%282007%29&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Barber</em>, 343 Or 525, 173 P3d 827 (2007)</a> (Supreme
+            Court reversed burglary and theft convictions obtained
+            through a stipulated facts trial when no written jury waiver
+            was obtained and the Court of Appeals had decided that it
+            would not exercise its discretion to review the lack of a
+            jury waiver even though the error was apparent on the face
+            of the record).</p>
+            <p>Obtaining a ruling is not necessarily a guarantee of a
+            sufficiently preserved record to ensure appellate review. An
+            offer of proof on the record may be required, <a
+            href="http://scholar.google.com/scholar_case?case=16041972512008398863&amp;q=State+v.+Affeld,+307+Or+125,+764+P2d+220+%281988%29&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Affeld</em>, 307 Or 125, 764 P2d 220 (1988)</a>, although
+            the nature of the claimed error and the ruling may make it
+            unnecessary. <a
+            href="http://scholar.google.com/scholar_case?case=17942915936615114115&amp;q=Olmstead+1990&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Olmstead</em>, 310 Or 455, 461, 800 P2d 277 (1990)</a>.
+            The appellate court may decide not to address an argument
+            that it feels was not adequately presented to the trial
+            court, <a
+            href="http://scholar.google.com/scholar_case?case=5026437973746743819&amp;q=State+v.+Sanger,+89+Or+App+493,+749+P2d+1202+%281988%29&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Sanger</em>, 89 Or App 493, 749 P2d 1202 (1988)</a>, or
+            it may decide that a theory raised and preserved in the
+            trial court was waived by failure to adequately raise it at
+            the appellate level. <a
+            href="http://scholar.google.com/scholar_case?case=1814578974189179137&amp;q=Rivas+1990&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Rivas</em>, 100 Or App 620, 622, 788 P2d 464, <em>rev
+            den,</em> 310 Or 122 (1990)</a>. Further, because appellate
+            courts are not confined to choosing only among the arguments
+            for or against a properly identified claim, <a
+            href="http://scholar.google.com/scholar_case?case=2675826717223382070&amp;q=Cooper+4J+1986&amp;hl=en&amp;as_sdt=4,38"><em>Cooper
+            v. Eugene School District No. 4J</em>, 301 Or 358, 370 n 12,
+            723 P2d 298 (1986)</a>, a party cannot compel an appellate
+            court to decide a constitutional issue by failing to raise a
+            dispositive statutory issue. <a
+            href="http://scholar.google.com/scholar_case?case=12999539683324263291&amp;q=thomas+1991&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Thomas</em>, 311 Or 182, 186 n 1, 806 P2d 689 (1991)</a>;
+            <a
+            href="http://scholar.google.com/scholar_case?case=18139781197665756960&amp;q=Kennedy+1983&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Kennedy</em>, 295 Or 260, 266-67, 666 P2d 1316 (1983)</a>
+            (an Oregon court should not let parties by their choice of
+            issues force the court into a position to decide that the
+            state’s government has fallen below a nationwide
+            constitutional standard, when in fact the state’s law when
+            properly invoked meets or exceeds that standard); <a
+            href="http://scholar.google.com/scholar_case?case=742835309681492290&amp;q=Spada+1979&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Spada</em>, 286 Or 305, 309, 594 P2d 815 (1979)</a>.
+            Finally, any ambiguities or inconsistencies in the trial
+            court’s rulings will be construed against the party
+            appealing the ruling, so it is incumbent upon that party to
+            require the ruling judge to make a consistent and
+            unambiguous record. <a
+            href="http://scholar.google.com/scholar_case?case=1073391720836043967&amp;q=Levi+1980&amp;hl=en&amp;as_sdt=4,38"><em>City
+            of Portland v. Levi</em>, 98 Or App 341, 779 P2d 192 (1980),
+            <em>on recons,</em> 100 Or App 349, 352–53, 786 P2d 196,
+            <em>rev den,</em> 309 Or 645 (1990)</a>.</p>
+            </section>
+            <section id="ix._sequence_of_arguments" class="level1">
+            <h1><strong>IX. Sequence of Arguments</strong></h1>
+            <p>The appellate courts analyze statutory issues before
+            reaching constitutional questions, <a
+            href="http://scholar.google.com/scholar_case?case=14159078695434113676&amp;q=State+v.+Hitz,+307+Or+183,+188,+n+1,+766+P2d+373+%281988%29&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Hitz</em>, 307 Or 183, 188, n 1, 766 P2d 373 (1988)</a>,
+            and will analyze state constitutional arguments before
+            federal constitutional arguments. <a
+            href="http://scholar.google.com/scholar_case?case=12921246394006455298&amp;q=Campbell+1988&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Campbell</em>, 306 Or 157, 162, 759 P2d 1040 (1988)</a>.
+            The United States Supreme Court’s interpretations of federal
+            constitutional provisions set the minimum standard with
+            which the states must comply, but such interpretations are
+            not binding upon the Oregon Supreme Court in interpreting
+            the Oregon Constitution. <a
+            href="http://scholar.google.com/scholar_case?case=12256749275543318001&amp;q=Moore+2002&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Moore</em>, 334 Or 328, 49 P3d 785 (2002)</a>. State
+            statutory and constitutional claims should be raised
+            separately and explicitly to guarantee appellate
+            consideration of state grounds rather than federal grounds.
+            <a
+            href="http://scholar.google.com/scholar_case?case=5651425698453625745&amp;q=Mendez+1989&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Mendez</em>, 308 Or 9, 19, 774 P2d 1082 (1989)</a>. The
+            Oregon Supreme Court may reconsider one of its prior
+            interpretations of Oregon law when a principled argument
+            demonstrates that the ruling was wrongly decided. <a
+            href="http://scholar.google.com/scholar_case?case=7020372050195544789&amp;q=Birchfield&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Birchfield</em>, 342 Or 624, 157 P3d 216 (2007)</a>; <a
+            href="http://scholar.google.com/scholar_case?case=16116926811622477424&amp;q=Stranahan&amp;hl=en&amp;as_sdt=4,38"><em>Stranahan
+            v. Fred Meyer, Inc.</em>, 331 Or 38, 54, 11 P3d 228
+            (2000)</a>.</p>
+            </section>
+            <section id="x._appellants_opening_brief" class="level1">
+            <h1><strong>X. Appellant’s Opening Brief</strong></h1>
+            <p>Upon the filing of the notice of appeal, the state court
+            administrator notifies counsel of the case name, case
+            number, and opening brief due date by email. Such
+            information may also be obtained by calling the court at
+            503-986-5555 in Salem. The appellant’s opening brief must be
+            served and filed within 49 days after (1) the entry of the
+            trial court order settling the transcript, (2) the filing of
+            an agreed narrative statement with the trial court, (3) the
+            settling of the transcript 15 days after its filing by the
+            absence of any motion to correct it, (4) the entry of an
+            appellate court order waiving the transcript, or (5) the
+            filing of the notice of appeal when no transcript, audio
+            record, or narrative statement is designated. ORAP 5.80(1).
+            It is possible to obtain an extension of time by filing a
+            motion for extension of time (MOET) with the court which
+            contains statements about (1) the date the notice was filed,
+            (2) the date the brief is due, (3) the date to which the
+            extension is requested, (4) whether it is a first or other
+            request, (5) the specific circumstances which caused the
+            failure to complete the brief on time, and (6) whether the
+            defendant is incarcerated. ORAP 7.25(2). The motion must
+            also include a statement of opposing counsel’s position on
+            the motion when the motion is one other than a first motion
+            for an extension of 28 days or less. ORAP 7.25(3).</p>
+            <p>The specifications for briefs are found at ORAP 5.05,
+            including a provision that no opening or answering brief may
+            exceed 10,000 words unless permission for a longer brief is
+            obtained from the court. ORAP 5.05(1). Briefs should be
+            filed and served electronically. <em>See generally</em> ORAP
+            chapter 16 and the <a
+            href="http://courts.oregon.gov/OJD/OnlineServices/eFile/Pages/index.aspx">Oregon
+            Judicial Department’s eFiling page</a>.</p>
+            <p>The appellant’s brief should contain: (1) an index of the
+            contents of the brief, including a statement of each
+            assignment of error and the page number at which the
+            assignment may be found, (2) an index of appendices, if any,
+            and (3) an index of all authorities referred to, classified
+            by alphabetically arranged and completely cited cases,
+            constitutional and statutory provisions, texts, treatises,
+            and other authorities, indicating the page numbers where
+            they are cited. ORAP 5.35.</p>
+            <p>ORAP 5.40 sets out the requirements for the statement of
+            the case which is required at the beginning of each
+            appellant’s brief. The statement of the case is followed by
+            assignments of error and arguments, which are governed by
+            ORAP 5.45.</p>
+            <p>ORAP 5.45(4) requires that each assignment of error
+            demonstrate that the question or issue presented by the
+            assignment of error was timely and properly preserved in the
+            lower court. Each assignment of error must be followed by
+            the subheading “Preservation of Error,” which must specify
+            and quote the place in the record where the issue presented
+            by the assignment of error was raised and resolved by the
+            lower court. ORAP 5.45(4)(a). Each “Preservation of Error”
+            subheading must be followed by a subheading entitled
+            “Standard of Review,” which must contain a citation of the
+            applicable standard of review for the assignment of error
+            and a citation of legal authority for that standard. ORAP
+            5.45(5). The “Standard of Review” subheading is followed by
+            the subheading “Argument.” ORAP 5.45(6). The appellate
+            courts may decline to consider any assignment of error that
+            requires the court to search the record to find the error or
+            to determine if the error was properly preserved. ORAP
+            5.45(4)(a). Relevant portions of ordinances, charters,
+            statutes, and other similar provisions must be set forth
+            verbatim and with proper citation in either the body of the
+            brief, a footnote, or an appendix. ORAP 5.30. At the end of
+            the brief the appellant must include an excerpt of record,
+            which must contain a copy of the final charging instrument,
+            the judgment or order from which the appeal is being taken,
+            the register of actions, and copies of any other documents
+            from the record that are essential or significantly helpful
+            for understanding the argument, set forth in chronological
+            order and consecutively paginated with the first page being
+            “ER-1”. ORAP 5.50(2), (5)(b). The excerpt of record must be
+            preceded by an index which is organized chronologically,
+            describes each item, and identifies both where it may be
+            found in the record and the page where it may be found in
+            the excerpt. ORAP 5.50(5)(b). Pertinent motions must be
+            included in the excerpt of record, but not memoranda of law
+            filed in the trial court, unless the fact that a particular
+            argument was or was not made in the memorandum has
+            independent significance. ORAP 5.50(2)(c), (3). In criminal
+            cases in which the defendant appealed after entering a
+            conditional plea of guilty or no contest under ORS
+            135.335(3), the defendant must include in the excerpt of
+            record the writing in which the defendant reserved for
+            review on appeal the trial court’s adverse determination of
+            a pretrial motion. ORAP 5.50(2)(f).</p>
+            </section>
+            <section id="xi._respondents_brief" class="level1">
+            <h1><strong>XI. Respondent’s Brief</strong></h1>
+            <p>The respondent’s brief follows the form prescribed for
+            the appellant’s opening brief, and contains a concise answer
+            to each of the appellant’s assignments of error preceding
+            its own argument to each. ORAP 5.55(1). Under its statement
+            of the case, the respondent must either specifically accept
+            the appellant’s statement of the case or identify any
+            omissions or inaccuracies, and respondent may cite to
+            additional matters in the record as required. ORAP 5.55(2).
+            If the respondent does not file a brief, the case is
+            submitted on the appellant’s brief and the appellant’s oral
+            argument. ORAP 5.60. The respondent’s brief is due within 49
+            days after the filing of the appellant’s brief. ORAP
+            5.80(2). Briefs replying to the respondent’s brief may not
+            be filed in criminal cases without the permission of the
+            court, ORAP 5.70(3)(a), though in practice this permission
+            is granted liberally.</p>
+            </section>
+            <section id="xii._citations" class="level1">
+            <h1><strong>XII. Citations</strong></h1>
+            <p>Rules governing citation form are found at ORAP 5.20. All
+            pertinent questions are addressed in depth in the <a
+            href="https://www.courts.oregon.gov/publications/Documents/UpdatedStyleManual2002.pdf"><em>Oregon
+            Appellate Courts Style Manual</em> (2021 ed.)</a>.</p>
+            </section>
+            <section id="xiii._oral_arguments" class="level1">
+            <h1><strong>XIII. Oral Arguments</strong></h1>
+            <p>A party may present oral argument only if the party has
+            filed a brief. ORAP 6.10(1). The default practice of the
+            Court of Appeals is to consider cases without hearing oral
+            argument, but a party may obtain oral argument upon request
+            by filing a simple form. ORAP 6.05(2). Each party is
+            ordinarily permitted 15 minutes for argument in the Court of
+            Appeals. ORAP 6.15(2)(a). The appellant is allowed to
+            reserve up to five minutes of the time for reply. ORAP
+            6.15(2)(b). A point raised in the brief is not waived by
+            failure to address it in oral argument, ORAP 6.15(4), so it
+            is better to focus oral argument on a few strong points
+            rather than to spend equal time on a larger number of weaker
+            points.</p>
+            <p>Oral argument should begin with the words, “May it please
+            the court.” No time should be wasted, however, before moving
+            directly to the strongest points of the argument. The Court
+            of Appeals panel members will be far more familiar with the
+            contents of the briefs than the details of the trial court
+            record, so it is important to be prepared to answer
+            questions concerning what is and what is not in the
+            record.</p>
+            <p>Do not expect to be able to read a prepared statement.
+            Prepare an outline to cover the major points, but also be
+            prepared to disregard the outline if the judges decide to
+            ask questions. Take the time to understand the questions,
+            then answer them directly. If you do not know the answer,
+            say so.</p>
+            <p>It is not necessary to use all of the allotted time. The
+            court may stop an advocate who attempts to use reply time to
+            address an argument which was not addressed in the opening
+            oral argument or opposing counsel’s response, so keep an eye
+            on the time in your opening if it is absolutely necessary to
+            address a particular point. Above all, remember that Oregon
+            appellate courts address questions of law rather than
+            questions of fact. If the oral argument depends on the
+            appellate court having to find facts contrary to those found
+            in the trial court in a criminal case, it will not
+            succeed.</p>
+            <p>The appellate courts discourage reference at oral
+            argument to authorities not cited in a brief or a
+            pre-argument memorandum of additional authorities (ORAP
+            5.85). Counsel should inform opposing counsel at the
+            earliest practicable time if counsel wishes to refer in oral
+            argument to an authority not previously cited, and the court
+            may give leave to the opposing party to file a post-argument
+            responsive memorandum if it allows such reference. ORAP
+            6.15(6).</p>
+            </section>
+            <section id="xiv._decisions" class="level1">
+            <h1><strong>XIV. Decisions</strong></h1>
+            <p>The Court of Appeals is not required to write full
+            opinions in every case. <a
+            href="https://oregonlaws.org/ors/19.435">ORS 19.435</a>. The
+            court may reverse, affirm, or modify the judgment appealed
+            from, or it may order a new trial. ORS 138.240. The court
+            may also remand the case for findings of historical fact. <a
+            href="http://scholar.google.com/scholar_case?case=14871861316902192609&amp;q=Wise+1988&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Wise</em>, 305 Or 78, 81, 749 P2d 1179 (1988)</a>. The
+            state court administrator enters the original appellate
+            judgment and sends copies to the parties not less than 35
+            days after the date of the decision by the Court of Appeals
+            in order to allow the filing of a petition for review by the
+            Oregon Supreme Court. ORAP 14.05(3)(a). A party may move for
+            an immediate issuance of the appellate judgment, however,
+            upon a showing that no party intends to file a petition for
+            review, petition for attorney fees, or any other thing
+            requiring a judicial ruling. ORAP 14.05(3)(d).</p>
+            <section id="update" class="level2">
+            <h2><strong>2024 Update</strong></h2>
+            <p>Recently, the Court of Appeals adopted new procedures
+            whereby many criminal appeals will be disposed of through
+            nonprecedential opinions. Only opinions that materially
+            advance the development of the law are now citable as
+            precedent. Nonprecedential opinions are clearly labeled as
+            such. The court can still affirm without opinion, but does
+            so much less often now. The Ninth Circuit has long used
+            similar procedures.</p>
+            <p><strong>[End Update]</strong></p>
+            </section>
+            <section id="february_2022_update" class="level2">
+            <h2><strong>February 2022 Update</strong></h2>
+            <p>Beginning as early as 2022, the Court of Appeals may
+            adopt new procedures whereby most criminal cases will be
+            disposed of through nonprecedential opinions. If the court
+            adopts these procedures, only opinions that materially
+            advance the development of the law will be published and
+            citable as precedent. The point of these changes would be to
+            eliminate the practice of affirming without opinion. The
+            Ninth Circuit already uses similar procedures.</p>
+            <p><strong>[End 20222 Update]</strong></p>
+            </section>
+            </section>
+            <section id="xv._petitions_for_reconsideration"
+            class="level1">
+            <h1><strong>XV. Petitions for Reconsideration</strong></h1>
+            <p>A party may file a petition for reconsideration in the
+            Court of Appeals pursuant to ORAP 6.25, but the grounds for
+            such reconsideration are limited to: (1) a claim of factual
+            error in the order or opinion, (2) a claim of error in the
+            procedural disposition of the appeal requiring correction or
+            clarification to make the disposition consistent with the
+            holding or rationale of the opinion or the posture of the
+            case below, (3) a claim of error in the designation of the
+            prevailing party or award of costs, (4) a claim that there
+            has been a change in the statutes or case law since the
+            Court of Appeals decision, or (5) a claim that the Court of
+            Appeals erred in construing or applying the law. Claims that
+            were already argued in the briefs and addressed by the Court
+            of Appeals are disfavored in petitions for reconsideratio.
+            ORAP 6.25(1)(e) A petition for reconsideration must be filed
+            within 14 days of the Court of Appeals decision. ORAP
+            6.25(2). The filing of a petition for reconsideration is not
+            a prerequisite for filing a petition for review with the
+            Oregon Supreme Court, ORAP 6.25(3), but the time for filing
+            a petition for review with the Oregon Supreme Court does not
+            begin to run until the petition for reconsideration is
+            decided. ORAP 9.05(2)(b).</p>
+            <section id="update_1" class="level2">
+            <h2><strong>2024 Update</strong></h2>
+            <p>“The fact that a prior diversion entry was uncounseled
+            may not permit an otherwise-barred second diversion
+            entry. <a
+            href="https://scholar.google.com/scholar_case?case=705509983192789662&amp;q=diversion+2023&amp;hl=en&amp;scisbd=2&amp;as_sdt=4,38"><u><em>State
+            v. Peck</em>, 328 Or App 682, __ P3d __ (2023)</u></a>.”</p>
+            <p><strong>[End Update]</strong></p>
+            </section>
+            <section id="february_2022_update_1" class="level2">
+            <h2><strong>February 2022 Update</strong></h2>
+            <p>A court may find good cause to extend the diversion
+            period to permit a defendant who has violated the conditions
+            of diversion by consuming alcohol to remedy that violation
+            and successfully complete diversion. <a
+            href="https://scholar.google.com/scholar_case?case=15481596277005763939&amp;q=Zook&amp;hl=en&amp;scisbd=2&amp;as_sdt=4,38"><em>State
+            v. Zook</em>, 307 Or App 49, 476 P3d 508 (2020), <em>rev
+            den</em>, 367 Or 709 (2021)</a>.</p>
+            <p><strong>[End 2022 Update]</strong></p>
+            </section>
+            </section>
+            <section id="xvi._petitions_for_review" class="level1">
+            <h1><strong>XVI. Petitions for Review</strong></h1>
+            <p>A party seeking to have the Oregon Supreme Court review a
+            Court of Appeals decision must file a petition for review
+            within 35 days of the date of the Court of Appeals decision.
+            ORAP 9.05(2)(a). The petition may not exceed 5,000 words in
+            length and is in the form of a brief prepared in conformity
+            with ORAP 5.05 and ORAP 5.35. There is a strict list of
+            requirements for the contents of the cover of a petition for
+            review. ORAP 9.05(3)(a). The petition must contain: (1) a
+            short statement of the historical and procedural facts
+            relevant to the review (but not restating facts correctly
+            stated in the Court of Appeals decision), (2) concise
+            statements of the legal questions presented and the rule of
+            law that petitioner proposes to be established if review is
+            allowed, (3) a statement of specific reasons why the legal
+            questions presented have importance beyond the particular
+            case and require decision by the Oregon Supreme Court, (4)
+            if desired, a brief argument concerning the legal questions
+            presented on review, and (5) a copy of the decision of the
+            Court of Appeals. ORAP 9.05(4).</p>
+            <p>Criteria for granting discretionary review are listed in
+            ORAP 9.07. It is more important to use a petition for review
+            to argue why the case deserves the Supreme Court’s attention
+            than to argue why you should win the case. That is what
+            merits briefing is for.</p>
+            <p>A petition for review should be filed electronically but
+            two copies must be physically served on opposing counsel.
+            ORAP 9.05(3)(b). A separate brief on the merits of the
+            review may be filed if the petitioner gave notice of intent
+            to file such a brief in the petition for review, and the
+            petitioner is allowed 28 days from the date review is
+            allowed to file the brief. ORAP 9.17(2)(a). The requirements
+            for such a brief are listed at ORAP 9.17(2)(b). Merits
+            briefs should be filed electronically.</p>
+            <p>A party may file a response to a petition for review
+            within 14 days of the petition’s filing. ORAP 9.10(2). If no
+            response is filed, the party’s brief in the Court of Appeals
+            will be considered as the response. ORAP 9.10(1).</p>
+            <p>A petition for review will be allowed if one less than a
+            majority of the judges eligible to vote on the petition vote
+            to allow it. ORAP 9.20(1). If the Oregon Supreme Court
+            allows review, it may request the parties to address
+            specific questions either in writing before oral argument or
+            at oral argument, ORAP 9.20(3), and it may limit the
+            questions on review, ORAP 9.20(2). The parties’ briefs in
+            the Court of Appeals will be considered as the main briefs
+            in the Oregon Supreme Court, supplemented by the petition
+            for review and any response, brief, or memorandum that may
+            be filed. ORAP 9.20(4).</p>
+            <p>If the petition for review is denied, the appellate
+            judgment will not be issued by the state court administrator
+            for at least 21 days after the petition is denied so that a
+            petition for reconsideration may be filed. ORAP
+            14.05(3)(b).</p>
+            </section>
+            <section id="xvii._key_appellate_cases_regarding_diversion"
+            class="level1">
+            <h1><strong>XVII. Key Appellate Cases Regarding
+            Diversion</strong></h1>
+            <p><strong>Objections Based on Prior
+            Convictions:</strong></p>
+            <p>A defendant with a prior conviction may still be able to
+            get into diversion if there is a significant constitutional
+            defect in the prior conviction. <a
+            href="http://scholar.google.com/scholar_case?q=koellermeier&amp;hl=en&amp;as_sdt=4,227,228&amp;case=5459413842629865208&amp;scilh=0"><em>State
+            v. Koellermeier</em>, 75 Or App 126, 704 P2d 1169
+            (1985)</a>. Case law since <em>Kollermeier</em> has not made
+            doing so any easier, however. In <a
+            href="http://scholar.google.com/scholar_case?q=probst&amp;hl=en&amp;as_sdt=4,227,228&amp;case=4748958881503709322&amp;scilh=0"><em>State
+            v. Probst</em>, 339 Or 612, 124 P3d 1237 (2005)</a>, the
+            Oregon Supreme Court abrogated <a
+            href="http://scholar.google.com/scholar_case?q=pendleton+v+standerfer&amp;hl=en&amp;as_sdt=4,227,228&amp;case=18263455948401966112&amp;scilh=0"><em>City
+            of Pendleton v. Standerfer</em>, 297 Or 725, 688 P2d 68
+            (1984)</a>, and <a
+            href="http://scholar.google.com/scholar_case?q=grenvik&amp;hl=en&amp;as_sdt=4,227,228&amp;case=4887071307605378050&amp;scilh=0"><em>State
+            v. Grenvik</em>, 291 Or 99, 628 P2d 1195 (1981)</a>, on
+            which <em>Kollermeier</em> was based. Under <em>Probst</em>,
+            the standard for making such a “collateral attack” on a
+            prior conviction is essentially the same as in a
+            post-conviction proceeding. A defendant has to show a
+            defect, such as lack of counsel, and then show how that
+            resulted in an involuntary plea. <a
+            href="https://scholar.google.com/scholar_case?q=probst&amp;hl=en&amp;as_sdt=4,227,228&amp;case=4748958881503709322&amp;scilh=0"><em>Probst</em>
+            at 629</a>.</p>
+            <p><em>State v. Boyer</em>, 87 Or App 643, 743 P2d 1116
+            (1987). You cannot collaterally attack a prior conviction at
+            a contested diversion entry hearing if the defendant was
+            represented in the case resulting in the prior conviction.
+            You may be able to petition for post-conviction relief in
+            the prior case and thus establish eligibility, however.
+            (Note, though, that all the prerequisites for
+            post-conviction relief must still be met, including the
+            statute of limitations in <a
+            href="https://oregonlaws.org/ors/138.510">ORS
+            138.510(3)</a>. For more information, see <em>Post-Judgment
+            and Extraordinary Remedies</em> (OCDLA 2012).)</p>
+            <p>A prior conviction may not be considered “uncounseled” if
+            the defendant obtained the advice of an attorney, even if
+            that attorney did not appear in court with the defendant.
+            <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=state+v+conklin&amp;hl=en&amp;as_sdt=4,227,228&amp;case=1253680279535980783&amp;scilh=0"><em>State
+            v. Conklin</em>, 87 Or App 669, 743 P2d 779 (1987)</a>.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=state+v+maynard&amp;hl=en&amp;as_sdt=4,227,228&amp;case=15746560142393112572&amp;scilh=0"><em>State
+            v. Maynard</em>, 85 Or App 631, 738 P2d 210 (1987)</a>. The
+            assistance of counsel on a prior diversion is moot, as the
+            prior diversion itself is a disqualifier.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=91+or+app+312&amp;hl=en&amp;as_sdt=4,227&amp;case=14007716767346181112&amp;scilh=0"><em>State
+            v. Olson</em>, 91 Or App 312, 754 P2d 630 (1988)</a>.
+            Uncounseled “out-of-state” conviction(s) may be collaterally
+            attacked and do not bar eligibility.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=92+or+app+355&amp;hl=en&amp;as_sdt=4,38&amp;case=6750189768850458412&amp;scilh=0"><em>State
+            v. Barnes</em>, 92 Or App 355, 758 P2d 419 (1988)</a>.
+            Diversion may not be denied based on anything defendant was
+            required to do as a result of an uncounseled conviction.
+            This is when the DAs object because defendant went through
+            the old rehabilitation program on a DUII infraction.</p>
+            <p><em>State v. Manfredonia</em>, 105 Or App 537, 805 P2d
+            738 (1991). It may be, and some judges have held, that it is
+            the defendant’s burden to establish that the prior
+            conviction was uncounseled. Thus, when the defendant
+            testified about eligibility, the DA should have
+            cross-examined about the prior. An open question is whether
+            the DA can call the defendant as a state’s witness at the
+            contested diversion entry hearing. If the DA has not given
+            you discovery of the prior conviction, you can call the DA
+            as your witness first to avoid a possible perjury charge on
+            your client.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=meyrick&amp;hl=en&amp;as_sdt=4,38&amp;case=3868546510032013217&amp;scilh=0"><em>State
+            v. Meyrick</em>, 313 Or 125, 831 P2d 666 (1992)</a>. Is
+            there a record that your client’s prior waiver of counsel
+            and subsequent conviction passed constitutional muster? In
+            <em>Meyrick</em> the court held that a colloquy on the
+            record between the trial court and defendant wherein the
+            court, in some fashion, explains the risks of
+            self-representation is the preferred means of assuring that
+            a defendant understands the risks of self-representation. So
+            if your client waived counsel and was convicted in a
+            municipal court or some other court where there is no
+            record, you may have a shot at getting your client into
+            diversion.</p>
+            <p>A written waiver of counsel form from the prior plea,
+            however, may well suffice to establish the validity of the
+            prior conviction, making close reading of a plea transcript
+            or other inquiry unnecessary. <a
+            href="http://scholar.google.com/scholar_case?case=17364863279772076040&amp;q=Meyrick+DUII&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Forrest</em>, 213 Or App 151, 159 P3d 1286
+            (2007)</a>.</p>
+            <p>The Legislature’s 2009 amendment of <a
+            href="https://oregonlaws.org/ors/813.215">ORS 813.215</a>,
+            which increased the diversion ineligibility look-back period
+            from 10 to 15 years, could be applied retroactively without
+            violating the state or federal constitutions’ ex post facto
+            clauses. <a
+            href="https://scholar.google.com/scholar_case?case=10406228682623396988&amp;q=A146784&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Carroll</em>, 253 Or App 265, 290 P3d 864 (2012)</a>.</p>
+            <p>A trial court’s decision to set aside a judgment of
+            dismissal and enter a judgment of conviction for violating a
+            diversion agreement when it later came to the court’s
+            attention that the defendant was accused of a new DUII
+            during an extension of the diversion period was held to be
+            unreviewable on appeal. <a
+            href="https://scholar.google.com/scholar_case?case=1813790846799720855&amp;q=A146189&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Landahl</em>, 254 Or App 46, 292 P3d 646 (2012)</a>.</p>
+            <p>For more on this subject, see Chapter 6, Diversion.</p>
+            </section>
+            <section id="xviii._further_reading" class="level1">
+            <h1><strong>XVIII. Further Reading</strong></h1>
+            <p>Your Oregon State Bar membership gives you access to a
+            broad library of practitioner treastises called BarBooks™ at
+            no additional cost. Both <em>Appeal and Review: The
+            Basics</em> (2010 ed.) and <em>Appeal and Review: Beyond the
+            Basics</em> (2014 ed.) are well worth your time.</p>
+            <references />
+            </section>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><a
+            href="http://courts.oregon.gov/OJD/OnlineServices/eFile/Pages/index.aspx">http://courts.oregon.gov/OJD/OnlineServices/eFile/Pages/index.aspx</a>.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></li>
+            </ol>
+            </section>
+    </body>
+</html>

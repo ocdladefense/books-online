@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>The Trial Notebook</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">The Trial Notebook</h1>
+                                    </section>
+            <p><strong><code>The Trial Notebook</code></strong><code>, 2013 edition</code></p>
+            <p><strong>Chapter 1. Uniform Trial Court Rules</strong></p>
+            <p><strong><em>By DeAnna Horne, Amanda
+            Alvarez</em></strong></p>
+            <section id="i._introduction" class="level1">
+            <h1><strong>I. Introduction</strong></h1>
+            <p>I’m not one who has ever been big on rules. As a matter
+            of fact, I tend to feel rather resentful of them. That said,
+            I believe the [<a
+            href="http://courts.oregon.gov/OJD/programs/utcr/utcrrules.page">http://courts.oregon.gov/OJD/programs/utcr/utcrrules.page</a>?
+            Uniform Trial Court Rules] (hereinafter “UTCR”) offer some
+            interesting opportunities for the trial lawyer, if you don’t
+            get too caught up in them. Remember: The rules are just
+            tools that should be used along with all the other ones
+            already in your trial kit. It’s important to view these
+            rules creatively and to bring them out when they suit the
+            best interest of your client.</p>
+            <p>This is not an attempt to analyze each and every rule
+            promulgated by the UTCR committee and the Chief Justice.
+            This chapter will alert you to the rules that you can use
+            while preparing for a trial and that will aid your client’s
+            cause. This chapter is, of course, no substitute for reading
+            and knowing the UTCR yourself.</p>
+            <p>First, the entire text of the Oregon Uniform Trial Court
+            Rules is available online for free at <a
+            href="http://courts.oregon.gov/OJD/programs/utcr/utcrrules.page"><span>http://courts.oregon.gov/OJD/programs/utcr/utcrrules.page</span></a>.
+            They can be downloaded in PDF format. Additionally, the <a
+            href="http://www.ojd.state.or.us/Web/OJDPublications.nsf/SLR?OpenView&amp;count=1000">Supplemental
+            Local Rules</a> (hereinafter “SLR”) for each county are also
+            available on-line through the Judicial Department at <a
+            href="http://www.ojd.state.or.us/Web/OJDPublications.nsf/SLR?OpenView&amp;count=1000"><span>http://www.ojd.state.or.us/Web/OJDPublications.nsf/SLR?OpenView&amp;count=1000</span></a></p>
+            </section>
+            <section id="ii._utcr_chapter_1_general_provisions"
+            class="level1">
+            <h1><strong>II. <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch01.pdf">UTCR
+            Chapter 1, General Provisions</a></strong></h1>
+            <p><a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch01.pdf">Chapter
+            1</a> of the UTCR covers the scope of the rules, the
+            administrative details, sanctions, definitions, time
+            calculations, and guidelines for enacting SLRs. There are
+            some interesting tidbits in the General Provisions,
+            especially in the provisions that deal with conflicts
+            between the UTCR and the SLR.</p>
+            <section id="a._supplemental_local_rules_slr"
+            class="level2">
+            <h2><strong>A. Supplemental Local Rules (SLR)</strong></h2>
+            <p>UTCR 1.030(2) provides that all inconsistent SLR or
+            portions of SLR are simply superseded by the UTCR.
+            Additionally, the UTCR does not require that any notice be
+            given to the offending jurisdiction. Therefore, if your
+            local rules are inconsistent with the UTCR, you may simply
+            ignore them.</p>
+            <p>However, “when justice requires, a judge may order that
+            an action or proceeding pending…be governed by the previous
+            SLR or practice of the court.” UTCR 1.030(2). If the local
+            rules suit your client, use those. If the local rules don’t
+            suit your client, find an SLR inconsistent with the UTCR so
+            that the local rules are simply superseded.</p>
+            <p>The promulgation, review, and enforceability of
+            supplemental local rules are covered by UTCR 1.050. The SLR
+            may be promulgated and enforced only for the purpose of
+            giving full effect to the UTCR and for the “prompt and
+            orderly dispatch of the business of the court.” UTCR
+            1.050(1)(a). Any SLR adopted by the trial courts may
+            not:</p>
+            <p>duplicate or conflict with the constitutions, statutes,
+            ORCP, UTCR, Chief Justice Orders, Supreme Court Orders,
+            disciplinary rules for lawyers, judicial canons, or ORAP. A
+            court may not adopt SLR that establish internal operating
+            procedures of the court or trial court administrator that do
+            not create requirements or have potential consequences for
+            parties or attorneys.</p>
+            <p>UTCR 1.050(1)(b). Proposed local rules must be reviewed
+            and approved by the Chief Justice. The rules will only be
+            reviewed once a year, between September and December.
+            Approved changes will become effective on February first of
+            the following year. Remember, the trial courts <em>may
+            not</em> change the local rules without this review. UTCR
+            1.050(2)(a),(b) and (c).</p>
+            <p>Any local practice not outlined in a court’s SLR and
+            reviewed by the Chief Justice cannot be enforced.
+            Additionally, the trial court may not impose a sanction for
+            failing to follow a local practice unless the attorney has
+            been given an opportunity to “cure the violation” through
+            compliance. UTCR 1.050(3). Arguably, this rule is in
+            conflict with the portion of UTCR 1.050(1)(b) which states
+            that “a court must incorporate into its SLR any local
+            practice, procedure, form, or other requirement (‘local
+            practice’) with which the court expects or requires parties
+            or attorneys to comply.” UTCR 1.050(1)(b). If “a court
+            must,” than unwritten local practices should be considered
+            unenforceable.</p>
+            </section>
+            <section id="b._utcr_escape_clause" class="level2">
+            <h2><strong>B. UTCR Escape Clause</strong></h2>
+            <p>Under UTCR 1.100, relief from application of either the
+            UTCR or the SLR may be given by a judge on “good cause
+            shown,” if it is necessary to avoid “hardship or injustice.”
+            Always keep this in mind, as this is the UTCR’s escape
+            clause. If the rules will cause “hardship or injustice,”
+            move the court to make a “good cause” finding and allow you
+            relief from the requirement.</p>
+            </section>
+            <section id="c._definitions" class="level2">
+            <h2><strong>C. Definitions</strong></h2>
+            <p>UTCR 1.110 is the definition section for the UTCR.
+            Nothing in it is really odd or complicated.</p>
+            </section>
+            <section id="d._time_computation" class="level2">
+            <h2><strong>D. Time Computation</strong></h2>
+            <p>Any time period described by the UTCR is governed by Rule
+            10 of the Oregon Rules of Civil Procedure (hereinafter
+            “ORCP”). Rule 10 reads:</p>
+            <p>In computing any period of time prescribed or allowed by
+            these rules, by the local rules of any court or by order of
+            court, the day of the act, event, or default from which the
+            designated period of time begins to run shall not be
+            included. The last day of the period so computed shall be
+            included, unless it is a Saturday or a legal holiday,
+            including Sunday, in which event the period runs until the
+            end of the next day which is not a Saturday or a legal
+            holiday. If the period so computed relates to serving a
+            public officer or filing a document at a public office, and
+            if the last day falls on a day when that particular office
+            is closed before the end of or for all of the normal work
+            day, the last day shall be excluded in computing the period
+            of time within which service is to be made or the document
+            is to be filed, in which event the period runs until the
+            close of office hours on the next day the office is open for
+            business. When the period of time prescribed or allowed
+            (without regard to section C of this rule) is less than 7
+            days, intermediate Saturdays and legal holidays, including
+            Sundays, shall be excluded in the computation. As used in
+            this rule, “legal holiday” means legal holiday as defined in
+            ORS 187.010 and 187.020. This section does not apply to any
+            time limitation governed by ORS 174.120.</p>
+            <p>UTCR 1.130.</p>
+            </section>
+            <section id="e._utcr_remedy_provision" class="level2">
+            <h2><strong>E. UTCR Remedy Provision</strong></h2>
+            <p>Chapter 1 includes a sanctions provision for failure to
+            follow the UTCR. This is the UTCR “remedy” provision.
+            Remember this provision as you look at the rest of the UTCR
+            and its timelines for discovery and motion practice in
+            criminal cases. Under this provision, the court may strike a
+            pleading or document that is filed in violation of the rules
+            in either form or time frame. UTCR 1.090(1). Also, for
+            “willful and prejudicial resistance or refusal to comply
+            with the UTCR or SLR the court, on its own motion or that of
+            a party after opportunity for a hearing, may” assess
+            reasonable costs and attorneys’ fees against the offending
+            party. UTCR 1.090(2).</p>
+            </section>
+            </section>
+            <section id="iii._chapter_3_decorum_in_proceedings"
+            class="level1">
+            <h1><strong>III. <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch03.pdf">Chapter
+            3, Decorum in Proceedings</a></strong></h1>
+            <p><a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch03.pdf">Chapter
+            3</a> covers rules for witnesses, attorneys and judges
+            ranging from proper apparel to the controversial rule
+            barring communication with jurors. It also provides
+            instruction to attorneys about speaking to clients and
+            witnesses and explaining the procedures and proper behavior
+            in the courtroom.</p>
+            <section id="a._behavior_in_court" class="level2">
+            <h2><strong>A. Behavior in Court</strong></h2>
+            <p>UTCR 3.010 instructs “all persons attending the court
+            must be dressed so as not to detract from the dignity of
+            court.” This rule is extended to members of the public and
+            allows for their removal from court for failure to comply.
+            UTCR 3.010(1). It is unlikely that you would succeed in
+            excluding state’s representatives or victims from the
+            courtroom using this rule, but in the right case it might be
+            worth a try. Lastly, the rule requires that incarcerated
+            witnesses and defendants appearing for trial wear civilian
+            attire.</p>
+            <p>Litigants and their attorneys must address adult
+            witnesses, jurors, or opposing parties by their last names.
+            UTCR 3.030. Except in voir dire, jurors cannot be addressed
+            individually at all. <em>Id</em>. As trial attorneys, we
+            <em>must</em> have a conversation with our clients and our
+            witnesses to explain to them the formalities of the court
+            and to encourage their cooperation. UTCR 3.040.</p>
+            <p>There are several more rules governing behavior in the
+            courtroom of note: UTCR 3.060 requires a criminal defendant
+            to stand during arraignment, plea and sentence; UTCR 3.080
+            states that the “swearing of witnesses shall be conducted as
+            a serious ceremony and not as a mere formality”; UTCR 3.090
+            bars undue recognition of or familiarity with “any person in
+            the courtroom” by the judge; and UTCR 3.0150 dictates that
+            upon the reading of a verdict, all persons must remain
+            seated until the jurors have left the room and no one shall
+            react to the jury verdict “in a manner which disrupts the
+            dignity of the courtroom.”</p>
+            </section>
+            <section id="b._communication_with_jurors" class="level2">
+            <h2><strong>B. Communication with Jurors</strong></h2>
+            <p>Except as necessary during trial, and provided under
+            subsection (2), UTCR 3.120 bars parties, witnesses and court
+            employees from communicating with jurors. Seriously. They
+            mean it.</p>
+            <p>This rule is rather unfortunate. In other states, such as
+            California, attorneys and jurors are encouraged to speak to
+            one another after trial. Jurors get to ask questions of the
+            attorneys and attorneys get feedback from jurors. In no way
+            should a juror be compelled to speak to an attorney, but
+            once the case is over, the juror really should be given the
+            opportunity to ask questions and offer feedback.</p>
+            <p>Some judges across the state have been “debriefing”
+            jurors and allowing them to engage in a conversation with
+            the attorneys after discharge. This may be outside of the
+            rules, but I haven’t heard of anyone actually being
+            sanctioned for participating in these sessions.</p>
+            </section>
+            <section id="c._rules_related_to_media_coverage"
+            class="level2">
+            <h2><strong>C. Rules Related to Media Coverage</strong></h2>
+            <p>Also covered in Chapter 3 of the UTCR are rules relating
+            to media, or “public access” coverage, of court events. UTCR
+            3.180. “Upon request or on the court’s own motion, after
+            notice to all parties, public access shall be allowed in any
+            courtroom” except as provided under the rest of the rule.
+            UTCR 3.180(1). The media is not allowed to cover proceedings
+            in chambers, notes or conversations intended to be private,
+            voir dire or recesses, or engage any juror anywhere during
+            the course of the trial. Additionally, the media cannot
+            cover juvenile, paternity, adoption, custody, mental
+            commitment, restraining order, or stalking order
+            proceedings. At a victim’s request, they cannot cover sex
+            offense proceedings either. UTCR 3.180(2)(a–g).</p>
+            <p>The judge may deny access to the media only if findings
+            of fact are made on the record outlining “substantial
+            reasons for the denial.” UTCR 3.180(3). If there is a
+            “reasonable likelihood” that the media would interfere with
+            the right to a fair trial, affect the presentation of
+            evidence, or affect the outcome of a trial, the judge may
+            restrict media access to the courtroom. UTCR 3.180(3)(a).
+            Additionally, if the media will place a large financial
+            burden on the court, the judge may restrict access. UTCR
+            3.180(3)(b).</p>
+            <p>Should you decide that the presence of the media is not
+            in the best interest of your client, you have the options
+            presented by UTCR 3.180(3). Additionally, the judge can
+            prohibit media coverage of a particular witness’s testimony
+            if the court finds on the record that the media presence
+            would “endanger the welfare of the witness or materially
+            hamper the witness’ testimony.” UTCR 3.180(4).</p>
+            </section>
+            </section>
+            <section id="iv._chapter_4_proceedings_in_criminal_cases"
+            class="level1">
+            <h1><strong>IV. <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch04.pdf">Chapter
+            4, Proceedings in Criminal Cases</a></strong></h1>
+            <p>The UTCR devotes an entire three-and-a-half pages to the
+            proceedings in criminal cases. This chapter covers timelines
+            for filing motions, guidelines for arguing them, procedures
+            for transporting clients and witnesses, communications with
+            witnesses and victims, motions to suppress, and the proper
+            way to dismiss charges after diversion, among other
+            things.</p>
+            <section id="a._time_for_filing_pretrial_motions"
+            class="level2">
+            <h2><strong>A. Time for Filing Pretrial
+            Motions</strong></h2>
+            <p>UTCR 4.010 sets the time period for filing certain
+            motions at “not less than 21 days before trial or within 7
+            days after the arraignment, whichever is later, unless a
+            different time is permitted by the court for good cause
+            shown.” UTCR 4.010.</p>
+            <p>The motions covered by this provision are motions brought
+            under <a href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.037</a> and <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS 135.805
+            through ORS 135.873</a>. These are the statutes that cover
+            omnibus hearings (ORS 135.037) and the discovery statutes
+            (ORS 135.805 through ORS 135.873).</p>
+            <p>The Oregon Court of Appeals addressed the question of
+            exactly when a trial begins in <a
+            href="http://scholar.google.com/scholar_case?q=iverson&amp;hl=en&amp;as_sdt=4,38&amp;case=15778833901362934299&amp;scilh=0">State
+            v. Iverson,</a><a
+            href="http://scholar.google.com/scholar_case?q=iverson&amp;hl=en&amp;as_sdt=4,38&amp;case=15778833901362934299&amp;scilh=0">185
+            Or App 9 (2002),</a><a
+            href="http://scholar.google.com/scholar_case?q=iverson&amp;hl=en&amp;as_sdt=4,38&amp;case=15778833901362934299&amp;scilh=0">rev
+            den</a><a
+            href="http://scholar.google.com/scholar_case?q=iverson&amp;hl=en&amp;as_sdt=4,38&amp;case=15778833901362934299&amp;scilh=0">335
+            Or 655 (2003)</a>. The question in this case was whether or
+            not the state had complied with the 15-day notice under <a
+            href="http://www.oregonlaws.org/ors/40.460">OEC 803
+            18(b)</a>. The state argued that a trial begins when the
+            jury is sworn. <em>Iverson</em>, at 12. The court disagreed.
+            Using UTCR 4.010, as well as other statutes and rules
+            providing timelines, the court held that the “trial date
+            [is] the date on which proceedings begin, not an imprecise
+            future date on which the jury is sworn.” <em>Iverson</em>,
+            at 14.</p>
+            <p>However, remember the escape clause under UTCR 1.100. If
+            the requirement that discovery motions and motions in
+            omnibus hearings must be filed 21 days before trial is going
+            to prejudice your client, you may be able to seek relief
+            under that rule.</p>
+            </section>
+            <section id="b._communications_with_victims_and_witnesses"
+            class="level2">
+            <h2><strong>B. Communications with Victims and
+            Witnesses</strong></h2>
+            <p>Article I, section 42, of the <a
+            href="http://www.leg.state.or.us/orcons/orcons.html">Oregon
+            Constitution</a>, the “victims’ rights” section, allows
+            victims to:</p>
+            <p>refuse an interview, deposition, or other discovery
+            request by the criminal defendant or other person acting on
+            behalf of the criminal defendant, provided, however, that
+            nothing in this paragraph shall restrict any other
+            constitutional right of the defendant to discovery against
+            the state.</p>
+            <p>Or Con Art. 1 § 42(c). This rule requires the district
+            attorney to act as the attorney for the victim and
+            perpetuates the illusion that district attorneys have
+            clients other than the state.</p>
+            <p>Additionally, Article I, section 43, of the Oregon
+            Constitution discusses a victim’s right to be protected from
+            the defendant. Section 1(b) indicates that a victim has the
+            right to “have decisions by the court regarding the
+            pre-trial release of a criminal defendant based upon the
+            reasonable protection of the victim and the public…” Section
+            4(a)(b) demonstrates that, at the victim’s request, the
+            prosecuting attorney assert and enforce a right guaranteed
+            to the victim under this section.</p>
+            <p>In 2008, the primary UTCR dealing with victims’ rights
+            was amended. While (now repealed) <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch04.pdf">UTCR
+            4.040</a> required some action by the prosecuting attorney
+            on behalf of a victim or witness (like reporting to the
+            court whether the victim has received notice of a
+            rescheduled trial date), these requirements were made
+            stricter and more formal with the creation of UTCR
+            4.100.</p>
+            <p>UTCR 4.100 requires that the prosecuting attorney “must
+            file a notification of compliance as provided in <a
+            href="http://www.leg.state.or.us/ors/147.html">ORS
+            147.510</a>, in substantially the form set out in Form
+            4.100.1a or 4.100.1b in the UTCR Appendix of Forms.”</p>
+            <p>ORS 147.510, in part, requires that: the prosecuting
+            attorney inform the court whether the victim is present;
+            inform the court whether the victim requested advance notice
+            of any critical stage, and if so, whether the victim was in
+            fact notified and provided with victim’s rights; certify
+            that the charging instrument includes the name of each
+            victim known to the prosecuting attorney and that the
+            prosecuting attorney attempt to identify any victim not so
+            included; and indicate to the court whether or not the
+            victim intends to assert a right granted to the victim by
+            section 42 or 43 of Article I of the Oregon
+            Constitution.</p>
+            <p>The Oregon Supreme Court recently dealt with a violation
+            of victim’s rights and the implications it can have on the
+            criminal defendant. In <em>State v. Barrett</em>, the court
+            ruled that a trial judge is required to grant a victim’s
+            request to vacate a sentence where the judge has found that
+            the victim’s constitutional right to be informed in advance
+            of sentencing was violated. <a
+            href="http://scholar.google.com/scholar_case?q=350+or+390&amp;hl=en&amp;as_sdt=4,38&amp;case=11136647299445643531&amp;scilh=0">350
+            Or 390 (2011)</a>. Clearly, even if it is the state that
+            violates the victim’s rights, it can still mean trouble for
+            your client.</p>
+            </section>
+            <section id="c._oral_argument_on_motions" class="level2">
+            <h2><strong>C. Oral Argument on Motions</strong></h2>
+            <p>The court is required to hear oral arguments in criminal
+            cases if oral argument has been requested in the caption of
+            the motion or response. UTCR 4.050(1). However, the court is
+            not required to hear argument on motions to postpone trial.
+            <em>Id.</em> In order to request a motion, the attorney must
+            estimate time for oral argument and request official court
+            reporting services. <em>Id.</em></p>
+            <p>If oral argument is not specifically requested, the court
+            does not have to hold argument and can merely rule on the
+            pleadings. Don’t forget to request oral argument!</p>
+            <p>Should you need to request telephonic argument, make sure
+            you are familiar with UTCR 4.050(2), which sets out lengthy
+            rules for oral argument by telecommunication.</p>
+            </section>
+            <section id="d._motion_to_suppress" class="level2">
+            <h2><strong>D. Motion to Suppress</strong></h2>
+            <p>Rule 4.060 sets out guidelines for motions to suppress
+            and responses to motions to suppress. These guidelines
+            include the amount of specificity required in motions to
+            suppress, time requirements, and the requirements for
+            affidavits based on “information and belief.”</p>
+            <p>All motions to suppress “must make specific reference to
+            any constitutional provision, statute, rule, case, or other
+            authority upon which it is based.” UTCR 4.060(1)(a).
+            Additionally, the rule requires that the motion be
+            accompanied by a “brief” that is sufficient to notify the
+            court and the opposing party of the “arguments and
+            authorities relied upon.” UTCR 4.060(1)(b).</p>
+            <p>Under the UTCR, a response to a motion to suppress is not
+            required. UTCR 4.060(4). However, if the district attorney’s
+            office does write a response, they only have seven days to
+            file it. UTCR 4.060(2)(a). The response is subject to the
+            same rules of specificity required for the original motion.
+            UTCR 4.060(2)(b and c).</p>
+            </section>
+            <section id="e._other_rules_for_criminal_proceedings"
+            class="level2">
+            <h2><strong>E. Other Rules for Criminal
+            Proceedings</strong></h2>
+            <p>Chapter 4 of the UTCR lays out rules for defendants to
+            appear in court via “simultaneous electronic transmission”
+            and other rules for electronic filing of violation
+            complaints and criminal citations. UTCR 4.080 and 4.090. For
+            further information on simultaneous electronic transmission,
+            you should refer to <a
+            href="http://www.leg.state.or.us/ors/131.html">ORS
+            131.045</a>, <a
+            href="http://www.leg.state.or.us/ors/135.html">ORS
+            135.030</a> (arraignments), ORS 135.355–360 (plea), <a
+            href="http://www.leg.state.or.us/ors/137.html">ORS
+            137.0404</a> (sentencing), and ORS 137.545 (probation
+            violations).</p>
+            </section>
+            </section>
+            <section id="v._chapter_6_trials" class="level1">
+            <h1><strong>V. Chapter 6, Trials</strong></h1>
+            <p><a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch06.pdf">Chapter
+            6</a> of the UTCR governs both criminal and civil trials,
+            and many of the rules have limited application in a criminal
+            practice. However, some of these rules offer a real
+            opportunity for creative arguments.</p>
+            <section id="a._postponement_of_trial_scheduling_conflicts"
+            class="level2">
+            <h2><strong>A. Postponement of Trial; Scheduling
+            Conflicts</strong></h2>
+            <p>Requests to postpone a trial must be by motion. UTCR
+            6.030(1). Section 2 of this rule lays out the information
+            that must be in a motion to postpone. The attorney must have
+            informed the client, and the motion needs to contain the
+            date currently scheduled for trial, the reason for the
+            postponement, the date of each previous postponement, and
+            whether any of the parties object. UTCR 6.030(2)(a–e).</p>
+            <p>The rules address motions to postpone when the motion is
+            based on a conflict in another court. UTCR 6.030(3).
+            Specifically, there is a provision for resolving scheduling
+            conflicts. Any attorney who is scheduled to be in two courts
+            at once is entitled to a resolution of the conflict. In
+            fact, the rules require the presiding judges of the affected
+            courts to work it out on the motion of “the affected party
+            in both courts.” UTCR 6.040(1). Remember this rule, and
+            don’t let the courts bully you into appearing in Klamath
+            County and Washington County on the same day! The rules lay
+            out the factors that must be considered in determining which
+            case will be postponed. UTCR 6.040(2)(a–g). In order to make
+            a decision, the presiding judges must consult with one
+            another. If they cannot come to an agreement, the Chief
+            Justice will make a “summary resolution.” UTCR 6.040(3).</p>
+            </section>
+            <section
+            id="b._proposed_jury_instructions_and_verdict_forms"
+            class="level2">
+            <h2><strong>B. Proposed Jury Instructions and Verdict
+            Forms</strong></h2>
+            <p>Requested jury instructions must be in writing and
+            delivered to the court and the opposing party. UTCR
+            6.060(1). Additionally, the court must be provided with an
+            original and one copy of both the requested instructions and
+            the requested verdict form. UTCR 6.060(2).</p>
+            <p>Uniform instructions may be requested simply by referring
+            to the instruction number and its title. UTCR 6.060(3). If
+            the uniform instruction requires a “fill in the blank,” make
+            sure you have provided the information. UTCR 6.060(3). The
+            rule does not require you to type and print the requested
+            instruction with the information filled in, but it is a good
+            idea to provide the judge with a completed instruction. A
+            turn of phrase can be very important.</p>
+            <p>UTCR 6.060(4) is a list of requirements for preparing
+            requested jury instructions. The court must consider
+            requested instructions and inform the parties which
+            instructions it intends to give before argument. UTCR
+            6.060(5). A proposed verdict form must be submitted at the
+            commencement of trial. UTCR 6.060(6).</p>
+            </section>
+            <section
+            id="c._hazardous_substances_controlled_substances_weapons_and_dangerous_instruments_in_the_courtroom"
+            class="level2">
+            <h2><strong>C. Hazardous Substances, Controlled Substances,
+            Weapons, and Dangerous Instruments in the
+            Courtroom</strong></h2>
+            <p>The UTCR committee and the Chief Justice have found it
+            necessary to promulgate rules that dictate how these
+            substances are handled in the courtroom. These rules may
+            very well be prejudicial to defendants in many situations,
+            but they also provide an opportunity to keep evidence out if
+            the district attorney does not abide by the rules.</p>
+            <p>A “hazardous substance” is defined in UTCR 6.140(2)
+            as:</p>
+            <p>any substance listed or hereafter added to the Department
+            of Transportation Hazardous Substances List and the Oregon
+            State Police List of Chemicals and Precursors for
+            Methamphetamine Production and any other hazardous substance
+            designated by SLR.</p>
+            <p>If a party intends to offer into evidence anything
+            fitting this description, he must file a motion with the
+            court no fewer than 28 days prior to the hearing or trial
+            seeking court order regulating the handling, use and
+            disposition of the substance. UTCR 6.140(1). However, UTCR
+            6.140(4) provides that “failure to file a timely motion
+            under subsection(1) of this rule may be grounds for
+            excluding any hazardous substance from the courthouse.” It
+            is this provision that you should draw to the judge’s
+            attention when the prosecuting attorney fails to abide by
+            the rules.</p>
+            <p><strong>Practice Tip</strong></p>
+            <p>If you are successful in arguing that the state may not
+            present a “hazardous material” as evidence, make sure that
+            you also object to any discussion of the material as “just
+            too dangerous to bring here for you to see.”</p>
+            <p>Additionally, the court may order a jury view or
+            photograph of the substance in lieu of its transportation to
+            the court room. Moreover, the court has the discretion to
+            appoint a custodian, a disposition expert, or a medical
+            expert. UTCR 6.140(3)(a–d). Lastly, the court may also limit
+            the amount of material to be transported, dictate the type
+            of container in which it is stored, order the disposition of
+            the material, or order other safeguards. UTCR
+            6.140(3)(e–i).</p>
+            <p>UTCR 6.150 addresses “weapons and dangerous instruments.”
+            All “firearms, BB guns, and pellet guns intended to be
+            offered into evidence must be unloaded and either rendered
+            inoperable or have a trigger guard installed.” UTCR
+            6.150(1)(a). If the mechanical operation of a weapon is an
+            evidentiary issue, the UTCR committee intended that there be
+            exceptions granted to this rule. <em>See</em> 1990
+            Commentary to UTCR 6.150. All guns and ammunition must be
+            kept separate at all times. UTCR 6.150(1)(b).</p>
+            <p>Knives, scissors and other sharp objects must be in
+            puncture-proof containers or provided with protective
+            sheaths. They must be “rendered harmless.” UTCR 6.150(1)(c).
+            Again, in the right case, you may be able to use this rule
+            creatively to keep evidence out of the jury’s hands.</p>
+            <p>Section 2 of UTCR 6.150 addresses other “hazardous
+            materials” such as hypodermic needles, chemicals,
+            pharmaceuticals and biological substances. These items must
+            be in containers that provide for safe handling and viewing.
+            UTCR 6.150(2)(a &amp; b).</p>
+            <p>Only a small, representative sample of controlled
+            substances may be brought into the courtroom. UTCR 6.160(1).
+            This rule is more focused on preventing theft than for the
+            safety of the jury or the court. Drugs must be sealed in a
+            see-through bag and may not be opened except upon court
+            order. <em>Id.</em>Additionally, the controlled substance
+            must be kept in the court’s evidence locker or in the
+            possession of court staff or a law enforcement agency. UTCR
+            6.160(2).</p>
+            <p>“Jurors must be advised if any controlled, hazardous, or
+            infections substances or chemicals…present a danger.” UTCR
+            6.170. Jurors must be further advised on how to safely
+            handle these substances. <em>Id.</em> Arguably, giving these
+            warnings constitutes a comment on the evidence. Therefore,
+            in the right case, you may be able to use the prejudicial
+            nature of these warnings to keep the evidence at issue
+            out.</p>
+            </section>
+            <section id="d._other_provisions" class="level2">
+            <h2><strong>D. Other Provisions</strong></h2>
+            <ul>
+            <li>The parties must notify the court immediately if the
+            case will be dismissed or if the defendant will make a
+            change of plea. UTCR 6.020(1).</li>
+            <li>UTCR 6.080 explains how to mark exhibits and requires
+            that exhibits be marked unless not available at the
+            commencement of trial, not reasonably anticipated to be
+            used, or solely to be used for impeachment purposes.</li>
+            <li>Except for good cause shown, UTCR 6.100 prohibits more
+            than one attorney for each party examining a witness or
+            presenting argument on an issue.</li>
+            </ul>
+            </section>
+            </section>
+            <section id="vi._chapter_7_case_management_and_calendaring"
+            class="level1">
+            <h1><strong>VI. Chapter 7, Case Management and
+            Calendaring</strong></h1>
+            <p><a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch07.pdf">Chapter
+            7</a> of the Trial Court Rules addresses pleas,
+            negotiations, discovery and trial dates in criminal cases.
+            It also addresses designating “complex cases,” the use of
+            foreign language interpreters, and providing accommodations
+            for those with disabilities.</p>
+            <section
+            id="a._pleas_negotiations_discovery_and_trial_dates_in_criminal_cases"
+            class="level2">
+            <h2><strong>A. Pleas, Negotiations, Discovery, and Trial
+            Dates in Criminal Cases</strong></h2>
+            <p>At arraignment, the court may either accept a not guilty
+            plea and set a trial date, or it may set a date for a later
+            entry of a plea. UTCR 7.010(1). Plea agreements,
+            negotiations, discovery and investigation in criminal cases
+            must be completed well in advance of trial. UTCR 7.010(2).
+            For defendants in custody, these tasks must be concluded by
+            a deadline set by the court no earlier than 21 days after
+            arraignment, but no later than 21 days before trial. UTCR
+            7.010(2)(a). For defendants out of custody, that timeline is
+            no earlier than 35 days after arraignment, but not later
+            than 35 days before trial. UTCR 7.010(2)(b).</p>
+            <p>According to UTCR 7.010(3), the timeline imposed by
+            section 2 requires trial counsel to report a number of
+            things about trial within the same time frame: whether a
+            jury trial is requested, the probable length of trial, the
+            need for pretrial hearings, and “any other matter affecting
+            the case.” UTCR 7.010(3)(a–d).</p>
+            <p>These deadlines can be impractical in a criminal case. As
+            such, always remember that <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch01.pdf">UTCR
+            1.100</a> offers an “escape clause” from all of these rules.
+            If your client will be harmed by these deadlines, and the
+            court is insisting on holding you to them, you may make a
+            “good cause” argument under the escape clause. As a matter
+            of fact, the commentary to the rules from both 1988 and 1990
+            encourage that the court give relief from the timelines.</p>
+            <p>Additionally, the 1990 commentary to this rule states
+            that <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch04.pdf">UTCR
+            4.010</a> should be read in conjunction with <a
+            href="http://courts.oregon.gov/OJD/docs/programs/utcr/2011_UTCR_ch07.pdf">UTCR
+            7.010</a>. Section 4.010 addresses timelines for filing
+            motions. The commentary suggests that “parties may request
+            that the court decide any legal issue, including motions to
+            suppress, before plea negotiations are concluded.” 1990
+            Commentary to UTCR 7.010. The commentary does note that the
+            court is not required to allow the request.</p>
+            </section>
+            <section id="b._designating_complex_cases" class="level2">
+            <h2><strong>B. Designating Complex Cases</strong></h2>
+            <p>Any party to a case may apply to the presiding judge to
+            have the case designated as a “complex case.” UTCR 7.030(1).
+            UTCR 7.030(2) suggest that the criteria for determining what
+            is a complex case includes: “the number of parties involved,
+            the complexity of the legal issues, the expected extent and
+            difficulty of discovery, and the anticipated length of
+            trial.” A complex case has the advantage of being assigned
+            to a particular judge who shall have “full or partial
+            responsibility for the case.” UTCR 7.030(3).</p>
+            <p>A complex case is specifically given relief from the
+            timelines imposed on <em>civil</em> cases. Nothing suggests
+            that a complex case is immune from the timelines imposed on
+            criminal cases. UTCR 7.030(4).</p>
+            </section>
+            <section
+            id="c._americans_with_disabilities_act_accommodation"
+            class="level2">
+            <h2><strong>C. Americans with Disabilities Act
+            Accommodation</strong></h2>
+            <p>The court will provide special accommodation for those
+            requiring it. In order to do so, it must be notified “as
+            soon as possible” but no later than four judicial days in
+            advance of the proceeding. UTCR 7.060(1).</p>
+            <p>Notice to the court must contain the name of the person
+            needing accommodation, the case number, charges, the nature
+            of the proceeding, the person’s status in the proceeding,
+            the time, date, and estimated length of the proceeding, the
+            type of disability that needs accommodation, and the type of
+            accommodation needed. UTCR 7.060(2)(a–h).</p>
+            </section>
+            <section id="d._foreign_language_interpreters"
+            class="level2">
+            <h2><strong>D. Foreign Language Interpreters</strong></h2>
+            <p>The court will always provide interpreters for those
+            needing it. In order to obtain an interpreter, notify the
+            court exactly how you would if you notifying the court of a
+            need for an ADA accommodation. UTCR 7.070(2)(a–g).</p>
+            <p>Additionally, the interpreter may request a list of
+            specialized terminology that may be used during the
+            proceeding. UTCR 7.080. Even though the interpreter is
+            provided by the court, the list is confidential and is not
+            discoverable by the state. <em>Id.</em></p>
+            </section>
+            </section>
+            <section id="vii._conclusion" class="level1">
+            <h1><strong>VII. Conclusion</strong></h1>
+            <p>The Uniform Trial Court Rules are packed with
+            opportunity. Remember that if the rule prejudices your
+            client, the court is required to provide relief from the
+            rule upon “good cause shown.” Additionally, remember that
+            the rules are promulgated only by the judicial branch. They
+            have not been approved by the legislature and signed by the
+            governor. As such, any statute or constitutional provision
+            will trump the UTCR.</p>
+            <p>Use the rules to your client’s advantage. If nothing
+            else, have fun with them.</p>
+            <center>
+            <p>This chapter originally prepared for the 1993 edition
+            by</p>
+            </center>
+            <center>
+            <p>Bob Homan, Public Defense Services of Lane County,
+            Eugene.</p>
+            </center>
+            <center>
+            <p>Updating and editing for the 2000 edition by Bob
+            Homan.</p>
+            </center>
+            <center>
+            <p>Updating and editing for the 2012 edition by Amanda
+            Alvarez.</p>
+            </center>
+            </section>
+    </body>
+</html>

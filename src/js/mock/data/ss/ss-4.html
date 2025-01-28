@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+                    <title>Search and Seizure Manual</title>
+    <style>
+        html {
+          color: #1a1a1a;
+          background-color: #fdfdfd;
+        }
+        body {
+          margin: 0 auto;
+          max-width: 36em;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          hyphens: auto;
+          overflow-wrap: break-word;
+          text-rendering: optimizeLegibility;
+          font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+          body {
+            font-size: 0.9em;
+            padding: 12px;
+          }
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+        @media print {
+          html {
+            background-color: white;
+          }
+          body {
+            background-color: transparent;
+            color: black;
+            font-size: 12pt;
+          }
+          p, h2, h3 {
+            orphans: 3;
+            widows: 3;
+          }
+          h2, h3, h4 {
+            page-break-after: avoid;
+          }
+        }
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #1a1a1a;
+        }
+        a:visited {
+          color: #1a1a1a;
+        }
+        img {
+          max-width: 100%;
+        }
+        svg {
+          height: auto;
+          max-width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: 1.4em;
+        }
+        h5, h6 {
+          font-size: 1em;
+          font-style: italic;
+        }
+        h6 {
+          font-weight: normal;
+        }
+        ol, ul {
+          padding-left: 1.7em;
+          margin-top: 1em;
+        }
+        li > ol, li > ul {
+          margin-top: 0;
+        }
+        blockquote {
+          margin: 1em 0 1em 1.7em;
+          padding-left: 1em;
+          border-left: 2px solid #e6e6e6;
+          color: #606060;
+        }
+        code {
+          font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+          font-size: 85%;
+          margin: 0;
+          hyphens: manual;
+        }
+        pre {
+          margin: 1em 0;
+          overflow: auto;
+        }
+        pre code {
+          padding: 0;
+          overflow: visible;
+          overflow-wrap: normal;
+        }
+        .sourceCode {
+         background-color: transparent;
+         overflow: visible;
+        }
+        hr {
+          background-color: #1a1a1a;
+          border: none;
+          height: 1px;
+          margin: 1em 0;
+        }
+        table {
+          margin: 1em 0;
+          border-collapse: collapse;
+          width: 100%;
+          overflow-x: auto;
+          display: block;
+          font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+          margin-bottom: 0.75em;
+        }
+        tbody {
+          margin-top: 0.5em;
+          border-top: 1px solid #1a1a1a;
+          border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+          border-top: 1px solid #1a1a1a;
+          padding: 0.25em 0.5em 0.25em 0.5em;
+        }
+        td {
+          padding: 0.125em 0.5em 0.25em 0.5em;
+        }
+        header {
+          margin-bottom: 4em;
+          text-align: center;
+        }
+        #TOC li {
+          list-style: none;
+        }
+        #TOC ul {
+          padding-left: 1.3em;
+        }
+        #TOC > ul {
+          padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+          text-decoration: none;
+        }
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+                <script>
+
+        class WebcOrs extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+        class WebcOar extends HTMLDivElement {
+            constructor() {
+                super();
+            }
+            // Element functionality written in here
+        }
+
+
+        customElements.define("webc-ors", WebcOrs, { extends: "div" });
+        customElements.define("webc-oar", WebcOar, { extends: "div" });
+
+    </script>
+</head>
+<body>
+            <section id="title-block-header">
+        <h1 class="title">Search and Seizure Manual</h1>
+                                    </section>
+            <div class="noautonum">
+            <p>__TOC__</p>
+            </div>
+            <div class="WordSection1">
+            <p><span id="i.-introduction"></span></p>
+            <section id="i._introduction" class="level2">
+            <h2>I. Introduction</h2>
+            <p>Most Oregon counties, cities, and towns have enacted
+            policies that allow law enforcement agencies to inventory
+            for safekeeping any property that the agency impounds or
+            otherwise takes into administrative custody. In practice,
+            the inventory arises most commonly in connection with law
+            enforcement impound of a client’s car or the storage of a
+            client’s belongings when the client is booked into jail. The
+            purpose of the inventory is not to investigate possible
+            criminal activity, but to protect property and to protect
+            law enforcement from claims that property in their custody
+            was mishandled or stolen.</p>
+            <p>Police frequently find contraband during inventories. The
+            Oregon Supreme Court has held that admission of evidence
+            discovered during a properly authorized and conducted
+            non-investigatory inventory of property does not violate
+            Article I, section 9, of the Oregon Constitution. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Atkinson&amp;hl=en&amp;as_sdt=4,38&amp;case=1150044939061409472&amp;scilh=0"><em>State
+            v. Atkinson</em>, 298 Or 1, 4-6, 688 P2d 832 (1984)</a>; <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Keller,+265+Or+622,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14367204705150062758&amp;scilh=0"><em>State
+            v. Keller</em>, 265 Or 622, 629, 510 P2d 568 (1973)</a>.
+            When “responsible policy makers” promulgate an inventory
+            policy for protective reasons, “such a policy is not
+            inherently ‘unreasonable’ within the meaning of Article I,
+            section 9.” <em>Atkinson</em>, 298 Or at 8. The properly
+            authorized and conducted inventory is therefore a reasonable
+            intrusion. <em>Id.</em></p>
+            <p>This is true whether the inventory is of an impounded
+            automobile, <em>Atkinson</em> 298 Or 1, impounded personal
+            property of a person in police custody, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Perry,+298+Or+21,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15983434659216272583&amp;scilh=0"><em>State
+            v. Perry</em>, 298 Or 21, 688 P2d 827 (1984)</a>, or
+            property in any type of “administrative”—<em>i.e.</em>,
+            non-investigative—custody. <em>Atkinson</em>, 298 Or at
+            8.</p>
+            <p>The government may inventory personal property to
+            safeguard the property it takes into administrative custody
+            and to insulate itself against claims that it has mishandled
+            or misappropriated it. <em>Atkinson</em>, 298 Or at 8. In
+            that context, “there is no <em>search</em> for predictable
+            ‘things to be seized’ that could be ‘particularly
+            described,’ as the warrant requirement of Article I, section
+            9, contemplates.” <em>Atkinson</em>, 298 Or at 8 (emphasis
+            added). Such limited, purely administrative cataloging of a
+            person’s property for safekeeping is reasonable and
+            therefore does not offend Article I, section 9, so long as
+            it complies with <em>Atkinson</em>’s requirements.</p>
+            <p><br />
+            </p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>Notwithstanding <em>Atkinson</em> and its progeny,
+            counsel should consider challenging the admission of
+            evidence discovered during <em>any</em> inventory, even if
+            the police did everything “right” under <em>Atkinson</em>.
+            It makes practical sense that the police are authorized to
+            impound and inventory property pursuant to certain policies
+            and procedures, but beyond merely stating that such
+            procedures are reasonable, no Oregon case satisfactorily
+            addresses <em>why</em> the use of evidence discovered during
+            an inventory of impounded property against a defendant at
+            trial is “reasonable” under Article I, section 9. As the
+            Supreme Court noted in a different but related context in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Bridewell,+306+Or+231,+&amp;hl=en&amp;as_sdt=4,38&amp;case=9670416287966371438&amp;scilh=0"><em><span>State
+            v.
+            Bridewell</span></em><strong><span>,</span></strong><span>
+            306 Or 231, 239, 759 P2d 1054 (1988)</span></a>, the mere
+            fact that police conduct may comport with law enforcement
+            policy or societally-accepted police function “does not
+            ensure [that conduct’s] compliance with Article I, section
+            9. Any intrusion of state power upon a constitutionally
+            protected interest, be it for civil or criminal
+            investigative purposes, must comply with constitutional
+            standards.”</p>
+            </div>
+            <p><span id="ii.-attacking-the-inventory-the-atkinson-criteria"></span></p>
+            </section>
+            <section
+            id="ii._attacking_the_inventory_the_atkinson_criteria"
+            class="level2">
+            <h2>II. Attacking the Inventory: The Atkinson Criteria</h2>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Atkinson&amp;hl=en&amp;as_sdt=4,38&amp;case=1150044939061409472&amp;scilh=0"><em>State
+            v. Atkinson</em>, 298 Or 1</a>, '<em>' is Oregon’s lead
+            inventory case. In</em>Atkinson'', the Supreme Court dealt
+            with police inventory of the contents of an impounded car
+            and noted,</p>
+            <div class="blockquote">
+            <p>“There are occasions when state officials * * * have an
+            administrative or civil duty, authority or responsibility to
+            take custody of personal property. When governmental
+            authorities have lawful ‘administrative’ custody of personal
+            property, then they may take a series of reasonable steps
+            which * * * can include a detailed ‘inventory’ of the
+            property’s contents.”</p>
+            </div>
+            <p><em>Atkinson</em>, 298 Or at 8. <em>Atkinson</em>’s
+            holding and analysis apply to the inventory of any property
+            that police have impounded or otherwise taken into
+            “administrative custody.” <em>Atkinson</em>, 298 Or at 8.
+            <em>Atkinson</em> sets forth three criteria that an
+            inventory must meet for evidence that the police find during
+            the inventory to be admissible against a defendant at
+            trial:</p>
+            <div class="blockquote">
+            <p>(1) the property must be lawfully impounded</p>
+            <p>(2) the inventory policy must not permit the person doing
+            the inventory to exercise discretion as to when and how to
+            conduct the inventory, and</p>
+            <p>(3) the person conducting the inventory must not deviate
+            from the policy.</p>
+            </div>
+            <p>Challenge the admission of evidence found during in
+            inventory through a motion to suppress, arguing that one or
+            more aspects of the impound or inventory violated the
+            defendant’s right to be free from unreasonable search and
+            seizure under Article I, section 9, and/or the Fourth
+            Amendment. The following questions based on the
+            <em>Atkinson</em> criteria will help frame such a motion and
+            argument.</p>
+            <p>(1) Did the state identify the source of the duty,
+            authority, or responsibility to impound and inventory the
+            defendant’s property?</p>
+            <p>If the state fails to demonstrate the existence and
+            nature of such authority, argue that the impound and
+            subsequent inventory are invalid. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Custer,+126+Or+App+431,&amp;hl=en&amp;as_sdt=4,38&amp;case=13835472841933249118&amp;scilh=0"><em>State
+            v. Custer</em>, 126 Or App 431, 435 (1994)</a> (“[A]
+            reviewing court must make a determination as to the
+            authority under which the police impounded and inventoried
+            the vehicle, as a prerequisite to declaring the inventory
+            valid.”). <em>But see</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Boone,+327+Or+307,&amp;hl=en&amp;as_sdt=4,38&amp;case=17440933093068807946&amp;scilh=0"><em>State
+            v. Boone</em>, 327 Or 307, 314, 959 P2d 76 (1998)</a> (law
+            enforcement agency impliedly authorized to adopt its own
+            inventory policy by city ordinance authorizing impound).</p>
+            <p>(2) Was the rule or policy properly promulgated?</p>
+            <p>Look to constitutional provisions, charter provisions,
+            ordinances, the Administrative Procedures Act and case law
+            on administrative law in making this analysis. Keep in mind,
+            however, that a law enforcement agency may promulgate its
+            own inventory policy, so long as the policy comports with
+            <em>Atkinson</em>. <em>Boone</em>, 327 Or at 314-16. '''' If
+            there is any problem with promulgation of the rule, argue
+            that the impoundment is invalid.</p>
+            <p>(3) Were the officers aware of the rule or policy and did
+            they follow it to the letter when they impounded and
+            inventoried the property?</p>
+            <p>If not, argue that the inventory is invalid.</p>
+            <p>(4) Does the rule or policy prevent the exercise of
+            discretion by the officer?</p>
+            <p>If the rule allows officer discretion, argue that the
+            inventory is invalid.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>The <em>Atkinson</em> requirements have teeth—use them.
+            Get copies of the inventory policies that govern law
+            enforcement agencies in your jurisdiction. Know the ins and
+            outs of the policies better than the officers and better
+            than the prosecutors. If the policies do not comply with
+            <em>Atkinson</em>’s requirements, any inventory conducted
+            under their authority is invalid. If the officers do not
+            comply with the policy, the inventory is invalid.</p>
+            </div>
+            <p><span id="a.-the-property-must-be-lawfully-impounded"></span></p>
+            <section id="a._the_property_must_be_lawfully_impounded"
+            class="level3">
+            <h3>A. The Property Must Be Lawfully Impounded</h3>
+            <p>“Lawful impoundment of a vehicle is a necessary
+            prerequisite to an inventory of its contents by the
+            government or its agents.” <em>Atkinson</em>, 298 Or at 8
+            (internal citation omitted). The police must act under some
+            authority to take custody of private property. There are
+            many likely sources of such authority, including
+            departmental and agency inventory policies and statutes or
+            city ordinances such as those that authorize police to take
+            custody of abandoned vehicles, to move vehicles that have
+            been involved in accidents, and to seize property the
+            ownership of which is disputed by two or more claimants. The
+            authority to conduct inventories need not come exclusively
+            from the legislature or another politically accountable
+            body: a law enforcement agency may adopt an inventory policy
+            so long as the policy comports with <em>Atkinson</em>.
+            <em>Boone</em>, 327 Or at 314-16.</p>
+            <p>If there is no lawful basis for impoundment, the evidence
+            must be excluded: “If the government agents had no authority
+            to take custody of the property, then there can be no lawful
+            intrusion upon it. The inquiry ends there.”
+            <em>Atkinson</em>, '''' 298 Or at 9.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>The police usually <em>do</em> have authority to impound
+            our clients’ cars or personal property, but defense counsel
+            should still make the state prove it. There will be times
+            when the officer or the prosecutor does not know or cannot
+            satisfactorily demonstrate to the court what the source of
+            the impound authority is. Be ready to take advantage of such
+            unpreparedness. If the state can’t prove the source of
+            authority, argue that the impound is invalid and the
+            inventory therefore unlawful.</p>
+            </div>
+            <p>Where the impound is invalid any subsequent search is
+            invalid. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gonzales,+236+Or+App+391,+236+P3d+834+%282010&amp;hl=en&amp;as_sdt=4,38&amp;case=12953958015256735103&amp;scilh=0"><em>State
+            v. Gonzales</em>, 236 Or App 391, 236 P3d 834 (2010)</a>
+            (holding that the impound of the defendant’s car from his
+            own driveway was not a valid community caretaking impound;
+            thus, the inventory conducted pursuant to that impound was
+            therefore also invalid). In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+72+Or+App+130,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12574596924917814863&amp;scilh=0"><em>State
+            v. Smith,</em> 72 Or App 130, 694 P2d 1013 (1985)</a>, there
+            was no impound at all—the officer was going to leave the car
+            locked on the street—and the court held that without an
+            impound, the officer was not permitted to inventory the
+            car.</p>
+            <p>Suspicion of criminal activity can play no part in the
+            decision whether to impound the vehicle. <a
+            href="https://scholar.google.com/scholar_case?case=13730661358991315136&amp;q=State+v.+Lambert,+265+Or+App+742,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Lambert</em>, 265 Or App 742, 746, 338 P3d 160
+            (2014)</a>; <em>see also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gaunce,+114+Or+App+190,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12319178714455172722&amp;scilh=0"><em>State
+            v. <span class="SpellE">Gaunce</span></em>, 114 Or App 190,
+            194, 834 P2d 512 (1992)</a> (holding that “an officer’s
+            decision to impound a vehicle may involve the exercise of
+            discretion,” but the officer’s<span> </span>suspicions of
+            criminal activity “can play no part in the discretion that
+            he exercises when deciding whether to impound a car”).</p>
+            <p>A fundamental tension exists, however, between on the one
+            hand, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Willhite,110+Or+App+567&amp;hl=en&amp;as_sdt=4,38&amp;case=11591810474747857859&amp;scilh=0"><em>State
+            v. Willhite</em>,110 Or App 567, 573, 824 P2d 419 (1992)</a>
+            (holding that an inventory policy must “adequately
+            <span class="SpellE">eliminat</span>[e] individual
+            discretion about <em>whether</em> to inventory a vehicle”
+            (emphasis in original)), and on the other cases like
+            <span class="SpellE"><em>Gaunce</em></span> and <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Penney,+252+Or+App+677,+288+P3d+989+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=7592287309558208120&amp;scilh=0"><em>State
+            v. Penney</em>, 252 Or App 677, 288 P3d 989
+            (2012)</a><u><span>,</span></u> which allow for some
+            exercise of discretion. This is a rather gaping hole in
+            <em>Atkinson</em>’s scheme: in effect, it allows officers to
+            decide which cars will be inventoried and which will not.
+            Given that <em>Atkinson</em> does not want officers to be
+            able to decide even what containers to open during an
+            inventory, <span class="SpellE"><em>Gaunce</em></span> and
+            <em>Penney</em> may irreconcilably conflict with
+            <em>Atkinson</em> and may therefore be ripe for
+            challenge.</p>
+            <p><strong><span><br />
+            </span></strong></p>
+            <div class="bon-update">
+            <p><span id="update"></span></p>
+            </section>
+            <section id="update" class="level3">
+            <h3>2024 Update</h3>
+            <p>“The lawful seizure of a person does not justify the
+            warrantless seizure of the person’s property.”<span>
+            </span><a
+            href="https://scholar.google.com/scholar_case?case=7617837671062490960&amp;q=State+v.+Wilcox,+323+Or+App+271&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Wilcox</span></em>, 323 Or App 271, 276</a> (December 14,
+            2022), <em><span>rev allowed</span></em><span>,</span> 371
+            Or 60 (2023) (citing <a
+            href="https://scholar.google.com/scholar_case?case=13333094264633615174&amp;q=State+v.+Edwards,+304+Or+App+293&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Edwards</em>, 304 Or App 293, 294 (2020)</a>.</p>
+            </div>
+            <p><span id="b.-properly-authorized-administrative-program"></span></p>
+            </section>
+            <section id="b._properly_authorized_administrative_program"
+            class="level3">
+            <h3>B. Properly Authorized Administrative Program</h3>
+            <p>The inventory must be conducted pursuant to a properly
+            authorized administrative program that is designed and
+            administered so that the inventory involves no exercise of
+            discretion by the law enforcement person directing or
+            conducting the inventory.</p>
+            <p><em>Atkinson</em> provides some guidance concerning what
+            the phrase “properly authorized administrative program”
+            means. The program must be “designed” to preclude any
+            exercise of discretion by the inventorying officer.
+            Arguably, that is a requirement for written, specific rules.
+            In addition, the program must be “systematically
+            administered” so that the officer cannot exercise
+            discretion. That translates to a requirement that the
+            officer who conducts the inventory must know what the
+            inventory rules are. It also suggests that some form of
+            administrative oversight must ensure that officers comply
+            with established policy.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>In addition to obtaining the inventory policy itself, try
+            to get details of the officer’s training (1) about the
+            inventory policy itself, <em>and</em> (2) how to conduct an
+            inventory. Argue that any shortcomings in officer
+            training—whether at the DPSST or the individual agency
+            level—undercut the validity of the inventory.</p>
+            </div>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Willhite,+110+Or+App+567+&amp;hl=en&amp;as_sdt=4,38&amp;case=11591810474747857859&amp;scilh=0"><em>Willhite,</em>
+            110 Or App 567</a>, for example, <strong>' holds</strong>'
+            that a policy that is too general offends Article I, section
+            9. The <em>Willhite</em> “policy” was a memo directing
+            officers simply to complete a “Property Inventory” and
+            separately list and store all property of “great value.”
+            That policy was too broad because it more or less demanded
+            that an officer <span class="GramE">look</span> anywhere and
+            everywhere in a car to ferret out valuable property, but
+            left it to the officer to decide where. The policy must be
+            specific enough that any officer can determine what the
+            established inventory procedures are and act accordingly
+            without having to decide independently what to inventory and
+            what to leave alone. “The only question the trial court
+            should have to ask is: Would the evidence have been
+            discovered by <em>any</em> person following the established
+            policy or procedures?” <em>Willhite</em>, 100 Or App at 574
+            (emphasis added). <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Davis,+262+Or+App+555+&amp;hl=en&amp;as_sdt=4,38&amp;case=17058068518392454176&amp;scilh=0"><em>State
+            v. Davis</em>, 262 Or App 555 (2014)</a> (policy that
+            directed officers to impound and inventory a long and varied
+            list of arrestee’s property at jail book-in was
+            unconstitutional because it effectively authorized search of
+            <em>all</em> property).</p>
+            <p>The scope of the inventory must be limited to just that:
+            an inventory. An inventory policy may not permit or require
+            officers to examine the contents of closed containers such
+            as fishing tackle boxes, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Keller,+265+Or+622,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14367204705150062758&amp;scilh=0"><em>Keller,</em>
+            265 Or 622</a>, suitcases, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Perry,+298+Or+21&amp;hl=en&amp;as_sdt=4,38&amp;case=15983434659216272583&amp;scilh=0"><em>Perry,</em>
+            298 Or 21</a>, or small opaque boxes. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ridderbush,+71+Or+App+418,&amp;hl=en&amp;as_sdt=4,38&amp;case=1865985235360248746&amp;scilh=0"><em>State
+            v. <span class="SpellE">Ridderbush</span>,</em> 71 Or App
+            418, 692 P2d 667 (1984)</a>. However, police may examine the
+            contents of containers (such as bindles) which announce
+            their contents, <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+McCrory,+84+Or+App+390,&amp;hl=en&amp;as_sdt=4,38&amp;case=11855954969484695209&amp;scilh=0"><em>State
+            v. McCrory,</em> 84 Or App 390, 734 P2d 359 (1987)</a>, and
+            containers that are expressly designed to contain valuables.
+            <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mundt/Fincher,+98+Or+App+407,&amp;hl=en&amp;as_sdt=4,38&amp;case=10287235373837503051&amp;scilh=0"><em>State
+            v. Mundt/Fincher,</em> 98 Or App 407, 780 P2d 234
+            (1989)</a>. The fact that an officer may be able to tell
+            that contraband is inside a closed container does not render
+            that container one that announces its contents. <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kruchek,+156+Or+App+617&amp;hl=en&amp;as_sdt=4,38&amp;case=16482093105926250150&amp;scilh=0"><em>State
+            v. <span class="SpellE">Kruchek</span>,</em> 156 Or App 617
+            (1998)</a>, <em>aff’d by an equally divided court,</em> 331
+            Or 664 (2001) (closed cooler from which smell of marijuana
+            emanated did not “announce its contents”).</p>
+            <div class="practice-tip">
+            <p>Practice Tips</p>
+            <p>1. The Oregon Supreme Court has never fully recognized
+            the “containers designed to carry valuables” exception to
+            the rule that opaque closed containers may not be opened
+            during an inventory. The Court of Appeals created that
+            exception in <em>Mundt/Fincher</em> and has built on it
+            since. The Supreme Court impliedly accepted the exception in
+            <span class="MsoHyperlink"><em><span>State v.
+            Connally</span></em></span><span class="MsoHyperlink"><span>,
+            339 Or 583, 588 n 3, 125 P3d 1254 (2005)</span></span>, but
+            noted that the defendant did not challenge the scope of the
+            policy at issue in that case. The Supreme Court has never
+            considered the exception further. In <em>Mundt/Fincher</em>,
+            the Court of Appeals held that the opening of a wallet and a
+            purse were permissible because those containers are
+            primarily intended to store valuables, and the purpose of an
+            inventory is to secure valuables. 98 Or App at 412. In <a
+            href="https://scholar.google.com/scholar_case?case=15770180901425519844&amp;q=State+v.+Cleland,+289+Or+App+379,+&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Cleland</span></em><span>, 289 Or App 379, 410 P3d 386
+            (2017)</span></a> (James, J. concurring), Judge James noted,
+            “If this court’s jurisprudence were an art museum, our
+            decisions on inventory searches would surely hang in the
+            impressionists wing, where patrons are not encouraged to
+            inquire too closely, lest the illusion of a coherent picture
+            be dispelled.” Judge James reviewed the case law for
+            inventories and provides a persuasive case for arguing that
+            the line of cases authorizing searches of closed containers
+            designed to hold valuables is wrongly decided.</p>
+            <p>2. In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Swanson,+187+Or+App+477,&amp;hl=en&amp;as_sdt=4,38&amp;case=16720699055983996109&amp;scilh=0"><em><span>State
+            v. Swanson</span></em><span>, 187 Or App 477, 480-81, 68 P3d
+            265 (2003)</span></a>, the state conceded that a lockbox did
+            not fall within the terms of an inventory policy that
+            directed officers to open and inventory the contents of
+            “purses, wallets, backpacks, and other similar items
+            designed to contain valuables * * * .” The Court of Appeals
+            explained that that was so because even though the lockbox
+            was designed to contain valuables, it was not “similar” to
+            the other listed items in the policy. Think back to your
+            canons of statutory construction and pull out * * *
+            <em>ejusdem generis</em> (literally, “of the same kind”):
+            when statutory (or inventory policy) text “consists of a
+            general term accompanied by examples of the general term[,]
+            “<em>ejusdem generis</em> serves to confine the
+            interpretation of the general term according to one or more
+            common characteristics of the listed examples.” <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kurtz,+350+Or+65,+&amp;hl=en&amp;as_sdt=4,38&amp;case=14098154909225998555&amp;scilh=0"><em><span>State
+            v. Kurtz</span></em><span>, 350 Or 65, 74, 249 P3d 1271
+            (2011)</span></a>. If the inventory policy you are
+            challenging contains a list like the one in
+            <em>Swanson</em>, and the closed container that the police
+            opened was not the same kind as the ones in the list, use
+            <em>ejusdem generis</em> to argue that the policy didn’t
+            apply to your closed container and therefore the container
+            should not have been opened.</p>
+            </div>
+            <p><span id="c.-person-must-not-deviate"></span></p>
+            </section>
+            <section id="c._person_must_not_deviate" class="level3">
+            <h3>C. Person Must Not Deviate</h3>
+            <p>The person who conducts the inventory must not deviate
+            from the established policy or procedures, and the officer
+            carrying out the inventory must follow the policy to the
+            letter.</p>
+            <p>Under <em>Atkinson</em>, the inventory is reasonable only
+            because it is a limited intrusion driven by a legitimate
+            specific purpose. If an officer deviates from the policy,
+            the inventory becomes impermissibly intrusive and is
+            therefore transformed into an unreasonable search or seizure
+            that violates Article I, section 9.</p>
+            <p>In <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kendall,+173+Or+App+487&amp;hl=en&amp;as_sdt=4,38&amp;case=15174991273017949010&amp;scilh=0"><em>State
+            v. Kendall</em>, 173 Or App 487, 24 P3d 914 (2001)</a>, for
+            example, the court found that a key case was not a container
+            designed to carry valuables within the meaning of the City
+            of Portland inventory ordinance because a key is not an item
+            of value as described by that ordinance; therefore, the
+            officer strayed impermissibly beyond the limits of the
+            policy in opening the key case. And in <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Guerrero,+214+Or+App+14,&amp;hl=en&amp;as_sdt=4,38&amp;case=1487328768759534235&amp;scilh=0"><em>State
+            v. Guerrero</em>, 214 Or App 14, 162 P3d 1048 (2007)</a>, a
+            Marion County Jail inventory policy that was silent
+            regarding the opening of closed containers did not authorize
+            officers to open a black opaque case marked “Panasonic light
+            scope.” Although the policy directed officers to take and
+            count an arrestee’s money and jewelry, thus impliedly
+            authorizing officers to open containers designed to contain
+            money or jewelry, the policy did not authorize the opening
+            of closed containers designed to hold generic
+            “valuables.”</p>
+            <p>Importantly, in <a
+            href="https://scholar.google.com/scholar_case?case=15750647642175221160&amp;q=State+v.+Fulmer,+366+Or+224&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Fulmer</em>, 366 Or 224, 460 P3d 486 (2020)</a>, the
+            Oregon Supreme Court settled an important unresolved
+            question that repeatedly crops up in inventory cases. The
+            court held that, as a matter of first impression, (1) before
+            a vehicle inventory is conducted, police must notify
+            vehicle’s occupants who are present that they may remove
+            readily removable items from the vehicle; (2) if police fail
+            to thus notify the occupants, the inventory exceeds the
+            purposes that justify the inventory exception to the warrant
+            requirement; and (3) such an inventory violates Article I,
+            section 9. <em>See also</em> <a
+            href="https://scholar.google.com/scholar_case?case=8454895366735709052&amp;q=State+v.+Schmidt,+303+Or+App+500,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Schmidt</em>, 303 Or App 500, 464 P3d 481 (2020)</a>
+            (applying <em>Fulmer</em> to hold that the inventory
+            violated Article I, section 9, because the officer did not
+            give the defendant, a passenger in a stopped vehicle that
+            the officer later impounded, notice that she could take her
+            backpack with her when she got out of the car, <em>even
+            though</em> she at first denied ownership of the
+            backpack).</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p><em>Fulmer</em>! This case is huge—use it.
+            <em>Schmidt</em> too. Given how recent these cases are (at
+            the time of this writing), it is possible if not likely that
+            many law enforcement officers are still doing inventories
+            the old way, <em>i.e.</em>, under the assumption that they
+            can get people out of the car and refuse to let them take
+            their belongings with them, thereby rendering
+            <span class="GramE">all of</span> those belongings subject
+            to “inventory.” Make sure the court knows that this simply
+            does not pass constitutional muster anymore.</p>
+            </div>
+            <p><span><br />
+            </span></p>
+            <div class="bon-update">
+            <p><span id="update-1"></span></p>
+            </section>
+            <section id="update_1" class="level3">
+            <h3>2024 Update</h3>
+            <p>Under <em>State v. Fulmer</em>, 366 Or 224 (2020), police
+            are required to provide the warnings <em>before</em> the
+            inventory begins. <em>State v.
+            <span class="SpellE">Sevits</span></em>, 333 Or App 745
+            (2024) (holding that police violated Article I, section 9,
+            when they began an inventory of defendant’s car and, 40
+            seconds into it, asked defendant if he wanted to remove any
+            items).</p>
+            </div>
+            <p><span id="iii.-specific-types-of-inventories"></span></p>
+            </section>
+            </section>
+            <section id="iii._specific_types_of_inventories"
+            class="level2">
+            <h2>III. Specific Types of Inventories</h2>
+            <p><span id="a.-automobile-inventories"></span></p>
+            <section id="a._automobile_inventories" class="level3">
+            <h3>A. Automobile Inventories</h3>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Atkinson,+298+Or+1&amp;hl=en&amp;as_sdt=4,38&amp;case=1150044939061409472&amp;scilh=0"><em>Atkinson,</em>
+            298 Or 1</a>. Oregon’s lead case on inventories. The vehicle
+            must first be lawfully impounded. Inventory must be
+            conducted pursuant to a properly authorized administrative
+            program. Person conducting the inventory must not deviate
+            from the policy in any way.</p>
+            <p><span class="MsoHyperlink"><em>Keller</em>, 265 Or
+            622</span>. This was the lead case until <em>Atkinson</em>
+            came along. Officers could not open and search a closed
+            fishing tackle box as part of a car inventory even after
+            they discovered drug paraphernalia in plain view during the
+            inventory. Absent any exigency, they had to get a warrant to
+            open and search the tackle box.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p><em>Keller</em> shows how inventories and searches can
+            overlap. Police often seem to think that if they find
+            contraband in plain view during an inventory, the inventory
+            magically transforms into a lawful
+            <span class="GramE">search</span> and they can then search
+            anywhere they like. This is not the case. A warrantless
+            search requires probable cause <em>and</em> an exigency. No
+            exigency? The inventory stays an inventory until someone
+            gets a warrant.</p>
+            </div>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>Don’t let the state use the automobile exception as an
+            exigency to transform an inventory in which police find
+            contraband into a full-blown search. Once a car is
+            impounded, the automobile exception no longer applies
+            because any exigency resulting from the car’s mobility has
+            been extinguished by the impound. <a
+            href="https://scholar.google.com/scholar_case?case=16482093105926250150&amp;q=State+v.+Kruchek,+156+Or+App+617&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em><span>Kruchek</span></em></span><em><span>,
+            </span></em><span>156 Or App 617</span></a>.</p>
+            </div>
+            <p><span id="unlawful-impound"></span></p>
+            <section id="unlawful_impound" class="level4">
+            <h4>1. Unlawful Impound</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Smith,+72+Or+App+130,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12574596924917814863&amp;scilh=0"><em>State
+            v. Smith,</em> 72 Or App 130, 694 P2d 1013 (1985)</a>.
+            “[L]awful impoundment of a vehicle is a necessary
+            prerequisite to an inventory of its contents * *
+            <span class="GramE">* .</span>” Officer conducted inventory
+            because he was going to leave the car locked on the street,
+            not because the car would be impounded. No impound = no
+            inventory.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gaunce,+114+Or+App+190&amp;hl=en&amp;as_sdt=4,38&amp;case=12319178714455172722&amp;scilh=0"><span class="SpellE"><em>Gaunce</em></span><em>,</em>
+            114 Or App 190</a>, <em>rev den</em>, 315 Or 271 (1992).
+            '<em>' The defendant had been lawfully stopped for a traffic
+            infraction. The officer arrested him on an outstanding
+            warrant. The officer decided to have the car towed because
+            it was blocking traffic</em>and'' because the officer
+            suspected that the car and tires had been stolen and that
+            the car might contain drugs. He conducted a “standard
+            inventory search” of the car and found a bag containing
+            cocaine. The Court of Appeals held that an officer’s
+            suspicion that a car contains evidence of a crime may play
+            no part in the officer’s exercise of discretion in deciding
+            whether to impound and thus inventory the car. If it does,
+            then the decision to impound effectively singles the car out
+            for special searching attention. Police may not embark on a
+            criminal investigation by conducting an “inventory” as a
+            substitute for a lawful search.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Corey,+123+Or+App+207,+&amp;hl=en&amp;as_sdt=4,38&amp;case=18278058724401225731&amp;scilh=0"><em>State
+            v. Corey,</em> 123 Or App 207, 859 P2d 560 (1993)</a>,
+            <em>rev den</em>, 318 Or 351 (1994). An inventory of the
+            contents of an automobile is not an unreasonable search if
+            certain requirements are met. One of these requirements is
+            that the car has been lawfully impounded. Under PCC section
+            16.040.020, when the person in possession of a vehicle owned
+            by another is arrested, a city officer may order the vehicle
+            towed when no other reasonable disposition of the vehicle is
+            available. The reasonableness of other dispositions is based
+            on facts, and inferences based on those facts, known to the
+            officer at the time of the decision to tow the vehicle.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Gonzales,+236+Or+App+391,+236+P3d+834+%282010&amp;hl=en&amp;as_sdt=4,38&amp;case=12953958015256735103&amp;scilh=0"><em>State
+            v. Gonzales</em>, 236 Or App 391, 236 P3d 834,
+            <span class="SpellE"><em><span>adh’d</span></em></span><em><span>
+            to as mod on recons</span></em><span>, 238 Or App 541
+            (2010)</span></a>. An officer saw defendant pull into his
+            own driveway after committing a traffic infraction. The
+            officer learned that defendant’s license was suspended and
+            impounded the vehicle. He conducted an inventory and seized
+            evidence. The court ruled that community caretaking does not
+            extend to impounding a car from a defendant’s driveway. The
+            impound was invalid and therefore the inventory was
+            invalid.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=7993670386647375448&amp;q=State+v.+Balabon,+292+Or+App+870,&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Balabon</span></em>, 292 Or App 870,
+            426 P3d 133 (2018)</a>. Officers pulled defendant over for a
+            traffic infraction. She presented a valid license and a card
+            that included insurance information but did not indicate
+            <span class="GramE">a time period</span> for insurance
+            coverage or a reference to any vehicle insured. The officers
+            cited the defendant for driving uninsured and impounded her
+            vehicle, which they then inventoried, finding
+            methamphetamine. The Court of Appeals held that the impound
+            and inventory were unlawful because the officers did not
+            have probable cause to believe that defendant was driving
+            uninsured as required to impound her car.</p>
+            <p><span id="scope-of-inventory-policy-overbreadth"></span></p>
+            </section>
+            <section id="scope_of_inventory_policy_overbreadth"
+            class="level4">
+            <h4>2. Scope of Inventory Policy – Overbreadth</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Willhite,+110+Or+App+567,&amp;hl=en&amp;as_sdt=4,38&amp;case=11591810474747857859&amp;scilh=0"><em>Willhite,</em>
+            110 Or App 567</a>. Automobile inventory. Tigard police
+            inventory policy was “too general” because it did not curb
+            officer discretion as to the <em>scope</em> of the inventory
+            and thus did not satisfy the <em>Atkinson</em> criteria.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Martin,+124+Or+App+459&amp;hl=en&amp;as_sdt=4,38&amp;case=10327206144511513213&amp;scilh=0"><em>State
+            v. Martin,</em> 124 Or App 459, 863 P2d 1276 (1993)</a>. An
+            officer’s testimony that it was standard procedure to tow
+            vehicles, and to search them before towing, is
+            insufficiently specific to satisfy <em>Atkinson</em>. Note
+            that while <em>Martin</em> says that the state must prove by
+            a preponderance of the evidence that its policies and
+            procedures satisfy <em>Atkinson</em>, the <em>Atkinson</em>
+            opinion does not actually specify an evidentiary
+            standard.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Guynn,+162+Or+App+594,&amp;hl=en&amp;as_sdt=4,38&amp;case=16565512192871602354&amp;scilh=0"><em>State
+            v. <span class="SpellE">Guynn</span>,</em> 162 Or App 594,
+            986 P2d 1190 (1999)</a>. Inventories are neither searches
+            nor seizures but are limited administrative acts designed to
+            protect a person’s property while it is in police custody.
+            Therefore, if an officer develops probable cause during an
+            inventory to believe that a closed container holds evidence
+            of a crime, the officer cannot seize the container without
+            first obtaining a <span class="GramE">warrant, or</span>
+            establishing that an exception to the warrant requirement
+            permits the warrantless seizure. Container at issue here was
+            a zippered duffel bag in an impounded car.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Eldridge,+207+Or+App+337&amp;hl=en&amp;as_sdt=4,38&amp;case=362274904957870753&amp;scilh=0"><em>State
+            v. Eldridge</em>, 207 Or App 337, 142 P3d 82 (2006)</a>. The
+            policy at issue was overbroad because it commanded that all
+            impounded vehicles “be completely searched and inventoried”
+            and that officers “make a complete inventory of all vehicle
+            contents.” Testimony from officers also disclosed that there
+            was no oversight of inventory practices, or any guidance or
+            documentation for inventory procedures. A bindle found in
+            center console was suppressed.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Nordloh,+208+Or+App+309,&amp;hl=en&amp;as_sdt=4,38&amp;case=8687615383118732952&amp;scilh=0"><em>State
+            v. <span class="SpellE">Nordloh</span></em>, 208 Or App 309,
+            144 P3d 1013 (2006)</a>. Grants Pass inventory policy was
+            unconstitutional because it required the opening and
+            inventory of <em>all</em> closed containers in an impounded
+            vehicle, regardless of whether a container was designed to
+            hold valuables. The closed container here was a
+            <span class="GramE">small zippered</span> pouch.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Williams,+227+Or+App+453,+206+P3d+269+%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=5202207083174975836&amp;scilh=0"><em>State
+            v. Williams</em>, 227 Or App 453, 206 P3d 269 (2009)</a>.
+            Prineville ordinance regarding the impounding of vehicles
+            was too broad because it authorized police to inventory the
+            contents of <em>all</em> closed containers, not just those
+            likely to contain valuables. Container at issue was an
+            eyeglasses case.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stone,+232+Or+App+358,&amp;hl=en&amp;as_sdt=4,38&amp;case=3633293644052012559&amp;scilh=0"><em>State
+            v. Stone</em>, 232 Or App 358, 222 P3d 714 (2009)</a>. Court
+            of Appeals held that city inventory policy that required
+            officers to inventory any closed container that “[t]he
+            officer reasonably believes * * * contains valuable or
+            dangerous personal property” eliminated officer discretion
+            as required by <em>Atkinson</em> and thus passed
+            constitutional muster. Container was a drawstring bag.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>The holding in <em>Stone</em> may be subject to
+            challenge, i.e., that a policy that relies on an officer’s
+            “reasonable belief” to determine when to conduct an
+            inventory effectively eliminates officer discretion. If the
+            state relies on this case, argue that “reasonable belief” is
+            a concept that often contains within
+            <span class="GramE">it</span> discretion of the kind that
+            <em>Atkinson</em> forbids. An inventory policy must dictate
+            the <em>same</em> result every single time. Officers’
+            “reasonable beliefs” will likely differ, thus resulting in
+            different results. In fact, <a
+            href="https://scholar.google.com/scholar_case?case=11591810474747857859&amp;q=State+v.+Willhite,+110+Or+App&amp;hl=en&amp;as_sdt=6,38"><em><span>State
+            v. Willhite<strong>,</strong> </span></em><span>110 Or App
+            at 574</span></a>, expressly rejected reliance on any
+            “reasonable belief” or “probable cause” type inquiry.</p>
+            </div>
+            <p><span><br />
+            </span>
+            <span id="source-of-authority-for-inventory-policy"></span></p>
+            </section>
+            <section id="source_of_authority_for_inventory_policy"
+            class="level4">
+            <h4>3. Source of Authority for Inventory Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Haney,+195+Or+App+273&amp;hl=en&amp;as_sdt=4,38&amp;case=697634531462155766&amp;scilh=0"><em>State
+            v. Haney</em>, 195 Or App 273, 97 P3d 1211</a>,
+            <span class="SpellE"><em>adh’d</em></span> <em>to as
+            modified on recons</em>, 196 Or App 498 (2004). Even if the
+            statute requiring reports to be filed after automobile
+            injury accidents authorizes administrative searches, the
+            state made no showing that the police agency here had
+            adopted such an administrative search policy; or, if it had,
+            that the policy eliminated officer discretion.</p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>Even a perfectly designed and implemented inventory
+            policy must be properly authorized for admission of evidence
+            discovered during the inventory to comport with Article I,
+            section 9. If the state can’t prove where the authority
+            underlying the policy comes from, argue that the inventory
+            is invalid.</p>
+            </div>
+            <p><span id="sufficiency-of-evidence-that-policy-comported-with-atkinson-or-that-officers-conduct-comported-with-policy"></span></p>
+            </section>
+            <section
+            id="sufficiency_of_evidence_that_policy_comported_with_atkinson_or_that_officers_conduct_comported_with_policy"
+            class="level4">
+            <h4>4. Sufficiency of Evidence that Policy Comported with
+            Atkinson or that Officer’s Conduct Comported with
+            Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Herrin,+323+Or+188&amp;hl=en&amp;as_sdt=4,38&amp;case=4415837785414944241&amp;scilh=0"><em>State
+            v. Herrin</em>, 323 Or 188, 915 P2d 953 (1996)</a>. The
+            court held that the record did not support the state’s
+            inevitable discovery by inventory theory because the record
+            was insufficient to establish what politically accountable
+            authority promulgated the inventory policy and did not
+            demonstrate that a closed bag would have been opened as part
+            of the inventory<em>.</em></p>
+            <p><span class="MsoHyperlink"><em>Swanson</em>, 187 Or App
+            477</span>. Where the relevant city ordinance and police
+            department order contain requirements that must be met
+            before a closed opaque container can be inventoried, the
+            record must be sufficient to establish that the inventory
+            was lawful under those requirements. In this case, the
+            container at issue, a small, red “make-up type purse
+            accessory <span class="GramE">kit[</span>,]” was not in
+            evidence. The officer’s testimony was the only evidence of
+            the nature of the container and was not sufficient to
+            establish that it was designed to hold valuables and thus
+            subject to inventory under the city policy.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=2164354054797204799&amp;q=State+v.+Hockersmith,+264+Or+App+560,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Hockersmith</span></em>, 264 Or App
+            560, 333 P3d 1085 (2014)</a>. The applicable inventory
+            policy required officer to open and inventory any container
+            that based upon its context or physical appearance would
+            reasonably be expected to contain valuables. Officer removed
+            the defendant’s wallet from a pair of shorts left in the
+            vehicle, opened the wallet, and found defendant’s license,
+            thereby identifying him. The inventory was not valid because
+            the state presented no evidence about the context or
+            appearance of the shorts showing that the shorts could
+            reasonably be expected to contain valuables. Noting that
+            inventory cases are extremely fact-specific and that
+            inventory policies vary widely in language and scope, the
+            Court of Appeals rejected the state’s (somewhat comical)
+            argument that the pocket on <em>every</em> pair of men’s
+            shorts is designed to hold valuables and therefore could
+            reasonably be expected to contain valuables.</p>
+            <p><span><br />
+            </span></p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>The state may attempt to rely on an inventory as a means
+            of inevitable discovery to avoid suppression of evidence
+            obtained during an illegal search or seizure. An inventory
+            may well be a method of inevitable discovery, but the state
+            must prove that the inventory would have comported with
+            <em>Atkinson</em>. A prosecutor does not show inevitable
+            discovery merely by intoning the magic word “inventory” or
+            eliciting testimony from an officer that the defendant’s
+            belongings would have been inventoried at the jail or that
+            the car would have been impounded anyway. <em>See</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+177+Or+App+244,&amp;hl=en&amp;as_sdt=4,38&amp;case=3673982906639434225&amp;scilh=0"><em><span>State
+            v. Johnson</span></em><span>, 177 Or App 244,
+            250-52,</span></a> <em>aff’d</em> 335 Or 511 (2003).</p>
+            </div>
+            <p><span id="officer-noncompliance-with-inventory-policy"></span></p>
+            </section>
+            <section id="officer_noncompliance_with_inventory_policy"
+            class="level4">
+            <h4>5. Officer Noncompliance with Inventory Policy</h4>
+            <p><span class="SpellE"><span class="MsoHyperlink"><em>Kruchek</em></span></span><span class="MsoHyperlink"><em>,</em>
+            156 Or App 617</span>. The trial court erred when it denied
+            defendant’s motion to suppress evidence of marijuana found
+            by a police officer who opened an opaque ice chest while
+            inventorying the contents of defendant’s van. The fact that
+            the officer could smell the odor of marijuana emanating from
+            the cooler did not give the officer the authority to open
+            the cooler to determine its contents without first obtaining
+            a search warrant. '''' This case illustrates the police
+            tendency to believe that an inventory morphs into a lawful
+            unwarranted search the moment an officer develops probable
+            cause to believe it contains contraband. The state argued
+            that the automobile exception provided the requisite
+            exigency to support a search. But once police impound a
+            vehicle, the automobile exception is “extinguished.”</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Resler,+163+Or+App+328,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15531057552921141088&amp;scilh=0"><em>State
+            v. <span class="SpellE">Resler</span>,</em> 163 Or App 328,
+            987 P2d 1269 (1999)</a>. Opening an opaque container during
+            a vehicle inventory is a search unless the size and unique
+            construction of the container make clear that it could
+            contain <em>nothing</em> other than contraband. Here, an
+            officer opened defendant’s fanny pack during the inventory
+            because he knew it was “of the sort that is commonly used to
+            carry a handgun.” The court held that
+            <span class="SpellE"><em>Kruchek</em></span> '''' controlled
+            and reversed because the fanny pack was opaque and did not
+            announce its contents.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Walker,+173+Or+App+46,&amp;hl=en&amp;as_sdt=4,38&amp;case=9481104701481877241&amp;scilh=0"><em>State
+            v. Walker</em>, 173 Or App 46, 20 P3d 834 (2001)</a>. A
+            bubble container like those handed out at weddings so that
+            guests may blow bubbles was not a container of the type that
+            “is invariably used to store and
+            <span class="GramE">transport controlled</span> substances”
+            even though it “rattled” when shaken and the officer
+            believed that it contained crack cocaine. Under <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Owens,+302+Or+196,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5637100601881181364&amp;scilh=0"><em>State
+            v. Owens</em>, 302 Or 196, 206, 729 P2d 524 (1986)</a>,
+            '<em>' police can lawfully open an opaque container without
+            a warrant in only two circumstances: 1) the container so
+            “announces its contents” that opening it does not invade a
+            protected privacy interest and, thus, does not constitute a
+            search, or 2) the opening is supported by probable
+            cause</em>and some exception to the warrant requirement''.
+            Neither existed in this case.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Delaney,+224+Or+App+463,+&amp;hl=en&amp;as_sdt=4,38&amp;case=4559268910869992076&amp;scilh=0"><em>State
+            v. Delaney</em>, 224 Or App 463, 197 P3d 621 (2008)</a>.
+            State conceded that inventory policy did not allow the
+            officer to look through the pockets of the defendant’s
+            jacket found in the defendant’s car during vehicle
+            inventory.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dean,+227+Or+App+342,+206+P3d+206+%282009&amp;hl=en&amp;as_sdt=4,38&amp;case=4531789573759465769&amp;scilh=0"><em>State
+            v. Dean</em>, 227 Or App 342, 206 P3d 206 (2009)</a>. During
+            the inventory of the vehicle the officer seized a folding
+            digital scale. He opened the scale and discovered a
+            controlled substance inside. The state argued that the
+            officer lawfully seized the scale pursuant to the terms of
+            the applicable inventory <span class="GramE">policy,
+            but</span> conceded that he did not have authority to open
+            the scale. The court accepted that concession.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Sparks,+228+Or+App+163,&amp;hl=en&amp;as_sdt=4,38&amp;case=2294785342505841636&amp;scilh=0"><em>State
+            v. Sparks</em>, 228 Or App 163, 206 P3d 1197 (2009)</a>. The
+            defendant was a passenger in a car stopped for a traffic
+            violation. She got out of the car with her purse. When she
+            declined to give permission to the officer to search her
+            purse, he told her he had to search it anyway pursuant to
+            the city’s impound and inventory policy which required him
+            to search everything that was in the car at the time it was
+            stopped. State conceded on appeal that the officer’s search
+            was unlawful because it overstepped the bounds of the city
+            inventory policy.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Keady,+236+Or+App+530,&amp;hl=en&amp;as_sdt=4,38&amp;case=15675044650484966193&amp;scilh=0"><em>State
+            v. Keady</em>, 236 Or App 530, 237 P3d 885 (2010)</a>. City
+            policy requiring officers to open and inventory contents of
+            containers “designed to hold valuables” did not allow police
+            to open a “fish oil capsule container” because it was not
+            designed to hold valuables. Officer’s belief that the
+            container <em>might</em> contain valuables was
+            irrelevant.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jorgenson,+245+Or+App+494&amp;hl=en&amp;as_sdt=4,38&amp;case=15519609065317542720&amp;scilh=0"><em>State
+            v. Jorgenson,</em> 245 Or App 494, 261 P3d 96 (2011)</a>.
+            The state conceded that removing the console of a car
+            (located between the front seats) exceeded the permissible
+            scope of an inventory.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dimmick,+248+Or+App+167,+273+P3d+212+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=2588051882941086188&amp;scilh=0"><em>State
+            v. <span class="SpellE">Dimmick</span></em>, 248 Or App 167,
+            273 P3d 212 (2012)</a>. Here, the policy was silent as to
+            when closed containers should be seized pursuant to a tow,
+            therefore, the officer was not allowed to seize any closed
+            container. The closed container at issue in this case was a
+            backpack that the defendant asked to take with him when
+            police told him they were impounding his car. The officer
+            denied the request, inventoried the backpack and found
+            methamphetamine. Since the seizure was unlawful, a
+            subsequent warrant derived from that initial unlawful
+            seizure did not cure it.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Hanna,+248+Or+App+608,+273+P3d+945+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=726158903290865734&amp;scilh=0"><em>State
+            v. Hanna</em>, 248 Or App 608, 273 P3d 945 (2012)</a>.
+            Officers exceeded the authority of their inventory policy
+            where they searched the bed of a pickup truck secured by a
+            locked tonneau cover. The bed of a pickup truck is neither a
+            “trunk” nor an “external vehicle
+            <span class="GramE">container[</span>,]” the two
+            possibilities allowed under the inventory policy. A pickup
+            bed is not a trunk: only cars have trunks. That the tonneau
+            cover allowed the bed to function like a trunk did not
+            transform the pickup bed into a trunk.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Rowell,+251+Or+App+463,+283+P3d+454+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=17444614554189921679&amp;scilh=0"><em>State
+            v. Rowell</em>, 251 Or App 463, 283 P3d 454 (2012)</a>. The
+            Portland City Code inventory policy allowed police officer
+            to open closed containers designed to contain valuables, but
+            only applies to items in the possession of a person placed
+            in custody. The inventory must occur prior to placing such
+            persons into a holding room or police vehicle. Here,
+            defendant was a passenger in a stopped car. He was stopped
+            but he was not “in custody” for purposes of inventory
+            because he was only stopped as a witness. The state could
+            not use the arrested driver’s constructive possession of the
+            defendant’s laptop bag to justify the search because the
+            driver was already in the patrol car.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=9517975232141190371&amp;q=State+v.+Krumenaker,+306+Or+App+9,+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. <span class="SpellE">Krumenaker</span></em>, 306 Or App
+            9, 472 P3d 760 (2020)</a>. During an inventory of
+            defendant’s impounded car, the officer looked inside a
+            backpack and discovered a zipper case that the officer
+            identified as a pistol case. He felt a gun inside, opened
+            the case, and found the gun. The Tillamook Police inventory
+            policy appropriately provided that closed containers
+            designed for carrying money, small valuables, or hazardous
+            materials be opened and their contents inventoried. However,
+            the Tillamook police chief testified that whether an officer
+            would open a wide variety of different containers
+            “depend[ed] on the circumstances.” The trial court granted
+            <span class="GramE">suppression</span> and the state
+            appealed. The Court of Appeals affirmed the trial court,
+            holding that, while the policy itself was fine, the
+            Tillamook Police Department’s implementation of the policy
+            was not: as a matter of first impression, the Court of
+            Appeals determined that the way in which the police
+            administer an inventory policy can render an otherwise
+            acceptable policy overbroad.</p>
+            <p><span id="b.-jail-bookingdetox"></span></p>
+            </section>
+            </section>
+            <section id="b._jail_bookingdetox" class="level3">
+            <h3>B. Jail Booking/Detox</h3>
+            <p><span id="source-of-authority-for-inventory-policy-1"></span></p>
+            <section id="source_of_authority_for_inventory_policy_1"
+            class="level4">
+            <h4>1. Source of Authority for Inventory Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Layman,+162+Or+App+386&amp;hl=en&amp;as_sdt=4,38&amp;case=18367838758489981904&amp;scilh=0"><em>State
+            v. Layman</em>, 162 Or App 386, 986 P2d 624 (1999)</a>. The
+            defendant was arrested on an outstanding warrant and taken
+            to the Lane County Jail. He was searched pursuant to a
+            book-in policy which included an inventory search of his
+            person. He had methamphetamine in his wallet. The state did
+            not establish that either the Lane County Commission or the
+            legislature expressly authorized the jail officials to
+            conduct inventories or to adopt an inventory policy.
+            However, the authority to do so was implied in the
+            commission’s decision to establish a jail. The decision to
+            authorize the police to take custody of people and to hold
+            them in a jail includes an implied grant of authority to the
+            police to control the personal property that is taken by
+            prisoners into the jail and to account for property that is
+            held by the police pending its return to the prisoners or
+            other disposition. That authority includes the authority to
+            conduct an inventory and to adopt a policy by which to
+            conduct it. This case replaced <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Layman,+147+Or+App+225&amp;hl=en&amp;as_sdt=4,38&amp;case=14555284836531999304&amp;scilh=0"><em>State
+            v. Layman</em>, 147 Or App 225, 935 P2d 1216 (1997)</a>.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ketelson,+163+Or+App+70&amp;hl=en&amp;as_sdt=4,38&amp;case=1666713226729831440&amp;scilh=0"><em>State
+            v. <span class="SpellE">Ketelson</span></em>, 163 Or App 70,
+            986 P2d 1202 (1999)</a>. The decision to establish a detox
+            center and to authorize those charged with operating it to
+            hold and treat intoxicated people includes an implied grant
+            of authority to control the personal property that is
+            brought by patients into the facility and to account for
+            that property pending its return to the patients or other
+            disposition. That authority includes the authority to
+            conduct an inventory and to adopt policies by which to
+            conduct it.</p>
+            <p><span id="unlawful-impound-1"></span></p>
+            </section>
+            <section id="unlawful_impound_1" class="level4">
+            <h4>2. Unlawful Impound</h4>
+            <p>Obviously, automobile impound does not arise in the
+            context of jail or detox center booking. Depending on the
+            circumstances of your case, however, you may be able to
+            argue analogously that your client was not lawfully arrested
+            and therefore should not have been subject to the inventory
+            process in the first place. Sections II, IV, and V of
+            Chapter 3C deal with whether an arrest is lawful.</p>
+            <p><span id="scope-of-inventory-policy-overbreadth-1"></span></p>
+            </section>
+            <section id="scope_of_inventory_policy_overbreadth_1"
+            class="level4">
+            <h4>3. Scope of Inventory Policy – Overbreadth</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Perry,+298+Or+21&amp;hl=en&amp;as_sdt=4,38&amp;case=15983434659216272583&amp;scilh=0"><em>Perry</em>,
+            298 Or 21</a>. <em>Perry</em> is the lead jail inventory
+            case, although it <span class="GramE">actually
+            involved</span> a detox hold rather than jail booking. The
+            defendant was publicly drunk. Police detained him and took
+            him and his belongings to the police station for
+            detoxification purposes. After laying the defendant on a
+            mattress in the “detox” area of the station, police opened
+            and “inventoried” his suitcase. They found marijuana and the
+            defendant was charged with PCS. The Supreme Court held that
+            it was unreasonable for police to open the defendant’s
+            suitcase, noting that the inventory in a noncriminal process
+            such as detox detention should be less intrusive than what
+            is reasonable in a criminal case. Note: the civil/criminal
+            dichotomy posited in this case has not developed much
+            further in the inventory case law.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Ridderbush,+71+Or+App+418,+&amp;hl=en&amp;as_sdt=4,38&amp;case=1865985235360248746&amp;scilh=0"><em>State
+            v. <span class="SpellE">Ridderbush</span>,</em> 71 Or App
+            418, 692 P2d 667 (1984)</a>. During booking, jail staff
+            opened a small black box found in the defendant’s pocket and
+            discovered a straight razor. The Court of Appeals held that
+            under <em>Keller</em> (the tackle box case) and
+            <em>Perry,</em> “no closed, opaque container may be opened”
+            during inventory to determine what is inside.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mundt/Fincher,+98+Or+App+407&amp;hl=en&amp;as_sdt=4,38&amp;case=10287235373837503051&amp;scilh=0"><em>Mundt/Fincher,</em>
+            98 Or App 407</a>. In this case, the Court of Appeals
+            created the container-designed-to-contain-valuables
+            “exception” to the general rule that closed containers are
+            not subject to inventory. In <em>Mundt,</em> the court held
+            that the search of a wallet at the jail pursuant to an
+            inventory policy was reasonable. The drugs obtained from the
+            wallet were admissible. In <em>Fincher,</em> the search of a
+            purse pursuant to an inventory policy was reasonable but the
+            closed containers inside the purse could not be searched.
+            <em>See also</em> <a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+153+Or+App+535,+&amp;hl=en&amp;as_sdt=4,38&amp;case=15668567686641663804&amp;scilh=0"><em>State
+            v. Johnson</em>, 153 Or App 535, 153 P2d 887 (1998)</a>
+            (applying <em>Mundt/Fincher</em> exception).</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Johnson,+177+Or+App+244,&amp;hl=en&amp;as_sdt=4,38&amp;case=3673982906639434225&amp;scilh=0"><em>Johnson</em>,
+            177 Or App 244</a>. A jail inventory is <em>not</em> a
+            search. The jail becomes the bailee of the incarcerated
+            person’s belongings, but the jail “has not ‘seized’ the
+            inmate’s property in the sense that the facility may now
+            treat that property as it desires.” In this case, the state
+            offered a jail inventory as a method of inevitable discovery
+            to render admissible the evidence discovered
+            <span class="GramE">as a result of</span> an earlier,
+            warrantless seizure of the defendant’s clothes and boots.
+            The court noted: “even if the record establishes that the
+            jail staff would have taken custody of defendant’s clothing
+            and boots as part of booking
+            <span class="GramE">him[</span>, it] does not show that the
+            police would have used that clothing for the purposes of
+            this criminal investigation.” (To see what happened next in
+            this case, <em>see</em> <a
+            href="https://scholar.google.com/scholar_case?case=17285329312809786802&amp;q=Johnson,+335+Or+511&amp;hl=en&amp;as_sdt=6,48">Johnson,
+            335 Or 511, 73 P3d 282
+            (2003)</a><span class="MsoHyperlink">.</span></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Taylor,+250+Or+App+90,+279+P3d+254+%282012&amp;hl=en&amp;as_sdt=4,38&amp;case=5888306994736519013&amp;scilh=0"><em>State
+            v. Taylor</em>, 250 Or App 90, 279 P3d 254 (2012)</a>. An
+            inventory policy cannot give police blanket authority to
+            open closed containers. The scope of the inventory must be
+            limited so that objects are scrutinized only to the extent
+            necessary to complete the inventory. Umatilla County Jail
+            inventory policy authorizing search of all closed containers
+            was impermissibly overbroad, in violation of Article I,
+            section 9.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cordova,+250+Or+App+397,&amp;hl=en&amp;as_sdt=4,38&amp;case=1910246484545517214&amp;scilh=0"><em>State
+            v. Cordova</em>, 250 Or App 397, 280 P3d 1036 (2012)</a>. An
+            inventory policy is overbroad when it effectively authorizes
+            inspection of all closed containers. Here, the Marion County
+            Sheriff’s General Order authorized inspection of the
+            contents of “all closed containers that <em>could</em>
+            contain valuables.” Because valuables can be extremely
+            small, any container “could” contain valuables.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cruz-Renteria&amp;hl=en&amp;as_sdt=4,38&amp;case=2815097783190794837&amp;scilh=0"><em>State
+            v. Cruz-Renteria</em>, 250 Or App 585, 280 P3d 1065
+            (2012</a><u><span>)</span></u>. The fact that reasonable
+            people, including reasonable officers, might disagree about
+            the purpose of the containers indicated that the policy
+            itself possibly allowed impermissible discretion.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Jansen,+261+Or+App+117,&amp;hl=en&amp;as_sdt=4,38&amp;case=18288004767876989418&amp;scilh=0"><em>State
+            v. Jansen</em>, 261 Or App 117, 323 P3d 332 (2014)</a>.
+            State conceded that jail inventory policy which gave
+            officers unbridled discretion with respect to opening closed
+            containers was unconstitutionally broad. Quotes
+            <em>Cordova</em>, <em>supra</em>, noting that “we have been
+            scrupulously rigorous in our construction of the terms of
+            inventory policies.” Container at issue here was a zippered
+            pouch.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Cherry,+262+Or+App+612,&amp;hl=en&amp;as_sdt=4,38&amp;case=11001862622685363897&amp;scilh=0"><em>State
+            v. Cherry</em>, 262 Or App 612, 325 P3d 813 (2014)</a>. The
+            state conceded and the Court of Appeals held that the Marion
+            County Jail inventory policy was unconstitutional because it
+            required authorized deputies to open <em>all</em> closed
+            containers.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?q=hite&amp;hl=en&amp;as_sdt=4,38&amp;case=11272299542842103046&amp;scilh=0"><span class="InternetLink"><em><span>State
+            v.
+            Hite</span></em></span></a><span class="InternetLink"><span>,
+            266 Or App 710, 724, 338 P3d 803, 811 (2014)</span></span>.
+            Lane County Jail inventory policy that required inventory of
+            impounded property to determine whether, <em>inter
+            alia</em>, the property contained perishable food, medical
+            marijuana, alcohol or hazardous or dangerous substances was
+            unconstitutionally overbroad because it implicitly
+            authorized officers to open just about any closed container.
+            Oregon’s general rule is that “an inventory policy may not
+            authorize the police to open all closed, opaque containers.
+            Although [the Court of Appeals has] recognized an exception
+            to that rule for containers that are designed to or likely
+            to contain valuables, [the court has] not extended that
+            exception to containers that are objectively likely to
+            contain weapons, drugs, or other contraband.” Inventory of
+            the defendant’s backpack pursuant to the overbroad policy
+            was unconstitutional.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15770180901425519844&amp;q=State+v.+Cleland,+289+Or+App+379,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Cleland</em>, 289 Or App 379, 410 P3d 386 (2017)</a>
+            (James, J. concurring). Judge James concurred to note a
+            tension in the case law: that by applying different
+            precedent, the Court of Appeals could have found the search
+            in this case unlawful and reversed rather than affirming:
+            “If this court’s jurisprudence were an art museum, our
+            decisions on inventory searches would surely hang in the
+            impressionists wing, where patrons are not encouraged to
+            inquire too closely, lest the illusion of a coherent picture
+            be dispelled.” Judge James reviewed the case law for
+            inventories and provides a persuasive case for arguing that
+            the line of cases authorizing searches of closed containers
+            designed to hold valuables is wrongly decided.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=12497047244353952647&amp;q=State+v.+Steele,+290+Or+App+675,&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Steele</em>, 290 Or App 675, 414 P3d 458 (2018)</a>.
+            Defendant challenged an inventory, arguing that the policy
+            was unconstitutionally overbroad because it authorized the
+            search of all closed containers—even though the evidence at
+            issue was not in a closed container. The Court of Appeals
+            agreed, based on the record made in this case. Police
+            discovered methamphetamine in defendant’s pocket, and he was
+            taken to jail. The jail deputy explained that he conducts
+            his “own search” of everyone who is booked into the jail and
+            that he opens all closed containers pursuant to the
+            inventory policy. That was the only evidence of the contents
+            of the inventory policy and was a sufficient basis to
+            establish that the jail inventory policy was
+            unconstitutionally overbroad “in that it categorically
+            sanctioned the search of all closed containers.”
+            <em>Id.</em> at 684.</p>
+            <p>Judge DeVore concurred to note that whether an inventory
+            policy that is flawed in part is invalid in whole has not
+            expressly been <span class="GramE">decided, and</span> is
+            not decided in this case. He took great pains to distinguish
+            two cases: <a
+            href="https://scholar.google.com/scholar_case?case=8687615383118732952&amp;q=Nordloh,+208+Or+App+309,&amp;hl=en&amp;as_sdt=6,38"><span class="SpellE"><em>Nordloh</em></span>,
+            208 Or App 309</a>, and <a
+            href="https://scholar.google.com/scholar_case?case=11001862622685363897&amp;q=State+v.+Cherry,+262+Or+App+612,&amp;hl=en&amp;as_sdt=6,38"><em>Cherry</em>,
+            262 Or App 612</a>, which seem on their face to support a
+            non-severability doctrine. However, until a majority opinion
+            expressly undermines the broad language used in those cases,
+            they permit a reasonable argument that an inventory policy
+            that is invalid in one respect renders a search conducted
+            pursuant to a lawful and unrelated portion of the policy
+            unconstitutional.</p>
+            <p><strong><span><br />
+            </span></strong></p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p><em>Steele</em> provides a legitimate basis to argue that
+            even if the evidence at issue is not discovered
+            <span class="GramE">as a result of</span> the invalid
+            portion of the inventory policy, you may still be able to
+            get the evidence suppressed. Always, always get a copy of
+            the inventory policy! Even if at first blush it seems like
+            the contraband turned up in a legitimate way, the policy
+            itself may be fatally flawed in a different way that you can
+            use to your client’s benefit.</p>
+            </div>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=15448476290908715915&amp;q=State+v.+Barnett,+299+Or+App+656,+&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Barnett</em></a><a
+            href="https://scholar.google.com/scholar_case?case=15448476290908715915&amp;q=State+v.+Barnett,+299+Or+App+656,+&amp;hl=en&amp;as_sdt=4,38">,
+            299 Or App 656, 633 (2019)</a> (<em>per
+            <span class="SpellE">curiam</span></em>) (James, J.,
+            concurring). '''<em>' Expanding on the view he took in
+            his</em>Cleland<em>concurrence, Judge James argues that the
+            inventory exception has become unmoored from its
+            foundational cases,</em>Atkinson<em>and</em>Keller<em>, and
+            that the Court of Appeals has and will inevitably continue
+            to permit inventories of virtually all closed containers,
+            save an angler’s tackle box, which</em>Atkinson'' expressly
+            held could not be opened.</p>
+            <p><span id="sufficiency-of-evidence-that-policy-comported-with-atkinson-or-that-officers-conduct-comported-with-policy-1"></span></p>
+            </section>
+            <section
+            id="sufficiency_of_evidence_that_policy_comported_with_atkinson_or_that_officers_conduct_comported_with_policy_1"
+            class="level4">
+            <h4>4. Sufficiency of Evidence that Policy Comported with
+            Atkinson or that Officer’s Conduct Comported with
+            Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Petri,+214+Or+App+138&amp;hl=en&amp;as_sdt=4,38&amp;case=10412580539313883534&amp;scilh=0"><em>State
+            v. Petri</em>, 214 Or App 138, 162 P3d 1053 (2007)</a>. The
+            state posited jail inventory as a method of inevitable
+            discovery of drug paraphernalia found in a warrantless
+            search of the defendant’s sunglasses case. The Court of
+            Appeals held that the record did not contain evidence to
+            support the state’s inevitable discovery argument. The only
+            mention of jail inventory was the officer’s testimony that
+            he would have searched the defendant “to inventory the
+            contents of his person prior to placing him in the police
+            vehicle.”</p>
+            <p>[<a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Medinger,+235+Or+App+88&amp;hl=en&amp;as_sdt=4,38&amp;case=11431238308393177306&amp;scilh=0">http://scholar.google.com/scholar_case?q=State+v.+Medinger,+235+Or+App+88&amp;hl=en&amp;as_sdt=4,38&amp;case=11431238308393177306&amp;scilh=0</a>
+            <em>State v. <span class="SpellE">Medinger</span></em>, 235
+            Or App 88, '<em>' 230 P3d 76 (2010)]. The state did not
+            prove that contraband would have been inevitably discovered
+            pursuant to detox/treatment facility inventory because the
+            record did not contain sufficient evidence to establish by a
+            preponderance that the facility’s policy comported
+            with</em>Atkinson''’s requirement.</p>
+            <p><span id="officer-compliance-with-inventory-policy"></span></p>
+            </section>
+            <section id="officer_compliance_with_inventory_policy"
+            class="level4">
+            <h4>5. Officer Compliance With Inventory Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+May,+174+Or+App+560,&amp;hl=en&amp;as_sdt=4,38&amp;case=164651645700549125&amp;scilh=0"><em>State
+            v. May</em>, 174 Or App 560, 26 P3d 188 (2001)</a>. State
+            conceded that a closed, opaque candy bag that police found
+            in the defendant’s pocket when he was arrested should not
+            have been subject to inventory, and that the jail inventory
+            policy did not comport with <em>Atkinson</em>.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Dillon,+182+Or+App+308&amp;hl=en&amp;as_sdt=4,38&amp;case=35738830137831212&amp;scilh=0"><em>State
+            v. Dillon</em>, 182 Or App 308, 50 P3d 1172 (2002)</a>. The
+            Court of Appeals held that the city ordinance and police
+            policies at issue in this case did not authorize the
+            inventory of the defendant because they applied only to
+            “prisoners.” Here, the defendant was not a prisoner and had
+            not been arrested. The police acted without authority when
+            they inventoried the defendant’s property.</p>
+            <p><span class="MsoHyperlink"><em>Guerrero</em>, 214 Or App
+            14</span>. Marion County Jail inventory policy did not
+            authorize police to open a black opaque case marked
+            “Panasonic light scope.” The policy also did not authorize
+            the opening of closed containers designed to hold generic
+            “valuables.” Police did not act in conformity with the
+            inventory policy when they opened the case, and therefore
+            their inventory was invalid.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Keady,+236+Or+App+530,+237+P3d+885+%282010&amp;hl=en&amp;as_sdt=4,38&amp;case=15675044650484966193&amp;scilh=0"><em>State
+            v. Keady</em>, 236 Or App 530, 237 P3d 885
+            (2010)</a><u><span>.</span></u> An officer’s belief that a
+            closed opaque container “might contain” valuables is
+            irrelevant to whether it was “designed” to do so. Only those
+            containers “designed to hold valuables” may be inventoried
+            pursuant to the City of Salem inventory policy.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?case=7154967022115447956&amp;q=State+v.+Garcia-Cruz,+287+Or+App+516&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Garcia-Cruz,</em> 287 Or App 516, 402 P3d 750
+            (2017)</a><span class="MsoHyperlink">. </span>Police
+            arrested defendant on a probation violation. At the jail,
+            pursuant to an inventory policy, police inspected
+            defendant’s wallet. Police found and opened two folded
+            pieces of paper, one of which contained methamphetamine.</p>
+            <p>The Court of Appeals concluded that the paper fold did
+            not by its nature reveal its contents, even though the
+            officer felt a granulated substance. The contents of the
+            folded paper were not so “plainly obvious” that the feel of
+            them revealed that the paper contained methamphetamine. “In
+            this case, the feel of the substance in the folded paper did
+            not reveal the contents of that paper to be methamphetamine,
+            by its very nature, because what the officer felt only
+            indicated that the paper could have contained
+            <span class="GramE">a number of</span> granulated
+            crystal-like substances, nothing more specific. In sum,
+            notwithstanding that it was highly probable that the folded
+            paper contained methamphetamine, that opaque receptacle did
+            not reveal its contents.” <em>Id</em>. at 524.</p>
+            <div class="bon-update">
+            <p><span id="update-2"></span></p>
+            </section>
+            </section>
+            <section id="update_2" class="level3">
+            <h3>2024 Update</h3>
+            <p>In <em>State v. Wilcox</em>, 371 Or 756 (2023), the
+            defendant was intoxicated and belligerent at a hospital, and
+            police officers were asked to assist in effectuating his
+            discharge. <em>Id.</em> at 758-59. The police handcuffed the
+            defendant and told him they were taking him to a detox
+            facility. <em>Id.</em> The d<span>efendant had a backpack
+            with him. </span>In the parking lot, before putting the
+            defendant in the patrol car, one officer searched the
+            defendant’s person, and the other “conducted an inventory”
+            of the backpack and found a restricted weapon.
+            <em>Id.</em></p>
+            <p>The court issued two significant holdings: (1) Police
+            seized the defendant’s backpack when they removed it from
+            his person (and certainly <span class="GramE">at the
+            moment</span> the police opened it), <em>id.</em> at 764-65,
+            and (2) when a person or property is seized pursuant to the
+            public intoxication statute, ORS 430.399, the seizure is an
+            “administrative” noncriminal seizure and must comply with
+            requirements in <em>State v. Atkinson</em>, 298 Or 1 (1984).
+            <em>Id.</em> at 766-68.<span></span></p>
+            <p><span>The state argued that it would be unreasonable for
+            police officers to require an intoxicated person to leave a
+            bag with unknown contents in a public parking lot because it
+            would be unsecured and could create a nuisance or pose a
+            safety hazard to anyone who might find it. <em>Id.</em> at
+            768.</span></p>
+            <p><span>The Supreme Court agreed that an officer might
+            reasonably have those concerns, “but a perception of
+            reasonableness by the executive actor is not a substitute
+            for the extra-executive control provided by “legislative
+            enactments defining and limiting official
+            <span class="GramE">authority[</span>,]” as required by the
+            “administrative” search and seizure exception. <em>Id.</em>
+            </span></p>
+            <p><span>That is, the issue is not the reasonableness of an
+            individual officer’s desire, or even need, to seize
+            property, it is the source of authority for that seizure. In
+            Oregon there is no generalized police community caretaking
+            authority:</span></p>
+            <div class="blockquote">
+            <p>“‘There is no generic “community caretaking function.”
+            Whether law enforcement officers have specific functions is
+            a matter of statutory law. * * *Any intrusion of state power
+            upon a constitutionally protected interest, be it for civil
+            or criminal investigative purposes, must comply with
+            constitutional standards.’”</p>
+            </div>
+            <p><em>Id.</em> at 769 (quoting <em><span>State v.
+            Bridewell</span></em>, 306 Or 231, 239 (1988)).</p>
+            <p>Thus, generalized concerns for safety or liability, even
+            reasonable ones, are not the equivalent of an
+            <em>Atkinson­-</em>compliant grant of authority to seize or
+            search property. <em>Id.</em></p>
+            <div class="practice-tip">
+            <p>Practice Tip</p>
+            <p>Whenever a person or property is seized pursuant to the
+            non-criminal detox statute—or pursuant to any other
+            noncriminal authority—trial attorneys should be prepared to
+            cite <em>Wilcox</em> and argue that the search or seizure
+            must comply strictly with <em>Atkinson</em>.
+            <span> </span></p>
+            </div>
+            </div>
+            <p><span id="c.-inventory-of-personal-property-incident-to-arrest"></span></p>
+            </section>
+            <section
+            id="c._inventory_of_personal_property_incident_to_arrest"
+            class="level3">
+            <h3>C. Inventory of Personal Property Incident to
+            Arrest</h3>
+            <p><span id="unlawful-impound-2"></span></p>
+            <section id="unlawful_impound_2" class="level4">
+            <h4>1. Unlawful Impound</h4>
+            <p>As with a jail or detox inventory, a critical question in
+            the inventory incident to arrest context is whether the
+            defendant is lawfully arrested. See Chapter 3C for more on
+            determining the lawfulness of your client’s arrest. If the
+            arrest is not lawful, any inventory conducted pursuant to
+            the arrest should be invalid.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Tyler,+168+Or+App+600,&amp;hl=en&amp;as_sdt=4,38&amp;case=18016132023874371612&amp;scilh=0"><em>State
+            v. Tyler</em>, 168 Or App 600, 7 P3d 624 (2000)</a>. Officer
+            arrested the defendant for jaywalking, then inventoried her
+            belongings pursuant to the arrest and found drugs. The
+            inventory was invalid because the officer did not have the
+            authority to <em>arrest</em> the defendant and take her into
+            custody: jaywalking is not an arrestable offense. Arrest
+            inventory must be based upon a valid arrest. No valid arrest
+            = no valid inventory.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Lovaina-Burmudez,+257+Or+App+1&amp;hl=en&amp;as_sdt=4,38&amp;case=14071025684602910040&amp;scilh=0"><em>State
+            v. <span class="SpellE">Lovaina-Burmudez</span></em>, 257 Or
+            App 1, 303 P3d 988 (2013)</a>. Officer treated the
+            defendant’s possessions as evidence to be maintained for
+            future prosecution rather than as inventoried property,
+            including photographing the soles of his shoes. Six months
+            later, the police obtained a warrant and seized the property
+            as evidence. The Court of Appeals held that when a
+            defendant’s personal property is lawfully secured pursuant
+            to an inventory policy, processing the property as evidence
+            exceeds the scope of the inventory and thus constitutes an
+            unlawful search and seizure. For purposes of the inevitable
+            discovery doctrine, the court held that the state failed to
+            show that the defendant’s clothing and shoes would still
+            have been available to seize six months later had the items
+            been handled according to the inventory policy rather than
+            as evidence.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Stinstrom,+261+Or+App+186,&amp;hl=en&amp;as_sdt=4,38&amp;case=2556648218747277729&amp;scilh=0"><em>State
+            v. <span class="SpellE">Stinstrom</span></em>, 261 Or App
+            186, 322 P3d 1076 (2014)</a>. The officer encountered the
+            defendant in a park. One of the defendant’s companions took
+            off the backpack he was wearing, set it next to defendant
+            and said, “This is your bag.” The defendant began to reach
+            for it, saying, “This is my bag.” The officer instructed him
+            to stop. The officer arrested the defendant on an
+            outstanding warrant and began to walk him to the police car,
+            leaving the backpack where it sat. Part way to the car, the
+            officer said, “Oh, I forgot your backpack.” The defendant
+            said the backpack was not his. The officer brought it along
+            anyway and searched it, finding contraband and a notebook
+            containing the defendant’s name inside. The Court of Appeals
+            reversed, holding that the officer’s warrantless seizure of
+            the backpack was not authorized by the inventory policy. An
+            inventory policy, the court explained, does not give an
+            officer authority to <em>seize</em> property; rather, it
+            governs the <em>examination</em> of property that is already
+            seized.</p>
+            <p><a
+            href="https://scholar.google.com/scholar_case?q=olendorff&amp;hl=en&amp;as_sdt=4,38&amp;case=11335328720725011549&amp;scilh=0"><span class="InternetLink"><em>State
+            v.
+            <span class="SpellE">Olendorff</span></em></span></a><span class="InternetLink">,
+            267 Or App 476 (2014)</span>. After arresting the defendant
+            for driving while suspended, officers unlawfully seized the
+            defendant’s purse for an inventory after the defendant had
+            requested that officers give her purse to her boyfriend. The
+            police gave no reason to believe that there was anything
+            harmful in the purse or any evidence of the crime of arrest.
+            Defendant’s ultimate admission that there was “something”
+            illegal in her purse as well and drugs found therein had to
+            be suppressed because the officers exploited the unlawful
+            seizure of the purse when they wrongfully limited her
+            choices. The officer presented defendant with two options:
+            (1) grant permission to search the purse or (2) be charged
+            with supplying contraband to the jail if she did not tell
+            them about any drugs that they suspected they would find in
+            her purse. Because the police had no authority to prevent
+            defendant from transferring her property to her boyfriend,
+            the police unlawfully constrained defendant’s options and
+            her statements had to be suppressed.</p>
+            <p><span id="scope-of-inventory-policy"></span></p>
+            </section>
+            <section id="scope_of_inventory_policy" class="level4">
+            <h4>2. Scope of Inventory Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Davis,+262+Or+App+555,+&amp;hl=en&amp;as_sdt=4,38&amp;case=17058068518392454176&amp;scilh=0"><em>State
+            v. Davis</em>, 262 Or App 555, 325 P3d 790 (2014)</a>. While
+            arresting the defendant on an outstanding warrant, the
+            deputy removed a closed white sock from the defendant’s
+            pocket and looked inside. The sock contained a meth pipe.
+            Citing <a
+            href="https://scholar.google.com/scholar_case?case=5888306994736519013&amp;q=State+v.+Taylor%C2%B8+250+Or+App+90+&amp;hl=en&amp;as_sdt=6,38"><em>State
+            v. Taylor</em>¸ 250 Or App 90 (2012)</a>, the Court of
+            Appeals held that the Lane County Sheriff’s Office inventory
+            policy was constitutionally deficient because it did not
+            impose any limitations on the officer’s discretion to open
+            closed containers. The pipe and the defendant’s statements
+            about the pipe should have been suppressed.</p>
+            <p><span id="sufficiency-of-evidence-that-policy-comported-with-atkinson-or-that-officers-conduct-comported-with-policy-2"></span></p>
+            </section>
+            <section
+            id="sufficiency_of_evidence_that_policy_comported_with_atkinson_or_that_officers_conduct_comported_with_policy_2"
+            class="level4">
+            <h4>3. Sufficiency of Evidence that Policy Comported with
+            Atkinson or that Officer’s Conduct Comported with
+            Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Mituniewicz,+125+Or+App+41,&amp;hl=en&amp;as_sdt=4,38&amp;case=9365671673718828525&amp;scilh=0"><em>State
+            v. <span class="SpellE">Mituniewicz</span></em>, 125 Or App
+            41, 864 P2d 1359 (1993)</a>. An officer’s testimony that it
+            was standard procedure to remove everything from an
+            arrestee’s pockets before transporting the arrestee was
+            insufficient to show that the purported inventory policy
+            authorized the opening of containers. Even assuming there
+            was a proper policy, the evidence did not demonstrate that
+            the policy required the opening of any containers, such as
+            the paper bindle at issue in this case. Likewise, the
+            evidence did not support a finding that the bindle would
+            inevitably have been opened during jail booking.</p>
+            <p><span id="officer-compliance-with-inventory-policy-1"></span></p>
+            </section>
+            <section id="officer_compliance_with_inventory_policy_1"
+            class="level4">
+            <h4>4. Officer Compliance with Inventory Policy</h4>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Maynard,+149+Or+App+293,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12470937261151067916&amp;scilh=0"><em>State
+            v. Maynard</em>, 149 Or App 293, 942 P2d 851 (1997)</a>. The
+            defendant was arrested for various offenses. Before the
+            officer placed her in the patrol car, he conducted an
+            inventory of her possessions in accordance with a Portland
+            city ordinance. During the inventory, he found a small
+            wooden matchbox of the “strike anywhere” variety. He opened
+            the box and discovered methamphetamine. The officer did not
+            comply with the inventory policy when he opened the matchbox
+            to determine its contents. The inventory was not valid.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Myers,+156+Or+App+561,+&amp;hl=en&amp;as_sdt=4,38&amp;case=5531671817182780613&amp;scilh=0"><em>State
+            v. Myers</em>, 156 Or App 561, 967 P2d 887 (1998)</a>. The
+            City of Portland cannot lawfully authorize a police officer
+            who is conducting an inventory to open a closed container to
+            determine its contents before deciding whether to return the
+            container to a person in custody. Under those circumstances,
+            opening a container to determine its contents is not an
+            inventory but is a search.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+May,+162+Or+App+317,+&amp;hl=en&amp;as_sdt=4,38&amp;case=12995756336355096967&amp;scilh=0"><em>State
+            v. May</em>, 162 Or App 317, 986 P2d 608 (1999)</a>. Officer
+            unwrapped a cloth bundle found in the defendant’s pocket and
+            found drugs and drug paraphernalia. The bundle was a closed
+            container which the officer had opened without establishing
+            a proper basis for doing so. The officer exceeded the scope
+            of the inventory policy.</p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Kendall,+173+Or+App+487,&amp;hl=en&amp;as_sdt=4,38&amp;case=15174991273017949010&amp;scilh=0"><em>Kendall</em>,
+            173 Or App 487</a><span class="MsoHyperlink">, 24 P3d 914
+            (2001)</span>. A key case is not a container designed to
+            carry valuables within the meaning of the Portland inventory
+            ordinance because a key is not an item of value as defined
+            in that ordinance. Police discovered the key case inside the
+            defendant’s shaving kit. The Court of Appeals noted that the
+            defendant did not challenge the opening of the shaving kit
+            and therefore confined its analysis to the key case rather
+            than addressing the shaving kit. The implication is that the
+            police likely overstepped the inventory when they opened the
+            shaving kit.</p>
+            <div class="bon-update">
+            <p><span id="update-3"></span></p>
+            </section>
+            </section>
+            <section id="update_3" class="level3">
+            <h3>2024 Update</h3>
+            <p>A person’s lawful arrest does not allow for the seizure
+            of all the arrestee’s personal property. It may authorize a
+            seizure of “narrow categories” of personal effects, such as
+            effects related to the probable cause for arrest or readily
+            apparent contraband. But the defendant’s backpack did not
+            fall within such narrow categories. <a
+            href="https://scholar.google.com/scholar_case?case=7617837671062490960&amp;q=State+v.+Wilcox,+323+Or+App+271&amp;hl=en&amp;as_sdt=4,38"><em><span>State
+            v. Wilcox</span></em>, 323 Or App 271, 276</a> (December 14,
+            2022), <em><span>rev allowed</span></em><span>,</span> 371
+            Or 60 (2023) (citing <a
+            href="https://scholar.google.com/scholar_case?case=13333094264633615174&amp;q=State+v.+Edwards,+304+Or+App+293&amp;hl=en&amp;as_sdt=4,38"><em>State
+            v. Edwards</em>, 304 Or App 293, 294, 466 P.3d 1034
+            (2020)</a>.</p>
+            </div>
+            <p><span id="d.-courthouse"></span></p>
+            </section>
+            <section id="d._courthouse" class="level3">
+            <h3>D. Courthouse</h3>
+            <p><em>Scope of Inventory Policy</em></p>
+            <p><a
+            href="http://scholar.google.com/scholar_case?q=State+v.+Snow,+247+Or+App+497,+&amp;hl=en&amp;as_sdt=4,38&amp;case=6781567800028405355&amp;scilh=0"><em>State
+            v. Snow</em>, 247 Or App 497, 268 P3d 802 (2011)</a>.
+            Courthouse security deputy opened a cigarette package that
+            the defendant had in his pocket and found methamphetamine.
+            The county security policy authorized deputies to search
+            people and their belongings to prevent anyone from entering
+            the courthouse with dangerous or hazardous items. The Court
+            of Appeals held that the policy afforded deputies too much
+            discretion in deciding whom to search, which items to
+            search, and how intensely to search. Because the policy was
+            too broad, the administrative search was unlawful.</p>
+            </div>
+            </section>
+            </section>
+    </body>
+</html>
