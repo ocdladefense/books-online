@@ -20,6 +20,30 @@ A better reading experience for OCDLA's Books Online subscribers.
 git submodule deinit -f path/to/submodule
 ```
 
+### How to handle children in React
+In React, the children prop allows you to pass components or elements as content between the opening and closing tags of another component. Here's how you can use it...
+
+### Creating a Simple Custom JSX Parser /w Practical Example
+https://dev.to/mike-at-redspace/creating-a-simple-custom-jsx-parser-w-practical-example-1p8h
+
+### What is "Mounting" in React js?
+https://stackoverflow.com/questions/31556450/what-is-mounting-in-react-js
+
+
+
+### Demystifying JSX: building your own JSX parser from scratch
+https://blog.bitsrc.io/demystifying-jsx-building-your-own-jsx-parser-from-scratch-caecf58d7cbd
+
+### JSX In Depth
+https://legacy.reactjs.org/docs/jsx-in-depth.html
+
+### Understanding the Virtual DOM Structure in React
+https://medium.com/@princybhalu11/understanding-the-virtual-dom-structure-in-react-d437d2e526e0
+
+### What is the difference between children and childNodes in JavaScript?
+https://stackoverflow.com/questions/7935689/what-is-the-difference-between-children-and-childnodes-in-javascript
+
+
 ### Remove the submodule directory from the superproject's .git/modules directory
 
 ```javascript
@@ -189,8 +213,33 @@ View rendering consists of five or more phases.
   Two concepts are involved in component execution:
       a. Components return virtual nodes but aren't virtual nodes themselves.
       b. Virtual nodes are plain JavaScript objects that represent HTML elements: tag name, attributes and children.
+      c. Components can return type <code>Fragment</code>.
+4. Node diffing / node reconciliation - compare the the old virtual node tree with the new virtual node tree; use an algorithm that identifies the least number of updates to mark relevant nodes as needing updating (CRUD).
 
-4. 
+5. Target platform manipulations: DOM manipulation - Perform the relevant DOM manipulations
+
+
+## Query: When a node in the new tree has more children than the corresponding node in the old tree, the diffing algorithm needs to determine how to handle the additional children. Here's a general approach:
+
+1. Keyed Children:
+### If keys are used:
+If the children have keys, the algorithm can efficiently match the children in the new tree to the children in the old tree based on their keys.
+### New Children:
+Any children in the new tree that don't have a matching key in the old tree are considered new and will be added to the DOM.
+### Removed Children:
+Any children in the old tree that don't have a matching key in the new tree are considered removed and will be removed from the DOM.
+
+2. Unkeyed Children:
+### Without keys:
+If the children don't have keys, the algorithm falls back to a simpler approach.
+### Index-based Matching:
+The algorithm will try to match children based on their index in the list.
+### Excess Children:
+If the new tree has more children than the old tree, the extra children will be added to the end of the list.
+### Missing Children:
+If the new tree has fewer children than the old tree, the extra children in the old tree will be removed from the end of the list.
+
+
 
 
 Important Points:
