@@ -90,10 +90,10 @@ export default function App() {
   useEffect(() => {
     async function doOutline() {
       let doc = await loadChapter(book, chapter);
-      const opts = { selectors: [".level1", ".level2", ".level3"] };
+      const opts = { selectors: [".level2", ".level3"] };
       const outline = new Outline(opts);
       setOutline(outline.build(doc));
-      setIntersectionElems(outline.build(doc, true));
+      // setIntersectionElems(outline.build(doc, true));
     }
     doOutline();
   }, [book, chapter]);
@@ -164,14 +164,14 @@ export default function App() {
             id="document"
             class="flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8"
           >
-          <h2 class="text-3xl font-bold my-0">{chapterTitle}</h2>
-          <h3 class="my-0">{chapterAuthors}</h3>  
-              <h2 style="border-radius: 0px 0px 8px 8px; z-index:100;" class="my-0 sticky top-0 p-4 bg-ocdla-dark-blue text-white">{bookShortName} | {chapterTitle}</h2>
-              <div dangerouslySetInnerHTML={html}>Loading...</div>
+            <h2 class="text-3xl font-bold my-0">{chapterTitle}</h2>
+            <h3 class="my-0">{chapterAuthors}</h3>  
+            <h2 style="border-radius: 0px 0px 8px 8px; z-index:100;" class="my-0 sticky top-0 p-4 bg-ocdla-dark-blue text-white">{bookShortName} | {chapterTitle}</h2>
+            <div dangerouslySetInnerHTML={html}>Loading...</div>
           </div>
-          <div id="outline" class="fixed top-0 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white">
+          <div id="outline" class="fixed top-8 left-[100%] z-10 h-screen shadow-2xl max-w-[50vw] lg:shadow-none lg:h-auto lg:static lg:top-auto lg:left-auto bg-white">
             <aside class='sticky top-0 hidden h-full lg:h-[87.5vh] overflow-y-scroll lg:block overflow-x-clip'>
-              {/* <OutlineSidebar items={outline} /> */}
+              <OutlineSidebar items={outline} />
             </aside>
           </div>
         </div>

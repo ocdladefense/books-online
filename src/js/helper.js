@@ -43,12 +43,12 @@ export function getBookList(index) {
   if (!index) return null;
   const elems = [...index.querySelectorAll('book')];
   const bookList = elems.map((elem) => {
-        return {
-          name: elem.getAttribute("name"),
-          shortName: elem.getAttribute("shortName"),
-          default: elem.getAttribute("default")
-        }
-      });
+    return {
+      name: elem.getAttribute("name"),
+      shortName: elem.getAttribute("shortName"),
+      default: elem.getAttribute("default")
+    }
+  });
   return bookList;
 }
 
@@ -68,7 +68,7 @@ export async function getContent(book, unit) {
   return loadChapter(book, unit).then((doc) => {
 
     // import node function
-    let sections = doc.querySelectorAll("header, section:not(#title-block-header)");
+    let sections = doc.querySelectorAll("header, section[class^='level1']");
     let fragment = document.createDocumentFragment();
     fragment.append(...sections);
     const s = new XMLSerializer();

@@ -51,8 +51,8 @@ export default class Outline {
     // Take a comma separated string of html selectors
     const elems = [...node.querySelectorAll(selectors.join(","))];
 
-    // Process all headings with anchor links and styling
-    this.#items = elems.map((elem) => {
+    // Process all headings with anchor links and styling.
+    this.#items = elems.filter(elem => "P" != elem.children[0].tagName).map((elem) => {
       const header = elem.children[0];
       const label = header.textContent;
       if (!elem.id)
