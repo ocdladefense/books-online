@@ -15,7 +15,7 @@ module.exports = {
           "ocdla-dark-blue": "rgb(28 30 60)"
       },
       fontFamily: {
-        sans: ['"Open Sans"', "Verdana", ...defaultTheme.fontFamily.sans],
+        sans: ["Open Sans", "Verdana", ...defaultTheme.fontFamily.sans],
       },
     },
   },

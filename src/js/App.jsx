@@ -62,8 +62,9 @@ export default function App() {
       const label = chapterNode.getAttribute("label");
       const name = chapterNode.getAttribute("name");
       const chapterTitle = `${label} - ${name}`;
+      const authors = chapterNode.getAttribute("authors");
       const authorNode = chapterNode.querySelector("meta[name='authors']");
-      const chapterAuthors = (authorNode && authorNode.getAttribute("content")) || editor;
+      const chapterAuthors = (authorNode && authorNode.getAttribute("content")) || authors || editor;
 
       setTitle(title);
       setEdition(edition);

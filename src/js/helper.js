@@ -68,9 +68,8 @@ export async function getContent(book, unit) {
   return loadChapter(book, unit).then((doc) => {
 
     // import node function
-
-    let sections = doc.querySelectorAll("header, section");
-    let fragment = doc.createDocumentFragment();
+    let sections = doc.querySelectorAll("header, section:not(#title-block-header)");
+    let fragment = document.createDocumentFragment();
     fragment.append(...sections);
     const s = new XMLSerializer();
 
